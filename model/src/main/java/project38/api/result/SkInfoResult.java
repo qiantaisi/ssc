@@ -1,0 +1,108 @@
+package project38.api.result;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+/**
+ * 收款信息
+ */
+public class SkInfoResult {
+
+    private List<SkInfo> skInfoList;
+
+    public List<SkInfo> getSkInfoList() {
+        return skInfoList;
+    }
+
+    public void setSkInfoList(List<SkInfo> skInfoList) {
+        this.skInfoList = skInfoList;
+    }
+
+    public static class SkInfo {
+        /**
+         * 编码
+         */
+        private Long id;
+        /**
+         * 收款人姓名
+         */
+        private String username;
+        /**
+         * 收款账号
+         */
+        private String account;
+        /**
+         * 二维码编码
+         */
+        private Long imageId;
+        /**
+         * 最低金额
+         */
+        private BigDecimal minMoney;
+        /**
+         * 最高金额
+         */
+        private BigDecimal maxMoney;
+
+        /**
+         * 描述
+         */
+        private String description;
+
+        public String getUsername() {
+            return username;
+        }
+
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
+        public String getAccount() {
+            return account;
+        }
+
+        public void setAccount(String account) {
+            this.account = account;
+        }
+
+        public Long getImageId() {
+            return imageId;
+        }
+
+        public void setImageId(Long imageId) {
+            this.imageId = imageId;
+        }
+
+        public Long getId() {
+            return id;
+        }
+
+        public void setId(Long id) {
+            this.id = id;
+        }
+
+        public BigDecimal getMinMoney() {
+            return minMoney;
+        }
+
+        public void setMinMoney(BigDecimal minMoney) {
+            this.minMoney = minMoney;
+        }
+
+        public BigDecimal getMaxMoney() {
+            return maxMoney;
+        }
+
+        public void setMaxMoney(BigDecimal maxMoney) {
+            this.maxMoney = maxMoney;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+    }
+}

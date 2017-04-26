@@ -1,0 +1,512 @@
+.bg-img-allssc {
+    background-image:url(../img/allhico.png);
+}
+.caizhong-bg-1,.bg-img-cqssc {
+    background-image:url(../img/hico6.png);
+    /*background-size: 100%!important;*/
+}
+.caizhong-bg-6,.bg-img-lhc {
+    background-image:url(../img/hico7.png);
+
+}
+.caizhong-bg-9,.bg-img-pk10 {
+    background-image:url(../img/hico8.png);
+
+}
+.caizhong-bg-2,.bg-img-tjssc {
+    background-image:url(../img/hico15.png);
+}
+.caizhong-bg-11,.bg-img-klsf {
+    background-image:url(../img/hico12.png);
+}
+.caizhong-bg-11,.bg-img-xyft {
+    background-image:url(../img/hico106.png);
+}
+.caizhong-bg-8,.bg-img-kl8 {
+    background-image:url(../img/hico11.png);
+}
+.caizhong-bg-3,.bg-img-xjssc {
+    background-image:url(../img/hico18.png);
+}
+.caizhong-bg-10,.bg-img-cqxync {
+    background-image:url(../img/hico19.png);
+}
+.caizhong-bg-7,.bg-img-xy28 {
+    background-image:url(../img/hico20.png);
+}
+.caizhong-bg-9,.bg-img-sfssc {
+    background-image:url(../img/sfssc.png);
+}
+.bg-img-xyft {
+    background-image:url(../img/hico106.png);
+}
+.caizhong-bg-4,.bg-img-pl3 {
+    background-image:url(../img/hico13.png);
+}
+.caizhong-bg-5,.bg-img-3d {
+    background-image:url(../img/hico10.png);
+
+}
+.caizhong-bg-5,.bg-img-xyft {
+    background-image:url(../img/hico106.png);
+}
+.bg-img-gd {
+    background-image:url(../img/hico21.png);
+}
+
+.bg-img-ffssc {
+    background-image:url(../img/ffssc.png);
+}
+.bg-img-efssc {
+    background-image:url(../img/efssc.png);
+}
+.bg-img-wfssc {
+    background-image:url(../img/wfssc.png);
+}
+.bg-img-jsk3 {
+    background-image:url(../img/jsk3.png);
+}
+.bg-img-ahk3 {
+    background-image:url(../img/ahk3.png);
+}
+.bg-img-jlk3 {
+    background-image:url(../img/jlk3.png);
+}
+.bg-img-hbk3 {
+    background-image:url(../img/hbk3.png);
+}
+.row a{
+    border-bottom: 1Px solid #dddddd;
+}
+.cl-8 .list-block ul li a .item-subtitle .col1{
+    background:#2CDA19;
+}
+.cl-8 .list-block ul li a .item-subtitle .col0{
+    background:#1379D7;
+}
+.cl-8 .list-block ul li a .item-subtitle .ballpk{background:#dd3e3e;color:#fff;width:1rem;line-height:1rem;height:1rem;display:inline-block;text-align:center}
+.bg-1{background:#dbd507!important}.bg-2{background:#01b7ff!important}.bg-3{background:#636862!important}
+.bg-4{background:#e4670d!important}.bg-5{background:#7bf8fc!important}.bg-6{background:#2600f7!important}.bg-7{background:#ceced6!important}
+.bg-8{background:#f80509!important}.bg-9{background:#690000!important}.bg-10{background:#090!important}
+.cl-9 .col-33 span{float: left;line-height:0.59rem;}
+.cl-9 .col-33 img{margin-left: 0.5rem;float: left;align:absmiddle;}
+.cl-8 .list-block ul li a .item-text_res{height: 0rem;}
+.cl-8 .list-block ul li a .item-subtitle_res{white-space:normal;height:2.2rem;width: 11.8rem;}
+.cl-8 .list-block ul li a .item-subtitle_res .ball{margin-top: 0.1rem;}
+.lhc_item-subtitle{height: 1.08rem!important;margin-bottom: 0.12rem!important;}
+
+.ball-4{
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 1.4rem;
+    line-height: 1.4rem;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+}
+.ball-2{margin-left: 0.33rem;display:inline-block;margin-top: 0.07rem;width: 1.4rem;height: 1.4rem;border-radius: 1.4rem;line-height: 1.4rem;font-size: 0.7rem;text-align: center;color: #fff!important;}
+.ball-orange{background: #fa6200;}
+.cl-904 .openNumber .blue{background: #0074ff;}
+.cl-904 .openNumber .green{background: #5bae1c;}
+.ball-blue{background: #0074ff;}
+.ball-green{background: #5bae1c;}
+.ball-red{background: #f13030;}
+.txt_1{display: inline-block;}
+.pkbg-1{background: #dbd507}
+.pkbg-2{background: #01b7ff}
+.pkbg-3{background: #636862}
+.pkbg-4{background: #e4670d}
+.pkbg-5{background: #7bf8fc}
+.pkbg-6{background: #2600f7}
+.pkbg-7{background: #ceced6}
+.pkbg-8{background: #f80509}
+.pkbg-9{background: #690000}
+.pkbg-10{background: #009900}
+
+.cl-904 .openNumber .pk10{
+    color: #fff;
+    padding: .1rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 0.01rem;
+}
+.lhc_cl_982{
+    height: 1.6rem;
+}
+.cl-904 .lhc_sx{
+    margin-left: 0.125rem;
+    margin-top: 0.1rem;
+}
+.cl-904 .lhc_sx i{
+    border: 1px solid #e5e5e5;
+    color: #959595;
+    height: 1.2rem;
+    text-align: center;
+    margin-right: 0.26rem;
+    line-height: 0.5rem;
+
+}
+.pkbg-1, .pkbg-2, .pkbg-3, .pkbg-4, .pkbg-5, .pkbg-6, .pkbg-7, .pkbg-8, .pkbg-9, .pkbg-10{
+    margin-top:0.07rem;
+    width: 1.20rem;
+    height: 1.20rem;
+    border-radius: 0.2rem;
+    line-height: 1.2rem;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.3rem;
+    color: #FFFFFF!important;
+}
+.bili_w table tbody tr td,.hs_w table tbody tr td{width: 50%}
+.xy28 table tbody tr td span:nth-child(1){
+    float: left;
+    margin-left: 1.2rem;
+}
+.xy28 table tbody tr td span:nth-child(2){
+    float: left;
+    margin-left: 0.4rem;
+    line-height: 1.4rem;
+}
+.cl-313 .list-block ul li label .item-inner .item-subtitle .bank_text{
+    float:none;
+    display:inline;
+    line-height: 1.5rem;
+}
+/*银行卡类型背景*/
+.banklogo{
+    background:url("../img/bank_logo .gif") left top no-repeat;
+    display: inline-block;
+    width: 122px;
+    height: 35px;
+    cursor: pointer;
+    vertical-align: top;
+}
+/*工商银行*/
+.item-link .item-subtitle .bank_icbc{
+    background-position: 0 -33px;
+}
+/*农业银行*/
+.bank-abchina{
+    background-position: 0 -66px;
+}
+/*中国银行*/
+.bank-chinabank{
+    background-position: 0 -99px;
+}
+/*中国建设银行*/
+.bank-ccb{
+    background-position: 0 -132px;
+}
+/*交通银行*/
+.bank-comm{
+    background-position: 0 -165px;
+}
+/*招商银行*/
+.bank-cmb{
+    background-position: 0 -429px;
+}
+/*兴业银行*/
+.bank-cib{
+    background-position: 0 -462px;
+}
+/*浦发银行*/
+.bank-spdb{
+    background-position: 0 -495px;
+}
+/*华夏银行*/
+.bank-hxb{
+    background-position: 0 -297px;
+}
+/*中信银行*/
+.bank-ecitic{
+    background-position: 0 -231px;
+}
+/*中国光大银行*/
+.bank-cebbank{
+    background-position: 0 -264px;
+}
+/*广发银行*/
+.bank-cgbchina{
+    background-position: 0 -363px;
+}
+/*中国邮政储蓄银行*/
+.bank-psbc{
+    background-position: 0 -198px;
+}
+/*平安银行*/
+.bank-pingan {
+    background-position: 0 -528px;
+}
+/*上海银行*/
+.bank-bankofshanghai {
+    background-position: 0 -693px;
+}
+
+.style_blue{color: #0094e9;}
+.ssc_1201_num{display: inline-block;}
+.ssc_1202_sx{display: inline-block;margin-top:0.51rem;}
+.ssc_1200_qi{margin-left: 0.22rem;margin-right: 0;}
+.cl-901 .openNumber i{height: 1rem;width: 1rem;line-height: 0.9rem;}
+.cl-904,.cl-901 .cl-902{font-size: 0.65rem;}
+.cl-982 { margin-top: -0.07rem;}
+.qita_1200_qi{margin-left: 0.22rem;margin-right:0.5rem;}
+.klb_982{width: 15.8rem!important;float: none;}
+.klb_981{line-height: 1.6rem;}
+.lhc_1200_qi,.klb_1200_qi{margin-left: 0.22rem;margin-right:0rem;}
+.lhc_ball{width: 1.1rem!important;height: 1.1rem!important;}
+.cl-900{min-width: 16rem;width: auto;}
+.symbol{font-size: 0.6rem;color: #A4AFBD;}
+/*首页底部菜单*/
+.cl-1001 .cl-1002 li{height: 1.3rem;line-height: 0.3rem;}
+/*投注底部*/
+.cl-606{bottom: 0rem;}
+.cl-606~.content{ bottom: 2.1rem;}
+/*个人信息*/
+.cl-330{font-size: 0.6rem;}
+.cl-311 .list-block .item-content .item-inner .item-title, .cl-311 .list-block .item-media+.item-inner .item-input input{font-size: 0.66rem;}
+.icon-form-zhyhm{ background-image: url(../img/ico37.png);}
+.icon-form-zhzsxm{ background-image: url(../img/ico38.png);}
+.icon-form-zhdj{background-image: url(../img/ico40.png);}
+.icon-form-zhfd{background-image: url(../img/ico41.png);}
+.item-content .item-inner .item-input .i_right{
+    width: 0.18rem;
+    height: 0.39rem;
+    background: url(../img/ico22.png);
+    background-size: cover;
+    margin-top: 0.07rem;
+    float: right;
+    margin-left: 0.2rem;
+}
+.icon-home-css{margin-top: 0.5rem!important;}
+.icon_mini { width: 0.75rem; height: 0.75rem; display: inline-block;overflow: hidden;background-image: url(../img/icon.png);}
+.icon_ok {background-position: -30px -10px;}
+.info_gr,.re-item-input{margin-left: 0.6rem;}
+.edit_color{padding-left: 0.6rem;color: #FA6200!important;}
+.list-block .item-title.label{width: 30%;}
+.green{color: green;}
+/*银行卡管理*/
+.yhkgl_moren{margin-bottom: 0.2rem;}
+.yxsm{
+    position: absolute;
+    right: 2.2rem;
+    top: 0.61rem;
+    color: #0894EC;
+    z-index: 100;
+}
+.cl-608 input{font-size:1.4em;min-height:inherit;height:1.4rem;line-height:1.4rem;overflow:hidden;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input[type="number"]{-moz-appearance:textfield;}
+
+/*走势图样式*/
+.zst-cl-101 span{
+    text-align: center;
+    border-left: solid #E6E6E6 1px;
+    height: 2rem!important;
+}
+.zst-cl-101 .sxName{border: none!important;}
+.zst-cl-102_span{line-height: 2rem!important;}
+.cl-601 .copyright {
+    font-size: 0.18rem;
+    color: #a0a0a0;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #F9F9F9;
+}
+
+.zst-cl-1 .item span i{
+    margin-top: 3px;
+    margin-bottom: 0rem;
+}
+.zst-cl-1 .item span .sxName{
+    margin-top: -2px;
+    color: #A4A3A2;
+}
+.color-green{color: green;}
+.color-blue{color:blue;}
+.color-red{color:red;}
+.zst-content-all {
+    height: calc(110vh - 1.8rem - 3.2rem - 21px - 2.0rem - 1.8rem)!important;
+}
+.zst-content {
+    height: calc(100vh - 1.8rem - 3.2rem - 23px - 2.5rem + 0.8rem);
+}
+.zst_style{padding: 0!important;}
+.zst-cl-102_resetH{height: 1rem!important;}
+.zst-cl-21 span var,.zst-cl-21 span i{background: #F9F9F9!important;}
+.zst-cl-1 .item span .i_style_mar{margin-top: 1px!important;}
+/*中奖号背景*/
+.jbspan i{
+    display: block;
+    width: 19px;
+    margin: 0 auto;
+    height: 19px;
+    line-height: 19px;
+    border-bottom: 1px solid #F9F7F3;
+    color: #fff;
+    border-radius: 50%;
+}
+.cus-on-red {
+    background-color: #F63F3F;
+}
+.cus-on-green {
+    background-color: #27F619;
+}
+.cus-on-blue{
+    background-color: #4D9CF6;
+}
+
+.zst_relative{position: relative!important;}
+/*.zst-cl-50,.zst-cl-102_resetH{overflow: visible!important;}*/
+.mobile_zx {position: absolute!important;}
+
+/*幸运飞艇冠亚和*/
+.gyjh_table tbody tr td{width: 50%!important;}
+.gyjh_table tbody tr td span:first-child{
+    display: inline-block;
+    width: 30px;
+    text-align: right;
+    float: left;
+    margin-left: 30%;}
+.gyjh_table tbody tr td span:last-child{
+    display: inline-block;
+    text-align: center;
+    float: left;
+    margin-left: 5%!important;
+}
+.cl-604 .gyjh_table_hcol2 tbody tr td{
+    border-top: 0;
+}
+.cl-604 .gyjh_table_h tbody tr td span:first-child{
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+    float: left;
+    margin-left:28%;
+}
+.cl-604 .gyjh_table_h tbody tr td span:last-child{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+/*新彩种上线的图标注释*/
+.cl-5 a.col-25{position:relative;}
+.xin_new img{
+    width: 1.5rem;
+    height: 1.6rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    right:0
+}
+
+/*购彩大厅边框修整*/
+.gcdtList .a_bottom{border-bottom: none!important;width: 25%!important;}
+.gcdtList a:last-child{border-right: none!important;}
+.cl-7 .gcdtList .a_top{border-top: none!important;border-right: 1px solid #DDDDDD!important;}
+.gcdtList .re_a_bottom{border-bottom: none!important;width: 25%!important;}
+.gcdtList a.last_bottom:first-child{border-bottom: 1px solid #DDDDDD!important;}
+/*购彩大厅边框修正  （修整低频彩）*/
+.gcdtList .b_bottom{border-bottom: none!important;width: 33.33%!important;}
+.cl-700 .re-list-block{
+    margin-top: 0.5rem!important;
+}
+.buttons-tab-type{
+    margin-top: 0.5rem!important;
+}
+.buttons-tab-type a{
+    border-bottom: none!important;
+}
+.checked_color{
+    background: #FA6200;
+    color: white!important;
+    border-bottom: none!important;
+}
+
+/*优惠活动*/
+.bg-img-yhhd {
+    background-image: url(../img/hico69.png);
+    background-size: 95%!important;
+}
+.tit_style{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 44px;
+    color: #fff;
+
+}
+.app-list-box {
+    background: #fff;
+    border: 1px solid #dddddd;
+    width: 94%;
+    margin: 5px auto 10px;
+
+    box-sizing: border-box;
+    padding: 10px 15px 0;
+    border-radius: 5px;
+}
+.list-tit h3{
+    margin: 0;
+    padding: 0;
+}
+.list-tit p{
+    margin: 0;
+    padding: 0;
+    color: #666;
+}
+.pic-yhhd,.list-pic{
+    margin: 0 auto;
+    height: 110px;
+    width: 320px;
+    overflow: hidden;
+}
+.join-icon{
+    background: url(../img/join-icon.png) no-repeat;
+    width: 16px;
+    height: 27px;
+    background-size: 8px 13px;
+    float: right;
+    display: block;
+    margin-top: 6px;
+}
+.yhhd-detail a{
+    color: #000;
+    font-size: 0.8rem;
+    border-top: solid 1px #DDDDDD;
+    display: block;
+    height: 30px;
+    line-height: 26px!important;
+}
+.card-detail p{margin: 0;padding: 0;}
+.card-detail{
+    width: 100%;
+    padding: 0 15px 15px 15px;
+}
+/*投注记录内容高度重设*/
+.tzjl-reheight{height: 93.5%;}
+.re-bottom-div-height,.re-bottom-height{height: 2.0rem!important;color: #6E6E6E!important;background: #DADADA!important;}
+
+/*购彩大厅*/
+.tingshou{
+    height: 38px;
+    padding-top: 13px;
+    font-size: 0.8rem;
+    color: #5C676B!important;
+}
+
+.tingcaipage{
+    height: 90%;
+    padding-top: 60%;
+    padding-left: 36%;
+    font-size: 0.8rem;
+    color: #3D4145;
+}
