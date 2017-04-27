@@ -1,4 +1,4 @@
-package com.petsathall.project.common.IPparse;
+package project38.api.common.IPparse;
 
 /**
  * Created by Administrator on 2016/6/19.

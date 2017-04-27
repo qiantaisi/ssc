@@ -1,4 +1,4 @@
-package com.petsathall.project.common.exception;
+package project38.api.common.exception;
 
 /**
  * Created by Administrator on 2016/8/18.

@@ -1,7 +1,7 @@
 package project38.ssc.mobile.controller;
 
-import com.petsathall.project.common.exception.UserException;
-import com.petsathall.project.common.helper.IPHelper;
+import project38.api.common.exception.UserException;
+import project38.api.common.helper.IPHelper;
 import project38.api.common.result.CommonResult;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;

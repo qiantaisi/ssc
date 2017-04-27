@@ -1,4 +1,4 @@
-package com.petsathall.project.common.utils;
+package project38.api.common.utils;
 
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;

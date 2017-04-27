@@ -1,8 +1,8 @@
 package project38.api.utils;
 
 import project38.api.common.result.CommonResult;
-import com.petsathall.project.common.utils.HttpUtils;
-import com.petsathall.project.common.utils.JSONUtils;
+import project38.api.common.utils.HttpUtils;
+import project38.api.common.utils.JSONUtils;
 import org.apache.commons.collections.map.HashedMap;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import project38.api.common.ApiConstant;

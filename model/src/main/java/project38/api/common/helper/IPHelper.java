@@ -1,4 +1,4 @@
-package com.petsathall.project.common.helper;
+package project38.api.common.helper;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;

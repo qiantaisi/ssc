@@ -1,4 +1,4 @@
-package com.petsathall.project.common.utils;
+package project38.api.common.utils;
 
 import org.apache.commons.net.ntp.NTPUDPClient;
 import org.apache.commons.net.ntp.TimeInfo;

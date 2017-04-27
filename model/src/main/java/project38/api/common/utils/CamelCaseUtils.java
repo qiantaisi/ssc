@@ -1,4 +1,4 @@
-package com.petsathall.project.common.utils;
+package project38.api.common.utils;
 
 /**
  * Created by Administrator on 2016/4/9.

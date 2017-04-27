@@ -1,4 +1,4 @@
-package com.petsathall.project.common.utils;
+package project38.api.common.utils;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.time.DateFormatUtils;

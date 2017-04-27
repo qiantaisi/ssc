@@ -1,7 +1,7 @@
 package project38.ssc.mobile.interceptors;
 
 import project38.api.common.result.CommonResult;
-import com.petsathall.project.common.utils.JSONUtils;
+import project38.api.common.utils.JSONUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

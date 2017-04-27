@@ -1,7 +1,7 @@
 package project38.ssc.mobile.controller;
 
-import com.petsathall.project.common.helper.IPHelper;
-import com.petsathall.project.common.utils.JSONUtils;
+import project38.api.common.helper.IPHelper;
+import project38.api.common.utils.JSONUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;

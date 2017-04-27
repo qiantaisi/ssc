@@ -1,4 +1,4 @@
-package com.petsathall.project.common.ntp;
+package project38.api.common.ntp;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
