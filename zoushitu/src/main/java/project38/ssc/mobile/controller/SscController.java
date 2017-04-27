@@ -267,7 +267,7 @@ public class SscController extends BaseController {
     public SscHistoryResult2 ajaxGetSscDataHistory(Long playGroupId) {
         SscHistoryResult2 result = new SscHistoryResult2();
         try {
-            result = ApiUtils.getSscDataHistory(0, 5, playGroupId, null, project28.api.common.utils.DateUtils.getBeijingCalendar().getTime());
+            result = ApiUtils.getSscDataHistory(0, 5, playGroupId, null, project38.api.common.utils.DateUtils.getBeijingCalendar().getTime());
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");

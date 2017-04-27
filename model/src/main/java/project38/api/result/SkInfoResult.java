@@ -1,12 +1,14 @@
 package project38.api.result;
 
+import project38.api.common.result.CommonResult;
+
 import java.math.BigDecimal;
 import java.util.List;
 
 /**
  * 收款信息
  */
-public class SkInfoResult {
+public class SkInfoResult extends CommonResult {
 
     private List<SkInfo> skInfoList;
 
