@@ -51,6 +51,19 @@ public class SkInfoResult extends CommonResult {
          */
         private String description;
 
+        /**
+         * 二维码图片BASE64数据
+         */
+        private String imageData;
+
+        public String getImageData() {
+            return imageData;
+        }
+
+        public void setImageData(String imageData) {
+            this.imageData = imageData;
+        }
+
         public String getUsername() {
             return username;
         }
