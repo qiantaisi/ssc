@@ -558,6 +558,7 @@ input[type="number"]{-moz-appearance:textfield;}
     float: right;
     line-height: 1.8rem;
     margin-right: 0.29rem;
+    padding: 10px;
 }
 #sub-menu-list .cl-610 .re-cl-602{
     padding-right: 0.4rem!important;
@@ -581,7 +582,7 @@ input[type="number"]{-moz-appearance:textfield;}
 .click-qishu-btns{
     text-align: center;
     background: #f7f7f7;
-    width: 3rem;
+    width: 4rem;
     position: absolute;
     right: 0.1rem;
     top: 1.3rem;
