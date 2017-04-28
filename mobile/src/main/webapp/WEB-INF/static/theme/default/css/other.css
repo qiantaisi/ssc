@@ -558,7 +558,7 @@ input[type="number"]{-moz-appearance:textfield;}
     float: right;
     line-height: 1.8rem;
     margin-right: 0.29rem;
-    padding: 10px;
+    padding-right: 10px;
 }
 #sub-menu-list .cl-610 .re-cl-602{
     padding-right: 0.4rem!important;
