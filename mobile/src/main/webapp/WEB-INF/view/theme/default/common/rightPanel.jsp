@@ -45,6 +45,14 @@
                 </a>
             </li>
             <li>
+                <a href="<%=basePath%>ssc/zst/lhc/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">走势图表</div>
+                    </div>
+                </a>
+            </li>
+            <li>
                 <a href="<%=basePath%>member/tzjl/list.html" class="item-content">
                     <div class="item-media"><i class="icon bg-img-tzjl"></i></div>
                     <div class="item-inner">

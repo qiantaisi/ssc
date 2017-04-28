@@ -74,7 +74,7 @@
                             <a href="javascript:void(0)" onclick="getSscPage('lhc')"><img src="${resPath}img/ico17.png"
                                                                                           alt=""><var>香港六合彩</var></a>
                         </div>
-                        <h3 class="head-qita"><img src="${resPath}img/lhcxl.png" alt=""><var>其他系列</var><i></i></h3>
+                        <h3 class="head-qita"><img src="${resPath}img/qitaxl.png" alt=""><var>其他系列</var><i></i></h3>
                         <div class="xl-down xHide">
                             <a href="javascript:void(0)" onclick="getSscPage('klsf')"><img src="${resPath}img/ico26.png" alt=""><var>广东快乐十分</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('xync')"><img src="${resPath}img/ico29.png" alt=""><var>重庆幸运农场</var></a>

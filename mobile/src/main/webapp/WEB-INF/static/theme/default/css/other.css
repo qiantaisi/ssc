@@ -558,6 +558,7 @@ input[type="number"]{-moz-appearance:textfield;}
     float: right;
     line-height: 1.8rem;
     margin-right: 0.29rem;
+    padding-right: 10px;
 }
 #sub-menu-list .cl-610 .re-cl-602{
     padding-right: 0.4rem!important;
@@ -581,18 +582,20 @@ input[type="number"]{-moz-appearance:textfield;}
 .click-qishu-btns{
     text-align: center;
     background: #f7f7f7;
-    width: 3rem;
+    width: 4rem;
     position: absolute;
     right: 0.1rem;
-    top: 1.3rem;
+    top: 1.4rem;
     z-index: 100;
     border: 1px solid #E5E5E5;
     display: none;
+    height:2.7rem;
+    line-height: 2;
 }
 .click-qishu-btns a{
     color:#464E5A;
     display: block;
-    height: 1rem;
+    height: 1.3rem;
 }
 .click-qishu-btns a:first-child{
     border-bottom: 1px dashed gainsboro;

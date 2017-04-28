@@ -26,20 +26,6 @@
         </tr>
         </tbody>
     </table>
-    <%--<table width="100%" border="0" class="game_tab" id="bottom_zs_table_select">--%>
-    <%--<tbody>--%>
-    <%--<tr>--%>
-    <%--<th class="game_result choose" data-type="dx">大小</th>--%>
-    <%--<th class="game_result" data-type="ds">单双</th>--%>
-
-
-    <%--<th></th>--%>
-    <%--<th></th>--%>
-    <%--<th></th>--%>
-    <%--<th></th>--%>
-    <%--</tr>--%>
-    <%--</tbody>--%>
-    <%--</table>--%>
     <div id="bottom_zs_table_content">
     </div>
 </div>
@@ -306,5 +292,4 @@
             });
         }
     }
-    ;
 </script>
