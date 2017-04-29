@@ -212,7 +212,7 @@
         <li>
             <div class="p-img fl"><img src="${resPath}img/jspk10.png"></div>
             <div class="p-url fl">
-                <h3>极速赛车</h3>
+                <h3>极速PK10</h3>
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/jspk10.html?type=1')">基本走势</a>
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/jspk10.html?type=2')">K线图</a>
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/jspk10.html?type=3')">直方图</a>
