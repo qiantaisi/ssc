@@ -14,7 +14,7 @@
     <div class="page page-current" id="page-gcdt-xync">
         <header class="bar bar-nav">
             <a class="button button-link pull-left open-panel" data-panel='#panel-left'>
-                彩种选择
+                彩种切换
             </a>
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
