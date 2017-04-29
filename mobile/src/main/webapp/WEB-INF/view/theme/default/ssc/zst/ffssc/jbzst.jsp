@@ -10,6 +10,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <c:import url="../../../common/bodyStart.jsp"/>
+<c:import url="../../../common/commonJs.jsp"/>
 <div class="page-group">
     <div class="page page-current" id="page-zst-jbzst">
         <header class="bar bar-nav">
@@ -138,7 +139,7 @@
     <c:import url="../common/leftZstPanel.jsp"/>
     <c:import url="../../../common/rightPanel.jsp"/>
 </div>
-<c:import url="../../../common/commonJs.jsp"/>
+<%--<c:import url="../../../common/commonJs.jsp"/>--%>
 <script type="text/html" id="template_item">
     <div class="item">
         <span>{{number}}</span>
@@ -530,7 +531,7 @@
                     if (h == 5 && zhStr == '合') {
                         if(zhiHeStr == next_zhiHeStr){
                             sm_top_w = sm_spanH / 4 * 3.0 + sm_i * sm_spanH;
-                            sm_left_w = firstSpanW + twoSpanW + sm_spanW * 5 + 2 + 'px';
+                            sm_left_w = firstSpanW + twoSpanW + sm_spanW * 4.96 + 'px';
                         }else{
                             sm_top_w = sm_spanH / 4 * 2.9 + sm_i * sm_spanH;
                             sm_left_w = sm_spanW / 4 * 1.6 + firstSpanW + twoSpanW + sm_spanW * 4 + 'px';

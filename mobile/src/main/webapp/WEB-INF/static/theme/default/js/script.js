@@ -6306,10 +6306,13 @@ $(function () {
 
         $("#ssc-parent-menu .re-cl-602 .gengduo").click(
             function () {
-                $(".click-qishu-btns").toggle();
-            }
-        );
-         //点击实现循环切换走势图 “更多期数” 的文字颜色
+                $(".click-qishu-btns").show();
+                $(".click-qishu-btns").on('touchend', function () {
+                    $(".click-qishu-btns").hide();
+                });
+        });
+
+        //点击实现循环切换走势图 “更多期数” 的文字颜色
         $("#ssc-parent-menu .re-cl-602 .gengduo").click(
             function () {
                 var changes = "red";
