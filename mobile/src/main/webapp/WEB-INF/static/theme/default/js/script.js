@@ -6309,11 +6309,11 @@ $(function () {
                 $(".click-qishu-btns").toggle();
             }
         );
-        //实现点击选中的结果 “就收回下拉菜单”
+        //走势图里，实现点击选中的结果 “就收回下拉菜单”
         $(".click-qishu-btns a").click(
             function () {
                 $(".click-qishu-btns").toggle();
-                $("#ssc-parent-menu .re-cl-602 .gengduo").css("color","gray");
+                $("#ssc-parent-menu .re-cl-602 .gengduo").css("color", "gray");
             }
         );
 
