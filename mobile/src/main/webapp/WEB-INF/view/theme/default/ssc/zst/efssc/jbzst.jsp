@@ -30,7 +30,7 @@
                 <div class="re-cl-602">
                     <a data-name="jb" href="javascript:void(0)" class="choose">基本走势</a>
                     <%--<a data-name="sm" href="javascript:void(0)" class="sm">双面走势</a>--%>
-                    <span class="goucai"><a href="<%=basePath%>ssc/gcdt/efssc.html">购彩</a></span>
+                    <span class="goucai"><a id="blink" href="<%=basePath%>ssc/gcdt/efssc.html">购彩</a></span>
                     <span class="gengduo">更多期数</span>
                 </div>
             </div>
@@ -322,5 +322,13 @@
         //context.strokeStyle = "#F63F3F";
         //context.stroke();
     }
+</script>
+<script language="javascript">
+    function changeColor() {
+        var color = "blue|red";
+        color = color.split("|");
+        document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
+    }
+    setInterval("changeColor()", 230);
 </script>
 <c:import url="../../../common/bodyEnd.jsp"/>
