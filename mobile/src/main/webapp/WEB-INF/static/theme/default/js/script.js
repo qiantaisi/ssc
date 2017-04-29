@@ -6313,6 +6313,7 @@ $(function () {
         $(".click-qishu-btns a").click(
             function () {
                 $(".click-qishu-btns").toggle();
+                $("#ssc-parent-menu .re-cl-602 .gengduo").css("color","gray")
             }
         );
         //点击实现循环切换走势图 “更多期数” 的文字颜色
