@@ -24,7 +24,7 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">极速PK10</h1>
+            <h1 class="title">极速赛车</h1>
         </header>
         <c:import url="common/commonBet.jsp" />
         <div class="content cl-601">

@@ -41,9 +41,7 @@
             <div class="cl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <marquee behavior="scroll" contenteditable="true"
-                                 onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="5"
-                                 width="100%" onmouseover="this.stop();" onmouseout="this.start();">
+                        <marquee behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="5" width="100%" onmouseover="this.stop();" onmouseout="this.start();">
                             <c:forEach items="${popupNoticeList}" var="item">
                                 <span>${item.title}：${item.content}</span>
                             </c:forEach>
@@ -123,6 +121,7 @@
                         <span class="img bg-img-jspk10"></span>
                         <span>极速PK10</span>
                     </a>
+                    
                     <a class="col-25 col-33 re_a_bottom" data-play_group_id="22"
                        href="<%=basePath%>ssc/gcdt/sflhc.html">
                         <span class="info">距离开盘</span>
@@ -237,7 +236,6 @@
                         <span class="img bg-img-kl8"></span>
                         <span>北京快乐8</span>
                     </a>
-
                     <a class="col-25 col-33 a_bottom" data-play_group_id="13" href="<%=basePath%>ssc/gcdt/sfssc.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
@@ -278,19 +276,6 @@
                         <span class="img bg-img-wfssc"></span>
                         <span>五分时时彩</span>
                     </a>
-                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="21"
-                       href="<%=basePath%>ssc/gcdt/jlk3.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-jlk3"></span>
-                        <span>吉林快3</span>
-                    </a>
                     <a class="col-25 col-33 re_a_bottom" data-play_group_id="19"
                        href="<%=basePath%>ssc/gcdt/hbk3.html">
                         <span class="info">距离开盘</span>
@@ -303,6 +288,19 @@
                         </span>
                         <span class="img bg-img-hbk3"></span>
                         <span>湖北快3</span>
+                    </a>
+                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="21"
+                       href="<%=basePath%>ssc/gcdt/jlk3.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-jlk3"></span>
+                        <span>吉林快3</span>
                     </a>
                     <a class="col-25 col-33 re_a_bottom"></a>
                 </div>
@@ -356,19 +354,19 @@
                 </div>
                 <%--<div class="row cl-318 gcdtList">--%>
                 <%--<a class="col-25 col-33 " data-play_group_id="22" href="<%=basePath%>ssc/gcdt/sflhc.html">--%>
-                <%--<span class="info">距离开盘</span>--%>
-                <%--<span class="time">--%>
-                <%--<i>00</i>--%>
-                <%--<font>:</font>--%>
-                <%--<i>00</i>--%>
-                <%--<font>:</font>--%>
-                <%--<i>00</i>--%>
-                <%--</span>--%>
-                <%--<span class="img bg-img-sflhc"></span>--%>
-                <%--<span>10分六合彩</span>--%>
+                    <%--<span class="info">距离开盘</span>--%>
+                    <%--<span class="time">--%>
+                          <%--<i>00</i>--%>
+                          <%--<font>:</font>--%>
+                          <%--<i>00</i>--%>
+                          <%--<font>:</font>--%>
+                          <%--<i>00</i>--%>
+                        <%--</span>--%>
+                    <%--<span class="img bg-img-sflhc"></span>--%>
+                    <%--<span>10分六合彩</span>--%>
                 <%--</a>--%>
-                <%--<a class="col-25 col-33 "></a>--%>
-                <%--<a class="col-25 col-33 "></a>--%>
+                    <%--<a class="col-25 col-33 "></a>--%>
+                    <%--<a class="col-25 col-33 "></a>--%>
                 <%--</div>--%>
                 <%--<div class="row cl-318 gcdtList">--%>
                 <%--<a class="col-25 col-33 re_a_bottom"></a>--%>
