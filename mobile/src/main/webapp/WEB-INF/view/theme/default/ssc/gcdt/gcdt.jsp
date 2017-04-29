@@ -93,6 +93,34 @@
                         <span class="img bg-img-cqssc"></span>
                         <span>重庆时时彩</span>
                     </a>
+                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="18"
+                       href="<%=basePath%>ssc/gcdt/jsk3.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-jsk3"></span>
+                        <span>江苏快3</span>
+                    </a>
+                </div>
+                <div class="row cl-318 gcdtList">
+                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="23"
+                       href="<%=basePath%>ssc/gcdt/jspk10.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-jspk10"></span>
+                        <span>极速PK10</span>
+                    </a>
                     <a class="col-25 col-33 re_a_bottom" data-play_group_id="22"
                        href="<%=basePath%>ssc/gcdt/sflhc.html">
                         <span class="info">距离开盘</span>
@@ -106,10 +134,7 @@
                         <span class="img bg-img-sflhc"></span>
                         <span>10分六合彩</span>
                     </a>
-                </div>
-                <div class="row cl-318 gcdtList">
-                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="18"
-                       href="<%=basePath%>ssc/gcdt/jsk3.html">
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="14" href="<%=basePath%>ssc/gcdt/xyft.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
                           <i>00</i>
@@ -118,8 +143,97 @@
                           <font>:</font>
                           <i>00</i>
                         </span>
-                        <span class="img bg-img-jsk3"></span>
-                        <span>江苏快3</span>
+                        <span class="img bg-img-xyft"></span>
+                        <span>幸运飞艇</span>
+                    </a>
+                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="20"
+                       href="<%=basePath%>ssc/gcdt/ahk3.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-ahk3"></span>
+                        <span>安徽快3</span>
+                    </a>
+                </div>
+                <div class="row cl-318 gcdtList">
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="3" href="<%=basePath%>ssc/gcdt/xjssc.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-xjssc"></span>
+                        <span>新疆时时彩</span>
+                    </a>
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="2" href="<%=basePath%>ssc/gcdt/tjssc.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-tjssc"></span>
+                        <span>天津时时彩</span>
+                    </a>
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="11" href="<%=basePath%>ssc/gcdt/klsf.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-klsf"></span>
+                        <span>广东快乐十分</span>
+                    </a>
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="7" href="<%=basePath%>ssc/gcdt/xy28.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-xy28"></span>
+                        <span>幸运28</span>
+                    </a>
+                </div>
+                <div class="row cl-318 gcdtList">
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="10" href="<%=basePath%>ssc/gcdt/xync.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-cqxync"></span>
+                        <span>重庆幸运农场</span>
+                    </a>
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="8" href="<%=basePath%>ssc/gcdt/kl8.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-kl8"></span>
+                        <span>北京快乐8</span>
                     </a>
                     <a class="col-25 col-33 a_bottom" data-play_group_id="13" href="<%=basePath%>ssc/gcdt/sfssc.html">
                         <span class="info">距离开盘</span>
@@ -146,22 +260,10 @@
                         <span class="img bg-img-efssc"></span>
                         <span>两分时时彩</span>
                     </a>
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="14" href="<%=basePath%>ssc/gcdt/xyft.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-xyft"></span>
-                        <span>幸运飞艇</span>
-                    </a>
                 </div>
                 <div class="row cl-318 gcdtList">
-                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="20"
-                       href="<%=basePath%>ssc/gcdt/ahk3.html">
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="17"
+                       href="<%=basePath%>ssc/gcdt/wfssc.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
                           <i>00</i>
@@ -170,8 +272,8 @@
                           <font>:</font>
                           <i>00</i>
                         </span>
-                        <span class="img bg-img-ahk3"></span>
-                        <span>安徽快3</span>
+                        <span class="img bg-img-wfssc"></span>
+                        <span>五分时时彩</span>
                     </a>
                     <a class="col-25 col-33 re_a_bottom" data-play_group_id="19"
                        href="<%=basePath%>ssc/gcdt/hbk3.html">
@@ -186,95 +288,6 @@
                         <span class="img bg-img-hbk3"></span>
                         <span>湖北快3</span>
                     </a>
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="3" href="<%=basePath%>ssc/gcdt/xjssc.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-xjssc"></span>
-                        <span>新疆时时彩</span>
-                    </a>
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="2" href="<%=basePath%>ssc/gcdt/tjssc.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-tjssc"></span>
-                        <span>天津时时彩</span>
-                    </a>
-                </div>
-                <div class="row cl-318 gcdtList">
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="11" href="<%=basePath%>ssc/gcdt/klsf.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-klsf"></span>
-                        <span>广东快乐十分</span>
-                    </a>
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="17"
-                       href="<%=basePath%>ssc/gcdt/wfssc.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-wfssc"></span>
-                        <span>五分时时彩</span>
-                    </a>
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="7" href="<%=basePath%>ssc/gcdt/xy28.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-xy28"></span>
-                        <span>幸运28</span>
-                    </a>
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="10" href="<%=basePath%>ssc/gcdt/xync.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-cqxync"></span>
-                        <span>重庆幸运农场</span>
-                    </a>
-                </div>
-                <div class="row cl-318 gcdtList">
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="8" href="<%=basePath%>ssc/gcdt/kl8.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-kl8"></span>
-                        <span>北京快乐8</span>
-                    </a>
                     <a class="col-25 col-33 re_a_bottom" data-play_group_id="21"
                        href="<%=basePath%>ssc/gcdt/jlk3.html">
                         <span class="info">距离开盘</span>
@@ -287,19 +300,6 @@
                         </span>
                         <span class="img bg-img-jlk3"></span>
                         <span>吉林快3</span>
-                    </a>
-                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="23"
-                        href="<%=basePath%>ssc/gcdt/jspk10.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-jspk10"></span>
-                        <span>极速赛车</span>
                     </a>
                     <a class="col-25 col-33 re_a_bottom"></a>
                 </div>
