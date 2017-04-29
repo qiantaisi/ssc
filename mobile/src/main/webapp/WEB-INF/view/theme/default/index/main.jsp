@@ -129,7 +129,6 @@
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/sflhc.html">
                         <span class="bg-img-sflhc"></span>
                         <span>10分六合彩</span>
-                        <var class="xin_new"><img src="${resPath}img/xin_new.gif" alt="新上线" style="float:right;"></var>
                     </a>
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/xyft.html">
                         <span class="bg-img-xyft"></span>
