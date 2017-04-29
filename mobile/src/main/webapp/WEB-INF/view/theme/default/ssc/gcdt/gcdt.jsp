@@ -121,6 +121,7 @@
                         <span class="img bg-img-jspk10"></span>
                         <span>极速PK10</span>
                     </a>
+                    
                     <a class="col-25 col-33 re_a_bottom" data-play_group_id="22"
                        href="<%=basePath%>ssc/gcdt/sflhc.html">
                         <span class="info">距离开盘</span>
