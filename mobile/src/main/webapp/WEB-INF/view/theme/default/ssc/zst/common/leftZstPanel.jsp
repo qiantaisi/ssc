@@ -182,7 +182,7 @@
                 <a href="<%=basePath%>ssc/zst/jspk10/jbzst.html" class="item-content">
                     <div class="item-media"><i class="icon bg-img-jspk10"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">极速赛车</div>
+                        <div class="item-title">极速PK10</div>
                     </div>
                 </a>
             </li>
