@@ -41,7 +41,7 @@
                     <c:when test="${playGroupId == 20}">安徽快3</c:when>
                     <c:when test="${playGroupId == 21}">吉林快3</c:when>
                     <c:when test="${playGroupId == 22}">10分六合彩</c:when>
-                    <c:when test="${playGroupId == 23}">极速赛车</c:when>
+                    <c:when test="${playGroupId == 23}">极速PK10</c:when>
                 </c:choose>
                 -玩法说明
             </h1>

@@ -24,7 +24,7 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">极速赛车</h1>
+            <h1 class="title">极速PK10</h1>
         </header>
         <div class="content cl-601 zst-cl-10">
             <div class="cl-600" id="ssc-parent-menu">
