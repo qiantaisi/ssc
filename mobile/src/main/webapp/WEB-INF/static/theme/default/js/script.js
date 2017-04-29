@@ -6306,11 +6306,16 @@ $(function () {
 
         $("#ssc-parent-menu .re-cl-602 .gengduo").click(
             function () {
-                $(".click-qishu-btns").show();
-                $(".click-qishu-btns").on('touchend', function () {
-                    $(".click-qishu-btns").hide();
-                });
-        });
+                $(".click-qishu-btns").toggle();
+            }
+        );
+        //实现点击选中的结果 “就收回下拉菜单”
+        $(".click-qishu-btns a").click(
+            function () {
+                $(".click-qishu-btns").toggle();
+                $("#ssc-parent-menu .re-cl-602 .gengduo").css("color","gray");
+            }
+        );
 
         //点击实现循环切换走势图 “更多期数” 的文字颜色
         $("#ssc-parent-menu .re-cl-602 .gengduo").click(
