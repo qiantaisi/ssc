@@ -35,7 +35,7 @@
                 <p class="<c:if test="${param.playGroupId == 19}">acti</c:if>"><a href="<%=basePath%>help/rule/hbk3.html">湖北快3</a></p>
                 <p class="<c:if test="${param.playGroupId == 20}">acti</c:if>"><a href="<%=basePath%>help/rule/ahk3.html">安徽快3</a></p>
                 <p class="<c:if test="${param.playGroupId == 21}">acti</c:if>"><a href="<%=basePath%>help/rule/jlk3.html">吉林快3</a></p>
-                <p class="<c:if test="${param.playGroupId == 23}">acti</c:if>"><a href="<%=basePath%>help/rule/jspk10.html">极速赛车</a></p>
+                <p class="<c:if test="${param.playGroupId == 23}">acti</c:if>"><a href="<%=basePath%>help/rule/jspk10.html">极速PK10</a></p>
             </div>
         </li>
         <li class="li1 <c:if test="${param.navGroup == 2}">sli</c:if> zhinan" <c:if test="${not empty param.zcplayGroupId || not empty param.czplayGroupId || not empty param.tkplayGroupId}">sl="0"</c:if>>

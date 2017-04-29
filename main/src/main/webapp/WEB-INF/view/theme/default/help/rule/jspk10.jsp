@@ -31,7 +31,7 @@
 
         <div class="help_list">
             <div class="lis">
-                <h5>极速赛车</h5>
+                <h5>极速PK10</h5>
                 <ul>
                     <li class="sli">常规玩法</li>
                     <li>官方玩法</li>
@@ -65,7 +65,7 @@
             </div>
             <div class="help_col">
                 <h5><strong>开奖说明</strong></h5>
-                <p>极速赛车（开奖网） 北京时间（GMT+8）
+                <p>极速PK10（开奖网） 北京时间（GMT+8）
                     每天00:00起每隔1分钟开奖一次, 每天开奖1440期</p>
             </div>
         </div>

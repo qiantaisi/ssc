@@ -79,7 +79,7 @@
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')">安徽快3</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jlk3')">吉林快3</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/sflhc')">10分六合彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速赛车</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速PK10</a></span>
                             </p>
                         </div>
                         <div class="pay_list">

@@ -52,7 +52,7 @@
                         <div class="xlPk10-down xHide">
                             <a href="javascript:void(0)" onclick="getSscPage('pk10')"><img src="${resPath}img/ico18.png" alt=""><var>北京PK10</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('xyft')"><img src="${resPath}img/xyft.png" alt=""><var>幸运飞艇</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('jspk10')"><img src="${resPath}img/jspk10.png" alt=""><var>极速赛车</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('jspk10')"><img src="${resPath}img/jspk10.png" alt=""><var>极速PK10</var></a>
                         </div>
 
                         <h3 class="head-k3"><img src="${resPath}img/k3xl.png" alt=""><var>快3系列</var><i></i></h3>
@@ -125,7 +125,7 @@
                     <a href="javascript:void(0)" onclick="getSscPage('sflhc')"><img src="${resPath}img/sflhc.png"
                                                                                   alt=""><var>10分六合彩</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('jspk10')"><img src="${resPath}img/jspk10.png"
-                                                                                     alt=""><var>极速赛车</var></a>
+                                                                                     alt=""><var>极速PK10</var></a>
                 </div>
             </li>
             <li class="show">
