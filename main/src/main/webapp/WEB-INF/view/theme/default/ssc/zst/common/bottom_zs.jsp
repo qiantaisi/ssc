@@ -7,7 +7,8 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="game_tables regame_tables">
-    <table hidden="hidden" width="100%" class="game_tab" id="bottom_zs_table_head" style="border-bottom: 1px solid #A69B91;">
+    <table hidden="hidden" width="100%" class="game_tab" id="bottom_zs_table_head"
+           style="border-bottom: 1px solid #A69B91;">
         <tbody>
         <tr>
             <th class="game_result" data-position="0">第一球</th>
@@ -22,7 +23,9 @@
     <table width="100%" border="0">
         <tbody>
         <tr>
-            <th class="game_result" data-type="dx" style="text-align: left; padding-left: 10px; color: gray;font-size: 14px;">近30期长龙走势</th>
+            <th class="game_result" data-type="dx"
+                style="text-align: left; padding-left: 10px; color: gray;font-size: 14px;">近80期长龙走势
+            </th>
         </tr>
         </tbody>
     </table>
@@ -54,9 +57,7 @@
                 }
                 var data = json.sscHistoryList;
                 data.reverse();
-
                 renderView(data);
-//                changeTable();
             }
         });
     }
@@ -64,8 +65,8 @@
 
     function renderView(json) {
         var result = [];
-        var maxdsY = [],maxzhdsY = [];
-        var maxdxY = [],maxzhdxY = [];
+        var maxdsY = [], maxzhdsY = [];
+        var maxdxY = [], maxzhdxY = [];
         for (var i = 0; i < 6; ++i) {
             result[i] = {ds: [], dx: []};
             maxdsY[i] = 0;
@@ -81,7 +82,7 @@
             if (position != 'zh') {
                 for (var i = 0; i < json.length; ++i) {
                     var value = Tools.parseInt(json[i].openCode.split(",")[Tools.parseInt(position)]);
-                    var name = value % 2 == 0 ? '<font style="color:#e70f0f;">双</font>' : '<font style="color:#58adff;">单</font>';
+                    var name = value % 2 == 0 ? '<font style="color:#e70f0f;border: 1px solid;margin-left: -9.5%;padding:0 2px;">双</font>' : '<font style="color:#58adff;border: 1px solid;margin-left: -9.5%;padding:0 2px;">单</font>';
                     var x = 0, y = 0;
 
                     if (result[Tools.parseInt(position)].ds.length != 0) {
@@ -102,7 +103,7 @@
 
 
                     var value = json[i].openCode.split(",")[Tools.parseInt(position)];
-                    var name = value >= 5 ? '<font style="color:#e70f0f;">大</font>' : '<font style="color:#58adff;">小</font>';
+                    var name = value >= 5 ? '<font style="color:#e70f0f;border: 1px solid;margin-left: -9.5%;padding:0 2px;">大</font>' : '<font style="color:#58adff;border: 1px solid;margin-left: -9.5%;padding:0 2px;">小</font>';
                     var xdx = 0, ydx = 0;
 
                     if (result[Tools.parseInt(position)].dx.length != 0) {
@@ -120,14 +121,11 @@
                         x: xdx,
                         y: ydx
                     });
-
-//                    maxdsY[position] = maxdsY[position] > y ? maxdsY[position] : y;
-//                    maxdxY[position] = maxdxY[position] > ydx ? maxdxY[position] : ydx;
                 }
 
 
                 // 单双
-                str += '<table style="width: 100%;color:#007ABE;background: #F9F7F4;height: 30px; font-size: 14px;"><tobody><th>'+ (position == 0 ? '第一球单双大小' : (position == 2 ? '第三球单双大小' : (position == 3 ? '第四球单双大小' : (position == 4 ? '第五球单双大小' : '第二球单双大小')))) +'<th></tobody></table>';
+                str += '<table style="width: 100%;color:#007ABE;background: #F9F7F4;height: 30px; font-size: 14px;"><tobody><th>' + (position == 0 ? '第一球单双大小' : (position == 2 ? '第三球单双大小' : (position == 3 ? '第四球单双大小' : (position == 4 ? '第五球单双大小' : '第二球单双大小')))) + '<th></tobody></table>';
                 str += '<table id="bottom_zs_table_' + position + '_ds" width="100%" border="0" class="resultLoad">';
                 str += '<tbody>';
 
@@ -139,21 +137,13 @@
                     if (value.x > maxX) {
                         maxX = value.x;
                     }
-//                    if (value.y > maxY) {
-//                       maxY = value.y;
-//                    }
                 });
 
-//                if(maxdsY[position] > maxdxY[position]){
-//                    maxY = maxdsY[position];
-//                }else{
-//                    maxY = maxdxY[position]
-//                }
 
                 for (var i = 0; i < maxY + 1; ++i) {
                     str += '<tr class="resultLoad">';
                     for (var j = 0; j < 52; ++j) {
-                        str += '<td>&nbsp;</td>';
+                        str += '<td style="width: 15px;">&nbsp;</td>';
                     }
                     str += '</tr>';
                 }
@@ -171,21 +161,12 @@
                     if (value.x > maxX) {
                         maxX = value.x;
                     }
-//                    if (value.y > maxY) {
-//                        maxY = value.y;
-//                    }
                 });
-
-//                if(maxdsY[position] > maxdxY[position]){
-//                    maxY = maxdsY[position];
-//                }else{
-//                    maxY = maxdxY[position]
-//                }
 
                 for (var i = 0; i < maxY + 1; ++i) {
                     str += '<tr class="resultLoad">';
                     for (var j = 0; j < 52; ++j) {
-                        str += '<td>&nbsp;</td>';
+                        str += '<td style="width:15px;">&nbsp;</td>';
                     }
                     str += '</tr>';
                 }
@@ -198,7 +179,7 @@
                         value += Tools.parseInt(tmpArr[j]);
                     }
 
-                    var name = value % 2 == 0 ? '<font style="color:#e70f0f;">双</font>' : '<font style="color:#58adff;">单</font>';
+                    var name = value % 2 == 0 ? '<font style="color:#e70f0f;border: 1px solid;margin-left: -9.5%;padding:0 2px;">双</font>' : '<font style="color:#58adff;border: 1px solid;margin-left: -9.5%;padding:0 2px;">单</font>';
                     var x = 0, y = 0;
 
                     if (result[5].ds.length != 0) {
@@ -216,7 +197,6 @@
                         x: x,
                         y: y
                     });
-//                    maxzhdsY[position] = maxzhdsY[position] > y ? maxzhdsY[position] : y;
                 }
 
                 for (var i = 0; i < json.length; ++i) {
@@ -224,7 +204,7 @@
                     for (var j = 0, tmpArr = json[i].openCode.split(","); j < tmpArr.length; ++j) {
                         value += Tools.parseInt(tmpArr[j]);
                     }
-                    var name = value >= 23 ? '<font style="color:#e70f0f;">大</font>' : '<font style="color:#58adff;">小</font>';
+                    var name = value >= 23 ? '<font style="color:#e70f0f;border: 1px solid;margin-left: -9.5%;padding:0 2px;">大</font>' : '<font style="color:#58adff;border: 1px solid;margin-left: -9.5%;padding:0 2px;">小</font>';
                     var x = 0, y = 0;
 
                     if (result[5].dx.length != 0) {
@@ -242,7 +222,6 @@
                         x: x,
                         y: y
                     });
-//                    maxzhdxY[position] = maxzhdxY[position] > y ? maxzhdxY[position] : y;
                 }
 
                 // 单双
@@ -251,27 +230,18 @@
                 str += '<tbody>';
 
 
-                var maxX = 30;
                 var maxY = 5;
+                var maxX = 30;
                 $.each(result[5].ds, function (index, value) {
                     if (value.x > maxX) {
                         maxX = value.x;
                     }
-//                    if (value.y > maxY) {
-//                        maxY = value.y;
-//                    }
                 });
-
-//                if(maxzhdsY[position] > maxzhdxY[position]){
-//                    maxY = maxzhdsY[position];
-//                }else{
-//                    maxY = maxzhdxY[position];
-//                }
 
                 for (var i = 0; i < maxY + 1; ++i) {
                     str += '<tr class="resultLoad">';
                     for (var j = 0; j < 52; ++j) {
-                        str += '<td>&nbsp;</td>';
+                        str += '<td style="width:15px;">&nbsp;</td>';
                     }
                     str += '</tr>';
                 }
@@ -290,21 +260,12 @@
                     if (value.x > maxX) {
                         maxX = value.x;
                     }
-//                    if (value.y > maxY) {
-//                        maxY = value.y;
-//                    }
                 });
-
-//                if(maxzhdsY[position] > maxzhdxY[position]){
-//                    maxY = maxzhdsY[position];
-//                }else{
-//                    maxY = maxzhdxY[position];
-//                }
 
                 for (var i = 0; i < maxY + 1; ++i) {
                     str += '<tr class="resultLoad">';
                     for (var j = 0; j < 52; ++j) {
-                        str += '<td>&nbsp;</td>';
+                        str += '<td style="width:15px;">&nbsp;</td>';
                     }
                     str += '</tr>';
                 }
@@ -314,29 +275,46 @@
         });
 
         $("#bottom_zs_table_content").html(str);
+        var flagdx = new Array();
+        var y_flag = 0;
+        for (var x = 0; x < 52; x++) {
+            flagdx[x] = new Array();
+            for (var y = 0; y < 6; y++) {
+                flagdx[x][y] = 0;
+            }
+        }
+
         for (var i = 0; i < 6; ++i) {
             var value = result[i];
             var col_x = 0;
             var col_x_dx = 0;
             var pre = i == 5 ? 'zh' : i;
             $.each(value.ds, function (index, value) {
-                if(value.y >= 5){
+                if (value.y >= 5) {
                     $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(5).find("td").eq(value.x + col_x).html(value.name);
                     col_x++;
-                }else{
+                } else {
                     col_x = 0;
                     $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(value.y).find("td").eq(value.x).html(value.name);
                 }
 
             });
             $.each(value.dx, function (index, value) {
-                if(value.y >= 5){
+//                if (value.y >= 5) {
+//                    flagdx[value.x][value.y] = 1; //记录超过六行的标记
+//                    col_x_dx++;
+//                }else{
+//                    col_x_dx = 0;
+//                }
+
+                if (value.y >= 5) {
                     $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(5).find("td").eq(value.x + col_x_dx).html(value.name);
                     col_x_dx++;
-                }else{
+                } else {
                     col_x_dx = 0;
                     $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(value.y).find("td").eq(value.x).html(value.name);
                 }
+
             });
         }
     }
