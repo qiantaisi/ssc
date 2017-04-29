@@ -20,7 +20,7 @@
         <img src="${resPath}img/ico18.png" alt="">北京PK10</a><i class="i0">5分钟一期 快速</i>
     </li>
     <li><a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">
-        <img src="${resPath}img/jspk10.png" alt="">极速赛车</a><i class="i0">分分PK10</i>
+        <img src="${resPath}img/jspk10.png" alt="">极速PK10</a><i class="i0">分分PK10</i>
     </li>
     <li><a href="javascript:void(0)" onclick="openGcdt('gcdt/jsk3')">
         <img src="${resPath}img/jsk3.png" alt="">江苏快3</a><i class="i0">最火快3</i>
@@ -29,7 +29,7 @@
         <img src="${resPath}img/xyft.png" alt="">幸运飞艇</a><i class="i0">激情飞艇 快速</i>
     </li>
     <li><a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')">
-        <img src="${resPath}img/ahk3.png" alt="">安徽快3</a><i class="i">10分钟一期</i>
+        <img src="${resPath}img/ahk3.png" alt="">安徽快3</a><i class="i0">10分钟一期</i>
     </li>
     <%--<li><a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')">--%>
         <%--<img src="${resPath}img/sfssc.png" alt="">三分时时彩</a><i class="i0">三分钟一期</i>--%>
@@ -83,7 +83,7 @@
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')">安徽快3</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/jlk3')">吉林快3</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/sflhc')">10分六合彩</a>
-            <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速赛车</a>
+            <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速PK10</a>
         </strong>
     </div>
 </div>
@@ -130,7 +130,7 @@
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/hbk3')">湖北快3</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')">安徽快3</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/jlk3')">吉林快3</a>
-            <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速赛车</a>
+            <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速PK10</a>
         </strong>
     </div>
 </div>

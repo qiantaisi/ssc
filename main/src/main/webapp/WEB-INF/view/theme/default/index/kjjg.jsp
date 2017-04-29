@@ -68,7 +68,7 @@
                         <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="19">湖北快3</a>
                         <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="20">安徽快3</a>
                         <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="21">吉林快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="23" class="last">极速赛车</a>
+                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="23" class="last">极速PK10</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_2">
@@ -91,7 +91,7 @@
                         <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="20">安徽快3</a>
                         <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="21">吉林快3</a>
                         <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="22">10分六合彩</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="23">极速赛车</a>
+                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="23">极速PK10</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide" id="subNav_3">
@@ -154,7 +154,7 @@
                             <option value="19">湖北快3</option>
                             <option value="20">安徽快3</option>
                             <option value="21">吉林快3</option>
-                            <option value="23">极速赛车</option>
+                            <option value="23">极速PK10</option>
                         </select>
                         <input class="inp1" type="text" name="qihao" placeholder="输入期数"/>
                         <input class="inp2" type="submit" onclick="sousuokjhm()" value="搜索" name="" />
@@ -1656,7 +1656,7 @@
             <var class="no"></var>
             {{/if}}
             <div class="text">
-                <h3>极速赛车<span>第{{number}}期</span></h3>
+                <h3>极速PK10<span>第{{number}}期</span></h3>
                 <p>每天1440期</p>
             </div>
         </div>
@@ -2113,7 +2113,7 @@
 </script>
 <script type="text/html" id="template_single_23">
     <li>
-        <span class="sp1">极速赛车</span>
+        <span class="sp1">极速PK10</span>
         <span class="sp2">{{number}}</span>
         <span class="sp3">{{openTime}}</span>
         <span class="sp4">

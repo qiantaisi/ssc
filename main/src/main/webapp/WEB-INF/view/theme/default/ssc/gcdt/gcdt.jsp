@@ -128,7 +128,7 @@
                     <img src="${resPath}img/jspk10.png" alt="">
                 </div>
                 <div class="text">
-                    <b>极速赛车</b>
+                    <b>极速PK10</b>
                     <p>第<i data-name="number"></i>期销售中</p>
                 </div>
             </div>

@@ -118,7 +118,7 @@
                         </li>
                         <li>
                             <h4><span><a href="<%=basePath%>help/rule/jspk10.html"><img src="${resPath}img/jspk10.png"/></a></span></h4>
-                            <a href="<%=basePath%>help/rule/jspk10.html"><p>极速赛车</br><span>极速赛车</span></p></a>
+                            <a href="<%=basePath%>help/rule/jspk10.html"><p>极速PK10</br><span>极速PK10</span></p></a>
                         </li>
                     </ul>
                 </div>
