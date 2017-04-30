@@ -1125,7 +1125,7 @@
 
 
         //遍历冠亚和大小写入表格中
-        for (var i = (dxZsLen - 32); i < dxZsLen; i++) {  //获取数组32长度
+        for (var i = (dxZsLen - 30); i < dxZsLen; i++) {  //获取数组32长度
             for (var k = 0; k < xStrDx[i].content_info.length; k++) {
                 if (xStrDx[i].content_info[k].flag_dx == '小') {
                     classFlag_dx = 'dishReload_small';

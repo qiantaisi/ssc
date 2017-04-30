@@ -32,23 +32,23 @@
                     </c:otherwise>
                 </c:choose>
                 <%--<div class="alert_log" style="z-index: 1000">--%>
-                    <%--<form onsubmit="login2();return false;">--%>
-                        <%--<h5><input type="text" id="loginAccount2"  placeholder="会员名"/></h5>--%>
-                        <%--<h5><input type="password" id="loginPassword2"  placeholder="密码"/></h5>--%>
-                        <%--<h5><input type="text" id="loginYzm2" class="yzm" onfocus="refreshYzm(document.getElementById('yzmImg2'))" /><img id="yzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=48&imgHeight=29&fontSize=30&imgFontHeight=23" alt="" /></h5>--%>
-                        <%--<h5><input type="submit" value="登录" class="sub"/><a href="<%=basePath%>register.html">立即注册</a></h5>--%>
-                        <%--<h3><a href="${kefuUrl}" target="_blank">忘记密码？</a></h3>--%>
-                    <%--</form>--%>
+                <%--<form onsubmit="login2();return false;">--%>
+                <%--<h5><input type="text" id="loginAccount2"  placeholder="会员名"/></h5>--%>
+                <%--<h5><input type="password" id="loginPassword2"  placeholder="密码"/></h5>--%>
+                <%--<h5><input type="text" id="loginYzm2" class="yzm" onfocus="refreshYzm(document.getElementById('yzmImg2'))" /><img id="yzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=48&imgHeight=29&fontSize=30&imgFontHeight=23" alt="" /></h5>--%>
+                <%--<h5><input type="submit" value="登录" class="sub"/><a href="<%=basePath%>register.html">立即注册</a></h5>--%>
+                <%--<h3><a href="${kefuUrl}" target="_blank">忘记密码？</a></h3>--%>
+                <%--</form>--%>
                 <%--</div>--%>
                 <%--<div class="alert_par">--%>
-                    <%--<ul>--%>
-                        <%--<li><h5><span><img src="${resPath}img/i1.png" /></span></h5><a href="javascript:void(0)">支付宝</a></li>--%>
-                        <%--<li><h5><span><img src="${resPath}img/i2.png" /></span></h5><a href="javascript:void(0)">QQ</a></li>--%>
-                        <%--<li><h5><span><img src="${resPath}img/i3.png" /></span></h5><a href="javascript:void(0)">新浪徽博</a></li>--%>
-                        <%--<li><h5><span><img src="${resPath}img/i4.png" /></span></h5><a href="javascript:void(0)">139邮箱</a></li>--%>
-                        <%--<li><h5><span><img src="${resPath}img/i5.png" /></span></h5><a href="javascript:void(0)">PPTV</a></li>--%>
-                        <%--<li><h5><span><img src="${resPath}img/i6.png" /></span></h5><a href="javascript:void(0)">纵横中文网</a></li>--%>
-                    <%--</ul>--%>
+                <%--<ul>--%>
+                <%--<li><h5><span><img src="${resPath}img/i1.png" /></span></h5><a href="javascript:void(0)">支付宝</a></li>--%>
+                <%--<li><h5><span><img src="${resPath}img/i2.png" /></span></h5><a href="javascript:void(0)">QQ</a></li>--%>
+                <%--<li><h5><span><img src="${resPath}img/i3.png" /></span></h5><a href="javascript:void(0)">新浪徽博</a></li>--%>
+                <%--<li><h5><span><img src="${resPath}img/i4.png" /></span></h5><a href="javascript:void(0)">139邮箱</a></li>--%>
+                <%--<li><h5><span><img src="${resPath}img/i5.png" /></span></h5><a href="javascript:void(0)">PPTV</a></li>--%>
+                <%--<li><h5><span><img src="${resPath}img/i6.png" /></span></h5><a href="javascript:void(0)">纵横中文网</a></li>--%>
+                <%--</ul>--%>
                 <%--</div>--%>
             </div>
         </div>
@@ -61,33 +61,33 @@
                         <div class="pay_list">
                             <h4>高频：</h4>
                             <p>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')">北京PK10</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速PK10</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xyft')">幸运飞艇</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">重庆时时彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')">天津时时彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xjssc')">新疆时时彩</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')">分分时时彩</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/efssc')">两分时时彩</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')">三分时时彩</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/wfssc')">五分时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">重庆时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')">天津时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xjssc')">新疆时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')">北京PK10</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xyft')">幸运飞艇</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/hbk3')">湖北快3</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')">安徽快3</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jsk3')">江苏快3</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jlk3')">吉林快3</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/kl8')">北京快乐8</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/klsf')">快乐十分</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xync')">幸运农场</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xy28')">幸运28</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jsk3')">江苏快3</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/hbk3')">湖北快3</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')">安徽快3</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jlk3')">吉林快3</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/sflhc')">10分六合彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速赛车</a></span>
+                                <!--  <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/sflhc')">十分六合彩</a></span> -->
                             </p>
                         </div>
                         <div class="pay_list">
                             <h4>低频：</h4>
                             <p>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">香港六合彩</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/fc3d')">福彩3D</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/pl3')">体彩排列3</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">香港六合彩</a></span>
                             </p>
                         </div>
                     </div>

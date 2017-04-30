@@ -375,27 +375,27 @@
                         <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank">重庆时时彩</a>
                         <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank">天津时时彩</a>
                         <a href="<%=basePath%>ssc/zst/xjssc.html" target="_blank">新疆时时彩</a>
-                        <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
-                        <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
-                        <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">广东快乐十分</a>
-                        <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">重庆幸运农场</a>
-                        <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
-                        <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
                         <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
                         <a href="<%=basePath%>ssc/zst/efssc.html" target="_blank">两分时时彩</a>
                         <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分时时彩</a>
                         <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">五分时时彩</a>
+                        <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
+                        <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK10</a>
+                        <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
                         <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">江苏快3</a>
                         <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">湖北快3</a>
                         <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">安徽快3</a>
-                        <%--<a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>--%>
-                        <%--<a href="<%=basePath%>ssc/zst/sflhc.html" target="_blank">10分六合彩</a>--%>
+                        <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>
+                        <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">幸运农场</a>
+                        <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
+                        <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
+                        <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
                     </p>
                     <p>
                         <span>低频彩</span>
+                        <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
                         <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">福彩3D</a>
                         <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">体彩排列3</a>
-                        <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
                     </p>
                 </div>
 
@@ -757,50 +757,46 @@
             module = '';
         }
 
-        var urlArr = module.split("/");
-        var idPl = getPlayGroupId(urlArr[1]);
-        var flag = getCaiZhongEnable(idPl);
-        if (idPl != 0 && flag == false) {
-            windowOpenBlank('<%=basePath%>ssc/index.html?module=tingcaipage');
-        } else {
-            windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);
-        }
+//        var urlArr = module.split("/");
+//        var idPl = getPlayGroupId(urlArr[1]);
+//        var flag = getCaiZhongEnable(idPl);
+        windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);
     }
 
-    function getCaiZhongEnable(playGroupId) {
-        var enable = '';
-        ajaxRequest({
-            url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
-            data: {
-                playGroupId: playGroupId
-            },
-            success: function (json) {
-                if (json.result != 1) {
-                    return;
-                }
+//    function getCaiZhongEnable(playGroupId) {
+//        var enable = '';
+//        ajaxRequest({
+//            url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
+//            data: {
+//                playGroupId: playGroupId
+//            },
+//            success: function (json) {
+//                if (json.result != 1) {
+//                    return;
+//                }
+//
+//                $.each(json.sscTimeList, function (index, value) {
+//                    var obj = $("#ssc_" + value.playGroupId);
+//
+//                    if ($(obj).length == 0) {
+//                        return;
+//                    }
+//
+//                    enable = $(obj).data("enable", value.enable);
+//
+//                });
+//            }
+//        });
+//        return enable;
+//    }
 
-                $.each(json.sscTimeList, function (index, value) {
-                    var obj = $("#ssc_" + value.playGroupId);
-
-                    if ($(obj).length == 0) {
-                        return;
-                    }
-
-                    enable = $(obj).data("enable", value.enable);
-
-                });
-            }
-        });
-        return enable;
-    }
-
-    function getPlayGroupId(param_url) {
-        var idPl = 0;
-        if (param_url == 'jlk3') {
-            idPl = 21;
-        }
-        return idPl;
-    }
+//    function getPlayGroupId(param_url) {
+//        var idPl = 0;
+//        if (param_url == 'jlk3') {
+//            idPl = 21;
+//        }
+//        return idPl;
+//    }
 
 
     function openZstIndex(module) {

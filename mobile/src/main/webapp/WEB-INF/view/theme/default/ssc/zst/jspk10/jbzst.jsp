@@ -15,7 +15,7 @@
     <div class="page page-current" id="page-zst-jbzst">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
-                <font>彩种列表</font>
+                <font>彩种切换</font>
                 <span class="icon icon-top-gcdt"></span>
             </a>
             <%--<a class="yxsm" href="<%=basePath%>ssc/kjjl/bqxq.html?playGroupId=1">--%>
@@ -24,13 +24,14 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">极速赛车</h1>
+            <h1 class="title">极速PK10</h1>
         </header>
         <div class="content cl-601 zst-cl-10">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="re-cl-602">
                     <a data-name="jb" href="javascript:void(0)" class="choose">基本走势</a>
                     <%--<a data-name="sm" href="javascript:void(0)" class="sm">双面走势</a>--%>
+                    <span class="goucai"><a id="blink" href="<%=basePath%>ssc/gcdt/jspk10.html">购彩</a></span>
                     <span class="gengduo">更多期数</span>
                 </div>
             </div>
@@ -321,9 +322,12 @@
         }
     }
 </script>
-
-
-
-
-
+<script language="javascript">
+    function changeColor() {
+        var color = "blue|red";
+        color = color.split("|");
+        document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
+    }
+    setInterval("changeColor()", 230);
+</script>
 <c:import url="../../../common/bodyEnd.jsp"/>

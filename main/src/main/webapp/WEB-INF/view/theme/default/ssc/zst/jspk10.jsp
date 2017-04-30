@@ -14,7 +14,7 @@
         <div class="main">
             <div class="main-box" style="width:2402px;">
                 <div class="main-nav">
-                    <div class="cplogo"><img src="${resPath}zst/img/jspk10.png" alt="极速赛车" /><span>极速赛车</span></div>
+                    <div class="cplogo"><img src="${resPath}zst/img/jspk10.png" alt="极速PK10" /><span>极速PK10</span></div>
                     <c:import url="common/nav.jsp" />
                     <ul class="btn-navs">
                         <li class="fff" data-contentid="zhexianData" data-id="shuju1">基本走势</li>
@@ -411,13 +411,13 @@
         // 基于准备好的dom，初始化echarts实例
         var myChart2 = echarts.init(document.getElementById('main2'));
         // 指定图表的配置项和数据
-        var subtext = "极速赛车";
+        var subtext = "极速PK10";
         if(data.length > 0) {
             subtext += " 第" + data[0].number + '期 ~ ' + "第" + data[data.length - 1].number + '期';
         }
         var option = {
             title: {
-                text: '极速赛车直方图',
+                text: '极速PK10直方图',
                 subtext: subtext,
                 x: 'center'
             },
@@ -528,13 +528,13 @@
         var myChart1 = echarts.init(document.getElementById('main1'));
 
         // 指定图表的配置项和数据
-        var subtext = "极速赛车";
+        var subtext = "极速PK10";
         if(data.length > 0) {
             subtext += " 第" + data[0].number + '期 ~ ' + "第" + data[data.length - 1].number + '期';
         }
         var option = {
             title: {
-                text: '极速赛车K线图',
+                text: '极速PK10K线图',
                 subtext: subtext,
                 x: 'center'
             },

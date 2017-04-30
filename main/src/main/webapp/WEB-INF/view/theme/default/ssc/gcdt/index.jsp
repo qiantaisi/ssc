@@ -1,4 +1,5 @@
 <%@ page import="org.apache.commons.lang3.StringUtils" %>
+<%@ page import="java.util.Date" %>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -8,11 +9,9 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
     String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("www.", "");
 %>
-<c:import url="../common/bodyStart.jsp"/>
-<c:import url="../common/checkIsChildFrame.jsp"/>
-<style>body {
-    overflow: hidden;
-}</style>
+<c:import url="../../common/bodyStart.jsp"/>
+<%--<c:import url="../../common/checkIsChildFrame.jsp"/>--%>
+<style>body{overflow:hidden;}</style>
 <div class="menu_left">
     <div class="logo">
         <img src="<%=basePath%>image/${logo.imageId}" alt="" onclick="window.location.href='<%=basePath%>'" style="cursor:pointer">
@@ -21,8 +20,15 @@
     <div class="list_menu">
         <ul>
             <li class="show">
-                <h2><a href="javascript:void(0)" onclick="getPage('<%=basePath%>ssc/gcdt.html')"><span><div
-                        class="pict"><var><img src="${resPath}img/ico3.png" alt=""></var></div></span><b>购彩大厅</b></a>
+                <h2>
+                    <a href="javascript:void(0)" onclick="getPage('<%=basePath%>ssc/gcdt.html')">
+                        <span>
+                            <div class="pict">
+                                <var><img src="${resPath}img/ico3.png" alt=""></var>
+                            </div>
+                        </span>
+                        <b>购彩大厅</b>
+                    </a>
                 </h2>
                 <a class="Refresh"></a>
             </li>
@@ -50,14 +56,18 @@
 
                         <h3 class="head-k3"><img src="${resPath}img/k3xl.png" alt=""><var>快3</var><i></i></h3>
                         <div class="xl-down xHide">
-                            <a href="javascript:void(0)" onclick="getSscPage('jsk3')"><img src="${resPath}img/jsk3.png"
-                                                                                           alt=""><var>江苏快3</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('hbk3')"><img src="${resPath}img/hbk3.png"
-                                                                                           alt=""><var>湖北快3</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('ahk3')"><img src="${resPath}img/ahk3.png"
-                                                                                           alt=""><var>安徽快3</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('jlk3')"><img src="${resPath}img/jlk3.png"
-                                                                                           alt=""><var>吉林快3</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('jsk3')">
+                                <img src="${resPath}img/jsk3.png" alt=""><var>江苏快3</var>
+                            </a>
+                            <a href="javascript:void(0)" onclick="getSscPage('hbk3')">
+                                <img src="${resPath}img/hbk3.png" alt=""><var>湖北快3</var>
+                            </a>
+                            <a href="javascript:void(0)" onclick="getSscPage('ahk3')">
+                                <img src="${resPath}img/ahk3.png" alt=""><var>安徽快3</var>
+                            </a>
+                            <a href="javascript:void(0)" onclick="getSscPage('jlk3')">
+                                <img src="${resPath}img/jlk3.png" alt=""><var>吉林快3</var>
+                            </a>
                         </div>
 
                         <!--<h3 class="head-lhc"><img src="${resPath}img/lhcxl.png" alt=""><var>六合彩系列</var><i></i></h3>
@@ -78,8 +88,17 @@
                 </div>
             </li>
             <li class="show">
-                <h2><span><div class="pict"><var><img src="${resPath}img/ico8.png"
-                                                      alt=""></var></div></span><b>高频彩</b><i></i></h2>
+                <h2>
+                    <span>
+                        <div class="pict">
+                            <var>
+                                <img src="${resPath}img/ico8.png" alt="">
+                            </var>
+                        </div>
+                    </span>
+                    <b>高频彩</b>
+                    <i></i>
+                </h2>
                 <div class="down">
                     <a href="javascript:void(0)" onclick="getSscPage('pk10')"><img src="${resPath}img/ico18.png" alt=""><var>北京PK10</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('jspk10')"><img src="${resPath}img/jspk10.png" alt=""><var>极速PK10</var></a>
@@ -161,14 +180,10 @@
                         <h2><a href="<%=basePath%>?u=<%=basePath%>help/index.html" target="_blank">帮助中心</a></h2>
                         <p>
                             <a href="<%=basePath%>?u=<%=basePath%>help/index.html?module=rule/cqssc" target="_blank">彩种介绍</a>
-                            <a href="<%=basePath%>?u=<%=basePath%>help/index.html?module=question"
-                               target="_blank">功能指引</a>
-                            <a href="<%=basePath%>?u=<%=basePath%>help/index.html?module=question"
-                               target="_blank">常见问题</a>
-                            <a href="<%=basePath%>?u=<%=basePath%>help/index.html?module=question"
-                               target="_blank">热点问题</a>
-                            <a href="<%=basePath%>?u=<%=basePath%>help/index.html?module=question"
-                               target="_blank">兑奖/领奖</a>
+                            <a href="<%=basePath%>?u=<%=basePath%>help/index.html?module=question" target="_blank">功能指引</a>
+                            <a href="<%=basePath%>?u=<%=basePath%>help/index.html?module=question" target="_blank">常见问题</a>
+                            <a href="<%=basePath%>?u=<%=basePath%>help/index.html?module=question" target="_blank">热点问题</a>
+                            <a href="<%=basePath%>?u=<%=basePath%>help/index.html?module=question" target="_blank">兑奖/领奖</a>
                         </p>
                     </li>
                     <li>
@@ -211,7 +226,8 @@
         </div>
     </div>
 </c:forEach>
-<c:import url="../common/commonJs.jsp"/>
+<c:import url="../../common/commonJs.jsp"/>
+<script src="${resPath}js/ccs/gcdt/gcdt.js?<%=(new Date()).getTime()%>"></script>
 <script>
     function showGonggao(id) {
         $("#gonggao_" + id).show();
@@ -493,28 +509,87 @@
         $("#rightContent").attr("src", url);
     }
     function getSscPage(url) {
-        getPage("<%=basePath%>ssc/gcdt/" + url + ".html");
+        var idPl = getPlayGroupId(url);
+        var flag = getCaiZhongEnable(idPl, function() {
+            getPage("<%=basePath%>ssc/gcdt/" + url + ".html");
+        });
     }
 
-    <%--function getCaiZhongEnable(playGroupId, callback) {--%>
-        <%--ajaxRequest({--%>
-            <%--url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",--%>
-            <%--data: {--%>
-                <%--playGroupId: playGroupId--%>
-            <%--},--%>
-            <%--success: function(json) {--%>
-                <%--if (json.result == -888) {  // 彩种已关闭--%>
-                    <%--$("#rightContent").attr("src", '<%=basePath%>ssc/tingcaipage.html');--%>
-                    <%--return;--%>
-                <%--}--%>
+    function getCaiZhongEnable(playGroupId, callback) {
+        ajaxRequest({
+            url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
+            data: {
+                playGroupId: playGroupId
+            },
+            success: function(json) {
+                if (json.result == -888) {  // 彩种已关闭
+                    $("#rightContent").attr("src", '<%=basePath%>ssc/tingcaipage.html');
+                    return;
+                }
 
-                <%--if (typeof callback == 'function') {--%>
-                    <%--callback();--%>
-                <%--}--%>
-            <%--}--%>
-        <%--});--%>
-    <%--}--%>
+                if (typeof callback == 'function') {
+                    callback();
+                }
+            }
+        });
+    }
 
+    function getZstPage(url) {
+        if (typeof url == 'undefined') {
+            url = 'index';
+        }
+        getPage("<%=basePath%>ssc/zst/" + url + ".html");
+    }
+
+    function getPlayGroupId(param_url){
+        var idPl = 0;
+        if(param_url == 'cqssc'){
+            idPl = 1;
+        }else if(param_url == 'tjssc'){
+            idPl = 2;
+        }else if(param_url == 'xjssc'){
+            idPl = 3;
+        }else if(param_url == 'pl3'){
+            idPl = 4;
+        }else if(param_url == 'fc3d'){
+            idPl = 5;
+        }else if(param_url == 'lhc'){
+            idPl = 6;
+        }else if(param_url == 'xy28'){
+            idPl = 7;
+        }else if(param_url == 'kl8'){
+            idPl = 8;
+        }else if(param_url == 'pk10'){
+            idPl = 9;
+        }else if(param_url == 'xync'){
+            idPl = 10;
+        }else if(param_url == 'klsf'){
+            idPl = 11;
+        }else if(param_url == 'sfssc'){
+            idPl = 13;
+        }else if(param_url == 'xyft'){
+            idPl = 14;
+        }else if(param_url == 'ffssc'){
+            idPl = 15;
+        }else if(param_url == 'efssc'){
+            idPl = 16;
+        }else if(param_url == 'wfssc'){
+            idPl = 17;
+        }else if(param_url == 'jsk3'){
+            idPl = 18;
+        }else if(param_url == 'hbk3'){
+            idPl = 19;
+        }else if(param_url == 'ahk3'){
+            idPl = 20;
+        }else if(param_url == 'jlk3'){
+            idPl = 21;
+        }else if(param_url == 'sflhc'){
+            idPl = 22;
+        }else if(param_url == 'jspk10'){
+            idPl = 23;
+        }
+        return idPl;
+    }
 
     function getUserSession() {
         ajaxRequest({
@@ -654,4 +729,4 @@
         windowOpen('<%=basePath%>member/index.html?module=' + module, '会员中心', 1250, 834);
     }
 </script>
-<c:import url="../common/bodyEnd.jsp"/>
+<c:import url="../../common/bodyEnd.jsp"/>

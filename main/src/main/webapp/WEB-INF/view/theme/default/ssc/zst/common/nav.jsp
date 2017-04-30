@@ -53,7 +53,7 @@
                         <a href="javascript:void(0)" onclick="getZstPage('sflhc')">10分六合彩</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" onclick="getZstPage('jspk10')">极速赛车</a>
+                        <a href="javascript:void(0)" onclick="getZstPage('jspk10')">极速PK10</a>
 
                     </li>
                 </ul>

@@ -10,11 +10,12 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <c:import url="../../../common/bodyStart.jsp"/>
+<c:import url="../../../common/commonJs.jsp"/>
 <div class="page-group">
     <div class="page page-current" id="page-zst-jbzst">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
-                <font>彩种列表</font>
+                <font>彩种切换</font>
                 <span class="icon icon-top-gcdt"></span>
             </a>
             <%--<a class="yxsm" href="<%=basePath%>ssc/kjjl/bqxq.html?playGroupId=1">--%>
@@ -30,6 +31,7 @@
                 <div class="re-cl-602">
                     <a data-name="jb" href="javascript:void(0)" class="choose">基本走势</a>
                     <a data-name="sm" href="javascript:void(0)" class="sm">双面走势</a>
+                    <span class="goucai"><a id="blink" href="<%=basePath%>ssc/gcdt/ffssc.html">购彩</a></span>
                     <span class="gengduo">更多期数</span>
                 </div>
             </div>
@@ -138,7 +140,7 @@
     <c:import url="../common/leftZstPanel.jsp"/>
     <c:import url="../../../common/rightPanel.jsp"/>
 </div>
-<c:import url="../../../common/commonJs.jsp"/>
+<%--<c:import url="../../../common/commonJs.jsp"/>--%>
 <script type="text/html" id="template_item">
     <div class="item">
         <span>{{number}}</span>
@@ -530,7 +532,7 @@
                     if (h == 5 && zhStr == '合') {
                         if(zhiHeStr == next_zhiHeStr){
                             sm_top_w = sm_spanH / 4 * 3.0 + sm_i * sm_spanH;
-                            sm_left_w = firstSpanW + twoSpanW + sm_spanW * 5 + 2 + 'px';
+                            sm_left_w = firstSpanW + twoSpanW + sm_spanW * 4.96 + 'px';
                         }else{
                             sm_top_w = sm_spanH / 4 * 2.9 + sm_i * sm_spanH;
                             sm_left_w = sm_spanW / 4 * 1.6 + firstSpanW + twoSpanW + sm_spanW * 4 + 'px';
@@ -770,5 +772,13 @@
             return flagStr = '合';
         }
     }
+</script>
+<script language="javascript">
+    function changeColor() {
+        var color = "blue|red";
+        color = color.split("|");
+        document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
+    }
+    setInterval("changeColor()", 230);
 </script>
 <c:import url="../../../common/bodyEnd.jsp"/>

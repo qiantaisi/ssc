@@ -47,42 +47,6 @@
             </div>
         </li>
 
-        <li id="ssc_9">
-            <div class="pro_name">
-                <div class="pict">
-                    <img src="${resPath}img/ico18.png" alt="">
-                </div>
-                <div class="text">
-                    <b>北京PK10</b>
-                    <p>第<i data-name="number"></i>期销售中</p>
-                </div>
-            </div>
-            <div class="Time at">
-                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
-                <div class="timer_wrap" data-name="time">
-                    <ol class="s">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="f">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="m">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                </div>
-                <p class="p1 bj28" data-name="lastOpenData">上期开奖</p>
-            </div>
-            <div class="Result">
-                <p>
-                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=9">历史开奖</a>
-                    <a onclick="getZstPage('pk10')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('pk10')">立即投注</a>
-                </p>
-            </div>
-        </li>
 
         <li id="ssc_1">
             <div class="pro_name">
@@ -121,13 +85,13 @@
             </div>
         </li>
 
-        <li id="ssc_18" class="ss_xclass">
+        <li id="ssc_9">
             <div class="pro_name">
                 <div class="pict">
-                    <img src="${resPath}img/jsk3.png" alt="">
+                    <img src="${resPath}img/ico18.png" alt="">
                 </div>
                 <div class="text">
-                    <b>江苏快3</b>
+                    <b>北京PK10</b>
                     <p>第<i data-name="number"></i>期销售中</p>
                 </div>
             </div>
@@ -147,25 +111,24 @@
                         <span class="sp2">0</span>
                     </ol>
                 </div>
-                <p class="p1" data-name="lastOpenData">上期开奖</p>
+                <p class="p1 bj28" data-name="lastOpenData">上期开奖</p>
             </div>
             <div class="Result">
                 <p>
-                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=18">历史开奖</a>
-                    <a onclick="getZstPage('jsk3')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('jsk3')">立即投注</a>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=9">历史开奖</a>
+                    <a onclick="getZstPage('pk10')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('pk10')">立即投注</a>
                 </p>
             </div>
         </li>
-
-        <li id="ssc_22" class="ss_xclass">
+        <li id="ssc_23" class="ss_xclass">
             <div class="pro_name">
                 <var class="xin_new ss_x_var"><img src="${resPath}img/xin_new.gif" alt="新上线" style="float:right;"></var>
                 <div class="pict">
-                    <img src="${resPath}img/sflhc.png" alt="">
+                    <img src="${resPath}img/jspk10.png" alt="">
                 </div>
                 <div class="text">
-                    <b>10分六合彩</b>
+                    <b>极速PK10</b>
                     <p>第<i data-name="number"></i>期销售中</p>
                 </div>
             </div>
@@ -185,124 +148,13 @@
                         <span class="sp2">0</span>
                     </ol>
                 </div>
-                <p class="p1" data-name="lastOpenData">上期开奖</p>
+                <p class="p1 bj28" data-name="lastOpenData">上期开奖</p>
             </div>
             <div class="Result">
                 <p>
-                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=22">历史开奖</a>
-                    <a onclick="getZstPage('sflhc')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('sflhc')">立即投注</a>
-                </p>
-            </div>
-        </li>
-
-        <li id="ssc_6">
-            <div class="pro_name">
-                <div class="pict">
-                    <img src="${resPath}img/ico17.png" alt="">
-                </div>
-                <div class="text">
-                    <b>香港六合彩</b>
-                    <p>第<i data-name="number"></i>期销售中</p>
-                </div>
-            </div>
-            <div class="Time at">
-                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
-                <div class="timer_wrap" data-name="time">
-                    <ol class="s">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="f">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="m">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                </div>
-                <p class="p1" data-name="lastOpenData">上期开奖</p>
-            </div>
-            <div class="Result">
-                <p>
-                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=6">历史开奖</a>
-                    <a onclick="getZstPage('lhc')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('lhc')">立即投注</a>
-                </p>
-            </div>
-        </li>
-
-        <li id="ssc_13" class="ss_xclass">
-            <div class="pro_name">
-                <div class="pict">
-                    <img src="${resPath}img/sfssc.png" alt="">
-                </div>
-                <div class="text">
-                    <b>三分时时彩</b>
-                    <p>第<i data-name="number"></i>期销售中</p>
-                </div>
-            </div>
-            <div class="Time at">
-                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
-                <div class="timer_wrap" data-name="time">
-                    <ol class="s">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="f">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="m">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                </div>
-                <p class="p1" data-name="lastOpenData">上期开奖</p>
-            </div>
-            <div class="Result">
-                <p>
-                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=13">历史开奖</a>
-                    <a onclick="getZstPage('sfssc')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('sfssc')">立即投注</a>
-                </p>
-            </div>
-        </li>
-
-        <li id="ssc_16" class="ss_xclass">
-            <div class="pro_name">
-                <div class="pict">
-                    <img src="${resPath}img/efssc.png" alt="">
-                </div>
-                <div class="text">
-                    <b>两分时时彩</b>
-                    <p>第<i data-name="number"></i>期销售中</p>
-                </div>
-            </div>
-            <div class="Time at">
-                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
-                <div class="timer_wrap" data-name="time">
-                    <ol class="s">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="f">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="m">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                </div>
-                <p class="p1" data-name="lastOpenData">上期开奖</p>
-            </div>
-            <div class="Result">
-                <p>
-                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=16">历史开奖</a>
-                    <a onclick="getZstPage('efssc')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('efssc')">立即投注</a>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=23">历史开奖</a>
+                    <a onclick="getZstPage('jspk10')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('jspk10')">立即投注</a>
                 </p>
             </div>
         </li>
@@ -340,6 +192,43 @@
                     <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=14">历史开奖</a>
                     <a onclick="getZstPage('xyft')" href="javascript:void(0)">开奖走势</a>
                     <a href="javascript:void(0)" class="acti" onclick="getSscPage('xyft')">立即投注</a>
+                </p>
+            </div>
+        </li>
+
+        <li id="ssc_6">
+            <div class="pro_name">
+                <div class="pict">
+                    <img src="${resPath}img/ico17.png" alt="">
+                </div>
+                <div class="text">
+                    <b>香港六合彩</b>
+                    <p>第<i data-name="number"></i>期销售中</p>
+                </div>
+            </div>
+            <div class="Time at">
+                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
+                <div class="timer_wrap" data-name="time">
+                    <ol class="s">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="f">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="m">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                </div>
+                <p class="p1" data-name="lastOpenData">上期开奖</p>
+            </div>
+            <div class="Result">
+                <p>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=6">历史开奖</a>
+                    <a onclick="getZstPage('lhc')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('lhc')">立即投注</a>
                 </p>
             </div>
         </li>
@@ -492,6 +381,43 @@
             </div>
         </li>
 
+        <li id="ssc_10">
+            <div class="pro_name">
+                <div class="pict">
+                    <img src="${resPath}img/ico29.png" alt="">
+                </div>
+                <div class="text">
+                    <b>重庆幸运农场</b>
+                    <p>第<i data-name="number"></i>期销售中</p>
+                </div>
+            </div>
+            <div class="Time at">
+                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
+                <div class="timer_wrap" data-name="time">
+                    <ol class="s">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="f">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="m">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                </div>
+                <p class="p1" data-name="lastOpenData">上期开奖</p>
+            </div>
+            <div class="Result">
+                <p>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=10">历史开奖</a>
+                    <a onclick="getZstPage('xync')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('xync')">立即投注</a>
+                </p>
+            </div>
+        </li>
+
         <li id="ssc_11">
             <div class="pro_name">
                 <div class="pict">
@@ -529,43 +455,6 @@
             </div>
         </li>
 
-        <li id="ssc_17" class="ss_xclass">
-            <div class="pro_name">
-                <div class="pict">
-                    <img src="${resPath}img/wfssc.png" alt="">
-                </div>
-                <div class="text">
-                    <b>五分时时彩</b>
-                    <p>第<i data-name="number"></i>期销售中</p>
-                </div>
-            </div>
-            <div class="Time at">
-                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
-                <div class="timer_wrap" data-name="time">
-                    <ol class="s">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="f">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="m">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                </div>
-                <p class="p1" data-name="lastOpenData">上期开奖</p>
-            </div>
-            <div class="Result">
-                <p>
-                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=17">历史开奖</a>
-                    <a onclick="getZstPage('wfssc')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('wfssc')">立即投注</a>
-                </p>
-            </div>
-        </li>
-
         <li id="ssc_7">
             <div class="pro_name">
                 <div class="pict">
@@ -599,43 +488,6 @@
                     <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=7">历史开奖</a>
                     <a onclick="getZstPage('xy28')" href="javascript:void(0)">开奖走势</a>
                     <a href="javascript:void(0)" class="acti" onclick="getSscPage('xy28')">立即投注</a>
-                </p>
-            </div>
-        </li>
-
-        <li id="ssc_10">
-            <div class="pro_name">
-                <div class="pict">
-                    <img src="${resPath}img/ico29.png" alt="">
-                </div>
-                <div class="text">
-                    <b>重庆幸运农场</b>
-                    <p>第<i data-name="number"></i>期销售中</p>
-                </div>
-            </div>
-            <div class="Time at">
-                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
-                <div class="timer_wrap" data-name="time">
-                    <ol class="s">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="f">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                    <ol class="m">
-                        <span class="sp1">0</span>
-                        <span class="sp2">0</span>
-                    </ol>
-                </div>
-                <p class="p1" data-name="lastOpenData">上期开奖</p>
-            </div>
-            <div class="Result">
-                <p>
-                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=10">历史开奖</a>
-                    <a onclick="getZstPage('xync')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('xync')">立即投注</a>
                 </p>
             </div>
         </li>
@@ -753,6 +605,153 @@
         </li>
 
 
+        <li id="ssc_16" class="ss_xclass">
+            <div class="pro_name">
+                <div class="pict">
+                    <img src="${resPath}img/efssc.png" alt="">
+                </div>
+                <div class="text">
+                    <b>两分时时彩</b>
+                    <p>第<i data-name="number"></i>期销售中</p>
+                </div>
+            </div>
+            <div class="Time at">
+                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
+                <div class="timer_wrap" data-name="time">
+                    <ol class="s">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="f">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="m">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                </div>
+                <p class="p1" data-name="lastOpenData">上期开奖</p>
+            </div>
+            <div class="Result">
+                <p>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=16">历史开奖</a>
+                    <a onclick="getZstPage('efssc')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('efssc')">立即投注</a>
+                </p>
+            </div>
+        </li>
+        <li id="ssc_13" class="ss_xclass">
+            <div class="pro_name">
+                <div class="pict">
+                    <img src="${resPath}img/sfssc.png" alt="">
+                </div>
+                <div class="text">
+                    <b>三分时时彩</b>
+                    <p>第<i data-name="number"></i>期销售中</p>
+                </div>
+            </div>
+            <div class="Time at">
+                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
+                <div class="timer_wrap" data-name="time">
+                    <ol class="s">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="f">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="m">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                </div>
+                <p class="p1" data-name="lastOpenData">上期开奖</p>
+            </div>
+            <div class="Result">
+                <p>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=13">历史开奖</a>
+                    <a onclick="getZstPage('sfssc')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('sfssc')">立即投注</a>
+                </p>
+            </div>
+        </li>
+
+        <li id="ssc_17" class="ss_xclass">
+            <div class="pro_name">
+                <div class="pict">
+                    <img src="${resPath}img/wfssc.png" alt="">
+                </div>
+                <div class="text">
+                    <b>五分时时彩</b>
+                    <p>第<i data-name="number"></i>期销售中</p>
+                </div>
+            </div>
+            <div class="Time at">
+                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
+                <div class="timer_wrap" data-name="time">
+                    <ol class="s">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="f">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="m">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                </div>
+                <p class="p1" data-name="lastOpenData">上期开奖</p>
+            </div>
+            <div class="Result">
+                <p>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=17">历史开奖</a>
+                    <a onclick="getZstPage('wfssc')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('wfssc')">立即投注</a>
+                </p>
+            </div>
+        </li>
+
+        <li id="ssc_18" class="ss_xclass">
+            <div class="pro_name">
+                <div class="pict">
+                    <img src="${resPath}img/jsk3.png" alt="">
+                </div>
+                <div class="text">
+                    <b>江苏快3</b>
+                    <p>第<i data-name="number"></i>期销售中</p>
+                </div>
+            </div>
+            <div class="Time at">
+                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
+                <div class="timer_wrap" data-name="time">
+                    <ol class="s">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="f">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="m">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                </div>
+                <p class="p1" data-name="lastOpenData">上期开奖</p>
+            </div>
+            <div class="Result">
+                <p>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=18">历史开奖</a>
+                    <a onclick="getZstPage('jsk3')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('jsk3')">立即投注</a>
+                </p>
+            </div>
+        </li>
+
         <li id="ssc_21" class="ss_xclass">
             <div class="pro_name">
                 <div class="pict">
@@ -790,14 +789,13 @@
             </div>
         </li>
 
-        <li id="ssc_23" class="ss_xclass">
+        <!--<li id="ssc_22">
             <div class="pro_name">
-                <var class="xin_new ss_x_var"><img src="${resPath}img/xin_new.gif" alt="新上线" style="float:right;"></var>
                 <div class="pict">
-                    <img src="${resPath}img/jspk10.png" alt="">
+                    <img src="${resPath}img/sflhc.png" alt="">
                 </div>
                 <div class="text">
-                    <b>极速赛车</b>
+                    <b>十分六合彩</b>
                     <p>第<i data-name="number"></i>期销售中</p>
                 </div>
             </div>
@@ -817,16 +815,16 @@
                         <span class="sp2">0</span>
                     </ol>
                 </div>
-                <p class="p1 bj28" data-name="lastOpenData">上期开奖</p>
+                <p class="p1" data-name="lastOpenData">上期开奖</p>
             </div>
             <div class="Result">
                 <p>
-                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=23">历史开奖</a>
-                    <a onclick="getZstPage('jspk10')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('jspk10')">立即投注</a>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=22">历史开奖</a>
+                    <a onclick="getZstPage('sflhc')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('sflhc')">立即投注</a>
                 </p>
             </div>
-        </li>
+        </li>-->
 
     </ul>
 </div>
@@ -838,7 +836,7 @@
         if (typeof url == 'undefined') {
             url = 'index';
         }
-       window.open("<%=basePath%>ssc/zst/" + url + ".html?type=1");
+        window.open("<%=basePath%>ssc/zst/" + url + ".html?type=1");
     }
 
     function getSscPage(url) {
@@ -1111,111 +1109,111 @@
     <%--&lt;%&ndash;}&ndash;%&gt;--%>
 
     <%--function renderOpenTimeHtml() {--%>
-        <%--$("#ssc_list ul li").each(function () {--%>
-            <%--var lastNumber = $(this).data("last_number");--%>
-            <%--var number = $(this).data("number");--%>
-            <%--var lastOpenData = $(this).data("last_open_data");--%>
-            <%--var lastOpenTime = $(this).data("last_open_time");--%>
-            <%--var leftTime = $(this).data("left_time");--%>
-            <%--var playGroupId = $(this).data("play_group_id");--%>
+    <%--$("#ssc_list ul li").each(function () {--%>
+    <%--var lastNumber = $(this).data("last_number");--%>
+    <%--var number = $(this).data("number");--%>
+    <%--var lastOpenData = $(this).data("last_open_data");--%>
+    <%--var lastOpenTime = $(this).data("last_open_time");--%>
+    <%--var leftTime = $(this).data("left_time");--%>
+    <%--var playGroupId = $(this).data("play_group_id");--%>
 
-            <%--var time = 0;--%>
-            <%--var str;--%>
+    <%--var time = 0;--%>
+    <%--var str;--%>
 
-            <%--time = Tools.parseInt(leftTime);--%>
-            <%--if (playGroupId == 3 || playGroupId == 14) {--%>
-                <%--number = number.substr(8);--%>
-            <%--}--%>
-            <%--if(typeof number != 'undefined' && !number && number != null){--%>
-                <%--str = number.replace(dateFormat(new Date(), "yyyymmdd"), "") + "期已开盘，欢迎投注。距下期还有:";--%>
-            <%--}--%>
+    <%--time = Tools.parseInt(leftTime);--%>
+    <%--if (playGroupId == 3 || playGroupId == 14) {--%>
+    <%--number = number.substr(8);--%>
+    <%--}--%>
+    <%--if(typeof number != 'undefined' && !number && number != null){--%>
+    <%--str = number.replace(dateFormat(new Date(), "yyyymmdd"), "") + "期已开盘，欢迎投注。距下期还有:";--%>
+    <%--}--%>
 
-            <%--$(this).data("left_time", time - 1);--%>
+    <%--$(this).data("left_time", time - 1);--%>
 
-            <%--if (isNaN(time) || time <= 0) {--%>
-                <%--return;--%>
-            <%--}--%>
+    <%--if (isNaN(time) || time <= 0) {--%>
+    <%--return;--%>
+    <%--}--%>
 
-            <%--var hour = Math.floor(time / 60 / 60);--%>
-            <%--time -= hour * 60 * 60;--%>
-            <%--var minute = Math.floor(time / 60);--%>
-            <%--time -= minute * 60;--%>
-            <%--var second = time;--%>
+    <%--var hour = Math.floor(time / 60 / 60);--%>
+    <%--time -= hour * 60 * 60;--%>
+    <%--var minute = Math.floor(time / 60);--%>
+    <%--time -= minute * 60;--%>
+    <%--var second = time;--%>
 
-            <%--var timeHtml = "";--%>
-            <%--timeHtml += '<ol class="s">';--%>
-            <%--timeHtml += '<span class="sp1">' + (Math.floor(hour / 10)) + '</span>';--%>
-            <%--timeHtml += '<span class="sp2">' + (hour % 10) + '</span>';--%>
-            <%--timeHtml += '</ol>';--%>
-            <%--timeHtml += '<ol class="f">';--%>
-            <%--timeHtml += '<span class="sp1">' + (Math.floor(minute / 10)) + '</span>';--%>
-            <%--timeHtml += '<span class="sp2">' + (minute % 10) + '</span>';--%>
-            <%--timeHtml += '</ol>';--%>
-            <%--timeHtml += '<ol class="m">';--%>
-            <%--timeHtml += '<span class="sp1">' + (Math.floor(second / 10)) + '</span>';--%>
-            <%--timeHtml += '<span class="sp2">' + (second % 10) + '</span>';--%>
-            <%--timeHtml += '</ol>';--%>
-            <%--$(this).find('[data-name="time"]').html(timeHtml);--%>
-            <%--$(this).find('[data-name="number"]').html(number);--%>
-            <%--$(this).find('[data-name="tip"]').html(str);--%>
+    <%--var timeHtml = "";--%>
+    <%--timeHtml += '<ol class="s">';--%>
+    <%--timeHtml += '<span class="sp1">' + (Math.floor(hour / 10)) + '</span>';--%>
+    <%--timeHtml += '<span class="sp2">' + (hour % 10) + '</span>';--%>
+    <%--timeHtml += '</ol>';--%>
+    <%--timeHtml += '<ol class="f">';--%>
+    <%--timeHtml += '<span class="sp1">' + (Math.floor(minute / 10)) + '</span>';--%>
+    <%--timeHtml += '<span class="sp2">' + (minute % 10) + '</span>';--%>
+    <%--timeHtml += '</ol>';--%>
+    <%--timeHtml += '<ol class="m">';--%>
+    <%--timeHtml += '<span class="sp1">' + (Math.floor(second / 10)) + '</span>';--%>
+    <%--timeHtml += '<span class="sp2">' + (second % 10) + '</span>';--%>
+    <%--timeHtml += '</ol>';--%>
+    <%--$(this).find('[data-name="time"]').html(timeHtml);--%>
+    <%--$(this).find('[data-name="number"]').html(number);--%>
+    <%--$(this).find('[data-name="tip"]').html(str);--%>
 
-            <%--var lastOpenDataHtml = "";--%>
-            <%--if(typeof lastOpenData != 'undefined' && !lastOpenData && lastOpenData != null){--%>
-                <%--var tmpArr = lastOpenData.split(",");--%>
+    <%--var lastOpenDataHtml = "";--%>
+    <%--if(typeof lastOpenData != 'undefined' && !lastOpenData && lastOpenData != null){--%>
+    <%--var tmpArr = lastOpenData.split(",");--%>
 
-                <%--if (playGroupId == 6) {--%>
-                    <%--for (var i = 0; i < tmpArr.length && i < 20; ++i) {--%>
-                        <%--var c = getBose(tmpArr[i]);--%>
-                        <%--if (c == 0) {--%>
-                            <%--c = 'ball-red';--%>
-                        <%--} else if (c == 1) {--%>
-                            <%--c = 'ball-blue';--%>
-                        <%--} else {--%>
-                            <%--c = 'ball-green';--%>
-                        <%--}--%>
-                        <%--if (i == tmpArr.length - 1) {--%>
-                            <%--lastOpenDataHtml += '<i style="color:black; background: white;">+</i>';--%>
-                            <%--lastOpenDataHtml += '<i class="round ' + c + '">' + tmpArr[i] + '</i>';--%>
-                        <%--} else {--%>
-                            <%--lastOpenDataHtml += '<i class="round ' + c + '">' + tmpArr[i] + '</i>';--%>
-                        <%--}--%>
+    <%--if (playGroupId == 6) {--%>
+    <%--for (var i = 0; i < tmpArr.length && i < 20; ++i) {--%>
+    <%--var c = getBose(tmpArr[i]);--%>
+    <%--if (c == 0) {--%>
+    <%--c = 'ball-red';--%>
+    <%--} else if (c == 1) {--%>
+    <%--c = 'ball-blue';--%>
+    <%--} else {--%>
+    <%--c = 'ball-green';--%>
+    <%--}--%>
+    <%--if (i == tmpArr.length - 1) {--%>
+    <%--lastOpenDataHtml += '<i style="color:black; background: white;">+</i>';--%>
+    <%--lastOpenDataHtml += '<i class="round ' + c + '">' + tmpArr[i] + '</i>';--%>
+    <%--} else {--%>
+    <%--lastOpenDataHtml += '<i class="round ' + c + '">' + tmpArr[i] + '</i>';--%>
+    <%--}--%>
 
-                    <%--}--%>
-                    <%--$(this).find('[data-name="lastOpenData"]').html(lastOpenDataHtml);--%>
-                <%--} else if (playGroupId == 9 || playGroupId == 14) {--%>
-                    <%--lastOpenDataHtml = "";--%>
-                    <%--for (var i = 0; i < tmpArr.length && i < 20; ++i) {--%>
-                        <%--lastOpenDataHtml += '<i class="fang bg-' + Tools.parseInt(tmpArr[i]) + '">' + tmpArr[i] + '</i>';--%>
-                    <%--}--%>
-                    <%--$(this).find('[data-name="lastOpenData"]').html(lastOpenDataHtml);--%>
-                <%--} else {--%>
-                    <%--if (tmpArr.length > 7) {--%>
-                        <%--lastOpenDataHtml = "";--%>
-                    <%--}--%>
-                    <%--for (var i = 0; i < tmpArr.length && i < 20; ++i) {--%>
-                        <%--lastOpenDataHtml += '<i>' + tmpArr[i] + '</i>';--%>
-                    <%--}--%>
-                    <%--if (tmpArr.length <= 5) {--%>
-                        <%--$(this).find('[data-name="lastOpenData"]').html("上期开奖" + lastOpenDataHtml);--%>
-                    <%--} else {--%>
-                        <%--$(this).find('[data-name="lastOpenData"]').html(lastOpenDataHtml);--%>
-                    <%--}--%>
-                <%--}--%>
-            <%--}--%>
+    <%--}--%>
+    <%--$(this).find('[data-name="lastOpenData"]').html(lastOpenDataHtml);--%>
+    <%--} else if (playGroupId == 9 || playGroupId == 14) {--%>
+    <%--lastOpenDataHtml = "";--%>
+    <%--for (var i = 0; i < tmpArr.length && i < 20; ++i) {--%>
+    <%--lastOpenDataHtml += '<i class="fang bg-' + Tools.parseInt(tmpArr[i]) + '">' + tmpArr[i] + '</i>';--%>
+    <%--}--%>
+    <%--$(this).find('[data-name="lastOpenData"]').html(lastOpenDataHtml);--%>
+    <%--} else {--%>
+    <%--if (tmpArr.length > 7) {--%>
+    <%--lastOpenDataHtml = "";--%>
+    <%--}--%>
+    <%--for (var i = 0; i < tmpArr.length && i < 20; ++i) {--%>
+    <%--lastOpenDataHtml += '<i>' + tmpArr[i] + '</i>';--%>
+    <%--}--%>
+    <%--if (tmpArr.length <= 5) {--%>
+    <%--$(this).find('[data-name="lastOpenData"]').html("上期开奖" + lastOpenDataHtml);--%>
+    <%--} else {--%>
+    <%--$(this).find('[data-name="lastOpenData"]').html(lastOpenDataHtml);--%>
+    <%--}--%>
+    <%--}--%>
+    <%--}--%>
 
-        <%--});--%>
+    <%--});--%>
     <%--}--%>
     <%--$(function () {--%>
-        <%--getAllOpenTime();--%>
-        <%--setInterval(function () {--%>
-            <%--getAllOpenTime();--%>
-        <%--}, 10000);--%>
+    <%--getAllOpenTime();--%>
+    <%--setInterval(function () {--%>
+    <%--getAllOpenTime();--%>
+    <%--}, 10000);--%>
 
-        <%--setInterval(function () {--%>
-            <%--renderOpenTimeHtml();--%>
-        <%--}, 1000);--%>
+    <%--setInterval(function () {--%>
+    <%--renderOpenTimeHtml();--%>
+    <%--}, 1000);--%>
 
-        <%--parent.layer.closeAll();--%>
+    <%--parent.layer.closeAll();--%>
     <%--});--%>
 </script>
 <c:import url="../../common/bodyEnd.jsp"/>
