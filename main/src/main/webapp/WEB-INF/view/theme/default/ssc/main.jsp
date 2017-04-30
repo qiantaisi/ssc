@@ -497,87 +497,28 @@
         $("#rightContent").attr("src", url);
     }
     function getSscPage(url) {
-        var idPl = getPlayGroupId(url);
-        var flag = getCaiZhongEnable(idPl, function() {
-            getPage("<%=basePath%>ssc/gcdt/" + url + ".html");
-        });
+        getPage("<%=basePath%>ssc/gcdt/" + url + ".html");
     }
 
-    function getCaiZhongEnable(playGroupId, callback) {
-        ajaxRequest({
-            url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
-            data: {
-                playGroupId: playGroupId
-            },
-            success: function(json) {
-                if (json.result == -888) {  // 彩种已关闭
-                    $("#rightContent").attr("src", '<%=basePath%>ssc/tingcaipage.html');
-                    return;
-                }
+    <%--function getCaiZhongEnable(playGroupId, callback) {--%>
+        <%--ajaxRequest({--%>
+            <%--url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",--%>
+            <%--data: {--%>
+                <%--playGroupId: playGroupId--%>
+            <%--},--%>
+            <%--success: function(json) {--%>
+                <%--if (json.result == -888) {  // 彩种已关闭--%>
+                    <%--$("#rightContent").attr("src", '<%=basePath%>ssc/tingcaipage.html');--%>
+                    <%--return;--%>
+                <%--}--%>
 
-                if (typeof callback == 'function') {
-                    callback();
-                }
-            }
-        });
-    }
+                <%--if (typeof callback == 'function') {--%>
+                    <%--callback();--%>
+                <%--}--%>
+            <%--}--%>
+        <%--});--%>
+    <%--}--%>
 
-    function getZstPage(url) {
-        if (typeof url == 'undefined') {
-            url = 'index';
-        }
-        getPage("<%=basePath%>ssc/zst/" + url + ".html");
-    }
-
-    function getPlayGroupId(param_url){
-        var idPl = 0;
-        if(param_url == 'cqssc'){
-            idPl = 1;
-        }else if(param_url == 'tjssc'){
-            idPl = 2;
-        }else if(param_url == 'xjssc'){
-            idPl = 3;
-        }else if(param_url == 'pl3'){
-            idPl = 4;
-        }else if(param_url == 'fc3d'){
-            idPl = 5;
-        }else if(param_url == 'lhc'){
-            idPl = 6;
-        }else if(param_url == 'xy28'){
-            idPl = 7;
-        }else if(param_url == 'kl8'){
-            idPl = 8;
-        }else if(param_url == 'pk10'){
-            idPl = 9;
-        }else if(param_url == 'xync'){
-            idPl = 10;
-        }else if(param_url == 'klsf'){
-            idPl = 11;
-        }else if(param_url == 'sfssc'){
-            idPl = 13;
-        }else if(param_url == 'xyft'){
-            idPl = 14;
-        }else if(param_url == 'ffssc'){
-            idPl = 15;
-        }else if(param_url == 'efssc'){
-            idPl = 16;
-        }else if(param_url == 'wfssc'){
-            idPl = 17;
-        }else if(param_url == 'jsk3'){
-            idPl = 18;
-        }else if(param_url == 'hbk3'){
-            idPl = 19;
-        }else if(param_url == 'ahk3'){
-            idPl = 20;
-        }else if(param_url == 'jlk3'){
-            idPl = 21;
-        }else if(param_url == 'sflhc'){
-            idPl = 22;
-        }else if(param_url == 'jspk10'){
-            idPl = 23;
-        }
-        return idPl;
-    }
 
     function getUserSession() {
         ajaxRequest({
