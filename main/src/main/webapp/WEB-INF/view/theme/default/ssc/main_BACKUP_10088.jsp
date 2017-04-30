@@ -81,6 +81,46 @@
                 <h2><span><div class="pict"><var><img src="${resPath}img/ico8.png"
                                                       alt=""></var></div></span><b>高频彩</b><i></i></h2>
                 <div class="down">
+<<<<<<< HEAD
+                    <a href="javascript:void(0)" onclick="getSscPage('ffssc')"><img src="${resPath}img/ffssc.png"
+                                                                                    alt=""><var>分分时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('efssc')"><img src="${resPath}img/efssc.png"
+                                                                                    alt=""><var>两分时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('sfssc')"><img src="${resPath}img/sfssc.png"
+                                                                                    alt=""><var>三分时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('wfssc')"><img src="${resPath}img/wfssc.png"
+                                                                                    alt=""><var>五分时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('cqssc')"><img src="${resPath}img/ico16.png"
+                                                                                    alt=""><var>重庆时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('pk10')"><img src="${resPath}img/ico18.png"
+                                                                                   alt=""><var>北京PK10</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('xyft')"><img src="${resPath}img/xyft.png"
+                                                                                   alt=""><var>幸运飞艇</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('xjssc')"><img src="${resPath}img/ico28.png"
+                                                                                    alt=""><var>新疆时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('jsk3')"><img src="${resPath}img/jsk3.png"
+                                                                                   alt=""><var>江苏快3</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('bjk3')"><img src="${resPath}img/hbk3.png"
+                                                                                   alt=""><var>湖北快3</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('ahk3')"><img src="${resPath}img/ahk3.png"
+                                                                                   alt=""><var>安徽快3</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('jlk3')"><img src="${resPath}img/jlk3.png"
+                                                                                   alt=""><var>吉林快3</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('klsf')"><img src="${resPath}img/ico26.png"
+                                                                                   alt=""><var>广东快乐十分</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('xync')"><img src="${resPath}img/ico29.png"
+                                                                                   alt=""><var>重庆幸运农场</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('tjssc')"><img src="${resPath}img/ico27.png"
+                                                                                    alt=""><var>天津时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('xy28')"><img src="${resPath}img/ico30.png"
+                                                                                   alt=""><var>幸运28</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('kl8')"><img src="${resPath}img/ico25.png"
+                                                                                  alt=""><var>北京快乐8</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('sflhc')"><img src="${resPath}img/sflhc.png"
+                                                                                  alt=""><var>10分六合彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('jspk10')"><img src="${resPath}img/jspk10.png"
+                                                                                     alt=""><var>极速PK10</var></a>
+=======
                     <a href="javascript:void(0)" onclick="getSscPage('pk10')"><img src="${resPath}img/ico18.png" alt=""><var>北京PK10</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('jspk10')"><img src="${resPath}img/jspk10.png" alt=""><var>极速PK10</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('xyft')"><img src="${resPath}img/xyft.png" alt=""><var>幸运飞艇</var></a>
@@ -100,15 +140,24 @@
                     <a href="javascript:void(0)" onclick="getSscPage('sfssc')"><img src="${resPath}img/sfssc.png" alt=""><var>三分时时彩</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('wfssc')"><img src="${resPath}img/wfssc.png" alt=""><var>五分时时彩</var></a>
                     <!--<a href="javascript:void(0)" onclick="getSscPage('sflhc')"><img src="${resPath}img/sflhc.png" alt=""><var>十分六合彩</var></a>-->
+>>>>>>> 65461c379eccbd18c2cfdcc46a5c7b98e28b78a6
                 </div>
             </li>
             <li class="show">
-                <h2><span><div class="pict"><var><img src="${resPath}img/ico9.png"
-                                                      alt=""></var></div></span><b>低频彩</b><i></i></h2>
+                <h2><span><div class="pict"><var><img src="${resPath}img/ico9.png" alt=""></var></div></span><b>低频彩</b><i></i></h2>
                 <div class="down">
+<<<<<<< HEAD
+                    <a href="javascript:void(0)" onclick="getSscPage('lhc')"><img src="${resPath}img/ico17.png"
+                                                                                  alt=""><var>香港六合彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('fc3d')"><img src="${resPath}img/ico24.png"
+                                                                                   alt=""><var>福彩3D</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('pl3')"><img src="${resPath}img/ico20.png"
+                                                                                  alt=""><var>体彩排列3</var></a>
+=======
                     <a href="javascript:void(0)" onclick="getSscPage('lhc')"><img src="${resPath}img/ico17.png" alt=""><var>香港六合彩</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('fc3d')"><img src="${resPath}img/ico24.png" alt=""><var>福彩3D</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('pl3')"><img src="${resPath}img/ico20.png" alt=""><var>体彩排列3</var></a>
+>>>>>>> 65461c379eccbd18c2cfdcc46a5c7b98e28b78a6
                     <%--<a href="javascript:void(0)" onclick="getSscPage('ssq')"><img src="${resPath}img/ico19.png" alt=""><var>双色球</var></a>--%>
                 </div>
             </li>
@@ -497,30 +546,31 @@
         $("#rightContent").attr("src", url);
     }
     function getSscPage(url) {
-        var idPl = getPlayGroupId(url);
-        var flag = getCaiZhongEnable(idPl, function() {
-            getPage("<%=basePath%>ssc/gcdt/" + url + ".html");
-        });
+//        var idPl = getPlayGroupId(url);
+        getPage("<%=basePath%>ssc/gcdt/" + url + ".html");
+        <%--var flag = getCaiZhongEnable(idPl, function() {--%>
+            <%--getPage("<%=basePath%>ssc/gcdt/" + url + ".html");--%>
+        <%--});--%>
     }
 
-    function getCaiZhongEnable(playGroupId, callback) {
-        ajaxRequest({
-            url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
-            data: {
-                playGroupId: playGroupId
-            },
-            success: function(json) {
-                if (json.result == -888) {  // 彩种已关闭
-                    $("#rightContent").attr("src", '<%=basePath%>ssc/tingcaipage.html');
-                    return;
-                }
+    <%--function getCaiZhongEnable(playGroupId, callback) {--%>
+        <%--ajaxRequest({--%>
+            <%--url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",--%>
+            <%--data: {--%>
+                <%--playGroupId: playGroupId--%>
+            <%--},--%>
+            <%--success: function(json) {--%>
+                <%--if (json.result == -888) {  // 彩种已关闭--%>
+                    <%--$("#rightContent").attr("src", '<%=basePath%>ssc/tingcaipage.html');--%>
+                    <%--return;--%>
+                <%--}--%>
 
-                if (typeof callback == 'function') {
-                    callback();
-                }
-            }
-        });
-    }
+                <%--if (typeof callback == 'function') {--%>
+                    <%--callback();--%>
+                <%--}--%>
+            <%--}--%>
+        <%--});--%>
+    <%--}--%>
 
     function getZstPage(url) {
         if (typeof url == 'undefined') {
@@ -529,55 +579,55 @@
         getPage("<%=basePath%>ssc/zst/" + url + ".html");
     }
 
-    function getPlayGroupId(param_url){
-        var idPl = 0;
-        if(param_url == 'cqssc'){
-            idPl = 1;
-        }else if(param_url == 'tjssc'){
-            idPl = 2;
-        }else if(param_url == 'xjssc'){
-            idPl = 3;
-        }else if(param_url == 'pl3'){
-            idPl = 4;
-        }else if(param_url == 'fc3d'){
-            idPl = 5;
-        }else if(param_url == 'lhc'){
-            idPl = 6;
-        }else if(param_url == 'xy28'){
-            idPl = 7;
-        }else if(param_url == 'kl8'){
-            idPl = 8;
-        }else if(param_url == 'pk10'){
-            idPl = 9;
-        }else if(param_url == 'xync'){
-            idPl = 10;
-        }else if(param_url == 'klsf'){
-            idPl = 11;
-        }else if(param_url == 'sfssc'){
-            idPl = 13;
-        }else if(param_url == 'xyft'){
-            idPl = 14;
-        }else if(param_url == 'ffssc'){
-            idPl = 15;
-        }else if(param_url == 'efssc'){
-            idPl = 16;
-        }else if(param_url == 'wfssc'){
-            idPl = 17;
-        }else if(param_url == 'jsk3'){
-            idPl = 18;
-        }else if(param_url == 'hbk3'){
-            idPl = 19;
-        }else if(param_url == 'ahk3'){
-            idPl = 20;
-        }else if(param_url == 'jlk3'){
-            idPl = 21;
-        }else if(param_url == 'sflhc'){
-            idPl = 22;
-        }else if(param_url == 'jspk10'){
-            idPl = 23;
-        }
-        return idPl;
-    }
+//    function getPlayGroupId(param_url){
+//        var idPl = 0;
+//        if(param_url == 'cqssc'){
+//            idPl = 1;
+//        }else if(param_url == 'tjssc'){
+//            idPl = 2;
+//        }else if(param_url == 'xjssc'){
+//            idPl = 3;
+//        }else if(param_url == 'pl3'){
+//            idPl = 4;
+//        }else if(param_url == 'fc3d'){
+//            idPl = 5;
+//        }else if(param_url == 'lhc'){
+//            idPl = 6;
+//        }else if(param_url == 'xy28'){
+//            idPl = 7;
+//        }else if(param_url == 'kl8'){
+//            idPl = 8;
+//        }else if(param_url == 'pk10'){
+//            idPl = 9;
+//        }else if(param_url == 'xync'){
+//            idPl = 10;
+//        }else if(param_url == 'klsf'){
+//            idPl = 11;
+//        }else if(param_url == 'sfssc'){
+//            idPl = 13;
+//        }else if(param_url == 'xyft'){
+//            idPl = 14;
+//        }else if(param_url == 'ffssc'){
+//            idPl = 15;
+//        }else if(param_url == 'efssc'){
+//            idPl = 16;
+//        }else if(param_url == 'wfssc'){
+//            idPl = 17;
+//        }else if(param_url == 'jsk3'){
+//            idPl = 18;
+//        }else if(param_url == 'hbk3'){
+//            idPl = 19;
+//        }else if(param_url == 'ahk3'){
+//            idPl = 20;
+//        }else if(param_url == 'jlk3'){
+//            idPl = 21;
+//        }else if(param_url == 'sflhc'){
+//            idPl = 22;
+//        }else if(param_url == 'jspk10'){
+//            idPl = 23;
+//        }
+//        return idPl;
+//    }
 
     function getUserSession() {
         ajaxRequest({
