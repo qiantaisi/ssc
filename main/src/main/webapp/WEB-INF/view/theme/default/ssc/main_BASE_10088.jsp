@@ -30,25 +30,32 @@
                 <h2 class="open"><span><div class="pict"><var><img src="${resPath}img/ico5.png" alt=""></var></div></span><b>热门彩种</b><i class="show"></i></h2>
                 <div class="down" style="display: block;">
                     <div class="inner-menu">
-                        <h3 class="head-ssc"><img src="${resPath}img/sscxl.png" alt=""><var>时时彩</var><i></i></h3>
+                        <h3 class="head-ssc"><img src="${resPath}img/sscxl.png" alt=""><var>时时彩系列</var><i></i></h3>
                         <div class="xl-down xHide">
-                            <a href="javascript:void(0)" onclick="getSscPage('ffssc')"><img src="${resPath}img/ffssc.png" alt=""><var>分分时时彩</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('cqssc')"><img src="${resPath}img/ico16.png" alt=""><var>重庆时时彩</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('xjssc')"><img src="${resPath}img/ico28.png" alt=""><var>新疆时时彩</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('tjssc')"><img src="${resPath}img/ico27.png" alt=""><var>天津时时彩</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('efssc')"><img src="${resPath}img/efssc.png" alt=""><var>两分时时彩</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('sfssc')"><img src="${resPath}img/sfssc.png" alt=""><var>三分时时彩</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('wfssc')"><img src="${resPath}img/wfssc.png" alt=""><var>五分时时彩</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('ffssc')"><img src="${resPath}img/ffssc.png"
+                                                                                            alt=""><var>分分时时彩</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('efssc')"><img src="${resPath}img/efssc.png"
+                                                                                            alt=""><var>两分时时彩</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('sfssc')"><img src="${resPath}img/sfssc.png"
+                                                                                            alt=""><var>三分时时彩</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('wfssc')"><img src="${resPath}img/wfssc.png"
+                                                                                            alt=""><var>五分时时彩</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('cqssc')"><img src="${resPath}img/ico16.png"
+                                                                                            alt=""><var>重庆时时彩</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('xjssc')"><img src="${resPath}img/ico28.png"
+                                                                                            alt=""><var>新疆时时彩</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('tjssc')"><img src="${resPath}img/ico27.png"
+                                                                                            alt=""><var>天津时时彩</var></a>
                         </div>
 
-                        <h3 class="head-pk10"><img src="${resPath}img/pk10xl.png" alt=""><var>PK10</var><i></i></h3>
+                        <h3 class="head-pk10"><img src="${resPath}img/pk10xl.png" alt=""><var>PK10系列</var><i></i></h3>
                         <div class="xlPk10-down xHide">
                             <a href="javascript:void(0)" onclick="getSscPage('pk10')"><img src="${resPath}img/ico18.png" alt=""><var>北京PK10</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('xyft')"><img src="${resPath}img/xyft.png" alt=""><var>幸运飞艇</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('jspk10')"><img src="${resPath}img/jspk10.png" alt=""><var>极速PK10</var></a>
                         </div>
 
-                        <h3 class="head-k3"><img src="${resPath}img/k3xl.png" alt=""><var>快3</var><i></i></h3>
+                        <h3 class="head-k3"><img src="${resPath}img/k3xl.png" alt=""><var>快3系列</var><i></i></h3>
                         <div class="xl-down xHide">
                             <a href="javascript:void(0)" onclick="getSscPage('jsk3')"><img src="${resPath}img/jsk3.png"
                                                                                            alt=""><var>江苏快3</var></a>
@@ -60,12 +67,15 @@
                                                                                            alt=""><var>吉林快3</var></a>
                         </div>
 
-                        <!--<h3 class="head-lhc"><img src="${resPath}img/lhcxl.png" alt=""><var>六合彩系列</var><i></i></h3>
+                        <h3 class="head-lhc"><img src="${resPath}img/lhcxl.png" alt=""><var>六合彩系列</var><i></i></h3>
                         <div class="xl-down xHide">
-                        </div> -->
+                            <a href="javascript:void(0)" onclick="getSscPage('sflhc')"><img src="${resPath}img/sflhc.png"
+                                                                                            alt=""><var>10分六合彩</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('lhc')"><img src="${resPath}img/ico17.png"
+                                                                                          alt=""><var>香港六合彩</var></a>
+                        </div>
                         <h3 class="head-qita"><img src="${resPath}img/qitaxl.png" alt=""><var>其他系列</var><i></i></h3>
                         <div class="xl-down xHide">
-                            <a href="javascript:void(0)" onclick="getSscPage('lhc')"><img src="${resPath}img/ico17.png" alt=""><var>香港六合彩</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('klsf')"><img src="${resPath}img/ico26.png" alt=""><var>广东快乐十分</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('xync')"><img src="${resPath}img/ico29.png" alt=""><var>重庆幸运农场</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('fc3d')"><img src="${resPath}img/ico24.png" alt=""><var>福彩3D</var></a>
@@ -81,33 +91,52 @@
                 <h2><span><div class="pict"><var><img src="${resPath}img/ico8.png"
                                                       alt=""></var></div></span><b>高频彩</b><i></i></h2>
                 <div class="down">
-                    <a href="javascript:void(0)" onclick="getSscPage('pk10')"><img src="${resPath}img/ico18.png" alt=""><var>北京PK10</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('jspk10')"><img src="${resPath}img/jspk10.png" alt=""><var>极速PK10</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('xyft')"><img src="${resPath}img/xyft.png" alt=""><var>幸运飞艇</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('ffssc')"><img src="${resPath}img/ffssc.png" alt=""><var>分分时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('cqssc')"><img src="${resPath}img/ico16.png" alt=""><var>重庆时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('tjssc')"><img src="${resPath}img/ico27.png" alt=""><var>天津时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('xjssc')"><img src="${resPath}img/ico28.png" alt=""><var>新疆时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('jsk3')"><img src="${resPath}img/jsk3.png" alt=""><var>江苏快3</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('bjk3')"><img src="${resPath}img/hbk3.png" alt=""><var>湖北快3</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('ahk3')"><img src="${resPath}img/ahk3.png" alt=""><var>安徽快3</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('jlk3')"><img src="${resPath}img/jlk3.png" alt=""><var>吉林快3</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('xync')"><img src="${resPath}img/ico29.png" alt=""><var>重庆幸运农场</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('ffssc')"><img src="${resPath}img/ffssc.png"
+                                                                                    alt=""><var>分分时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('efssc')"><img src="${resPath}img/efssc.png"
+                                                                                    alt=""><var>两分时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('sfssc')"><img src="${resPath}img/sfssc.png"
+                                                                                    alt=""><var>三分时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('wfssc')"><img src="${resPath}img/wfssc.png"
+                                                                                    alt=""><var>五分时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('cqssc')"><img src="${resPath}img/ico16.png"
+                                                                                    alt=""><var>重庆时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('pk10')"><img src="${resPath}img/ico18.png"
+                                                                                   alt=""><var>北京PK10</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('xyft')"><img src="${resPath}img/xyft.png"
+                                                                                   alt=""><var>幸运飞艇</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('xjssc')"><img src="${resPath}img/ico28.png"
+                                                                                    alt=""><var>新疆时时彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('jsk3')"><img src="${resPath}img/jsk3.png"
+                                                                                   alt=""><var>江苏快3</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('bjk3')"><img src="${resPath}img/hbk3.png"
+                                                                                   alt=""><var>湖北快3</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('ahk3')"><img src="${resPath}img/ahk3.png"
+                                                                                   alt=""><var>安徽快3</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('jlk3')"><img src="${resPath}img/jlk3.png"
+                                                                                   alt=""><var>吉林快3</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('klsf')"><img src="${resPath}img/ico26.png" alt=""><var>广东快乐十分</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('xync')"><img src="${resPath}img/ico29.png" alt=""><var>重庆幸运农场</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('tjssc')"><img src="${resPath}img/ico27.png"
+                                                                                    alt=""><var>天津时时彩</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('xy28')"><img src="${resPath}img/ico30.png" alt=""><var>幸运28</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('kl8')"><img src="${resPath}img/ico25.png" alt=""><var>北京快乐8</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('efssc')"><img src="${resPath}img/efssc.png" alt=""><var>两分时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('sfssc')"><img src="${resPath}img/sfssc.png" alt=""><var>三分时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('wfssc')"><img src="${resPath}img/wfssc.png" alt=""><var>五分时时彩</var></a>
-                    <!--<a href="javascript:void(0)" onclick="getSscPage('sflhc')"><img src="${resPath}img/sflhc.png" alt=""><var>十分六合彩</var></a>-->
+                    <a href="javascript:void(0)" onclick="getSscPage('kl8')"><img src="${resPath}img/ico25.png"
+                                                                                  alt=""><var>北京快乐8</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('sflhc')"><img src="${resPath}img/sflhc.png"
+                                                                                  alt=""><var>10分六合彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('jspk10')"><img src="${resPath}img/jspk10.png"
+                                                                                     alt=""><var>极速PK10</var></a>
                 </div>
             </li>
             <li class="show">
-                <h2><span><div class="pict"><var><img src="${resPath}img/ico9.png" alt=""></var></div></span><b>低频彩</b><i></i></h2>
+                <h2><span><div class="pict"><var><img src="${resPath}img/ico9.png"
+                                                      alt=""></var></div></span><b>低频彩</b><i></i></h2>
                 <div class="down">
-                    <a href="javascript:void(0)" onclick="getSscPage('lhc')"><img src="${resPath}img/ico17.png" alt=""><var>香港六合彩</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('lhc')"><img src="${resPath}img/ico17.png"
+                                                                                  alt=""><var>香港六合彩</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('fc3d')"><img src="${resPath}img/ico24.png" alt=""><var>福彩3D</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('pl3')"><img src="${resPath}img/ico20.png" alt=""><var>体彩排列3</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('pl3')"><img src="${resPath}img/ico20.png"
+                                                                                  alt=""><var>体彩排列3</var></a>
                     <%--<a href="javascript:void(0)" onclick="getSscPage('ssq')"><img src="${resPath}img/ico19.png" alt=""><var>双色球</var></a>--%>
                 </div>
             </li>
@@ -120,15 +149,16 @@
                         src="${resPath}img/ico12.png" alt=""></var></div></span><b>走势图表</b><i></i></a></h2>
             </li>
             <%--<li>--%>
-            <%--<h2><a href="javascript:void(0)" onclick="openHyzx('jfmx/hylb')"><span><div class="pict"><var><img--%>
-            <%--src="${resPath}img/ico13.png" alt=""></var></div></span><b>代理合作</b><i></i></a></h2>--%>
+                <%--<h2><a href="javascript:void(0)" onclick="openHyzx('jfmx/hylb')"><span><div class="pict"><var><img--%>
+                        <%--src="${resPath}img/ico13.png" alt=""></var></div></span><b>代理合作</b><i></i></a></h2>--%>
             <%--</li>--%>
             <%--<li>--%>
-            <%--<h2><a href="<%=basePath%>?u=<%=basePath%>yhhd.html" target="_blank"><span><div class="pict"><var><img--%>
-            <%--src="${resPath}img/ico14.png" alt=""></var></div></span><b>优惠活动</b><i></i></a></h2>--%>
+                <%--<h2><a href="<%=basePath%>?u=<%=basePath%>yhhd.html" target="_blank"><span><div class="pict"><var><img--%>
+                        <%--src="${resPath}img/ico14.png" alt=""></var></div></span><b>优惠活动</b><i></i></a></h2>--%>
             <%--</li>--%>
             <li>
-                <h2><a href="<%=mHostName%>" target="_blank"><span><div class="pict"><var><img src="${resPath}img/ico15.png" alt=""></var></div></span><b>手机购彩</b><i></i></a></h2>
+                <h2><a href="<%=mHostName%>" target="_blank"><span><div class="pict"><var><img
+                        src="${resPath}img/ico15.png" alt=""></var></div></span><b>手机购彩</b><i></i></a></h2>
             </li>
 
         </ul>
@@ -198,7 +228,8 @@
     </div>
     <div class="Account">
     </div>
-    <iframe id="rightContent" src="" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" name="ifm" width="100%" style="overflow-x:hidden;"></iframe>
+    <iframe id="rightContent" src="" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto"
+            id="ifm" name="ifm" width="100%" style="overflow-x:hidden;"></iframe>
 </div>
 <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
     <div class="alert hide" id="gonggao_${status.count}">
@@ -213,6 +244,7 @@
 </c:forEach>
 <c:import url="../common/commonJs.jsp"/>
 <script>
+
     function showGonggao(id) {
         $("#gonggao_" + id).show();
     }
@@ -493,28 +525,87 @@
         $("#rightContent").attr("src", url);
     }
     function getSscPage(url) {
-        getPage("<%=basePath%>ssc/gcdt/" + url + ".html");
+        var idPl = getPlayGroupId(url);
+        var flag = getCaiZhongEnable(idPl, function() {
+            getPage("<%=basePath%>ssc/gcdt/" + url + ".html");
+        });
     }
 
-    <%--function getCaiZhongEnable(playGroupId, callback) {--%>
-        <%--ajaxRequest({--%>
-            <%--url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",--%>
-            <%--data: {--%>
-                <%--playGroupId: playGroupId--%>
-            <%--},--%>
-            <%--success: function(json) {--%>
-                <%--if (json.result == -888) {  // 彩种已关闭--%>
-                    <%--$("#rightContent").attr("src", '<%=basePath%>ssc/tingcaipage.html');--%>
-                    <%--return;--%>
-                <%--}--%>
+    function getCaiZhongEnable(playGroupId, callback) {
+        ajaxRequest({
+            url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
+            data: {
+                playGroupId: playGroupId
+            },
+            success: function(json) {
+                if (json.result == -888) {  // 彩种已关闭
+                    $("#rightContent").attr("src", '<%=basePath%>ssc/tingcaipage.html');
+                    return;
+                }
 
-                <%--if (typeof callback == 'function') {--%>
-                    <%--callback();--%>
-                <%--}--%>
-            <%--}--%>
-        <%--});--%>
-    <%--}--%>
+                if (typeof callback == 'function') {
+                    callback();
+                }
+            }
+        });
+    }
 
+    function getZstPage(url) {
+        if (typeof url == 'undefined') {
+            url = 'index';
+        }
+        getPage("<%=basePath%>ssc/zst/" + url + ".html");
+    }
+
+    function getPlayGroupId(param_url){
+        var idPl = 0;
+        if(param_url == 'cqssc'){
+            idPl = 1;
+        }else if(param_url == 'tjssc'){
+            idPl = 2;
+        }else if(param_url == 'xjssc'){
+            idPl = 3;
+        }else if(param_url == 'pl3'){
+            idPl = 4;
+        }else if(param_url == 'fc3d'){
+            idPl = 5;
+        }else if(param_url == 'lhc'){
+            idPl = 6;
+        }else if(param_url == 'xy28'){
+            idPl = 7;
+        }else if(param_url == 'kl8'){
+            idPl = 8;
+        }else if(param_url == 'pk10'){
+            idPl = 9;
+        }else if(param_url == 'xync'){
+            idPl = 10;
+        }else if(param_url == 'klsf'){
+            idPl = 11;
+        }else if(param_url == 'sfssc'){
+            idPl = 13;
+        }else if(param_url == 'xyft'){
+            idPl = 14;
+        }else if(param_url == 'ffssc'){
+            idPl = 15;
+        }else if(param_url == 'efssc'){
+            idPl = 16;
+        }else if(param_url == 'wfssc'){
+            idPl = 17;
+        }else if(param_url == 'jsk3'){
+            idPl = 18;
+        }else if(param_url == 'hbk3'){
+            idPl = 19;
+        }else if(param_url == 'ahk3'){
+            idPl = 20;
+        }else if(param_url == 'jlk3'){
+            idPl = 21;
+        }else if(param_url == 'sflhc'){
+            idPl = 22;
+        }else if(param_url == 'jspk10'){
+            idPl = 23;
+        }
+        return idPl;
+    }
 
     function getUserSession() {
         ajaxRequest({
