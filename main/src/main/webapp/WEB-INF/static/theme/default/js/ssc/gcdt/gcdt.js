@@ -1,7 +1,119 @@
 // 初始化
 $(function() {
-    function resize() {
-        dropmove(".Single .layout .add_spot .left .sopt_wrap .slide_sp p var", ".Single .layout .add_spot .left .sopt_wrap .slide_sp p")
+    getSubPage();
+
+    function rightResize(rightWidth, isAnimate) {
+        if (rightWidth < 1000) {
+            rightWidth = 1000;
+            isAnimate = false;
+        }
+
+        if (isAnimate) {
+            $(".con_right, #rightContent, .con_right .top, .con_right .Account").animate({"width": rightWidth + "px"}, 400, function () {
+            });
+        } else {
+            $(".con_right, #rightContent, .con_right .top, .con_right .Account").css("width", rightWidth + "px");
+        }
+    }
+    function minLeftMenu(leftWidth, isAnimate) {
+        $(".menu_left .logo img").hide();
+        $(".menu_left .list_menu ul li a.Refresh").hide();
+        //热门菜单中的子菜单
+        $(".menu_left .list_menu ul li .inner-menu h3 i").hide();
+        $(".menu_left .list_menu ul li .inner-menu h3 var").hide();
+        $(".menu_left .list_menu ul li .inner-menu h3 img").addClass('menusuox');
+        $(".menu_left .list_menu ul li .inner-menu h3").addClass('menusuox-h3');
+
+
+        $(".menu_left").addClass("add_menu");
+        if (isAnimate) {
+            $(".menu_left").animate({"width": leftWidth + "px"}, 400, function () {
+            });
+        } else {
+            $(".menu_left").css("width", leftWidth + "px");
+        }
+        $(".menu_left .logo a").attr("opent", "1");
+    }
+
+    function autow(tee, isAnimal) {
+        var leftWidth = tee ? tee : Tools.parseInt($(".menu_left").width());
+        var rightWidth = $(window).width() - leftWidth;
+        if (rightWidth < 1000) {
+            rightWidth = 1000;
+        }
+        $(".con_right").css("height", $(window).height() + "px");
+        if (isAnimal) {
+            $(".con_right, #rightContent, .con_right .top, .con_right .Account").animate({"width": rightWidth + "px"}, 400, function () {
+            });
+            console.log(isAnimal);
+        } else {
+            $(".con_right, #rightContent, .con_right .top, .con_right .Account").css("width", rightWidth + "px");
+            console.log('w');
+        }
+
+    }//结束
+
+    function maxLeftMenu(leftWidth, isAnimate) {
+        if (isAnimate) {
+            $(".menu_left").animate({"width": leftWidth + "px"}, 400, function () {
+                $(".menu_left .logo img").show();
+                $(".menu_left").removeClass("add_menu");
+                $(".menu_left .list_menu ul li a.Refresh").show();
+
+                $(".menu_left .list_menu ul li .inner-menu h3 i").show();
+                $(".menu_left .list_menu ul li .inner-menu h3 var").show();
+                $(".menu_left .list_menu ul li .inner-menu h3 img").removeClass('menusuox');
+                $(".menu_left .list_menu ul li .inner-menu h3").removeClass('menusuox-h3');
+            });
+        } else {
+            $(".menu_left").css("width", leftWidth + "px");
+            $(".menu_left .logo img").show();
+            $(".menu_left").removeClass("add_menu");
+            $(".menu_left .list_menu ul li a.Refresh").show();
+
+            $(".menu_left .list_menu ul li .inner-menu h3 i").show();
+            $(".menu_left .list_menu ul li .inner-menu h3 var").show();
+            $(".menu_left .list_menu ul li .inner-menu h3 img").removeClass('menusuox');
+            $(".menu_left .list_menu ul li .inner-menu h3").removeClass('menusuox-h3');
+        }
+        $(".menu_left .logo a").attr("opent", "0");
+    }
+
+    function bodyResize(leftWidth, rightWidth) {
+        $("body").css("width", leftWidth + rightWidth + "px");
+    }
+
+    function autoHeight() {
+        var rightContentHeight = $(window).height() - 100;
+        $("#rightContent").css("height", rightContentHeight + "px");
+        var leftContentHeight = $(window).height();
+        $(".menu_left").css("height", leftContentHeight + "px");
+    }
+    // function resize() {
+    //     // dropmove(".Single .layout .add_spot .left .sopt_wrap .slide_sp p var", ".Single .layout .add_spot .left .sopt_wrap .slide_sp p")
+    // }
+
+    function resize(isAnimate) {
+        autoHeight();
+        var winWidth = $(window).width();
+        var leftWidth, rightWidth;
+        if ($(window).width() < 1250) {
+            leftWidth = 40;
+            rightWidth = winWidth - leftWidth;
+        } else {
+            leftWidth = 250;
+            rightWidth = winWidth - leftWidth;
+        }
+        if (rightWidth < 1000) {
+            rightWidth = 1000;
+        }
+        bodyResize(leftWidth, rightWidth);
+        if (leftWidth <= 40) {
+            minLeftMenu(leftWidth, isAnimate);
+        } else {
+            maxLeftMenu(leftWidth, isAnimate);
+        }
+        rightResize(rightWidth, isAnimate);
     }
 
     $(window).resize(function () {
@@ -81,10 +193,28 @@ $(function() {
             $(this).attr("opent", "1");
         }
     })
+
+    getUserSession();
 });
 
+function getUserSession() {
+    ajaxRequest({
+        url: CONFIG.BASEURL + 'member/getUserSession.json',
+        beforeSend: function () {
+            $(".Account").html('<img src="${resPath}img/base_loading.gif" alt="" style="display: block;text-align: center;margin: auto;padding-top: 25px;">');
+        },
+        success: function (json) {
+            if (json.result == 1) {
+                showLogin(json);
+            } else {
+                showNotLogin();
+            }
+        }
+    });
+}
+
 function getSscPage(url) {
-    goSubUrl(config.BASEURL + "ssc/gcdt/" + url + ".html");
+    goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + url + ".html");
 }
 
 // 读取子页面
@@ -96,7 +226,7 @@ function getPage(url) {
 // 读取子页面
 function goSubUrl(url, params) {
     var turl = url + "?timestamp=" + (new Date()).getTime();
-    var surl = config.BASEURL + "ssc/gcdt/index.html#url=" + url;
+    var surl = CONFIG.BASEURL + "ssc/gcdt/index.html#url=" + url;
 
     if (typeof params != 'undefined') {
         var tmp = params.split("&");
@@ -107,11 +237,38 @@ function goSubUrl(url, params) {
     }
 
     window.location.href = surl;
-    getPage(turl);
+    getSubPage();
 }
 
-function getSubPage(url, params) {
+function getSubPage() {
+    var surl = window.location.toString();
+    var paramArr = surl.split("#");
+    var turl = "";
+    var tparam = "?timestamp=" + (new Date()).getTime();
+    if (paramArr) {
+        paramArr = paramArr[1];
+        if (paramArr) {
+            paramArr = paramArr.split("&");
 
+            $.each(paramArr, function(index, value) {
+                var tmp = value.split("=");
+                var key = tmp[0];
+                var v = tmp[1];
+
+                if (key == "url") {
+                    turl = v;
+                } else {
+                    tparam += "&" + key + "=" + v;
+                }
+            });
+        }
+    }
+
+    if (!turl) {
+        turl = CONFIG.BASEURL + "ssc/gcdt/gcdt.html";
+    }
+
+    getPage(turl + tparam);
 }
 // function showGonggao(id) {
 //     $("#gonggao_" + id).show();
@@ -179,128 +336,22 @@ $(function () {
 //
 //     autow();
 // }
-// function resize(isAnimate) {
-//     autoHeight();
-//     var winWidth = $(window).width();
-//     var leftWidth, rightWidth;
-//     if ($(window).width() < 1250) {
-//         leftWidth = 40;
-//         rightWidth = winWidth - leftWidth;
-//     } else {
-//         leftWidth = 250;
-//         rightWidth = winWidth - leftWidth;
-//     }
-//     if (rightWidth < 1000) {
-//         rightWidth = 1000;
-//     }
-//     bodyResize(leftWidth, rightWidth);
-//     if (leftWidth <= 40) {
-//         minLeftMenu(leftWidth, isAnimate);
-//     } else {
-//         maxLeftMenu(leftWidth, isAnimate);
-//     }
-//     rightResize(rightWidth, isAnimate);
-// }
-$(function () {
-    getUserSession();
+
+//
+//
+//
 
 
-});
-//
-//
-//
-// function autoHeight() {
-//     var rightContentHeight = $(window).height() - 100;
-//     $("#rightContent").css("height", rightContentHeight + "px");
-//     var leftContentHeight = $(window).height();
-//     $(".menu_left").css("height", leftContentHeight + "px");
-// }
-// function bodyResize(leftWidth, rightWidth) {
-//     $("body").css("width", leftWidth + rightWidth + "px");
-// }
-// function rightResize(rightWidth, isAnimate) {
-//     if (rightWidth < 1000) {
-//         rightWidth = 1000;
-//         isAnimate = false;
-//     }
-//
-//     if (isAnimate) {
-//         $(".con_right, #rightContent, .con_right .top, .con_right .Account").animate({"width": rightWidth + "px"}, 400, function () {
-//         });
-//     } else {
-//         $(".con_right, #rightContent, .con_right .top, .con_right .Account").css("width", rightWidth + "px");
-//     }
-// }
-// function minLeftMenu(leftWidth, isAnimate) {
-//     $(".menu_left .logo img").hide();
-//     $(".menu_left .list_menu ul li a.Refresh").hide();
-//     //热门菜单中的子菜单
-//     $(".menu_left .list_menu ul li .inner-menu h3 i").hide();
-//     $(".menu_left .list_menu ul li .inner-menu h3 var").hide();
-//     $(".menu_left .list_menu ul li .inner-menu h3 img").addClass('menusuox');
-//     $(".menu_left .list_menu ul li .inner-menu h3").addClass('menusuox-h3');
-//
-//
-//     $(".menu_left").addClass("add_menu");
-//     if (isAnimate) {
-//         $(".menu_left").animate({"width": leftWidth + "px"}, 400, function () {
-//         });
-//     } else {
-//         $(".menu_left").css("width", leftWidth + "px");
-//     }
-//     $(".menu_left .logo a").attr("opent", "1");
-// }
-// function maxLeftMenu(leftWidth, isAnimate) {
-//     if (isAnimate) {
-//         $(".menu_left").animate({"width": leftWidth + "px"}, 400, function () {
-//             $(".menu_left .logo img").show();
-//             $(".menu_left").removeClass("add_menu");
-//             $(".menu_left .list_menu ul li a.Refresh").show();
-//
-//             $(".menu_left .list_menu ul li .inner-menu h3 i").show();
-//             $(".menu_left .list_menu ul li .inner-menu h3 var").show();
-//             $(".menu_left .list_menu ul li .inner-menu h3 img").removeClass('menusuox');
-//             $(".menu_left .list_menu ul li .inner-menu h3").removeClass('menusuox-h3');
-//         });
-//     } else {
-//         $(".menu_left").css("width", leftWidth + "px");
-//         $(".menu_left .logo img").show();
-//         $(".menu_left").removeClass("add_menu");
-//         $(".menu_left .list_menu ul li a.Refresh").show();
-//
-//         $(".menu_left .list_menu ul li .inner-menu h3 i").show();
-//         $(".menu_left .list_menu ul li .inner-menu h3 var").show();
-//         $(".menu_left .list_menu ul li .inner-menu h3 img").removeClass('menusuox');
-//         $(".menu_left .list_menu ul li .inner-menu h3").removeClass('menusuox-h3');
-//     }
-//     $(".menu_left .logo a").attr("opent", "0");
-// }
-// function autow(tee, isAnimal) {
-//     var leftWidth = tee ? tee : Tools.parseInt($(".menu_left").width());
-//     var rightWidth = $(window).width() - leftWidth;
-//     if (rightWidth < 1000) {
-//         rightWidth = 1000;
-//     }
-//     $(".con_right").css("height", $(window).height() + "px");
-//     if (isAnimal) {
-//         $(".con_right, #rightContent, .con_right .top, .con_right .Account").animate({"width": rightWidth + "px"}, 400, function () {
-//         });
-//         console.log(isAnimal);
-//     } else {
-//         $(".con_right, #rightContent, .con_right .top, .con_right .Account").css("width", rightWidth + "px");
-//         console.log('w');
-//     }
-//
-// }//结束
-//
-// function showLoading() {
-//     layer.load(2, {
-//         shade: [0.1, '#000'] //0.1透明度的白色背景
-//     })
-// }
-// function hideLoading() {
-//     layer.closeAll();
-// }
+
+
+function showLoading() {
+    layer.load(2, {
+        shade: [0.1, '#000'] //0.1透明度的白色背景
+    })
+}
+function hideLoading() {
+    layer.closeAll();
+}
 // function getPage(url) {
 //     showLoading();
 //     $("#rightContent").attr("src", url);
@@ -331,12 +382,13 @@ $(function () {
 //     });
 // }
 //
-// function getZstPage(url) {
-//     if (typeof url == 'undefined') {
-//         url = 'index';
-//     }
-//     getPage("<%=basePath%>ssc/zst/" + url + ".html");
-// }
+function getZstPage(url) {
+    if (typeof url == 'undefined') {
+        url = 'index';
+    }
+
+    goSubUrl(CONFIG.BASEURL + "ssc/zst/" + url + ".html");
+}
 //
 // function getPlayGroupId(param_url){
 //     var idPl = 0;
@@ -388,21 +440,6 @@ $(function () {
 //     return idPl;
 // }
 //
-// function getUserSession() {
-//     ajaxRequest({
-//         url: '<%=basePath%>member/getUserSession.json',
-//         beforeSend: function () {
-//             $(".Account").html('<img src="${resPath}img/base_loading.gif" alt="" style="display: block;text-align: center;margin: auto;padding-top: 25px;">');
-//         },
-//         success: function (json) {
-//             if (json.result == 1) {
-//                 showLogin(json);
-//             } else {
-//                 showNotLogin();
-//             }
-//         }
-//     });
-// }
 // function ajaxLogin() {
 //     var account = $.trim($("#loginForm input[name='account']").val());
 //     var password = $.trim($("#loginForm input[name='password']").val());
@@ -427,7 +464,7 @@ $(function () {
 //     }
 //
 //     ajaxRequest({
-//         url: '<%=basePath%>member/ajaxLogin.json',
+//         url: CONFIG.BASEURL + 'member/ajaxLogin.json',
 //         data: {
 //             account: account,
 //             password: $.md5(password),
@@ -463,26 +500,26 @@ $(function () {
 //     $(".Account").html(str);
 // }
 //
-// function showNotLogin() {
-//     var str = '';
-//     str += '<div class="state">';
-//     str += '<form id="loginForm" onsubmit="ajaxLogin();return false;">';
-//     str += '<ul>';
-//     str += '<li><input type="text" placeholder="会员名" name="account"></li>';
-//     str += '<li><input type="password" placeholder="密码" name="password"></li>';
-//     str += '<li><input type="text" placeholder="验证码" onfocus="refreshYzm(document.getElementById(\'yzmImg\'))" name="yzm" class="short"><img id="yzmImg" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=45&imgHeight=20&imgFontHeight=20&imgCodeY=16" alt=""></li>';
-//     str += '</ul>';
-//     str += '<div class="buton">';
-//     str += '<button type="submit">登录</button>';
-//     str += '</form>';
-//     str += '<p>';
-//     str += '<a href="<%=basePath%>?u=<%=basePath%>register.html" target="_blank">会员注册</a>|';
-//     str += '<a href="${kefuUrl}" target="_blank">忘记密码？</a>';
-//     str += '</p>';
-//     str += '</div>';
-//     str += '</div>';
-//     $(".Account").html(str);
-// }
+function showNotLogin() {
+    var str = '';
+    str += '<div class="state">';
+    str += '<form id="loginForm" onsubmit="ajaxLogin();return false;">';
+    str += '<ul>';
+    str += '<li><input type="text" placeholder="会员名" name="account"></li>';
+    str += '<li><input type="password" placeholder="密码" name="password"></li>';
+    str += '<li><input type="text" placeholder="验证码" onfocus="refreshYzm(document.getElementById(\'yzmImg\'))" name="yzm" class="short"><img id="yzmImg" onclick="refreshYzm(this)" src="' + CONFIG.BASEURL + 'code/yzm?imgWidth=45&imgHeight=20&imgFontHeight=20&imgCodeY=16" alt=""></li>';
+    str += '</ul>';
+    str += '<div class="buton">';
+    str += '<button type="submit">登录</button>';
+    str += '</form>';
+    str += '<p>';
+    str += '<a href="<%=basePath%>?u=<%=basePath%>register.html" target="_blank">会员注册</a>|';
+    str += '<a href="${kefuUrl}" target="_blank">忘记密码？</a>';
+    str += '</p>';
+    str += '</div>';
+    str += '</div>';
+    $(".Account").html(str);
+}
 // function refreshYzm(obj) {
 //     var src = $(obj).attr("src");
 //     var params = getRequest(src);
@@ -495,7 +532,7 @@ $(function () {
 // }
 // function sigout() {
 //     ajaxRequest({
-//         url: '<%=basePath%>member/ajaxSigout.json',
+//         url: CONFIG.BASEURL + 'member/ajaxSigout.json',
 //         data: {},
 //         beforeSend: function () {
 //             $(".Account").html('<img src="${resPath}img/base_loading.gif" alt="" style="display: block;text-align: center;margin: auto;margin-top: 20px;">');
