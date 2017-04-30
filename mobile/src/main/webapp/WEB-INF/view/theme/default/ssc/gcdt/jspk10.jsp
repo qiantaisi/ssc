@@ -18,13 +18,13 @@
             <%--返回--%>
             <%--</a>--%>
             <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
-                <font>彩种列表</font>
+                <font>彩种切换</font>
                 <span class="icon icon-top-gcdt"></span>
             </a>
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">极速赛车</h1>
+            <h1 class="title">极速PK10</h1>
         </header>
         <c:import url="common/commonBet.jsp" />
         <div class="content cl-601">

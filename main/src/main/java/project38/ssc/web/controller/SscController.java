@@ -296,4 +296,10 @@ public class SscController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderView("ssc/gcdt/gfwf/" + group + "/" + play, modelMap);
     }
+
+    @RequestMapping(value = "/gcdt/index.html", method = RequestMethod.GET)
+    public ModelAndView gcdtIndex() {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        return this.renderView("ssc/gcdt/index", modelMap);
+    }
 }

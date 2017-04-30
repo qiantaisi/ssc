@@ -14,7 +14,7 @@
     <div class="page page-current" id="page-gcdt-sflhc">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
-                <font>彩种列表</font>
+                <font>彩种切换</font>
                 <span class="icon icon-top-gcdt"></span>
             </a>
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>

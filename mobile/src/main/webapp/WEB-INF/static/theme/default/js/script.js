@@ -1263,7 +1263,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '10分六合彩', '极速赛车']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '10分六合彩', '极速PK10']
                 }
             ]
         });
@@ -1488,7 +1488,7 @@ $(function () {
                 playGroupId = 21;
             } else if (inputCaizhong == '10分六合彩') {
                 playGroupId = 22;
-            } else if (inputCaizhong == '极速赛车') {
+            } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
             }
 
@@ -3179,7 +3179,7 @@ $(function () {
                 playGroupId = 21;
             } else if (inputCaizhong == '10分六合彩') {
                 playGroupId = 22;
-            } else if (inputCaizhong == '极速赛车') {
+            } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
             }
 
@@ -4731,7 +4731,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '10分六合彩', '极速赛车']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '10分六合彩', '极速PK10']
                 }
             ]
         });
@@ -4791,7 +4791,7 @@ $(function () {
             } else if (playGroupId == 22) {
                 $("#inputCaizhong").val("10分六合彩")
             } else if (playGroupId == 23) {
-                $("#inputCaizhong").val("极速赛车")
+                $("#inputCaizhong").val("极速PK10")
             }
         }
 
@@ -5231,7 +5231,7 @@ $(function () {
                 playGroupId = 21;
             } else if (inputCaizhong == '10分六合彩') {
                 playGroupId = 22;
-            } else if (inputCaizhong == '极速赛车') {
+            } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
             }
 
@@ -5286,7 +5286,7 @@ $(function () {
         } else if (playGroupId == 22) {
             $("#inputCaizhong").val("10分六合彩");
         } else if (playGroupId == 23) {
-            $("#inputCaizhong").val("极速赛车");
+            $("#inputCaizhong").val("极速PK10");
         }
 
 
@@ -6309,7 +6309,15 @@ $(function () {
                 $(".click-qishu-btns").toggle();
             }
         );
-         //点击实现循环切换走势图 “更多期数” 的文字颜色
+        //走势图里，实现点击选中的结果 “就收回下拉菜单”
+        $(".click-qishu-btns a").click(
+            function () {
+                $(".click-qishu-btns").toggle();
+                $("#ssc-parent-menu .re-cl-602 .gengduo").css("color", "gray");
+            }
+        );
+
+        //点击实现循环切换走势图 “更多期数” 的文字颜色
         $("#ssc-parent-menu .re-cl-602 .gengduo").click(
             function () {
                 var changes = "red";

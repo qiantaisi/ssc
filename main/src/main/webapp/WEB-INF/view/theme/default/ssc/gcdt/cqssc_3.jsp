@@ -6,8 +6,6 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-
-    response.sendRedirect(basePath + "ssc/tingcaipage.html");
 %>
 <c:import url="../../common/bodyStart.jsp"/>
 <c:import url="../../common/checkIsChildFrame.jsp"/>
@@ -15,7 +13,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>江苏快3</h2>
+                <h2>重庆时时彩</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="number"></i>期</p>
                 <div class="select">
@@ -23,7 +21,7 @@
                     <c:import url="common/soundList.jsp"/>
                 </div>
             </div>
-            <div class="box2_stage rebox2_stage">
+            <div class="box2_stage">
                 <p><span><i class="acti">近一期</i><i>近五期</i></span><font id="lastNumber"></font></p>
                 <div class="number pt10" id="lastOpenCode">
                 </div>
@@ -33,7 +31,7 @@
                 </div>
             </div>
             <div class="box3_timer">
-                <p id="tip">已开盘，欢迎投注。距离开奖还有:</p>
+                <p id="tip">已开盘，欢迎投注。距离封盘还有:</p>
                 <div class="timer_wrap" id="leftTime">
                     <ol class="s">
                         <span class="sp1">0</span>
@@ -62,17 +60,34 @@
                             <style>.Single .layout .Playmethod ul li p.kuaiqian span {
                                 width: 61px;
                             }</style>
-                            <span><a href="javascript:void(0)" data-url="jsk3-hz">和值</a></span>
-                            <span><a href="javascript:void(0)" data-url="jsk3-tx">通选</a></span>
-                            <span style="width: 80px"><a href="javascript:void(0)"  data-url="jsk3-sthdx">三同号单选</a></span>
-                            <span><a href="javascript:void(0)" data-url="jsk3-sbt">三不同</a></span>
-                            <span style="width: 80px"><a href="javascript:void(0)" data-url="jsk3-ethfx">二同号复选</a></span>
-                            <span style="width: 80px"><a href="javascript:void(0)" data-url="jsk3-ethdx">二同号单选</a></span>
-                            <span><a href="javascript:void(0)" data-url="jsk3-ebth">二不同号</a></span>
-                            <span><a href="javascript:void(0)" data-url="jsk3-cbc">猜必出</a></span>
-                            <span style="width: 80px"><a href="javascript:void(0)" data-url="jsk3-cbbc">猜必不出</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-sm">双面</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-szp">数字盘</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-yzdw_wdw">一字定位</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-ezdw">二字定位</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-szdw">三字定位</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-yzzh_q5">一字组合</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-ezzh_q3">二字组合</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-ezhs">二字和数</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-zxs_q3">组选三</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-zxl_q3">组选六</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-kd_q3">跨度</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-lh">龙虎</a></span>
                         </p>
                     </li>
+                    <%--<li>--%>
+                    <%--<b class="acti">官方玩法</b>--%>
+                    <%--<p>--%>
+                    <%--<span class="acti"><a href="javascript:void(0)">五星</a></span>--%>
+                    <%--<span><a href="javascript:void(0)">四星</a></span>--%>
+                    <%--<span><a href="javascript:void(0)">前三</a></span>--%>
+                    <%--<span><a href="javascript:void(0)">中三</a></span>--%>
+                    <%--<span><a href="javascript:void(0)">后三</a></span>--%>
+                    <%--<span><a href="javascript:void(0)">二星</a></span>--%>
+                    <%--<span><a href="javascript:void(0)">定位胆</a></span>--%>
+                    <%--<span><a href="javascript:void(0)">大小单双</a></span>--%>
+                    <%--<span><a href="javascript:void(0)">趣味</a></span>--%>
+                    <%--</p>--%>
+                    <%--</li>--%>
                 </ul>
             </div>
 
@@ -85,15 +100,15 @@
 <c:import url="../../common/commonJs.jsp"/>
 <c:import url="common/commonJs.jsp"/>
 <script>
-    var playGroupId = 18;    // 彩种ID
+    var playGroupId = 1;    // 彩种ID
 </script>
 <script>
     // 随机号码
     function randomNumber() {
         var arr = [];
         var tmpStr = '';
-        for (var i = 0; i < 3; ++i) {
-            tmpStr += '<span>' + (Math.floor(Math.random() * 5)+1) + '</span>';
+        for (var i = 0; i < 5; ++i) {
+            tmpStr += '<span>' + (Math.floor(Math.random() * 10)) + '</span>';
         }
         $("#lastOpenCode").html(tmpStr);
     }
@@ -112,11 +127,11 @@
     <li>
         <p>第{{number}}期</p>
         {{if list.length == 0}}
-            <p style="margin-left:5px">开奖中</p>
+        <p style="margin-left:5px">开奖中</p>
         {{else}}
-            {{each list as value}}
-                <i>{{value}}</i>
-            {{/each}}
+        {{each list as value}}
+        <i>{{value}}</i>
+        {{/each}}
         {{/if}}
     </li>
 </script>

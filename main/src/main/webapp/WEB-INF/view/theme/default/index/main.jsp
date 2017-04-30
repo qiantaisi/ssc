@@ -375,27 +375,27 @@
                         <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank">重庆时时彩</a>
                         <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank">天津时时彩</a>
                         <a href="<%=basePath%>ssc/zst/xjssc.html" target="_blank">新疆时时彩</a>
-                        <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
-                        <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
-                        <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">广东快乐十分</a>
-                        <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">重庆幸运农场</a>
-                        <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
-                        <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
                         <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
                         <a href="<%=basePath%>ssc/zst/efssc.html" target="_blank">两分时时彩</a>
                         <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分时时彩</a>
                         <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">五分时时彩</a>
+                        <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
+                        <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK10</a>
+                        <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
                         <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">江苏快3</a>
                         <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">湖北快3</a>
                         <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">安徽快3</a>
-                        <%--<a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>--%>
-                        <%--<a href="<%=basePath%>ssc/zst/sflhc.html" target="_blank">10分六合彩</a>--%>
+                        <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>
+                        <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">幸运农场</a>
+                        <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
+                        <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
+                        <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
                     </p>
                     <p>
                         <span>低频彩</span>
+                        <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
                         <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">福彩3D</a>
                         <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">体彩排列3</a>
-                        <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
                     </p>
                 </div>
 

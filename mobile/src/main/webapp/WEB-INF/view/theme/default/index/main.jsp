@@ -103,79 +103,68 @@
                         <span class="bg-img-ffssc"></span>
                         <span>分分时时彩</span>
                     </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/pk10.html">
-                        <span class="bg-img-pk10"></span>
-                        <span>北京PK10</span>
-                    </a>
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/cqssc.html">
                         <span class="bg-img-cqssc"></span>
                         <span>重庆时时彩</span>
                     </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/jsk3.html">
-                        <span class="bg-img-jsk3"></span>
-                        <span>江苏快3</span>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/pk10.html">
+                        <span class="bg-img-pk10"></span>
+                        <span>北京PK10</span>
                     </a>
-                </div>
-                <div class="row cl-5">
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/sflhc.html">
-                        <span class="bg-img-sflhc"></span>
-                        <span>10分六合彩</span>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/jspk10.html">
+                        <span class="bg-img-jspk10"></span>
+                        <span>极速PK10</span>
                         <var class="xin_new"><img src="${resPath}img/xin_new.gif" alt="新上线" style="float:right;"></var>
                     </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/lhc.html">
-                        <span class="bg-img-lhc"></span>
-                        <span>香港六合彩</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/sfssc.html">
-                        <span class="bg-img-sfssc"></span>
-                        <span>三分时时彩</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/efssc.html">
-                        <span class="bg-img-efssc"></span>
-                        <span>两分时时彩</span>
-                    </a>
                 </div>
                 <div class="row cl-5">
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xyft.html">
-                        <span class="bg-img-xyft"></span>
-                        <span>幸运飞艇</span>
-                    </a>
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/ahk3.html">
                         <span class="bg-img-ahk3"></span>
                         <span>安徽快3</span>
                     </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/jspk10.html">
-                        <span class="bg-img-jspk10"></span>
-                        <span>极速赛车</span>
-                        <var class="xin_new"><img src="${resPath}img/xin_new.gif" alt="新上线" style="float:right;"></var>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/hbk3.html">
+                        <span class="bg-img-hbk3"></span>
+                        <span>湖北快3</span>
                     </a>
+                    <%--<a class="col-25" href="<%=basePath%>ssc/gcdt/jsk3.html">
+                        <span class="bg-img-jsk3"></span>
+                        <span>江苏快3</span>
+                    </a>--%>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/lhc.html">
+                        <span class="bg-img-lhc"></span>
+                        <span>香港六合彩</span>
+                    </a>
+                    <%--<a class="col-25" href="<%=basePath%>ssc/gcdt/sflhc.html">
+                        <span class="bg-img-sflhc"></span>
+                        <span>10分六合彩</span>
+                    </a>--%>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xyft.html">
+                        <span class="bg-img-xyft"></span>
+                        <span>幸运飞艇</span>
+                    </a>
+                </div>
+                <div class="row cl-5">
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/xjssc.html">
                         <span class="bg-img-xjssc"></span>
                         <span>新疆时时彩</span>
                     </a>
-                </div>
-                <div class="row cl-5">
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/tjssc.html">
                         <span class="bg-img-tjssc"></span>
                         <span>天津时时彩</span>
+                    </a>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xync.html">
+                        <span class="bg-img-cqxync"></span>
+                        <span>重庆幸运农场</span>
                     </a>
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/klsf.html">
                         <span class="bg-img-klsf"></span>
                         <span>广东快乐十分</span>
                     </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/wfssc.html">
-                        <span class="bg-img-wfssc"></span>
-                        <span>五分时时彩</span>
-                    </a>
+                </div>
+                <div class="row cl-5">
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/xy28.html">
                         <span class="bg-img-xy28"></span>
                         <span>幸运28</span>
-                    </a>
-                </div>
-                <div class="row cl-5">
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xync.html">
-                        <span class="bg-img-cqxync"></span>
-                        <span>重庆幸运农场</span>
                     </a>
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/kl8.html">
                         <span class="bg-img-kl8"></span>
@@ -190,19 +179,30 @@
                         <span>体彩排列3</span>
                     </a>
                 </div>
+                <div class="row cl-5">
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/efssc.html">
+                        <span class="bg-img-efssc"></span>
+                        <span>两分时时彩</span>
+                    </a>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/sfssc.html">
+                        <span class="bg-img-sfssc"></span>
+                        <span>三分时时彩</span>
+                    </a>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/wfssc.html">
+                        <span class="bg-img-wfssc"></span>
+                        <span>五分时时彩</span>
+                    </a>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt.html">
+                        <span class="bg-img-gd"></span>
+                        <span>更多</span>
+                    </a>
+                </div>
                 <%--<div class="row cl-5">--%>
                 <%--<a class="col-25" href="<%=basePath%>ssc/gcdt/jlk3.html">--%>
                 <%--<span class="bg-img-jlk3"></span>--%>
                 <%--<span>吉林快3</span>--%>
                 <%--</a>--%>
                 <%--</div>--%>
-                <!--
-                <div class="row cl-5">
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt.html">
-                        <span class="bg-img-gd"></span>
-                        <span>更多</span>
-                    </a>
-                </div>-->
             </div>
             <div class="row cl-6">
                 <div class="col-100">

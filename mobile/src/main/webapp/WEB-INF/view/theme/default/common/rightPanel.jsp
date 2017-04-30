@@ -44,6 +44,240 @@
                     </div>
                 </a>
             </li>
+            <c:if test="${empty param.playGroupId}">
+                <li>
+                    <a href="<%=basePath%>ssc/zst/lhc/jbzst.html" class="item-content">
+                        <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">走势图表</div>
+                        </div>
+                    </a>
+                </li>
+            </c:if>
+            <c:if test="${not empty param.playGroupId}">
+                <c:choose>
+                    <c:when test="${param.playGroupId == 1}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/cqssc/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 2}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/tjssc/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 3}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/xjssc/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 4}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/pl3/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 5}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/fc3d/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 6}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/lhc/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 7}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/xy28/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 8}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/kl8/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 9}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/pk10/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 10}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/xync/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 11}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/klsf/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 13}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/sfssc/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 14}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/xyft/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 15}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/ffssc/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 16}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/efssc/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 17}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/wfssc/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 18}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/jsk3/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 19}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/hbk3/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 20}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/ahk3/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 21}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/jlk3/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 22}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/sflhc/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 23}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/jspk10/jbzst.html" class="item-content">
+                                <div class="item-media"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                </c:choose>
+            </c:if>
             <li>
                 <a href="<%=basePath%>member/tzjl/list.html" class="item-content">
                     <div class="item-media"><i class="icon bg-img-tzjl"></i></div>

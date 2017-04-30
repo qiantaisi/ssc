@@ -11,14 +11,6 @@
     <div class="list-block">
         <ul>
             <li>
-                <a href="<%=basePath%>ssc/zst/ffssc/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-ffssc"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title">分分时时彩</div>
-                    </div>
-                </a>
-            </li>
-            <li>
                 <a href="<%=basePath%>ssc/zst/pk10/jbzst.html" class="item-content">
                     <div class="item-media"><i class="icon bg-img-pk10"></i></div>
                     <div class="item-inner">
@@ -27,50 +19,10 @@
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/zst/cqssc/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-cqssc"></i></div>
+                <a href="<%=basePath%>ssc/zst/jspk10/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-jspk10"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">重庆时时彩</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="<%=basePath%>ssc/zst/jsk3/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-jsk3"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title">江苏快3</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="<%=basePath%>ssc/zst/sflhc/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-sflhc"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title">10分六合彩</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="<%=basePath%>ssc/zst/lhc/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-lhc"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title">香港六合彩</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="<%=basePath%>ssc/zst/sfssc/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-sfssc"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title">三分时时彩</div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="<%=basePath%>ssc/zst/efssc/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-efssc"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title">两分时时彩</div>
+                        <div class="item-title">极速PK10</div>
                     </div>
                 </a>
             </li>
@@ -83,18 +35,18 @@
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/zst/ahk3/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-ahk3"></i></div>
+                <a href="<%=basePath%>ssc/zst/ffssc/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-ffssc"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">安徽快3</div>
+                        <div class="item-title">分分时时彩</div>
                     </div>
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/zst/hbk3/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-hbk3"></i></div>
+                <a href="<%=basePath%>ssc/zst/cqssc/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-cqssc"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">湖北快3</div>
+                        <div class="item-title">重庆时时彩</div>
                     </div>
                 </a>
             </li>
@@ -115,26 +67,42 @@
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/zst/klsf/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-klsf"></i></div>
+                <a href="<%=basePath%>ssc/zst/lhc/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-lhc"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">广东快乐十分</div>
+                        <div class="item-title">香港六合彩</div>
                     </div>
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/zst/wfssc/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-wfssc"></i></div>
+                <a href="<%=basePath%>ssc/zst/ahk3/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-ahk3"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">五分时时彩</div>
+                        <div class="item-title">安徽快3</div>
                     </div>
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/zst/xy28/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-xy28"></i></div>
+                <a href="<%=basePath%>ssc/zst/hbk3/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-hbk3"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">幸运28</div>
+                        <div class="item-title">湖北快3</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="<%=basePath%>ssc/zst/jsk3/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-jsk3"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">江苏快3</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="<%=basePath%>ssc/zst/jlk3/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-jlk3"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">吉林快3</div>
                     </div>
                 </a>
             </li>
@@ -143,6 +111,22 @@
                     <div class="item-media"><i class="icon bg-img-cqxync"></i></div>
                     <div class="item-inner">
                         <div class="item-title">重庆幸运农场</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="<%=basePath%>ssc/zst/klsf/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-klsf"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">广东快乐十分</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="<%=basePath%>ssc/zst/xy28/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-xy28"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">幸运28</div>
                     </div>
                 </a>
             </li>
@@ -171,46 +155,64 @@
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/zst/jlk3/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-jlk3"></i></div>
+                <a href="<%=basePath%>ssc/zst/efssc/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-efssc"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">吉林快3</div>
+                        <div class="item-title">两分时时彩</div>
                     </div>
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/zst/jspk10/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-jspk10"></i></div>
+                <a href="<%=basePath%>ssc/zst/sfssc/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-sfssc"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">极速赛车</div>
+                        <div class="item-title">三分时时彩</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="<%=basePath%>ssc/zst/wfssc/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-wfssc"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">五分时时彩</div>
                     </div>
                 </a>
             </li>
 
 
-        <%--<li>--%>
-                <%--<a href="" class="item-content">--%>
-                    <%--<div class="item-media"><i class="icon bg-img-cqssc"></i></div>--%>
-                    <%--<div class="item-inner">--%>
-                        <%--<div class="item-title">重庆时时彩</div>--%>
-                    <%--</div>--%>
-                <%--</a>--%>
+
+            <%--
+            <li>
+                <a href="<%=basePath%>ssc/zst/sflhc/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-sflhc"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">10分六合彩</div>
+                    </div>
+                </a>
+            </li>--%>
+            <%--<li>--%>
+            <%--<a href="" class="item-content">--%>
+            <%--<div class="item-media"><i class="icon bg-img-cqssc"></i></div>--%>
+            <%--<div class="item-inner">--%>
+            <%--<div class="item-title">重庆时时彩</div>--%>
+            <%--</div>--%>
+            <%--</a>--%>
             <%--</li>--%>
             <%--<li>--%>
-                <%--<a href="" class="item-content">--%>
-                    <%--<div class="item-media"><i class="icon bg-img-cqssc"></i></div>--%>
-                    <%--<div class="item-inner">--%>
-                        <%--<div class="item-title">重庆时时彩</div>--%>
-                    <%--</div>--%>
-                <%--</a>--%>
+            <%--<a href="" class="item-content">--%>
+            <%--<div class="item-media"><i class="icon bg-img-cqssc"></i></div>--%>
+            <%--<div class="item-inner">--%>
+            <%--<div class="item-title">重庆时时彩</div>--%>
+            <%--</div>--%>
+            <%--</a>--%>
             <%--</li>--%>
             <%--<li>--%>
-                <%--<a href="" class="item-content">--%>
-                    <%--<div class="item-media"><i class="icon bg-img-cqssc"></i></div>--%>
-                    <%--<div class="item-inner">--%>
-                        <%--<div class="item-title">重庆时时彩</div>--%>
-                    <%--</div>--%>
-                <%--</a>--%>
+            <%--<a href="" class="item-content">--%>
+            <%--<div class="item-media"><i class="icon bg-img-cqssc"></i></div>--%>
+            <%--<div class="item-inner">--%>
+            <%--<div class="item-title">重庆时时彩</div>--%>
+            <%--</div>--%>
+            <%--</a>--%>
             <%--</li>--%>
         </ul>
     </div>
