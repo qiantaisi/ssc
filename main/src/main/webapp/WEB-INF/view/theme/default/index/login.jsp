@@ -14,7 +14,7 @@
 <div class="regedit">
     <div class="reg_col re_reg_col">
         <div class="img re_img"><a href="<%=basePath%>">
-            <img src="<%=basePath%>image/${logo.imageId}" alt=""></a>
+            <img src="<%=basePath%>images/${logo.imageId}" alt=""></a>
         </div>
         <div class="reg">
             <div class="alert_log_col log_col">

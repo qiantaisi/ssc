@@ -15,7 +15,7 @@
 <div class="men_list">
     <div class="wid1">
         <div class="logo mt0">
-            <a href="<%=basePath%>"><img src="<%=basePath%>image/${logo.imageId}" alt=""></a>
+            <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a>
         </div>
         <c:import url="../common/navList.jsp"/>
     </div>
@@ -34,12 +34,12 @@
                     <c:forEach items="${carouseList.carouselList}" var="item">
                         <c:choose>
                             <c:when test="${empty item.url}">
-                                <li><a href="javascript:void(0)"><img src="<%=basePath%>image/${item.imageId}"
+                                <li><a href="javascript:void(0)"><img src="<%=basePath%>images/${item.imageId}"
                                                                       alt="${item.title}"></a></li>
                             </c:when>
                             <c:otherwise>
                                 <li><a href="${item.url}" target="_blank"><img
-                                        src="<%=basePath%>image/${item.imageId}" alt="${item.title}"></a></li>
+                                        src="<%=basePath%>images/${item.imageId}" alt="${item.title}"></a></li>
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>

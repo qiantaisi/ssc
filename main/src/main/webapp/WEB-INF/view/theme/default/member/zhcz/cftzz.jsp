@@ -87,7 +87,7 @@
             str += '<span>财付通昵称信息：</span>';
             str += '<div class="bankInfo">';
             str += '<p>';
-            str += '<img src="<%=basePath%>image/' + imageId + '" alt="" width="240" height="240" class="img-responsive __web-inspector-hide-shortcut__" style="margin:auto;">';
+            str += '<img src="<%=basePath%>images/' + imageId + '" alt="" width="240" height="240" class="img-responsive __web-inspector-hide-shortcut__" style="margin:auto;">';
             str += '</p>';
             str += '<div class="name">请使用财付通昵称扫码完成付款，或转账给以下财付通昵称号</div>';
             str += '<p>收款帐号：' + account + '</p>';

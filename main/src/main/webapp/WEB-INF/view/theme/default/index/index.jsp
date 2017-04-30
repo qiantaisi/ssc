@@ -21,8 +21,8 @@
     <title>${webTitle}</title>
     <meta name="keywords" content="${webKeywords}" />
     <meta name="description" content="${webDescription}" />
-    <link rel="icon" href="<%=basePath%>image/${icoData.imageId}" type="image/x-icon">
-    <link rel="shortcut icon" href="<%=basePath%>image/${icoData.imageId}" mce_href="<%=basePath%>image/${icoData.imageId}" type="image/x-icon">
+    <link rel="icon" href="<%=basePath%>images/${icoData.imageId}" type="image/x-icon">
+    <link rel="shortcut icon" href="<%=basePath%>images/${icoData.imageId}" mce_href="<%=basePath%>images/${icoData.imageId}" type="image/x-icon">
     <style>html{height:100%;width:100%;}iframe{width:100%;height:100%;overflow-x:hidden;overflow-y:hidden;padding:0;margin:0;}body{margin:0;padding:0;height:100%;overflow:hidden;}</style>
     <script>
         // 防止被frame

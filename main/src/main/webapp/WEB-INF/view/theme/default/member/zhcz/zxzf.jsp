@@ -31,7 +31,7 @@
                       <c:forEach items="${systemPayOnlineResult.systemPayOnlineList}" var="item">
                         <label>
                             <input data-payurl="${item.payUrl}" type="radio" data-description="${item.description}" data-minmoney="${item.minMoney}" data-maxmoney="${item.maxMoney}" name="payOnlineId" value="${item.id}">
-                            <em class=""><img src="<%=basePath%>image/${item.imageId}" width="50" height="50" alt=""></em>
+                            <em class=""><img src="<%=basePath%>images/${item.imageId}" width="50" height="50" alt=""></em>
                         </label>
                       </c:forEach>
                     </div>

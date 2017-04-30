@@ -10,7 +10,7 @@
 <c:import url="../common/checkIsChildFrame.jsp" />
 <c:import url="top.jsp" />
 
-<div class="img"><a href="<%=basePath%>"><img src="<%=basePath%>image/${logo.imageId}" alt=""></a></div>
+<div class="img"><a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a></div>
 <img src="${resPath}img/bj.jpg" class="back" alt="" width="100%">
 <div class="regedit">
 

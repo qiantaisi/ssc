@@ -20,7 +20,7 @@ import java.io.OutputStream;
  * Created by Administrator on 2016/5/28.
  */
 @Controller
-@RequestMapping(value = "/image")
+@RequestMapping(value = "/images")
 public class ImageController extends BaseController {
     private Log log = LogFactory.getLog(getClass());
 

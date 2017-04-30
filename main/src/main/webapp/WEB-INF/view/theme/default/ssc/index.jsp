@@ -12,9 +12,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>购彩大厅</title>
-    <link rel="icon" href="<%=basePath%>image/${icoData.imageId}" type="image/x-icon">
-    <link rel="shortcut icon" href="<%=basePath%>image/${icoData.imageId}"
-          mce_href="<%=basePath%>image/${icoData.imageId}" type="image/x-icon">
+    <link rel="icon" href="<%=basePath%>images/${icoData.imageId}" type="image/x-icon">
+    <link rel="shortcut icon" href="<%=basePath%>images/${icoData.imageId}"
+          mce_href="<%=basePath%>images/${icoData.imageId}" type="image/x-icon">
     <style>html {
         height: 100%;
         width: 100%;

@@ -14,7 +14,7 @@
 <div class="men_list">
     <div class="wid1">
         <div class="logo mt0">
-            <a href="<%=basePath%>"><img src="<%=basePath%>image/${logo.imageId}" alt=""></a>
+            <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a>
             <a href="javascript:void(0)" onclick="clickxuan()"><h1>选择彩种<i class="acti1"></i></h1></a>
             <div class="left_layout">
                 <c:import url="leftMenu.jsp" />
