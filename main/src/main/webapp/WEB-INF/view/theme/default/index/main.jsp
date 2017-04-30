@@ -757,50 +757,46 @@
             module = '';
         }
 
-        var urlArr = module.split("/");
-        var idPl = getPlayGroupId(urlArr[1]);
-        var flag = getCaiZhongEnable(idPl);
-        if (idPl != 0 && flag == false) {
-            windowOpenBlank('<%=basePath%>ssc/index.html?module=tingcaipage');
-        } else {
-            windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);
-        }
+//        var urlArr = module.split("/");
+//        var idPl = getPlayGroupId(urlArr[1]);
+//        var flag = getCaiZhongEnable(idPl);
+        windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);
     }
 
-    function getCaiZhongEnable(playGroupId) {
-        var enable = '';
-        ajaxRequest({
-            url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
-            data: {
-                playGroupId: playGroupId
-            },
-            success: function (json) {
-                if (json.result != 1) {
-                    return;
-                }
+//    function getCaiZhongEnable(playGroupId) {
+//        var enable = '';
+//        ajaxRequest({
+//            url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
+//            data: {
+//                playGroupId: playGroupId
+//            },
+//            success: function (json) {
+//                if (json.result != 1) {
+//                    return;
+//                }
+//
+//                $.each(json.sscTimeList, function (index, value) {
+//                    var obj = $("#ssc_" + value.playGroupId);
+//
+//                    if ($(obj).length == 0) {
+//                        return;
+//                    }
+//
+//                    enable = $(obj).data("enable", value.enable);
+//
+//                });
+//            }
+//        });
+//        return enable;
+//    }
 
-                $.each(json.sscTimeList, function (index, value) {
-                    var obj = $("#ssc_" + value.playGroupId);
-
-                    if ($(obj).length == 0) {
-                        return;
-                    }
-
-                    enable = $(obj).data("enable", value.enable);
-
-                });
-            }
-        });
-        return enable;
-    }
-
-    function getPlayGroupId(param_url) {
-        var idPl = 0;
-        if (param_url == 'jlk3') {
-            idPl = 21;
-        }
-        return idPl;
-    }
+//    function getPlayGroupId(param_url) {
+//        var idPl = 0;
+//        if (param_url == 'jlk3') {
+//            idPl = 21;
+//        }
+//        return idPl;
+//    }
 
 
     function openZstIndex(module) {

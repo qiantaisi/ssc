@@ -19,6 +19,8 @@ import project38.ssc.web.form.SscBetForm;
 import project38.api.utils.ApiUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -72,11 +74,25 @@ public class SscController extends BaseController {
         return this.renderView("ssc/gcdt/tingcaipage", modelMap);
     }
 
-    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroup(@PathVariable String group) {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
+//    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
+//    public ModelAndView gcdtGroup(@PathVariable String group) {
+//        Map<String, Object> modelMap = new HashMap<String, Object>();
+//
+//        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+//        return this.renderView("ssc/gcdt/" + group, modelMap);
+//    }
 
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
+    public ModelAndView gcdtGroup(@PathVariable String group, HttpServletResponse httpServletResponse) throws IOException {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group);
+        if(!"gcdt".equals(group)){
+            // 彩种禁用暂停
+            if (!sscPlayGroupResult.getEnable()) {
+                return this.renderView("ssc/gcdt/tingcaipage", modelMap);
+            }
+        }
+
         return this.renderView("ssc/gcdt/" + group, modelMap);
     }
 
