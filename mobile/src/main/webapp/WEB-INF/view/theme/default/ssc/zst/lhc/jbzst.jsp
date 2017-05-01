@@ -10,7 +10,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <c:import url="../../../common/bodyStart.jsp"/>
-<c:import url="../common/commonHead.jsp" />
+<c:import url="../common/commonHead.jsp"/>
 <div class="page-group">
     <div class="page page-current" id="page-zst-jbzst">
         <header class="bar bar-nav">
@@ -87,23 +87,23 @@
             var sum = 0;
             var boseArr = [0, 0, 0];
 
-            $.each(kjData, function(index, value) {
+            $.each(kjData, function (index, value) {
                 sum += Tools.parseInt(value);
                 boseArr[getBose(value)]++;
             });
             var maxBose = 0;
             var maxValue = 0;
-            $.each(boseArr, function(index, value) {
-                if(value > maxValue) {
+            $.each(boseArr, function (index, value) {
+                if (value > maxValue) {
                     maxValue = value;
                     maxBose = index;
                 }
             });
-            if(maxBose == 0) {
+            if (maxBose == 0) {
                 maxBose = '<font class="color-red">红波</font>';
-            } else if(maxBose == 1) {
+            } else if (maxBose == 1) {
                 maxBose = '<font class="color-blue">蓝波</font>';
-            } else if(maxBose == 2) {
+            } else if (maxBose == 2) {
                 maxBose = '<font class="color-green">绿波</font>';
             }
 
@@ -111,13 +111,13 @@
             strHtml += '<span class="zst-cl-102_span" style="width:80px!important">' + data[i].number.substr(2) + '</span>';
             strHtml += '<div class="zst-cl-50">';
             strHtml += '<div class="zst-cl-51 zst-cl-101" style="width:646px!important">';
-            for(var ii = 0; ii < 7; ii++){
+            for (var ii = 0; ii < 7; ii++) {
                 strHtml += getBj(kjData[ii]);
             }
             strHtml += '<span class="zst-cl-102_span" style="width:40px!important">' + sum + '</span>';
-            strHtml += '<span class="zst-cl-102_span" style="width:40px!important">'+ (sum % 2 == 0 ? '总和双' : '总和单') + '</span>';
-            strHtml += '<span class="zst-cl-102_span" style="width:40px!important">'+ (sum >= 175 ? '总和大' : '总和小') + '</span>';
-            strHtml += '<span class="zst-cl-102_span" style="width:40px!important">'+ maxBose + '</span>';
+            strHtml += '<span class="zst-cl-102_span" style="width:40px!important">' + (sum % 2 == 0 ? '总和双' : '总和单') + '</span>';
+            strHtml += '<span class="zst-cl-102_span" style="width:40px!important">' + (sum >= 175 ? '总和大' : '总和小') + '</span>';
+            strHtml += '<span class="zst-cl-102_span" style="width:40px!important">' + maxBose + '</span>';
             var tm = Tools.parseInt(kjData[6]);
             strHtml += '<span class="zst-cl-102_span" style="width:40px!important">' + (tm % 2 == 0 ? '<font class="color-red">双</font>' : '<font>单</font>') + '</span>';
             strHtml += '<span class="zst-cl-102_span" style="width:40px!important">' + (tm >= 25 ? (tm != 49 ? '<font class="color-red">大</font>' : '和') : '<font>小</font>') + '</span>';
@@ -133,22 +133,22 @@
 
         //动态修改显示内容高度 不同屏幕下高度(大于530高度的屏幕使用--.zst-content-all {height: calc(110vh - 1.8rem - 3.2rem - 23px - 2.0rem - 2.2rem)!important;})
         var zca_H = $("#sub-menu-list").height();
-        if(zca_H > 530){
-            $(".zst-content-all").css('height','calc(110vh - 1.8rem - 3.2rem - 23px - 2.0rem - 2.2rem)!important');
+        if (zca_H > 530) {
+            $(".zst-content-all").css('height', 'calc(110vh - 1.8rem - 3.2rem - 23px - 2.0rem - 2.2rem)!important');
         }
     }
 
     function getBj(num) {
         var strClass = '';
         var h = getBose(num);
-        if(h == 0){
+        if (h == 0) {
             strClass = 'cus-on-red';
-        }else if(h == 1){
+        } else if (h == 1) {
             strClass = 'cus-on-blue';
-        }else{
+        } else {
             strClass = 'cus-on-green';
         }
-        strHtml = '<span class="jbspan" style="width:40px!important"><i class="'+ strClass +'">' + num + '</i><span class="sxName">'  + getSxName(num) +'</span></span>';
+        strHtml = '<span class="jbspan" style="width:40px!important"><i class="' + strClass + '">' + num + '</i><span class="sxName">' + getSxName(num) + '</span></span>';
         return strHtml;
     }
 
@@ -161,11 +161,11 @@
     var pageX = 0;
     var pageY = 0;
     function bindTouchScroll() {
-        $(".zst-cl-101").unbind("touchstart").bind('touchstart',function(event){
+        $(".zst-cl-101").unbind("touchstart").bind('touchstart', function (event) {
             pageX = event.touches[0].pageX;
             pageY = event.touches[0].pageY;
         });
-        $(".zst-cl-101").unbind("touchmove").bind('touchmove',function(event){
+        $(".zst-cl-101").unbind("touchmove").bind('touchmove', function (event) {
             var tmpPageX = event.touches[0].pageX;
             var tmpPageY = event.touches[0].pageY;
 
@@ -173,9 +173,9 @@
             var left = 0;
             if (tmpPageX > pageX) {
                 left = parseInt($(this).css("left")) + length;
-            } else if (tmpPageX < pageX){
+            } else if (tmpPageX < pageX) {
                 left = parseInt($(this).css("left")) - length;
-            } else if(tmpPageX == pageX){
+            } else if (tmpPageX == pageX) {
                 left = parseInt($(this).css("left"));
             }
 

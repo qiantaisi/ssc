@@ -306,6 +306,7 @@
         }
     }
 </script>
+//实现文字的闪烁
 <script language="javascript">
     function changeColor() {
         var color = "blue|red";
