@@ -771,61 +771,7 @@
         <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
     <%--}--%>
 
-    function openGcdt(url) {
-        goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + url + ".html");
-    }
 
-    // 读取子页面
-    function getPage(url) {
-        showLoading();
-        $("#rightContent").attr("src", url);
-    }
-
-    // 读取子页面
-    function goSubUrl(url, params) {
-        var turl = url + "?timestamp=" + (new Date()).getTime();
-        var surl = CONFIG.BASEURL + "ssc/gcdt/index.html#url=" + url;
-
-        if (typeof params != 'undefined') {
-            var tmp = params.split("&");
-            $.each(tmp, function(index, value) {
-                turl += "&" + value.key + "=" + value.value;
-                surl += "&" + value.key + "=" + value.value;
-            });
-        }
-        window.parent.location.href = surl;
-        getSubPage();
-    }
-
-    function getSubPage() {
-        var surl = window.parent.location.href.toString();
-        var paramArr = surl.split("#");
-        var turl = "";
-        var tparam = "?timestamp=" + (new Date()).getTime();
-        if (paramArr) {
-            paramArr = paramArr[1];
-            if (paramArr) {
-                paramArr = paramArr.split("&");
-
-                $.each(paramArr, function(index, value) {
-                    var tmp = value.split("=");
-                    var key = tmp[0];
-                    var v = tmp[1];
-
-                    if (key == "url") {
-                        turl = v;
-                    } else {
-                        tparam += "&" + key + "=" + v;
-                    }
-                });
-            }
-        }
-
-        if (!turl) {
-            turl = CONFIG.BASEURL + "ssc/gcdt/gcdt.html";
-        }
-        getPage(turl + tparam);
-    }
 
 //    function getCaiZhongEnable(playGroupId) {
 //        var enable = '';

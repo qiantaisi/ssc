@@ -96,13 +96,13 @@
                 <li class="l"><a href="javascript:void(0)"><b>网站导航</b><i class="ico-d"></i></a>
                     <div class="link">
                         <h5>
-                            <a href="<%=basePath%>ssc/index.html" target="_blank">购买彩票</a>
+                            <a href="<%=basePath%>ssc/gcdt/index.html" target="_blank">购买彩票</a>
                             <a href="<%=mHostName%>" target="_blank">手机购彩</a>
                             <a href="<%=basePath%>/help/index.html">规则说明</a>
                         </h5>
                         <h4>
                             <strong>彩票工具</strong>
-                            <p><a href="<%=mHostName%>" target="_blank">手机客户端</a> <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">走势查询</a> <a href="javascript:void(0)" onclick="getPage('lsjl/tzjl')">中奖查询</a></p>
+                            <p><a href="<%=mHostName%>" target="_blank">手机客户端</a> <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">走势查询</a> <a href="javascript:void(0)" onclick="getJluPage('lsjl/tzjl')">中奖查询</a></p>
                         </h4>
                         <h5 class="last">
                             <a href="javascript:void(0)" onclick="openHyzx()">会员中心</a>
@@ -116,7 +116,7 @@
     </div>
 </div>
 <script>
-    function getPage(module) {
+    function getJluPage(module) {
         if (typeof module == 'undefined') {
             module = '';
         }

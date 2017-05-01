@@ -881,7 +881,7 @@
                 <span class="bg-{{num8}}">{{num8}}</span>
                 <span class="bg-{{num9}}">{{num9}}</span>
                 <span class="bg-{{num10}}">{{num10}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pk10')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('pk10')">详情</a>
             </div>
             <p>
             </p>
@@ -891,7 +891,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/pk10')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pk10')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('pk10')">购买</a>
         </div>
     </li>
 </script>
@@ -915,7 +915,7 @@
                 <span>{{num3}}</span>
                 <span>{{num4}}</span>
                 <span>{{num5}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('cqssc')">详情</a>
             </div>
             <p>
                 <i>{{sum}}</i>
@@ -929,7 +929,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/cqssc')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('cqssc')">购买</a>
         </div>
     </li>
 </script>
@@ -953,7 +953,7 @@
                 <span>{{num3}}</span>
                 <span>{{num4}}</span>
                 <span>{{num5}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('tjssc')">详情</a>
             </div>
             <p>
                 <i>{{sum}}</i>
@@ -967,7 +967,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/tjssc')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('tjssc')">购买</a>
         </div>
     </li>
 </script>
@@ -991,7 +991,7 @@
                 <span>{{num3}}</span>
                 <span>{{num4}}</span>
                 <span>{{num5}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('xjssc')">详情</a>
             </div>
             <p>
                 <i>{{sum}}</i>
@@ -1005,7 +1005,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/xjssc')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('xjssc')">购买</a>
         </div>
     </li>
 </script>
@@ -1027,7 +1027,7 @@
                 <span>{{num1}}</span>
                 <span>{{num2}}</span>
                 <span>{{num3}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pl3')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('pl3')">详情</a>
             </div>
             <p>
             </p>
@@ -1037,7 +1037,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/pl3')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pl3')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('pl3')">购买</a>
         </div>
     </li>
 </script>
@@ -1059,7 +1059,7 @@
                 <span>{{num1}}</span>
                 <span>{{num2}}</span>
                 <span>{{num3}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/fc3d')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('fc3d')">详情</a>
             </div>
             <p>
             </p>
@@ -1069,7 +1069,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/fc3d')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/fc3d')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('fc3d')">购买</a>
         </div>
     </li>
 </script>
@@ -1095,7 +1095,7 @@
                 <span class="{{if bose5 == 1}}col0{{else if bose5 == 2}}col1{{/if}}">{{num5}}</span>
                 <span class="{{if bose6 == 1}}col0{{else if bose6 == 2}}col1{{/if}}">{{num6}}</span>
                 <span class="{{if bose7 == 1}}col0{{else if bose7 == 2}}col1{{/if}}">{{num7}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/lhc')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('lhc')">详情</a>
             </div>
             <p>
                 <i>{{sx1}}</i>
@@ -1112,7 +1112,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/lhc')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/lhc')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('lhc')">购买</a>
         </div>
     </li>
 </script>
@@ -1134,7 +1134,7 @@
                 <span>{{num1}}</span>
                 <span>{{num2}}</span>
                 <span>{{num3}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xy28')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('xy28')">详情</a>
             </div>
             <p>
             </p>
@@ -1144,7 +1144,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/xy28')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xy28')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('xy28')">购买</a>
         </div>
     </li>
 </script>
@@ -1183,7 +1183,7 @@
                 <span>{{num18}}</span>
                 <span>{{num19}}</span>
                 <span>{{num20}}</span>
-                <a href="javascript:void(0)" class="a1 kl8" onclick="openGcdt('gcdt/kl8')">详情</a>
+                <a href="javascript:void(0)" class="a1 kl8" onclick="openGcdt('kl8')">详情</a>
             </div>
             <p>
             </p>
@@ -1193,7 +1193,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/kl8')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/kl8')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('kl8')">购买</a>
         </div>
     </li>
 </script>
@@ -1220,7 +1220,7 @@
                 <span>{{num6}}</span>
                 <span>{{num7}}</span>
                 <span>{{num8}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xync')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('xync')">详情</a>
             </div>
             <p>
                 <i>{{str1}}</i>
@@ -1235,7 +1235,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/xync')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xync')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('xync')">购买</a>
         </div>
     </li>
 </script>
@@ -1263,7 +1263,7 @@
                 <span>{{num6}}</span>
                 <span>{{num7}}</span>
                 <span>{{num8}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/klsf')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('klsf')">详情</a>
             </div>
             <p>
                 <i>{{str1}}</i>
@@ -1278,7 +1278,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/klsf')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/klsf')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('klsf')">购买</a>
         </div>
     </li>
 </script>
@@ -1302,7 +1302,7 @@
                 <span>{{num3}}</span>
                 <span>{{num4}}</span>
                 <span>{{num5}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sfssc')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('sfssc')">详情</a>
             </div>
             <p>
                 <i>{{sum}}</i>
@@ -1316,7 +1316,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/csfssc')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sfssc')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('sfssc')">购买</a>
         </div>
     </li>
 </script>
@@ -1345,7 +1345,7 @@
                 <span class="bg-{{num8}}">{{num8}}</span>
                 <span class="bg-{{num9}}">{{num9}}</span>
                 <span class="bg-{{num10}}">{{num10}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xyft')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('xyft')">详情</a>
             </div>
             <p>
             </p>
@@ -1355,7 +1355,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/xyft')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xyft')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('xyft')">购买</a>
         </div>
     </li>
 </script>
@@ -1379,7 +1379,7 @@
                 <span>{{num3}}</span>
                 <span>{{num4}}</span>
                 <span>{{num5}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ffssc')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('ffssc')">详情</a>
             </div>
             <p>
                 <i>{{sum}}</i>
@@ -1393,7 +1393,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/ffssc')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ffssc')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('ffssc')">购买</a>
         </div>
     </li>
 </script>
@@ -1417,7 +1417,7 @@
                 <span>{{num3}}</span>
                 <span>{{num4}}</span>
                 <span>{{num5}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/efssc')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('efssc')">详情</a>
             </div>
             <p>
                 <i>{{sum}}</i>
@@ -1431,7 +1431,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/efssc')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/efssc')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('efssc')">购买</a>
         </div>
     </li>
 </script>
@@ -1455,7 +1455,7 @@
                 <span>{{num3}}</span>
                 <span>{{num4}}</span>
                 <span>{{num5}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/wfssc')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('wfssc')">详情</a>
             </div>
             <p>
                 <i>{{sum}}</i>
@@ -1469,7 +1469,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/wfssc')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/wfssc')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('wfssc')">购买</a>
         </div>
     </li>
 </script>
@@ -1491,7 +1491,7 @@
                 <span>{{num1}}</span>
                 <span>{{num2}}</span>
                 <span>{{num3}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jsk3')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('jsk3')">详情</a>
             </div>
             <p>
                 <i>{{hezhi}}</i>
@@ -1504,7 +1504,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/jsks')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jsks')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('jsks')">购买</a>
         </div>
     </li>
 </script>
@@ -1527,7 +1527,7 @@
                 <span>{{num1}}</span>
                 <span>{{num2}}</span>
                 <span>{{num3}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/hbk3')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('hbk3')">详情</a>
             </div>
             <p>
                 <i>{{hezhi}}</i>
@@ -1540,7 +1540,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/hbk3')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/hbk3')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('hbk3')">购买</a>
         </div>
     </li>
 </script>
@@ -1563,7 +1563,7 @@
                 <span>{{num1}}</span>
                 <span>{{num2}}</span>
                 <span>{{num3}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ahk3')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('ahk3')">详情</a>
             </div>
             <p>
                 <i>{{hezhi}}</i>
@@ -1576,7 +1576,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/ahk3')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ahk3')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('ahk3')">购买</a>
         </div>
     </li>
 </script>
@@ -1599,7 +1599,7 @@
                 <span>{{num1}}</span>
                 <span>{{num2}}</span>
                 <span>{{num3}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jlk3')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('jlk3')">详情</a>
             </div>
             <p>
                 <i>{{hezhi}}</i>
@@ -1612,7 +1612,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/jlk3')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jlk3')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('jlk3')">购买</a>
         </div>
     </li>
 </script>
@@ -1638,7 +1638,7 @@
                 <span class="{{if bose5 == 1}}col0{{else if bose5 == 2}}col1{{/if}}">{{num5}}</span>
                 <span class="{{if bose6 == 1}}col0{{else if bose6 == 2}}col1{{/if}}">{{num6}}</span>
                 <span class="{{if bose7 == 1}}col0{{else if bose7 == 2}}col1{{/if}}">{{num7}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sflhc')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('sflhc')">详情</a>
             </div>
             <p>
                 <i>{{sx1}}</i>
@@ -1655,7 +1655,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/sflhc')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sflhc')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('sflhc')">购买</a>
         </div>
     </li>
 </script>
@@ -1684,7 +1684,7 @@
                 <span class="bg-{{num8}}">{{num8}}</span>
                 <span class="bg-{{num9}}">{{num9}}</span>
                 <span class="bg-{{num10}}">{{num10}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jspk10')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('jspk10')">详情</a>
             </div>
             <p>
             </p>
@@ -1694,7 +1694,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/jspk10')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jspk10')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('jspk10')">购买</a>
         </div>
     </li>
 </script>
@@ -1715,7 +1715,7 @@
         <span class="sp6">5分钟-10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/cqssc')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('cqssc')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_2">
@@ -1735,7 +1735,7 @@
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/tjssc')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('tjssc')">立即购彩</a></span>
     </li>
 </script>
 
@@ -1755,7 +1755,7 @@
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/xjssc')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('xjssc')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_4">
@@ -1772,7 +1772,7 @@
         <span class="sp6">每天一次</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/pl3')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pl3')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('pl3')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_5">
@@ -1789,7 +1789,7 @@
         <span class="sp6">每天一次 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/fc3d')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/fc3d')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('fc3d')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_6">
@@ -1810,7 +1810,7 @@
         <span class="sp6">两天一次</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/lhc')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/lhc')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('lhc')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_7">
@@ -1827,7 +1827,7 @@
         <span class="sp6">5分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/xy28')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xy28')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('xy28')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_8">
@@ -1861,7 +1861,7 @@
         <span class="sp6">5分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/kl8')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/kl8')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('kl8')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_9">
@@ -1885,7 +1885,7 @@
         <span class="sp6">5分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/pk10')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pk10')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('pk10')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_10">
@@ -1907,7 +1907,7 @@
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/xync')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xync')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('xync')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_11">
@@ -1929,7 +1929,7 @@
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/klsf')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/klsf')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('klsf')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_13">
@@ -1948,7 +1948,7 @@
         <span class="sp6">3分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/sfssc')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sfssc')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('sfssc')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_14">
@@ -1971,7 +1971,7 @@
         <span class="sp5">180期</span>
         <span class="sp6">5分钟</span>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/xyft')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xyft')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('xyft')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_15">
@@ -1990,7 +1990,7 @@
         <span class="sp6">1分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/ffssc')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ffssc')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('ffssc')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_16">
@@ -2009,7 +2009,7 @@
         <span class="sp6">2分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/efssc')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/efssc')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('efssc')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_17">
@@ -2028,7 +2028,7 @@
         <span class="sp6">5分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/wfssc')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/wfssc')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('wfssc')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_18">
@@ -2045,7 +2045,7 @@
         <span class="sp6">每10分钟一期 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/jsk3')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jsk3')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('jsk3')">立即购彩</a></span>
     </li>
 </script>
 
@@ -2063,7 +2063,7 @@
         <span class="sp6">每10分钟一期 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/hbk3')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/hbk3')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('hbk3')">立即购彩</a></span>
     </li>
 </script>
 
@@ -2081,7 +2081,7 @@
         <span class="sp6">每10分钟一期 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/ahk3')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ahk3')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('ahk3')">立即购彩</a></span>
     </li>
 </script>
 
@@ -2099,7 +2099,7 @@
         <span class="sp6">每10分钟一期 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/jlk3')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jlk3')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('jlk3')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_22">
@@ -2120,7 +2120,7 @@
         <span class="sp6">10分钟一期</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/sflhc')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sflhc')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('sflhc')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_23">
@@ -2143,7 +2143,7 @@
         <span class="sp5">1440期</span>
         <span class="sp6">1分钟</span>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/jspk10')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jspk10')">立即购彩</a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('jspk10')">立即购彩</a></span>
     </li>
 </script>
 <c:import url="../common/bodyEnd.jsp"/>
