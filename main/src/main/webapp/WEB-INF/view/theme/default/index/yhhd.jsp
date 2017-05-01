@@ -12,7 +12,7 @@
 <div class="men_list">
     <div class="wid1">
         <div class="logo">
-            <img src="<%=basePath%>image/${logo.imageId}" alt="">
+            <img src="<%=basePath%>images/${logo.imageId}" alt="">
         </div>
         <c:import url="../common/navList.jsp" />
     </div>
@@ -165,8 +165,7 @@
         {{/if}}
         <h2>{{title}}<p>发布时间：{{createTime}}</p></h2>
         <div class="pict">
-            <img src="<%=basePath%>image/{{bigImageId}}" alt="">
-            <%--<img src="data:image/png;base64,{{imageData}}" alt="">--%>
+            <img src="<%=basePath%>images/{{bigImageId}}" alt="">
         </div>
         <div class="text">
             <p>活动时间：<span class="startTi">{{startTime}}</span> 至 <span class="endTi">{{endTime}}</span></p>

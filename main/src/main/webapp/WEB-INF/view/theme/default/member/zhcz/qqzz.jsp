@@ -88,7 +88,7 @@
             str += '<div class="bankInfo">';
             if (imageId) {
                 str += '<p>';
-                str += '<img src="<%=basePath%>image/' + imageId + '" alt="" width="240" height="240" class="img-responsive __web-inspector-hide-shortcut__" style="margin:auto;">';
+                str += '<img src="<%=basePath%>images/' + imageId + '" alt="" width="240" height="240" class="img-responsive __web-inspector-hide-shortcut__" style="margin:auto;">';
                 str += '</p>';
                 str += '<div class="name">请使用QQ昵称扫码完成付款，或转账给以下QQ昵称号</div>';
             }

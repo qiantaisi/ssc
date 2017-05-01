@@ -3,7 +3,6 @@ package project38.ssc.web.controller;
 import project38.api.common.exception.UserException;
 import project38.api.common.result.CommonResult;
 import project38.api.common.utils.JSONUtils;
-import org.apache.commons.collections.comparators.FixedOrderComparator;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,6 @@ import project38.ssc.web.form.SscBetForm;
 import project38.api.utils.ApiUtils;
 
 import javax.servlet.http.HttpServletRequest;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -72,11 +70,25 @@ public class SscController extends BaseController {
         return this.renderView("ssc/gcdt/tingcaipage", modelMap);
     }
 
-    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroup(@PathVariable String group) {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
+//    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
+//    public ModelAndView gcdtGroup(@PathVariable String group) {
+//        Map<String, Object> modelMap = new HashMap<String, Object>();
+//
+//        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+//        return this.renderView("ssc/gcdt/" + group, modelMap);
+//    }
 
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
+    public ModelAndView gcdtGroup(@PathVariable String group){
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group);
+        if(!"gcdt".equals(group)){
+            // 彩种禁用暂停
+            if (!sscPlayGroupResult.getEnable()) {
+                return this.renderView("ssc/gcdt/tingcaipage", modelMap);
+            }
+        }
+
         return this.renderView("ssc/gcdt/" + group, modelMap);
     }
 
@@ -295,5 +307,11 @@ public class SscController extends BaseController {
     public ModelAndView gcdtGfwf(@PathVariable String group, @PathVariable String play) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderView("ssc/gcdt/gfwf/" + group + "/" + play, modelMap);
+    }
+
+    @RequestMapping(value = "/gcdt/index.html", method = RequestMethod.GET)
+    public ModelAndView gcdtIndex() {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        return this.renderView("ssc/gcdt/index", modelMap);
     }
 }

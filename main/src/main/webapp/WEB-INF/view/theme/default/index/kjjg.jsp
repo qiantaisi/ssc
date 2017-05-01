@@ -14,7 +14,7 @@
 <div class="men_list">
     <div class="wid1">
         <div class="logo mt0">
-            <a href="<%=basePath%>"><img src="<%=basePath%>image/${logo.imageId}" alt=""></a>
+            <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a>
             <a href="javascript:void(0)" onclick="clickxuan()"><h1>选择彩种<i class="acti1"></i></h1></a>
             <div class="left_layout">
                 <c:import url="leftMenu.jsp" />
@@ -40,91 +40,105 @@
                         <li data-subnav="4"><a href="javascript:void(0)">全国彩种开奖</a></li>
                         <li data-subnav="5"><a href="javascript:void(0)">地方彩种开奖</a></li>
                         <li data-subnav="6"><a href="javascript:void(0)">境外彩种开奖</a></li>
-                        <li data-subnav="7"><a href="javascript:void(0)">开奖搜索</a></li>
+                        <li data-subnav="7"><a href="javascript:void(0)">本站品牌</a></li>
+                        <li data-subnav="8"><a href="javascript:void(0)">开奖搜索</a></li>
                     </ul>
                 </div>
                 <div class="wrap_select at corl1 kjjg_hz_style" id="subNav_1">
                     <div>
                         <a class="acti" href="javascript:void(0)">汇总</a>
+                        <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
+                        <a href="javascript:void(0)" data-playgroupid="9">北京PK10</a>
+                        <a href="javascript:void(0)" data-playgroupid="23">极速PK10</a>
+                        <a href="javascript:void(0)" data-playgroupid="14">幸运飞艇</a>
+                        <a href="javascript:void(0)" data-playgroupid="15">分分时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="1">重庆时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="2">天津时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="3">新疆时时彩</a>
-                        <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
-                        <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
-                        <a href="javascript:void(0)" data-playgroupid="22">10分六合彩</a>
-                        <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
-                        <a href="javascript:void(0)" data-playgroupid="7">幸运28</a>
-                        <a href="javascript:void(0)" data-playgroupid="8">北京快乐8</a>
-                        <a href="javascript:void(0)" data-playgroupid="9">北京PK10</a>
-                        <a href="javascript:void(0)" data-playgroupid="10">重庆幸运农场</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="11">广东快乐十分</a>
+                        <a href="javascript:void(0)" data-playgroupid="13">三分时时彩</a>
+                        <a href="javascript:void(0)" data-playgroupid="16">两分时时彩</a>
+                        <a href="javascript:void(0)" data-playgroupid="17">五分时时彩</a>
                         <%--<a href="javascript:void(0)" style="visibility: hidden">占位</a>--%>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="13">三分时时彩</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="14">幸运飞艇</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="15">分分时时彩</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="16">两分时时彩</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="17">五分时时彩</a>
                         <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="18">江苏快3</a>
                         <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="19">湖北快3</a>
                         <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="20">安徽快3</a>
                         <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="21">吉林快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="23" class="last">极速PK10</a>
+                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="10">重庆幸运农场</a>
+                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="11">广东快乐十分</a>
+                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="4">体彩排列3</a>
+                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="5">福彩3D</a>
+                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="7">幸运28</a>
+                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="8" class="last">北京快乐8</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_2">
                     <div>
+                        <a href="javascript:void(0)" data-playgroupid="9">北京PK10</a>
+                        <a href="javascript:void(0)" data-playgroupid="23">极速PK10</a>
+                        <a href="javascript:void(0)" data-playgroupid="14">幸运飞艇</a>
+                        <a href="javascript:void(0)" data-playgroupid="15">分分时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="1">重庆时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="2">天津时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="3">新疆时时彩</a>
-                        <a href="javascript:void(0)" data-playgroupid="7">幸运28</a>
-                        <a href="javascript:void(0)" data-playgroupid="8">北京快乐8</a>
-                        <a href="javascript:void(0)" data-playgroupid="9">北京PK10</a>
-                        <a href="javascript:void(0)" data-playgroupid="10">重庆幸运农场</a>
-                        <a href="javascript:void(0)" data-playgroupid="11">广东快乐十分</a>
+                        <a href="javascript:void(0)" data-playgroupid="16">两分时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="13">三分时时彩</a>
-                        <a href="javascript:void(0)" data-playgroupid="14">幸运飞艇</a>
-                        <a href="javascript:void(0)" data-playgroupid="15">分分时时彩</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="16">两分时时彩</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="17">五分时时彩</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="18">江苏快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="19">湖北快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="17">五分时时彩</a>
+                        <a href="javascript:void(0)" data-playgroupid="18">江苏快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="19">湖北快3</a>
                         <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="20">安徽快3</a>
                         <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="21">吉林快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="22">10分六合彩</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="23">极速PK10</a>
+                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="10">重庆幸运农场</a>
+                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="11">广东快乐十分</a>
+                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="7">幸运28</a>
+                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="8">北京快乐8</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide" id="subNav_3">
                     <div>
+                        <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
                         <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
                         <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
-                        <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide" id="subNav_4">
                     <div>
+                        <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
                         <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
                         <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
-                        <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
                         <a href="javascript:void(0)" data-playgroupid="7">幸运28</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide" id="subNav_5">
                     <div>
+                        <a href="javascript:void(0)" data-playgroupid="9">北京PK10</a>
                         <a href="javascript:void(0)" data-playgroupid="1">重庆时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="2">天津时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="3">新疆时时彩</a>
-                        <a href="javascript:void(0)" data-playgroupid="8">北京快乐8</a>
-                        <a href="javascript:void(0)" data-playgroupid="9">北京PK10</a>
-                        <a href="javascript:void(0)" data-playgroupid="10">重庆幸运农场</a>
-                        <a href="javascript:void(0)" data-playgroupid="11">广东快乐十分</a>
                         <a href="javascript:void(0)" data-playgroupid="18">江苏快3</a>
                         <a href="javascript:void(0)" data-playgroupid="19">湖北快3</a>
                         <a href="javascript:void(0)" data-playgroupid="20">安徽快3</a>
-                        <a href="javascript:void(0)" data-playgroupid="21" class="last">吉林快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="21">吉林快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="10">重庆幸运农场</a>
+                        <a href="javascript:void(0)" data-playgroupid="11">广东快乐十分</a>
+                        <a href="javascript:void(0)" data-playgroupid="8" class="last">北京快乐8</a>
+                    </div>
+                </div>
+                <div class="wrap_select at corl1 hide" id="subNav_6">
+                    <div>
+                        <a href="javascript:void(0)" data-playgroupid="14">幸运飞艇</a>
+                        <a href="javascript:void(0)" data-playgroupid="6">香港六合彩</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide" id="subNav_7">
+                    <div>
+                        <a href="javascript:void(0)" data-playgroupid="23">极速PK10</a>
+                        <a href="javascript:void(0)" data-playgroupid="15">分分时时彩</a>
+                        <a href="javascript:void(0)" data-playgroupid="16">两分时时彩</a>
+                        <a href="javascript:void(0)" data-playgroupid="13">三分时时彩</a>
+                        <a href="javascript:void(0)" data-playgroupid="17">五分时时彩</a>
+                    </div>
+                </div>
+                <div class="wrap_select at corl1 hide" id="subNav_8">
                     <div class="zx" style="display:block;">
                         <p>精确搜索：</p>
                         <select class="kjTime">
@@ -133,28 +147,27 @@
                             <option value="t3">三天内开奖</option>
                         </select>
                         <select class="kjCz">
+                            <option value="6">香港六合彩</option>
+                            <option value="9">北京PK10</option>
+                            <option value="23">极速PK10</option>
+                            <option value="14">幸运飞艇</option>
+                            <option value="15">分分时时彩</option>
                             <option value="1">重庆时时彩</option>
                             <option value="2">天津时时彩</option>
                             <option value="3">新疆时时彩</option>
-                            <option value="4">体育排列3</option>
-                            <option value="5">福彩3D</option>
-                            <option value="22">10分六合彩</option>
-                            <option value="6">香港六合彩</option>
-                            <option value="7">幸运28</option>
-                            <option value="8">北京快乐8</option>
-                            <option value="9">北京PK10</option>
-                            <option value="10">重庆幸运农场</option>
-                            <option value="11">广东快乐十分</option>
-                            <option value="13">三分时时彩</option>
-                            <option value="14">幸运飞艇</option>
-                            <option value="15">分分时时彩</option>
                             <option value="16">两分时时彩</option>
+                            <option value="13">三分时时彩</option>
                             <option value="17">五分时时彩</option>
                             <option value="18">江苏快3</option>
                             <option value="19">湖北快3</option>
                             <option value="20">安徽快3</option>
                             <option value="21">吉林快3</option>
-                            <option value="23">极速PK10</option>
+                            <option value="10">重庆幸运农场</option>
+                            <option value="11">广东快乐十分</option>
+                            <option value="4">体育排列3</option>
+                            <option value="5">福彩3D</option>
+                            <option value="7">幸运28</option>
+                            <option value="8">北京快乐8</option>
                         </select>
                         <input class="inp1" type="text" name="qihao" placeholder="输入期数"/>
                         <input class="inp2" type="submit" onclick="sousuokjhm()" value="搜索" name="" />
@@ -235,25 +248,25 @@
     }
     function getSouData(playGroupId,startT,qiHao) {
         ajaxRequest({
-                url: "<%=basePath%>ssc/ajaxGetHistory.json",
-                data: {
-                    playGroupId: playGroupId,
-                    pageIndex: 1,
-                    startT:startT
-                },
-                beforeSend: function() {
-                    showLoading();
-                },
-                success: function(json) {
-                    if (json.result != 1) {
-                        return;
-                    }
-                    renderData(json.sscHistoryList);
-                },
-                complete: function() {
-                    hideLoading();
+            url: "<%=basePath%>ssc/ajaxGetHistory.json",
+            data: {
+                playGroupId: playGroupId,
+                pageIndex: 1,
+                startT:startT
+            },
+            beforeSend: function() {
+                showLoading();
+            },
+            success: function(json) {
+                if (json.result != 1) {
+                    return;
                 }
-            });
+                renderData(json.sscHistoryList);
+            },
+            complete: function() {
+                hideLoading();
+            }
+        });
     }
     function getData(playGroupId) {
         if (typeof playGroupId == 'undefined' || playGroupId == null) {
@@ -840,16 +853,55 @@
     $(function () {
         autobox(".Customerservice", 1, 1180, 0);
         click_addname(".Resultt .latyout .wrap_select a", "acti", "click");
-       // slide_nav(".men_list .logo", ".left_layout", "acti");
+        // slide_nav(".men_list .logo", ".left_layout", "acti");
     });
+</script>
+<script type="text/html" id="template_9">
+    <li class="pk10">
+        <div class="box1">
+            {{if isToday}}
+            <var>今日开奖</var>
+            {{else}}
+            <var class="no"></var>
+            {{/if}}
+            <div class="text">
+                <h3>北京PK10<span>第{{number}}期</span></h3>
+                <p>每天180期</p>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box_num">
+                <span class="bg-{{num1}}">{{num1}}</span>
+                <span class="bg-{{num2}}">{{num2}}</span>
+                <span class="bg-{{num3}}">{{num3}}</span>
+                <span class="bg-{{num4}}">{{num4}}</span>
+                <span class="bg-{{num5}}">{{num5}}</span>
+                <span class="bg-{{num6}}">{{num6}}</span>
+                <span class="bg-{{num7}}">{{num7}}</span>
+                <span class="bg-{{num8}}">{{num8}}</span>
+                <span class="bg-{{num9}}">{{num9}}</span>
+                <span class="bg-{{num10}}">{{num10}}</span>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pk10')">详情</a>
+            </div>
+            <p>
+            </p>
+        </div>
+        <div class="box3">
+            <a href="<%=basePath%>kjjg.html?playGroupId=9">历史开奖</a>
+            <a href="javascript:void(0)" onclick="goZst('zst/pk10')">走势图表</a>
+        </div>
+        <div class="box4">
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pk10')">购买</a>
+        </div>
+    </li>
 </script>
 <script type="text/html" id="template_1">
     <li>
         <div class="box1">
             {{if isToday}}
-                <var>今日开奖</var>
+            <var>今日开奖</var>
             {{else}}
-                <var class="no"></var>
+            <var class="no"></var>
             {{/if}}
             <div class="text">
                 <h3>重庆时时彩<span>第{{number}}期</span></h3>
@@ -1142,45 +1194,6 @@
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/kl8')">购买</a>
-        </div>
-    </li>
-</script>
-<script type="text/html" id="template_9">
-    <li class="pk10">
-        <div class="box1">
-            {{if isToday}}
-            <var>今日开奖</var>
-            {{else}}
-            <var class="no"></var>
-            {{/if}}
-            <div class="text">
-                <h3>北京PK10<span>第{{number}}期</span></h3>
-                <p>每天180期</p>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="box_num">
-                <span class="bg-{{num1}}">{{num1}}</span>
-                <span class="bg-{{num2}}">{{num2}}</span>
-                <span class="bg-{{num3}}">{{num3}}</span>
-                <span class="bg-{{num4}}">{{num4}}</span>
-                <span class="bg-{{num5}}">{{num5}}</span>
-                <span class="bg-{{num6}}">{{num6}}</span>
-                <span class="bg-{{num7}}">{{num7}}</span>
-                <span class="bg-{{num8}}">{{num8}}</span>
-                <span class="bg-{{num9}}">{{num9}}</span>
-                <span class="bg-{{num10}}">{{num10}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pk10')">详情</a>
-            </div>
-            <p>
-            </p>
-        </div>
-        <div class="box3">
-            <a href="<%=basePath%>kjjg.html?playGroupId=9">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/pk10')">走势图表</a>
-        </div>
-        <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pk10')">购买</a>
         </div>
     </li>
 </script>
@@ -1603,7 +1616,6 @@
         </div>
     </li>
 </script>
-
 <script type="text/html" id="template_22">
     <li>
         <div class="box1">
@@ -1613,7 +1625,7 @@
             <var class="no"></var>
             {{/if}}
             <div class="text">
-                <h3>10分六合彩<span>第{{number}}期</span></h3>
+                <h3>十分六合彩<span>第{{number}}期</span></h3>
                 <p>每天144期</p>
             </div>
         </div>
@@ -2092,7 +2104,7 @@
 </script>
 <script type="text/html" id="template_single_22">
     <li>
-        <span class="sp1">10分六合彩</span>
+        <span class="sp1">十分六合彩</span>
         <span class="sp2">{{number}}</span>
         <span class="sp3">{{openTime}}</span>
         <span class="sp4">

@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>会员中心</title>
-    <link rel="icon" href="<%=basePath%>image/${icoData.imageId}" type="image/x-icon">
+    <link rel="icon" href="<%=basePath%>images/${icoData.imageId}" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/reset.css">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/hpn-common.css">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/index.css">
