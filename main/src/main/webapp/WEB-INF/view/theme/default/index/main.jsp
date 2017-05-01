@@ -68,7 +68,9 @@
                 <div class="num_bett" id="ssc_id_1">
                     <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
                             class="sp1 jiangchi"></span><span><a
-                            href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=cqssc&navIndex=1"
+                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=cqssc&navIndex=1"--%>
+                            href="javascript:void(0);"
+                            onclick="openGcdt('cqssc')"
                             target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,1)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/index.html?module=zst/cqssc" target="_blank"
                             class="sp0">走势图</a></span></p>
@@ -98,7 +100,10 @@
                 <div class="num_bett" id="ssc_id_6">
                     <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
                             class="sp1 angchi"></span><span><a
-                            href="<%=basePath%>ssc/index.html?module=gcdt/lhc&caizhong=lhc&navIndex=0" target="_blank">手动选号</a> | <a
+                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/lhc&caizhong=lhc&navIndex=0"--%>
+                            href="javascript:void(0);"
+                            onclick="openGcdt('lhc')"
+                            target="_blank">手动选号</a> | <a
                             href="javascript:void(0)" onclick="xyxh(this,6)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/index.html?module=zst/lhc" target="_blank" class="sp0">走势图</a></span>
                     </p>
@@ -140,8 +145,10 @@
                 <div class="num_bett" id="ssc_id_9">
                     <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
                             class="sp1 jiangchi"></span><span><a
-                            href="<%=basePath%>ssc/index.html?module=gcdt/lhc&caizhong=pk10&navIndex=1" target="_blank">手动选号</a> | <a
-                            href="javascript:void(0)" onclick="xyxh(this,9)">幸运选号</a> | <a
+                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/lhc&caizhong=pk10&navIndex=1"--%>
+                            href="javascript:void(0);"
+                            onclick="openGcdt('pk10')"
+                            target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,9)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/index.html?module=zst/lhc" target="_blank" class="sp0">走势图</a></span>
                     </p>
                     <div class="box_n at hei1 pk10" id="xyxhContent_9">
@@ -221,7 +228,9 @@
                 <div class="num_bett" id="ssc_id_3">
                     <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
                             class="sp1 jiangchi"></span><span><a
-                            href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=xjssc&navIndex=1"
+                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=xjssc&navIndex=1"--%>
+                            href="javascript:void(0);"
+                            onclick="openGcdt('xjssc')"
                             target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,3)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/index.html?module=zst/xjssc" target="_blank"
                             class="sp0">走势图</a></span></p>
@@ -251,7 +260,9 @@
                 <div class="num_bett" id="ssc_id_2">
                     <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
                             class="sp1 jiangchi"></span><span><a
-                            href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=tjssc&navIndex=1"
+                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=tjssc&navIndex=1"--%>
+                            href="javascript:void(0);"
+                            onclick="openGcdt('tjssc')"
                             target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,2)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/index.html?module=zst/tjssc" target="_blank"
                             class="sp0">走势图</a></span></p>
