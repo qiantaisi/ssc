@@ -13,6 +13,19 @@ public class EnumsResult extends CommonResult {
      */
     private List<Type> czlxList;
 
+    /**
+     * 银行列表
+     */
+    private List<Type> bankList;
+
+    public List<Type> getBankList() {
+        return bankList;
+    }
+
+    public void setBankList(List<Type> bankList) {
+        this.bankList = bankList;
+    }
+
     public List<Type> getCzlxList() {
         return czlxList;
     }
