@@ -10,6 +10,12 @@
 <script src="${resPath}zst/js/point.js"></script>
 <script src="${resPath}zst/js/echarts.min.js"></script>
 <script>
+    var CONFIG = {
+        BASEURL: "<%=basePath%>",    // 根路径
+        RESURL: "${resPath}"         // 资源路径
+    };
+</script>
+<script>
     var pageSize=30;
     $(function() {
         var date = new Date();
@@ -181,7 +187,11 @@
         if (typeof module == 'undefined') {
             module = '';
         }
-        window.location.href ='<%=basePath%>ssc/index.html?module=' + module;
+
+       // module -- 字符串例子：gcdt/cqssc
+        var caizhong = module.toString().split("/");
+        <%--window.location.href ='<%=basePath%>ssc/index.html?module=' + module;--%>
+        openGcdt(caizhong[1]);
     }
 
     $(function () {

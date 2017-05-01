@@ -9,7 +9,7 @@
 <script type="text/javascript" src="${resPath}js/jquery.min.js?v=2017"></script><!--jQuery库-->
 <script type="text/javascript" src="${resPath}js/scrollanim.min.js?v=2017"></script> <!--"动画库"-->
 <script src="${resPath}js/type.js?v=2017"></script><!--自定义封装函数-->
-<script src="${resPath}js/global.js?v=20170321"></script><!--自定义封装函数-->
+<script src="${resPath}js/global.js?v=20170501"></script><!--自定义封装函数-->
 <script src="${resPath}js/jquery.cookie.js?v=2017"></script><!--自定义封装函数-->
 <script src="${resPath}js/jquery.md5.js?v=2017"></script><!--自定义封装函数-->
 <script src="${resPath}layer/layer.js?v=2017"></script>
