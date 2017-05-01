@@ -1504,7 +1504,7 @@
             <a href="javascript:void(0)" onclick="goZst('zst/jsks')">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('jsks')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('jsk3')">购买</a>
         </div>
     </li>
 </script>
