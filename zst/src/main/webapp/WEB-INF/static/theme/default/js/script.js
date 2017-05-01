@@ -6031,7 +6031,7 @@ $(function () {
         //     }
         // }, 1000);
     });
-
+             //on() 添加一个或多个事件处理程序
     $(document).on("pageInit", "#page-zst-jbzst", function (e, id, page) {
         var tmpData = null;
         $(".qishu-btns a").click(function () {
