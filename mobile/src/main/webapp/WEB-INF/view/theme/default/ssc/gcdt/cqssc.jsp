@@ -22,6 +22,12 @@
             </a>
             <h1 class="title">重庆时时彩</h1>
             <div class="triangle-down"> <!--向下的三角--> </div>
+            <div class="consele">
+                <div class="selects">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </header>
         <c:import url="common/commonBet.jsp" />
         <div class="content cl-601">
