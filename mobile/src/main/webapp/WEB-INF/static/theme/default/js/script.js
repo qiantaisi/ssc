@@ -2090,7 +2090,7 @@ $(function () {
                         infoArr.push(sum);
                         infoArr.push(sum % 2 == 0 ? '双' : '单');
                         infoArr.push(sum <= 10 ? '小' : '大');
-                    } else if ($.inArray(playGroupId, [9, 14, 23]) >= 0) {
+                    } else if ($.inArray(playGroupId, [9]) >= 0) {
                         var arr = lastOpenData.openCodeArr;
                         var num1 = parseInt(arr[0]);
                         var num2 = parseInt(arr[1]);
@@ -2107,6 +2107,33 @@ $(function () {
                         infoArr.push(sum12);
                         infoArr.push(sum12 % 2 == 0 ? '双' : '单');
                         infoArr.push(0 <= sum12 && sum12 <= 10 ? '小' : '大');
+                        var cha = num1 - num10;
+                        infoArr.push(cha == 0 ? '和' : (cha > 0 ? '龙' : '虎'));
+                        cha = num2 - num9;
+                        infoArr.push(cha == 0 ? '和' : (cha > 0 ? '龙' : '虎'));
+                        cha = num3 - num8;
+                        infoArr.push(cha == 0 ? '和' : (cha > 0 ? '龙' : '虎'));
+                        cha = num4 - num7;
+                        infoArr.push(cha == 0 ? '和' : (cha > 0 ? '龙' : '虎'));
+                        cha = num5 - num6;
+                        infoArr.push(cha == 0 ? '和' : (cha > 0 ? '龙' : '虎'));
+                    } else if ($.inArray(playGroupId, [14, 23]) >= 0) {
+                        var arr = lastOpenData.openCodeArr;
+                        var num1 = parseInt(arr[0]);
+                        var num2 = parseInt(arr[1]);
+                        var num3 = parseInt(arr[2]);
+                        var num4 = parseInt(arr[3]);
+                        var num5 = parseInt(arr[4]);
+                        var num6 = parseInt(arr[5]);
+                        var num7 = parseInt(arr[6]);
+                        var num8 = parseInt(arr[7]);
+                        var num9 = parseInt(arr[8]);
+                        var num10 = parseInt(arr[9]);
+
+                        var sum12 = num1 + num2;
+                        infoArr.push(sum12);
+                        infoArr.push(sum12 % 2 == 0 ? '双' : '单');
+                        infoArr.push(0 <= sum12 && sum12 <= 11 ? '小' : '大');
                         var cha = num1 - num10;
                         infoArr.push(cha == 0 ? '和' : (cha > 0 ? '龙' : '虎'));
                         cha = num2 - num9;
