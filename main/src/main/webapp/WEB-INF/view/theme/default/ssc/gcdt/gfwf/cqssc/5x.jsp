@@ -282,6 +282,20 @@
         }
     }
 
+    //获取手动输入的有效注数
+    function getDsZhushu() {
+        var textStr = $(".content_jiang .content_tex").val();
+        var newArr = [];
+        textStr = $.trim(textStr.replace(/[^1-9]/g,','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 5){
+                newArr.push(arr_new[i]);
+            }
+        }
+        return newArr.length;
+    }
+
     //五星直选-直选单式
     function getDsZhudan(obj) {
         var textStr = $(".content_jiang .content_tex").val();
@@ -454,6 +468,9 @@
 </script>
 <script>
     $(function () {
+        $('.content_jiang .content_tex').keyup(function () {
+            stateTouZhu('dan');
+        });
         $('.slider-input').jRange({
             from: 0,
             to: 13,
@@ -471,7 +488,14 @@
                 money_jangjin = 98000 - (money_jangjin * 1000);
                 $(".jiangjin-change").html(money_jangjin);
                 if(typeof stateTouZhu == "function"){
-                    stateTouZhu();
+                    var flag_str = '';
+                    if (typeof $('.recl-1003').attr('statef') != 'undefined') {
+                        flag_str = 'dan';
+                        stateTouZhu(flag_str);
+                    } else {
+                        flag_str = 'fu';
+                        stateTouZhu(flag_str);
+                    }
                 }
             }
         });

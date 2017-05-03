@@ -89,13 +89,21 @@ function selectFun_6(obj) {
     $(obj).addClass("acti");
 
     $(obj).parent().parent().find("span").removeClass("acti");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu();
-    }
 }
 
-function stateTouZhu(){
-    var zhushu = getZhushu();
+function stateTouZhu(flag_str){
+    var flag_str_inner = '';
+    var zhushu = '';
+    if(typeof flag_str == 'undefined' || flag_str == null){
+        flag_str_inner = 'dan';
+    }else{
+        flag_str_inner = flag_str;
+    }
+    if(flag_str_inner == 'dan'){
+        zhushu = getDsZhushu();
+    }else if(flag_str_inner == 'fu'){
+        zhushu = getZhushu();
+    }
     if(zhushu <= 0){
         return;
     }
