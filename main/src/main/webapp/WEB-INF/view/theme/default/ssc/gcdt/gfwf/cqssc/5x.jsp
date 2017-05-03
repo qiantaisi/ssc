@@ -239,9 +239,8 @@
 
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
-            console.log(typeof stateTouZhu);
             if(typeof stateTouZhu == "function"){
-                stateTouZhu();
+                stateTouZhu('fu');
             }
         });
     });
@@ -330,7 +329,7 @@
 
         zhushu = newArr.length;
         obj.playName = "五星直选-单式";
-        obj.content = "号码：（" + newArr + "）";
+        obj.content = "号码: (" + newArr + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");

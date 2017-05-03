@@ -95,7 +95,7 @@ function stateTouZhu(flag_str){
     var flag_str_inner = '';
     var zhushu = '';
     if(typeof flag_str == 'undefined' || flag_str == null){
-        flag_str_inner = 'dan';
+        flag_str_inner = 'fu';
     }else{
         flag_str_inner = flag_str;
     }
