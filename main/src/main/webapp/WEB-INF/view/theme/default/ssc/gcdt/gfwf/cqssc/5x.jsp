@@ -177,7 +177,7 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i><var class="jiangjin-change">8.1</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
             </div>
             <div class="reduce">
                 <a class="fl">-</a>
@@ -266,6 +266,9 @@
                 return;
             }
             clearTextarea();
+            if(typeof clearStateTouZhu == 'function'){
+                clearStateTouZhu();
+            }
             var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();

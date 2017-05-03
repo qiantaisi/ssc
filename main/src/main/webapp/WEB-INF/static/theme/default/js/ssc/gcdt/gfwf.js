@@ -123,4 +123,6 @@ function clearStateTouZhu(){
     $('.p1 .i_beishu').html('0');
     $('.p1 .i_fanD').html('0.00');
     $('.p1 .i_money').html('0.00');
+    $('.slider-input').jRange('setValue', '0,0');
+
 }
