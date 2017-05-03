@@ -83,7 +83,7 @@
         var strHtml = "";
 
         for (var i = 0; i < data.length; ++i) {
-            var kjData = data[i].openCode.split(",");
+            var kjData = data[i].openCode.split(",");   //拿到开奖结果数据
             var sum = 0;
             var boseArr = [0, 0, 0];
 

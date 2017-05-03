@@ -312,6 +312,7 @@ public class SscController extends BaseController {
     @RequestMapping(value = "/gcdt/index.html", method = RequestMethod.GET)
     public ModelAndView gcdtIndex() {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        modelMap.put("icoData", ApiUtils.getLogo(3));
         return this.renderView("ssc/gcdt/index", modelMap);
     }
 }

@@ -74,7 +74,7 @@
             var sum = 0;
             var boseArr = [0, 0, 0];
 
-            $.each(kjData, function(index, value) {
+            $.each(kjData, function(index, value) { // 函数用于遍历指定的对象和数组
                 sum += Tools.parseInt(value);
                 boseArr[getBose(value)]++;
             });

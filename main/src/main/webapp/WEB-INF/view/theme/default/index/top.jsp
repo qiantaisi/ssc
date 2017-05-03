@@ -61,33 +61,33 @@
                         <div class="pay_list">
                             <h4>高频：</h4>
                             <p>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')">北京PK10</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速PK10</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xyft')">幸运飞艇</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">重庆时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')">天津时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xjssc')">新疆时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')">分分时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/efssc')">两分时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')">三分时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/wfssc')">五分时时彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/hbk3')">湖北快3</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')">安徽快3</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jsk3')">江苏快3</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/jlk3')">吉林快3</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/kl8')">北京快乐8</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/klsf')">快乐十分</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xync')">幸运农场</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xy28')">幸运28</a></span>
-                                <!--  <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/sflhc')">十分六合彩</a></span> -->
+                                <span><a href="javascript:void(0)" onclick="openGcdt('pk10')">北京PK10</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('jspk10')">极速PK10</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('xyft')">幸运飞艇</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('cqssc')">重庆时时彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('tjssc')">天津时时彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('xjssc')">新疆时时彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('ffssc')">分分时时彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('efssc')">两分时时彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('sfssc')">三分时时彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('wfssc')">五分时时彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('hbk3')">湖北快3</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('ahk3')">安徽快3</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('jsk3')">江苏快3</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('jlk3')">吉林快3</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('kl8')">北京快乐8</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('klsf')">快乐十分</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('xync')">幸运农场</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('xy28')">幸运28</a></span>
+                                <!--  <span><a href="javascript:void(0)" onclick="openGcdt('sflhc')">十分六合彩</a></span> -->
                             </p>
                         </div>
                         <div class="pay_list">
                             <h4>低频：</h4>
                             <p>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">香港六合彩</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/fc3d')">福彩3D</a></span>
-                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/pl3')">体彩排列3</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('lhc')">香港六合彩</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('fc3d')">福彩3D</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('pl3')">体彩排列3</a></span>
                             </p>
                         </div>
                     </div>
@@ -96,13 +96,13 @@
                 <li class="l"><a href="javascript:void(0)"><b>网站导航</b><i class="ico-d"></i></a>
                     <div class="link">
                         <h5>
-                            <a href="<%=basePath%>ssc/index.html" target="_blank">购买彩票</a>
+                            <a href="<%=basePath%>ssc/gcdt/index.html" target="_blank">购买彩票</a>
                             <a href="<%=mHostName%>" target="_blank">手机购彩</a>
                             <a href="<%=basePath%>/help/index.html">规则说明</a>
                         </h5>
                         <h4>
                             <strong>彩票工具</strong>
-                            <p><a href="<%=mHostName%>" target="_blank">手机客户端</a> <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">走势查询</a> <a href="javascript:void(0)" onclick="getPage('lsjl/tzjl')">中奖查询</a></p>
+                            <p><a href="<%=mHostName%>" target="_blank">手机客户端</a> <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">走势查询</a> <a href="javascript:void(0)" onclick="getJluPage('lsjl/tzjl')">中奖查询</a></p>
                         </h4>
                         <h5 class="last">
                             <a href="javascript:void(0)" onclick="openHyzx()">会员中心</a>
@@ -116,7 +116,7 @@
     </div>
 </div>
 <script>
-    function getPage(module) {
+    function getJluPage(module) {
         if (typeof module == 'undefined') {
             module = '';
         }

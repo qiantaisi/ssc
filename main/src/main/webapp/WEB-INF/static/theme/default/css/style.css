@@ -306,7 +306,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .Single .layout  .Playmethod ul li b{width: 118px;height: 35px; background:url(../img/ico49.png);display: block;text-align: center;line-height: 35px;font-size: 16px;color: #333333;float: left;}
 .Single .layout  .Playmethod ul li b.acti{color: #fff;height: 39px; background:url(../img/ico49-1.png) -2px 0;margin-top: -2px;}
 .Single .layout  .Playmethod ul li p{float: left;margin-left: 10px;}
-.Single .layout  .Playmethod ul li p span{border: 1px solid #dcdcdc; background:url(../img/line5.png);-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;height: 30px;float: left;text-align: center;line-height: 30px;color: #666666;width: 63px;margin-left: 4px;}
+.Single .layout  .Playmethod ul li p span{border: 1px solid #dcdcdc; background:url(../img/line5.png);-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;height: 30px;float: left;text-align: center;line-height: 30px;color: #666666;width: 61px;margin-left: 4px;}
 .Single .layout  .Playmethod ul li p span.acti{background: #f02800;color: #fff;border: none;border-bottom: 2px solid #a92309;padding: 0 1px;}
 .Single .layout  .Playmethod ul li p span a{color: #666666;display: block;}
 .Single .layout  .Playmethod ul li p span:hover{background: #f02800;color: #fff;border: none;border-bottom: 2px solid #a92309;padding: 0 1px;}

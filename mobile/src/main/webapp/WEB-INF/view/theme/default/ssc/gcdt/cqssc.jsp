@@ -17,13 +17,17 @@
                 <font>彩种切换</font>
                 <span class="icon icon-top-gcdt"></span>
             </a>
-            <%--<a class="yxsm" href="<%=basePath%>ssc/kjjl/bqxq.html?playGroupId=1">--%>
-                 <%--游戏说明--%>
-            <%--</a>--%>
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
             <h1 class="title">重庆时时彩</h1>
+            <div class="triangle-down"> <!--向下的三角--> </div>
+            <div class="consele">
+                <div class="selects">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </header>
         <c:import url="common/commonBet.jsp" />
         <div class="content cl-601">

@@ -250,6 +250,35 @@ function getRequest(url) {
     }
     return theRequest;
 }
+// 获取万、千、百、十、个固定位数的个数所组成5位所有组合
+function getNewArrs(wanA, qianA, baiA, shiA, geA) {
+    var wArr = [], qArr = [], bArr = [], sArr = [], gArr =[];
+    wArr = wanA; qArr =qianA; bArr = baiA; sArr = shiA; gArr =geA;
+    var tempArr = [];
+    for(var w = 0; w < wArr.length; w++){
+        for(var q = 0; q < qArr.length; q++){
+            for(var b = 0; b < bArr.length; b++){
+                for(var s = 0; s < sArr.length; s++){
+                    for(var g = 0; g < gArr.length; g++){
+                        tempArr.push(wArr[w] + "" + qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                    }
+                }
+            }
+        }
+    }
+    return tempArr;
+}
+
+// 判断一个字符串是否都为数字
+function isAllNaN(str) {
+    for (var i = 0; i < str.length; i++) {
+        if(isNaN(str.charAt(i))) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
 /**
  * 获得从m中取n的所有组合
  */
@@ -329,6 +358,62 @@ function getFlagArrs(arr, num) {
 
 function windowOpenBlank(url) {
     window.open(url,'_blank');
+}
+
+function openGcdt(url) {
+    goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + url + ".html");
+}
+
+// 读取子页面
+function getPage(url) {
+    showLoading();
+    $("#rightContent").attr("src", url);
+}
+
+// 读取子页面
+function goSubUrl(url, params) {
+    var turl = url + "?timestamp=" + (new Date()).getTime();
+    var surl = CONFIG.BASEURL + "ssc/gcdt/index.html#url=" + url;
+
+    if (typeof params != 'undefined') {
+        var tmp = params.split("&");
+        $.each(tmp, function(index, value) {
+            turl += "&" + value.key + "=" + value.value;
+            surl += "&" + value.key + "=" + value.value;
+        });
+    }
+    window.parent.location.href = surl;
+    getSubPage();
+}
+
+function getSubPage() {
+    var surl = window.parent.location.href.toString();
+    var paramArr = surl.split("#");
+    var turl = "";
+    var tparam = "?timestamp=" + (new Date()).getTime();
+    if (paramArr) {
+        paramArr = paramArr[1];
+        if (paramArr) {
+            paramArr = paramArr.split("&");
+
+            $.each(paramArr, function(index, value) {
+                var tmp = value.split("=");
+                var key = tmp[0];
+                var v = tmp[1];
+
+                if (key == "url") {
+                    turl = v;
+                } else {
+                    tparam += "&" + key + "=" + v;
+                }
+            });
+        }
+    }
+
+    if (!turl) {
+        turl = CONFIG.BASEURL + "ssc/gcdt/gcdt.html";
+    }
+    getPage(turl + tparam);
 }
 
 function windowOpen(url, title, width, height) {

@@ -16,7 +16,7 @@
             </a>
         </li>
         <li>
-            <a href="<%=basePath%>ssc/index.html" target="_blank">
+            <a href="<%=basePath%>ssc/gcdt/index.html" target="_blank">
                 <img src="${resPath}img/ico34.png" alt="购彩大厅">
                 <p>购彩大厅</p>
             </a>
