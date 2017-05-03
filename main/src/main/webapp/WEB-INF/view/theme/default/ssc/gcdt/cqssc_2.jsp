@@ -56,7 +56,7 @@
                 <ul>
                     <li>
                         <b class="acti">官方玩法</b>
-                        <p class="guanfang">
+                        <p class="guanfang respan">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-cqssc-5x">五星</a></span>
                             <span><a href="javascript:void(0)">四星</a></span>
                             <span><a href="javascript:void(0)">前三</a></span>
@@ -89,18 +89,88 @@
             </div>
 
             <div id="sscContent"></div>
-
+            <i class="it0"><img src="${resPath}img/ico46.png" alt=""></i>
+            <i class="it1"><img src="${resPath}img/ico46.png" alt=""></i>
         </div>
     </div><!--Single-->
+    <div class="Detailedlist Single wid1">
+
+        <div class="layout at">
+            <h1 class="at">投注清单</h1>
+            <div class="boxt at reboxt">
+                <div class="left">
+                    <ul id="zhudanList">
+                        <%--<li class="head"><span class="sp1">玩法</span><span class="sp2">投注号码</span><span--%>
+                                <%--class="sp3">金额</span><span class="sp4">操作</span></li>--%>
+                    </ul>
+                </div><!--left-->
+                <div class="right">
+                    <ul>
+                        <li><a href="javascript:void(0)" onclick="getSuiji(1)">随机一注</a></li>
+                        <li><a href="javascript:void(0)" onclick="getSuiji(5)">随机五注</a></li>
+                        <li><a href="javascript:void(0)" onclick="javascript:alert('开发中，敬请期待')"><img
+                                src="${resPath}img/ico51.png" alt="">我要追号</a></li>
+                        <li><a href="javascript:void(0)" onclick="clearZhudan()"><img src="${resPath}img/ico52.png"
+                                                                                      alt="">清空注单</a></li>
+                    </ul>
+                    <p id="zongtouInfo">总投 <span>0</span> 注，<span>0</span> 倍，共 <span>0</span> 元。</p>
+                    <a href="javascript:void(0)" class="ok" onclick="sureXd()"><img src="${resPath}img/ico54.png"
+                                                                                    alt="">确认投注</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <c:import url="common/bottomInfo.jsp"/>
 </div>
 <c:import url="../../common/commonJs.jsp"/>
 <c:import url="common/commonJs.jsp"/>
 <c:import url="gfwf/common/commonJs.jsp" />
 <script>
-    var playGroupId = 1;    // 彩种ID
+    var playGroupId = 1;
+    var playName = '复式';
+    var playId = 111;
 </script>
 <script>
+    function getSuiji(total) {
+        var betFormList = suiji(total);
+        $.each(betFormList, function (index, value) {
+            var html = template("template_touzhu", value);
+            $("#zhudanList").append(html);
+        });
+        calcAll();
+    }
+
+    function clearSelected() {
+        $(".Single .layout .Pick ul li span.acti").removeClass("acti");
+        $(".re-5x-i i.acti").removeClass("acti");
+        $("#zhushuInfo").data("zhushu", 0);
+        if(typeof clearStateTouZhu == 'function'){
+            clearStateTouZhu();
+        }
+        calc();
+    }
+
+    function removeThisItem(obj) {
+        $(obj).parent().parent().parent().remove();
+        calcAll();
+    }
+    function clearZhudan() {
+        $("#zhudanList li:not('.head')").remove();
+        calcAll();
+    }
+
+    function calc() {
+        var money = $("#inputMoney").data("money");
+        var beishu = $("#inputBeishu").data("beishu");
+        var zhushu = $("#zhushuInfo").data("zhushu");
+
+        var totalMoney = mul(beishu * zhushu, money);
+
+        $("#beishuInfo").html(beishu);
+        $("#totalMoneyInfo").data("total_money", totalMoney).html(totalMoney);
+    }
+
     // 随机号码
     function randomNumber() {
         var arr = [];

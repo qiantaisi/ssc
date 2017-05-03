@@ -11,6 +11,9 @@ function selectFun_1(obj) {
             $(this).addClass("acti");
         }
     });
+    if(typeof stateTouZhu == "function"){
+        stateTouZhu();
+    }
 }
 
 function selectFun_2(obj) {
@@ -25,6 +28,9 @@ function selectFun_2(obj) {
             $(this).addClass("acti");
         }
     });
+    if(typeof stateTouZhu == "function"){
+        stateTouZhu();
+    }
 }
 
 function selectFun_3(obj) {
@@ -39,6 +45,9 @@ function selectFun_3(obj) {
             $(this).addClass("acti");
         }
     });
+    if(typeof stateTouZhu == "function"){
+        stateTouZhu();
+    }
 }
 
 function selectFun_4(obj) {
@@ -53,6 +62,9 @@ function selectFun_4(obj) {
             $(this).addClass("acti");
         }
     });
+    if(typeof stateTouZhu == "function"){
+        stateTouZhu();
+    }
 }
 
 function selectFun_5(obj) {
@@ -67,6 +79,9 @@ function selectFun_5(obj) {
             $(this).addClass("acti");
         }
     });
+    if(typeof stateTouZhu == "function"){
+        stateTouZhu();
+    }
 }
 
 function selectFun_6(obj) {
@@ -74,4 +89,30 @@ function selectFun_6(obj) {
     $(obj).addClass("acti");
 
     $(obj).parent().parent().find("span").removeClass("acti");
+    if(typeof stateTouZhu == "function"){
+        stateTouZhu();
+    }
+}
+
+function stateTouZhu(){
+    var zhushu = getZhushu();
+    if(zhushu <= 0){
+        return;
+    }
+
+    $('.p1 .i0').html(zhushu);
+    $('.p1 .i_beishu').html($("#inputBeishu").val());
+    var strFd = $(".fandian-bfb").html();
+    var num = parseInt(strFd.toString().substr(0,strFd.length-1)) / 100;
+    var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
+    var p1_i2 = totalMoney * num;
+    $('.p1 .i_fanD').html(p1_i2.toFixed(2));
+    $('.p1 .i_money').html(totalMoney);
+}
+
+function clearStateTouZhu(){
+    $('.p1 .i0').html('0');
+    $('.p1 .i_beishu').html('0');
+    $('.p1 .i_fanD').html('0.00');
+    $('.p1 .i_money').html('0.00');
 }

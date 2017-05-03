@@ -250,6 +250,35 @@ function getRequest(url) {
     }
     return theRequest;
 }
+// 获取万、千、百、十、个固定位数的个数所组成5位所有组合
+function getNewArrs(wanA, qianA, baiA, shiA, geA) {
+    var wArr = [], qArr = [], bArr = [], sArr = [], gArr =[];
+    wArr = wanA; qArr =qianA; bArr = baiA; sArr = shiA; gArr =geA;
+    var tempArr = [];
+    for(var w = 0; w < wArr.length; w++){
+        for(var q = 0; q < qArr.length; q++){
+            for(var b = 0; b < bArr.length; b++){
+                for(var s = 0; s < sArr.length; s++){
+                    for(var g = 0; g < gArr.length; g++){
+                        tempArr.push(wArr[w] + "" + qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                    }
+                }
+            }
+        }
+    }
+    return tempArr;
+}
+
+// 判断一个字符串是否都为数字
+function isAllNaN(str) {
+    for (var i = 0; i < str.length; i++) {
+        if(isNaN(str.charAt(i))) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
 /**
  * 获得从m中取n的所有组合
  */
