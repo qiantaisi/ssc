@@ -128,7 +128,6 @@
 <c:import url="gfwf/common/commonJs.jsp" />
 <script>
     var playGroupId = 1;
-    var playName = '复式';
     var playId = 111;
 </script>
 <script>

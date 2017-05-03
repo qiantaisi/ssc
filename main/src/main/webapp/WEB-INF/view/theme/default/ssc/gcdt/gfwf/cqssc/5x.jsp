@@ -312,7 +312,7 @@
         }
 
         zhushu = newArr.length;
-        obj.playName = "五星直选-单选";
+        obj.playName = "五星直选-单式";
         obj.content = "号码：（" + newArr + "）";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -346,8 +346,8 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "五星直选-" + playName;
-        obj.content = "万位：" + wanArr.join("") + " 千位：" + qianArr.join("") + " 百位：" + baiArr.join("") + " 十位：" + shiArr.join("") + " 个位：" + geArr.join("");
+        obj.playName = "五星直选-复式";
+        obj.content = "万位: " + wanArr.join("") + " 千位: " + qianArr.join("") + " 百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -407,6 +407,17 @@
 
     function suiji(total) {
         var result = [];
+        var flag_dan_zhi = "dan";//默认为单式
+        var playNameStr = '';
+        var contentStr = '';
+        if (typeof $('.recl-1003').attr('statef') != 'undefined') {
+            playNameStr = "五星直选-单式";
+            flag_dan_zhi = "dan";
+        } else {
+            playNameStr = "五星直选-复式";
+            flag_dan_zhi = "fu";
+        }
+
         for (var numIndex = 0; numIndex < total; ++numIndex) {
             var redArr = [];
             for (var i = 0; i <= 9; ++i) {
@@ -421,10 +432,15 @@
                     arr.push(num);
                 }
             }
+            if(flag_dan_zhi == "dan"){
+                contentStr = "号码: (" +  + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+            }else if(flag_dan_zhi == "fu"){
+                contentStr = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+            }
 
             var obj = {};
-            obj.playName = "五星直选-" + playName;
-            obj.content = "万位：" + arr[0] + " 千位：" + arr[1] + " 百位：" + arr[2] + " 十位：" + arr[3] + " 个位：" + arr[4];
+            obj.playName = playNameStr;
+            obj.content = contentStr;
             obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
             obj.zhushu = 1;
             obj.beishu = $("#inputBeishu").data("beishu");

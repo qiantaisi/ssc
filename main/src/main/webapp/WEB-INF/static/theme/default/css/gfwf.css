@@ -37,6 +37,7 @@
 }
 .content-jiang .span1{
     padding-right: 5px;
+    padding-left: 5px;
     width: auto;
     max-width: 60px;
 }
@@ -60,22 +61,20 @@
     height: 180px;
     padding-left: 30px;
 }
-.content_jiang .con_j_start{
 
-}
 .content_jiang .con_j_end{
     position: absolute;
-    right: -200px;
+    right: -160px;
     top:0;
 }
 .con_j_end ul li{
-    width: 163px;
-    height: 34px;
+    width: 120px;
+    height: 28px;
     background: #FF6100;
     color: #fff;
     text-align: center;
     font-size: 12px;
-    line-height: 34px;
+    line-height: 30px;
     border-bottom: 2px solid #a92309;
     border-radius: 3px;
     cursor: pointer;
