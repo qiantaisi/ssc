@@ -6651,3 +6651,15 @@ function showLhcLastDataNum() {
 function kefuToast() {
     Tools.toast("请联系在线客服");
 }
+
+$(".title").click(
+    function () {
+        if ($(".content").is(".show_hide")) {
+            $(".page").find(".show_hide").removeClass("show_hide");
+            $(".consele").addClass("show_hide");
+        } else {
+            $(".consele").removeClass("show_hide");
+            $(".page").find(".content").addClass("show_hide");
+        }
+    }
+);

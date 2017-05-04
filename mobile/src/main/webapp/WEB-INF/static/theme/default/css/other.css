@@ -209,6 +209,9 @@
     text-align: center;
     color: #fff !important;
 }
+.show_hide{
+    z-index:99;
+}
 
 .ball-orange {
     background: #fa6200;

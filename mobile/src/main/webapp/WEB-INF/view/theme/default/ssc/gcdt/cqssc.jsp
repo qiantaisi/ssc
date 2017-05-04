@@ -21,16 +21,19 @@
                 菜单
             </a>
             <h1 class="title">重庆时时彩<i class="triangle-down"> <!--向下的三角--> </i></h1>
-
-            <div class="consele">
-                <div class="selects">
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
         </header>
         <c:import url="common/commonBet.jsp" />
-        <div class="content cl-601">
+        <div class="consele">
+            <div class="selects">
+                <div class="selects-one">
+                    <span class="active">官方玩法</span>
+                </div>
+                <div class="selects-two">
+                    <span>快捷玩法</span>
+                </div>
+            </div>
+        </div>
+        <div class="content cl-601 show_hide">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/sm.html">双面</a>
