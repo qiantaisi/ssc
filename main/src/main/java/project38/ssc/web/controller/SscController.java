@@ -84,7 +84,7 @@ public class SscController extends BaseController {
         SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group);
         if(!"gcdt".equals(group)){
             // 彩种禁用暂停
-            if (!sscPlayGroupResult.getEnable()) {
+            if (!"".equals(sscPlayGroupResult.getEnable()) && !sscPlayGroupResult.getEnable()) {
                 return this.renderView("ssc/gcdt/tingcaipage", modelMap);
             }
         }
