@@ -20,8 +20,8 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">重庆时时彩</h1>
-            <div class="triangle-down"> <!--向下的三角--> </div>
+            <h1 class="title">重庆时时彩<i class="triangle-down"> <!--向下的三角--> </i></h1>
+
             <div class="consele">
                 <div class="selects">
                     <div></div>
