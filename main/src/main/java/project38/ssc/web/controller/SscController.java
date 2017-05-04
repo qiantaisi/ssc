@@ -1,5 +1,5 @@
 package project38.ssc.web.controller;
-
+import org.apache.commons.lang3.StringUtils;
 import project38.api.common.exception.UserException;
 import project38.api.common.result.CommonResult;
 import project38.api.common.utils.JSONUtils;
@@ -81,16 +81,16 @@ public class SscController extends BaseController {
     @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
     public ModelAndView gcdtGroup(@PathVariable String group){
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group);
-        if(!"gcdt".equals(group)){
-            // 彩种禁用暂停
-            if (!sscPlayGroupResult.getEnable()) {
+        if (!"gcdt".equals(group)) {
+            // 彩种禁用
+            SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group);
+            if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
                 return this.renderView("ssc/gcdt/tingcaipage", modelMap);
             }
         }
-
         return this.renderView("ssc/gcdt/" + group, modelMap);
     }
+
 
     @RequestMapping(value = "/zst/{module}.html", method = RequestMethod.GET)
     public ModelAndView zstModule(@PathVariable String module) {

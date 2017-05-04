@@ -56,7 +56,7 @@
                 <ul>
                     <li>
                         <b class="acti">官方玩法</b>
-                        <p class="guanfang respan">
+                        <p class="guanfang respan" data-name="gfwf">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-cqssc-5x">五星</a></span>
                             <span><a href="javascript:void(0)">四星</a></span>
                             <span><a href="javascript:void(0)">前三</a></span>
@@ -70,7 +70,7 @@
                     </li>
                     <li>
                         <b>快钱玩法</b>
-                        <p class="kuaiqian">
+                        <p class="kuaiqian" data-name="kqwf">
                             <span><a href="javascript:void(0)" data-url="cqssc-sm">双面</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-szp">数字盘</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-yzdw_wdw">一字定位</a></span>
@@ -89,8 +89,8 @@
             </div>
 
             <div id="sscContent"></div>
-            <i class="it0"><img src="${resPath}img/ico46.png" alt=""></i>
-            <i class="it1"><img src="${resPath}img/ico46.png" alt=""></i>
+            <i class="it0 left_it0"><img src="${resPath}img/ico46.png" alt=""></i>
+            <i class="it1 right_it1"><img src="${resPath}img/ico46.png" alt=""></i>
         </div>
     </div><!--Single-->
     <div class="Detailedlist Single wid1">
@@ -131,45 +131,6 @@
     var playId = 111;
 </script>
 <script>
-    function getSuiji(total) {
-        var betFormList = suiji(total);
-        $.each(betFormList, function (index, value) {
-            var html = template("template_touzhu", value);
-            $("#zhudanList").append(html);
-        });
-        calcAll();
-    }
-
-    function clearSelected() {
-        $(".Single .layout .Pick ul li span.acti").removeClass("acti");
-        $(".re-5x-i i.acti").removeClass("acti");
-        $("#zhushuInfo").data("zhushu", 0);
-        if(typeof clearStateTouZhu == 'function'){
-            clearStateTouZhu();
-        }
-        calc();
-    }
-
-    function removeThisItem(obj) {
-        $(obj).parent().parent().parent().remove();
-        calcAll();
-    }
-    function clearZhudan() {
-        $("#zhudanList li:not('.head')").remove();
-        calcAll();
-    }
-
-    function calc() {
-        var money = $("#inputMoney").data("money");
-        var beishu = $("#inputBeishu").data("beishu");
-        var zhushu = $("#zhushuInfo").data("zhushu");
-
-        var totalMoney = mul(beishu * zhushu, money);
-
-        $("#beishuInfo").html(beishu);
-        $("#totalMoneyInfo").data("total_money", totalMoney).html(totalMoney);
-    }
-
     // 随机号码
     function randomNumber() {
         var arr = [];

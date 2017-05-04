@@ -243,9 +243,75 @@
                 stateTouZhu('fu');
             }
         });
+
+        //官方玩法
+        $(".Playmethod ul li span").click(function () {
+
+            var name_flag = $(this).parent().data('name');
+            if (name_flag == 'gfwf') {
+                var flag_acti = $(this).parent().parent().next().find('b').hasClass('acti');
+                if (flag_acti == true) {
+                    $(this).parent().parent().next().find('b').removeClass('acti');
+                }
+                $(this).parent().parent().find('b').addClass('acti');
+                $(".left_it0").show();
+                $(".right_it1").show();
+                $(".Detailedlist").show();
+            } else {
+                var flag_acti =  $(this).parent().parent().prev().find("b").hasClass('acti');
+                if (flag_acti == true) {
+                    $(this).parent().parent().prev().find("b").removeClass('acti');
+                }
+                $(this).parent().parent().find('b').addClass('acti');
+                $(".left_it0").hide();
+                $(".right_it1").hide();
+                $(".Detailedlist").hide();
+            }
+
+        });
+
     });
 </script>
 <script>
+    function getSuiji(total) {
+        var betFormList = suiji(total);
+        $.each(betFormList, function (index, value) {
+            var html = template("template_touzhu", value);
+            $("#zhudanList").append(html);
+        });
+        calcAll();
+    }
+
+    function clearSelected() {
+        $(".Single .layout .Pick ul li span.acti").removeClass("acti");
+        $(".re-5x-i i.acti").removeClass("acti");
+        $("#zhushuInfo").data("zhushu", 0);
+        if(typeof clearStateTouZhu == 'function'){
+            clearStateTouZhu();
+        }
+        calc();
+    }
+
+    function removeThisItem(obj) {
+        $(obj).parent().parent().parent().remove();
+        calcAll();
+    }
+    function clearZhudan() {
+        $("#zhudanList li:not('.head')").remove();
+        calcAll();
+    }
+
+    function calc() {
+        var money = $("#inputMoney").data("money");
+        var beishu = $("#inputBeishu").data("beishu");
+        var zhushu = $("#zhushuInfo").data("zhushu");
+
+        var totalMoney = mul(beishu * zhushu, money);
+
+        $("#beishuInfo").html(beishu);
+        $("#totalMoneyInfo").data("total_money", totalMoney).html(totalMoney);
+    }
+
     function clearTextarea() {
         $(".content_jiang textarea").val('');
     }
