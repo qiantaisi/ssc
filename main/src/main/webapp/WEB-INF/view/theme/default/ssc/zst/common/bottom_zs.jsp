@@ -325,7 +325,7 @@
             var pre = i == 5 ? 'zh' : i;
             $.each(value.ds, function (index, value) {
                 if (value.y > col_y_flag_ds) {
-                    $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(col_y_flag_ds).find("td").eq((parseInt(value.x) + col_x_ds)).html(value.name);
+                    $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(col_y_flag_ds).find("td").eq((parseInt(value.x) + col_x_ds)).html(value.name);
                     //分别设置每位遍历写入表格时，超过六行的标记（记录x轴的延伸情况）
                     if(pre == 0){
                         flagds[col_y_flag_ds][value.x + col_x_ds] = 1;
