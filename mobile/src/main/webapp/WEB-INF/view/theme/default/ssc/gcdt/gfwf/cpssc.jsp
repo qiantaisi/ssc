@@ -34,7 +34,20 @@
             </div>
         </div>
         <div class="content cl-601 show_hide">
-
+            <div class="cus-tabs-scroll">
+                <div>
+                    <a>五星直选</a>
+                </div>
+                <div>
+                    <img src="<%=basePath%>static/theme/default/img/ico222.png"/>
+                </div>
+                <div>
+                    <a>
+                        直选方式
+                        <i class="triangle-down"> <!--向下的三角--> </i>
+                    </a>
+                </div>
+            </div>
             <div class="cl-900" id="lastOpenInfo"></div>
             <div class="cl-901">
                 <div class="cl-902">
@@ -50,9 +63,9 @@
             </div>
         </div>
     </div>
-    <c:import url="../../../common/leftSscPanel.jsp" />
+    <c:import url="../../../common/leftSscPanel.jsp"/>
     <c:import url="../../../common/rightPanel.jsp">
-        <c:param name="playGroupId" value="1" />
+        <c:param name="playGroupId" value="1"/>
     </c:import>
 </div>
 
@@ -75,7 +88,8 @@
     </div>
 </script>
 <script type="text/html" id="template_lastOpenInfo">
-    <span class="left cl-1200 ssc_1200_qi" id="lastNumber">第<span class="style_blue">{{number}}</span>期&nbsp;&nbsp;</span>
+    <span class="left cl-1200 ssc_1200_qi" id="lastNumber">第<span
+            class="style_blue">{{number}}</span>期&nbsp;&nbsp;</span>
     <div class="left">
         <span class="cl-1201 ssc_1201_num">
             {{each openCodeArr as value index}}
