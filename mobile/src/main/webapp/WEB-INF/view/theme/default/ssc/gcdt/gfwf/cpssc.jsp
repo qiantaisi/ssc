@@ -35,13 +35,11 @@
         </div>
         <div class="content cl-601 show_hide">
             <div class="cus-tabs-scroll">
-                <div>
+                <div class="cus-1">
                     <a>五星直选</a>
                 </div>
-                <div>
+                <div class="cus-2">
                     <img src="<%=basePath%>static/theme/default/img/ico222.png"/>
-                </div>
-                <div>
                     <a>
                         直选方式
                         <i class="triangle-down"> <!--向下的三角--> </i>
