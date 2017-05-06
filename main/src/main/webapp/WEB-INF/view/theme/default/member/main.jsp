@@ -150,7 +150,11 @@
             <h5>优惠活动</h5>
             <ul>
                 <c:forEach items="${promotionList}" var="item">
-                    <li><a onclick="showContent(this)" data-name="${item.name}" data-time="<fmt:formatDate value="${item.createTime}" pattern="yyyy-MM-dd" />" data-content="${item.content}" href="javascript:void(0)"><img src="<%=basePath%>images/${item.smallImageId}" alt="${item.name}"></a></li>
+                    <li>
+                        <a onclick="showContent(this)" data-name="${item.name}" data-time="<fmt:formatDate value="${item.createTime}" pattern="yyyy-MM-dd" />" data-content="<c:out value="${item.content}" />">
+                            <img src="<%=basePath%>images/${item.smallImageId}" alt="${item.name}"/>
+                        </a>
+                    </li>
                 </c:forEach>
             </ul>
         </div>
