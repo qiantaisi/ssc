@@ -277,7 +277,7 @@ function getNewArrs(wanA, qianA, baiA, shiA, geA) {
     return tempArr;
 }
 
-// 获取千、百、十、个固定位数的个数所组成5位所有组合
+// 获取千、百、十、个固定位数的个数所组成4位所有组合
 function getFourNewArrs(qianA, baiA, shiA, geA) {
     var qArr = [], bArr = [], sArr = [], gArr = [];
     qArr = qianA;
@@ -291,6 +291,23 @@ function getFourNewArrs(qianA, baiA, shiA, geA) {
                 for (var g = 0; g < gArr.length; g++) {
                     tempArr.push(qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
                 }
+            }
+        }
+    }
+    return tempArr;
+}
+
+// 获取百、十、个固定位数的个数所组成3位所有组合
+function getThreeNewArrs(baiA, shiA, geA) {
+    var bArr = [], sArr = [], gArr = [];
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var b = 0; b < bArr.length; b++) {
+        for (var s = 0; s < sArr.length; s++) {
+            for (var g = 0; g < gArr.length; g++) {
+                tempArr.push(bArr[b] + "" + sArr[s] + "" + gArr[g]);
             }
         }
     }
@@ -388,61 +405,61 @@ function windowOpenBlank(url) {
     window.open(url, '_blank');
 }
 
-function openGcdt(url) {
-    goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + url + ".html");
-}
-
-// 读取子页面
-function getPage(url) {
-    showLoading();
-    $("#rightContent").attr("src", url);
-}
-
-// 读取子页面
-function goSubUrl(url, params) {
-    var turl = url + "?timestamp=" + (new Date()).getTime();
-    var surl = CONFIG.BASEURL + "ssc/gcdt/index.html#url=" + url;
-
-    if (typeof params != 'undefined') {
-        var tmp = params.split("&");
-        $.each(tmp, function (index, value) {
-            turl += "&" + value.key + "=" + value.value;
-            surl += "&" + value.key + "=" + value.value;
-        });
-    }
-    window.parent.location.href = surl;
-    getSubPage();
-}
-
-function getSubPage() {
-    var surl = window.parent.location.href.toString();
-    var paramArr = surl.split("#");
-    var turl = "";
-    var tparam = "?timestamp=" + (new Date()).getTime();
-    if (paramArr) {
-        paramArr = paramArr[1];
-        if (paramArr) {
-            paramArr = paramArr.split("&");
-
-            $.each(paramArr, function (index, value) {
-                var tmp = value.split("=");
-                var key = tmp[0];
-                var v = tmp[1];
-
-                if (key == "url") {
-                    turl = v;
-                } else {
-                    tparam += "&" + key + "=" + v;
-                }
-            });
-        }
-    }
-
-    if (!turl) {
-        turl = CONFIG.BASEURL + "ssc/gcdt/gcdt.html";
-    }
-    getPage(turl + tparam);
-}
+// function openGcdt(url) {
+//     goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + url + ".html");
+// }
+//
+// // 读取子页面
+// function getPage(url) {
+//     showLoading();
+//     $("#rightContent").attr("src", url);
+// }
+//
+// // 读取子页面
+// function goSubUrl(url, params) {
+//     var turl = url + "?timestamp=" + (new Date()).getTime();
+//     var surl = CONFIG.BASEURL + "ssc/gcdt/index.html#url=" + url;
+//
+//     if (typeof params != 'undefined') {
+//         var tmp = params.split("&");
+//         $.each(tmp, function (index, value) {
+//             turl += "&" + value.key + "=" + value.value;
+//             surl += "&" + value.key + "=" + value.value;
+//         });
+//     }
+//     window.parent.location.href = surl;
+//     getSubPage();
+// }
+//
+// function getSubPage() {
+//     var surl = window.parent.location.href.toString();
+//     var paramArr = surl.split("#");
+//     var turl = "";
+//     var tparam = "?timestamp=" + (new Date()).getTime();
+//     if (paramArr) {
+//         paramArr = paramArr[1];
+//         if (paramArr) {
+//             paramArr = paramArr.split("&");
+//
+//             $.each(paramArr, function (index, value) {
+//                 var tmp = value.split("=");
+//                 var key = tmp[0];
+//                 var v = tmp[1];
+//
+//                 if (key == "url") {
+//                     turl = v;
+//                 } else {
+//                     tparam += "&" + key + "=" + v;
+//                 }
+//             });
+//         }
+//     }
+//
+//     if (!turl) {
+//         turl = CONFIG.BASEURL + "ssc/gcdt/gcdt.html";
+//     }
+//     getPage(turl + tparam);
+// }
 
 function windowOpen(url, title, width, height) {
     var top = (window.screen.height - 30 - height) / 2; //获得窗口的垂直位置;
