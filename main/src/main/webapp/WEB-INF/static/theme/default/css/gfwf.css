@@ -95,3 +95,50 @@
     margin-left: 25px;
     margin-top: 30px;
 }
+.hide_flag{
+    display: none!important;
+}
+/*后三---后三组合*/
+.li1012_hezhi b,.li1005_hezhi b{
+  display: block;
+  height: 80px;
+}
+.li1005_hezhi{
+    width: 880px!important;
+}
+.li1012_hezhi{
+    width: 825px!important;
+}
+.li1012_hezhi span,.li1005_hezhi span{
+    height: 45px!important;
+}
+/*和值尾数*/
+.cl-1015-tsh ul .tsh_li b i,.cl-1014-hzws ul .hzws_li b i{
+    width: 68px!important;
+    background: url(../img/ico55re.png)!important;
+}
+.cl-1015-tsh ul .tsh_li b,.cl-1014-hzws ul .hzws_li b{
+    width: 68px!important;
+}
+/*特殊号*/
+.tsh_li span{
+    float: left;
+    height: 33px;
+    border-radius: 33px;
+    background: #fff;
+    border: 1px #ccc solid;
+    box-shadow: 1px 1px 2px #ccc;
+    font-size: 18px;
+    line-height: 33px;
+    text-align: center;
+    color: #8f8f8f;
+    font-weight: 500;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 100px!important;
+}
+/*豹子顺子对子*/
+.acti_tsh{
+    background: #e84f31!important;
+    color: #FFF!important;
+}

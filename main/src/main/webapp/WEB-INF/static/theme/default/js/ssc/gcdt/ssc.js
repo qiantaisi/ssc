@@ -453,7 +453,7 @@ function sureXd() {
             perMoney: value.perMoney,
             content: value.content,
             playPlId: value.playPlId,
-            playPl: value.playPl,
+            playPl: value.playPl
         });
     });
 

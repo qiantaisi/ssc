@@ -9,7 +9,7 @@
 <div class="group">
     <ul>
         <li>
-            <b>五星</b>
+            <b>五星直选</b>
             <p class="btn_fu_zhi">
                 <span class="acti" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
                 <span data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
@@ -143,11 +143,11 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个五位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：13456 开奖号码：13456，即中五星直选。</var>
+                <var>投注方案：23456 开奖号码：23456，即中五星直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
+                <var>手动输入一个五位数号码组成一注，所选的号码万、千、百、十、个位与号码相同，且顺序一致即为中奖。</var>
             </a>
 
         </span>

@@ -950,7 +950,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .Single .layout .group{background: #fff;display: table;width: 100%;padding-bottom: 28px;padding-top: 18px;}
 .Single .layout .group ul{margin-left: 24px;}
 .Single .layout .group ul li{width: 100%;margin-top:8px;}
-.Single .layout .group ul li b{float: left;width: 52px;height: 26px; background:url(../img/ico50.png);color: #fff;line-height: 25px;text-indent: 10px;}
+.Single .layout .group ul li b{float: left;width: 85px;height: 26px; background:url(../img/ico50.png);color: #fff;line-height: 25px;text-indent: 10px;}
 .Single .layout .group ul li p{}
 .Single .layout .group ul li p span{width: 72px;float: left;border: 1px solid #dcdcdc;height: 22px;text-align: center;line-height: 23px;color: #3e3e3e;margin-left: 10px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;font-size: 12px;}
 .Single .layout .group ul li p span.acti{color: #fff;border: none;border-bottom: 2px solid #a92309;background: #f02800;padding: 0 1px;}

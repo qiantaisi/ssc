@@ -9,10 +9,32 @@
 <div class="group">
     <ul>
         <li>
-            <b>五星</b>
-            <p class="btn_fu_zhi">
-                <span class="acti" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
-                <span data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
+            <b>后三直选</b>
+            <p class="btn_h3_zx">
+                <span class="acti" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span data-name="hszh"><a href="javascript:void(0)">后三组合</a></span>
+                <span data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
+                <span data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
+            </p>
+        </li>
+        <li>
+            <b>后三组选</b>
+            <p class="btn_h3_zux">
+                <span data-name="zsfs"><a href="javascript:void(0)">组三复式</a></span>
+                <span data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
+                <span data-name="zlfs"><a href="javascript:void(0)">组六复式</a></span>
+                <span data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
+                <span data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
+                <span data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+            </p>
+        </li>
+        <li>
+            <b>后三其他</b>
+            <p class="btn_h3_qt">
+                <span data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
+                <span data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
             </p>
         </li>
     </ul>
@@ -20,38 +42,17 @@
 <div class="Pick cl-1002 recl-1002">
     <p class="p1">
         <span class="fr fl cl-1001">
-            从千位、百位、十位、个位各选一个号码组成一注。
+            从百位、十位、个位各选一个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：13456 开奖号码：13456，即中四星直选。</var>
+                <var>投注方案：345 开奖号码后三位：1345，即中后三位直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从千、百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
+                <var>从百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
             </a>
         </span>
     </p>
     <ul>
-        <li data-name="千">
-            <b><i>千位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <div class="clear re-5x-i">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
-            </div>
-        </li>
         <li data-name="百">
             <b><i>百位</i></b>
             <span><i>0</i></span>
@@ -122,11 +123,11 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个四位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：3456 开奖号码：3456，即中四星直选。</var>
+                <var>投注方案：345开奖号码：345，即中后三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从千、百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
+                <var>从百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
             </a>
 
         </span>
@@ -144,6 +145,467 @@
 
     <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
 </div>
+<%--后三组合--%>
+<div class="Pick cl-1002 cl-1004-hszh">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从百位、十位、个位各选一个号码组成三注。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：购买：6+7+8，该票共6元，由以下三注：678(三星)、78(二星)、8(一星)构成 开奖号码：678，即可中奖 一星、二星、三星各一注。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从百、十、个位中至少各选择1个号码组成1-3星的组合共三注，当个位数以开奖号码相同，则中一个3等奖；如果个位和十位号码和开奖号码相同，则中一个3等奖以及一个2等奖，以次类推，最高可中3个奖。</var>
+            </a>
+
+        </span>
+    </p>
+    <ul>
+        <li data-name="百">
+            <b><i>百位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+        <li data-name="十">
+            <b><i>十位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+        <li data-name="个">
+            <b><i>个位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+<%--直选和值--%>
+<div class="Pick cl-1005-zxhz">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-27中任意选择1个或1个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：和值：1，开奖号码：后三位001、010、100，即中后三值选。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>所选号码数值等于开奖号码的百、十、个三个数值相加之和，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li class="li1005_hezhi" data-name="和值">
+            <b><i>和值</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <span><i>10</i></span>
+            <span><i>11</i></span>
+            <span><i>12</i></span>
+            <span><i>13</i></span>
+            <span><i>14</i></span>
+            <span><i>15</i></span>
+            <span><i>16</i></span>
+            <span><i>17</i></span>
+            <span><i>18</i></span>
+            <span><i>19</i></span>
+            <span><i>20</i></span>
+            <span><i>21</i></span>
+            <span><i>22</i></span>
+            <span><i>23</i></span>
+            <span><i>24</i></span>
+            <span><i>25</i></span>
+            <span><i>26</i></span>
+            <span><i>27</i></span>
+        </li>
+    </ul>
+</div>
+<%--直选跨度--%>
+<div class="Pick cl-1002 cl-1006-zxkd">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中选择1个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：跨度：8，开奖号码：**129，最大号码9与最小号码1相减值等于8，所选号与跨度号码相同即中奖。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>所选数值与开奖号码后三位最大和最小数字相减之差，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="跨度">
+            <b><i>跨度</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+<%--组三复式--%>
+<div class="Pick cl-1002 cl-1007-zsfs">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择2个或2个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：588开奖号码：后三位588(顺序不限)，即可中后三组选三。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9号码中至少选择2个号码组成两注，所选号码与开奖号码的百、十、个位相同，且顺序不限，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="组三">
+            <b><i>组三</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+<%--组三单式--%>
+<div class="Pick cl-1008-zsds">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            手动输入号码，至少输入1个三位数号码（三个数字中必须有二个数字相同）。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：001 开奖号码：后三位010(顺序不限)，即中后三组选三。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>手动输入一个3位数号码组成一注，三个数字中必须有两个数字相同，输入的数字与开奖的百、十、个位相同，顺序不限，即为中奖。</var>
+            </a>
+
+        </span>
+    </p>
+    <div class="content_jiang">
+        <textarea class="content_tex" autofocus></textarea>
+        <div class="right con_j_end">
+            <ul>
+                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
+                <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
+</div>
+
+<%--组六复式--%>
+<div class="Pick cl-1002 cl-1009-zlfs">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择3个或3个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：258开奖号码：后三位852(顺序不限)，即可中后三组选六。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9号码中至少选择3个号码组成一注，所选号码与开奖号码的百、十、个位相同，且顺序不限，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="组六">
+            <b><i>组六</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<%--组六单式--%>
+<div class="Pick cl-1010-zlds">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            手动输入号码，至少输入1个三位数号码（三个数字完全不相同）。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：123 开奖号码：后三位321(顺序不限)，即中后三组选六。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>手动输入一个3位数号码组成一注，所选的号码与开奖的号码的百、十、个位相同，顺序不限，即为中奖。</var>
+            </a>
+
+        </span>
+    </p>
+    <div class="content_jiang">
+        <textarea class="content_tex" autofocus></textarea>
+        <div class="right con_j_end">
+            <ul>
+                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
+                <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
+</div>
+<%--混合组选--%>
+<div class="Pick cl-1011-hhzx">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            手动至少输入三个号码构成一注(不包含豹子号)。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：001和123 开奖号码：后三位010(顺序不限)，即中后三组选三，或后三位312(顺序不限)，即中后三组选六。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>手动输入一个3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，投注号码以开奖号码后三位相同，顺序不限，即为中奖。</var>
+            </a>
+
+        </span>
+    </p>
+    <div class="content_jiang">
+        <textarea class="content_tex" autofocus></textarea>
+        <div class="right con_j_end">
+            <ul>
+                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
+                <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
+</div>
+<%--组选和值--%>
+<div class="Pick cl-1012-zxhz">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从1-26中选择1个号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：和值：3，开奖号码：后三位003(顺序不限)，即中后三组选三，或者后三位012(顺序不限)即中后三组选六。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>开奖号码后3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，所选数值等于开奖号码的百、十、个位三个数字相加之和，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li class="li1012_hezhi" data-name="和值">
+            <b><i>和值</i></b>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <span><i>10</i></span>
+            <span><i>11</i></span>
+            <span><i>12</i></span>
+            <span><i>13</i></span>
+            <span><i>14</i></span>
+            <span><i>15</i></span>
+            <span><i>16</i></span>
+            <span><i>17</i></span>
+            <span><i>18</i></span>
+            <span><i>19</i></span>
+            <span><i>20</i></span>
+            <span><i>21</i></span>
+            <span><i>22</i></span>
+            <span><i>23</i></span>
+            <span><i>24</i></span>
+            <span><i>25</i></span>
+            <span><i>26</i></span>
+        </li>
+    </ul>
+</div>
+
+<%--组选包胆--%>
+<div class="Pick cl-1002 cl-1013-zxbd">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中选择1个号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：包胆3：开奖号码：后三位3XX或者33X，即中后三组选三，后三位3XY，即中后三组选六</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9号码中任意选择一个胆码，开奖号码后三位为组选三或组选六形态(不含豹子号，投注号码与开奖后三位中任意一位相同，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="包胆">
+            <b><i>包胆</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+        </li>
+    </ul>
+</div>
+<%--和值尾数--%>
+<div class="Pick cl-1002 cl-1014-hzws">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中选择1个号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：和值尾数8 开奖号码：后三位936，和值尾数为8，即中和值尾数。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>所选号码等于开奖号码的百、十、个位数字相加之和的尾数，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li class="hzws_li" data-name="和值尾数">
+            <b><i>和值尾数</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+        </li>
+    </ul>
+</div>
+<%--特殊号--%>
+<div class="Pick cl-1002 cl-1015-tsh">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中选择1个号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：豹子顺子对子 开奖号码：后三位888，即中豹子；后三位678，即中顺子；后三位558，即中对子。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>所选号码特殊属性与开奖号码后三位号码属性一致，即为中奖。其中：1.顺子号的百、十、个位不分顺序(特别号码：019、089也是顺子号)；2.对子号指的是开奖号码的后三位当中，任意两位数字相同的三位数号码</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li class="hzws_li tsh_li" data-name="特殊号">
+            <b><i>特殊号</i></b>
+            <span>豹子</span>
+            <span>对子</span>
+            <span>顺子</span>
+        </li>
+    </ul>
+</div>
+
+
 <div class="add_spot">
     <div class="left">
         <div class="sopt_wrap">
@@ -189,32 +651,91 @@
 <script>
     $(function(){
         //初始化复式选号模式
-        $('.recl-1003').hide();
+        $(".Pick").hide();
         $('.recl-1002').show();
         $('.recl-1002').attr("statef","1002");
 
-        $(".btn_fu_zhi span").click(function () {
-           if($(this).siblings().hasClass('acti')){
-               $(this).siblings().removeClass('acti');
-           }
+        $(".btn_h3_zx span").click(function () {
+            if($(".group ul li p span").hasClass('acti')){
+                $(".group ul li p span").removeClass('acti');
+            }
            $(this).addClass('acti');
-           var da_name = $(this).data('name');
-           if(da_name == 'zhix'){
+           var flag_name = $(this).data('name');
+           if(flag_name == 'zxds'){
+               $(".Pick").hide();
                $('.recl-1003').show();
-               $('.recl-1002').hide();
-               if(typeof $('.recl-1002').attr('statef') != 'undefined'){
-                   $('.recl-1002').removeAttr('statef');
-               }
-               $('.recl-1003').attr("statef","1003");
-           }else if(da_name == 'fux'){
-               $('.recl-1003').hide();
+           }else if(flag_name == 'zxfs'){
+               $(".Pick").hide();
                $('.recl-1002').show();
-               if(typeof $('.recl-1003').attr('statef') != 'undefined'){
-                   $('.recl-1003').removeAttr('statef');
-               }
-               $('.recl-1002').attr("statef","1002");
+           }else if(flag_name == "hszh"){
+               $(".Pick").hide();
+               $('.cl-1004-hszh').show();
+           }else if(flag_name == "zxhz"){
+               $(".Pick").hide();
+               $('.cl-1005-zxhz').show();
+           }else if(flag_name == "zxkd"){
+               $(".Pick").hide();
+               $('.cl-1006-zxkd').show();
+           }else if(flag_name == "zsfs"){
+               $(".Pick").hide();
+               $(".cl-1007-zsfs").show();
            }
         });
+
+        $(".btn_h3_zux span").click(function () {
+           if($(".group ul li p span").hasClass('acti')){
+               $(".group ul li p span").removeClass('acti');
+           }
+           $(this).addClass("acti");
+            var flag_name = $(this).data('name');
+            if(flag_name == 'zsfs'){
+                $(".Pick").hide();
+                $('.cl-1007-zsfs').show();
+            }else if(flag_name == "zsds"){
+                $(".Pick").hide();
+                $(".cl-1008-zsds").show();
+            }else if(flag_name == "zlfs"){
+                $(".Pick").hide();
+                $(".cl-1009-zlfs").show();
+            }else if(flag_name == "zlds"){
+                $(".Pick").hide();
+                $(".cl-1010-zlds").show();
+            }else if(flag_name == "hhzx"){
+                $(".Pick").hide();
+                $(".cl-1011-hhzx").show();
+            }else if(flag_name == "zxhz"){
+                $(".Pick").hide();
+                $(".cl-1012-zxhz").show();
+            }else if(flag_name == "zxbd"){
+                $(".Pick").hide();
+                $(".cl-1013-zxbd").show();
+            }
+        });
+
+        $(".btn_h3_qt span").click(function () {
+           if($(".group ul li p span").hasClass('acti')){
+               $(".group ul li p span").removeClass('acti');
+           }
+           $(this).addClass("acti");
+            var flag_name = $(this).data('name');
+            if(flag_name == 'hzws'){
+                $(".Pick").hide();
+                $('.cl-1014-hzws').show();
+            }else if(flag_name == "tsh"){
+                $(".Pick").hide();
+                $('.cl-1015-tsh').show();
+            }
+        });
+
+        // 选中特殊号
+        $(".cl-1015-tsh ul .tsh_li span").click(function () {
+            if($(".cl-1015-tsh ul .tsh_li span").hasClass("acti_tsh")){
+                $(".cl-1015-tsh ul .tsh_li span").removeClass('acti_tsh');
+            }
+            $(this).addClass('acti_tsh');
+        });
+
+
 
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
@@ -248,6 +769,7 @@
             }
 
         });
+
 
     });
 </script>
@@ -336,14 +858,14 @@
         textStr = $.trim(textStr.replace(/[^1-9]/g,','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
-            if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4){
+            if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3){
                 newArr.push(arr_new[i]);
             }
         }
         return newArr.length;
     }
 
-    //四星直选-直选单式
+    //后三直选-直选单式
     function getDsZhudan(obj) {
         var textStr = $(".content_jiang .content_tex").val();
         var newArr = [];
@@ -353,7 +875,7 @@
         textStr = $.trim(textStr.replace(/[^1-9]/g,','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
-           if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4){
+           if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3){
                newArr.push(arr_new[i]);
            }else{
                errorArr.push(arr_new[i]);
@@ -373,7 +895,7 @@
         }
 
         zhushu = newArr.length;
-        obj.playName = "四星直选-单式";
+        obj.playName = "后三直选-单式";
         obj.content = "号码: (" + newArr + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -385,11 +907,7 @@
     }
 
     function getZhudan(obj) {
-        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
-
-        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
-            qianArr.push($.trim($(this).find("i").html()));
-        });
+        var baiArr = [], shiArr = [], geArr = [];
         $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
             baiArr.push($.trim($(this).find("i").html()));
         });
@@ -405,8 +923,8 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "四星直选-复式";
-        obj.content = " 千位: " + qianArr.join("") + " 百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
+        obj.playName = "后三直选-复式";
+        obj.content = "百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -418,9 +936,6 @@
 
     function getZhushu() {
         var qianArr = [], baiArr = [], shiArr = [], geArr = [];
-        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
-            qianArr.push($.trim($(this).find("i").html()));
-        });
         $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
             baiArr.push($.trim($(this).find("i").html()));
         });
@@ -431,16 +946,15 @@
             geArr.push($.trim($(this).find("i").html()));
         });
 
-        var qianLength = qianArr.length;
         var baiLength = baiArr.length;
         var shiLength = shiArr.length;
         var geLength = geArr.length;
 
-        if (qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+        if ( baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
             return 0;
         }
 
-        var newArr = getFourNewArrs(qianArr, baiArr, shiArr, geArr);
+        var newArr = getThreeNewArrs(baiArr, shiArr, geArr);
         return newArr.length;
     }
 
@@ -466,10 +980,10 @@
         var playNameStr = '';
         var contentStr = '';
         if (typeof $('.recl-1003').attr('statef') != 'undefined') {
-            playNameStr = "四星直选-单式";
+            playNameStr = "后三直选-单式";
             flag_dan_zhi = "dan";
         } else {
-            playNameStr = "四星直选-复式";
+            playNameStr = "后三直选-复式";
             flag_dan_zhi = "fu";
         }
 
@@ -488,9 +1002,9 @@
                 }
             }
             if(flag_dan_zhi == "dan"){
-                contentStr = "号码: (" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+                contentStr = "号码: (" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
             }else if(flag_dan_zhi == "fu"){
-                contentStr = " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+                contentStr = "百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
             }
 
             var obj = {};
@@ -526,7 +1040,7 @@
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                money_jangjin = 9800 - (money_jangjin * 100);
+                money_jangjin = 980 - (money_jangjin * 10);
                 $(".jiangjin-change").html(money_jangjin);
                 if(typeof stateTouZhu == "function"){
                     var flag_str = '';

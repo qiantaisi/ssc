@@ -59,9 +59,9 @@
                         <p class="guanfang respan" data-name="gfwf">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-cqssc-5x">五星</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-4x">四星</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-h3">后三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-q3">前三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-z3">中三</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-h3">后三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-2x">二星</a></span>
                             <span><a href="javascript:void(0)">定位胆</a></span>
                             <span><a href="javascript:void(0)">大小单双</a></span>
