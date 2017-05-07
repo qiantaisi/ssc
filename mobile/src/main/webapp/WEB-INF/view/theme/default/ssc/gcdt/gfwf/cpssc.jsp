@@ -35,16 +35,12 @@
         </div>
         <div class="content cl-601 show_hide">
             <div class="cus-tabs-scroll">
-                <div class="cus-1">
-                    <a>五星直选</a>
-                </div>
-                <div class="cus-2">
-                    <img src="<%=basePath%>static/theme/default/img/ico222.png"/>
-                    <a>
-                        直选方式
-                        <i class="triangle-down"> <!--向下的三角--> </i>
-                    </a>
-                </div>
+                <a>五星直选</a>
+                <span><img src="<%=basePath%>static/theme/default/img/ico222.png"/></span>
+                <a>
+                    直选方式
+                    <i class="triangle-down"> <!--向下的三角--> </i>
+                </a>
             </div>
             <div class="cl-900" id="lastOpenInfo"></div>
             <div class="cl-901">
