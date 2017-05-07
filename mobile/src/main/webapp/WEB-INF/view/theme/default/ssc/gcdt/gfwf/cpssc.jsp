@@ -39,7 +39,7 @@
                 <span><img src="<%=basePath%>static/theme/default/img/ico222.png"/></span>
                 <a>
                     直选方式
-                    <i class="triangle-down"> <!--向下的三角--> </i>
+                    <i class="triangle-down"><!--向下的三角--> </i>
                 </a>
             </div>
             <div class="cl-900" id="lastOpenInfo"></div>
@@ -53,7 +53,8 @@
             </div>
 
             <div class="cus-tem-a" id="betDemo">
-
+<div></div>
+<div></div>
             </div>
         </div>
     </div>
