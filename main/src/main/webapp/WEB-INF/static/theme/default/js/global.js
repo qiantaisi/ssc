@@ -297,8 +297,22 @@ function getFourNewArrs(qianA, baiA, shiA, geA) {
     return tempArr;
 }
 
-// 获取百、十、个固定位数的个数所组成3位所有组合
-function getThreeNewArrs(baiA, shiA, geA) {
+
+//去掉数组重复
+Array.prototype.uniqueArr = function () {
+    var temp = new Array();
+    this.sort();
+    for(i = 0; i < this.length; i++) {
+        if( this[i] == this[i+1]) {
+            continue;
+        }
+        temp[temp.length]=this[i];
+    }
+    return temp;
+}
+
+// 获取百、十、个固定位数的个数所组成(后三直选--后三组合)
+function getHszhNewArrs(baiA, shiA, geA) {
     var bArr = [], sArr = [], gArr = [];
     bArr = baiA;
     sArr = shiA;
@@ -308,6 +322,8 @@ function getThreeNewArrs(baiA, shiA, geA) {
         for (var s = 0; s < sArr.length; s++) {
             for (var g = 0; g < gArr.length; g++) {
                 tempArr.push(bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                tempArr.push(sArr[s] + "" + gArr[g]);
+                tempArr.push(gArr[g]);
             }
         }
     }

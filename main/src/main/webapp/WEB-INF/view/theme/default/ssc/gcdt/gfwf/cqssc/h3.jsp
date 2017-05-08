@@ -39,7 +39,7 @@
         </li>
     </ul>
 </div>
-<div class="Pick cl-1002 recl-1002">
+<div class="Pick cl-1002 recl-1002" data-flag="zxfs_zx">
     <p class="p1">
         <span class="fr fl cl-1001">
             从百位、十位、个位各选一个号码组成一注。
@@ -121,7 +121,7 @@
 <div class="Pick cl-1003 recl-1003">
     <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个四位数号码组成一注。
+            手动输入号码，至少输入1个3位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
                 <var>投注方案：345开奖号码：345，即中后三直选。</var>
             </a>
@@ -640,7 +640,8 @@
             </div>
         </div>
         <p class="p1">
-            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i class="i1 i_money">0.00</i>元。
+            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i
+                class="i1 i_money">0.00</i>元。
         </p>
     </div>
     <div class="rigth">
@@ -649,98 +650,122 @@
 
 </div>
 <script>
-    $(function(){
+    $(function () {
         //初始化复式选号模式
         $(".Pick").hide();
         $('.recl-1002').show();
-        $('.recl-1002').attr("statef","1002");
 
         $(".btn_h3_zx span").click(function () {
-            if($(".group ul li p span").hasClass('acti')){
+            if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
             }
-           $(this).addClass('acti');
-           var flag_name = $(this).data('name');
-           if(flag_name == 'zxds'){
-               $(".Pick").hide();
-               $('.recl-1003').show();
-           }else if(flag_name == 'zxfs'){
-               $(".Pick").hide();
-               $('.recl-1002').show();
-           }else if(flag_name == "hszh"){
-               $(".Pick").hide();
-               $('.cl-1004-hszh').show();
-           }else if(flag_name == "zxhz"){
-               $(".Pick").hide();
-               $('.cl-1005-zxhz').show();
-           }else if(flag_name == "zxkd"){
-               $(".Pick").hide();
-               $('.cl-1006-zxkd').show();
-           }else if(flag_name == "zsfs"){
-               $(".Pick").hide();
-               $(".cl-1007-zsfs").show();
-           }
+            //移除标签属性
+            $(".Pick").removeAttr("data-flag");
+
+            $(this).addClass('acti');
+            var flag_name = $(this).data('name');
+            if (flag_name == 'zxds') {
+                $(".Pick").hide();
+                $('.recl-1003').show();
+                $('.recl-1003').attr("data-flag", "zxds_zx");
+            } else if (flag_name == 'zxfs') {
+                $(".Pick").hide();
+                $('.recl-1002').show();
+                $('.recl-1002').attr("data-flag", "zxfs_zx");
+            } else if (flag_name == "hszh") {
+                $(".Pick").hide();
+                $('.cl-1004-hszh').show();
+                $('.cl-1004-hszh').attr("data-flag", "hszh_zx");
+            } else if (flag_name == "zxhz") {
+                $(".Pick").hide();
+                $('.cl-1005-zxhz').show();
+                $('.cl-1005-zxhz').attr("data-flag", "zxhz_zx");
+            } else if (flag_name == "zxkd") {
+                $(".Pick").hide();
+                $('.cl-1006-zxkd').show();
+                $('.cl-1006-zxkd').attr("data-flag", "zxkd_zx");
+            }
         });
 
         $(".btn_h3_zux span").click(function () {
-           if($(".group ul li p span").hasClass('acti')){
-               $(".group ul li p span").removeClass('acti');
-           }
-           $(this).addClass("acti");
+            if ($(".group ul li p span").hasClass('acti')) {
+                $(".group ul li p span").removeClass('acti');
+            }
+            $(".Pick").removeAttr("data-flag");
+            $(this).addClass("acti");
             var flag_name = $(this).data('name');
-            if(flag_name == 'zsfs'){
+            if (flag_name == 'zsfs') {
                 $(".Pick").hide();
                 $('.cl-1007-zsfs').show();
-            }else if(flag_name == "zsds"){
+                $('.cl-1007-zsfs').attr("data-flag", "zsfs_zux");
+            } else if (flag_name == "zsds") {
                 $(".Pick").hide();
                 $(".cl-1008-zsds").show();
-            }else if(flag_name == "zlfs"){
+                $('.cl-1008-zsds').attr("data-flag", "zsds_zux");
+            } else if (flag_name == "zlfs") {
                 $(".Pick").hide();
                 $(".cl-1009-zlfs").show();
-            }else if(flag_name == "zlds"){
+                $(".cl-1009-zlfs").attr("data-flag", "zlfs_zux");
+            } else if (flag_name == "zlds") {
                 $(".Pick").hide();
                 $(".cl-1010-zlds").show();
-            }else if(flag_name == "hhzx"){
+                $(".cl-1010-zlds").attr("data-flag", "zlds_zux");
+            } else if (flag_name == "hhzx") {
                 $(".Pick").hide();
                 $(".cl-1011-hhzx").show();
-            }else if(flag_name == "zxhz"){
+                $(".cl-1011-hhzx").attr("data-flag", "hhzx_zux");
+            } else if (flag_name == "zxhz") {
                 $(".Pick").hide();
                 $(".cl-1012-zxhz").show();
-            }else if(flag_name == "zxbd"){
+                $(".cl-1012-zxhz").attr("data-flag", "zxhz_zux");
+            } else if (flag_name == "zxbd") {
                 $(".Pick").hide();
                 $(".cl-1013-zxbd").show();
+                $(".cl-1013-zxbd").attr("data-flag", "zxbd_zux");
             }
         });
 
         $(".btn_h3_qt span").click(function () {
-           if($(".group ul li p span").hasClass('acti')){
-               $(".group ul li p span").removeClass('acti');
-           }
-           $(this).addClass("acti");
+            if ($(".group ul li p span").hasClass('acti')) {
+                $(".group ul li p span").removeClass('acti');
+            }
+            $(".Pick").removeAttr("data-flag");
+            $(this).addClass("acti");
             var flag_name = $(this).data('name');
-            if(flag_name == 'hzws'){
+            if (flag_name == 'hzws') {
                 $(".Pick").hide();
                 $('.cl-1014-hzws').show();
-            }else if(flag_name == "tsh"){
+                $(".cl-1014-hzws").attr("data-flag", "hzws_qt");
+            } else if (flag_name == "tsh") {
                 $(".Pick").hide();
                 $('.cl-1015-tsh').show();
+                $('.cl-1015-tsh').attr("data-flag", "tsh_qt");
             }
         });
 
         // 选中特殊号
         $(".cl-1015-tsh ul .tsh_li span").click(function () {
-            if($(".cl-1015-tsh ul .tsh_li span").hasClass("acti_tsh")){
+            if ($(".cl-1015-tsh ul .tsh_li span").hasClass("acti_tsh")) {
                 $(".cl-1015-tsh ul .tsh_li span").removeClass('acti_tsh');
             }
             $(this).addClass('acti_tsh');
         });
 
-
-
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
-            if(typeof stateTouZhu == "function"){
-                stateTouZhu('fu');
+            var flag_name = $(this).parent().parent().parent().parent().attr("data-flag");
+            if (typeof stateTouZhu == "function") {
+                if(flag_name == "hszh_zx"){
+                    stateTouZhu(flag_name);
+                }else if(flag_name == "zxhz_zx"){
+                    stateTouZhu(flag_name);
+                }else if(flag_name == "zxkd_zx"){
+                    stateTouZhu(flag_name);
+                }else if(flag_name == "zsfs_zux"){
+                    stateTouZhu(flag_name);
+                }else{
+                    stateTouZhu('fu');
+                }
             }
         });
 
@@ -758,7 +783,7 @@
                 $(".right_it1").show();
                 $(".Detailedlist").show();
             } else {
-                var flag_acti =  $(this).parent().parent().prev().find("b").hasClass('acti');
+                var flag_acti = $(this).parent().parent().prev().find("b").hasClass('acti');
                 if (flag_acti == true) {
                     $(this).parent().parent().prev().find("b").removeClass('acti');
                 }
@@ -787,7 +812,7 @@
         $(".Single .layout .Pick ul li span.acti").removeClass("acti");
         $(".re-5x-i i.acti").removeClass("acti");
         $("#zhushuInfo").data("zhushu", 0);
-        if(typeof clearStateTouZhu == 'function'){
+        if (typeof clearStateTouZhu == 'function') {
             clearStateTouZhu();
         }
         calc();
@@ -826,26 +851,77 @@
     }
 
     function tjzd() {
-        if (typeof $('.recl-1003').attr('statef') != 'undefined') {
-            var betDsForm ={};
-            if(!getDsZhudan(betDsForm)){
-                return;
-            }
-            clearTextarea();
-            if(typeof clearStateTouZhu == 'function'){
-                clearStateTouZhu();
-            }
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
-            calcAll();
-
-        } else {
+        if(typeof $('.recl-1002').attr('data-flag') != 'undefined'){
             var betForm = {};
             if (!getZhudan(betForm)) {
                 return;
             }
             clearSelected();
             var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        }else if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
+            var betDsForm = {};
+            if (!getDsZhudan(betDsForm)) {
+                return;
+            }
+            clearTextarea();
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
+
+        } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
+            var betDsForm = {};
+            if (!getHsZhudan(betDsForm)) {
+                return;
+            }
+            clearTextarea();
+            clearSelected();
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
+
+        }else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
+            var betDsForm = {};
+            if (!getHeZhiZhudan(betDsForm)) {
+                return;
+            }
+            clearSelected();
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
+
+        }else if(typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined'){
+            var betDsForm = {};
+            if (!getZhudan(betDsForm)) {
+                return;
+            }
+            clearSelected();
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        }else if(typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined'){
+            var betDsForm = {};
+            if (!getZuSanZhudan(betDsForm)) {
+                return;
+            }
+            clearSelected();
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();
         }
@@ -855,10 +931,10 @@
     function getDsZhushu() {
         var textStr = $(".content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g,','));
+        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
-            if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3){
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
                 newArr.push(arr_new[i]);
             }
         }
@@ -872,23 +948,23 @@
         var errorArr = [];
         var errorStr = '';
         var zhushu = 0;
-        textStr = $.trim(textStr.replace(/[^1-9]/g,','));
+        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
-           if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3){
-               newArr.push(arr_new[i]);
-           }else{
-               errorArr.push(arr_new[i]);
-           }
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            } else {
+                errorArr.push(arr_new[i]);
+            }
         }
 
-        if(newArr.length <= 0){
+        if (newArr.length <= 0) {
             alert("号码或金额输入有误，请重新输入");
             return;
         }
 
-        if(errorArr.length > 0){
-            for(var e = 0; e < errorArr.length; e++){
+        if (errorArr.length > 0) {
+            for (var e = 0; e < errorArr.length; e++) {
                 errorStr += errorArr[e] + ",";
             }
             alert("被过滤掉的错误号码" + errorStr);
@@ -906,24 +982,118 @@
         return true;
     }
 
+    //后三组选-组三复式
+    function getZuSanZhudan(obj) {
+        var flag_name = '', contentDan = '', playNameDan = '';//标签名称  注单内容  注单名称
+        var zuSanArr = [];
+        flag_name = $('.cl-1007-zsfs').attr('data-flag'); //获取当前是否为跨度界面
+
+        $.each($(".cl-1007-zsfs ul li[data-name = '组三'] span.acti"), function (index, value) {
+            zuSanArr.push($.trim($(this).find("i").html()));
+        });
+        playNameDan = "后三组选-组三复式";
+        contentDan = "组三: (" + zuSanArr.join(", ") + ")";
+
+        var zhushu = getZuSanZhushu(flag_name);
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = playNameDan;
+        obj.content = contentDan;
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+    //后三直选-直选复式
     function getZhudan(obj) {
-        var baiArr = [], shiArr = [], geArr = [];
-        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
-            baiArr.push($.trim($(this).find("i").html()));
+        var flag_name = '',contentDan = '',playNameDan = '';//标签名称  注单内容  注单名称
+        flag_name = $('.cl-1006-zxkd').attr('data-flag'); //获取当前是否为跨度界面
+        if(flag_name == "zxkd_zx"){
+            var kaDuArr = [];
+            $.each($(".cl-1006-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
+                kaDuArr.push($.trim($(this).find("i").html()));
+            });
+            playNameDan = "后三直选-跨度";
+            contentDan =  "跨度: (" + kaDuArr.join(", ") + ")";
+        }else{
+            var baiArr = [], shiArr = [], geArr = [];
+            $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+                baiArr.push($.trim($(this).find("i").html()));
+            });
+            $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+                shiArr.push($.trim($(this).find("i").html()));
+            });
+            $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+                geArr.push($.trim($(this).find("i").html()));
+            });
+            playNameDan = "后三直选-复式";
+            contentDan =  "百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
+        }
+        var zhushu = getZhushu(flag_name);
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = playNameDan;
+        obj.content = contentDan;
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+    //后三直选--直选和值
+    function getHeZhiZhudan(obj){
+        var heZhiArr = [];
+        $.each($(".cl-1005-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            heZhiArr.push($.trim($(this).find("i").html()));
         });
-        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
-            shiArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
-            geArr.push($.trim($(this).find("i").html()));
-        });
-        var zhushu = getZhushu();
+
+        var zhushu = getHezhiZhushu();
 
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "后三直选-复式";
+        obj.playName = "后三直选-和值";
+        obj.content = "和值: (" + heZhiArr.join(", ") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+    //后三直选--后三组合
+    function getHsZhudan(obj){
+        var baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1004-hszh ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1004-hszh ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1004-hszh ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+        var zhushu = getHsZhushu();
+
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "后三直选-组合";
         obj.content = "百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -934,7 +1104,95 @@
         return true;
     }
 
-    function getZhushu() {
+
+    function getZhushu(flag_name) {
+        var newArr = [];
+        if(flag_name == "zxkd_zx"){
+            var kaDuArr = [];
+            $.each($(".cl-1006-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
+                kaDuArr.push($.trim($(this).find("i").html()));
+               if(kaDuArr.length <= 0){
+                   return 0;
+               }
+            newArr = getKaduNewArrs(kaDuArr);
+            });
+        }else if(flag_name == "zxfs_zux"){
+            var zuSanArr = [];
+            $.each($(".cl-1007-zsfs ul li[data-name = '组三'] span.acti"), function (index, value) {
+                zuSanArr.push($.trim($(this).find("i").html()));
+            });
+            newArr = getZuXuanNewArrs(zuSanArr);
+        }else{
+            var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+            $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+                baiArr.push($.trim($(this).find("i").html()));
+            });
+            $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+                shiArr.push($.trim($(this).find("i").html()));
+            });
+            $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+                geArr.push($.trim($(this).find("i").html()));
+            });
+
+            var baiLength = baiArr.length;
+            var shiLength = shiArr.length;
+            var geLength = geArr.length;
+            if (baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+                return 0;
+            }
+            newArr = getThreeNewArrs(baiArr, shiArr, geArr);
+        }
+
+        return newArr.length;
+    }
+    //后三直选-跨度
+    function getKaDuZhushu() {
+        var kaDuArr = [], newArr = [];
+        $.each($(".cl-1006-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
+            kaDuArr.push($.trim($(this).find("i").html()));
+        });
+
+        var heZhiLength = kaDuArr.length;
+        if (heZhiLength <= 0) {
+            return 0;
+        }
+        newArr = getKaduNewArrs(kaDuArr);
+        return newArr.length;
+    }
+
+    //后三组选-组三复式
+    function getZuSanZhushu() {
+        var fuShiArr = [], newArr = [];
+        $.each($(".cl-1007-zsfs ul li[data-name = '组三'] span.acti"), function (index, value) {
+            fuShiArr.push($.trim($(this).find("i").html()));
+        });
+
+        var heZhiLength = fuShiArr.length;
+        if (heZhiLength <= 1) {
+            return 0;
+        }
+        newArr = getZuXuanNewArrs(fuShiArr);
+        return newArr.length;
+    }
+
+    //后三直选-和值
+    function getHezhiZhushu() {
+        var heZhiArr = [], newArr = [];
+        $.each($(".cl-1005-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            heZhiArr.push($.trim($(this).find("i").html()));
+        });
+
+        var heZhiLength = heZhiArr.length;
+        if (heZhiLength <= 0) {
+            return 0;
+        }
+
+        newArr = getHezNewArrs(heZhiArr);
+        return newArr.length;
+    }
+
+    //后三直选-后三组合
+    function getHsZhushu() {
         var qianArr = [], baiArr = [], shiArr = [], geArr = [];
         $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
             baiArr.push($.trim($(this).find("i").html()));
@@ -950,11 +1208,11 @@
         var shiLength = shiArr.length;
         var geLength = geArr.length;
 
-        if ( baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+        if (baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
             return 0;
         }
 
-        var newArr = getThreeNewArrs(baiArr, shiArr, geArr);
+        var newArr = getHszhNewArrs(baiArr, shiArr, geArr);
         return newArr.length;
     }
 
@@ -979,32 +1237,66 @@
         var flag_dan_zhi = "dan";//默认为单式
         var playNameStr = '';
         var contentStr = '';
-        if (typeof $('.recl-1003').attr('statef') != 'undefined') {
+        if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-单式";
             flag_dan_zhi = "dan";
-        } else {
+        } else if(typeof $('.recl-1002').attr('data-flag') != 'undefined'){
             playNameStr = "后三直选-复式";
             flag_dan_zhi = "fu";
+        }else if(typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined'){
+            playNameStr = "后三直选-组合";
+            flag_dan_zhi = "hszh-zx";
+        }else if(typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined'){
+            playNameStr = "后三直选-和值";
+            flag_dan_zhi = "hshz-zx";
+        }else if(typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined'){
+            playNameStr = "后三直选-跨度";
+            flag_dan_zhi = "zxkd-zx";
+        }else if(typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined'){
+            playNameStr = "后三直选-组三复式";
+            flag_dan_zhi = "zxfs-zux";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
-            var redArr = [];
-            for (var i = 0; i <= 9; ++i) {
-                redArr[i] = 0;
-            }
-
-            var arr = [];
-            while (arr.length != 6) {
-                var num = parseInt(Math.random() * 10);
-                if (redArr[num] != 1) {
-                    redArr[num] = 1;
-                    arr.push(num);
+            if(flag_dan_zhi == "hshz-zx"){
+                var arrZx = [];
+                while (arrZx.length != 1) {
+                    var m = parseInt(Math.random() * 28);
+                    arrZx.push(m);
                 }
-            }
-            if(flag_dan_zhi == "dan"){
-                contentStr = "号码: (" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
-            }else if(flag_dan_zhi == "fu"){
-                contentStr = "百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+                contentStr = "和值: (" + arrZx[0] + ")";
+            }else if(flag_dan_zhi == "zxfs-zux"){
+                var arrTemp = [];
+                while (arrTemp.length != 2) {
+                    var x = parseInt(Math.random() * 10);
+                    var y = parseInt(Math.random() * 10);
+                    if(x != y){
+                       arrTemp.push(x);
+                       arrTemp.push(y);
+                    }
+                }
+                contentStr = "组三: (" + arrTemp.join(', ') + ")";
+            }else{
+                var redArr = [];
+                for (var i = 0; i <= 9; ++i) {
+                    redArr[i] = 0;
+                }
+
+                var arr = [];
+                while (arr.length != 6) {
+                    var num = parseInt(Math.random() * 10);
+                    if (redArr[num] != 1) {
+                        redArr[num] = 1;
+                        arr.push(num);
+                    }
+                }
+                if (flag_dan_zhi == "dan") {
+                    contentStr = "号码: (" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+                }else if(flag_dan_zhi == "zxkd-zx"){
+                    contentStr = "跨度: ("+ arr[4] + ")";
+                }else if (flag_dan_zhi == "fu" || flag_dan_zhi == "hszh-zx") {
+                    contentStr = "百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+                }
             }
 
             var obj = {};
@@ -1042,13 +1334,22 @@
                 $(".fandian-bfb").html(money_jangjin + "%");
                 money_jangjin = 980 - (money_jangjin * 10);
                 $(".jiangjin-change").html(money_jangjin);
-                if(typeof stateTouZhu == "function"){
+                if (typeof stateTouZhu == "function") {
                     var flag_str = '';
-                    if (typeof $('.recl-1003').attr('statef') != 'undefined') {
+                    if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
                         flag_str = 'dan';
                         stateTouZhu(flag_str);
-                    } else {
+                    } else if(typeof $('.recl-1002').attr('data-flag') != 'undefined') {
                         flag_str = 'fu';
+                        stateTouZhu(flag_str);
+                    }else if(typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined'){
+                        flag_str = 'zxhz_zx';
+                        stateTouZhu(flag_str);
+                    }else if(typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined'){
+                        flag_str = 'zxkd_zx';
+                        stateTouZhu(flag_str);
+                    }else if(typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined'){
+                        flag_str = 'zsfs_zux';
                         stateTouZhu(flag_str);
                     }
                 }
@@ -1114,16 +1415,16 @@
             data-content="{{content}}"
             class="re_touzhu_tem"
     >
-            <div class="head-name">
-                <span>{{playName}}</span>
-            </div>
-            <div class="content-jiang">
-                <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-                <span class="span1">{{zhushu}}注</span>
-                <span class="span2">{{jiangJfanD}}</span>
-                <span class="span3">{{totalMoney}}元</span>
-                <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
-                        src="${resPath}img/ico53.png" alt=""></a></span>
-            </div>
+        <div class="head-name">
+            <span>{{playName}}</span>
+        </div>
+        <div class="content-jiang">
+            <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
+            <span class="span1">{{zhushu}}注</span>
+            <span class="span2">{{jiangJfanD}}</span>
+            <span class="span3">{{totalMoney}}元</span>
+            <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
+                    src="${resPath}img/ico53.png" alt=""></a></span>
+        </div>
     </li>
 </script>

@@ -17,7 +17,7 @@
         </li>
     </ul>
 </div>
-<div class="Pick cl-1002 recl-1002">
+<div class="Pick cl-1002 recl-1002" data-flag="fu">
     <p class="p1">
         <span class="fr fl cl-1001">
             从千位、百位、十位、个位各选一个号码组成一注。
@@ -293,6 +293,7 @@
 
     function clearTextarea() {
         $(".content_jiang textarea").val('');
+        clearStateTouZhu();
     }
 
     function daoRu() {

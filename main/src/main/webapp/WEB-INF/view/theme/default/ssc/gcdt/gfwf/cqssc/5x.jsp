@@ -17,7 +17,7 @@
         </li>
     </ul>
 </div>
-<div class="Pick cl-1002 recl-1002">
+<div class="Pick cl-1002 recl-1002" data-flag="fu">
     <p class="p1">
         <span class="fr fl cl-1001">
             从万位、千位、百位、十位、个位各选一个号码组成一注。
@@ -138,7 +138,7 @@
         </li>
     </ul>
 </div>
-<div class="Pick cl-1003 recl-1003">
+<div class="Pick cl-1003 recl-1003" data-flag="dan">
     <p class="p1">
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个五位数号码组成一注。
@@ -218,6 +218,7 @@
            if($(this).siblings().hasClass('acti')){
                $(this).siblings().removeClass('acti');
            }
+
            $(this).addClass('acti');
            var da_name = $(this).data('name');
            if(da_name == 'zhix'){
@@ -314,6 +315,7 @@
 
     function clearTextarea() {
         $(".content_jiang textarea").val('');
+        clearStateTouZhu();
     }
 
     function daoRu() {
@@ -468,6 +470,12 @@
         }
 
         var newArr = getNewArrs(wanArr, qianArr, baiArr, shiArr, geArr);
+        if(typeof newArr == "undefined" || newArr.length <= 0){
+            if(typeof clearStateTouZhu == 'function'){
+                clearStateTouZhu();
+            }
+            return;
+        }
         return newArr.length;
     }
 
