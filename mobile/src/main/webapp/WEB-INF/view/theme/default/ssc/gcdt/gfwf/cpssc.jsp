@@ -51,10 +51,22 @@
                 <div class="cl-903" id="openHistoryList">
                 </div>
             </div>
-
             <div class="cus-tem-a" id="betDemo">
-<div></div>
-<div></div>
+                <h2 class="cus-flex-title ui-grid-a">
+                    <span class="cus-left">万位</span>
+                    <span class="cus-right">
+                        <i>全</i>
+                        <i>大</i>
+                        <i>小</i>
+                        <i>奇</i>
+                        <i>偶</i>
+                        <i>清</i>
+                    </span>
+                </h2>
+                <div></div>
+            </div>
+            <div class="cus-flex-list ui-grid-a">
+
             </div>
         </div>
     </div>
