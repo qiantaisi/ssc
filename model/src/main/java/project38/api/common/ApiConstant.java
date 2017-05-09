@@ -107,4 +107,6 @@ public class ApiConstant {
 
     public static String API_GET_SYS_QQ = API_DOMAIN+"member/getSystemQQ.json";//获取系统QQ账号
     public static String API_QQ_ZZ = API_DOMAIN+"member/submitQQzz.json";//QQ转账
+
+    public static String API_WEB_SETTING_GET_COMPANY_SHORT_NAME = API_DOMAIN+"webSetting/getCompanyShortName.json";  // 获取公司标志
 }

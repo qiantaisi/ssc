@@ -1141,4 +1141,15 @@ public class ApiUtils {
         paramsMap.put("token", token);
         return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SYS_QQ, paramsMap), SkInfoResult.class);
     }
+
+    /**
+     * 获取公司标志
+     * @param domain 域名
+     * @return
+     */
+    public static CompanyShortNameResult getSystemQq(String domain) {
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("domain", domain);
+        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_WEB_SETTING_GET_COMPANY_SHORT_NAME, paramsMap), CompanyShortNameResult.class);
+    }
 }
