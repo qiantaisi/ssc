@@ -115,9 +115,13 @@ function stateTouZhu(flag_str){
         zhushu = getKaDuZhushu(flag_str_inner);
     }else if(flag_str_inner == "zsfs_zux"){
         zhushu = getZuSanZhushu(flag_str_inner);
+    }else if(flag_str_inner == "zsds_zux"){ //后三组选-组选单式
+        zhushu = getZsdsZhushu("zsds_zux");
+    }else if(flag_str_inner == "zlfs_zux"){ //后三组选-组六复式
+        zhushu = getZuLiuZhushu(flag_str_inner);
     }
 
-    if(zhushu <= 0 || typeof zhushu == "undefined"){
+    if(zhushu <= 0){
         clearStateTouZhu();
         return 0;
     }
@@ -152,6 +156,31 @@ function getZuXuanNewArrs(zuXuanArr) {
         }
     }
     tempArr = tempArr.uniqueArr();
+    return tempArr;
+}
+
+//后三组选-组六复式
+function getZuLiuNewArrs(zuXuanArr) {
+    var tempArr = [],zxArr = [];
+    zxArr = zuXuanArr;
+    for(var i = 0; i < zxArr.length; i++){
+        for(var i1 = 0; i1 < zxArr.length; i1++){
+            for(var i2 = 0; i2 < zxArr.length; i2++) {
+                if(zxArr[i] != zxArr[i1] != zxArr[i2]){
+                    var sortArr = [];
+                    sortArr.push(zxArr[i]);
+                    sortArr.push(zxArr[i1]);
+                    sortArr.push(zxArr[i2]);
+                    sortArr.sort();
+                    tempArr.push(sortArr.join(""));
+                }
+            }
+        }
+    }
+    tempArr = tempArr.uniqueArr();
+    for(var  n =0 ; n<tempArr.length; n++){
+        console.log(tempArr[n])
+    }
     return tempArr;
 }
 
