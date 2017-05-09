@@ -51,6 +51,19 @@ public class SystemPayOnlineResult extends CommonResult {
          */
         private Long imageId;
 
+        /**
+         * APP模式，1-二维码，2-网页
+         */
+        private Integer appMode;
+
+        public Integer getAppMode() {
+            return appMode;
+        }
+
+        public void setAppMode(Integer appMode) {
+            this.appMode = appMode;
+        }
+
         public String getPayUrl() {
             return payUrl;
         }

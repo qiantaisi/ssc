@@ -60,6 +60,19 @@ public class CzInfoResult extends CommonResult {
          */
         private String url;
 
+        /**
+         * APP模式，1-二维码，2-网页
+         */
+        private Integer appMode;
+
+        public Integer getAppMode() {
+            return appMode;
+        }
+
+        public void setAppMode(Integer appMode) {
+            this.appMode = appMode;
+        }
+
         public Integer getType() {
             return type;
         }
