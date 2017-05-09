@@ -31,96 +31,105 @@ public class IndexController extends BaseController{
     @Autowired
     private HttpServletRequest httpServletRequest;
 
+
     @RequestMapping(value = "/kefu.html", method = RequestMethod.GET)
     public ModelAndView kefu() {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
-        return this.renderView("index/kefu", modelMap);
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+        return this.renderView("index/kefu", modelMap,companyShortName);
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public ModelAndView index() {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2);
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
         modelMap.put("webTitle", webInfoResult.getWebTitle());
         modelMap.put("webKeywords", webInfoResult.getWebKeywords());
         modelMap.put("webDescription", webInfoResult.getWebDescription());
         modelMap.put("webTjjs", webInfoResult.getWebTjjs());
-        modelMap.put("icoData", ApiUtils.getLogo(4));
-        return this.renderView("index/index", modelMap);
+        modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
+        return this.renderView("index/index", modelMap,companyShortName);
     }
 
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
-    public ModelAndView main() {
+    public ModelAndView main(String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("logo", ApiUtils.getLogo(1));
+        modelMap.put("logo", ApiUtils.getLogo(1,companyShortName));
         
-        modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,null, null).getWebNoticeList());
-        modelMap.put("carouseList", ApiUtils.getCarouselList(true, 1));
+        modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName).getWebNoticeList());
+        modelMap.put("carouseList", ApiUtils.getCarouselList(true, 1,companyShortName));
         // 热门开奖列表
-        modelMap.put("kjjgJsonData", JSONUtils.toJSONStr(ApiUtils.getHotSscDataHistory3()));
+        modelMap.put("kjjgJsonData", JSONUtils.toJSONStr(ApiUtils.getHotSscDataHistory3(companyShortName)));
 
 //        modelMap.put("yhzzList", ApiUtils.getSystemBankCard(uid, token).getBankcardList());
 //        modelMap.put("zfbzzList", ApiUtils.getSystemAlipay(uid, token).getSkInfoList());
 //        modelMap.put("wxzzList", ApiUtils.getSystemWeixin(uid, token).getSkInfoList());
 //        modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token).getSkInfoList());
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3},companyShortName));
 
 
 
-        return this.renderView("index/main", modelMap);
+        return this.renderView("index/main", modelMap,companyShortName);
     }
 
     @RequestMapping(value = "/register.html", method = RequestMethod.GET)
     public ModelAndView register() {
+        String companyShortName = this.getCompanyShortName();
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("logo", ApiUtils.getLogo(1));
-        return this.renderView("index/register", modelMap);
+        modelMap.put("logo", ApiUtils.getLogo(1,companyShortName));
+        return this.renderView("index/register", modelMap,companyShortName);
     }
 
     @RequestMapping(value = "/yhhd.html", method = RequestMethod.GET)
     public ModelAndView yhhd() {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null).getPromotionList());
-        return this.renderView("index/yhhd", modelMap);
+        modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null,companyShortName).getPromotionList());
+        return this.renderView("index/yhhd", modelMap,companyShortName);
     }
 
     @RequestMapping(value = "/yhhd/{id}.html", method = RequestMethod.GET)
     public ModelAndView yhhdDetail(@PathVariable Long id) {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("promotion", ApiUtils.promotionGetById(id));
-        return this.renderView("index/yhhdDetail", modelMap);
+        modelMap.put("promotion", ApiUtils.promotionGetById(id,companyShortName));
+        return this.renderView("index/yhhdDetail", modelMap,companyShortName);
     }
 
     @RequestMapping(value = "/login.html", method = RequestMethod.GET)
     public ModelAndView login(String refer) {
+        String companyShortName = this.getCompanyShortName();
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("logo", ApiUtils.getLogo(1));
-        return this.renderView("index/login", modelMap);
+        modelMap.put("logo", ApiUtils.getLogo(1,companyShortName));
+        return this.renderView("index/login", modelMap,companyShortName);
     }
 
     @RequestMapping(value = "/ajaxGetWebInfo.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public WebInfoResult ajaxGetWebInfo() {
-        return ApiUtils.getWebInfo(2);
+        String companyShortName = this.getCompanyShortName();
+        return ApiUtils.getWebInfo(2,companyShortName);
     }
 
     @RequestMapping(value = "/shiwan.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public LoginResult LoginResult() {
+        String companyShortName = this.getCompanyShortName();
         LoginResult loginResult = new LoginResult();
         try {
-            return ApiUtils.memberShiwanLogin(IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), 1);
+            return ApiUtils.memberShiwanLogin(IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), 1,companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             loginResult.setResult(-100);
@@ -131,12 +140,13 @@ public class IndexController extends BaseController{
 
     @RequestMapping(value = "/pc.html", method = RequestMethod.GET)
     public ModelAndView pc() {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1);
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
         modelMap.put("webTitle", webInfoResult.getWebTitle());
         modelMap.put("webKeywords", webInfoResult.getWebKeywords());
         modelMap.put("webDescription", webInfoResult.getWebDescription());
         modelMap.put("webTjjs", webInfoResult.getWebTjjs());
-        return this.renderView("index/pc", modelMap);
+        return this.renderView("index/pc", modelMap,companyShortName);
     }
 }

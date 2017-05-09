@@ -7,6 +7,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
+import project38.api.result.CompanyShortNameResult;
 import project38.api.result.UserSessionResult;
 import project38.api.utils.ApiUtils;
 
@@ -27,11 +28,11 @@ public abstract class BaseController {
 
     /** 基于@ExceptionHandler异常处理 */
     @ExceptionHandler
-    public ModelAndView exp(HttpServletRequest request, Exception ex) {
+    public ModelAndView exp(HttpServletRequest request, Exception ex,String companyShortName) {
         log.error(this, ex);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("error/500/index", modelMap);
+        return this.renderView("error/500/index", modelMap,companyShortName);
     }
 
     /**
@@ -42,7 +43,7 @@ public abstract class BaseController {
      * @param modelMap
      * @return
      */
-    protected ModelAndView renderView(HttpServletRequest request, String jspLocation, Map<String, Object> modelMap) {
+    protected ModelAndView renderView(HttpServletRequest request, String jspLocation, Map<String, Object> modelMap,String companyShortName) {
         if (null == modelMap) {
             modelMap = new HashMap<String, Object>();
         }
@@ -64,7 +65,7 @@ public abstract class BaseController {
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token);
+        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token,companyShortName);
         if (null != userSessionResult && userSessionResult.getResult() == 1) {
             modelMap.put("userSession", userSessionResult);
         }
@@ -81,8 +82,8 @@ public abstract class BaseController {
      * @param modelMap
      * @return
      */
-    protected ModelAndView renderView(String jspLocation, Map<String, Object> modelMap) {
-        return this.renderView(httpServletRequest, jspLocation, modelMap);
+    protected ModelAndView renderView(String jspLocation, Map<String, Object> modelMap,String companyShortName) {
+        return this.renderView(httpServletRequest, jspLocation, modelMap,companyShortName);
     }
 
     /**
@@ -140,6 +141,29 @@ public abstract class BaseController {
         } else {
             return null;
         }
+    }
+
+    protected String getCompanyShortName() {
+        // 公司标志
+        Boolean sessionIsExist = false;
+
+        String companyShortName = (String) httpServletRequest.getSession().getAttribute("COMPANY_SHORT_NAME");
+        if (StringUtils.isBlank(companyShortName)) {
+            CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
+            if (companyShortNameResult.getResult() == 1) {
+                companyShortName = companyShortNameResult.getCompanyShortName();
+            }
+        } else {
+            sessionIsExist = true;
+        }
+        if (StringUtils.isBlank(companyShortName)) {
+            throw new RuntimeException("非法请求");
+        }
+
+        if (!sessionIsExist) {
+            httpServletRequest.getSession().setAttribute("COMPANY_SHORT_NAME", companyShortName);
+        }
+        return companyShortName;
     }
 }
 
