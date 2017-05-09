@@ -9,7 +9,7 @@
 <div class="group">
     <ul>
         <li>
-            <b>五星直选</b>
+            <b>四星直选</b>
             <p class="btn_fu_zhi">
                 <span class="acti" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
                 <span data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
@@ -20,38 +20,17 @@
 <div class="Pick cl-1002 recl-1002" data-flag="fu">
     <p class="p1">
         <span class="fr fl cl-1001">
-            从万位、千位、百位、十位、个位各选一个号码组成一注。
+            从千位、百位、十位、个位各选一个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：13456 开奖号码：13456，即中五星直选。</var>
+                <var>投注方案：3456 开奖号码后四位：3456，即中四星直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
+                <var>从千、百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码后四位相同，且顺序一致，即为中奖。</var>
             </a>
         </span>
     </p>
     <ul>
-        <li data-name="万">
-            <b><i>万位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <div class="clear re-5x-i">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
-            </div>
-        </li>
         <li data-name="千">
             <b><i>千位</i></b>
             <span><i>0</i></span>
@@ -138,16 +117,16 @@
         </li>
     </ul>
 </div>
-<div class="Pick cl-1003 recl-1003" data-flag="dan">
+<div class="Pick cl-1003 recl-1003">
     <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个五位数号码组成一注。
+            手动输入号码，至少输入1个四位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：23456 开奖号码：23456，即中五星直选。</var>
+                <var>投注方案：3456 开奖号码：3456，即中四星直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>手动输入一个五位数号码组成一注，所选的号码万、千、百、十、个位与号码相同，且顺序一致即为中奖。</var>
+                <var>手动输入一个4位数号码组成一注，所选择的千、百、十、个位与开奖号码相同，且顺序一致，即为中奖。</var>
             </a>
 
         </span>
@@ -218,7 +197,6 @@
            if($(this).siblings().hasClass('acti')){
                $(this).siblings().removeClass('acti');
            }
-
            $(this).addClass('acti');
            var da_name = $(this).data('name');
            if(da_name == 'zhix'){
@@ -323,7 +301,7 @@
     }
 
     function delRrepet() {
-
+        alert("开发中，敬请期待...");
     }
 
     function tjzd() {
@@ -359,14 +337,14 @@
         textStr = $.trim(textStr.replace(/[^1-9]/g,','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
-            if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 5){
+            if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4){
                 newArr.push(arr_new[i]);
             }
         }
         return newArr.length;
     }
 
-    //五星直选-直选单式
+    //四星直选-直选单式
     function getDsZhudan(obj) {
         var textStr = $(".content_jiang .content_tex").val();
         var newArr = [];
@@ -376,7 +354,7 @@
         textStr = $.trim(textStr.replace(/[^1-9]/g,','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
-           if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 5){
+           if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4){
                newArr.push(arr_new[i]);
            }else{
                errorArr.push(arr_new[i]);
@@ -396,7 +374,7 @@
         }
 
         zhushu = newArr.length;
-        obj.playName = "五星直选-单式";
+        obj.playName = "四星直选-单式";
         obj.content = "号码: (" + newArr + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -408,10 +386,8 @@
     }
 
     function getZhudan(obj) {
-        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
-        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
-            wanArr.push($.trim($(this).find("i").html()));
-        });
+        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+
         $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
             qianArr.push($.trim($(this).find("i").html()));
         });
@@ -430,8 +406,8 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "五星直选-复式";
-        obj.content = "万位: " + wanArr.join("") + " 千位: " + qianArr.join("") + " 百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
+        obj.playName = "四星直选-复式";
+        obj.content = "千位: " + qianArr.join("") + " 百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -442,10 +418,7 @@
     }
 
     function getZhushu() {
-        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
-        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
-            wanArr.push($.trim($(this).find("i").html()));
-        });
+        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
         $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
             qianArr.push($.trim($(this).find("i").html()));
         });
@@ -459,23 +432,16 @@
             geArr.push($.trim($(this).find("i").html()));
         });
 
-        var wanLength = wanArr.length;
         var qianLength = qianArr.length;
         var baiLength = baiArr.length;
         var shiLength = shiArr.length;
         var geLength = geArr.length;
 
-        if (wanLength <= 0 || qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+        if (qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
             return 0;
         }
 
-        var newArr = getNewArrs(wanArr, qianArr, baiArr, shiArr, geArr);
-        if(typeof newArr == "undefined" || newArr.length <= 0){
-            if(typeof clearStateTouZhu == 'function'){
-                clearStateTouZhu();
-            }
-            return;
-        }
+        var newArr = getFourNewArrs(qianArr, baiArr, shiArr, geArr);
         return newArr.length;
     }
 
@@ -501,10 +467,10 @@
         var playNameStr = '';
         var contentStr = '';
         if (typeof $('.recl-1003').attr('statef') != 'undefined') {
-            playNameStr = "五星直选-单式";
+            playNameStr = "四星直选-单式";
             flag_dan_zhi = "dan";
         } else {
-            playNameStr = "五星直选-复式";
+            playNameStr = "四星直选-复式";
             flag_dan_zhi = "fu";
         }
 
@@ -523,9 +489,9 @@
                 }
             }
             if(flag_dan_zhi == "dan"){
-                contentStr = "号码: (" +  + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+                contentStr = "号码: (" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
             }else if(flag_dan_zhi == "fu"){
-                contentStr = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+                contentStr = "千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
             }
 
             var obj = {};
@@ -561,7 +527,7 @@
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                money_jangjin = 98000 - (money_jangjin * 1000);
+                money_jangjin = 9800 - (money_jangjin * 100);
                 $(".jiangjin-change").html(money_jangjin);
                 if(typeof stateTouZhu == "function"){
                     var flag_str = '';

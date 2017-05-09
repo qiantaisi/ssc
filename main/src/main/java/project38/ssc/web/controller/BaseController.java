@@ -7,6 +7,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
+import project38.api.result.CompanyShortNameResult;
 import project38.api.result.UserSessionResult;
 import project38.api.utils.ApiUtils;
 
@@ -49,13 +50,30 @@ public abstract class BaseController {
         }
 
         String theme = null;
-        if (null != request) {
-            theme = (String) request.getAttribute("theme");
+//        if (null != request) {
+//            theme = (String) request.getAttribute("theme");
+//        }
+//
+//        if (StringUtils.isBlank(theme)) {
+//            theme = "default";
+//        }
+
+        // 公司标志
+        if (request.getRequestURI().indexOf(".html") > 0) {
+            String companyShortName = (String) request.getSession().getAttribute("COMPANY_SHORT_NAME");
+            if (StringUtils.isBlank(companyShortName)) {
+                CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
+                if (companyShortNameResult.getResult() == 1) {
+                    companyShortName = companyShortNameResult.getCompanyShortName();
+                }
+            }
+            if (StringUtils.isBlank(companyShortName)) {
+                throw new RuntimeException("非法请求");
+            } else {
+                theme = companyShortName;
+            }
         }
 
-        if (StringUtils.isBlank(theme)) {
-            theme = "default";
-        }
 
         if (null != request) {
             request.setAttribute("theme", theme);

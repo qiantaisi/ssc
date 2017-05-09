@@ -1,18 +1,18 @@
 /**
  * 时间对象的格式化;
  */
-Date.prototype.format = function(format) {
+Date.prototype.format = function (format) {
     /*
      * eg:format="yyyy-MM-dd hh:mm:ss";
      */
     var o = {
-        "M+" : this.getMonth() + 1, // month
-        "d+" : this.getDate(), // day
-        "h+" : this.getHours(), // hour
-        "m+" : this.getMinutes(), // minute
-        "s+" : this.getSeconds(), // second
-        "q+" : Math.floor((this.getMonth() + 3) / 3), // quarter
-        "S" : this.getMilliseconds()
+        "M+": this.getMonth() + 1, // month
+        "d+": this.getDate(), // day
+        "h+": this.getHours(), // hour
+        "m+": this.getMinutes(), // minute
+        "s+": this.getSeconds(), // second
+        "q+": Math.floor((this.getMonth() + 3) / 3), // quarter
+        "S": this.getMilliseconds()
         // millisecond
     }
 
@@ -102,7 +102,7 @@ var Tools = {
     null2Str: function (str) {
         return str || '';
     },
-    parseInt: function(str) {
+    parseInt: function (str) {
         return parseInt(str, 10);
     }
 }
@@ -119,7 +119,7 @@ var ajaxRequest = function (obj) {
     } else {
         requestStr += "?";
     }
-    
+
     var type;
     if (typeof obj.type == 'undefined') {
         type = 'POST';
@@ -218,10 +218,12 @@ function mul(a, b) {
         e = b.toString();
     try {
         c += d.split(".")[1].length;
-    } catch (f) {}
+    } catch (f) {
+    }
     try {
         c += e.split(".")[1].length;
-    } catch (f) {}
+    } catch (f) {
+    }
     return Number(d.replace(".", "")) * Number(e.replace(".", "")) / Math.pow(10, c);
 }
 
@@ -230,10 +232,12 @@ function div(a, b) {
         f = 0;
     try {
         e = a.toString().split(".")[1].length;
-    } catch (g) {}
+    } catch (g) {
+    }
     try {
         f = b.toString().split(".")[1].length;
-    } catch (g) {}
+    } catch (g) {
+    }
     return c = Number(a.toString().replace(".", "")), d = Number(b.toString().replace(".", "")), mul(c / d, Math.pow(10, f - e));
 }
 function getRequest(url) {
@@ -241,7 +245,7 @@ function getRequest(url) {
     if (url.indexOf("?") != -1) {   //如果要检索的字符串值没有出现，则该方法返回 -1
         var str = url.substr(url.indexOf("?") + 1);
         strs = str.split("&");
-        for(var i = 0; i < strs.length; i ++) {
+        for (var i = 0; i < strs.length; i++) {
             theRequest.push({
                 key: strs[i].split("=")[0],
                 value: unescape(strs[i].split("=")[1])
@@ -252,14 +256,18 @@ function getRequest(url) {
 }
 // 获取万、千、百、十、个固定位数的个数所组成5位所有组合
 function getNewArrs(wanA, qianA, baiA, shiA, geA) {
-    var wArr = [], qArr = [], bArr = [], sArr = [], gArr =[];
-    wArr = wanA; qArr =qianA; bArr = baiA; sArr = shiA; gArr =geA;
+    var wArr = [], qArr = [], bArr = [], sArr = [], gArr = [];
+    wArr = wanA;
+    qArr = qianA;
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
     var tempArr = [];
-    for(var w = 0; w < wArr.length; w++){
-        for(var q = 0; q < qArr.length; q++){
-            for(var b = 0; b < bArr.length; b++){
-                for(var s = 0; s < sArr.length; s++){
-                    for(var g = 0; g < gArr.length; g++){
+    for (var w = 0; w < wArr.length; w++) {
+        for (var q = 0; q < qArr.length; q++) {
+            for (var b = 0; b < bArr.length; b++) {
+                for (var s = 0; s < sArr.length; s++) {
+                    for (var g = 0; g < gArr.length; g++) {
                         tempArr.push(wArr[w] + "" + qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
                     }
                 }
@@ -269,10 +277,63 @@ function getNewArrs(wanA, qianA, baiA, shiA, geA) {
     return tempArr;
 }
 
+// 获取千、百、十、个固定位数的个数所组成4位所有组合
+function getFourNewArrs(qianA, baiA, shiA, geA) {
+    var qArr = [], bArr = [], sArr = [], gArr = [];
+    qArr = qianA;
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var q = 0; q < qArr.length; q++) {
+        for (var b = 0; b < bArr.length; b++) {
+            for (var s = 0; s < sArr.length; s++) {
+                for (var g = 0; g < gArr.length; g++) {
+                    tempArr.push(qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                }
+            }
+        }
+    }
+    return tempArr;
+}
+
+
+//去掉数组重复
+Array.prototype.uniqueArr = function () {
+    var temp = new Array();
+    this.sort();
+    for(i = 0; i < this.length; i++) {
+        if( this[i] == this[i+1]) {
+            continue;
+        }
+        temp[temp.length]=this[i];
+    }
+    return temp;
+}
+
+// 获取百、十、个固定位数的个数所组成(后三直选--后三组合)
+function getHszhNewArrs(baiA, shiA, geA) {
+    var bArr = [], sArr = [], gArr = [];
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var b = 0; b < bArr.length; b++) {
+        for (var s = 0; s < sArr.length; s++) {
+            for (var g = 0; g < gArr.length; g++) {
+                tempArr.push(bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                tempArr.push(sArr[s] + "" + gArr[g]);
+                tempArr.push(gArr[g]);
+            }
+        }
+    }
+    return tempArr;
+}
+
 // 判断一个字符串是否都为数字
 function isAllNaN(str) {
     for (var i = 0; i < str.length; i++) {
-        if(isNaN(str.charAt(i))) {
+        if (isNaN(str.charAt(i))) {
             return 0;
         }
     }
@@ -357,69 +418,69 @@ function getFlagArrs(arr, num) {
 }
 
 function windowOpenBlank(url) {
-    window.open(url,'_blank');
+    window.open(url, '_blank');
 }
 
-function openGcdt(url) {
-    goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + url + ".html");
-}
-
-// 读取子页面
-function getPage(url) {
-    showLoading();
-    $("#rightContent").attr("src", url);
-}
-
-// 读取子页面
-function goSubUrl(url, params) {
-    var turl = url + "?timestamp=" + (new Date()).getTime();
-    var surl = CONFIG.BASEURL + "ssc/gcdt/index.html#url=" + url;
-
-    if (typeof params != 'undefined') {
-        var tmp = params.split("&");
-        $.each(tmp, function(index, value) {
-            turl += "&" + value.key + "=" + value.value;
-            surl += "&" + value.key + "=" + value.value;
-        });
-    }
-    window.parent.location.href = surl;
-    getSubPage();
-}
-
-function getSubPage() {
-    var surl = window.parent.location.href.toString();
-    var paramArr = surl.split("#");
-    var turl = "";
-    var tparam = "?timestamp=" + (new Date()).getTime();
-    if (paramArr) {
-        paramArr = paramArr[1];
-        if (paramArr) {
-            paramArr = paramArr.split("&");
-
-            $.each(paramArr, function(index, value) {
-                var tmp = value.split("=");
-                var key = tmp[0];
-                var v = tmp[1];
-
-                if (key == "url") {
-                    turl = v;
-                } else {
-                    tparam += "&" + key + "=" + v;
-                }
-            });
-        }
-    }
-
-    if (!turl) {
-        turl = CONFIG.BASEURL + "ssc/gcdt/gcdt.html";
-    }
-    getPage(turl + tparam);
-}
+// function openGcdt(url) {
+//     goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + url + ".html");
+// }
+//
+// // 读取子页面
+// function getPage(url) {
+//     showLoading();
+//     $("#rightContent").attr("src", url);
+// }
+//
+// // 读取子页面
+// function goSubUrl(url, params) {
+//     var turl = url + "?timestamp=" + (new Date()).getTime();
+//     var surl = CONFIG.BASEURL + "ssc/gcdt/index.html#url=" + url;
+//
+//     if (typeof params != 'undefined') {
+//         var tmp = params.split("&");
+//         $.each(tmp, function (index, value) {
+//             turl += "&" + value.key + "=" + value.value;
+//             surl += "&" + value.key + "=" + value.value;
+//         });
+//     }
+//     window.parent.location.href = surl;
+//     getSubPage();
+// }
+//
+// function getSubPage() {
+//     var surl = window.parent.location.href.toString();
+//     var paramArr = surl.split("#");
+//     var turl = "";
+//     var tparam = "?timestamp=" + (new Date()).getTime();
+//     if (paramArr) {
+//         paramArr = paramArr[1];
+//         if (paramArr) {
+//             paramArr = paramArr.split("&");
+//
+//             $.each(paramArr, function (index, value) {
+//                 var tmp = value.split("=");
+//                 var key = tmp[0];
+//                 var v = tmp[1];
+//
+//                 if (key == "url") {
+//                     turl = v;
+//                 } else {
+//                     tparam += "&" + key + "=" + v;
+//                 }
+//             });
+//         }
+//     }
+//
+//     if (!turl) {
+//         turl = CONFIG.BASEURL + "ssc/gcdt/gcdt.html";
+//     }
+//     getPage(turl + tparam);
+// }
 
 function windowOpen(url, title, width, height) {
-    var top = (window.screen.height-30-height)/2; //获得窗口的垂直位置;
-    var left = (window.screen.width-10-width)/2; //获得窗口的水平位置;
-    var win = window.open(url, title,'height='+height+',innerHeight='+height+',width='+width+',innerWidth='+width+',top='+top+',left='+left+',fullscreen=1,toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
+    var top = (window.screen.height - 30 - height) / 2; //获得窗口的垂直位置;
+    var left = (window.screen.width - 10 - width) / 2; //获得窗口的水平位置;
+    var win = window.open(url, title, 'height=' + height + ',innerHeight=' + height + ',width=' + width + ',innerWidth=' + width + ',top=' + top + ',left=' + left + ',fullscreen=1,toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');
     win.focus();
 }
 
@@ -509,7 +570,8 @@ function toFixed(value, scale, isUp) {
 }
 
 function getQueryString(name) {
-    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
-    if(r!=null)return  unescape(r[2]); return null;
+    if (r != null)return unescape(r[2]);
+    return null;
 }

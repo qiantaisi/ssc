@@ -213,63 +213,63 @@ function getUserSession() {
     });
 }
 
-function getSscPage(url) {
-    goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + url + ".html");
-}
+// function getSscPage(url) {
+//     goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + url + ".html");
+// }
+//
+// 读取子页面
+// function getPage(url) {
+//     showLoading();
+//     $("#rightContent").attr("src", url);
+// }
 
 // 读取子页面
-function getPage(url) {
-    showLoading();
-    $("#rightContent").attr("src", url);
-}
+// function goSubUrl(url, params) {
+//     var turl = url + "?timestamp=" + (new Date()).getTime();
+//     var surl = CONFIG.BASEURL + "ssc/gcdt/index.html#url=" + url;
+//
+//     if (typeof params != 'undefined') {
+//         var tmp = params.split("&");
+//         $.each(tmp, function(index, value) {
+//             turl += "&" + value.key + "=" + value.value;
+//             surl += "&" + value.key + "=" + value.value;
+//         });
+//     }
+//
+//     window.location.href = surl;
+//     getSubPage();
+// }
 
-// 读取子页面
-function goSubUrl(url, params) {
-    var turl = url + "?timestamp=" + (new Date()).getTime();
-    var surl = CONFIG.BASEURL + "ssc/gcdt/index.html#url=" + url;
-
-    if (typeof params != 'undefined') {
-        var tmp = params.split("&");
-        $.each(tmp, function(index, value) {
-            turl += "&" + value.key + "=" + value.value;
-            surl += "&" + value.key + "=" + value.value;
-        });
-    }
-
-    window.location.href = surl;
-    getSubPage();
-}
-
-function getSubPage() {
-    var surl = window.location.toString();
-    var paramArr = surl.split("#");
-    var turl = "";
-    var tparam = "?timestamp=" + (new Date()).getTime();
-    if (paramArr) {
-        paramArr = paramArr[1];
-        if (paramArr) {
-            paramArr = paramArr.split("&");
-
-            $.each(paramArr, function(index, value) {
-                var tmp = value.split("=");
-                var key = tmp[0];
-                var v = tmp[1];
-
-                if (key == "url") {
-                    turl = v;
-                } else {
-                    tparam += "&" + key + "=" + v;
-                }
-            });
-        }
-    }
-
-    if (!turl) {
-        turl = CONFIG.BASEURL + "ssc/gcdt/gcdt.html";
-    }
-
-    getPage(turl + tparam);
-}
+// function getSubPage() {
+//     var surl = window.location.toString();
+//     var paramArr = surl.split("#");
+//     var turl = "";
+//     var tparam = "?timestamp=" + (new Date()).getTime();
+//     if (paramArr) {
+//         paramArr = paramArr[1];
+//         if (paramArr) {
+//             paramArr = paramArr.split("&");
+//
+//             $.each(paramArr, function(index, value) {
+//                 var tmp = value.split("=");
+//                 var key = tmp[0];
+//                 var v = tmp[1];
+//
+//                 if (key == "url") {
+//                     turl = v;
+//                 } else {
+//                     tparam += "&" + key + "=" + v;
+//                 }
+//             });
+//         }
+//     }
+//
+//     if (!turl) {
+//         turl = CONFIG.BASEURL + "ssc/gcdt/gcdt.html";
+//     }
+//
+//     getPage(turl + tparam);
+// }
 // function showGonggao(id) {
 //     $("#gonggao_" + id).show();
 // }
@@ -386,8 +386,8 @@ function getZstPage(url) {
     if (typeof url == 'undefined') {
         url = 'index';
     }
-
-    goSubUrl(CONFIG.BASEURL + "ssc/zst/" + url + ".html");
+    windowOpenBlank('<%=basePath%>ssc/index.html?module=zst/'+ module);
+    // goSubUrl(CONFIG.BASEURL + "ssc/zst/" + url + ".html");
 }
 //
 // function getPlayGroupId(param_url){
@@ -440,66 +440,66 @@ function getZstPage(url) {
 //     return idPl;
 // }
 //
-// function ajaxLogin() {
-//     var account = $.trim($("#loginForm input[name='account']").val());
-//     var password = $.trim($("#loginForm input[name='password']").val());
-//     var yzm = $.trim($("#loginForm input[name='yzm']").val());
-//
-//     if (!account) {
-//         layer.msg("请填写账号", {icon: 2});
-//         $("#loginForm input[name='account']").focus();
-//         return;
-//     }
-//
-//     if (!password) {
-//         layer.msg("请填写密码", {icon: 2});
-//         $("#loginForm input[name='password']").focus();
-//         return;
-//     }
-//
-//     if (!yzm) {
-//         layer.msg("请填写验证码", {icon: 2});
-//         $("#loginForm input[name='yzm']").focus();
-//         return;
-//     }
-//
-//     ajaxRequest({
-//         url: CONFIG.BASEURL + 'member/ajaxLogin.json',
-//         data: {
-//             account: account,
-//             password: $.md5(password),
-//             yzm: yzm
-//         },
-//         beforeSend: function () {
-//             $(".Account").html('<img src="${resPath}img/base_loading.gif" alt="" style="display: block;text-align: center;margin: auto;margin-top: 20px;">');
-//         },
-//         success: function (json) {
-//             if (json.result == 1) {
-//                 $.cookie("uid", json.userId, {path: "/"});
-//                 $.cookie("token", json.token, {path: "/"});
-//                 getUserSession();
-//                 ifm.window.location.reload();
-//             } else {
-//                 layer.msg(json.description, {icon: 2});
-//                 showNotLogin();
-//
-//                 // 刷新我的投注
-//                 if (typeof document.getElementById('rightContent').contentWindow.getBetDetails == 'function') {
-//                     document.getElementById('rightContent').contentWindow.getBetDetails(document.getElementById('rightContent').contentWindow.playGroupId);
-//                 }
-//             }
-//         }
-//     });
-// }
-//
-// function showLogin(user) {
-//     var str = '';
-//     str += '<p>账号：<i class="i0">' + user.account + '</i>';
-//     str += '<span>余额：<i class="i1">￥' + user.balance + '</i></span>';
-//     str += '<span><a href="javascript:void(0)" onclick="openHyzx(\'zhcz/yhzz\')">充值提现</a>  |  <a href="<%=basePath%>member/index.html" target="_blank">会员中心</a>  |  <a href="javascript:void(0)" onclick="openHyzx(\'lsjl/tzjl\')">投注记录</a>  |  <a href="${kefuUrl}" target="_blank">在线客服</a>  |  <a href="javascript:void(0)"  onclick="openHyzx(\'letter\')">最新消息</a>  |  <a href="javascript:void(0)" onclick="sigout()" class="red">退出登录</a>  |</span></p>';
-//     $(".Account").html(str);
-// }
-//
+function ajaxLogin() {
+    var account = $.trim($("#loginForm input[name='account']").val());
+    var password = $.trim($("#loginForm input[name='password']").val());
+    var yzm = $.trim($("#loginForm input[name='yzm']").val());
+
+    if (!account) {
+        layer.msg("请填写账号", {icon: 2});
+        $("#loginForm input[name='account']").focus();
+        return;
+    }
+
+    if (!password) {
+        layer.msg("请填写密码", {icon: 2});
+        $("#loginForm input[name='password']").focus();
+        return;
+    }
+
+    if (!yzm) {
+        layer.msg("请填写验证码", {icon: 2});
+        $("#loginForm input[name='yzm']").focus();
+        return;
+    }
+
+    ajaxRequest({
+        url: CONFIG.BASEURL + 'member/ajaxLogin.json',
+        data: {
+            account: account,
+            password: $.md5(password),
+            yzm: yzm
+        },
+        beforeSend: function () {
+            $(".Account").html('<img src="${resPath}img/base_loading.gif" alt="" style="display: block;text-align: center;margin: auto;margin-top: 20px;">');
+        },
+        success: function (json) {
+            if (json.result == 1) {
+                $.cookie("uid", json.userId, {path: "/"});
+                $.cookie("token", json.token, {path: "/"});
+                getUserSession();
+                ifm.window.location.reload();
+            } else {
+                layer.msg(json.description, {icon: 2});
+                showNotLogin();
+
+                // 刷新我的投注
+                if (typeof document.getElementById('rightContent').contentWindow.getBetDetails == 'function') {
+                    document.getElementById('rightContent').contentWindow.getBetDetails(document.getElementById('rightContent').contentWindow.playGroupId);
+                }
+            }
+        }
+    });
+}
+
+function showLogin(user) {
+    var str = '';
+    str += '<p>账号：<i class="i0">' + user.account + '</i>';
+    str += '<span>余额：<i class="i1">￥' + user.balance + '</i></span>';
+    str += '<span><a href="javascript:void(0)" onclick="openHyzx(\'zhcz/yhzz\')">充值提现</a>  |  <a href="<%=basePath%>member/index.html" target="_blank">会员中心</a>  |  <a href="javascript:void(0)" onclick="openHyzx(\'lsjl/tzjl\')">投注记录</a>  |  <a href="${kefuUrl}" target="_blank">在线客服</a>  |  <a href="javascript:void(0)"  onclick="openHyzx(\'letter\')">最新消息</a>  |  <a href="javascript:void(0)" onclick="sigout()" class="red">退出登录</a>  |</span></p>';
+    $(".Account").html(str);
+}
+
 function showNotLogin() {
     var str = '';
     str += '<div class="state">';
@@ -520,32 +520,32 @@ function showNotLogin() {
     str += '</div>';
     $(".Account").html(str);
 }
-// function refreshYzm(obj) {
-//     var src = $(obj).attr("src");
-//     var params = getRequest(src);
-//
-//     src = '<%=basePath%>code/yzm?timestamp=' + (new Date()).getTime();
-//     $.each(params, function (index, value) {
-//         src += '&' + value.key + '=' + value.value;
-//     });
-//     $(obj).attr("src", src);
-// }
-// function sigout() {
-//     ajaxRequest({
-//         url: CONFIG.BASEURL + 'member/ajaxSigout.json',
-//         data: {},
-//         beforeSend: function () {
-//             $(".Account").html('<img src="${resPath}img/base_loading.gif" alt="" style="display: block;text-align: center;margin: auto;margin-top: 20px;">');
-//         },
-//         success: function (json) {
-//             if (json.result == 1) {
-//                 $.cookie("uid", '', {path: "/", expires: -1});
-//                 $.cookie("token", '', {path: "/", expires: -1});
-//             }
-//             getUserSession();
-//         }
-//     });
-// }
+
+function refreshYzm(obj) {
+    var src = $(obj).attr("src");
+    var params = getRequest(src);
+    src = '<%=basePath%>code/yzm?timestamp=' + (new Date()).getTime();
+    $.each(params, function (index, value) {
+        src += '&' + value.key + '=' + value.value;
+    });
+    $(obj).attr("src", src);
+}
+function sigout() {
+    ajaxRequest({
+        url: CONFIG.BASEURL + 'member/ajaxSigout.json',
+        data: {},
+        beforeSend: function () {
+            $(".Account").html('<img src="${resPath}img/base_loading.gif" alt="" style="display: block;text-align: center;margin: auto;margin-top: 20px;">');
+        },
+        success: function (json) {
+            if (json.result == 1) {
+                $.cookie("uid", '', {path: "/", expires: -1});
+                $.cookie("token", '', {path: "/", expires: -1});
+            }
+            getUserSession();
+        }
+    });
+}
 // function openHyzx(module) {
 //     if (typeof module == 'undefined') {
 //         module = '';

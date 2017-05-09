@@ -35,11 +35,6 @@
 
 <script>
     $(function () {
-        $("#bottom_zs_table_head tbody tr th, #bottom_zs_table_select tbody tr th").click(function () {
-            $(this).parent().find(".choose").removeClass("choose");
-            $(this).addClass("choose");
-        });
-
         refreshViewRight();
     });
 
@@ -122,6 +117,8 @@
                         y: ydx
                     });
                 }
+
+
 
 
                 // 单双
@@ -275,47 +272,146 @@
         });
 
         $("#bottom_zs_table_content").html(str);
+
         var flagdx = new Array();
-        var y_flag = 0;
-        for (var x = 0; x < 52; x++) {
-            flagdx[x] = new Array();
-            for (var y = 0; y < 6; y++) {
-                flagdx[x][y] = 0;
+        var flagdx_1 = new Array();
+        var flagdx_2 = new Array();
+        var flagdx_3 = new Array();
+        var flagdx_4 = new Array();
+        var flagdx_5 = new Array();
+
+        var flagds = new Array();
+        var flagds_1 = new Array();
+        var flagds_2 = new Array();
+        var flagds_3 = new Array();
+        var flagds_4 = new Array();
+        var flagds_5 = new Array();
+        for (var ydx = 0; ydx < 6; ydx++) {
+            flagdx[ydx] = new Array();
+            flagdx_1[ydx] = new Array();
+            flagdx_2[ydx] = new Array();
+            flagdx_3[ydx] = new Array();
+            flagdx_4[ydx] = new Array();
+            flagdx_5[ydx] = new Array();
+
+            flagds[ydx] = new Array();
+            flagds_1[ydx] = new Array();
+            flagds_2[ydx] = new Array();
+            flagds_3[ydx] = new Array();
+            flagds_4[ydx] = new Array();
+            flagds_5[ydx] = new Array();
+            for (var xdx = 0; xdx < 53; xdx++) {
+                flagdx[ydx][xdx] = 0;
+                flagdx_1[ydx][xdx] = 0;
+                flagdx_2[ydx][xdx] = 0;
+                flagdx_3[ydx][xdx] = 0;
+                flagdx_4[ydx][xdx] = 0;
+                flagdx_5[ydx][xdx] = 0;
+
+                flagds[ydx][xdx] = 0;
+                flagds_1[ydx][xdx] = 0;
+                flagds_2[ydx][xdx] = 0;
+                flagds_3[ydx][xdx] = 0;
+                flagds_4[ydx][xdx] = 0;
+                flagds_5[ydx][xdx] = 0;
             }
         }
 
         for (var i = 0; i < 6; ++i) {
             var value = result[i];
-            var col_x = 0;
-            var col_x_dx = 0;
+            var col_y_flag_dx = 5, col_y_flag_ds = 5; //最初为5 ，为底层标记
+            var dx_col_max_right_x = 0, ds_col_max_right_x = 0; //当前超过六行时，往右移动最大数标记
+            var col_x_dx = 1, col_x_ds = 1;
             var pre = i == 5 ? 'zh' : i;
             $.each(value.ds, function (index, value) {
-                if (value.y >= 5) {
-                    $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(5).find("td").eq(value.x + col_x).html(value.name);
-                    col_x++;
-                } else {
-                    col_x = 0;
-                    $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(value.y).find("td").eq(value.x).html(value.name);
-                }
+                if (value.y > col_y_flag_ds) {
+                    $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(col_y_flag_ds).find("td").eq((parseInt(value.x) + col_x_ds)).html(value.name);
+                    //分别设置每位遍历写入表格时，超过六行的标记（记录x轴的延伸情况）
+                    if(pre == 0){
+                        flagds[col_y_flag_ds][value.x + col_x_ds] = 1;
+                    }else if(pre == 1){
+                        flagds_1[col_y_flag_ds][value.x + col_x_ds] = 1;
+                    }else if(pre == 2){
+                        flagds_2[col_y_flag_ds][value.x + col_x_ds] = 1;
+                    }else if(pre == 3){
+                        flagds_3[col_y_flag_ds][value.x + col_x_ds] = 1;
+                    }else if(pre == 4){
+                        flagds_4[col_y_flag_ds][value.x + col_x_ds] = 1;
+                    }else if(pre == 5){
+                        flagds_5[col_y_flag_ds][value.x + col_x_ds] = 1;
+                    }
 
+                    ds_col_max_right_x = ds_col_max_right_x > (value.x + col_x_ds) ? ds_col_max_right_x : (value.x + col_x_ds);
+                    col_x_ds++;
+                } else {
+                    //判断每位每组数据在碰到做标记的数据时，向右移动且对当前行数减掉一行，并且记录当前最大x轴延伸的位置
+                    if ((pre == 5 && flagds_5[value.y][value.x] == 1) ||(pre == 4 && flagds_4[value.y][value.x] == 1) ||(pre == 3 && flagds_3[value.y][value.x] == 1) ||(pre == 2 && flagds_2[value.y][value.x] == 1) || (pre == 1 && flagds_1[value.y][value.x] == 1) || (pre == 0 && flagds[value.y][value.x] == 1)) {
+                        if (col_y_flag_ds != 0) {
+                            col_y_flag_ds--;
+                        }
+                        $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(col_y_flag_ds).find("td").eq(value.x + col_x_ds).html(value.name);
+                        ds_col_max_right_x = ds_col_max_right_x > (value.x + col_x_ds) ? ds_col_max_right_x : (value.x + col_x_ds);
+                        col_x_ds++;
+                    } else {
+                        //正常填入大小标记时，初始化x轴累加号 col_x_ds ，待下个往右移动数据时使用
+                        col_x_ds = 1;
+                        //当不在做记号数据坐标的范围时，初始化最大行号为5
+                        if (value.x > ds_col_max_right_x) {
+                            col_y_flag_ds = 5;
+                        }
+                        $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(value.y).find("td").eq(value.x).html(value.name);
+                    }
+
+                }
             });
             $.each(value.dx, function (index, value) {
-//                if (value.y >= 5) {
-//                    flagdx[value.x][value.y] = 1; //记录超过六行的标记
-//                    col_x_dx++;
-//                }else{
-//                    col_x_dx = 0;
-//                }
 
-                if (value.y >= 5) {
-                    $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(5).find("td").eq(value.x + col_x_dx).html(value.name);
+                if (value.y > col_y_flag_dx) {
+                    $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(col_y_flag_dx).find("td").eq((parseInt(value.x) + col_x_dx)).html(value.name);
+                    //分别设置每位遍历写入表格时，超过六行的标记（记录x轴的延伸情况）
+                    if(pre == 0){
+                        flagdx[col_y_flag_dx][value.x + col_x_dx] = 1;
+                    }else if(pre == 1){
+                        flagdx_1[col_y_flag_dx][value.x + col_x_dx] = 1;
+                    }else if(pre == 2){
+                        flagdx_2[col_y_flag_dx][value.x + col_x_dx] = 1;
+                    }else if(pre == 3){
+                        flagdx_3[col_y_flag_dx][value.x + col_x_dx] = 1;
+                    }else if(pre == 4){
+                        flagdx_4[col_y_flag_dx][value.x + col_x_dx] = 1;
+                    }else if(pre == 5){
+                        flagdx_5[col_y_flag_dx][value.x + col_x_dx] = 1;
+                    }
+
+                    dx_col_max_right_x = dx_col_max_right_x > (value.x + col_x_dx) ? dx_col_max_right_x : (value.x + col_x_dx);
                     col_x_dx++;
                 } else {
-                    col_x_dx = 0;
-                    $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(value.y).find("td").eq(value.x).html(value.name);
-                }
+                    //判断每位每组数据在碰到做标记的数据时，向右移动且对当前行数减掉一行，并且记录当前最大x轴延伸的位置
+                    if ((pre == 5 && flagdx_5[value.y][value.x] == 1) ||(pre == 4 && flagdx_4[value.y][value.x] == 1) ||(pre == 3 && flagdx_3[value.y][value.x] == 1) ||(pre == 2 && flagdx_2[value.y][value.x] == 1) || (pre == 1 && flagdx_1[value.y][value.x] == 1) || (pre == 0 && flagdx[value.y][value.x] == 1)) {
+                        if (col_y_flag_dx != 0) {
+                            col_y_flag_dx--;
+                        }
+                        $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(col_y_flag_dx).find("td").eq(value.x + col_x_dx).html(value.name);
+                        dx_col_max_right_x = dx_col_max_right_x > (value.x + col_x_dx) ? dx_col_max_right_x : (value.x + col_x_dx);
+                        col_x_dx++;
+                    } else {
+                        //正常填入大小标记时，初始化x轴累加号 col_x_dx ，待下个往右移动数据时使用
+                        col_x_dx = 1;
+                        //当不在做记号数据坐标的范围时，初始化最大行号为5
+                        if (value.x > dx_col_max_right_x) {
+                            col_y_flag_dx = 5;
+                        }
+                        $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(value.y).find("td").eq(value.x).html(value.name);
+                    }
 
+                }
             });
         }
     }
 </script>
+
+
+
+
+
+

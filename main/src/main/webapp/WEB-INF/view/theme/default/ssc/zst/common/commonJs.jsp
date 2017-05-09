@@ -189,9 +189,9 @@
         }
 
        // module -- 字符串例子：gcdt/cqssc
-        var caizhong = module.toString().split("/");
+      // var caizhong = module.toString().split("/");
         <%--window.location.href ='<%=basePath%>ssc/index.html?module=' + module;--%>
-        openGcdt(caizhong[1]);
+        openGcdt(module);
     }
 
     $(function () {

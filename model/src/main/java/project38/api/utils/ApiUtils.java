@@ -1147,7 +1147,7 @@ public class ApiUtils {
      * @param domain 域名
      * @return
      */
-    public static CompanyShortNameResult getSystemQq(String domain) {
+    public static CompanyShortNameResult getCompanyShortName(String domain) {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("domain", domain);
         return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_WEB_SETTING_GET_COMPANY_SHORT_NAME, paramsMap), CompanyShortNameResult.class);

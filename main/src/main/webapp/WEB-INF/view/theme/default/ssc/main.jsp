@@ -213,6 +213,13 @@
 </c:forEach>
 <c:import url="../common/commonJs.jsp"/>
 <script>
+    function getZstPage(module){
+        if (typeof module == 'undefined') {
+            module = 'index';
+        }
+        windowOpenBlank('<%=basePath%>ssc/index.html?module=zst/' + module);
+    }
+
     function showGonggao(id) {
         $("#gonggao_" + id).show();
     }
@@ -653,5 +660,6 @@
 
         windowOpen('<%=basePath%>member/index.html?module=' + module, '会员中心', 1250, 834);
     }
+
 </script>
 <c:import url="../common/bodyEnd.jsp"/>
