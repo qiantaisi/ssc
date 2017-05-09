@@ -54,8 +54,9 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxRegister.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxRegister(String account, String password, String yzm, String name, Long agentId,String companyShortName) {
+    public LoginResult ajaxRegister(String account, String password, String yzm, String name, Long agentId) {
         LoginResult result = new LoginResult();
+        String companyShortName = this.getCompanyShortName();
         try {
             if (StringUtils.isBlank(account)) {
                 result.setResult(-1);
@@ -193,10 +194,10 @@ public class MemberController extends BaseController {
      */
     @Authentication
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
+    public ModelAndView index(HttpServletRequest httpServletRequest) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("logoData", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("icoData", ApiUtils.getLogo(4, companyShortName));
@@ -214,11 +215,12 @@ public class MemberController extends BaseController {
      */
     @Authentication
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
-    public ModelAndView main(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
+    public ModelAndView main(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         modelMap.put("userLastInfo", ApiUtils.getUserLastInfo(uid, token, companyShortName));
         modelMap.put("bindStatus", ApiUtils.getBindStatus(uid, token, companyShortName));
@@ -236,9 +238,9 @@ public class MemberController extends BaseController {
      */
     @Authentication
     @RequestMapping(value = "/selfInfo.html", method = RequestMethod.GET)
-    public ModelAndView selfInfo(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView selfInfo(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-
+        String companyShortName = this.getCompanyShortName();
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
@@ -256,9 +258,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/yhzz.html", method = RequestMethod.GET)
-    public ModelAndView zhczYhzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zhczYhzz(HttpServletRequest httpServletRequest) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
@@ -293,12 +296,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/hylb.html", method = RequestMethod.GET)
-    public ModelAndView jfmxHylb(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
+    public ModelAndView jfmxHylb(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
@@ -311,12 +315,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/tjhy.html", method = RequestMethod.GET)
-    public ModelAndView jfmxTjhy(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView jfmxTjhy(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
@@ -327,12 +332,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/cwbb.html", method = RequestMethod.GET)
-    public ModelAndView jfmxCwbb(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView jfmxCwbb(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
@@ -342,12 +348,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/tdls.html", method = RequestMethod.GET)
-    public ModelAndView jfmxTdls(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView jfmxTdls(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
@@ -357,12 +364,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/tdbb.html", method = RequestMethod.GET)
-    public ModelAndView jfmxTdbb(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
+    public ModelAndView jfmxTdbb(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
@@ -373,8 +381,9 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/tdtz.html", method = RequestMethod.GET)
-    public ModelAndView jfmxTdtz(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
+    public ModelAndView jfmxTdtz(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        String companyShortName = this.getCompanyShortName();
         SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList(companyShortName);
         modelMap.put("sscplaylist", sscplaylist);
 
@@ -391,9 +400,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/zxzf.html", method = RequestMethod.GET)
-    public ModelAndView zhczZxzf(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
+    public ModelAndView zhczZxzf(HttpServletRequest httpServletRequest) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
@@ -428,9 +438,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/qqzz.html", method = RequestMethod.GET)
-    public ModelAndView zhcsQqzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception{
+    public ModelAndView zhcsQqzz(HttpServletRequest httpServletRequest) throws Exception{
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         Map<String,Object> modelMap = new HashMap<String,Object>();
 
         // 权限检查
@@ -465,9 +476,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/qqzf.html", method = RequestMethod.GET)
-    public ModelAndView zhczQqzf(HttpServletRequest httpServletRequest,String  companyShortName) throws Exception{
+    public ModelAndView zhczQqzf(HttpServletRequest httpServletRequest) throws Exception{
         Long uid =this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         Map<String, Object> modelMap =new HashMap<String, Object>();
 
@@ -503,9 +515,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/wxzf.html", method = RequestMethod.GET)
-    public ModelAndView zhczWxzf(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zhczWxzf(HttpServletRequest httpServletRequest ) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
@@ -541,9 +554,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/zfbzf.html", method = RequestMethod.GET)
-    public ModelAndView zfbzf(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zfbzf(HttpServletRequest httpServletRequest) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
@@ -578,9 +592,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/wxzz.html", method = RequestMethod.GET)
-    public ModelAndView zhczWxzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zhczWxzz(HttpServletRequest httpServletRequest ) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
@@ -614,9 +629,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/zfbzz.html", method = RequestMethod.GET)
-    public ModelAndView zhczZfbzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zhczZfbzz(HttpServletRequest httpServletRequest ) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
@@ -650,9 +666,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/cftzz.html", method = RequestMethod.GET)
-    public ModelAndView zhczCftzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zhczCftzz(HttpServletRequest httpServletRequest ) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
@@ -690,9 +707,10 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/submitYhzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxSubmitYhzz(Double money, Integer depositChannelId, String bankAccount, Long bankCardId, String userBankName,String companyShortName) {
+    public String ajaxSubmitYhzz(Double money, Integer depositChannelId, String bankAccount, Long bankCardId, String userBankName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         CommonResult result = new CommonResult();
         try {
@@ -739,12 +757,13 @@ public class MemberController extends BaseController {
      */
     @Authentication
     @RequestMapping(value = "/withdraw.html", method = RequestMethod.GET)
-    public ModelAndView withdrawLocation(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView withdrawLocation(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanWithdraw()) {
             return this.renderView("member/noaccess", modelMap);
@@ -777,9 +796,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxGetLetter.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String letterLocation(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize,String  companyShortName) throws Exception {
+    public String letterLocation(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.getUserInboxList(uid, token, startTime, endTime, hasRead, pageIndex, pageSize, companyShortName));
     }
 
@@ -792,9 +812,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/submitWeixinzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxSubmitWeixinzz(Double money, String userWeixinName, Integer weixinId, Date time, String companyShortName) {
+    public String ajaxSubmitWeixinzz(Double money, String userWeixinName, Integer weixinId, Date time) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         CommonResult result = new CommonResult();
 
@@ -831,9 +852,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxSubmitQqzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxSubmitQqzz(Double money, String userQqName, Integer qqId, Date time,String companyShortName) {
+    public String ajaxSubmitQqzz(Double money, String userQqName, Integer qqId, Date time ) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         CommonResult result = new CommonResult();
 
@@ -870,10 +892,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/submitAlipayzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxAlipayzz(Double money, String userAlipayName, Integer alipayId, Date time, String companyShortName) {
+    public String ajaxAlipayzz(Double money, String userAlipayName, Integer alipayId, Date time ) {
         Long uid = this.getUid(httpServletRequest);
-
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         CommonResult result = new CommonResult();
 
@@ -911,9 +933,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/submitTenpayzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxTenpayzz(Double money, String userTenpayName, Integer tenpayId, Date time, String companyShortName) {
+    public String ajaxTenpayzz(Double money, String userTenpayName, Integer tenpayId, Date time ) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         CommonResult result = new CommonResult();
 
@@ -951,10 +974,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/submitWithdraw.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxWithdraw(Double money, Long id, String drawPassword, String companyShortName) {
+    public String ajaxWithdraw(Double money, Long id, String drawPassword) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-
+        String companyShortName = this.getCompanyShortName();
         CommonResult result = ApiUtils.submitWithdraw(uid, token, money, id, drawPassword, companyShortName);
         return this.renderJson(result);
     }
@@ -1042,12 +1065,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhsz/grzl.html", method = RequestMethod.GET)
-    public ModelAndView zhszGrzl(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zhszGrzl(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanEditInfo()) {
             return this.renderView("member/noaccess", modelMap);
@@ -1059,12 +1083,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhsz/dlmm.html", method = RequestMethod.GET)
-    public ModelAndView zhszDlmm(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zhszDlmm(HttpServletRequest httpServletRequest ) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanEditPassword()) {
             return this.renderView("member/noaccess", modelMap);
@@ -1082,12 +1107,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhsz/yhkgl.html", method = RequestMethod.GET)
-    public ModelAndView zhszYhkgl(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zhszYhkgl(HttpServletRequest httpServletRequest ) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanEditUserBank()) {
             return this.renderView("member/noaccess", modelMap);
@@ -1099,12 +1125,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhsz/aqxx.html", method = RequestMethod.GET)
-    public ModelAndView zhszAqxx(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView zhszAqxx(HttpServletRequest httpServletRequest ) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanSafeinfo()) {
             return this.renderView("member/noaccess", modelMap);
@@ -1117,9 +1144,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/zhsz/ajaxEditUserInfo.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxEditUserInfo(String nickname, Date birthday, String qq, String telephone, String email, Integer sex,String companyShortName) {
+    public String ajaxEditUserInfo(String nickname, Date birthday, String qq, String telephone, String email, Integer sex ) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         CommonResult result = ApiUtils.editUserInfo(uid, token, nickname, birthday, qq, telephone, email, sex, companyShortName);
         return this.renderJson(result);
@@ -1128,9 +1156,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/zhsz/ajaxResetPassword.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxResetPassword(String oldPassword, String newPassword,String companyShortName) {
+    public String ajaxResetPassword(String oldPassword, String newPassword ) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         CommonResult result = ApiUtils.resetPassword(uid, token, oldPassword, newPassword, companyShortName);
         return this.renderJson(result);
     }
@@ -1138,9 +1167,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/zhsz/ajaxResetDrawPassword.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxResetDrawPassword(String oldPassword, String newPassword,String companyShortName) {
+    public String ajaxResetDrawPassword(String oldPassword, String newPassword ) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         CommonResult result = ApiUtils.resetDrawPassword(uid, token, oldPassword, newPassword, companyShortName);
         return this.renderJson(result);
     }
@@ -1155,15 +1185,17 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/lsjl/ckjl.html", method = RequestMethod.GET)
-    public ModelAndView lsjlCkjl(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
+    public ModelAndView lsjlCkjl(HttpServletRequest httpServletRequest ) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        String companyShortName = this.getCompanyShortName();
         modelMap.put("depositChannelResult", ApiUtils.getDepositChannel(companyShortName));
         return this.renderView("member/lsjl/ckjl", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/lsjl/tzjl.html", method = RequestMethod.GET)
-    public ModelAndView lsjlTzjl(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView lsjlTzjl(HttpServletRequest httpServletRequest ) throws Exception {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList(companyShortName);
         modelMap.put("sscplaylist", sscplaylist);
@@ -1172,7 +1204,8 @@ public class MemberController extends BaseController {
 
     @RequestMapping(value = "/getSscPlayGroup.json")
     @ResponseBody
-    public String getPlayGroup(String companyShortName) {
+    public String getPlayGroup( ) {
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.getSscPlayGroupList(companyShortName));
     }
 
@@ -1205,9 +1238,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxGetCkjl.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxGetCkjl(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type,String companyShortName) {
+    public String ajaxGetCkjl(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.getDepositList(uid, token, startTime, endTime, pageIndex, pageSize, status, type,companyShortName));
     }
 
@@ -1219,9 +1253,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxGetTkjl.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxGetTkjl(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type,String companyShortName) {
+    public String ajaxGetTkjl(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.getWithdrawList(uid, token, startTime, endTime, pageIndex, pageSize, status, type, companyShortName));
     }
 
@@ -1233,9 +1268,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxGetTzjl.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscBetsListResult ajaxGetTzjl(Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Long playGroupId, Long playId, Integer status, Boolean isZhongjiang,String companyShortName) {
+    public SscBetsListResult ajaxGetTzjl(Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Long playGroupId, Long playId, Integer status, Boolean isZhongjiang) {
         Long uid = Long.parseLong((String) httpServletRequest.getAttribute("uid"));
         String token = (String) httpServletRequest.getAttribute("token");
+        String companyShortName = this.getCompanyShortName();
         return ApiUtils.getSscBetsList(uid, token, startTime, endTime, pageIndex, pageSize, playGroupId, playId, status, isZhongjiang, companyShortName);
     }
 
@@ -1247,9 +1283,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxReadZnx.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxReadZnx(@RequestParam("ids[]") Long[] idList,String companyShortName) {
+    public String ajaxReadZnx(@RequestParam("ids[]") Long[] idList ) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.readUserInboxNotice(uid, token, idList, companyShortName));
     }
 
@@ -1261,9 +1298,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxDelZnx.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxDelZnx(@RequestParam("ids[]") Long[] idList,String companyShortName) {
+    public String ajaxDelZnx(@RequestParam("ids[]") Long[] idList) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.delUserInboxNotice(uid, token, idList, companyShortName));
     }
 
@@ -1275,9 +1313,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxAddUserBank.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxAddUserBank(String bankName, String subBankName, String bankAccount, String companyShortName) {
+    public String ajaxAddUserBank(String bankName, String subBankName, String bankAccount) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.addUserBank(uid, token, bankName, subBankName, bankAccount, companyShortName));
     }
 
@@ -1289,20 +1328,22 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxDelUserBank.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxDelUserBank(Long id,String companyShortName) {
+    public String ajaxDelUserBank(Long id) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.delUserBank(uid, token, id, companyShortName));
     }
 
     @Authentication
     @RequestMapping(value = "/ajaxSetDefault.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public CommonResult ajaxSetDefault(Long id,String companyShortName) {
+    public CommonResult ajaxSetDefault(Long id) {
         CommonResult result = new CommonResult();
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
+            String companyShortName = this.getCompanyShortName();
 
             return ApiUtils.setUserBankDefault(uid, token, id,companyShortName);
         } catch (Exception e) {
@@ -1337,24 +1378,27 @@ public class MemberController extends BaseController {
 
     @RequestMapping(value = "/ajaxGetServerTime.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String getServerTime(String companyShortName) {
+    public String getServerTime() {
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.getServerTime(companyShortName));
     }
 
     @RequestMapping(value = "/checkOnline.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public CommonResult checkOnline(String companyShortName) {
+    public CommonResult checkOnline() {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return ApiUtils.checkOnline(uid, token, companyShortName);
     }
 
     @Authentication
     @RequestMapping(value = "/updateUserInfo.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String updateUserInfo(HttpServletRequest httpServletRequest, String companyShortName) {
+    public String updateUserInfo(HttpServletRequest httpServletRequest) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         ApiUtils.updateUserInfo(uid, token, companyShortName);
         return this.renderJson(ApiUtils.getUserSession(uid, token,companyShortName));
     }
@@ -1362,16 +1406,18 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/getUserSession.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String getUserSession(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
-        return updateUserInfo(httpServletRequest,companyShortName);
+    public String getUserSession(HttpServletRequest httpServletRequest) throws Exception {
+        String companyShortName = this.getCompanyShortName();
+        return updateUserInfo(httpServletRequest);
     }
 
     @Authentication
     @RequestMapping(value = "/ajaxSigout.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxSigout(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public String ajaxSigout(HttpServletRequest httpServletRequest) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.sigout(uid, token,companyShortName));
     }
 
@@ -1383,20 +1429,22 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetWebPopUpNotice.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public WebNoticeResult ajaxGetWebPopUpNotice(String companyShortName) throws Exception {
+    public WebNoticeResult ajaxGetWebPopUpNotice() throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName);
     }
 
     @Authentication
     @RequestMapping(value = "/jfmx/yjjl.html", method = RequestMethod.GET)
-    public ModelAndView jfmxYjjl(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+    public ModelAndView jfmxYjjl(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
@@ -1412,9 +1460,10 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetLogUserCoinList.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LogUserCoinResult ajaxGetLogUserCoinList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer type, String companyShortName) throws Exception {
+    public LogUserCoinResult ajaxGetLogUserCoinList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer type) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return ApiUtils.getLogUserCoinList(uid, token,pageIndex, pageSize, startTime, endTime, type, companyShortName);
     }
 }

@@ -115,7 +115,8 @@ public class IndexController extends BaseController{
 
     @RequestMapping(value = "/shiwan.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult LoginResult(String companyShortName) {
+    public LoginResult LoginResult() {
+        String companyShortName = this.getCompanyShortName();
         LoginResult loginResult = new LoginResult();
         try {
             return ApiUtils.memberShiwanLogin(IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), 2,companyShortName);
