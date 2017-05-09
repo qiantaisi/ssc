@@ -27,7 +27,7 @@ public class ApiUtils {
         paramsMap.put("token", token);
         paramsMap.put("oldPassword", oldPassword);
         paramsMap.put("newPassword", newPassword);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_RESET_DRAW_PASSWORD, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_RESET_DRAW_PASSWORD, paramsMap, companyShortName), CommonResult.class);
     }
 
     public static CommonResult resetPassword(Long uid, String token, String oldPassword, String newPassword) {
@@ -39,7 +39,7 @@ public class ApiUtils {
         paramsMap.put("token", token);
         paramsMap.put("oldPassword", oldPassword);
         paramsMap.put("newPassword", newPassword);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_RESET_PASSWORD, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_RESET_PASSWORD, paramsMap, companyShortName), CommonResult.class);
     }
 
     public static CommonResult submitWeixinzz(Long uid, String token, Double money, String userWeixinName, Integer weixinId, Date time) {
@@ -53,7 +53,7 @@ public class ApiUtils {
         paramsMap.put("userWeixinName", userWeixinName);
         paramsMap.put("weixinId", weixinId);
         paramsMap.put("time", formatDate(time, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_WEI_XIN_ZZ, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_WEI_XIN_ZZ, paramsMap, companyShortName), CommonResult.class);
     }
 
     public static CommonResult submitQqzz(Long uid, String token, Double money, String userQqName, Integer qqId, Date time) {
@@ -67,7 +67,7 @@ public class ApiUtils {
         paramsMap.put("userQQName", userQqName);
         paramsMap.put("qqId", qqId);
         paramsMap.put("time", formatDate(time, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_QQ_ZZ, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_QQ_ZZ, paramsMap, companyShortName), CommonResult.class);
     }
 
 
@@ -82,7 +82,7 @@ public class ApiUtils {
         paramsMap.put("userAlipayName", userAlipayName);
         paramsMap.put("alipayId", alipayId);
         paramsMap.put("time", formatDate(time, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_ALIPAY_ZZ, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_ALIPAY_ZZ, paramsMap, companyShortName), CommonResult.class);
     }
 
 
@@ -97,7 +97,7 @@ public class ApiUtils {
         paramsMap.put("userTenpayName", userTenpayName);
         paramsMap.put("tenpayId", tenpayId);
         paramsMap.put("time", formatDate(time, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_TENPAY_ZZ, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_TENPAY_ZZ, paramsMap, companyShortName), CommonResult.class);
     }
 
 
@@ -113,7 +113,7 @@ public class ApiUtils {
         paramsMap.put("bankAccount", bankAccount);
         paramsMap.put("bankCardId", bankCardId);
         paramsMap.put("userBankName", userBankName);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SUBMIT_YHZZ, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SUBMIT_YHZZ, paramsMap, companyShortName), CommonResult.class);
     }
 
 
@@ -124,7 +124,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_CHECK_ONLINE, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_CHECK_ONLINE, paramsMap, companyShortName), CommonResult.class);
     }
 
 
@@ -140,7 +140,7 @@ public class ApiUtils {
         paramsMap.put("url", url);
         paramsMap.put("qq", qq);
         paramsMap.put("agentId", agentId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_REGISTER, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER, paramsMap, companyShortName), CommonResult.class);
     }
 
 
@@ -153,7 +153,7 @@ public class ApiUtils {
         paramsMap.put("password", password);
         paramsMap.put("ip", ip);
         paramsMap.put("loginType", loginType);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_LOGIN, paramsMap), LoginResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_LOGIN, paramsMap, companyShortName), LoginResult.class);
     }
 
     public static CommonResult submitWithdraw(Long uid, String token, Double money, Long id, String drawPassword) {
@@ -166,7 +166,7 @@ public class ApiUtils {
         paramsMap.put("money", money);
         paramsMap.put("id", id);
         paramsMap.put("drawPassword", drawPassword);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SUBMIT_WITHDRAW, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SUBMIT_WITHDRAW, paramsMap, companyShortName), CommonResult.class);
     }
 
     public static CommonResult editUserInfo(Long uid, String token, String nickname, Date birthday, String qq, String telephone, String email, Integer sex) {
@@ -184,7 +184,7 @@ public class ApiUtils {
         paramsMap.put("telephone", telephone);
         paramsMap.put("email", email);
         paramsMap.put("sex", sex);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_EDIT_USER_INFO, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_EDIT_USER_INFO, paramsMap, companyShortName), CommonResult.class);
     }
 
     public static DepositChannelResult getDepositChannel() {
@@ -192,7 +192,7 @@ public class ApiUtils {
             return JSONUtils.toObject("{\"result\":1,\"description\":null,\"depositChannelList\":[{\"id\":1,\"name\":\"在线银行\"},{\"id\":2,\"name\":\"手机银行\"},{\"id\":3,\"name\":\"柜台转账\"},{\"id\":4,\"name\":\"ATM现金转账\"}]}", DepositChannelResult.class);
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_DEPOSIT_CHANNEL, paramsMap), DepositChannelResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_DEPOSIT_CHANNEL, paramsMap, companyShortName), DepositChannelResult.class);
     }
 
     public static UserSessionResult getUserSession(Long uid, String token) {
@@ -202,7 +202,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_USER_SESSION, paramsMap), UserSessionResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_USER_SESSION, paramsMap, companyShortName), UserSessionResult.class);
     }
 
     public static UserLastInfoResult getUserLastInfo(Long uid, String token) {
@@ -212,7 +212,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_USER_LAST_INFO, paramsMap), UserLastInfoResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_USER_LAST_INFO, paramsMap, companyShortName), UserLastInfoResult.class);
     }
 
     public static UserDepositListResult getDepositList(Long uid, String token, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type) {
@@ -228,7 +228,7 @@ public class ApiUtils {
         paramsMap.put("type", type);
         paramsMap.put("pageIndex", pageIndex);
         paramsMap.put("pageSize", pageSize);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_DEPOSIT_LIST, paramsMap), UserDepositListResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_DEPOSIT_LIST, paramsMap, companyShortName), UserDepositListResult.class);
     }
 
     public static UserDepositListResult.UserDeposit getDeposit(Long uid, String token, String orderNo) {
@@ -239,7 +239,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("orderNo", orderNo);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_DEPOSIT, paramsMap), UserDepositListResult.UserDeposit.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_DEPOSIT, paramsMap, companyShortName), UserDepositListResult.UserDeposit.class);
     }
 
     public static SscBetsListResult getSscBetsList(Long uid, String token, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Long playGroupId, Long playId, Integer status, Boolean isZhongjiang) {
@@ -258,7 +258,7 @@ public class ApiUtils {
         paramsMap.put("playId", playId);
         paramsMap.put("status", status);
         paramsMap.put("isZhongjiang", isZhongjiang);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SSC_BETS_LIST, paramsMap), SscBetsListResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SSC_BETS_LIST, paramsMap, companyShortName), SscBetsListResult.class);
     }
 
     public static SscBetsListResult.SscBets getSscBets(Long uid, String token, String orderNumber) {
@@ -269,7 +269,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("orderNumber", orderNumber);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SSC_BETS, paramsMap), SscBetsListResult.SscBets.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SSC_BETS, paramsMap, companyShortName), SscBetsListResult.SscBets.class);
     }
 
     public static SscBetsListResult.SscBets getAgentSscBets(Long uid, String token, String orderNumber) {
@@ -280,7 +280,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("orderNumber", orderNumber);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_GET_SSC_BETS, paramsMap), SscBetsListResult.SscBets.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_GET_SSC_BETS, paramsMap, companyShortName), SscBetsListResult.SscBets.class);
     }
 
     public static UserWithdrawListResult getWithdrawList(Long uid, String token, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type) {
@@ -296,7 +296,7 @@ public class ApiUtils {
         paramsMap.put("pageSize", pageSize);
         paramsMap.put("status", status);
         paramsMap.put("type", type);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_WITHDRAW_LIST, paramsMap), UserWithdrawListResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_WITHDRAW_LIST, paramsMap, companyShortName), UserWithdrawListResult.class);
     }
 
     public static UserWithdrawListResult.UserWithdraw getWithdraw(Long uid, String token, String orderNo) {
@@ -307,7 +307,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("orderNo", orderNo);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_WITHDRAW, paramsMap), UserWithdrawListResult.UserWithdraw.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_WITHDRAW, paramsMap, companyShortName), UserWithdrawListResult.UserWithdraw.class);
     }
 
     public static UserInboxResult getUserInboxList(Long uid, String token, Date startTime, Date endTime, Boolean hasRead, Integer pageIndex, Integer pageSize) {
@@ -322,7 +322,7 @@ public class ApiUtils {
         paramsMap.put("hasRead", hasRead);
         paramsMap.put("pageIndex", pageIndex);
         paramsMap.put("pageSize", pageSize);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_USER_INBOX_LIST, paramsMap), UserInboxResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_USER_INBOX_LIST, paramsMap, companyShortName), UserInboxResult.class);
     }
 
 
@@ -334,7 +334,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("noticeId", noticeId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_USER_INBOX, paramsMap), UserInboxResult.UserInbox.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_USER_INBOX, paramsMap, companyShortName), UserInboxResult.UserInbox.class);
     }
 
     public static UserBindStatusResult getBindStatus(Long uid, String token) {
@@ -344,7 +344,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_BIND_STATUS, paramsMap), UserBindStatusResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_BIND_STATUS, paramsMap, companyShortName), UserBindStatusResult.class);
     }
 
     public static UserBankCardResult getUserBankCardList(Long uid, String token) {
@@ -354,7 +354,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_USER_BANK_CARD_LIST, paramsMap), UserBankCardResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_USER_BANK_CARD_LIST, paramsMap, companyShortName), UserBankCardResult.class);
     }
 
     public static UserBankCardResult.UserBankCard getUserBankCard(Long uid, String token, Long userBankCardId) {
@@ -365,7 +365,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("userBankCardId", userBankCardId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_USER_BANK_CARD, paramsMap), UserBankCardResult.UserBankCard.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_USER_BANK_CARD, paramsMap, companyShortName), UserBankCardResult.UserBankCard.class);
     }
 
     public static SystemPayOnlineResult getSystemPayonline(Long uid, String token, Integer payType, Integer[] typeList) {
@@ -377,7 +377,7 @@ public class ApiUtils {
         paramsMap.put("token", token);
         paramsMap.put("payType", payType);
         paramsMap.put("typeList", arr2Str(typeList));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SYS_PAYON_ONLINE, paramsMap), SystemPayOnlineResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SYS_PAYON_ONLINE, paramsMap, companyShortName), SystemPayOnlineResult.class);
     }
 
     public static SkInfoResult getSystemTenpay(Long uid, String token) {
@@ -387,7 +387,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SYS_TENPAY, paramsMap), SkInfoResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SYS_TENPAY, paramsMap, companyShortName), SkInfoResult.class);
     }
 
     public static SkInfoResult getSystemWeixin(Long uid, String token) {
@@ -397,7 +397,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SYS_WEIXIN, paramsMap), SkInfoResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SYS_WEIXIN, paramsMap, companyShortName), SkInfoResult.class);
     }
 
     public static SkInfoResult getSystemAlipay(Long uid, String token) {
@@ -407,7 +407,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SYS_ALIPAY, paramsMap), SkInfoResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SYS_ALIPAY, paramsMap, companyShortName), SkInfoResult.class);
     }
 
     public static SystemBankCardResult getSystemBankCard(Long uid, String token) {
@@ -417,7 +417,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SYSTEM_BANK_CARD, paramsMap), SystemBankCardResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SYSTEM_BANK_CARD, paramsMap, companyShortName), SystemBankCardResult.class);
     }
 
     public static SafeInfoResult getSafeInfo(Long uid, String token) {
@@ -427,7 +427,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SAFE_INFO, paramsMap), SafeInfoResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SAFE_INFO, paramsMap, companyShortName), SafeInfoResult.class);
     }
 
     public static PromotionResult getPromotion(Integer pageIndex, Integer pageSize, Date startTime, Date endTime) {
@@ -439,7 +439,7 @@ public class ApiUtils {
         paramsMap.put("pageSize", pageSize);
         paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_PROMOTION, paramsMap), PromotionResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_PROMOTION, paramsMap, companyShortName), PromotionResult.class);
     }
 
     public static ServerTimeResult getServerTime() {
@@ -449,7 +449,7 @@ public class ApiUtils {
             return result;
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SERVER_TIME, paramsMap), ServerTimeResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SERVER_TIME, paramsMap, companyShortName), ServerTimeResult.class);
     }
 
     public static SscPlayGroupListResult getSscPlayGroupList() {
@@ -457,7 +457,7 @@ public class ApiUtils {
             return JSONUtils.toObject("{\"result\":1,\"description\":null,\"sscPlayGroupList\":[{\"id\":1,\"name\":\"重庆时时彩\"},{\"id\":2,\"name\":\"天津时时彩\"},{\"id\":3,\"name\":\"新疆时时彩\"},{\"id\":4,\"name\":\"体彩排列3\"},{\"id\":5,\"name\":\"福彩3D\"},{\"id\":6,\"name\":\"六合彩\"},{\"id\":7,\"name\":\"幸运28\"},{\"id\":8,\"name\":\"北京快乐8\"},{\"id\":9,\"name\":\"北京PK10\"},{\"id\":10,\"name\":\"重庆幸运农场\"},{\"id\":11,\"name\":\"广东快乐十分\"}],\"sscPlayList\":[{\"id\":204,\"name\":\"特码\",\"playGroupId\":6},{\"id\":205,\"name\":\"正码\",\"playGroupId\":6},{\"id\":206,\"name\":\"正特码\",\"playGroupId\":6},{\"id\":207,\"name\":\"正码1-6\",\"playGroupId\":6},{\"id\":208,\"name\":\"连码\",\"playGroupId\":6},{\"id\":209,\"name\":\"半波\",\"playGroupId\":6},{\"id\":210,\"name\":\"一肖/尾数\",\"playGroupId\":6},{\"id\":211,\"name\":\"特肖\",\"playGroupId\":6},{\"id\":212,\"name\":\"合肖\",\"playGroupId\":6},{\"id\":213,\"name\":\"连肖\",\"playGroupId\":6},{\"id\":214,\"name\":\"尾数连\",\"playGroupId\":6},{\"id\":215,\"name\":\"全不中\",\"playGroupId\":6},{\"id\":216,\"name\":\"双面\",\"playGroupId\":1},{\"id\":217,\"name\":\"数字盘\",\"playGroupId\":1},{\"id\":218,\"name\":\"一字定位\",\"playGroupId\":1},{\"id\":219,\"name\":\"二字定位\",\"playGroupId\":1},{\"id\":220,\"name\":\"三字定位\",\"playGroupId\":1},{\"id\":221,\"name\":\"一字组合\",\"playGroupId\":1},{\"id\":222,\"name\":\"二字组合\",\"playGroupId\":1},{\"id\":223,\"name\":\"二字和数\",\"playGroupId\":1},{\"id\":224,\"name\":\"组选三\",\"playGroupId\":1},{\"id\":225,\"name\":\"组选六\",\"playGroupId\":1},{\"id\":226,\"name\":\"跨度\",\"playGroupId\":1},{\"id\":227,\"name\":\"龙虎\",\"playGroupId\":1},{\"id\":228,\"name\":\"双面\",\"playGroupId\":2},{\"id\":229,\"name\":\"数字盘\",\"playGroupId\":2},{\"id\":230,\"name\":\"一字定位\",\"playGroupId\":2},{\"id\":231,\"name\":\"二字定位\",\"playGroupId\":2},{\"id\":232,\"name\":\"三字定位\",\"playGroupId\":2},{\"id\":233,\"name\":\"一字组合\",\"playGroupId\":2},{\"id\":234,\"name\":\"二字组合\",\"playGroupId\":2},{\"id\":235,\"name\":\"二字和数\",\"playGroupId\":2},{\"id\":236,\"name\":\"组选三\",\"playGroupId\":2},{\"id\":237,\"name\":\"组选六\",\"playGroupId\":2},{\"id\":238,\"name\":\"跨度\",\"playGroupId\":2},{\"id\":239,\"name\":\"龙虎\",\"playGroupId\":2},{\"id\":240,\"name\":\"双面\",\"playGroupId\":3},{\"id\":241,\"name\":\"数字盘\",\"playGroupId\":3},{\"id\":242,\"name\":\"一字定位\",\"playGroupId\":3},{\"id\":243,\"name\":\"二字定位\",\"playGroupId\":3},{\"id\":244,\"name\":\"三字定位\",\"playGroupId\":3},{\"id\":245,\"name\":\"一字组合\",\"playGroupId\":3},{\"id\":246,\"name\":\"二字组合\",\"playGroupId\":3},{\"id\":247,\"name\":\"二字和数\",\"playGroupId\":3},{\"id\":248,\"name\":\"组选三\",\"playGroupId\":3},{\"id\":249,\"name\":\"组选六\",\"playGroupId\":3},{\"id\":250,\"name\":\"跨度\",\"playGroupId\":3},{\"id\":251,\"name\":\"龙虎\",\"playGroupId\":3},{\"id\":252,\"name\":\"定位\",\"playGroupId\":5},{\"id\":253,\"name\":\"组合\",\"playGroupId\":5},{\"id\":254,\"name\":\"和数\",\"playGroupId\":5},{\"id\":255,\"name\":\"组选三\",\"playGroupId\":5},{\"id\":256,\"name\":\"组选六\",\"playGroupId\":5},{\"id\":257,\"name\":\"跨度\",\"playGroupId\":5},{\"id\":258,\"name\":\"双面\",\"playGroupId\":9},{\"id\":259,\"name\":\"数字盘\",\"playGroupId\":9},{\"id\":260,\"name\":\"冠军\",\"playGroupId\":9},{\"id\":261,\"name\":\"亚军\",\"playGroupId\":9},{\"id\":262,\"name\":\"季军\",\"playGroupId\":9},{\"id\":263,\"name\":\"第四名\",\"playGroupId\":9},{\"id\":264,\"name\":\"第五名\",\"playGroupId\":9},{\"id\":265,\"name\":\"第六名\",\"playGroupId\":9},{\"id\":266,\"name\":\"第七名\",\"playGroupId\":9},{\"id\":267,\"name\":\"第八名\",\"playGroupId\":9},{\"id\":268,\"name\":\"第九名\",\"playGroupId\":9},{\"id\":269,\"name\":\"第十名\",\"playGroupId\":9},{\"id\":270,\"name\":\"冠亚和\",\"playGroupId\":9},{\"id\":271,\"name\":\"选5\",\"playGroupId\":8},{\"id\":272,\"name\":\"选4\",\"playGroupId\":8},{\"id\":273,\"name\":\"选3\",\"playGroupId\":8},{\"id\":274,\"name\":\"选2\",\"playGroupId\":8},{\"id\":275,\"name\":\"选1\",\"playGroupId\":8},{\"id\":276,\"name\":\"其他\",\"playGroupId\":8},{\"id\":277,\"name\":\"双面\",\"playGroupId\":11},{\"id\":278,\"name\":\"第一球\",\"playGroupId\":11},{\"id\":279,\"name\":\"第二球\",\"playGroupId\":11},{\"id\":280,\"name\":\"第三球\",\"playGroupId\":11},{\"id\":281,\"name\":\"第四球\",\"playGroupId\":11},{\"id\":282,\"name\":\"第五球\",\"playGroupId\":11},{\"id\":283,\"name\":\"第六球\",\"playGroupId\":11},{\"id\":284,\"name\":\"第七球\",\"playGroupId\":11},{\"id\":285,\"name\":\"第八球\",\"playGroupId\":11},{\"id\":286,\"name\":\"龙虎\",\"playGroupId\":11},{\"id\":287,\"name\":\"定位\",\"playGroupId\":4},{\"id\":288,\"name\":\"组合\",\"playGroupId\":4},{\"id\":289,\"name\":\"和数\",\"playGroupId\":4},{\"id\":290,\"name\":\"组选三\",\"playGroupId\":4},{\"id\":291,\"name\":\"组选六\",\"playGroupId\":4},{\"id\":292,\"name\":\"跨度\",\"playGroupId\":4},{\"id\":293,\"name\":\"和值\",\"playGroupId\":7},{\"id\":294,\"name\":\"双面\",\"playGroupId\":10},{\"id\":295,\"name\":\"第一球\",\"playGroupId\":10},{\"id\":296,\"name\":\"第二球\",\"playGroupId\":10},{\"id\":297,\"name\":\"第三球\",\"playGroupId\":10},{\"id\":298,\"name\":\"第四球\",\"playGroupId\":10},{\"id\":299,\"name\":\"第五球\",\"playGroupId\":10},{\"id\":300,\"name\":\"第六球\",\"playGroupId\":10},{\"id\":301,\"name\":\"第七球\",\"playGroupId\":10},{\"id\":302,\"name\":\"第八球\",\"playGroupId\":10},{\"id\":303,\"name\":\"龙虎\",\"playGroupId\":10}]}", SscPlayGroupListResult.class);
         }
 
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SSC_PLAY_GROUP), SscPlayGroupListResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SSC_PLAY_GROUP), SscPlayGroupListResult.class);
     }
 
     public static SscTimeResult getAllSscOpenTime() {
@@ -465,7 +465,7 @@ public class ApiUtils {
             return JSONUtils.toObject("{\"result\":1,\"description\":null,\"sscTimeList\":[{\"playGroupId\":1,\"playGroupName\":\"重庆时时彩\",\"leftTime\":188,\"number\":\"20161116111\",\"lastOpenNumber\":\"20161107118\",\"lastOpenTime\":1478533851000,\"lastOpenData\":\"7,2,1,5,8\",\"leftOpenTime\":248,\"opening\":true},{\"playGroupId\":2,\"playGroupName\":\"天津时时彩\",\"leftTime\":35887,\"number\":\"20161117001\",\"lastOpenNumber\":\"20161109051\",\"lastOpenTime\":1478683995000,\"lastOpenData\":\"2,0,1,9,1\",\"leftOpenTime\":35947,\"opening\":true},{\"playGroupId\":3,\"playGroupName\":\"新疆时时彩\",\"leftTime\":486,\"number\":\"20161116080\",\"lastOpenNumber\":\"20161109046\",\"lastOpenTime\":1478684433000,\"lastOpenData\":\"0,5,7,7,8\",\"leftOpenTime\":546,\"opening\":true},{\"playGroupId\":4,\"playGroupName\":\"体彩排列3\",\"leftTime\":74946,\"number\":\"2016315\",\"lastOpenNumber\":\"2016306\",\"lastOpenTime\":1478608767000,\"lastOpenData\":\"7,4,0\",\"leftOpenTime\":76746,\"opening\":true},{\"playGroupId\":5,\"playGroupName\":\"福彩3D\",\"leftTime\":76686,\"number\":\"2016315\",\"lastOpenNumber\":\"2016306\",\"lastOpenTime\":1478608600000,\"lastOpenData\":\"0,7,3\",\"leftOpenTime\":76746,\"opening\":true},{\"playGroupId\":6,\"playGroupName\":\"六合彩\",\"leftTime\":80286,\"number\":\"2016133\",\"lastOpenNumber\":\"2016130\",\"lastOpenTime\":1478784600000,\"lastOpenData\":\"1,2,3,4,5,6,20\",\"leftOpenTime\":80346,\"opening\":true},{\"playGroupId\":7,\"playGroupName\":\"幸运28\",\"leftTime\":186,\"number\":\"792526\",\"lastOpenNumber\":\"791206\",\"lastOpenTime\":1478684430000,\"lastOpenData\":\"7,0,3\",\"leftOpenTime\":246,\"opening\":true},{\"playGroupId\":8,\"playGroupName\":\"北京快乐8\",\"leftTime\":186,\"number\":\"792526\",\"lastOpenNumber\":\"791206\",\"lastOpenTime\":1478684430000,\"lastOpenData\":\"06,07,17,19,23,24,30,33,42,47,48,49,51,52,54,56,58,62,69,72,01\",\"leftOpenTime\":246,\"opening\":true},{\"playGroupId\":9,\"playGroupName\":\"北京PK10\",\"leftTime\":6,\"number\":\"587097\",\"lastOpenNumber\":\"585777\",\"lastOpenTime\":1478684269000,\"lastOpenData\":\"06,03,01,10,09,05,02,08,07,04\",\"leftOpenTime\":66,\"opening\":true},{\"playGroupId\":10,\"playGroupName\":\"重庆幸运农场\",\"leftTime\":126,\"number\":\"20161116093\",\"lastOpenNumber\":\"20161109059\",\"lastOpenTime\":1478684023000,\"lastOpenData\":\"10,15,03,18,20,11,07,17\",\"leftOpenTime\":186,\"opening\":true},{\"playGroupId\":11,\"playGroupName\":\"广东快乐十分\",\"leftTime\":35885,\"number\":\"20161117001\",\"lastOpenNumber\":\"20161111020\",\"lastOpenTime\":1478794920000,\"lastOpenData\":\"1,2,3,4,5,6,7,8\",\"leftOpenTime\":35945,\"opening\":true}]}", SscTimeResult.class);
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_ALL_SSC_OPEN_TIME, paramsMap), SscTimeResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_ALL_SSC_OPEN_TIME, paramsMap, companyShortName), SscTimeResult.class);
     }
 
 
@@ -475,7 +475,7 @@ public class ApiUtils {
      */
     public static SscAllTimeResult getAllSscOpenTimeTwo(){
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_ALL_SSC_OPEN_TIME_TWO, paramsMap), SscAllTimeResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_ALL_SSC_OPEN_TIME_TWO, paramsMap, companyShortName), SscAllTimeResult.class);
     }
 
     /**
@@ -484,16 +484,16 @@ public class ApiUtils {
      */
     public static SscCurrentTimeResult getCurrentTimeResult(){
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SSC_CURRENT_OPEN_TIME, paramsMap), SscCurrentTimeResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SSC_CURRENT_OPEN_TIME, paramsMap, companyShortName), SscCurrentTimeResult.class);
     }
 
-    public static LogoResult getLogo(Integer type) {
+    public static LogoResult getLogo(Integer type, String companyShortName) {
         if (IS_DEBUG) {
             return new LogoResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("type", type);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_LOGO, paramsMap), LogoResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_LOGO, paramsMap, companyShortName), LogoResult.class);
     }
 
     private static String formatDate(Date date, String pattern) {
@@ -512,7 +512,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("idList", arr2Str(idList));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_READ_USER_INBOX_NOTICE, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_READ_USER_INBOX_NOTICE, paramsMap, companyShortName), CommonResult.class);
     }
     public static CommonResult delUserInboxNotice(Long uid, String token, Long[] idList) {
         if (IS_DEBUG) {
@@ -522,7 +522,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("idList", arr2Str(idList));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_DEL_USER_INBOX_NOTICE, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_DEL_USER_INBOX_NOTICE, paramsMap, companyShortName), CommonResult.class);
     }
     @Deprecated
     public static CommonResult addUserBank(Long uid, String token, String bankName, String subBankName, String bankAccount) {
@@ -535,7 +535,7 @@ public class ApiUtils {
         paramsMap.put("bankName", bankName);
         paramsMap.put("subBankName", subBankName);
         paramsMap.put("bankAccount", bankAccount);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_ADD_USER_BANK, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_ADD_USER_BANK, paramsMap, companyShortName), CommonResult.class);
     }
     public static CommonResult addUserBank(Long uid, String token, String bankName, String subBankName, String bankAccount, String location) {
         if (IS_DEBUG) {
@@ -548,7 +548,7 @@ public class ApiUtils {
         paramsMap.put("subBankName", subBankName);
         paramsMap.put("bankAccount", bankAccount);
         paramsMap.put("location", location);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_ADD_USER_BANK, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_ADD_USER_BANK, paramsMap, companyShortName), CommonResult.class);
     }
     public static CommonResult updateUserInfo(Long uid, String token) {
         if (IS_DEBUG) {
@@ -557,21 +557,21 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_UPDATE_USER_INFO, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_UPDATE_USER_INFO, paramsMap, companyShortName), CommonResult.class);
     }
     public static KefuResult getKefu() {
         if (IS_DEBUG) {
             return new KefuResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_KEFU, paramsMap), KefuResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_KEFU, paramsMap, companyShortName), KefuResult.class);
     }
     public static KhxyResult getKhxy() {
         if (IS_DEBUG) {
             return new KhxyResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_KHXY, paramsMap), KhxyResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_KHXY, paramsMap, companyShortName), KhxyResult.class);
     }
     public static CommonResult bet(Long uid, String token, String betForm) {
         if (IS_DEBUG) {
@@ -581,7 +581,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("betForm", betForm);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_BET, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_BET, paramsMap, companyShortName), CommonResult.class);
     }
     public static CarouselResult getCarouselList(Boolean isEnable, Integer type) {
         if (IS_DEBUG) {
@@ -590,7 +590,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("isEnable", isEnable);
         paramsMap.put("type", type);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_CAROUSEL_LIST, paramsMap), CarouselResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_CAROUSEL_LIST, paramsMap, companyShortName), CarouselResult.class);
     }
     public static CommonResult chedan(Long uid, String token, Long id) {
         if (IS_DEBUG) {
@@ -600,7 +600,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("id", id);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_CHEDAN, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_CHEDAN, paramsMap, companyShortName), CommonResult.class);
     }
     public static SscOpenTimeResult getSscOpenTime(Boolean isData, Long playGroupId, Long playId, Integer lastDataOffset, Integer lastDataSize, Boolean calcJiangchi) {
         if (IS_DEBUG) {
@@ -613,7 +613,7 @@ public class ApiUtils {
         paramsMap.put("lastDataOffset", lastDataOffset);
         paramsMap.put("lastDataSize", lastDataSize);
         paramsMap.put("calcJiangchi", calcJiangchi);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SSC_OPEN_TIME, paramsMap), SscOpenTimeResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SSC_OPEN_TIME, paramsMap, companyShortName), SscOpenTimeResult.class);
     }
     public static ImageResult getImageData(Long id) {
         if (IS_DEBUG) {
@@ -621,7 +621,7 @@ public class ApiUtils {
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("id", id);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_IMAGE_DATA, paramsMap), ImageResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_IMAGE_DATA, paramsMap, companyShortName), ImageResult.class);
     }
     public static CommonResult sigout(Long uid, String token) {
         if (IS_DEBUG) {
@@ -630,7 +630,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SIGOUT, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SIGOUT, paramsMap, companyShortName), CommonResult.class);
     }
 
     public static CommonResult setUserBankDefault(Long uid, String token, Long id) {
@@ -641,7 +641,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("id", id);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SET_USER_BANK_DEFAULT, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SET_USER_BANK_DEFAULT, paramsMap, companyShortName), CommonResult.class);
     }
 
     public static CommonResult delUserBank(Long uid, String token, Long id) {
@@ -652,7 +652,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("id", id);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_DEL_USER_BANK, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_DEL_USER_BANK, paramsMap, companyShortName), CommonResult.class);
     }
 
     public static BetListResult getBetDetails(Long uid, String token, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer status, Long playGroupId, String number, String orderNumber, Boolean isZhongjiang) {
@@ -671,7 +671,7 @@ public class ApiUtils {
         paramsMap.put("number", number);
         paramsMap.put("orderNumber", orderNumber);
         paramsMap.put("isZhongjiang", isZhongjiang);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_BET_DETAILS, paramsMap), BetListResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_BET_DETAILS, paramsMap, companyShortName), BetListResult.class);
     }
 
     public static WebNoticeResult getPopupNoticeList(Long uid, String token, Date startTime, Date endTime) {
@@ -684,7 +684,7 @@ public class ApiUtils {
         paramsMap.put("token", token);
         paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_POPUP_NOTICE_LIST, paramsMap), WebNoticeResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_POPUP_NOTICE_LIST, paramsMap, companyShortName), WebNoticeResult.class);
     }
 
     public static WebNoticeResult.WebNotice getPopupNotice(String pk) {
@@ -694,7 +694,7 @@ public class ApiUtils {
 
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("pk", pk);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_POPUP_NOTICE, paramsMap), WebNoticeResult.WebNotice.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_POPUP_NOTICE, paramsMap, companyShortName), WebNoticeResult.WebNotice.class);
     }
 
     public static WebNoticeResult getScrollNoticeList(Date startTime, Date endTime) {
@@ -705,16 +705,16 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SCROLL_NOTICE_LIST, paramsMap), WebNoticeResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SCROLL_NOTICE_LIST, paramsMap, companyShortName), WebNoticeResult.class);
     }
 
-    public static WebInfoResult getWebInfo(Integer type) {
+    public static WebInfoResult getWebInfo(Integer type, String companyShortName) {
         if (IS_DEBUG) {
             return new WebInfoResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("type", type);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_WEB_INFO, paramsMap), WebInfoResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_WEB_INFO, paramsMap, companyShortName), WebInfoResult.class);
     }
 
     /**
@@ -738,7 +738,7 @@ public class ApiUtils {
         paramsMap.put("pageIndex", pageIndex);
         paramsMap.put("pageSize", pageSize);
         paramsMap.put("date", date);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_HISTORY, paramsMap), SscHistoryResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_HISTORY, paramsMap, companyShortName), SscHistoryResult.class);
     }
 
     public static AgentUserListResult getUserList(Long uid, String token, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String account, Long id) {
@@ -754,7 +754,7 @@ public class ApiUtils {
         paramsMap.put("pageSize", pageSize);
         paramsMap.put("account", account);
         paramsMap.put("id", id);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_GET_USER_LIST, paramsMap), AgentUserListResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_GET_USER_LIST, paramsMap, companyShortName), AgentUserListResult.class);
     }
 
     public static BetListResult getTouzhu(Long uid, String token, String account, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer status, Long playGroupId, Long playId, String number, String orderNumber) {
@@ -774,7 +774,7 @@ public class ApiUtils {
         paramsMap.put("playId", playId);
         paramsMap.put("number", number);
         paramsMap.put("orderNumber", orderNumber);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_GET_TOUZHU, paramsMap), BetListResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_GET_TOUZHU, paramsMap, companyShortName), BetListResult.class);
     }
 
     public static AgentTdlsResult getLiushui(Long uid, String token, Integer pageIndex, Integer pageSize, String account, Date startTime, Date endTime, Integer type) {
@@ -790,7 +790,7 @@ public class ApiUtils {
         paramsMap.put("pageSize", pageSize);
         paramsMap.put("account", account);
         paramsMap.put("type", type);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_GET_LIUSHUI, paramsMap), AgentTdlsResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_GET_LIUSHUI, paramsMap, companyShortName), AgentTdlsResult.class);
     }
 
     public static CommonResult addUser(Long uid, String token, String account, String password, String name, String ip, String url, String qq) {
@@ -806,7 +806,7 @@ public class ApiUtils {
         paramsMap.put("ip", ip);
         paramsMap.put("url", url);
         paramsMap.put("qq", qq);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_ADD_USER, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_ADD_USER, paramsMap, companyShortName), CommonResult.class);
     }
     public static CommonResult updateOnlineInfo(Long uid, String token, String url) {
         if (IS_DEBUG) {
@@ -816,7 +816,7 @@ public class ApiUtils {
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
         paramsMap.put("url", url);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_UPDATE_ONLINE_INFO, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_UPDATE_ONLINE_INFO, paramsMap, companyShortName), CommonResult.class);
     }
     public static CommonResult agentEnableUser(Long uid, String token, Long userId, Boolean isEnable) {
         if (IS_DEBUG) {
@@ -827,7 +827,7 @@ public class ApiUtils {
         paramsMap.put("token", token);
         paramsMap.put("userId", userId);
         paramsMap.put("isEnable", isEnable);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_ENABLE_USER, paramsMap), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_ENABLE_USER, paramsMap, companyShortName), CommonResult.class);
     }
 
     public static SscPlayJjDescriptionResult getSscPlayJjDescription(Long playId) {
@@ -836,7 +836,7 @@ public class ApiUtils {
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("playId", playId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SSC_PLAY_JJ_DESCRIPTION, paramsMap), SscPlayJjDescriptionResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SSC_PLAY_JJ_DESCRIPTION, paramsMap, companyShortName), SscPlayJjDescriptionResult.class);
     }
 
     public static AgentReportResult getAgentReport(Long uid, String token, Date startTime, Date endTime) {
@@ -848,7 +848,7 @@ public class ApiUtils {
         paramsMap.put("token", token);
         paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_GET_AGENT_REPORT, paramsMap), AgentReportResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_GET_AGENT_REPORT, paramsMap, companyShortName), AgentReportResult.class);
     }
 
 //    public static AgentUserBalanceListResult getUserBalanceList(Long uid, String token, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String account, Long id) {
@@ -864,7 +864,7 @@ public class ApiUtils {
 //        paramsMap.put("pageSize", pageSize);
 //        paramsMap.put("account", account);
 //        paramsMap.put("id", id);
-//        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_GET_USER_BALANCE_LIST, paramsMap), AgentUserBalanceListResult.class);
+//        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_GET_USER_BALANCE_LIST, paramsMap, companyShortName), AgentUserBalanceListResult.class);
 //    }
 
 
@@ -896,7 +896,7 @@ public class ApiUtils {
         paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("type", type);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_GET_USER_YJ_LIST, paramsMap), AgentUserYjListResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_GET_USER_YJ_LIST, paramsMap, companyShortName), AgentUserYjListResult.class);
     }
 
     public static LogUserCoinResult getLogUserCoinList(Long uid, String token, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer type) {
@@ -911,7 +911,7 @@ public class ApiUtils {
         paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("type", type);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_MEMBER_GET_USER_COIN_LIST, paramsMap), LogUserCoinResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_MEMBER_GET_USER_COIN_LIST, paramsMap, companyShortName), LogUserCoinResult.class);
     }
 
     public static PromotionResult.Promotion promotionGetById(Long id) {
@@ -920,7 +920,7 @@ public class ApiUtils {
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("id", id);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_PROMOTION_GET_BY_ID, paramsMap), PromotionResult.Promotion.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_PROMOTION_GET_BY_ID, paramsMap, companyShortName), PromotionResult.Promotion.class);
     }
 
     public static LoginResult memberShiwanLogin(String ip, String url, Integer loginType) {
@@ -931,7 +931,7 @@ public class ApiUtils {
         paramsMap.put("ip", ip);
         paramsMap.put("url", url);
         paramsMap.put("loginType", loginType);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_MEMBER_SHIWAN_LOGIN, paramsMap), LoginResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_MEMBER_SHIWAN_LOGIN, paramsMap, companyShortName), LoginResult.class);
     }
 
     public static LayerInfoResult getLayer(Long uid, String token) {
@@ -941,7 +941,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_MEMBER_GET_LAYER, paramsMap), LayerInfoResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_MEMBER_GET_LAYER, paramsMap, companyShortName), LayerInfoResult.class);
     }
 
     public static Integer countUserInboxUnRead(Long uid, String token) {
@@ -951,7 +951,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return Integer.parseInt(HttpUtils.post(ApiConstant.API_MEMBER_COUNT_USER_INBOX_UN_READ, paramsMap));
+        return Integer.parseInt(commonRequest(ApiConstant.API_MEMBER_COUNT_USER_INBOX_UN_READ, paramsMap));
     }
 
     public static QkSettingResult getQkSetting() {
@@ -959,7 +959,7 @@ public class ApiUtils {
             return new QkSettingResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_WEB_SETTING_GET_QK_SETTING, paramsMap), QkSettingResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_WEB_SETTING_GET_QK_SETTING, paramsMap, companyShortName), QkSettingResult.class);
     }
 
     public static SscOpenTimeResultPer getSscOpenTimePer(Long playGroupId) {
@@ -968,7 +968,7 @@ public class ApiUtils {
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("playGroupId", playGroupId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_SSC_OPEN_TIME_PER, paramsMap), SscOpenTimeResultPer.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_OPEN_TIME_PER, paramsMap, companyShortName), SscOpenTimeResultPer.class);
     }
 
     public static SscHistoryResult2 getSscDataHistory(Integer offset, Integer limit, Long playGroupId, Date startTime, Date endTime) {
@@ -981,7 +981,7 @@ public class ApiUtils {
         paramsMap.put("playGroupId", playGroupId);
         paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_SSC_DATA_HISTORY, paramsMap), SscHistoryResult2.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_HISTORY, paramsMap, companyShortName), SscHistoryResult2.class);
     }
 
     public static SscPlayPlResult getSscPlayPl(Long uid, String token, Long playId) {
@@ -992,7 +992,7 @@ public class ApiUtils {
         paramsMap.put("playId", playId);
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_SSC_PLAY_PL, paramsMap), SscPlayPlResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_PLAY_PL, paramsMap, companyShortName), SscPlayPlResult.class);
     }
 
     public static SscLeftTimeResult getSscLeftTime(Long playGroupId) {
@@ -1001,7 +1001,7 @@ public class ApiUtils {
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("playGroupId", playGroupId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_LEFT_TIME, paramsMap), SscLeftTimeResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_LEFT_TIME, paramsMap, companyShortName), SscLeftTimeResult.class);
     }
 
     public static SscHistoryResult3 getDataHistory(Integer pageIndex, Integer pageSize, Date openDate, String number, Long playGroupId, Date startTime, Date endTime) {
@@ -1016,7 +1016,7 @@ public class ApiUtils {
         paramsMap.put("playGroupId", playGroupId);
         paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_DATA_HISTORY, paramsMap), SscHistoryResult3.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_DATA_HISTORY, paramsMap, companyShortName), SscHistoryResult3.class);
     }
 
     public static SscHistoryResult3 getAllDataHistory(Integer type, Long playGroupId) {
@@ -1026,7 +1026,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("type", type);
         paramsMap.put("playGroupId", playGroupId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_ALL_DATA_HISTORY, paramsMap), SscHistoryResult3.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_ALL_DATA_HISTORY, paramsMap, companyShortName), SscHistoryResult3.class);
     }
 
     public static AgentUserReportResult getUserReport(Long uid, String token, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String account) {
@@ -1041,7 +1041,7 @@ public class ApiUtils {
         paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
         paramsMap.put("account", account);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_AGENT_GET_USER_REPORT, paramsMap), AgentUserReportResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_GET_USER_REPORT, paramsMap, companyShortName), AgentUserReportResult.class);
     }
 
     public static RedPacketResult redpacketChoujiang(String account) {
@@ -1050,7 +1050,7 @@ public class ApiUtils {
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("account", account);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_REDPACKET_CHOUJIANG, paramsMap), RedPacketResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_REDPACKET_CHOUJIANG, paramsMap, companyShortName), RedPacketResult.class);
     }
 
     public static RedPacketListResult redpacketgetList(String account) {
@@ -1059,7 +1059,7 @@ public class ApiUtils {
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("account", account);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_REDPACKET_GET_LIST, paramsMap), RedPacketListResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_REDPACKET_GET_LIST, paramsMap, companyShortName), RedPacketListResult.class);
     }
 
     public static SscHistoryResult2 getPlanOpenDataHistory(Integer size, Long playGroupId) {
@@ -1070,7 +1070,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("size", size);
         paramsMap.put("playGroupId", playGroupId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_PLAN_OPEN_DATA_HISTORY, paramsMap), SscHistoryResult2.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_PLAN_OPEN_DATA_HISTORY, paramsMap, companyShortName), SscHistoryResult2.class);
     }
 
     public static SscOpenDataResult getSscOpenCode(Long playGroupId, String number) {
@@ -1081,7 +1081,7 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("playGroupId", playGroupId);
         paramsMap.put("number", number);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_SSC_OPEN_CODE, paramsMap), SscOpenDataResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_OPEN_CODE, paramsMap, companyShortName), SscOpenDataResult.class);
     }
 
     public static SscOpenTimeResult getSscOpenTime2(Long playGroupId) {
@@ -1091,7 +1091,7 @@ public class ApiUtils {
 
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("playGroupId", playGroupId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_SSC_OPEN_TIME_2, paramsMap), SscOpenTimeResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_OPEN_TIME_2, paramsMap, companyShortName), SscOpenTimeResult.class);
     }
 
     public static SscTimeResult2 getAllSscOpenTime2() {
@@ -1100,7 +1100,7 @@ public class ApiUtils {
         }
 
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_ALL_SSC_OPEN_TIME_2, paramsMap), SscTimeResult2.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_ALL_SSC_OPEN_TIME_2, paramsMap, companyShortName), SscTimeResult2.class);
     }
 
     public static SscHotOpenDataResult getHotSscDataHistory3() {
@@ -1109,7 +1109,7 @@ public class ApiUtils {
         }
 
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_HOT_SSC_DATA_HISTORY_3, paramsMap), SscHotOpenDataResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_HOT_SSC_DATA_HISTORY_3, paramsMap, companyShortName), SscHotOpenDataResult.class);
     }
 
     public static SscPlayGroupResult getSscPlayGroup(Long playGroupId) {
@@ -1119,7 +1119,7 @@ public class ApiUtils {
 
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("playGroupId", playGroupId);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_SSC_PLAY_GROUP, paramsMap), SscPlayGroupResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_PLAY_GROUP, paramsMap, companyShortName), SscPlayGroupResult.class);
     }
 
     public static SscPlayGroupResult getSscPlayGroup(String shortName) {
@@ -1129,17 +1129,24 @@ public class ApiUtils {
 
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("shortName", shortName);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_SSC_GET_SSC_PLAY_GROUP, paramsMap), SscPlayGroupResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_PLAY_GROUP, paramsMap, companyShortName), SscPlayGroupResult.class);
     }
 
-    public static SkInfoResult getSystemQq(Long uid, String token) {
+    /**
+     * 获取QQ收款账号
+     * @param uid
+     * @param token
+     * @param companyShortName
+     * @return
+     */
+    public static SkInfoResult getSystemQq(Long uid, String token, String companyShortName) {
         if (IS_DEBUG) {
             return new SkInfoResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_GET_SYS_QQ, paramsMap), SkInfoResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SYS_QQ, paramsMap, companyShortName), SkInfoResult.class);
     }
 
     /**
@@ -1151,5 +1158,25 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("domain", domain);
         return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_WEB_SETTING_GET_COMPANY_SHORT_NAME, paramsMap), CompanyShortNameResult.class);
+    }
+
+    /**
+     * 普通请求
+     * @param apiUrl API地址
+     * @param paramsMap 参数
+     * @param companyShortName 公司标识
+     * @return
+     */
+    private static String commonRequest(
+            String apiUrl,
+            Map<String, Object> paramsMap,
+            String companyShortName
+    ) {
+        if (null == paramsMap) {
+            paramsMap = new HashMap<String, Object>();
+        }
+        paramsMap.put("companyShortName", companyShortName);
+        
+        return HttpUtils.post(ApiConstant.API_WEB_SETTING_GET_COMPANY_SHORT_NAME, paramsMap);
     }
 }

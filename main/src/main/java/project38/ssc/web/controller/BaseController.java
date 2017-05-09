@@ -59,20 +59,8 @@ public abstract class BaseController {
 //        }
 
         // 公司标志
-        String companyShortName = (String) request.getSession().getAttribute("COMPANY_SHORT_NAME");
-        if (StringUtils.isBlank(companyShortName)) {
-            CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
-            if (companyShortNameResult.getResult() == 1) {
-                companyShortName = companyShortNameResult.getCompanyShortName();
-            }
-        }
-        if (StringUtils.isBlank(companyShortName)) {
-            throw new RuntimeException("非法请求");
-        } else {
-            request.getSession().setAttribute("COMPANY_SHORT_NAME", companyShortName);
-            theme = companyShortName;
-        }
-
+        String companyShortName = getCompanyShortName();
+        theme = companyShortName;
 
         if (null != request) {
             request.setAttribute("theme", theme);
@@ -158,5 +146,28 @@ public abstract class BaseController {
         } else {
             return null;
         }
+    }
+
+    protected String getCompanyShortName() {
+        // 公司标志
+        Boolean sessionIsExist = false;
+
+        String companyShortName = (String) httpServletRequest.getSession().getAttribute("COMPANY_SHORT_NAME");
+        if (StringUtils.isBlank(companyShortName)) {
+            CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
+            if (companyShortNameResult.getResult() == 1) {
+                companyShortName = companyShortNameResult.getCompanyShortName();
+            }
+        } else {
+            sessionIsExist = true;
+        }
+        if (StringUtils.isBlank(companyShortName)) {
+            throw new RuntimeException("非法请求");
+        }
+
+        if (!sessionIsExist) {
+            httpServletRequest.getSession().setAttribute("COMPANY_SHORT_NAME", companyShortName);
+        }
+        return companyShortName;
     }
 }

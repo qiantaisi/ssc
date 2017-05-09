@@ -36,13 +36,15 @@ public class IndexController extends BaseController{
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public ModelAndView index() {
+        String companyShortName = this.getCompanyShortName();
+
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1);
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
         modelMap.put("webTitle", webInfoResult.getWebTitle());
         modelMap.put("webKeywords", webInfoResult.getWebKeywords());
         modelMap.put("webDescription", webInfoResult.getWebDescription());
         modelMap.put("webTjjs", webInfoResult.getWebTjjs());
-        modelMap.put("icoData", ApiUtils.getLogo(4));
+        modelMap.put("icoData", ApiUtils.getLogo(4, companyShortName));
         modelMap.put("webName",webInfoResult.getWebName());
         return this.renderView("index/index", modelMap);
     }
