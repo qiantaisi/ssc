@@ -36,7 +36,7 @@ public class AgentController extends BaseController{
 
     @RequestMapping(value = "/index.html",method = RequestMethod.GET)
     public ModelAndView agentindex(String companyShortName){
-        return this.renderView("agent/index",null,companyShortName);
+        return this.renderView("agent/index",null);
     }
 
     @RequestMapping(value = "/ajaxGetUserList.json", method = {RequestMethod.GET, RequestMethod.POST})

@@ -33,6 +33,12 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/ssc")
+
+
+
+
+
+
 public class SscController extends BaseController {
     private Log log = LogFactory.getLog(SscController.class);
 
@@ -42,14 +48,14 @@ public class SscController extends BaseController {
     @RequestMapping(value = "/register.html",method = RequestMethod.GET)
     public ModelAndView register(String companyShortName){
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("index/register", modelMap,companyShortName);
+        return this.renderView("index/register", modelMap);
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public ModelAndView index(String companyShortName) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
-        return this.renderView("ssc/index", modelMap, companyShortName);
+        return this.renderView("ssc/index", modelMap);
     }
 
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
@@ -61,7 +67,7 @@ public class SscController extends BaseController {
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName));
         
         modelMap.put("logo", ApiUtils.getLogo(3,companyShortName));
-        return this.renderView("ssc/main", modelMap,companyShortName);
+        return this.renderView("ssc/main", modelMap);
     }
 
     @RequestMapping(value = "/gcdt.html", method = RequestMethod.GET)
@@ -72,13 +78,13 @@ public class SscController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,null, null, companyShortName).getWebNoticeList());
-        return this.renderView("ssc/gcdt/gcdt", modelMap, companyShortName);
+        return this.renderView("ssc/gcdt/gcdt", modelMap);
     }
 
     @RequestMapping(value = "/tingcaipage.html", method = RequestMethod.GET)
     public ModelAndView tingcaipage(String companyShortName) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("ssc/gcdt/tingcaipage", modelMap,companyShortName);
+        return this.renderView("ssc/gcdt/tingcaipage", modelMap);
     }
 
     @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
@@ -96,19 +102,19 @@ public class SscController extends BaseController {
 //            return null;
 //        }
 
-        return this.renderView("ssc/gcdt/" + group, modelMap,companyShortName);
+        return this.renderView("ssc/gcdt/" + group, modelMap);
     }
 
     @RequestMapping(value = "/zst/{module}.html", method = RequestMethod.GET)
     public ModelAndView zstModule(@PathVariable String module,String companyShortName) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("ssc/zst/" + module, modelMap,companyShortName);
+        return this.renderView("ssc/zst/" + module, modelMap);
     }
 
     @RequestMapping(value = "/gcdt/{group}/{play}.html", method = RequestMethod.GET)
     public ModelAndView gcdtGroupPlay(@PathVariable String group, @PathVariable String play,String companyShortName) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("ssc/gcdt/" + group + "/" + play, modelMap,companyShortName);
+        return this.renderView("ssc/gcdt/" + group + "/" + play, modelMap);
     }
 
     @Authentication
@@ -317,13 +323,13 @@ public class SscController extends BaseController {
     public ModelAndView kjjlList(Long playGroupId, String companyShortName){
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
-        return this.renderView("ssc/kjjl/list", modelMap,companyShortName);
+        return this.renderView("ssc/kjjl/list", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/all.html",method = RequestMethod.GET)
     public ModelAndView kjjlAll(String companyShortName){
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("ssc/kjjl/all", modelMap, companyShortName);
+        return this.renderView("ssc/kjjl/all", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/bqxq.html",method = RequestMethod.GET)
@@ -331,27 +337,27 @@ public class SscController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
         modelMap.put("openData", JSONUtils.toJSONStr(ApiUtils.getAllDataHistory(3, playGroupId,companyShortName)));
-        return this.renderView("ssc/kjjl/bqxq", modelMap,companyShortName);
+        return this.renderView("ssc/kjjl/bqxq", modelMap);
     }
 
     @RequestMapping(value = "/wfsm/lskj.html",method = RequestMethod.GET)
     public ModelAndView wfsmLskj(Long playGroupId,String companyShortName){
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
-        return this.renderView("ssc/wfsm/lskj", modelMap,companyShortName);
+        return this.renderView("ssc/wfsm/lskj", modelMap);
     }
 
     @RequestMapping(value = "/wfsm/wfsm.html",method = RequestMethod.GET)
     public ModelAndView wfsmWfsm( Long playGroupId,String companyShortName){
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
-        return this.renderView("ssc/wfsm/wfsm", modelMap,companyShortName);
+        return this.renderView("ssc/wfsm/wfsm", modelMap);
     }
 
     @RequestMapping(value = "/zst/{playGroupName}/{zstName}.html",method = RequestMethod.GET)
-    public ModelAndView wfsmWfsm(@PathVariable String playGroupName, @PathVariable String zstName, String companyShortName){
+    public ModelAndView wfsmWfsm(@PathVariable String playGroupName, @PathVariable String zstName){
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("ssc/zst/" + playGroupName + "/" + zstName, modelMap,companyShortName);
+        return this.renderView("ssc/zst/" + playGroupName + "/" + zstName, modelMap);
     }
 
     @RequestMapping(value = "/getSscOpenTime2.json", method = {RequestMethod.GET, RequestMethod.POST})

@@ -28,9 +28,10 @@ public abstract class BaseController {
 
     /** 基于@ExceptionHandler异常处理 */
     @ExceptionHandler
-    public ModelAndView exp(HttpServletRequest request, Exception ex,String companyShortName) {
+    public ModelAndView exp(HttpServletRequest request, Exception ex) {
         log.error(this, ex);
 
+        String companyShortName = getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderView("error/500/index", modelMap);

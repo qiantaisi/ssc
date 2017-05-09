@@ -25,7 +25,8 @@ public class ImageController extends BaseController {
     private Log log = LogFactory.getLog(getClass());
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public void id(@PathVariable Long id, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,String companyShortName) {
+    public void id(@PathVariable Long id, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        String companyShortName = this.getCompanyShortName();
         OutputStream outputSream = null;
         try {
             if (id == null) {
@@ -40,7 +41,7 @@ public class ImageController extends BaseController {
             BASE64Decoder decoder = new BASE64Decoder();
             byte[] bytes = decoder.decodeBuffer(data);
 
-            httpServletResponse.setContentType("image/jpeg");
+            httpServletResponse.setContentType("images/jpeg");
             httpServletResponse.setCharacterEncoding("UTF-8");
             outputSream = httpServletResponse.getOutputStream();
             InputStream in = new ByteArrayInputStream(bytes);

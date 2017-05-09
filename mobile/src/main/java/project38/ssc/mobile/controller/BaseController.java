@@ -28,11 +28,12 @@ public abstract class BaseController {
 
     /** 基于@ExceptionHandler异常处理 */
     @ExceptionHandler
-    public ModelAndView exp(HttpServletRequest request, Exception ex,String companyShortName) {
+    public ModelAndView exp(HttpServletRequest request, Exception ex) {
         log.error(this, ex);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("error/500/index", modelMap,companyShortName);
+        String companyShortName = getCompanyShortName();
+        return this.renderView("error/500/index", modelMap);
     }
 
     /**
@@ -43,23 +44,25 @@ public abstract class BaseController {
      * @param modelMap
      * @return
      */
-    protected ModelAndView renderView(HttpServletRequest request, String jspLocation, Map<String, Object> modelMap,String companyShortName) {
+    protected ModelAndView renderView(HttpServletRequest request, String jspLocation, Map<String, Object> modelMap) {
         if (null == modelMap) {
             modelMap = new HashMap<String, Object>();
         }
 
         String theme = null;
+        String companyShortName = this.getCompanyShortName();
+        theme = companyShortName;
         if (null != request) {
             theme = (String) request.getAttribute("theme");
         }
+//
+//        if (StringUtils.isBlank(theme)) {
+//            theme = "default";
+//        }
 
-        if (StringUtils.isBlank(theme)) {
-            theme = "default";
-        }
-
-        if (null != request) {
-            request.setAttribute("theme", theme);
-        }
+//        if (null != request) {
+//            request.setAttribute("theme", theme);
+//        }
 
         request.setAttribute("resPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/theme/" + theme + "/");
 
@@ -82,8 +85,8 @@ public abstract class BaseController {
      * @param modelMap
      * @return
      */
-    protected ModelAndView renderView(String jspLocation, Map<String, Object> modelMap,String companyShortName) {
-        return this.renderView(httpServletRequest, jspLocation, modelMap,companyShortName);
+    protected ModelAndView renderView(String jspLocation, Map<String, Object> modelMap) {
+        return this.renderView(httpServletRequest, jspLocation, modelMap);
     }
 
     /**

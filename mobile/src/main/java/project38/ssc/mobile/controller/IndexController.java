@@ -37,7 +37,7 @@ public class IndexController extends BaseController{
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        return this.renderView("index/kefu", modelMap,companyShortName);
+        return this.renderView("index/kefu", modelMap);
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
@@ -50,13 +50,14 @@ public class IndexController extends BaseController{
         modelMap.put("webDescription", webInfoResult.getWebDescription());
         modelMap.put("webTjjs", webInfoResult.getWebTjjs());
         modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
-        return this.renderView("index/index", modelMap,companyShortName);
+        return this.renderView("index/index", modelMap);
     }
 
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
-    public ModelAndView main(String companyShortName) {
+    public ModelAndView main() {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("logo", ApiUtils.getLogo(1,companyShortName));
@@ -75,7 +76,7 @@ public class IndexController extends BaseController{
 
 
 
-        return this.renderView("index/main", modelMap,companyShortName);
+        return this.renderView("index/main", modelMap);
     }
 
     @RequestMapping(value = "/register.html", method = RequestMethod.GET)
@@ -86,7 +87,7 @@ public class IndexController extends BaseController{
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("logo", ApiUtils.getLogo(1,companyShortName));
-        return this.renderView("index/register", modelMap,companyShortName);
+        return this.renderView("index/register", modelMap);
     }
 
     @RequestMapping(value = "/yhhd.html", method = RequestMethod.GET)
@@ -94,7 +95,7 @@ public class IndexController extends BaseController{
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null,companyShortName).getPromotionList());
-        return this.renderView("index/yhhd", modelMap,companyShortName);
+        return this.renderView("index/yhhd", modelMap);
     }
 
     @RequestMapping(value = "/yhhd/{id}.html", method = RequestMethod.GET)
@@ -102,7 +103,7 @@ public class IndexController extends BaseController{
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("promotion", ApiUtils.promotionGetById(id,companyShortName));
-        return this.renderView("index/yhhdDetail", modelMap,companyShortName);
+        return this.renderView("index/yhhdDetail", modelMap);
     }
 
     @RequestMapping(value = "/login.html", method = RequestMethod.GET)
@@ -113,7 +114,7 @@ public class IndexController extends BaseController{
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("logo", ApiUtils.getLogo(1,companyShortName));
-        return this.renderView("index/login", modelMap,companyShortName);
+        return this.renderView("index/login", modelMap);
     }
 
     @RequestMapping(value = "/ajaxGetWebInfo.json", method = {RequestMethod.GET, RequestMethod.POST})
@@ -147,6 +148,6 @@ public class IndexController extends BaseController{
         modelMap.put("webKeywords", webInfoResult.getWebKeywords());
         modelMap.put("webDescription", webInfoResult.getWebDescription());
         modelMap.put("webTjjs", webInfoResult.getWebTjjs());
-        return this.renderView("index/pc", modelMap,companyShortName);
+        return this.renderView("index/pc", modelMap);
     }
 }

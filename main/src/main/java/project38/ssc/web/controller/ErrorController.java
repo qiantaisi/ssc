@@ -20,8 +20,9 @@ import java.util.Map;
 public class ErrorController extends BaseController{
 
     @RequestMapping(value = "/404.html", method = RequestMethod.GET)
-    public ModelAndView error_404(String companyShortName) {
+    public ModelAndView error_404() {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        String companyShortName = this.getCompanyShortName();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webName",webInfoResult.getWebName());
@@ -29,7 +30,8 @@ public class ErrorController extends BaseController{
     }
 
     @RequestMapping(value = "/500.html", method = RequestMethod.GET)
-    public ModelAndView error_500(String companyShortName) {
+    public ModelAndView error_500() {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
@@ -38,7 +40,8 @@ public class ErrorController extends BaseController{
     }
 
     @RequestMapping(value = "/incompatible.html", method = RequestMethod.GET)
-    public ModelAndView error_incompatible(String companyShortName) {
+    public ModelAndView error_incompatible() {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
         modelMap.put("webName",webInfoResult.getWebName());
