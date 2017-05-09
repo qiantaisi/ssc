@@ -61,7 +61,6 @@ public abstract class BaseController {
         // 公司标志
         String companyShortName = getCompanyShortName();
         theme = companyShortName;
-
         if (null != request) {
             request.setAttribute("theme", theme);
         }

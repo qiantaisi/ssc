@@ -1185,6 +1185,6 @@ public class ApiUtils{
         }
         paramsMap.put("companyShortName", companyShortName);
         
-        return HttpUtils.post(ApiConstant.API_WEB_SETTING_GET_COMPANY_SHORT_NAME, paramsMap);
+        return HttpUtils.post(apiUrl, paramsMap);
     }
 }

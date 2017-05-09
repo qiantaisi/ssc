@@ -133,7 +133,7 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxLogin.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxLogin(HttpServletResponse httpServletResponse, String account, String password, String yzm, String companyShortName) {
+    public LoginResult ajaxLogin(HttpServletResponse httpServletResponse, String account, String password, String yzm) {
         LoginResult result = new LoginResult();
         try {
             if (StringUtils.isBlank(account)) {
@@ -170,6 +170,8 @@ public class MemberController extends BaseController {
                 return result;
             }
 
+            // 获取本站标志
+            String companyShortName = this.getCompanyShortName();
             // 接口返回数据
             result = ApiUtils.login(account, password, IPHelper.getIpAddr(httpServletRequest), 2,companyShortName);
 
