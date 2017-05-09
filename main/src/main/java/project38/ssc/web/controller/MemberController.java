@@ -54,7 +54,7 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxRegister.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxRegister(String account, String password, String yzm, String name, Long agentId) {
+    public LoginResult ajaxRegister(String account, String password, String yzm, String name, Long agentId,String companyShortName) {
         LoginResult result = new LoginResult();
         try {
             if (StringUtils.isBlank(account)) {
@@ -91,9 +91,9 @@ public class MemberController extends BaseController {
             }
             // 接口返回数据
             String ip = IPHelper.getIpAddr(httpServletRequest);
-            CommonResult responseResult = ApiUtils.register(account, password, name, ip, httpServletRequest.getServerName(), null, agentId);
+            CommonResult responseResult = ApiUtils.register(account, password, name, ip, httpServletRequest.getServerName(), null, agentId, companyShortName);
             if (responseResult.getResult() == 1) {
-                result = ApiUtils.login(account, password, ip, 0);
+                result = ApiUtils.login(account, password, ip,0, companyShortName);
                 if (result.getResult() != 1) {
                     result.setResult(-6);
                     result.setDescription("注册成功，请登录");
@@ -133,7 +133,7 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxLogin.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxLogin(HttpServletResponse httpServletResponse, String account, String password, String yzm) {
+    public LoginResult ajaxLogin(HttpServletResponse httpServletResponse, String account, String password, String yzm, String companyShortName) {
         LoginResult result = new LoginResult();
         try {
             if (StringUtils.isBlank(account)) {
@@ -171,10 +171,10 @@ public class MemberController extends BaseController {
             }
 
             // 接口返回数据
-            result = ApiUtils.login(account, password, IPHelper.getIpAddr(httpServletRequest), 2);
+            result = ApiUtils.login(account, password, IPHelper.getIpAddr(httpServletRequest), 2,companyShortName);
 
             if (1 == result.getResult()) {
-                result.setWebNoticeList(ApiUtils.getPopupNoticeList(result.getUserId(), result.getToken(), null, null).getWebNoticeList());
+                result.setWebNoticeList(ApiUtils.getPopupNoticeList(result.getUserId(), result.getToken(), null, null, companyShortName).getWebNoticeList());
             }
         } catch (Exception e) {
             log.error(this, e);
@@ -191,17 +191,16 @@ public class MemberController extends BaseController {
      */
     @Authentication
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView index(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
-
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("logoData", ApiUtils.getLogo(2));
-        modelMap.put("icoData", ApiUtils.getLogo(4));
-        modelMap.put("serverTime", ApiUtils.getServerTime());
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
-        modelMap.put("kefu", ApiUtils.getKefu());
+        modelMap.put("logoData", ApiUtils.getLogo(2, companyShortName));
+        modelMap.put("icoData", ApiUtils.getLogo(4, companyShortName));
+        modelMap.put("serverTime", ApiUtils.getServerTime(companyShortName));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
+        modelMap.put("kefu", ApiUtils.getKefu(companyShortName));
 
         return this.renderView("member/index", modelMap);
     }
@@ -213,17 +212,17 @@ public class MemberController extends BaseController {
      */
     @Authentication
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
-    public ModelAndView main(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView main(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
-        modelMap.put("userLastInfo", ApiUtils.getUserLastInfo(uid, token));
-        modelMap.put("bindStatus", ApiUtils.getBindStatus(uid, token));
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
-        modelMap.put("userInboxList", ApiUtils.getUserInboxList(uid, token, null, null, null, 1, 4).getUserInboxList());
-        modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null).getPromotionList());
+        modelMap.put("userLastInfo", ApiUtils.getUserLastInfo(uid, token, companyShortName));
+        modelMap.put("bindStatus", ApiUtils.getBindStatus(uid, token, companyShortName));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
+        modelMap.put("userInboxList", ApiUtils.getUserInboxList(uid, token, null, null, null, 1, 4, companyShortName).getUserInboxList());
+        modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null, companyShortName).getPromotionList());
 
         return this.renderView("member/main", modelMap);
     }
@@ -235,13 +234,13 @@ public class MemberController extends BaseController {
      */
     @Authentication
     @RequestMapping(value = "/selfInfo.html", method = RequestMethod.GET)
-    public ModelAndView selfInfo(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView selfInfo(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
 
         return this.renderView("member/selfInfo", modelMap);
     }
@@ -255,68 +254,68 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/yhzz.html", method = RequestMethod.GET)
-    public ModelAndView zhczYhzz(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhczYhzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
-        modelMap.put("bankCardListResult", ApiUtils.getSystemBankCard(uid, token));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
+        modelMap.put("bankCardListResult", ApiUtils.getSystemBankCard(uid, token, companyShortName));
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3},companyShortName));
         //支付宝支付信息
-        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
+        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3},companyShortName));
         //微信支付信息
-        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
+        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3},companyShortName));
         //QQ支付信息
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3},companyShortName));
 
         //微信转账信息
-        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         //支付宝转账信息
-        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token,companyShortName));
         //财付通转账信息
-        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         // QQ转账
-        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token));
+        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
-        modelMap.put("depositChannel", ApiUtils.getDepositChannel());
+        modelMap.put("depositChannel", ApiUtils.getDepositChannel(companyShortName));
         return this.renderView("member/zhcz/yhzz", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/jfmx/hylb.html", method = RequestMethod.GET)
-    public ModelAndView jfmxHylb(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView jfmxHylb(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
 //        modelMap.put("bankCardListResult", ApiUtils.getSystemBankCard(uid, token));
         return this.renderView("member/jfmx/hylb", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/jfmx/tjhy.html", method = RequestMethod.GET)
-    public ModelAndView jfmxTjhy(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView jfmxTjhy(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
         }
@@ -326,13 +325,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/cwbb.html", method = RequestMethod.GET)
-    public ModelAndView jfmxCwbb(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView jfmxCwbb(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
         }
@@ -341,13 +340,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/tdls.html", method = RequestMethod.GET)
-    public ModelAndView jfmxTdls(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView jfmxTdls(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
         }
@@ -356,13 +355,13 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/tdbb.html", method = RequestMethod.GET)
-    public ModelAndView jfmxTdbb(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView jfmxTdbb(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
         }
@@ -372,15 +371,15 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/jfmx/tdtz.html", method = RequestMethod.GET)
-    public ModelAndView jfmxTdtz(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView jfmxTdtz(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList();
+        SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList(companyShortName);
         modelMap.put("sscplaylist", sscplaylist);
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token,companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
         }
@@ -390,195 +389,194 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/zxzf.html", method = RequestMethod.GET)
-    public ModelAndView zhczZxzf(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhczZxzf(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
         //支付宝支付信息
-        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
+        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
         //微信支付信息
-        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
+        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
         //QQ支付信息
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}, companyShortName));
         //微信转账信息
-        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         //支付宝转账信息
-        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token, companyShortName));
         //财付通转账信息
-        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         // QQ转账
-        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token));
+        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
-        modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderView("member/zhcz/zxzf", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhcz/qqzz.html", method = RequestMethod.GET)
-    public ModelAndView zhcsQqzz(HttpServletRequest httpServletRequest) throws Exception{
+    public ModelAndView zhcsQqzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception{
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-
         Map<String,Object> modelMap = new HashMap<String,Object>();
 
         // 权限检查
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
         //支付宝支付信息
-        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
+        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
         //微信支付信息
-        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
+        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
         //QQ支付信息
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}, companyShortName));
         //微信转账信息
-        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         //支付宝转账信息
-        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token, companyShortName));
         //财付通转账信息
-        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         // QQ转账
-        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token));
+        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
-        modelMap.put("systemQqResult", ApiUtils.getSystemQq(uid, token));
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        modelMap.put("systemQqResult", ApiUtils.getSystemQq(uid, token, companyShortName));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderView("member/zhcz/qqzz", modelMap);
     }
 
 
     @Authentication
     @RequestMapping(value = "/zhcz/qqzf.html", method = RequestMethod.GET)
-    public ModelAndView zhczQqzf(HttpServletRequest httpServletRequest) throws Exception{
+    public ModelAndView zhczQqzf(HttpServletRequest httpServletRequest,String  companyShortName) throws Exception{
         Long uid =this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap =new HashMap<String, Object>();
 
         // 权限检查
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
         //支付宝支付信息
-        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
+        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
         //微信支付信息
-        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
+        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
         //QQ支付信息
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}, companyShortName));
 
         //微信转账信息
-        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         //支付宝转账信息
-        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token, companyShortName));
         //财付通转账信息
-        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         // QQ转账
-        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token));
+        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
-        modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {2, 3}));
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {2, 3}, companyShortName));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderView("member/zhcz/qqzf", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhcz/wxzf.html", method = RequestMethod.GET)
-    public ModelAndView zhczWxzf(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhczWxzf(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
         //支付宝支付信息
-        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
+        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
         //微信支付信息
-        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
+        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
         //QQ支付信息
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}, companyShortName));
 
         //微信转账信息
-        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         //支付宝转账信息
-        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token, companyShortName));
         //财付通转账信息
-        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         // QQ转账
-        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token));
+        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
-        modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderView("member/zhcz/wxzf", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhcz/zfbzf.html", method = RequestMethod.GET)
-    public ModelAndView zfbzf(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zfbzf(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
         //支付宝支付信息
-        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
+        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
         //微信支付信息
-        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
+        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
         //QQ支付信息
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}, companyShortName));
         //微信转账信息
-        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         //支付宝转账信息
-        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token, companyShortName));
         //财付通转账信息
-        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         // QQ转账
-        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token));
+        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
-        modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderView("member/zhcz/zfbzf", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhcz/wxzz.html", method = RequestMethod.GET)
-    public ModelAndView zhczWxzz(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhczWxzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
@@ -586,35 +584,35 @@ public class MemberController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
         //支付宝支付信息
-        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
+        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
         //微信支付信息
-        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
+        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
         //QQ支付信息
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}, companyShortName));
         //微信转账信息
-        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         //支付宝转账信息
-        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token, companyShortName));
         //财付通转账信息
-        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         // QQ转账
-        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token));
+        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
-        modelMap.put("systemWeiXinResult", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("systemWeiXinResult", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         return this.renderView("member/zhcz/wxzz", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhcz/zfbzz.html", method = RequestMethod.GET)
-    public ModelAndView zhczZfbzz(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhczZfbzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
@@ -622,64 +620,64 @@ public class MemberController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
         //支付宝支付信息
-        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
+        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
         //微信支付信息
-        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
+        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
         //QQ支付信息
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}, companyShortName));
         //微信转账信息
-        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         //支付宝转账信息
-        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token, companyShortName));
         //财付通转账信息
-        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         // QQ转账
-        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token));
+        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
-        modelMap.put("systemAlipayResult", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("systemAlipayResult", ApiUtils.getSystemAlipay(uid, token, companyShortName));
         return this.renderView("member/zhcz/zfbzz", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhcz/cftzz.html", method = RequestMethod.GET)
-    public ModelAndView zhczCftzz(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhczCftzz(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}));
+        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
         //支付宝支付信息
-        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}));
+        modelMap.put("zfbzfInfo", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
         //微信支付信息
-        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}));
+        modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
         //QQ支付信息
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3}, companyShortName));
         //微信转账信息
-        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token));
+        modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));
         //支付宝转账信息
-        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token));
+        modelMap.put("zfbzzInfo", ApiUtils.getSystemAlipay(uid, token, companyShortName));
         //财付通转账信息
-        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("cftzzInfo", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         // QQ转账
-        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token));
+        modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
-        modelMap.put("systemTenpayResult", ApiUtils.getSystemTenpay(uid, token));
+        modelMap.put("systemTenpayResult", ApiUtils.getSystemTenpay(uid, token, companyShortName));
         return this.renderView("member/zhcz/cftzz", modelMap);
     }
 
@@ -690,7 +688,7 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/submitYhzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxSubmitYhzz(Double money, Integer depositChannelId, String bankAccount, Long bankCardId, String userBankName) {
+    public String ajaxSubmitYhzz(Double money, Integer depositChannelId, String bankAccount, Long bankCardId, String userBankName,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
@@ -722,7 +720,7 @@ public class MemberController extends BaseController {
                 result.setDescription("转出银行不能为空！");
                 return this.renderJson(result);
             }
-            result = ApiUtils.submitYhzz(uid, token, money, depositChannelId, bankAccount, bankCardId, userBankName);
+            result = ApiUtils.submitYhzz(uid, token, money, depositChannelId, bankAccount, bankCardId, userBankName, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);
@@ -739,19 +737,19 @@ public class MemberController extends BaseController {
      */
     @Authentication
     @RequestMapping(value = "/withdraw.html", method = RequestMethod.GET)
-    public ModelAndView withdrawLocation(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView withdrawLocation(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanWithdraw()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
-        modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
+        modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token, companyShortName));
 
         return this.renderView("member/withdraw", modelMap);
     }
@@ -777,10 +775,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxGetLetter.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String letterLocation(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize) throws Exception {
+    public String letterLocation(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize,String  companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return this.renderJson(ApiUtils.getUserInboxList(uid, token, startTime, endTime, hasRead, pageIndex, pageSize));
+        return this.renderJson(ApiUtils.getUserInboxList(uid, token, startTime, endTime, hasRead, pageIndex, pageSize, companyShortName));
     }
 
 
@@ -792,7 +790,7 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/submitWeixinzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxSubmitWeixinzz(Double money, String userWeixinName, Integer weixinId, Date time) {
+    public String ajaxSubmitWeixinzz(Double money, String userWeixinName, Integer weixinId, Date time, String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
@@ -819,7 +817,7 @@ public class MemberController extends BaseController {
             return this.renderJson(result);
         }
 
-        result = ApiUtils.submitWeixinzz(uid, token, money, userWeixinName, weixinId, time);
+        result = ApiUtils.submitWeixinzz(uid, token, money, userWeixinName, weixinId, time, companyShortName);
         return this.renderJson(result);
     }
 
@@ -831,7 +829,7 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxSubmitQqzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxSubmitQqzz(Double money, String userQqName, Integer qqId, Date time) {
+    public String ajaxSubmitQqzz(Double money, String userQqName, Integer qqId, Date time,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
@@ -858,7 +856,7 @@ public class MemberController extends BaseController {
             return this.renderJson(result);
         }
 
-        result = ApiUtils.submitQqzz(uid, token, money, userQqName, qqId, time);
+        result = ApiUtils.submitQqzz(uid, token, money, userQqName, qqId, time, companyShortName);
         return this.renderJson(result);
     }
 
@@ -870,7 +868,7 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/submitAlipayzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxAlipayzz(Double money, String userAlipayName, Integer alipayId, Date time) {
+    public String ajaxAlipayzz(Double money, String userAlipayName, Integer alipayId, Date time, String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
 
         String token = this.getToken(httpServletRequest);
@@ -898,7 +896,7 @@ public class MemberController extends BaseController {
             return this.renderJson(result);
         }
 
-        result = ApiUtils.submitAlipayzz(uid, token, money, userAlipayName, alipayId, time);
+        result = ApiUtils.submitAlipayzz(uid, token, money, userAlipayName, alipayId, time, companyShortName);
         return this.renderJson(result);
     }
 
@@ -911,7 +909,7 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/submitTenpayzz.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxTenpayzz(Double money, String userTenpayName, Integer tenpayId, Date time) {
+    public String ajaxTenpayzz(Double money, String userTenpayName, Integer tenpayId, Date time, String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
@@ -938,7 +936,7 @@ public class MemberController extends BaseController {
             return this.renderJson(result);
         }
 
-        result = ApiUtils.submitTenpayzz(uid, token, money, userTenpayName, tenpayId, time);
+        result = ApiUtils.submitTenpayzz(uid, token, money, userTenpayName, tenpayId, time, companyShortName);
         return this.renderJson(result);
     }
 
@@ -951,11 +949,11 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/submitWithdraw.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxWithdraw(Double money, Long id, String drawPassword) {
+    public String ajaxWithdraw(Double money, Long id, String drawPassword, String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
-        CommonResult result = ApiUtils.submitWithdraw(uid, token, money, id, drawPassword);
+        CommonResult result = ApiUtils.submitWithdraw(uid, token, money, id, drawPassword, companyShortName);
         return this.renderJson(result);
     }
 
@@ -1042,30 +1040,30 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhsz/grzl.html", method = RequestMethod.GET)
-    public ModelAndView zhszGrzl(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhszGrzl(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanEditInfo()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         return this.renderView("member/zhsz/grzl", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhsz/dlmm.html", method = RequestMethod.GET)
-    public ModelAndView zhszDlmm(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhszDlmm(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanEditPassword()) {
             return this.renderView("member/noaccess", modelMap);
         }
@@ -1082,66 +1080,66 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhsz/yhkgl.html", method = RequestMethod.GET)
-    public ModelAndView zhszYhkgl(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhszYhkgl(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanEditUserBank()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
-        modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token));
+        modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token, companyShortName));
         return this.renderView("member/zhsz/yhkgl", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhsz/aqxx.html", method = RequestMethod.GET)
-    public ModelAndView zhszAqxx(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView zhszAqxx(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanSafeinfo()) {
             return this.renderView("member/noaccess", modelMap);
         }
 
-        modelMap.put("safeInfo", ApiUtils.getSafeInfo(uid, token));
+        modelMap.put("safeInfo", ApiUtils.getSafeInfo(uid, token, companyShortName));
         return this.renderView("member/zhsz/aqxx", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhsz/ajaxEditUserInfo.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxEditUserInfo(String nickname, Date birthday, String qq, String telephone, String email, Integer sex) {
+    public String ajaxEditUserInfo(String nickname, Date birthday, String qq, String telephone, String email, Integer sex,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
-        CommonResult result = ApiUtils.editUserInfo(uid, token, nickname, birthday, qq, telephone, email, sex);
+        CommonResult result = ApiUtils.editUserInfo(uid, token, nickname, birthday, qq, telephone, email, sex, companyShortName);
         return this.renderJson(result);
     }
 
     @Authentication
     @RequestMapping(value = "/zhsz/ajaxResetPassword.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxResetPassword(String oldPassword, String newPassword) {
+    public String ajaxResetPassword(String oldPassword, String newPassword,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        CommonResult result = ApiUtils.resetPassword(uid, token, oldPassword, newPassword);
+        CommonResult result = ApiUtils.resetPassword(uid, token, oldPassword, newPassword, companyShortName);
         return this.renderJson(result);
     }
 
     @Authentication
     @RequestMapping(value = "/zhsz/ajaxResetDrawPassword.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxResetDrawPassword(String oldPassword, String newPassword) {
+    public String ajaxResetDrawPassword(String oldPassword, String newPassword,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        CommonResult result = ApiUtils.resetDrawPassword(uid, token, oldPassword, newPassword);
+        CommonResult result = ApiUtils.resetDrawPassword(uid, token, oldPassword, newPassword, companyShortName);
         return this.renderJson(result);
     }
 
@@ -1155,25 +1153,25 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/lsjl/ckjl.html", method = RequestMethod.GET)
-    public ModelAndView lsjlCkjl(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView lsjlCkjl(HttpServletRequest httpServletRequest, String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("depositChannelResult", ApiUtils.getDepositChannel());
+        modelMap.put("depositChannelResult", ApiUtils.getDepositChannel(companyShortName));
         return this.renderView("member/lsjl/ckjl", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/lsjl/tzjl.html", method = RequestMethod.GET)
-    public ModelAndView lsjlTzjl(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView lsjlTzjl(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList();
+        SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList(companyShortName);
         modelMap.put("sscplaylist", sscplaylist);
         return this.renderView("member/lsjl/tzjl", modelMap);
     }
 
     @RequestMapping(value = "/getSscPlayGroup.json")
     @ResponseBody
-    public String getPlayGroup() {
-        return this.renderJson(ApiUtils.getSscPlayGroupList());
+    public String getPlayGroup(String companyShortName) {
+        return this.renderJson(ApiUtils.getSscPlayGroupList(companyShortName));
     }
 
     @Authentication
@@ -1205,10 +1203,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxGetCkjl.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxGetCkjl(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type) {
+    public String ajaxGetCkjl(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return this.renderJson(ApiUtils.getDepositList(uid, token, startTime, endTime, pageIndex, pageSize, status, type));
+        return this.renderJson(ApiUtils.getDepositList(uid, token, startTime, endTime, pageIndex, pageSize, status, type,companyShortName));
     }
 
     /**
@@ -1219,10 +1217,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxGetTkjl.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxGetTkjl(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type) {
+    public String ajaxGetTkjl(Boolean hasRead, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return this.renderJson(ApiUtils.getWithdrawList(uid, token, startTime, endTime, pageIndex, pageSize, status, type));
+        return this.renderJson(ApiUtils.getWithdrawList(uid, token, startTime, endTime, pageIndex, pageSize, status, type, companyShortName));
     }
 
     /**
@@ -1233,10 +1231,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxGetTzjl.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscBetsListResult ajaxGetTzjl(Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Long playGroupId, Long playId, Integer status, Boolean isZhongjiang) {
+    public SscBetsListResult ajaxGetTzjl(Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Long playGroupId, Long playId, Integer status, Boolean isZhongjiang,String companyShortName) {
         Long uid = Long.parseLong((String) httpServletRequest.getAttribute("uid"));
         String token = (String) httpServletRequest.getAttribute("token");
-        return ApiUtils.getSscBetsList(uid, token, startTime, endTime, pageIndex, pageSize, playGroupId, playId, status, isZhongjiang);
+        return ApiUtils.getSscBetsList(uid, token, startTime, endTime, pageIndex, pageSize, playGroupId, playId, status, isZhongjiang, companyShortName);
     }
 
     /**
@@ -1247,10 +1245,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxReadZnx.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxReadZnx(@RequestParam("ids[]") Long[] idList) {
+    public String ajaxReadZnx(@RequestParam("ids[]") Long[] idList,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return this.renderJson(ApiUtils.readUserInboxNotice(uid, token, idList));
+        return this.renderJson(ApiUtils.readUserInboxNotice(uid, token, idList, companyShortName));
     }
 
     /**
@@ -1261,10 +1259,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxDelZnx.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxDelZnx(@RequestParam("ids[]") Long[] idList) {
+    public String ajaxDelZnx(@RequestParam("ids[]") Long[] idList,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return this.renderJson(ApiUtils.delUserInboxNotice(uid, token, idList));
+        return this.renderJson(ApiUtils.delUserInboxNotice(uid, token, idList, companyShortName));
     }
 
     /**
@@ -1275,10 +1273,10 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxAddUserBank.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxAddUserBank(String bankName, String subBankName, String bankAccount) {
+    public String ajaxAddUserBank(String bankName, String subBankName, String bankAccount, String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return this.renderJson(ApiUtils.addUserBank(uid, token, bankName, subBankName, bankAccount));
+        return this.renderJson(ApiUtils.addUserBank(uid, token, bankName, subBankName, bankAccount, companyShortName));
     }
 
     /**
@@ -1289,22 +1287,22 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxDelUserBank.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxDelUserBank(Long id) {
+    public String ajaxDelUserBank(Long id,String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return this.renderJson(ApiUtils.delUserBank(uid, token, id));
+        return this.renderJson(ApiUtils.delUserBank(uid, token, id, companyShortName));
     }
 
     @Authentication
     @RequestMapping(value = "/ajaxSetDefault.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public CommonResult ajaxSetDefault(Long id) {
+    public CommonResult ajaxSetDefault(Long id,String companyShortName) {
         CommonResult result = new CommonResult();
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
 
-            return ApiUtils.setUserBankDefault(uid, token, id);
+            return ApiUtils.setUserBankDefault(uid, token, id,companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);
@@ -1337,42 +1335,42 @@ public class MemberController extends BaseController {
 
     @RequestMapping(value = "/ajaxGetServerTime.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String getServerTime() {
-        return this.renderJson(ApiUtils.getServerTime());
+    public String getServerTime(String companyShortName) {
+        return this.renderJson(ApiUtils.getServerTime(companyShortName));
     }
 
     @RequestMapping(value = "/checkOnline.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public CommonResult checkOnline() {
+    public CommonResult checkOnline(String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return ApiUtils.checkOnline(uid, token);
+        return ApiUtils.checkOnline(uid, token, companyShortName);
     }
 
     @Authentication
     @RequestMapping(value = "/updateUserInfo.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String updateUserInfo(HttpServletRequest httpServletRequest) {
+    public String updateUserInfo(HttpServletRequest httpServletRequest, String companyShortName) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        ApiUtils.updateUserInfo(uid, token);
-        return this.renderJson(ApiUtils.getUserSession(uid, token));
+        ApiUtils.updateUserInfo(uid, token, companyShortName);
+        return this.renderJson(ApiUtils.getUserSession(uid, token,companyShortName));
     }
 
     @Authentication
     @RequestMapping(value = "/getUserSession.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String getUserSession(HttpServletRequest httpServletRequest) throws Exception {
-        return updateUserInfo(httpServletRequest);
+    public String getUserSession(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
+        return updateUserInfo(httpServletRequest,companyShortName);
     }
 
     @Authentication
     @RequestMapping(value = "/ajaxSigout.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxSigout(HttpServletRequest httpServletRequest) throws Exception {
+    public String ajaxSigout(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return this.renderJson(ApiUtils.sigout(uid, token));
+        return this.renderJson(ApiUtils.sigout(uid, token,companyShortName));
     }
 
 
@@ -1383,21 +1381,21 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetWebPopUpNotice.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public WebNoticeResult ajaxGetWebPopUpNotice() throws Exception {
+    public WebNoticeResult ajaxGetWebPopUpNotice(String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return ApiUtils.getPopupNoticeList(uid, token,null, null);
+        return ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName);
     }
 
     @Authentication
     @RequestMapping(value = "/jfmx/yjjl.html", method = RequestMethod.GET)
-    public ModelAndView jfmxYjjl(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView jfmxYjjl(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
             return this.renderView("member/noaccess", modelMap);
         }
@@ -1412,9 +1410,9 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetLogUserCoinList.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LogUserCoinResult ajaxGetLogUserCoinList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer type) throws Exception {
+    public LogUserCoinResult ajaxGetLogUserCoinList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer type, String companyShortName) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return ApiUtils.getLogUserCoinList(uid, token,pageIndex, pageSize, startTime, endTime, type);
+        return ApiUtils.getLogUserCoinList(uid, token,pageIndex, pageSize, startTime, endTime, type, companyShortName);
     }
 }

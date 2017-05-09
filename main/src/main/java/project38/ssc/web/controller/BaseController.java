@@ -28,11 +28,11 @@ public abstract class BaseController {
 
     /** 基于@ExceptionHandler异常处理 */
     @ExceptionHandler
-    public ModelAndView exp(HttpServletRequest request, Exception ex) {
+    public ModelAndView exp(HttpServletRequest request, Exception ex,String companyShortName) {
         log.error(this, ex);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderView("error/500/index", modelMap);
     }
 
@@ -70,7 +70,7 @@ public abstract class BaseController {
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token);
+        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
         if (null != userSessionResult && userSessionResult.getResult() == 1) {
             modelMap.put("userSession", userSessionResult);
         }

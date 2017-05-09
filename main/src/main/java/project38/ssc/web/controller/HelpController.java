@@ -21,9 +21,10 @@ public class HelpController extends BaseController{
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public ModelAndView index() {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1);
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
-        modelMap.put("logo", ApiUtils.getLogo(2));
+        String companyShortName = this.getCompanyShortName();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+        modelMap.put("logo", ApiUtils.getLogo(2,companyShortName));
         modelMap.put("webName",webInfoResult.getWebName());
         return this.renderView("help/index", modelMap);
     }
@@ -31,8 +32,9 @@ public class HelpController extends BaseController{
     @RequestMapping(value = "/{file}.html", method = RequestMethod.GET)
     public ModelAndView file(@PathVariable String file) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1);
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        String companyShortName = this.getCompanyShortName();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webName",webInfoResult.getWebName());
         return this.renderView("help/" + file, modelMap);
     }
@@ -40,10 +42,11 @@ public class HelpController extends BaseController{
     @RequestMapping(value = "/{folder}/{file}.html", method = RequestMethod.GET)
     public ModelAndView folderFile(@PathVariable String folder, @PathVariable String file) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1);
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        String companyShortName = this.getCompanyShortName();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webName",webInfoResult.getWebName());
-        modelMap.put("logo", ApiUtils.getLogo(2));
+        modelMap.put("logo", ApiUtils.getLogo(2,companyShortName));
         return this.renderView("help/" + folder + "/" + file, modelMap);
     }
 }

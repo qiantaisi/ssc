@@ -24,8 +24,8 @@ public class PromotionController extends BaseController {
 
     @RequestMapping(value = "/getList.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public PromotionResult getList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime) {
-        System.out.println(JSONUtils.toJSONStr(ApiUtils.getPromotion(pageIndex, pageSize, startTime, endTime)));
-        return ApiUtils.getPromotion(pageIndex, pageSize, startTime, endTime);
+    public PromotionResult getList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String companyShortName) {
+        System.out.println(JSONUtils.toJSONStr(ApiUtils.getPromotion(pageIndex, pageSize, startTime, endTime, companyShortName)));
+        return ApiUtils.getPromotion(pageIndex, pageSize, startTime, endTime, companyShortName);
     }
 }

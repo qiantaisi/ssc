@@ -28,21 +28,21 @@ public class RedPacketController extends BaseController {
     private HttpServletRequest httpServletRequest;
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest httpServletRequest) throws Exception {
+    public ModelAndView index(HttpServletRequest httpServletRequest,String companyShortName) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderView("redpacket/index", modelMap);
     }
 
     @RequestMapping(value = "/ajaxChoujiang.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public RedPacketResult ajaxChoujiang(String account) throws Exception {
-        return ApiUtils.redpacketChoujiang(account);
+    public RedPacketResult ajaxChoujiang(String account,String companyShortName) throws Exception {
+        return ApiUtils.redpacketChoujiang(account,companyShortName);
     }
 
     @RequestMapping(value = "/ajaxGetList.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public RedPacketListResult ajaxGetList(String account) throws Exception {
-        return ApiUtils.redpacketgetList(account);
+    public RedPacketListResult ajaxGetList(String account,String companyShortName) throws Exception {
+        return ApiUtils.redpacketgetList(account,companyShortName);
     }
 }

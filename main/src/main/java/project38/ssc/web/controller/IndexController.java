@@ -31,7 +31,8 @@ public class IndexController extends BaseController{
     @RequestMapping(value = "/ajaxGetWebInfo.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public WebInfoResult ajaxGetWebInfo() {
-        return ApiUtils.getWebInfo(1);
+        String companyShortName = this.getCompanyShortName();
+        return ApiUtils.getWebInfo(1,companyShortName);
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
@@ -53,56 +54,60 @@ public class IndexController extends BaseController{
     public ModelAndView main() {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1);
-        modelMap.put("carouseList", ApiUtils.getCarouselList(true, 2));
-        modelMap.put("serverTime", ApiUtils.getServerTime().getServerTime());
-        modelMap.put("logo", ApiUtils.getLogo(2));
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
+        modelMap.put("carouseList", ApiUtils.getCarouselList(true, 2,companyShortName));
+        modelMap.put("serverTime", ApiUtils.getServerTime(companyShortName).getServerTime());
+        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webName",webInfoResult.getWebName());
 
-//        modelMap.put("userInboxResult", ApiUtils.getUserInboxList(uid, token, null, null, null, 0, 2));
+//      modelMap.put("userInboxResult", ApiUtils.getUserInboxList(uid, token, null, null, null, 0, 2));
         return this.renderView("index/main", modelMap);
     }
 
     @RequestMapping(value = "/register.html", method = RequestMethod.GET)
     public ModelAndView register() {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1);
-        modelMap.put("khxy", ApiUtils.getKhxy());
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
-        modelMap.put("logo", ApiUtils.getLogo(2));
+        String companyShortName = this.getCompanyShortName();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
+        modelMap.put("khxy", ApiUtils.getKhxy(companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("index/register", modelMap);
     }
 
     @RequestMapping(value = "/login.html", method = RequestMethod.GET)
     public ModelAndView login() {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1);
-        modelMap.put("khxy", ApiUtils.getKhxy());
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
-        modelMap.put("logo", ApiUtils.getLogo(2));
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
+        modelMap.put("khxy", ApiUtils.getKhxy(companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("index/login", modelMap);
     }
 
     @RequestMapping(value = "/kjjg.html", method = RequestMethod.GET)
     public ModelAndView kjjg() {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
-        modelMap.put("logo", ApiUtils.getLogo(2));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         return this.renderView("index/kjjg", modelMap);
     }
 
     @RequestMapping(value = "/yhhd.html", method = RequestMethod.GET)
     public ModelAndView yhhd() {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1);
-        modelMap.put("logo", ApiUtils.getLogo(2));
-        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
-        modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null).getPromotionList());
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
+        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+        modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null,companyShortName).getPromotionList());
         modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("index/yhhd", modelMap);
     }
@@ -110,10 +115,10 @@ public class IndexController extends BaseController{
 
     @RequestMapping(value = "/shiwan.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult LoginResult() {
+    public LoginResult LoginResult(String companyShortName) {
         LoginResult loginResult = new LoginResult();
         try {
-            return ApiUtils.memberShiwanLogin(IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), 2);
+            return ApiUtils.memberShiwanLogin(IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), 2,companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             loginResult.setResult(-100);

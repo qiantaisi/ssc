@@ -23,10 +23,10 @@ public class TimeController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetServerTime.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxGetServerTime() {
+    public String ajaxGetServerTime(String companyShortName) {
         ServerTimeResult result = new ServerTimeResult();
         try {
-            result = ApiUtils.getServerTime();
+            result = ApiUtils.getServerTime(companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);

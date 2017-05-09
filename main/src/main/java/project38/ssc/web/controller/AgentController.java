@@ -41,12 +41,12 @@ public class AgentController extends BaseController{
 
     @RequestMapping(value = "/ajaxGetUserList.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public AgentUserListResult ajaxGetUserList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String account, Long id) {
+    public AgentUserListResult ajaxGetUserList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String account, Long id, String companyShortName) {
         AgentUserListResult result = new AgentUserListResult();
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
-            return ApiUtils.getUserList(uid, token, pageIndex, pageSize, startTime, endTime, account, id);
+            return ApiUtils.getUserList(uid, token, pageIndex, pageSize, startTime, endTime, account,id, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);
@@ -57,12 +57,12 @@ public class AgentController extends BaseController{
 
     @RequestMapping(value = "/agentEnableUser.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public CommonResult agentEnableUser(Long userId, Boolean isEnable) {
+    public CommonResult agentEnableUser(Long userId, Boolean isEnable,String companyShortName) {
         CommonResult result = new CommonResult();
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
-            return ApiUtils.agentEnableUser(uid, token, userId, isEnable);
+            return ApiUtils.agentEnableUser(uid, token, userId, isEnable, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);
@@ -73,7 +73,7 @@ public class AgentController extends BaseController{
 
     @RequestMapping(value = "/ajaxAddUser.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public CommonResult ajaxAddUser(String account, String password, String name, String qq) {
+    public CommonResult ajaxAddUser(String account, String password, String name, String qq,String companyShortName) {
         CommonResult result = new CommonResult();
         try {
             Long uid = this.getUid(httpServletRequest);
@@ -95,7 +95,7 @@ public class AgentController extends BaseController{
                 throw new UserException(-8, "QQ不能为空");
             }
 
-            return ApiUtils.addUser(uid, token, account, password, name, IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), qq);
+            return ApiUtils.addUser(uid, token, account, password, name, IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), qq, companyShortName);
         } catch (UserException e) {
             result.setResult(e.getCode());
             result.setDescription(e.getMessage());
@@ -109,12 +109,12 @@ public class AgentController extends BaseController{
 
     @RequestMapping(value = "/ajaxGetLiushui.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public AgentTdlsResult ajaxGetLiushui(Integer pageIndex, Integer pageSize, String account, Date startTime, Date endTime, Integer type) {
+    public AgentTdlsResult ajaxGetLiushui(Integer pageIndex, Integer pageSize, String account, Date startTime, Date endTime, Integer type, String companyShortName) {
         AgentTdlsResult result = new AgentTdlsResult();
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
-            return ApiUtils.getLiushui(uid, token, pageIndex, pageSize, account, startTime, endTime, type);
+            return ApiUtils.getLiushui(uid, token, pageIndex, pageSize, account, startTime, endTime, type, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);
@@ -125,12 +125,12 @@ public class AgentController extends BaseController{
 
     @RequestMapping(value = "/ajaxGetTouzhu.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public BetListResult ajaxGetTouzhu(String account, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer status, Long playGroupId, Long playId, String number, String orderNumber) {
+    public BetListResult ajaxGetTouzhu(String account, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer status, Long playGroupId, Long playId, String number, String orderNumber, String companyShortName) {
         BetListResult result = new BetListResult();
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
-            return ApiUtils.getTouzhu(uid, token, account, pageIndex, pageSize, startTime, endTime, status, playGroupId, playId, number, orderNumber);
+            return ApiUtils.getTouzhu(uid, token, account, pageIndex, pageSize, startTime, endTime, status, playGroupId, playId, number, orderNumber, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);
@@ -141,13 +141,13 @@ public class AgentController extends BaseController{
 
     @RequestMapping(value = "/ajaxGetUserReport.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public AgentUserReportResult ajaxGetUserReport(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String account, Long id) {
+    public AgentUserReportResult ajaxGetUserReport(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String account, Long id, String companyShortName) {
         AgentUserReportResult result = new AgentUserReportResult();
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
 //            return ApiUtils.getUserBalanceList(uid, token, pageIndex, pageSize, startTime, endTime, account, id);
-            return ApiUtils.getUserReport(uid, token, pageIndex, pageSize, startTime, endTime, account);
+            return ApiUtils.getUserReport(uid, token, pageIndex, pageSize, startTime, endTime, account, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);
@@ -158,12 +158,12 @@ public class AgentController extends BaseController{
 
     @RequestMapping(value = "/ajaxGetAgentReport.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public AgentReportResult ajaxGetAgentReport(Date startTime, Date endTime) {
+    public AgentReportResult ajaxGetAgentReport(Date startTime, Date endTime, String companyShortName) {
         AgentReportResult result = new AgentReportResult();
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
-            return ApiUtils.getAgentReport(uid, token, startTime, endTime);
+            return ApiUtils.getAgentReport(uid, token, startTime, endTime, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);
@@ -174,12 +174,12 @@ public class AgentController extends BaseController{
 
     @RequestMapping(value = "/ajaxGetUserYjList.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public AgentUserYjListResult ajaxGetUserYjList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer type) {
+    public AgentUserYjListResult ajaxGetUserYjList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer type,String companyShortName) {
         AgentUserYjListResult result = new AgentUserYjListResult();
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
-            return ApiUtils.agentGetUserYjList(uid, token, pageIndex, pageSize, startTime, endTime, type);
+            return ApiUtils.agentGetUserYjList(uid, token, pageIndex, pageSize, startTime, endTime, type, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);
