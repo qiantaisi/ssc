@@ -27,12 +27,13 @@ public class ImageController extends BaseController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public void id(@PathVariable Long id, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
         OutputStream outputSream = null;
+        String companyShortName = getCompanyShortName();
         try {
             if (id == null) {
                 return;
             }
 
-            String data = ApiUtils.getImageData(id).getImageData();
+            String data = ApiUtils.getImageData(id,companyShortName).getImageData();
 
             if (StringUtils.isBlank(data)) {
                 return;
