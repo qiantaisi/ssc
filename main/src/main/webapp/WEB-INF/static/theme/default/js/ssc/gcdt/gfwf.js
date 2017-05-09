@@ -99,13 +99,13 @@ function stateTouZhu(flag_str){
     var flag_str_inner = '';
     var zhushu = 0;
     if(typeof flag_str == 'undefined' || flag_str == null){
-        flag_str_inner = 'zxfs-zx';
+        flag_str_inner = 'zxfs_zx';
     }else{
         flag_str_inner = flag_str;
     }
     if(flag_str_inner == 'dan'){
         zhushu = getDsZhushu();
-    }else if(flag_str_inner == 'zxfs-zx'|| flag_str_inner == "fu"){
+    }else if(flag_str_inner == "zxfs_zx" || flag_str_inner == "fu"){
         zhushu = getZhushu();
     }else if(flag_str_inner == "hszh_zx"){
         zhushu = getHsZhushu();
@@ -117,9 +117,9 @@ function stateTouZhu(flag_str){
         zhushu = getZuSanZhushu(flag_str_inner);
     }
 
-    if(zhushu <= 0){
+    if(zhushu <= 0 || typeof zhushu == "undefined"){
         clearStateTouZhu();
-        return;
+        return 0;
     }
 
     $('.p1 .i0').html(zhushu);

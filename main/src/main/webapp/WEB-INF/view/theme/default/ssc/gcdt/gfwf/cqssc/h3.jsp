@@ -1209,7 +1209,7 @@
         var geLength = geArr.length;
 
         if (baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
-            return 0;
+            return;
         }
 
         var newArr = getHszhNewArrs(baiArr, shiArr, geArr);
@@ -1342,13 +1342,16 @@
                     } else if(typeof $('.recl-1002').attr('data-flag') != 'undefined') {
                         flag_str = 'fu';
                         stateTouZhu(flag_str);
-                    }else if(typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined'){
+                    } else if(typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
+                        flag_str = 'hszh_zx';
+                        stateTouZhu(flag_str);
+                    } else if(typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined'){
                         flag_str = 'zxhz_zx';
                         stateTouZhu(flag_str);
-                    }else if(typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined'){
+                    } else if(typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined'){
                         flag_str = 'zxkd_zx';
                         stateTouZhu(flag_str);
-                    }else if(typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined'){
+                    } else if(typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined'){
                         flag_str = 'zsfs_zux';
                         stateTouZhu(flag_str);
                     }
