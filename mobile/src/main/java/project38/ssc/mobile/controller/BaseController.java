@@ -42,7 +42,7 @@ public abstract class BaseController {
      * @param modelMap
      * @return
      */
-    protected ModelAndView renderView(HttpServletRequest request, String jspLocation, Map<String, Object> modelMap) {
+    protected ModelAndView renderView(HttpServletRequest request, String jspLocation, Map<String, Object> modelMap,String companyShortName) {
         if (null == modelMap) {
             modelMap = new HashMap<String, Object>();
         }
@@ -64,7 +64,7 @@ public abstract class BaseController {
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token);
+        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token,companyShortName);
         if (null != userSessionResult && userSessionResult.getResult() == 1) {
             modelMap.put("userSession", userSessionResult);
         }
@@ -81,8 +81,8 @@ public abstract class BaseController {
      * @param modelMap
      * @return
      */
-    protected ModelAndView renderView(String jspLocation, Map<String, Object> modelMap) {
-        return this.renderView(httpServletRequest, jspLocation, modelMap);
+    protected ModelAndView renderView(String jspLocation, Map<String, Object> modelMap,String companyShortName) {
+        return this.renderView(httpServletRequest, jspLocation, modelMap,companyShortName);
     }
 
     /**
