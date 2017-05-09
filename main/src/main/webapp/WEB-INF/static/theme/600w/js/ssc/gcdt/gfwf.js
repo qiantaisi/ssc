@@ -161,12 +161,12 @@ function getZuXuanNewArrs(zuXuanArr) {
 
 //后三组选-组六复式
 function getZuLiuNewArrs(zuXuanArr) {
-    var tempArr = [],zxArr = [];
+    var tempArr = [], zxArr = [];
     zxArr = zuXuanArr;
-    for(var i = 0; i < zxArr.length; i++){
-        for(var i1 = 0; i1 < zxArr.length; i1++){
-            for(var i2 = 0; i2 < zxArr.length; i2++) {
-                if(zxArr[i] != zxArr[i1] != zxArr[i2]){
+    for (var i = 0; i < zxArr.length; i++) {
+        for (var i1 = 0; i1 < zxArr.length; i1++) {
+            for (var i2 = 0; i2 < zxArr.length; i2++) {
+                if (zxArr[i] != zxArr[i1] && zxArr[i1] != zxArr[i2] && zxArr[i] != zxArr[i2]) {
                     var sortArr = [];
                     sortArr.push(zxArr[i]);
                     sortArr.push(zxArr[i1]);
@@ -178,9 +178,6 @@ function getZuLiuNewArrs(zuXuanArr) {
         }
     }
     tempArr = tempArr.uniqueArr();
-    for(var  n =0 ; n<tempArr.length; n++){
-        console.log(tempArr[n])
-    }
     return tempArr;
 }
 

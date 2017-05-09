@@ -763,6 +763,8 @@
                     stateTouZhu(flag_name);
                 }else if(flag_name == "zsfs_zux"){
                     stateTouZhu(flag_name);
+                }else if(flag_name == "zlfs_zux"){
+                    stateTouZhu(flag_name);
                 }else{
                     stateTouZhu('fu');
                 }
