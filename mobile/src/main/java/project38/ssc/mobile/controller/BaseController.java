@@ -49,13 +49,7 @@ public abstract class BaseController {
             modelMap = new HashMap<String, Object>();
         }
 
-        String theme = null;
-        String companyShortName = this.getCompanyShortName();
-        theme = companyShortName;
-        if (null != request) {
-            theme = (String) request.getAttribute("theme");
-        }
-//
+         String theme = null;
 //        if (StringUtils.isBlank(theme)) {
 //            theme = "default";
 //        }
@@ -63,12 +57,19 @@ public abstract class BaseController {
 //        if (null != request) {
 //            request.setAttribute("theme", theme);
 //        }
+        // 公司标志
+
+        String companyShortName = getCompanyShortName();
+        theme = companyShortName;
+        if (null != request) {
+            request.setAttribute("theme", theme);
+        }
 
         request.setAttribute("resPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/theme/" + theme + "/");
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token,companyShortName);
+        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
         if (null != userSessionResult && userSessionResult.getResult() == 1) {
             modelMap.put("userSession", userSessionResult);
         }
