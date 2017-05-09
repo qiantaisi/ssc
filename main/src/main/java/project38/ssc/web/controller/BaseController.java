@@ -59,19 +59,18 @@ public abstract class BaseController {
 //        }
 
         // 公司标志
-        if (request.getRequestURI().indexOf(".html") > 0) {
-            String companyShortName = (String) request.getSession().getAttribute("COMPANY_SHORT_NAME");
-            if (StringUtils.isBlank(companyShortName)) {
-                CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
-                if (companyShortNameResult.getResult() == 1) {
-                    companyShortName = companyShortNameResult.getCompanyShortName();
-                }
+        String companyShortName = (String) request.getSession().getAttribute("COMPANY_SHORT_NAME");
+        if (StringUtils.isBlank(companyShortName)) {
+            CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
+            if (companyShortNameResult.getResult() == 1) {
+                companyShortName = companyShortNameResult.getCompanyShortName();
             }
-            if (StringUtils.isBlank(companyShortName)) {
-                throw new RuntimeException("非法请求");
-            } else {
-                theme = companyShortName;
-            }
+        }
+        if (StringUtils.isBlank(companyShortName)) {
+            throw new RuntimeException("非法请求");
+        } else {
+            request.getSession().setAttribute("COMPANY_SHORT_NAME", companyShortName);
+            theme = companyShortName;
         }
 
 
