@@ -56,9 +56,22 @@ public class CzListResult extends CommonResult {
         private Long payOnlineId;
 
         /**
-         * 支付网址
+         * 支付网址（若APP 模式为二维码，则是api请求地址，若是网页模式，则是跳转地址）
          */
         private String url;
+
+        /**
+         * APP模式：1-二维码，2-网页
+         */
+        private Integer appMode;
+
+        public Integer getAppMode() {
+            return appMode;
+        }
+
+        public void setAppMode(Integer appMode) {
+            this.appMode = appMode;
+        }
 
         public Integer getType() {
             return type;
