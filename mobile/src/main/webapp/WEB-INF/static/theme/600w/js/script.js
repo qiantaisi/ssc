@@ -6664,17 +6664,3 @@ $(".title").click(
     }
 );
 
-$(document).on("ui-grid-a",
-    function () {
-        var strHTML = "";
-        for(var i;i<10;++i){
-            strHTML = "<div class='cus-flex-item'>";
-            strHTML += "<span class='cus-round-red'>";
-            strHTML += "i+</span>";
-            strHTML += "<span class='cus-muted'>"
-            strHTML += "ii+</span>";
-            strHTML += "</div>"
-        }
-      $(".cus-flex-list").html(strHTML);
-    }
-);
