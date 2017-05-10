@@ -1271,7 +1271,6 @@ public class MemberController extends BaseController {
     public SscBetsListResult ajaxGetTzjl(Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Long playGroupId, Long playId, Integer status, Boolean isZhongjiang) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-
         String companyShortName = this.getCompanyShortName();
         return ApiUtils.getSscBetsList(uid, token, startTime, endTime, pageIndex, pageSize, playGroupId, playId, status, isZhongjiang, companyShortName);
     }
