@@ -35,6 +35,6 @@ public class MathUtils {
 
     public static void main(String[] args) {
         double o = new Double(500000047.67);
-        System.out.println(o);
+//        System.out.println(o);
     }
 }

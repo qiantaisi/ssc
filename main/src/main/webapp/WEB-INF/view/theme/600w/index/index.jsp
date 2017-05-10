@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
     String u = request.getParameter("u");
-    System.out.println(u + "-----------");
+//    System.out.println(u + "-----------");
     if (StringUtils.isBlank(u)) {
         u = basePath + "main.html";
     }

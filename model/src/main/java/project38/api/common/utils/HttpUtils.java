@@ -138,7 +138,7 @@ public class HttpUtils {
             }
             response = httpclient.execute(httpGet);
             result = getResponseContent(httpGet, response);
-            System.out.println("result: " + result);
+//            System.out.println("result: " + result);
         } catch (IOException e) {
             e.printStackTrace();
             log.error(HttpUtils.class, e);

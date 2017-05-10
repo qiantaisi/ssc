@@ -172,7 +172,7 @@ public class DateUtils {
             TimeInfo timeInfo = timeClient.getTime(timeServerAddress);
             TimeStamp timeStamp = timeInfo.getMessage().getTransmitTimeStamp();
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-            System.out.println(dateFormat.format(timeStamp.getDate()));
+//            System.out.println(dateFormat.format(timeStamp.getDate()));
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
