@@ -8,7 +8,8 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="head">
-    <img src="${resPath}member/images/hpn/ic1.png"/>
+    <%--<img src="${resPath}member/images/hpn/ic1.png"/>--%>
+    <img src="<%=basePath%>images/${logoData.imageId}" alt="">
     <div>
         <h5><span>北京时间：<i id="bjTime" data-time="<%=(new Date()).getTime()%>"></i></span></h5>
         <p>您的贵宾网址：${userSession.privateUrl}</p>
