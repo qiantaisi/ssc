@@ -26,7 +26,9 @@ public abstract class BaseController {
     @Autowired
     private HttpServletRequest httpServletRequest;
 
-    /** 基于@ExceptionHandler异常处理 */
+    /**
+     * 基于@ExceptionHandler异常处理
+     */
     @ExceptionHandler
     public ModelAndView exp(HttpServletRequest request, Exception ex) {
         log.error(this, ex);
@@ -39,7 +41,6 @@ public abstract class BaseController {
     /**
      * 渲染视图
      *
-     *
      * @param jspLocation
      * @param modelMap
      * @return
@@ -49,7 +50,7 @@ public abstract class BaseController {
             modelMap = new HashMap<String, Object>();
         }
 
-         String theme = null;
+        String theme = null;
 //        if (StringUtils.isBlank(theme)) {
 //            theme = "default";
 //        }
@@ -79,7 +80,7 @@ public abstract class BaseController {
         return modelAndView;
     }
 
-     /**
+    /**
      * 渲染视图
      *
      * @param jspLocation
