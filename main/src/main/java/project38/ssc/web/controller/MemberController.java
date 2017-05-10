@@ -1269,8 +1269,9 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/ajaxGetTzjl.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public SscBetsListResult ajaxGetTzjl(Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Long playGroupId, Long playId, Integer status, Boolean isZhongjiang) {
-        Long uid = Long.parseLong((String) httpServletRequest.getAttribute("uid"));
-        String token = (String) httpServletRequest.getAttribute("token");
+        Long uid = this.getUid(httpServletRequest);
+        String token = this.getToken(httpServletRequest);
+
         String companyShortName = this.getCompanyShortName();
         return ApiUtils.getSscBetsList(uid, token, startTime, endTime, pageIndex, pageSize, playGroupId, playId, status, isZhongjiang, companyShortName);
     }
@@ -1407,6 +1408,7 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/getUserSession.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public String getUserSession(HttpServletRequest httpServletRequest) throws Exception {
+        String companyShortName = this.getCompanyShortName();
         return updateUserInfo(httpServletRequest);
     }
 
@@ -1419,6 +1421,7 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.sigout(uid, token,companyShortName));
     }
+
 
     /**
      * ajax获取弹窗公告
