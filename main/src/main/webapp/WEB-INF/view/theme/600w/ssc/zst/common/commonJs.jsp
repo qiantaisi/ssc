@@ -190,9 +190,9 @@
 
        // module -- 字符串例子：gcdt/cqssc
       // var caizhong = module.toString().split("/");
-        <%--window.location.href ='<%=basePath%>ssc/index.html?module=' + module;--%>
-        openGcdt(module);
+        window.location.href ='<%=basePath%>ssc/index.html?module=' + module;
     }
+
 
     $(function () {
         var right_w = $(".shuoming .shuomingright").outerWidth();
