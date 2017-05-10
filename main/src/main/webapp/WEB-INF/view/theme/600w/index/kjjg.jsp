@@ -885,7 +885,7 @@
             </div>
             <p>
             </p>
-        </div>gcdt/
+        </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=9">历史开奖</a>
             <a href="javascript:void(0)" onclick="goZst('zst/pk10')">走势图表</a>
