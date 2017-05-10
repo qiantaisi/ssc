@@ -1407,7 +1407,6 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/getUserSession.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public String getUserSession(HttpServletRequest httpServletRequest) throws Exception {
-        String companyShortName = this.getCompanyShortName();
         return updateUserInfo(httpServletRequest);
     }
 
@@ -1420,7 +1419,6 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.sigout(uid, token,companyShortName));
     }
-
 
     /**
      * ajax获取弹窗公告

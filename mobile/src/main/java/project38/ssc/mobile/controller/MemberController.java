@@ -43,7 +43,7 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxRegister.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxRegister(String account, String password, String name, Long agentId,String companyShortName) {
+    public LoginResult ajaxRegister(String account, String password, String name, Long agentId) {
         LoginResult result = new LoginResult();
         try {
             if (StringUtils.isBlank(account)) {
@@ -57,6 +57,8 @@ public class MemberController extends BaseController {
                 result.setDescription("密码不能为空");
                 return result;
             }
+
+            String companyShortName = this.getCompanyShortName();
 
             // 接口返回数据
             String ip = IPHelper.getIpAddr(httpServletRequest);
@@ -197,9 +199,10 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/zhcz/yhzz.html", method = RequestMethod.GET)
-    public ModelAndView zhczYhzz(String companyShortName) throws Exception {
+    public ModelAndView zhczYhzz() throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         // 权限检查
@@ -1197,7 +1200,8 @@ public class MemberController extends BaseController {
 
     @RequestMapping(value = "/ajaxGetServerTime.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String getServerTime(String companyShortName) {
+    public String getServerTime() {
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.getServerTime(companyShortName));
     }
 
@@ -1246,9 +1250,10 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetWebPopUpNoticeList.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public WebNoticeResult ajaxGetWebPopUpNoticeList(String companyShortName) throws Exception {
+    public WebNoticeResult ajaxGetWebPopUpNoticeList() throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         return ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName);
     }
 

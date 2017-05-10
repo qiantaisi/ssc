@@ -46,20 +46,22 @@ public class SscController extends BaseController {
     private HttpServletRequest httpServletRequest;
 
     @RequestMapping(value = "/register.html",method = RequestMethod.GET)
-    public ModelAndView register(String companyShortName){
+    public ModelAndView register(){
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderView("index/register", modelMap);
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
-    public ModelAndView index(String companyShortName) {
+    public ModelAndView index() {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        String companyShortName = this.getCompanyShortName();
         modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
         return this.renderView("ssc/index", modelMap);
     }
 
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
-    public ModelAndView main(String companyShortName) {
+    public ModelAndView main() {
+        String companyShortName = this.getCompanyShortName();
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
 
@@ -71,10 +73,10 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/gcdt.html", method = RequestMethod.GET)
-    public ModelAndView gcdt(String companyShortName) {
+    public ModelAndView gcdt() {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,null, null, companyShortName).getWebNoticeList());
@@ -82,8 +84,9 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/tingcaipage.html", method = RequestMethod.GET)
-    public ModelAndView tingcaipage(String companyShortName) {
+    public ModelAndView tingcaipage() {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        String companyShortName = this.getCompanyShortName();
         return this.renderView("ssc/gcdt/tingcaipage", modelMap);
     }
 
@@ -106,13 +109,13 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/zst/{module}.html", method = RequestMethod.GET)
-    public ModelAndView zstModule(@PathVariable String module,String companyShortName) {
+    public ModelAndView zstModule(@PathVariable String module) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderView("ssc/zst/" + module, modelMap);
     }
 
     @RequestMapping(value = "/gcdt/{group}/{play}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroupPlay(@PathVariable String group, @PathVariable String play,String companyShortName) {
+    public ModelAndView gcdtGroupPlay(@PathVariable String group, @PathVariable String play) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderView("ssc/gcdt/" + group + "/" + play, modelMap);
     }
@@ -120,7 +123,7 @@ public class SscController extends BaseController {
     @Authentication
     @RequestMapping(value = "/ajaxBet.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxBet(HttpServletRequest httpServletRequest, String betForm, String companyShortName) {
+    public String ajaxBet(HttpServletRequest httpServletRequest, String betForm) {
         CommonResult result = new CommonResult();
         try {
             SscBetForm sscBetForm = JSONUtils.toObject(betForm, SscBetForm.class);
@@ -132,6 +135,7 @@ public class SscController extends BaseController {
 
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
+            String companyShortName = this.getCompanyShortName();
             result = ApiUtils.bet(uid, token, betForm, companyShortName);
         } catch (Exception e) {
             result.setResult(-1000);
@@ -142,8 +146,9 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/getSscOpenTime.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String getSscOpenTime(Boolean isData, Long playGroupId, Long playId, Boolean calcJiangchi,String companyShortName) {
+    public String getSscOpenTime(Boolean isData, Long playGroupId, Long playId, Boolean calcJiangchi) {
         SscOpenTimeResult result = new SscOpenTimeResult();
+        String companyShortName = this.getCompanyShortName();
         try {
             result = ApiUtils.getSscOpenTime(isData, playGroupId, playId, 0, 5, calcJiangchi, companyShortName);
         } catch (Exception e) {
@@ -155,7 +160,8 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/getAllOpenTime.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String gouCaiDaTJson (String companyShortName) {
+    public String gouCaiDaTJson () {
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.getAllSscOpenTime(companyShortName));
     }
 
@@ -163,19 +169,21 @@ public class SscController extends BaseController {
     @Authentication
     @RequestMapping(value = "/getBetDetails.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String getBetDetails(HttpServletRequest httpServletRequest,Integer pageIndex,Integer pageSize,Date startTime,Date endTime,Integer status,Long playGroupId,String number,String orderNumber, Boolean isZhongjiang,String companyShortName) {
+    public String getBetDetails(HttpServletRequest httpServletRequest,Integer pageIndex,Integer pageSize,Date startTime,Date endTime,Integer status,Long playGroupId,String number,String orderNumber, Boolean isZhongjiang ) {
         BetListResult result = new BetListResult();
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
         result = ApiUtils.getBetDetails(uid,token,pageIndex,pageSize,startTime,endTime,status, playGroupId, number, orderNumber, isZhongjiang,companyShortName);
         return this.renderJson(result);
     }
 
     @RequestMapping(value = "/ajaxGetHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date,String companyShortName) {
+    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date) {
         SscHistoryResult result = new SscHistoryResult();
+        String companyShortName = this.getCompanyShortName();
         try {
             result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date,companyShortName);
         } catch (Exception e) {
@@ -187,8 +195,9 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/ajaxGetSscPlayJjDescription.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscPlayJjDescriptionResult ajaxGetSscPlayJjDescription(Long playId,String companyShortName) {
+    public SscPlayJjDescriptionResult ajaxGetSscPlayJjDescription(Long playId) {
         SscPlayJjDescriptionResult result = new SscPlayJjDescriptionResult();
+        String companyShortName = this.getCompanyShortName();
         try {
             result = ApiUtils.getSscPlayJjDescription(playId, companyShortName);
         } catch (Exception e) {
@@ -202,8 +211,9 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/ajaxGetSscOpenTime.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String ajaxGetSscOpenTime(Long playGroupId, String companyShortName) {
+    public String ajaxGetSscOpenTime(Long playGroupId ) {
         SscOpenTimeResult result = new SscOpenTimeResult();
+        String companyShortName = this.getCompanyShortName();
         try {
             result = ApiUtils.getSscOpenTime(false, playGroupId, null, null, null, null, companyShortName);
         } catch (Exception e) {
@@ -216,8 +226,9 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/getSscOpenTimePer.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String getSscOpenTimePer(Long playGroupId,String companyShortName) {
+    public String getSscOpenTimePer(Long playGroupId ) {
         SscOpenTimeResultPer result = new SscOpenTimeResultPer();
+        String companyShortName = this.getCompanyShortName();
         try {
             result = ApiUtils.getSscOpenTimePer(playGroupId, companyShortName);
         } catch (Exception e) {
@@ -234,8 +245,9 @@ public class SscController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetSscLeftTime.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscLeftTimeResult ajaxGetSscLeftTime(Long playGroupId,String companyShortName) {
+    public SscLeftTimeResult ajaxGetSscLeftTime(Long playGroupId ) {
         SscLeftTimeResult result = new SscLeftTimeResult();
+        String companyShortName = this.getCompanyShortName();
         try {
             result = ApiUtils.getSscLeftTime(playGroupId, companyShortName);
         } catch (Exception e) {
@@ -252,7 +264,8 @@ public class SscController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetSscPlayPl.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscPlayPlResult ajaxGetSscPlayPl(Long playId,String companyShortName) {
+    public SscPlayPlResult ajaxGetSscPlayPl(Long playId ) {
+        String companyShortName = this.getCompanyShortName();
         SscPlayPlResult result = new SscPlayPlResult();
         try {
             Long uid = this.getUid(httpServletRequest);
@@ -272,7 +285,8 @@ public class SscController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetSscDataHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult2 ajaxGetSscDataHistory(Long playGroupId,String companyShortName) {
+    public SscHistoryResult2 ajaxGetSscDataHistory(Long playGroupId ) {
+        String companyShortName = this.getCompanyShortName();
         SscHistoryResult2 result = new SscHistoryResult2();
         try {
             result = ApiUtils.getSscDataHistory(0, 5, playGroupId, null, project38.api.common.utils.DateUtils.getBeijingCalendar().getTime(),companyShortName);
@@ -290,8 +304,9 @@ public class SscController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetDataHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult3 ajaxGetDataHistory(Integer pageIndex, Integer pageSize, Date openDate, String number, Long playGroupId, Date startTime, Date endTime, String companyShortName) {
+    public SscHistoryResult3 ajaxGetDataHistory(Integer pageIndex, Integer pageSize, Date openDate, String number, Long playGroupId, Date startTime, Date endTime) {
         SscHistoryResult3 result = new SscHistoryResult3();
+        String companyShortName = this.getCompanyShortName();
         try {
             result = ApiUtils.getDataHistory(pageIndex, pageSize, openDate, number, playGroupId, startTime, endTime, companyShortName);
         } catch (Exception e) {
@@ -308,7 +323,8 @@ public class SscController extends BaseController {
      */
     @RequestMapping(value = "/ajaxGetAllDataHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult3 ajaxGetAllDataHistory(Integer type, String companyShortName) {
+    public SscHistoryResult3 ajaxGetAllDataHistory(Integer type) {
+        String companyShortName = this.getCompanyShortName();
         SscHistoryResult3 result = new SscHistoryResult3();
         try {
             result = ApiUtils.getAllDataHistory(type, null, companyShortName);
@@ -320,35 +336,38 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/kjjl/list.html",method = RequestMethod.GET)
-    public ModelAndView kjjlList(Long playGroupId, String companyShortName){
+    public ModelAndView kjjlList(Long playGroupId ){
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
         return this.renderView("ssc/kjjl/list", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/all.html",method = RequestMethod.GET)
-    public ModelAndView kjjlAll(String companyShortName){
+    public ModelAndView kjjlAll(){
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderView("ssc/kjjl/all", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/bqxq.html",method = RequestMethod.GET)
-    public ModelAndView kjjlGdqc(Long playGroupId,String companyShortName){
+    public ModelAndView kjjlGdqc(Long playGroupId){
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        String companyShortName = this.getCompanyShortName();
         modelMap.put("playGroupId", playGroupId);
         modelMap.put("openData", JSONUtils.toJSONStr(ApiUtils.getAllDataHistory(3, playGroupId,companyShortName)));
         return this.renderView("ssc/kjjl/bqxq", modelMap);
     }
 
     @RequestMapping(value = "/wfsm/lskj.html",method = RequestMethod.GET)
-    public ModelAndView wfsmLskj(Long playGroupId,String companyShortName){
+    public ModelAndView wfsmLskj(Long playGroupId){
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
         return this.renderView("ssc/wfsm/lskj", modelMap);
     }
 
     @RequestMapping(value = "/wfsm/wfsm.html",method = RequestMethod.GET)
-    public ModelAndView wfsmWfsm( Long playGroupId,String companyShortName){
+    public ModelAndView wfsmWfsm( Long playGroupId ){
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
         return this.renderView("ssc/wfsm/wfsm", modelMap);
@@ -362,7 +381,8 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/getSscOpenTime2.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscOpenTimeResult getSscOpenTime2(Long playGroupId,String companyShortName) {
+    public SscOpenTimeResult getSscOpenTime2(Long playGroupId) {
+        String companyShortName = this.getCompanyShortName();
         SscOpenTimeResult result = new SscOpenTimeResult();
         try {
             result = ApiUtils.getSscOpenTime2(playGroupId,companyShortName);
@@ -376,7 +396,8 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/getPlanOpenDataHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult2 getPlanOpenDataHistory(Integer size, Long playGroupId,String companyShortName) {
+    public SscHistoryResult2 getPlanOpenDataHistory(Integer size, Long playGroupId) {
+        String companyShortName = this.getCompanyShortName();
         SscHistoryResult2 result = new SscHistoryResult2();
         try {
             // 默认5条
