@@ -14,15 +14,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.*;
 import project38.api.utils.ApiUtils;
-import project38.ssc.mobile.auth.Authentication;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.swing.text.html.HTML;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,7 +37,8 @@ public class SscController extends BaseController {
     public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date) {
         SscHistoryResult result = new SscHistoryResult();
         try {
-            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date);
+            String companyShortName = this.getCompanyShortName();
+            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date, companyShortName);
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");
