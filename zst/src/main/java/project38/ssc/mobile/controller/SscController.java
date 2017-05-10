@@ -37,8 +37,7 @@ public class SscController extends BaseController {
     public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date) {
         SscHistoryResult result = new SscHistoryResult();
         try {
-            String companyShortName = this.getCompanyShortName();
-            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date, companyShortName);
+            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date, null);
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");

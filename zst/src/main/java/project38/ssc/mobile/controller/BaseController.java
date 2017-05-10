@@ -65,10 +65,10 @@ public abstract class BaseController {
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, this.getCompanyShortName());
-        if (null != userSessionResult && userSessionResult.getResult() == 1) {
-            modelMap.put("userSession", userSessionResult);
-        }
+//        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, this.getCompanyShortName());
+//        if (null != userSessionResult && userSessionResult.getResult() == 1) {
+//            modelMap.put("userSession", userSessionResult);
+//        }
 
         ModelAndView modelAndView = new ModelAndView("theme/" + theme + "/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
