@@ -22,29 +22,37 @@
             </a>
             <h1 class="title">重庆时时彩<i class="triangle-down"> <!--向下的三角--> </i></h1>
         </header>
-        <c:import url="common/commonBet.jsp" />
+        <c:import url="common/commonBet.jsp"/>
         <div class="consele">
             <div class="selects">
                 <div class="selects-one">
                     <span class="active"><a href="<%=basePath%>ssc/gcdt/gfwf/cpssc.html">官方玩法</a></span>
                 </div>
+            </div>
+            <div class="selects">
                 <div class="selects-two">
                     <span>快捷玩法</span>
                 </div>
             </div>
         </div>
-
+        <div class="bott">
+            <%--半透明--%>
+        </div>
         <div class="content cl-601 show_hide">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/sm.html">双面</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/szp.html">数字盘</a>
+                    <a href="javascript:void(0)" data-type="page"
+                       data-url="<%=basePath%>ssc/gcdt/cqssc/szp.html">数字盘</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-yzdw">一字定</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/ezdw.html">二字定</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/szdw.html">三字定</a>
+                    <a href="javascript:void(0)" data-type="page"
+                       data-url="<%=basePath%>ssc/gcdt/cqssc/ezdw.html">二字定</a>
+                    <a href="javascript:void(0)" data-type="page"
+                       data-url="<%=basePath%>ssc/gcdt/cqssc/szdw.html">三字定</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-yzzh">一字组</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-ezzh">二字组</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/ezhs.html">二字和</a>
+                    <a href="javascript:void(0)" data-type="page"
+                       data-url="<%=basePath%>ssc/gcdt/cqssc/ezhs.html">二字和</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-zxs">组选三</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-zxl">组选六</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-kd">跨度</a>
@@ -111,9 +119,9 @@
             </div>
         </div>
     </div>
-    <c:import url="../../common/leftSscPanel.jsp" />
+    <c:import url="../../common/leftSscPanel.jsp"/>
     <c:import url="../../common/rightPanel.jsp">
-        <c:param name="playGroupId" value="1" />
+        <c:param name="playGroupId" value="1"/>
     </c:import>
 </div>
 <c:import url="../../common/commonJs.jsp"/>
@@ -134,7 +142,8 @@
     </div>
 </script>
 <script type="text/html" id="template_lastOpenInfo">
-    <span class="left cl-1200 ssc_1200_qi" id="lastNumber">第<span class="style_blue">{{number}}</span>期&nbsp;&nbsp;</span>
+    <span class="left cl-1200 ssc_1200_qi" id="lastNumber">第<span
+            class="style_blue">{{number}}</span>期&nbsp;&nbsp;</span>
     <div class="left">
         <span class="cl-1201 ssc_1201_num">
             {{each openCodeArr as value index}}
