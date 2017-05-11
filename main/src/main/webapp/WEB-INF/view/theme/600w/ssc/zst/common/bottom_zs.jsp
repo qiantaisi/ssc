@@ -327,17 +327,17 @@
                 if (value.y > col_y_flag_ds) {
                     $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(col_y_flag_ds).find("td").eq((parseInt(value.x) + col_x_ds)).html(value.name);
                     //分别设置每位遍历写入表格时，超过六行的标记（记录x轴的延伸情况）
-                    if(pre == 0){
+                    if(i == 0){
                         flagds[col_y_flag_ds][value.x + col_x_ds] = 1;
-                    }else if(pre == 1){
+                    }else if(i == 1){
                         flagds_1[col_y_flag_ds][value.x + col_x_ds] = 1;
-                    }else if(pre == 2){
+                    }else if(i == 2){
                         flagds_2[col_y_flag_ds][value.x + col_x_ds] = 1;
-                    }else if(pre == 3){
+                    }else if(i == 3){
                         flagds_3[col_y_flag_ds][value.x + col_x_ds] = 1;
-                    }else if(pre == 4){
+                    }else if(i == 4){
                         flagds_4[col_y_flag_ds][value.x + col_x_ds] = 1;
-                    }else if(pre == 5){
+                    }else if(i == 5){
                         flagds_5[col_y_flag_ds][value.x + col_x_ds] = 1;
                     }
 
@@ -345,22 +345,22 @@
                     col_x_ds++;
                 } else {
                     //判断每位每组数据在碰到做标记的数据时，向右移动且对当前行数减掉一行，并且记录当前最大x轴延伸的位置
-                    if ((pre == 5 && flagds_5[value.y][value.x] == 1) ||(pre == 4 && flagds_4[value.y][value.x] == 1) ||(pre == 3 && flagds_3[value.y][value.x] == 1) ||(pre == 2 && flagds_2[value.y][value.x] == 1) || (pre == 1 && flagds_1[value.y][value.x] == 1) || (pre == 0 && flagds[value.y][value.x] == 1)) {
+                    if ((i == 5 && flagds_5[value.y][value.x] == 1) ||(i == 4 && flagds_4[value.y][value.x] == 1) ||(i == 3 && flagds_3[value.y][value.x] == 1) ||(i == 2 && flagds_2[value.y][value.x] == 1) || (i == 1 && flagds_1[value.y][value.x] == 1) || (i == 0 && flagds[value.y][value.x] == 1)) {
                         if (col_y_flag_ds != 0) {
                             col_y_flag_ds--;
                         }
                         $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(col_y_flag_ds).find("td").eq(value.x + col_x_ds).html(value.name);
-                        if(pre == 0){
+                        if(i == 0){
                             flagds[col_y_flag_ds][value.x + col_x_ds] = 1;
-                        }else if(pre == 1){
+                        }else if(i == 1){
                             flagds_1[col_y_flag_ds][value.x + col_x_ds] = 1;
-                        }else if(pre == 2){
+                        }else if(i == 2){
                             flagds_2[col_y_flag_ds][value.x + col_x_ds] = 1;
-                        }else if(pre == 3){
+                        }else if(i == 3){
                             flagds_3[col_y_flag_ds][value.x + col_x_ds] = 1;
-                        }else if(pre == 4){
+                        }else if(i == 4){
                             flagds_4[col_y_flag_ds][value.x + col_x_ds] = 1;
-                        }else if(pre == 5){
+                        }else if(i == 5){
                             flagds_5[col_y_flag_ds][value.x + col_x_ds] = 1;
                         }
                         ds_col_max_right_x = ds_col_max_right_x > (value.x + col_x_ds) ? ds_col_max_right_x : (value.x + col_x_ds);
@@ -378,21 +378,20 @@
                 }
             });
             $.each(value.dx, function (index, value) {
-
                 if (value.y > col_y_flag_dx) {
                     $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(col_y_flag_dx).find("td").eq((parseInt(value.x) + col_x_dx)).html(value.name);
                     //分别设置每位遍历写入表格时，超过六行的标记（记录x轴的延伸情况）
-                    if(pre == 0){
+                    if(i == 0){
                         flagdx[col_y_flag_dx][value.x + col_x_dx] = 1;
-                    }else if(pre == 1){
+                    }else if(i == 1){
                         flagdx_1[col_y_flag_dx][value.x + col_x_dx] = 1;
-                    }else if(pre == 2){
+                    }else if(i == 2){
                         flagdx_2[col_y_flag_dx][value.x + col_x_dx] = 1;
-                    }else if(pre == 3){
+                    }else if(i == 3){
                         flagdx_3[col_y_flag_dx][value.x + col_x_dx] = 1;
-                    }else if(pre == 4){
+                    }else if(i == 4){
                         flagdx_4[col_y_flag_dx][value.x + col_x_dx] = 1;
-                    }else if(pre == 5){
+                    }else if(i == 5){
                         flagdx_5[col_y_flag_dx][value.x + col_x_dx] = 1;
                     }
 
@@ -400,22 +399,22 @@
                     col_x_dx++;
                 } else {
                     //判断每位每组数据在碰到做标记的数据时，向右移动且对当前行数减掉一行，并且记录当前最大x轴延伸的位置
-                    if ((pre == 5 && flagdx_5[value.y][value.x] == 1) ||(pre == 4 && flagdx_4[value.y][value.x] == 1) ||(pre == 3 && flagdx_3[value.y][value.x] == 1) ||(pre == 2 && flagdx_2[value.y][value.x] == 1) || (pre == 1 && flagdx_1[value.y][value.x] == 1) || (pre == 0 && flagdx[value.y][value.x] == 1)) {
-                        if (col_y_flag_dx != 0) {
-                            col_y_flag_dx--;
+                    if ((i == 5 && flagdx_5[value.y][value.x] == 1) ||(i == 4 && flagdx_4[value.y][value.x] == 1) ||(i == 3 && flagdx_3[value.y][value.x] == 1) ||(i == 2 && flagdx_2[value.y][value.x] == 1) || (i == 1 && flagdx_1[value.y][value.x] == 1) || (i == 0 && flagdx[value.y][value.x] == 1)) {
+                        if (value.y  != 0) {
+                            col_y_flag_dx = value.y - 1;
                         }
                         $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(col_y_flag_dx).find("td").eq(value.x + col_x_dx).html(value.name);
-                        if(pre == 0){
+                        if(i == 0){
                             flagdx[col_y_flag_dx][value.x + col_x_dx] = 1;
-                        }else if(pre == 1){
+                        }else if(i == 1){
                             flagdx_1[col_y_flag_dx][value.x + col_x_dx] = 1;
-                        }else if(pre == 2){
+                        }else if(i == 2){
                             flagdx_2[col_y_flag_dx][value.x + col_x_dx] = 1;
-                        }else if(pre == 3){
+                        }else if(i == 3){
                             flagdx_3[col_y_flag_dx][value.x + col_x_dx] = 1;
-                        }else if(pre == 4){
+                        }else if(i == 4){
                             flagdx_4[col_y_flag_dx][value.x + col_x_dx] = 1;
-                        }else if(pre == 5){
+                        }else if(i == 5){
                             flagdx_5[col_y_flag_dx][value.x + col_x_dx] = 1;
                         }
                         dx_col_max_right_x = dx_col_max_right_x > (value.x + col_x_dx) ? dx_col_max_right_x : (value.x + col_x_dx);
