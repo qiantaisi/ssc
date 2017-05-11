@@ -36,7 +36,7 @@ public class ErrorController extends BaseController{
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webName",webInfoResult.getWebName());
-        return this.renderView("error/500/index", modelMap);
+        return this.renderView( "error/500/index", modelMap);
     }
 
     @RequestMapping(value = "/incompatible.html", method = RequestMethod.GET)
