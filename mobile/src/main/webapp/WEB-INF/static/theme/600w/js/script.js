@@ -6657,10 +6657,11 @@ $(".title").click(
         if ($(".content").is(".show_hide")) {
             $(".page").find(".show_hide").removeClass("show_hide");
             $(".consele").addClass("show_hide");
+            $(".bott").addClass("show_hide");
         } else {
             $(".consele").removeClass("show_hide");
+            $(".bott").removeClass("show_hide");
             $(".page").find(".content").addClass("show_hide");
         }
     }
 );
-

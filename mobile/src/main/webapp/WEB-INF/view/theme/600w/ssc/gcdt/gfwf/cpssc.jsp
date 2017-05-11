@@ -28,10 +28,15 @@
                 <div class="selects-one">
                     <span class="active">官方玩法</span>
                 </div>
+            </div>
+            <div class="selects">
                 <div class="selects-two">
                     <span><a href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a></span>
                 </div>
             </div>
+        </div>
+        <div class="bott">
+            <%--半透明--%>
         </div>
         <div class="content cl-601 show_hide">
             <div class="cus-tabs-scroll">
