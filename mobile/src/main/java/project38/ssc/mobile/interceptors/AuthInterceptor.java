@@ -22,8 +22,8 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
     private Log log = LogFactory.getLog(getClass());
 
-//    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler,String companyShortName) throws Exception {
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String uri = request.getRequestURI();
 //        log.info("uri:" + uri);
 
@@ -46,8 +46,10 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
         }
 
         boolean flag = true;
+        String companyShortName = (String) request.getSession().getAttribute("COMPANY_SHORT_NAME");
         if (handler instanceof HandlerMethod) {
             Authentication authentication = ((HandlerMethod) handler).getMethod().getAnnotation(Authentication.class);
+
             if (null != authentication) {   // 有权限控制的就要检查
                 if (StringUtils.isBlank(uidStr) || StringUtils.isBlank(token) || ApiUtils.checkOnline(Long.parseLong(uidStr), token,companyShortName).getResult() != 1) {    // 没登录就要求登录
                     flag = false;
