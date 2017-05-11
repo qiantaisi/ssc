@@ -22,6 +22,16 @@ public class SscPlayPlResult2 extends CommonResult {
     public static class SscPlayPlGroup {
         private String name;
 
+        private Integer dataType;
+
+        public Integer getDataType() {
+            return dataType;
+        }
+
+        public void setDataType(Integer dataType) {
+            this.dataType = dataType;
+        }
+
         private List<SscPlayPl> sscPlayPlList;
 
         public List<SscPlayPl> getSscPlayPlList() {

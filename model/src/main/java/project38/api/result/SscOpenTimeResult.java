@@ -196,6 +196,16 @@ public class SscOpenTimeResult extends CommonResult {
 
         private Long id;
 
+        private Integer dataType;
+
+        public Integer getDataType() {
+            return dataType;
+        }
+
+        public void setDataType(Integer dataType) {
+            this.dataType = dataType;
+        }
+
         public List<SscPlayPl> getSscPlayPlList() {
             return sscPlayPlList;
         }
