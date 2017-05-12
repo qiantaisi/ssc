@@ -7,6 +7,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import project38.api.utils.SessionUtils;
 import project38.api.utils.ApiUtils;
 import project38.ssc.mobile.auth.Authentication;
 
@@ -22,8 +23,8 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
     private Log log = LogFactory.getLog(getClass());
 
-    //    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler,String companyShortName) throws Exception {
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String uri = request.getRequestURI();
 //        log.info("uri:" + uri);
 
@@ -45,11 +46,18 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             }
         }
 
+
+        String companyShortName = SessionUtils.getSessionCompanyShortName(request);
+        if (StringUtils.isBlank(companyShortName)) {
+            companyShortName = ApiUtils.getCompanyShortName(request.getServerName()).getCompanyShortName();
+            SessionUtils.setSessionCompanyShortName(request, companyShortName);
+        }
+
         boolean flag = true;
         if (handler instanceof HandlerMethod) {
             Authentication authentication = ((HandlerMethod) handler).getMethod().getAnnotation(Authentication.class);
             if (null != authentication) {   // 有权限控制的就要检查
-                if (StringUtils.isBlank(uidStr) || StringUtils.isBlank(token) || ApiUtils.checkOnline(Long.parseLong(uidStr), token,companyShortName).getResult() != 1) {    // 没登录就要求登录
+                if (StringUtils.isBlank(uidStr) || StringUtils.isBlank(token) || ApiUtils.checkOnline(Long.parseLong(uidStr), token, companyShortName).getResult() != 1) {    // 没登录就要求登录
                     flag = false;
                     if (uri.indexOf(".json") > 0) {
                         CommonResult commonResult = new CommonResult();
@@ -67,7 +75,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
                         }
                     } else if (uri.indexOf(".html") > 0) {
                         String path = request.getContextPath();
-                        String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/login.html?refer=" + uri;
+                        String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
 
                         response.sendRedirect(basePath);
                     }
@@ -80,7 +88,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
         }
 
         if (uri.indexOf(".html") > 0) {
-            if (StringUtils.isNotBlank(uidStr) && StringUtils.isNotBlank(token)) {
+            if (StringUtils.isNotBlank(uidStr) && StringUtils.isNotBlank(token) && StringUtils.isNotBlank(companyShortName)) {
                 String path = request.getContextPath();
                 String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
                 ApiUtils.updateOnlineInfo(Long.parseLong(uidStr), token, basePath + uri,companyShortName);

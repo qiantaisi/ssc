@@ -7,8 +7,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-import project38.ssc.web.auth.Authentication;
+import project38.api.utils.SessionUtils;
 import project38.api.utils.ApiUtils;
+import project38.ssc.web.auth.Authentication;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +23,8 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
     private Log log = LogFactory.getLog(getClass());
 
-//    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler, String companyShortName) throws Exception {
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String uri = request.getRequestURI();
 //        log.info("uri:" + uri);
 
@@ -43,6 +44,13 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
                     }
                 }
             }
+        }
+
+
+        String companyShortName = SessionUtils.getSessionCompanyShortName(request);
+        if (StringUtils.isBlank(companyShortName)) {
+            companyShortName = ApiUtils.getCompanyShortName(request.getServerName()).getCompanyShortName();
+            SessionUtils.setSessionCompanyShortName(request, companyShortName);
         }
 
         boolean flag = true;
@@ -80,7 +88,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
         }
 
         if (uri.indexOf(".html") > 0) {
-            if (StringUtils.isNotBlank(uidStr) && StringUtils.isNotBlank(token)) {
+            if (StringUtils.isNotBlank(uidStr) && StringUtils.isNotBlank(token) && StringUtils.isNotBlank(companyShortName)) {
                 String path = request.getContextPath();
                 String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
                 ApiUtils.updateOnlineInfo(Long.parseLong(uidStr), token, basePath + uri,companyShortName);

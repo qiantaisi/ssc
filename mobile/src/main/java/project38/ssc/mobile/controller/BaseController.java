@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.CompanyShortNameResult;
 import project38.api.result.UserSessionResult;
 import project38.api.utils.ApiUtils;
+import project38.api.utils.SessionUtils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -150,10 +151,15 @@ public abstract class BaseController {
 
     protected String getCompanyShortName() {
         // 公司标志
-        String companyShortName = null;
+        String companyShortName = SessionUtils.getSessionCompanyShortName(httpServletRequest);
+        if (StringUtils.isNotBlank(companyShortName)) {
+            return companyShortName;
+        }
+
         CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
         if (companyShortNameResult.getResult() == 1) {
             companyShortName = companyShortNameResult.getCompanyShortName();
+            SessionUtils.setSessionCompanyShortName(httpServletRequest, companyShortName);
         }
 
         if (StringUtils.isBlank(companyShortName)) {
