@@ -975,10 +975,20 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/submitWithdraw.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public String ajaxWithdraw(Double money, Long id, String drawPassword) {
+
+
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
-        CommonResult result = ApiUtils.submitWithdraw(uid, token, money, id, drawPassword, companyShortName);
+        CommonResult result = new CommonResult();
+
+        if (money == null) {
+            result.setResult(-1);
+            result.setDescription("请输入金额");
+            return this.renderJson(result);
+        }
+
+        result = ApiUtils.submitWithdraw(uid, token, money, id, drawPassword, companyShortName);
         return this.renderJson(result);
     }
 
