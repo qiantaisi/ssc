@@ -5744,7 +5744,7 @@ $(function () {
 
                             var html = template("template_" + tmpPlayGroupId, obj);
                             str += html;
-                        } else if ($.inArray(tmpPlayGroupId, [6, 22]) >= 0) {
+                        } else if ($.inArray(tmpPlayGroupId, [6]) >= 0) {
                             var obj = {};
 
                             obj.openTime = value.openTime;

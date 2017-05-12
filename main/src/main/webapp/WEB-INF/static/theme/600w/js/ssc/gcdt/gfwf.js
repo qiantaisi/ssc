@@ -95,30 +95,36 @@ function selectFun_6(obj) {
     clearStateTouZhu();//清除投注状态栏
 }
 
-function stateTouZhu(flag_str){
+function stateTouZhu(flag_str) {
     var flag_str_inner = '';
     var zhushu = 0;
-    if(typeof flag_str == 'undefined' || flag_str == null){
+    if (typeof flag_str == 'undefined' || flag_str == null) {
         flag_str_inner = 'zxfs_zx';
-    }else{
+    } else {
         flag_str_inner = flag_str;
     }
-    if(flag_str_inner == 'dan'){
+    if (flag_str_inner == 'dan') {
         zhushu = getDsZhushu();
-    }else if(flag_str_inner == "zxfs_zx" || flag_str_inner == "fu"){
+    } else if (flag_str_inner == "zxfs_zx" || flag_str_inner == "fu") {
         zhushu = getZhushu();
-    }else if(flag_str_inner == "hszh_zx"){
+    } else if (flag_str_inner == "hszh_zx") {
         zhushu = getHsZhushu();
-    }else if(flag_str_inner == "zxhz_zx"){
+    } else if (flag_str_inner == "zxhz_zx") {
         zhushu = getHezhiZhushu(flag_str_inner);
-    }else if(flag_str_inner == "zxkd_zx"){
+    } else if (flag_str_inner == "zxkd_zx") {
         zhushu = getKaDuZhushu(flag_str_inner);
-    }else if(flag_str_inner == "zsfs_zux"){
+    } else if (flag_str_inner == "zsfs_zux") {
         zhushu = getZuSanZhushu(flag_str_inner);
-    }else if(flag_str_inner == "zsds_zux"){ //后三组选-组选单式
+    } else if (flag_str_inner == "zsds_zux") { //后三组选-组选单式
         zhushu = getZsdsZhushu("zsds_zux");
-    }else if(flag_str_inner == "zlfs_zux"){ //后三组选-组六复式
+    } else if (flag_str_inner == "zlfs_zux") { //后三组选-组六复式
         zhushu = getZuLiuZhushu(flag_str_inner);
+    } else if (flag_str_inner == "zlds_zux") { //后三组选-组六单式
+        zhushu = getZldsZhushu(flag_str_inner);
+    } else if(flag_str_inner == "hhzx_zux"){
+        zhushu = getHhzxZhushu(flag_str_inner);
+    } else if(flag_str_inner == "zxhz_zux"){
+        zhushu = getZxhzZhushu(flag_str_inner);
     }
 
     if(zhushu <= 0){
@@ -177,6 +183,34 @@ function getZuLiuNewArrs(zuXuanArr) {
             }
         }
     }
+    tempArr = tempArr.uniqueArr();
+    return tempArr;
+}
+
+//后三组选-组选和值
+function getZxhzNewArrs(zuXuanArr) {
+    var tempArr = [], zxArr = [];
+    zxArr = zuXuanArr;
+    for(var n = 0; n < zxArr.length; n++){
+        for (var i = 0; i < zxArr.length; i++) {
+            for (var i1 = 0; i1 < zxArr.length; i1++) {
+                for (var i2 = 0; i2 < zxArr.length; i2++) {
+                    if (zxArr[i] != zxArr[i1] && zxArr[i1] != zxArr[i2] && zxArr[i] != zxArr[i2]) {
+                        var sortArr = [];
+                        sortArr.push(zxArr[i]);
+                        sortArr.push(zxArr[i1]);
+                        sortArr.push(zxArr[i2]);
+                        sortArr.sort();
+                        var arStr = zxArr[i] + "" + zxArr[i1] + "" + zxArr[i2];
+                        if(parseInt(arStr) == zxArr[n]){
+                            tempArr.push(sortArr.join(""));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     tempArr = tempArr.uniqueArr();
     return tempArr;
 }
