@@ -20,7 +20,7 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">福彩3d</h1>
+            <h1 class="title">福彩3D</h1>
         </header>
         <c:import url="common/commonBet.jsp"/>
         <div class="content cl-601">
