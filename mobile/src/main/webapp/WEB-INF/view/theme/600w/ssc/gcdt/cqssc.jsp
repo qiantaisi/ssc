@@ -157,4 +157,11 @@
         </span>
     </div>
 </script>
+<script>
+    function Hide_Show() {
+        $(".consele").hide();
+        $(".bott").hide();
+    }
+    Hide_Show();
+</script>
 <c:import url="../../common/bodyEnd.jsp"/>
