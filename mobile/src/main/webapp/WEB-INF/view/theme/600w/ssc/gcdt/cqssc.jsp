@@ -157,7 +157,7 @@
         </span>
     </div>
 </script>
-<script>
+<script>   //加载页面时隐藏蒙版
     function Hide_Show() {
         $(".consele").hide()
         $(".bott").hide();
