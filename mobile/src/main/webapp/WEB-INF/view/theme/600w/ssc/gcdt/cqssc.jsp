@@ -159,7 +159,7 @@
 </script>
 <script>
     function Hide_Show() {
-        $(".consele").hide();
+        $(".consele").hide()
         $(".bott").hide();
     }
     Hide_Show();

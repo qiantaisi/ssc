@@ -6655,13 +6655,13 @@ function kefuToast() {
 $(".title").click(
     function () {
         if ($(".content").is(".show_hide")) {
-            $(".page").find(".show_hide").removeClass("show_hide").hide();
+            $(".page").find(".show_hide").removeClass("show_hide");
             $(".consele").addClass("show_hide").show();
             $(".bott").addClass("show_hide").show();
         } else {
-            $(".consele").removeClass("show_hide").hide();
+            $(".consele").removeClass("show_hide").show();
             $(".bott").removeClass("show_hide").hide();
-            $(".page").find(".content").addClass("show_hide").show();
+            $(".page").find(".content").addClass("show_hide");
         }
     }
 );
