@@ -5744,7 +5744,7 @@ $(function () {
 
                             var html = template("template_" + tmpPlayGroupId, obj);
                             str += html;
-                        } else if ($.inArray(tmpPlayGroupId, [6, 22]) >= 0) {
+                        } else if ($.inArray(tmpPlayGroupId, [6]) >= 0) {
                             var obj = {};
 
                             obj.openTime = value.openTime;
@@ -6656,11 +6656,11 @@ $(".title").click(
     function () {
         if ($(".content").is(".show_hide")) {
             $(".page").find(".show_hide").removeClass("show_hide");
-            $(".consele").addClass("show_hide");
-            $(".bott").addClass("show_hide");
+            $(".consele").addClass("show_hide").show();
+            $(".bott").addClass("show_hide").show();
         } else {
-            $(".consele").removeClass("show_hide");
-            $(".bott").removeClass("show_hide");
+            $(".consele").removeClass("show_hide").show();
+            $(".bott").removeClass("show_hide").hide();
             $(".page").find(".content").addClass("show_hide");
         }
     }
