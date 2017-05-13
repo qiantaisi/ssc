@@ -13,7 +13,7 @@
 %>
 <c:import url="../common/bodyStart.jsp"/>
 <div class="eveb_content">
-    <img src="${resPath}member/images/noaccess_${userSession.layerId}.png" alt="" style="margin:auto;margin-top:15%;display:block;">
+    <img src="${resPath}member/images/noaccess.png" alt="" style="margin:auto;margin-top:15%;display:block;">
 </div>
 <c:import url="common/commonJs.jsp"/>
 <c:import url="common/subCommonJs.jsp"/>
