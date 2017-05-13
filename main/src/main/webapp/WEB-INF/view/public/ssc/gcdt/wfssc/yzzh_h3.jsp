@@ -9,10 +9,10 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd clearfix">
-            <div class="fl">
-                快捷金额：
-                <input type="text" class="txt"/>
-            </div>
+            <%--<div class="fl">--%>
+                <%--快捷金额：--%>
+                <%--<input type="text" class="txt"/>--%>
+            <%--</div>--%>
             <div class="fr">
                 <div class="T-tab clearfix" style="margin-top: 4.4px; ">
                     <a href="javascript:void(0)" onclick="getSscSubPage('wfssc-yzzh_q5')">全五一字组合</a>
