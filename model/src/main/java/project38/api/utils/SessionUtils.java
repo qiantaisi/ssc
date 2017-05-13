@@ -25,7 +25,7 @@ public class SessionUtils {
      * @param companyShortName
      */
     public static void setSessionCompanyShortName(HttpServletRequest httpServletRequest, String companyShortName) {
-        if (null == httpServletRequest || StringUtils.isBlank(companyShortName)) {
+        if (null == httpServletRequest) {
             return;
         }
 

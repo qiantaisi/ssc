@@ -1,4 +1,4 @@
-package project38.ssc.web.servlet;
+package project38.ssc.mobile.servlet;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
@@ -9,7 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.CompanyShortNameResult;
 import project38.api.utils.ApiUtils;
 import project38.api.utils.SessionUtils;
-import project38.ssc.web.controller.BaseController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

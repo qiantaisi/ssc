@@ -7,6 +7,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import project38.api.result.CompanyShortNameResult;
 import project38.api.utils.SessionUtils;
 import project38.api.utils.ApiUtils;
 import project38.ssc.web.auth.Authentication;
@@ -49,8 +50,15 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
         String companyShortName = SessionUtils.getSessionCompanyShortName(request);
         if (StringUtils.isBlank(companyShortName)) {
-            companyShortName = ApiUtils.getCompanyShortName(request.getServerName()).getCompanyShortName();
+            CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(request.getServerName());
+            if (null != companyShortNameResult) {
+                companyShortName = companyShortNameResult.getCompanyShortName();
+            }
             SessionUtils.setSessionCompanyShortName(request, companyShortName);
+        }
+
+        if (StringUtils.isBlank(companyShortName)) {
+            throw new RuntimeException("非法请求");
         }
 
         boolean flag = true;
