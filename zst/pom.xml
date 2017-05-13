@@ -24,6 +24,6 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>mobile</finalName>
+        <finalName>zst</finalName>
     </build>
 </project>

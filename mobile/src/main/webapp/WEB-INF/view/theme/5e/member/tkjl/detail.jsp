@@ -29,7 +29,20 @@
                         <img src="${resPath}img/ico11.png" alt="">
                         <span>${userSession.account}</span>
                     </p>
-                    <p class="cl-502">-${data.money}</p>
+                    <p class="cl-502">
+                        <c:choose>
+                            <c:when test="${data.status == 0}">
+                                ${data.money}
+                            </c:when>
+                            <c:when test="${data.status == 1}">
+                                ${data.money}
+                            </c:when>
+                            <c:when test="${data.status == 2}">
+                                -${data.money}
+                            </c:when>
+                        </c:choose>
+
+                    </p>
                     <p class="cl-503">
                         <c:choose>
                             <c:when test="${data.status == 0}">
@@ -59,16 +72,16 @@
                             </div>
                         </li>
                         <%--<li class="item-content">--%>
-                            <%--<div class="item-inner">--%>
-                                <%--<div class="item-title">出款方式</div>--%>
-                                <%--<div class="item-after">--%>
-                                    <%--<c:choose>--%>
-                                        <%--<c:when test="${data.type == 1}">--%>
-                                            <%--银行出款--%>
-                                        <%--</c:when>--%>
-                                    <%--</c:choose>--%>
-                                <%--</div>--%>
-                            <%--</div>--%>
+                        <%--<div class="item-inner">--%>
+                        <%--<div class="item-title">出款方式</div>--%>
+                        <%--<div class="item-after">--%>
+                        <%--<c:choose>--%>
+                        <%--<c:when test="${data.type == 1}">--%>
+                        <%--银行出款--%>
+                        <%--</c:when>--%>
+                        <%--</c:choose>--%>
+                        <%--</div>--%>
+                        <%--</div>--%>
                         <%--</li>--%>
                         <li class="item-content">
                             <div class="item-inner">
