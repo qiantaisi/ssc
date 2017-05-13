@@ -93,6 +93,35 @@ public abstract class BaseController {
     }
 
     /**
+     * 渲染视图
+     *
+     * @param jspLocation
+     * @param modelMap
+     * @return
+     */
+    protected ModelAndView renderPublicView(String jspLocation, Map<String, Object> modelMap) {
+        if (null == modelMap) {
+            modelMap = new HashMap<String, Object>();
+        }
+
+        // 公司标志
+        String companyShortName = getCompanyShortName();
+
+        httpServletRequest.setAttribute("resPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
+
+        Long uid = this.getUid(httpServletRequest);
+        String token = this.getToken(httpServletRequest);
+        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
+        if (null != userSessionResult && userSessionResult.getResult() == 1) {
+            modelMap.put("userSession", userSessionResult);
+        }
+
+        ModelAndView modelAndView = new ModelAndView("public/" + jspLocation);
+        modelAndView.addAllObjects(modelMap);
+        return modelAndView;
+    }
+
+    /**
      * 输出json
      *
      * @param obj
