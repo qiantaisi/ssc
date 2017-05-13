@@ -89,7 +89,7 @@
                     <a href="javascript:void(0)" onclick="getSscPage('tjssc')"><img src="${resPath}img/ico27.png" alt=""><var>天津时时彩</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('xjssc')"><img src="${resPath}img/ico28.png" alt=""><var>新疆时时彩</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('jsk3')"><img src="${resPath}img/jsk3.png" alt=""><var>江苏快3</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('bjk3')"><img src="${resPath}img/hbk3.png" alt=""><var>湖北快3</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('hbk3')"><img src="${resPath}img/hbk3.png" alt=""><var>湖北快3</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('ahk3')"><img src="${resPath}img/ahk3.png" alt=""><var>安徽快3</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('jlk3')"><img src="${resPath}img/jlk3.png" alt=""><var>吉林快3</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('xync')"><img src="${resPath}img/ico29.png" alt=""><var>重庆幸运农场</var></a>

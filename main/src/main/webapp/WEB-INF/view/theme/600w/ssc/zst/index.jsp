@@ -229,7 +229,7 @@
         <li>
             <div class="p-img fl"><img src="${resPath}img/p2.png"></div>
             <div class="p-url fl">
-                <h3>六合彩</h3>
+                <h3>香港六合彩</h3>
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/lhc.html?type=1')">基本走势</a>
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/lhc.html?type=2')">K线图</a>
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/lhc.html?type=3')">直方图</a>
@@ -240,7 +240,7 @@
         <li>
             <div class="p-img fl"><img src="${resPath}img/p5.png"></div>
             <div class="p-url fl">
-                <h3>福彩3d</h3>
+                <h3>福彩3D</h3>
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/fc3d.html?type=1')">基本走势</a>
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/fc3d.html?type=2')">K线图</a>
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/fc3d.html?type=3')">直方图</a>

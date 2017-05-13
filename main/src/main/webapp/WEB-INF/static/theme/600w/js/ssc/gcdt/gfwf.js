@@ -121,9 +121,9 @@ function stateTouZhu(flag_str) {
         zhushu = getZuLiuZhushu(flag_str_inner);
     } else if (flag_str_inner == "zlds_zux") { //后三组选-组六单式
         zhushu = getZldsZhushu(flag_str_inner);
-    } else if(flag_str_inner == "hhzx_zux"){
+    } else if (flag_str_inner == "hhzx_zux"){
         zhushu = getHhzxZhushu(flag_str_inner);
-    } else if(flag_str_inner == "zxhz_zux"){
+    } else if (flag_str_inner == "zxhz_zux"){
         zhushu = getZxhzZhushu(flag_str_inner);
     }
 
@@ -189,29 +189,46 @@ function getZuLiuNewArrs(zuXuanArr) {
 
 //后三组选-组选和值
 function getZxhzNewArrs(zuXuanArr) {
-    var tempArr = [], zxArr = [];
-    zxArr = zuXuanArr;
-    for(var n = 0; n < zxArr.length; n++){
-        for (var i = 0; i < zxArr.length; i++) {
-            for (var i1 = 0; i1 < zxArr.length; i1++) {
-                for (var i2 = 0; i2 < zxArr.length; i2++) {
-                    if (zxArr[i] != zxArr[i1] && zxArr[i1] != zxArr[i2] && zxArr[i] != zxArr[i2]) {
-                        var sortArr = [];
-                        sortArr.push(zxArr[i]);
-                        sortArr.push(zxArr[i1]);
-                        sortArr.push(zxArr[i2]);
-                        sortArr.sort();
-                        var arStr = zxArr[i] + "" + zxArr[i1] + "" + zxArr[i2];
-                        if(parseInt(arStr) == zxArr[n]){
-                            tempArr.push(sortArr.join(""));
+    var heZhiArr = [], shuArr = [], tempArr = [];
+    var temp = [];
+    var sumTemp = 0;
+    var num = 0; //当前号码
+    var fjHaoZuhe = []; //分解号组合
+
+    heZhiArr = zuXuanArr;
+    for(var d = 0; d < 28; d++){
+        shuArr[d] = 0;
+    }
+    //号码分解---所选号分解成所有组合的值等于此号的所有组合
+    for (var i = 0; i < heZhiArr.length; i++) {
+        sumTemp = parseInt(heZhiArr[i]);
+        num = parseInt(heZhiArr[i]);
+        while (sumTemp >= 0) {
+            temp.push(sumTemp);
+            sumTemp--;
+        }
+
+        //获取所选号的组选三和组选六形态的所有组数（不包含豹子号、顺序不限）
+        for (var n = 0; n < temp.length; n++) {
+            for(var m = 0; m < temp.length; m++){
+                for(var mn = 0; mn < temp.length; mn++){
+                    if(temp[n] + temp[m] + temp[mn] == num && temp[mn] <= 9 && temp[m] <= 9 && temp[n] <= 9){
+                        if(temp[m] != temp[n] && temp[n] != temp[mn] && temp[mn] != temp[n]){
+                            var sortArr = [];
+                            sortArr.push(temp[n]);
+                            sortArr.push(temp[m]);
+                            sortArr.push(temp[mn]);
+                            sortArr.sort();
+                            fjHaoZuhe.push(sortArr.join(""));
+
                         }
                     }
                 }
             }
         }
-    }
 
-    tempArr = tempArr.uniqueArr();
+    }
+    tempArr = fjHaoZuhe.uniqueArr();
     return tempArr;
 }
 
