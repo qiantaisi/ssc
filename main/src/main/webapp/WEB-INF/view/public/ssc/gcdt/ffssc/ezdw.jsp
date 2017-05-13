@@ -8,6 +8,11 @@
 %>
 <div class="lot-content clearfix">
     <div class="fl main-left cl-100">
+        <div class="hd clearfix rehd" id="toptouzhu">
+            <c:import url="../common/toptouzhu.jsp">
+                <c:param name="flagGroup" value="22"/>
+            </c:import>
+        </div>
         <div class="table-common">
             <table width="100%" border="1">
                 <thead>
@@ -133,16 +138,6 @@
                     <td><input type="checkbox" data-name="9" data-group="个"/></td>
                 </tr>
                 </tbody>
-                <tfoot>
-                <tr>
-                    <td colspan="21">
-                        <c:import url="../common/toptouzhu.jsp">
-                            <c:param name="flagGroup" value="11"/>
-                            <c:param name="navGroup" value="2"/>
-                        </c:import>
-                    </td>
-                </tr>
-                </tfoot>
             </table>
         </div>
 
@@ -153,7 +148,7 @@
         <c:import url="common/bottom_zs.jsp"/>
     </div>
 
-    <div class="fr main-right"></div>
+    <div class="fr main-right cl-10"></div>
 </div>
 <c:import url="../common/subPageCommonJs.jsp"/>
 
