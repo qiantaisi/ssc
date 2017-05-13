@@ -958,6 +958,16 @@
             var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();
+        }else if(typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined'){
+            var betDsForm = {};
+            if (!getZxhzZhudan(betDsForm)) {
+                return;
+            }
+            clearSelected();
+            clearStateTouZhu();
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
         }
     }
 
@@ -1007,7 +1017,6 @@
         if (zlLength <= 0) {
             return 0;
         }
-
         newArr = getZxhzNewArrs(fuShiArr);
         return newArr.length;
     }
@@ -1364,6 +1373,31 @@
         return true;
     }
 
+
+    //后三组选--组选和值
+    function getZxhzZhudan(obj){
+        var heZhiArr = [];
+        $.each($(".cl-1012-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            heZhiArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getZxhzZhushu();
+
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "后三组选-组选和值";
+        obj.content = "和值: (" + heZhiArr.join(", ") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
     //后三直选--后三组合
     function getHsZhudan(obj){
         var baiArr = [], shiArr = [], geArr = [];
@@ -1540,6 +1574,7 @@
         var flag_dan_zhi = "dan";//默认为单式
         var playNameStr = '';
         var contentStr = '';
+        var zhushu = 1; //默认为1注
         if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-单式";
             flag_dan_zhi = "dan";
@@ -1570,6 +1605,9 @@
         }else if(typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined'){
             playNameStr = "后三组选-混合组选";
             flag_dan_zhi = "hhzx-zux";
+        }else if(typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined'){
+            playNameStr = "后三组选-组选和值";
+            flag_dan_zhi = "zxhz-zux";
         }
 
 
@@ -1577,10 +1615,20 @@
             if(flag_dan_zhi == "hshz-zx"){
                 var arrZx = [];
                 while (arrZx.length != 1) {
-                    var m = parseInt(Math.random() * 28);
+                    var m = parseInt(Math.random() * 27) + 1;
                     arrZx.push(m);
                 }
+                zhushu = getHezNewArrs(arrZx).length;
                 contentStr = "和值: (" + arrZx[0] + ")";
+            }else if(flag_dan_zhi == "zxhz-zux"){
+                var arrZxhz = [];
+                while (arrZxhz.length != 1) {
+                    var zhi = parseInt(Math.random() * 26) + 1;
+                    arrZxhz.push(zhi);
+                }
+                zhushu = getZxhzNewArrs(arrZxhz).length;
+                console.log(zhushu + "---" + typeof zhushu);
+                contentStr = "和值: (" + arrZxhz[0] + ")";
             }else if(flag_dan_zhi == "zxfs-zux"){
                 var arrTemp = [];
                 while (arrTemp.length != 2) {
@@ -1658,7 +1706,7 @@
             obj.playName = playNameStr;
             obj.content = contentStr;
             obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
-            obj.zhushu = 1;
+            obj.zhushu = zhushu;
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");
             obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
