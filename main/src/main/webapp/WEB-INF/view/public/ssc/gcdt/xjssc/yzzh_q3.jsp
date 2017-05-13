@@ -129,7 +129,7 @@
             totalZhushu: 0
         };
 
-        $(".main-left .table-common input").each(function() {
+        $(".main-left .table-common tbody input").each(function() {
             var inputMoney = $(this).val();
             if (typeof inputMoney != 'undefined' && inputMoney != '') {
                 betForm.sscBetList.push({
