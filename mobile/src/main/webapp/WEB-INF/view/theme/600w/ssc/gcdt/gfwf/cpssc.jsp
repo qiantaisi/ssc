@@ -39,7 +39,8 @@
             <%--半透明--%>
         </div>
         <div class="content cl-601 show_hide">
-            <c:import url="../gfwf/cqssc/common/common.jsp"/>
+            <c:import url="../gfwf/cqssc/common/common.jsp"/>   <%--选择菜单--%>
+            <c:import url="../gfwf/cqssc/common/xzcd.jsp" />   <%--菜单下的内容--%>
             <div class="cl-900" id="lastOpenInfo">
                 <%--第几期--%>
             </div>
