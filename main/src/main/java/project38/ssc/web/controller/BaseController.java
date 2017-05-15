@@ -7,6 +7,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
+import project38.api.result.BetListResult;
 import project38.api.result.CompanyShortNameResult;
 import project38.api.result.UserSessionResult;
 import project38.api.utils.ApiUtils;
@@ -30,11 +31,14 @@ public abstract class BaseController {
     /** 基于@ExceptionHandler异常处理 */
     @ExceptionHandler
     public ModelAndView exp(HttpServletRequest request, Exception ex) {
-        log.error(this, ex);
-
-        String companyShortName = getCompanyShortName();
+        BetListResult result = new BetListResult();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+        try {
+            String companyShortName = getCompanyShortName();
+            modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+        } catch (Exception e) {
+            log.error(this, ex);
+        }
         return this.renderView("error/500/index", modelMap);
     }
 
@@ -68,12 +72,15 @@ public abstract class BaseController {
         }
 
         request.setAttribute("resPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/theme/" + theme + "/");
-
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
-        if (null != userSessionResult && userSessionResult.getResult() == 1) {
-            modelMap.put("userSession", userSessionResult);
+        try{
+            UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
+            if (null != userSessionResult && userSessionResult.getResult() == 1) {
+                modelMap.put("userSession", userSessionResult);
+            }
+        }catch (Exception e){
+            log.error(this, e);
         }
 
         ModelAndView modelAndView = new ModelAndView("theme/" + theme + "/" + jspLocation);
@@ -106,14 +113,16 @@ public abstract class BaseController {
 
         // 公司标志
         String companyShortName = getCompanyShortName();
-
         httpServletRequest.setAttribute("resPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
-
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
-        if (null != userSessionResult && userSessionResult.getResult() == 1) {
-            modelMap.put("userSession", userSessionResult);
+        try{
+            UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
+            if (null != userSessionResult && userSessionResult.getResult() == 1) {
+                modelMap.put("userSession", userSessionResult);
+            }
+        }catch (Exception e){
+            log.error(this, e);
         }
 
         ModelAndView modelAndView = new ModelAndView("public/" + jspLocation);
@@ -184,17 +193,19 @@ public abstract class BaseController {
         if (StringUtils.isNotBlank(companyShortName)) {
             return companyShortName;
         }
-
-        CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
-        if (companyShortNameResult.getResult() == 1) {
-            companyShortName = companyShortNameResult.getCompanyShortName();
-            SessionUtils.setSessionCompanyShortName(httpServletRequest, companyShortName);
+        try{
+            CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
+            if (companyShortNameResult.getResult() == 1) {
+                companyShortName = companyShortNameResult.getCompanyShortName();
+                SessionUtils.setSessionCompanyShortName(httpServletRequest, companyShortName);
+            }
+        }catch (Exception e){
+            log.error(this, e);
         }
 
         if (StringUtils.isBlank(companyShortName)) {
             throw new RuntimeException("非法请求");
         }
-
         return companyShortName;
     }
 }
