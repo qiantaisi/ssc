@@ -1003,7 +1003,8 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/lsjl/ckjl.html", method = RequestMethod.GET)
-    public ModelAndView lsjlCkjl(String companyShortName) throws Exception {
+    public ModelAndView lsjlCkjl() throws Exception {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("depositChannelResult", ApiUtils.getDepositChannel(companyShortName));
         return this.renderView("member/lsjl/ckjl", modelMap);
@@ -1011,8 +1012,9 @@ public class MemberController extends BaseController {
 
     @Authentication
     @RequestMapping(value = "/lsjl/tzjl.html", method = RequestMethod.GET)
-    public ModelAndView lsjlTzjl(String companyShortName) throws Exception {
+    public ModelAndView lsjlTzjl() throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        String companyShortName = this.getCompanyShortName();
         SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList(companyShortName);
         modelMap.put("sscplaylist", sscplaylist);
         return this.renderView("member/lsjl/tzjl", modelMap);
@@ -1020,7 +1022,8 @@ public class MemberController extends BaseController {
 
     @RequestMapping(value = "/getSscPlayGroup.json")
     @ResponseBody
-    public String getPlayGroup(String companyShortName) {
+    public String getPlayGroup() {
+        String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.getSscPlayGroupList(companyShortName));
     }
 

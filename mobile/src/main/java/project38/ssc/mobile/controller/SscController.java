@@ -91,9 +91,9 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroup(@PathVariable String group, HttpServletResponse httpServletResponse,String companyShortName) throws IOException {
+    public ModelAndView gcdtGroup(@PathVariable String group, HttpServletResponse httpServletResponse) throws IOException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-
+        String companyShortName = this.getCompanyShortName();
 //        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group);
 //
 //        // 彩种禁用暂停
