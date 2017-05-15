@@ -125,6 +125,12 @@ function stateTouZhu(flag_str) {
         zhushu = getHhzxZhushu(flag_str_inner);
     } else if (flag_str_inner == "zxhz_zux"){
         zhushu = getZxhzZhushu(flag_str_inner);
+    } else if (flag_str_inner == "zxbd_zux"){
+        zhushu = getZxbdZhushu(flag_str_inner);
+    } else if (flag_str_inner == "hzws_qt"){
+        zhushu = getZxwsZhushu(flag_str_inner);
+    } else if (flag_str_inner == "tsh_qt"){
+        zhushu = getTshZhushu(flag_str_inner);
     }
 
     if(zhushu <= 0){
@@ -162,6 +168,30 @@ function getZuXuanNewArrs(zuXuanArr) {
         }
     }
     tempArr = tempArr.uniqueArr();
+    return tempArr;
+}
+
+
+//后三组选-组选包胆
+function getZxbdNewArrs(zuXuanArr) {
+    var tempArr = [], bdArr = [];
+    bdArr = zuXuanArr;
+    for(var n = 0; n < bdArr.length; n++) {
+        for(var n1 = 0; n1 < 10; n1++){
+            for(var n2 = 0; n2 < 10; n2++){
+                if(bdArr[n] != n1 && bdArr != n2 && n1 != n2 || n1 == n2 && bdArr[n] != n2 || n2 == bdArr[n] && bdArr[n] != n1 || n1 == bdArr[n] && bdArr[n] != n2){
+                    var sortArr = [];
+                    sortArr.push(bdArr[n]);
+                    sortArr.push(n1);
+                    sortArr.push(n2);
+                    sortArr.sort();
+                    tempArr.push(sortArr.join(""));
+                }
+            }
+        }
+    }
+
+    tempArr =tempArr.uniqueArr();
     return tempArr;
 }
 

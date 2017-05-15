@@ -343,7 +343,7 @@
                                         href="${kefuUrl}" target="_blank">忘记密码?</a></li>
                                 <li>
                                     <button type="submit">登录</button>
-                                    <a href="<%=basePath%>ssc/register.html" class="a0">立即注册</a><a
+                                    <a href="<%=basePath%>register.html" class="a0">立即注册</a><a
                                         href="javascript:void(0)" onclick="shiwan()" class="a0">免费试玩</a></li>
                             </ul>
                         </form>
