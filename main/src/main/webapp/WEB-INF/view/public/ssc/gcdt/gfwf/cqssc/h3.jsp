@@ -659,6 +659,8 @@
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
             }
+            $(".reboxt .right .suiji5").html("随机五注");
+            $(".reboxt .right .suiji1").html("随机一注");
             //移除标签属性
             $(".Pick").removeAttr("data-flag");
 
@@ -680,6 +682,8 @@
                 $(".Pick").hide();
                 $('.cl-1005-zxhz').show();
                 $('.cl-1005-zxhz').attr("data-flag", "zxhz_zx");
+                $(".reboxt .right .suiji5").html("随机五组");
+                $(".reboxt .right .suiji1").html("随机一组");
             } else if (flag_name == "zxkd") {
                 $(".Pick").hide();
                 $('.cl-1006-zxkd').show();
@@ -691,6 +695,8 @@
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
             }
+            $(".reboxt .right .suiji5").html("随机五注");
+            $(".reboxt .right .suiji1").html("随机一注");
             $(".Pick").removeAttr("data-flag");
             $(this).addClass("acti");
             var flag_name = $(this).data('name');
@@ -718,10 +724,14 @@
                 $(".Pick").hide();
                 $(".cl-1012-zxhz").show();
                 $(".cl-1012-zxhz").attr("data-flag", "zxhz_zux");
+                $(".reboxt .right .suiji5").html("随机五组");
+                $(".reboxt .right .suiji1").html("随机一组");
             } else if (flag_name == "zxbd") {
                 $(".Pick").hide();
                 $(".cl-1013-zxbd").show();
                 $(".cl-1013-zxbd").attr("data-flag", "zxbd_zux");
+                $(".reboxt .right .suiji5").html("随机五组");
+                $(".reboxt .right .suiji1").html("随机一组");
             }
         });
 
@@ -729,6 +739,8 @@
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
             }
+            $(".reboxt .right .suiji5").html("随机五注");
+            $(".reboxt .right .suiji1").html("随机一注");
             $(".Pick").removeAttr("data-flag");
             $(this).addClass("acti");
             var flag_name = $(this).data('name');
@@ -745,29 +757,35 @@
 
         // 选中特殊号
         $(".cl-1015-tsh ul .tsh_li span").click(function () {
-            if ($(".cl-1015-tsh ul .tsh_li span").hasClass("acti_tsh")) {
-                $(".cl-1015-tsh ul .tsh_li span").removeClass('acti_tsh');
+            $(this).toggleClass('acti_tsh');
+
+            if (typeof $(".cl-1015-tsh").attr('data-flag') != 'undefined') {
+                var flag_str = 'tsh_qt';
+                stateTouZhu(flag_str);
             }
-            $(this).addClass('acti_tsh');
         });
 
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
             var flag_name = $(this).parent().parent().parent().parent().attr("data-flag");
             if (typeof stateTouZhu == "function") {
-                if(flag_name == "hszh_zx"){
+                if (flag_name == "hszh_zx") {
                     stateTouZhu(flag_name);
-                }else if(flag_name == "zxhz_zx"){
+                } else if (flag_name == "zxhz_zx") {
                     stateTouZhu(flag_name);
-                }else if(flag_name == "zxkd_zx"){
+                } else if (flag_name == "zxkd_zx") {
                     stateTouZhu(flag_name);
-                }else if(flag_name == "zsfs_zux"){
+                } else if (flag_name == "zsfs_zux") {
                     stateTouZhu(flag_name);
-                }else if(flag_name == "zlfs_zux"){
+                } else if (flag_name == "zlfs_zux") {
                     stateTouZhu(flag_name);
-                }else if(flag_name == "zxhz_zux"){
+                } else if (flag_name == "zxhz_zux") {
                     stateTouZhu(flag_name);
-                }else{
+                } else if (flag_name == "zxbd_zux") {
+                    stateTouZhu(flag_name);
+                } else if (flag_name == "hzws_qt") {
+                    stateTouZhu(flag_name);
+                } else {
                     stateTouZhu('fu');
                 }
             }
@@ -855,7 +873,7 @@
     }
 
     function tjzd() {
-        if(typeof $('.recl-1002').attr('data-flag') != 'undefined'){
+        if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
             var betForm = {};
             if (!getZhudan(betForm)) {
                 return;
@@ -864,7 +882,7 @@
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
-        }else if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
+        } else if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getDsZhudan(betDsForm)) {
                 return;
@@ -898,7 +916,7 @@
             $("#zhudanList").append(html);
             calcAll();
 
-        } else if(typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getZhudan(betDsForm)) {
                 return;
@@ -908,7 +926,7 @@
             var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();
-        } else if(typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getZuSanZhudan(betDsForm)) {
                 return;
@@ -918,7 +936,7 @@
             var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();
-        } else if(typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getZsdsZhudan(betDsForm)) {
                 return;
@@ -928,7 +946,7 @@
             var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();
-        } else if(typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getZuLiuZhudan(betDsForm)) {
                 return;
@@ -938,7 +956,7 @@
             var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();
-        }else if(typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getZldsZhudan(betDsForm)) {
                 return;
@@ -948,7 +966,7 @@
             var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();
-        }else if(typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getHhzxZhudan(betDsForm)) {
                 return;
@@ -958,9 +976,39 @@
             var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();
-        }else if(typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getZxhzZhudan(betDsForm)) {
+                return;
+            }
+            clearSelected();
+            clearStateTouZhu();
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
+            var betDsForm = {};
+            if (!getZxbdZhudan(betDsForm)) {
+                return;
+            }
+            clearSelected();
+            clearStateTouZhu();
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
+            var betDsForm = {};
+            if (!getHzwsZhudan(betDsForm)) {
+                return;
+            }
+            clearSelected();
+            clearStateTouZhu();
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
+            var betDsForm = {};
+            if (!getTshZhudan(betDsForm)) {
                 return;
             }
             clearSelected();
@@ -987,7 +1035,7 @@
     //获取手动输入的有效注数-组选混合
     function getHhzxZhushu() {
         var textStr = $(".cl-1011-hhzx .content_jiang .content_tex").val();
-        var newArr = [],tempArr = [];
+        var newArr = [], tempArr = [];
         textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
@@ -995,12 +1043,12 @@
                 newArr.push(arr_new[i]);
             }
         }
-        for(var n = 0; n < newArr.length; n++){
+        for (var n = 0; n < newArr.length; n++) {
             var temp = newArr[n].toString();
-            var oneStr = temp.substr(0,1);
-            var twoStr = temp.substr(1,1);
-            var threeStr = temp.substr(2,1);
-            if(oneStr != twoStr && twoStr != threeStr && threeStr != oneStr || oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && threeStr != oneStr || threeStr == oneStr && oneStr != twoStr){
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            if (oneStr != twoStr && twoStr != threeStr && threeStr != oneStr || oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && threeStr != oneStr || threeStr == oneStr && oneStr != twoStr) {
                 tempArr.push(newArr[n]);
             }
         }
@@ -1024,7 +1072,7 @@
     //获取手动输入的有效注数-组六单式
     function getZldsZhushu() {
         var textStr = $(".cl-1010-zlds .content_jiang .content_tex").val();
-        var newArr = [],tempArr = [];
+        var newArr = [], tempArr = [];
         textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
@@ -1032,12 +1080,12 @@
                 newArr.push(arr_new[i]);
             }
         }
-        for(var n = 0; n < newArr.length; n++){
+        for (var n = 0; n < newArr.length; n++) {
             var temp = newArr[n].toString();
-            var oneStr = temp.substr(0,1);
-            var twoStr = temp.substr(1,1);
-            var threeStr = temp.substr(2,1);
-            if(oneStr != twoStr && twoStr != threeStr && threeStr != oneStr){
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            if (oneStr != twoStr && twoStr != threeStr && threeStr != oneStr) {
                 tempArr.push(newArr[n]);
             }
         }
@@ -1047,7 +1095,7 @@
     //获取手动输入的有效注数-组三单式
     function getZsdsZhushu() {
         var textStr = $(".cl-1008-zsds .content_jiang .content_tex").val();
-        var newArr = [],tempArr = [];
+        var newArr = [], tempArr = [];
         textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
@@ -1055,12 +1103,12 @@
                 newArr.push(arr_new[i]);
             }
         }
-        for(var n = 0; n < newArr.length; n++){
+        for (var n = 0; n < newArr.length; n++) {
             var temp = newArr[n].toString();
-            var oneStr = temp.substr(0,1);
-            var twoStr = temp.substr(1,1);
-            var threeStr = temp.substr(2,1);
-            if(oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && threeStr != oneStr || threeStr == oneStr && oneStr != twoStr){
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            if (oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && threeStr != oneStr || threeStr == oneStr && oneStr != twoStr) {
                 tempArr.push(newArr[n]);
             }
         }
@@ -1113,7 +1161,7 @@
     function getZsdsZhudan(obj) {
         var zhushu = 0;
         var textStr = $(".cl-1008-zsds .content_jiang .content_tex").val();
-        var newArr = [],tempArr = [],errorStr = '',errorArr = [];
+        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
         textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
@@ -1121,14 +1169,14 @@
                 newArr.push(arr_new[i]);
             }
         }
-        for(var n = 0; n < newArr.length; n++){
+        for (var n = 0; n < newArr.length; n++) {
             var temp = newArr[n].toString();
-            var oneStr = temp.substr(0,1);
-            var twoStr = temp.substr(1,1);
-            var threeStr = temp.substr(2,1);
-            if(oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr){
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            if (oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr) {
                 tempArr.push(newArr[n]);
-            }else{
+            } else {
                 errorArr.push(newArr[n]);
             }
         }
@@ -1216,7 +1264,7 @@
     function getHhzxZhudan(obj) {
         var zhushu = 0;
         var textStr = $(".cl-1011-hhzx .content_jiang .content_tex").val();
-        var newArr = [],tempArr = [],errorStr = '',errorArr = [];
+        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
         textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
@@ -1224,14 +1272,14 @@
                 newArr.push(arr_new[i]);
             }
         }
-        for(var n = 0; n < newArr.length; n++){
+        for (var n = 0; n < newArr.length; n++) {
             var temp = newArr[n].toString();
-            var oneStr = temp.substr(0,1);
-            var twoStr = temp.substr(1,1);
-            var threeStr = temp.substr(2,1);
-            if(twoStr != threeStr && oneStr != threeStr && twoStr != oneStr || oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr){
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            if (twoStr != threeStr && oneStr != threeStr && twoStr != oneStr || oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr) {
                 tempArr.push(newArr[n]);
-            }else{
+            } else {
                 errorArr.push(newArr[n]);
             }
         }
@@ -1264,7 +1312,7 @@
     function getZldsZhudan(obj) {
         var zhushu = 0;
         var textStr = $(".cl-1010-zlds .content_jiang .content_tex").val();
-        var newArr = [],tempArr = [],errorStr = '',errorArr = [];
+        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
         textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
@@ -1272,14 +1320,14 @@
                 newArr.push(arr_new[i]);
             }
         }
-        for(var n = 0; n < newArr.length; n++){
+        for (var n = 0; n < newArr.length; n++) {
             var temp = newArr[n].toString();
-            var oneStr = temp.substr(0,1);
-            var twoStr = temp.substr(1,1);
-            var threeStr = temp.substr(2,1);
-            if(twoStr != threeStr && oneStr != threeStr && twoStr != oneStr){
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            if (twoStr != threeStr && oneStr != threeStr && twoStr != oneStr) {
                 tempArr.push(newArr[n]);
-            }else{
+            } else {
                 errorArr.push(newArr[n]);
             }
         }
@@ -1310,16 +1358,16 @@
 
     //后三直选-直选复式
     function getZhudan(obj) {
-        var flag_name = '',contentDan = '',playNameDan = '';//标签名称  注单内容  注单名称
+        var flag_name = '', contentDan = '', playNameDan = '';//标签名称  注单内容  注单名称
         flag_name = $('.cl-1006-zxkd').attr('data-flag'); //获取当前是否为跨度界面
-        if(flag_name == "zxkd_zx"){
+        if (flag_name == "zxkd_zx") {
             var kaDuArr = [];
             $.each($(".cl-1006-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
                 kaDuArr.push($.trim($(this).find("i").html()));
             });
             playNameDan = "后三直选-跨度";
-            contentDan =  "跨度: (" + kaDuArr.join(", ") + ")";
-        }else{
+            contentDan = "跨度: (" + kaDuArr.join(", ") + ")";
+        } else {
             var baiArr = [], shiArr = [], geArr = [];
             $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
                 baiArr.push($.trim($(this).find("i").html()));
@@ -1331,7 +1379,7 @@
                 geArr.push($.trim($(this).find("i").html()));
             });
             playNameDan = "后三直选-复式";
-            contentDan =  "百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
+            contentDan = "百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
         }
         var zhushu = getZhushu(flag_name);
         if (zhushu <= 0) {
@@ -1350,7 +1398,7 @@
     }
 
     //后三直选--直选和值
-    function getHeZhiZhudan(obj){
+    function getHeZhiZhudan(obj) {
         var heZhiArr = [];
         $.each($(".cl-1005-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
             heZhiArr.push($.trim($(this).find("i").html()));
@@ -1375,7 +1423,7 @@
 
 
     //后三组选--组选和值
-    function getZxhzZhudan(obj){
+    function getZxhzZhudan(obj) {
         var heZhiArr = [];
         $.each($(".cl-1012-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
             heZhiArr.push($.trim($(this).find("i").html()));
@@ -1398,8 +1446,100 @@
         return true;
     }
 
+    //后三组选--特殊号
+    function getHzwsZhudan(obj) {
+        var bdArr = [];
+        $.each($(".cl-1015-hzws ul li[data-name = '特殊号'] span.acti_tsh"), function (index, value) {
+            bdArr.push($.trim($(this).html()));
+        });
+
+        if (bdArr.length <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "后三组选-和值尾数";
+        obj.content = "和值: (" + bdArr.join(", ") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * bdArr.length;
+        obj.zhushu = bdArr.length;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+
+    //后三组选--和值尾数
+    function getHzwsZhudan(obj) {
+        var bdArr = [];
+        $.each($(".cl-1014-hzws ul li[data-name = '和值尾数'] span.acti"), function (index, value) {
+            bdArr.push($.trim($(this).find("i").html()));
+        });
+
+        if (bdArr.length <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "后三组选-和值尾数";
+        obj.content = "和值: (" + bdArr.join(", ") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * bdArr.length;
+        obj.zhushu = bdArr.length;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+
+    //后三组选--组选包胆
+    function getZxbdZhudan(obj) {
+        var bdArr = [];
+        $.each($(".cl-1013-zxbd ul li[data-name = '包胆'] span.acti"), function (index, value) {
+            bdArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getZxbdZhushu();
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "后三组选-组选包胆";
+        obj.content = "包胆: (" + bdArr.join(", ") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+    //后三组选--组选包胆
+    function getZxbdZhudan(obj) {
+        var bdArr = [];
+        $.each($(".cl-1013-zxbd ul li[data-name = '包胆'] span.acti"), function (index, value) {
+            bdArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getZxbdZhushu();
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "后三组选-组选包胆";
+        obj.content = "包胆: (" + bdArr.join(", ") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
     //后三直选--后三组合
-    function getHsZhudan(obj){
+    function getHsZhudan(obj) {
         var baiArr = [], shiArr = [], geArr = [];
         $.each($(".cl-1004-hszh ul li[data-name = '百'] span.acti"), function (index, value) {
             baiArr.push($.trim($(this).find("i").html()));
@@ -1430,22 +1570,22 @@
 
     function getZhushu(flag_name) {
         var newArr = [];
-        if(flag_name == "zxkd_zx"){
+        if (flag_name == "zxkd_zx") {
             var kaDuArr = [];
             $.each($(".cl-1006-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
                 kaDuArr.push($.trim($(this).find("i").html()));
-               if(kaDuArr.length <= 0){
-                   return 0;
-               }
-            newArr = getKaduNewArrs(kaDuArr);
+                if (kaDuArr.length <= 0) {
+                    return 0;
+                }
+                newArr = getKaduNewArrs(kaDuArr);
             });
-        }else if(flag_name == "zxfs_zux"){
+        } else if (flag_name == "zxfs_zux") {
             var zuSanArr = [];
             $.each($(".cl-1007-zsfs ul li[data-name = '组三'] span.acti"), function (index, value) {
                 zuSanArr.push($.trim($(this).find("i").html()));
             });
             newArr = getZuXuanNewArrs(zuSanArr);
-        }else{
+        } else {
             var qianArr = [], baiArr = [], shiArr = [], geArr = [];
             $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
                 baiArr.push($.trim($(this).find("i").html()));
@@ -1512,7 +1652,47 @@
         return newArr.length;
     }
 
-    //后三直选-和值
+    // 后三组选-组选包胆
+    function getZxbdZhushu() {
+        var baoDanArr = [], newArr = [];
+        $.each($(".cl-1013-zxbd ul li[data-name = '包胆'] span.acti"), function (index, value) {
+            baoDanArr.push($.trim($(this).find("i").html()));
+        });
+        var zlLength = baoDanArr.length;
+        if (zlLength < 0) {
+            return 0;
+        }
+        newArr = getZxbdNewArrs(baoDanArr);
+        return newArr.length;
+    }
+
+    // 后三组选-特殊号
+    function getTshZhushu() {
+        var tsArr = [], newArr = [];
+        $.each($(".cl-1015-tsh ul li.tsh_li[data-name = '特殊号'] span.acti_tsh"), function (index, value) {
+            tsArr.push($.trim($(this).html()));
+        });
+        var zlLength = tsArr.length;
+        if (zlLength < 0) {
+            return 0;
+        }
+        return zlLength;
+    }
+
+    // 后三组选-和值尾数
+    function getZxwsZhushu() {
+        var wsArr = [], newArr = [];
+        $.each($(".cl-1014-hzws ul li[data-name = '和值尾数'] span.acti"), function (index, value) {
+            wsArr.push($.trim($(this).find("i").html()));
+        });
+        var zlLength = wsArr.length;
+        if (zlLength < 0) {
+            return 0;
+        }
+        return zlLength;
+    }
+
+    // 后三直选-和值
     function getHezhiZhushu() {
         var heZhiArr = [], newArr = [];
         $.each($(".cl-1005-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
@@ -1578,41 +1758,47 @@
         if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-单式";
             flag_dan_zhi = "dan";
-        } else if(typeof $('.recl-1002').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-复式";
             flag_dan_zhi = "fu";
-        }else if(typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-组合";
             flag_dan_zhi = "hszh-zx";
-        }else if(typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-和值";
             flag_dan_zhi = "hshz-zx";
-        }else if(typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-跨度";
             flag_dan_zhi = "zxkd-zx";
-        }else if(typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-组三复式";
             flag_dan_zhi = "zxfs-zux";
-        }else if(typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-组三单式";
             flag_dan_zhi = "zsds-zux";
-        }else if(typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-组六复式";
             flag_dan_zhi = "zlfs-zux";
-        }else if(typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-组六单式";
             flag_dan_zhi = "zlds-zux";
-        }else if(typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-混合组选";
             flag_dan_zhi = "hhzx-zux";
-        }else if(typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined'){
+        } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-组选和值";
             flag_dan_zhi = "zxhz-zux";
+        } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
+            playNameStr = "后三组选-组选包胆";
+            flag_dan_zhi = "zxbd-zux";
+        } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
+            playNameStr = "后三组选-和值尾数";
+            flag_dan_zhi = "hzws-zux";
         }
 
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
-            if(flag_dan_zhi == "hshz-zx"){
+            if (flag_dan_zhi == "hshz-zx") {  //直选和值
                 var arrZx = [];
                 while (arrZx.length != 1) {
                     var m = parseInt(Math.random() * 27) + 1;
@@ -1620,66 +1806,81 @@
                 }
                 zhushu = getHezNewArrs(arrZx).length;
                 contentStr = "和值: (" + arrZx[0] + ")";
-            }else if(flag_dan_zhi == "zxhz-zux"){
+            } else if (flag_dan_zhi == "zxhz-zux") {  //组选和值
                 var arrZxhz = [];
                 while (arrZxhz.length != 1) {
-                    var zhi = parseInt(Math.random() * 26) + 1;
-                    arrZxhz.push(zhi);
+                    var zhiZx = parseInt(Math.random() * 26) + 1;
+                    arrZxhz.push(zhiZx);
                 }
                 zhushu = getZxhzNewArrs(arrZxhz).length;
-                console.log(zhushu + "---" + typeof zhushu);
                 contentStr = "和值: (" + arrZxhz[0] + ")";
-            }else if(flag_dan_zhi == "zxfs-zux"){
+            } else if (flag_dan_zhi == "hzws-zux") {  //和值尾数
+                var arrHzws = [];
+                while (arrHzws.length != 1) {
+                    var zhiWs = parseInt(Math.random() * 10);
+                    arrHzws.push(zhiWs);
+                }
+                zhushu = arrHzws.length;
+                contentStr = "和值: (" + arrHzws[0] + ")";
+            } else if (flag_dan_zhi == "zxbd-zux") {  //组选包胆
+                var arrZxbd = [];
+                while (arrZxbd.length != 1) {
+                    var zhi = parseInt(Math.random() * 10);
+                    arrZxbd.push(zhi);
+                }
+                zhushu = getZxbdNewArrs(arrZxbd).length;
+                contentStr = "包胆: (" + arrZxbd[0] + ")";
+            } else if (flag_dan_zhi == "zxfs-zux") {
                 var arrTemp = [];
                 while (arrTemp.length != 2) {
                     var x = parseInt(Math.random() * 10);
                     var y = parseInt(Math.random() * 10);
-                    if(x != y){
-                       arrTemp.push(x);
-                       arrTemp.push(y);
+                    if (x != y) {
+                        arrTemp.push(x);
+                        arrTemp.push(y);
                     }
                 }
                 contentStr = "组三: (" + arrTemp.join(', ') + ")";
-            }else if(flag_dan_zhi == "hhzx-zux"){
+            } else if (flag_dan_zhi == "hhzx-zux") {
                 var arrTemp_hhzx = [];
                 while (arrTemp_hhzx.length != 3) {
                     var xHhzx = parseInt(Math.random() * 10);
                     var yHhzx = parseInt(Math.random() * 10);
                     var zHhzx = parseInt(Math.random() * 10);
-                    if(xHhzx == yHhzx && yHhzx != zHhzx || xHhzx == zHhzx && zHhzx !=yHhzx || yHhzx == zHhzx && zHhzx != xHhzx || xHhzx != yHhzx && yHhzx != zHhzx && zHhzx != xHhzx){
+                    if (xHhzx == yHhzx && yHhzx != zHhzx || xHhzx == zHhzx && zHhzx != yHhzx || yHhzx == zHhzx && zHhzx != xHhzx || xHhzx != yHhzx && yHhzx != zHhzx && zHhzx != xHhzx) {
                         arrTemp_hhzx.push(xHhzx);
                         arrTemp_hhzx.push(yHhzx);
                         arrTemp_hhzx.push(zHhzx);
                     }
                 }
                 contentStr = "号码: (" + arrTemp_hhzx.join("") + ")";
-            }else if(flag_dan_zhi == "zsds-zux"){
+            } else if (flag_dan_zhi == "zsds-zux") {
                 var arrTemp_zxds = [];
                 while (arrTemp_zxds.length != 3) {
                     var xZxds = parseInt(Math.random() * 10);
                     var yZxds = parseInt(Math.random() * 10);
                     var zZxds = parseInt(Math.random() * 10);
-                    if(xZxds == yZxds && yZxds != zZxds || xZxds == zZxds && zZxds !=yZxds || yZxds == zZxds && zZxds != xZxds){
+                    if (xZxds == yZxds && yZxds != zZxds || xZxds == zZxds && zZxds != yZxds || yZxds == zZxds && zZxds != xZxds) {
                         arrTemp_zxds.push(xZxds);
                         arrTemp_zxds.push(yZxds);
                         arrTemp_zxds.push(zZxds);
                     }
                 }
                 contentStr = "号码: (" + arrTemp_zxds.join("") + ")";
-            }else if(flag_dan_zhi == "zlfs-zux" || flag_dan_zhi == "zlds-zux"){
+            } else if (flag_dan_zhi == "zlfs-zux" || flag_dan_zhi == "zlds-zux") {
                 var arrTemp_zlfs = [];
                 while (arrTemp_zlfs.length != 3) {
                     var xZlfs = parseInt(Math.random() * 10);
                     var yZlfs = parseInt(Math.random() * 10);
                     var zZlfs = parseInt(Math.random() * 10);
-                    if(xZlfs != yZlfs && yZlfs != zZlfs && zZlfs != xZlfs){
+                    if (xZlfs != yZlfs && yZlfs != zZlfs && zZlfs != xZlfs) {
                         arrTemp_zlfs.push(xZlfs);
                         arrTemp_zlfs.push(yZlfs);
                         arrTemp_zlfs.push(zZlfs);
                     }
                 }
                 contentStr = "号码: (" + arrTemp_zlfs.join("") + ")";
-            }else{
+            } else {
                 var redArr = [];
                 for (var i = 0; i <= 9; ++i) {
                     redArr[i] = 0;
@@ -1695,9 +1896,9 @@
                 }
                 if (flag_dan_zhi == "dan") {
                     contentStr = "号码: (" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
-                }else if(flag_dan_zhi == "zxkd-zx"){
-                    contentStr = "跨度: ("+ arr[4] + ")";
-                }else if (flag_dan_zhi == "fu" || flag_dan_zhi == "hszh-zx") {
+                } else if (flag_dan_zhi == "zxkd-zx") {
+                    contentStr = "跨度: (" + arr[4] + ")";
+                } else if (flag_dan_zhi == "fu" || flag_dan_zhi == "hszh-zx") {
                     contentStr = "百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
                 }
             }
@@ -1751,32 +1952,44 @@
                     if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
                         flag_str = 'dan';
                         stateTouZhu(flag_str);
-                    } else if(typeof $('.recl-1002').attr('data-flag') != 'undefined') {
+                    } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
                         flag_str = 'fu';
                         stateTouZhu(flag_str);
-                    } else if(typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
+                    } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
                         flag_str = 'hszh_zx';
                         stateTouZhu(flag_str);
-                    } else if(typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined'){
+                    } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
                         flag_str = 'zxhz_zx';
                         stateTouZhu(flag_str);
-                    } else if(typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined'){
+                    } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
                         flag_str = 'zxkd_zx';
                         stateTouZhu(flag_str);
-                    } else if(typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined'){
+                    } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
                         flag_str = 'zsfs_zux';
                         stateTouZhu(flag_str);
-                    }else if(typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined'){
+                    } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
                         flag_str = 'zsds_zux';
                         stateTouZhu(flag_str);
-                    }else if(typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined'){
+                    } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
                         flag_str = 'zlfs_zux';
                         stateTouZhu(flag_str);
-                    }else if(typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined'){
+                    } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
                         flag_str = 'zlds_zux';
                         stateTouZhu(flag_str);
-                    }else if(typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined'){
+                    } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
                         flag_str = 'hhzx_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
+                        flag_str = 'zxhz_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
+                        flag_str = 'zxbd_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
+                        flag_str = 'hzws_qt';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
+                        flag_str = 'tsh_qt';
                         stateTouZhu(flag_str);
                     }
                 }
