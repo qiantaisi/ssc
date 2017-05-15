@@ -1137,7 +1137,7 @@ public class MemberController extends BaseController {
     public CommonResult ajaxAddUserBank(String bankName, String subBankName, String bankAccount, String location) {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        return ApiUtils.addUserBank(uid, token, bankName, subBankName, bankAccount, location);
+        return ApiUtils.addUserBank(uid, token, bankName, subBankName, bankAccount, location, this.getCompanyShortName());
     }
 
     /**
