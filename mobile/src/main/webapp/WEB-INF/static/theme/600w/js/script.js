@@ -6666,7 +6666,7 @@ $(".title").click(  // 官方玩法点击事件
     }
 );
 
-$(".cus-tabs-scroll a").click(    //直选方式点击事件
+$(".cus-tabs-scroll .xuan").click(    //直选方式点击事件
     function () {
         if ($(".coveron1").is(".hw")) {
             $(".page").find(".hw").removeClass("hw");

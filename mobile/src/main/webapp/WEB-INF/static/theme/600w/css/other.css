@@ -1128,6 +1128,7 @@ input[type="number"] {
 .bg-hezhi {
     background: green;
 }
+
 .bott {
     background: #000;
     opacity: 0.7;
@@ -1136,36 +1137,58 @@ input[type="number"] {
     position: relative;
     top: 15%;
 }
-.hw{display:none;}
+
+.hw {
+    display: none;
+}
+
 .consele1 {
     width: 100%;
     height: 50%;
 }
-.coveron1{
-    position:absolute;
-    width:100%;
-    height:100%;
-    /*background-color: red;*/
+
+.coveron1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
 }
-.consele1{
-    width:100%;
-    height:50%;
-    overflow-y:auto;
-    color:#989898;
+
+.consele1 {
+    width: 100%;
+    height: 50%;
+    overflow-y: auto;
+    color: #989898;
 }
-.coveron1 .consele1 .xuan{
-    height:0.4rem;
-    margin-top:15px;
+
+.coveron1 .consele1 .xuan {
+    height: 0.4rem;
+    margin-top: 15px;
 }
-.xuan1{
-    width:42%;
-    border-bottom:1px solid #CCCCCC;
+
+.xuan1 {
+    width: 42%;
+    border-bottom: 1px solid #CCCCCC;
 }
-.xuan2{
-    width:16%;
-    line-height:1px;
-    text-align:center;
+
+.xuan2 {
+    width: 16%;
+    line-height: 1px;
+    text-align: center;
 }
-.content{
+
+.content {
+    position: absolute;
+}
+
+.xuan div {
+    float: left;
+}
+
+.cover1 {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity:0.7;
     position:absolute;
 }
