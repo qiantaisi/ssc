@@ -12,7 +12,7 @@
 <div class="cus-tabs-scroll">
     <a>五星直选</a>
     <span><img src="<%=basePath%>static/theme/600w/img/ico222.png"/></span>
-    <a>
+    <a class="xuan">
         直选方式
         <i class="triangle-down"><!--向下的三角--> </i>
     </a>
