@@ -14,10 +14,12 @@ import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.LoginResult;
 import project38.api.result.PromotionResult;
 import project38.api.result.WebInfoResult;
+import project38.api.result.WebNoticeResult;
 import project38.api.utils.ApiUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,7 +28,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/*")
 public class IndexController extends BaseController{
-    private static Log log = LogFactory.getLog(IndexController.class);
+    private static final Log log = LogFactory.getLog(IndexController.class);
 
     @Autowired
     private HttpServletRequest httpServletRequest;
@@ -60,21 +62,27 @@ public class IndexController extends BaseController{
         String companyShortName = this.getCompanyShortName();
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("logo", ApiUtils.getLogo(1,companyShortName));
-        
-        modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName).getWebNoticeList());
-        modelMap.put("carouseList", ApiUtils.getCarouselList(true, 1,companyShortName));
-        // 热门开奖列表
-        modelMap.put("kjjgJsonData", JSONUtils.toJSONStr(ApiUtils.getHotSscDataHistory3(companyShortName)));
+        try {
+            modelMap.put("logo", ApiUtils.getLogo(1, companyShortName));
 
-//        modelMap.put("yhzzList", ApiUtils.getSystemBankCard(uid, token).getBankcardList());
-//        modelMap.put("zfbzzList", ApiUtils.getSystemAlipay(uid, token).getSkInfoList());
-//        modelMap.put("wxzzList", ApiUtils.getSystemWeixin(uid, token).getSkInfoList());
-//        modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token).getSkInfoList());
-        //获取在线支付信息
-        modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3},companyShortName));
+            WebNoticeResult webNoticeResult = ApiUtils.getPopupNoticeList(uid, token, null, null, companyShortName);
+            if (null != webNoticeResult) {
+                modelMap.put("popupNoticeList", webNoticeResult.getWebNoticeList());
+            }
 
+            modelMap.put("carouseList", ApiUtils.getCarouselList(true, 1, companyShortName));
+            // 热门开奖列表
+            modelMap.put("kjjgJsonData", JSONUtils.toJSONStr(ApiUtils.getHotSscDataHistory3(companyShortName)));
 
+            //        modelMap.put("yhzzList", ApiUtils.getSystemBankCard(uid, token).getBankcardList());
+            //        modelMap.put("zfbzzList", ApiUtils.getSystemAlipay(uid, token).getSkInfoList());
+            //        modelMap.put("wxzzList", ApiUtils.getSystemWeixin(uid, token).getSkInfoList());
+            //        modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token).getSkInfoList());
+            //获取在线支付信息
+            modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[]{2, 3}, companyShortName));
+        } catch (Exception e) {
+            log.error(this, e);
+        }
 
         return this.renderView("index/main", modelMap);
     }
