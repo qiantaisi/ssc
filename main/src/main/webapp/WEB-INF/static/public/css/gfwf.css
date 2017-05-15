@@ -142,3 +142,13 @@
     background: #e84f31!important;
     color: #FFF!important;
 }
+
+.h3_slide_sp{
+    position:relative;
+}
+.h3_slide_sp .change-2{
+    position: absolute;
+    top:-20px;
+    right:15%;
+}
+

@@ -31,7 +31,7 @@
             </p>
         </li>
         <li>
-            <b>后三其他</b>
+            <b>后三其它</b>
             <p class="btn_h3_qt">
                 <span data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
                 <span data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
@@ -599,8 +599,8 @@
         <li class="hzws_li tsh_li" data-name="特殊号">
             <b><i>特殊号</i></b>
             <span>豹子</span>
-            <span>对子</span>
             <span>顺子</span>
+            <span>对子</span>
         </li>
     </ul>
 </div>
@@ -609,7 +609,7 @@
 <div class="add_spot">
     <div class="left">
         <div class="sopt_wrap">
-            <div class="slide_sp">
+            <div class="slide_sp h3_slide_sp">
                 奖金/返点
                 <%--<p><span style="width: 4.89063px;"></span><var style="left: 4.89063px;"></var></p>--%>
                 <%--<i><var>934058.63</var> / 7.0%</i>--%>
@@ -618,7 +618,10 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i class="change-base"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i class="change-1"><var class="fandian-bfb">1.0%</var></i>
+                <i class="change-2"><var class="jiangjin-change-2">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-3">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-4">0.0</var></i>
+
             </div>
             <div class="reduce">
                 <a class="fl">-</a>
@@ -654,8 +657,15 @@
         //初始化复式选号模式
         $(".Pick").hide();
         $('.recl-1002').show();
+        $(".change-1").hide();
+        $(".change-2").hide();
+        $(".change-3").hide();
 
         $(".btn_h3_zx span").click(function () {
+            $(".change-1").hide();
+            $(".change-2").hide();
+            $(".change-3").hide();;
+            $(".change-base").show();
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
             }
@@ -678,6 +688,10 @@
                 $(".Pick").hide();
                 $('.cl-1004-hszh').show();
                 $('.cl-1004-hszh').attr("data-flag", "hszh_zx");
+                $(".change-1").show();
+                $(".change-2").show();
+                $(".change-3").show();
+                $(".change-base").hide();
             } else if (flag_name == "zxhz") {
                 $(".Pick").hide();
                 $('.cl-1005-zxhz').show();
@@ -692,6 +706,10 @@
         });
 
         $(".btn_h3_zux span").click(function () {
+            $(".change-1").hide();
+            $(".change-2").hide();
+            $(".change-3").hide();;
+            $(".change-base").show();
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
             }
@@ -736,6 +754,10 @@
         });
 
         $(".btn_h3_qt span").click(function () {
+            $(".change-1").hide();
+            $(".change-2").hide();
+            $(".change-3").hide();;
+            $(".change-base").show();
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
             }
@@ -757,6 +779,10 @@
 
         // 选中特殊号
         $(".cl-1015-tsh ul .tsh_li span").click(function () {
+            $(".change-1").hide();
+            $(".change-2").hide();
+            $(".change-3").hide();;
+            $(".change-base").show();
             $(this).toggleClass('acti_tsh');
 
             if (typeof $(".cl-1015-tsh").attr('data-flag') != 'undefined') {
@@ -1447,9 +1473,9 @@
     }
 
     //后三组选--特殊号
-    function getHzwsZhudan(obj) {
+    function getTshZhudan(obj) {
         var bdArr = [];
-        $.each($(".cl-1015-hzws ul li[data-name = '特殊号'] span.acti_tsh"), function (index, value) {
+        $.each($(".cl-1015-tsh ul li[data-name = '特殊号'] span.acti_tsh"), function (index, value) {
             bdArr.push($.trim($(this).html()));
         });
 
@@ -1457,8 +1483,8 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "后三组选-和值尾数";
-        obj.content = "和值: (" + bdArr.join(", ") + ")";
+        obj.playName = "后三其它-特殊号";
+        obj.content = "特殊号: (" + bdArr.join(", ") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * bdArr.length;
         obj.zhushu = bdArr.length;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -1792,8 +1818,11 @@
             playNameStr = "后三组选-组选包胆";
             flag_dan_zhi = "zxbd-zux";
         } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
-            playNameStr = "后三组选-和值尾数";
-            flag_dan_zhi = "hzws-zux";
+            playNameStr = "后三其它-和值尾数";
+            flag_dan_zhi = "hzws-qt";
+        } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
+            playNameStr = "后三其它-特殊号";
+            flag_dan_zhi = "tsh-qt";
         }
 
 
@@ -1814,7 +1843,7 @@
                 }
                 zhushu = getZxhzNewArrs(arrZxhz).length;
                 contentStr = "和值: (" + arrZxhz[0] + ")";
-            } else if (flag_dan_zhi == "hzws-zux") {  //和值尾数
+            } else if (flag_dan_zhi == "hzws-qt") {  //和值尾数
                 var arrHzws = [];
                 while (arrHzws.length != 1) {
                     var zhiWs = parseInt(Math.random() * 10);
@@ -1822,6 +1851,14 @@
                 }
                 zhushu = arrHzws.length;
                 contentStr = "和值: (" + arrHzws[0] + ")";
+            } else if (flag_dan_zhi == "tsh-qt") {  //特殊号
+                var arrTsh = [];
+                while (arrTsh.length != 1) {
+                    var zhiTsh = parseInt(Math.random() * 10);
+                    arrTsh.push(zhiTsh);
+                }
+                zhushu = arrTsh.length;
+                contentStr = "特殊号: (" + arrTsh[0] + ")";
             } else if (flag_dan_zhi == "zxbd-zux") {  //组选包胆
                 var arrZxbd = [];
                 while (arrZxbd.length != 1) {
@@ -1947,6 +1984,10 @@
                 $(".fandian-bfb").html(money_jangjin + "%");
                 money_jangjin = 980 - (money_jangjin * 10);
                 $(".jiangjin-change").html(money_jangjin);
+                $(".jiangjin-change-2").html(money_jangjin);
+                $(".jiangjin-change-3").html(money_jangjin / 10);
+                $(".jiangjin-change-4").html(money_jangjin / 100);
+
                 if (typeof stateTouZhu == "function") {
                     var flag_str = '';
                     if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
