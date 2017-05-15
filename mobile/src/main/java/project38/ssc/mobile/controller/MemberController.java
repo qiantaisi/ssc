@@ -1456,10 +1456,11 @@ public class MemberController extends BaseController {
     }
 
     @RequestMapping(value = "/gonggao/list.html", method = RequestMethod.GET)
-    public ModelAndView gonggaoList(String companyShortName) throws Exception {
+    public ModelAndView gonggaoList() throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
+        String companyShortName =  this.getCompanyShortName();
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName).getWebNoticeList());
         return this.renderView("member/gonggao/list", modelMap);
     }
