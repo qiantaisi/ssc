@@ -1466,10 +1466,10 @@ public class MemberController extends BaseController {
     }
 
     @RequestMapping(value = "/gonggao/detail.html", method = RequestMethod.GET)
-    public ModelAndView gonggaoDetail(String pk,String companyShortName) throws Exception {
+    public ModelAndView gonggaoDetail(String pk) throws Exception {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-
+        String companyShortName =  this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("data", ApiUtils.getPopupNotice(pk,companyShortName));
 
