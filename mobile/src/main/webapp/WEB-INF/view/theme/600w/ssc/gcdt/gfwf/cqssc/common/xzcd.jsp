@@ -9,11 +9,12 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<div class="cus-tabs-scroll">
-    <a>五星直选</a>
-    <span><img src="<%=basePath%>static/theme/600w/img/ico222.png"/></span>
-    <a>
-        直选方式
-        <i class="triangle-down"><!--向下的三角--> </i>
-    </a>
+<div class="coveron1 hw">
+    <div class="consele1">
+        <div class="xuan">
+            <div class="xuan1"></div>
+            <div class="xuan2">五星</div>
+            <div class="xuan1"></div>
+        </div>
+    </div>
 </div>
