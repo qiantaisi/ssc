@@ -163,6 +163,10 @@
     height: 95px;
     width: 650px !important;
 }
-.recl-1004-zxhz ul li.hz-q2 span{
+.recl-1008-zuxhz ul li.hz-q2{
+    height: 95px;
+    width: 590px !important;
+}
+.recl-1004-zxhz ul li.hz-q2 span,.recl-1008-zuxhz ul li.hz-q2 span{
     height: 50px!important;
 }

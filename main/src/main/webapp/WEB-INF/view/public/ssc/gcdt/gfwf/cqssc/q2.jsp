@@ -20,10 +20,10 @@
         <li>
             <b>前二组选</b>
             <p class="btn_fu_zhi">
-                <span data-name="zxfs"><a href="javascript:void(0)">组选复式</a></span>
-                <span data-name="zxds"><a href="javascript:void(0)">组选单式</a></span>
-                <span data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <span data-name="zxkd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span data-name="zuxfs"><a href="javascript:void(0)">组选复式</a></span>
+                <span data-name="zuxds"><a href="javascript:void(0)">组选单式</a></span>
+                <span data-name="zuxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span data-name="zuxbd"><a href="javascript:void(0)">组选包胆</a></span>
             </p>
         </li>
     </ul>
@@ -116,7 +116,7 @@
     <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
 </div>
 <%--直选和值--%>
-<div class="Pick cl-1002 recl-1004-zxhz" data-flag="q2zx">
+<div class="Pick cl-1002 recl-1004-zxhz">
     <p class="p1">
         <span class="fr fl cl-1001">
             从0-18中任意选择1个或1个以上的和值号码。
@@ -155,7 +155,7 @@
     </ul>
 </div>
 <%--直选跨度--%>
-<div class="Pick cl-1002 recl-1005-zxkd" data-flag="q2zx">
+<div class="Pick cl-1002 recl-1005-zxkd">
     <p class="p1">
         <span class="fr fl cl-1001">
             从0-9中任意选择1个号码组成一注。
@@ -171,6 +171,147 @@
     <ul>
         <li data-name="跨度">
             <b><i>跨度</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+<%--组选复式--%>
+<div class="Pick cl-1002 recl-1006-zuxfs">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+           从0-9中任意选择2个或2个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：58 开奖号码：前两位 58 或 85(顺序不限，不含对子号)，即为中奖。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9号码中选取两个号码组成一注，所选号码与开奖号码的万、千位相同，顺序不限，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="组选">
+            <b><i>组选</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+<%--组选单式--%>
+<div class="Pick cl-1003 recl-1007-zuxds">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            手动输入号码，至少输入1个二位数号码组成一注。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：58 开奖号码：前二位 58 或者 85(顺序不限，不含对子号)，即中前二组选。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>手动输入2个号码组成一注，输入号码的万、千位与开奖号码相同，且顺序不限，即为中奖。</var>
+            </a>
+
+        </span>
+    </p>
+    <div class="content_jiang">
+        <textarea class="content_tex" autofocus></textarea>
+        <div class="right con_j_end">
+            <ul>
+                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
+                <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
+</div>
+<%--组选和值--%>
+<div class="Pick cl-1002 recl-1008-zuxhz">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从1-17中任意选择1个或者1个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：和值1 开奖号码前两位：01或10(顺序不限，不含对子号)，即中前二组选。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>开奖号码的万、千位中两个数字相加之和等于所选号(不含对子号)，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="和值" class="hz-q2">
+            <b class="hz-dir"><i>和值</i></b>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <span><i>10</i></span>
+            <span><i>11</i></span>
+            <span><i>12</i></span>
+            <span><i>13</i></span>
+            <span><i>14</i></span>
+            <span><i>15</i></span>
+            <span><i>16</i></span>
+            <span><i>17</i></span>
+        </li>
+    </ul>
+</div>
+<%--组选包胆--%>
+<div class="Pick cl-1002 recl-1009-zuxbd">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+           从0-9中任意选择1个包胆号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：包胆8 开奖号码：前二位 8×，且×不等于8，即中前二组选。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9号码中任意选取一个胆码，开奖号码前二位各不相同(不含对子号)，投注号码与开奖号码前二位中任意一位相同，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="胆码">
+            <b><i>胆码</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -227,7 +368,8 @@
             </div>
         </div>
         <p class="p1">
-            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i class="i1 i_money">0.00</i>元。
+            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i
+                class="i1 i_money">0.00</i>元。
         </p>
     </div>
     <div class="rigth">
@@ -236,37 +378,49 @@
 
 </div>
 <script>
-    $(function(){
+    $(function () {
         //初始化复式选号模式
         $(".Pick").hide();
         $('.recl-1002').show();
 
         $(".group ul li span").click(function () {
-             var flagForT = $(".group ul li p span").hasClass("acti");
-             if(flagForT){
-                 $(".group ul li p span").removeClass('acti');
-             }
-             $(this).addClass("acti");
+            var flagForT = $(".group ul li p span").hasClass("acti");
+            if (flagForT) {
+                $(".group ul li p span").removeClass('acti');
+            }
+            $(this).addClass("acti");
 
-             var flagName = $(this).data("name");
-             if(flagName == "zxds"){
-                 $(".Pick").hide();
-                 $('.recl-1003').show();
-             }else if(flagName == "zxfs"){
-                 $(".Pick").hide();
-                 $('.recl-1002').show();
-             }else if(flagName == "zxhz"){
-                 $(".Pick").hide();
-                 $('.recl-1004-zxhz').show();
-             }else if(flagName == "zxkd"){
-                 $(".Pick").hide();
-                 $('.recl-1005-zxkd').show();
-             }
+            var flagName = $(this).data("name");
+            if (flagName == "zxds") {
+                $(".Pick").hide();
+                $('.recl-1003').show();
+            } else if (flagName == "zxfs") {
+                $(".Pick").hide();
+                $('.recl-1002').show();
+            } else if (flagName == "zxhz") {
+                $(".Pick").hide();
+                $('.recl-1004-zxhz').show();
+            } else if (flagName == "zxkd") {
+                $(".Pick").hide();
+                $('.recl-1005-zxkd').show();
+            } else if (flagName == "zuxfs") {
+                $(".Pick").hide();
+                $('.recl-1006-zuxfs').show();
+            } else if (flagName == "zuxds") {
+                $(".Pick").hide();
+                $('.recl-1007-zuxds').show();
+            } else if (flagName == "zuxhz") {
+                $(".Pick").hide();
+                $('.recl-1008-zuxhz').show();
+            } else if (flagName == "zuxbd") {
+                $(".Pick").hide();
+                $('.recl-1009-zuxbd').show();
+            }
         });
 
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
-            if(typeof stateTouZhu == "function"){
+            if (typeof stateTouZhu == "function") {
                 stateTouZhu('fu');
             }
         });
@@ -284,7 +438,7 @@
                 $(".right_it1").show();
                 $(".Detailedlist").show();
             } else {
-                var flag_acti =  $(this).parent().parent().prev().find("b").hasClass('acti');
+                var flag_acti = $(this).parent().parent().prev().find("b").hasClass('acti');
                 if (flag_acti == true) {
                     $(this).parent().parent().prev().find("b").removeClass('acti');
                 }
@@ -311,7 +465,7 @@
         $(".Single .layout .Pick ul li span.acti").removeClass("acti");
         $(".re-5x-i i.acti").removeClass("acti");
         $("#zhushuInfo").data("zhushu", 0);
-        if(typeof clearStateTouZhu == 'function'){
+        if (typeof clearStateTouZhu == 'function') {
             clearStateTouZhu();
         }
         calc();
@@ -351,12 +505,12 @@
     //添加注单
     function tjzd() {
         if (typeof $('.recl-1003').attr('statef') != 'undefined') {
-            var betDsForm ={};
-            if(!getDsZhudan(betDsForm)){
+            var betDsForm = {};
+            if (!getDsZhudan(betDsForm)) {
                 return;
             }
             clearTextarea();
-            if(typeof clearStateTouZhu == 'function'){
+            if (typeof clearStateTouZhu == 'function') {
                 clearStateTouZhu();
             }
             var html = template("template_touzhu", betDsForm);
@@ -378,10 +532,10 @@
     function getDsZhushu() {
         var textStr = $(".content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g,','));
+        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
-            if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4){
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
                 newArr.push(arr_new[i]);
             }
         }
@@ -395,23 +549,23 @@
         var errorArr = [];
         var errorStr = '';
         var zhushu = 0;
-        textStr = $.trim(textStr.replace(/[^1-9]/g,','));
+        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
-           if(arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4){
-               newArr.push(arr_new[i]);
-           }else{
-               errorArr.push(arr_new[i]);
-           }
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+                newArr.push(arr_new[i]);
+            } else {
+                errorArr.push(arr_new[i]);
+            }
         }
 
-        if(newArr.length <= 0){
+        if (newArr.length <= 0) {
             alert("号码或金额输入有误，请重新输入");
             return;
         }
 
-        if(errorArr.length > 0){
-            for(var e = 0; e < errorArr.length; e++){
+        if (errorArr.length > 0) {
+            for (var e = 0; e < errorArr.length; e++) {
                 errorStr += errorArr[e] + ",";
             }
             alert("被过滤掉的错误号码" + errorStr);
@@ -533,9 +687,9 @@
                     arr.push(num);
                 }
             }
-            if(flag_dan_zhi == "dan"){
+            if (flag_dan_zhi == "dan") {
                 contentStr = "号码: (" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
-            }else if(flag_dan_zhi == "fu"){
+            } else if (flag_dan_zhi == "fu") {
                 contentStr = "千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
             }
 
@@ -574,7 +728,7 @@
                 $(".fandian-bfb").html(money_jangjin + "%");
                 money_jangjin = 98.00 - money_jangjin;
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
-                if(typeof stateTouZhu == "function"){
+                if (typeof stateTouZhu == "function") {
                     var flag_str = '';
                     if (typeof $('.recl-1003').attr('statef') != 'undefined') {
                         flag_str = 'dan';
@@ -642,16 +796,16 @@
             data-content="{{content}}"
             class="re_touzhu_tem"
     >
-            <div class="head-name">
-                <span>{{playName}}</span>
-            </div>
-            <div class="content-jiang">
-                <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-                <span class="span1">{{zhushu}}注</span>
-                <span class="span2">{{jiangJfanD}}</span>
-                <span class="span3">{{totalMoney}}元</span>
-                <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
-                        src="${resPath}img/ico53.png" alt=""></a></span>
-            </div>
+        <div class="head-name">
+            <span>{{playName}}</span>
+        </div>
+        <div class="content-jiang">
+            <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
+            <span class="span1">{{zhushu}}注</span>
+            <span class="span2">{{jiangJfanD}}</span>
+            <span class="span3">{{totalMoney}}元</span>
+            <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
+                    src="${resPath}img/ico53.png" alt=""></a></span>
+        </div>
     </li>
 </script>
