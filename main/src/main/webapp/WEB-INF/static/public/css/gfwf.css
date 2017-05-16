@@ -146,7 +146,6 @@
     background: #e84f31!important;
     color: #FFF!important;
 }
-
 .h3_slide_sp{
     position:relative;
 }
@@ -156,3 +155,14 @@
     right:15%;
 }
 
+/*前二页面（时时彩）*/
+.hz-dir{
+    height:80px;
+}
+.recl-1004-zxhz ul li.hz-q2{
+    height: 95px;
+    width: 650px !important;
+}
+.recl-1004-zxhz ul li.hz-q2 span{
+    height: 50px!important;
+}

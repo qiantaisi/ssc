@@ -1241,7 +1241,7 @@
             }
         }
 
-        if (newArr.length <= 0) {
+        if (tempArr.length <= 0) {
             alert("号码或金额输入有误，请重新输入");
             return;
         }
@@ -1392,7 +1392,7 @@
             }
         }
 
-        if (newArr.length <= 0) {
+        if (tempArr.length <= 0) {
             alert("号码或金额输入有误，请重新输入");
             return;
         }
@@ -1533,6 +1533,8 @@
            }else if(flag_name == "对子"){
                obj.jiangJfanD = $(".jiangjin-change-tsh-dz").html() + "/" + $(".fandian-bfb").html();
            }
+        }else if(bdArr.length > 1){
+            obj.jiangJfanD = $(".jiangjin-change-tsh").html() + "/" + $(".fandian-bfb").html();
         }
         obj.playGroupId = playGroupId;
         return true;
