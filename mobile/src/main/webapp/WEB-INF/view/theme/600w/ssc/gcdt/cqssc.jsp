@@ -26,7 +26,7 @@
         <div class="consele">
             <div class="selects">
                 <div class="selects-one">
-                    <span class="active"><a href="<%=basePath%>ssc/gcdt/gfwf/cpssc.html">官方玩法</a></span>
+                    <span><a href="<%=basePath%>ssc/gcdt/gfwf/cpssc.html">官方玩法</a></span>
                 </div>
             </div>
             <div class="selects">
@@ -42,17 +42,13 @@
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/sm.html">双面</a>
-                    <a href="javascript:void(0)" data-type="page"
-                       data-url="<%=basePath%>ssc/gcdt/cqssc/szp.html">数字盘</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/szp.html">数字盘</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-yzdw">一字定</a>
-                    <a href="javascript:void(0)" data-type="page"
-                       data-url="<%=basePath%>ssc/gcdt/cqssc/ezdw.html">二字定</a>
-                    <a href="javascript:void(0)" data-type="page"
-                       data-url="<%=basePath%>ssc/gcdt/cqssc/szdw.html">三字定</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/ezdw.html">二字定</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/szdw.html">三字定</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-yzzh">一字组</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-ezzh">二字组</a>
-                    <a href="javascript:void(0)" data-type="page"
-                       data-url="<%=basePath%>ssc/gcdt/cqssc/ezhs.html">二字和</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/ezhs.html">二字和</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-zxs">组选三</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-zxl">组选六</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-kd">跨度</a>
