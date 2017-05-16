@@ -1394,7 +1394,7 @@
 
         if (newArr.length <= 0) {
             alert("号码或金额输入有误，请重新输入");
-            return;
+            return false;
         }
 
         if (errorArr.length > 0) {
