@@ -618,9 +618,14 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i class="change-base"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
-                <i class="change-1"><var class="fandian-bfb">1.0%</var></i>
+                <i class="change-base"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="change-base-hszx"><var class="jiangjin-change-hszx">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="change-base-zl"><var class="jiangjin-change-zl">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="change-base-ws"><var class="jiangjin-change-ws">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="change-base-tsh"><var class="jiangjin-change-tsh">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-sz">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-dz">0.0</var></i>
+                <i class="change-1"><var class="fandian-bfb">0.0%</var></i>
                 <i class="change-2"><var class="jiangjin-change-2">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-3">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-4">0.0</var></i>
+                <i class="change-3"><var class="jiangjin-change-hszx">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-zl">0.0</var></i>
 
             </div>
             <div class="reduce">
@@ -660,11 +665,19 @@
         $(".change-1").hide();
         $(".change-2").hide();
         $(".change-3").hide();
+        $(".change-base-hszx").hide();
+        $(".change-base-zl").hide();
+        $(".change-base-ws").hide();
+        $(".change-base-tsh").hide();
 
         $(".btn_h3_zx span").click(function () {
             $(".change-1").hide();
             $(".change-2").hide();
-            $(".change-3").hide();;
+            $(".change-3").hide();
+            $(".change-base-hszx").hide();
+            $(".change-base-zl").hide();
+            $(".change-base-ws").hide();
+            $(".change-base-tsh").hide();
             $(".change-base").show();
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
@@ -690,7 +703,6 @@
                 $('.cl-1004-hszh').attr("data-flag", "hszh_zx");
                 $(".change-1").show();
                 $(".change-2").show();
-                $(".change-3").show();
                 $(".change-base").hide();
             } else if (flag_name == "zxhz") {
                 $(".Pick").hide();
@@ -708,8 +720,13 @@
         $(".btn_h3_zux span").click(function () {
             $(".change-1").hide();
             $(".change-2").hide();
-            $(".change-3").hide();;
-            $(".change-base").show();
+            $(".change-3").hide();
+            $(".change-base").hide();
+            $(".change-base-zl").hide();
+            $(".change-base-ws").hide();
+            $(".change-base-tsh").hide();
+            $(".change-base-hszx").show();
+
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
             }
@@ -730,34 +747,49 @@
                 $(".Pick").hide();
                 $(".cl-1009-zlfs").show();
                 $(".cl-1009-zlfs").attr("data-flag", "zlfs_zux");
+                $(".change-base-zl").show();
+                $(".change-base-hszx").hide();
             } else if (flag_name == "zlds") {
                 $(".Pick").hide();
                 $(".cl-1010-zlds").show();
                 $(".cl-1010-zlds").attr("data-flag", "zlds_zux");
+                $(".change-base-zl").show();
+                $(".change-base-hszx").hide();
             } else if (flag_name == "hhzx") {
                 $(".Pick").hide();
                 $(".cl-1011-hhzx").show();
                 $(".cl-1011-hhzx").attr("data-flag", "hhzx_zux");
+                $(".change-base-hszx").hide();
+                $(".change-1").show();
+                $(".change-3").show();
             } else if (flag_name == "zxhz") {
                 $(".Pick").hide();
                 $(".cl-1012-zxhz").show();
                 $(".cl-1012-zxhz").attr("data-flag", "zxhz_zux");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                $(".change-base-hszx").hide();
+                $(".change-1").show();
+                $(".change-3").show();
             } else if (flag_name == "zxbd") {
                 $(".Pick").hide();
                 $(".cl-1013-zxbd").show();
                 $(".cl-1013-zxbd").attr("data-flag", "zxbd_zux");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                $(".change-base-hszx").hide();
+                $(".change-1").show();
+                $(".change-3").show();
             }
         });
 
         $(".btn_h3_qt span").click(function () {
             $(".change-1").hide();
             $(".change-2").hide();
-            $(".change-3").hide();;
-            $(".change-base").show();
+            $(".change-3").hide();
+            $(".change-base").hide();
+            $(".change-base-hszx").hide();
+            $(".change-base-ws").show();
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
             }
@@ -774,17 +806,15 @@
                 $(".Pick").hide();
                 $('.cl-1015-tsh').show();
                 $('.cl-1015-tsh').attr("data-flag", "tsh_qt");
+                $(".change-base-ws").hide();
+                $(".change-1").show();
+                $(".change-base-tsh").show();
             }
         });
 
         // 选中特殊号
         $(".cl-1015-tsh ul .tsh_li span").click(function () {
-            $(".change-1").hide();
-            $(".change-2").hide();
-            $(".change-3").hide();;
-            $(".change-base").show();
             $(this).toggleClass('acti_tsh');
-
             if (typeof $(".cl-1015-tsh").attr('data-flag') != 'undefined') {
                 var flag_str = 'tsh_qt';
                 stateTouZhu(flag_str);
@@ -857,6 +887,10 @@
     }
 
     function clearSelected() {
+        var flag = $(".cl-1015-tsh").attr("data-flag");
+        if(typeof flag != "undefined"){
+            $(".cl-1015-tsh ul li span.acti_tsh").removeClass("acti_tsh");
+        }
         $(".Single .layout .Pick ul li span.acti").removeClass("acti");
         $(".re-5x-i i.acti").removeClass("acti");
         $("#zhushuInfo").data("zhushu", 0);
@@ -1226,7 +1260,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1253,7 +1287,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1280,7 +1314,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-zl").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1329,7 +1363,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1377,7 +1411,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-zl").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1467,7 +1501,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1483,13 +1517,23 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
+
         obj.playName = "后三其它-特殊号";
         obj.content = "特殊号: (" + bdArr.join(", ") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * bdArr.length;
         obj.zhushu = bdArr.length;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        if(bdArr.length == 1) {
+           var flag_name = $(".cl-1015-tsh ul li[data-name = '特殊号'] span.acti_tsh").html();
+           if(flag_name == "豹子"){
+               obj.jiangJfanD = $(".jiangjin-change-tsh").html() + "/" + $(".fandian-bfb").html();
+           }else if(flag_name == "顺子"){
+               obj.jiangJfanD = $(".jiangjin-change-tsh-sz").html() + "/" + $(".fandian-bfb").html();
+           }else if(flag_name == "对子"){
+               obj.jiangJfanD = $(".jiangjin-change-tsh-dz").html() + "/" + $(".fandian-bfb").html();
+           }
+        }
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1512,7 +1556,7 @@
         obj.zhushu = bdArr.length;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-ws").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1536,33 +1580,11 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
 
-    //后三组选--组选包胆
-    function getZxbdZhudan(obj) {
-        var bdArr = [];
-        $.each($(".cl-1013-zxbd ul li[data-name = '包胆'] span.acti"), function (index, value) {
-            bdArr.push($.trim($(this).find("i").html()));
-        });
-
-        var zhushu = getZxbdZhushu();
-        if (zhushu <= 0) {
-            alert("至少选择1注号码才能投注");
-            return false;
-        }
-        obj.playName = "后三组选-组选包胆";
-        obj.content = "包胆: (" + bdArr.join(", ") + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
-        return true;
-    }
 
     //后三直选--后三组合
     function getHsZhudan(obj) {
@@ -1777,57 +1799,57 @@
 
     function suiji(total) {
         var result = [];
-        var flag_dan_zhi = "dan";//默认为单式
+        var flag_zhi = "dan";//默认为单式
         var playNameStr = '';
         var contentStr = '';
         var zhushu = 1; //默认为1注
         if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-单式";
-            flag_dan_zhi = "dan";
+            flag_zhi = "dan";
         } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-复式";
-            flag_dan_zhi = "fu";
+            flag_zhi = "fu";
         } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-组合";
-            flag_dan_zhi = "hszh-zx";
+            flag_zhi = "hszh-zx";
         } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-和值";
-            flag_dan_zhi = "hshz-zx";
+            flag_zhi = "hshz-zx";
         } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-跨度";
-            flag_dan_zhi = "zxkd-zx";
+            flag_zhi = "zxkd-zx";
         } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
-            playNameStr = "后三直选-组三复式";
-            flag_dan_zhi = "zxfs-zux";
+            playNameStr = "后三组选-组三复式";
+            flag_zhi = "zxfs-zux";
         } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-组三单式";
-            flag_dan_zhi = "zsds-zux";
+            flag_zhi = "zsds-zux";
         } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-组六复式";
-            flag_dan_zhi = "zlfs-zux";
+            flag_zhi = "zlfs-zux";
         } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-组六单式";
-            flag_dan_zhi = "zlds-zux";
+            flag_zhi = "zlds-zux";
         } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-混合组选";
-            flag_dan_zhi = "hhzx-zux";
+            flag_zhi = "hhzx-zux";
         } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-组选和值";
-            flag_dan_zhi = "zxhz-zux";
+            flag_zhi = "zxhz-zux";
         } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
             playNameStr = "后三组选-组选包胆";
-            flag_dan_zhi = "zxbd-zux";
+            flag_zhi = "zxbd-zux";
         } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
             playNameStr = "后三其它-和值尾数";
-            flag_dan_zhi = "hzws-qt";
+            flag_zhi = "hzws-qt";
         } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
             playNameStr = "后三其它-特殊号";
-            flag_dan_zhi = "tsh-qt";
+            flag_zhi = "tsh-qt";
         }
 
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
-            if (flag_dan_zhi == "hshz-zx") {  //直选和值
+            if (flag_zhi == "hshz-zx") {  //直选和值
                 var arrZx = [];
                 while (arrZx.length != 1) {
                     var m = parseInt(Math.random() * 27) + 1;
@@ -1835,7 +1857,7 @@
                 }
                 zhushu = getHezNewArrs(arrZx).length;
                 contentStr = "和值: (" + arrZx[0] + ")";
-            } else if (flag_dan_zhi == "zxhz-zux") {  //组选和值
+            } else if (flag_zhi == "zxhz-zux") {  //组选和值
                 var arrZxhz = [];
                 while (arrZxhz.length != 1) {
                     var zhiZx = parseInt(Math.random() * 26) + 1;
@@ -1843,7 +1865,7 @@
                 }
                 zhushu = getZxhzNewArrs(arrZxhz).length;
                 contentStr = "和值: (" + arrZxhz[0] + ")";
-            } else if (flag_dan_zhi == "hzws-qt") {  //和值尾数
+            } else if (flag_zhi == "hzws-qt") {  //和值尾数
                 var arrHzws = [];
                 while (arrHzws.length != 1) {
                     var zhiWs = parseInt(Math.random() * 10);
@@ -1851,7 +1873,7 @@
                 }
                 zhushu = arrHzws.length;
                 contentStr = "和值: (" + arrHzws[0] + ")";
-            } else if (flag_dan_zhi == "tsh-qt") {  //特殊号
+            } else if (flag_zhi == "tsh-qt") {  //特殊号
                 var arrTsh = [];
                 while (arrTsh.length != 1) {
                     var zhiTsh = parseInt(Math.random() * 10);
@@ -1859,7 +1881,7 @@
                 }
                 zhushu = arrTsh.length;
                 contentStr = "特殊号: (" + arrTsh[0] + ")";
-            } else if (flag_dan_zhi == "zxbd-zux") {  //组选包胆
+            } else if (flag_zhi == "zxbd-zux") {  //组选包胆
                 var arrZxbd = [];
                 while (arrZxbd.length != 1) {
                     var zhi = parseInt(Math.random() * 10);
@@ -1867,7 +1889,7 @@
                 }
                 zhushu = getZxbdNewArrs(arrZxbd).length;
                 contentStr = "包胆: (" + arrZxbd[0] + ")";
-            } else if (flag_dan_zhi == "zxfs-zux") {
+            } else if (flag_zhi == "zxfs-zux") {  //组三复式
                 var arrTemp = [];
                 while (arrTemp.length != 2) {
                     var x = parseInt(Math.random() * 10);
@@ -1878,7 +1900,7 @@
                     }
                 }
                 contentStr = "组三: (" + arrTemp.join(', ') + ")";
-            } else if (flag_dan_zhi == "hhzx-zux") {
+            } else if (flag_zhi == "hhzx-zux") {
                 var arrTemp_hhzx = [];
                 while (arrTemp_hhzx.length != 3) {
                     var xHhzx = parseInt(Math.random() * 10);
@@ -1891,7 +1913,7 @@
                     }
                 }
                 contentStr = "号码: (" + arrTemp_hhzx.join("") + ")";
-            } else if (flag_dan_zhi == "zsds-zux") {
+            } else if (flag_zhi == "zsds-zux") {
                 var arrTemp_zxds = [];
                 while (arrTemp_zxds.length != 3) {
                     var xZxds = parseInt(Math.random() * 10);
@@ -1904,7 +1926,7 @@
                     }
                 }
                 contentStr = "号码: (" + arrTemp_zxds.join("") + ")";
-            } else if (flag_dan_zhi == "zlfs-zux" || flag_dan_zhi == "zlds-zux") {
+            } else if (flag_zhi == "zlfs-zux" || flag_zhi == "zlds-zux") {
                 var arrTemp_zlfs = [];
                 while (arrTemp_zlfs.length != 3) {
                     var xZlfs = parseInt(Math.random() * 10);
@@ -1931,11 +1953,11 @@
                         arr.push(num);
                     }
                 }
-                if (flag_dan_zhi == "dan") {
+                if (flag_zhi == "dan") {
                     contentStr = "号码: (" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
-                } else if (flag_dan_zhi == "zxkd-zx") {
+                } else if (flag_zhi == "zxkd-zx") {
                     contentStr = "跨度: (" + arr[4] + ")";
-                } else if (flag_dan_zhi == "fu" || flag_dan_zhi == "hszh-zx") {
+                } else if (flag_zhi == "fu" || flag_zhi == "hszh-zx") {
                     contentStr = "百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
                 }
             }
@@ -1947,7 +1969,17 @@
             obj.zhushu = zhushu;
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");
-            obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+            if(flag_zhi == "zxfs-zux" || flag_zhi == "zsds-zux" || flag_zhi == "hhzx-zux" || flag_zhi == "zxhz-zux" || flag_zhi == "zxbd-zux"){
+                obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
+            }else if(flag_zhi == "zlfs-zux" || flag_zhi == "zlds-zux"){
+                obj.jiangJfanD = $(".jiangjin-change-zl").html() + "/" + $(".fandian-bfb").html();
+            }else if(flag_zhi == "hzws-qt"){
+                obj.jiangJfanD = $(".jiangjin-change-ws").html() + "/" + $(".fandian-bfb").html();
+            }else if(flag_zhi == "tsh-qt"){
+                obj.jiangJfanD = $(".jiangjin-change-tsh").html() + "/" + $(".fandian-bfb").html();
+            }else{
+                obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+            }
             obj.playGroupId = playGroupId;
             result.push(obj);
         }
@@ -1979,61 +2011,78 @@
             showScale: false,
             snap: true,
             onstatechange: function () {
-                var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(1);
-                $(".fandian-bfb").html(money_jangjin + "%");
-                money_jangjin = 980 - (money_jangjin * 10);
-                $(".jiangjin-change").html(money_jangjin);
-                $(".jiangjin-change-2").html(money_jangjin);
-                $(".jiangjin-change-3").html(money_jangjin / 10);
-                $(".jiangjin-change-4").html(money_jangjin / 100);
+                    var money_jangjin = $(".slider-input").val();
+                    money_jangjin = parseFloat(money_jangjin).toFixed(1);
+                    $(".fandian-bfb").html(money_jangjin + "%");
+                    money_jangjin = 980 - (money_jangjin * 10);
+                    $(".jiangjin-change").html(money_jangjin);
+                    //特殊号的拉动杆值
+                    var money_tsh = parseFloat(money_jangjin / 10).toFixed(2);
+                    $(".jiangjin-change-tsh").html(money_tsh);
+                    money_tsh = parseFloat(money_tsh / 6).toFixed(2);
+                    $(".jiangjin-change-tsh-sz").html(money_tsh);
+                    money_tsh = parseFloat(money_tsh / 4.5).toFixed(2);
+                    $(".jiangjin-change-tsh-dz").html(money_tsh);
+                    //特殊号尾数和值的拉动杆值
+                    var money_ws = parseFloat(money_jangjin / 100).toFixed(2);
+                    $(".jiangjin-change-ws").html(money_ws);
+                    //组三拉动干值
+                    var money_hszx = parseFloat(money_jangjin / 3).toFixed(2);
+                    $(".jiangjin-change-hszx").html(money_hszx);
+                    //组六拉动杆值
+                    var money_zl = parseFloat(money_jangjin / 6).toFixed(2);
+                    $(".jiangjin-change-zl").html(money_zl);
+                    $(".jiangjin-change-2").html(money_jangjin);
+                    $(".jiangjin-change-3").html(money_jangjin / 10);
+                    $(".jiangjin-change-4").html(money_jangjin / 100);
 
-                if (typeof stateTouZhu == "function") {
-                    var flag_str = '';
-                    if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
-                        flag_str = 'dan';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
-                        flag_str = 'fu';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
-                        flag_str = 'hszh_zx';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
-                        flag_str = 'zxhz_zx';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
-                        flag_str = 'zxkd_zx';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
-                        flag_str = 'zsfs_zux';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
-                        flag_str = 'zsds_zux';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
-                        flag_str = 'zlfs_zux';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
-                        flag_str = 'zlds_zux';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
-                        flag_str = 'hhzx_zux';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
-                        flag_str = 'zxhz_zux';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
-                        flag_str = 'zxbd_zux';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
-                        flag_str = 'hzws_qt';
-                        stateTouZhu(flag_str);
-                    } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
-                        flag_str = 'tsh_qt';
-                        stateTouZhu(flag_str);
+
+                    if (typeof stateTouZhu == "function") {
+                        var flag_str = '';
+                        if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
+                            flag_str = 'dan';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
+                            flag_str = 'fu';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
+                            flag_str = 'hszh_zx';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
+                            flag_str = 'zxhz_zx';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
+                            flag_str = 'zxkd_zx';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
+                            flag_str = 'zsfs_zux';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
+                            flag_str = 'zsds_zux';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
+                            flag_str = 'zlfs_zux';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
+                            flag_str = 'zlds_zux';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
+                            flag_str = 'hhzx_zux';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
+                            flag_str = 'zxhz_zux';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
+                            flag_str = 'zxbd_zux';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
+                            flag_str = 'hzws_qt';
+                            stateTouZhu(flag_str);
+                        } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
+                            flag_str = 'tsh_qt';
+                            stateTouZhu(flag_str);
+                        }
                     }
-                }
             }
         });
 

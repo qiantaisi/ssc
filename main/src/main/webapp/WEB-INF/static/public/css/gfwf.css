@@ -146,7 +146,7 @@
 .h3_slide_sp{
     position:relative;
 }
-.h3_slide_sp .change-2{
+.h3_slide_sp .change-2,.h3_slide_sp .change-3,.h3_slide_sp .change-base-tsh{
     position: absolute;
     top:-20px;
     right:15%;
