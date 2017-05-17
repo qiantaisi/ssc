@@ -122,7 +122,33 @@ function getZxfsZshu() {
     return tempArr.length;
 }
 
+//前二直选-组选复式
+function getZuxfsZshu() {
+    var tempArr = [], zuxArr = [];
+    $.each($(".recl-1006-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
+        zuxArr.push($.trim($(this).find("i").html()));
+    });
 
+    var xLength = zuxArr.length;
+    if (xLength < 2) {
+        return;
+    }
+
+    for(var i = 0; i < zuxArr.length; i++){
+        for(var i1 = 0; i1 < zuxArr.length; i1++){
+            if(zuxArr[i] != zuxArr[i1]){
+                var xArr =[];
+                xArr.push(zuxArr[i]);
+                xArr.push(zuxArr[i1]);
+                xArr.sort();
+                tempArr.push(xArr.join(""));
+            }
+        }
+    }
+
+    tempArr = tempArr.uniqueArr();
+    return tempArr.length;
+}
 
 
 //获取状态
@@ -165,12 +191,17 @@ function stateTouZhu(flag_str) {
     } else if (flagStrInner == "zxfs-q2"){ //直选复式-前二
         zhushu = getZxfsZshu();
     } else if (flagStrInner == "zxds-q2"){ //直选单式-前二
-        zhushu = getDsZhushu();
+        zhushu = getZxdsZhushu();
     } else if (flagStrInner == "zxhz-q2"){ //直选和值-前二
         zhushu = getZxhzZshu();
     } else if (flagStrInner == "zxkd-q2"){ // 直选跨度-前二
         zhushu = getZxkdZshu();
+    } else if (flagStrInner == "zuxfs-q2"){ // 组选复式-前二
+        zhushu = getZuxfsZshu();
+    } else if (flagStrInner == "zuxds-q2"){ // 组选单式-前二
+        zhushu = getZuxdsZhushu();
     }
+
     if(zhushu <= 0){
         clearStateTouZhu();
         return 0;

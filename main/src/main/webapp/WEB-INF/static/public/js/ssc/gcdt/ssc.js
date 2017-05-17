@@ -579,7 +579,6 @@ function getJjsm() {
             $(container).html('<li style="width:100%;padding:15px;text-align:center;"><img src="' + CONFIG.RESURL + 'img/base_loading.gif"/>');
         },
         success: function(json) {
-            console.log(json.result);
             if(json.result != 1) {
                 return;
             }
