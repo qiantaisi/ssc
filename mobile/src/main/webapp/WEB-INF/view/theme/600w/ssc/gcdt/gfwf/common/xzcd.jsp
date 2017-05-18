@@ -9,7 +9,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<div class="cover1">
+<div class="cover1 hw">
     <%--蒙版--%>
 </div>
 <div class="coveron1 hw">
