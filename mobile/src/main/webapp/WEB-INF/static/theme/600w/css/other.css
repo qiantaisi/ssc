@@ -1240,14 +1240,16 @@ input[type="number"] {
     left: 1rem;
 }
 
-.selects-one span a {
+.selects-one a {
     color: #a3a3a3;
 }
 
-.selects-two span a {
-    color: #a3a3a3;
+.selects-two a {
+    color: #fa6200;
 }
-
+.selects .Bcolor{
+    border: 1px solid #fa6200;
+}
 .selects-two {
     color: #a3a3a3;
     float: right;
@@ -1255,9 +1257,5 @@ input[type="number"] {
     position: relative;
     right: 1rem;
     width: 40%;
-    border: 1px solid #a3a3a3;
-}
-.gfwfColor{
-    color: #fa6200;
-    border-color: #fa6200;
+    /*border: 1px solid #a3a3a3;*/
 }

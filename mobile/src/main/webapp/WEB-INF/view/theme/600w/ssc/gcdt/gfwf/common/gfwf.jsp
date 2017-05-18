@@ -12,12 +12,12 @@
 <div class="consele">
     <div class="selects">
         <div class="selects-one">
-            <span><a href="<%=basePath%>ssc/gcdt/gfwf/cpssc.html">官方玩法</a></span>
+         <a href="<%=basePath%>ssc/gcdt/gfwf/cpssc.html">官方玩法</a>
         </div>
     </div>
     <div class="selects">
-        <div class="selects-two">
-            <span><a href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a></span>
+        <div class="selects-two Bcolor">
+            <a href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
         </div>
     </div>
 </div>
