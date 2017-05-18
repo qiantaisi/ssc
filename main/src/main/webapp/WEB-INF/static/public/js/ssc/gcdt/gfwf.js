@@ -204,6 +204,8 @@ function stateTouZhu(flag_str) {
         zhushu = getZuxhzZhushu();
     } else if (flagStrInner == "zuxbd-q2"){ // 组选包胆-前二
         zhushu = getZuxbdZhushu();
+    }  else if (flagStrInner == "dwd"){ // 定位胆
+        zhushu = getDwdZhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){
