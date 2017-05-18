@@ -206,6 +206,7 @@ public abstract class BaseController {
         if (StringUtils.isBlank(companyShortName)) {
             throw new RuntimeException("非法请求");
         }
+
         return companyShortName;
     }
 }

@@ -91,7 +91,7 @@ public class SscController extends BaseController {
         SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(companyShortName, group);
 
         // 彩种禁用暂停
-        if (!sscPlayGroupResult.getEnable()) {
+        if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
             String path = httpServletRequest.getContextPath();
             String basePath = httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + path + "/ssc/tingcaipage.html";
 
