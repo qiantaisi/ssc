@@ -6686,5 +6686,3 @@ $(".cus-area-box .staer span").click(      //玩法选择点击事件
 
 
 
-
-
