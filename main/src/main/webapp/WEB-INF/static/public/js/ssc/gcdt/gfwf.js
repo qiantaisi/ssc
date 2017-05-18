@@ -200,9 +200,13 @@ function stateTouZhu(flag_str) {
         zhushu = getZuxfsZshu();
     } else if (flagStrInner == "zuxds-q2"){ // 组选单式-前二
         zhushu = getZuxdsZhushu();
+    } else if (flagStrInner == "zuxhz-q2"){ // 组选和值-前二
+        zhushu = getZuxhzZhushu();
+    } else if (flagStrInner == "zuxbd-q2"){ // 组选包胆-前二
+        zhushu = getZuxbdZhushu();
     }
 
-    if(zhushu <= 0){
+    if(zhushu <= 0 || typeof zhushu == "undefined"){
         clearStateTouZhu();
         return 0;
     }

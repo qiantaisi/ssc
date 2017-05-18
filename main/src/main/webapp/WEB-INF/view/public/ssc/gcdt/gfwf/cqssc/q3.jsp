@@ -822,8 +822,18 @@
         });
 
         $(".Pick ul li span i").click(function () {
-            $(this).parent().toggleClass('acti');
             var flag_name = $(this).parent().parent().parent().parent().attr("data-flag");
+            if(flag_name == "zxbd_zux"){
+                if( $(this).parent().hasClass('acti')){
+                    $(this).parent().removeClass('acti');
+                }else{
+                    $(".cl-1013-zxbd ul li span.acti").removeClass('acti');
+                    $(this).parent().addClass('acti');
+                }
+            }else{
+                $(this).parent().toggleClass('acti');
+            }
+
             if (typeof stateTouZhu == "function") {
                 if (flag_name == "hszh_zx") {
                     stateTouZhu(flag_name);
