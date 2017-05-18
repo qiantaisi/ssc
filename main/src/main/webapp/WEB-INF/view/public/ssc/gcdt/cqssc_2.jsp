@@ -63,7 +63,7 @@
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-q3">前三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-q2">前二</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-dwd">定位胆</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-bdw">不定位</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-budw">不定位</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-dxds">大小单双</a></span>
                             <span><a href="javascript:void(0)">任选玩法</a></span>
                         </p>
