@@ -95,45 +95,120 @@ function selectFun_6(obj) {
     clearStateTouZhu();//清除投注状态栏
 }
 
-function stateTouZhu(flag_str) {
-    var flag_str_inner = '';
-    var zhushu = 0;
-    if (typeof flag_str == 'undefined' || flag_str == null) {
-        flag_str_inner = 'zxfs_zx';
-    } else {
-        flag_str_inner = flag_str;
-    }
-    if (flag_str_inner == 'dan') {
-        zhushu = getDsZhushu();
-    } else if (flag_str_inner == "zxfs_zx" || flag_str_inner == "fu") {
-        zhushu = getZhushu();
-    } else if (flag_str_inner == "hszh_zx") {
-        zhushu = getHsZhushu();
-    } else if (flag_str_inner == "zxhz_zx") {
-        zhushu = getHezhiZhushu(flag_str_inner);
-    } else if (flag_str_inner == "zxkd_zx") {
-        zhushu = getKaDuZhushu(flag_str_inner);
-    } else if (flag_str_inner == "zsfs_zux") {
-        zhushu = getZuSanZhushu(flag_str_inner);
-    } else if (flag_str_inner == "zsds_zux") { //后三组选-组选单式
-        zhushu = getZsdsZhushu("zsds_zux");
-    } else if (flag_str_inner == "zlfs_zux") { //后三组选-组六复式
-        zhushu = getZuLiuZhushu(flag_str_inner);
-    } else if (flag_str_inner == "zlds_zux") { //后三组选-组六单式
-        zhushu = getZldsZhushu(flag_str_inner);
-    } else if (flag_str_inner == "hhzx_zux"){
-        zhushu = getHhzxZhushu(flag_str_inner);
-    } else if (flag_str_inner == "zxhz_zux"){
-        zhushu = getZxhzZhushu(flag_str_inner);
-    } else if (flag_str_inner == "zxbd_zux"){
-        zhushu = getZxbdZhushu(flag_str_inner);
-    } else if (flag_str_inner == "hzws_qt"){
-        zhushu = getZxwsZhushu(flag_str_inner);
-    } else if (flag_str_inner == "tsh_qt"){
-        zhushu = getTshZhushu(flag_str_inner);
+//前二直选-直选复式
+function getZxfsZshu() {
+    var tempArr = [];
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).find("i").html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).find("i").html()));
+    });
+
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
+
+    if (wanLength <= 0 || qianLength <= 0) {
+        return;
     }
 
-    if(zhushu <= 0){
+    for(var i = 0; i < wanArr.length; i++){
+        for(var i1 = 0; i1 < qianArr.length; i1++){
+            tempArr.push(wanArr[i] + "" + qianArr[i1]);
+        }
+    }
+
+    return tempArr.length;
+}
+
+//前二直选-组选复式
+function getZuxfsZshu() {
+    var tempArr = [], zuxArr = [];
+    $.each($(".recl-1006-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
+        zuxArr.push($.trim($(this).find("i").html()));
+    });
+
+    var xLength = zuxArr.length;
+    if (xLength < 2) {
+        return;
+    }
+
+    for(var i = 0; i < zuxArr.length; i++){
+        for(var i1 = 0; i1 < zuxArr.length; i1++){
+            if(zuxArr[i] != zuxArr[i1]){
+                var xArr =[];
+                xArr.push(zuxArr[i]);
+                xArr.push(zuxArr[i1]);
+                xArr.sort();
+                tempArr.push(xArr.join(""));
+            }
+        }
+    }
+
+    tempArr = tempArr.uniqueArr();
+    return tempArr.length;
+}
+
+
+//获取状态
+function stateTouZhu(flag_str) {
+    var flagStrInner = '';
+    var zhushu = 0;
+    if (typeof flag_str == 'undefined' || flag_str == null || flag_str == '') {
+        flagStrInner = 'zxfs_zx';
+    } else {
+        flagStrInner = flag_str;
+    }
+    if (flagStrInner == 'dan') {
+        zhushu = getDsZhushu();
+    } else if (flagStrInner == "zxfs_zx" || flagStrInner == "fu") {
+        zhushu = getZhushu();
+    } else if (flagStrInner == "hszh_zx") { //后三直选-后三组合
+        zhushu = getHsZhushu();
+    } else if (flagStrInner == "zxhz_zx") { //后三直选-后三和值
+        zhushu = getHezhiZhushu();
+    } else if (flagStrInner == "zxkd_zx") { //后三直选-后三跨度
+        zhushu = getKaDuZhushu();
+    } else if (flagStrInner == "zsfs_zux") { //后三直选-直选复式
+        zhushu = getZuSanZhushu();
+    } else if (flagStrInner == "zsds_zux") { //后三组选-组选单式
+        zhushu = getZsdsZhushu();
+    } else if (flagStrInner == "zlfs_zux") { //后三组选-组六复式
+        zhushu = getZuLiuZhushu();
+    } else if (flagStrInner == "zlds_zux") { //后三组选-组六单式
+        zhushu = getZldsZhushu();
+    } else if (flagStrInner == "hhzx_zux"){ //后三组选-混合组选
+        zhushu = getHhzxZhushu();
+    } else if (flagStrInner == "zxhz_zux"){ //后三组选-组选和值
+        zhushu = getZxhzZhushu();
+    } else if (flagStrInner == "zxbd_zux"){ //后三组选-组选包胆
+        zhushu = getZxbdZhushu();
+    } else if (flagStrInner == "hzws_qt"){ //后三其它-和值尾数
+        zhushu = getZxwsZhushu();
+    } else if (flagStrInner == "tsh_qt"){ //后三其它-特殊号
+        zhushu = getTshZhushu();
+    } else if (flagStrInner == "zxfs-q2"){ //直选复式-前二
+        zhushu = getZxfsZshu();
+    } else if (flagStrInner == "zxds-q2"){ //直选单式-前二
+        zhushu = getZxdsZhushu();
+    } else if (flagStrInner == "zxhz-q2"){ //直选和值-前二
+        zhushu = getZxhzZshu();
+    } else if (flagStrInner == "zxkd-q2"){ // 直选跨度-前二
+        zhushu = getZxkdZshu();
+    } else if (flagStrInner == "zuxfs-q2"){ // 组选复式-前二
+        zhushu = getZuxfsZshu();
+    } else if (flagStrInner == "zuxds-q2"){ // 组选单式-前二
+        zhushu = getZuxdsZhushu();
+    } else if (flagStrInner == "zuxhz-q2"){ // 组选和值-前二
+        zhushu = getZuxhzZhushu();
+    } else if (flagStrInner == "zuxbd-q2"){ // 组选包胆-前二
+        zhushu = getZuxbdZhushu();
+    }  else if (flagStrInner == "dwd"){ // 定位胆
+        zhushu = getDwdZhushu();
+    }
+
+    if(zhushu <= 0 || typeof zhushu == "undefined"){
         clearStateTouZhu();
         return 0;
     }
@@ -144,17 +219,20 @@ function stateTouZhu(flag_str) {
     var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
     var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
     var p1_i2 = (totalMoney * num).toString();
-    p1_i2 = isNaN(p1_i2) == true ? 0.00 :p1_i2;
+    p1_i2 = isNaN(p1_i2) == true ? "0.0000" :p1_i2;
     $('.p1 .i_fanD').html(p1_i2.substr(0,p1_i2.indexOf(".") + 3));
     $('.p1 .i_money').html(totalMoney);
 }
 
+//清除状态
 function clearStateTouZhu(){
     $('.p1 .i0').html('0');
     $('.p1 .i_beishu').html('0');
     $('.p1 .i_fanD').html('0.00');
     $('.p1 .i_money').html('0.00');
 }
+
+
 //后三组选-组三复式
 function getZuXuanNewArrs(zuXuanArr) {
     var tempArr = [],zxArr = [];

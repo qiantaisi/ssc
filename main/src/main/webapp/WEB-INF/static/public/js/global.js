@@ -330,6 +330,15 @@ function getHszhNewArrs(baiA, shiA, geA) {
     return tempArr;
 }
 
+//查找数据中重复元素
+Array.prototype.duplicate=function() {
+    var tmp = [];
+    this.concat().sort().sort(function(a,b){
+        if(a==b && tmp.indexOf(a) === -1) tmp.push(a);
+    });
+    return tmp;
+}
+
 // 判断一个字符串是否都为数字
 function isAllNaN(str) {
     for (var i = 0; i < str.length; i++) {

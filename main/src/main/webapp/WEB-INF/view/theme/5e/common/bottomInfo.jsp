@@ -58,7 +58,7 @@
             </p>
             </div>
         </li>
-        <li style="border-right: none;">
+        <li style="border-right: none;" class="bottom_li">
             <h2><img src="${resPath}img/ico45.png" alt="">特色服务</h2>
             <p>
                 <span class="<c:if test="${param.playGroupId == 3}">acti</c:if>"><a href="<%=basePath%>help/rule/Extension.html">推广赚钱</a></span>
@@ -70,6 +70,9 @@
                 <%--<a href="<%=basePath%>help/rule/Extension.html" target="_blank">推广赚钱</a>--%>
                 <%--<a href="<%=basePath%>help/rule/QQ.html" target="_blank"></a>--%>
                 <%--<a href="<%=basePath%>help/rule/QQ.html" target="_blank"></a>--%>
+                <div class="bottom_div">
+                  <img src="${resPath}img/wx.png" alt="">
+                </div>
             </p>
         </li>
     </ul>

@@ -9,17 +9,17 @@
 <div class="group">
     <ul>
         <li>
-            <b>后三直选</b>
+            <b>前三直选</b>
             <p class="btn_h3_zx">
                 <span class="acti" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
                 <span data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span data-name="hszh"><a href="javascript:void(0)">后三组合</a></span>
+                <span data-name="hszh"><a href="javascript:void(0)">前三组合</a></span>
                 <span data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
                 <span data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
             </p>
         </li>
         <li>
-            <b>后三组选</b>
+            <b>前三组选</b>
             <p class="btn_h3_zux">
                 <span data-name="zsfs"><a href="javascript:void(0)">组三复式</a></span>
                 <span data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
@@ -31,7 +31,7 @@
             </p>
         </li>
         <li>
-            <b>后三其它</b>
+            <b>前三其它</b>
             <p class="btn_h3_qt">
                 <span data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
                 <span data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
@@ -42,19 +42,40 @@
 <div class="Pick cl-1002 recl-1002" data-flag="zxfs_zx">
     <p class="p1">
         <span class="fr fl cl-1001">
-            从百位、十位、个位各选一个号码组成一注。
+            从万位、千位、十位各选一个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：345 开奖号码后三位：1345，即中后三位直选。</var>
+                <var>投注方案：345 开奖号码前三位：1345，即中前三位直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
+                <var>从万、千、十位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
             </a>
         </span>
     </p>
     <ul>
-        <li data-name="百">
-            <b><i>百位</i></b>
+        <li data-name="万">
+            <b><i>万位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+        <li data-name="千">
+            <b><i>千位</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -76,27 +97,6 @@
         </li>
         <li data-name="十">
             <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <div class="clear re-5x-i">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
-            </div>
-        </li>
-        <li data-name="个">
-            <b><i>个位</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -123,11 +123,11 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个3位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：345开奖号码：345，即中后三直选。</var>
+                <var>投注方案：345开奖号码：345，即中前三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
+                <var>从万、千、十位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
             </a>
 
         </span>
@@ -145,24 +145,45 @@
 
     <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
 </div>
-<%--后三组合--%>
+<%--前三组合--%>
 <div class="Pick cl-1002 cl-1004-hszh">
     <p class="p1">
         <span class="fr fl cl-1001">
-            从百位、十位、个位各选一个号码组成三注。
+            从万位、千位、十位各选一个号码组成三注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
                 <var>投注方案：购买：6+7+8，该票共6元，由以下三注：678(三星)、78(二星)、8(一星)构成 开奖号码：678，即可中奖 一星、二星、三星各一注。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从百、十、个位中至少各选择1个号码组成1-3星的组合共三注，当个位数以开奖号码相同，则中一个3等奖；如果个位和十位号码和开奖号码相同，则中一个3等奖以及一个2等奖，以次类推，最高可中3个奖。</var>
+                <var>从万、千、十位中至少各选择1个号码组成1-3星的组合共三注，当十位数以开奖号码相同，则中一个3等奖；如果十位和千位号码和开奖号码相同，则中一个3等奖以及一个2等奖，以次类推，最高可中3个奖。</var>
             </a>
 
         </span>
     </p>
     <ul>
-        <li data-name="百">
-            <b><i>百位</i></b>
+        <li data-name="万">
+            <b><i>万位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+        <li data-name="千">
+            <b><i>千位</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -184,27 +205,6 @@
         </li>
         <li data-name="十">
             <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <div class="clear re-5x-i">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
-            </div>
-        </li>
-        <li data-name="个">
-            <b><i>个位</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -232,11 +232,11 @@
         <span class="fr fl cl-1001">
             从0-27中任意选择1个或1个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：和值：1，开奖号码：后三位001、010、100，即中后三值选。</var>
+                <var>投注方案：和值：1，开奖号码：前三位001、010、100，即中前三值选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>所选号码数值等于开奖号码的百、十、个三个数值相加之和，即为中奖。</var>
+                <var>所选号码数值等于开奖号码的万、千、十三个数值相加之和，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -284,7 +284,7 @@
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>所选数值与开奖号码后三位最大和最小数字相减之差，即为中奖。</var>
+                <var>所选数值与开奖号码前三位最大和最小数字相减之差，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -318,11 +318,11 @@
         <span class="fr fl cl-1001">
             从0-9中任意选择2个或2个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：588开奖号码：后三位588(顺序不限)，即可中后三组选三。</var>
+                <var>投注方案：588开奖号码：前三位588(顺序不限)，即可中前三组选三。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从0-9号码中至少选择2个号码组成两注，所选号码与开奖号码的百、十、个位相同，且顺序不限，即为中奖。</var>
+                <var>从0-9号码中至少选择2个号码组成两注，所选号码与开奖号码的万、千、十位相同，且顺序不限，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -356,11 +356,11 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个三位数号码（三个数字中必须有二个数字相同）。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：001 开奖号码：后三位010(顺序不限)，即中后三组选三。</var>
+                <var>投注方案：001 开奖号码：前三位010(顺序不限)，即中前三组选三。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>手动输入一个3位数号码组成一注，三个数字中必须有两个数字相同，输入的数字与开奖的百、十、个位相同，顺序不限，即为中奖。</var>
+                <var>手动输入一个3位数号码组成一注，三个数字中必须有两个数字相同，输入的数字与开奖的万、千、十位相同，顺序不限，即为中奖。</var>
             </a>
 
         </span>
@@ -385,11 +385,11 @@
         <span class="fr fl cl-1001">
             从0-9中任意选择3个或3个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：258开奖号码：后三位852(顺序不限)，即可中后三组选六。</var>
+                <var>投注方案：258开奖号码：前三位852(顺序不限)，即可中前三组选六。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从0-9号码中至少选择3个号码组成一注，所选号码与开奖号码的百、十、个位相同，且顺序不限，即为中奖。</var>
+                <var>从0-9号码中至少选择3个号码组成一注，所选号码与开奖号码的万、千、十位相同，且顺序不限，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -424,11 +424,11 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个三位数号码（三个数字完全不相同）。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：123 开奖号码：后三位321(顺序不限)，即中后三组选六。</var>
+                <var>投注方案：123 开奖号码：前三位321(顺序不限)，即中前三组选六。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>手动输入一个3位数号码组成一注，所选的号码与开奖的号码的百、十、个位相同，顺序不限，即为中奖。</var>
+                <var>手动输入一个3位数号码组成一注，所选的号码与开奖的号码的万、千、十位相同，顺序不限，即为中奖。</var>
             </a>
 
         </span>
@@ -452,11 +452,11 @@
         <span class="fr fl cl-1001">
             手动至少输入三个号码构成一注(不包含豹子号)。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：001和123 开奖号码：后三位010(顺序不限)，即中后三组选三，或后三位312(顺序不限)，即中后三组选六。</var>
+                <var>投注方案：001和123 开奖号码：前三位010(顺序不限)，即中前三组选三，或前三位312(顺序不限)，即中前三组选六。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>手动输入一个3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，投注号码以开奖号码后三位相同，顺序不限，即为中奖。</var>
+                <var>手动输入一个3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，投注号码以开奖号码前三位相同，顺序不限，即为中奖。</var>
             </a>
 
         </span>
@@ -480,11 +480,11 @@
         <span class="fr fl cl-1001">
             从1-26中选择1个号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：和值：3，开奖号码：后三位003(顺序不限)，即中后三组选三，或者后三位012(顺序不限)即中后三组选六。</var>
+                <var>投注方案：和值：3，开奖号码：前三位003(顺序不限)，即中前三组选三，或者前三位012(顺序不限)即中前三组选六。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>开奖号码后3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，所选数值等于开奖号码的百、十、个位三个数字相加之和，即为中奖。</var>
+                <var>开奖号码后3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，所选数值等于开奖号码的万、千、十位三个数字相加之和，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -527,11 +527,11 @@
         <span class="fr fl cl-1001">
             从0-9中选择1个号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：包胆3：开奖号码：后三位3XX或者33X，即中后三组选三，后三位3XY，即中后三组选六</var>
+                <var>投注方案：包胆3：开奖号码：前三位3XX或者33X，即中前三组选三，前三位3XY，即中前三组选六</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从0-9号码中任意选择一个胆码，开奖号码后三位为组选三或组选六形态(不含豹子号，投注号码与开奖后三位中任意一位相同，即为中奖。</var>
+                <var>从0-9号码中任意选择一个胆码，开奖号码前三位为组选三或组选六形态(不含豹子号，投注号码与开奖前三位中任意一位相同，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -557,11 +557,11 @@
         <span class="fr fl cl-1001">
             从0-9中选择1个号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：和值尾数8 开奖号码：后三位936，和值尾数为8，即中和值尾数。</var>
+                <var>投注方案：和值尾数8 开奖号码：前三位936，和值尾数为8，即中和值尾数。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>所选号码等于开奖号码的百、十、个位数字相加之和的尾数，即为中奖。</var>
+                <var>所选号码等于开奖号码的万、千、十位数字相加之和的尾数，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -587,11 +587,11 @@
         <span class="fr fl cl-1001">
             从0-9中选择1个号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：豹子顺子对子 开奖号码：后三位888，即中豹子；后三位678，即中顺子；后三位558，即中对子。</var>
+                <var>投注方案：豹子顺子对子 开奖号码：前三位888，即中豹子；前三位678，即中顺子；前三位558，即中对子。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>所选号码特殊属性与开奖号码后三位号码属性一致，即为中奖。其中：1.顺子号的百、十、个位不分顺序(特别号码：019、089也是顺子号)；2.对子号指的是开奖号码的后三位当中，任意两位数字相同的三位数号码</var>
+                <var>所选号码特殊属性与开奖号码前三位号码属性一致，即为中奖。其中：1.顺子号的万、千、十位不分顺序(特别号码：019、089也是顺子号)；2.对子号指的是开奖号码的前三位当中，任意两位数字相同的三位数号码</var>
             </a>
         </span>
     </p>
@@ -1185,7 +1185,7 @@
         return tempArr.length;
     }
 
-    //后三直选-直选单式
+    //前三直选-直选单式
     function getDsZhudan(obj) {
         var textStr = $(".content_jiang .content_tex").val();
         var newArr = [];
@@ -1215,7 +1215,7 @@
         }
 
         zhushu = newArr.length;
-        obj.playName = "后三直选-单式";
+        obj.playName = "前三直选-单式";
         obj.content = "号码: (" + newArr + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -1227,7 +1227,7 @@
     }
 
 
-    //后三组选-组三单式
+    //前三组选-组三单式
     function getZsdsZhudan(obj) {
         var zhushu = 0;
         var textStr = $(".cl-1008-zsds .content_jiang .content_tex").val();
@@ -1264,7 +1264,7 @@
         }
 
         zhushu = tempArr.length;
-        obj.playName = "后三组选-组三单式";
+        obj.playName = "前三组选-组三单式";
         obj.content = "号码: (" + tempArr.join(', ') + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -1275,7 +1275,7 @@
         return true;
     }
 
-    //后三组选-组三复式
+    //前三组选-组三复式
     function getZuSanZhudan(obj) {
         var flag_name = '', contentDan = '', playNameDan = '';//标签名称  注单内容  注单名称
         var zuSanArr = [];
@@ -1283,7 +1283,7 @@
         $.each($(".cl-1007-zsfs ul li[data-name = '组三'] span.acti"), function (index, value) {
             zuSanArr.push($.trim($(this).find("i").html()));
         });
-        playNameDan = "后三组选-组三复式";
+        playNameDan = "前三组选-组三复式";
         contentDan = "组三: (" + zuSanArr.join(", ") + ")";
 
         var zhushu = getZuSanZhushu();
@@ -1302,7 +1302,7 @@
         return true;
     }
 
-    //后三组选-组六复式
+    //前三组选-组六复式
     function getZuLiuZhudan(obj) {
         var flag_name = '', contentDan = '', playNameDan = '';//标签名称  注单内容  注单名称
         var zuLiuArr = [];
@@ -1330,7 +1330,7 @@
     }
 
 
-    //后三组选-混合组选
+    //前三组选-混合组选
     function getHhzxZhudan(obj) {
         var zhushu = 0;
         var textStr = $(".cl-1011-hhzx .content_jiang .content_tex").val();
@@ -1367,7 +1367,7 @@
         }
 
         zhushu = tempArr.length;
-        obj.playName = "后三组选-混合组选";
+        obj.playName = "前三组选-混合组选";
         obj.content = "号码: (" + tempArr.join(', ') + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -1378,7 +1378,7 @@
         return true;
     }
 
-    //后三组选-组六单式
+    //前三组选-组六单式
     function getZldsZhudan(obj) {
         var zhushu = 0;
         var textStr = $(".cl-1010-zlds .content_jiang .content_tex").val();
@@ -1404,7 +1404,7 @@
 
         if (tempArr.length <= 0) {
             alert("号码或金额输入有误，请重新输入");
-            return;
+            return false;
         }
 
         if (errorArr.length > 0) {
@@ -1415,7 +1415,7 @@
         }
 
         zhushu = tempArr.length;
-        obj.playName = "后三组选-组六单式";
+        obj.playName = "前三组选-组六单式";
         obj.content = "号码: (" + tempArr.join(', ') + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -1426,7 +1426,7 @@
         return true;
     }
 
-    //后三直选-直选复式
+    //前三直选-直选复式
     function getZhudan(obj) {
         var flag_name = '', contentDan = '', playNameDan = '';//标签名称  注单内容  注单名称
         flag_name = $('.cl-1006-zxkd').attr('data-flag'); //获取当前是否为跨度界面
@@ -1435,21 +1435,21 @@
             $.each($(".cl-1006-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
                 kaDuArr.push($.trim($(this).find("i").html()));
             });
-            playNameDan = "后三直选-跨度";
+            playNameDan = "前三直选-跨度";
             contentDan = "跨度: (" + kaDuArr.join(", ") + ")";
         } else {
             var baiArr = [], shiArr = [], geArr = [];
-            $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
                 baiArr.push($.trim($(this).find("i").html()));
             });
-            $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
                 shiArr.push($.trim($(this).find("i").html()));
             });
-            $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
                 geArr.push($.trim($(this).find("i").html()));
             });
-            playNameDan = "后三直选-复式";
-            contentDan = "百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
+            playNameDan = "前三直选-复式";
+            contentDan = "万位: " + baiArr.join("") + " 千位: " + shiArr.join("") + " 十位: " + geArr.join("");
         }
         var zhushu = getZhushu(flag_name);
         if (zhushu <= 0) {
@@ -1467,7 +1467,7 @@
         return true;
     }
 
-    //后三直选--直选和值
+    //前三直选--直选和值
     function getHeZhiZhudan(obj) {
         var heZhiArr = [];
         $.each($(".cl-1005-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
@@ -1480,7 +1480,7 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "后三直选-和值";
+        obj.playName = "前三直选-和值";
         obj.content = "和值: (" + heZhiArr.join(", ") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -1492,7 +1492,7 @@
     }
 
 
-    //后三组选--组选和值
+    //前三组选--组选和值
     function getZxhzZhudan(obj) {
         var heZhiArr = [];
         $.each($(".cl-1012-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
@@ -1505,7 +1505,7 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "后三组选-组选和值";
+        obj.playName = "前三组选-组选和值";
         obj.content = "和值: (" + heZhiArr.join(", ") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -1516,7 +1516,7 @@
         return true;
     }
 
-    //后三组选--特殊号
+    //前三组选--特殊号
     function getTshZhudan(obj) {
         var bdArr = [];
         $.each($(".cl-1015-tsh ul li[data-name = '特殊号'] span.acti_tsh"), function (index, value) {
@@ -1528,7 +1528,7 @@
             return false;
         }
 
-        obj.playName = "后三其它-特殊号";
+        obj.playName = "前三其它-特殊号";
         obj.content = "特殊号: (" + bdArr.join(", ") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * bdArr.length;
         obj.zhushu = bdArr.length;
@@ -1551,7 +1551,7 @@
     }
 
 
-    //后三组选--和值尾数
+    //前三组选--和值尾数
     function getHzwsZhudan(obj) {
         var bdArr = [];
         $.each($(".cl-1014-hzws ul li[data-name = '和值尾数'] span.acti"), function (index, value) {
@@ -1562,7 +1562,7 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "后三组选-和值尾数";
+        obj.playName = "前三组选-和值尾数";
         obj.content = "和值: (" + bdArr.join(", ") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * bdArr.length;
         obj.zhushu = bdArr.length;
@@ -1574,7 +1574,7 @@
     }
 
 
-    //后三组选--组选包胆
+    //前三组选--组选包胆
     function getZxbdZhudan(obj) {
         var bdArr = [];
         $.each($(".cl-1013-zxbd ul li[data-name = '包胆'] span.acti"), function (index, value) {
@@ -1586,7 +1586,7 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "后三组选-组选包胆";
+        obj.playName = "前三组选-组选包胆";
         obj.content = "包胆: (" + bdArr.join(", ") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
@@ -1598,16 +1598,16 @@
     }
 
 
-    //后三直选--后三组合
+    //前三直选--前三组合
     function getHsZhudan(obj) {
         var baiArr = [], shiArr = [], geArr = [];
-        $.each($(".cl-1004-hszh ul li[data-name = '百'] span.acti"), function (index, value) {
+        $.each($(".cl-1004-hszh ul li[data-name = '万'] span.acti"), function (index, value) {
             baiArr.push($.trim($(this).find("i").html()));
         });
-        $.each($(".cl-1004-hszh ul li[data-name = '十'] span.acti"), function (index, value) {
+        $.each($(".cl-1004-hszh ul li[data-name = '千'] span.acti"), function (index, value) {
             shiArr.push($.trim($(this).find("i").html()));
         });
-        $.each($(".cl-1004-hszh ul li[data-name = '个'] span.acti"), function (index, value) {
+        $.each($(".cl-1004-hszh ul li[data-name = '十'] span.acti"), function (index, value) {
             geArr.push($.trim($(this).find("i").html()));
         });
         var zhushu = getHsZhushu();
@@ -1616,8 +1616,8 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "后三直选-组合";
-        obj.content = "百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
+        obj.playName = "前三直选-组合";
+        obj.content = "万位: " + baiArr.join("") + " 千位: " + shiArr.join("") + " 十位: " + geArr.join("");
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -1647,13 +1647,13 @@
             newArr = getZuXuanNewArrs(zuSanArr);
         } else {
             var qianArr = [], baiArr = [], shiArr = [], geArr = [];
-            $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
                 baiArr.push($.trim($(this).find("i").html()));
             });
-            $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
                 shiArr.push($.trim($(this).find("i").html()));
             });
-            $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
                 geArr.push($.trim($(this).find("i").html()));
             });
 
@@ -1668,7 +1668,7 @@
 
         return newArr.length;
     }
-    //后三直选-跨度
+    //前三直选-跨度
     function getKaDuZhushu() {
         var kaDuArr = [], newArr = [];
         $.each($(".cl-1006-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
@@ -1683,7 +1683,7 @@
         return newArr.length;
     }
 
-    //后三组选-组三复式
+    //前三组选-组三复式
     function getZuSanZhushu() {
         var fuShiArr = [], newArr = [];
         $.each($(".cl-1007-zsfs ul li[data-name = '组三'] span.acti"), function (index, value) {
@@ -1698,7 +1698,7 @@
         return newArr.length;
     }
 
-    //后三组选-组六复式
+    //前三组选-组六复式
     function getZuLiuZhushu() {
         var fuShiArr = [], newArr = [];
         $.each($(".cl-1009-zlfs ul li[data-name = '组六'] span.acti"), function (index, value) {
@@ -1712,7 +1712,7 @@
         return newArr.length;
     }
 
-    // 后三组选-组选包胆
+    // 前三组选-组选包胆
     function getZxbdZhushu() {
         var baoDanArr = [], newArr = [];
         $.each($(".cl-1013-zxbd ul li[data-name = '包胆'] span.acti"), function (index, value) {
@@ -1726,7 +1726,7 @@
         return newArr.length;
     }
 
-    // 后三组选-特殊号
+    // 前三组选-特殊号
     function getTshZhushu() {
         var tsArr = [], newArr = [];
         $.each($(".cl-1015-tsh ul li.tsh_li[data-name = '特殊号'] span.acti_tsh"), function (index, value) {
@@ -1739,7 +1739,7 @@
         return zlLength;
     }
 
-    // 后三组选-和值尾数
+    // 前三组选-和值尾数
     function getZxwsZhushu() {
         var wsArr = [], newArr = [];
         $.each($(".cl-1014-hzws ul li[data-name = '和值尾数'] span.acti"), function (index, value) {
@@ -1752,7 +1752,7 @@
         return zlLength;
     }
 
-    // 后三直选-和值
+    // 前三直选-和值
     function getHezhiZhushu() {
         var heZhiArr = [], newArr = [];
         $.each($(".cl-1005-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
@@ -1768,16 +1768,16 @@
         return newArr.length;
     }
 
-    //后三直选-后三组合
+    //前三直选-前三组合
     function getHsZhushu() {
         var qianArr = [], baiArr = [], shiArr = [], geArr = [];
-        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
             baiArr.push($.trim($(this).find("i").html()));
         });
-        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
             shiArr.push($.trim($(this).find("i").html()));
         });
-        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
             geArr.push($.trim($(this).find("i").html()));
         });
 
@@ -1816,46 +1816,46 @@
         var contentStr = '';
         var zhushu = 1; //默认为1注
         if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
-            playNameStr = "后三直选-单式";
+            playNameStr = "前三直选-单式";
             flag_zhi = "dan";
         } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
-            playNameStr = "后三直选-复式";
+            playNameStr = "前三直选-复式";
             flag_zhi = "fu";
         } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
-            playNameStr = "后三直选-组合";
+            playNameStr = "前三直选-组合";
             flag_zhi = "hszh-zx";
         } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
-            playNameStr = "后三直选-和值";
+            playNameStr = "前三直选-和值";
             flag_zhi = "hshz-zx";
         } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
-            playNameStr = "后三直选-跨度";
+            playNameStr = "前三直选-跨度";
             flag_zhi = "zxkd-zx";
         } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
-            playNameStr = "后三组选-组三复式";
+            playNameStr = "前三组选-组三复式";
             flag_zhi = "zxfs-zux";
         } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
-            playNameStr = "后三组选-组三单式";
+            playNameStr = "前三组选-组三单式";
             flag_zhi = "zsds-zux";
         } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
-            playNameStr = "后三组选-组六复式";
+            playNameStr = "前三组选-组六复式";
             flag_zhi = "zlfs-zux";
         } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
-            playNameStr = "后三组选-组六单式";
+            playNameStr = "前三组选-组六单式";
             flag_zhi = "zlds-zux";
         } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
-            playNameStr = "后三组选-混合组选";
+            playNameStr = "前三组选-混合组选";
             flag_zhi = "hhzx-zux";
         } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
-            playNameStr = "后三组选-组选和值";
+            playNameStr = "前三组选-组选和值";
             flag_zhi = "zxhz-zux";
         } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
-            playNameStr = "后三组选-组选包胆";
+            playNameStr = "前三组选-组选包胆";
             flag_zhi = "zxbd-zux";
         } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
-            playNameStr = "后三其它-和值尾数";
+            playNameStr = "前三其它-和值尾数";
             flag_zhi = "hzws-qt";
         } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
-            playNameStr = "后三其它-特殊号";
+            playNameStr = "前三其它-特殊号";
             flag_zhi = "tsh-qt";
         }
 
@@ -1970,7 +1970,7 @@
                 } else if (flag_zhi == "zxkd-zx") {
                     contentStr = "跨度: (" + arr[4] + ")";
                 } else if (flag_zhi == "fu" || flag_zhi == "hszh-zx") {
-                    contentStr = "百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+                    contentStr = "万位: " + arr[2] + " 千位: " + arr[3] + " 十位: " + arr[4];
                 }
             }
 

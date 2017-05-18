@@ -389,3 +389,15 @@ table.touzhuArea {
     margin-right: 45px;
 }
 
+/*首页底部二维码*/
+.tail .bottom_li{
+    position: relative;
+}
+.bottom_div img{
+    width: 98px;
+    height: 98px;
+}
+.bottom_div{
+    position: absolute;
+    right: -59px;
+}

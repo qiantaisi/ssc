@@ -41,6 +41,10 @@
     width: auto;
     max-width: 60px;
 }
+.content-jiang .span3{
+    padding-right: 5px;
+    padding-left: 5px;
+}
 .content-jiang .span2{
     width: 80px;
 }
@@ -142,13 +146,27 @@
     background: #e84f31!important;
     color: #FFF!important;
 }
-
 .h3_slide_sp{
     position:relative;
 }
-.h3_slide_sp .change-2{
+.h3_slide_sp .change-2,.h3_slide_sp .change-3,.h3_slide_sp .change-base-tsh{
     position: absolute;
     top:-20px;
     right:15%;
 }
 
+/*前二页面（时时彩）*/
+.hz-dir{
+    height:80px;
+}
+.recl-1004-zxhz ul li.hz-q2{
+    height: 95px;
+    width: 650px !important;
+}
+.recl-1008-zuxhz ul li.hz-q2{
+    height: 95px;
+    width: 590px !important;
+}
+.recl-1004-zxhz ul li.hz-q2 span,.recl-1008-zuxhz ul li.hz-q2 span{
+    height: 50px!important;
+}
