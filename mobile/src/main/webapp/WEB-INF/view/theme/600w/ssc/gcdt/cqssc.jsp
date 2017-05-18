@@ -23,21 +23,8 @@
             <h1 class="title">重庆时时彩<i class="triangle-down"> <!--向下的三角--> </i></h1>
         </header>
         <c:import url="common/commonBet.jsp"/>
-        <div class="consele">
-            <div class="selects">
-                <div class="selects-one">
-                    <span><a href="<%=basePath%>ssc/gcdt/gfwf/cpssc.html">官方玩法</a></span>
-                </div>
-            </div>
-            <div class="selects">
-                <div class="selects-two">
-                    <span>快捷玩法</span>
-                </div>
-            </div>
-        </div>
-        <div class="bott">
-            <%--半透明--%>
-        </div>
+        <c:import url="gfwf/common/gfwf.jsp" />     <%--官方玩法选择--%>
+
         <div class="content cl-601 show_hide">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
