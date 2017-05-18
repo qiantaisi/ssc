@@ -1146,9 +1146,9 @@ input[type="number"] {
 }
 
 .cus-area-box span {
-    border:1px solid #ddd;
+    border: 1px solid #ddd;
     line-height: 1.2rem;
-    text-align:center;
+    text-align: center;
     border-radius: 5px;
 }
 
@@ -1240,6 +1240,14 @@ input[type="number"] {
     left: 1rem;
 }
 
+.selects-one span a {
+    color: #a3a3a3;
+}
+
+.selects-two span a {
+    color: #a3a3a3;
+}
+
 .selects-two {
     color: #a3a3a3;
     float: right;
@@ -1248,4 +1256,8 @@ input[type="number"] {
     right: 1rem;
     width: 40%;
     border: 1px solid #a3a3a3;
+}
+.gfwfColor{
+    color: #fa6200;
+    border-color: #fa6200;
 }

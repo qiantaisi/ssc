@@ -12,7 +12,7 @@
 <div class="consele">
     <div class="selects">
         <div class="selects-one">
-            <span class="active">官方玩法</span>
+            <span><a href="<%=basePath%>ssc/gcdt/gfwf/cpssc.html">官方玩法</a></span>
         </div>
     </div>
     <div class="selects">
