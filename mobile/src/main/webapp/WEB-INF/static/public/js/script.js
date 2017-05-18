@@ -6676,8 +6676,6 @@ $(".cus-tabs-scroll .xuan").click(    //直选方式点击事件
     }
 );
 
-<<<<<<< HEAD
-=======
 $(".cus-tabs-scroll .xuan").ckick(
   function () {
       if($(".cover1").is(".hw")){
@@ -6687,6 +6685,3 @@ $(".cus-tabs-scroll .xuan").ckick(
       }
   }
 );
-
->>>>>>> master
-
