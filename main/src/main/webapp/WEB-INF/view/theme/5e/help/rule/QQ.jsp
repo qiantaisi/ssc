@@ -25,7 +25,7 @@
 <body>
 <div id="inbox">
     <h1 style="text-align: center;">（代理QQ）</h1>
-    <h1 style="text-align: center; color: red;"><a href=tencent://message/?uin=2247777777&Site=在线客服&Menu=yes>点击此链接<span style="color: red">添加 qq</span>:2247777777以客服取得联系</a></h1>
+    <h1 style="text-align: center; color: red;"><a href=tencent://message/?uin=1902616161&Site=在线客服&Menu=yes>点击此链接<span style="color: red">添加 qq</span>:1902616161以客服取得联系</a></h1>
     <h1>1、如果您还未登录 QQ ，点击此链接后将会自动帮您启动您的 QQ。</h1>  <h1>2、如果您的QQ是已经在线的了，点击此链接后，按照提示接着选择方可。</h1>
 </div>
 </body>

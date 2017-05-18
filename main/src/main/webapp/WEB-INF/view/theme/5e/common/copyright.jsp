@@ -8,7 +8,6 @@
     String hostName = request.getServerName().replace("www.", "");
 %>
 <div class="record wid1">
-    <%--<p>600万彩票网 客服QQ：<a class="qqstyle" href="tencent://message/?uin=2247777777&amp;Site=在线客服&amp;Menu=yes">2247777777</a></p>--%>
     <%--<jsp:include page="../common/copyright_time.jsp"/>--%>
     <p class="webDbxx"></p>
     <p class="mt30"><span><%=hostName%>&nbsp;&nbsp; 郑重提示：彩票有风险，投注需谨慎</span> 不向未满18周岁的青少年出售彩票</p>
