@@ -6677,6 +6677,13 @@ $(".cus-tabs-scroll .xuan").click(    //(直选方式)点击事件
     }
 );
 
+$(".cus-area-box .staer span").click(      //玩法选择点击事件
+    function () {
+        $(this).siblings("span").removeClass("active"); //删除其他兄弟元素的样式
+        $(this).addClass("active");   //添加当前元素的样式
+    }
+);
+
 
 
 

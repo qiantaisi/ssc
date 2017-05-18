@@ -14,10 +14,32 @@
 </div>
 <div class="coveron1 hw">
     <div class="consele1">
-        <div class="xuan">
-            <div class="xuan1"></div>
-            <div class="xuan2">五星</div>
-            <div class="xuan1"></div>
+        <div class="cus-area-box">
+            <div class="xuan">
+                <div class="xuan1"></div>
+                <div class="xuan2">五星</div>
+                <div class="xuan1"></div>
+            </div>
+            <div class="staer">
+                <span class="active one">直选复式</span>
+                <span class="two">直选单式</span>
+                <span class="three">任选二</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="consele1">
+        <div class="cus-area-box">
+            <div class="xuan">
+                <div class="xuan1"></div>
+                <div class="xuan2">四星</div>
+                <div class="xuan1"></div>
+            </div>
+            <div class="staer">
+                <span class="active one">直选复式</span>
+                <span class="two">直选单式</span>
+                <span class="three">任选二</span>
+            </div>
         </div>
     </div>
 </div>
