@@ -14,11 +14,11 @@ public class AgentReportResult extends CommonResult {
     /**
      * 下属会员数
      */
-    private Integer userCount;
+    private Long userCount;
 
-    private Integer depositCount;
+    private Long depositCount;
 
-    private Integer withdrawCount;
+    private Long withdrawCount;
 
     private BigDecimal sscYjTotalMoney;
 
@@ -33,23 +33,7 @@ public class AgentReportResult extends CommonResult {
     /**
      * 有效会员
      */
-    private Integer effectiveUserCount;
-
-    public Integer getEffectiveUserCount() {
-        return effectiveUserCount;
-    }
-
-    public void setEffectiveUserCount(Integer effectiveUserCount) {
-        this.effectiveUserCount = effectiveUserCount;
-    }
-
-    public Integer getUserCount() {
-        return userCount;
-    }
-
-    public void setUserCount(Integer userCount) {
-        this.userCount = userCount;
-    }
+    private Long effectiveUserCount;
 
     public Integer getRegisterUserCount() {
         return registerUserCount;
@@ -59,19 +43,27 @@ public class AgentReportResult extends CommonResult {
         this.registerUserCount = registerUserCount;
     }
 
-    public Integer getDepositCount() {
+    public Long getUserCount() {
+        return userCount;
+    }
+
+    public void setUserCount(Long userCount) {
+        this.userCount = userCount;
+    }
+
+    public Long getDepositCount() {
         return depositCount;
     }
 
-    public void setDepositCount(Integer depositCount) {
+    public void setDepositCount(Long depositCount) {
         this.depositCount = depositCount;
     }
 
-    public Integer getWithdrawCount() {
+    public Long getWithdrawCount() {
         return withdrawCount;
     }
 
-    public void setWithdrawCount(Integer withdrawCount) {
+    public void setWithdrawCount(Long withdrawCount) {
         this.withdrawCount = withdrawCount;
     }
 
@@ -105,5 +97,13 @@ public class AgentReportResult extends CommonResult {
 
     public void setEffectiveMoney(BigDecimal effectiveMoney) {
         this.effectiveMoney = effectiveMoney;
+    }
+
+    public Long getEffectiveUserCount() {
+        return effectiveUserCount;
+    }
+
+    public void setEffectiveUserCount(Long effectiveUserCount) {
+        this.effectiveUserCount = effectiveUserCount;
     }
 }
