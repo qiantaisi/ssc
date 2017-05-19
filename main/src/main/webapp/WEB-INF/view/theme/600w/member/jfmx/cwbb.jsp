@@ -21,13 +21,13 @@
             <div clproject38.apiass="eveb_search eveb_search_h2">
                 时间：
                 <input name="starttime" id="starttime" type="text" size="11" class="suminp"
-                       onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="<%=DateFormatUtils.format(project38.api.common.utils.DateUtils.getMonthStart(), "yyyy-MM-dd 00:00")%>"> -
+                       onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="<%=DateFormatUtils.format(project38.api.common.utils.DateUtils.getMonthStart(), "yyyy-MM-dd")%>"> -
                 <input name="endtime" id="endtime" type="text" size="11" class="suminp"
-                       onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="<%=DateFormatUtils.format(project38.api.common.utils.DateUtils.getMonthEnd(), "yyyy-MM-dd 00:00")%>">
+                       onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="<%=DateFormatUtils.format(project38.api.common.utils.DateUtils.getMonthEnd(), "yyyy-MM-dd")%>">
                 <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+                <a href="javascript:void(0)" class="button_small button_4" onclick="searchDayNoHM(1)">今日</a>
+                <a href="javascript:void(0)" class="button_small button_4" onclick="searchDayNoHM(3)">3天</a>
+                <a href="javascript:void(0)" class="button_small button_4" onclick="searchDayNoHM(7)">本周</a>
             </div>
         </h2>
         <table class="eveb_box eveb_table" id="dataTable">

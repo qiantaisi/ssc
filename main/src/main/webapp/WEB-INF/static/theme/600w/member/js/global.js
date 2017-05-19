@@ -241,6 +241,29 @@ function copyToClipboard(_maintext){
 	}
 	alert('已复制 ' + _maintext);
 }
+//时间无时分格式搜索
+function searchDayNoHM(id){
+    if(id){
+        var De = new Date(),ymd,endymd,tmpEnd;
+        ymd = De.getFullYear()+"-"+GetFullDate(De.getMonth()+1)+"-"+GetFullDate(De.getDate());
+        De.setDate(De.getDate()+1);
+        tmpEnd = De.getFullYear()+"-"+GetFullDate(De.getMonth()+1)+"-"+GetFullDate(De.getDate());
+        if(id==1){
+            endymd = tmpEnd;
+        }else if(id==3){
+            De.setDate(De.getDate()-3);
+            endymd = tmpEnd;
+            ymd = De.getFullYear()+"-"+GetFullDate(De.getMonth()+1)+"-"+GetFullDate(De.getDate());
+        }else if(id==7){
+            De.setDate(De.getDate()-7);
+            endymd = tmpEnd;
+            ymd = De.getFullYear()+"-"+GetFullDate(De.getMonth()+1)+"-"+GetFullDate(De.getDate());
+        }
+        $("#starttime").val(ymd);
+        $("#endtime").val(endymd);
+    }else return !1
+}
+
 //时间搜索
 function searchday(id){
 	if(id){
