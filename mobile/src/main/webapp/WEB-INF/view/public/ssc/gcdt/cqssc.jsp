@@ -20,24 +20,24 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">重庆时时彩<i class="triangle-down"> <!--向下的三角--> </i></h1>
+            <h1 class="title">重庆时时彩 <%--<i class="triangle-down"> <!--向下的三角--> </i> --%></h1>
         </header>
         <c:import url="common/commonBet.jsp"/>
-        <div class="consele">
-            <div class="selects">
-                <div class="selects-one">
-                    <span class="active"><a href="<%=basePath%>ssc/gcdt/gfwf/cpssc.html">官方玩法</a></span>
-                </div>
-            </div>
-            <div class="selects">
-                <div class="selects-two">
-                    <span>快捷玩法</span>
-                </div>
-            </div>
-        </div>
-        <div class="bott">
-            <%--半透明--%>
-        </div>
+        <%--<div class="consele">--%>
+            <%--<div class="selects">--%>
+                <%--<div class="selects-one">--%>
+                    <%--<span class="active"><a href="<%=basePath%>ssc/gcdt/gfwf/cpssc.html">官方玩法</a></span>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<div class="selects">--%>
+                <%--<div class="selects-two">--%>
+                    <%--<span>快捷玩法</span>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <%--<div class="bott">--%>
+            <%--&lt;%&ndash;半透明&ndash;%&gt;--%>
+        <%--</div>--%>
         <div class="content cl-601 show_hide">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
@@ -158,10 +158,10 @@
     </div>
 </script>
 <script>   //加载页面时隐藏蒙版
-    function Hide_Show() {
-        $(".consele").hide()
-        $(".bott").hide();
-    }
-    Hide_Show();
+function Hide_Show() {
+    $(".consele").hide()
+    $(".bott").hide();
+}
+Hide_Show();
 </script>
 <c:import url="../../common/bodyEnd.jsp"/>
