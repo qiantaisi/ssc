@@ -16,15 +16,15 @@
         <span class="icon icon-gc"></span>
         <span class="tab-label">购彩大厅</span>
     </a>
-    <a class="tab-item external" href="#">
+    <a class="tab-item external" href="<%=basePath%>ssc/kjjl/all.html">
         <span class="icon icon-kj"></span>
         <span class="tab-label">开奖</span>
     </a>
-    <a class="tab-item external" href="#">
+    <a class="tab-item external" href="<%=basePath%>ssc/zst/lhc/jbzst.html">
         <span class="icon icon-zst"></span>
         <span class="tab-label">走势图</span>
     </a>
-    <a class="tab-item external" href="#">
+    <a class="tab-item external" href="<%=basePath%>member/index.html">
         <span class="icon icon-info"></span>
         <span class="tab-label">个人中心</span>
     </a>

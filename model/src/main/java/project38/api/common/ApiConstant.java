@@ -5,9 +5,8 @@ package project38.api.common;
  * Created by Administrator on 2016/10/30.
  */
 public class ApiConstant {
-//    public static String API_DOMAIN = "http://api.bb.nf:8080/api/";
-    public static String API_DOMAIN = "http://cpxitong.com:8080/api/";
-//   public static String API_DOMAIN = "http://apptest.bb.nf:8080/api/";
+    public static String API_DOMAIN = "http://api.bb.nf:8080/api/";
+    //public static String API_DOMAIN = "http://apptest.bb.nf:8080/api/";
     // 正式
 //    public static String API_DOMAIN = "http://api.bb.nf/";
     public static String API_REGISTER = API_DOMAIN + "member/register.json";    // 用户注册接口
