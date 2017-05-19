@@ -3,6 +3,7 @@ package project38.ssc.mobile.servlet;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.util.UrlPathHelper;
+import project38.api.common.exception.UserException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,16 +21,11 @@ public class MyDispatchServlet extends DispatcherServlet {
     private String fileNotFondUrl = "/error/404.html";
 
     public void noHandlerFound(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        if (pageNotFoundLogger.isWarnEnabled()) {
-            String requestUri = urlPathHelper.getRequestUri(request);
-            pageNotFoundLogger.warn("No mapping found for HTTP request with URI [" + requestUri +
-                    "] in DispatcherServlet with name '" + getServletName() + "'");
-            if (requestUri.indexOf("html") > 0) {
-//                response.sendRedirect(request.getContextPath() + fileNotFondUrl);
-//                return;
-            }
+        String requestUri = urlPathHelper.getRequestUri(request);
+        if (requestUri.indexOf("html") < 0) {
+            return;
         }
-        super.noHandlerFound(request, response);
+        throw new UserException(-1, "No mapping found for HTTP request with URI [" + requestUri + "] in DispatcherServlet with name '" + getServletName() + "'");
     }
 
     public String getFileNotFondUrl() {
@@ -39,8 +35,4 @@ public class MyDispatchServlet extends DispatcherServlet {
     public void setFileNotFondUrl(String fileNotFondUrl) {
         this.fileNotFondUrl = fileNotFondUrl;
     }
-
-
-
-
 }

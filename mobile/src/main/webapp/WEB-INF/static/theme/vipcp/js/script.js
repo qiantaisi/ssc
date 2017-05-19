@@ -294,6 +294,7 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
+
         // 首页图片轮播
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',

@@ -35,8 +35,4 @@ public class MyDispatchServlet extends DispatcherServlet {
     public void setFileNotFondUrl(String fileNotFondUrl) {
         this.fileNotFondUrl = fileNotFondUrl;
     }
-
-
-
-
 }

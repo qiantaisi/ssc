@@ -11,7 +11,7 @@
 %>
 <c:import url="../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-index">
+    <div class="page page-current re-bg" id="page-index">
         <header class="bar bar-nav cl-1-vipcp">
             <a href="javascript:void(0)" class="cl-2" onclick="location.reload()">
                 <img src="<%=basePath%>images/${logo.imageId}" alt="">
@@ -37,7 +37,22 @@
         <c:import url="../common/bottomNav.jsp"/>
 
         <div class="content content-img">
-            <div class="row cl-scroll swiper-container swiper-container-horizontal">
+            <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <marquee behavior="scroll" contenteditable="true"
+                                 onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="5"
+                                 width="100%" onmouseover="this.stop();" onmouseout="this.start();">
+                            <c:forEach items="${popupNoticeList}" var="item" varStatus="status">
+                                <c:if test="${status.count != 1}"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></c:if>
+                                <span>${item.title}：${item.content}</span>
+                            </c:forEach>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row cl-scroll swiper-container swiper-container-horizontal re-row">
                 <div class="swiper-wrapper">
                     <c:forEach items="${carouseList.carouselList}" var="item">
                         <c:choose>
@@ -54,24 +69,10 @@
                 </div>
             </div>
 
-            <div class="cl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <marquee behavior="scroll" contenteditable="true"
-                                 onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="5"
-                                 width="100%" onmouseover="this.stop();" onmouseout="this.start();">
-                            <c:forEach items="${popupNoticeList}" var="item" varStatus="status">
-                                <c:if test="${status.count != 1}"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></c:if>
-                                <span>${item.title}：${item.content}</span>
-                            </c:forEach>
-                        </marquee>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row cl-5">
+            <div class="row cl-5 recl-5">
                 <a class="col-25 external" href="<%=basePath%>kefu.html" target="_blank">
-                    <span class="bg-img-zxkf2"></span>
+                    <span class="bg-img-zxkf2 re-zxkf2"></span>
                     <span>在线客服</span>
                 </a>
                 <%--<a class="col-25" href="<%=basePath%>member/index.html">--%>
@@ -79,26 +80,40 @@
                 <%--<span>会员中心</span>--%>
                 <%--</a>--%>
                 <a class="col-25" href="<%=basePath%>ssc/kjjl/all.html">
-                    <span class="bg-img-kjjg"></span>
+                    <span class="bg-img-kjjg re-kjjg"></span>
                     <span>开奖结果</span>
                 </a>
                 <a class="col-25" href="<%=basePath%>ssc/zst/lhc/jbzst.html">
-                    <span class="bg-img-zst"></span>
+                    <span class="bg-img-zst re-zst"></span>
                     <span>走势图</span>
                 </a>
                 <a class="col-25" href="<%=basePath%>yhhd.html">
-                    <span class="bg-img-yhhd"></span>
+                    <span class="bg-img-yhhd re-yhhd"></span>
                     <span>优惠活动</span>
                 </a>
             </div>
-            <div class="row cl-6">
+
+            <div class="row cl-6 recl-6">
                 <div class="col-100">
-                    <span class="left">热门彩种</span>
-                    <a href="<%=basePath%>ssc/gcdt.html" class="right">更多&gt;&gt;</a>
+                    <span class="left">热门开奖</span>
+                    <%--<span class="left">开奖结果同步更新</span>--%>
+                    <a href="<%=basePath%>ssc/kjjl/all.html" class="right">更多</a>
                 </div>
             </div>
-            <div class="cl-7">
-                <div class="row cl-5">
+            <div class="cl-8 recl-8">
+                <div class="list-block media-list">
+                    <div class="kjjg_div"></div>
+                </div>
+            </div>
+
+            <div class="row cl-6 re-rmcz">
+                <div class="col-100">
+                    <span class="left">热门彩种</span>
+                    <a href="<%=basePath%>ssc/gcdt.html" class="right">更多</a>
+                </div>
+            </div>
+            <div class="cl-7 recl-7">
+                <div class="row cl-5 cl-row-5">
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/ffssc.html">
                         <span class="bg-img-ffssc"></span>
                         <span>分分时时彩</span>
@@ -107,115 +122,10 @@
                         <span class="bg-img-cqssc"></span>
                         <span>重庆时时彩</span>
                     </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/pk10.html">
-                        <span class="bg-img-pk10"></span>
-                        <span>北京PK10</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/jspk10.html">
-                        <span class="bg-img-jspk10"></span>
-                        <span>极速PK10</span>
-                        <var class="xin_new"><img src="${resPath}img/xin_new.gif" alt="新上线" style="float:right;"></var>
-                    </a>
-                </div>
-                <div class="row cl-5">
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/ahk3.html">
-                        <span class="bg-img-ahk3"></span>
-                        <span>安徽快3</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/hbk3.html">
-                        <span class="bg-img-hbk3"></span>
-                        <span>湖北快3</span>
-                    </a>
-                    <%--<a class="col-25" href="<%=basePath%>ssc/gcdt/jsk3.html">
-                        <span class="bg-img-jsk3"></span>
-                        <span>江苏快3</span>
-                    </a>--%>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/lhc.html">
-                        <span class="bg-img-lhc"></span>
-                        <span>香港六合彩</span>
-                    </a>
-                    <%--<a class="col-25" href="<%=basePath%>ssc/gcdt/sflhc.html">
-                        <span class="bg-img-sflhc"></span>
-                        <span>10分六合彩</span>
-                    </a>--%>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xyft.html">
-                        <span class="bg-img-xyft"></span>
-                        <span>幸运飞艇</span>
-                    </a>
-                </div>
-                <div class="row cl-5">
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xjssc.html">
-                        <span class="bg-img-xjssc"></span>
-                        <span>新疆时时彩</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/tjssc.html">
-                        <span class="bg-img-tjssc"></span>
-                        <span>天津时时彩</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xync.html">
-                        <span class="bg-img-cqxync"></span>
-                        <span>重庆幸运农场</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/klsf.html">
-                        <span class="bg-img-klsf"></span>
-                        <span>广东快乐十分</span>
-                    </a>
-                </div>
-                <div class="row cl-5">
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xy28.html">
-                        <span class="bg-img-xy28"></span>
-                        <span>幸运28</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/kl8.html">
-                        <span class="bg-img-kl8"></span>
-                        <span>北京快乐8</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/fc3d.html">
-                        <span class="bg-img-3d"></span>
-                        <span>福彩3D</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/pl3.html">
-                        <span class="bg-img-pl3"></span>
-                        <span>体彩排列3</span>
-                    </a>
-                </div>
-                <div class="row cl-5">
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/efssc.html">
-                        <span class="bg-img-efssc"></span>
-                        <span>两分时时彩</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/sfssc.html">
-                        <span class="bg-img-sfssc"></span>
-                        <span>三分时时彩</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/wfssc.html">
-                        <span class="bg-img-wfssc"></span>
-                        <span>五分时时彩</span>
-                    </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt.html">
-                        <span class="bg-img-gd"></span>
-                        <span>更多</span>
-                    </a>
-                </div>
-                <%--<div class="row cl-5">--%>
-                <%--<a class="col-25" href="<%=basePath%>ssc/gcdt/jlk3.html">--%>
-                <%--<span class="bg-img-jlk3"></span>--%>
-                <%--<span>吉林快3</span>--%>
-                <%--</a>--%>
-                <%--</div>--%>
-            </div>
-            <div class="row cl-6">
-                <div class="col-100">
-                    <span class="left">热门开奖</span>
-                    <span class="left">开奖结果同步更新</span>
-                    <a href="<%=basePath%>ssc/kjjl/all.html" class="right">更多&gt;&gt;</a>
                 </div>
             </div>
-            <div class="cl-8">
-                <div class="list-block media-list">
-                    <div class="kjjg_div"></div>
-                </div>
-            </div>
+
+
 
             <%--<div class="row cl-6">--%>
             <%--<div class="col-100">--%>
@@ -306,6 +216,10 @@
 <c:import url="../common/commonJs.jsp"/>
 <script>
     var kjjgJsonData = ${kjjgJsonData};
+    var CONFIG = {
+        BASEURL:"<%=basePath%>",
+        RESURL:"${resPath}"
+    }
 </script>
 <script type="text/html" id="template_1">
     <li>
