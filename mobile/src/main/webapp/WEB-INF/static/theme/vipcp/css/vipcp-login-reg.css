@@ -1,0 +1,58 @@
+/*.outInsert .cl-103, .outInsert .cl-104 {*/
+/*height: 100%;*/
+/*display: block;*/
+/*padding: .5rem;*/
+/*background: #f42023;*/
+/*color: #fff;*/
+/*text-align: center;*/
+/*font-size: .8rem;*/
+/*}*/
+.cl-102 .outInsert {
+    height: 100%;
+    display: block;
+    padding: .5rem;
+    background: #f42023;
+    color: #fff;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.Center {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.Center span {
+    color: #adadad;
+}
+
+.Center a {
+    color: #f42023;
+}
+
+.Prompt {
+    display: block;
+    background: #eeeeee;
+    font-size: small;
+    color: #adadad;
+}
+.vipcp~.content{
+    top:4.2rem;
+    background: #eeeeee;
+}
+.page .vipcp{
+    background: #f42023;
+    color: #fff;
+    position: relative;
+    height:4rem;
+}
+.page .vipcp .title img{
+    padding-top:1rem;
+    width:50%;
+}
+.page .vipcp .button, .page .vipcp .title{
+    color: inherit;
+}
+.bar .button-nav.pull-left{
+    margin-left: -.25rem;
+}
