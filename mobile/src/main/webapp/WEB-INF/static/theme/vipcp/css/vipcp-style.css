@@ -1,79 +1,181 @@
-.cl-1-vipcp{
+.cl-1-vipcp {
     padding-left: .3rem;
-    line-height: 2.4rem!important;
-    height: 2.4rem!important;
+    line-height: 2.4rem !important;
+    height: 2.4rem !important;
     overflow: hidden;
-    background: #f4f4f4!important;
+    background: #f4f4f4 !important;
+    border-bottom: #DEDFDE 1px solid;
 }
+
 .cl-3 a {
     color: #202020;
     margin-right: .3rem;
 }
+
 .cl-3 a:last-child {
     background: #16da69;
-    color:white;
+    color: white;
 }
-.bar .button-link{
+
+.recl-4 {
+    margin-bottom: 0px;
+}
+
+.bar .button-link {
     line-height: 2.4rem;
     height: 2.4rem;
 }
-.cl-328 a{
-    color: #202020!important;
+
+.cl-328 a {
+    color: #202020 !important;
 }
-.cl-1003{
+
+.cl-1003 {
     background: #ffffff;
 }
+
 /*底部菜单栏*/
-.bar-tab-vipcp{
+.bar-tab-vipcp {
     bottom: 0;
     padding-left: 0;
     padding-right: 0;
 }
-.bar-tab~.content{
-    bottom: 2.5rem!important;
+
+.bar-tab ~ .content {
+    bottom: 2.5rem !important;
 }
-.c1-101{
+
+.c1-101 {
     border-top: 1px solid #aaaaaa;
 }
-.re-icon-home{
-    background-image: url(../img/footer2.png);
+
+.re-icon-home {
+    background-image: url(../img/footer22.png);
     display: block;
-    height: 20px!important;
-    width: 22px!important;
-    margin: 0 auto;
-}
-.icon-gc{
-    background-image: url(../img/footer_10.png);
-    display: block;
-    height: 20px!important;
-    width: 20px!important;
-    margin: 0 auto;
-}
-.icon-kj{
-    background-image: url(../img/footer4.png);
-    display: block;
-    height: 20px!important;
-    width: 26.5px!important;
-    margin: 0 auto;
-}
-.icon-zst{
-    background-image: url(../img/footer1.png);
-    display: block;
-    height: 20px!important;
-    width: 21.5px!important;
-    margin: 0 auto;
-}
-.icon-info{
-    background-image: url(../img/footer3.png);
-    display: block;
-    height: 20px!important;
-    width: 17.5px!important;
+    height: 20px !important;
+    width: 22px !important;
     margin: 0 auto;
 }
 
-.c1-101 a{
-    height: 2.5rem!important;
-    font-size: 12px;
-    font-family: "微软雅黑","Microsoft YaHei";
-    color: #525552!important;
+.icon-gc {
+    background-image: url(../img/footer_10.png);
+    display: block;
+    height: 20px !important;
+    width: 20px !important;
+    margin: 0 auto;
 }
+
+.icon-kj {
+    background-image: url(../img/footer4.png);
+    display: block;
+    height: 20px !important;
+    width: 26.5px !important;
+    margin: 0 auto;
+}
+
+.icon-zst {
+    background-image: url(../img/footer1.png);
+    display: block;
+    height: 20px !important;
+    width: 21.5px !important;
+    margin: 0 auto;
+}
+
+.icon-info {
+    background-image: url(../img/footer3.png);
+    display: block;
+    height: 20px !important;
+    width: 17.5px !important;
+    margin: 0 auto;
+}
+
+.c1-101 a {
+    height: 2.5rem !important;
+    font-size: 12px;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    color: #525552 !important;
+}
+
+.re-zxkf2, .re-kjjg {
+    width: 3.5rem !important;
+    border: none !important;
+}
+
+.re-zst, .re-yhhd {
+    width: 2.5rem !important;
+    border: none !important;
+}
+
+.recl-5 {
+    border-top: #DEDFDE 1px solid;
+    margin-bottom: 0.5rem;
+}
+.recl-5 a,.cl-row-5 a{
+    padding-top: 0;
+}
+.recl-5 a span {
+    font-size: 0.3rem;
+}
+
+.re-row {
+    margin-bottom: 0.5rem;
+}
+
+.re-bg {
+    background: #FFFFFF;
+}
+
+.recl-6 {
+    border-top: #DEDFDE 1px solid;
+    border-bottom: #DEDFDE 1px solid;
+}
+.recl-6 .col-100,.re-rmcz .col-100{
+    height: 1.43rem;
+    line-height: 1.43rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.recl-6 .col-100 span:first-child,.re-rmcz .col-100 span:first-child{
+    color: #3b3b3b;
+    font-size: 18px;
+    border: none;
+    font-weight:normal;
+    margin-left: 0.5rem;
+}
+.recl-6 .col-100 a,.re-rmcz .col-100 a{
+    color: #686868;
+    font-size: 12px;
+    border-bottom: 0;
+    margin-right: 0.6rem;
+}
+.re-rmcz {
+    border-top: #DEDFDE 1px solid;
+}
+.recl-8 {
+    margin-bottom: 0.5rem;
+}
+.cl-row-5{
+    width: 100%;
+    border-bottom:#DEDFDE 1px solid;
+}
+.recl-7 .cl-5 a{
+    width: 50%;
+    border: none;
+}
+.recl-7 .cl-5 a span{
+    border: none;
+}
+.cl-row-5 a span{
+    diplay:inline-block!important;
+    float: left;
+}
+.cl-row-5 a span:first-child{
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0 0.2rem 0 0.4rem;
+    background-size: 100%;
+}
+.cl-row-5 a{
+    padding: 20px 0px;
+}
+
