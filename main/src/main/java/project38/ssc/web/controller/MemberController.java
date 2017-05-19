@@ -988,6 +988,13 @@ public class MemberController extends BaseController {
             return this.renderJson(result);
         }
 
+        if (null == id) {
+            result.setResult(-2);
+            result.setDescription("请选择银行卡！");
+            return this.renderJson(result);
+        }
+
+
         result = ApiUtils.submitWithdraw(uid, token, money, id, drawPassword, companyShortName);
         return this.renderJson(result);
     }
