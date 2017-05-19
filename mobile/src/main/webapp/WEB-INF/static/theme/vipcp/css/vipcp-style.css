@@ -1,0 +1,79 @@
+.cl-1-vipcp{
+    padding-left: .3rem;
+    line-height: 2.4rem!important;
+    height: 2.4rem!important;
+    overflow: hidden;
+    background: #f4f4f4!important;
+}
+.cl-3 a {
+    color: #202020;
+    margin-right: .3rem;
+}
+.cl-3 a:last-child {
+    background: #16da69;
+    color:white;
+}
+.bar .button-link{
+    line-height: 2.4rem;
+    height: 2.4rem;
+}
+.cl-328 a{
+    color: #202020!important;
+}
+.cl-1003{
+    background: #ffffff;
+}
+/*底部菜单栏*/
+.bar-tab-vipcp{
+    bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.bar-tab~.content{
+    bottom: 2.5rem!important;
+}
+.c1-101{
+    border-top: 1px solid #aaaaaa;
+}
+.re-icon-home{
+    background-image: url(../img/footer2.png);
+    display: block;
+    height: 20px!important;
+    width: 22px!important;
+    margin: 0 auto;
+}
+.icon-gc{
+    background-image: url(../img/footer_10.png);
+    display: block;
+    height: 20px!important;
+    width: 20px!important;
+    margin: 0 auto;
+}
+.icon-kj{
+    background-image: url(../img/footer4.png);
+    display: block;
+    height: 20px!important;
+    width: 26.5px!important;
+    margin: 0 auto;
+}
+.icon-zst{
+    background-image: url(../img/footer1.png);
+    display: block;
+    height: 20px!important;
+    width: 21.5px!important;
+    margin: 0 auto;
+}
+.icon-info{
+    background-image: url(../img/footer3.png);
+    display: block;
+    height: 20px!important;
+    width: 17.5px!important;
+    margin: 0 auto;
+}
+
+.c1-101 a{
+    height: 2.5rem!important;
+    font-size: 12px;
+    font-family: "微软雅黑","Microsoft YaHei";
+    color: #525552!important;
+}
