@@ -204,6 +204,7 @@
                     reutnr;
                 }
                 $(".money").html(json.balance);
+                $(".center_wallet .money").css({"font-size": "20px", "font-weight": "bold"});
             }
         });
     }
