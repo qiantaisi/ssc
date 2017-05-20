@@ -114,7 +114,7 @@
             </div>
             <div class="cl-7 recl-7">
                 <div class="row cl-5 cl-row-5">
-                    <a class="col-25" href="javascript:void(0)" id="btn_sscxl" sp="0">
+                    <a class="col-25 xl-select" href="javascript:void(0)" data-name="sscxl" id="btn_sscxl" sp="0">
                         <em class="sanjiao sj_sscxl"></em>
                         <div class="c25-div">
                             <span class="bg-img-sscxl"></span>
@@ -124,7 +124,8 @@
                             </span>
                         </div>
                     </a>
-                    <a class="col-25" href="javascript:void(0)" id="btn_k3xl" sp="0">
+                    <a class="col-25 xl-select" href="javascript:void(0)" data-name="k3xl" id="btn_k3xl" sp="0">
+                        <em class="sanjiao sj_k3xl"></em>
                         <div class="c25-div rec25">
                             <span class="bg-img-k3xl"></span>
                             <span class="content-sp">
@@ -134,7 +135,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="sscxl hide-xl">
+                <div class="xlcz sscxl hide-xl">
                     <div class="row cl-cz-hide clearfix">
                         <a href="<%=basePath%>ssc/gcdt/ffssc.html">
                             <div class="content-clear-f">
@@ -184,6 +185,34 @@
                         </a>
                     </div>
 
+                </div>
+                <div class="xlcz k3xl hide-xl">
+                    <div class="row cl-cz-hide clearfix">
+                        <a href="<%=basePath%>ssc/gcdt/jsk3.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-jsk3"></span>
+                                <p>江苏快3</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/hbk3.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-hbk3"></span>
+                                <p>湖北快3</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/ahk3.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-ahk3"></span>
+                                <p>安徽快3</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/jlk3.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-jlk3"></span>
+                                <p>吉林快3</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
 

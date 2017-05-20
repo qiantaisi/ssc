@@ -304,23 +304,61 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
-        $(".sj_sscxl").hide();
+        $(".sanjiao").hide();//隐藏所有三角号 系列彩种中
 
-        $("#btn_sscxl").click(function(){
-              var sp_s = $(this).attr("sp");
-              if(sp_s == 0){
-                  $(".sscxl").show();
-                  $(".sj_sscxl").show();
-                  $(this).parent().css("border-bottom","none");
-                  $(this).attr("sp",1);
-              }else{
-                  $(".sscxl").hide();
-                  $(".sj_sscxl").hide();
-                  $(this).parent().css("border-bottom","#DEDFDE 1px solid");
-                  $(this).attr("sp",0);
-              }
+        //0代表为隐藏 1为显示标签
+        $(".recl-7 .cl-row-5 .xl-select").click(function () {
+            $(".xlcz").hide();
+            $(".sanjiao").hide();
+
+            var sp_s = $(this).attr("sp");
+            var nameFlag = $(this).data("name");
+            if(nameFlag == "sscxl" && sp_s == 0){
+                $(".sscxl").show();
+                $(".sj_sscxl").show();
+                $(this).parent().css("border-bottom","none");
+                $(this).attr("sp",1);
+
+                var flag1 = $("#btn_k3xl").attr("sp");
+                if(flag1 == 1){
+                    $("#btn_k3xl").attr("sp",0);
+                }
+            }else if(nameFlag == "sscxl" && sp_s == 1){
+                $(".sscxl").hide();
+                $(".sj_sscxl").hide();
+                $(this).parent().css("border-bottom","#DEDFDE 1px solid");
+                $(this).attr("sp",0);
+
+                var flag1 = $("#btn_k3xl").attr("sp");
+                if(flag1 == 1){
+                    $("#btn_k3xl").attr("sp",0);
+                }
+            }
+
+            if(nameFlag == "k3xl" && sp_s == 0){
+                $(".k3xl").show();
+                $(".sj_k3xl").show();
+                $(this).parent().css("border-bottom","none");
+                $(this).attr("sp",1);
+
+                var flag1 = $("#btn_sscxl").attr("sp");
+                if(flag1 == 1){
+                    $("#btn_sscxl").attr("sp",0);
+                }
+            }else if(nameFlag == "k3xl" && sp_s == 1){
+                $(".k3xl").hide();
+                $(".sj_k3xl").hide();
+                $(this).parent().css("border-bottom","#DEDFDE 1px solid");
+                $(this).attr("sp",0);
+
+                var flag1 = $("#btn_sscxl").attr("sp");
+                if(flag1 == 1){
+                    $("#btn_sscxl").attr("sp",0);
+                }
+            }
 
         });
+
 
         // 首页图片轮播
         var swiper = new Swiper('.swiper-container', {
