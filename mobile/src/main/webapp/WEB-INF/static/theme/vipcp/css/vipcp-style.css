@@ -339,5 +339,46 @@
     color: #f42023!important;
     font-size: 14px;
     float: right;
-
+}
+.index_five{
+    padding: 10px 0px;
+    color: #525252;
+    text-align: center;
+}
+.index_six{
+    margin-bottom: 9px;
+    text-align: center;
+}
+.index_six_main{
+    display: inline-block;
+    background: #fff;
+    line-height: 28px;
+    border-radius: 5px;
+    border: 1px solid #e3e0e0;
+    color: #686868;
+    padding: 0px 28px;
+}
+.index_six_main span{
+    color: #9c9b9b;
+}
+.index_seven{
+    color: #626161;
+    text-align: center;
+    padding: 0px 5%;
+    line-height: 18px;
+    font-size: 12px;
+    font-family: "微软雅黑","Microsoft YaHei";
+}
+.index_eight{
+    text-align: center;
+    padding: 5px 0px;
+}
+.index_eight img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 37px;
+}
+img{
+    Vertical-aliagn: top;
+    border: 0;
 }

@@ -412,12 +412,30 @@
                 </div>
                 <a href="#navBar" class="top-click">TOP</a>
             </div>
-            <div class="pcAndMobile">
-                <a href="javascript:void(0)" onclick="parent.location.href='<%=mHostName%>'">手机版</a>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="javascript:void(0)" onclick="parent.location.href='<%=pcHostName%>/?z=1'">电脑版</a>
+
+            <div class="index_five">
+                <a href="javascript:void(0)">下载客户端</a>
+                <span>&nbsp;|&nbsp;</span>
+                <a href="javascript:void(0)" onclick="parent.location.href='<%=mHostName%>'">触屏版</a>
+                <span>&nbsp;|&nbsp;</span>
+                <a href="javascript:void(0)" onclick="parent.location.href='<%=pcHostName%>/?z=1'">PC版</a>
             </div>
-            <c:import url="../common/copyright.jsp"/>
+
+            <div class="index_six">
+                <span class="index_six_main">
+                   <span>客服热线：</span>
+                    4000-888-888
+                </span>
+            </div>
+
+            <div class="index_seven">
+                ©2001-2017 500彩票网 版权所有 股票代码：WBAI<br>
+                深圳市易讯天空网络技术有限公司
+            </div>
+            <div class="index_eight">
+                <img src="${resPath}img/index_89.png">
+            </div>
+            <%--<c:import url="../common/copyright.jsp"/>--%>
         </div>
     </div>
     <c:import url="../common/rightPanel.jsp"/>
