@@ -1,3 +1,9 @@
+/*首页滚动公告*/
+.sp_scroll_txt{
+    font-size: 14px;
+    color: #000;
+    line-height: 1.7rem;
+}
 .cl-1-vipcp {
     padding-left: .3rem;
     line-height: 2.4rem !important;
