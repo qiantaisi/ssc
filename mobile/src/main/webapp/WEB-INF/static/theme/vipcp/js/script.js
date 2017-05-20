@@ -301,8 +301,26 @@ $(function () {
         });
     }
 
+
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
+        $(".sj_sscxl").hide();
+
+        $("#btn_sscxl").click(function(){
+              var sp_s = $(this).attr("sp");
+              if(sp_s == 0){
+                  $(".sscxl").show();
+                  $(".sj_sscxl").show();
+                  $(this).parent().css("border-bottom","none");
+                  $(this).attr("sp",1);
+              }else{
+                  $(".sscxl").hide();
+                  $(".sj_sscxl").hide();
+                  $(this).parent().css("border-bottom","#DEDFDE 1px solid");
+                  $(this).attr("sp",0);
+              }
+
+        });
 
         // 首页图片轮播
         var swiper = new Swiper('.swiper-container', {

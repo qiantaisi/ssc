@@ -114,7 +114,8 @@
             </div>
             <div class="cl-7 recl-7">
                 <div class="row cl-5 cl-row-5">
-                    <a class="col-25" href="javascript:void(0)">
+                    <a class="col-25" href="javascript:void(0)" id="btn_sscxl" sp="0">
+                        <em class="sanjiao sj_sscxl"></em>
                         <div class="c25-div">
                             <span class="bg-img-sscxl"></span>
                             <span class="content-sp">
@@ -123,16 +124,68 @@
                             </span>
                         </div>
                     </a>
-                    <a class="col-25" href="javascript:void(0)">
+                    <a class="col-25" href="javascript:void(0)" id="btn_k3xl" sp="0">
                         <div class="c25-div rec25">
                             <span class="bg-img-k3xl"></span>
                             <span class="content-sp">
-                            <p>快3系列</p>
-                             快3系列
-                        </span>
+                               <p>快3系列</p>
+                                快3系列
+                            </span>
                         </div>
                     </a>
                 </div>
+                <div class="sscxl hide-xl">
+                    <div class="row cl-cz-hide clearfix">
+                        <a href="<%=basePath%>ssc/gcdt/ffssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-ffssc"></span>
+                                <p>分分时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/cqssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-cqssc"></span>
+                                <p>重庆时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/xjssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-xjssc"></span>
+                                <p>新疆时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/xjssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-tjssc"></span>
+                                <p>天津时时彩</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="row cl-cz-hide clearfix">
+                        <a href="<%=basePath%>ssc/gcdt/efssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-efssc"></span>
+                                <p>两分时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/sfssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-sfssc"></span>
+                                <p>三分时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/wfssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-wfssc"></span>
+                                <p>五时时彩</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
 
                 <div class="row cl-5 cl-row-5">
                     <a class="col-25" href="javascript:void(0)">
@@ -242,7 +295,6 @@
             </div>
 
 
-
             <%--<div class="row cl-6">--%>
             <%--<div class="col-100">--%>
             <%--<span class="left">走势图</span>--%>
@@ -333,8 +385,8 @@
 <script>
     var kjjgJsonData = ${kjjgJsonData};
     var CONFIG = {
-        BASEURL:"<%=basePath%>",
-        RESURL:"${resPath}"
+        BASEURL: "<%=basePath%>",
+        RESURL: "${resPath}"
     }
 </script>
 <script type="text/html" id="template_1">

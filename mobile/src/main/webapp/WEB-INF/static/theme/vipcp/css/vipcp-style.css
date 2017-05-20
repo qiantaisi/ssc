@@ -248,3 +248,56 @@
 .bg-img-gdcz{
     background-image: url(../img/cz/gdcz.png);
 }
+
+.cl-cz-hide{
+    width:100%;
+    height: 3.75rem;
+    margin-left: 0px;
+}
+.cl-cz-hide a{
+    float: left;
+    display: inline-block;
+    width: 25%;
+    border-bottom: none!important;
+}
+.content-clear-f{
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+.content-clear-f span{
+    display: block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    float: left;
+    margin-left: 28.5%;
+}
+.content-clear-f p{
+    clear: left;
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    color:#3d4145;
+    font-family: "微软雅黑","Microsoft YaHei";
+    line-height: 1.3rem;
+}
+/*小三角图片*/
+.sanjiao{
+    background: url(../img/sanjiao.png);
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 16px;
+    height: 7px;
+    right: 43%;
+    bottom: 0.22%;
+    z-index: 100
+}
+.hide-xl{
+    display: none;
+}
