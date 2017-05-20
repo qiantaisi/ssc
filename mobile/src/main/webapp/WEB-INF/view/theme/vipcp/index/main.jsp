@@ -179,7 +179,7 @@
                         <a href="<%=basePath%>ssc/gcdt/wfssc.html">
                             <div class="content-clear-f">
                                 <span class="bg-img-wfssc"></span>
-                                <p>五时时彩</p>
+                                <p>五分时时彩</p>
                             </div>
                         </a>
                     </div>
