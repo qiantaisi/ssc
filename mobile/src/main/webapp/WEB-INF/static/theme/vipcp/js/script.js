@@ -33,6 +33,15 @@ $(function () {
         }
     });
 
+    // 返回按钮
+    $(".vipcp .fanhui").click(function () {
+        if ($.config.router == true) {
+            $.router.back();
+        } else {
+            back();
+        }
+    });
+
     // 首页
     $(".bar-nav .shouye").click(function () {
         // $.router.back()
