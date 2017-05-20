@@ -36,23 +36,55 @@
     font-size: small;
     color: #adadad;
 }
-.vipcp~.content{
-    top:4.2rem;
+
+.vipcp ~ .content {
+    top: 4.2rem;
     background: #eeeeee;
 }
-.page .vipcp{
+
+.page .vipcp {
     background: #f42023;
     color: #fff;
     position: relative;
-    height:4rem;
+    height: 4rem;
 }
-.page .vipcp .title img{
-    padding-top:1rem;
-    width:50%;
+
+.page .vipcp .title img {
+    padding-top: 1rem;
+    width: 50%;
 }
-.page .vipcp .button, .page .vipcp .title{
+
+.page .vipcp .button, .page .vipcp .title {
     color: inherit;
 }
-.bar .button-nav.pull-left{
+
+.bar .button-nav.pull-left {
     margin-left: -.25rem;
+}
+
+.reg-101 {
+    text-align: center;
+    margin-top:0.8rem;
+}
+.vipcp-102{
+    height:100%;
+    display: block;
+    padding:.5rem;
+    background: #f42023;
+    color: #fff;
+    text-align: center;
+    font-size:.8rem;
+    border-radius: .3rem;
+}
+.pass-101 {
+    text-align: center;
+    margin-top:0.7rem;
+}
+
+.reg-101 a {
+    color: #f42023;
+}
+
+.pass-101 a {
+    color: #6a6a6a;
 }
