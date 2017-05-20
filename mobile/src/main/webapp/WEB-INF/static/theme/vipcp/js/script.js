@@ -301,7 +301,6 @@ $(function () {
         });
     }
 
-
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
         $(".sanjiao").hide();//隐藏所有三角号 系列彩种中

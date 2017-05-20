@@ -1,4 +1,7 @@
 /*首页滚动公告*/
+.content-vipvp{
+    background: #FFF7F7!important;
+}
 .sp_scroll_txt{
     font-size: 14px;
     color: #000;
@@ -114,7 +117,6 @@
 
 .recl-5 {
     border-top: #DEDFDE 1px solid;
-    border-bottom: #DEDFDE 1px solid;
     margin-bottom: 0.5rem;
 }
 .recl-5 a,.cl-row-5 a{
@@ -300,4 +302,42 @@
 }
 .hide-xl{
     display: none;
+}
+.index_four{
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 1.52rem;
+    background: white;
+    border-bottom: #DEDFDE solid 1px;
+    border-top: #DEDFDE solid 1px;
+    line-height: 1.4rem;
+    padding-right:5%;
+}
+.index_four a{
+    margin-left: 0.2rem;
+    color: #6B696B;
+}
+.clearfix_{
+    display: block;
+}
+.clearfix_:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.left_{
+    float: left
+}
+.index_four_lf a{
+    display: inline-block;
+    padding: 0px 11px;
+}
+.top-click{
+    color: #f42023!important;
+    font-size: 14px;
+    float: right;
+
 }

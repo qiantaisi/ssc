@@ -36,7 +36,7 @@
         </header>
         <c:import url="../common/bottomNav.jsp"/>
 
-        <div class="content content-img">
+        <div class="content content-img content-vipvp" id="navBar">
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -217,12 +217,12 @@
 
 
                 <div class="row cl-5 cl-row-5">
-                    <a class="col-25" href="javascript:void(0)">
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/lhc.html">
                         <div class="c25-div">
-                            <span class="bg-img-lhcxl"></span>
+                            <span class="bg-img-lhc"></span>
                             <span class="content-sp">
-                            <p>六合彩系列</p>
-                             六合彩系列
+                            <p>香港六合彩</p>
+                             香港六合彩
                             </span>
                         </div>
                     </a>
@@ -400,6 +400,18 @@
             <%--</a>--%>
             <%--</div>--%>
             <%--</div>--%>
+            <div class="index_four clearfix_">
+                <div class="left_ index_four_lf">
+                    <a href="<%=basePath%>login.html" class="login_">登录</a>
+                    <span>|</span>
+                    <a href="<%=basePath%>register.html" class="reg_">注册</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)" class="help_">帮助</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)" class="zsk">知识库</a>
+                </div>
+                <a href="#navBar" class="top-click">TOP</a>
+            </div>
             <div class="pcAndMobile">
                 <a href="javascript:void(0)" onclick="parent.location.href='<%=mHostName%>'">手机版</a>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -417,6 +429,9 @@
         BASEURL: "<%=basePath%>",
         RESURL: "${resPath}"
     }
+    setTimeout(function(){
+        location.hash="navBar";
+    },500);
 </script>
 <script type="text/html" id="template_1">
     <li>
