@@ -39,7 +39,7 @@
                     <strong>第二步：</strong>点击“<span style="color:#E53333;">免费注册</span>”或“<span style="color:#E53333;">立即注册</span>”等注册字样。
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc.png"> <img src="${resPath}img/zc.png" style="border:#cccccc 1px solid" width="700" height="282" title="点击放大图片"/></a>
+                    <a href="${resPath}img/zc.png"> <img src="${resPath}img/zc.png" style="border:#cccccc 1px solid" width="700" title="点击放大图片"/></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
                 <br/>
@@ -47,7 +47,7 @@
                     <strong>第三步：</strong>根据提示，依次输入<span style="color:#E53333;">用户名、密码、真实姓名和验证码</span>。点击“<span style="color:#E53333;">立即注册</span>”。<br/>
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc2.png"><img src="${resPath}img/zc2.png" style="border:#cccccc 1px solid" width="700" height="389" title="点击放大图片" width="517" height="503"/></a>
+                    <a href="${resPath}img/zc2.png"><img src="${resPath}img/zc2.png" style="border:#cccccc 1px solid" width="700" title="点击放大图片" /></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
 
@@ -56,11 +56,11 @@
                     <strong>第四步：</strong>点击“<span style="color:#E53333;">确定</span>”完成注册。如图显示<br/>
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc3.png"><img src="${resPath}img/zc3.png" title="点击放大图片"  style="border:#cccccc 1px solid" width="700" height="390"/></a> <br/>
+                    <a href="${resPath}img/zc3.png"><img src="${resPath}img/zc3.png" title="点击放大图片"  style="border:#cccccc 1px solid" width="700" /></a> <br/>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3><br/>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc4.png"><img src="${resPath}img/zc4.png" style="border:#cccccc 1px solid" width="700" height="246" title="点击放大图片"/></a>
+                    <a href="${resPath}img/zc4.png"><img src="${resPath}img/zc4.png" style="border:#cccccc 1px solid" width="700" title="点击放大图片"/></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
             </div>
