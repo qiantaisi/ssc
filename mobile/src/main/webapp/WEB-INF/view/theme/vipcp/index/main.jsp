@@ -114,15 +114,131 @@
             </div>
             <div class="cl-7 recl-7">
                 <div class="row cl-5 cl-row-5">
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/ffssc.html">
-                        <span class="bg-img-ffssc"></span>
-                        <span>分分时时彩</span>
+                    <a class="col-25" href="javascript:void(0)">
+                        <div class="c25-div">
+                            <span class="bg-img-sscxl"></span>
+                            <span class="content-sp">
+                            <p>时时彩系列</p>
+                             时时彩系列
+                            </span>
+                        </div>
                     </a>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/cqssc.html">
-                        <span class="bg-img-cqssc"></span>
-                        <span>重庆时时彩</span>
+                    <a class="col-25" href="javascript:void(0)">
+                        <div class="c25-div rec25">
+                            <span class="bg-img-k3xl"></span>
+                            <span class="content-sp">
+                            <p>快3系列</p>
+                             快3系列
+                        </span>
+                        </div>
                     </a>
                 </div>
+
+                <div class="row cl-5 cl-row-5">
+                    <a class="col-25" href="javascript:void(0)">
+                        <div class="c25-div">
+                            <span class="bg-img-lhcxl"></span>
+                            <span class="content-sp">
+                            <p>六合彩系列</p>
+                             六合彩系列
+                            </span>
+                        </div>
+                    </a>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/pk10.html">
+                        <div class="c25-div rec25">
+                            <span class="bg-img-bjpk10"></span>
+                            <span class="content-sp">
+                            <p>北京赛车PK10</p>
+                             北京赛车PK10
+                        </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row cl-5 cl-row-5">
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xyft.html">
+                        <div class="c25-div">
+                            <span class="bg-img-xyft"></span>
+                            <span class="content-sp">
+                            <p>幸运飞艇</p>
+                            全场最高500万
+                            </span>
+                        </div>
+                    </a>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xy28.html">
+                        <div class="c25-div rec25">
+                            <span class="bg-img-xy28"></span>
+                            <span class="content-sp">
+                            <p>重庆时时彩</p>
+                            全场最高500万
+                        </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row cl-5 cl-row-5">
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/kl8.html">
+                        <div class="c25-div">
+                            <span class="bg-img-kl8"></span>
+                            <span class="content-sp">
+                            <p>北京快乐8</p>
+                            北京快乐8
+                            </span>
+                        </div>
+                    </a>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/klsf.html">
+                        <div class="c25-div rec25">
+                            <span class="bg-img-klsf"></span>
+                            <span class="content-sp">
+                            <p>广东快乐十分</p>
+                            全场最高500万
+                        </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row cl-5 cl-row-5">
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/fc3d.html">
+                        <div class="c25-div">
+                            <span class="bg-img-fc3d"></span>
+                            <span class="content-sp">
+                            <p>福彩3D</p>
+                            福彩3D
+                            </span>
+                        </div>
+                    </a>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/xync.html">
+                        <div class="c25-div rec25">
+                            <span class="bg-img-xync"></span>
+                            <span class="content-sp">
+                            <p>重庆幸运农场</p>
+                            重庆幸运农场
+                        </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row cl-5 cl-row-5">
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/pl3.html">
+                        <div class="c25-div">
+                            <span class="bg-img-pl3"></span>
+                            <span class="content-sp">
+                            <p>体彩排列3</p>
+                            体彩排列3
+                            </span>
+                        </div>
+                    </a>
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt.html">
+                        <div class="c25-div rec25">
+                            <span class="bg-img-gdcz"></span>
+                            <span class="content-sp">
+                            <p class="gd-p">更多好玩彩种</p>
+
+                        </span>
+                        </div>
+                    </a>
+                </div>
+
             </div>
 
 

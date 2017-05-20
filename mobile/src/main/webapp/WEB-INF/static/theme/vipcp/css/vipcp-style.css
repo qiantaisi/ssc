@@ -108,6 +108,7 @@
 
 .recl-5 {
     border-top: #DEDFDE 1px solid;
+    border-bottom: #DEDFDE 1px solid;
     margin-bottom: 0.5rem;
 }
 .recl-5 a,.cl-row-5 a{
@@ -116,7 +117,6 @@
 .recl-5 a span {
     font-size: 0.3rem;
 }
-
 .re-row {
     margin-bottom: 0.5rem;
 }
@@ -154,9 +154,12 @@
 .recl-8 {
     margin-bottom: 0.5rem;
 }
+.recl-8 .list-block ul{
+    margin-bottom: 0;
+}
 .cl-row-5{
     width: 100%;
-    border-bottom:#DEDFDE 1px solid;
+    border-bottom: #DEDFDE 1px solid;
 }
 .recl-7 .cl-5 a{
     width: 50%;
@@ -175,7 +178,67 @@
     margin: 0 0.2rem 0 0.4rem;
     background-size: 100%;
 }
+.cl-row-5 .c25-div{
+    height: 2.2rem;
+    border-right: 1px solid #ddd;
+}
+.rec25{
+    border-right: 0!important;
+}
+
+.cl-row-5 .c25-div .content-sp{
+    text-align: left;
+    font-size: 12px;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    color: #525552 !important;
+}
+.cl-row-5 .c25-div .content-sp p{
+    color: #000;
+    font-size: 14px;
+    margin-top:0.1rem;
+    margin-bottom: 0;
+}
+.gd-p{
+    line-height: 1.95rem;
+}
+
 .cl-row-5 a{
     padding: 20px 0px;
 }
 
+.bg-img-sscxl {
+    background-image: url(../img/cz/sscxl.png);
+}
+.bg-img-k3xl {
+    background-image: url(../img/cz/k3xl.png);
+}
+.bg-img-lhcxl {
+    background-image: url(../img/cz/lhcxl.png);
+}
+.bg-img-bjpk10 {
+    background-image: url(../img/cz/bjpk10.png);
+}
+.bg-img-xyft {
+    background-image: url(../img/cz/xyft.png);
+}
+.bg-img-xy28 {
+    background-image: url(../img/cz/xy28.png);
+}
+.bg-img-kl8 {
+    background-image: url(../img/cz/kl8.png);
+}
+.bg-img-klsf {
+    background-image: url(../img/cz/klsf.png);
+}
+.bg-img-fc3d {
+    background-image: url(../img/cz/fc3d.png);
+}
+.bg-img-xync {
+    background-image: url(../img/cz/xync.png);
+}
+.bg-img-pl3{
+    background-image: url(../img/cz/pl3.png);
+}
+.bg-img-gdcz{
+    background-image: url(../img/cz/gdcz.png);
+}
