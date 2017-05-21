@@ -483,7 +483,6 @@ $(function () {
                     obj.playGroupId = playGroupId;
                     obj.number = value.lastOpenNumber;
 
-
                     var numArr = value.lastOpenData.split(",");
                     var num1 = Tools.parseInt(numArr[0]);
                     var num2 = Tools.parseInt(numArr[1]);
@@ -506,6 +505,17 @@ $(function () {
                     obj.num8 = num8;
                     obj.num9 = num9;
                     obj.num10 = num10;
+
+                    obj.sx1 = getSxName(num1);
+                    obj.sx2 = getSxName(num2);
+                    obj.sx3 = getSxName(num3);
+                    obj.sx4 = getSxName(num4);
+                    obj.sx5 = getSxName(num5);
+                    obj.sx6 = getSxName(num6);
+                    obj.sx7 = getSxName(num7);
+                    obj.sx8 = getSxName(num8);
+                    obj.sx9 = getSxName(num9);
+                    obj.sx10 = getSxName(num10);
 
                     var html = template("template_" + playGroupId, obj);
                     htmlArr.push(html);

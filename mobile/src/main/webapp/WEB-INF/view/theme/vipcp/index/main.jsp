@@ -453,13 +453,9 @@
 </script>
 <script type="text/html" id="template_1">
     <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=1">
-            <div class="item-media"><img src="${resPath}img/cz/cz-1.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">重庆时时彩</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
+        <a class="item-content" href="javascript:void(0)">
+            <div class="item-media remedia"><img src="${resPath}img/cz/cz-1.png" style='width: 2.4rem;'></div>
+            <div class="item-inner reitem-inner">
                 <div class="item-subtitle">
                     <span class="ball">{{num1}}</span>
                     <span class="ball">{{num2}}</span>
@@ -472,6 +468,13 @@
                     <span>{{ds}}</span>
                     <span>{{dx}}</span>
                     <span>{{lh}}</span>
+                </div>
+                <div class="item-title-row re-row-touzhu">
+                    <span class="">重庆时时彩</span>
+                    <span href="javascript:void(0)" class="tz_content">
+                        <em class="shuaxin"></em>
+                        <var class="touzhu">投注</var>
+                    </span>
                 </div>
             </div>
         </a>
@@ -570,13 +573,9 @@
 <%--</script>--%>
 <script type="text/html" id="template_6">
     <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=6">
-            <div class="item-media"><img src="${resPath}img/cz/cz-6.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">香港六合彩</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
+        <a class="item-content" href="javascript:void(0)">
+            <div class="item-media remedia"><img src="${resPath}img/cz/cz-6.png" style='width: 2.4rem;'></div>
+            <div class="item-inner reitem-inner">
                 <div class="item-subtitle lhc_item-subtitle">
                     <span class="ball {{if bose1 == 1}}col0{{else if bose1 == 2}}col1{{/if}}">{{num1}}</span>
                     <span class="ball {{if bose2 == 1}}col0{{else if bose2 == 2}}col1{{/if}}">{{num2}}</span>
@@ -596,6 +595,13 @@
                     <span>{{sx6}}</span>
                     <i>&nbsp;&nbsp;&nbsp;</i>
                     <span>{{sx7}}</span>
+                </div>
+                <div class="item-title-row re-row-touzhu">
+                    <span class="">香港六合彩</span>
+                    <span href="javascript:void(0)" class="tz_content">
+                        <em class="shuaxin"></em>
+                        <var class="touzhu">投注</var>
+                    </span>
                 </div>
             </div>
         </a>
@@ -660,13 +666,9 @@
 </script>
 <script type="text/html" id="template_9">
     <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=9">
-            <div class="item-media"><img src="${resPath}img/cz/cz-9.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">北京PK10</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
+        <a class="item-content" href="javascript:void(0)">
+            <div class="item-media remedia"><img src="${resPath}img/cz/cz-9.png" style='width: 2.5rem;'></div>
+            <div class="item-inner reitem-inner">
                 <div class="item-subtitle">
                     <span class="ballpk bg-{{num1}}">{{num1}}</span>
                     <span class="ballpk bg-{{num2}}">{{num2}}</span>
@@ -679,7 +681,24 @@
                     <span class="ballpk bg-{{num9}}">{{num9}}</span>
                     <span class="ballpk bg-{{num10}}">{{num10}}</span>
                 </div>
-                <div class="item-text item-text_res">
+                <div class="item-text">
+                    <span>{{sx1}}</span>
+                    <span>{{sx2}}</span>
+                    <span>{{sx3}}</span>
+                    <span>{{sx4}}</span>
+                    <span>{{sx5}}</span>
+                    <span>{{sx6}}</span>
+                    <span>{{sx7}}</span>
+                    <span>{{sx8}}</span>
+                    <span>{{sx9}}</span>
+                    <span>{{sx10}}</span>
+                </div>
+                <div class="item-title-row re-row-touzhu">
+                    <span class="">北京赛车PK10</span>
+                    <span href="javascript:void(0)" class="tz_content">
+                        <em class="shuaxin"></em>
+                        <var class="touzhu">投注</var>
+                    </span>
                 </div>
             </div>
         </a>

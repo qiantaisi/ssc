@@ -1,6 +1,8 @@
 /*首页滚动公告*/
 .content-vipvp{
     background: #FFF7F7!important;
+    font-size: 12px;
+    font-family: "微软雅黑","Microsoft YaHei";
 }
 .sp_scroll_txt{
     font-size: 14px;
@@ -100,8 +102,6 @@
 
 .c1-101 a {
     height: 2.5rem !important;
-    font-size: 12px;
-    font-family: "微软雅黑", "Microsoft YaHei";
     color: #525552 !important;
 }
 
@@ -196,8 +196,6 @@
 
 .cl-row-5 .c25-div .content-sp{
     text-align: left;
-    font-size: 12px;
-    font-family: "微软雅黑", "Microsoft YaHei";
     color: #525552 !important;
 }
 .cl-row-5 .c25-div .content-sp p{
@@ -281,9 +279,7 @@
     clear: left;
     margin: 0;
     text-align: center;
-    font-size: 12px;
     color:#3d4145;
-    font-family: "微软雅黑","Microsoft YaHei";
     line-height: 1.3rem;
 }
 /*小三角图片*/
@@ -366,12 +362,11 @@
     text-align: center;
     padding: 0px 5%;
     line-height: 18px;
-    font-size: 12px;
-    font-family: "微软雅黑","Microsoft YaHei";
 }
 .index_eight{
     text-align: center;
     padding: 5px 0px;
+    padding-bottom: 15px;
 }
 .index_eight img{
     display: inline-block;
@@ -382,3 +377,47 @@ img{
     Vertical-aliagn: top;
     border: 0;
 }
+.right_{
+    float:right;
+}
+.re-row-title{
+    height: 1.6rem!important;
+    line-height: 1.6rem!important;
+}
+.tz_content{
+    float: right;
+}
+/*热门开奖*/
+.re-row-touzhu{
+    position: relative;
+    height: 1.8rem!important;
+    line-height: 1.8rem!important;
+    color:#313031;
+    margin-top: 0.2rem;
+}
+.shuaxin{
+    display: inline-block;
+    background: url(../img/index_29.png) no-repeat;
+    background-size: 17px 16px;
+    width: 17px;
+    height: 16px;
+    margin-top: 3px;
+    position: absolute;
+    top: 16.5%;
+    right: 24%;
+}
+.touzhu{
+    color: #333333;
+    font-size: 13px;
+    border: 1px solid #e3e0e0;
+    border-radius: 5px;
+    line-height: 20px;
+    padding: 0px 10px;
+}
+.remedia{
+    padding-left: 0.2rem!important;
+}
+.reitem-inner{
+    padding-bottom: 0px!important;
+}
+
