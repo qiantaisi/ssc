@@ -64,21 +64,23 @@
 
 .reg-101 {
     text-align: center;
-    margin-top:0.8rem;
+    margin-top: 0.8rem;
 }
-.vipcp-102{
-    height:100%;
+
+.vipcp-102 {
+    height: 100%;
     display: block;
-    padding:.5rem;
+    padding: .5rem;
     background: #f42023;
     color: #fff;
     text-align: center;
-    font-size:.8rem;
+    font-size: .8rem;
     border-radius: .3rem;
 }
+
 .pass-101 {
     text-align: center;
-    margin-top:0.7rem;
+    margin-top: 0.7rem;
 }
 
 .reg-101 a {
@@ -88,3 +90,31 @@
 .pass-101 a {
     color: #6a6a6a;
 }
+
+.agree {
+
+}
+
+.agree span {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #f42023;
+    margin-right: 3px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.agree a {
+    color: #f42023;
+}
+.vipcp-list-block{
+    margin:.75rem 0;
+}
+/*.vipcp-list-block ul{*/
+    /*background: #fff;*/
+    /*list-style:none;*/
+    /*padding:0;*/
+    /*margin:0;*/
+    /*position: relative;*/
+    /*margin-bottom:1.2rem;*/
+/*}*/
