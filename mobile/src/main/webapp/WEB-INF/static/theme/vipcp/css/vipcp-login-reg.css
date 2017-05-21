@@ -107,14 +107,29 @@
 .agree a {
     color: #f42023;
 }
-.vipcp-list-block{
-    margin:.75rem 0;
+
+.vipcp-list-block {
+    margin: .75rem 0;
 }
+
+.remenber {
+    margin-left: 20px;
+}
+
+.remenber span {
+    display: inline-block;
+    width:10px;
+    height:10px;
+    border:1px solid #f42023;
+    vertical-align:-2px;
+    margin-right:3px;
+}
+
 /*.vipcp-list-block ul{*/
-    /*background: #fff;*/
-    /*list-style:none;*/
-    /*padding:0;*/
-    /*margin:0;*/
-    /*position: relative;*/
-    /*margin-bottom:1.2rem;*/
+/*background: #fff;*/
+/*list-style:none;*/
+/*padding:0;*/
+/*margin:0;*/
+/*position: relative;*/
+/*margin-bottom:1.2rem;*/
 /*}*/
