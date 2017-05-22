@@ -70,8 +70,9 @@
                 <%--<a href="<%=basePath%>help/rule/Extension.html" target="_blank">推广赚钱</a>--%>
                 <%--<a href="<%=basePath%>help/rule/QQ.html" target="_blank"></a>--%>
                 <%--<a href="<%=basePath%>help/rule/QQ.html" target="_blank"></a>--%>
-                <div class="bottom_div">
-                  <img src="${resPath}img/wx.png" alt="">
+                <div class="bottom_div" style="right:-30px;bottom:-30px">
+                    <img src="${resPath}img/wx.png" alt="">
+                    <a style="cursor:pointer;text-align:center;display: block;margin: auto;" href="javascript:void(0)">微信客服</a>
                 </div>
             </p>
         </li>
