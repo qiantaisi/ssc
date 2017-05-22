@@ -420,4 +420,65 @@ img{
 .reitem-inner{
     padding-bottom: 0px!important;
 }
-
+.k3xl,.sscxl{
+    background: #EFEFEF;
+}
+/*vipcp购彩大厅*/
+.relb{
+    margin: 0!important;
+    height: 1.4rem!important;
+}
+.reitem-link{
+    height: 1.4rem!important;
+    min-height: 1.4rem!important;
+    color: #000000;
+    font-size: 16px;
+    background: #FFFFFF;
+    padding-left:0.5rem!important;
+}
+.reit-inner{
+    min-height: 1.4rem!important;
+    padding-bottom: 0!important;
+    padding-top: 0!important;
+}
+.gcdtList .vipcp_bottem{
+    border-bottom: none!important;
+    width:33.33%;
+}
+.cl-318 .vipcp_bottem:nth-child(3){
+    border-right: none!important;
+}
+.cl-318 .vipcp_bottem:nth-child(4){
+    border-right: 1px solid #ddd!important;
+}
+.cl-318 .vipcp_bottem:nth-child(6){
+    border-right: none!important;
+}
+.cl-318 .jlk3-a,.cl-318 .lfssc-a,.cl-318 .sfssc-a,.cl-318 .tjssc-a,.cl-318 .ahk3-a,.cl-318 .hbk3-a,.cl-7 .gcdtList .gp-wfssc,.cl-7 .gcdtList .gp-jsk3{
+    border-bottom: 1px solid #ddd!important;
+}
+.cl-7 .gcdtList .wfssc-a{
+    border-top: none!important;
+    border-right: 1px solid #ddd!important;
+}
+.relb-k3xl,.cl-318 .jlk3-a{
+    border-top: 1px solid #ddd!important;
+}
+.cl-318 .vipcp_bottem span.img{
+    width: 2.43rem;
+    height: 2.43rem;
+    background-size: 100%;
+    border: none;
+}
+.cl-7 .gcdtList .gp-ahk3{
+    border-right: none!important;
+}
+.cl-7 .gcdtList .gp-hbk3,.cl-7 .gcdtList .gp-jlk3{
+    border-top: none!important;
+ }
+.cl-7 .gcdtList .gp-jlk3{
+    border-right: 1px solid #ddd!important;
+ }
+.cl-7 .gcdtList .gp-pk10,.cl-7 .gcdtList .gp-xync{
+    border-right: none!important;
+}

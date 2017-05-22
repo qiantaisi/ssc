@@ -43,15 +43,31 @@
 }
 
 .page .vipcp {
-    background: #f42023;
+    background: #FF3C39;
     color: #fff;
     position: relative;
     height: 4rem;
 }
-
+.recl-1{
+    background: #FF3C39!important;
+}
 .page .vipcp .title img {
     padding-top: 1rem;
     width: 50%;
+}
+.bar .reicon{
+    margin-top: -20%;
+    margin-left: 30%;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+}
+.bar-nav .reimg img{
+    height: 45%;
+    vertical-align: middle;
+    width: 55px;
+}
+.bar-nav .reimg{
+    font-size: 18px;
 }
 
 .page .vipcp .button, .page .vipcp .title {
