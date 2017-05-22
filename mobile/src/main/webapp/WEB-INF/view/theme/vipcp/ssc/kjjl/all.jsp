@@ -18,9 +18,10 @@
             <h1 class="title reimg">
                 <img src="${resPath}img/kaihead_06.png"/>彩票开奖
             </h1>
-            <span class="xzcz">
-                选择彩种
-            </span>
+            <a href="javascript:void(0)" class="btn_xz">
+                <span>选择彩种</span>
+            </a>
+
         </header>
         <c:import url="../../common/bottomNav.jsp"/>
         <%--隐藏块--%>

@@ -511,9 +511,13 @@ img{
 .rekjcl-1{
     background: #FF3C39!important;
 }
-.rekjcl-1 .xzcz{
-    float: right;
+
+.rekjcl-1 .btn_xz{
+    cursor: pointer;
     margin-top: 4%;
+    display: inline-block;
+    float: right;
+    color:white;
 }
 .media-list .re-l-con li{
     margin-bottom: 0.3rem;

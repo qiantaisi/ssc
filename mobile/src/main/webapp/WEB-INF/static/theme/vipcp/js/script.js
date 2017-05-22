@@ -5736,6 +5736,8 @@ $(function () {
         // 预加载
         getData();
     });
+
+
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-all", function (e, id, page) {
         // 初始化隐弹框信息
@@ -5778,10 +5780,12 @@ $(function () {
             $(".re-modal").hide();
         });
 
-        $(".rekjcl-1 .xzcz").click(function () {
-            Tools.alert("1");
-            // $(".outer").show();
-            // $(".re-modal").show();
+        $(".btn_xz").click(function () {
+            console.log("djdj");
+        });
+
+        $(".btn_xz").click(function() {
+            alert("t");
         });
 
 
