@@ -332,13 +332,13 @@ public class SscController extends BaseController {
     public ModelAndView kjjlList(Long playGroupId ){
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
-        return this.renderPublicView("ssc/kjjl/list", modelMap);
+        return this.renderView("ssc/kjjl/list", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/all.html",method = RequestMethod.GET)
     public ModelAndView kjjlAll(){
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderPublicView("ssc/kjjl/all", modelMap);
+        return this.renderView("ssc/kjjl/all", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/bqxq.html",method = RequestMethod.GET)

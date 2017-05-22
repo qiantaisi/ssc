@@ -503,3 +503,103 @@ img{
     right: 5px;
     font-size: 12px;
 }
+/*vipcp开奖页面*/
+.cl-102{
+    height: 4.8rem;
+    margin: 0;
+}
+.rekjcl-1{
+    background: #FF3C39!important;
+}
+.rekjcl-1 .xzcz{
+    float: right;
+    margin-top: 4%;
+}
+.media-list .re-l-con li{
+    margin-bottom: 0.3rem;
+    border-top: solid #DEDFDE 1px;
+}
+.re-conten-kjjg{
+    background:white!important;
+}
+
+/*弹窗*/
+.outer{
+    background: #fff;
+    width: 94%;
+    z-index: 100000;
+    left: 3%;
+    position: fixed;
+    top: 50%;
+    border-radius: 0.5rem;
+    margin-top: -10rem;
+}
+.outer .alert_ul li{
+    list-style: none;
+    vertical-align: bottom;
+}
+.outer .alert_ul {
+    padding: 0 5px;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+}
+.alert_tl{
+    text-align: center;
+    margin-bottom: 0;
+}
+.alert_ul li {
+    display: inline-block;
+    float: left;
+    width: 33.3%;
+    margin-bottom: 0.5rem;
+}
+.alert_main {
+    padding: 12px 0 0 0;
+    display: block;
+}
+.alert_ul li a {
+    margin: 0 3px;
+    display: block;
+    border: 1px solid #f53131;
+    border-radius: 5px;
+    color: #f63f3f;
+    font-size: 12px;
+    text-align: center;
+    line-height: 28px;
+    position: relative;
+    overflow: hidden;
+}
+.alert_xuan {
+    padding: 0 5px;
+}
+.alert_xuan a {
+    display: inline-block;
+    border: 1px solid #b5b5b5;
+    border-radius: 0.3rem;
+    line-height: 30px;
+    color: #696969;
+    font-size: 14px;
+    width: 45%;
+    text-align: center;
+}
+.alertbtn {
+    font-size: 14px;
+    color: #2b8fe4;
+    text-align: center;
+    padding: 0.8rem 0;
+    display: block;
+    border-top: 1px solid #b5b5b5;
+    margin-top: 10px;
+}
+.alert_ul li a em {
+    background: url(../img/select_icon1.png) no-repeat;
+    width: 19px;
+    height: 16px;
+    background-size: 19px 16px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.alert_ul .lihover em {
+    display: none;
+}
