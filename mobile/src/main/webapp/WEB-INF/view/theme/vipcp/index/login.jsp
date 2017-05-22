@@ -53,6 +53,10 @@
                     </ul>
                 </div>
             </div>
+            <div class="remenber">
+                <span></span>
+                记住密码
+            </div>
             <div class="cl-102">
                 <a href="javascript:void(0)" id="btn-login" class="outInsert">登录</a>
             </div>

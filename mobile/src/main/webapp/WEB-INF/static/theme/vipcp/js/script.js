@@ -303,6 +303,61 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
+        $(".sanjiao").hide();//隐藏所有三角号 系列彩种中
+
+        //0代表为隐藏 1为显示标签
+        $(".recl-7 .cl-row-5 .xl-select").click(function () {
+            $(".xlcz").hide();
+            $(".sanjiao").hide();
+
+            var sp_s = $(this).attr("sp");
+            var nameFlag = $(this).data("name");
+            if(nameFlag == "sscxl" && sp_s == 0){
+                $(".sscxl").show();
+                $(".sj_sscxl").show();
+                $(this).parent().css("border-bottom","none");
+                $(this).attr("sp",1);
+
+                var flag1 = $("#btn_k3xl").attr("sp");
+                if(flag1 == 1){
+                    $("#btn_k3xl").attr("sp",0);
+                }
+            }else if(nameFlag == "sscxl" && sp_s == 1){
+                $(".sscxl").hide();
+                $(".sj_sscxl").hide();
+                $(this).parent().css("border-bottom","#DEDFDE 1px solid");
+                $(this).attr("sp",0);
+
+                var flag1 = $("#btn_k3xl").attr("sp");
+                if(flag1 == 1){
+                    $("#btn_k3xl").attr("sp",0);
+                }
+            }
+
+            if(nameFlag == "k3xl" && sp_s == 0){
+                $(".k3xl").show();
+                $(".sj_k3xl").show();
+                $(this).parent().css("border-bottom","none");
+                $(this).attr("sp",1);
+
+                var flag1 = $("#btn_sscxl").attr("sp");
+                if(flag1 == 1){
+                    $("#btn_sscxl").attr("sp",0);
+                }
+            }else if(nameFlag == "k3xl" && sp_s == 1){
+                $(".k3xl").hide();
+                $(".sj_k3xl").hide();
+                $(this).parent().css("border-bottom","#DEDFDE 1px solid");
+                $(this).attr("sp",0);
+
+                var flag1 = $("#btn_sscxl").attr("sp");
+                if(flag1 == 1){
+                    $("#btn_sscxl").attr("sp",0);
+                }
+            }
+
+        });
+
 
         // 首页图片轮播
         var swiper = new Swiper('.swiper-container', {
@@ -428,7 +483,6 @@ $(function () {
                     obj.playGroupId = playGroupId;
                     obj.number = value.lastOpenNumber;
 
-
                     var numArr = value.lastOpenData.split(",");
                     var num1 = Tools.parseInt(numArr[0]);
                     var num2 = Tools.parseInt(numArr[1]);
@@ -451,6 +505,17 @@ $(function () {
                     obj.num8 = num8;
                     obj.num9 = num9;
                     obj.num10 = num10;
+
+                    obj.sx1 = getSxName(num1);
+                    obj.sx2 = getSxName(num2);
+                    obj.sx3 = getSxName(num3);
+                    obj.sx4 = getSxName(num4);
+                    obj.sx5 = getSxName(num5);
+                    obj.sx6 = getSxName(num6);
+                    obj.sx7 = getSxName(num7);
+                    obj.sx8 = getSxName(num8);
+                    obj.sx9 = getSxName(num9);
+                    obj.sx10 = getSxName(num10);
 
                     var html = template("template_" + playGroupId, obj);
                     htmlArr.push(html);
