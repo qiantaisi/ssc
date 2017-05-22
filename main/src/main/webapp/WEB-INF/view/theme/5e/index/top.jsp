@@ -100,6 +100,10 @@
                             <a href="<%=mHostName%>" target="_blank">手机购彩</a>
                             <a href="<%=basePath%>/help/index.html">规则说明</a>
                         </h5>
+                        <h5>
+                            <a href="http://www.5y444.com" target="_blank"><span style="color:#E53333;">导航网址</span></a>
+                            <a href="http://www.wuyicaipiao.com" target="_blank"><span style="color:#E53333;">线路检测</span></a>
+                        </h5>
                         <h4>
                             <strong>彩票工具</strong>
                             <p><a href="<%=mHostName%>" target="_blank">手机客户端</a> <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">走势查询</a> <a href="javascript:void(0)" onclick="getJluPage('lsjl/tzjl')">中奖查询</a></p>
