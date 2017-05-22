@@ -442,8 +442,12 @@ img{
     padding-top: 0!important;
 }
 .gcdtList .vipcp_bottem{
+    position: relative;
     border-bottom: none!important;
     width:33.33%;
+}
+.gcdtList .vipcp_bottem .jc{
+    margin: 0;
 }
 .cl-318 .vipcp_bottem:nth-child(3){
     border-right: none!important;
@@ -454,7 +458,7 @@ img{
 .cl-318 .vipcp_bottem:nth-child(6){
     border-right: none!important;
 }
-.cl-318 .jlk3-a,.cl-318 .lfssc-a,.cl-318 .sfssc-a,.cl-318 .tjssc-a,.cl-318 .ahk3-a,.cl-318 .hbk3-a,.cl-7 .gcdtList .gp-wfssc,.cl-7 .gcdtList .gp-jsk3{
+.cl-318 .lfssc-a,.cl-318 .sfssc-a,.cl-318 .tjssc-a,.cl-318 .ahk3-a,.cl-318 .hbk3-a,.cl-7 .gcdtList .gp-wfssc,.cl-7 .gcdtList .gp-jsk3{
     border-bottom: 1px solid #ddd!important;
 }
 .cl-7 .gcdtList .wfssc-a{
@@ -476,9 +480,26 @@ img{
 .cl-7 .gcdtList .gp-hbk3,.cl-7 .gcdtList .gp-jlk3{
     border-top: none!important;
  }
+.cl-7 .gcdtList .jsk3-a{
+    border-bottom: 1px solid #ddd!important;
+}
+.cl-7 .gcdtList .jlk3-a{
+    border-top:0!important;
+}
 .cl-7 .gcdtList .gp-jlk3{
     border-right: 1px solid #ddd!important;
  }
 .cl-7 .gcdtList .gp-pk10,.cl-7 .gcdtList .gp-xync{
     border-right: none!important;
+}
+.goucai_biaoqian {
+    display: inline-block;
+    background: #f83e3e;
+    color: #fff;
+    padding: 0px 5px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 100;
+    right: 5px;
+    font-size: 12px;
 }

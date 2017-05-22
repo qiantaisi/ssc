@@ -88,13 +88,12 @@ public class SscController extends BaseController {
     public ModelAndView gcdtGroup(@PathVariable String group, HttpServletResponse httpServletResponse) throws IOException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
-        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(companyShortName, group);
+        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group, companyShortName);
 
         // 彩种禁用暂停
         if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
             String path = httpServletRequest.getContextPath();
             String basePath = httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + path + "/ssc/tingcaipage.html";
-
             httpServletResponse.sendRedirect(basePath);
             return null;
         }
