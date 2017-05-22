@@ -36,7 +36,7 @@
         </header>
         <c:import url="../common/bottomNav.jsp"/>
 
-        <div class="content content-img">
+        <div class="content content-img content-vipvp" id="navBar">
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -114,7 +114,8 @@
             </div>
             <div class="cl-7 recl-7">
                 <div class="row cl-5 cl-row-5">
-                    <a class="col-25" href="javascript:void(0)">
+                    <a class="col-25 xl-select" href="javascript:void(0)" data-name="sscxl" id="btn_sscxl" sp="0">
+                        <em class="sanjiao sj_sscxl"></em>
                         <div class="c25-div">
                             <span class="bg-img-sscxl"></span>
                             <span class="content-sp">
@@ -123,24 +124,105 @@
                             </span>
                         </div>
                     </a>
-                    <a class="col-25" href="javascript:void(0)">
+                    <a class="col-25 xl-select" href="javascript:void(0)" data-name="k3xl" id="btn_k3xl" sp="0">
+                        <em class="sanjiao sj_k3xl"></em>
                         <div class="c25-div rec25">
                             <span class="bg-img-k3xl"></span>
                             <span class="content-sp">
-                            <p>快3系列</p>
-                             快3系列
-                        </span>
+                               <p>快3系列</p>
+                                快3系列
+                            </span>
                         </div>
                     </a>
                 </div>
+                <div class="xlcz sscxl hide-xl">
+                    <div class="row cl-cz-hide clearfix">
+                        <a href="<%=basePath%>ssc/gcdt/ffssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-ffssc"></span>
+                                <p>分分时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/cqssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-cqssc"></span>
+                                <p>重庆时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/xjssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-xjssc"></span>
+                                <p>新疆时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/xjssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-tjssc"></span>
+                                <p>天津时时彩</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="row cl-cz-hide clearfix">
+                        <a href="<%=basePath%>ssc/gcdt/efssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-efssc"></span>
+                                <p>两分时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/sfssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-sfssc"></span>
+                                <p>三分时时彩</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/wfssc.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-wfssc"></span>
+                                <p>五分时时彩</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="xlcz k3xl hide-xl">
+                    <div class="row cl-cz-hide clearfix">
+                        <a href="<%=basePath%>ssc/gcdt/jsk3.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-jsk3"></span>
+                                <p>江苏快3</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/hbk3.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-hbk3"></span>
+                                <p>湖北快3</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/ahk3.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-ahk3"></span>
+                                <p>安徽快3</p>
+                            </div>
+                        </a>
+                        <a href="<%=basePath%>ssc/gcdt/jlk3.html">
+                            <div class="content-clear-f">
+                                <span class="bg-img-jlk3"></span>
+                                <p>吉林快3</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
 
                 <div class="row cl-5 cl-row-5">
-                    <a class="col-25" href="javascript:void(0)">
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/lhc.html">
                         <div class="c25-div">
-                            <span class="bg-img-lhcxl"></span>
+                            <span class="bg-img-lhc"></span>
                             <span class="content-sp">
-                            <p>六合彩系列</p>
-                             六合彩系列
+                            <p>香港六合彩</p>
+                             香港六合彩
                             </span>
                         </div>
                     </a>
@@ -242,7 +324,6 @@
             </div>
 
 
-
             <%--<div class="row cl-6">--%>
             <%--<div class="col-100">--%>
             <%--<span class="left">走势图</span>--%>
@@ -319,12 +400,42 @@
             <%--</a>--%>
             <%--</div>--%>
             <%--</div>--%>
-            <div class="pcAndMobile">
-                <a href="javascript:void(0)" onclick="parent.location.href='<%=mHostName%>'">手机版</a>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="javascript:void(0)" onclick="parent.location.href='<%=pcHostName%>/?z=1'">电脑版</a>
+            <div class="index_four clearfix_">
+                <div class="left_ index_four_lf">
+                    <a href="<%=basePath%>login.html" class="login_">登录</a>
+                    <span>|</span>
+                    <a href="<%=basePath%>register.html" class="reg_">注册</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)" class="help_">帮助</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)" class="zsk">知识库</a>
+                </div>
+                <a href="#navBar" class="top-click">TOP</a>
             </div>
-            <c:import url="../common/copyright.jsp"/>
+
+            <div class="index_five">
+                <a href="javascript:void(0)">下载客户端</a>
+                <span>&nbsp;|&nbsp;</span>
+                <a href="javascript:void(0)" onclick="parent.location.href='<%=mHostName%>'">触屏版</a>
+                <span>&nbsp;|&nbsp;</span>
+                <a href="javascript:void(0)" onclick="parent.location.href='<%=pcHostName%>/?z=1'">PC版</a>
+            </div>
+
+            <div class="index_six">
+                <span class="index_six_main">
+                   <span>客服热线：</span>
+                    4000-888-888
+                </span>
+            </div>
+
+            <div class="index_seven">
+                ©2001-2017 500彩票网 版权所有 股票代码：WBAI<br>
+                深圳市易讯天空网络技术有限公司
+            </div>
+            <div class="index_eight">
+                <img src="${resPath}img/index_89.png">
+            </div>
+            <%--<c:import url="../common/copyright.jsp"/>--%>
         </div>
     </div>
     <c:import url="../common/rightPanel.jsp"/>
@@ -333,19 +444,18 @@
 <script>
     var kjjgJsonData = ${kjjgJsonData};
     var CONFIG = {
-        BASEURL:"<%=basePath%>",
-        RESURL:"${resPath}"
+        BASEURL: "<%=basePath%>",
+        RESURL: "${resPath}"
     }
+    setTimeout(function(){
+        location.hash="navBar";
+    },500);
 </script>
 <script type="text/html" id="template_1">
     <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=1">
-            <div class="item-media"><img src="${resPath}img/cz/cz-1.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">重庆时时彩</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
+        <a class="item-content" href="javascript:void(0)">
+            <div class="item-media remedia"><img src="${resPath}img/cz/cz-1.png" style='width: 2.4rem;'></div>
+            <div class="item-inner reitem-inner">
                 <div class="item-subtitle">
                     <span class="ball">{{num1}}</span>
                     <span class="ball">{{num2}}</span>
@@ -358,6 +468,13 @@
                     <span>{{ds}}</span>
                     <span>{{dx}}</span>
                     <span>{{lh}}</span>
+                </div>
+                <div class="item-title-row re-row-touzhu">
+                    <span class="">重庆时时彩</span>
+                    <span href="javascript:void(0)" class="tz_content">
+                        <em class="shuaxin"></em>
+                        <var class="touzhu">投注</var>
+                    </span>
                 </div>
             </div>
         </a>
@@ -456,13 +573,9 @@
 <%--</script>--%>
 <script type="text/html" id="template_6">
     <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=6">
-            <div class="item-media"><img src="${resPath}img/cz/cz-6.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">香港六合彩</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
+        <a class="item-content" href="javascript:void(0)">
+            <div class="item-media remedia"><img src="${resPath}img/cz/cz-6.png" style='width: 2.4rem;'></div>
+            <div class="item-inner reitem-inner">
                 <div class="item-subtitle lhc_item-subtitle">
                     <span class="ball {{if bose1 == 1}}col0{{else if bose1 == 2}}col1{{/if}}">{{num1}}</span>
                     <span class="ball {{if bose2 == 1}}col0{{else if bose2 == 2}}col1{{/if}}">{{num2}}</span>
@@ -482,6 +595,13 @@
                     <span>{{sx6}}</span>
                     <i>&nbsp;&nbsp;&nbsp;</i>
                     <span>{{sx7}}</span>
+                </div>
+                <div class="item-title-row re-row-touzhu">
+                    <span class="">香港六合彩</span>
+                    <span href="javascript:void(0)" class="tz_content">
+                        <em class="shuaxin"></em>
+                        <var class="touzhu">投注</var>
+                    </span>
                 </div>
             </div>
         </a>
@@ -546,13 +666,9 @@
 </script>
 <script type="text/html" id="template_9">
     <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=9">
-            <div class="item-media"><img src="${resPath}img/cz/cz-9.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">北京PK10</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
+        <a class="item-content" href="javascript:void(0)">
+            <div class="item-media remedia"><img src="${resPath}img/cz/cz-9.png" style='width: 2.5rem;'></div>
+            <div class="item-inner reitem-inner">
                 <div class="item-subtitle">
                     <span class="ballpk bg-{{num1}}">{{num1}}</span>
                     <span class="ballpk bg-{{num2}}">{{num2}}</span>
@@ -565,7 +681,24 @@
                     <span class="ballpk bg-{{num9}}">{{num9}}</span>
                     <span class="ballpk bg-{{num10}}">{{num10}}</span>
                 </div>
-                <div class="item-text item-text_res">
+                <div class="item-text">
+                    <span>{{sx1}}</span>
+                    <span>{{sx2}}</span>
+                    <span>{{sx3}}</span>
+                    <span>{{sx4}}</span>
+                    <span>{{sx5}}</span>
+                    <span>{{sx6}}</span>
+                    <span>{{sx7}}</span>
+                    <span>{{sx8}}</span>
+                    <span>{{sx9}}</span>
+                    <span>{{sx10}}</span>
+                </div>
+                <div class="item-title-row re-row-touzhu">
+                    <span class="">北京赛车PK10</span>
+                    <span href="javascript:void(0)" class="tz_content">
+                        <em class="shuaxin"></em>
+                        <var class="touzhu">投注</var>
+                    </span>
                 </div>
             </div>
         </a>

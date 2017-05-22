@@ -1,4 +1,9 @@
 /*首页滚动公告*/
+.content-vipvp{
+    background: #FFF7F7!important;
+    font-size: 12px;
+    font-family: "微软雅黑","Microsoft YaHei";
+}
 .sp_scroll_txt{
     font-size: 14px;
     color: #000;
@@ -97,8 +102,6 @@
 
 .c1-101 a {
     height: 2.5rem !important;
-    font-size: 12px;
-    font-family: "微软雅黑", "Microsoft YaHei";
     color: #525552 !important;
 }
 
@@ -114,7 +117,6 @@
 
 .recl-5 {
     border-top: #DEDFDE 1px solid;
-    border-bottom: #DEDFDE 1px solid;
     margin-bottom: 0.5rem;
 }
 .recl-5 a,.cl-row-5 a{
@@ -194,8 +196,6 @@
 
 .cl-row-5 .c25-div .content-sp{
     text-align: left;
-    font-size: 12px;
-    font-family: "微软雅黑", "Microsoft YaHei";
     color: #525552 !important;
 }
 .cl-row-5 .c25-div .content-sp p{
@@ -248,3 +248,176 @@
 .bg-img-gdcz{
     background-image: url(../img/cz/gdcz.png);
 }
+
+.cl-cz-hide{
+    width:100%;
+    height: 3.75rem;
+    margin-left: 0px;
+}
+.cl-cz-hide a{
+    float: left;
+    display: inline-block;
+    width: 25%;
+    border-bottom: none!important;
+}
+.content-clear-f{
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+.content-clear-f span{
+    display: block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    float: left;
+    margin-left: 28.5%;
+}
+.content-clear-f p{
+    clear: left;
+    margin: 0;
+    text-align: center;
+    color:#3d4145;
+    line-height: 1.3rem;
+}
+/*小三角图片*/
+.sanjiao{
+    background: url(../img/sanjiao.png);
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 16px;
+    height: 7px;
+    right: 43%;
+    bottom: 0.22%;
+    z-index: 100
+}
+.hide-xl{
+    display: none;
+}
+.index_four{
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 1.52rem;
+    background: white;
+    border-bottom: #DEDFDE solid 1px;
+    border-top: #DEDFDE solid 1px;
+    line-height: 1.4rem;
+    padding-right:5%;
+}
+.index_four a{
+    margin-left: 0.2rem;
+    color: #6B696B;
+}
+.clearfix_{
+    display: block;
+}
+.clearfix_:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.left_{
+    float: left
+}
+.index_four_lf a{
+    display: inline-block;
+    padding: 0px 11px;
+}
+.top-click{
+    color: #f42023!important;
+    font-size: 14px;
+    float: right;
+}
+.index_five{
+    padding: 10px 0px;
+    color: #525252;
+    text-align: center;
+}
+.index_six{
+    margin-bottom: 9px;
+    text-align: center;
+}
+.index_six_main{
+    display: inline-block;
+    background: #fff;
+    line-height: 28px;
+    border-radius: 5px;
+    border: 1px solid #e3e0e0;
+    color: #686868;
+    padding: 0px 28px;
+}
+.index_six_main span{
+    color: #9c9b9b;
+}
+.index_seven{
+    color: #626161;
+    text-align: center;
+    padding: 0px 5%;
+    line-height: 18px;
+}
+.index_eight{
+    text-align: center;
+    padding: 5px 0px;
+    padding-bottom: 15px;
+}
+.index_eight img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 37px;
+}
+img{
+    Vertical-aliagn: top;
+    border: 0;
+}
+.right_{
+    float:right;
+}
+.re-row-title{
+    height: 1.6rem!important;
+    line-height: 1.6rem!important;
+}
+.tz_content{
+    float: right;
+}
+/*热门开奖*/
+.re-row-touzhu{
+    position: relative;
+    height: 1.8rem!important;
+    line-height: 1.8rem!important;
+    color:#313031;
+    margin-top: 0.2rem;
+}
+.shuaxin{
+    display: inline-block;
+    background: url(../img/index_29.png) no-repeat;
+    background-size: 17px 16px;
+    width: 17px;
+    height: 16px;
+    margin-top: 3px;
+    position: absolute;
+    top: 16.5%;
+    right: 24%;
+}
+.touzhu{
+    color: #333333;
+    font-size: 13px;
+    border: 1px solid #e3e0e0;
+    border-radius: 5px;
+    line-height: 20px;
+    padding: 0px 10px;
+}
+.remedia{
+    padding-left: 0.2rem!important;
+}
+.reitem-inner{
+    padding-bottom: 0px!important;
+}
+

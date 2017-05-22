@@ -21,7 +21,7 @@
         </header>
         <div class="content bg-white">
             <div class="cl-101">
-                <div class="list-block">
+                <div class="list-block vipcp-list-block">
                     <ul>
                         <span class="Prompt">字母开头的6-12位字母数字组成的用户名</span>
                         <li>
@@ -75,6 +75,14 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="agree">
+                <span></span>
+                本人同意
+                <a href="#">
+                    《开户协议》
+                </a>
+
             </div>
             <div class="cl-102">
                 <a href="javascript:void(0)" class="outInsert" id="btn-register">立即注册</a>
