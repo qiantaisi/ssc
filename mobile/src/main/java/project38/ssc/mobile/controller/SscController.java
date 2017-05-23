@@ -397,7 +397,6 @@ public class SscController extends BaseController {
             if (size == null) {
                 size = 5;
             }
-
             result = ApiUtils.getPlanOpenDataHistory(size, playGroupId,companyShortName);
         } catch (Exception e) {
             log.error(this, e);

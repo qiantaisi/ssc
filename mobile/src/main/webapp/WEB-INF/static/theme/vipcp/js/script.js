@@ -5740,10 +5740,6 @@ $(function () {
 
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-all", function (e, id, page) {
-        // 初始化隐弹框信息
-        $(".outer").hide();
-        $(".re-modal").hide();
-
         $(".alert_ul li").click(function () {
             var flag_TF = $(this).hasClass('lihover');
             if(flag_TF){
@@ -5781,12 +5777,10 @@ $(function () {
         });
 
         $(".btn_xz").click(function () {
-            console.log("djdj");
+            $(".outer").show();
+            $(".re-modal").show();
         });
 
-        $(".btn_xz").click(function() {
-            alert("t");
-        });
 
 
         // 无限滚动

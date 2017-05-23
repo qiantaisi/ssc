@@ -514,20 +514,26 @@ img{
 
 .rekjcl-1 .btn_xz{
     cursor: pointer;
-    margin-top: 4%;
     display: inline-block;
     float: right;
     color:white;
 }
+.media-list .re-l-con{
+    background: #FFF7F7;
+}
 .media-list .re-l-con li{
     margin-bottom: 0.3rem;
     border-top: solid #DEDFDE 1px;
+    background: white;
 }
 .re-conten-kjjg{
-    background:white!important;
+    background:#FFF7F7!important;
 }
 
 /*弹窗*/
+.vipcp-hide{
+    display: none;
+}
 .outer{
     background: #fff;
     width: 94%;
