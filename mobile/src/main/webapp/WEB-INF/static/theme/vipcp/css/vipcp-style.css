@@ -602,6 +602,7 @@ img{
     margin-top: 10px;
 }
 .alert_ul li a em {
+    display: none;
     background: url(../img/select_icon1.png) no-repeat;
     width: 19px;
     height: 16px;
@@ -611,5 +612,5 @@ img{
     bottom: 0;
 }
 .alert_ul .lihover em {
-    display: none;
+    display: block;
 }

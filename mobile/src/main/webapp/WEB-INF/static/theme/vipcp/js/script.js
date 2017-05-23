@@ -5740,6 +5740,13 @@ $(function () {
 
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-all", function (e, id, page) {
+        $(".outer .alert_main ul li").each(function () {
+            var f = $(this).hasClass('lihover');
+            if(!f){
+                $(this).addClass('lihover');
+            }
+        });
+
         $(".alert_ul li").click(function () {
             var flag_TF = $(this).hasClass('lihover');
             if(flag_TF){
@@ -5753,8 +5760,8 @@ $(function () {
         $(".quanxuan").click(function () {
             $(".alert_ul li").each(function () {
                 var flag_TF = $(this).hasClass('lihover');
-                if(flag_TF){
-                    $(this).removeClass('lihover');
+                if(!flag_TF){
+                    $(this).addClass('lihover');
                 }
             });
         });
@@ -5763,15 +5770,24 @@ $(function () {
         $(".fangxuan").click(function () {
             $(".alert_ul li").each(function () {
                 var flag_TF = $(this).hasClass('lihover');
-                if(!flag_TF){
-                    $(this).addClass('lihover');
+                if(flag_TF){
+                    $(this).removeClass('lihover');
                 }
             });
         });
 
-
         // 确认按钮
         $(".alertbtn").click(function () {
+            var idArr = [];
+            $(".outer .alert_main ul li.lihover").each(function () {
+                var pid = $(this).data("id");
+                idArr.push(pid);
+            });
+            Tools.setCookie("idStr",idArr.join(","));
+
+            getKjjgSetData(idArr);
+
+            //隐藏选框和蒙版框
             $(".outer").hide();
             $(".re-modal").hide();
         });
@@ -5779,16 +5795,46 @@ $(function () {
         $(".btn_xz").click(function () {
             $(".outer").show();
             $(".re-modal").show();
-        });
 
+            var cookieVal = Tools.getCookie("idStr");
+            if(cookieVal != null){
+                $(".outer .alert_main ul li").each(function () {
+                    var f = $(this).hasClass('lihover');
+                    if(f){
+                        $(this).removeClass('lihover');
+                    }
+                });
+
+                var idArr = cookieVal.split(",");
+                for(var n = 0; n < idArr.length; n++){
+                    $(".outer .alert_main ul li[data-id='"+ idArr[n] +"']").addClass('lihover');
+                }
+            }
+        });
 
 
         // 无限滚动
         var loading = false;    // 加载flag
-        var type = 0;
-        getData(true);
+        getData(true); //获取开奖结果
+
+        //显示选中设置相应开奖结果
+        function getKjjgSetData(arrTemp) {
+            //移除所有彩种开奖
+            $(".list-block .re-l-con li").each(function () {
+                var f = $(this).hasClass('vipcp-hide');
+                if (!f) {
+                    $(this).addClass('vipcp-hide');
+                }
+            });
+
+            //根据选中id 显示相对应开奖彩种
+            for (var n = 0; n < arrTemp.length; n++) {
+                $(".list-block .re-l-con li[data-id='" + arrTemp[n] + "']").removeClass('vipcp-hide');
+            }
+        }
 
         function getData(isInit) {
+            var type = 0;
             if (loading) return;
             ajaxRequest({
                 url: config.basePath + "ssc/ajaxGetAllDataHistory.json",
@@ -5808,6 +5854,7 @@ $(function () {
                     }
 
                     var str = "";
+
                     $.each(json.sscHistoryList, function (index, value) {
                         var tmpPlayGroupId = Tools.parseInt(value.playGroupId);
                         if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17]) >= 0) {
@@ -6068,6 +6115,11 @@ $(function () {
                     loading = false;
                     // 下拉刷新重置
                     $.pullToRefreshDone('.pull-to-refresh-content');
+                    var cookieVal = Tools.getCookie("idStr");
+                    if(cookieVal != null) {
+                        var idArr = cookieVal.split(",");
+                        getKjjgSetData(idArr);
+                    }
                 }
             });
         }
