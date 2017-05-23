@@ -244,14 +244,13 @@ $(function() {
 
         // 播放铃声
         if (1 == isFengpan) {
-            if (!opening) {
+            if (opening) {
                 if (hour == 0 && minute == 0 && second < 10 && second > 0) {
                     var file = $("#selectCount").find("option:selected").data("file");
                     play(file);
                 }
             }
         } else {
-
             if (hour == 0 && minute == 0 && second < 10 && second > 0) {
                 var file = $("#selectCount").find("option:selected").data("file");
                 play(file);
