@@ -5736,11 +5736,57 @@ $(function () {
         // 预加载
         getData();
     });
+
+
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-all", function (e, id, page) {
+        $(".alert_ul li").click(function () {
+            var flag_TF = $(this).hasClass('lihover');
+            if(flag_TF){
+                $(this).removeClass('lihover');
+            }else{
+                $(this).addClass('lihover');
+            }
+        });
+
+        // 全选择
+        $(".quanxuan").click(function () {
+            $(".alert_ul li").each(function () {
+                var flag_TF = $(this).hasClass('lihover');
+                if(flag_TF){
+                    $(this).removeClass('lihover');
+                }
+            });
+        });
+
+        // 反选
+        $(".fangxuan").click(function () {
+            $(".alert_ul li").each(function () {
+                var flag_TF = $(this).hasClass('lihover');
+                if(!flag_TF){
+                    $(this).addClass('lihover');
+                }
+            });
+        });
+
+
+        // 确认按钮
+        $(".alertbtn").click(function () {
+            $(".outer").hide();
+            $(".re-modal").hide();
+        });
+
+        $(".btn_xz").click(function () {
+            $(".outer").show();
+            $(".re-modal").show();
+        });
+
+
+
         // 无限滚动
         var loading = false;    // 加载flag
         var type = 0;
+        getData(true);
 
         function getData(isInit) {
             if (loading) return;
@@ -6038,31 +6084,31 @@ $(function () {
             getData(true);
         });
 
-        $("#buttonsTabList .button").click(function () {
-            var id = $(this).attr("data-id");
-            if (id == "btn-all") {
-                $("#buttonsTabList .button.active").removeClass("active");
-                $(this).addClass("active");
-
-                type = 0;
-                getData(true);
-            } else if (id == "btn-gpc") {
-                $("#buttonsTabList .button.active").removeClass("active");
-                $(this).addClass("active");
-
-                type = 1;
-                getData(true);
-            } else if (id == "btn-dpc") {
-                $("#buttonsTabList .button.active").removeClass("active");
-                $(this).addClass("active");
-
-                type = 2;
-                getData(true);
-            }
-        });
-
-        // 预加载
-        $("#buttonsTabList .button").eq(0).trigger("click");
+        // $("#buttonsTabList .button").click(function () {
+        //     var id = $(this).attr("data-id");
+        //     if (id == "btn-all") {
+        //         $("#buttonsTabList .button.active").removeClass("active");
+        //         $(this).addClass("active");
+        //
+        //         type = 0;
+        //         getData(true);
+        //     } else if (id == "btn-gpc") {
+        //         $("#buttonsTabList .button.active").removeClass("active");
+        //         $(this).addClass("active");
+        //
+        //         type = 1;
+        //         getData(true);
+        //     } else if (id == "btn-dpc") {
+        //         $("#buttonsTabList .button.active").removeClass("active");
+        //         $(this).addClass("active");
+        //
+        //         type = 2;
+        //         getData(true);
+        //     }
+        // });
+        //
+        // // 预加载
+        // $("#buttonsTabList .button").eq(0).trigger("click");
     });
 
     // 开奖记录
