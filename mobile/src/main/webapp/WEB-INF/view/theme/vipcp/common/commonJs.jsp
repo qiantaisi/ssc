@@ -40,6 +40,6 @@
 <script>
     config.basePath = '<%=basePath%>';
 </script>
-<script src="${resPath}js/script.js?v=20170523_21203"></script>
+<script src="${resPath}js/script.js?v=20170523"></script>
 <script>
 </script>

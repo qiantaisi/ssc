@@ -151,7 +151,7 @@
                 <div class="preloader"></div>
                 <div class="pull-to-refresh-arrow"></div>
             </div>
-            <div class="row cl-102">
+            <div class="row cl-102-kjjg">
 
             </div>
             <div class="content-block cl-8 cl-990">
