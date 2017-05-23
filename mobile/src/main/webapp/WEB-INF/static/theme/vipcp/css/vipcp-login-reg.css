@@ -136,6 +136,11 @@
     height:10px;
     position: absolute;
 }
+.agree span img{
+    width: 10px;
+    height:10px;
+    position: absolute;
+}
 .remenber span {
     display: inline-block;
     width:12px;
@@ -146,6 +151,9 @@
     position: relative;
 }
 .remenber span .show_hide{
+    display: none;
+}
+.agree span .show_hide{
     display: none;
 }
 /*.vipcp-list-block ul{*/

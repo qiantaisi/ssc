@@ -6873,3 +6873,14 @@ $(".remenber span").click(
         }
     }
 );
+
+//实现立即注册处的，本人同意开户协议勾选事件
+$(".agree span").click(
+    function () {
+        if ($(".agree span img").is(".show_hide")) {
+            $(".agree span").find("img").removeClass("show_hide");
+        } else {
+            $(".agree span").find("img").addClass("show_hide");
+        }
+    }
+);

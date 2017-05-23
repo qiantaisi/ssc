@@ -77,7 +77,9 @@
                 </div>
             </div>
             <div class="agree">
-                <span></span>
+                <span>
+                       <img class="show_hide" src="${resPath}img/reg_21.png"/>
+                </span>
                 本人同意
                 <a href="#">
                     《开户协议》
