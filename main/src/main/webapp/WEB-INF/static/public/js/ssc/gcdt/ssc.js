@@ -98,8 +98,15 @@ function getSscOpenTime(playGroupId, callback) {
                 $("#tip").html(json.number + '期已开盘，欢迎投注。距离下一期还有:');
                 $("#leftTime").data("time", json.leftTime);
                 $("#tip").data("opening", true);
+                $("#tip").data("isFengpan", json.isFengpan);
 
                 renderPlData();
+            } else {
+                $("#tip").html(json.number + '期已封盘，距离开盘还有:');
+                $("#leftTime").data("time", json.leftOpenTime);
+                $("#tip").data("opening", false);
+                $("#tip").data("isFengpan", json.isFengpan);
+                showFengPan();
             }
 
             if (typeof callback == 'function') {
@@ -174,22 +181,41 @@ $(function() {
 
     function autoLeftTime() {
         var time = $("#leftTime").data("time");
+        var isFengpan = $("#tip").data("isFengpan");
+        var opening = $("#tip").data("opening");
         if (isNaN(time) || time < 0) {
             if (getSscOpenTime_Timestamp != null && (new Date()).getTime() - getSscOpenTime_Timestamp < 5 * 1000) {   // 5秒内防止重复请求，避免接口获取数据延迟增加不必要的访问量
                 return;
             }
 
-            getSscOpenTime(playGroupId, function() {
-                getSscOpenTime_Timestamp = (new Date()).getTime();  // 设置调用getSscOpenTime成功的时间
-                getOpenCodeHistory();   // 获取开奖记录
-            });
+            if (1 == isFengpan) {
+                getSscOpenTime(playGroupId, function () {
+                    getSscOpenTime_Timestamp = (new Date()).getTime();  // 设置调用getSscOpenTime成功的时间
+                    getOpenCodeHistory();   // 获取开奖记录
+                });
 
-            if (time == -1) {
-                // 显示清除投注内容提示框
-                if (typeof showClearBetTemplate == 'function') {
-                    showClearBetTemplate();
+                if (opening) {
+                    if (time == -1) {
+                        // 显示清除投注内容提示框
+                        if (typeof showClearBetTemplate == 'function') {
+                            showClearBetTemplate();
+                        }
+                    }
+                }
+            } else {
+                getSscOpenTime(playGroupId, function () {
+                    getSscOpenTime_Timestamp = (new Date()).getTime();  // 设置调用getSscOpenTime成功的时间
+                });
+
+                if (time == -1) {
+                    // 显示清除投注内容提示框
+                    if (typeof showClearBetTemplate == 'function') {
+                        showClearBetTemplate();
+                    }
                 }
             }
+
+
             $("#leftTime").data("time", --time);
             return;
         }
@@ -217,10 +243,21 @@ $(function() {
         $("#leftTime").data("time", --time).html(str);
 
         // 播放铃声
-        if (hour == 0 && minute == 0 && second < 10 && second > 0) {
-            var file = $("#selectCount").find("option:selected").data("file");
-            play(file);
+        if (1 == isFengpan) {
+            if (!opening) {
+                if (hour == 0 && minute == 0 && second < 10 && second > 0) {
+                    var file = $("#selectCount").find("option:selected").data("file");
+                    play(file);
+                }
+            }
+        } else {
+
+            if (hour == 0 && minute == 0 && second < 10 && second > 0) {
+                var file = $("#selectCount").find("option:selected").data("file");
+                play(file);
+            }
         }
+        return;
     }
 
     setInterval(function() {
