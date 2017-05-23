@@ -152,7 +152,14 @@
                 <div class="pull-to-refresh-arrow"></div>
             </div>
             <div class="row cl-102-kjjg">
-
+                <div class="row cl-scroll swiper-container swiper-container-horizontal re-vipvp-head">
+                    <div class="swiper-wrapper">
+                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>
+                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>
+                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets re-swiper-pag"></div>
+                </div>
             </div>
             <div class="content-block cl-8 cl-990">
                 <div class="no-right-record hide"></div>

@@ -443,10 +443,6 @@
 <c:import url="../common/commonJs.jsp"/>
 <script>
     var kjjgJsonData = ${kjjgJsonData};
-    var CONFIG = {
-        BASEURL: "<%=basePath%>",
-        RESURL: "${resPath}"
-    }
     setTimeout(function(){
         location.hash="navBar";
     },500);

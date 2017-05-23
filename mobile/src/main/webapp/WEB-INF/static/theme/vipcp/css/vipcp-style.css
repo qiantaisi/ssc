@@ -614,3 +614,18 @@ img{
 .alert_ul .lihover em {
     display: block;
 }
+.re-vipvp-head{
+    height: inherit!important;
+}
+.re-swiper-pag{
+    bottom: 0!important;
+}
+.re-vipvp-head .swiper-wrapper .img-sz img{
+    width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+.re-swiper-pag .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #FFF300!important;
+}

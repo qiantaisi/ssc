@@ -36,7 +36,7 @@
                 </c:otherwise>
             </c:choose>
         </header>
-        <c:import url="../../common/bottomNav.jsp"/>
+        <%--<c:import url="../../common/bottomNav.jsp"/>--%>
         <div class="content">
             <div class="tingcaipage">
                 <span>sorry,该彩票暂停！</span>

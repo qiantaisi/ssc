@@ -303,6 +303,9 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
+        $(".c1-101 .tab-item .re-icon-home").css("background-image","url("+ CONFIG.RESURL +"img/footer2.png)");
+        $(".c1-101 .tab-item .tab-indx").css("color","red");
+
         $(".sanjiao").hide();//隐藏所有三角号 系列彩种中
 
         //0代表为隐藏 1为显示标签
@@ -556,6 +559,9 @@ $(function () {
 
     // 会员首页
     $(document).on("pageInit", "#page-member-index", function (e, id, page) {
+        $(".c1-101 .tab-item .icon-info").css("background-image","url("+ CONFIG.RESURL +"img/footer33.png)");
+        $(".c1-101 .tab-item .tab-info").css("color","red");
+
         var hour = (new Date()).getHours();
         if (hour <= 6) {
             hour = '凌晨好！';
@@ -2495,6 +2501,8 @@ $(function () {
 
     // 购彩大厅首页
     $(document).on("pageInit", "#page-gcdt", function (e, id, page) {
+        $(".c1-101 .tab-item .icon-gc").css("background-image","url("+ CONFIG.RESURL +"img/footer_100.png)");
+        $(".c1-101 .tab-item .tab-gcdt").css("color","red");
         // // 公告滚动
         // var mySwiper = new Swiper('.swiper-container', {
         //     pagination: '.swiper-pagination',
@@ -5740,6 +5748,21 @@ $(function () {
 
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-all", function (e, id, page) {
+        $(".c1-101 .tab-item .icon-kj").css("background-image","url("+ CONFIG.RESURL +"img/footer44.png)");
+        $(".c1-101 .tab-item .tab-kj").css("color","red");
+
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 2500,
+            autoplayDisableOnInteraction: false
+        });
+
+
         $(".outer .alert_main ul li").each(function () {
             var f = $(this).hasClass('lihover');
             if(!f){
