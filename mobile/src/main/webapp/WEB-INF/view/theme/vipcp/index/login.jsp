@@ -54,7 +54,9 @@
                 </div>
             </div>
             <div class="remenber">
-                <span></span>
+                <span>
+                    <img class="show_hide" src="${resPath}img/reg_21.png"/>
+                </span>
                 记住密码
             </div>
             <div class="cl-102">

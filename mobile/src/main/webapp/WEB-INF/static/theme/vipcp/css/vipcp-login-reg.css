@@ -131,16 +131,23 @@
 .remenber {
     margin-left: 20px;
 }
-
+.remenber span img{
+    width: 10px;
+    height:10px;
+    position: absolute;
+}
 .remenber span {
     display: inline-block;
-    width:10px;
-    height:10px;
+    width:12px;
+    height:12px;
     border:1px solid #f42023;
     vertical-align:-2px;
     margin-right:3px;
+    position: relative;
 }
-
+.remenber span .show_hide{
+    display: none;
+}
 /*.vipcp-list-block ul{*/
 /*background: #fff;*/
 /*list-style:none;*/
