@@ -78,7 +78,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
                         }
                     } else if (uri.indexOf(".html") > 0) {
                         String path = request.getContextPath();
-                        String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
+                        String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/login.html";
 
                         response.sendRedirect(basePath);
                     }
