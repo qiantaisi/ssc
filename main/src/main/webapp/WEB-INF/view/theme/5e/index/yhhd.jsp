@@ -163,7 +163,7 @@
                 <h3>{{month}}.{{day}}</h3>
             </div>
         {{/if}}
-        <h2>{{title}}<p>发布时间：{{createTime}}</p></h2>
+        <h2>{{title}}<!--<p>发布时间：{{createTime}}</p>--></h2>
         <div class="pict">
             <img src="<%=basePath%>images/{{bigImageId}}" alt="">
         </div>

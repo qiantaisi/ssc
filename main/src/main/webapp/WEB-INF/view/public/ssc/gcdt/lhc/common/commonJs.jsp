@@ -231,7 +231,7 @@
     $(function () {
         var obj = {};
         var arr = [];
-        for (var i = 25; i <= 49; ++i) {
+        for (var i = 25; i <= 48; ++i) {
             arr.push(i);
         }
         obj.arr1 = arr.join(',');
@@ -243,7 +243,7 @@
         obj.arr2 = arr.join(',');
 
         arr = [];
-        for (var i = 1; i <= 49; ++i) {
+        for (var i = 1; i <= 48; ++i) {
             if (i % 2 == 1) {
                 arr.push(i);
             }
@@ -258,13 +258,13 @@
         }
         obj.arr4 = arr.join(',');
 
-        arr = [1, 7, 12, 18, 23, 29, 30, 34, 45, 5, 16, 21, 27, 32, 38, 43, 49, 3, 9, 10, 14, 25, 36, 41, 47];
+        arr = [1, 7, 12, 18, 23, 29, 30, 34, 45, 5, 16, 21, 27, 32, 38, 43, 3, 9, 10, 14, 25, 36, 41, 47];
         obj.arr5 = arr.join(',');
         arr = [2, 8, 13, 19, 24, 35, 40, 46, 6, 11, 17, 22, 28, 33, 44, 4, 15, 20, 26, 37, 42, 48];
         obj.arr6 = arr.join(',');
 
         arr = [];
-        for (var i = 1; i <= 49; ++i) {
+        for (var i = 1; i <= 48; ++i) {
             if (i % 2 == 1 && i >= 25) {
                 arr.push(i);
             }
@@ -294,7 +294,7 @@
         }
         obj.arr10 = arr.join(',');
         arr = [];
-        for (var i = 1; i <= 49; ++i) {
+        for (var i = 1; i <= 48; ++i) {
             if (i % 10 >= 5) {
                 arr.push(i);
             }
