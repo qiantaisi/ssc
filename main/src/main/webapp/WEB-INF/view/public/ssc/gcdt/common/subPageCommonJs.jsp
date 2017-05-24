@@ -114,8 +114,9 @@
             }
         });
 
-//        // 幸运选号
+       // 幸运选号
         var tmpXyxhNums = getQueryString("nums");
+
         var tmpXyxhMoney = getQueryString("money");
         if (typeof tmpXyxhNums != 'undefined' && typeof tmpXyxhMoney != 'undefined' && tmpXyxhNums != '' && tmpXyxhMoney != '' && tmpXyxhNums != null && tmpXyxhMoney != null) {
             var oArr = [

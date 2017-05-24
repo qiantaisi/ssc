@@ -403,8 +403,8 @@ img{
     height: 16px;
     margin-top: 3px;
     position: absolute;
-    top: 16.5%;
-    right: 24%;
+    top: 20%;
+    right: 22%;
 }
 .touzhu{
     color: #333333;
@@ -445,6 +445,7 @@ img{
     position: relative;
     border-bottom: none!important;
     width:33.33%;
+    padding: 0.56rem 0.2rem;
 }
 .gcdtList .vipcp_bottem .jc{
     margin: 0;
@@ -496,12 +497,13 @@ img{
     display: inline-block;
     background: #f83e3e;
     color: #fff;
-    padding: 0px 5px;
-    border-radius: 10px;
+    padding: 0 0.2rem;
+    border-radius: 0.25rem;
     position: absolute;
     z-index: 100;
-    right: 5px;
-    font-size: 12px;
+    right: 0.2rem;
+    top:0;
+    font-size: 0.4rem;
 }
 /*vipcp开奖页面*/
 .cl-102-kjjg{
@@ -532,7 +534,7 @@ img{
 
 /*弹窗*/
 .vipcp-hide{
-    display: none;
+    display: none!important;
 }
 .outer{
     background: #fff;
@@ -622,10 +624,82 @@ img{
 }
 .re-vipvp-head .swiper-wrapper .img-sz img{
     width: 100%;
+    height: 4.8rem;
     vertical-align: middle;
     border: 0;
 }
 .re-swiper-pag .swiper-pagination-bullet-active {
     opacity: 1;
     background: #FFF300!important;
+}
+
+/*vipcp首页热门开奖*/
+.list-block .re-it-con .item-subtitle .ball {
+    border-radius: 25px;
+    background: #dd3e3e;
+    color: #fff;
+    width: 1rem;
+    line-height: 1rem;
+    height: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+.list-block .re-it-con .item-subtitle{
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .5rem;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+}
+
+.list-block .re-it-con .item-text span {
+    height: 100%;
+    min-width: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    display: inline-block;
+}
+.list-block .re-it-con .item-text{
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .5rem;
+}
+.list-block .re-it-con{
+    font-size: .5rem;
+    border-bottom: solid 1px #DEDFDE;
+    background: white;
+}
+/*六合彩*/
+.list-block .re-it-con .item-subtitle .col1 {
+    background: #2CDA19!important;
+}
+.list-block .re-it-con .item-subtitle .col0{
+    background: #1379D7!important;
+}
+.list-block .re-it-con .item-subtitle .ball {
+    border-radius: 25px;
+    background: #dd3e3e;
+    color: #fff;
+    width: 1rem;
+    line-height: 1rem;
+    height: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+/*背景pk10*/
+.list-block .re-it-con .item-subtitle .ballpk {
+    background: #dd3e3e;
+    color: #fff;
+    width: 1rem;
+    line-height: 1rem;
+    height: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+.list-block .reitem-inner{
+    position: inherit;
+}
+.lhc-kjjg .item-text span:last-child{
+    margin-left: -0.1rem!important;
 }

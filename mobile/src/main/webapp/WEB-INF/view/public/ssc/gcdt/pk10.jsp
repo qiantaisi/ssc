@@ -31,7 +31,7 @@
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/pk10/sm.html">双面</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/pk10/szp.html">数字盘</a>
+                    <a class="szp" href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/pk10/szp.html">数字盘</a>
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/pk10/gj.html">冠军</a>
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/pk10/yj.html">亚军</a>
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/pk10/jj.html">季军</a>

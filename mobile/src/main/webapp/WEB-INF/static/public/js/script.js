@@ -1760,6 +1760,9 @@ $(function () {
     var globalLeftOpenTime = 0; // 剩余开奖时间
     var globalLastQueryTime = 0;    // 上次查询时间
     var globalOpening = false;  // 是否开盘中
+    var numStr = '';
+    var navStr = '';
+    var playGrounpId = 0;
     // $(document).on("pageInit", "#page-cqssc", function(e, id, page) {initSscPage();});
     function initSscPage(playGroupId) {
         querySscLeftTime(playGroupId);
@@ -1934,6 +1937,14 @@ $(function () {
             var zhushu = getZhushu();
             $("#zhushu").html(zhushu);
         });
+        //首页热门开奖--幸运选号
+        numStr = getQueryString("nums");
+        navStr = getQueryString("navIndex");
+
+        if(playGroupId == 9 && navStr != "undefined" && navStr != ''){
+            $("#ssc-parent-menu .cl-602 .szp").trigger("click");
+        }
+
     }
 
     var querySscLeftTime_Running = false; // querySscLeftTime函数是否正在调用
@@ -1974,6 +1985,45 @@ $(function () {
                 querySscLeftTime_Running = false;
             }
         });
+    }
+
+    //随机号码选中
+    function xuanZhongSjh(playGrounpId, numStr){
+        if(playGrounpId == 9 && numStr != "undfined") {
+            var numberX = [];
+            var nameF = '';
+            var numArr = numStr.split(",");
+            for (var i = 0; i < numArr.length; i++) {
+                var strTmp = numArr[i].toString();
+                var xIndex = strTmp.indexOf("-") + 1;
+                numberX.push(strTmp.substr(xIndex));
+            }
+            for (var y = 0; y < numberX.length; y++) {
+                if (y == 0) {
+                    nameF = '冠军-' + numberX[y];
+                } else if (y == 1) {
+                    nameF = '季军-' + numberX[y];
+                } else if (y == 2) {
+                    nameF = '亚军-' + numberX[y];
+                } else if (y == 3) {
+                    nameF = '第四名-' + numberX[y];
+                } else if (y == 4) {
+                    nameF = '第五名-' + numberX[y];
+                } else if (y == 5) {
+                    nameF = '第六名-' + numberX[y];
+                } else if (y == 6) {
+                    nameF = '第七名-' + numberX[y];
+                } else if (y == 7) {
+                    nameF = '第八名-' + numberX[y];
+                } else if (y == 8) {
+                    nameF = '第九名-' + numberX[y];
+                } else if (y == 9) {
+                    nameF = '第十名-' + numberX[y];
+                }
+                $("#betContainer .cl-604 table tbody tr td[data-name='" + nameF + "']").addClass('active');
+            }
+        }
+
     }
 
     function querySscPlData() {
@@ -2241,6 +2291,7 @@ $(function () {
             },
             complete: function () {
                 Tools.hideLoading();
+                xuanZhongSjh(playGrounpId, numStr);
             }
         });
     }

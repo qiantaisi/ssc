@@ -102,7 +102,9 @@
             </div>
             <div class="cl-8 recl-8">
                 <div class="list-block media-list">
-                    <div class="kjjg_div"></div>
+                    <div class="kjjg_div">
+
+                    </div>
                 </div>
             </div>
 
@@ -448,33 +450,33 @@
     },500);
 </script>
 <script type="text/html" id="template_1">
-    <li>
-        <a class="item-content" href="javascript:void(0)">
+    <%--<li class="img-sz">--%>
+        <div class="item-content re-it-con cqssc-kjjg">
             <div class="item-media remedia"><img src="${resPath}img/cz/cz-1.png" style='width: 2.4rem;'></div>
             <div class="item-inner reitem-inner">
-                <div class="item-subtitle">
+                <div class="item-subtitle" id="xyxhContent_1">
                     <span class="ball">{{num1}}</span>
                     <span class="ball">{{num2}}</span>
                     <span class="ball">{{num3}}</span>
                     <span class="ball">{{num4}}</span>
                     <span class="ball">{{num5}}</span>
                 </div>
-                <div class="item-text">
+                <div class="item-text" id="xyxhContent_1_dsdxh">
                     <span>{{sum}}</span>
                     <span>{{ds}}</span>
                     <span>{{dx}}</span>
                     <span>{{lh}}</span>
                 </div>
-                <div class="item-title-row re-row-touzhu">
+                <div class="item-title-row re-row-touzhu cq-touzhu">
                     <span class="">重庆时时彩</span>
-                    <span href="javascript:void(0)" class="tz_content">
-                        <em class="shuaxin"></em>
-                        <var class="touzhu">投注</var>
+                    <span class="tz_content">
+                       <a href="javascript:void(0)" class="shuaxin"></a>
+                        <a href="javascript:void(0)" class="touzhu">投注</a>
                     </span>
                 </div>
             </div>
-        </a>
-    </li>
+        </div>
+    <%--</li>--%>
 </script>
 <%--<script type="text/html" id="template_2">--%>
 <%--<li>--%>
@@ -568,21 +570,20 @@
 <%--</li>--%>
 <%--</script>--%>
 <script type="text/html" id="template_6">
-    <li>
-        <a class="item-content" href="javascript:void(0)">
-            <div class="item-media remedia"><img src="${resPath}img/cz/cz-6.png" style='width: 2.4rem;'></div>
+        <div class="item-content re-it-con lhc-kjjg">
+            <div class="item-media remedia"><img src="${resPath}img/cz/cz-6.png" style='width: 2.3rem;'></div>
             <div class="item-inner reitem-inner">
-                <div class="item-subtitle lhc_item-subtitle">
+                <div class="item-subtitle lhc_item-subtitle" id="xyxhContent_6">
                     <span class="ball {{if bose1 == 1}}col0{{else if bose1 == 2}}col1{{/if}}">{{num1}}</span>
                     <span class="ball {{if bose2 == 1}}col0{{else if bose2 == 2}}col1{{/if}}">{{num2}}</span>
                     <span class="ball {{if bose3 == 1}}col0{{else if bose3 == 2}}col1{{/if}}">{{num3}}</span>
                     <span class="ball {{if bose4 == 1}}col0{{else if bose4 == 2}}col1{{/if}}">{{num4}}</span>
                     <span class="ball {{if bose5 == 1}}col0{{else if bose5 == 2}}col1{{/if}}">{{num5}}</span>
                     <span class="ball {{if bose6 == 1}}col0{{else if bose6 == 2}}col1{{/if}}">{{num6}}</span>
-                    <span class="symbol">+</span>
+                    <i class="symbol">+</i>
                     <span class="ball {{if bose7 == 1}}col0{{else if bose7 == 2}}col1{{/if}}">{{num7}}</span>
                 </div>
-                <div class="item-text">
+                <div class="item-text" id="xyxhContent_6_sx">
                     <span>{{sx1}}</span>
                     <span>{{sx2}}</span>
                     <span>{{sx3}}</span>
@@ -592,16 +593,15 @@
                     <i>&nbsp;&nbsp;&nbsp;</i>
                     <span>{{sx7}}</span>
                 </div>
-                <div class="item-title-row re-row-touzhu">
+                <div class="item-title-row re-row-touzhu lhc-touzhu">
                     <span class="">香港六合彩</span>
                     <span href="javascript:void(0)" class="tz_content">
-                        <em class="shuaxin"></em>
-                        <var class="touzhu">投注</var>
+                        <a href="javascript:void(0)" class="shuaxin"></a>
+                        <a href="javascript:void(0)" class="touzhu">投注</a>
                     </span>
                 </div>
             </div>
-        </a>
-    </li>
+        </div>
 </script>
 <script type="text/html" id="template_7">
     <li>
@@ -661,10 +661,9 @@
     </li>
 </script>
 <script type="text/html" id="template_9">
-    <li>
-        <a class="item-content" href="javascript:void(0)">
-            <div class="item-media remedia"><img src="${resPath}img/cz/cz-9.png" style='width: 2.5rem;'></div>
-            <div class="item-inner reitem-inner">
+        <div class="item-content re-it-con pk10-kjjg">
+            <div class="item-media remedia"><img src="${resPath}img/cz/cz-9.png" style='width: 2.3rem;'></div>
+            <div class="item-inner reitem-inner" id="xyxhContent_9">
                 <div class="item-subtitle">
                     <span class="ballpk bg-{{num1}}">{{num1}}</span>
                     <span class="ballpk bg-{{num2}}">{{num2}}</span>
@@ -677,28 +676,15 @@
                     <span class="ballpk bg-{{num9}}">{{num9}}</span>
                     <span class="ballpk bg-{{num10}}">{{num10}}</span>
                 </div>
-                <div class="item-text">
-                    <span>{{sx1}}</span>
-                    <span>{{sx2}}</span>
-                    <span>{{sx3}}</span>
-                    <span>{{sx4}}</span>
-                    <span>{{sx5}}</span>
-                    <span>{{sx6}}</span>
-                    <span>{{sx7}}</span>
-                    <span>{{sx8}}</span>
-                    <span>{{sx9}}</span>
-                    <span>{{sx10}}</span>
-                </div>
-                <div class="item-title-row re-row-touzhu">
+                <div class="item-title-row re-row-touzhu pk10-touzhu">
                     <span class="">北京赛车PK10</span>
                     <span href="javascript:void(0)" class="tz_content">
-                        <em class="shuaxin"></em>
-                        <var class="touzhu">投注</var>
+                        <a href="javascript:void(0)" class="shuaxin"></a>
+                        <a href="javascript:void(0)" class="touzhu">投注</a>
                     </span>
                 </div>
             </div>
-        </a>
-    </li>
+        </div>
 </script>
 <script type="text/html" id="template_10">
     <li>
