@@ -58,6 +58,18 @@ public class SscOpenTimeResult extends CommonResult {
      * 彩种是否启用
      */
     private Boolean isEnable;
+    /**
+     * 0-无封盘彩种，1-封盘彩种
+     */
+    private Integer isFengpan;
+
+    public Integer getIsFengpan() {
+        return isFengpan;
+    }
+
+    public void setIsFengpan(Integer isFengpan) {
+        this.isFengpan = isFengpan;
+    }
 
     public Boolean getEnable() {
         return isEnable;

@@ -303,7 +303,6 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
-
         $(".c1-101 .tab-item .re-icon-home").css("background-image","url("+ CONFIG.RESURL +"img/footer2.png)");
         $(".c1-101 .tab-item .tab-indx").css("color","red");
 
@@ -316,47 +315,47 @@ $(function () {
 
             var sp_s = $(this).attr("sp");
             var nameFlag = $(this).data("name");
-            if(nameFlag == "sscxl" && sp_s == 0){
+            if (nameFlag == "sscxl" && sp_s == 0) {
                 $(".sscxl").show();
                 $(".sj_sscxl").show();
-                $(this).parent().css("border-bottom","none");
-                $(this).attr("sp",1);
+                $(this).parent().css("border-bottom", "none");
+                $(this).attr("sp", 1);
 
                 var flag1 = $("#btn_k3xl").attr("sp");
-                if(flag1 == 1){
-                    $("#btn_k3xl").attr("sp",0);
+                if (flag1 == 1) {
+                    $("#btn_k3xl").attr("sp", 0);
                 }
-            }else if(nameFlag == "sscxl" && sp_s == 1){
+            } else if (nameFlag == "sscxl" && sp_s == 1) {
                 $(".sscxl").hide();
                 $(".sj_sscxl").hide();
-                $(this).parent().css("border-bottom","#DEDFDE 1px solid");
-                $(this).attr("sp",0);
+                $(this).parent().css("border-bottom", "#DEDFDE 1px solid");
+                $(this).attr("sp", 0);
 
                 var flag1 = $("#btn_k3xl").attr("sp");
-                if(flag1 == 1){
-                    $("#btn_k3xl").attr("sp",0);
+                if (flag1 == 1) {
+                    $("#btn_k3xl").attr("sp", 0);
                 }
             }
 
-            if(nameFlag == "k3xl" && sp_s == 0){
+            if (nameFlag == "k3xl" && sp_s == 0) {
                 $(".k3xl").show();
                 $(".sj_k3xl").show();
-                $(this).parent().css("border-bottom","none");
-                $(this).attr("sp",1);
+                $(this).parent().css("border-bottom", "none");
+                $(this).attr("sp", 1);
 
                 var flag1 = $("#btn_sscxl").attr("sp");
-                if(flag1 == 1){
-                    $("#btn_sscxl").attr("sp",0);
+                if (flag1 == 1) {
+                    $("#btn_sscxl").attr("sp", 0);
                 }
-            }else if(nameFlag == "k3xl" && sp_s == 1){
+            } else if (nameFlag == "k3xl" && sp_s == 1) {
                 $(".k3xl").hide();
                 $(".sj_k3xl").hide();
-                $(this).parent().css("border-bottom","#DEDFDE 1px solid");
-                $(this).attr("sp",0);
+                $(this).parent().css("border-bottom", "#DEDFDE 1px solid");
+                $(this).attr("sp", 0);
 
                 var flag1 = $("#btn_sscxl").attr("sp");
-                if(flag1 == 1){
-                    $("#btn_sscxl").attr("sp",0);
+                if (flag1 == 1) {
+                    $("#btn_sscxl").attr("sp", 0);
                 }
             }
 
@@ -942,8 +941,8 @@ $(function () {
 
     // 会员首页
     $(document).on("pageInit", "#page-member-index", function (e, id, page) {
-        $(".c1-101 .tab-item .icon-info").css("background-image","url("+ CONFIG.RESURL +"img/footer33.png)");
-        $(".c1-101 .tab-item .tab-info").css("color","red");
+        $(".c1-101 .tab-item .icon-info").css("background-image", "url(" + CONFIG.RESURL + "img/footer33.png)");
+        $(".c1-101 .tab-item .tab-info").css("color", "red");
 
         var hour = (new Date()).getHours();
         if (hour <= 6) {
@@ -1727,7 +1726,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3','极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
                 }
             ]
         });
@@ -2884,8 +2883,8 @@ $(function () {
 
     // 购彩大厅首页
     $(document).on("pageInit", "#page-gcdt", function (e, id, page) {
-        $(".c1-101 .tab-item .icon-gc").css("background-image","url("+ CONFIG.RESURL +"img/footer_100.png)");
-        $(".c1-101 .tab-item .tab-gcdt").css("color","red");
+        $(".c1-101 .tab-item .icon-gc").css("background-image", "url(" + CONFIG.RESURL + "img/footer_100.png)");
+        $(".c1-101 .tab-item .tab-gcdt").css("color", "red");
         // // 公告滚动
         // var mySwiper = new Swiper('.swiper-container', {
         //     pagination: '.swiper-pagination',
@@ -5224,7 +5223,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3','极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
                 }
             ]
         });
@@ -6131,8 +6130,8 @@ $(function () {
 
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-all", function (e, id, page) {
-        $(".c1-101 .tab-item .icon-kj").css("background-image","url("+ CONFIG.RESURL +"img/footer44.png)");
-        $(".c1-101 .tab-item .tab-kj").css("color","red");
+        $(".c1-101 .tab-item .icon-kj").css("background-image", "url(" + CONFIG.RESURL + "img/footer44.png)");
+        $(".c1-101 .tab-item .tab-kj").css("color", "red");
 
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
@@ -6148,16 +6147,16 @@ $(function () {
 
         $(".outer .alert_main ul li").each(function () {
             var f = $(this).hasClass('lihover');
-            if(!f){
+            if (!f) {
                 $(this).addClass('lihover');
             }
         });
 
         $(".alert_ul li").click(function () {
             var flag_TF = $(this).hasClass('lihover');
-            if(flag_TF){
+            if (flag_TF) {
                 $(this).removeClass('lihover');
-            }else{
+            } else {
                 $(this).addClass('lihover');
             }
         });
@@ -6166,7 +6165,7 @@ $(function () {
         $(".quanxuan").click(function () {
             $(".alert_ul li").each(function () {
                 var flag_TF = $(this).hasClass('lihover');
-                if(!flag_TF){
+                if (!flag_TF) {
                     $(this).addClass('lihover');
                 }
             });
@@ -6176,7 +6175,7 @@ $(function () {
         $(".fangxuan").click(function () {
             $(".alert_ul li").each(function () {
                 var flag_TF = $(this).hasClass('lihover');
-                if(flag_TF){
+                if (flag_TF) {
                     $(this).removeClass('lihover');
                 }
             });
@@ -6189,7 +6188,7 @@ $(function () {
                 var pid = $(this).data("id");
                 idArr.push(pid);
             });
-            Tools.setCookie("idStr",idArr.join(","));
+            Tools.setCookie("idStr", idArr.join(","));
 
             getKjjgSetData(idArr);
 
@@ -6203,17 +6202,17 @@ $(function () {
             $(".re-modal").show();
 
             var cookieVal = Tools.getCookie("idStr");
-            if(cookieVal != null){
+            if (cookieVal != null) {
                 $(".outer .alert_main ul li").each(function () {
                     var f = $(this).hasClass('lihover');
-                    if(f){
+                    if (f) {
                         $(this).removeClass('lihover');
                     }
                 });
 
                 var idArr = cookieVal.split(",");
-                for(var n = 0; n < idArr.length; n++){
-                    $(".outer .alert_main ul li[data-id='"+ idArr[n] +"']").addClass('lihover');
+                for (var n = 0; n < idArr.length; n++) {
+                    $(".outer .alert_main ul li[data-id='" + idArr[n] + "']").addClass('lihover');
                 }
             }
         });
@@ -6522,7 +6521,7 @@ $(function () {
                     // 下拉刷新重置
                     $.pullToRefreshDone('.pull-to-refresh-content');
                     var cookieVal = Tools.getCookie("idStr");
-                    if(cookieVal != null) {
+                    if (cookieVal != null) {
                         var idArr = cookieVal.split(",");
                         getKjjgSetData(idArr);
                     }
@@ -7241,6 +7240,29 @@ $(".title").click(
             $(".consele").removeClass("show_hide").show();
             $(".bott").removeClass("show_hide").hide();
             $(".page").find(".content").addClass("show_hide");
+        }
+    }
+);
+
+
+//实现登录处的记住密码勾选事件
+$(".remenber span").click(
+    function () {
+        if ($(".content .remenber span img").is(".show_hide")) {
+            $(".content .remenber span").find("img").removeClass("show_hide");
+        } else {
+            $(".content .remenber span").find("img").addClass("show_hide");
+        }
+    }
+);
+
+//实现立即注册处的，本人同意开户协议勾选事件
+$(".agree span").click(
+    function () {
+        if ($(".agree span img").is(".show_hide")) {
+            $(".agree span").find("img").removeClass("show_hide");
+        } else {
+            $(".agree span").find("img").addClass("show_hide");
         }
     }
 );

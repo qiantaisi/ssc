@@ -100,6 +100,10 @@ function getSscOpenTime(playGroupId, callback) {
                 $("#tip").data("opening", true);
 
                 renderPlData();
+            } else {
+                $("#tip").html(json.number + '期已封盘，距离开盘还有:');
+                $("#leftTime").data("time", json.leftTime);
+                $("#tip").data("opening", true);
             }
 
             if (typeof callback == 'function') {
