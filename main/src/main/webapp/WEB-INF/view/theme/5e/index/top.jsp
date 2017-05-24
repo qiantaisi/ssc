@@ -101,7 +101,7 @@
                             <a href="<%=basePath%>/help/index.html">规则说明</a>
                         </h5>
                         <h5>
-                            <a href="http://www.5y444.com" target="_blank"><span style="color:#E53333;">导航网址</span></a>
+                            <a href="http://www.5y333.com" target="_blank"><span style="color:#E53333;">导航网址</span></a>
                             <a href="http://www.wuyicaipiao.com" target="_blank"><span style="color:#E53333;">线路检测</span></a>
                         </h5>
                         <h4>
