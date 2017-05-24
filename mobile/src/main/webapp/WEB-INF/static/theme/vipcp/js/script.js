@@ -104,7 +104,7 @@ $(function () {
                 closeBtn: 0, //显示关闭按钮
                 anim: 2,
                 title: '开户协议'+ '<a href="javascript:void(0)" class="jb_img btn_close"><span></span></a>',
-                shadeClose: false, //开启遮罩关闭
+                shadeClose: true, //开启遮罩关闭
                 content: $("#template_khxy").html()
             });
         });

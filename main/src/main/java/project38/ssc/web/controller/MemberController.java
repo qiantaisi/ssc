@@ -205,7 +205,7 @@ public class MemberController extends BaseController {
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("kefu", ApiUtils.getKefu(companyShortName));
 
-        return this.renderView("member/index", modelMap);
+        return this.renderPublicView("member/index", modelMap);
     }
 
     /**
@@ -228,7 +228,7 @@ public class MemberController extends BaseController {
         modelMap.put("userInboxList", ApiUtils.getUserInboxList(uid, token, null, null, null, 1, 4, companyShortName).getUserInboxList());
         modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null, companyShortName).getPromotionList());
 
-        return this.renderView("member/main", modelMap);
+        return this.renderPublicView("member/main", modelMap);
     }
 
     /**
@@ -246,14 +246,14 @@ public class MemberController extends BaseController {
 
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
 
-        return this.renderView("member/selfInfo", modelMap);
+        return this.renderPublicView("member/selfInfo", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhcz.html", method = RequestMethod.GET)
     public ModelAndView zhcz(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/zhcz", modelMap);
+        return this.renderPublicView("member/zhcz", modelMap);
     }
 
     @Authentication
@@ -267,7 +267,7 @@ public class MemberController extends BaseController {
         // 权限检查
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
@@ -291,7 +291,7 @@ public class MemberController extends BaseController {
         modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
         modelMap.put("depositChannel", ApiUtils.getDepositChannel(companyShortName));
-        return this.renderView("member/zhcz/yhzz", modelMap);
+        return this.renderPublicView("member/zhcz/yhzz", modelMap);
     }
 
     @Authentication
@@ -305,12 +305,12 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
 //        modelMap.put("bankCardListResult", ApiUtils.getSystemBankCard(uid, token));
-        return this.renderView("member/jfmx/hylb", modelMap);
+        return this.renderPublicView("member/jfmx/hylb", modelMap);
     }
 
     @Authentication
@@ -324,10 +324,10 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
-        return this.renderView("member/jfmx/tjhy", modelMap);
+        return this.renderPublicView("member/jfmx/tjhy", modelMap);
     }
 
     @Authentication
@@ -341,9 +341,9 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
-        return this.renderView("member/jfmx/cwbb", modelMap);
+        return this.renderPublicView("member/jfmx/cwbb", modelMap);
     }
 
     @Authentication
@@ -357,9 +357,9 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
-        return this.renderView("member/jfmx/tdls", modelMap);
+        return this.renderPublicView("member/jfmx/tdls", modelMap);
     }
 
     @Authentication
@@ -373,9 +373,9 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
-        return this.renderView("member/jfmx/tdbb", modelMap);
+        return this.renderPublicView("member/jfmx/tdbb", modelMap);
     }
 
 
@@ -392,9 +392,9 @@ public class MemberController extends BaseController {
         String token = this.getToken(httpServletRequest);
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token,companyShortName);
         if (!layerInfoResult.getCanAgent()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
-        return this.renderView("member/jfmx/tdtz", modelMap);
+        return this.renderPublicView("member/jfmx/tdtz", modelMap);
     }
 
 
@@ -410,7 +410,7 @@ public class MemberController extends BaseController {
         // 权限检查
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
@@ -433,7 +433,7 @@ public class MemberController extends BaseController {
         modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[] {2, 3}, companyShortName));
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        return this.renderView("member/zhcz/zxzf", modelMap);
+        return this.renderPublicView("member/zhcz/zxzf", modelMap);
     }
 
     @Authentication
@@ -447,7 +447,7 @@ public class MemberController extends BaseController {
         // 权限检查
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
@@ -470,7 +470,7 @@ public class MemberController extends BaseController {
         modelMap.put("systemQqResult", ApiUtils.getSystemQq(uid, token, companyShortName));
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        return this.renderView("member/zhcz/qqzz", modelMap);
+        return this.renderPublicView("member/zhcz/qqzz", modelMap);
     }
 
 
@@ -486,7 +486,7 @@ public class MemberController extends BaseController {
         // 权限检查
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
@@ -510,7 +510,7 @@ public class MemberController extends BaseController {
         modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {2, 3}, companyShortName));
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        return this.renderView("member/zhcz/qqzf", modelMap);
+        return this.renderPublicView("member/zhcz/qqzf", modelMap);
     }
 
     @Authentication
@@ -525,7 +525,7 @@ public class MemberController extends BaseController {
         // 权限检查
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
@@ -549,7 +549,7 @@ public class MemberController extends BaseController {
         modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3}, companyShortName));
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        return this.renderView("member/zhcz/wxzf", modelMap);
+        return this.renderPublicView("member/zhcz/wxzf", modelMap);
     }
 
     @Authentication
@@ -564,7 +564,7 @@ public class MemberController extends BaseController {
         // 权限检查
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
@@ -587,7 +587,7 @@ public class MemberController extends BaseController {
         modelMap.put("systemPayOnlineResult", ApiUtils.getSystemPayonline(uid, token, 2, new Integer[] {2, 3}, companyShortName));
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        return this.renderView("member/zhcz/zfbzf", modelMap);
+        return this.renderPublicView("member/zhcz/zfbzf", modelMap);
     }
 
     @Authentication
@@ -603,7 +603,7 @@ public class MemberController extends BaseController {
         // 权限检查
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
@@ -624,7 +624,7 @@ public class MemberController extends BaseController {
         modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
         modelMap.put("systemWeiXinResult", ApiUtils.getSystemWeixin(uid, token, companyShortName));
-        return this.renderView("member/zhcz/wxzz", modelMap);
+        return this.renderPublicView("member/zhcz/wxzz", modelMap);
     }
 
     @Authentication
@@ -640,7 +640,7 @@ public class MemberController extends BaseController {
         // 权限检查
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
@@ -661,7 +661,7 @@ public class MemberController extends BaseController {
         modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
         modelMap.put("systemAlipayResult", ApiUtils.getSystemAlipay(uid, token, companyShortName));
-        return this.renderView("member/zhcz/zfbzz", modelMap);
+        return this.renderPublicView("member/zhcz/zfbzz", modelMap);
     }
 
     @Authentication
@@ -676,7 +676,7 @@ public class MemberController extends BaseController {
         // 权限检查
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanDeposit()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         //获取在线支付信息
@@ -697,7 +697,7 @@ public class MemberController extends BaseController {
         modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
         modelMap.put("systemTenpayResult", ApiUtils.getSystemTenpay(uid, token, companyShortName));
-        return this.renderView("member/zhcz/cftzz", modelMap);
+        return this.renderPublicView("member/zhcz/cftzz", modelMap);
     }
 
     /**
@@ -766,13 +766,13 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanWithdraw()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token, companyShortName));
 
-        return this.renderView("member/withdraw", modelMap);
+        return this.renderPublicView("member/withdraw", modelMap);
     }
 
 
@@ -785,7 +785,7 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/letter.html", method = RequestMethod.GET)
     public ModelAndView letterLocation(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/letter", modelMap);
+        return this.renderPublicView("member/letter", modelMap);
     }
 
     /**
@@ -1077,7 +1077,7 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/zhsz.html", method = RequestMethod.GET)
     public ModelAndView zhsz(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/zhsz", modelMap);
+        return this.renderPublicView("member/zhsz", modelMap);
     }
 
     @Authentication
@@ -1091,11 +1091,11 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanEditInfo()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
-        return this.renderView("member/zhsz/grzl", modelMap);
+        return this.renderPublicView("member/zhsz/grzl", modelMap);
     }
 
     @Authentication
@@ -1109,17 +1109,17 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanEditPassword()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
-        return this.renderView("member/zhsz/dlmm", modelMap);
+        return this.renderPublicView("member/zhsz/dlmm", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/zhsz/tkmm.html", method = RequestMethod.GET)
     public ModelAndView zhszTkmm(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/zhsz/tkmm", modelMap);
+        return this.renderPublicView("member/zhsz/tkmm", modelMap);
     }
 
     @Authentication
@@ -1133,11 +1133,11 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanEditUserBank()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token, companyShortName));
-        return this.renderView("member/zhsz/yhkgl", modelMap);
+        return this.renderPublicView("member/zhsz/yhkgl", modelMap);
     }
 
     @Authentication
@@ -1151,11 +1151,11 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanSafeinfo()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
         modelMap.put("safeInfo", ApiUtils.getSafeInfo(uid, token, companyShortName));
-        return this.renderView("member/zhsz/aqxx", modelMap);
+        return this.renderPublicView("member/zhsz/aqxx", modelMap);
     }
 
     @Authentication
@@ -1197,7 +1197,7 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/lsjl.html", method = RequestMethod.GET)
     public ModelAndView lsjl(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/lsjl", modelMap);
+        return this.renderPublicView("member/lsjl", modelMap);
     }
 
     @Authentication
@@ -1206,7 +1206,7 @@ public class MemberController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         modelMap.put("depositChannelResult", ApiUtils.getDepositChannel(companyShortName));
-        return this.renderView("member/lsjl/ckjl", modelMap);
+        return this.renderPublicView("member/lsjl/ckjl", modelMap);
     }
 
     @Authentication
@@ -1216,7 +1216,7 @@ public class MemberController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList(companyShortName);
         modelMap.put("sscplaylist", sscplaylist);
-        return this.renderView("member/lsjl/tzjl", modelMap);
+        return this.renderPublicView("member/lsjl/tzjl", modelMap);
     }
 
     @RequestMapping(value = "/getSscPlayGroup.json")
@@ -1230,21 +1230,21 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/lsjl/tkjl.html", method = RequestMethod.GET)
     public ModelAndView lsjlTkjl(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/lsjl/tkjl", modelMap);
+        return this.renderPublicView("member/lsjl/tkjl", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/lsjl/zjjl.html", method = RequestMethod.GET)
     public ModelAndView lsjlZzjl(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/lsjl/zjjl", modelMap);
+        return this.renderPublicView("member/lsjl/zjjl", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/lsjl/yhjl.html", method = RequestMethod.GET)
     public ModelAndView lsjlYhjl(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/lsjl/yhjl", modelMap);
+        return this.renderPublicView("member/lsjl/yhjl", modelMap);
     }
 
     /**
@@ -1376,21 +1376,21 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/schd.html", method = RequestMethod.GET)
     public ModelAndView schd(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/schd", modelMap);
+        return this.renderPublicView("member/schd", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/schd/yhqb.html", method = RequestMethod.GET)
     public ModelAndView schdYhqb(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/schd/yhqb", modelMap);
+        return this.renderPublicView("member/schd/yhqb", modelMap);
     }
 
     @Authentication
     @RequestMapping(value = "/schd/tjfl.html", method = RequestMethod.GET)
     public ModelAndView schdTjfl(HttpServletRequest httpServletRequest) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("member/schd/tjfl", modelMap);
+        return this.renderPublicView("member/schd/tjfl", modelMap);
     }
 
     @RequestMapping(value = "/ajaxGetServerTime.json", method = {RequestMethod.GET, RequestMethod.POST})
@@ -1464,10 +1464,10 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
         if (!layerInfoResult.getCanAgent()) {
-            return this.renderView("member/noaccess", modelMap);
+            return this.renderPublicView("member/noaccess", modelMap);
         }
 
-        return this.renderView("member/jfmx/yjjl", modelMap);
+        return this.renderPublicView("member/jfmx/yjjl", modelMap);
     }
 
     /**
