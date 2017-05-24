@@ -25,8 +25,8 @@
                     <ul>
                         <span class="Prompt">字母开头的6-12位字母数字组成的用户名</span>
                         <li>
-                            <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-name"></i></div>
+                            <div class="item-content re-item-vipcp-zh">
+                                <div class=""><i class="icon icon-form-name re-item-form"></i></div>
                                 <div class="item-inner">
                                     <div class="item-input">
                                         <input type="text" placeholder="账号" name="account">
@@ -38,8 +38,8 @@
                     <ul>
                         <span class="Prompt">请输入6-12位字母、数字的密码</span>
                         <li>
-                            <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-password"></i></div>
+                            <div class="item-content re-item-vipcp-zh">
+                                <div class=""><i class="icon icon-form-password re-item-form"></i></div>
                                 <div class="item-inner">
                                     <div class="item-input">
                                         <input type="password" placeholder="密码" name="password">
@@ -51,8 +51,8 @@
                     <ul>
                         <span class="Prompt">请再次输入您的密码</span>
                         <li>
-                            <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-password"></i></div>
+                            <div class="item-content re-item-vipcp-zh">
+                                <div class=""><i class="icon icon-form-password re-item-form"></i></div>
                                 <div class="item-inner">
                                     <div class="item-input">
                                         <input type="password" placeholder="确认密码" name="confirmPassword">
@@ -64,8 +64,8 @@
                     <ul>
                         <span class="Prompt">请输入真实姓名</span>
                         <li>
-                            <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-password"></i></div>
+                            <div class="item-content re-item-vipcp-zh">
+                                <div class=""><i class="icon icon-form-password re-item-form re_reg_18_img"></i></div>
                                 <div class="item-inner">
                                     <div class="item-input">
                                         <input type="text" placeholder="姓名" name="name">
@@ -77,9 +77,11 @@
                 </div>
             </div>
             <div class="agree">
-                <span>
-                       <img class="show_hide" src="${resPath}img/reg_21.png"/>
-                </span>
+                <a href="javascript:void(0)" class="agree-btn">
+                    <span>
+                           <img class="show_hide" src="${resPath}img/reg_21.png"/>
+                    </span>
+                </a>
                 本人同意
                 <a href="#">
                     《开户协议》
@@ -96,5 +98,8 @@
         </div>
     </div>
 </div>
+<script type="text/html" id="template_khxy">
+${khxy.khxy}
+</script>
 <c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/bodyEnd.jsp"/>

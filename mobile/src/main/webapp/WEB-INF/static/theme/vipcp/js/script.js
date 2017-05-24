@@ -87,8 +87,29 @@ $(function () {
         });
     });
 
+
+    //协议关闭按钮
+    $(document).on("click", ".layui-m-layermain h3 .btn_close", function (e, id, page) {
+        $("#layui-m-layer0").hide();
+    });
+
     // 注册页面
     $(document).on("pageInit", "#page-register", function (e, id, page) {
+
+        $(".agree-btn").click(function () {
+            //自定页
+            layer.open({
+                type: 1,
+                skin: 'layui-layer-popup', //样式类名
+                closeBtn: 0, //显示关闭按钮
+                anim: 2,
+                title: '开户协议'+ '<a href="javascript:void(0)" class="jb_img btn_close"><span></span></a>',
+                shadeClose: false, //开启遮罩关闭
+                content: $("#template_khxy").html()
+            });
+        });
+
+
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
@@ -5817,8 +5838,8 @@ $(function () {
         });
 
         $(".btn_xz").click(function () {
-            $(".outer").show();
-            $(".re-modal").show();
+            $(".outer").removeClass('vipcp-hide');
+            $(".re-modal").removeClass('vipcp-hide');
 
             var cookieVal = Tools.getCookie("idStr");
             if (cookieVal != null) {

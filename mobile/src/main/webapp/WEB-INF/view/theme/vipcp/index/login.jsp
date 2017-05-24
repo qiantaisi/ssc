@@ -29,8 +29,8 @@
                 <div class="list-block">
                     <ul>
                         <li>
-                            <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-name"></i></div>
+                            <div class="item-content re-item-vipcp-zh">
+                                <div><i class="icon icon-form-name re-item-form"></i></div>
                                 <div class="item-inner">
                                     <div class="item-input">
                                         <input type="text" placeholder="帐号" name="account">
@@ -41,8 +41,8 @@
                     </ul>
                     <ul>
                         <li>
-                            <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-password"></i></div>
+                            <div class="item-content re-item-vipcp-zh">
+                                <div class=""><i class="icon icon-form-password re-item-form"></i></div>
                                 <div class="item-inner">
                                     <div class="item-input">
                                         <input type="password" placeholder="密码" name="password">
