@@ -20,7 +20,7 @@
         <span class="icon icon-kj"></span>
         <span class="tab-label tab-kj">开奖</span>
     </a>
-    <a class="tab-item external" href="<%=basePath%>ssc/zst/lhc/jbzst.html" data-name="zst">
+    <a class="tab-item external" href="<%=basePath%>ssc/zst/ffssc/jbzst.html" data-name="zst">
         <span class="icon icon-zst"></span>
         <span class="tab-label tab-zst">走势图</span>
     </a>

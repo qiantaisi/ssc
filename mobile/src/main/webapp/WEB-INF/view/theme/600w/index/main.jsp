@@ -82,7 +82,7 @@
                     <span class="bg-img-kjjg"></span>
                     <span>开奖结果</span>
                 </a>
-                <a class="col-25" href="<%=basePath%>ssc/zst/lhc/jbzst.html">
+                <a class="col-25" href="<%=basePath%>ssc/zst/ffssc/jbzst.html">
                     <span class="bg-img-zst"></span>
                     <span>走势图</span>
                 </a>

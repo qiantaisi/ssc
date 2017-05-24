@@ -83,7 +83,7 @@
                     <span class="bg-img-kjjg re-kjjg"></span>
                     <span>开奖结果</span>
                 </a>
-                <a class="col-25" href="<%=basePath%>ssc/zst/lhc/jbzst.html">
+                <a class="col-25" href="<%=basePath%>ssc/zst/ffssc/jbzst.html">
                     <span class="bg-img-zst re-zst"></span>
                     <span>走势图</span>
                 </a>
@@ -412,7 +412,7 @@
                     <span>|</span>
                     <a href="javascript:void(0)" class="zsk">知识库</a>
                 </div>
-                <a href="#navBar" class="top-click">TOP</a>
+                <a href="javascript:void(0)" class="top-click">TOP</a>
             </div>
 
             <div class="index_five">
@@ -445,39 +445,34 @@
 <c:import url="../common/commonJs.jsp"/>
 <script>
     var kjjgJsonData = ${kjjgJsonData};
-    setTimeout(function(){
-        location.hash="navBar";
-    },500);
 </script>
-<script type="text/html" id="template_1">
-    <%--<li class="img-sz">--%>
-        <div class="item-content re-it-con cqssc-kjjg">
-            <div class="item-media remedia"><img src="${resPath}img/cz/cz-1.png" style='width: 2.4rem;'></div>
-            <div class="item-inner reitem-inner">
-                <div class="item-subtitle" id="xyxhContent_1">
-                    <span class="ball">{{num1}}</span>
-                    <span class="ball">{{num2}}</span>
-                    <span class="ball">{{num3}}</span>
-                    <span class="ball">{{num4}}</span>
-                    <span class="ball">{{num5}}</span>
-                </div>
-                <div class="item-text" id="xyxhContent_1_dsdxh">
-                    <span>{{sum}}</span>
-                    <span>{{ds}}</span>
-                    <span>{{dx}}</span>
-                    <span>{{lh}}</span>
-                </div>
-                <div class="item-title-row re-row-touzhu cq-touzhu">
-                    <span class="">重庆时时彩</span>
-                    <span class="tz_content">
-                       <a href="javascript:void(0)" class="shuaxin"></a>
-                        <a href="javascript:void(0)" class="touzhu">投注</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-    <%--</li>--%>
-</script>
+<%--<script type="text/html" id="template_1">--%>
+        <%--<div class="item-content re-it-con cqssc-kjjg">--%>
+            <%--<div class="item-media remedia"><img src="${resPath}img/cz/cz-1.png" style='width: 2.4rem;'></div>--%>
+            <%--<div class="item-inner reitem-inner">--%>
+                <%--<div class="item-subtitle" id="xyxhContent_1">--%>
+                    <%--<span class="ball">{{num1}}</span>--%>
+                    <%--<span class="ball">{{num2}}</span>--%>
+                    <%--<span class="ball">{{num3}}</span>--%>
+                    <%--<span class="ball">{{num4}}</span>--%>
+                    <%--<span class="ball">{{num5}}</span>--%>
+                <%--</div>--%>
+                <%--<div class="item-text" id="xyxhContent_1_dsdxh">--%>
+                    <%--<span>{{sum}}</span>--%>
+                    <%--<span>{{ds}}</span>--%>
+                    <%--<span>{{dx}}</span>--%>
+                    <%--<span>{{lh}}</span>--%>
+                <%--</div>--%>
+                <%--<div class="item-title-row re-row-touzhu cq-touzhu">--%>
+                    <%--<span class="">重庆时时彩</span>--%>
+                    <%--<span class="tz_content">--%>
+                       <%--<a href="javascript:void(0)" class="shuaxin"></a>--%>
+                        <%--<a href="javascript:void(0)" class="touzhu">投注</a>--%>
+                    <%--</span>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+<%--</script>--%>
 <%--<script type="text/html" id="template_2">--%>
 <%--<li>--%>
 <%--<a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=2">--%>
@@ -595,209 +590,209 @@
                 </div>
                 <div class="item-title-row re-row-touzhu lhc-touzhu">
                     <span class="">香港六合彩</span>
-                    <span href="javascript:void(0)" class="tz_content">
+                    <span class="tz_content">
                         <a href="javascript:void(0)" class="shuaxin"></a>
-                        <a href="javascript:void(0)" class="touzhu">投注</a>
+                        <a href="<%=basePath%>ssc/gcdt/lhc.html" class="touzhu">投注</a>
                     </span>
                 </div>
             </div>
         </div>
 </script>
-<script type="text/html" id="template_7">
-    <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=7">
-            <div class="item-media"><img src="${resPath}img/cz/cz-7.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">幸运28</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
-                <div class="item-subtitle">
-                    <span class="ball">{{num1}}</span>
-                    <span class="ball">{{num2}}</span>
-                    <span class="ball">{{num3}}</span>
-                </div>
-                <div class="item-text item-text_res">
-                </div>
-            </div>
-        </a>
-    </li>
-</script>
-<script type="text/html" id="template_8">
-    <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=8">
-            <div class="item-media"><img src="${resPath}img/cz/cz-8.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">北京快乐8</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
-                <div class="item-subtitle item-subtitle_res">
-                    <span class="ball">{{num1}}</span>
-                    <span class="ball">{{num2}}</span>
-                    <span class="ball">{{num3}}</span>
-                    <span class="ball">{{num4}}</span>
-                    <span class="ball">{{num5}}</span>
-                    <span class="ball">{{num6}}</span>
-                    <span class="ball">{{num7}}</span>
-                    <span class="ball">{{num8}}</span>
-                    <span class="ball">{{num9}}</span>
-                    <span class="ball">{{num10}}</span>
-                    <span class="ball">{{num11}}</span>
-                    <span class="ball">{{num12}}</span>
-                    <span class="ball">{{num13}}</span>
-                    <span class="ball">{{num14}}</span>
-                    <span class="ball">{{num15}}</span>
-                    <span class="ball">{{num16}}</span>
-                    <span class="ball">{{num17}}</span>
-                    <span class="ball">{{num18}}</span>
-                    <span class="ball">{{num19}}</span>
-                    <span class="ball">{{num20}}</span>
-                </div>
-                <div class="item-text item-text_res">
-                </div>
-            </div>
-        </a>
-    </li>
-</script>
-<script type="text/html" id="template_9">
-        <div class="item-content re-it-con pk10-kjjg">
-            <div class="item-media remedia"><img src="${resPath}img/cz/cz-9.png" style='width: 2.3rem;'></div>
-            <div class="item-inner reitem-inner" id="xyxhContent_9">
-                <div class="item-subtitle">
-                    <span class="ballpk bg-{{num1}}">{{num1}}</span>
-                    <span class="ballpk bg-{{num2}}">{{num2}}</span>
-                    <span class="ballpk bg-{{num3}}">{{num3}}</span>
-                    <span class="ballpk bg-{{num4}}">{{num4}}</span>
-                    <span class="ballpk bg-{{num5}}">{{num5}}</span>
-                    <span class="ballpk bg-{{num6}}">{{num6}}</span>
-                    <span class="ballpk bg-{{num7}}">{{num7}}</span>
-                    <span class="ballpk bg-{{num8}}">{{num8}}</span>
-                    <span class="ballpk bg-{{num9}}">{{num9}}</span>
-                    <span class="ballpk bg-{{num10}}">{{num10}}</span>
-                </div>
-                <div class="item-title-row re-row-touzhu pk10-touzhu">
-                    <span class="">北京赛车PK10</span>
-                    <span href="javascript:void(0)" class="tz_content">
-                        <a href="javascript:void(0)" class="shuaxin"></a>
-                        <a href="javascript:void(0)" class="touzhu">投注</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-</script>
-<script type="text/html" id="template_10">
-    <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=10">
-            <div class="item-media"><img src="${resPath}img/cz/cz-10.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">重庆幸运农场</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
-                <div class="item-subtitle">
-                    <span class="ball">{{num1}}</span>
-                    <span class="ball">{{num2}}</span>
-                    <span class="ball">{{num3}}</span>
-                    <span class="ball">{{num4}}</span>
-                    <span class="ball">{{num5}}</span>
-                    <span class="ball">{{num6}}</span>
-                    <span class="ball">{{num7}}</span>
-                    <span class="ball">{{num8}}</span>
-                </div>
-                <div class="item-text">
-                    <span>{{str1}}</span>
-                    <span>{{str2}}</span>
-                    <span>{{str3}}</span>
-                    <span>{{str4}}</span>
-                    <span>{{str5}}</span>
-                </div>
-            </div>
-        </a>
-    </li>
-</script>
-<script type="text/html" id="template_11">
-    <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=11">
-            <div class="item-media"><img src="${resPath}img/cz/cz-11.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">广东快乐十分</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
-                <div class="item-subtitle">
-                    <span class="ball">{{num1}}</span>
-                    <span class="ball">{{num2}}</span>
-                    <span class="ball">{{num3}}</span>
-                    <span class="ball">{{num4}}</span>
-                    <span class="ball">{{num5}}</span>
-                    <span class="ball">{{num6}}</span>
-                    <span class="ball">{{num7}}</span>
-                    <span class="ball">{{num8}}</span>
-                </div>
-                <div class="item-text">
-                    <span>{{str1}}</span>
-                    <span>{{str2}}</span>
-                    <span>{{str3}}</span>
-                    <span>{{str4}}</span>
-                    <span>{{str5}}</span>
-                </div>
-            </div>
-        </a>
-    </li>
-</script>
-<script type="text/html" id="template_13">
-    <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=13">
-            <div class="item-media"><img src="${resPath}img/cz/cz-13.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">三分时时彩</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
-                <div class="item-subtitle">
-                    <span class="ball">{{num1}}</span>
-                    <span class="ball">{{num2}}</span>
-                    <span class="ball">{{num3}}</span>
-                    <span class="ball">{{num4}}</span>
-                    <span class="ball">{{num5}}</span>
-                </div>
-                <div class="item-text">
-                    <span>{{sum}}</span>
-                    <span>{{ds}}</span>
-                    <span>{{dx}}</span>
-                    <span>{{lh}}</span>
-                </div>
-            </div>
-        </a>
-    </li>
-</script>
+<%--<script type="text/html" id="template_7">--%>
+    <%--<li>--%>
+        <%--<a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=7">--%>
+            <%--<div class="item-media"><img src="${resPath}img/cz/cz-7.png" style='width: 2.2rem;'></div>--%>
+            <%--<div class="item-inner">--%>
+                <%--<div class="item-title-row">--%>
+                    <%--<div class="item-title">幸运28</div>--%>
+                    <%--<div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>--%>
+                <%--</div>--%>
+                <%--<div class="item-subtitle">--%>
+                    <%--<span class="ball">{{num1}}</span>--%>
+                    <%--<span class="ball">{{num2}}</span>--%>
+                    <%--<span class="ball">{{num3}}</span>--%>
+                <%--</div>--%>
+                <%--<div class="item-text item-text_res">--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</a>--%>
+    <%--</li>--%>
+<%--</script>--%>
+<%--<script type="text/html" id="template_8">--%>
+    <%--<li>--%>
+        <%--<a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=8">--%>
+            <%--<div class="item-media"><img src="${resPath}img/cz/cz-8.png" style='width: 2.2rem;'></div>--%>
+            <%--<div class="item-inner">--%>
+                <%--<div class="item-title-row">--%>
+                    <%--<div class="item-title">北京快乐8</div>--%>
+                    <%--<div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>--%>
+                <%--</div>--%>
+                <%--<div class="item-subtitle item-subtitle_res">--%>
+                    <%--<span class="ball">{{num1}}</span>--%>
+                    <%--<span class="ball">{{num2}}</span>--%>
+                    <%--<span class="ball">{{num3}}</span>--%>
+                    <%--<span class="ball">{{num4}}</span>--%>
+                    <%--<span class="ball">{{num5}}</span>--%>
+                    <%--<span class="ball">{{num6}}</span>--%>
+                    <%--<span class="ball">{{num7}}</span>--%>
+                    <%--<span class="ball">{{num8}}</span>--%>
+                    <%--<span class="ball">{{num9}}</span>--%>
+                    <%--<span class="ball">{{num10}}</span>--%>
+                    <%--<span class="ball">{{num11}}</span>--%>
+                    <%--<span class="ball">{{num12}}</span>--%>
+                    <%--<span class="ball">{{num13}}</span>--%>
+                    <%--<span class="ball">{{num14}}</span>--%>
+                    <%--<span class="ball">{{num15}}</span>--%>
+                    <%--<span class="ball">{{num16}}</span>--%>
+                    <%--<span class="ball">{{num17}}</span>--%>
+                    <%--<span class="ball">{{num18}}</span>--%>
+                    <%--<span class="ball">{{num19}}</span>--%>
+                    <%--<span class="ball">{{num20}}</span>--%>
+                <%--</div>--%>
+                <%--<div class="item-text item-text_res">--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</a>--%>
+    <%--</li>--%>
+<%--</script>--%>
+<%--<script type="text/html" id="template_9">--%>
+        <%--<div class="item-content re-it-con pk10-kjjg">--%>
+            <%--<div class="item-media remedia"><img src="${resPath}img/cz/cz-9.png" style='width: 2.3rem;'></div>--%>
+            <%--<div class="item-inner reitem-inner" id="xyxhContent_9">--%>
+                <%--<div class="item-subtitle">--%>
+                    <%--<span class="ballpk bg-{{num1}}">{{num1}}</span>--%>
+                    <%--<span class="ballpk bg-{{num2}}">{{num2}}</span>--%>
+                    <%--<span class="ballpk bg-{{num3}}">{{num3}}</span>--%>
+                    <%--<span class="ballpk bg-{{num4}}">{{num4}}</span>--%>
+                    <%--<span class="ballpk bg-{{num5}}">{{num5}}</span>--%>
+                    <%--<span class="ballpk bg-{{num6}}">{{num6}}</span>--%>
+                    <%--<span class="ballpk bg-{{num7}}">{{num7}}</span>--%>
+                    <%--<span class="ballpk bg-{{num8}}">{{num8}}</span>--%>
+                    <%--<span class="ballpk bg-{{num9}}">{{num9}}</span>--%>
+                    <%--<span class="ballpk bg-{{num10}}">{{num10}}</span>--%>
+                <%--</div>--%>
+                <%--<div class="item-title-row re-row-touzhu pk10-touzhu">--%>
+                    <%--<span class="">北京赛车PK10</span>--%>
+                    <%--<span href="javascript:void(0)" class="tz_content">--%>
+                        <%--<a href="javascript:void(0)" class="shuaxin"></a>--%>
+                        <%--<a href="javascript:void(0)" class="touzhu">投注</a>--%>
+                    <%--</span>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+<%--</script>--%>
+<%--<script type="text/html" id="template_10">--%>
+    <%--<li>--%>
+        <%--<a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=10">--%>
+            <%--<div class="item-media"><img src="${resPath}img/cz/cz-10.png" style='width: 2.2rem;'></div>--%>
+            <%--<div class="item-inner">--%>
+                <%--<div class="item-title-row">--%>
+                    <%--<div class="item-title">重庆幸运农场</div>--%>
+                    <%--<div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>--%>
+                <%--</div>--%>
+                <%--<div class="item-subtitle">--%>
+                    <%--<span class="ball">{{num1}}</span>--%>
+                    <%--<span class="ball">{{num2}}</span>--%>
+                    <%--<span class="ball">{{num3}}</span>--%>
+                    <%--<span class="ball">{{num4}}</span>--%>
+                    <%--<span class="ball">{{num5}}</span>--%>
+                    <%--<span class="ball">{{num6}}</span>--%>
+                    <%--<span class="ball">{{num7}}</span>--%>
+                    <%--<span class="ball">{{num8}}</span>--%>
+                <%--</div>--%>
+                <%--<div class="item-text">--%>
+                    <%--<span>{{str1}}</span>--%>
+                    <%--<span>{{str2}}</span>--%>
+                    <%--<span>{{str3}}</span>--%>
+                    <%--<span>{{str4}}</span>--%>
+                    <%--<span>{{str5}}</span>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</a>--%>
+    <%--</li>--%>
+<%--</script>--%>
+<%--<script type="text/html" id="template_11">--%>
+    <%--<li>--%>
+        <%--<a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=11">--%>
+            <%--<div class="item-media"><img src="${resPath}img/cz/cz-11.png" style='width: 2.2rem;'></div>--%>
+            <%--<div class="item-inner">--%>
+                <%--<div class="item-title-row">--%>
+                    <%--<div class="item-title">广东快乐十分</div>--%>
+                    <%--<div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>--%>
+                <%--</div>--%>
+                <%--<div class="item-subtitle">--%>
+                    <%--<span class="ball">{{num1}}</span>--%>
+                    <%--<span class="ball">{{num2}}</span>--%>
+                    <%--<span class="ball">{{num3}}</span>--%>
+                    <%--<span class="ball">{{num4}}</span>--%>
+                    <%--<span class="ball">{{num5}}</span>--%>
+                    <%--<span class="ball">{{num6}}</span>--%>
+                    <%--<span class="ball">{{num7}}</span>--%>
+                    <%--<span class="ball">{{num8}}</span>--%>
+                <%--</div>--%>
+                <%--<div class="item-text">--%>
+                    <%--<span>{{str1}}</span>--%>
+                    <%--<span>{{str2}}</span>--%>
+                    <%--<span>{{str3}}</span>--%>
+                    <%--<span>{{str4}}</span>--%>
+                    <%--<span>{{str5}}</span>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</a>--%>
+    <%--</li>--%>
+<%--</script>--%>
+<%--<script type="text/html" id="template_13">--%>
+    <%--<li>--%>
+        <%--<a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=13">--%>
+            <%--<div class="item-media"><img src="${resPath}img/cz/cz-13.png" style='width: 2.2rem;'></div>--%>
+            <%--<div class="item-inner">--%>
+                <%--<div class="item-title-row">--%>
+                    <%--<div class="item-title">三分时时彩</div>--%>
+                    <%--<div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>--%>
+                <%--</div>--%>
+                <%--<div class="item-subtitle">--%>
+                    <%--<span class="ball">{{num1}}</span>--%>
+                    <%--<span class="ball">{{num2}}</span>--%>
+                    <%--<span class="ball">{{num3}}</span>--%>
+                    <%--<span class="ball">{{num4}}</span>--%>
+                    <%--<span class="ball">{{num5}}</span>--%>
+                <%--</div>--%>
+                <%--<div class="item-text">--%>
+                    <%--<span>{{sum}}</span>--%>
+                    <%--<span>{{ds}}</span>--%>
+                    <%--<span>{{dx}}</span>--%>
+                    <%--<span>{{lh}}</span>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</a>--%>
+    <%--</li>--%>
+<%--</script>--%>
 
-<script type="text/html" id="template_14">
-    <li>
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=14">
-            <div class="item-media"><img src="${resPath}img/cz/cz-14.png" style='width: 2.2rem;'></div>
-            <div class="item-inner">
-                <div class="item-title-row">
-                    <div class="item-title">幸运飞艇</div>
-                    <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
-                </div>
-                <div class="item-subtitle">
-                    <span class="ballpk bg-{{num1}}">{{num1}}</span>
-                    <span class="ballpk bg-{{num2}}">{{num2}}</span>
-                    <span class="ballpk bg-{{num3}}">{{num3}}</span>
-                    <span class="ballpk bg-{{num4}}">{{num4}}</span>
-                    <span class="ballpk bg-{{num5}}">{{num5}}</span>
-                    <span class="ballpk bg-{{num6}}">{{num6}}</span>
-                    <span class="ballpk bg-{{num7}}">{{num7}}</span>
-                    <span class="ballpk bg-{{num8}}">{{num8}}</span>
-                    <span class="ballpk bg-{{num9}}">{{num9}}</span>
-                    <span class="ballpk bg-{{num10}}">{{num10}}</span>
-                </div>
-                <div class="item-text item-text_res">
-                </div>
-            </div>
-        </a>
-    </li>
-</script>
+<%--<script type="text/html" id="template_14">--%>
+    <%--<li>--%>
+        <%--<a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=14">--%>
+            <%--<div class="item-media"><img src="${resPath}img/cz/cz-14.png" style='width: 2.2rem;'></div>--%>
+            <%--<div class="item-inner">--%>
+                <%--<div class="item-title-row">--%>
+                    <%--<div class="item-title">幸运飞艇</div>--%>
+                    <%--<div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>--%>
+                <%--</div>--%>
+                <%--<div class="item-subtitle">--%>
+                    <%--<span class="ballpk bg-{{num1}}">{{num1}}</span>--%>
+                    <%--<span class="ballpk bg-{{num2}}">{{num2}}</span>--%>
+                    <%--<span class="ballpk bg-{{num3}}">{{num3}}</span>--%>
+                    <%--<span class="ballpk bg-{{num4}}">{{num4}}</span>--%>
+                    <%--<span class="ballpk bg-{{num5}}">{{num5}}</span>--%>
+                    <%--<span class="ballpk bg-{{num6}}">{{num6}}</span>--%>
+                    <%--<span class="ballpk bg-{{num7}}">{{num7}}</span>--%>
+                    <%--<span class="ballpk bg-{{num8}}">{{num8}}</span>--%>
+                    <%--<span class="ballpk bg-{{num9}}">{{num9}}</span>--%>
+                    <%--<span class="ballpk bg-{{num10}}">{{num10}}</span>--%>
+                <%--</div>--%>
+                <%--<div class="item-text item-text_res">--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</a>--%>
+    <%--</li>--%>
+<%--</script>--%>
 <c:import url="../common/bodyEnd.jsp"/>
