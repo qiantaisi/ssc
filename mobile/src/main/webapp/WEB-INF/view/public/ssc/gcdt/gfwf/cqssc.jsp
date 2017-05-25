@@ -23,12 +23,27 @@
             <h1 class="title">重庆时时彩<i class="triangle-down"> <!--向下的三角--> </i></h1>
         </header>
         <c:import url="../common/commonBet.jsp"/>
-        <c:import url="../gfwf/common/gfwf.jsp" />     <%--官方玩法选择--%>
+        <div class="consele">
+            <div class="selects">
+                <div class="selects-one">
+                    <span class="active">官方玩法</span>
+                </div>
+            </div>
+            <div class="selects">
+                <div class="selects-two">
+                    <span><a href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="bott">
+            <%--半透明--%>
+        </div>
+        <%--<c:import url="../gfwf/cqssc/common/gfwf.jsp" />     &lt;%&ndash;官方玩法选择&ndash;%&gt;--%>
         <div class="content cl-601 show_hide">
-            <c:import url="../gfwf/common/common.jsp"/>   <%--选择菜单标题--%>
-            <c:import url="../gfwf/common/xzcd.jsp" />   <%--菜单下的内容--%>
+            <c:import url="../gfwf/cqssc/common/common.jsp"/>   <%--直选方式--%>
+            <c:import url="../gfwf/cqssc/common/xzcd.jsp" />   <%--直选方式下的内容--%>
             <div class="cl-900" id="lastOpenInfo">
-                <%--第几期--%>
+                <%--显示第几期彩种--%>
             </div>
             <div class="cl-901">
                 <div class="cl-902">

@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="${resPath}swiper/css/swiper.min.css?v=201702280308">
     <link rel="stylesheet" href="${resPath}css/style.css?v=201703222201">
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170421">
+    <link rel="stylesheet" href="${resPath}css/gfwf_css.css?v=20170525"/>
 
     <script>
         <!--

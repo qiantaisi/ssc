@@ -1226,7 +1226,7 @@ input[type="number"] {
     color: #a3a3a3;
     line-height: 2rem;
     position: relative;
-    top: 30%;
+    top: 25%;
 }
 
 .selects-one {
@@ -1257,5 +1257,5 @@ input[type="number"] {
     position: relative;
     right: 1rem;
     width: 40%;
-    /*border: 1px solid #a3a3a3;*/
+    border: 1px solid #a3a3a3;
 }
