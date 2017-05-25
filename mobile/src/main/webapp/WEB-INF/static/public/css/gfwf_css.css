@@ -69,3 +69,27 @@
     position: relative;
     top: inherit;
 }
+
+.cus-tabs-scroll {
+    text-align: center;
+    position: relative;
+    height: 8%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.cus-tabs-scroll a {
+    padding: 15%;
+    position: relative;
+    top: 26%;
+    color: #fa6200;
+}
+
+.cus-tabs-scroll span {
+    position: relative;
+    top: 30%;
+}
+
+.cus-tabs-scroll span img {
+    height: 0.7rem;
+}
