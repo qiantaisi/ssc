@@ -401,3 +401,12 @@ table.touzhuArea {
     position: absolute;
     right: -59px;
 }
+
+/*首页右边悬浮菜单*/
+.rt .fix_ico {
+    position: fixed;
+    width: 60px;
+    z-index: 2;
+    margin-left: 760px;
+    margin-top: 3.3px;
+}

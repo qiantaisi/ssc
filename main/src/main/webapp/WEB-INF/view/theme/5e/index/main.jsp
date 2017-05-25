@@ -12,6 +12,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp"/>
 <c:import url="top.jsp"/>
+
 <div class="men_list">
     <div class="wid1">
         <div class="logo mt0">
@@ -21,13 +22,15 @@
     </div>
 </div>
 
+
 <div class="main_layout wid1">
     <div class="left_layout">
         <h1>选择彩种</h1>
         <c:import url="leftMenu.jsp"/>
     </div>
 
-    <div class="right_layotu">
+    <div class="right_layotu rt">
+        <c:import url="../common/right.jsp"/>
         <div class="left_wrap">
             <div class="scroll_pic">
                 <ul>
