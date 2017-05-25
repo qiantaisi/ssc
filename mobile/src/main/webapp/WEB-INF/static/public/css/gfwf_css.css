@@ -29,10 +29,10 @@
 }
 
 .selects-one {
-    width: 70%;
+    width: 60%;
     border: 1px solid #a3a3a3;
     border-radius: 10px;
-    height: 50%;
+    height: 47%;
     position: relative;
     top: 25%;
     text-align: center;
@@ -40,10 +40,10 @@
 }
 
 .selects-two {
-    width: 70%;
+    width: 60%;
     border: 1px solid #a3a3a3;
     border-radius: 10px;
-    height: 50%;
+    height: 47%;
     position: relative;
     top: 25%;
     text-align: center;
@@ -59,13 +59,11 @@
 }
 
 .selects-one span {
-    font-size: initial;
     position: relative;
     top: inherit;
 }
 
 .selects-two span {
-    font-size: initial;
     position: relative;
     top: inherit;
 }
