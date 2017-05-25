@@ -84,7 +84,7 @@
                 account: $("input[name='account']").val()
             },
             beforeSend: function () {
-                $("#dataTable tbody").html('<tr><td colspan="5" styl="text-align:center;"><img src="${resPath}img/base_loading.gif"/></td></tr>');
+                $("#dataTable tbody").html('<tr><td colspan="9" styl="text-align:center;"><img src="${resPath}img/base_loading.gif"/></td></tr>');
                 $(".eveb_page").html('');
             },
             success: function (json) {
