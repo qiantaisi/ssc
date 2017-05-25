@@ -794,7 +794,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .main_layout .right_layotu .right_wrap .Notice b{font-size: 14px;font-weight: normal;color: #fa6200;border-bottom: 1px solid #e8e8e8;padding-bottom:6px;display: block;text-indent: 6px;}
 .main_layout .right_layotu .right_wrap .Notice p{cursor:pointer; font-size: 12px;color: #666666;margin-top:6px;line-height:1.9;}
 
-.main_layout .right_layotu .chart{width: 748px;border: 1px solid #dbdbdb;height: 203px;margin-top:13px;float: left;}
+.main_layout .right_layotu .chart{width：100%;border: 1px solid #dbdbdb;height: 203px;margin-top:13px;float: left;}
 .main_layout .right_layotu .chart .title{border-bottom: 1px solid #fa6200;padding-bottom: 15px;height:28px;margin-top:6px;}
 .main_layout .right_layotu .chart .title a{float: right;color: #fa6200;line-height: 35px;margin-right: 6px;}
 .main_layout .right_layotu .chart .title a:hover{ text-decoration:underline;}
@@ -1427,7 +1427,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .main_layout .right_layotu .right_wrap .Notice b{font-size: 14px;font-weight: normal;color: #fa6200;border-bottom: 1px solid #e8e8e8;padding-bottom:6px;display: block;text-indent: 6px;}
 .main_layout .right_layotu .right_wrap .Notice p{font-size: 12px;color: #666666;margin-top:6px;line-height:1.9;}
 
-.main_layout .right_layotu .chart{width: 748px;border: 1px solid #dbdbdb;height: 203px;margin-top:13px;float: left;}
+.main_layout .right_layotu .chart{width: 100%;border: 1px solid #dbdbdb;height: 203px;margin-top:13px;float: left;}
 .main_layout .right_layotu .chart .title{border-bottom: 1px solid #fa6200;padding-bottom: 15px;height:28px;margin-top:6px;}
 .main_layout .right_layotu .chart .title a{float: right;color: #fa6200;line-height: 35px;margin-right: 6px;}
 .main_layout .right_layotu .chart .title a:hover{ text-decoration:underline;}
