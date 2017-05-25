@@ -49,7 +49,7 @@
             </a>
         </li>
         <li>
-            <a href="https://messenger.providesupport.net/messenger/1jtkcz7eucxt91kj32akhmp0sc.html" target="_blank">
+            <a href="${kefuUrl}"  target="_blank">
                 <div class="pict">
                     <i><img src="${resPath}img/zxkf.png" alt=""></i>
                 </div>
