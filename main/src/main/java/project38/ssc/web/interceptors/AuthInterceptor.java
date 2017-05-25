@@ -22,12 +22,11 @@ import java.io.PrintWriter;
  */
 public class AuthInterceptor extends HandlerInterceptorAdapter {
 
-    private Log log = LogFactory.getLog(getClass());
+    private static final Log log = LogFactory.getLog(AuthInterceptor.class);
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String uri = request.getRequestURI();
-//        log.info("uri:" + uri);
 
         String uidStr = request.getParameter("uid");
         String token = request.getParameter("token");
@@ -47,7 +46,6 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             }
         }
 
-
         String companyShortName = SessionUtils.getSessionCompanyShortName(request);
         if (StringUtils.isBlank(companyShortName)) {
             CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(request.getServerName());
@@ -66,7 +64,6 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             Authentication authentication = ((HandlerMethod) handler).getMethod().getAnnotation(Authentication.class);
             if (null != authentication) {   // 有权限控制的就要检查
                 if (StringUtils.isBlank(uidStr) || StringUtils.isBlank(token) || ApiUtils.checkOnline(Long.parseLong(uidStr), token, companyShortName).getResult() != 1) {    // 没登录就要求登录
-                    flag = false;
                     if (uri.indexOf(".json") > 0) {
                         CommonResult commonResult = new CommonResult();
                         commonResult.setResult(-101);
