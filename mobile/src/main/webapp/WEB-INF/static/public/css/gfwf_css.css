@@ -1,0 +1,95 @@
+.consele {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    height: 15%;
+}
+
+/*.consele .selects {*/
+/*font-size: 15px;*/
+/*font-weight: 600;*/
+/*text-align: center;*/
+/*color: #a3a3a3;*/
+/*line-height: 2rem;*/
+/*position: relative;*/
+/*top: 25%;*/
+/*}*/
+.consele-one {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.consele-two {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.selects-one {
+    width: 70%;
+    border: 1px solid #a3a3a3;
+    border-radius: 10px;
+    height: 50%;
+    position: relative;
+    top: 25%;
+    text-align: center;
+    margin: auto;
+}
+
+.selects-two {
+    width: 70%;
+    border: 1px solid #a3a3a3;
+    border-radius: 10px;
+    height: 50%;
+    position: relative;
+    top: 25%;
+    text-align: center;
+    margin: auto;
+}
+
+.selects-one span a {
+    color: #a3a3a3;
+}
+
+.selects-two span a {
+    color: #a3a3a3;
+}
+
+.selects-one span {
+    font-size: initial;
+    position: relative;
+    top: inherit;
+}
+
+.selects-two span {
+    font-size: initial;
+    position: relative;
+    top: inherit;
+}
+
+.cus-tabs-scroll {
+    text-align: center;
+    position: relative;
+    height: 8%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.cus-tabs-scroll a {
+    padding: 15%;
+    position: relative;
+    top: 26%;
+    color: #fa6200;
+}
+
+.cus-tabs-scroll span {
+    position: relative;
+    top: 30%;
+}
+
+.cus-tabs-scroll span img {
+    height: 0.7rem;
+}

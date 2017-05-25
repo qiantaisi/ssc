@@ -66,7 +66,7 @@ public class IndexController extends BaseController{
         try {
             modelMap.put("logo", ApiUtils.getLogo(1, companyShortName));
 
-            WebNoticeResult webNoticeResult = ApiUtils.getPopupNoticeList(uid, token, null, null, companyShortName);
+            WebNoticeResult webNoticeResult = ApiUtils.getPopupNoticeList(uid, token, companyShortName);
             if (null != webNoticeResult) {
                 modelMap.put("popupNoticeList", webNoticeResult.getWebNoticeList());
             }

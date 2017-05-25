@@ -1257,7 +1257,7 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName);
+        return ApiUtils.getPopupNoticeList(uid, token,companyShortName);
     }
 
     @Authentication
@@ -1464,7 +1464,7 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName =  this.getCompanyShortName();
-        modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName).getWebNoticeList());
+        modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,companyShortName).getWebNoticeList());
         return this.renderPublicView("member/gonggao/list", modelMap);
     }
 

@@ -267,7 +267,9 @@ function searchday(id){
 function GetFullDate(v)
 {
 	var v;
-	if(v>9)return v.toString();
+	if (v > 9) {
+		return v.toString();
+    }
 	return "0"+v;
 }
 //全选
