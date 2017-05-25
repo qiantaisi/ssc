@@ -24,14 +24,14 @@
         </header>
         <c:import url="common/commonBet.jsp"/>
         <div class="consele">
-            <div class="selects">
+            <div class="consele-one">
                 <div class="selects-one">
-                    <span class="active"><a href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a></span>
+                    <span><a  class="active" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a></span>
                 </div>
             </div>
-            <div class="selects">
+            <div class="consele-two">
                 <div class="selects-two">
-                    <span>快捷玩法</span>
+                    <span><a calss="" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a></span>
                 </div>
             </div>
         </div>

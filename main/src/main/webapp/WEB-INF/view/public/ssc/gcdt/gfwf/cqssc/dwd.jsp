@@ -433,11 +433,8 @@
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
                 if(typeof stateTouZhu == "function"){
                     var flag_str = '';
-                    if (typeof $('.recl-1003').attr('statef') != 'undefined') {
-                        flag_str = 'dan';
-                        stateTouZhu(flag_str);
-                    } else {
-                        flag_str = 'fu';
+                    if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
+                        flag_str = 'dwd';
                         stateTouZhu(flag_str);
                     }
                 }
