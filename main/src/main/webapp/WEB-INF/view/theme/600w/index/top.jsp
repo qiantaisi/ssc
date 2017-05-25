@@ -15,9 +15,9 @@
                     <c:when test="${not empty userSession}">
                         <span class="line">
                             <a onclick="openHyzx()" href="javascript:void(0)" class="a1">${userSession.account}</a>
-                            <a href="javascript:void(0)"  onclick="openHyzx('zhcz/yhzz')" class="par">充值</a>
-                            <a href="javascript:void(0)" onclick="openHyzx('withdraw')" class="par">提款</a>
-                            <a onclick="openHyzx('letter')" href="javascript:void(0)" class="par">站内信</a>
+                            <a href="javascript:void(0)"  onclick="openHyzx('member/zhcz.html?module=yhzz')" class="par">充值</a>
+                            <a href="javascript:void(0)" onclick="openHyzx('member/withdraw.html')" class="par">提款</a>
+                            <a href="javascript:void(0)" onclick="openHyzx('member/letter.html')" class="par">站内信</a>
                             <a href="javascript:void(0)" class="par" onclick="sigout()">退出</a>
                         </span>
                     </c:when>
@@ -106,7 +106,7 @@
                         </h4>
                         <h5 class="last">
                             <a href="javascript:void(0)" onclick="openHyzx()">会员中心</a>
-                            <a href="javascript:void(0)" onclick="openHyzx('jfmx/hylb')">推广赚钱</a>
+                            <a href="javascript:void(0)" onclick="openHyzx('member/jfmx.html?module=hylb')">推广赚钱</a>
                             <a href="<%=basePath%>yhhd.html">优惠活动</a>
                         </h5>
                     </div>
