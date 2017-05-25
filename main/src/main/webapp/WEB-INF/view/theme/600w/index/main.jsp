@@ -300,7 +300,7 @@
                 <c:choose>
                     <c:when test="${not empty userSession}">
                         <ul class="state">
-                            <li>尊敬的：<i style="cursor: pointer;" onclick="openHyzx('main')">${userSession.account}</i>
+                            <li>尊敬的：<i style="cursor: pointer;" onclick="openHyzx()">${userSession.account}</i>
                                 <script>
                                     var hour = (new Date()).getHours();
                                     if (hour < 6) {
