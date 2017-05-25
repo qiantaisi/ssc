@@ -9,49 +9,49 @@
 <div class="fix_ico">
     <ul>
         <li>
-            <a href="javascript:void(0)" onclick="openHyzx('zhsz/grzl')">
+            <a href="tencent://message/?uin=1597523456&Site=在线客服&Menu=yes">
                 <div class="pict">
-                    <i><img src="${resPath}img/ico208.png" alt=""></i>
+                    <i><img src="${resPath}img/qqkf.png" alt=""></i>
                 </div>
                 <div class="text">
-                    <p>修改资料</p>
+                    <p>QQ客服</p>
                 </div>
             </a>
         </li>
         <li>
-            <a href="javascript:void(0)" onclick="openHyzx()">
+            <a href="tencent://message/?uin=1902616161&Site=在线客服&Menu=yes">
                 <div class="pict">
-                    <i><img src="${resPath}img/ico209.png" alt=""></i>
+                    <i><img src="${resPath}img/dljm.png" alt=""></i>
                 </div>
                 <div class="text">
-                    <p>会员中心</p>
+                    <p>代理加盟</p>
                 </div>
             </a>
         </li>
         <li>
-            <a href="javascript:void(0)" onclick="openHyzx('zhsz/dlmm')">
+            <a href="http://www.5y333.com">
                 <div class="pict">
-                    <i><img src="${resPath}img/ico210.png" alt=""></i>
+                    <i><img src="${resPath}img/wzdh.png" alt=""></i>
                 </div>
                 <div class="text">
-                    <p>修改密码</p>
+                    <p>网址导航</p>
                 </div>
             </a>
         </li>
         <li>
-            <a href="<%=basePath%>ssc/register.html" class="a0">
+            <a href="http://www.wuyicaipiao.com" class="a0">
                 <div class="pict">
-                    <i><img src="${resPath}img/ico211.png" alt=""></i>
+                    <i><img src="${resPath}img/xljc.png" alt=""></i>
                 </div>
                 <div class="text">
-                    <p>免费注册</p>
+                    <p>线路检查</p>
                 </div>
             </a>
         </li>
         <li>
-            <a href="${kefuUrl}" target="_blank">
+            <a href="https://messenger.providesupport.net/messenger/1jtkcz7eucxt91kj32akhmp0sc.html" target="_blank">
                 <div class="pict">
-                    <i><img src="${resPath}img/ico212.png" alt=""></i>
+                    <i><img src="${resPath}img/zxkf.png" alt=""></i>
                 </div>
                 <div class="text">
                     <p>在线客服</p>
