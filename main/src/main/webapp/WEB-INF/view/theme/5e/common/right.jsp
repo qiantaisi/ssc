@@ -9,6 +9,16 @@
 <div class="fix_ico">
     <ul>
         <li>
+            <a href="${kefuUrl}"  target="_blank">
+                <div class="pict">
+                    <i><img src="${resPath}img/zxkf.png" alt=""></i>
+                </div>
+                <div class="text">
+                    <p>在线客服</p>
+                </div>
+            </a>
+        </li>
+        <li>
             <a href="tencent://message/?uin=1597523456&Site=在线客服&Menu=yes">
                 <div class="pict">
                     <i><img src="${resPath}img/qqkf.png" alt=""></i>
@@ -29,7 +39,7 @@
             </a>
         </li>
         <li>
-            <a href="http://www.5y333.com">
+            <a href="http://www.5y333.com" target="_blank">
                 <div class="pict">
                     <i><img src="${resPath}img/wzdh.png" alt=""></i>
                 </div>
@@ -39,22 +49,12 @@
             </a>
         </li>
         <li>
-            <a href="http://www.wuyicaipiao.com" class="a0">
+            <a href="http://www.wuyicaipiao.com" class="a0" target="_blank">
                 <div class="pict">
                     <i><img src="${resPath}img/xljc.png" alt=""></i>
                 </div>
                 <div class="text">
                     <p>线路检查</p>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="${kefuUrl}"  target="_blank">
-                <div class="pict">
-                    <i><img src="${resPath}img/zxkf.png" alt=""></i>
-                </div>
-                <div class="text">
-                    <p>在线客服</p>
                 </div>
             </a>
         </li>
