@@ -170,3 +170,13 @@
 .recl-1004-zxhz ul li.hz-q2 span,.recl-1008-zuxhz ul li.hz-q2 span{
     height: 50px!important;
 }
+/*不定位*/
+.Single .layout .group ul li .tit_img {
+    float: left;
+    width: 52px;
+    height: 26px;
+    background: url(../img/ico50_small.png);
+    color: #fff;
+    line-height: 25px;
+    text-indent: 10px;
+}

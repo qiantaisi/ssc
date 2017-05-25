@@ -9,7 +9,7 @@
 <div class="group">
     <ul>
         <li>
-            <b>三星</b>
+            <b class="tit_img">三星</b>
             <p>
                 <span class="acti" data-name="qsym"><a href="javascript:void(0)">前三一码</a></span>
                 <span data-name="qsem"><a href="javascript:void(0)">前三二码</a></span>
@@ -18,124 +18,40 @@
             </p>
         </li>
         <li>
-            <b>四星</b>
+            <b class="tit_img">四星</b>
             <p>
-                <span data-name="qsym"><a href="javascript:void(0)">前四一码</a></span>
-                <span data-name="qsem"><a href="javascript:void(0)">前四二码</a></span>
-                <span data-name="hsym"><a href="javascript:void(0)">后四一码</a></span>
-                <span data-name="hsem"><a href="javascript:void(0)">后四二码</a></span>
+                <span data-name="q4ym"><a href="javascript:void(0)">前四一码</a></span>
+                <span data-name="q4em"><a href="javascript:void(0)">前四二码</a></span>
+                <span data-name="h4ym"><a href="javascript:void(0)">后四一码</a></span>
+                <span data-name="h4em"><a href="javascript:void(0)">后四二码</a></span>
             </p>
         </li>
         <li>
-            <b>五星</b>
+            <b class="tit_img">五星</b>
             <p>
-                <span data-name="qsym"><a href="javascript:void(0)">五星一码</a></span>
-                <span data-name="qsem"><a href="javascript:void(0)">五星二码</a></span>
-                <span data-name="hsym"><a href="javascript:void(0)">五星三码</a></span>
+                <span data-name="wxym"><a href="javascript:void(0)">五星一码</a></span>
+                <span data-name="wxem"><a href="javascript:void(0)">五星二码</a></span>
+                <span data-name="wxsm"><a href="javascript:void(0)">五星三码</a></span>
             </p>
         </li>
     </ul>
 </div>
-<div class="Pick cl-1002 recl-1002" data-flag="dwd">
+<div class="Pick cl-1002 recl-1002" data-flag="qsym-budw">
     <p class="p1">
         <span class="fr fl cl-1001">
-            在万位、千位、百位、十位、个位任意位置上任意选择1个或1个以上号码。
+            从0-9中任意选择1个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：万位1 开奖号码：万位1，即中定位胆万位。</var>
+                <var>投注方案：1 开奖号码：前三位，至少出现1个1，即中前三一码不定位。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少选择1个号码组成一注，每注由一个号码组成，所选号码与相同位置上的开奖号码一致，即为中奖。</var>
+                <var>从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码万、千百位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
             </a>
         </span>
     </p>
     <ul>
-        <li data-name="万">
-            <b><i>万位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <div class="clear re-5x-i">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
-            </div>
-        </li>
-        <li data-name="千">
-            <b><i>千位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <div class="clear re-5x-i">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
-            </div>
-        </li>
-        <li data-name="百">
-            <b><i>百位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <div class="clear re-5x-i">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
-            </div>
-        </li>
-        <li data-name="十">
-            <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <div class="clear re-5x-i">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
-            </div>
-        </li>
-        <li data-name="个">
-            <b><i>个位</i></b>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -157,6 +73,44 @@
         </li>
     </ul>
 </div>
+<div class="Pick cl-1002 recl-1003-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择2个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：12 开奖号码：前三位，至少出现1和2各一个，即中前三二码不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中至少 选择2个以上号码，每组由2个号码组成，只要开奖号码万、千百、百位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+
 <div class="add_spot">
     <div class="left">
         <div class="sopt_wrap">
@@ -169,7 +123,7 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
             </div>
             <div class="reduce">
                 <a class="fl">-</a>
@@ -191,7 +145,8 @@
             </div>
         </div>
         <p class="p1">
-            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i class="i1 i_money">0.00</i>元。
+            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i
+                class="i1 i_money">0.00</i>元。
         </p>
     </div>
     <div class="rigth">
@@ -200,20 +155,94 @@
 
 </div>
 <script>
-    $(function(){
+    $(function () {
+        $(".Pick").hide();
+        $(".recl-1002").show();
         $(".btn_fu_zhi span").click(function () {
-           if($(this).siblings().hasClass('acti')){
-               $(this).siblings().removeClass('acti');
-           }
+            if ($(this).siblings().hasClass('acti')) {
+                $(this).siblings().removeClass('acti');
+            }
 
-           $(this).addClass('acti');
+            $(this).addClass('acti');
+        });
+
+        $(".group ul li p span").click(function () {
+            $(".group ul li p span.acti").removeClass("acti");
+            $(this).addClass("acti");
+            var nameF = $(this).data("name");
+            if (nameF == "qsem") {
+                $(".Pick").hide();
+                $(".recl-1003-budw").show();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1003-budw").attr("data-flag", "qsem-budw");
+
+            } else if (nameF = "qsym") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1002").show();
+                $(".recl-1002").attr("data-flag", "qsym-budw");
+
+            } else if (nameF = "hsym") {
+                $(this).parent().parent().parent().attr("data-flag", "hsym-budw");
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('hsym');
+                }
+            } else if (nameF = "hsem") {
+                $(this).parent().parent().parent().attr("data-flag", "hsem-budw");
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('hsem');
+                }
+            } else if (nameF = "q4ym") {
+                $(this).parent().parent().parent().attr("data-flag", "q4ym-budw");
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('q4ym');
+                }
+            } else if (nameF = "q4em") {
+                $(this).parent().parent().parent().attr("data-flag", "q4em-budw");
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('q4em');
+                }
+            } else if (nameF = "h4ym") {
+                $(this).parent().parent().parent().attr("data-flag", "h4ym-budw");
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('h4ym');
+                }
+            } else if (nameF = "h4em") {
+                $(this).parent().parent().parent().attr("data-flag", "h4em-budw");
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('h4em');
+                }
+            } else if (nameF = "wxym") {
+                $(this).parent().parent().parent().attr("data-flag", "wxym-budw");
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('wxym');
+                }
+            } else if (nameF = "wxem") {
+                $(this).parent().parent().parent().attr("data-flag", "wxem-budw");
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('wxem');
+                }
+            } else if (nameF = "wxsm") {
+                $(this).parent().parent().parent().attr("data-flag", "wxsm-budw");
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('wxsm');
+                }
+            }
         });
 
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
-            if(typeof stateTouZhu == "function"){
-                stateTouZhu('dwd');
+            var flagName = $(this).parent().parent().parent().parent().data("flag");
+            if(flagName == "qsym-budw"){
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('qsym-budw');
+                }
+            }else if(flagName == "qsem-budw"){
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('qsem-budw');
+                }
             }
+
         });
 
         //官方玩法
@@ -230,7 +259,7 @@
                 $(".right_it1").show();
                 $(".Detailedlist").show();
             } else {
-                var flag_acti =  $(this).parent().parent().prev().find("b").hasClass('acti');
+                var flag_acti = $(this).parent().parent().prev().find("b").hasClass('acti');
                 if (flag_acti == true) {
                     $(this).parent().parent().prev().find("b").removeClass('acti');
                 }
@@ -244,59 +273,61 @@
 
     });
 </script>
+<%--不定位点击时选中注数--%>
 <script>
-    function getDwdZhushu() {
-        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
-        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
-            wanArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
-            qianArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
-            baiArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
-            shiArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
-            geArr.push($.trim($(this).find("i").html()));
+    function getBuwdZhushu() {
+        var budwArr = [];
+        $.each($(".cl-1002 ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
         });
 
-        var wanLength = wanArr.length;
-        var qianLength = qianArr.length;
-        var baiLength = baiArr.length;
-        var shiLength = shiArr.length;
-        var geLength = geArr.length;
-
-        if (wanLength <= 0 && qianLength <= 0 && baiLength <= 0 && shiLength <= 0 && geLength <= 0) {
-            return 0;
-        }
-
-        if (wanLength > 0) {
-            newArr = newArr.concat(wanArr);
-        }
-        if (qianLength > 0) {
-            newArr = newArr.concat(qianArr);
-        }
-        if (baiLength > 0) {
-            newArr = newArr.concat(baiArr);
-        }
-        if (shiLength > 0) {
-            newArr = newArr.concat(shiArr);
-        }
-        if (geLength > 0) {
-            newArr = newArr.concat(geArr);
-        }
-
-        if(typeof newArr == "undefined" || newArr.length <= 0){
-            if(typeof clearStateTouZhu == 'function'){
+        var budwLength = budwArr.length;
+        if (typeof budwArr == "undefined" || budwLength <= 0) {
+            if (typeof clearStateTouZhu == 'function') {
                 clearStateTouZhu();
             }
             return;
         }
+        return budwLength;
+    }
+
+    function getBuwQsemZhushu() {
+        var budwArr = [];
+        $.each($(".recl-1003-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        if (typeof budwArr == "undefined" || budwArr.length < 2) {
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            return;
+        }
+
+        var budwLength = getQsemZhushu(budwArr);
+        return budwLength;
+    }
+
+    function getQsemZhushu(tempArr) {
+        var newArr = [];
+        for(var i = 0; i < tempArr.length; i++){
+            for(var j = 0; j < tempArr.length; j++){
+                if(i != j){
+                   var arr = [];
+                   arr.push(newArr[i])
+                   newArr.push(tempArr[i] + "" + tempArr[j]);
+                }
+            }
+        }
+
+        for(var n=0;n<newArr.length;n++){
+            console.log(newArr[n]);
+        }
+
         return newArr.length;
     }
+
+
 </script>
 <script>
     function getSuiji(total) {
@@ -312,7 +343,7 @@
         $(".Single .layout .Pick ul li span.acti").removeClass("acti");
         $(".re-5x-i i.acti").removeClass("acti");
         $("#zhushuInfo").data("zhushu", 0);
-        if(typeof clearStateTouZhu == 'function'){
+        if (typeof clearStateTouZhu == 'function') {
             clearStateTouZhu();
         }
         calc();
@@ -360,30 +391,18 @@
 
 
     function getZhudan(obj) {
-        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
-        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
-            wanArr.push($.trim($(this).find("i").html()));
+        var budwArr = [];
+        $.each($(".cl-1002 ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
         });
-        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
-            qianArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
-            baiArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
-            shiArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
-            geArr.push($.trim($(this).find("i").html()));
-        });
-        var zhushu = getDwdZhushu();
 
+        var zhushu = budwArr.length;
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "定位胆-定位胆";
-        obj.content = "万位: " + wanArr.join("") + " 千位: " + qianArr.join("") + " 百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
+        obj.playName = "不定位-前三一码";
+        obj.content = "不定位: (" + budwArr.join(",") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -412,23 +431,15 @@
     function suiji(total) {
         var result = [];
         for (var numIndex = 0; numIndex < total; ++numIndex) {
-            var redArr = [];
-            for (var i = 0; i <= 9; ++i) {
-                redArr[i] = 0;
-            }
-
-            var arr = [];
-            while (arr.length != 6) {
+            var strTemp = 10;
+            while (strTemp == 10) {
                 var num = parseInt(Math.random() * 10);
-                if (redArr[num] != 1) {
-                    redArr[num] = 1;
-                    arr.push(num);
-                }
+                strTemp = num;
             }
 
             var obj = {};
-            obj.playName = "定位胆-定位胆";
-            obj.content = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+            obj.playName = "不定位-前三一码";
+            obj.content = "不定位: (" + strTemp + ")";
             obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
             obj.zhushu = 1;
             obj.beishu = $("#inputBeishu").data("beishu");
@@ -442,9 +453,7 @@
 </script>
 <script>
     $(function () {
-        $('.content_jiang .content_tex').keyup(function () {
-            stateTouZhu('dan');
-        });
+
         $('.slider-input').jRange({
             from: 0,
             to: 13,
@@ -459,15 +468,12 @@
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                money_jangjin = (98 - money_jangjin) / 10;
-                $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
-                if(typeof stateTouZhu == "function"){
+                money_jangjin = (98 - money_jangjin) / 10 / 2.71;
+                $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(3));
+                if (typeof stateTouZhu == "function") {
                     var flag_str = '';
-                    if (typeof $('.recl-1003').attr('statef') != 'undefined') {
-                        flag_str = 'dan';
-                        stateTouZhu(flag_str);
-                    } else {
-                        flag_str = 'fu';
+                    if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
+                        flag_str = 'qsym';
                         stateTouZhu(flag_str);
                     }
                 }
@@ -533,16 +539,16 @@
             data-content="{{content}}"
             class="re_touzhu_tem"
     >
-            <div class="head-name">
-                <span>{{playName}}</span>
-            </div>
-            <div class="content-jiang">
-                <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-                <span class="span1">{{zhushu}}注</span>
-                <span class="span2">{{jiangJfanD}}</span>
-                <span class="span3">{{totalMoney}}元</span>
-                <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
-                        src="${resPath}img/ico53.png" alt=""></a></span>
-            </div>
+        <div class="head-name">
+            <span>{{playName}}</span>
+        </div>
+        <div class="content-jiang">
+            <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
+            <span class="span1">{{zhushu}}注</span>
+            <span class="span2">{{jiangJfanD}}</span>
+            <span class="span3">{{totalMoney}}元</span>
+            <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
+                    src="${resPath}img/ico53.png" alt=""></a></span>
+        </div>
     </li>
 </script>

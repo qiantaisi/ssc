@@ -206,6 +206,28 @@ function stateTouZhu(flag_str) {
         zhushu = getZuxbdZhushu();
     }  else if (flagStrInner == "dwd"){ // 定位胆
         zhushu = getDwdZhushu();
+    }  else if (flagStrInner == "qsym-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
+    }  else if (flagStrInner == "qsem-budw"){ // 不定位
+        zhushu = getBuwQsemZhushu();
+    }  else if (flagStrInner == "hsym-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
+    }  else if (flagStrInner == "hsem-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
+    }  else if (flagStrInner == "q4ym-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
+    }  else if (flagStrInner == "q4em-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
+    }  else if (flagStrInner == "h4ym-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
+    }  else if (flagStrInner == "h4em-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
+    }  else if (flagStrInner == "qsym-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
+    }  else if (flagStrInner == "wxem-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
+    }  else if (flagStrInner == "wxsm-budw"){ // 不定位
+        zhushu = getBuwdZhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){
@@ -216,6 +238,7 @@ function stateTouZhu(flag_str) {
     $('.p1 .i0').html(zhushu);
     $('.p1 .i_beishu').html($("#inputBeishu").val());
     var strFd = $(".fandian-bfb").html();
+    console.log(strFd);
     var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
     var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
     var p1_i2 = (totalMoney * num).toString();
