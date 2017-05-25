@@ -80,7 +80,6 @@
                 <ul class="eveb_index_validation">
                     <li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/yhzz')" title="在线充值"><i class="icon_cunqu icon_validation_email"></i><p>在线充值</p></a></li>
                     <li><a href="javascript:void(0)" onclick="parent.getPage('withdraw')" title="快速提现"><i class="icon_cunqu icon_validation_phone"></i><p>快速提现</p></a></li>
-
                     <c:choose>
                         <c:when test="${bindStatus.isBindBankcard == true}">
                             <li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/yhkgl')" title="已绑定"><i class="icon_big icon_validation_card"></i><p>银行卡管理</p></a></li>
@@ -107,12 +106,6 @@
 
                         <span class="t">账户等级</span>
                         <span title="${userSession.layerName}" class="icon_level icon_level_1"></span>
-
-                        <!-- <span title="二星会员" class="icon_level icon_level_2"></span>
-                        <span title="三星会员" class="icon_level icon_level_3"></span>
-                        <span title="四星会员" class="icon_level icon_level_4"></span>
-                        <span title="五星会员" class="icon_level icon_level_5"></span>  -->
-
                     </li>
                     <li>
                         <span class="t">我的佣金</span>
@@ -130,14 +123,14 @@
                         <c:choose>
                             <c:when test="${item.hasRead == true}">
                                 <li>
-                                    <a href="#letter" onclick="parent.getPage('letter')">${fn:substring(item.content, 0, 15)}</a>
+                                    <a href="javascript:void(0)" onclick="parent.getPage('letter')">${fn:substring(item.content, 0, 15)}</a>
                                     <span><fmt:formatDate value="${item.createTime}" pattern="MM-dd" /></span>
                                 </li>
                             </c:when>
                             <c:otherwise>
                                 <li class="new">
                                     <em>新</em>
-                                    <a href="#letter" onclick="parent.getPage('letter')">${fn:substring(item.content, 0, 15)}</a>
+                                    <a href="javascript:void(0)" onclick="parent.getPage('letter')">${fn:substring(item.content, 0, 15)}</a>
                                     <span><fmt:formatDate value="${item.createTime}" pattern="MM-dd" /></span>
                                 </li>
                             </c:otherwise>
@@ -162,32 +155,5 @@
 </div>
 <c:import url="common/commonJs.jsp"/>
 <c:import url="common/subCommonJs.jsp"/>
-<script type="text/javascript">
-    function openHyzx() {
-        windowOpen('<%=basePath%>member/index.html','会员中心', 1250, 834);
-    }
-    function gotoGrzl() {
-        $("#nav_8").trigger("click");
-    }
-    function showContent(obj) {
-        var content = $(obj).data("content");
-        var time = $(obj).data("time");
-        var name = $(obj).data("name");
-        var str = '';
-        str += '<h5><span>优惠活动</span><i>×</i></h5>';
-        str += '<h2>' + name + '</h2>';
-        str += '<div>';
-        str += content;
-        str += '</div>';
-        str += '<h4>${webName}</h4>';
-        str += '<h4>' + time + '</h4>';
-        parent.$(".alert_col").html(str);
-
-        parent.$('.alert_col h5 i').click(function(){
-            parent.$('.alert').hide();
-        })
-        parent.$('.alert').show();
-    }
-
-</script>
+<script type="text/javascript" src="${resPath}member/js/main.js?v=1.0"></script>
 <c:import url="common/bodyEnd.jsp"/>

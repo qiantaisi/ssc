@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/reset.css">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/hpn-common.css">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/index.css">
-    <%--<link rel="stylesheet" type="text/css" href="<%=basePath%>static/global.css">--%>
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/global.css">
     <script>
         <!--
