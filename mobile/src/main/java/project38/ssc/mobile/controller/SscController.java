@@ -60,7 +60,7 @@ public class SscController extends BaseController {
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName));
+        modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token,companyShortName));
         
         modelMap.put("logo", ApiUtils.getLogo(3,companyShortName));
         return this.renderPublicView("ssc/main", modelMap);
@@ -73,7 +73,7 @@ public class SscController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
-        modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,null, null, companyShortName).getWebNoticeList());
+        modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,companyShortName).getWebNoticeList());
         return this.renderView("ssc/gcdt/gcdt", modelMap);
     }
 

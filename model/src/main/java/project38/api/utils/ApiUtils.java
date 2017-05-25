@@ -136,10 +136,28 @@ public class ApiUtils{
     }
 
 
-    public static CommonResult register(String account, String password, String name, String ip, String url, String qq, Long agentId, String companyShortName) {
-        if (IS_DEBUG) {
-            return new CommonResult();
-        }
+    /**
+     * 注册接口
+     * @param account 账号
+     * @param password 密码
+     * @param name 姓名
+     * @param ip IP
+     * @param url 注册网址
+     * @param qq QQ号
+     * @param agentId 代理ID
+     * @param companyShortName 公司标志
+     * @return
+     */
+    public static CommonResult register(
+            String account,
+            String password,
+            String name,
+            String ip,
+            String url,
+            String qq,
+            Long agentId,
+            String companyShortName
+    ) {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("account", account);
         paramsMap.put("password", password);
@@ -682,7 +700,7 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_BET_DETAILS, paramsMap, companyShortName), BetListResult.class);
     }
 
-    public static WebNoticeResult getPopupNoticeList(Long uid, String token, Date startTime, Date endTime, String companyShortName) {
+    public static WebNoticeResult getPopupNoticeList(Long uid, String token, String companyShortName) {
         if (IS_DEBUG) {
             return new WebNoticeResult();
         }
@@ -690,8 +708,6 @@ public class ApiUtils{
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
         paramsMap.put("token", token);
-        paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
-        paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_POPUP_NOTICE_LIST, paramsMap, companyShortName), WebNoticeResult.class);
     }
 

@@ -54,7 +54,7 @@ public class SscController extends BaseController {
         String companyShortName = this.getCompanyShortName();
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, null, null,companyShortName));
+        modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("logo", ApiUtils.getLogo(3,companyShortName));
         return this.renderPublicView("ssc/main", modelMap);

@@ -36,28 +36,29 @@ public class MemberController extends BaseController {
     @Autowired
     private HttpServletRequest httpServletRequest;
 
-//    /**
-//     * 注册页面
-//     *
-//     * @return
-//     */
-//    @RequestMapping(value = "/register.html", method = RequestMethod.GET)
-//    public ModelAndView register() {
-//        Map<String, Object> modelMap = new HashMap<String, Object>();
-//        return this.renderView("member/register", modelMap);
-//    }
-//
     /**
      * ajax注册请求
-     *
+     * @param account 账号
+     * @param password 密码
+     * @param yzm 验证码
+     * @param name 姓名
+     * @param agentId 代理ID
      * @return
      */
     @RequestMapping(value = "/ajaxRegister.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxRegister(String account, String password, String yzm, String name, Long agentId) {
+    public LoginResult ajaxRegister(
+            String account,
+            String password,
+            String yzm,
+            String name,
+            Long agentId
+    ) {
         LoginResult result = new LoginResult();
-        String companyShortName = this.getCompanyShortName();
+
         try {
+            String companyShortName = this.getCompanyShortName();
+
             if (StringUtils.isBlank(account)) {
                 result.setResult(-1);
                 result.setDescription("账号不能为空");
@@ -90,12 +91,24 @@ public class MemberController extends BaseController {
                 result.setDescription("验证码不正确");
                 return result;
             }
-            // 接口返回数据
+
+            // 注册
             String ip = IPHelper.getIpAddr(httpServletRequest);
-            CommonResult responseResult = ApiUtils.register(account, password, name, ip, httpServletRequest.getServerName(), null, agentId, companyShortName);
+            CommonResult responseResult = ApiUtils.register(
+                    account,
+                    password,
+                    name,
+                    ip,
+                    httpServletRequest.getServerName(),
+                    null,
+                    agentId,
+                    companyShortName
+            );
+
+            // 注册成功则登录
             if (responseResult.getResult() == 1) {
                 result = ApiUtils.login(account, password, ip,0, companyShortName);
-                if (result.getResult() != 1) {
+                if (result.getResult() != 1) {  // 自动登录失败，提示前往登录
                     result.setResult(-6);
                     result.setDescription("注册成功，请登录");
                 }
@@ -111,30 +124,21 @@ public class MemberController extends BaseController {
         }
         return result;
     }
-//
-//    /**
-//     * 注册页面
-//     *
-//     * @return
-//     */
-//    @RequestMapping(value = "/login.html", method = RequestMethod.GET)
-//    public ModelAndView login() {
-//        Map<String, Object> modelMap = new HashMap<String, Object>();
-//        return this.renderView("user/login", modelMap);
-//    }
-//
 
     /**
      * ajax请求登录
-     *
-     * @param httpServletResponse
-     * @param account
-     * @param password
+     * @param account 账号
+     * @param password 密码
+     * @param yzm 验证码
      * @return
      */
     @RequestMapping(value = "/ajaxLogin.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxLogin(HttpServletResponse httpServletResponse, String account, String password, String yzm) {
+    public LoginResult ajaxLogin(
+            String account,
+            String password,
+            String yzm
+    ) {
         LoginResult result = new LoginResult();
         try {
             if (StringUtils.isBlank(account)) {
@@ -171,13 +175,25 @@ public class MemberController extends BaseController {
                 return result;
             }
 
-            // 获取本站标志
             String companyShortName = this.getCompanyShortName();
-            // 接口返回数据
-            result = ApiUtils.login(account, password, IPHelper.getIpAddr(httpServletRequest), 2,companyShortName);
+            // 登录
+            result = ApiUtils.login(
+                    account,
+                    password,
+                    IPHelper.getIpAddr(httpServletRequest),
+                    2,
+                    companyShortName
+            );
 
+            // 登录成功，调取公告
             if (1 == result.getResult()) {
-                result.setWebNoticeList(ApiUtils.getPopupNoticeList(result.getUserId(), result.getToken(), null, null, companyShortName).getWebNoticeList());
+                result.setWebNoticeList(
+                        ApiUtils.getPopupNoticeList(
+                                result.getUserId(),
+                                result.getToken(),
+                                companyShortName
+                        ).getWebNoticeList()
+                );
             }
         } catch (Exception e) {
             log.error(this, e);
@@ -202,7 +218,6 @@ public class MemberController extends BaseController {
         modelMap.put("logoData", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("icoData", ApiUtils.getLogo(4, companyShortName));
         modelMap.put("serverTime", ApiUtils.getServerTime(companyShortName));
-        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("kefu", ApiUtils.getKefu(companyShortName));
 
         return this.renderPublicView("member/index", modelMap);
@@ -1011,7 +1026,7 @@ public class MemberController extends BaseController {
             locationUrl = locationUrl + "2";
         }
 
-        return this.renderView(locationUrl, modelMap);
+        return this.renderPublicView(locationUrl, modelMap);
     }
 
     /**
@@ -1039,7 +1054,7 @@ public class MemberController extends BaseController {
             }
         }
 
-        return this.renderView(location_str, modelMap);
+        return this.renderPublicView(location_str, modelMap);
     }
 
     /**
@@ -1066,7 +1081,7 @@ public class MemberController extends BaseController {
                 location_str = location_flag + "5";
             }
         }
-        return this.renderView(location_str, modelMap);
+        return this.renderPublicView(location_str, modelMap);
     }
 
 
@@ -1450,7 +1465,7 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getPopupNoticeList(uid, token,null, null,companyShortName);
+        return ApiUtils.getPopupNoticeList(uid, token,companyShortName);
     }
 
     @Authentication
