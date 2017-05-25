@@ -7,13 +7,34 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<c:import url="../common/bodyStart.jsp" />
+<c:import url="common/bodyStart.jsp" />
+<style>body{width:100%;}</style>
 <div class="wid-1200 helpCont clearfix">
     <c:import url="common/head.jsp"/>
     <div class="clean"></div>
-    <div>
-        <c:import url="common/leftNav.jsp"/>
-        <iframe id="indexRightFrame" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm"  width="100%"></iframe>
+    <div style="overflow:hidden;">
+        <div class="help_l_menu fl">
+            <h2 class="title clearfix">
+                <span class="account_img fl"><img src="${resPath}member/images/account/account_img.png"></span>
+                <p class="fl">
+                    <span class="name">${userSession.account}</span>
+                    <span class="sum money">￥${userSession.balance}</span>
+                </p>
+            </h2>
+            <ul class="account_list" id="leftNav">
+                <li><a class="t home_page" href="javascript:void(0)" data-url="<%=basePath%>member/main.html"><span></span>会员首页</a></li>
+                <li><a class="t deposit" href="javascript:void(0)" data-url="<%=basePath%>member/zhcz.html?module=yhzz"><span></span>账户充值</a></li>
+                <li><a class="t withdraw" href="javascript:void(0)" data-url="<%=basePath%>member/withdraw.html"><span></span>快速提现</a></li>
+                <li><a class="t letter" href="javascript:void(0)" data-url="<%=basePath%>member/letter.html"><span></span>站内信件</a></li>
+                <li>
+                    <a class="t record" href="javascript:void(0)" data-url="<%=basePath%>member/lsjl.html?module=ckjl"><span></span>历史记录</a>
+                </li>
+                <li><a class="t setting" href="javascript:void(0)" data-url="<%=basePath%>member/zhsz.html?module=grzl"><span></span>账户设置</a></li>
+                <li><a class="t jifen" href="javascript:void(0)" data-url="<%=basePath%>member/jfmx.html?module=hylb"><span></span>代理赚钱</a></li>
+            </ul>
+            <a href="${kefu.kefuUrl}" class="onlineService" target="_blank">联系在线客服</a>
+        </div>
+        <iframe id="ifm" class="ifm" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" name="ifm"  width="100%"></iframe>
     </div>
     <div class="clean"></div>
     <div class="bottom ">
@@ -25,6 +46,6 @@
 </div>
 
 <c:import url="common/commonJs.jsp"/>
-<script type="text/html" src="${resPath}member/js/index.js"></script>
+<script src="${resPath}member/js/index.js?v=1.0.1"></script>
 <c:import url="../common/checkOnline.jsp" />
 <c:import url="common/bodyEnd.jsp"/>

@@ -14,7 +14,7 @@
 <script type="text/javascript" src="${resPath}member/js/jquery.form.min.js"></script>
 <script type="text/javascript" src="${resPath}member/js/jquery.md5.js"></script>
 <%--<script type="text/javascript" src="${resPath}member/js/jquery.hashchange.js"></script>--%>
-<script type="text/javascript" src="${resPath}js/global.js"></script>
+<script type="text/javascript" src="${resPath}js/global.js?v=2.0"></script>
 <script type="text/javascript" src="${resPath}layer/layer.js"></script>
 <script type="text/javascript" src="${resPath}js/jquery.nicescroll.js"></script>
 <script type="text/javascript" src="${resPath}member/js/clipboard.min.js"></script>
@@ -23,7 +23,6 @@
 <script src="${resPath}js/jquery.cookie.js"></script><!--自定义封装函数-->
 <script src="${resPath}js/jquery.md5.js"></script><!--自定义封装函数-->
 <script>
-
     $(function() {
         // 底部信息调用
         function ajaxGetDbxx() {

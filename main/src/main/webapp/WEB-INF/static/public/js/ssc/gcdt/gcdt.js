@@ -239,7 +239,6 @@ function getUserSession() {
 //     window.location.href = surl;
 //     getSubPage();
 // }
-
 // function getSubPage() {
 //     var surl = window.location.toString();
 //     var paramArr = surl.split("#");
@@ -270,6 +269,7 @@ function getUserSession() {
 //
 //     getPage(turl + tparam);
 // }
+
 // function showGonggao(id) {
 //     $("#gonggao_" + id).show();
 // }

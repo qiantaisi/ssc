@@ -9,26 +9,14 @@
 %>
 <c:import url="../common/bodyStart.jsp"/>
 <div class="eveb_content">
-    <div class="eveb_nav_sub">
-        <ul class="clearfix">
-            <li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/yhzz')">银行转账</a></li>
-            <c:if test="${not empty zxzfInfo.systemPayOnlineList}"><li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/zxzf')">在线支付</a></li></c:if>
-            <c:if test="${not empty zfbzfInfo.systemPayOnlineList}"><li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/zfbzf')">支付宝支付</a></li></c:if>
-            <c:if test="${not empty wxzfInfo.systemPayOnlineList}"><li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/wxzf')">微信支付</a></li></c:if>
-            <c:if test="${not empty qqzfInfo.systemPayOnlineList}"><li class="on"><a href="javascript:void(0)" onclick="parent.getPage('zhcz/qqzf')">QQ支付</a></li></c:if>
-            <c:if test="${not empty wxzzInfo.skInfoList}"><li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/wxzz')">微信转账</a></li></c:if>
-            <c:if test="${not empty zfbzzInfo.skInfoList}"><li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/zfbzz')">支付宝转账</a></li></c:if>
-            <c:if test="${not empty cftzzInfo.skInfoList}"><li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/cftzz')">财付通转账</a></li></c:if>
-            <c:if test="${not empty qqzzList.skInfoList}"><li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/qqzz')">QQ转账</a></li></c:if>
-        </ul>
-    </div>
+    <c:import url="common/nav.jsp" />
     <div class="eveb_content">
         <form name="qqzfForm" novalidate="novalidate" onsubmit="return false;">
             <ul class="eveb_form">
                 <li>
                     <span style="height:50px;line-height:50px;">支付渠道：</span>
                     <div class="eveb_form_box eveb_bank_list">
-                        <c:forEach items="${systemPayOnlineResult.systemPayOnlineList}" var="item">
+                        <c:forEach items="${qqzfInfo.systemPayOnlineList}" var="item">
                             <label>
                                 <input data-payurl="${item.payUrl}" type="radio" data-description="${item.description}" data-minmoney="${item.minMoney}" data-maxmoney="${item.maxMoney}" name="payOnlineId" value="${item.id}">
                                 <em class=""><img src="<%=basePath%>images/${item.imageId}" width="50" height="50" alt=""></em>

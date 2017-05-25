@@ -13,15 +13,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <div class="help_r_main">
     <div class="eveb_content">
-        <div class="eveb_nav_sub">
-            <ul class="clearfix">
-                <li class="on"><a href="javascript:void(0)" onclick="parent.getPage('lsjl/ckjl')">充值记录</a></li>
-                <li><a href="javascript:void(0)" onclick="parent.getPage('lsjl/tkjl')">提现记录</a></li>
-                <li><a href="javascript:void(0)" onclick="parent.getPage('lsjl/zjjl')">资金记录</a></li>
-                <li><a href="javascript:void(0)" onclick="parent.getPage('lsjl/tzjl')">投注记录</a></li>
-                <%--<li><a href="javascript:void(0)" onclick="parent.getPage('lsjl/yhjl')">优惠记录</a></li>--%>
-            </ul>
-        </div>
+        <c:import url="common/nav.jsp" />
         <h2>
             <div class="eveb_search eveb_search_h2">
                 <input type="hidden" name="pageIndex"/>

@@ -318,9 +318,9 @@
                                 </script>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" onclick="openHyzx('zhcz/yhzz')">充值</a>|
-                                <a href="javascript:void(0)" onclick="openHyzx('withdraw')">提款</a>|
-                                <a onclick="openHyzx('lsjl/ckjl')" href="javascript:void(0)">历史记录</a>|
+                                <a href="javascript:void(0)" onclick="openHyzx('member/zhcz.html?module=yhzz')">充值</a>|
+                                <a href="javascript:void(0)" onclick="openHyzx('member/withdraw.html')">提款</a>|
+                                <a onclick="openHyzx('member/lsjl.html?module=ckjl')" href="javascript:void(0)">历史记录</a>|
                                 <a onclick="openHyzx()" href="javascript:void(0)">会员中心</a>
                             </li>
                             <li>余额：<i class="i0">${userSession.balance}</i> 元</li>
@@ -833,7 +833,11 @@
             window.location.href = "<%=basePath%>main.html";
             return;
         }
-        windowOpen('<%=basePath%>member/index.html?module=' + module, '会员中心', 1250, 834);
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + module;
+        }
+        windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);
     }
 
     var content_G = '';

@@ -10,16 +10,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <div class="help_r_main">
     <div class="eveb_content">
-        <!-- 账户设置 -->
-        <div class="eveb_nav_sub">
-            <ul class="clearfix">
-                <li class="on"><a href="javascript:void(0)" onclick="parent.getPage('zhsz/grzl')">个人资料</a></li>
-                <li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/dlmm')">登录密码</a></li>
-                <%--<li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/tkmm')">提款密码</a></li>--%>
-                <li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/yhkgl')">银行卡管理</a></li>
-                <li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/aqxx')">安全信息</a></li>
-            </ul>
-        </div>
+        <c:import url="common/nav.jsp" />
         <table class="eveb_setting_table">
             <tbody>
             <tr>

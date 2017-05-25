@@ -2,18 +2,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="eveb_nav_sub">
     <ul class="clearfix">
-        <li class="<c:if test="${param.type == 1}">on</c:if>"><a href="javascript:void(0)" onclick="parent.getPage('jfmx/hylb')">会员列表</a></li>
-        <li class="<c:if test="${param.type == 2}">on</c:if>"><a href="javascript:void(0)" onclick="parent.getPage('jfmx/tjhy')">添加会员</a></li>
-        <li class="<c:if test="${param.type == 3}">on</c:if>"><a href="javascript:void(0)" onclick="parent.getPage('jfmx/cwbb')">财务报表</a></li>
-        <li class="<c:if test="${param.type == 4}">on</c:if>"><a href="javascript:void(0)" onclick="parent.getPage('jfmx/tdls')">团队流水</a></li>
-        <li class="<c:if test="${param.type == 5}">on</c:if>"><a href="javascript:void(0)" onclick="parent.getPage('jfmx/tdbb')">团队报表</a></li>
-        <li class="<c:if test="${param.type == 6}">on</c:if>"><a href="javascript:void(0)" onclick="parent.getPage('jfmx/tdtz')">团队投注</a></li>
-        <li class="<c:if test="${param.type == 7}">on</c:if>"><a href="javascript:void(0)" onclick="parent.getPage('jfmx/yjjl')">佣金记录</a></li>
+        <li class="<c:if test="${param.module == 'hylb'}">on</c:if>"><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/jfmx.html?module=hylb')">会员列表</a></li>
+        <li class="<c:if test="${param.module == 'tjhy'}">on</c:if>"><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/jfmx.html?module=tjhy')">添加会员</a></li>
+        <li class="<c:if test="${param.module == 'cwbb'}">on</c:if>"><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/jfmx.html?module=cwbb')">财务报表</a></li>
+        <li class="<c:if test="${param.module == 'tdls'}">on</c:if>"><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/jfmx.html?module=tdls')">团队流水</a></li>
+        <li class="<c:if test="${param.module == 'tdbb'}">on</c:if>"><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/jfmx.html?module=tdbb')">团队报表</a></li>
+        <li class="<c:if test="${param.module == 'tdtz'}">on</c:if>"><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/jfmx.html?module=tdtz')">团队投注</a></li>
+        <li class="<c:if test="${param.module == 'yjjl'}">on</c:if>"><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/jfmx.html?module=yjjl')">佣金记录</a></li>
     </ul>
 </div>

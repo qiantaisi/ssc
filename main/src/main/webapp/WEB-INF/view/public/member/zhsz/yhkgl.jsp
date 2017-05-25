@@ -11,16 +11,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <div class="help_r_main">
     <div class="eveb_content">
-        <!-- 账户设置 -->
-        <div class="eveb_nav_sub">
-            <ul class="clearfix">
-                <li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/grzl')">个人资料</a></li>
-                <li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/dlmm')">登录密码</a></li>
-                <%--<li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/tkmm')">提款密码</a></li>--%>
-                <li class="on"><a href="javascript:void(0)" onclick="parent.getPage('zhsz/yhkgl')">银行卡管理</a></li>
-                <li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/aqxx')">安全信息</a></li>
-            </ul>
-        </div>
+        <c:import url="common/nav.jsp" />
         <div class="mb10 color-888">银行卡列表：</div>
         <ul class="management_bank">
         <c:forEach items="${userBankCardResult.userBankCardList}" var="item">
@@ -33,10 +24,10 @@
                     <div class="item w125 color-e77c3c" style="width:30px"></div>
                 </c:otherwise>
             </c:choose>
-        <div class="item w105">${item.bankName}</div>
-        <div class="item w105">${item.userName}</div>
-        <div class="item w205">${fn:substring(item.bankAccount, 0, 4)} **** **** **** ${fn:substring(item.bankAccount, 12, 16)}</div>
-        <div class="item w230">${item.subBankName}</div>
+            <div class="item w105">${item.bankName}</div>
+            <div class="item w105">${item.userName}</div>
+            <div class="item w205">${fn:substring(item.bankAccount, 0, 4)} **** **** **** ${fn:substring(item.bankAccount, 12, 16)}</div>
+            <div class="item w230">${item.subBankName}</div>
             <div class="item">
                 <a href="javascript:void(0)" class="mr10 color-c4463c" onclick="setDefault(${item.id})">设为默认</a>
                 <a href="javascript:void(0)" class="icon deleteIcon2" onclick="ajaxDel(${item.id})"></a>
@@ -47,11 +38,6 @@
         <div class="eveb_content">
             <form name="addYhkForm" onsubmit="return false;" novalidate="novalidate">
                 <ul class="eveb_form eveb_withdraw">
-                    <%--<li>--%>
-                        <%--<span>银行名称：</span>--%>
-                        <%--<input type="text" class="passwinp" id="bankName" name="bankName" style="width:180px;" placeholder="请输入开户银行">--%>
-                        <%--<label class="error" for="bankName"></label>--%>
-                    <%--</li>--%>
                     <li>
                         <span>银行名称：</span>
                         <select name="bankName" id="bankName" style="width:182px">
@@ -87,15 +73,7 @@
                         <span>银行账号：</span>
                         <input type="text" name="bankAccount" id="bankAccount" style="width:180px;" class="passwinp" placeholder="请输入银行卡号" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')">
                         <label class="error" for="bankAccount"></label>
-                        <%--<input type="text" style="width:40px;" class="passwinp" id="bankAccount_2">--%>
-                        <%--<input type="text" style="width:40px;" class="passwinp" id="bankAccount_3">--%>
-                        <%--<input type="text" style="width:40px;" class="passwinp" id="bankAccount_4">--%>
-                        <%--<input name="bankAccount" type="hidden" id="bankAccount" />--%>
                     </li>
-                    <%--<li>--%>
-                        <%--<span>提款密码：</span>--%>
-                        <%--<input type="password" class="passwinp" name="drawPassword">--%>
-                    <%--</li>--%>
                 </ul>
                 <div class="eveb_form_submit">
                     <input type="submit" value="提交" class="button_medium button_1">
