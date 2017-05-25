@@ -19,7 +19,7 @@
                     <a class="login not-login" href="javascript:void(0)">网站首页</a>
                     <a href="javascript:void(0)" class="back-index" target="_blank">优惠活动</a>
                     <a href="javascript:void(0)" class="back-index" target="_blank">代理赚钱</a>
-                    <a href="javascript:void(0)" class="back-index" target="_blank">在线客服</a>
+                    <a href="${kefuUrl}" class="back-index" target="_blank">在线客服</a>
                 </div>
 
             </div>
@@ -37,7 +37,7 @@
                     <div class="fr btn-grp">
                         <p class="box">下载APP送您38元现金</p>
                         <p><img src="${resPath}images/ewm.png" alt=""></p>
-                        <a href="###" class="btn-down-android mt10" target="_self"><i class="icon i-iphone"></i><span class="a-txt">iPhone版下载</span>
+                        <a href="<%=mHostName%>" class="btn-down-android mt10" target="_self"><i class="icon i-iphone"></i><span class="a-txt">iPhone版下载</span>
                             <span class="layer-down"><i class="icon i-down"></i><span class="a-txt">2.35M</span></span></a>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="download">
                         <div class="btn-grp">
-                            <a href="###" class="btn-down-iphone mt10" target="_blank"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span><span class="layer-down"><i class="icon i-down"></i><span class="a-txt">25.9M</span></span></a>
+                            <a href="<%=mHostName%>" class="btn-down-iphone mt10" target="_blank"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span><span class="layer-down"><i class="icon i-down"></i><span class="a-txt">25.9M</span></span></a>
                         </div>
                     </div>
                 </div>
