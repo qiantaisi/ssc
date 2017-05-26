@@ -1,3 +1,4 @@
+<%@ page import="java.util.Date" %>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -10,7 +11,13 @@
 <c:import url="common/bodyStart.jsp" />
 <style>body{width:100%;}</style>
 <div class="wid-1200 helpCont clearfix">
-    <c:import url="common/head.jsp"/>
+    <div class="head">
+        <img src="<%=basePath%>images/${logoData.imageId}" alt="">
+        <div>
+            <h5><span>北京时间：<i id="bjTime" data-time="<%=(new Date()).getTime()%>"></i></span></h5>
+            <p>您的贵宾网址：${userSession.privateUrl}</p>
+        </div>
+    </div>
     <div class="clean"></div>
     <div style="overflow:hidden;">
         <div class="help_l_menu fl">

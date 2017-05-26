@@ -1,5 +1,6 @@
 package project38.ssc.web.controller;
 
+import project38.api.common.exception.UserException;
 import project38.api.common.utils.JSONUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.BetListResult;
 import project38.api.result.CompanyShortNameResult;
+import project38.api.result.FenggeResult;
 import project38.api.result.UserSessionResult;
 import project38.api.utils.ApiUtils;
 import project38.api.utils.SessionUtils;
@@ -106,7 +108,7 @@ public abstract class BaseController {
      * @param modelMap
      * @return
      */
-    protected ModelAndView renderPublicView(String jspLocation, Map<String, Object> modelMap) {
+    protected ModelAndView renderPublicView(String jspLocation, Map<String, Object> modelMap) throws UserException {
         if (null == modelMap) {
             modelMap = new HashMap<String, Object>();
         }
@@ -124,6 +126,18 @@ public abstract class BaseController {
         }catch (Exception e){
             log.error(this, e);
         }
+
+        // 公共模板读取风格
+        FenggeResult fenggeResult = ApiUtils.getWebFengge(
+                companyShortName,
+                1
+        );
+
+        if (null == fenggeResult || fenggeResult.getResult() != 1) {
+            throw new UserException(-997, "服务器错误");
+        }
+        modelMap.put("fengge_1", fenggeResult.getFengge_1());
+        modelMap.put("fengge_2", fenggeResult.getFengge_2());
 
         ModelAndView modelAndView = new ModelAndView("public/" + jspLocation);
         modelAndView.addAllObjects(modelMap);

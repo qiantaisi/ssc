@@ -21,6 +21,6 @@
         window.onerror=function(){return true;}
         // -->
     </script>
-    <jsp:include page="../../common/commonHeader.jsp" />
+    <jsp:include page="../../common/customTheme.jsp" />
 </head>
 <body>
