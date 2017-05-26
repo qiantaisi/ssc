@@ -69,7 +69,7 @@ public class SscController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,companyShortName).getWebNoticeList());
-        return this.renderPublicView("ssc/gcdt/gcdt", modelMap);
+        return this.renderView("ssc/gcdt/gcdt", modelMap);
     }
 
     @RequestMapping(value = "/tingcaipage.html", method = RequestMethod.GET)
