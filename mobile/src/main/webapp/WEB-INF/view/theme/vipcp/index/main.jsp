@@ -407,10 +407,10 @@
                     <a href="<%=basePath%>login.html" class="login_">登录</a>
                     <span>|</span>
                     <a href="<%=basePath%>register.html" class="reg_">注册</a>
-                    <span>|</span>
-                    <a href="javascript:void(0)" class="help_">帮助</a>
-                    <span>|</span>
-                    <a href="javascript:void(0)" class="zsk">知识库</a>
+                    <%--<span>|</span>--%>
+                    <%--<a href="javascript:void(0)" class="help_">帮助</a>--%>
+                    <%--<span>|</span>--%>
+                    <%--<a href="javascript:void(0)" class="zsk">知识库</a>--%>
                 </div>
                 <a href="javascript:void(0)" class="top-click">TOP</a>
             </div>
@@ -423,12 +423,12 @@
                 <a href="javascript:void(0)" onclick="parent.location.href='<%=pcHostName%>/?z=1'">PC版</a>
             </div>
 
-            <div class="index_six">
-                <span class="index_six_main">
-                   <span>客服热线：</span>
-                    4000-888-888
-                </span>
-            </div>
+            <%--<div class="index_six">--%>
+                <%--<span class="index_six_main">--%>
+                   <%--<span>客服热线：</span>--%>
+                    <%--4000-888-888--%>
+                <%--</span>--%>
+            <%--</div>--%>
 
             <div class="index_seven">
                 ©2001-2017 500彩票网 版权所有 股票代码：WBAI<br>

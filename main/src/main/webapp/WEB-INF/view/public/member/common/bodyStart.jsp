@@ -18,9 +18,10 @@
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/global.css">
     <script>
         <!--
-        window.onerror=function(){return true;}
+//        window.onerror=function(){return true;}
         // -->
     </script>
     <jsp:include page="../../common/commonHeader.jsp" />
+    <jsp:include page="../../common/customTheme.jsp" />
 </head>
 <body>

@@ -484,7 +484,7 @@ function xd() {
         sureXd();
     }, function(){
     });
-    $(".layui-layer-title").css({'font-size': '16px', 'font-weight': 'bold', 'color': '#fff', 'text-align': 'center', 'background-color': '#fa6200'});
+    $(".layui-layer-title").addClass('xzqd');
     $(".layui-layer-close").css({'background': 'url(' + CONFIG.RESURL + 'img/ico_close.png) no-repeat'});
 }
 

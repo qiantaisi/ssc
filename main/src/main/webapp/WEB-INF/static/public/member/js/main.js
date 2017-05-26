@@ -14,7 +14,7 @@ function showContent(obj) {
     str += '<div>';
     str += content;
     str += '</div>';
-    str += '<h4>${webName}</h4>';
+    // str += '<h4>${webName}</h4>';
     str += '<h4>' + time + '</h4>';
     parent.$(".alert_col").html(str);
 

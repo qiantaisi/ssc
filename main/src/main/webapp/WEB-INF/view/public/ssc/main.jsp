@@ -10,9 +10,7 @@
 %>
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp"/>
-<style>body {
-    overflow: hidden;
-}</style>
+<style>body {overflow: hidden;}</style>
 <div class="menu_left">
     <div class="logo">
         <img src="<%=basePath%>images/${logo.imageId}" alt="" onclick="window.location.href='<%=basePath%>'" style="cursor:pointer">
