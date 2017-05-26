@@ -555,10 +555,136 @@ $(function () {
         //后台设置热门开奖个数
         renderAllData(kjjgJsonData.sscTimeList);
 
-        //刷新开奖结果
-        $(".lhc-kjjg .lhc-touzhu .shuaxin").click(function () {
-            renderAllData(kjjgJsonData.sscTimeList);
+        $(".lhc-kjjg .lhc-touzhu .shuaxin").live('click',function(){
+            xyxh(this, 6);
+            //刷新
+            setTimeout(function(){
+                renderAllData(kjjgJsonData.sscTimeList)
+            },2500);
         });
+
+
+
+
+        function xyxh(obj, type) {
+            if (typeof type == 'undefined') {
+                return;
+            }
+
+            var index_6 = null;
+            var index_1 = null;
+            var index_2 = null;
+            var index_3 = null;
+            var index_9 = null;
+            if (type == 6) {
+                $("#xyxhContent_6 span").each(function () {
+                    $(this).data("num", '');
+                });
+
+                index_6 = setInterval(function () {
+                    var num1 = Math.floor(Math.random() * 49 + 1);
+                    var num2 = Math.floor(Math.random() * 49 + 1);
+                    var num3 = Math.floor(Math.random() * 49 + 1);
+                    var num4 = Math.floor(Math.random() * 49 + 1);
+                    var num5 = Math.floor(Math.random() * 49 + 1);
+                    var num6 = Math.floor(Math.random() * 49 + 1);
+                    var num7 = Math.floor(Math.random() * 49 + 1);
+
+                    var bose1 = getBose(num1);
+                    var bose2 = getBose(num2);
+                    var bose3 = getBose(num3);
+                    var bose4 = getBose(num4);
+                    var bose5 = getBose(num5);
+                    var bose6 = getBose(num6);
+                    var bose7 = getBose(num7);
+
+                    bose1 = bose1 == 0 ? 'ball' : (bose1 == 1 ? 'ball col0' : 'ball col1');
+                    bose2 = bose2 == 0 ? 'ball' : (bose2 == 1 ? 'ball col0' : 'ball col1');
+                    bose3 = bose3 == 0 ? 'ball' : (bose3 == 1 ? 'ball col0' : 'ball col1');
+                    bose4 = bose4 == 0 ? 'ball' : (bose4 == 1 ? 'ball col0' : 'ball col1');
+                    bose5 = bose5 == 0 ? 'ball' : (bose5 == 1 ? 'ball col0' : 'ball col1');
+                    bose6 = bose6 == 0 ? 'ball' : (bose6 == 1 ? 'ball col0' : 'ball col1');
+                    bose7 = bose7 == 0 ? 'ball' : (bose7 == 1 ? 'ball col0' : 'ball col1');
+
+                    $("#xyxhContent_6 span").eq(0).attr("class", bose1).html(num1);
+                    $("#xyxhContent_6 span").eq(1).attr("class", bose2).html(num2);
+                    $("#xyxhContent_6 span").eq(2).attr("class", bose3).html(num3);
+                    $("#xyxhContent_6 span").eq(3).attr("class", bose4).html(num4);
+                    $("#xyxhContent_6 span").eq(4).attr("class", bose5).html(num5);
+                    $("#xyxhContent_6 span").eq(5).attr("class", bose6).html(num6);
+                    $("#xyxhContent_6 span").eq(6).attr("class", bose7).html(num7);
+
+                    $("#xyxhContent_6_sx span").eq(0).html(getSxName(num1));
+                    $("#xyxhContent_6_sx span").eq(1).html(getSxName(num2));
+                    $("#xyxhContent_6_sx span").eq(2).html(getSxName(num3));
+                    $("#xyxhContent_6_sx span").eq(3).html(getSxName(num4));
+                    $("#xyxhContent_6_sx span").eq(4).html(getSxName(num5));
+                    $("#xyxhContent_6_sx span").eq(5).html(getSxName(num6));
+                    $("#xyxhContent_6_sx span").eq(6).html(getSxName(num7));
+                }, 50);
+
+                setTimeout(function () {
+                    var arr = [];
+                    while (arr.length != 7) {
+                        var randNum = Math.floor(Math.random() * 49 + 1);
+
+                        var hasExist = false;
+                        for (var j = 0; j < arr.length; ++j) {
+                            if (arr[j] == randNum) {
+                                hasExist = true;
+                                break;
+                            }
+                        }
+                        if (!hasExist) {
+                            arr.push(randNum);
+                        }
+                    }
+
+                    var num1 = arr[0];
+                    var num2 = arr[1];
+                    var num3 = arr[2];
+                    var num4 = arr[3];
+                    var num5 = arr[4];
+                    var num6 = arr[5];
+                    var num7 = arr[6];
+
+                    var bose1 = getBose(num1);
+                    var bose2 = getBose(num2);
+                    var bose3 = getBose(num3);
+                    var bose4 = getBose(num4);
+                    var bose5 = getBose(num5);
+                    var bose6 = getBose(num6);
+                    var bose7 = getBose(num7);
+
+                    bose1 = bose1 == 0 ? 'ball' : (bose1 == 1 ? 'ball col0' : 'ball col1');
+                    bose2 = bose2 == 0 ? 'ball' : (bose2 == 1 ? 'ball col0' : 'ball col1');
+                    bose3 = bose3 == 0 ? 'ball' : (bose3 == 1 ? 'ball col0' : 'ball col1');
+                    bose4 = bose4 == 0 ? 'ball' : (bose4 == 1 ? 'ball col0' : 'ball col1');
+                    bose5 = bose5 == 0 ? 'ball' : (bose5 == 1 ? 'ball col0' : 'ball col1');
+                    bose6 = bose6 == 0 ? 'ball' : (bose6 == 1 ? 'ball col0' : 'ball col1');
+                    bose7 = bose7 == 0 ? 'ball' : (bose7 == 1 ? 'ball col0' : 'ball col1');
+
+                    clearInterval(index_6);
+                    $("#xyxhContent_6 span").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
+                    $("#xyxhContent_6 span").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
+                    $("#xyxhContent_6 span").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
+                    $("#xyxhContent_6 span").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
+                    $("#xyxhContent_6 span").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
+                    $("#xyxhContent_6 span").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
+                    $("#xyxhContent_6 span").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
+
+                    $("#xyxhContent_6_sx span").eq(0).html(getSxName(num1));
+                    $("#xyxhContent_6_sx span").eq(1).html(getSxName(num2));
+                    $("#xyxhContent_6_sx span").eq(2).html(getSxName(num3));
+                    $("#xyxhContent_6_sx span").eq(3).html(getSxName(num4));
+                    $("#xyxhContent_6_sx span").eq(4).html(getSxName(num5));
+                    $("#xyxhContent_6_sx span").eq(5).html(getSxName(num6));
+                    $("#xyxhContent_6_sx span").eq(6).html(getSxName(num7));
+                }, 2000);
+            }
+            return 1;
+        }
+
 
         $("#btn-shiwan").click(function () {
             shiwan();
@@ -578,6 +704,82 @@ $(function () {
         }
         $(".timeInfo").html(hour);
     });
+
+
+
+
+    function openXyxh(type) {
+        var caizhong = '';
+        var nums = '';
+        var navIndex = '';
+
+        if (type == 6) {
+            caizhong = 'lhc';
+            navIndex = 0;
+            numsArr = [];
+            for (var i = 0; i < 7; ++i) {
+                var v = $("#xyxhContent_6 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。
+            }
+            nums = numsArr.join(",");
+        } else if (type == 1) {
+            caizhong = 'cqssc';
+            navIndex = 1;
+            var numsArr = [];
+            for (var i = 0; i < 5; ++i) {
+                var v = $("#xyxhContent_1 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+        } else if (type == 2) {
+            caizhong = 'tjssc';
+            navIndex = 1;
+            var numsArr = [];
+            for (var i = 0; i < 5; ++i) {
+                var v = $("#xyxhContent_2 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+        } else if (type == 3) {
+            caizhong = 'xjssc';
+            navIndex = 1;
+            var numsArr = [];
+            for (var i = 0; i < 5; ++i) {
+                var v = $("#xyxhContent_3 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+        } else if (type == 9) {
+            caizhong = 'pk10';
+            navIndex = 1;
+            var numsArr = [];
+            for (var i = 0; i < 10; ++i) {
+                var v = $("#xyxhContent_9 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+        }
+
+        if (numsArr.length == 0) {
+            return;
+        }
+        openXyxhGcdt(caizhong, nums, navIndex);
+    }
 
     // 会员首页
     $(document).on("pageInit", "#page-member-index", function (e, id, page) {
