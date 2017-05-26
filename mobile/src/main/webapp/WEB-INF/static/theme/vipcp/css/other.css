@@ -965,7 +965,7 @@ input[type="number"] {
 }
 
 .content-img .cl-scroll .swiper-wrapper .img-sz img {
-    height: 7rem;
+    /*height: 7rem;*/
     width: 100%;
 }
 
