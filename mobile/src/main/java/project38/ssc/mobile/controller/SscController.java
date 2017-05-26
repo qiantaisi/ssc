@@ -333,7 +333,7 @@ public class SscController extends BaseController {
     @RequestMapping(value = "/kjjl/all.html",method = RequestMethod.GET)
     public ModelAndView kjjlAll() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderPublicView("ssc/kjjl/all", modelMap);
+        return this.renderView("ssc/kjjl/all", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/bqxq.html",method = RequestMethod.GET)
