@@ -200,7 +200,7 @@ public abstract class BaseController {
         // 公共模板读取风格
         FenggeResult fenggeResult = ApiUtils.getWebFengge(
                 companyShortName,
-                1
+                2
         );
 
         if (null == fenggeResult || fenggeResult.getResult() != 1) {
