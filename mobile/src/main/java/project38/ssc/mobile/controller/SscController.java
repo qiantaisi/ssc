@@ -327,7 +327,7 @@ public class SscController extends BaseController {
     public ModelAndView kjjlList(Long playGroupId ) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
-        return this.renderPublicView("ssc/kjjl/list", modelMap);
+        return this.renderView("ssc/kjjl/list", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/all.html",method = RequestMethod.GET)
@@ -342,7 +342,7 @@ public class SscController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         modelMap.put("playGroupId", playGroupId);
         modelMap.put("openData", JSONUtils.toJSONStr(ApiUtils.getAllDataHistory(3, playGroupId,companyShortName)));
-        return this.renderPublicView("ssc/kjjl/bqxq", modelMap);
+        return this.renderView("ssc/kjjl/bqxq", modelMap);
     }
 
     @RequestMapping(value = "/wfsm/lskj.html",method = RequestMethod.GET)
