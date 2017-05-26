@@ -88,15 +88,26 @@ $(function () {
     });
 
 
-    //协议关闭按钮
-    $(document).on("click", ".layui-m-layermain h3 .btn_close", function (e, id, page) {
-        $("#layui-m-layer0").hide();
-    });
-
     // 注册页面
     $(document).on("pageInit", "#page-register", function (e, id, page) {
+         //实现立即注册处的，本人同意开户协议勾选事件
+        $(".agree span").click(
+            function () {
+                if ($(".agree span img").is(".show_hide")) {
+                    $(".agree span").find("img").removeClass("show_hide");
+                } else {
+                    $(".agree span").find("img").addClass("show_hide");
+                }
+            }
+        );
 
-        $(".agree-btn").click(function () {
+        //协议关闭按钮
+        $(".layui-m-layermain h3 .btn_close").live('click',function () {
+            layer.closeAll();
+        });
+
+        //协议对话框
+        $(".agree-btn").live('click',function () {
             //自定页
             layer.open({
                 type: 1,
@@ -7098,13 +7109,3 @@ $(".remenber span").click(
     }
 );
 
-//实现立即注册处的，本人同意开户协议勾选事件
-$(".agree span").click(
-    function () {
-        if ($(".agree span img").is(".show_hide")) {
-            $(".agree span").find("img").removeClass("show_hide");
-        } else {
-            $(".agree span").find("img").addClass("show_hide");
-        }
-    }
-);

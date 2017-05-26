@@ -77,13 +77,13 @@
                 </div>
             </div>
             <div class="agree">
-                <a href="javascript:void(0)" class="agree-btn">
+                <a href="javascript:void(0)">
                     <span>
-                           <img class="show_hide" src="${resPath}img/reg_21.png"/>
+                           <img src="${resPath}img/reg_21.png"/>
                     </span>
                 </a>
                 本人同意
-                <a href="#">
+                <a href="javascript:void(0)" class="agree-btn">
                     《开户协议》
                 </a>
 

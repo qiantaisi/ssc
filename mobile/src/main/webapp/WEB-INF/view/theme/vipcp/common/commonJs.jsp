@@ -45,4 +45,4 @@
 <script>
     config.basePath = '<%=basePath%>';
 </script>
-<script src="${resPath}js/script.js?v=20170526"></script>
+<script src="${resPath}js/script.js?v=20170526_1"></script>
