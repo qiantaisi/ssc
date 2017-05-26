@@ -560,7 +560,7 @@ $(function () {
             //刷新
             setTimeout(function(){
                 renderAllData(kjjgJsonData.sscTimeList)
-            },2500);
+            },2200);
         });
 
 

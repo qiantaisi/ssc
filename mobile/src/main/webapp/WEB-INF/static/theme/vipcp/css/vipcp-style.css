@@ -199,10 +199,11 @@
     color: #525552 !important;
 }
 .cl-row-5 .c25-div .content-sp p{
-    color: #000;
+    color: #333333;
     font-size: 14px;
     margin-top:0.1rem;
     margin-bottom: 0;
+    font-weight: bold;
 }
 .gd-p{
     line-height: 1.95rem;
