@@ -2736,9 +2736,8 @@ $(function () {
 
     // 购彩大厅首页
     $(document).on("pageInit", "#page-gcdt", function (e, id, page) {
-        $(".re-con-out .relb .btn-xl-ssc").click(function(){
+        $(".re-con-out .btn-xl-ssc").click(function(){
             var sp = $(".ssc-div-content").attr("sp");
-            console.log(sp);
             if(sp == 0){
                 $(".ssc-div-content").hide();
                 $(".ssc-div-content").attr("sp","1");
@@ -2749,7 +2748,62 @@ $(function () {
                 $(".ssc-div-content").attr("sp","0");
                 $(".btn-xl-ssc .img_jian").removeClass("goucai_sj");
             }
+        });
 
+        $(".re-con-out .btn-xl-k3").click(function(){
+            var sp = $(".k3-div-content").attr("sp");
+            if(sp == 0){
+                $(".k3-div-content").hide();
+                $(".k3-div-content").attr("sp","1");
+                $(".btn-xl-k3 .img_jian").addClass("goucai_sj");
+
+            }else if(sp == 1){
+                $(".k3-div-content").show();
+                $(".k3-div-content").attr("sp","0");
+                $(".btn-xl-k3 .img_jian").removeClass("goucai_sj");
+            }
+        });
+
+        $(".re-con-out .btn-xl-pk10").click(function(){
+            var sp = $(".pk10-div-content").attr("sp");
+            if(sp == 0){
+                $(".pk10-div-content").hide();
+                $(".pk10-div-content").attr("sp","1");
+                $(".btn-xl-pk10 .img_jian").addClass("goucai_sj");
+
+            }else if(sp == 1){
+                $(".pk10-div-content").show();
+                $(".pk10-div-content").attr("sp","0");
+                $(".btn-xl-pk10 .img_jian").removeClass("goucai_sj");
+            }
+        });
+
+        $(".re-con-out .btn-xl-gp").click(function(){
+            var sp = $(".gp-div-content").attr("sp");
+            if(sp == 0){
+                $(".gp-div-content").hide();
+                $(".gp-div-content").attr("sp","1");
+                $(".btn-xl-gp .img_jian").addClass("goucai_sj");
+
+            }else if(sp == 1){
+                $(".gp-div-content").show();
+                $(".gp-div-content").attr("sp","0");
+                $(".btn-xl-gp .img_jian").removeClass("goucai_sj");
+            }
+        });
+
+        $(".re-con-out .btn-xl-dp").click(function(){
+            var sp = $(".dp-div-content").attr("sp");
+            if(sp == 0){
+                $(".dp-div-content").hide();
+                $(".dp-div-content").attr("sp","1");
+                $(".btn-xl-dp .img_jian").addClass("goucai_sj");
+
+            }else if(sp == 1){
+                $(".dp-div-content").show();
+                $(".dp-div-content").attr("sp","0");
+                $(".btn-xl-dp .img_jian").removeClass("goucai_sj");
+            }
         });
 
         $(".c1-101 .tab-item .icon-gc").css("background-image", "url(" + CONFIG.RESURL + "img/footer_100.png)");

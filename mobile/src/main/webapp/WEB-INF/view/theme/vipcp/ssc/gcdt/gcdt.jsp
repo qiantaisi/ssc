@@ -23,14 +23,14 @@
         </header>
         <c:import url="../../common/bottomNav.jsp"/>
         <div class="content re-con-out">
-            <div class="list-block relb">
+            <a href="javascript:void(0)" class="list-block relb btn-xl-ssc">
                  <div class="item-content item-link reitem-link" href="javascript:void(0)">
                      <div class="reit-inner">
                          <div class="item-title">时时彩系列</div>
                      </div>
-                     <a href="javascript:void(0)" class="btn-xl-ssc"><span class="img_jian"></span></a>
+                     <span class="img_jian"></span>
                  </div>
-            </div>
+            </a>
             <div class="cl-7 ssc-div-content" sp="0">
                 <div class="row cl-318 gcdtList">
                     <a class="col-25 col-33 vipcp_bottem" data-play_group_id="15" href="<%=basePath%>ssc/gcdt/ffssc.html">
@@ -70,15 +70,15 @@
                     </a>
                 </div>
             </div>
-            <div class="list-block relb relb-k3xl re-margin-top">
-                <a class="item-content reitem-link" href="javascript:void(0)">
+            <a href="javascript:void(0)" class="list-block relb relb-k3xl re-margin-top btn-xl-k3">
+                <div class="item-content reitem-link" href="javascript:void(0)">
                     <div class="item-inner reit-inner">
                         <div class="item-title">快3系列</div>
                     </div>
                     <span class="img_jian"></span>
-                </a>
-            </div>
-            <div class="cl-7">
+                </div>
+            </a>
+            <div class="cl-7 k3-div-content" sp="0">
                 <div class="row cl-318 gcdtList">
                     <a class="col-25 col-33 vipcp_bottem jsk3-a" data-play_group_id="18"
                        href="<%=basePath%>ssc/gcdt/jsk3.html">
@@ -106,15 +106,15 @@
                     </a>
                 </div>
             </div>
-            <div class="list-block relb relb-k3xl">
-                <a class="item-content reitem-link" href="javascript:void(0)">
+            <a class="list-block relb relb-k3xl btn-xl-pk10">
+                <div class="item-content reitem-link" href="javascript:void(0)">
                     <div class="item-inner reit-inner">
                         <div class="item-title">PK10系列</div>
                     </div>
                     <span class="img_jian"></span>
-                </a>
-            </div>
-            <div class="cl-7">
+                </div>
+            </a>
+            <div class="cl-7 pk10-div-content" sp="0">
                 <div class="row cl-318 gcdtList">
                     <a class="col-25 col-33 vipcp_bottem" data-play_group_id="9"
                        href="<%=basePath%>ssc/gcdt/pk10.html">
@@ -136,15 +136,15 @@
                     </a>
                 </div>
             </div>
-            <div class="list-block relb relb-k3xl">
-                <a class="item-content reitem-link" href="javascript:void(0)">
+            <a class="list-block relb relb-k3xl btn-xl-gp">
+                <div class="item-content reitem-link" href="javascript:void(0)">
                     <div class="item-inner reit-inner">
                         <div class="item-title">高频彩</div>
                     </div>
                     <span class="img_jian"></span>
-                </a>
-            </div>
-            <div class="cl-7">
+                </div>
+            </a>
+            <div class="cl-7 gp-div-content" sp="0">
                 <div class="row cl-318 gcdtList">
                     <a class="col-25 col-33 vipcp_bottem" data-play_group_id="15" href="<%=basePath%>ssc/gcdt/ffssc.html">
                         <span class="jc"></span>
@@ -246,15 +246,15 @@
                     </a>
                 </div>
             </div>
-            <div class="list-block relb relb-k3xl">
-                <a class="item-content reitem-link" href="javascript:void(0)">
+            <a class="list-block relb relb-k3xl btn-xl-dp">
+                <div class="item-content reitem-link" href="javascript:void(0)">
                     <div class="item-inner reit-inner">
                         <div class="item-title">低频彩</div>
                     </div>
                     <span class="img_jian"></span>
-                </a>
-            </div>
-            <div class="cl-7">
+                </div>
+            </a>
+            <div class="cl-7 dp-div-content" sp="0">
                 <div class="row cl-318 gcdtList">
                     <a class="col-25 col-33 vipcp_bottem" data-play_group_id="6" href="<%=basePath%>ssc/gcdt/lhc.html">
                         <span class="jc"></span>

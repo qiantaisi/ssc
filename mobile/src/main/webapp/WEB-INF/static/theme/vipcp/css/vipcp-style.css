@@ -714,22 +714,28 @@ img{
 }
 .img_jian{
     cursor: pointer;
+    background: url(../img/goucai_03-133.png) no-repeat;
+    width: 10px;
+    height: 17px;
+    background-size: 10px 17px;
+    margin-top: -5px;
+    margin-right: 7px;
+    float: right;
+
+}
+
+.goucai_sj {
+    cursor: pointer;
     display: inline-block;
     background: url(../img/rigth_jian_xia.png);
     width: 17px;
     height: 10px;
     background-size: 17px 10px;
     margin-top: -5px;
-    margin-right: 5px;
+    margin-right: 6px;
     float: right;
 }
-
-.goucai_sj {
-    background: url(../img/goucai_03-133.png) no-repeat;
-    width: 10px;
-    height: 17px;
-    background-size: 10px 17px;
-    margin-top: -5px;
-    margin-right: 5px;
-    float: right;
+.btn-xl-ssc .item-title{
+    color: #000000;
+    font-size: 16px;
 }
