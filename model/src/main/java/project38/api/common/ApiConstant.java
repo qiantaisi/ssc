@@ -110,4 +110,6 @@ public class ApiConstant {
     public static String API_QQ_ZZ = API_DOMAIN+"member/submitQQzz.json";//QQ转账
 
     public static String API_WEB_SETTING_GET_COMPANY_SHORT_NAME = API_DOMAIN+"webSetting/getCompanyShortName.json";  // 获取公司标志
+
+    public static String API_WEB_SETTING_GET_FENGGE= API_DOMAIN+"webSetting/getFengge.json";  // 获取风格
 }

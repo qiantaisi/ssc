@@ -1203,4 +1203,20 @@ public class ApiUtils{
         
         return HttpUtils.post(apiUrl, paramsMap);
     }
+
+    /**
+     * 获取WEB风格
+     * @param companyShortName 公司标志
+     * @param type 类型（1-PC，2-手机）
+     * @return
+     */
+    public static FenggeResult getWebFengge(
+            String companyShortName,
+            Integer type
+    ) {
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("companyShortName", companyShortName);
+        paramsMap.put("type", type);
+        return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_WEB_SETTING_GET_FENGGE, paramsMap), FenggeResult.class);
+    }
 }

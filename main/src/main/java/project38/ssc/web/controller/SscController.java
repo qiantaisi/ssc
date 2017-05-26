@@ -34,13 +34,13 @@ public class SscController extends BaseController {
     private HttpServletRequest httpServletRequest;
 
     @RequestMapping(value = "/register.html", method = RequestMethod.GET)
-    public ModelAndView register() {
+    public ModelAndView register() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("index/register", modelMap);
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
-    public ModelAndView index() {
+    public ModelAndView index() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
@@ -48,7 +48,7 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
-    public ModelAndView main() {
+    public ModelAndView main() throws UserException {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
@@ -61,13 +61,13 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/gcdt.html", method = RequestMethod.GET)
-    public ModelAndView gcdt() {
+    public ModelAndView gcdt() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/gcdt/gcdt", modelMap);
     }
 
     @RequestMapping(value = "/tingcaipage.html", method = RequestMethod.GET)
-    public ModelAndView tingcaipage() {
+    public ModelAndView tingcaipage() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
     }
@@ -81,7 +81,7 @@ public class SscController extends BaseController {
 //    }
 
     @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroup(@PathVariable String group){
+    public ModelAndView gcdtGroup(@PathVariable String group) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         if (!"gcdt".equals(group)) {
@@ -96,13 +96,13 @@ public class SscController extends BaseController {
 
 
     @RequestMapping(value = "/zst/{module}.html", method = RequestMethod.GET)
-    public ModelAndView zstModule(@PathVariable String module) {
+    public ModelAndView zstModule(@PathVariable String module) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/zst/" + module, modelMap);
     }
 
     @RequestMapping(value = "/gcdt/{group}/{play}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroupPlay(@PathVariable String group, @PathVariable String play) {
+    public ModelAndView gcdtGroupPlay(@PathVariable String group, @PathVariable String play) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/gcdt/" + group + "/" + play, modelMap);
     }
@@ -319,13 +319,13 @@ public class SscController extends BaseController {
      * @return
      */
     @RequestMapping(value = "/gcdt/gfwf/{group}/{play}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGfwf(@PathVariable String group, @PathVariable String play) {
+    public ModelAndView gcdtGfwf(@PathVariable String group, @PathVariable String play) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/gcdt/gfwf/" + group + "/" + play, modelMap);
     }
 
     @RequestMapping(value = "/gcdt/index.html", method = RequestMethod.GET)
-    public ModelAndView gcdtIndex() {
+    public ModelAndView gcdtIndex() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         modelMap.put("icoData", ApiUtils.getLogo(3, companyShortName));

@@ -2539,7 +2539,7 @@ $(function () {
                                 }
 
                                 $(obj).attr("data-time", json.leftTime);
-                                $(obj).find(".info").html(json.opening ? "<font style='color:#fa6200'>距离下期</font>" : "<font style='color:#ec1818'>距离开奖</font>");
+                                $(obj).find(".info").html(json.opening ? "<font class='glxq'>距离下期</font>" : "<font style='color:#ec1818'>距离开奖</font>");
                             },
                             error: function (a, b, c) {
                             },

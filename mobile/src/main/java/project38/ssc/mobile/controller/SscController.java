@@ -1,5 +1,6 @@
 package project38.ssc.mobile.controller;
 
+import project38.api.common.exception.UserException;
 import project38.api.common.result.CommonResult;
 import project38.api.common.utils.JSONUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -39,14 +40,8 @@ public class SscController extends BaseController {
     @Autowired
     private HttpServletRequest httpServletRequest;
 
-    @RequestMapping(value = "/register.html",method = RequestMethod.GET)
-    public ModelAndView register(){
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("index/register", modelMap);
-    }
-
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
-    public ModelAndView index() {
+    public ModelAndView index() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
@@ -54,7 +49,7 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
-    public ModelAndView main() {
+    public ModelAndView main() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
@@ -67,25 +62,25 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/gcdt.html", method = RequestMethod.GET)
-    public ModelAndView gcdt() {
+    public ModelAndView gcdt() throws UserException {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,companyShortName).getWebNoticeList());
-        return this.renderView("ssc/gcdt/gcdt", modelMap);
+        return this.renderPublicView("ssc/gcdt/gcdt", modelMap);
     }
 
     @RequestMapping(value = "/tingcaipage.html", method = RequestMethod.GET)
-    public ModelAndView tingcaipage() {
+    public ModelAndView tingcaipage() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
     }
 
     @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroup(@PathVariable String group, HttpServletResponse httpServletResponse) throws IOException {
+    public ModelAndView gcdtGroup(@PathVariable String group, HttpServletResponse httpServletResponse) throws IOException, UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group, companyShortName);
@@ -102,13 +97,13 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/zst/{module}.html", method = RequestMethod.GET)
-    public ModelAndView zstModule(@PathVariable String module) {
+    public ModelAndView zstModule(@PathVariable String module) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/zst/" + module, modelMap);
     }
 
     @RequestMapping(value = "/gcdt/{group}/{play}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroupPlay(@PathVariable String group, @PathVariable String play) {
+    public ModelAndView gcdtGroupPlay(@PathVariable String group, @PathVariable String play) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/gcdt/" + group + "/" + play, modelMap);
     }
@@ -329,20 +324,20 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/kjjl/list.html",method = RequestMethod.GET)
-    public ModelAndView kjjlList(Long playGroupId ){
+    public ModelAndView kjjlList(Long playGroupId ) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
-        return this.renderView("ssc/kjjl/list", modelMap);
+        return this.renderPublicView("ssc/kjjl/list", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/all.html",method = RequestMethod.GET)
-    public ModelAndView kjjlAll(){
+    public ModelAndView kjjlAll() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderView("ssc/kjjl/all", modelMap);
+        return this.renderPublicView("ssc/kjjl/all", modelMap);
     }
 
     @RequestMapping(value = "/kjjl/bqxq.html",method = RequestMethod.GET)
-    public ModelAndView kjjlGdqc(Long playGroupId){
+    public ModelAndView kjjlGdqc(Long playGroupId) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         modelMap.put("playGroupId", playGroupId);
@@ -351,7 +346,7 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/wfsm/lskj.html",method = RequestMethod.GET)
-    public ModelAndView wfsmLskj(Long playGroupId){
+    public ModelAndView wfsmLskj(Long playGroupId) throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
@@ -359,7 +354,7 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/wfsm/wfsm.html",method = RequestMethod.GET)
-    public ModelAndView wfsmWfsm( Long playGroupId ){
+    public ModelAndView wfsmWfsm( Long playGroupId ) throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("playGroupId", playGroupId);
@@ -367,7 +362,7 @@ public class SscController extends BaseController {
     }
 
     @RequestMapping(value = "/zst/{playGroupName}/{zstName}.html",method = RequestMethod.GET)
-    public ModelAndView wfsmWfsm(@PathVariable String playGroupName, @PathVariable String zstName){
+    public ModelAndView wfsmWfsm(@PathVariable String playGroupName, @PathVariable String zstName) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/zst/" + playGroupName + "/" + zstName, modelMap);
     }
