@@ -571,7 +571,7 @@ $(function () {
             //刷新
             setTimeout(function(){
                 renderAllData(kjjgJsonData.sscTimeList)
-            },2200);
+            },1200);
         });
 
 
@@ -691,7 +691,7 @@ $(function () {
                     $("#xyxhContent_6_sx span").eq(4).html(getSxName(num5));
                     $("#xyxhContent_6_sx span").eq(5).html(getSxName(num6));
                     $("#xyxhContent_6_sx span").eq(6).html(getSxName(num7));
-                }, 2000);
+                }, 1000);
             }
             return 1;
         }

@@ -456,6 +456,10 @@ img{
     border-bottom: none!important;
     width:33.33%;
     padding: 0.56rem 0.2rem;
+    background: white;
+}
+.re-gctList-bg{
+    background: #f8f7f7;
 }
 .gcdtList .vipcp_bottem .jc{
     margin: 0;

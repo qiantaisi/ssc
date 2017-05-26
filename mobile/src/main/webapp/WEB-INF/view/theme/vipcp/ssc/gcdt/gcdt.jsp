@@ -32,7 +32,7 @@
                  </div>
             </a>
             <div class="cl-7 ssc-div-content" sp="0">
-                <div class="row cl-318 gcdtList">
+                <div class="row cl-318 gcdtList re-gctList-bg">
                     <a class="col-25 col-33 vipcp_bottem" data-play_group_id="15" href="<%=basePath%>ssc/gcdt/ffssc.html">
                         <span class="jc"></span>
                         <span class="img bg-img-ffssc"></span>
@@ -79,7 +79,7 @@
                 </div>
             </a>
             <div class="cl-7 k3-div-content" sp="0">
-                <div class="row cl-318 gcdtList">
+                <div class="row cl-318 gcdtList re-gctList-bg">
                     <a class="col-25 col-33 vipcp_bottem jsk3-a" data-play_group_id="18"
                        href="<%=basePath%>ssc/gcdt/jsk3.html">
                         <span class="jc"></span>
@@ -115,7 +115,7 @@
                 </div>
             </a>
             <div class="cl-7 pk10-div-content" sp="0">
-                <div class="row cl-318 gcdtList">
+                <div class="row cl-318 gcdtList re-gctList-bg">
                     <a class="col-25 col-33 vipcp_bottem" data-play_group_id="9"
                        href="<%=basePath%>ssc/gcdt/pk10.html">
                         <span class="jc"></span>
@@ -145,7 +145,7 @@
                 </div>
             </a>
             <div class="cl-7 gp-div-content" sp="0">
-                <div class="row cl-318 gcdtList">
+                <div class="row cl-318 gcdtList re-gctList-bg">
                     <a class="col-25 col-33 vipcp_bottem" data-play_group_id="15" href="<%=basePath%>ssc/gcdt/ffssc.html">
                         <span class="jc"></span>
                         <span class="img bg-img-ffssc"></span>
