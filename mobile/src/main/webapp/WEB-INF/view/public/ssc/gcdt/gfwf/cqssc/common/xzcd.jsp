@@ -19,5 +19,50 @@
             <div class="xuan2">五星</div>
             <div class="xuan1"></div>
         </div>
+        <div class="xuan_cz">
+            <div class="xuan_cz1">直选复式</div>
+            <div class="xuan_cz2">直选单式</div>
+            <div class="xuan_cz3">任选二</div>
+        </div>
+        <div class="xuan">
+            <div class="xuan1"></div>
+            <div class="xuan2">四星</div>
+            <div class="xuan1"></div>
+        </div>
+        <div class="xuan_cz">
+            <div class="xuan_cz1">直选复式</div>
+            <div class="xuan_cz2">直选单式</div>
+            <div class="xuan_cz3">任选二</div>
+        </div>
+        <div class="xuan">
+            <div class="xuan1"></div>
+            <div class="xuan2">三星</div>
+            <div class="xuan1"></div>
+        </div>
+        <div class="xuan_cz">
+            <div class="xuan_cz1">直选复式</div>
+            <div class="xuan_cz2">直选单式</div>
+            <div class="xuan_cz3">任选二</div>
+        </div>
+        <div class="xuan">
+            <div class="xuan1"></div>
+            <div class="xuan2">二星</div>
+            <div class="xuan1"></div>
+        </div>
+        <div class="xuan_cz">
+            <div class="xuan_cz1">直选复式</div>
+            <div class="xuan_cz2">直选单式</div>
+            <div class="xuan_cz3">任选二</div>
+        </div>
+        <div class="xuan">
+            <div class="xuan1"></div>
+            <div class="xuan2">一星</div>
+            <div class="xuan1"></div>
+        </div>
+        <div class="xuan_cz">
+            <div class="xuan_cz1">直选复式</div>
+            <div class="xuan_cz2">直选单式</div>
+            <div class="xuan_cz3">任选二</div>
+        </div>
     </div>
 </div>
