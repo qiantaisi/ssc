@@ -205,6 +205,7 @@ $(function() {
             } else {
                 getSscOpenTime(playGroupId, function () {
                     getSscOpenTime_Timestamp = (new Date()).getTime();  // 设置调用getSscOpenTime成功的时间
+                    getOpenCodeHistory();   // 获取开奖记录
                 });
 
                 if (time == -1) {
