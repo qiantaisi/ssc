@@ -15,7 +15,8 @@
                 <span class="icon icon-left"></span>
             </a>
             <h1 class="title">
-                <img src="${resPath}img/reg_06.png"/>
+                <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt="" height="100%"></a>
+                <%--<img src="${resPath}img/reg_06.png"/>--%>
             </h1>
         </header>
         <div class="content bg-white">
