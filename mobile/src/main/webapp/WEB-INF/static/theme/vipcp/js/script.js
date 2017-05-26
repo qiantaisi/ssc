@@ -2736,8 +2736,24 @@ $(function () {
 
     // 购彩大厅首页
     $(document).on("pageInit", "#page-gcdt", function (e, id, page) {
+        $(".re-con-out .relb .btn-xl-ssc").click(function(){
+            var sp = $(".ssc-div-content").attr("sp");
+            console.log(sp);
+            if(sp == 0){
+                $(".ssc-div-content").hide();
+                $(".ssc-div-content").attr("sp","1");
+                $(".btn-xl-ssc .img_jian").addClass("goucai_sj");
+
+            }else if(sp == 1){
+                $(".ssc-div-content").show();
+                $(".ssc-div-content").attr("sp","0");
+                $(".btn-xl-ssc .img_jian").removeClass("goucai_sj");
+            }
+
+        });
+
         $(".c1-101 .tab-item .icon-gc").css("background-image", "url(" + CONFIG.RESURL + "img/footer_100.png)");
-        $(".c1-101 .tab-item .tab-gcdt").css("color", "red");
+        $(".c1-101 .tab-item .btn-xl-ssc").css("color", "red");
         // // 公告滚动
         // var mySwiper = new Swiper('.swiper-container', {
         //     pagination: '.swiper-pagination',
@@ -7108,4 +7124,3 @@ $(".remenber span").click(
         }
     }
 );
-

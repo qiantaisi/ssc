@@ -12,7 +12,7 @@
 %>
 <c:import url="../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-gcdt">
+    <div class="page page-current re-background" id="page-gcdt">
         <header class="bar bar-nav cl-1 recl-1">
             <a href="javascript:void(0)" class="button button-link button-nav pull-left fanhui">
                 <span class="icon icon-left reicon"></span>
@@ -22,15 +22,16 @@
             </h1>
         </header>
         <c:import url="../../common/bottomNav.jsp"/>
-        <div class="content">
+        <div class="content re-con-out">
             <div class="list-block relb">
-                 <a class="item-content item-link reitem-link" href="javascript:void(0)">
-                     <div class="item-inner reit-inner">
+                 <div class="item-content item-link reitem-link" href="javascript:void(0)">
+                     <div class="reit-inner">
                          <div class="item-title">时时彩系列</div>
                      </div>
-                 </a>
+                     <a href="javascript:void(0)" class="btn-xl-ssc"><span class="img_jian"></span></a>
+                 </div>
             </div>
-            <div class="cl-7">
+            <div class="cl-7 ssc-div-content" sp="0">
                 <div class="row cl-318 gcdtList">
                     <a class="col-25 col-33 vipcp_bottem" data-play_group_id="15" href="<%=basePath%>ssc/gcdt/ffssc.html">
                         <span class="jc"></span>
@@ -69,11 +70,12 @@
                     </a>
                 </div>
             </div>
-            <div class="list-block relb relb-k3xl">
-                <a class="item-content item-link reitem-link" href="javascript:void(0)">
+            <div class="list-block relb relb-k3xl re-margin-top">
+                <a class="item-content reitem-link" href="javascript:void(0)">
                     <div class="item-inner reit-inner">
                         <div class="item-title">快3系列</div>
                     </div>
+                    <span class="img_jian"></span>
                 </a>
             </div>
             <div class="cl-7">
@@ -105,10 +107,11 @@
                 </div>
             </div>
             <div class="list-block relb relb-k3xl">
-                <a class="item-content item-link reitem-link" href="javascript:void(0)">
+                <a class="item-content reitem-link" href="javascript:void(0)">
                     <div class="item-inner reit-inner">
                         <div class="item-title">PK10系列</div>
                     </div>
+                    <span class="img_jian"></span>
                 </a>
             </div>
             <div class="cl-7">
@@ -134,10 +137,11 @@
                 </div>
             </div>
             <div class="list-block relb relb-k3xl">
-                <a class="item-content item-link reitem-link" href="javascript:void(0)">
+                <a class="item-content reitem-link" href="javascript:void(0)">
                     <div class="item-inner reit-inner">
                         <div class="item-title">高频彩</div>
                     </div>
+                    <span class="img_jian"></span>
                 </a>
             </div>
             <div class="cl-7">
@@ -243,10 +247,11 @@
                 </div>
             </div>
             <div class="list-block relb relb-k3xl">
-                <a class="item-content item-link reitem-link" href="javascript:void(0)">
+                <a class="item-content reitem-link" href="javascript:void(0)">
                     <div class="item-inner reit-inner">
                         <div class="item-title">低频彩</div>
                     </div>
+                    <span class="img_jian"></span>
                 </a>
             </div>
             <div class="cl-7">

@@ -427,11 +427,11 @@ img{
 /*vipcp购彩大厅*/
 .relb{
     margin: 0!important;
-    height: 1.4rem!important;
+    height: 1.55rem!important;
 }
 .reitem-link{
-    height: 1.4rem!important;
-    min-height: 1.4rem!important;
+    height: 1.55rem!important;
+    min-height: 1.55rem!important;
     color: #000000;
     font-size: 16px;
     background: #FFFFFF;
@@ -460,15 +460,14 @@ img{
 .cl-318 .vipcp_bottem:nth-child(6){
     border-right: none!important;
 }
-.cl-318 .lfssc-a,.cl-318 .sfssc-a,.cl-318 .tjssc-a,.cl-318 .ahk3-a,.cl-318 .hbk3-a,.cl-7 .gcdtList .gp-wfssc,.cl-7 .gcdtList .gp-jsk3{
+.cl-7 .gcdtList .gp-wfssc,.cl-7 .gcdtList .gp-jsk3{
     border-bottom: 1px solid #ddd!important;
 }
-.cl-7 .gcdtList .wfssc-a{
-    border-top: none!important;
-    border-right: 1px solid #ddd!important;
-}
-.relb-k3xl,.cl-318 .jlk3-a{
-    border-top: 1px solid #ddd!important;
+/*.relb-k3xl,.cl-318 .jlk3-a{*/
+    /*border-top: 1px solid #ddd!important;*/
+/*}*/
+.re-margin-top{
+    margin-top: 12px!important;
 }
 .cl-318 .vipcp_bottem span.img{
     width: 2.43rem;
@@ -482,18 +481,20 @@ img{
 .cl-7 .gcdtList .gp-hbk3,.cl-7 .gcdtList .gp-jlk3{
     border-top: none!important;
  }
-.cl-7 .gcdtList .jsk3-a{
-    border-bottom: 1px solid #ddd!important;
-}
-.cl-7 .gcdtList .jlk3-a{
-    border-top:0!important;
-}
+
 .cl-7 .gcdtList .gp-jlk3{
     border-right: 1px solid #ddd!important;
  }
+.cl-7 .gcdtList .jlk3-a{
+    border-right: none!important;
+}
 .cl-7 .gcdtList .gp-pk10,.cl-7 .gcdtList .gp-xync{
     border-right: none!important;
 }
+.btn-xl-ssc{
+    /*display: inline-block;*/
+}
+
 .goucai_biaoqian {
     display: inline-block;
     background: #f83e3e;
@@ -703,4 +704,32 @@ img{
 }
 .lhc-kjjg .item-text span:last-child{
     margin-left: -0.1rem!important;
+}
+.re-con-out{
+    margin-top: 15px;
+    background: white!important;
+}
+.re-background{
+    background: white;
+}
+.img_jian{
+    cursor: pointer;
+    display: inline-block;
+    background: url(../img/rigth_jian_xia.png);
+    width: 17px;
+    height: 10px;
+    background-size: 17px 10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    float: right;
+}
+
+.goucai_sj {
+    background: url(../img/goucai_03-133.png) no-repeat;
+    width: 10px;
+    height: 17px;
+    background-size: 10px 17px;
+    margin-top: -5px;
+    margin-right: 5px;
+    float: right;
 }
