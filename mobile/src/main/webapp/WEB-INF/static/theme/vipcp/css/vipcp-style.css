@@ -176,6 +176,10 @@
 .recl-7 .cl-5 a span{
     border: none;
 }
+.re-font-title a span{
+    color: #313131!important;
+    font-weight: bold!important;
+}
 .cl-row-5 a span{
     diplay:inline-block!important;
     float: left;
@@ -432,10 +436,15 @@ img{
 .reitem-link{
     height: 1.55rem!important;
     min-height: 1.55rem!important;
+    line-height: 1.55rem!important;
     color: #000000;
     font-size: 16px;
     background: #FFFFFF;
     padding-left:0.5rem!important;
+    margin-top: 12px;
+}
+.reitem-link-ed{
+    margin-top: 15px;
 }
 .reit-inner{
     min-height: 1.4rem!important;
@@ -463,9 +472,6 @@ img{
 .cl-7 .gcdtList .gp-wfssc,.cl-7 .gcdtList .gp-jsk3{
     border-bottom: 1px solid #ddd!important;
 }
-/*.relb-k3xl,.cl-318 .jlk3-a{*/
-    /*border-top: 1px solid #ddd!important;*/
-/*}*/
 .re-margin-top{
     margin-top: 12px!important;
 }
@@ -706,22 +712,17 @@ img{
     margin-left: -0.1rem!important;
 }
 .re-con-out{
-    margin-top: 15px;
-    background: white!important;
+    background: #f8f7f7!important;
 }
-.re-background{
-    background: white;
-}
+
 .img_jian{
     cursor: pointer;
     background: url(../img/goucai_03-133.png) no-repeat;
     width: 10px;
     height: 17px;
     background-size: 10px 17px;
-    margin-top: -5px;
     margin-right: 7px;
     float: right;
-
 }
 
 .goucai_sj {
@@ -731,7 +732,7 @@ img{
     width: 17px;
     height: 10px;
     background-size: 17px 10px;
-    margin-top: -5px;
+    margin-top: -4px;
     margin-right: 6px;
     float: right;
 }

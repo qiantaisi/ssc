@@ -11,7 +11,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <c:import url="../../common/bodyStart.jsp"/>
-<div class="page-group">
+<div class="page-group re-bg-group">
     <div class="page page-current re-background" id="page-gcdt">
         <header class="bar bar-nav cl-1 recl-1">
             <a href="javascript:void(0)" class="button button-link button-nav pull-left fanhui">
@@ -24,7 +24,7 @@
         <c:import url="../../common/bottomNav.jsp"/>
         <div class="content re-con-out">
             <a href="javascript:void(0)" class="list-block relb btn-xl-ssc">
-                 <div class="item-content item-link reitem-link" href="javascript:void(0)">
+                 <div class="item-content item-link reitem-link reitem-link-ed" href="javascript:void(0)">
                      <div class="reit-inner">
                          <div class="item-title">时时彩系列</div>
                      </div>
@@ -72,7 +72,7 @@
             </div>
             <a href="javascript:void(0)" class="list-block relb relb-k3xl re-margin-top btn-xl-k3">
                 <div class="item-content reitem-link" href="javascript:void(0)">
-                    <div class="item-inner reit-inner">
+                    <div class="reit-inner">
                         <div class="item-title">快3系列</div>
                     </div>
                     <span class="img_jian"></span>
@@ -108,7 +108,7 @@
             </div>
             <a class="list-block relb relb-k3xl btn-xl-pk10">
                 <div class="item-content reitem-link" href="javascript:void(0)">
-                    <div class="item-inner reit-inner">
+                    <div class="reit-inner">
                         <div class="item-title">PK10系列</div>
                     </div>
                     <span class="img_jian"></span>
@@ -138,7 +138,7 @@
             </div>
             <a class="list-block relb relb-k3xl btn-xl-gp">
                 <div class="item-content reitem-link" href="javascript:void(0)">
-                    <div class="item-inner reit-inner">
+                    <div class="reit-inner">
                         <div class="item-title">高频彩</div>
                     </div>
                     <span class="img_jian"></span>
@@ -248,7 +248,7 @@
             </div>
             <a class="list-block relb relb-k3xl btn-xl-dp">
                 <div class="item-content reitem-link" href="javascript:void(0)">
-                    <div class="item-inner reit-inner">
+                    <div class="reit-inner">
                         <div class="item-title">低频彩</div>
                     </div>
                     <span class="img_jian"></span>

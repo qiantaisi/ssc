@@ -70,7 +70,7 @@
             </div>
 
 
-            <div class="row cl-5 recl-5">
+            <div class="row cl-5 recl-5 re-font-title">
                 <a class="col-25 external" href="<%=basePath%>kefu.html" target="_blank">
                     <span class="bg-img-zxkf2 re-zxkf2"></span>
                     <span>在线客服</span>
