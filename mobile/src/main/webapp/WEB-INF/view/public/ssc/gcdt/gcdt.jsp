@@ -338,25 +338,6 @@
                         <span>体彩排列3</span>
                     </a>
                 </div>
-                <%--<div class="row cl-318 gcdtList">--%>
-                <%--<a class="col-25 col-33 " data-play_group_id="22" href="<%=basePath%>ssc/gcdt/sflhc.html">--%>
-                <%--<span class="info">距离开盘</span>--%>
-                <%--<span class="time">--%>
-                <%--<i>00</i>--%>
-                <%--<font>:</font>--%>
-                <%--<i>00</i>--%>
-                <%--<font>:</font>--%>
-                <%--<i>00</i>--%>
-                <%--</span>--%>
-                <%--<span class="img bg-img-sflhc"></span>--%>
-                <%--<span>十分六合彩</span>--%>
-                <%--</a>--%>
-                <%--<a class="col-25 col-33 "></a>--%>
-                <%--<a class="col-25 col-33 "></a>--%>
-                <%--</div>--%>
-                <%--<div class="row cl-318 gcdtList">--%>
-                <%--<a class="col-25 col-33 re_a_bottom"></a>--%>
-                <%--</div>--%>
             </div>
             <c:import url="../../common/copyright.jsp"/>
         </div>

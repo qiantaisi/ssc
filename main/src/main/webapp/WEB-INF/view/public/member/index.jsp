@@ -53,6 +53,6 @@
 </div>
 
 <c:import url="common/commonJs.jsp"/>
-<script src="${resPath}member/js/index.js?v=1.0.1"></script>
+<script src="${resPath}member/js/index.js?v=<%=(new Date()).getTime()%>"></script>
 <c:import url="../common/checkOnline.jsp" />
 <c:import url="common/bodyEnd.jsp"/>

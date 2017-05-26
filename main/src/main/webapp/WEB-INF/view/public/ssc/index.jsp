@@ -44,9 +44,9 @@
     </script>
     <script>
         <!--
-        window.onerror = function () {
-            return true;
-        }
+//        window.onerror = function () {
+//            return true;
+//        }
         // -->
     </script>
 </head>
