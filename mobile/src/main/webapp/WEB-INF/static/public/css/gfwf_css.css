@@ -41,28 +41,28 @@
 
 .xuan_cz {
     text-align: center;
-    margin:20px;
+    margin: 20px;
 }
 
 .xuan_cz .xuan_cz1 {
-    border:1px solid #fa6200;
-    width:28%;
-    margin-right:18px;
+    border: 1px solid #fa6200;
+    width: 28%;
+    margin-right: 18px;
     display: inline-block;
-    border-radius:6px;
+    border-radius: 6px;
 }
 
 .xuan_cz .xuan_cz2 {
     border-radius: 6px;
-    width:28%;
+    width: 28%;
     display: inline-block;
-    border:1px solid #fa6200;
+    border: 1px solid #fa6200;
 }
 
 .xuan_cz .xuan_cz3 {
     border-radius: 6px;
-    border:1px solid #fa6200;
-    width:28%;
+    border: 1px solid #fa6200;
+    width: 28%;
     margin-left: 18px;
     display: inline-block;
 }
