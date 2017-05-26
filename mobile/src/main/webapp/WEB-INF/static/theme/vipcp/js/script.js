@@ -2807,7 +2807,7 @@ $(function () {
         });
 
         $(".c1-101 .tab-item .icon-gc").css("background-image", "url(" + CONFIG.RESURL + "img/footer_100.png)");
-        $(".c1-101 .tab-item .btn-xl-ssc").css("color", "red");
+        $(".c1-101 .tab-item .tab-gcdt").css("color","red");
         // // 公告滚动
         // var mySwiper = new Swiper('.swiper-container', {
         //     pagination: '.swiper-pagination',
