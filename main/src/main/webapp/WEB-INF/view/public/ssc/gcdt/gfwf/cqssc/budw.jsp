@@ -45,7 +45,7 @@
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码万、千百位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+                <var>从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码万、千、百位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
             </a>
         </span>
     </p>
@@ -82,7 +82,353 @@
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从0-9中至少 选择2个以上号码，每组由2个号码组成，只要开奖号码万、千百、百位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+                <var>从0-9中至少 选择2个以上号码，每组由2个号码组成，只要开奖号码万、千、百位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="Pick cl-1002 recl-1004-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择1个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：1 开奖号码：后三位至少出现1个1，即中后三一码不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码百、十、个位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="Pick cl-1002 recl-1005-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择2个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：12 开奖号码：后三位至少出现1和2各一个，即中后三二码不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中至少 选择2个以上号码，每组由2个号码组成，只要开奖号码百、十、个位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+<%--前四一码--%>
+<div class="Pick cl-1002 recl-1006-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择1个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：1 开奖号码：前四位至少出现1个1，即中前四不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码万、千、百、十位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+<%--前四二码--%>
+<div class="Pick cl-1002 recl-1007-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择2个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：12 开奖号码：前四位至少出现1和2各一个，即中前四二码不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中至少选择2个以上号码，每组由2个号码组成，只要开奖号码万、千、百、十位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<%--后四一码--%>
+<div class="Pick cl-1002 recl-1008-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择1个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：1 开奖号码：后四位至少出现1个1，即中后四不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码千、百、十、个位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+<%--后四二码--%>
+<div class="Pick cl-1002 recl-1009-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择2个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：12 开奖号码：后四位至少出现1和2各一个，即中后四二码不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中至少选择2个以上号码，每组由2个号码组成，只要开奖号码千、百、十、个位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<%--五星一码--%>
+<div class="Pick cl-1002 recl-1010-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择1个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：1 开奖号码：至少出现1个1，即中五星不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<%--五星二码--%>
+<div class="Pick cl-1002 recl-1011-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择2个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：12 开奖号码：至少出现1和2各一个，即中五星二码不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中至少选择2个以上号码，每组由2个号码组成，只要开奖号码中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li data-name="不定位">
+            <b><i>不定位</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<%--五星三码--%>
+<div class="Pick cl-1002 recl-1012-budw">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从0-9中任意选择3个以上号码。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：123 开奖号码：至少出现1和2及3各一个，即中五星三码不定位。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从0-9中至少选择3个以上号码，每组由3个号码组成，只要开奖号码中同时包含所选的3个号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
             </a>
         </span>
     </p>
@@ -123,7 +469,8 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base_jangj"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base_jangj_em"><var class="jiangjin-change_em">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
             </div>
             <div class="reduce">
                 <a class="fl">-</a>
@@ -158,6 +505,7 @@
     $(function () {
         $(".Pick").hide();
         $(".recl-1002").show();
+        $(".base_jangj_em").hide();
         $(".btn_fu_zhi span").click(function () {
             if ($(this).siblings().hasClass('acti')) {
                 $(this).siblings().removeClass('acti');
@@ -175,58 +523,77 @@
                 $(".recl-1003-budw").show();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1003-budw").attr("data-flag", "qsem-budw");
+                $(".base_jangj_em").show();
+                $(".base_jangj").hide();
+                clearSelected();
 
-            } else if (nameF = "qsym") {
+            } else if (nameF == "qsym") {
                 $(".Pick").hide();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1002").show();
                 $(".recl-1002").attr("data-flag", "qsym-budw");
+                $(".base_jangj_em").hide();
+                $(".base_jangj").show();
+                clearSelected();
 
-            } else if (nameF = "hsym") {
-                $(this).parent().parent().parent().attr("data-flag", "hsym-budw");
-                if (typeof stateTouZhu == "function") {
-                    stateTouZhu('hsym');
-                }
-            } else if (nameF = "hsem") {
-                $(this).parent().parent().parent().attr("data-flag", "hsem-budw");
-                if (typeof stateTouZhu == "function") {
-                    stateTouZhu('hsem');
-                }
-            } else if (nameF = "q4ym") {
-                $(this).parent().parent().parent().attr("data-flag", "q4ym-budw");
-                if (typeof stateTouZhu == "function") {
-                    stateTouZhu('q4ym');
-                }
-            } else if (nameF = "q4em") {
-                $(this).parent().parent().parent().attr("data-flag", "q4em-budw");
-                if (typeof stateTouZhu == "function") {
-                    stateTouZhu('q4em');
-                }
-            } else if (nameF = "h4ym") {
-                $(this).parent().parent().parent().attr("data-flag", "h4ym-budw");
-                if (typeof stateTouZhu == "function") {
-                    stateTouZhu('h4ym');
-                }
-            } else if (nameF = "h4em") {
-                $(this).parent().parent().parent().attr("data-flag", "h4em-budw");
-                if (typeof stateTouZhu == "function") {
-                    stateTouZhu('h4em');
-                }
-            } else if (nameF = "wxym") {
-                $(this).parent().parent().parent().attr("data-flag", "wxym-budw");
-                if (typeof stateTouZhu == "function") {
-                    stateTouZhu('wxym');
-                }
-            } else if (nameF = "wxem") {
-                $(this).parent().parent().parent().attr("data-flag", "wxem-budw");
-                if (typeof stateTouZhu == "function") {
-                    stateTouZhu('wxem');
-                }
-            } else if (nameF = "wxsm") {
-                $(this).parent().parent().parent().attr("data-flag", "wxsm-budw");
-                if (typeof stateTouZhu == "function") {
-                    stateTouZhu('wxsm');
-                }
+            } else if (nameF == "hsym") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1004-budw").show();
+                $(".recl-1004-budw").attr("data-flag", "hsym-budw");
+                $(".base_jangj_em").hide();
+                $(".base_jangj").show();
+                clearSelected();
+            } else if (nameF == "hsem") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1005-budw").show();
+                $(".recl-1005-budw").attr("data-flag", "hsem-budw");
+                $(".base_jangj_em").show();
+                $(".base_jangj").hide();
+                clearSelected();
+            } else if (nameF == "q4ym") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1006-budw").show();
+                $(".recl-1006-budw").attr("data-flag", "q4ym-budw");
+                clearSelected();
+            } else if (nameF == "q4em") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1007-budw").show();
+                $(".recl-1007-budw").attr("data-flag", "q4em-budw");
+                clearSelected();
+            } else if (nameF == "h4ym") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1008-budw").show();
+                $(".recl-1008-budw").attr("data-flag", "h4ym-budw");
+                clearSelected();
+            } else if (nameF == "h4em") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1009-budw").show();
+                $(".recl-1009-budw").attr("data-flag", "h4em-budw");
+                clearSelected();
+            } else if (nameF == "wxym") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1010-budw").show();
+                $(".recl-1010-budw").attr("data-flag", "wxym-budw");
+                clearSelected();
+            } else if (nameF == "wxem") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1011-budw").show();
+                $(".recl-1011-budw").attr("data-flag", "wxem-budw");
+                clearSelected();
+            } else if (nameF == "wxsm") {
+                $(".Pick").hide();
+                $(".Pick").removeAttr("data-flag");
+                $(".recl-1012-budw").show();
+                $(".recl-1012-budw").attr("data-flag", "wxsm-budw");
+                clearSelected();
             }
         });
 
@@ -237,9 +604,17 @@
                 if (typeof stateTouZhu == "function") {
                     stateTouZhu('qsym-budw');
                 }
-            }else if(flagName == "qsem-budw"){
+            } else if(flagName == "qsem-budw"){
                 if (typeof stateTouZhu == "function") {
                     stateTouZhu('qsem-budw');
+                }
+            } else if(flagName == "hsym-budw"){
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('hsym-budw');
+                }
+            } else if(flagName == "hsem-budw"){
+                if (typeof stateTouZhu == "function") {
+                    stateTouZhu('hsem-budw');
                 }
             }
 
@@ -275,55 +650,49 @@
 </script>
 <%--不定位点击时选中注数--%>
 <script>
-    function getBuwdZhushu() {
-        var budwArr = [];
+    function getBuwdZhushu(flagStrInner) {
+        var budwArr = [], budwLength = [];
         $.each($(".cl-1002 ul li[data-name = '不定位'] span.acti"), function (index, value) {
             budwArr.push($.trim($(this).find("i").html()));
         });
-
-        var budwLength = budwArr.length;
-        if (typeof budwArr == "undefined" || budwLength <= 0) {
-            if (typeof clearStateTouZhu == 'function') {
-                clearStateTouZhu();
+        var budwName = $(".cl-1002[data-flag='"+ flagStrInner +"']").data("flag"); //获取当前选号对象
+        if(budwName == "qsem-budw" || budwName == "hsem-budw"){
+            if (typeof budwArr == "undefined" || budwArr.length < 2) {
+                if (typeof clearStateTouZhu == 'function') {
+                    clearStateTouZhu();
+                }
+                return;
             }
-            return;
+            budwLength = getQsemZhushu(budwArr);
+        }else{
+            budwLength = budwArr.length;
+
+            if (typeof budwArr == "undefined" || budwLength <= 0) {
+                if (typeof clearStateTouZhu == 'function') {
+                    clearStateTouZhu()
+                }
+                return;
+            }
         }
         return budwLength;
     }
 
-    function getBuwQsemZhushu() {
-        var budwArr = [];
-        $.each($(".recl-1003-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
-            budwArr.push($.trim($(this).find("i").html()));
-        });
-
-        if (typeof budwArr == "undefined" || budwArr.length < 2) {
-            if (typeof clearStateTouZhu == 'function') {
-                clearStateTouZhu();
-            }
-            return;
-        }
-
-        var budwLength = getQsemZhushu(budwArr);
-        return budwLength;
-    }
-
+    //前三二码 /后三二码--算法
     function getQsemZhushu(tempArr) {
         var newArr = [];
         for(var i = 0; i < tempArr.length; i++){
             for(var j = 0; j < tempArr.length; j++){
                 if(i != j){
                    var arr = [];
-                   arr.push(newArr[i])
-                   newArr.push(tempArr[i] + "" + tempArr[j]);
+                   arr.push(tempArr[i]);
+                   arr.push(tempArr[j]);
+                   arr.sort();
+                   newArr.push(arr.join(","));
                 }
             }
         }
 
-        for(var n=0;n<newArr.length;n++){
-            console.log(newArr[n]);
-        }
-
+        newArr = newArr.uniqueArr();
         return newArr.length;
     }
 
@@ -379,17 +748,69 @@
     }
 
     function tjzd() {
-        var betForm = {};
-        if (!getZhudan(betForm)) {
-            return;
+        if (typeof $('.recl-1003-budw').attr('data-flag') != 'undefined') {
+            var betDsForm = {};
+            if (!getQsemZhudan(betDsForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getZhudan(betForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.recl-1004-budw').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getHsymZhudan(betForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.recl-1005-budw').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getHsemZhudan(betForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
         }
-        clearSelected();
-        var html = template("template_touzhu", betForm);
-        $("#zhudanList").append(html);
-        calcAll();
     }
 
+    //后三一码注单
+    function getHsymZhudan(obj) {
+        var budwArr = [];
+        $.each($(".cl-1002 ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
 
+        var zhushu = budwArr.length;
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "三星-后三一码";
+        obj.content = "不定位: (" + budwArr.join(",") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+    //前三一码注单
     function getZhudan(obj) {
         var budwArr = [];
         $.each($(".cl-1002 ul li[data-name = '不定位'] span.acti"), function (index, value) {
@@ -401,13 +822,59 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "不定位-前三一码";
+        obj.playName = "三星-前三一码";
         obj.content = "不定位: (" + budwArr.join(",") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
         obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+    //前三二码注单
+    function getQsemZhudan(obj) {
+        var budwArr = [];
+        $.each($(".recl-1003-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getQsemZhushu(budwArr);
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "三星-前三二码";
+        obj.content = "不定位: (" + budwArr.join(",") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+    //后三二码注单
+    function getHsemZhudan(obj) {
+        var budwArr = [];
+        $.each($(".recl-1005-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getQsemZhushu(budwArr);
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "三星-后三二码";
+        obj.content = "不定位: (" + budwArr.join(",") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -430,16 +897,48 @@
 
     function suiji(total) {
         var result = [];
+        var playName = '';
+        var content = '';
+        var flagVal = '';
+
+        if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
+            playName = "三星-前三一码";
+            flagVal = "qsym";
+        } else if (typeof $('.recl-1003-budw').attr('data-flag') != 'undefined') {
+            playName = "三星-前三二码";
+            flagVal = "qsem";
+        } else if (typeof $('.recl-1004-budw').attr('data-flag') != 'undefined') {
+            playName = "三星-后三一码";
+            flagVal = "hsym";
+        } else if (typeof $('.recl-1005-budw').attr('data-flag') != 'undefined') {
+            playName = "三星-后三二码";
+            flagVal = "hsem";
+        }
+
         for (var numIndex = 0; numIndex < total; ++numIndex) {
-            var strTemp = 10;
-            while (strTemp == 10) {
-                var num = parseInt(Math.random() * 10);
-                strTemp = num;
+            if(flagVal == "qsym" || flagVal == "hsym"){
+                var strTemp = 10;
+                while (strTemp == 10) {
+                    var num = parseInt(Math.random() * 10);
+                    strTemp = num;
+                }
+                content = "不定位: (" + strTemp + ")";
+            } else if(flagVal == "qsem" || flagVal == "hsem"){
+                var arrTemp = [];
+                while(arrTemp.length != 1){
+                    var oneN = parseInt(Math.random() * 10);
+                    var twoN = parseInt(Math.random() * 10);
+                    if(oneN != twoN){
+                        arrTemp.push(oneN + "," + twoN);
+                    }
+                }
+                content = "不定位: (" + arrTemp[0] + ")";
             }
 
+
             var obj = {};
-            obj.playName = "不定位-前三一码";
-            obj.content = "不定位: (" + strTemp + ")";
+            obj.playName = playName;
+            obj.content = content;
             obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
             obj.zhushu = 1;
             obj.beishu = $("#inputBeishu").data("beishu");
@@ -468,12 +967,23 @@
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").html(money_jangjin + "%");
+                var money_jangjin_em = (98 - money_jangjin) / 10 * 1.851;
                 money_jangjin = (98 - money_jangjin) / 10 / 2.71;
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(3));
+                $(".jiangjin-change_em").html(parseFloat(money_jangjin_em).toFixed(3));
                 if (typeof stateTouZhu == "function") {
                     var flag_str = '';
                     if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
-                        flag_str = 'qsym';
+                        flag_str = 'qsym-budw';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.recl-1003-budw').attr('data-flag') != 'undefined') {
+                        flag_str = 'qsem-budw';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.recl-1004-budw').attr('data-flag') != 'undefined') {
+                        flag_str = 'hsym-budw';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.recl-1005-budw').attr('data-flag') != 'undefined') {
+                        flag_str = 'hsem-budw';
                         stateTouZhu(flag_str);
                     }
                 }
