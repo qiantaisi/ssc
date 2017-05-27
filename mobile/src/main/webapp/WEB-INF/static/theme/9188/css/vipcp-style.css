@@ -123,7 +123,11 @@
     padding-top: 0;
 }
 .recl-5 a span {
+<<<<<<< HEAD:mobile/src/main/webapp/WEB-INF/static/theme/vipcp/css/vipcp-style.css
     font-size: 0.7rem;
+=======
+    font-size: 12px;
+>>>>>>> ea05b0ffa9b7c93c731bcee64796084c28313766:mobile/src/main/webapp/WEB-INF/static/theme/9188/css/vipcp-style.css
 }
 .re-row {
     margin-bottom: 0.5rem;
@@ -717,6 +721,7 @@ img{
 }
 .re-con-out{
     background: #f8f7f7!important;
+    line-height: normal;
 }
 
 .img_jian{

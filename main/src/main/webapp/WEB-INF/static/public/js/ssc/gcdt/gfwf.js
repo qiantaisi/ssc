@@ -204,24 +204,14 @@ function stateTouZhu(flag_str) {
         zhushu = getZuxhzZhushu();
     } else if (flagStrInner == "zuxbd-q2"){ // 组选包胆-前二
         zhushu = getZuxbdZhushu();
-    }  else if (flagStrInner == "dwd"){ // 定位胆
+    } else if (flagStrInner == "dwd"){ // 定位胆
         zhushu = getDwdZhushu();
-    }  else if (flagStrInner == "qsym-budw" || flagStrInner == "qsem-budw" || flagStrInner == "hsym-budw" || flagStrInner == "hsem-budw"){ // 不定位
+    } else if (flagStrInner == "qsym-budw" || flagStrInner == "qsem-budw" || flagStrInner == "hsym-budw" || flagStrInner == "hsem-budw"
+        || flagStrInner == "q4ym-budw" || flagStrInner == "q4em-budw" || flagStrInner == "h4ym-budw" || flagStrInner == "h4em-budw"
+        || flagStrInner == "wxym-budw" || flagStrInner == "wxem-budw"){ // 不定位
         zhushu = getBuwdZhushu(flagStrInner);
-    }  else if (flagStrInner == "q4ym-budw"){ // 不定位
-        zhushu = getBuwdZhushu();
-    }  else if (flagStrInner == "q4em-budw"){ // 不定位
-        zhushu = getBuwdZhushu();
-    }  else if (flagStrInner == "h4ym-budw"){ // 不定位
-        zhushu = getBuwdZhushu();
-    }  else if (flagStrInner == "h4em-budw"){ // 不定位
-        zhushu = getBuwdZhushu();
-    }  else if (flagStrInner == "qsym-budw"){ // 不定位
-        zhushu = getBuwdZhushu();
-    }  else if (flagStrInner == "wxem-budw"){ // 不定位
-        zhushu = getBuwdZhushu();
-    }  else if (flagStrInner == "wxsm-budw"){ // 不定位
-        zhushu = getBuwdZhushu();
+    } else if (flagStrInner == "wx3m-budw"){ // 不定位
+        zhushu = getWx3mZhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){
