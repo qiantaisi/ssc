@@ -31,7 +31,7 @@
             <p>
                 <span data-name="wxym"><a href="javascript:void(0)">五星一码</a></span>
                 <span data-name="wxem"><a href="javascript:void(0)">五星二码</a></span>
-                <span data-name="wxsm"><a href="javascript:void(0)">五星三码</a></span>
+                <span data-name="wx3m"><a href="javascript:void(0)">五星三码</a></span>
             </p>
         </li>
     </ul>
@@ -588,16 +588,17 @@
                 $(".recl-1011-budw").show();
                 $(".recl-1011-budw").attr("data-flag", "wxem-budw");
                 clearSelected();
-            } else if (nameF == "wxsm") {
+            } else if (nameF == "wx3m") {
                 $(".Pick").hide();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1012-budw").show();
-                $(".recl-1012-budw").attr("data-flag", "wxsm-budw");
+                $(".recl-1012-budw").attr("data-flag", "wx3m-budw");
                 clearSelected();
             }
         });
 
         $(".Pick ul li span i").click(function () {
+
             $(this).parent().toggleClass('acti');
             var flagName = $(this).parent().parent().parent().parent().data("flag");
             if(flagName == "qsym-budw"){
@@ -712,15 +713,36 @@
             budwArr.push($.trim($(this).find("i").html()));
         });
 
-        budwLength = budwArr.length;
-        if (typeof budwArr == "undefined" || budwLength < 3) {
+        budwLength = getJs3mZhushu(budwArr);
+        if (typeof budwArr == "undefined" || budwLength < 0) {
             if (typeof clearStateTouZhu == 'function') {
                 clearStateTouZhu()
             }
             return;
         }
-
         return budwLength;
+    }
+
+    //五星3码-算法
+    function getJs3mZhushu(tempArr) {
+        var newArr = [];
+        for(var i = 0; i < tempArr.length; i++){
+            for(var j = 0; j < tempArr.length; j++){
+               for(var x = 0; x < tempArr.length; x++) {
+                   if (i != j && j != x && i != x) {
+                       var arr = [];
+                       arr.push(tempArr[i]);
+                       arr.push(tempArr[j]);
+                       arr.push(tempArr[x]);
+                       arr.sort();
+                       newArr.push(arr.join(","));
+                   }
+               }
+            }
+        }
+
+        newArr = newArr.uniqueArr();
+        return newArr.length;
     }
 
     //前三二码 /后三二码--算法
@@ -878,6 +900,15 @@
         } else if (typeof $('.recl-1011-budw').attr('data-flag') != 'undefined') {
             var betForm = {};
             if (!getWxemZhudan(betForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.recl-1012-budw').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getWx3mZhudan(betForm)) {
                 return;
             }
             clearSelected();
@@ -1116,6 +1147,30 @@
         obj.playGroupId = playGroupId;
         return true;
     }
+
+    //五星3码注单
+    function getWxemZhudan(obj) {
+        var budwArr = [];
+        $.each($(".recl-1011-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getEmjsZhushu(budwArr);
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "五星-五星三码";
+        obj.content = "不定位: (" + budwArr.join(",") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
 
     function calcAll() {
         var totalZhushu = 0;

@@ -154,16 +154,9 @@ public class IndexController extends BaseController{
     @RequestMapping(value = "/pc.html", method = RequestMethod.GET)
     public ModelAndView pc(HttpServletResponse response,HttpServletRequest request) {
         String companyShortName = this.getCompanyShortName();
-        String strUrl = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + "/web";
-        if( "9188".equals(companyShortName)){
-            try {
-                response.sendRedirect(strUrl);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
+        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("webTitle", webInfoResult.getWebTitle());
         modelMap.put("webKeywords", webInfoResult.getWebKeywords());
         modelMap.put("webDescription", webInfoResult.getWebDescription());
