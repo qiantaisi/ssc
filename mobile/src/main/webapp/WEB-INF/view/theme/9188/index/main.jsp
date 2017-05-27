@@ -93,21 +93,6 @@
                 </a>
             </div>
 
-            <div class="row cl-6 recl-6">
-                <div class="col-100">
-                    <span class="left">热门开奖</span>
-                    <%--<span class="left">开奖结果同步更新</span>--%>
-                    <a href="<%=basePath%>ssc/kjjl/all.html" class="right">更多</a>
-                </div>
-            </div>
-            <div class="cl-8 recl-8">
-                <div class="list-block media-list">
-                    <div class="kjjg_div">
-
-                    </div>
-                </div>
-            </div>
-
             <div class="row cl-6 re-rmcz">
                 <div class="col-100">
                     <span class="left">热门彩种</span>
@@ -321,6 +306,21 @@
                         </span>
                         </div>
                     </a>
+                </div>
+
+                <div class="row cl-6 recl-6">
+                    <div class="col-100">
+                        <span class="left">热门开奖</span>
+                        <%--<span class="left">开奖结果同步更新</span>--%>
+                        <a href="<%=basePath%>ssc/kjjl/all.html" class="right">更多</a>
+                    </div>
+                </div>
+                <div class="cl-8 recl-8">
+                    <div class="list-block media-list">
+                        <div class="kjjg_div">
+
+                        </div>
+                    </div>
                 </div>
 
             </div>

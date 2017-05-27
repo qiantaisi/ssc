@@ -136,6 +136,7 @@
 .recl-6 {
     border-top: #DEDFDE 1px solid;
     border-bottom: #DEDFDE 1px solid;
+    margin-top: 0.5rem!important;
 }
 .recl-6 .col-100,.re-rmcz .col-100{
     height: 1.43rem;
