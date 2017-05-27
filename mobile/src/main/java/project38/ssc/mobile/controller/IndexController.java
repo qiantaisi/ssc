@@ -18,6 +18,8 @@ import project38.api.result.WebNoticeResult;
 import project38.api.utils.ApiUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -150,8 +152,16 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/pc.html", method = RequestMethod.GET)
-    public ModelAndView pc() {
+    public ModelAndView pc(HttpServletResponse response,HttpServletRequest request) {
         String companyShortName = this.getCompanyShortName();
+        String strUrl = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + "/web";
+        if( "9188".equals(companyShortName)){
+            try {
+                response.sendRedirect(strUrl);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
         modelMap.put("webTitle", webInfoResult.getWebTitle());
