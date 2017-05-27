@@ -16,7 +16,8 @@
                 <span class="icon icon-left reicon"></span>
             </a>
             <h1 class="title reimg">
-                <img src="${resPath}img/kaihead_06.png"/>彩票开奖
+                <%--<img src="${resPath}img/kaihead_06.png"/>--%>
+                9188彩票开奖
             </h1>
             <a href="javascript:void(0)" class="button button-link button-nav pull-right btn_xz">
                 <span>选择彩种</span>
