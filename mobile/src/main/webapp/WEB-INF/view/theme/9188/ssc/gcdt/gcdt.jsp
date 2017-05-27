@@ -70,6 +70,38 @@
                     </a>
                 </div>
             </div>
+
+            <a class="list-block relb relb-k3xl btn-xl-pk10">
+                <div class="item-content reitem-link" href="javascript:void(0)">
+                    <div class="reit-inner">
+                        <div class="item-title">PK10系列</div>
+                    </div>
+                    <span class="img_jian"></span>
+                </div>
+            </a>
+            <div class="cl-7 pk10-div-content" sp="0">
+                <div class="row cl-318 gcdtList re-gctList-bg">
+                    <a class="col-25 col-33 vipcp_bottem" data-play_group_id="9"
+                       href="<%=basePath%>ssc/gcdt/pk10.html">
+                        <span class="jc"></span>
+                        <span class="img bg-img-pk10"></span>
+                        <span>北京PK10</span>
+                    </a>
+                    <a class="col-25 col-33 vipcp_bottem" data-play_group_id="14"
+                       href="<%=basePath%>ssc/gcdt/xyft.html">
+                        <span class="jc"></span>
+                        <span class="img bg-img-xyft"></span>
+                        <span>幸运飞艇</span>
+                    </a>
+                    <a class="col-25 col-33 vipcp_bottem" data-play_group_id="23"
+                       href="<%=basePath%>ssc/gcdt/jspk10.html">
+                        <span class="jc"></span>
+                        <span class="img bg-img-jspk10"></span>
+                        <span>极速PK10</span>
+                    </a>
+                </div>
+            </div>
+
             <a href="javascript:void(0)" class="list-block relb relb-k3xl re-margin-top btn-xl-k3">
                 <div class="item-content reitem-link" href="javascript:void(0)">
                     <div class="reit-inner">
@@ -106,36 +138,7 @@
                     </a>
                 </div>
             </div>
-            <a class="list-block relb relb-k3xl btn-xl-pk10">
-                <div class="item-content reitem-link" href="javascript:void(0)">
-                    <div class="reit-inner">
-                        <div class="item-title">PK10系列</div>
-                    </div>
-                    <span class="img_jian"></span>
-                </div>
-            </a>
-            <div class="cl-7 pk10-div-content" sp="0">
-                <div class="row cl-318 gcdtList re-gctList-bg">
-                    <a class="col-25 col-33 vipcp_bottem" data-play_group_id="9"
-                       href="<%=basePath%>ssc/gcdt/pk10.html">
-                        <span class="jc"></span>
-                        <span class="img bg-img-pk10"></span>
-                        <span>北京PK10</span>
-                    </a>
-                    <a class="col-25 col-33 vipcp_bottem" data-play_group_id="14"
-                       href="<%=basePath%>ssc/gcdt/xyft.html">
-                        <span class="jc"></span>
-                        <span class="img bg-img-xyft"></span>
-                        <span>幸运飞艇</span>
-                    </a>
-                    <a class="col-25 col-33 vipcp_bottem" data-play_group_id="23"
-                       href="<%=basePath%>ssc/gcdt/jspk10.html">
-                        <span class="jc"></span>
-                        <span class="img bg-img-jspk10"></span>
-                        <span>极速PK10</span>
-                    </a>
-                </div>
-            </div>
+
             <a class="list-block relb relb-k3xl btn-xl-gp">
                 <div class="item-content reitem-link" href="javascript:void(0)">
                     <div class="reit-inner">
