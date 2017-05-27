@@ -429,11 +429,11 @@
                     <%--4000-888-888--%>
                 <%--</span>--%>
             <%--</div>--%>
-
-            <div class="index_seven">
-                ©2001-2017 500彩票网 版权所有 股票代码：WBAI<br>
-                深圳市易讯天空网络技术有限公司
-            </div>
+            <c:import url="../common/copyright.jsp"/>
+            <%--<div class="index_seven">--%>
+                <%--©2001-2017 500彩票网 版权所有 股票代码：WBAI<br>--%>
+                <%--深圳市易讯天空网络技术有限公司--%>
+            <%--</div>--%>
             <div class="index_eight">
                 <img src="${resPath}img/index_89.png">
             </div>
