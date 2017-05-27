@@ -137,18 +137,6 @@
     <script src="${resPath}js/wbw/vform.js?v=20170525"></script>
     <script src='${resPath}js/wbw/comm.min.js?v=20170525' type="text/javascript" ></script>
     <script src="${resPath}js/wbw/encrypt.min.js?v=20170525" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(function(){
-            window.cx || (window.cx = {});
-            cx.pub_salt = 'Ps2lQcq5SNNYemVlg3zTOA==';
-            cx.rsa_encrypt = function( val ) {
-                var rsa_n = 'B31FD13CCDA7684626351A49159B9FDD';
-                setMaxDigits(131);
-                var key = new RSAKeyPair("10001", '', rsa_n);
-                return encryptedString(key, val + '<PSALT>' + cx.pub_salt);
-            }
-        });
-    </script><!--note-footer end-->
 </div>
 
 </body>

@@ -157,6 +157,7 @@ public class IndexController extends BaseController{
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webTitle", webInfoResult.getWebTitle());
         modelMap.put("webKeywords", webInfoResult.getWebKeywords());
         modelMap.put("webDescription", webInfoResult.getWebDescription());
