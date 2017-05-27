@@ -20,8 +20,8 @@
                 </a>
                 <div class="user_info">
                     <a class="login not-login" href="javascript:void(0)">网站首页</a>
-                    <a href="javascript:void(0)" class="back-index" target="_blank">优惠活动</a>
-                    <a href="javascript:void(0)" class="back-index" target="_blank">代理赚钱</a>
+                    <a href="<%=request.getScheme() + "://" + request.getServerName()%>" class="back-index" target="_blank">手机投注</a>
+                    <a href="<%=request.getScheme() + "://" + request.getServerName().replace("m.", "")%>" class="back-index" target="_blank">电脑网页版</a>
                     <a href="${kefuUrl}" class="back-index" target="_blank">在线客服</a>
                 </div>
 
