@@ -14,7 +14,9 @@
     <div class="fix-foot-wrap">
         <div class="top_bar">
             <div class="wrap_in" style="margin-top:22px;" >
-                <a href="/mdownload"target="_self"><img src="${resPath}images/logo.png" alt="500彩票桌面版下载"></a>
+                <a href="/mdownload"target="_self">
+                    <img src="<%=basePath%>images/${logo.imageId}" alt="">
+                </a>
                 <div class="user_info">
                     <a class="login not-login" href="javascript:void(0)">网站首页</a>
                     <a href="javascript:void(0)" class="back-index" target="_blank">优惠活动</a>
