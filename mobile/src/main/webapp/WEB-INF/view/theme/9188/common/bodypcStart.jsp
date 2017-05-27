@@ -22,12 +22,6 @@
     <script src="${resPath}js/wbw/jquery-1.8.3.min.js?v=20170525" type="text/javascript"></script>
     <script src="${resPath}js/wbw/base.min.js?v=20170525" type="text/javascript" ></script>
     <script src="${resPath}js/wbw/jquery.fullPage.min.js?v=20170525" type="text/javascript"></script>
-    <script>
-        var md = new MobileDetect(window.navigator.userAgent);
-        if (md.mobile()) {
-            window.location.href = '<%=request.getScheme() + "://" + request.getServerName()%>';
-        }
-    </script>
     <jsp:include page="commonHeader.jsp" />
     <style>
         a:hover{
