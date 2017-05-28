@@ -107,7 +107,7 @@
                             <span class="bg-img-sscxl"></span>
                             <span class="content-sp">
                             <p>时时彩系列</p>
-                             时时彩系列
+                             最火爆的游戏
                             </span>
                         </div>
                     </a>
@@ -117,7 +117,7 @@
                             <span class="bg-img-k3xl"></span>
                             <span class="content-sp">
                                <p>快3系列</p>
-                                快3系列
+                                玩法新颖 返奖比例高
                             </span>
                         </div>
                     </a>
@@ -209,7 +209,7 @@
                             <span class="bg-img-lhc"></span>
                             <span class="content-sp">
                             <p>香港六合彩</p>
-                             香港六合彩
+                             最火低频
                             </span>
                         </div>
                     </a>
@@ -218,7 +218,7 @@
                             <span class="bg-img-bjpk10"></span>
                             <span class="content-sp">
                             <p>北京赛车PK10</p>
-                             北京赛车PK10
+                             中奖率最高的PK10游戏
                         </span>
                         </div>
                     </a>
@@ -230,7 +230,7 @@
                             <span class="bg-img-xyft"></span>
                             <span class="content-sp">
                             <p>幸运飞艇</p>
-                            全场最高500万
+                            PK10系列夜场版本
                             </span>
                         </div>
                     </a>
@@ -238,8 +238,8 @@
                         <div class="c25-div rec25">
                             <span class="bg-img-xy28"></span>
                             <span class="content-sp">
-                            <p>重庆时时彩</p>
-                            全场最高500万
+                            <p>幸运28</p>
+                            幸运28
                         </span>
                         </div>
                     </a>
@@ -260,7 +260,7 @@
                             <span class="bg-img-klsf"></span>
                             <span class="content-sp">
                             <p>广东快乐十分</p>
-                            全场最高500万
+                            广东快乐十分
                         </span>
                         </div>
                     </a>
@@ -281,7 +281,7 @@
                             <span class="bg-img-xync"></span>
                             <span class="content-sp">
                             <p>重庆幸运农场</p>
-                            重庆幸运农场
+                            重庆快乐十分
                         </span>
                         </div>
                     </a>
