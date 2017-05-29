@@ -117,7 +117,7 @@
                             <span class="bg-img-k3xl"></span>
                             <span class="content-sp">
                                <p>快3系列</p>
-                                玩法新颖 返奖比例高
+                                玩法新颖
                             </span>
                         </div>
                     </a>
@@ -217,8 +217,8 @@
                         <div class="c25-div rec25">
                             <span class="bg-img-bjpk10"></span>
                             <span class="content-sp">
-                            <p>北京赛车PK10</p>
-                             中奖率最高的PK10游戏
+                            <p>北京PK10</p>
+                             中奖率最高
                         </span>
                         </div>
                     </a>
@@ -230,7 +230,7 @@
                             <span class="bg-img-xyft"></span>
                             <span class="content-sp">
                             <p>幸运飞艇</p>
-                            PK10系列夜场版本
+                            PK10系列夜场版
                             </span>
                         </div>
                     </a>
