@@ -9,9 +9,10 @@
 <%--自定义风格--%>
 <c:if test="${not empty fengge_1}">
     <style>
-        .cl-102 .cl-103,.buttons-tab .button.active span,.page .bar-nav{background:#${fengge_1}!important}
-        .gonggao_title,.cl-801,.cl-306 .list-block ul li a .item-inner .cl-307:first-child span:last-child,.cl-330 a,.edit_color,.cl-318 .info,.glxq{color:#${fengge_1}!important}
+        .cl-102 .cl-103,.page .bar-nav{background:#${fengge_1}!important}
+        .cl-701 .button.active span,.cl-701 .button.active span,.gonggao_title,.cl-801,.cl-306 .list-block ul li a .item-inner .cl-307:first-child span:last-child,.cl-330 a,.edit_color,.cl-318 .info,.glxq{color:#${fengge_1}!important}
         .cl-952,.cl-102 .cl-103.yhkgl_moren{background-color:#009df7!important}
+        .cl-701 .button.active{border-bottom:1px solid #${fengge_1}!important}
         <%--.eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #${fengge_1}!important;}--%>
         <%--.eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}--%>
         <%--.eveb_nav_sub .on a{border-top:1px #${fengge_1} solid!important;}--%>
