@@ -35,7 +35,7 @@
             </a>
         </li>
         <li>
-            <a href="javascript:void(0)" onclick="openHyzx('jfmx/hylb')">
+            <a href="javascript:void(0)" onclick="openHyzx('member/jfmx.html?module=hylb')">
                 <img src="${resPath}img/ico37.png" alt="">
                 <p>代理合作</p>
             </a>
