@@ -109,22 +109,86 @@
     position: relative;
     top: inherit;
 }
-.gfwf_consele{
-    width:100%;
-    height:20%;
-    background-color: red;
-    position: absolute;
+
+.show_hide {
+    z-index: 999;
 }
-.gfwf_triangle_down{
-    width: px;
-    height:0px;
+
+.gfwf_one {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.gfwf_two {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.gfwf_one .border_one {
+    text-align: center;
+    width: 65%;
+    height: 50%;
+    position: relative;
+    top: 0.7rem;
+    margin: auto;
+    border-radius: 7px;
+    line-height: 1.5rem;
+}
+.color_one{
+    border: 1px solid #828282;
+}
+.color_two{
+    border: 1px solid #fa6200;
+}
+.gfwf_two .border_two {
+    text-align: center;
+    width: 65%;
+    height: 50%;
+    position: relative;
+    top: 0.7rem;
+    margin: auto;
+    border-radius: 7px;
+    line-height: 1.5rem;
+}
+
+.F1_color {
+    color: #828282;
+}
+
+.F2_color {
+    color: #fa6200;
+}
+
+.gfwf_consele {
+    width: 100%;
+    height: 3.3rem;
+    background-color: #fff;
+    position: absolute;
+    top: 2.2rem;
+}
+
+.gfwf_mask {
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+    background: #000;
+    margin-top: 5.5rem;
+}
+
+.gfwf_triangle_down {
+    width: 0px;
+    height: 0px;
     border-width: 7px;
     border-style: solid;
     border-color: #fff transparent transparent transparent;
     display: inline;
     position: relative;
-    top:0.6rem;
+    top: 0.6rem;
 }
+
 .cus-tabs-scroll {
     text-align: center;
     position: relative;
@@ -132,6 +196,7 @@
     width: 100%;
     background-color: #ffffff;
 }
+
 .cus-tabs-scroll a {
     padding: 15%;
     position: relative;

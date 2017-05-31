@@ -6709,10 +6709,10 @@ $(".title").click(  // 官方玩法点击事件
         if ($(".content").is(".show_hide")) {
             $(".page").find(".show_hide").removeClass("show_hide");
             $(".gfwf_consele").addClass("show_hide").show();
-            $(".mask").addClass("show_hide").show();
+            $(".gfwf_mask").addClass("show_hide").show();
         } else {
             $(".gfwf_consele").removeClass("show_hide").show();
-            $(".mask").removeClass("show_hide").hide();
+            $(".gfwf_mask").removeClass("show_hide").hide();
             $(".page").find(".content").addClass("show_hide");
         }
     }
