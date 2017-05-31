@@ -6708,11 +6708,11 @@ $(".title").click(  // 官方玩法点击事件
     function () {
         if ($(".content").is(".show_hide")) {
             $(".page").find(".show_hide").removeClass("show_hide");
-            $(".consele").addClass("show_hide").show();
-            $(".bott").addClass("show_hide").show();
+            $(".gfwf_consele").addClass("show_hide").show();
+            $(".gfwf_mask").addClass("show_hide").show();
         } else {
-            $(".consele").removeClass("show_hide").show();
-            $(".bott").removeClass("show_hide").hide();
+            $(".gfwf_consele").removeClass("show_hide").show();
+            $(".gfwf_mask").removeClass("show_hide").hide();
             $(".page").find(".content").addClass("show_hide");
         }
     }

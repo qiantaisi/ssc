@@ -110,6 +110,97 @@
     top: inherit;
 }
 
+.show_hide {
+    z-index: 999;
+}
+
+.gfwf_one {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.gfwf_two {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.gfwf_one .border_one {
+    text-align: center;
+    width: 65%;
+    height: 50%;
+    position: relative;
+    top: 0.7rem;
+    margin: auto;
+    border-radius: 7px;
+    line-height: 1.5rem;
+}
+
+.color_one {
+    border: 1px solid #828282;
+}
+
+.color_two {
+    border: 1px solid #fa6200;
+}
+
+.gfwf_two .border_two {
+    text-align: center;
+    width: 65%;
+    height: 50%;
+    position: relative;
+    top: 0.7rem;
+    margin: auto;
+    border-radius: 7px;
+    line-height: 1.5rem;
+}
+
+.F1_color {
+    color: #828282;
+}
+
+.F2_color {
+    color: #fa6200;
+}
+
+.gfwf_consele {
+    width: 100%;
+    height: 3.3rem;
+    background-color: #fff;
+    position: absolute;
+    top: 2.2rem;
+}
+
+.gfwf_mask {
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+    background: #000;
+    margin-top: 5.5rem;
+}
+.gfwf_triangle_down2{
+    width: 0px;
+    height: 0px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #101010 transparent transparent transparent;
+    display: inline;
+    position: relative;
+    top: 0.6rem;
+}
+.gfwf_triangle_down {
+    width: 0px;
+    height: 0px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    display: inline;
+    position: relative;
+    top: 0.6rem;
+}
+
 .cus-tabs-scroll {
     text-align: center;
     position: relative;
@@ -132,4 +223,37 @@
 
 .cus-tabs-scroll span img {
     height: 0.7rem;
+}
+
+.x_wrap {
+    width: 100%;
+    height: 2rem;
+    background: #fff;
+    text-align: center;
+    color: #fa6200;
+}
+
+.x_wrap .x_1 {
+    width: 45%;
+    display: inline-block;
+    position: relative;
+    top: 0.3rem;
+    border-bottom:1.5px solid #fa6200;
+    height:1.6rem;
+}
+
+.x_wrap .x_2 {
+    width: 5%;
+    display: inline-block;
+    position: relative;
+    top: 0.55rem;
+}
+.x_wrap .x_2 span img{
+    height:0.9rem;
+}
+.x_wrap .x_3 {
+    width: 45%;
+    display: inline-block;
+    position: relative;
+    top: 0.3rem;
 }
