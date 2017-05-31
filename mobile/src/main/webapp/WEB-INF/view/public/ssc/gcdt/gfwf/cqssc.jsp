@@ -42,10 +42,22 @@
         <div class="gfwf_mask">
             <%--实现蒙版--%>
         </div>
-        <%--<c:import url="../gfwf/cqssc/common/gfwf.jsp" />     &lt;%&ndash;官方玩法选择&ndash;%&gt;--%>
         <div class="content cl-601 show_hide">
-            <c:import url="../gfwf/cqssc/common/common.jsp"/>   <%--直选方式--%>
-            <c:import url="../gfwf/cqssc/common/xzcd.jsp" />   <%--直选方式下的内容--%>
+            <div class="x_wrap">
+                <div class="x_1">
+                    <span>五星直选</span>
+                </div>
+                <div class="x_2">
+                    <span><img src="${resPath}img/ico22.png"/></span>
+                </div>
+                <div class="x_3">
+                    <span>直选方式
+                       <div class="gfwf_triangle_down2">
+                           <%--画出一个向下的三角形图标--%>
+                       </div>
+                    </span>
+                </div>
+            </div>
             <div class="cl-900" id="lastOpenInfo">
                 <%--显示第几期彩种--%>
             </div>
@@ -57,7 +69,6 @@
                 <div class="cl-903" id="openHistoryList">
                 </div>
             </div>
-            <c:import url="../gfwf/cqssc/wx.jsp"/>
         </div>
     </div>
     <c:import url="../../../common/leftSscPanel.jsp"/>
