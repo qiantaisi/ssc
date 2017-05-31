@@ -460,7 +460,7 @@
 <div class="add_spot">
     <div class="left">
         <div class="sopt_wrap">
-            <div class="slide_sp">
+            <div class="slide_sp i-base-jin">
                 奖金/返点
                 <%--<p><span style="width: 4.89063px;"></span><var style="left: 4.89063px;"></var></p>--%>
                 <%--<i><var>934058.63</var> / 7.0%</i>--%>
@@ -471,6 +471,11 @@
                 </div>
                 <i class="base_jangj"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
                 <i class="base_jangj_em"><var class="jiangjin-change_em">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base_jangj_q4"><var class="jiangjin-change_q4">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base_jangj_q4em"><var class="jiangjin-change_q4em">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base_jangj_wx"><var class="jiangjin-change_wx">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base_jangj_wx2m"><var class="jiangjin-change_wx2m">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base_jangj_wx3m"><var class="jiangjin-change_wx3m">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
             </div>
             <div class="reduce">
                 <a class="fl">-</a>
@@ -505,7 +510,8 @@
     $(function () {
         $(".Pick").hide();
         $(".recl-1002").show();
-        $(".base_jangj_em").hide();
+        $(".i-base-jin i").hide();
+        $(".base_jangj").show();
         $(".btn_fu_zhi span").click(function () {
             if ($(this).siblings().hasClass('acti')) {
                 $(this).siblings().removeClass('acti');
@@ -523,8 +529,8 @@
                 $(".recl-1003-budw").show();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1003-budw").attr("data-flag", "qsem-budw");
+                $(".i-base-jin i").hide();
                 $(".base_jangj_em").show();
-                $(".base_jangj").hide();
                 clearSelected();
 
             } else if (nameF == "qsym") {
@@ -532,7 +538,7 @@
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1002").show();
                 $(".recl-1002").attr("data-flag", "qsym-budw");
-                $(".base_jangj_em").hide();
+                $(".i-base-jin i").hide();
                 $(".base_jangj").show();
                 clearSelected();
 
@@ -541,7 +547,7 @@
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1004-budw").show();
                 $(".recl-1004-budw").attr("data-flag", "hsym-budw");
-                $(".base_jangj_em").hide();
+                $(".i-base-jin i").hide();
                 $(".base_jangj").show();
                 clearSelected();
             } else if (nameF == "hsem") {
@@ -549,50 +555,64 @@
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1005-budw").show();
                 $(".recl-1005-budw").attr("data-flag", "hsem-budw");
+                $(".i-base-jin i").hide();
                 $(".base_jangj_em").show();
-                $(".base_jangj").hide();
                 clearSelected();
             } else if (nameF == "q4ym") {
                 $(".Pick").hide();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1006-budw").show();
                 $(".recl-1006-budw").attr("data-flag", "q4ym-budw");
+                $(".i-base-jin i").hide();
+                $(".base_jangj_q4").show();
                 clearSelected();
             } else if (nameF == "q4em") {
                 $(".Pick").hide();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1007-budw").show();
                 $(".recl-1007-budw").attr("data-flag", "q4em-budw");
+                $(".i-base-jin i").hide();
+                $(".base_jangj_q4em").show();
                 clearSelected();
             } else if (nameF == "h4ym") {
                 $(".Pick").hide();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1008-budw").show();
                 $(".recl-1008-budw").attr("data-flag", "h4ym-budw");
+                $(".i-base-jin i").hide();
+                $(".base_jangj_q4").show();
                 clearSelected();
             } else if (nameF == "h4em") {
                 $(".Pick").hide();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1009-budw").show();
                 $(".recl-1009-budw").attr("data-flag", "h4em-budw");
+                $(".i-base-jin i").hide();
+                $(".base_jangj_q4em").show();
                 clearSelected();
             } else if (nameF == "wxym") {
                 $(".Pick").hide();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1010-budw").show();
                 $(".recl-1010-budw").attr("data-flag", "wxym-budw");
+                $(".i-base-jin i").hide();
+                $(".base_jangj_wx").show();
                 clearSelected();
             } else if (nameF == "wxem") {
                 $(".Pick").hide();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1011-budw").show();
                 $(".recl-1011-budw").attr("data-flag", "wxem-budw");
+                $(".i-base-jin i").hide();
+                $(".base_jangj_wx2m").show();
                 clearSelected();
             } else if (nameF == "wx3m") {
                 $(".Pick").hide();
                 $(".Pick").removeAttr("data-flag");
                 $(".recl-1012-budw").show();
                 $(".recl-1012-budw").attr("data-flag", "wx3m-budw");
+                $(".i-base-jin i").hide();
+                $(".base_jangj_wx3m").show();
                 clearSelected();
             }
         });
@@ -1028,7 +1048,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change_q4").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1051,7 +1071,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change_q4em").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1074,7 +1094,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change_q4").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1097,7 +1117,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change_q4em").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1120,7 +1140,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change_wx").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1143,19 +1163,19 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change_wx2m").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
 
     //五星3码注单
-    function getWxemZhudan(obj) {
+    function getWx3mZhudan(obj) {
         var budwArr = [];
-        $.each($(".recl-1011-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+        $.each($(".recl-1012-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
             budwArr.push($.trim($(this).find("i").html()));
         });
 
-        var zhushu = getEmjsZhushu(budwArr);
+        var zhushu = getJs3mZhushu(budwArr);
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
@@ -1166,7 +1186,7 @@
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change_wx3m").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1253,10 +1273,10 @@
                     var erM = parseInt(Math.random() * 10);
                     var sanM = parseInt(Math.random() * 10);
                     if(yiM != erM && erM != sanM && sanM != yiM){
-                        arrTemp.push(yiM + "," + erM + "," + sanM);
+                        arrT.push(yiM + "," + erM + "," + sanM);
                     }
                 }
-                content = "不定位: (" + arrTemp[0] + ")";
+                content = "不定位: (" + arrT[0] + ")";
             }
 
 
@@ -1267,7 +1287,21 @@
             obj.zhushu = 1;
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");
-            obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+            if(flagVal == "qsem" || flagVal == "hsem"){
+                obj.jiangJfanD = $(".jiangjin-change_em").html() + "/" + $(".fandian-bfb").html();
+            }else if(flagVal == "q4ym" || flagVal == "h4ym"){
+                obj.jiangJfanD = $(".jiangjin-change_q4").html() + "/" + $(".fandian-bfb").html();
+            }else if(flagVal == "q4em" || flagVal == "h4em"){
+                obj.jiangJfanD = $(".jiangjin-change_q4em").html() + "/" + $(".fandian-bfb").html();
+            }else if(flagVal == "wxym"){
+                obj.jiangJfanD = $(".jiangjin-change_wx").html() + "/" + $(".fandian-bfb").html();
+            }else if(flagVal == "wxem"){
+                obj.jiangJfanD = $(".jiangjin-change_wx2m").html() + "/" + $(".fandian-bfb").html();
+            }else if(flagVal == "wx3m"){
+                obj.jiangJfanD = $(".jiangjin-change_wx3m").html() + "/" + $(".fandian-bfb").html();
+            }else{
+                obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+            }
             obj.playGroupId = playGroupId;
             result.push(obj);
         }
@@ -1289,12 +1323,24 @@
             snap: true,
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(1);
+                money_jangjin = parseFloat(money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                var money_jangjin_em = (98 - money_jangjin) / 10 * 1.851;
-                money_jangjin = (98 - money_jangjin) / 10 / 2.71;
+                var money_jangjin_em = 18.147 - (18.147 - 15.74) / 13 * money_jangjin;
+                var money_jangjin_q4 = 2.849 - (2.849 - 2.471) / 13 * money_jangjin;
+                var money_jangjin_q4em = 10.061 - (10.061 - 8.726) / 13 * money_jangjin;
+                var money_jangjin_wx = 2.392 - (2.392 - 2.075) / 13 * money_jangjin;
+                var money_jangjin_wx2m = 6.68 -(6.68 - 5.794) / 13 * money_jangjin;
+                var money_jangjin_wx3m = 22.528 - (22.528 - 19.54) / 13 * money_jangjin;
+
+                money_jangjin = 3.616 - (3.616 - 3.136)  / 13 * money_jangjin;
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(3));
                 $(".jiangjin-change_em").html(parseFloat(money_jangjin_em).toFixed(3));
+                $(".jiangjin-change_q4").html(parseFloat(money_jangjin_q4).toFixed(3));
+                $(".jiangjin-change_q4em").html(parseFloat(money_jangjin_q4em).toFixed(3));
+                $(".jiangjin-change_wx").html(parseFloat(money_jangjin_wx).toFixed(3));
+                $(".jiangjin-change_wx2m").html(parseFloat(money_jangjin_wx2m).toFixed(3));
+                $(".jiangjin-change_wx3m").html(parseFloat(money_jangjin_wx3m).toFixed(3));
+
                 if (typeof stateTouZhu == "function") {
                     var flag_str = '';
                     if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
