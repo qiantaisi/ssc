@@ -180,3 +180,17 @@
     line-height: 25px;
     text-indent: 10px;
 }
+
+.group .dsdx-menu span{
+    width: 80px!important;
+}
+.Single .layout .Pick ul.dxds li .clear {
+    float: right;
+    width: 61px;
+    height: 43px;
+    background: url(../img/reico57.png);
+    text-align: center;
+}
+.Single .layout .Pick ul.dxds li .re-5x-i{
+    margin-right: 550px;
+}
