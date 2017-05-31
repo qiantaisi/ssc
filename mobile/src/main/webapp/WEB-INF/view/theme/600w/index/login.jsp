@@ -27,7 +27,8 @@
                 <div class="col-100">
                     <img src="${resPath}img/ico17.png" alt="">
                 </div>
-                <div class="col-100">欢迎您登录600万彩票网</div>
+                <%--<div class="col-100">欢迎您登录600万彩票网</div>--%>
+                <div class="col-100">${WebInfoResult.webName}</div>
             </div>
             <div class="cl-101">
                 <div class="list-block">

@@ -99,6 +99,7 @@ public class IndexController extends BaseController{
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("khxy", ApiUtils.getKhxy(companyShortName));
         modelMap.put("logo", ApiUtils.getLogo(5,companyShortName));
+        modelMap.put("WebInfoResult", ApiUtils.getWebInfo(2,companyShortName));
         return this.renderView("index/register", modelMap);
     }
 
@@ -126,6 +127,7 @@ public class IndexController extends BaseController{
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("logo", ApiUtils.getLogo(5,companyShortName));
+        modelMap.put("WebInfoResult", ApiUtils.getWebInfo(2,companyShortName));
         return this.renderView("index/login", modelMap);
     }
 

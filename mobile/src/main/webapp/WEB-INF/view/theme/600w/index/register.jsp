@@ -2,7 +2,7 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -24,7 +24,8 @@
         </header>
         <div class="content bg-white">
             <div class="row cl-100">
-                <div class="col-100">欢迎您注册600w彩票网</div>
+                <%--<div class="col-100">欢迎您注册600w彩票网${WebInfoResult.webName}</div>--%>
+                <div class="col-100">${WebInfoResult.webName}</div>
             </div>
             <div class="cl-101">
                 <div class="list-block">

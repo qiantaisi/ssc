@@ -20,25 +20,22 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">重庆时时彩 <i class="triangle-down"> <!--向下的三角--> </i></h1>
+            <h1 class="title">
+                重庆时时彩
+                <div class="gfwf_triangle_down">
+                    <%--画出一个向下的三角形图标--%>
+                </div>
+            </h1>
         </header>
         <c:import url="common/commonBet.jsp"/>
-        <div class="consele">
-            <div class="consele-one">
-                <div class="selects-one">
-                    <span><a  class="active" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a></span>
-                </div>
-            </div>
-            <div class="consele-two">
-                <div class="selects-two">
-                    <span><a calss="" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a></span>
-                </div>
-            </div>
-        </div>
-        <div class="bott">
-            <%--半透明--%>
+
+        <div class="gfwf_mask">
+
         </div>
         <div class="content cl-601 show_hide">
+            <div class="gfwf_consele">
+
+            </div>
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/sm.html">双面</a>
