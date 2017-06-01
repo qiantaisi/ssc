@@ -1,3 +1,28 @@
+$(function () {
+    $(".btn-cgwf").click(function(){
+        var flagFT_cg = $(".gf-cgwf").hasClass("hide_flag");
+        var flagFT_rx = $(".gf-rxwf").hasClass("hide_flag");
+        if(flagFT_cg){
+            $(".gf-cgwf").removeClass("hide_flag");
+        }
+        if(!flagFT_rx){
+            $(".gf-rxwf").addClass("hide_flag");
+        }
+        $(".Single .layout  .Playmethod ul li.gf-li p span:first-child").addClass("acti");
+    });
+    $(".btn-rxwf").click(function(){
+        var flagFT_cg = $(".gf-cgwf").hasClass("hide_flag");
+        var flagFT_rx = $(".gf-rxwf").hasClass("hide_flag");
+        if(!flagFT_cg){
+            $(".gf-cgwf").addClass("hide_flag");
+        }
+        if(flagFT_rx){
+            $(".gf-rxwf").removeClass("hide_flag");
+        }
+        $(".Single .layout  .Playmethod ul li.gf-li p span:first-child").addClass("acti");
+    });
+});
+
 // 数字批量选择算法
 function selectFun_1(obj) {
     $(obj).parent().find(".acti").removeClass("acti");

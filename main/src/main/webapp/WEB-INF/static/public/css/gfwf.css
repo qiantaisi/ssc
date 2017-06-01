@@ -194,3 +194,75 @@
 .Single .layout .Pick ul.dxds li .re-5x-i{
     margin-right: 550px;
 }
+.Playmethod ul li p .rxwf{
+    width: 75px!important;
+}
+
+/*任选*/
+.selposition {
+    width: 681px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 8px;
+    background: #efefef;
+    /*box-shadow: 0 3px 5px #bbb inset;*/
+    margin: 0 0 10px 0;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.re2-1004-li{
+    padding-left: 25px;
+}
+.rxdesc {
+    font-size: 12px;
+    height: 16px!important;
+    width: 370px!important;
+    float: none!important;
+    margin-left: 0!important;
+}
+.rxdesc .rx-b-ts{
+    font-weight: bold;
+    width: 60px!important;
+    height: 16px!important;
+    float: none!important;
+    margin-left: -8px!important;
+    color: #5d5850 !important;
+}
+.rxdesc .rx-b-hao{
+    width: auto!important;
+    height: 16px!important;
+    float: none!important;
+    margin-left: 0!important;
+    color: #7d786d !important;
+}
+.selposition label {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.rxdesc b var{
+    color:red!important;
+}
+.re-select-ds{
+    margin-left: 30px;
+    margin-bottom: 18px;
+}
+.re-select-ds .rxdesc .rx-b-hao,.re-select-ds .rxdesc .rx-b-ts{
+    font-weight: normal;
+}
+.re-select-ds .rxdesc{
+    font-weight: normal;
+    color: #999899;
+}
+.Pick ul .re-zuxhz-rx2{
+    height: 50px;
+    line-height: 60px;
+}
+.Pick ul .re-zuxhz-rx2 b{
+    margin-right: 25px!important;
+}
+.Pick ul .re-zuxhz-rx2 span{
+    margin-left: 10px!important;
+}

@@ -54,9 +54,9 @@
         <div class="layout at">
             <div class="Playmethod cl-801">
                 <ul>
-                    <li>
+                    <li class="gf-li">
                         <b class="acti">官方玩法</b>
-                        <p class="guanfang respan" data-name="gfwf">
+                        <p class="guanfang respan gf-cgwf" data-name="gfwf">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-cqssc-5x">五星</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-4x">四星</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-h3">后三</a></span>
@@ -65,9 +65,14 @@
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-dwd">定位胆</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-budw">不定位</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-cqssc-dxds">大小单双</a></span>
-                            <span><a href="javascript:void(0)">任选玩法</a></span>
+                            <span class="rxwf"><a href="javascript:void(0)" class="btn-rxwf" data-url="gfwf-cqssc-rx2">任选玩法&gt;</a></span>
                         </p>
-                    </li>
+                        <p class="guanfang respan gf-rxwf hide_flag" data-name="gfwf">
+                            <span class="acti"><a href="javascript:void(0)" data-url="gfwf-cqssc-5x">任选二</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-4x">任选三</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-h3">任选四</a></span>
+                            <span class="rxwf"><a href="javascript:void(0)" class="btn-cgwf" data-url="gfwf-cqssc-5x">常规玩法&gt;</a></span>
+                        </p>
                     <li>
                         <b>快钱玩法</b>
                         <p class="kuaiqian" data-name="kqwf">
