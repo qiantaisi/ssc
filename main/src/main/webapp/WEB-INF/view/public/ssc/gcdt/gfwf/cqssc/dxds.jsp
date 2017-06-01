@@ -153,7 +153,7 @@
     </p>
     <ul class="dxds">
         <li data-name="百">
-            <b><i>万位</i></b>
+            <b><i>百位</i></b>
             <span><i>大</i></span>
             <span><i>小</i></span>
             <span><i>单</i></span>
@@ -391,7 +391,7 @@
     function getH3zhushu(){
         var dxdsBArr = [],dxdsSArr = [], dxdsGArr = [], tempArr = [];
         $.each($(".recl-1005-h3dxds ul li[data-name = '百'] span.acti"), function (index, value) {
-            dxdsSArr.push($.trim($(this).find("i").html()));
+            dxdsBArr.push($.trim($(this).find("i").html()));
         });
         $.each($(".recl-1005-h3dxds ul li[data-name = '十'] span.acti"), function (index, value) {
             dxdsSArr.push($.trim($(this).find("i").html()));
@@ -546,9 +546,21 @@
             var html = template("template_touzhu", betDsForm);
             $("#zhudanList").append(html);
             calcAll();
-        } else if (typeof $('.cl-1004-q3dxds').attr('data-flag') != 'undefined') {
+        } else if (typeof $('.recl-1004-q3dxds').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getQ3dxdsZhudan(betDsForm)) {
+                return;
+            }
+            clearSelected();
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            var html = template("template_touzhu", betDsForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.recl-1005-h3dxds').attr('data-flag') != 'undefined') {
+            var betDsForm = {};
+            if (!getH3dxdsZhudan(betDsForm)) {
                 return;
             }
             clearSelected();
@@ -637,12 +649,12 @@
 
         zhushu = getQ3zhushu();
         obj.playName = "前三大小单双";
-        obj.content = "万位: (" + dxdsWArr.join(",") + ")，" + "千位: (" + dxdsQArr.join(",") + ")" + "百位: (" + dxdsBArr.join(",") + ")";
+        obj.content = "万位: (" + dxdsWArr.join(",") + "), " + "千位: (" + dxdsQArr.join(",") + "), " + "百位: (" + dxdsBArr.join(",") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-3w").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -679,7 +691,43 @@
         obj.playGroupId = playGroupId;
         return true;
     }
+    //大小单双-后3
+    function getH3dxdsZhudan(obj) {
+        var zhushu = 0;
+        var dxdsBArr = [],dxdsSArr = [], dxdsGArr = [], tempArr = [];
+        $.each($(".recl-1005-h3dxds ul li[data-name = '百'] span.acti"), function (index, value) {
+            dxdsBArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".recl-1005-h3dxds ul li[data-name = '十'] span.acti"), function (index, value) {
+            dxdsSArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".recl-1005-h3dxds ul li[data-name = '个'] span.acti"), function (index, value) {
+            dxdsGArr.push($.trim($(this).find("i").html()));
+        });
 
+        for (var i = 0; i < dxdsBArr.length; i++) {
+            for (var n = 0; n < dxdsSArr.length; n++) {
+                for (var m = 0; m < dxdsGArr.length; m++) {
+                    tempArr.push(dxdsBArr[i] + "" + dxdsSArr[n] + "" + dxdsGArr[m]);
+                }
+            }
+        }
+        if(dxdsBArr.length <= 0 || dxdsSArr.length <= 0 || dxdsGArr.length <= 0){
+            alert("号码选择不完整，请重新选择");
+            return;
+        }
+
+        zhushu = getH3zhushu();
+        obj.playName = "后三大小单双";
+        obj.content = "百位: (" + dxdsBArr.join(",") + ")，" + "十位: (" + dxdsSArr.join(",") + ")，" + "个位: (" + dxdsGArr.join(",") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change-3w").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
 
     //计算总单数与金额
     function calcAll() {
@@ -700,21 +748,21 @@
     //随机生成注数
     function suiji(total) {
         var result = [];
-        var flag_dan_zhi = "";//默认为单式
+        var flagValue = "";//默认为单式
         var playNameStr = '';
         var contentStr = '';
         if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
             playNameStr = "前二大小单双";
-            flag_dan_zhi = "q2dxds";
+            flagValue = "q2dxds";
         } else if (typeof $('.recl-1003-h2dxds').attr('data-flag') != 'undefined') {
             playNameStr = "后二大小单双";
-            flag_dan_zhi = "h2dxds";
+            flagValue = "h2dxds";
         } else if (typeof $('.recl-1004-q3dxds').attr('data-flag') != 'undefined') {
             playNameStr = "前三大小单双";
-            flag_dan_zhi = "q3dxds";
+            flagValue = "q3dxds";
         } else if (typeof $('.recl-1005-h3dxds').attr('data-flag') != 'undefined') {
             playNameStr = "后三大小单双";
-            flag_dan_zhi = "h3dxds";
+            flagValue = "h3dxds";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -739,13 +787,13 @@
                 arr.push(tempArr[num1]);
                 arr.push(tempArr[num2]);
             }
-            if (flag_dan_zhi == "q2dxds") {
+            if (flagValue == "q2dxds") {
                 contentStr = "万位: (" + arr[0] + "), 千位: (" + arr[1] + ")";
-            } else if (flag_dan_zhi == "h2dxds") {
+            } else if (flagValue == "h2dxds") {
                 contentStr = "十位: (" + arr[0] + "), 个位: (" + arr[1] + ")";
-            } else if (flag_dan_zhi == "q3dxds") {
+            } else if (flagValue == "q3dxds") {
                 contentStr = "万位: (" + arr[0] + "), 千位: (" + arr[1] + "), 百位: (" + arr[2] + ")";
-            } else if (flag_dan_zhi == "h3dxds") {
+            } else if (flagValue == "h3dxds") {
                 contentStr = "百位: (" + arr[0] + "), 十位: (" + arr[1] + "), 个位: (" + arr[2] + ")";
             }
 
@@ -756,7 +804,11 @@
             obj.zhushu = 1;
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");
-            obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+            if(flagValue == "q3dxds" || flagValue == "h3dxds"){
+                obj.jiangJfanD = $(".jiangjin-change-3w").html() + "/" + $(".fandian-bfb").html();
+            }else{
+                obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+            }
             obj.playGroupId = playGroupId;
             result.push(obj);
         }
