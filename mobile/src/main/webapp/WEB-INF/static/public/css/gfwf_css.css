@@ -297,8 +297,8 @@
     border: 1px solid #dddddd;
     padding: 0.28em 0.5em;
     border-radius: 5px;
-    margin-right: 0.6em;
-    font-size: 0.9em;
+    margin-right: 0.4em;
+    /*font-size: 0.9em;*/
 }
 
 .wrap .cus_common .wan_bottom {
@@ -309,15 +309,15 @@
 
 .wrap .cus_common .wan_bottom .cus-flex-item {
     display: inline-block;
-    margin:0.8em;
-    line-height: 2.1em;
+    margin:0.6em;
+    line-height: 2.5em;
     text-align: center;
 }
 
 .wrap .cus_common .wan_bottom .cus-flex-item .xz {
     display: block;
-    width:2.1em;
-    height:2.1em;
+    width:2.5em;
+    height:2.5em;
     border:1px solid #dddddd;
     border-radius: 50%;
     color: red;
