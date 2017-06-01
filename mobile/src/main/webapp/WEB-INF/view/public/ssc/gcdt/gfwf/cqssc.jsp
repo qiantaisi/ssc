@@ -62,8 +62,6 @@
         <c:param name="playGroupId" value="1"/>
     </c:import>
 </div>
-
-
 <c:import url="../../../common/commonJs.jsp"/>
 <script type="text/html" id="template_openNumber_item">
     <div class="cl-904">
