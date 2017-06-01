@@ -27,6 +27,7 @@
             </h1>
         </header>
         <c:import url="../common/commonBet.jsp"/>
+
         <div class="gfwf_consele">
             <div class="gfwf_one">
                 <div class="border_one color_two">
@@ -42,8 +43,12 @@
         <div class="gfwf_mask">
             <%--实现蒙版--%>
         </div>
+
         <div class="content cl-601 show_hide">
-         <c:import url="./cqssc/common/common.jsp"/>
+            <c:import url="./cqssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
+            <div>
+
+            </div>
             <div class="cl-900" id="lastOpenInfo">
                 <%--显示第几期彩种--%>
             </div>
@@ -55,6 +60,7 @@
                 <div class="cl-903" id="openHistoryList">
                 </div>
             </div>
+            <c:import url="./cqssc/wx.jsp"/> <%--彩种主体内容--%>
         </div>
     </div>
     <c:import url="../../../common/leftSscPanel.jsp"/>
