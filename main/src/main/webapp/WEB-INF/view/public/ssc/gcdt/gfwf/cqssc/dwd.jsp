@@ -353,7 +353,12 @@
             return false;
         }
         obj.playName = "定位胆-定位胆";
-        obj.content = "万位: " + wanArr.join("") + " 千位: " + qianArr.join("") + " 百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
+        var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : "";
+        var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : "";
+        var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : "";
+        var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : "";
+        var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : "";
+        obj.content = wanStr + qianStr + baiStr + shiStr + geStr;
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
