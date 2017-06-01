@@ -43,21 +43,7 @@
             <%--实现蒙版--%>
         </div>
         <div class="content cl-601 show_hide">
-            <div class="x_wrap">
-                <div class="x_1">
-                    <span>五星直选</span>
-                </div>
-                <div class="x_2">
-                    <span><img src="${resPath}img/ico22.png"/></span>
-                </div>
-                <div class="x_3">
-                    <span>直选方式
-                       <div class="gfwf_triangle_down2">
-                           <%--画出一个向下的三角形图标--%>
-                       </div>
-                    </span>
-                </div>
-            </div>
+         <c:import url="./cqssc/common/common.jsp"/>
             <div class="cl-900" id="lastOpenInfo">
                 <%--显示第几期彩种--%>
             </div>
