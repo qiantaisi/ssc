@@ -222,33 +222,6 @@
                 stateTouZhu('fu');
             }
         });
-
-        //官方玩法
-        $(".Playmethod ul li span").click(function () {
-
-            var name_flag = $(this).parent().data('name');
-            if (name_flag == 'gfwf') {
-                var flag_acti = $(this).parent().parent().next().find('b').hasClass('acti');
-                if (flag_acti == true) {
-                    $(this).parent().parent().next().find('b').removeClass('acti');
-                }
-                $(this).parent().parent().find('b').addClass('acti');
-                $(".left_it0").show();
-                $(".right_it1").show();
-                $(".Detailedlist").show();
-            } else {
-                var flag_acti =  $(this).parent().parent().prev().find("b").hasClass('acti');
-                if (flag_acti == true) {
-                    $(this).parent().parent().prev().find("b").removeClass('acti');
-                }
-                $(this).parent().parent().find('b').addClass('acti');
-                $(".left_it0").hide();
-                $(".right_it1").hide();
-                $(".Detailedlist").hide();
-            }
-
-        });
-
     });
 </script>
 <script>
@@ -549,6 +522,7 @@
 
             $(this).parent().parent().find('input').data("money", parseInt(text));
             calc();
+            changeStateCommon();
         });
 
         $(".Single .layout .add_spot .left .sopt_wrap .down span").click(function () {
@@ -573,6 +547,7 @@
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
 
             calc();
+            changeStateCommon();
         });
 
         $(".Single .layout .add_spot .left .sopt_wrap .reduce a.fr").click(function () {
@@ -587,7 +562,9 @@
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
 
             calc();
+            changeStateCommon();
         });
+
     });
 </script>
 

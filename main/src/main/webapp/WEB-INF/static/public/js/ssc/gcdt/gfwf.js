@@ -1,4 +1,31 @@
 $(function () {
+    //官方玩法
+    $(".Playmethod ul li span").click(function () {
+
+        var name_flag = $(this).parent().data('name');
+        if (name_flag == 'gfwf') {
+            var flag_acti = $(this).parent().parent().next().find('b').hasClass('acti');
+            if (flag_acti == true) {
+                $(this).parent().parent().next().find('b').removeClass('acti');
+            }
+            $(this).parent().parent().find('b').addClass('acti');
+            $(".left_it0").show();
+            $(".right_it1").show();
+            $(".Detailedlist").show();
+        } else {
+            var flag_acti =  $(this).parent().parent().prev().find("b").hasClass('acti');
+            if (flag_acti == true) {
+                $(this).parent().parent().prev().find("b").removeClass('acti');
+            }
+            $(this).parent().parent().find('b').addClass('acti');
+            $(".left_it0").hide();
+            $(".right_it1").hide();
+            $(".Detailedlist").hide();
+        }
+
+    });
+
+
     $(".btn-cgwf").click(function(){
         var flagFT_cg = $(".gf-cgwf").hasClass("hide_flag");
         var flagFT_rx = $(".gf-rxwf").hasClass("hide_flag");
@@ -22,6 +49,23 @@ $(function () {
         $(".Single .layout  .Playmethod ul li.gf-li p span:first-child").addClass("acti");
     });
 });
+//加倍数 或 重新选钱时改变当前显示注数金额状态
+function changeStateCommon(){
+    var zhushu = $('.p1 .i0').html();
+    if(zhushu == null || typeof zhushu == "undefined"){
+        zhushu = 0;
+    }else{
+        zhushu = parseInt(zhushu);
+    }
+    $('.p1 .i_beishu').html($("#inputBeishu").val());
+    var strFd = $(".fandian-bfb").html();
+    var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
+    var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
+    var p1_i2 = (totalMoney * num).toString();
+    p1_i2 = isNaN(p1_i2) == true ? "0.0000" :p1_i2;
+    $('.p1 .i_fanD').html(p1_i2.substr(0,p1_i2.indexOf(".") + 3));
+    $('.p1 .i_money').html(totalMoney);
+}
 
 // 数字批量选择算法
 function selectFun_1(obj) {

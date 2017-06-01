@@ -539,36 +539,6 @@
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
             }
-
-
-
-
-        });
-
-        //官方玩法
-        $(".Playmethod ul li span").click(function () {
-
-            var name_flag = $(this).parent().data('name');
-            if (name_flag == 'gfwf') {
-                var flag_acti = $(this).parent().parent().next().find('b').hasClass('acti');
-                if (flag_acti == true) {
-                    $(this).parent().parent().next().find('b').removeClass('acti');
-                }
-                $(this).parent().parent().find('b').addClass('acti');
-                $(".left_it0").show();
-                $(".right_it1").show();
-                $(".Detailedlist").show();
-            } else {
-                var flag_acti =  $(this).parent().parent().prev().find("b").hasClass('acti');
-                if (flag_acti == true) {
-                    $(this).parent().parent().prev().find("b").removeClass('acti');
-                }
-                $(this).parent().parent().find('b').addClass('acti');
-                $(".left_it0").hide();
-                $(".right_it1").hide();
-                $(".Detailedlist").hide();
-            }
-
         });
 
     });
@@ -932,6 +902,7 @@
 
             calc();
         });
+
     });
 </script>
 
