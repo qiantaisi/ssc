@@ -46,9 +46,6 @@
 
         <div class="content cl-601 show_hide">
             <c:import url="./cqssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
-            <div>
-
-            </div>
             <div class="cl-900" id="lastOpenInfo">
                 <%--显示第几期彩种--%>
             </div>
