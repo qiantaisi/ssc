@@ -25,10 +25,69 @@
     </div>
 </div>
 <div class="gfwf_xz gfwf_wh">
-<div class="">
+    <div class="xuan">
+        <div class="xuan1"></div>
+        <div class="xuan2">五星</div>
+        <div class="xuan1"></div>
+    </div>
+    <div class="staer">
+        <span class="staer1">直选复式</span>
+        <span class="staer1">直选单式</span>
+        <span class="staer1">任选二</span>
+    </div>
 
-</div>
-</div>
-<div class="gfwf_mb">
-    <%--蒙版--%>
+    <div class="xuan">
+        <div class="xuan1"></div>
+        <div class="xuan2">四星</div>
+        <div class="xuan1"></div>
+    </div>
+    <div class="staer">
+        <span class="staer1">直选复式</span>
+        <span class="staer1">直选单式</span>
+        <span class="staer1">任选二</span>
+    </div>
+
+    <div class="xuan">
+        <div class="xuan1"></div>
+        <div class="xuan2">三星</div>
+        <div class="xuan1"></div>
+    </div>
+    <div class="staer">
+        <span class="staer1">直选复式</span>
+        <span class="staer1">直选单式</span>
+        <span class="staer1">任选二</span>
+    </div>
+
+    <div class="xuan">
+        <div class="xuan1"></div>
+        <div class="xuan2">二星</div>
+        <div class="xuan1"></div>
+    </div>
+    <div class="staer">
+        <span class="staer1">直选复式</span>
+        <span class="staer1">直选单式</span>
+        <span class="staer1">任选二</span>
+    </div>
+
+    <div class="xuan">
+        <div class="xuan1"></div>
+        <div class="xuan2">一星</div>
+        <div class="xuan1"></div>
+    </div>
+    <div class="staer">
+        <span class="staer1">直选复式</span>
+        <span class="staer1">直选单式</span>
+        <span class="staer1">任选二</span>
+    </div>
+
+    <div class="xuan">
+        <div class="xuan1"></div>
+        <div class="xuan2">五星</div>
+        <div class="xuan1"></div>
+    </div>
+    <div class="staer">
+        <span class="staer1">直选复式</span>
+        <span class="staer1">直选单式</span>
+        <span class="staer1">任选二</span>
+    </div>
 </div>
