@@ -6728,6 +6728,17 @@ $(".cus-tabs-scroll .xuan").click(    //直选方式点击事件
     }
 );
 
+//实现 直选方式 的点击事件。
+$(".x_3 span").click(
+    function () {
+        if($(".gfwf_xz").is(".gfwf_wh")){
+            $(".page").find(".gfwf_xz").removeClass("gfwf_wh");    // 显示
+        }else{
+            $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+        }
+    }
+);
+
 // $(".cus-tabs-scroll .xuan").ckick(
 //   function () {
 //       if($(".cover1").is(".hw")){
