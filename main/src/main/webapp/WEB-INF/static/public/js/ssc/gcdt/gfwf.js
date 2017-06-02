@@ -281,8 +281,12 @@ function stateTouZhu(flag_str) {
         zhushu = getBuwdZhushu(flagStrInner);
     } else if (flagStrInner == "wx3m-budw"){ // 不定位
         zhushu = getWx3mZhushu();
-    } else if (flagStrInner == "rx2-zxfs"){ // 任选二
+    } else if (flagStrInner == "rx2-zxfs"){ // 任选二-直选复式
         zhushu = stateZxfsZhuShu();
+    } else if (flagStrInner == "rx2-zxds"){ // 任选二-直选单式
+        zhushu = getZxdsRx2Zhushu();
+    } else if (flagStrInner == "rx2-zxhz"){ // 任选二-直选和值
+        zhushu = getZxhzRx2Zhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){
