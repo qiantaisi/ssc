@@ -1941,7 +1941,7 @@ $(function () {
         numStr = getQueryString("nums");
         navStr = getQueryString("navIndex");
 
-        if(playGroupId == 9 && navStr != "undefined" && navStr != ''){
+        if (playGroupId == 9 && navStr != "undefined" && navStr != '') {
             $("#ssc-parent-menu .cl-602 .szp").trigger("click");
         }
 
@@ -1988,8 +1988,8 @@ $(function () {
     }
 
     //随机号码选中
-    function xuanZhongSjh(playGrounpId, numStr){
-        if(playGrounpId == 9 && numStr != "undfined") {
+    function xuanZhongSjh(playGrounpId, numStr) {
+        if (playGrounpId == 9 && numStr != "undfined") {
             var numberX = [];
             var nameF = '';
             var numArr = numStr.split(",");
@@ -6718,26 +6718,17 @@ $(".title").click(  // 官方玩法点击事件
     }
 );
 
-$(".cus-tabs-scroll .xuan").click(    //直选方式点击事件
-    function () {
-        if ($(".coveron1").is(".hw")) {
-            $(".page").find(".hw").removeClass("hw");
-        } else {
-            $(".page").find(".coveron1").addClass("hw");
-        }
-    }
-);
-
 //实现 直选方式 的点击事件。
 $(".x_3 span").click(
     function () {
-        if($(".gfwf_xz").is(".gfwf_wh")){
+        if ($(".gfwf_xz").is(".gfwf_wh")) {
             $(".page").find(".gfwf_xz").removeClass("gfwf_wh");    // 显示
-        }else{
+        } else {
             $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
         }
     }
 );
+
 
 // $(".cus-tabs-scroll .xuan").ckick(
 //   function () {
