@@ -471,6 +471,7 @@
     $(function(){
         $(".Pick").hide();
         $(".base-i").hide();
+        $(".base-rx2").show();
         $('.recl-1002').show();
 
         $(".btn_fu_zhi span").click(function () {
@@ -485,10 +486,8 @@
             $(this).parent().toggleClass('acti');
             var flagName = $(this).parent().parent().parent().parent().attr("data-flag");
             if(flagName == "rx2-zxfs"){
-                stateZxfsZhuShu();
+                stateTouZhu(flagName);
             }
-
-
         });
 
         $(".group ul li p span").click(function () {
@@ -503,6 +502,7 @@
                 $('.recl-1002').attr("data-flag", "rx2-zxfs");
                 $(".base-i").hide();
                 $(".base-rx2").show();
+                allClearJl();
             } else if(nameVal == "zxds"){
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -510,6 +510,7 @@
                 $('.recl-1003-zxds').attr("data-flag", "rx2-zxds");
                 $(".base-i").hide();
                 $(".base-rx2").show();
+                allClearJl();
             } else if(nameVal == "zxhz"){
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -517,6 +518,7 @@
                 $('.recl-1004-zxhz').attr("data-flag", "rx2-zxhz");
                 $(".base-i").hide();
                 $(".base-rx2").show();
+                allClearJl();
             } else if(nameVal == "zuxfs"){
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -524,6 +526,7 @@
                 $('.recl-1005-zuxfs').attr("data-flag", "rx2-zuxfz");
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
+                allClearJl();
             } else if(nameVal == "zuxds"){
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -531,6 +534,7 @@
                 $('.recl-1006-zuxds').attr("data-flag", "rx2-zuxdz");
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
+                allClearJl();
             } else if(nameVal == "zuxhz"){
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -538,6 +542,7 @@
                 $('.recl-1007-zuxhz').attr("data-flag", "rx2-zuxhz");
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
+                allClearJl();
             }
         });
 
@@ -573,7 +578,7 @@
         }
 
         var zhushu = getRx2zxfsZhushu(wanArr, qianArr, baiArr, shiArr, geArr);
-        changeState(zhushu);
+        return zhushu;
 
     }
 
@@ -596,84 +601,14 @@
         }
         for(var i = 0; i < arrNew.length; i++){
             for(var i1 = 0; i1 < arrNew[i].length; i1++){
-
                 for(var x = i + 1; x < arrNew.length; x++){
                     for(var n = 0; n < arrNew[x].length; n++){
                         tempArr.push(arrNew[i][i1] + "" + arrNew[x][n]);
                     }
-
                 }
-
             }
-
         }
         return tempArr.length;
-    }
-
-   function changeState(zhushu){
-        $('.p1 .i0').html(zhushu);
-        $('.p1 .i_beishu').html($("#inputBeishu").val());
-        var strFd = $(".fandian-bfb").html();
-        var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
-        var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
-        var p1_i2 = (totalMoney * num).toString();
-        p1_i2 = isNaN(p1_i2) == true ? "0.0000" :p1_i2;
-        $('.p1 .i_fanD').html(p1_i2.substr(0,p1_i2.indexOf(".") + 3));
-        $('.p1 .i_money').html(totalMoney);
-    }
-
-
-    function getDwdZhushu() {
-        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
-        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
-            wanArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
-            qianArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
-            baiArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
-            shiArr.push($.trim($(this).find("i").html()));
-        });
-        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
-            geArr.push($.trim($(this).find("i").html()));
-        });
-
-        var wanLength = wanArr.length;
-        var qianLength = qianArr.length;
-        var baiLength = baiArr.length;
-        var shiLength = shiArr.length;
-        var geLength = geArr.length;
-
-        if (wanLength <= 0 && qianLength <= 0 && baiLength <= 0 && shiLength <= 0 && geLength <= 0) {
-            return 0;
-        }
-
-        if (wanLength > 0) {
-            newArr = newArr.concat(wanArr);
-        }
-        if (qianLength > 0) {
-            newArr = newArr.concat(qianArr);
-        }
-        if (baiLength > 0) {
-            newArr = newArr.concat(baiArr);
-        }
-        if (shiLength > 0) {
-            newArr = newArr.concat(shiArr);
-        }
-        if (geLength > 0) {
-            newArr = newArr.concat(geArr);
-        }
-
-        if(typeof newArr == "undefined" || newArr.length <= 0){
-            if(typeof clearStateTouZhu == 'function'){
-                clearStateTouZhu();
-            }
-            return;
-        }
-        return newArr.length;
     }
 </script>
 <script>
@@ -684,6 +619,11 @@
             $("#zhudanList").append(html);
         });
         calcAll();
+    }
+
+    function allClearJl(){
+        clearSelected();
+        clearTextarea();
     }
 
     function clearSelected() {
@@ -727,7 +667,7 @@
 
     function tjzd() {
         var betForm = {};
-        if (!getZhudan(betForm)) {
+        if (!getRx2zxfsZhudan(betForm)) {
             return;
         }
         clearSelected();
@@ -737,7 +677,7 @@
     }
 
 
-    function getZhudan(obj) {
+    function getRx2zxfsZhudan(obj) {
         var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
         $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
             wanArr.push($.trim($(this).find("i").html()));
@@ -754,19 +694,19 @@
         $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
             geArr.push($.trim($(this).find("i").html()));
         });
-        var zhushu = getDwdZhushu();
+        var zhushu = getRx2zxfsZhushu(wanArr, qianArr, baiArr, shiArr, geArr);
 
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "定位胆-定位胆";
-        var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : "";
-        var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : "";
-        var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : "";
-        var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : "";
-        var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : "";
-        obj.content = wanStr + qianStr + baiStr + shiStr + geStr;
+        obj.playName = "任选二-直选复式";
+        var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : '';
+        var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : '';
+        var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : '';
+        var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : '';
+        var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : '';
+        obj.content = $.trim(wanStr + qianStr + baiStr + shiStr + geStr);
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -810,7 +750,7 @@
             }
 
             var obj = {};
-            obj.playName = "定位胆-定位胆";
+            obj.playName = "任选二-直选复式";
             obj.content = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
             obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
             obj.zhushu = 1;
@@ -849,7 +789,7 @@
                 if(typeof stateTouZhu == "function"){
                     var flag_str = '';
                     if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
-                        flag_str = 'dwd';
+                        flag_str = 'rx2-zxfs';
                         stateTouZhu(flag_str);
                     }
                 }
@@ -863,6 +803,7 @@
 
             $(this).parent().parent().find('input').data("money", parseInt(text));
             calc();
+            changeStateCommon();
         });
 
         $(".Single .layout .add_spot .left .sopt_wrap .down span").click(function () {
@@ -887,6 +828,7 @@
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
 
             calc();
+            changeStateCommon();
         });
 
         $(".Single .layout .add_spot .left .sopt_wrap .reduce a.fr").click(function () {
@@ -901,6 +843,7 @@
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
 
             calc();
+            changeStateCommon();
         });
 
     });
