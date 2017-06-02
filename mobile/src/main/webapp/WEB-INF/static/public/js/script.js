@@ -1834,7 +1834,8 @@ $(function () {
             });
         });
 
-        $("#ssc-parent-menu .cl-602 a").click(function () {
+        $("#ssc-parent-menu .cl-602 a").click(
+            function () {
             var type = $(this).attr("data-type");
             if (type == "page") {
                 var url = $(this).attr("data-url");
