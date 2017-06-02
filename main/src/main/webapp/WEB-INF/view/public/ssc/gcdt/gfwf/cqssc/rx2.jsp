@@ -1024,18 +1024,19 @@
     function suiji(total) {
         var result = [];
         var playNameStr = '', flag_zhi = '', contentStr = '';
+        var shu = 0, hz_shu = 0;
         if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
             playNameStr = "任选二-直选复式";
-            flag_zhi = "rex2-zxfs";
+            flag_zhi = "rx2-zxfs";
         } else if (typeof $('.recl-1003-zxds').attr('data-flag') != 'undefined') {
             playNameStr = "任选二-直选单式";
-            flag_zhi = "rex2-zxds";
+            flag_zhi = "rx2-zxds";
         } else if (typeof $('.recl-1004-zxhz').attr('data-flag') != 'undefined') {
             playNameStr = "任选二-直选和值";
-            flag_zhi = "rex2-zxhz";
+            flag_zhi = "rx2-zxhz";
         } else if (typeof $('.recl-1005-zuxfs').attr('data-flag') != 'undefined') {
-            playNameStr = "选二组选-组选和值";
-            flag_zhi = "rex2-zuxfs";
+            playNameStr = "选二组选-组选复式";
+            flag_zhi = "rx2-zuxfs";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -1054,12 +1055,15 @@
             }
             if(flag_zhi == "rx2-zxfs"){
                 contentStr = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
-            } else if(flag_zhi == "rex2-zxds"){
+            } else if(flag_zhi == "rx2-zxds"){
                 contentStr = "号码: (" + arr[0] + "" + arr[1] +")";
-            } else if(flag_zhi == "rex2-zxhz"){
-                var hzsj = parseInt(Math.random() * 19);
+            } else if(flag_zhi == "rx2-zxhz"){
+                var hzsj = [];
+                hzsj.push(parseInt(Math.random() * 19));
+                shu = getRx2zxhzZhushu(hzsj);
+                hz_shu = $("#positioninfo-hz").html();
                 contentStr = "号码: (" + hzsj +")";
-            } else if(flag_zhi == "rex2-zuxfs"){
+            } else if(flag_zhi == "rx2-zuxfs"){
                 contentStr = "号码: (" + arr[0] + "," + arr[1] +")";
             }
 
@@ -1067,13 +1071,31 @@
             obj.playName = playNameStr;
             obj.content = contentStr;
             obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
-            obj.zhushu = 1;
+
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");
-            if(flag_zhi == "rex2-zuxfs" || flag_zhi == "rex2-zuxds" || flag_zhi == "rex2-zuxhz"){
+            if(flag_zhi == "rx2-zuxfs"){
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
-            }else{
+                var zufs_shu = $("#positioninfo-zufs").html();
+                obj.zhushu = zufs_shu;
+            } else if(flag_zhi == "rx2-zuxds"){
+                obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
+                var zuds_shu = $("#positioninfo-zuds").html();
+                obj.zhushu = zuds_shu;
+            } else if(flag_zhi == "rx2-zuxhz"){
+                obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
+                var zuhz_shu = $("#positioninfo-zuhz").html();
+                obj.zhushu = zuhz_shu;
+            } else if(flag_zhi == "rx2-zxds"){
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+                var ds_shu = $("#positioninfo-ds").html();
+                obj.zhushu = ds_shu;
+            } else if(flag_zhi == "rx2-zxhz"){
+                obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+                obj.zhushu = hz_shu * shu;
+            } else{
+                obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+                obj.zhushu = 1;
             }
             obj.playGroupId = playGroupId;
             result.push(obj);
