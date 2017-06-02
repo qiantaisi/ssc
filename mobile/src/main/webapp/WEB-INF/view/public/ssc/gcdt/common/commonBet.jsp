@@ -28,7 +28,10 @@
     <div class="cl-608">
         <label for="inputMoney">投注金额：</label>
         <div class="cl-609 item-input">
-            <input id="inputMoney" type="number" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" />
+            <input id="inputMoney" type="number" onkeyup="if(this.value.length==1){
+                this.value=this.value.replace(/[^1-9]/g,'')}else{
+                this.value=this.value.replace(/\D/g,'')}"
+                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" />
         </div>
         <a class="tab-item" href="javascript:void(0)" id="btn-reset">
             <%--<span class="icon icon-qingchu"></span>--%>
