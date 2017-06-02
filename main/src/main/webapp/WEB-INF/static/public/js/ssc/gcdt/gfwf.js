@@ -287,6 +287,12 @@ function stateTouZhu(flag_str) {
         zhushu = getZxdsRx2Zhushu();
     } else if (flagStrInner == "rx2-zxhz"){ // 任选二-直选和值
         zhushu = getZxhzRx2Zhushu();
+    } else if (flagStrInner == "rx2-zuxfs"){ // 任选二-组选复式
+        zhushu = stateZuxfsZhuShu();
+    } else if (flagStrInner == "rx2-zuxds"){ // 任选二-组选单式
+        zhushu = getZuxdsRx2Zhushu();
+    } else if (flagStrInner == "rx2-zuxhz"){ // 任选二-组选和值
+        zhushu = getZuxhzRx2Zhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){

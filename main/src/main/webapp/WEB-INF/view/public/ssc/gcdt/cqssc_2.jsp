@@ -69,9 +69,9 @@
                         </p>
                         <p class="guanfang respan gf-rxwf hide_flag" data-name="gfwf">
                             <span class="rxwf"><a href="javascript:void(0)" class="btn-cgwf" data-url="gfwf-cqssc-5x">&lt;常规玩法</a></span>
-                            <span class="acti rx2-span"><a href="javascript:void(0)" data-url="gfwf-cqssc-5x">任选二</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-4x">任选三</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-h3">任选四</a></span>
+                            <span class="acti rx2-span"><a href="javascript:void(0)" data-url="gfwf-cqssc-rx2">任选二</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-rx3">任选三</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-rx4">任选四</a></span>
                         </p>
                     <li>
                         <b>快钱玩法</b>

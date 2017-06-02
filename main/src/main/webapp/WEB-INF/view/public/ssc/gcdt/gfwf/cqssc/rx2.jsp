@@ -272,21 +272,21 @@
     </p>
     <ul>
         <li class="re2-1004-li">
-            <div class="selposition">
-                <label for="position_zux0"><input type="checkbox" class="selpositioninput" name="position_zux0" id="position_zux0" value="1"/>万位</label>
-                <label for="position_zux1"><input type="checkbox" class="selpositioninput" name="position_zux1" id="position_zux1" value="2"/>千位</label>
-                <label for="position_zux2"><input type="checkbox" class="selpositioninput" name="position_zux2" id="position_zux2" value="3"/>百位</label>
-                <label for="position_zux3"><input type="checkbox" class="selpositioninput" name="position_zux3" id="position_zux3" value="4"/>十位</label>
-                <label for="position_zux4"><input type="checkbox" class="selpositioninput" name="position_zux4" id="position_zux4" value="5"/>个位</label>
+            <div class="selposition recl-1005-fs">
+                <label for="position_zux0"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zux0" value="1"/>万位</label>
+                <label for="position_zux1"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zux1" value="2"/>千位</label>
+                <label for="position_zux2"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zux2" value="3"/>百位</label>
+                <label for="position_zux3"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zux3" value="4"/>十位</label>
+                <label for="position_zux4"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zux4" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
                     <b class="rx-b-hao">
-                       <var id="positioncount_zux" class="rxcount">2</var>
+                       <var id="positioncount-zufs" class="rxcount">2</var>
                     </b>
                      个位置，系统自动根据位置组合成
                     <b class="rx-b-hao">
-                       <var id="positioninfo_zux" class="rxcount">1</var>
+                       <var id="positioninfo-zufs" class="rxcount">1</var>
                     </b>
                      个方案。
                 </span>
@@ -491,6 +491,12 @@
                 stateTouZhu(flagName);
             } else if(flagName == "rx2-zxhz"){
                 stateTouZhu(flagName);
+            } else if(flagName == "rx2-zuxfs"){
+                stateTouZhu(flagName);
+            } else if(flagName == "rx2-zuxds"){
+                stateTouZhu(flagName);
+            } else if(flagName == "rx2-zuxhz"){
+                stateTouZhu(flagName);
             }
         });
 
@@ -513,6 +519,28 @@
                 $("#positioninfo-ds").html(0);
             }
             stateTouZhu("rx2-zxds");
+        });
+
+
+        //获取注数-组选复式
+        $(".recl-1005-fs input[name='position_zufs']").click(function () {
+            var arrTemp = [];
+            $(".recl-1005-fs input[name='position_zufs']:checked").each(function () {
+                arrTemp.push($(this).val());
+            });
+            $("#positioncount-zufs").html(arrTemp.length);
+            if(arrTemp.length == 3){
+                $("#positioninfo-zufs").html(3);
+            } else if(arrTemp.length == 4){
+                $("#positioninfo-zufs").html(6);
+            } else if(arrTemp.length == 5){
+                $("#positioninfo-zufs").html(10);
+            } else if(arrTemp.length == 2){
+                $("#positioninfo-zufs").html(1);
+            } else{
+                $("#positioninfo-zufs").html(0);
+            }
+            stateTouZhu("rx2-zuxfs");
         });
 
         //选中位置自动获取组成方案-直选和值
@@ -569,7 +597,7 @@
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1005-zuxfs').show();
-                $('.recl-1005-zuxfs').attr("data-flag", "rx2-zuxfz");
+                $('.recl-1005-zuxfs').attr("data-flag", "rx2-zuxfs");
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
                 allClearJl();
@@ -577,7 +605,7 @@
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1006-zuxds').show();
-                $('.recl-1006-zuxds').attr("data-flag", "rx2-zuxdz");
+                $('.recl-1006-zuxds').attr("data-flag", "rx2-zuxds");
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
                 allClearJl();
@@ -638,6 +666,8 @@
         return lengthArr;
     }
 
+
+
     //获取注数--直选复式
     function stateZxfsZhuShu(){
         var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
@@ -672,6 +702,27 @@
 
     }
 
+    //获取注数--组选复式
+    function stateZuxfsZhuShu(){
+        var zuArr = [], newArr = [];
+        $.each($(".recl-1005-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
+            zuArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zuLength = zuArr.length;
+
+        if (zuLength < 2) {
+            return;
+        }
+
+        var zhushu = getRx2zuxfsZhushu(zuArr);
+        var shu = $("#positioninfo-zufs").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+
+    }
+
+    // 任选二直选和值注数算法
     function getRx2zxhzZhushu(arr){
         var newArr = [];
         for(var i = 0; i < arr.length; i++){
@@ -685,6 +736,25 @@
         }
 
         return newArr.length;
+    }
+
+    // 组选复式
+    function getRx2zuxfsZhushu(arrNew) {
+        var tempArr = [];
+        for (var i = 0; i < arrNew.length; i++) {
+            for (var i1 = 0; i1 < arrNew.length; i1++) {
+                if (arrNew[i] != arrNew[i1]) {
+                    var arr = [];
+                    arr.push(arrNew[i]);
+                    arr.push(arrNew[i1]);
+                    arr.sort();
+                    tempArr.push(arr.join(""));
+                }
+            }
+        }
+
+        tempArr = tempArr.uniqueArr();
+        return tempArr.length;
     }
 
     function getRx2zxfsZhushu(wanArr, qianArr, baiArr, shiArr, geArr){
@@ -803,6 +873,15 @@
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
+        } else if (typeof $('.recl-1005-zuxfs').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getRx2zuxfsZhudan(betForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
         }
 
     }
@@ -902,6 +981,31 @@
     }
 
 
+    //任选二-组选复式注单
+    function getRx2zuxfsZhudan(obj) {
+        var zuArr = [];
+        $.each($(".recl-1005-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
+            zuArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getRx2zuxfsZhushu(zuArr);
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "任二组选-组选复式";
+
+        obj.content = "号码: (" + zuArr.join(",") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+
     function calcAll() {
         var totalZhushu = 0;
         var totalBeishu = 0;
@@ -929,6 +1033,9 @@
         } else if (typeof $('.recl-1004-zxhz').attr('data-flag') != 'undefined') {
             playNameStr = "任选二-直选和值";
             flag_zhi = "rex2-zxhz";
+        } else if (typeof $('.recl-1005-zuxfs').attr('data-flag') != 'undefined') {
+            playNameStr = "选二组选-组选和值";
+            flag_zhi = "rex2-zuxfs";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -952,6 +1059,8 @@
             } else if(flag_zhi == "rex2-zxhz"){
                 var hzsj = parseInt(Math.random() * 19);
                 contentStr = "号码: (" + hzsj +")";
+            } else if(flag_zhi == "rex2-zuxfs"){
+                contentStr = "号码: (" + arr[0] + "," + arr[1] +")";
             }
 
             var obj = {};
@@ -961,7 +1070,11 @@
             obj.zhushu = 1;
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");
-            obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+            if(flag_zhi == "rex2-zuxfs" || flag_zhi == "rex2-zuxds" || flag_zhi == "rex2-zuxhz"){
+                obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
+            }else{
+                obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+            }
             obj.playGroupId = playGroupId;
             result.push(obj);
         }
@@ -1001,6 +1114,15 @@
                         stateTouZhu(flag_str);
                     } else if (typeof $('.recl-1004-zxhz').attr('data-flag') != 'undefined') {
                         flag_str = 'rx2-zxhz';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.recl-1005-zuxfs').attr('data-flag') != 'undefined') {
+                        flag_str = 'rx2-zuxfs';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.recl-1006-zuxds').attr('data-flag') != 'undefined') {
+                        flag_str = 'rx2-zuxds';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.recl-1007-zuxhz').attr('data-flag') != 'undefined') {
+                        flag_str = 'rx2-zuxhz';
                         stateTouZhu(flag_str);
                     }
                 }
