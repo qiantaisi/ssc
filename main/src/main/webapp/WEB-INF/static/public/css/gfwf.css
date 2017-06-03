@@ -257,15 +257,49 @@
     color: #999899;
 }
 .Pick ul .re-zuxhz-rx2{
-    height: 50px;
-    line-height: 60px;
+    /*height: 50px;*/
+    /*line-height: 60px;*/
+    margin-bottom: 0!important;
 }
 .Pick ul .re-zuxhz-rx2 b{
-    margin-right: 25px!important;
+    margin-right: 9px!important;
 }
 .Pick ul .re-zuxhz-rx2 span{
     margin-left: 10px!important;
 }
 .re-select-zuxds{
     margin-left: 30px;
+}
+.recl-1004-zxhz ul .re-zxhz-rx2{
+    margin-bottom: 0!important;
+}
+.recl-1004-zxhz ul li.hz-rx3{
+    width: 780px !important;
+    height: 95px!important;
+    margin-bottom: 0!important;
+}
+.recl-1004-zxhz ul li.hz-rx3 .hz-dir{
+    height: 95px;
+    margin-right: 9px;
+}
+.Single .layout .Pick ul .re-zuxhz-rx3{
+    width: 75%!important;
+    height: 95px;
+    margin-bottom: 0!important;
+    line-height: 0!important;
+
+}
+.Single .layout .Pick ul .re-zuxhz-rx3 span{
+    margin-left: 10px!important;
+    margin-bottom: 10px!important;
+}
+.Single .layout .Pick ul .re-zuxhz-rx3 .hz-dir{
+    margin-right: 9px!important;
+}
+.Single .layout .Pick ul li.hz-rx3 span{
+    margin-left: 10px!important;
+    margin-bottom: 10px;
+}
+.Pick ul .re-zuxhz-rx3{
+    line-height: 50px;
 }

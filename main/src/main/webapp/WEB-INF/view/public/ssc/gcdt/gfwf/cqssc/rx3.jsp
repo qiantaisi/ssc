@@ -9,7 +9,7 @@
 <div class="group">
     <ul>
         <li>
-            <b>任二直选</b>
+            <b>任三直选</b>
             <p class="btn_fu_zhi">
                 <span class="acti" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
                 <span data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
@@ -17,25 +17,28 @@
             </p>
         </li>
         <li>
-            <b>任二组选</b>
+            <b>任三组选</b>
             <p class="btn_fu_zhi">
-                <span data-name="zuxfs"><a href="javascript:void(0)">组选复式</a></span>
-                <span data-name="zuxds"><a href="javascript:void(0)">组选单式</a></span>
+                <span data-name="zu3fs"><a href="javascript:void(0)">组三复式</a></span>
+                <span data-name="zu3ds"><a href="javascript:void(0)">组三单式</a></span>
+                <span data-name="zu6fs"><a href="javascript:void(0)">组六复式</a></span>
+                <span data-name="zu6ds"><a href="javascript:void(0)">组六单式</a></span>
+                <span data-name="hhzux"><a href="javascript:void(0)">混合组选</a></span>
                 <span data-name="zuxhz"><a href="javascript:void(0)">组选和值</a></span>
             </p>
         </li>
     </ul>
 </div>
-<div class="Pick cl-1002 recl-1002" data-flag="rx2-zxfs">
+<div class="Pick cl-1002 recl-1002" data-flag="rx3-zxfs">
     <p class="p1">
         <span class="fr fl cl-1001">
-           从万位、千位、百位、十位、个位中至少两位上各选1个号码组成一注。
+           从万位、千位、百位、十位、个位中至少三位上各选1个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：万位5，百位8 开奖号码：51812，即中任二直选。</var>
+                <var>投注方案：万位5，百位8,个位2 开奖号码：51812，即中任三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少选择两个位置，至少各选1个号码组成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</var>
+                <var>从万、千、百、十、个位中至少选择三个位置，至少各选1个号码组成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -152,13 +155,13 @@
 <div class="Pick cl-1003 recl-1003-zxds">
     <p class="p1">
         <span class="fr fl cl-1001">
-            从万位、千位、百位、十位、个位中至少选择两个位置,至少手动输入一个两位数的号码构成一注。
+            从万位、千位、百位、十位、个位中至少选择三个位置,至少手动输入一个三位数的号码构成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：位置选择万、百位，输入号码58 开奖号码：51812，即中任二直选(单式)。</var>
+                <var>投注方案：位置选择万、百,个位，输入号码582 开奖号码：51812，即中任三直选(单式)。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少选择两个位置,至少手动输入一个两位数的号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</var>
+                <var>从万、千、百、十、个位中至少选择三个位置,至少手动输入一个三位数的号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</var>
             </a>
 
         </span>
@@ -199,13 +202,13 @@
 <div class="Pick cl-1002 recl-1004-zxhz">
     <p class="p1">
         <span class="fr fl cl-1001">
-            从万位、千位、百位、十位、个位中至少选择两个位置,至少选择一个和值号码构成一注。
+            从万位、千位、百位、十位、个位中至少选择三个位置,至少选择一个和值号码构成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：位置选择万、百位，选择和值号码13 开奖号码：51812，即中任二直选和值。</var>
+                <var>投注方案：位置选择万、百、个位，选择和值号码15 开奖号码：51812，即中任三直选和值。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少选择两个位置,至少选择一个和值号码构成一注，所选两个位置的开奖号码相加之和与所选和值一致，即为中奖。</var>
+                <var>从万、千、百、十、个位中至少选择三个位置,至少选择一个和值号码构成一注，所选三个位置的开奖号码相加之和与所选和值一致，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -231,7 +234,7 @@
                 </span>
             </div>
         </li>
-        <li data-name="和值" class="hz-q2 re-zxhz-rx2">
+        <li data-name="和值" class="hz-rx3">
             <b class="hz-dir"><i>和值</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
@@ -252,21 +255,30 @@
             <span><i>16</i></span>
             <span><i>17</i></span>
             <span><i>18</i></span>
+            <span><i>19</i></span>
+            <span><i>20</i></span>
+            <span><i>21</i></span>
+            <span><i>22</i></span>
+            <span><i>23</i></span>
+            <span><i>24</i></span>
+            <span><i>25</i></span>
+            <span><i>26</i></span>
+            <span><i>27</i></span>
         </li>
     </ul>
 </div>
 
-<%--组选复式--%>
-<div class="Pick cl-1002 recl-1005-zuxfs">
+<%--组三复式--%>
+<div class="Pick cl-1002 recl-1005-zu3fs">
     <p class="p1">
         <span class="fr fl cl-1001">
-            从万位、千位、百位、十位、个位中至少选择两个位置,号码区至少选择两个号码构成一注。
+            从万位、千位、百位、十位、个位中至少选择三个位置,号码区至少选择两个号码构成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：位置选择万、百位，选择号码85 开奖号码：51812或者81512，即中任二组选。</var>
+                <var>投注方案：位置选择万、十、个位,选择号码12 开奖号码：11812，即中任三组三。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少选择两个位置,至少选择两个号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</var>
+                <var>从万、千、百、十、个位中至少选择三个位置,至少选择两个号码构成两注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -292,8 +304,8 @@
                 </span>
             </div>
         </li>
-        <li data-name="组选">
-            <b><i>组选</i></b>
+        <li data-name="组三">
+            <b><i>组三</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -316,27 +328,135 @@
     </ul>
 </div>
 
-<%--组选单式--%>
-<div class="Pick cl-1003 recl-1006-zuxds">
+<%--组三单式--%>
+<div class="Pick cl-1003 recl-1006-zu3ds">
     <p class="p1">
         <span class="fr fl cl-1001">
-            从万位、千位、百位、十位、个位中至少选择两个位置,至少手动输入一个两位数的号码构成一注。
+            从万位、千位、百位、十位、个位中至少选择三个位置,手动至少输入三个号码构成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：位置选择万、百位，输入号码85 开奖号码：51812或者81512，即中任二组选(单式)。</var>
+                <var>投注方案：位置选择万、十、个位,输入号码112 开奖号码：11812，即中任三组三(单式)。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少选择两个位置,至少手动输入一个两位数的号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</var>
+                <var>从万、千、百、十、个位中至少选择三个位置,至少手动输入三个号码构成一注，三个数字中必须有二个数字相同，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</var>
             </a>
 
         </span>
     </p>
     <div class="selposition re-select-zuxds">
-        <label for="position_zuds_0"><input type="checkbox" class="selpositioninput" name="position_zuds" id="position_zuds_0" value="1"/>万位</label>
-        <label for="position_zuds_1"><input type="checkbox" class="selpositioninput" name="position_zuds" id="position_zuds_1" value="2"/>千位</label>
-        <label for="position_zuds_2"><input type="checkbox" class="selpositioninput" name="position_zuds" id="position_zuds_2" value="3"/>百位</label>
-        <label for="position_zuds_3"><input type="checkbox" class="selpositioninput" name="position_zuds" checked="checked" id="position_zuds_3" value="4"/>十位</label>
-        <label for="position_zuds_4"><input type="checkbox" class="selpositioninput" name="position_zuds" checked="checked" id="position_zuds_4" value="5"/>个位</label>
+        <label for="position_zu3ds_0"><input type="checkbox" class="selpositioninput" name="position_zu3ds" id="position_zu3ds_0" value="1"/>万位</label>
+        <label for="position_zu3ds_1"><input type="checkbox" class="selpositioninput" name="position_zu3ds" id="position_zu3ds_1" value="2"/>千位</label>
+        <label for="position_zu3ds_2"><input type="checkbox" class="selpositioninput" name="position_zu3ds" id="position_zu3ds_2" value="3"/>百位</label>
+        <label for="position_zu3ds_3"><input type="checkbox" class="selpositioninput" name="position_zu3ds" checked="checked" id="position_zu3ds_3" value="4"/>十位</label>
+        <label for="position_zu3ds_4"><input type="checkbox" class="selpositioninput" name="position_zu3ds" checked="checked" id="position_zu3ds_4" value="5"/>个位</label>
+        <span class="rxdesc">
+                    <b class="rx-b-ts">温馨提示：</b>
+                    你选择了
+                    <b class="rx-b-hao">
+                       <var id="positioncount-zu3ds" class="rxcount">2</var>
+                    </b>
+                     个位置，系统自动根据位置组合成
+                    <b class="rx-b-hao">
+                       <var id="positioninfo-zu3ds" class="rxcount">1</var>
+                    </b>
+                     个方案。
+                </span>
+    </div>
+    <div class="content_jiang">
+        <textarea class="content_tex" autofocus></textarea>
+        <div class="right con_j_end">
+            <ul>
+                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
+                <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
+</div>
+
+<%--组六复式--%>
+<div class="Pick cl-1002 recl-1007-zu6fs">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从万位、千位、百位、十位、个位中至少选择三个位置,号码区至少选择三个号码构成一注。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：位置选择万、十、个位,选择号码512 开奖号码：51812，即中任三组六。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从万、千、百、十、个位中至少选择三个位置,至少选择三个号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</var>
+            </a>
+        </span>
+    </p>
+    <ul>
+        <li class="re2-1004-li">
+            <div class="selposition recl-1005-fs">
+                <label for="position_zu6fs0"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zu6fs0" value="1"/>万位</label>
+                <label for="position_zu6fs1"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zu6fs1" value="2"/>千位</label>
+                <label for="position_zu6fs2"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zu6fs2" value="3"/>百位</label>
+                <label for="position_zu6fs3"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zu6fs3" value="4"/>十位</label>
+                <label for="position_zu6fs4"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zu6fs4" value="5"/>个位</label>
+                <span class="rxdesc">
+                    <b class="rx-b-ts">温馨提示：</b>
+                    你选择了
+                    <b class="rx-b-hao">
+                       <var id="positioncount-zu6fs" class="rxcount">2</var>
+                    </b>
+                     个位置，系统自动根据位置组合成
+                    <b class="rx-b-hao">
+                       <var id="positioninfo-zu6fs" class="rxcount">1</var>
+                    </b>
+                     个方案。
+                </span>
+            </div>
+        </li>
+        <li data-name="组六">
+            <b><i>组六</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<%--组六单式--%>
+<div class="Pick cl-1003 recl-1008-zu6ds">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从万位、千位、百位、十位、个位中至少选择三个位置,手动至少输入三个号码构成一注。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：位置选择万、十、个位,输入号码512 开奖号码：51812，即中任三组六(单式)。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从万、千、百、十、个位中至少选择三个位置,至少手动输入三个号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</var>
+            </a>
+
+        </span>
+    </p>
+    <div class="selposition re-select-zuxds">
+        <label for="position_zu6ds_0"><input type="checkbox" class="selpositioninput" name="position_zu6ds" id="position_zu6ds_0" value="1"/>万位</label>
+        <label for="position_zu6ds_1"><input type="checkbox" class="selpositioninput" name="position_zu6ds" id="position_zu6ds_1" value="2"/>千位</label>
+        <label for="position_zu6ds_2"><input type="checkbox" class="selpositioninput" name="position_zu6ds" id="position_zu6ds_2" value="3"/>百位</label>
+        <label for="position_zu6ds_3"><input type="checkbox" class="selpositioninput" name="position_zu6ds" checked="checked" id="position_zu6ds_3" value="4"/>十位</label>
+        <label for="position_zu6ds_4"><input type="checkbox" class="selpositioninput" name="position_zu6ds" checked="checked" id="position_zu6ds_4" value="5"/>个位</label>
         <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
@@ -364,17 +484,67 @@
     <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
 </div>
 
+
+<%--混合组选--%>
+<div class="Pick cl-1003 recl-1009-hhzux">
+    <p class="p1">
+        <span class="fr fl cl-1001">
+            从万位、千位、百位、十位、个位中至少选择三个位置,手动至少输入三个号码构成一注(不包含豹子号)。
+            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：选择位置万、十、个位，输入号码001以及512 开奖号码：03410(指定位置号码顺序不限)即中任三组三；或者51812(指定位置号码顺序不限)即中任三组六。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从万、千、百、十、个位中至少选择三个位置,至少手动输入三个号码构成一注(不含豹子号)，开奖号码指定位置的号码为组三或组六形态，所选号码与开奖号码指定位置上的号码相同，且顺序不限，即为中奖。</var>
+            </a>
+
+        </span>
+    </p>
+    <div class="selposition re-select-zuxds">
+        <label for="position_hhzux_0"><input type="checkbox" class="selpositioninput" name="position_hhzux" id="position_hhzux_0" value="1"/>万位</label>
+        <label for="position_hhzux_1"><input type="checkbox" class="selpositioninput" name="position_hhzux" id="position_hhzux_1" value="2"/>千位</label>
+        <label for="position_hhzux_2"><input type="checkbox" class="selpositioninput" name="position_hhzux" id="position_hhzux_2" value="3"/>百位</label>
+        <label for="position_hhzux_3"><input type="checkbox" class="selpositioninput" name="position_hhzux" checked="checked" id="position_hhzux_3" value="4"/>十位</label>
+        <label for="position_hhzux_4"><input type="checkbox" class="selpositioninput" name="position_hhzux" checked="checked" id="position_hhzux_4" value="5"/>个位</label>
+        <span class="rxdesc">
+                    <b class="rx-b-ts">温馨提示：</b>
+                    你选择了
+                    <b class="rx-b-hao">
+                       <var id="positioncount-hhzux" class="rxcount">2</var>
+                    </b>
+                     个位置，系统自动根据位置组合成
+                    <b class="rx-b-hao">
+                       <var id="positioninfo-hhzux" class="rxcount">1</var>
+                    </b>
+                     个方案。
+                </span>
+    </div>
+    <div class="content_jiang">
+        <textarea class="content_tex" autofocus></textarea>
+        <div class="right con_j_end">
+            <ul>
+                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
+                <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
+</div>
+
+
 <%--组选和值--%>
-<div class="Pick cl-1002 recl-1007-zuxhz">
+<div class="Pick cl-1002 recl-1010-zuxhz">
     <p class="p1">
         <span class="fr fl cl-1001">
             从万位、千位、百位、十位、个位中至少选择两个位置,至少选择一个和值号码构成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：位置选择万、百位，选择和值号码13 开奖号码：51812，即中任二组选和值。</var>
+                <var>投注方案：位置选择万、十、个位,选择和值号码8 开奖号码：51812，即中任三组选和值。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少选择两个位置,至少选择一个和值号码构成一注，所选两个位置的开奖号码相加之和与所选和值一致(不含对子号)，即为中奖。</var>
+                <var>从万、千、百、十、个位中至少选择三个位置,至少选择一个和值号码构成一注，所选三个位置的开奖号码相加之和与所选和值一致(不包含豹子号)，即为中奖。</var>
             </a>
         </span>
     </p>
@@ -400,8 +570,8 @@
                 </span>
             </div>
         </li>
-        <li data-name="和值" class="hz-q2 re-zuxhz-rx2">
-            <b><i>和值</i></b>
+        <li data-name="和值" class="hz-q2 re-zuxhz-rx3">
+            <b class="hz-dir"><i>和值</i></b>
             <span><i>1</i></span>
             <span><i>2</i></span>
             <span><i>3</i></span>
@@ -419,6 +589,15 @@
             <span><i>15</i></span>
             <span><i>16</i></span>
             <span><i>17</i></span>
+            <span><i>18</i></span>
+            <span><i>19</i></span>
+            <span><i>20</i></span>
+            <span><i>21</i></span>
+            <span><i>22</i></span>
+            <span><i>23</i></span>
+            <span><i>24</i></span>
+            <span><i>25</i></span>
+            <span><i>26</i></span>
         </li>
     </ul>
 </div>
@@ -610,7 +789,7 @@
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1002').show();
-                $('.recl-1002').attr("data-flag", "rx2-zxfs");
+                $('.recl-1002').attr("data-flag", "rx3-zxfs");
                 $(".base-i").hide();
                 $(".base-rx2").show();
                 allClearJl();
@@ -618,7 +797,7 @@
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1003-zxds').show();
-                $('.recl-1003-zxds').attr("data-flag", "rx2-zxds");
+                $('.recl-1003-zxds').attr("data-flag", "rx3-zxds");
                 $(".base-i").hide();
                 $(".base-rx2").show();
                 allClearJl();
@@ -626,31 +805,55 @@
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1004-zxhz').show();
-                $('.recl-1004-zxhz').attr("data-flag", "rx2-zxhz");
+                $('.recl-1004-zxhz').attr("data-flag", "rx3-zxhz");
                 $(".base-i").hide();
                 $(".base-rx2").show();
                 allClearJl();
-            } else if(nameVal == "zuxfs"){
+            } else if(nameVal == "zu3fs"){
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
-                $('.recl-1005-zuxfs').show();
-                $('.recl-1005-zuxfs').attr("data-flag", "rx2-zuxfs");
+                $('.recl-1005-zu3fs').show();
+                $('.recl-1005-zu3fs').attr("data-flag", "rx3-zu3fs");
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
                 allClearJl();
-            } else if(nameVal == "zuxds"){
+            } else if(nameVal == "zu3ds"){
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
-                $('.recl-1006-zuxds').show();
-                $('.recl-1006-zuxds').attr("data-flag", "rx2-zuxds");
+                $('.recl-1006-zu3ds').show();
+                $('.recl-1006-zu3ds').attr("data-flag", "rx3-zu3ds");
+                $(".base-i").hide();
+                $(".base-rx2-zux").show();
+                allClearJl();
+            } else if(nameVal == "zu6fs"){
+                $(".Pick").removeAttr("data-flag");
+                $(".Pick").hide();
+                $('.recl-1007-zu6fs').show();
+                $('.recl-1007-zu6fs').attr("data-flag", "rx3-zu6fs");
+                $(".base-i").hide();
+                $(".base-rx2-zux").show();
+                allClearJl();
+            } else if(nameVal == "zu6ds"){
+                $(".Pick").removeAttr("data-flag");
+                $(".Pick").hide();
+                $('.recl-1008-zu6ds').show();
+                $('.recl-1008-zu6ds').attr("data-flag", "rx3-zu6ds");
+                $(".base-i").hide();
+                $(".base-rx2-zux").show();
+                allClearJl();
+            } else if(nameVal == "hhzux"){
+                $(".Pick").removeAttr("data-flag");
+                $(".Pick").hide();
+                $('.recl-1009-hhzux').show();
+                $('.recl-1009-hhzux').attr("data-flag", "rx3-hhzux");
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
                 allClearJl();
             } else if(nameVal == "zuxhz"){
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
-                $('.recl-1007-zuxhz').show();
-                $('.recl-1007-zuxhz').attr("data-flag", "rx2-zuxhz");
+                $('.recl-1010-zuxhz').show();
+                $('.recl-1010-zuxhz').attr("data-flag", "rx3-zuxhz");
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
                 allClearJl();
