@@ -765,13 +765,23 @@
             geArr.push($.trim($(this).find("i").html()));
         });
 
-        var wanLength = wanArr.length;
-        var qianLength = qianArr.length;
-        var baiLength = baiArr.length;
-        var shiLength = shiArr.length;
-        var geLength = geArr.length;
+        if(wanArr.length > 0){
+            newArr.push(wanArr);
+        }
+        if(qianArr.length > 0){
+            newArr.push(qianArr);
+        }
+        if(baiArr.length > 0){
+            newArr.push(baiArr);
+        }
+        if(shiArr.length > 0){
+            newArr.push(shiArr);
+        }
+        if(geArr.length > 0){
+            newArr.push(geArr);
+        }
 
-        if (wanLength <= 0 && qianLength <= 0 && baiLength <= 0 && shiLength <= 0 && geLength <= 0) {
+        if (newArr.length < 2) {
             return;
         }
 
