@@ -100,6 +100,10 @@
                             <input type="radio" name="userBankName" value="上海银行">
                             <em class="banklogo bank-bankofshanghai"></em>
                         </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="其他银行">
+                            <font>其他银行</font>
+                        </label>
                     </div>
                     <div class="parentfr">
                         <div class="fr">

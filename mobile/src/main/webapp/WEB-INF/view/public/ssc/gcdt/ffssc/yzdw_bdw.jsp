@@ -28,11 +28,11 @@
         </tr>
         <tr>
             <td data-name="百定位-2">
-                <span>0</span>
+                <span>2</span>
                 <span class="pl" data-plid="10607"></span>
             </td>
             <td data-name="百定位-3">
-                <span>1</span>
+                <span>3</span>
                 <span class="pl" data-plid="10606"></span>
             </td>
         </tr>

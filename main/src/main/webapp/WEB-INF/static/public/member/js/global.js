@@ -104,7 +104,7 @@ function copy(text) {
 //存款 更多银行
 function eveb_bank_more(_state){
 	if(_state == 0){
-		$('.eveb_bank_list').animate({height:'150px'});
+		$('.eveb_bank_list').animate({height:'180px'});
 		$('#eveb_bank_open').hide();
 		$('#eveb_bank_close').show();
 	}else{
