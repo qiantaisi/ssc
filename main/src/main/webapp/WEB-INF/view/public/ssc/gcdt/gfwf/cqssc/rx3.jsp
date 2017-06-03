@@ -284,21 +284,21 @@
     </p>
     <ul>
         <li class="re2-1004-li">
-            <div class="selposition recl-1005-fs">
-                <label for="position_zux0"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zux0" value="1"/>万位</label>
-                <label for="position_zux1"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zux1" value="2"/>千位</label>
-                <label for="position_zux2"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zux2" value="3"/>百位</label>
-                <label for="position_zux3"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zux3" value="4"/>十位</label>
-                <label for="position_zux4"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zux4" value="5"/>个位</label>
+            <div class="selposition recl-1005-zu3Rx3">
+                <label for="position_zux0"><input type="checkbox" class="selpositioninput" name="position_zu3fs" id="position_zux0" value="1"/>万位</label>
+                <label for="position_zux1"><input type="checkbox" class="selpositioninput" name="position_zu3fs" id="position_zux1" value="2"/>千位</label>
+                <label for="position_zux2"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux2" value="3"/>百位</label>
+                <label for="position_zux3"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux3" value="4"/>十位</label>
+                <label for="position_zux4"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux4" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
                     <b class="rx-b-hao">
-                       <var id="positioncount-zufs" class="rxcount">2</var>
+                       <var id="positioncount-zu3fs" class="rxcount">3</var>
                     </b>
                      个位置，系统自动根据位置组合成
                     <b class="rx-b-hao">
-                       <var id="positioninfo-zufs" class="rxcount">1</var>
+                       <var id="positioninfo-zu3fs" class="rxcount">1</var>
                     </b>
                      个方案。
                 </span>
@@ -664,13 +664,14 @@
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
             var flagName = $(this).parent().parent().parent().parent().attr("data-flag");
+            console.log(flagName);
             if(flagName == "rx3-zxfs"){
+                stateTouZhu(flagName);
+            } else if(flagName == "rx3-zxds"){
                 stateTouZhu(flagName);
             } else if(flagName == "rx3-zxhz"){
                 stateTouZhu(flagName);
-            } else if(flagName == "rx3-zuxfs"){
-                stateTouZhu(flagName);
-            } else if(flagName == "rx2-zuxhz"){
+            } else if(flagName == "rx3-zu3fs"){
                 stateTouZhu(flagName);
             }
         });
@@ -715,25 +716,23 @@
             stateTouZhu("rx2-zuxds");
         });
 
-        //获取注数-组选复式
-        $(".recl-1005-fs input[name='position_zufs']").click(function () {
+        //获取注数-组三复式-任选3
+        $(".recl-1005-zu3Rx3 input[name='position_zu3fs']").click(function () {
             var arrTemp = [];
-            $(".recl-1005-fs input[name='position_zufs']:checked").each(function () {
+            $(".recl-1005-zu3Rx3 input[name='position_zu3fs']:checked").each(function () {
                 arrTemp.push($(this).val());
             });
-            $("#positioncount-zufs").html(arrTemp.length);
+            $("#positioncount-zu3fs").html(arrTemp.length);
             if(arrTemp.length == 3){
-                $("#positioninfo-zufs").html(3);
+                $("#positioninfo-zu3fs").html(1);
             } else if(arrTemp.length == 4){
-                $("#positioninfo-zufs").html(6);
+                $("#positioninfo-zu3fs").html(4);
             } else if(arrTemp.length == 5){
-                $("#positioninfo-zufs").html(10);
-            } else if(arrTemp.length == 2){
-                $("#positioninfo-zufs").html(1);
+                $("#positioninfo-zu3fs").html(10);
             } else{
-                $("#positioninfo-zufs").html(0);
+                $("#positioninfo-zu3fs").html(0);
             }
-            stateTouZhu("rx2-zuxfs");
+            stateTouZhu("rx3-zu3fs");
         });
 
         //选中位置自动获取组成方案-直选和值
@@ -1033,22 +1032,22 @@
     }
 
     //获取注数--组选复式
-    function stateZuxfsZhuShu(){
+    function stateZu3fsZhuShu(){
         var zuArr = [], newArr = [];
-        $.each($(".recl-1005-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
+        $.each($(".recl-1005-zu3fs ul li[data-name = '组三'] span.acti"), function (index, value) {
             zuArr.push($.trim($(this).find("i").html()));
         });
 
         var zuLength = zuArr.length;
-
+         console.log(zuLength);
         if (zuLength < 2) {
             return;
         }
 
-        var zhushu = getRx2zuxfsZhushu(zuArr);
-        var shu = $("#positioninfo-zufs").html();
-        var lengthArr = zhushu * shu;
-        return lengthArr;
+        var zhushu = getRx3zu3fsZhushu(zuArr);
+//        var shu = $("#positioninfo-zufs").html();
+//        var lengthArr = zhushu * shu;
+        return zhushu;
 
     }
 
@@ -1072,22 +1071,17 @@
         return newArr.length;
     }
 
-    // 组选复式
-    function getRx2zuxfsZhushu(arrNew) {
+    // 组三复式--任选三
+    function getRx3zu3fsZhushu(arrNew) {
         var tempArr = [];
         for (var i = 0; i < arrNew.length; i++) {
             for (var i1 = 0; i1 < arrNew.length; i1++) {
                 if (arrNew[i] != arrNew[i1]) {
-                    var arr = [];
-                    arr.push(arrNew[i]);
-                    arr.push(arrNew[i1]);
-                    arr.sort();
-                    tempArr.push(arr.join(""));
+                    tempArr.push(arrNew[i] + "" + arrNew[i1]);
                 }
             }
         }
 
-        tempArr = tempArr.uniqueArr();
         return tempArr.length;
     }
 
@@ -1179,7 +1173,7 @@
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
-        } else if (typeof $('.recl-1005-zuxfs').attr('data-flag') != 'undefined') {
+        } else if (typeof $('.recl-1005-zu3fs').attr('data-flag') != 'undefined') {
             var betForm = {};
             if (!getRx2zuxfsZhudan(betForm)) {
                 return;
