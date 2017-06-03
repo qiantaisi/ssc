@@ -20,28 +20,31 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">重庆时时彩<i class="triangle-down"> <!--向下的三角--> </i></h1>
+            <h1 class="title">重庆时时彩
+                <div class="gfwf_triangle_down">
+                    <%--画出一个向下的三角形图标--%>
+                </div>
+            </h1>
         </header>
         <c:import url="../common/commonBet.jsp"/>
-        <div class="consele">
-            <div class="consele-one">
-                <div class="selects-one">
-                    <span class="active"><a href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a></span>
+
+        <div class="gfwf_consele">
+            <div class="gfwf_one">
+                <div class="border_one color_two">
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
                 </div>
             </div>
-            <div class="consele-two">
-                <div class="selects-two">
-                    <span><a href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a></span>
+            <div class="gfwf_two">
+                <div class="border_two color_one">
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
                 </div>
             </div>
         </div>
-        <div class="bott">
-            <%--半透明--%>
+        <div class="gfwf_mask">
+            <%--实现蒙版--%>
         </div>
-        <%--<c:import url="../gfwf/cqssc/common/gfwf.jsp" />     &lt;%&ndash;官方玩法选择&ndash;%&gt;--%>
         <div class="content cl-601 show_hide">
-            <c:import url="../gfwf/cqssc/common/common.jsp"/>   <%--直选方式--%>
-            <c:import url="../gfwf/cqssc/common/xzcd.jsp" />   <%--直选方式下的内容--%>
+            <c:import url="./cqssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
             <div class="cl-900" id="lastOpenInfo">
                 <%--显示第几期彩种--%>
             </div>
@@ -53,7 +56,7 @@
                 <div class="cl-903" id="openHistoryList">
                 </div>
             </div>
-            <c:import url="../gfwf/cqssc/wx.jsp"/>
+            <c:import url="./cqssc/wx.jsp"/> <%--彩种主体内容--%>
         </div>
     </div>
     <c:import url="../../../common/leftSscPanel.jsp"/>
@@ -61,8 +64,6 @@
         <c:param name="playGroupId" value="1"/>
     </c:import>
 </div>
-
-
 <c:import url="../../../common/commonJs.jsp"/>
 <script type="text/html" id="template_openNumber_item">
     <div class="cl-904">

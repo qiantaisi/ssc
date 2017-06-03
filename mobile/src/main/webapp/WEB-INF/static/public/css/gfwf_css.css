@@ -110,6 +110,107 @@
     top: inherit;
 }
 
+.show_hide {
+    z-index: 999;
+}
+
+.gfwf_one {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.gfwf_two {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.gfwf_one .border_one {
+    text-align: center;
+    width: 65%;
+    height: 50%;
+    position: relative;
+    top: 0.7rem;
+    margin: auto;
+    border-radius: 7px;
+    line-height: 1.5rem;
+}
+
+.color_one {
+    border: 1px solid #828282;
+}
+
+.color_two {
+    border: 1px solid #fa6200;
+}
+
+.gfwf_two .border_two {
+    text-align: center;
+    width: 65%;
+    height: 50%;
+    position: relative;
+    top: 0.7rem;
+    margin: auto;
+    border-radius: 7px;
+    line-height: 1.5rem;
+}
+
+.F1_color {
+    color: #828282;
+}
+
+.F2_color {
+    color: #fa6200;
+}
+
+.gfwf_consele {
+    width: 100%;
+    height: 3.3rem;
+    background-color: #fff;
+    position: absolute;
+    top: 2.2rem;
+}
+
+.gfwf_mask {
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+    background: #000;
+    margin-top: 5.5rem;
+}
+
+.gfwf_mask2 {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: #000;
+    position: absolute;
+}
+
+.gfwf_triangle_down2 {
+    width: 0px;
+    height: 0px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #101010 transparent transparent transparent;
+    display: inline;
+    position: relative;
+    top: 0.6rem;
+}
+
+.gfwf_triangle_down {
+    width: 0px;
+    height: 0px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    display: inline;
+    position: relative;
+    top: 0.6rem;
+}
+
 .cus-tabs-scroll {
     text-align: center;
     position: relative;
@@ -132,4 +233,155 @@
 
 .cus-tabs-scroll span img {
     height: 0.7rem;
+}
+
+.x_wrap {
+    width: 100%;
+    height: 2rem;
+    background: #fff;
+    text-align: center;
+    color: #fa6200;
+}
+
+.x_wrap .x_1 {
+    width: 45%;
+    display: inline-block;
+    position: relative;
+    top: 0.3rem;
+    border-bottom: 1.5px solid #fa6200;
+    height: 1.6rem;
+}
+
+.x_wrap .x_2 {
+    width: 5%;
+    display: inline-block;
+    position: relative;
+    top: 0.55rem;
+}
+
+.x_wrap .x_2 span img {
+    height: 0.9rem;
+}
+
+.x_wrap .x_3 {
+    width: 45%;
+    display: inline-block;
+    position: relative;
+    top: 0.3rem;
+}
+
+.wrap {
+    background: #f7f7f7;
+    width: 100%;
+    height: 53rem;
+}
+
+.wrap .cus_common {
+    background: #f7f7f7;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.wrap .cus_common .wan_top {
+    line-height: 2.1rem;
+    border-top: 2px solid #dddddd;
+}
+
+.wrap .cus_common .wan_top .wanwei {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: #fa6200;
+    padding-bottom: 0.6rem;
+    padding-top: 0.6rem;
+    color: #fff;
+    font-size: initial;
+}
+
+.wrap .cus_common .wan_top .xz {
+    float: right;
+}
+
+.wrap .cus_common .wan_top span i {
+    border: 1px solid #dddddd;
+    padding: 0.28em 0.5em;
+    border-radius: 5px;
+    margin-right: 0.4em;
+    /*font-size: 0.9em;*/
+}
+
+.wrap .cus_common .wan_bottom {
+    background: #fff;
+    border-bottom: 1px solid #dddddd;
+    padding: 0.1rem;
+}
+
+.wrap .cus_common .wan_bottom .cus-flex-item {
+    display: inline-block;
+    margin: 0.6em;
+    line-height: 2.5em;
+    text-align: center;
+}
+
+.wrap .cus_common .wan_bottom .cus-flex-item .xz {
+    display: block;
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    color: red;
+}
+
+.wrap .cus_common .wan_bottom .cus-flex-item .pl {
+    color: #838383;
+}
+
+.gfwf_xz {
+    width: 100%;
+    height: 50%;
+    background: #fff;
+    position: absolute;
+    top: 3em;
+    overflow-y: auto;
+}
+
+.gfwf_wh {
+    display: none;
+}
+
+.gfwf_mb {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.7;
+}
+
+.gfwf_xz .xuan {
+    width: 100%;
+    height: 0.4rem;
+    margin-top: 29px;
+}
+
+.gfwf_xz .xuan .xuan1 {
+    width: 42%;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.gfwf_xz .xuan .xuan2 {
+    color: #999;
+}
+
+.staer {
+    line-height: 1.2rem;
+    width: 100%;
+    margin-top: 0.5em;
+    color: #999;
+}
+
+.staer .staer1 {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    margin: 0.3em;
 }

@@ -12,56 +12,6 @@
 <div class="wrap">
     <div class="cus_common">
         <div class="wan_top">
-            <span class="wanwei">万位</span>
-            <span class="xz"><i>全</i><i>大</i><i>小</i><i>奇</i><i>偶</i><i>清</i></span>
-        </div>
-        <div class="wan_bottom">
-            <div class="cus-flex-item">
-                <span class="xz">0</span>
-                <span class="pl">8.8</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz">1</span>
-                <span class="pl">8.8</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz">2</span>
-                <span class="pl">8.8</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz">3</span>
-                <span class="pl">8.8</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz">4</span>
-                <span class="pl">8.8</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz">5</span>
-                <span class="pl">8.8</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz">6</span>
-                <span class="pl">8.8</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz">7</span>
-                <span class="pl">8.8</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz">8</span>
-                <span class="pl">8.8</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz">9</span>
-                <span class="pl">8.8</span>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="cus_common">
-        <div class="wan_top">
             <span class="wanwei">千位</span>
             <span class="xz"><i>全</i><i>大</i><i>小</i><i>奇</i><i>偶</i><i>清</i></span>
         </div>

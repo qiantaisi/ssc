@@ -186,32 +186,6 @@
             }
         });
 
-        //官方玩法
-        $(".Playmethod ul li span").click(function () {
-
-            var name_flag = $(this).parent().data('name');
-            if (name_flag == 'gfwf') {
-                var flag_acti = $(this).parent().parent().next().find('b').hasClass('acti');
-                if (flag_acti == true) {
-                    $(this).parent().parent().next().find('b').removeClass('acti');
-                }
-                $(this).parent().parent().find('b').addClass('acti');
-                $(".left_it0").show();
-                $(".right_it1").show();
-                $(".Detailedlist").show();
-            } else {
-                var flag_acti =  $(this).parent().parent().prev().find("b").hasClass('acti');
-                if (flag_acti == true) {
-                    $(this).parent().parent().prev().find("b").removeClass('acti');
-                }
-                $(this).parent().parent().find('b').addClass('acti');
-                $(".left_it0").hide();
-                $(".right_it1").hide();
-                $(".Detailedlist").hide();
-            }
-
-        });
-
     });
 </script>
 <script>
@@ -353,7 +327,12 @@
             return false;
         }
         obj.playName = "定位胆-定位胆";
-        obj.content = "万位: " + wanArr.join("") + " 千位: " + qianArr.join("") + " 百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
+        var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : "";
+        var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : "";
+        var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : "";
+        var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : "";
+        var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : "";
+        obj.content = wanStr + qianStr + baiStr + shiStr + geStr;
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -448,6 +427,7 @@
 
             $(this).parent().parent().find('input').data("money", parseInt(text));
             calc();
+            changeStateCommon();
         });
 
         $(".Single .layout .add_spot .left .sopt_wrap .down span").click(function () {
@@ -472,6 +452,7 @@
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
 
             calc();
+            changeStateCommon();
         });
 
         $(".Single .layout .add_spot .left .sopt_wrap .reduce a.fr").click(function () {
@@ -486,6 +467,7 @@
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
 
             calc();
+            changeStateCommon();
         });
     });
 </script>

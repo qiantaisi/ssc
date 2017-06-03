@@ -20,6 +20,10 @@
             </h1>
         </header>
         <div class="content bg-white">
+            <div class="row cl-100">
+                <%--<div class="col-100">欢迎您注册600w彩票网${WebInfoResult.webName}</div>--%>
+                <div class="col-100">${WebInfoResult.webName}</div>
+            </div>
             <div class="cl-101">
                 <div class="list-block vipcp-list-block">
                     <ul>
