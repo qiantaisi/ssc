@@ -65,7 +65,7 @@
     position: relative;
     width:680px;
     height: 180px;
-    padding-left: 30px;
+    padding-left: 25px;
 }
 
 .content_jiang .con_j_end{
@@ -248,7 +248,7 @@
     color:red!important;
 }
 .re-select-ds{
-    margin-left: 30px;
+    margin-left: 25px;
     margin-bottom: 18px;
 }
 .re-select-ds .rxdesc .rx-b-hao,.re-select-ds .rxdesc .rx-b-ts{
@@ -269,8 +269,8 @@
 .Pick ul .re-zuxhz-rx2 span{
     margin-left: 10px!important;
 }
-.re-select-zuxds{
-    margin-left: 30px;
+.re-select-zuxds,.re-select-zu3ds{
+    margin-left: 25px;
 }
 .recl-1004-zxhz ul .re-zxhz-rx2{
     margin-bottom: 0!important;
