@@ -155,7 +155,7 @@
             <%--<div class="row cl-102-kjjg">--%>
                 <div class="row cl-scroll swiper-container swiper-container-horizontal re-vipvp-head">
                     <div class="swiper-wrapper">
-                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>
+                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.jpg" alt=""></div>
                         <%--<div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>--%>
                         <%--<div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>--%>
                     </div>
