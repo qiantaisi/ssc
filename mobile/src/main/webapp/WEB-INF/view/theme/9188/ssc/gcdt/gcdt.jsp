@@ -19,7 +19,7 @@
             </a>
             <h1 class="title reimg">
                 <%--<img src="${resPath}img/kaihead_06.png"/>--%>
-                9188购彩大厅
+                购彩大厅
             </h1>
         </header>
         <c:import url="../../common/bottomNav.jsp"/>

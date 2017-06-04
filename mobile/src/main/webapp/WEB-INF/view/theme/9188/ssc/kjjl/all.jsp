@@ -17,7 +17,7 @@
             </a>
             <h1 class="title reimg">
                 <%--<img src="${resPath}img/kaihead_06.png"/>--%>
-                9188彩票开奖
+                彩票开奖
             </h1>
             <a href="javascript:void(0)" class="button button-link button-nav pull-right btn_xz">
                 <span>选择彩种</span>
@@ -155,7 +155,7 @@
             <%--<div class="row cl-102-kjjg">--%>
                 <div class="row cl-scroll swiper-container swiper-container-horizontal re-vipvp-head">
                     <div class="swiper-wrapper">
-                        <%--<div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>--%>
+                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>
                         <%--<div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>--%>
                         <%--<div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>--%>
                     </div>

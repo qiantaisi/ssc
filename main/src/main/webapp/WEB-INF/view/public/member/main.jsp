@@ -78,14 +78,14 @@
             <div class="eveb_box mr_10">
                 <h4>绑定状态</h4>
                 <ul class="eveb_index_validation">
-                    <li><a href="javascript:void(0)" onclick="parent.getPage('zhcz/yhzz')" title="在线充值"><i class="icon_cunqu icon_validation_email"></i><p>在线充值</p></a></li>
-                    <li><a href="javascript:void(0)" onclick="parent.getPage('withdraw')" title="快速提现"><i class="icon_cunqu icon_validation_phone"></i><p>快速提现</p></a></li>
+                    <li><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhcz.html?module=yhzz')" title="在线充值"><i class="icon_cunqu icon_validation_email"></i><p>在线充值</p></a></li>
+                    <li><a href="javascript:void(0)" data-url="<%=basePath%>member/withdraw.html" title="快速提现"><i class="icon_cunqu icon_validation_phone"></i><p>快速提现</p></a></li>
                     <c:choose>
                         <c:when test="${bindStatus.isBindBankcard == true}">
-                            <li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/yhkgl')" title="已绑定"><i class="icon_big icon_validation_card"></i><p>银行卡管理</p></a></li>
+                            <li><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=yhkgl')"></i><p>银行卡管理</p></a></li>
                         </c:when>
                         <c:otherwise>
-                            <li><a href="javascript:void(0)" onclick="parent.getPage('zhsz/yhkgl')" title="尚未绑定"><i class="icon_big icon_validation_card_no"></i><p>绑定银行卡</p></a></li>
+                            <li><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=yhkgl')"></i><p>绑定银行卡</p></a></li>
                         </c:otherwise>
                     </c:choose>
                 </ul>
