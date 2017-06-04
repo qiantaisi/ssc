@@ -298,6 +298,8 @@ function stateTouZhu(flag_str) {
         zhushu = getZxdsRx3Zhushu();
     } else if (flagStrInner == "rx3-zxhz"){ // 任选三-直选和值
         zhushu = getZxhzRx3Zhushu();
+    } else if (flagStrInner == "rx3-zu3fs"){ // 任选三-组三复式
+        zhushu = stateZu3fsZhuShu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){
