@@ -302,6 +302,8 @@ function stateTouZhu(flag_str) {
         zhushu = stateZu3fsZhuShu();
     } else if (flagStrInner == "rx3-zu3ds"){ // 任选三-组三单式
         zhushu = getZu3dsRx3Zhushu();
+    } else if (flagStrInner == "rx3-zu6fs") { // 任选三-组六复式
+        zhushu = getZu6fsRx3Zhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){

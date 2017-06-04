@@ -392,17 +392,17 @@
     </p>
     <ul>
         <li class="re2-1004-li">
-            <div class="selposition recl-1005-fs">
-                <label for="position_zu6fs0"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zu6fs0" value="1"/>万位</label>
-                <label for="position_zu6fs1"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zu6fs1" value="2"/>千位</label>
-                <label for="position_zu6fs2"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zu6fs2" value="3"/>百位</label>
-                <label for="position_zu6fs3"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zu6fs3" value="4"/>十位</label>
-                <label for="position_zu6fs4"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zu6fs4" value="5"/>个位</label>
+            <div class="selposition recl-1005-fs re-select-zu6fs">
+                <label for="position_zu6fs0"><input type="checkbox" class="selpositioninput" name="position_zu6fs" id="position_zu6fs0" value="1"/>万位</label>
+                <label for="position_zu6fs1"><input type="checkbox" class="selpositioninput" name="position_zu6fs" id="position_zu6fs1" value="2"/>千位</label>
+                <label for="position_zu6fs2"><input type="checkbox" class="selpositioninput" name="position_zu6fs" checked="checked" id="position_zu6fs2" value="3"/>百位</label>
+                <label for="position_zu6fs3"><input type="checkbox" class="selpositioninput" name="position_zu6fs" checked="checked" id="position_zu6fs3" value="4"/>十位</label>
+                <label for="position_zu6fs4"><input type="checkbox" class="selpositioninput" name="position_zu6fs" checked="checked" id="position_zu6fs4" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
                     <b class="rx-b-hao">
-                       <var id="positioncount-zu6fs" class="rxcount">2</var>
+                       <var id="positioncount-zu6fs" class="rxcount">3</var>
                     </b>
                      个位置，系统自动根据位置组合成
                     <b class="rx-b-hao">
@@ -615,8 +615,9 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i class="base-i base-rx2"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
-                <i class="base-i base-rx2-zux"><var class="jiangjin-change-zux">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i class="base-i base-rx3"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i class="base-i base-rx3-zux"><var class="jiangjin-change-zux">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i class="base-i base-rx3-zu6"><var class="jiangjin-change-zu6">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
             </div>
             <div class="reduce">
                 <a class="fl">-</a>
@@ -650,7 +651,7 @@
     $(function(){
         $(".Pick").hide();
         $(".base-i").hide();
-        $(".base-rx2").show();
+        $(".base-rx3").show();
         $('.recl-1002').show();
 
         $(".btn_fu_zhi span").click(function () {
@@ -672,6 +673,8 @@
             } else if(flagName == "rx3-zxhz"){
                 stateTouZhu(flagName);
             } else if(flagName == "rx3-zu3fs"){
+                stateTouZhu(flagName);
+            } else if(flagName == "rx3-zu6fs"){
                 stateTouZhu(flagName);
             }
         });
@@ -752,25 +755,23 @@
             stateTouZhu("rx3-zxhz");
         });
 
-        //选中位置自动获取组成方案-组选和值
-        $(".recl-1007-zuxhz input[name='position_zuxhz']").click(function () {
+        //选中位置自动获取组成方案-组六复式任选三
+        $(".re-select-zu6fs input[name='position_zu6fs']").click(function () {
             var arrTemp = [];
-            $(".recl-1007-zuxhz input[name='position_zuxhz']:checked").each(function () {
+            $(".re-select-zu6fs input[name='position_zu6fs']:checked").each(function () {
                 arrTemp.push($(this).val());
             });
-            $("#positioncount_zuhz").html(arrTemp.length);
+            $("#positioncount-zu6fs").html(arrTemp.length);
             if(arrTemp.length == 3){
-                $("#positioninfo-zuhz").html(3);
+                $("#positioninfo-zu6fs").html(1);
             } else if(arrTemp.length == 4){
-                $("#positioninfo-zuhz").html(6);
+                $("#positioninfo-zu6fs").html(4);
             } else if(arrTemp.length == 5){
-                $("#positioninfo-zuhz").html(10);
-            } else if(arrTemp.length == 2){
-                $("#positioninfo-zuhz").html(1);
+                $("#positioninfo-zu6fs").html(10);
             } else{
-                $("#positioninfo-zuhz").html(0);
+                $("#positioninfo-zu6fs").html(0);
             }
-            stateTouZhu("rx2-zuxhz");
+            stateTouZhu("rx3-zu6fs");
         });
 
         $(".group ul li p span").click(function () {
@@ -784,7 +785,7 @@
                 $('.recl-1002').show();
                 $('.recl-1002').attr("data-flag", "rx3-zxfs");
                 $(".base-i").hide();
-                $(".base-rx2").show();
+                $(".base-rx3").show();
                 allClearJl();
             } else if(nameVal == "zxds"){
                 $(".Pick").removeAttr("data-flag");
@@ -792,7 +793,7 @@
                 $('.recl-1003-zxds').show();
                 $('.recl-1003-zxds').attr("data-flag", "rx3-zxds");
                 $(".base-i").hide();
-                $(".base-rx2").show();
+                $(".base-rx3").show();
                 allClearJl();
             } else if(nameVal == "zxhz"){
                 $(".Pick").removeAttr("data-flag");
@@ -800,7 +801,7 @@
                 $('.recl-1004-zxhz').show();
                 $('.recl-1004-zxhz').attr("data-flag", "rx3-zxhz");
                 $(".base-i").hide();
-                $(".base-rx2").show();
+                $(".base-rx3").show();
                 allClearJl();
             } else if(nameVal == "zu3fs"){
                 $(".Pick").removeAttr("data-flag");
@@ -808,7 +809,7 @@
                 $('.recl-1005-zu3fs').show();
                 $('.recl-1005-zu3fs').attr("data-flag", "rx3-zu3fs");
                 $(".base-i").hide();
-                $(".base-rx2-zux").show();
+                $(".base-rx3-zux").show();
                 allClearJl();
             } else if(nameVal == "zu3ds"){
                 $(".Pick").removeAttr("data-flag");
@@ -816,7 +817,7 @@
                 $('.recl-1006-zu3ds').show();
                 $('.recl-1006-zu3ds').attr("data-flag", "rx3-zu3ds");
                 $(".base-i").hide();
-                $(".base-rx2-zux").show();
+                $(".base-rx3-zux").show();
                 allClearJl();
             } else if(nameVal == "zu6fs"){
                 $(".Pick").removeAttr("data-flag");
@@ -824,7 +825,7 @@
                 $('.recl-1007-zu6fs').show();
                 $('.recl-1007-zu6fs').attr("data-flag", "rx3-zu6fs");
                 $(".base-i").hide();
-                $(".base-rx2-zux").show();
+                $(".base-rx3-zu6").show();
                 allClearJl();
             } else if(nameVal == "zu6ds"){
                 $(".Pick").removeAttr("data-flag");
@@ -832,7 +833,7 @@
                 $('.recl-1008-zu6ds').show();
                 $('.recl-1008-zu6ds').attr("data-flag", "rx3-zu6ds");
                 $(".base-i").hide();
-                $(".base-rx2-zux").show();
+                $(".base-rx3-zux").show();
                 allClearJl();
             } else if(nameVal == "hhzux"){
                 $(".Pick").removeAttr("data-flag");
@@ -840,7 +841,7 @@
                 $('.recl-1009-hhzux').show();
                 $('.recl-1009-hhzux').attr("data-flag", "rx3-hhzux");
                 $(".base-i").hide();
-                $(".base-rx2-zux").show();
+                $(".base-rx3-zux").show();
                 allClearJl();
             } else if(nameVal == "zuxhz"){
                 $(".Pick").removeAttr("data-flag");
@@ -848,7 +849,7 @@
                 $('.recl-1010-zuxhz').show();
                 $('.recl-1010-zuxhz').attr("data-flag", "rx3-zuxhz");
                 $(".base-i").hide();
-                $(".base-rx2-zux").show();
+                $(".base-rx3-zux").show();
                 allClearJl();
             }
         });
@@ -958,23 +959,25 @@
         return newArr.length;
     }
 
-    //获取和值注数-直选任选二
-    function getZuxhzRx2Zhushu() {
-        var hzArr = [];
-        $.each($(".recl-1007-zuxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
-            hzArr.push($.trim($(this).find("i").html()));
-        });
+    //任选三-组六复式
+    function getZu6fsRx3Zhushu() {
+            var fuShiArr = [], newArr = [];
+            $.each($(".recl-1007-zu6fs ul li[data-name = '组六'] span.acti"), function (index, value) {
+                fuShiArr.push($.trim($(this).find("i").html()));
+            });
+            var zlLength = fuShiArr.length;
+            if (zlLength < 3) {
+                return 0;
+            }
 
-        if(hzArr.length <= 0){
-            return 0;
-        }
-        var zhushu = getRx2zuxhzZhushu(hzArr);
-        var shu = $("#positioninfo-zuhz").html();
-        var lengthArr = zhushu * shu;
-        return lengthArr;
+            newArr = getZuLiuNewArrs(fuShiArr);
+            var zhushu = newArr.length;
+            var shu = $("#positioninfo-zu6fs").html();
+            var lengthArr = zhushu * shu;
+            return lengthArr;
     }
 
-    //获取注数--直选复式-任选三
+    //直选复式-任选三
     function getZxfsRx3Zhushu(){
         var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
         $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
@@ -1050,7 +1053,7 @@
     }
 
     // 任选二组选和值注数算法
-    function getRx2zuxhzZhushu(zuxhzArr){
+    function getrx3zuxhzZhushu(zuxhzArr){
         var newArr = [];
         for(var i = 0; i < zuxhzArr.length; i++){
             for(var x = 0; x < 10; x++){
@@ -1182,16 +1185,16 @@
             calcAll();
         } else if (typeof $('.recl-1006-zu3ds').attr('data-flag') != 'undefined') {
             var betForm = {};
-            if (!getRx2zuxdsZhudan(betForm)) {
+            if (!getrx3zuxdsZhudan(betForm)) {
                 return;
             }
             clearTextarea();
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
-        } else if (typeof $('.recl-1007-zuxhz').attr('data-flag') != 'undefined') {
+        }else if (typeof $('.recl-1007-zu6fs').attr('data-flag') != 'undefined') {
             var betForm = {};
-            if (!getRx2zuxhzZhudan(betForm)) {
+            if (!getRx3zu6fsZhudan(betForm)) {
                 return;
             }
             clearSelected();
@@ -1202,25 +1205,25 @@
 
     }
 
-    //任选二-组选和值注单
-    function getRx2zuxhzZhudan(obj) {
-        var hzArr = [];
-        $.each($(".recl-1007-zuxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
-            hzArr.push($.trim($(this).find("i").html()));
+    //任选三-组六复式
+    function getRx3zu6fsZhudan(obj) {
+        var zuArr = [];
+        $.each($(".recl-1007-zu6fs ul li[data-name = '组六'] span.acti"), function (index, value) {
+            zuArr.push($.trim($(this).find("i").html()));
         });
-        var zhushu = getZuxhzRx2Zhushu();
 
+        var zhushu = getZu6fsRx3Zhushu(zuArr);
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "任二组选-组选和值";
-        obj.content = "号码: (" + hzArr.join(",") + ")";
+        obj.playName = "任三组选-组六复式";
+        obj.content = "号码: (" + zuArr.join(",") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
+        obj.jiangJfanD = $(".jiangjin-change-zu6").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1309,7 +1312,7 @@
     }
 
     //任选三-组三单式注单
-    function getRx2zuxdsZhudan(obj) {
+    function getrx3zuxdsZhudan(obj) {
         var errorStr = '', zhushu = 0;
         var repeatArr = [], allErrorArr = [];
         var errorArr = [];
@@ -1376,7 +1379,7 @@
         $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
             geArr.push($.trim($(this).find("i").html()));
         });
-        var zhushu = getRx2zxfsZhushu(wanArr, qianArr, baiArr, shiArr, geArr);
+        var zhushu = getrx3zxfsZhushu(wanArr, qianArr, baiArr, shiArr, geArr);
 
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
@@ -1458,9 +1461,9 @@
         } else if (typeof $('.recl-1006-zu3ds').attr('data-flag') != 'undefined') {
             playNameStr = "任三组选-组三单式";
             flag_zhi = "rx3-zu3ds";
-        } else if (typeof $('.recl-1007-zu3hz').attr('data-flag') != 'undefined') {
-            playNameStr = "任三组选-组三和值";
-            flag_zhi = "rx3-zu3hz";
+        } else if (typeof $('.recl-1007-zu6fs').attr('data-flag') != 'undefined') {
+            playNameStr = "任三组选-组六复式";
+            flag_zhi = "rx3-zu6fs";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -1500,6 +1503,17 @@
                     }
                 }
                 contentStr = "号码: (" + arrZu3ds[0] + ")";
+            } else if(flag_zhi == "rx3-zu6fs"){
+                var arrZu6fs = [];
+                while (arrZu6fs.length < 1) {
+                    var x1 = parseInt(Math.random() * 10);
+                    var x2 = parseInt(Math.random() * 10);
+                    var x3 = parseInt(Math.random() * 10);
+                    if (x1 != x2 && x2 != x3 && x3 != x2) {
+                        arrZu6fs.push(x1 + "," + x2 + "," + x3);
+                    }
+                }
+                contentStr = "号码: (" + arrZu6fs[0] + ")";
             }
 
             var obj = {};
@@ -1513,6 +1527,10 @@
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
                 var zu3fs_shu = $("#positioninfo-zu3fs").html();
                 obj.zhushu = zu3fs_shu * 2;
+            }else if(flag_zhi == "rx3-zu6fs"){
+                obj.jiangJfanD = $(".jiangjin-change-zu6").html() + "/" + $(".fandian-bfb").html();
+                var zu6fs_shu = $("#positioninfo-zu6fs").html();
+                obj.zhushu = zu6fs_shu;
             } else if(flag_zhi == "rx3-zu3ds"){
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
                 var zuds_shu = $("#positioninfo-zu3ds").html();
@@ -1556,10 +1574,12 @@
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").html(money_jangjin + "%");
+                var money_jangjin_zu6 = 163.333 - (163.333 - 141.667) / 13 * money_jangjin;
                 var money_jangjin_zux = 326.666 - (326.666 - 283.333) / 13 * money_jangjin;
                 money_jangjin = 980 - (980 - 850) / 13 * money_jangjin;
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
                 $(".jiangjin-change-zux").html(parseFloat(money_jangjin_zux).toFixed(3));
+                $(".jiangjin-change-zu6").html(parseFloat(money_jangjin_zu6).toFixed(3));
                 if(typeof stateTouZhu == "function"){
                     var flag_str = '';
                     if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
@@ -1653,9 +1673,7 @@
             </div>
             <div class="content-jiang">
                 <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-                <span class="span1">{{zhushu}}注</span>
-                <span class="span2">{{jiangJfanD}}</span>
-                <span class="span3">{{totalMoney}}元</span>
+                <span class="span1">{{zhushu}}注&nbsp;&nbsp;{{jiangJfanD}}&nbsp;&nbsp;<var class="varColor">{{totalMoney}}元</var></span>
                 <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
                         src="${resPath}img/ico53.png" alt=""></a></span>
             </div>

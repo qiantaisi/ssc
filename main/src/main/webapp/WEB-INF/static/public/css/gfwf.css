@@ -32,28 +32,18 @@
     word-break: normal; /*正常无变化(默认处理方式.文本自动处理换行.假如抵达容器边界内容会转到下一行)*/
     white-space: pre-wrap; /*同pre属性,但是遇到超出容器范围的时候会自动换行 */
 }
-.content-jiang .span1,.content-jiang .span2,.content-jiang .span3{
-    line-height: 18px;
-}
+
 .content-jiang .span1{
-    padding-right: 5px;
-    padding-left: 5px;
-    width: auto;
-    max-width: 60px;
+    width: 200px;
+    height: auto;
+    max-height: 35px;
+    line-height:18px;
+    word-break: normal; /*正常无变化(默认处理方式.文本自动处理换行.假如抵达容器边界内容会转到下一行)*/
+    white-space: pre-wrap; /*同pre属性,但是遇到超出容器范围的时候会自动换行 */
 }
-.content-jiang .span3{
-    padding-right: 5px;
-    padding-left: 5px;
-}
-.content-jiang .span2{
-    padding-right: 5px;
-    padding-left: 5px;
-    width: 70px;
-}
-.content-jiang .span3{
-    width: auto;
-    max-width: 80px;
-    color: green;
+.content-jiang .varColor{
+    display: inline-block;
+    color:green;
 }
 .content-jiang .span4 a img{
     position: absolute;

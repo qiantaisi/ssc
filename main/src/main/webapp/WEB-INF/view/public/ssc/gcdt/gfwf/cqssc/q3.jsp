@@ -2122,7 +2122,6 @@
         });
     });
 </script>
-
 <script type="text/html" id="template_touzhu">
     <li
             data-zhushu="{{zhushu}}"
@@ -2138,9 +2137,7 @@
         </div>
         <div class="content-jiang">
             <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-            <span class="span1">{{zhushu}}注</span>
-            <span class="span2">{{jiangJfanD}}</span>
-            <span class="span3">{{totalMoney}}元</span>
+            <span class="span1">{{zhushu}}注&nbsp;&nbsp;{{jiangJfanD}}&nbsp;&nbsp;<var class="varColor">{{totalMoney}}元</var></span>
             <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
                     src="${resPath}img/ico53.png" alt=""></a></span>
         </div>
