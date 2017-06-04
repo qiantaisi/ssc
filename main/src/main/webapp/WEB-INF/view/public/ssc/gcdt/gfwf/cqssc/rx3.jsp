@@ -1039,16 +1039,14 @@
         });
 
         var zuLength = zuArr.length;
-         console.log(zuLength);
         if (zuLength < 2) {
             return;
         }
 
         var zhushu = getRx3zu3fsZhushu(zuArr);
-//        var shu = $("#positioninfo-zufs").html();
-//        var lengthArr = zhushu * shu;
-        return zhushu;
-
+        var shu = $("#positioninfo-zu3fs").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
     }
 
     // 任选二组选和值注数算法
@@ -1175,7 +1173,7 @@
             calcAll();
         } else if (typeof $('.recl-1005-zu3fs').attr('data-flag') != 'undefined') {
             var betForm = {};
-            if (!getRx2zuxfsZhudan(betForm)) {
+            if (!getRx3zu3fsZhudan(betForm)) {
                 return;
             }
             clearSelected();
@@ -1419,18 +1417,18 @@
 
 
     //任选二-组选复式注单
-    function getRx2zuxfsZhudan(obj) {
+    function getRx3zu3fsZhudan(obj) {
         var zuArr = [];
-        $.each($(".recl-1005-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
+        $.each($(".recl-1005-zu3fs ul li[data-name = '组三'] span.acti"), function (index, value) {
             zuArr.push($.trim($(this).find("i").html()));
         });
 
-        var zhushu = getRx2zuxfsZhushu(zuArr);
+        var zhushu = getRx3zu3fsZhushu(zuArr);
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "任二组选-组选复式";
+        obj.playName = "任三组选-组三复式";
 
         obj.content = "号码: (" + zuArr.join(",") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
@@ -1525,7 +1523,7 @@
             obj.money = $("#inputMoney").data("money");
             if(flag_zhi == "rx2-zuxfs"){
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
-                var zufs_shu = $("#positioninfo-zufs").html();
+                var zufs_shu = $("#positioninfo-zu3fs").html();
                 obj.zhushu = zufs_shu;
             } else if(flag_zhi == "rx2-zuxds"){
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
@@ -1573,10 +1571,10 @@
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                var money_jangjin_zux = 49 - (49 - 42.5) / 13 * money_jangjin;
+                var money_jangjin_zux = 326.666 - (326.666 - 283.333) / 13 * money_jangjin;
                 money_jangjin = 980 - (980 - 850) / 13 * money_jangjin;
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
-                $(".jiangjin-change-zux").html(parseFloat(money_jangjin_zux).toFixed(2));
+                $(".jiangjin-change-zux").html(parseFloat(money_jangjin_zux).toFixed(3));
                 if(typeof stateTouZhu == "function"){
                     var flag_str = '';
                     if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
