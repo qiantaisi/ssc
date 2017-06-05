@@ -553,7 +553,7 @@
     function getDsZhushu() {
         var textStr = $(".content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {

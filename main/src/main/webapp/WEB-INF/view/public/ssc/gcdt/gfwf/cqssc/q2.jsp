@@ -611,7 +611,7 @@
     function getZxdsZhushu() {
         var textStr = $(".recl-1003 .content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
@@ -626,7 +626,7 @@
         var textStr = $(".recl-1007-zuxds .content_jiang .content_tex").val();
         var newArr = [];
 
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
@@ -807,7 +807,7 @@
         var errorArr = [];
         var errorStr = '';
         var zhushu = 0;
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
@@ -846,7 +846,7 @@
         var repeatArr = [], errorArr = [], allErrorArr = [],pairArr = [];
         var errorStr = '';
         var zhushu = 0;
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {

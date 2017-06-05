@@ -1066,7 +1066,7 @@
     function getDsZhushu() {
         var textStr = $(".content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -1079,7 +1079,7 @@
     function getHhzxZhushu() {
         var textStr = $(".cl-1011-hhzx .content_jiang .content_tex").val();
         var newArr = [], tempArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -1116,7 +1116,7 @@
     function getZldsZhushu() {
         var textStr = $(".cl-1010-zlds .content_jiang .content_tex").val();
         var newArr = [], tempArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -1139,7 +1139,7 @@
     function getZsdsZhushu() {
         var textStr = $(".cl-1008-zsds .content_jiang .content_tex").val();
         var newArr = [], tempArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -1165,7 +1165,7 @@
         var errorArr = [];
         var errorStr = '';
         var zhushu = 0;
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -1205,7 +1205,7 @@
         var zhushu = 0;
         var textStr = $(".cl-1008-zsds .content_jiang .content_tex").val();
         var newArr = [], tempArr = [], errorStr = '', errorArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -1308,7 +1308,7 @@
         var zhushu = 0;
         var textStr = $(".cl-1011-hhzx .content_jiang .content_tex").val();
         var newArr = [], tempArr = [], errorStr = '', errorArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -1356,7 +1356,7 @@
         var zhushu = 0;
         var textStr = $(".cl-1010-zlds .content_jiang .content_tex").val();
         var newArr = [], tempArr = [], errorStr = '', errorArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {

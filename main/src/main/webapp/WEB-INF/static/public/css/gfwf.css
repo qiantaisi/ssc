@@ -239,7 +239,7 @@
 }
 .re-select-ds{
     margin-left: 25px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 .re-select-ds .rxdesc .rx-b-hao,.re-select-ds .rxdesc .rx-b-ts{
     font-weight: normal;
@@ -259,7 +259,7 @@
 .Pick ul .re-zuxhz-rx2 span{
     margin-left: 10px!important;
 }
-.re-select-zuxds,.re-select-zu3ds{
+.re-select-zuxds,.re-select-zu3ds, .re-select-zu6ds, .re-select-hhzux{
     margin-left: 25px;
 }
 .recl-1004-zxhz ul .re-zxhz-rx2{
@@ -294,4 +294,13 @@
 }
 .Pick ul .re-zuxhz-rx3{
     line-height: 50px;
+}
+/*任选三*/
+.rx3_slide_sp{
+    position:relative;
+}
+.rx3_slide_sp .change-2{
+    position: absolute;
+    top: -20px;
+    right: 15%;
 }
