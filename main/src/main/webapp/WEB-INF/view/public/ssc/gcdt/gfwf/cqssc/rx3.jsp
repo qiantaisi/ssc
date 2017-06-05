@@ -955,6 +955,38 @@
         return lengthArr;
     }
 
+    //获取手动输入的有效注数--混合组选
+    function getHhzuxRx3Zhushu() {
+        var strLen = 0;
+        var lengthArr = 0;
+        var textStr = $(".recl-1009-hhzux .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        for (var n = 0; n < newArr.length; n++) {
+            var temp = newArr[n].toString();
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            var arr = [];
+            arr.push(oneStr);
+            arr.push(twoStr);
+            arr.push(threeStr);
+            arr.sort();
+            tempArr.push(arr.join(""));
+        }
+        tempArr = tempArr.uniqueArr();
+        strLen = tempArr.length;
+        var shu = $("#positioninfo-hhzux").html();
+        lengthArr = strLen * shu;
+        return lengthArr;
+    }
+
     //获取手动输入的有效注数--组选单式
     function getZu3dsRx3Zhushu() {
         var strLen = 0;
@@ -1281,6 +1313,15 @@
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
+        } else if (typeof $('.recl-1009-hhzux').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getRx3hhzuxZhudan(betForm)) {
+                return;
+            }
+            clearTextarea();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
         }
 
     }
@@ -1509,6 +1550,86 @@
         return true;
     }
 
+    //任选三-混合组选
+    function getRx3hhzuxZhudan(obj) {
+        var errorStr = '', zhushu = 0;
+        var repeatArr = [], allErrorArr = [];
+        var errorArr = [], arrTemp = [];
+        var textStr = $(".recl-1009-hhzux .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            } else{
+                errorArr.push(arr_new[i]);
+            }
+        }
+        for (var n = 0; n < newArr.length; n++) {
+            var arr = [];
+            var temp = newArr[n].toString();
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            arr.push(oneStr);
+            arr.push(twoStr);
+            arr.push(threeStr);
+            arr.sort();
+            if (twoStr == threeStr  && oneStr == threeStr  && twoStr == oneStr) {
+                errorArr.push(newArr[n]);
+            } else{
+                tempArr.push(arr.join(""));
+            }
+        }
+        repeatArr = tempArr.duplicate(); //重复号码
+        tempArr = tempArr.uniqueArr(); // 去掉重复号码
+
+        $(".recl-1009-hhzux input[name='position_hhzux']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 3) {
+            alert("[任选三]至少需要选择3个位置");
+            return false;
+        }
+        if (tempArr.length <= 0) {
+            alert("号码或金额输入有误，请重新输入");
+            return;
+        }
+
+        if (repeatArr.length > 0) {
+            allErrorArr.push("自动过滤重复号码:");
+            for(var r = 0; r < repeatArr.length; r++){
+                allErrorArr.push(repeatArr[r]);
+            }
+        }
+        if (errorArr.length > 0) {
+            allErrorArr.push(" 被过滤掉的错误号码:");
+            for (var l = 0; l < errorArr.length; l++) {
+                allErrorArr.push(errorArr[l]);
+            }
+        }
+
+        if (allErrorArr.length > 0) {
+            for (var e = 0; e < allErrorArr.length; e++) {
+                errorStr += allErrorArr[e] + " ";
+            }
+            alert($.trim(errorStr));
+        }
+
+        zhushu = tempArr.length;
+        var tempNum =  $("#positioninfo-hhzux").html();
+        zhushu = tempNum * zhushu;
+        obj.playName = "任三组选-混合组选";
+        obj.content = "号码: (" + tempArr.join(', ') + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
 
     //任选三-组六单式
     function getRx3zu6dsZhudan(obj) {
@@ -1705,6 +1826,9 @@
         } else if (typeof $('.recl-1008-zu6ds').attr('data-flag') != 'undefined') {
             playNameStr = "任三组选-组六单式";
             flag_zhi = "rx3-zu6ds";
+        } else if (typeof $('.recl-1009-hhzux').attr('data-flag') != 'undefined') {
+            playNameStr = "任三组选-混合组选";
+            flag_zhi = "rx3-hhzux";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -1760,6 +1884,17 @@
                     }
                 }
                 contentStr = "号码: (" + arrZu6[0] + ")";
+            } else if(flag_zhi == "rx3-hhzux"){
+                var arrHhzux = [];
+                while (arrHhzux.length < 1) {
+                    var Hhzux1 = parseInt(Math.random() * 10);
+                    var Hhzux2 = parseInt(Math.random() * 10);
+                    var Hhzux3 = parseInt(Math.random() * 10);
+                    if (!(Hhzux1 == Hhzux2 && Hhzux2 == Hhzux3 && Hhzux1 == Hhzux3)) {
+                      arrHhzux.push(Hhzux1 + "" + Hhzux2 + "" + Hhzux3);
+                    }
+                }
+                contentStr = "号码: (" + arrHhzux[0] + ")";
             }
 
             var obj = {};
@@ -1785,6 +1920,10 @@
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
                 var zuds_shu = $("#positioninfo-zu3ds").html();
                 obj.zhushu = zuds_shu;
+            }  else if(flag_zhi == "rx3-hhzux"){
+                obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
+                var hhzux_shu = $("#positioninfo-hhzux").html();
+                obj.zhushu = hhzux_shu;
             } else if(flag_zhi == "rx3-zxds"){
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
                 var ds_shu = $("#positioninfo-ds").html();
@@ -1812,6 +1951,9 @@
         });
         $('.recl-1008-zu6ds .content_jiang .content_tex').keyup(function () {
             stateTouZhu('rx3-zu6ds');
+        });
+        $('.recl-1009-hhzux .content_jiang .content_tex').keyup(function () {
+            stateTouZhu('rx3-hhzux');
         });
         $('.slider-input').jRange({
             from: 0,

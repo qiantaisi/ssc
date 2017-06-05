@@ -220,7 +220,8 @@ function getZuxfsZshu() {
 
 
 //获取状态
-function stateTouZhu(flag_str) {
+function
+stateTouZhu(flag_str) {
     var flagStrInner = '';
     var zhushu = 0;
     if (typeof flag_str == 'undefined' || flag_str == null || flag_str == '') {
@@ -306,6 +307,8 @@ function stateTouZhu(flag_str) {
         zhushu = getZu6fsRx3Zhushu();
     } else if (flagStrInner == "rx3-zu6ds") { // 任选三-组六复式
         zhushu = getZu6dsRx3Zhushu();
+    } else if (flagStrInner == "rx3-hhzux") { // 任选三-混合组选
+        zhushu = getHhzuxRx3Zhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){

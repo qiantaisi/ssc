@@ -304,3 +304,14 @@
     top: -20px;
     right: 15%;
 }
+.Single .layout .Pick .selposition span {
+    float: left;
+    width: 38px;
+    margin-left: 19px;
+    color: #999899;
+    font-size: 12px;
+    text-align: center;
+}
+.selposition .rxdesc .rx-b-hao, .selposition .rxdesc .rx-b-ts{
+    font-weight: normal;
+}
