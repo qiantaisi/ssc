@@ -30,7 +30,7 @@
                 返回
             </a>
             <h1 class="title">
-                <a href="javascript:void(0)"><img src="${resPath}img/ico13.png" alt="" height="100%"></a>
+                <a href="javascript:void(0)"><img src="<%=basePath%>images/${logo.imageId}" alt="" height="100%"></a>
             </h1>
         </header>
         <div class="content">
