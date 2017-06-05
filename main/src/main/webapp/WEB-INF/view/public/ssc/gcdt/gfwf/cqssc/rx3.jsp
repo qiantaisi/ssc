@@ -1208,15 +1208,32 @@
     //任选三-组六复式
     function getRx3zu6fsZhudan(obj) {
         var zuArr = [];
+        var arrTemp = [];
         $.each($(".recl-1007-zu6fs ul li[data-name = '组六'] span.acti"), function (index, value) {
             zuArr.push($.trim($(this).find("i").html()));
         });
 
+        $(".re-select-zu6fs input[name='position_zu6fs']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 3) {
+            alert("[任选三]至少选择3个位置");
+            return false;
+        }
+
         var zhushu = getZu6fsRx3Zhushu(zuArr);
+        $(".recl-1007-zu6fs input[name='position_zu6fs']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 3) {
+            alert("[任选三]至少需要选择3个位置");
+            return false;
+        }
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
+
         obj.playName = "任三组选-组六复式";
         obj.content = "号码: (" + zuArr.join(",") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
@@ -1231,10 +1248,19 @@
     //任选三-直选和值注单
     function getRx3zxhzZhudan(obj) {
         var hzArr = [];
+        var arrTemp = [];
         $.each($(".recl-1004-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
             hzArr.push($.trim($(this).find("i").html()));
         });
         var zhushu = getZxhzRx3Zhushu();
+
+        $(".re-select-hz input[name='position_hz']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 3) {
+            alert("[任选三]至少需要选择3个位置");
+            return false;
+        }
 
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
@@ -1276,6 +1302,15 @@
         var temp = newArr.length;
         var shu = $("#positioninfo-ds").html();
         var zhushu = temp * shu;
+        var arrTemp = [];
+
+        $(".re-select-ds input[name='position_ds']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 3) {
+            alert("[任选三]至少需要选择3个位置");
+            return false;
+        }
 
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
@@ -1315,7 +1350,7 @@
     function getrx3zuxdsZhudan(obj) {
         var errorStr = '', zhushu = 0;
         var repeatArr = [], allErrorArr = [];
-        var errorArr = [];
+        var errorArr = [], arrTemp = [];
         var textStr = $(".recl-1006-zu3ds .content_jiang .content_tex").val();
         var newArr = [], tempArr = [], errorStr = '', errorArr = [];
         textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
@@ -1337,6 +1372,13 @@
             }
         }
 
+        $(".recl-1006-zu3ds input[name='position_zu3ds']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 3) {
+            alert("[任选三]至少需要选择3个位置");
+            return false;
+        }
         if (tempArr.length <= 0) {
             alert("号码或金额输入有误，请重新输入");
             return;
@@ -1404,12 +1446,20 @@
 
     //任选二-组选复式注单
     function getRx3zu3fsZhudan(obj) {
-        var zuArr = [];
+        var zuArr = [], arrTemp = [];
         $.each($(".recl-1005-zu3fs ul li[data-name = '组三'] span.acti"), function (index, value) {
             zuArr.push($.trim($(this).find("i").html()));
         });
-
         var zhushu = getRx3zu3fsZhushu(zuArr);
+
+        $(".recl-1005-zu3fs input[name='position_zu3fs']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 3) {
+            alert("[任选三]至少需要选择3个位置");
+            return false;
+        }
+
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
