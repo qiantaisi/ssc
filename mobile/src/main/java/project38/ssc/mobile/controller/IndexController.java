@@ -41,7 +41,7 @@ public class IndexController extends BaseController{
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        modelMap.put("logo", ApiUtils.getLogo(1, companyShortName));
+        modelMap.put("logo", ApiUtils.getLogo(5, companyShortName));
         return this.renderView("index/kefu", modelMap);
     }
 
