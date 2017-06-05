@@ -309,6 +309,12 @@ stateTouZhu(flag_str) {
         zhushu = getZu6dsRx3Zhushu();
     } else if (flagStrInner == "rx3-hhzux") { // 任选三-混合组选
         zhushu = getHhzuxRx3Zhushu();
+    } else if (flagStrInner == "rx3-zuxhz") { // 任选三-组选和值
+        zhushu = getZuxhzRx3Zhushu();
+    } else if (flagStrInner == "rx4-zxfs") { // 任选四-直选复式
+        zhushu = getZxfsRx4Zhushu();
+    } else if (flagStrInner == "rx4-zxds"){ // 任选四-直选单式
+        zhushu = getZxdsrx4Zhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){

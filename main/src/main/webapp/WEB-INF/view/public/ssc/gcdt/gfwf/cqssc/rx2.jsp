@@ -1353,7 +1353,7 @@
                 obj.zhushu = hz_shu * shu;
             } else{
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-                obj.zhushu = 1;
+                obj.zhushu = 10;
             }
             obj.playGroupId = playGroupId;
             result.push(obj);
