@@ -315,6 +315,8 @@ stateTouZhu(flag_str) {
         zhushu = getZxfsRx4Zhushu();
     } else if (flagStrInner == "rx4-zxds"){ // 任选四-直选单式
         zhushu = getZxdsrx4Zhushu();
+    } else if (flagStrInner == "rx4-zux24"){ // 任选四-组选24
+        zhushu = getZux24Zhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){

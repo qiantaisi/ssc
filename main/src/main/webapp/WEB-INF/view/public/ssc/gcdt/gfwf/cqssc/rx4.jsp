@@ -213,16 +213,16 @@
     <ul>
         <li class="re2-1004-li">
             <div class="selposition re-select-zux24">
-                <label for="position_zux240"><input type="checkbox" class="selpositioninput" name="position_zu3fs" id="position_zux240" value="1"/>万位</label>
-                <label for="position_zux241"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux241" value="2"/>千位</label>
-                <label for="position_zux242"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux242" value="3"/>百位</label>
-                <label for="position_zux243"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux243" value="4"/>十位</label>
-                <label for="position_zux244"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux244" value="5"/>个位</label>
+                <label for="position_zux240"><input type="checkbox" class="selpositioninput" name="position_zux24" id="position_zux240" value="1"/>万位</label>
+                <label for="position_zux241"><input type="checkbox" class="selpositioninput" name="position_zux24" checked="checked" id="position_zux241" value="2"/>千位</label>
+                <label for="position_zux242"><input type="checkbox" class="selpositioninput" name="position_zux24" checked="checked" id="position_zux242" value="3"/>百位</label>
+                <label for="position_zux243"><input type="checkbox" class="selpositioninput" name="position_zux24" checked="checked" id="position_zux243" value="4"/>十位</label>
+                <label for="position_zux244"><input type="checkbox" class="selpositioninput" name="position_zux24" checked="checked" id="position_zux244" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
                     <b class="rx-b-hao">
-                       <var id="positioncount-zux24" class="rxcount">3</var>
+                       <var id="positioncount-zux24" class="rxcount">4</var>
                     </b>
                      个位置，系统自动根据位置组合成
                     <b class="rx-b-hao">
@@ -273,11 +273,11 @@
     <ul>
         <li class="re2-1004-li">
             <div class="selposition re-select-zux12">
-                <label for="position_zux120"><input type="checkbox" class="selpositioninput" name="position_zu3fs" id="position_zux120" value="1"/>万位</label>
-                <label for="position_zux121"><input type="checkbox" class="selpositioninput" name="position_zu3fs" id="position_zux121" value="2"/>千位</label>
-                <label for="position_zux122"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux122" value="3"/>百位</label>
-                <label for="position_zux123"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux123" value="4"/>十位</label>
-                <label for="position_zux124"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux124" value="5"/>个位</label>
+                <label for="position_zux120"><input type="checkbox" class="selpositioninput" name="position_zux12" id="position_zux120" value="1"/>万位</label>
+                <label for="position_zux121"><input type="checkbox" class="selpositioninput" name="position_zux12" id="position_zux121" value="2"/>千位</label>
+                <label for="position_zux122"><input type="checkbox" class="selpositioninput" name="position_zux12" checked="checked" id="position_zux122" value="3"/>百位</label>
+                <label for="position_zux123"><input type="checkbox" class="selpositioninput" name="position_zux12" checked="checked" id="position_zux123" value="4"/>十位</label>
+                <label for="position_zux124"><input type="checkbox" class="selpositioninput" name="position_zux12" checked="checked" id="position_zux124" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
@@ -333,11 +333,11 @@
     <ul>
         <li class="re2-1004-li">
             <div class="selposition re-select-zux6">
-                <label for="position_zux60"><input type="checkbox" class="selpositioninput" name="position_zu3fs" id="position_zux60" value="1"/>万位</label>
-                <label for="position_zux61"><input type="checkbox" class="selpositioninput" name="position_zu3fs" id="position_zux61" value="2"/>千位</label>
-                <label for="position_zux62"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux62" value="3"/>百位</label>
-                <label for="position_zux63"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux63" value="4"/>十位</label>
-                <label for="position_zux64"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux64" value="5"/>个位</label>
+                <label for="position_zux60"><input type="checkbox" class="selpositioninput" name="position_zux6" id="position_zux60" value="1"/>万位</label>
+                <label for="position_zux61"><input type="checkbox" class="selpositioninput" name="position_zux6" id="position_zux61" value="2"/>千位</label>
+                <label for="position_zux62"><input type="checkbox" class="selpositioninput" name="position_zux6" checked="checked" id="position_zux62" value="3"/>百位</label>
+                <label for="position_zux63"><input type="checkbox" class="selpositioninput" name="position_zux6" checked="checked" id="position_zux63" value="4"/>十位</label>
+                <label for="position_zux64"><input type="checkbox" class="selpositioninput" name="position_zux6" checked="checked" id="position_zux64" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
@@ -392,11 +392,11 @@
     <ul>
         <li class="re2-1004-li">
             <div class="selposition re-select-zux4">
-                <label for="position_zux40"><input type="checkbox" class="selpositioninput" name="position_zu3fs" id="position_zux40" value="1"/>万位</label>
-                <label for="position_zux41"><input type="checkbox" class="selpositioninput" name="position_zu3fs" id="position_zux41" value="2"/>千位</label>
-                <label for="position_zux42"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux42" value="3"/>百位</label>
-                <label for="position_zux43"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux43" value="4"/>十位</label>
-                <label for="position_zux44"><input type="checkbox" class="selpositioninput" name="position_zu3fs" checked="checked" id="position_zux44" value="5"/>个位</label>
+                <label for="position_zux40"><input type="checkbox" class="selpositioninput" name="position_zux4" id="position_zux40" value="1"/>万位</label>
+                <label for="position_zux41"><input type="checkbox" class="selpositioninput" name="position_zux4" id="position_zux41" value="2"/>千位</label>
+                <label for="position_zux42"><input type="checkbox" class="selpositioninput" name="position_zux4" checked="checked" id="position_zux42" value="3"/>百位</label>
+                <label for="position_zux43"><input type="checkbox" class="selpositioninput" name="position_zux4" checked="checked" id="position_zux43" value="4"/>十位</label>
+                <label for="position_zux44"><input type="checkbox" class="selpositioninput" name="position_zux4" checked="checked" id="position_zux44" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
@@ -502,6 +502,8 @@
             console.log(flagName);
             if(flagName == "rx4-zxfs"){
                 stateTouZhu(flagName);
+            }else if(flagName == "rx4-zux24"){
+                stateTouZhu(flagName);
             }
         });
 
@@ -522,24 +524,24 @@
             stateTouZhu("rx4-zxds");
         });
 
-        //任选三-组选和值
-        $(".re-select-zuxhz input[name='position_zuxhz']").click(function () {
+        //任选三-组选24
+        $(".re-select-zux24 input[name='position_zux24']").click(function () {
             var arrTemp = [];
-            $(".re-select-zuxhz input[name='position_zuxhz']:checked").each(function () {
+            $(".re-select-zux24 input[name='position_zux24']:checked").each(function () {
                 arrTemp.push($(this).val());
             });
-            $("#positioncount-zuxhz").html(arrTemp.length);
-            if(arrTemp.length == 3){
-                $("#positioninfo-zuxhz").html(1);
-            } else if(arrTemp.length == 4){
-                $("#positioninfo-zuxhz").html(4);
+            $("#positioncount-zux24").html(arrTemp.length);
+            if(arrTemp.length == 4){
+                $("#positioninfo-zux24").html(1);
             } else if(arrTemp.length == 5){
-                $("#positioninfo-zuxhz").html(10);
+                $("#positioninfo-zux24").html(5);
             } else{
-                $("#positioninfo-zuxhz").html(0);
+                $("#positioninfo-zux24").html(0);
             }
-            stateTouZhu("rx4-zuxhz");
+            stateTouZhu("rx4-zux24");
         });
+
+
 
         $(".group ul li p span").click(function () {
             $(".group ul li p span.acti").removeClass("acti");
@@ -627,213 +629,37 @@
         return lengthArr;
     }
 
-    //获取手动输入的有效注数--组六单式
-    function getZu6dsrx4Zhushu() {
-        var strLen = 0;
-        var lengthArr = 0;
-        var textStr = $(".recl-1008-zu6ds .content_jiang .content_tex").val();
-        var newArr = [], tempArr = [];
-        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
-        var arr_new = textStr.split(",");
-        for (var i = 0; i < arr_new.length; i++) {
-            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
-                newArr.push(arr_new[i]);
-            }
-        }
-        for (var n = 0; n < newArr.length; n++) {
-            var temp = newArr[n].toString();
-            var oneStr = temp.substr(0, 1);
-            var twoStr = temp.substr(1, 1);
-            var threeStr = temp.substr(2, 1);
-            if (oneStr != twoStr && threeStr != oneStr && threeStr != twoStr) {
-                tempArr.push(newArr[n]);
-            }
-        }
-
-        strLen = tempArr.length;
-        var shu = $("#positioninfo-zu6ds").html();
-        lengthArr = strLen * shu;
-        return lengthArr;
-    }
-
-    //获取手动输入的有效注数--混合组选
-    function getHhzuxrx4Zhushu() {
-        var strLen = 0;
-        var lengthArr = 0;
-        var textStr = $(".recl-1009-hhzux .content_jiang .content_tex").val();
-        var newArr = [], tempArr = [];
-        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
-        var arr_new = textStr.split(",");
-        for (var i = 0; i < arr_new.length; i++) {
-            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
-                newArr.push(arr_new[i]);
-            }
-        }
-        for (var n = 0; n < newArr.length; n++) {
-            var temp = newArr[n].toString();
-            var oneStr = temp.substr(0, 1);
-            var twoStr = temp.substr(1, 1);
-            var threeStr = temp.substr(2, 1);
-            var arr = [];
-            arr.push(oneStr);
-            arr.push(twoStr);
-            arr.push(threeStr);
-            arr.sort();
-            tempArr.push(arr.join(""));
-        }
-        tempArr = tempArr.uniqueArr();
-        strLen = tempArr.length;
-        var shu = $("#positioninfo-hhzux").html();
-        lengthArr = strLen * shu;
-        return lengthArr;
-    }
-
-    //获取手动输入的有效注数--组选单式
-    function getZu3dsrx4Zhushu() {
-        var strLen = 0;
-        var lengthArr = 0;
-        var textStr = $(".recl-1006-zu3ds .content_jiang .content_tex").val();
-        var newArr = [], tempArr = [];
-        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
-        var arr_new = textStr.split(",");
-        for (var i = 0; i < arr_new.length; i++) {
-            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
-                newArr.push(arr_new[i]);
-            }
-        }
-        for (var n = 0; n < newArr.length; n++) {
-            var temp = newArr[n].toString();
-            var oneStr = temp.substr(0, 1);
-            var twoStr = temp.substr(1, 1);
-            var threeStr = temp.substr(2, 1);
-            if (oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && threeStr != oneStr || threeStr == oneStr && oneStr != twoStr) {
-                tempArr.push(newArr[n]);
-            }
-        }
-
-        strLen = tempArr.length;
-        var shu = $("#positioninfo-zu3ds").html();
-        lengthArr = strLen * shu;
-        return lengthArr;
-    }
-
-    //直选和值--任选三
-    function getZxhzrx4Zhushu() {
-        var hzArr = [];
-        $.each($(".recl-1004-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
-            hzArr.push($.trim($(this).find("i").html()));
-        });
-
-        if(hzArr.length <= 0){
-            return 0;
-        }
-
-        var newArr = [];
-        for(var i = 0; i < hzArr.length; i++){
-            for(var x = 0; x < 10; x++){
-                for(var y = 0; y < 10; y++){
-                    for(var y1 = 0; y1 < 10; y1++) {
-                        if (x + y + y1 == hzArr[i]) {
-                            newArr.push(x + "" + y + "" + y1);
-                        }
-                    }
-                }
-            }
-        }
-
-        var zhushu = newArr.length;
-        var shu = $("#positioninfo-hz").html();
-        var lengthArr = zhushu * shu;
-        return lengthArr;
-    }
-
-    //组选和值--任选三
-    function getZuxhzrx4Zhushu() {
-        var hzArr = [];
-        $.each($(".recl-1010-zuxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
-            hzArr.push($.trim($(this).find("i").html()));
-        });
-
-        if(hzArr.length <= 0){
-            return 0;
-        }
-
-        var newArr = [];
-        for(var i = 0; i < hzArr.length; i++){
-            for(var x = 0; x < 10; x++){
-                for(var y = 0; y < 10; y++){
-                    for(var y1 = 0; y1 < 10; y1++) {
-                        if (x + y + y1 == hzArr[i] && !(x == y && x == y1 && y == y1)) {
-                            var arr = [];
-                            arr.push(x);
-                            arr.push(y);
-                            arr.push(y1);
-                            arr.sort();
-                            newArr.push(arr.join(""));
-                        }
-                    }
-                }
-            }
-        }
-
-        newArr = newArr.uniqueArr();
-        var zhushu = newArr.length;
-        var shu = $("#positioninfo-zuxhz").html();
-        var lengthArr = zhushu * shu;
-        return lengthArr;
-    }
-
-    function getrx4zuxhzZhushu(hzArr){
-        var newArr = [];
-        for(var i = 0; i < hzArr.length; i++){
-            for(var x = 0; x < 10; x++){
-                for(var y = 0; y < 10; y++){
-                    for(var y1 = 0; y1 < 10; y1++) {
-                        if (x + y + y1 == hzArr[i] && !(x == y && x == y1 && y == y1)) {
-                            var arr = [];
-                            arr.push(x);
-                            arr.push(y);
-                            arr.push(y1);
-                            arr.sort();
-                            newArr.push(arr.join(""));
-                        }
-                    }
-                }
-            }
-        }
-        return newArr.length;
-    }
-
-    function getrx4zxhzZhushu(hzArr){
-        var newArr = [];
-        for(var i = 0; i < hzArr.length; i++){
-            for(var x = 0; x < 10; x++){
-                for(var y = 0; y < 10; y++){
-                    for(var y1 = 0; y1 < 10; y1++) {
-                        if (x + y + y1 == hzArr[i]) {
-                            newArr.push(x + "" + y + "" + y1);
-                        }
-                    }
-                }
-            }
-        }
-        return newArr.length;
-    }
-
-    //任选三-组六复式
-    function getZu6fsrx4Zhushu() {
+    //任选三-组选24
+    function getZux24Zhushu() {
             var fuShiArr = [], newArr = [];
-            $.each($(".recl-1007-zu6fs ul li[data-name = '组六'] span.acti"), function (index, value) {
+            $.each($(".recl-1004-zux24 ul li[data-name = '组选24'] span.acti"), function (index, value) {
                 fuShiArr.push($.trim($(this).find("i").html()));
             });
             var zlLength = fuShiArr.length;
-            if (zlLength < 3) {
+            if (zlLength < 4) {
                 return 0;
             }
 
-            newArr = getZuLiuNewArrs(fuShiArr);
+            for(var n1 = 0; n1 < fuShiArr.length; n1++){
+                for(var n2 = 0; n2 < fuShiArr.length; n2++){
+                    for(var n3 = 0; n3 < fuShiArr.length; n3++){
+                        for(var n4 = 0; n4 < fuShiArr.length; n4++){
+                            if(fuShiArr[n1] != fuShiArr[n2] && fuShiArr[n1] != fuShiArr[n3] && fuShiArr[n1] != fuShiArr[n4] && fuShiArr[n2] != fuShiArr[n3] && fuShiArr[n2] != fuShiArr[n4]  && fuShiArr[n3] != fuShiArr[n4]){
+                                var arr = [];
+                                arr.push(fuShiArr[n1]);
+                                arr.push(fuShiArr[n2]);
+                                arr.push(fuShiArr[n3]);
+                                arr.push(fuShiArr[n4]);
+                                arr.sort();
+                                newArr.push(arr.join(""));
+                            }
+                        }
+                    }
+                }
+            }
+            newArr = newArr.uniqueArr();
             var zhushu = newArr.length;
-            var shu = $("#positioninfo-zu6fs").html();
+            var shu = $("#positioninfo-zux24").html();
             var lengthArr = zhushu * shu;
             return lengthArr;
     }
@@ -893,58 +719,6 @@
             result += tmpResult;
         });
         return result;
-    }
-
-    //获取注数--组选复式
-    function stateZu3fsZhuShu(){
-        var zuArr = [], newArr = [];
-        $.each($(".recl-1005-zu3fs ul li[data-name = '组三'] span.acti"), function (index, value) {
-            zuArr.push($.trim($(this).find("i").html()));
-        });
-
-        var zuLength = zuArr.length;
-        if (zuLength < 2) {
-            return;
-        }
-
-        var zhushu = getrx4zu3fsZhushu(zuArr);
-        var shu = $("#positioninfo-zu3fs").html();
-        var lengthArr = zhushu * shu;
-        return lengthArr;
-    }
-
-    // 任选二组选和值注数算法
-    function getrx4zuxhzZhushu(zuxhzArr){
-        var newArr = [];
-        for(var i = 0; i < zuxhzArr.length; i++){
-            for(var x = 0; x < 10; x++){
-                for(var y = 0; y < 10; y++){
-                    if((x + y) == zuxhzArr[i] && x != y){
-                        var arr = [];
-                        arr.push(x);
-                        arr.push(y);
-                        arr.sort();
-                        newArr.push(arr.join(""));
-                    }
-                }
-            }
-        }
-        newArr = newArr.uniqueArr();
-        return newArr.length;
-    }
-
-    // 组三复式--任选三
-    function getrx4zu3fsZhushu(arrNew) {
-        var tempArr = [];
-        for (var i = 0; i < arrNew.length; i++) {
-            for (var i1 = 0; i1 < arrNew.length; i1++) {
-                if (arrNew[i] != arrNew[i1]) {
-                    tempArr.push(arrNew[i] + "" + arrNew[i1]);
-                }
-            }
-        }
-
-        return tempArr.length;
     }
 
 </script>
@@ -1026,63 +800,9 @@
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
-        } else if (typeof $('.recl-1004-zxhz').attr('data-flag') != 'undefined') {
+        } else if (typeof $('.recl-1004-zux24').attr('data-flag') != 'undefined') {
             var betForm = {};
-            if (!getrx4zxhzZhudan(betForm)) {
-                return;
-            }
-            clearSelected();
-            var html = template("template_touzhu", betForm);
-            $("#zhudanList").append(html);
-            calcAll();
-        } else if (typeof $('.recl-1005-zu3fs').attr('data-flag') != 'undefined') {
-            var betForm = {};
-            if (!getrx4zu3fsZhudan(betForm)) {
-                return;
-            }
-            clearSelected();
-            var html = template("template_touzhu", betForm);
-            $("#zhudanList").append(html);
-            calcAll();
-        } else if (typeof $('.recl-1006-zu3ds').attr('data-flag') != 'undefined') {
-            var betForm = {};
-            if (!getrx4zuxdsZhudan(betForm)) {
-                return;
-            }
-            clearTextarea();
-            var html = template("template_touzhu", betForm);
-            $("#zhudanList").append(html);
-            calcAll();
-        } else if (typeof $('.recl-1007-zu6fs').attr('data-flag') != 'undefined') {
-            var betForm = {};
-            if (!getrx4zu6fsZhudan(betForm)) {
-                return;
-            }
-            clearSelected();
-            var html = template("template_touzhu", betForm);
-            $("#zhudanList").append(html);
-            calcAll();
-        } else if (typeof $('.recl-1008-zu6ds').attr('data-flag') != 'undefined') {
-            var betForm = {};
-            if (!getrx4zu6dsZhudan(betForm)) {
-                return;
-            }
-            clearTextarea();
-            var html = template("template_touzhu", betForm);
-            $("#zhudanList").append(html);
-            calcAll();
-        } else if (typeof $('.recl-1009-hhzux').attr('data-flag') != 'undefined') {
-            var betForm = {};
-            if (!getrx4hhzuxZhudan(betForm)) {
-                return;
-            }
-            clearTextarea();
-            var html = template("template_touzhu", betForm);
-            $("#zhudanList").append(html);
-            calcAll();
-        } else if (typeof $('.recl-1010-zuxhz').attr('data-flag') != 'undefined') {
-            var betForm = {};
-            if (!getrx4zuxhzZhudan(betForm)) {
+            if (!getZux24Zhudan(betForm)) {
                 return;
             }
             clearSelected();
@@ -1093,60 +813,20 @@
 
     }
 
-    //任选三-组六复式
-    function getrx4zu6fsZhudan(obj) {
-        var zuArr = [];
-        var arrTemp = [];
-        $.each($(".recl-1007-zu6fs ul li[data-name = '组六'] span.acti"), function (index, value) {
-            zuArr.push($.trim($(this).find("i").html()));
-        });
-
-        $(".re-select-zu6fs input[name='position_zu6fs']:checked").each(function () {
-            arrTemp.push($(this).val());
-        });
-        if (arrTemp.length < 3) {
-            alert("[任选三]至少选择3个位置");
-            return false;
-        }
-
-        var zhushu = getZu6fsrx4Zhushu(zuArr);
-        $(".recl-1007-zu6fs input[name='position_zu6fs']:checked").each(function () {
-            arrTemp.push($(this).val());
-        });
-        if (arrTemp.length < 3) {
-            alert("[任选三]至少需要选择3个位置");
-            return false;
-        }
-        if (zhushu <= 0) {
-            alert("至少选择1注号码才能投注");
-            return false;
-        }
-
-        obj.playName = "任四组选-组六复式";
-        obj.content = "号码: (" + zuArr.join(",") + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-zu6").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
-        return true;
-    }
-
-    //任选三-组选和值
-    function getrx4zuxhzZhudan(obj) {
+    //任选三-组选24
+    function getZux24Zhudan(obj) {
         var hzArr = [];
         var arrTemp = [];
-        $.each($(".recl-1010-zuxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+        $.each($(".recl-1004-zux24 ul li[data-name = '组选24'] span.acti"), function (index, value) {
             hzArr.push($.trim($(this).find("i").html()));
         });
-        var zhushu = getZuxhzrx4Zhushu();
+        var zhushu = getZux24Zhushu();
 
-        $(".re-select-zuxhz input[name='position_zuxhz']:checked").each(function () {
+        $(".re-select-zux24 input[name='position_zux24']:checked").each(function () {
             arrTemp.push($(this).val());
         });
-        if (arrTemp.length < 3) {
-            alert("[任选三]至少需要选择3个位置");
+        if (arrTemp.length < 4) {
+            alert("[任选三]至少需要选择4个位置");
             return false;
         }
 
@@ -1154,40 +834,8 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "任四直选-组选和值";
-        obj.content = "号码: (" + hzArr.join(",") + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
-        return true;
-    }
-
-    //任选三-直选和值
-    function getrx4zxhzZhudan(obj) {
-        var hzArr = [];
-        var arrTemp = [];
-        $.each($(".recl-1004-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
-            hzArr.push($.trim($(this).find("i").html()));
-        });
-        var zhushu = getZxhzrx4Zhushu();
-
-        $(".re-select-hz input[name='position_hz']:checked").each(function () {
-            arrTemp.push($(this).val());
-        });
-        if (arrTemp.length < 3) {
-            alert("[任选三]至少需要选择3个位置");
-            return false;
-        }
-
-        if (zhushu <= 0) {
-            alert("至少选择1注号码才能投注");
-            return false;
-        }
-        obj.playName = "任四直选-直选和值";
-        obj.content = "号码: (" + hzArr.join(",") + ")";
+        obj.playName = "任四组选-组选24";
+        obj.content = "组选24: (" + hzArr.join(",") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -1267,251 +915,11 @@
         return true;
     }
 
-    //任选三-组三单式
-    function getrx4zuxdsZhudan(obj) {
-        var errorStr = '', zhushu = 0;
-        var repeatArr = [], allErrorArr = [];
-        var errorArr = [], arrTemp = [];
-        var textStr = $(".recl-1006-zu3ds .content_jiang .content_tex").val();
-        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
-        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
-        var arr_new = textStr.split(",");
-        for (var i = 0; i < arr_new.length; i++) {
-            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
-                newArr.push(arr_new[i]);
-            } else{
-                errorArr.push(arr_new[i]);
-            }
-        }
-        for (var n = 0; n < newArr.length; n++) {
-            var arr = [];
-            var temp = newArr[n].toString();
-            var oneStr = temp.substr(0, 1);
-            var twoStr = temp.substr(1, 1);
-            var threeStr = temp.substr(2, 1);
-            arr.push(oneStr);
-            arr.push(twoStr);
-            arr.push(threeStr);
-            arr.sort();
-            if (oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr) {
-                tempArr.push(arr.join(""));
-            } else{
-                errorArr.push(newArr[n]);
-            }
-        }
-        repeatArr = tempArr.duplicate(); //重复号码
-        tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
-        $(".recl-1006-zu3ds input[name='position_zu3ds']:checked").each(function () {
-            arrTemp.push($(this).val());
-        });
-        if (arrTemp.length < 3) {
-            alert("[任选三]至少需要选择3个位置");
-            return false;
-        }
-        if (tempArr.length <= 0) {
-            alert("号码或金额输入有误，请重新输入");
-            return;
-        }
 
-        if (repeatArr.length > 0) {
-            allErrorArr.push("自动过滤重复号码:");
-            for(var r = 0; r < repeatArr.length; r++){
-                allErrorArr.push(repeatArr[r]);
-            }
-        }
-        if (errorArr.length > 0) {
-            allErrorArr.push(" 被过滤掉的错误号码:");
-            for (var l = 0; l < errorArr.length; l++) {
-                allErrorArr.push(errorArr[l]);
-            }
-        }
 
-        if (allErrorArr.length > 0) {
-            for (var e = 0; e < allErrorArr.length; e++) {
-                errorStr += allErrorArr[e] + " ";
-            }
-            alert($.trim(errorStr));
-        }
 
-        zhushu = tempArr.length;
-        var tempNum =  $("#positioninfo-zu3ds").html();
-        zhushu = tempNum * zhushu;
-
-        obj.playName = "任四组选-组三单式";
-        obj.content = "号码: (" + tempArr.join(', ') + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
-        return true;
-    }
-
-    //任选三-混合组选
-    function getrx4hhzuxZhudan(obj) {
-        var errorStr = '', zhushu = 0;
-        var repeatArr = [], allErrorArr = [];
-        var errorArr = [], arrTemp = [];
-        var textStr = $(".recl-1009-hhzux .content_jiang .content_tex").val();
-        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
-        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
-        var arr_new = textStr.split(",");
-        for (var i = 0; i < arr_new.length; i++) {
-            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
-                newArr.push(arr_new[i]);
-            } else{
-                errorArr.push(arr_new[i]);
-            }
-        }
-        for (var n = 0; n < newArr.length; n++) {
-            var arr = [];
-            var temp = newArr[n].toString();
-            var oneStr = temp.substr(0, 1);
-            var twoStr = temp.substr(1, 1);
-            var threeStr = temp.substr(2, 1);
-            arr.push(oneStr);
-            arr.push(twoStr);
-            arr.push(threeStr);
-            arr.sort();
-            if (twoStr == threeStr  && oneStr == threeStr  && twoStr == oneStr) {
-                errorArr.push(newArr[n]);
-            } else{
-                tempArr.push(arr.join(""));
-            }
-        }
-        repeatArr = tempArr.duplicate(); //重复号码
-        tempArr = tempArr.uniqueArr(); // 去掉重复号码
-
-        $(".recl-1009-hhzux input[name='position_hhzux']:checked").each(function () {
-            arrTemp.push($(this).val());
-        });
-        if (arrTemp.length < 3) {
-            alert("[任选三]至少需要选择3个位置");
-            return false;
-        }
-        if (tempArr.length <= 0) {
-            alert("号码或金额输入有误，请重新输入");
-            return;
-        }
-
-        if (repeatArr.length > 0) {
-            allErrorArr.push("自动过滤重复号码:");
-            for(var r = 0; r < repeatArr.length; r++){
-                allErrorArr.push(repeatArr[r]);
-            }
-        }
-        if (errorArr.length > 0) {
-            allErrorArr.push(" 被过滤掉的错误号码:");
-            for (var l = 0; l < errorArr.length; l++) {
-                allErrorArr.push(errorArr[l]);
-            }
-        }
-
-        if (allErrorArr.length > 0) {
-            for (var e = 0; e < allErrorArr.length; e++) {
-                errorStr += allErrorArr[e] + " ";
-            }
-            alert($.trim(errorStr));
-        }
-
-        zhushu = tempArr.length;
-        var tempNum =  $("#positioninfo-hhzux").html();
-        zhushu = tempNum * zhushu;
-        obj.playName = "任四组选-混合组选";
-        obj.content = "号码: (" + tempArr.join(', ') + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
-        return true;
-    }
-
-    //任选三-组六单式
-    function getrx4zu6dsZhudan(obj) {
-        var errorStr = '', zhushu = 0;
-        var repeatArr = [], allErrorArr = [];
-        var errorArr = [], arrTemp = [];
-        var textStr = $(".recl-1008-zu6ds .content_jiang .content_tex").val();
-        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
-        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
-        var arr_new = textStr.split(",");
-        for (var i = 0; i < arr_new.length; i++) {
-            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
-                newArr.push(arr_new[i]);
-            } else{
-                errorArr.push(arr_new[i]);
-            }
-        }
-        for (var n = 0; n < newArr.length; n++) {
-            var arr = [];
-            var temp = newArr[n].toString();
-            var oneStr = temp.substr(0, 1);
-            var twoStr = temp.substr(1, 1);
-            var threeStr = temp.substr(2, 1);
-            arr.push(oneStr);
-            arr.push(twoStr);
-            arr.push(threeStr);
-            arr.sort();
-            if (twoStr != threeStr  && oneStr != threeStr  && twoStr != oneStr) {
-                tempArr.push(arr.join(""));
-            } else{
-                errorArr.push(newArr[n]);
-            }
-        }
-        repeatArr = tempArr.duplicate(); //重复号码
-        tempArr = tempArr.uniqueArr(); // 去掉重复号码
-
-        $(".recl-1008-zu6ds input[name='position_zu6ds']:checked").each(function () {
-            arrTemp.push($(this).val());
-        });
-        if (arrTemp.length < 3) {
-            alert("[任选三]至少需要选择3个位置");
-            return false;
-        }
-        if (tempArr.length <= 0) {
-            alert("号码或金额输入有误，请重新输入");
-            return;
-        }
-
-        if (repeatArr.length > 0) {
-            allErrorArr.push("自动过滤重复号码:");
-            for(var r = 0; r < repeatArr.length; r++){
-                allErrorArr.push(repeatArr[r]);
-            }
-        }
-        if (errorArr.length > 0) {
-            allErrorArr.push(" 被过滤掉的错误号码:");
-            for (var l = 0; l < errorArr.length; l++) {
-                allErrorArr.push(errorArr[l]);
-            }
-        }
-
-        if (allErrorArr.length > 0) {
-            for (var e = 0; e < allErrorArr.length; e++) {
-                errorStr += allErrorArr[e] + " ";
-            }
-            alert($.trim(errorStr));
-        }
-
-        zhushu = tempArr.length;
-        var tempNum =  $("#positioninfo-zu6ds").html();
-        zhushu = tempNum * zhushu;
-        obj.playName = "任四组选-组六单式";
-        obj.content = "号码: (" + tempArr.join(', ') + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-zu6").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
-        return true;
-    }
-
-    //任选二-直选复式注单
+    //任选四-直选复式
     function getrx4zxfsZhudan(obj) {
         var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
         $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
@@ -1552,39 +960,6 @@
     }
 
 
-    //任选二-组选复式注单
-    function getrx4zu3fsZhudan(obj) {
-        var zuArr = [], arrTemp = [];
-        $.each($(".recl-1005-zu3fs ul li[data-name = '组三'] span.acti"), function (index, value) {
-            zuArr.push($.trim($(this).find("i").html()));
-        });
-        var zhushu = getrx4zu3fsZhushu(zuArr);
-
-        $(".recl-1005-zu3fs input[name='position_zu3fs']:checked").each(function () {
-            arrTemp.push($(this).val());
-        });
-        if (arrTemp.length < 3) {
-            alert("[任选三]至少需要选择3个位置");
-            return false;
-        }
-
-        if (zhushu <= 0) {
-            alert("至少选择1注号码才能投注");
-            return false;
-        }
-        obj.playName = "任四组选-组三复式";
-
-        obj.content = "号码: (" + zuArr.join(",") + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
-        return true;
-    }
-
-
     function calcAll() {
         var totalZhushu = 0;
         var totalBeishu = 0;
@@ -1611,6 +986,9 @@
         } else if (typeof $('.recl-1003-zxds').attr('data-flag') != 'undefined') {
             playNameStr = "任四直选-直选单式";
             flag_zhi = "rx4-zxds";
+        } else if (typeof $('.recl-1004-zux24').attr('data-flag') != 'undefined') {
+            playNameStr = "任四组选-组选24";
+            flag_zhi = "rx4-zux24";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -1634,6 +1012,20 @@
                 contentStr = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + ")";
                 var ds_shu = $("#positioninfo-ds").html();
                 zhushu = ds_shu;
+            } else if(flag_zhi == "rx4-zux24"){
+                var arrZux24 = [];
+                while (arrZux24.length < 1) {
+                    var x1 = parseInt(Math.random() * 10);
+                    var x2 = parseInt(Math.random() * 10);
+                    var x3 = parseInt(Math.random() * 10);
+                    var x4 = parseInt(Math.random() * 10);
+                    if (x1 != x2 && x1 != x3 && x1 != x4 && x2 != x3 && x2 != x4 && x3 != x4) {
+                        arrZux24.push(x1 + "," + x2 + "," + x3 + "," + x4);
+                    }
+                }
+                var numZux24 = $("#positioninfo-zux24").html();
+                contentStr = "组选24: (" + arrZux24.join("") + ")";
+                zhushu = numZux24;
             }
 
             var obj = {};
@@ -1644,8 +1036,10 @@
             obj.money = $("#inputMoney").data("money");
             if(flag_zhi == "rx4-zxfs"){
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-            }else  if(flag_zhi == "rx4-zxds"){
+            } else if(flag_zhi == "rx4-zxds"){
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+            } else if(flag_zhi == "rx4-zux24"){
+                obj.jiangJfanD = $(".jiangjin-change-zux24").html() + "/" + $(".fandian-bfb").html();
             }
             obj.zhushu = zhushu;
             obj.playGroupId = playGroupId;
