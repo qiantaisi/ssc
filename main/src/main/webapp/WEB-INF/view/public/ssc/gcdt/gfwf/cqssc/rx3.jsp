@@ -500,17 +500,17 @@
 
         </span>
     </p>
-    <div class="selposition re-select-zuxds">
+    <div class="selposition re-select-hhzux">
         <label for="position_hhzux_0"><input type="checkbox" class="selpositioninput" name="position_hhzux" id="position_hhzux_0" value="1"/>万位</label>
         <label for="position_hhzux_1"><input type="checkbox" class="selpositioninput" name="position_hhzux" id="position_hhzux_1" value="2"/>千位</label>
-        <label for="position_hhzux_2"><input type="checkbox" class="selpositioninput" name="position_hhzux" id="position_hhzux_2" value="3"/>百位</label>
+        <label for="position_hhzux_2"><input type="checkbox" class="selpositioninput" name="position_hhzux" checked="checked" id="position_hhzux_2" value="3"/>百位</label>
         <label for="position_hhzux_3"><input type="checkbox" class="selpositioninput" name="position_hhzux" checked="checked" id="position_hhzux_3" value="4"/>十位</label>
         <label for="position_hhzux_4"><input type="checkbox" class="selpositioninput" name="position_hhzux" checked="checked" id="position_hhzux_4" value="5"/>个位</label>
         <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
                     <b class="rx-b-hao">
-                       <var id="positioncount-hhzux" class="rxcount">2</var>
+                       <var id="positioncount-hhzux" class="rxcount">3</var>
                     </b>
                      个位置，系统自动根据位置组合成
                     <b class="rx-b-hao">
@@ -606,7 +606,7 @@
 <div class="add_spot">
     <div class="left">
         <div class="sopt_wrap">
-            <div class="slide_sp">
+            <div class="slide_sp rx3_slide_sp">
                 奖金/返点
                 <%--<p><span style="width: 4.89063px;"></span><var style="left: 4.89063px;"></var></p>--%>
                 <%--<i><var>934058.63</var> / 7.0%</i>--%>
@@ -618,6 +618,8 @@
                 <i class="base-i base-rx3"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
                 <i class="base-i base-rx3-zux"><var class="jiangjin-change-zux">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
                 <i class="base-i base-rx3-zu6"><var class="jiangjin-change-zu6">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i class="base-i change-1"><var class="fandian-bfb">0.0%</var></i>
+                <i class="base-i change-2"><var class="jiangjin-change-zux">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-zu6">0.0</var></i>
             </div>
             <div class="reduce">
                 <a class="fl">-</a>
@@ -793,6 +795,25 @@
             stateTouZhu("rx3-zu6ds");
         });
 
+        //任选三-混合组选
+        $(".re-select-hhzux input[name='position_hhzux']").click(function () {
+            var arrTemp = [];
+            $(".re-select-hhzux input[name='position_hhzux']:checked").each(function () {
+                arrTemp.push($(this).val());
+            });
+            $("#positioncount-hhzux").html(arrTemp.length);
+            if(arrTemp.length == 3){
+                $("#positioninfo-hhzux").html(1);
+            } else if(arrTemp.length == 4){
+                $("#positioninfo-hhzux").html(4);
+            } else if(arrTemp.length == 5){
+                $("#positioninfo-hhzux").html(10);
+            } else{
+                $("#positioninfo-hhzux").html(0);
+            }
+            stateTouZhu("rx3-hhzux");
+        });
+
         $(".group ul li p span").click(function () {
             $(".group ul li p span.acti").removeClass("acti");
             $(this).addClass('acti');
@@ -852,7 +873,7 @@
                 $('.recl-1008-zu6ds').show();
                 $('.recl-1008-zu6ds').attr("data-flag", "rx3-zu6ds");
                 $(".base-i").hide();
-                $(".base-rx3-zux").show();
+                $(".base-rx3-zu6").show();
                 allClearJl();
             } else if(nameVal == "hhzux"){
                 $(".Pick").removeAttr("data-flag");
@@ -860,7 +881,8 @@
                 $('.recl-1009-hhzux').show();
                 $('.recl-1009-hhzux').attr("data-flag", "rx3-hhzux");
                 $(".base-i").hide();
-                $(".base-rx3-zux").show();
+                $(".change-1").show();
+                $(".change-2").show();
                 allClearJl();
             } else if(nameVal == "zuxhz"){
                 $(".Pick").removeAttr("data-flag");
@@ -868,7 +890,8 @@
                 $('.recl-1010-zuxhz').show();
                 $('.recl-1010-zuxhz').attr("data-flag", "rx3-zuxhz");
                 $(".base-i").hide();
-                $(".base-rx3-zux").show();
+                $(".change-1").show();
+                $(".change-2").show();
                 allClearJl();
             }
         });
@@ -1254,7 +1277,7 @@
             if (!getRx3zu6dsZhudan(betForm)) {
                 return;
             }
-            clearSelected();
+            clearTextarea();
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
@@ -1392,6 +1415,7 @@
             }
             alert(errorStr);
         }
+
         obj.playName = "任三直选-直选单式";
         obj.content = "号码: (" + newArr.join(",") + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
@@ -1471,6 +1495,9 @@
         }
 
         zhushu = tempArr.length;
+        var tempNum =  $("#positioninfo-zu3ds").html();
+        zhushu = tempNum * zhushu;
+
         obj.playName = "任三组选-组三单式";
         obj.content = "号码: (" + tempArr.join(', ') + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
@@ -1551,6 +1578,8 @@
         }
 
         zhushu = tempArr.length;
+        var tempNum =  $("#positioninfo-zu6ds").html();
+        zhushu = tempNum * zhushu;
         obj.playName = "任三组选-组六单式";
         obj.content = "号码: (" + tempArr.join(', ') + ")";
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
@@ -1673,6 +1702,9 @@
         } else if (typeof $('.recl-1007-zu6fs').attr('data-flag') != 'undefined') {
             playNameStr = "任三组选-组六复式";
             flag_zhi = "rx3-zu6fs";
+        } else if (typeof $('.recl-1008-zu6ds').attr('data-flag') != 'undefined') {
+            playNameStr = "任三组选-组六单式";
+            flag_zhi = "rx3-zu6ds";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -1712,17 +1744,22 @@
                     }
                 }
                 contentStr = "号码: (" + arrZu3ds[0] + ")";
-            } else if(flag_zhi == "rx3-zu6fs"){
-                var arrZu6fs = [];
-                while (arrZu6fs.length < 1) {
+            } else if(flag_zhi == "rx3-zu6fs" || flag_zhi == "rx3-zu6ds"){
+                var arrZu6 = [];
+                while (arrZu6.length < 1) {
                     var x1 = parseInt(Math.random() * 10);
                     var x2 = parseInt(Math.random() * 10);
                     var x3 = parseInt(Math.random() * 10);
                     if (x1 != x2 && x2 != x3 && x3 != x2) {
-                        arrZu6fs.push(x1 + "," + x2 + "," + x3);
+                        if(flag_zhi == "rx3-zu6fs"){
+                            arrZu6.push(x1 + "," + x2 + "," + x3);
+                        }
+                        if(flag_zhi == "rx3-zu6ds"){
+                            arrZu6.push(x1 + "" + x2 + "" + x3);
+                        }
                     }
                 }
-                contentStr = "号码: (" + arrZu6fs[0] + ")";
+                contentStr = "号码: (" + arrZu6[0] + ")";
             }
 
             var obj = {};
@@ -1736,15 +1773,19 @@
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
                 var zu3fs_shu = $("#positioninfo-zu3fs").html();
                 obj.zhushu = zu3fs_shu * 2;
-            }else if(flag_zhi == "rx3-zu6fs"){
+            } else if(flag_zhi == "rx3-zu6fs"){
                 obj.jiangJfanD = $(".jiangjin-change-zu6").html() + "/" + $(".fandian-bfb").html();
                 var zu6fs_shu = $("#positioninfo-zu6fs").html();
                 obj.zhushu = zu6fs_shu;
+            } else if(flag_zhi == "rx3-zu6ds"){
+                obj.jiangJfanD = $(".jiangjin-change-zu6").html() + "/" + $(".fandian-bfb").html();
+                var zu6ds_shu = $("#positioninfo-zu6ds").html();
+                obj.zhushu = zu6ds_shu;
             } else if(flag_zhi == "rx3-zu3ds"){
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
                 var zuds_shu = $("#positioninfo-zu3ds").html();
                 obj.zhushu = zuds_shu;
-            }else if(flag_zhi == "rx3-zxds"){
+            } else if(flag_zhi == "rx3-zxds"){
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
                 var ds_shu = $("#positioninfo-ds").html();
                 obj.zhushu = ds_shu;
