@@ -1848,7 +1848,7 @@
         $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
             geArr.push($.trim($(this).find("i").html()));
         });
-        var zhushu = getrx3zxfsZhushu(wanArr, qianArr, baiArr, shiArr, geArr);
+        var zhushu = getZxfsRx3Zhushu();
 
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");

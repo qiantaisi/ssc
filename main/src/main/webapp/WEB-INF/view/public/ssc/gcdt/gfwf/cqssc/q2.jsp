@@ -922,8 +922,8 @@
             hzArr.push($.trim($(this).find("i").html()));
         });
 
-        var zhushu = getZxhzZshu();
-        if (zhushu <= 0) {
+        var zhushu = getZxhzZshu(hzArr);
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -946,7 +946,7 @@
         });
 
         var zhushu = getZuxhzZhushu();
-        if (zhushu <= 0) {
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -969,7 +969,7 @@
         });
 
         var zhushu = getZuxbdZhushu();
-        if (zhushu <= 0) {
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -992,7 +992,7 @@
         });
 
         var zhushu = getZxkdZshu();
-        if (zhushu <= 0) {
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1015,7 +1015,7 @@
         });
 
         var zhushu = getZuxfsZshu();
-        if (zhushu <= 0) {
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1040,7 +1040,7 @@
             qianArr.push($.trim($(this).find("i").html()));
         });
         var zhushu = getZxfsZshu();
-        if (zhushu <= 0) {
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1177,7 +1177,7 @@
             var obj = {};
             obj.playName = playNameStr;
             obj.content = contentStr;
-            obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
+            obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
             obj.zhushu = zhushu;
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");

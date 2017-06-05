@@ -1585,7 +1585,7 @@
         });
         var zhushu = getHsZhushu();
 
-        if (zhushu <= 0) {
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1787,6 +1787,7 @@
         var flag_zhi = "dan";//默认为单式
         var playNameStr = '';
         var contentStr = '';
+        var tsh_pl_flag = 0;
         var zhushu = 1; //默认为1注
         if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-单式";
@@ -1837,7 +1838,7 @@
             if (flag_zhi == "hshz-zx") {  //直选和值
                 var arrZx = [];
                 while (arrZx.length != 1) {
-                    var m = parseInt(Math.random() * 27) + 1;
+                    var m = parseInt(Math.random() * 28);
                     arrZx.push(m);
                 }
                 zhushu = getHezNewArrs(arrZx).length;
@@ -1859,13 +1860,23 @@
                 zhushu = arrHzws.length;
                 contentStr = "和值: (" + arrHzws[0] + ")";
             } else if (flag_zhi == "tsh-qt") {  //特殊号
-                var arrTsh = [];
-                while (arrTsh.length != 1) {
-                    var zhiTsh = parseInt(Math.random() * 10);
-                    arrTsh.push(zhiTsh);
+                var arrTsh = [], newArr = [];
+                arrTsh[0] = "对子";
+                arrTsh[1] = "顺子";
+                arrTsh[2] = "豹子";
+                while (newArr.length != 1) {
+                    var zhiTsh = parseInt(Math.random() * 3);
+                    newArr.push(arrTsh[parseInt(zhiTsh)]);
                 }
-                zhushu = arrTsh.length;
-                contentStr = "特殊号: (" + arrTsh[0] + ")";
+                zhushu = 1;
+                contentStr = "特殊号: (" + newArr[0] + ")";
+                if(newArr[0] == "对子"){
+                    tsh_pl_flag = 1;
+                } else if(newArr[0] == "顺子"){
+                    tsh_pl_flag = 2;
+                } else if(newArr[0] == "豹子"){
+                    tsh_pl_flag = 3;
+                }
             } else if (flag_zhi == "zxbd-zux") {  //组选包胆
                 var arrZxbd = [];
                 while (arrZxbd.length != 1) {
@@ -1950,7 +1961,7 @@
             var obj = {};
             obj.playName = playNameStr;
             obj.content = contentStr;
-            obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
+            obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
             obj.zhushu = zhushu;
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");
@@ -1961,7 +1972,13 @@
             }else if(flag_zhi == "hzws-qt"){
                 obj.jiangJfanD = $(".jiangjin-change-ws").html() + "/" + $(".fandian-bfb").html();
             }else if(flag_zhi == "tsh-qt"){
-                obj.jiangJfanD = $(".jiangjin-change-tsh").html() + "/" + $(".fandian-bfb").html();
+                if(tsh_pl_flag == 1){
+                    obj.jiangJfanD = $(".jiangjin-change-tsh-dz").html() + "/" + $(".fandian-bfb").html();
+                }else if(tsh_pl_flag == 2){
+                    obj.jiangJfanD = $(".jiangjin-change-tsh-sz").html() + "/" + $(".fandian-bfb").html();
+                }else if(tsh_pl_flag == 3){
+                    obj.jiangJfanD = $(".jiangjin-change-tsh").html() + "/" + $(".fandian-bfb").html();
+                }
             }else{
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
             }
