@@ -1673,7 +1673,7 @@ $(function () {
         // getData(true);
     });
 
-    function resetSelect() {
+    function resetSelect() {   //重新设置选择
         $(".cl-604 table tbody tr td.active").removeClass("active");
         $("#inputMoney").val("");
         $("#zhushu").html(0);
