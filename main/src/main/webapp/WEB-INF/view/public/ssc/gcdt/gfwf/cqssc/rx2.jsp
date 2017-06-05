@@ -673,7 +673,7 @@
 
         var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
@@ -693,7 +693,7 @@
         var lengthArr = 0;
         var textStr = $(".recl-1006-zuxds .content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
@@ -1074,7 +1074,7 @@
     function getRx2zxdsZhudan(obj) {
         var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
         var newArr = [], arrTemp = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
@@ -1114,7 +1114,7 @@
         var errorArr = [], arrTemp = [];
         var textStr = $(".recl-1006-zuxds .content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {

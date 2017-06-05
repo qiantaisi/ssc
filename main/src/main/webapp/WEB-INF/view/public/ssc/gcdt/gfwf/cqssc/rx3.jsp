@@ -451,21 +451,21 @@
 
         </span>
     </p>
-    <div class="selposition re-select-zuxds">
+    <div class="selposition re-select-zu6ds">
         <label for="position_zu6ds_0"><input type="checkbox" class="selpositioninput" name="position_zu6ds" id="position_zu6ds_0" value="1"/>万位</label>
         <label for="position_zu6ds_1"><input type="checkbox" class="selpositioninput" name="position_zu6ds" id="position_zu6ds_1" value="2"/>千位</label>
-        <label for="position_zu6ds_2"><input type="checkbox" class="selpositioninput" name="position_zu6ds" id="position_zu6ds_2" value="3"/>百位</label>
+        <label for="position_zu6ds_2"><input type="checkbox" class="selpositioninput" name="position_zu6ds" checked="checked" id="position_zu6ds_2" value="3"/>百位</label>
         <label for="position_zu6ds_3"><input type="checkbox" class="selpositioninput" name="position_zu6ds" checked="checked" id="position_zu6ds_3" value="4"/>十位</label>
         <label for="position_zu6ds_4"><input type="checkbox" class="selpositioninput" name="position_zu6ds" checked="checked" id="position_zu6ds_4" value="5"/>个位</label>
         <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
                     <b class="rx-b-hao">
-                       <var id="positioncount-zuds" class="rxcount">2</var>
+                       <var id="positioncount-zu6ds" class="rxcount">3</var>
                     </b>
                      个位置，系统自动根据位置组合成
                     <b class="rx-b-hao">
-                       <var id="positioninfo-zuds" class="rxcount">1</var>
+                       <var id="positioninfo-zu6ds" class="rxcount">1</var>
                     </b>
                      个方案。
                 </span>
@@ -679,7 +679,7 @@
             }
         });
 
-        //选中位置自动获取组成方案-直选单式-任选3
+        //任选三-直选单式
         $(".re-select-ds input[name='position_ds']").click(function () {
             var arrTemp = [];
             $(".re-select-ds input[name='position_ds']:checked").each(function () {
@@ -698,7 +698,7 @@
             stateTouZhu("rx3-zxds");
         });
 
-        //选中位置自动获取组成方案-组三单式任选三
+        //任选三-组三单式
         $(".re-select-zu3ds input[name='position_zu3ds']").click(function () {
             var arrTemp = [];
             $(".re-select-zu3ds input[name='position_zu3ds']:checked").each(function () {
@@ -717,7 +717,7 @@
             stateTouZhu("rx3-zu3ds");
         });
 
-        //获取注数-组三复式-任选3
+        //任选三-组三复式
         $(".recl-1005-zu3Rx3 input[name='position_zu3fs']").click(function () {
             var arrTemp = [];
             $(".recl-1005-zu3Rx3 input[name='position_zu3fs']:checked").each(function () {
@@ -736,7 +736,7 @@
             stateTouZhu("rx3-zu3fs");
         });
 
-        //选中位置自动获取组成方案-直选和值
+        //任选三--直选和值
         $(".recl-1004-hz input[name='position_hz']").click(function () {
             var arrTemp = [];
             $(".recl-1004-hz input[name='position_hz']:checked").each(function () {
@@ -755,7 +755,7 @@
             stateTouZhu("rx3-zxhz");
         });
 
-        //选中位置自动获取组成方案-组六复式任选三
+        //任选三--组六复式
         $(".re-select-zu6fs input[name='position_zu6fs']").click(function () {
             var arrTemp = [];
             $(".re-select-zu6fs input[name='position_zu6fs']:checked").each(function () {
@@ -772,6 +772,25 @@
                 $("#positioninfo-zu6fs").html(0);
             }
             stateTouZhu("rx3-zu6fs");
+        });
+
+        //任选三-组六单式
+        $(".re-select-zu6ds input[name='position_zu6ds']").click(function () {
+            var arrTemp = [];
+            $(".re-select-zu6ds input[name='position_zu6ds']:checked").each(function () {
+                arrTemp.push($(this).val());
+            });
+            $("#positioncount-zu6ds").html(arrTemp.length);
+            if(arrTemp.length == 3){
+                $("#positioninfo-zu6ds").html(1);
+            } else if(arrTemp.length == 4){
+                $("#positioninfo-zu6ds").html(4);
+            } else if(arrTemp.length == 5){
+                $("#positioninfo-zu6ds").html(10);
+            } else{
+                $("#positioninfo-zu6ds").html(0);
+            }
+            stateTouZhu("rx3-zu6ds");
         });
 
         $(".group ul li p span").click(function () {
@@ -870,7 +889,7 @@
 
         var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -884,13 +903,42 @@
         return lengthArr;
     }
 
+    //获取手动输入的有效注数--组六单式
+    function getZu6dsRx3Zhushu() {
+        var strLen = 0;
+        var lengthArr = 0;
+        var textStr = $(".recl-1008-zu6ds .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        for (var n = 0; n < newArr.length; n++) {
+            var temp = newArr[n].toString();
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            if (oneStr != twoStr && threeStr != oneStr && threeStr != twoStr) {
+                tempArr.push(newArr[n]);
+            }
+        }
+
+        strLen = tempArr.length;
+        var shu = $("#positioninfo-zu6ds").html();
+        lengthArr = strLen * shu;
+        return lengthArr;
+    }
+
     //获取手动输入的有效注数--组选单式
     function getZu3dsRx3Zhushu() {
         var strLen = 0;
         var lengthArr = 0;
         var textStr = $(".recl-1006-zu3ds .content_jiang .content_tex").val();
         var newArr = [], tempArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -1185,16 +1233,25 @@
             calcAll();
         } else if (typeof $('.recl-1006-zu3ds').attr('data-flag') != 'undefined') {
             var betForm = {};
-            if (!getrx3zuxdsZhudan(betForm)) {
+            if (!getRx3zuxdsZhudan(betForm)) {
                 return;
             }
             clearTextarea();
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
-        }else if (typeof $('.recl-1007-zu6fs').attr('data-flag') != 'undefined') {
+        } else if (typeof $('.recl-1007-zu6fs').attr('data-flag') != 'undefined') {
             var betForm = {};
             if (!getRx3zu6fsZhudan(betForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.recl-1008-zu6ds').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getRx3zu6dsZhudan(betForm)) {
                 return;
             }
             clearSelected();
@@ -1277,14 +1334,14 @@
         return true;
     }
 
-    //任选二-直选单式注单
+    //任选三-直选单式
     function getRx3zxdsZhudan(obj) {
         var errorStr = '';
         var repeatArr = [], allErrorArr = [];
         var errorArr = [];
         var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
         var newArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
@@ -1346,31 +1403,40 @@
         return true;
     }
 
-    //任选三-组三单式注单
-    function getrx3zuxdsZhudan(obj) {
+    //任选三-组三单式
+    function getRx3zuxdsZhudan(obj) {
         var errorStr = '', zhushu = 0;
         var repeatArr = [], allErrorArr = [];
         var errorArr = [], arrTemp = [];
         var textStr = $(".recl-1006-zu3ds .content_jiang .content_tex").val();
         var newArr = [], tempArr = [], errorStr = '', errorArr = [];
-        textStr = $.trim(textStr.replace(/[^1-9]/g, ','));
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
                 newArr.push(arr_new[i]);
+            } else{
+                errorArr.push(arr_new[i]);
             }
         }
         for (var n = 0; n < newArr.length; n++) {
+            var arr = [];
             var temp = newArr[n].toString();
             var oneStr = temp.substr(0, 1);
             var twoStr = temp.substr(1, 1);
             var threeStr = temp.substr(2, 1);
+            arr.push(oneStr);
+            arr.push(twoStr);
+            arr.push(threeStr);
+            arr.sort();
             if (oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr) {
-                tempArr.push(newArr[n]);
-            } else {
+                tempArr.push(arr.join(""));
+            } else{
                 errorArr.push(newArr[n]);
             }
         }
+        repeatArr = tempArr.duplicate(); //重复号码
+        tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
         $(".recl-1006-zu3ds input[name='position_zu3ds']:checked").each(function () {
             arrTemp.push($(this).val());
@@ -1384,11 +1450,24 @@
             return;
         }
 
-        if (errorArr.length > 0) {
-            for (var e = 0; e < errorArr.length; e++) {
-                errorStr += errorArr[e] + ",";
+        if (repeatArr.length > 0) {
+            allErrorArr.push("自动过滤重复号码:");
+            for(var r = 0; r < repeatArr.length; r++){
+                allErrorArr.push(repeatArr[r]);
             }
-            alert("被过滤掉的错误号码" + errorStr);
+        }
+        if (errorArr.length > 0) {
+            allErrorArr.push(" 被过滤掉的错误号码:");
+            for (var l = 0; l < errorArr.length; l++) {
+                allErrorArr.push(errorArr[l]);
+            }
+        }
+
+        if (allErrorArr.length > 0) {
+            for (var e = 0; e < allErrorArr.length; e++) {
+                errorStr += allErrorArr[e] + " ";
+            }
+            alert($.trim(errorStr));
         }
 
         zhushu = tempArr.length;
@@ -1399,6 +1478,86 @@
         obj.beishu = $("#inputBeishu").data("beishu");
         obj.money = $("#inputMoney").data("money");
         obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+
+    //任选三-组六单式
+    function getRx3zu6dsZhudan(obj) {
+        var errorStr = '', zhushu = 0;
+        var repeatArr = [], allErrorArr = [];
+        var errorArr = [], arrTemp = [];
+        var textStr = $(".recl-1008-zu6ds .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            } else{
+                errorArr.push(arr_new[i]);
+            }
+        }
+        for (var n = 0; n < newArr.length; n++) {
+            var arr = [];
+            var temp = newArr[n].toString();
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            arr.push(oneStr);
+            arr.push(twoStr);
+            arr.push(threeStr);
+            arr.sort();
+            if (twoStr != threeStr  && oneStr != threeStr  && twoStr != oneStr) {
+                tempArr.push(arr.join(""));
+            } else{
+                errorArr.push(newArr[n]);
+            }
+        }
+        repeatArr = tempArr.duplicate(); //重复号码
+        tempArr = tempArr.uniqueArr(); // 去掉重复号码
+
+        $(".recl-1008-zu6ds input[name='position_zu6ds']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 3) {
+            alert("[任选三]至少需要选择3个位置");
+            return false;
+        }
+        if (tempArr.length <= 0) {
+            alert("号码或金额输入有误，请重新输入");
+            return;
+        }
+
+        if (repeatArr.length > 0) {
+            allErrorArr.push("自动过滤重复号码:");
+            for(var r = 0; r < repeatArr.length; r++){
+                allErrorArr.push(repeatArr[r]);
+            }
+        }
+        if (errorArr.length > 0) {
+            allErrorArr.push(" 被过滤掉的错误号码:");
+            for (var l = 0; l < errorArr.length; l++) {
+                allErrorArr.push(errorArr[l]);
+            }
+        }
+
+        if (allErrorArr.length > 0) {
+            for (var e = 0; e < allErrorArr.length; e++) {
+                errorStr += allErrorArr[e] + " ";
+            }
+            alert($.trim(errorStr));
+        }
+
+        zhushu = tempArr.length;
+        obj.playName = "任三组选-组六单式";
+        obj.content = "号码: (" + tempArr.join(', ') + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change-zu6").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
     }
@@ -1609,6 +1768,9 @@
         });
         $('.recl-1006-zu3ds .content_jiang .content_tex').keyup(function () {
             stateTouZhu('rx3-zu3ds');
+        });
+        $('.recl-1008-zu6ds .content_jiang .content_tex').keyup(function () {
+            stateTouZhu('rx3-zu6ds');
         });
         $('.slider-input').jRange({
             from: 0,
