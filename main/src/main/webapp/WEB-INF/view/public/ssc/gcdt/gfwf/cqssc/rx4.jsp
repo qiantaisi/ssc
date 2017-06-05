@@ -274,7 +274,7 @@
         <li class="re2-1004-li">
             <div class="selposition re-select-zux12">
                 <label for="position_zux120"><input type="checkbox" class="selpositioninput" name="position_zux12" id="position_zux120" value="1"/>万位</label>
-                <label for="position_zux121"><input type="checkbox" class="selpositioninput" name="position_zux12" id="position_zux121" value="2"/>千位</label>
+                <label for="position_zux121"><input type="checkbox" class="selpositioninput" name="position_zux12" checked="checked" id="position_zux121" value="2"/>千位</label>
                 <label for="position_zux122"><input type="checkbox" class="selpositioninput" name="position_zux12" checked="checked" id="position_zux122" value="3"/>百位</label>
                 <label for="position_zux123"><input type="checkbox" class="selpositioninput" name="position_zux12" checked="checked" id="position_zux123" value="4"/>十位</label>
                 <label for="position_zux124"><input type="checkbox" class="selpositioninput" name="position_zux12" checked="checked" id="position_zux124" value="5"/>个位</label>
@@ -282,7 +282,7 @@
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
                     <b class="rx-b-hao">
-                       <var id="positioncount-zux12" class="rxcount">3</var>
+                       <var id="positioncount-zux12" class="rxcount">4</var>
                     </b>
                      个位置，系统自动根据位置组合成
                     <b class="rx-b-hao">
@@ -292,8 +292,29 @@
                 </span>
             </div>
         </li>
-        <li data-name="组选12">
-            <b><i>组选12</i></b>
+        <li data-name="二重号">
+            <b><i>二重号</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+        <li data-name="单号">
+            <b><i>单号</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -342,7 +363,7 @@
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
                     <b class="rx-b-hao">
-                       <var id="positioncount-zux6" class="rxcount">3</var>
+                       <var id="positioncount-zux6" class="rxcount">4</var>
                     </b>
                      个位置，系统自动根据位置组合成
                     <b class="rx-b-hao">
@@ -352,8 +373,8 @@
                 </span>
             </div>
         </li>
-        <li data-name="组选6">
-            <b><i>组选6</i></b>
+        <li data-name="二重号">
+            <b><i>二重号</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -499,15 +520,16 @@
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
             var flagName = $(this).parent().parent().parent().parent().attr("data-flag");
-            console.log(flagName);
             if(flagName == "rx4-zxfs"){
                 stateTouZhu(flagName);
-            }else if(flagName == "rx4-zux24"){
+            } else if(flagName == "rx4-zux24"){
+                stateTouZhu(flagName);
+            } else if(flagName == "rx4-zux12"){
                 stateTouZhu(flagName);
             }
         });
 
-        //任选三-直选单式
+        //任选四-直选单式
         $(".re-select-ds input[name='position_ds']").click(function () {
             var arrTemp = [];
             $(".re-select-ds input[name='position_ds']:checked").each(function () {
@@ -524,7 +546,7 @@
             stateTouZhu("rx4-zxds");
         });
 
-        //任选三-组选24
+        //任选四-组选24
         $(".re-select-zux24 input[name='position_zux24']").click(function () {
             var arrTemp = [];
             $(".re-select-zux24 input[name='position_zux24']:checked").each(function () {
@@ -541,6 +563,22 @@
             stateTouZhu("rx4-zux24");
         });
 
+        //任选四-组选12
+        $(".re-select-zux12 input[name='position_zux12']").click(function () {
+            var arrTemp = [];
+            $(".re-select-zux12 input[name='position_zux12']:checked").each(function () {
+                arrTemp.push($(this).val());
+            });
+            $("#positioncount-zux12").html(arrTemp.length);
+            if(arrTemp.length == 4){
+                $("#positioninfo-zux12").html(1);
+            } else if(arrTemp.length == 5){
+                $("#positioninfo-zux12").html(5);
+            } else{
+                $("#positioninfo-zux12").html(0);
+            }
+            stateTouZhu("rx4-zux12");
+        });
 
 
         $(".group ul li p span").click(function () {
@@ -603,7 +641,7 @@
 </script>
 <script>
 
-    //获取手动输入的有效注数
+    //任选四-直选单式
     function getZxdsrx4Zhushu() {
         var strLen = 0;
         var arrTemp = [];
@@ -629,7 +667,54 @@
         return lengthArr;
     }
 
-    //任选三-组选24
+    //任选四-组选24
+    function getZux12Zhushu() {
+        var erChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [];
+        $.each($(".recl-1005-zux12 ul li[data-name = '二重号'] span.acti"), function (index, value) {
+            erChongHaoArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".recl-1005-zux12 ul li[data-name = '单号'] span.acti"), function (index, value) {
+            danHaoArr.push($.trim($(this).find("i").html()));
+        });
+
+        if (danHaoArr.length < 2 && danHaoArr.length < 1) {
+            return;
+        }
+        //单号两两组合一共有若干对
+        for (var d = 0; d < danHaoArr.length; d++) {
+            for (var n = 0; n < danHaoArr.length; n++) {
+                if (danHaoArr[d] != danHaoArr[n]) {
+                    var arr = [];
+                    arr.push(danHaoArr[d]);
+                    arr.push(danHaoArr[n]);
+                    arr.sort();
+                    tempArr.push(arr.join(""));
+                }
+            }
+        }
+        tempArr = tempArr.uniqueArr();
+
+        for (var i = 0; i < erChongHaoArr.length; i++) {
+            for (var m = 0; m < tempArr.length; m++) {
+                var onestr = (tempArr[m].toString()).substr(0, 1);
+                var twostr = (tempArr[m].toString()).substr(1, 1);
+                if (parseInt(onestr) != erChongHaoArr[i] && parseInt(twostr) != erChongHaoArr[i]) {
+                    var arr = [];
+                    arr.push(onestr);
+                    arr.push(twostr);
+                    arr.sort();
+                    nowArr.push(erChongHaoArr[i] + "" + arr.join(""));
+                }
+            }
+        }
+        nowArr = nowArr.uniqueArr();
+        var zhushu = nowArr.length;
+        var shu = $("#positioninfo-zux12").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+    }
+
+    //任选四-组选24
     function getZux24Zhushu() {
             var fuShiArr = [], newArr = [];
             $.each($(".recl-1004-zux24 ul li[data-name = '组选24'] span.acti"), function (index, value) {
@@ -664,7 +749,7 @@
             return lengthArr;
     }
 
-    //直选复式-任选四
+    //任选四--直选复式
     function getZxfsRx4Zhushu(){
         var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
         $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
@@ -736,6 +821,7 @@
         clearSelected();
         clearTextarea();
     }
+
 
     function clearSelected() {
         $(".Single .layout .Pick ul li span.acti").removeClass("acti");
@@ -809,11 +895,55 @@
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
+        } else if (typeof $('.recl-1005-zux12').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getZux12Zhudan(betForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
         }
 
     }
 
-    //任选三-组选24
+    //任选四-组选12
+    function getZux12Zhudan(obj) {
+        var erChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [], arrTemp = [];
+        $.each($(".recl-1005-zux12 ul li[data-name = '二重号'] span.acti"), function (index, value) {
+            erChongHaoArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".recl-1005-zux12 ul li[data-name = '单号'] span.acti"), function (index, value) {
+            danHaoArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getZux12Zhushu();
+
+        $(".re-select-zux12 input[name='position_zux12']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 4) {
+            alert("[任选四]至少需要选择4个位置");
+            return false;
+        }
+
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "任四组选-组选12";
+        obj.content = "二重号: (" + erChongHaoArr.join(",") + "), " + "单号: (" + danHaoArr.join(",") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change-zux12").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+    //任选四-组选24
     function getZux24Zhudan(obj) {
         var hzArr = [];
         var arrTemp = [];
@@ -826,7 +956,7 @@
             arrTemp.push($(this).val());
         });
         if (arrTemp.length < 4) {
-            alert("[任选三]至少需要选择4个位置");
+            alert("[任选四]至少需要选择4个位置");
             return false;
         }
 
@@ -845,7 +975,7 @@
         return true;
     }
 
-    //任选三-直选单式
+    //任选四-直选单式
     function getrx4zxdsZhudan(obj) {
         var errorStr = '';
         var repeatArr = [], allErrorArr = [];
@@ -876,7 +1006,7 @@
             arrTemp.push($(this).val());
         });
         if (arrTemp.length < 4) {
-            alert("[任选三]至少需要选择4个位置");
+            alert("[任选四]至少需要选择4个位置");
             return false;
         }
 
@@ -989,6 +1119,9 @@
         } else if (typeof $('.recl-1004-zux24').attr('data-flag') != 'undefined') {
             playNameStr = "任四组选-组选24";
             flag_zhi = "rx4-zux24";
+        } else if (typeof $('.recl-1005-zux12').attr('data-flag') != 'undefined') {
+            playNameStr = "任四组选-组选12";
+            flag_zhi = "rx4-zux12";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -1026,6 +1159,19 @@
                 var numZux24 = $("#positioninfo-zux24").html();
                 contentStr = "组选24: (" + arrZux24.join("") + ")";
                 zhushu = numZux24;
+            } else if(flag_zhi == "rx4-zux12"){
+                var arrZux12 = [];
+                while (arrZux12.length < 1) {
+                    var x1 = parseInt(Math.random() * 10);
+                    var x2 = parseInt(Math.random() * 10);
+                    var x3 = parseInt(Math.random() * 10);
+                    if (x1 != x2 && x1 != x3 && x2 != x3) {
+                        arrZux12.push("二重号: ("+ x1 + "), " + "单号: (" + x2 + "," + x3 + ")");
+                    }
+                }
+                var numZux12 = $("#positioninfo-zux12").html();
+                contentStr = arrZux12[0];
+                zhushu = numZux12;
             }
 
             var obj = {};
