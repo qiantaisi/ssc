@@ -1856,7 +1856,7 @@ $(function () {
                 var subMenuId = $(this).attr("data-sub_menu_id");
                 $("#sub-menu-list .cl-610").hide();
                 $("#" + subMenuId).show();
-                var url = $("#sub-menu-list" + " #" + subMenuId + " .cl-602 a:first-child").attr("data-url");
+                 var url = $("#sub-menu-list #" + subMenuId + " .cl-602 a:first-child").attr("data-url");
                 // sscFengPan();
                 getSubSscPage(url, function () {
                     $("#sub-menu-list" + " #" + subMenuId + " .cl-602").find(".active").removeClass("active");
