@@ -349,6 +349,27 @@ function clearStateTouZhu(){
     $('.p1 .i_money').html('0.00');
 }
 
+//删除重复号码
+function delRrepet() {
+    var textStr = $(".content_jiang .content_tex").val();
+    var newArr = [],repeatArr = [], tempArr = [];
+    textStr = $.trim(textStr.replace(/[^0-9]/g,','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if(arr_new[i].toString().length > 0){
+            newArr.push(arr_new[i]);
+        }
+    }
+    repeatArr = newArr.duplicate();
+    tempArr = newArr.uniqueArr();
+    if(repeatArr.length <= 0){
+        alert("无重复号码！");
+    }else{
+        alert("已删除掉重复号: " + repeatArr.join(" "));
+        $(".content_jiang .content_tex").val(tempArr.join(" "));
+    }
+}
+
 
 //后三组选-组三复式
 function getZuXuanNewArrs(zuXuanArr) {

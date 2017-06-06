@@ -273,9 +273,6 @@
         alert("开发中，敬请期待...");
     }
 
-    function delRrepet() {
-        alert("开发中，敬请期待...");
-    }
 
     function tjzd() {
         if (typeof $('.recl-1003').attr('statef') != 'undefined') {

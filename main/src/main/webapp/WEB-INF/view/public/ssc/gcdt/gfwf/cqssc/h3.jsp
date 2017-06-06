@@ -911,10 +911,6 @@
         alert("开发中，敬请期待...");
     }
 
-    function delRrepet() {
-        alert("开发中，敬请期待...");
-    }
-
     function tjzd() {
         if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
             var betForm = {};
