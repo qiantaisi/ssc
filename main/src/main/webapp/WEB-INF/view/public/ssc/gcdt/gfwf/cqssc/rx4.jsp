@@ -726,7 +726,7 @@
         return lengthArr;
     }
 
-    //任选四-组选6
+    //任选四-组选4
     function getZux4Zhushu() {
         var sanChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [];
         $.each($(".recl-1007-zux4 ul li[data-name = '三重号'] span.acti"), function (index, value) {
@@ -934,7 +934,6 @@
         clearSelected();
         clearTextarea();
     }
-
 
     function clearSelected() {
         $(".Single .layout .Pick ul li span.acti").removeClass("acti");
@@ -1240,9 +1239,6 @@
         obj.playGroupId = playGroupId;
         return true;
     }
-
-
-
 
 
     //任选四-直选复式
