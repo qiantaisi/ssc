@@ -355,7 +355,7 @@
         <li class="re2-1004-li">
             <div class="selposition re-select-zux6">
                 <label for="position_zux60"><input type="checkbox" class="selpositioninput" name="position_zux6" id="position_zux60" value="1"/>万位</label>
-                <label for="position_zux61"><input type="checkbox" class="selpositioninput" name="position_zux6" id="position_zux61" value="2"/>千位</label>
+                <label for="position_zux61"><input type="checkbox" class="selpositioninput" name="position_zux6" checked="checked" id="position_zux61" value="2"/>千位</label>
                 <label for="position_zux62"><input type="checkbox" class="selpositioninput" name="position_zux6" checked="checked" id="position_zux62" value="3"/>百位</label>
                 <label for="position_zux63"><input type="checkbox" class="selpositioninput" name="position_zux6" checked="checked" id="position_zux63" value="4"/>十位</label>
                 <label for="position_zux64"><input type="checkbox" class="selpositioninput" name="position_zux6" checked="checked" id="position_zux64" value="5"/>个位</label>
@@ -414,7 +414,7 @@
         <li class="re2-1004-li">
             <div class="selposition re-select-zux4">
                 <label for="position_zux40"><input type="checkbox" class="selpositioninput" name="position_zux4" id="position_zux40" value="1"/>万位</label>
-                <label for="position_zux41"><input type="checkbox" class="selpositioninput" name="position_zux4" id="position_zux41" value="2"/>千位</label>
+                <label for="position_zux41"><input type="checkbox" class="selpositioninput" name="position_zux4" checked="checked" id="position_zux41" value="2"/>千位</label>
                 <label for="position_zux42"><input type="checkbox" class="selpositioninput" name="position_zux4" checked="checked" id="position_zux42" value="3"/>百位</label>
                 <label for="position_zux43"><input type="checkbox" class="selpositioninput" name="position_zux4" checked="checked" id="position_zux43" value="4"/>十位</label>
                 <label for="position_zux44"><input type="checkbox" class="selpositioninput" name="position_zux4" checked="checked" id="position_zux44" value="5"/>个位</label>
@@ -422,7 +422,7 @@
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
                     <b class="rx-b-hao">
-                       <var id="positioncount-zux4" class="rxcount">3</var>
+                       <var id="positioncount-zux4" class="rxcount">4</var>
                     </b>
                      个位置，系统自动根据位置组合成
                     <b class="rx-b-hao">
@@ -432,8 +432,29 @@
                 </span>
             </div>
         </li>
-        <li data-name="组选4">
-            <b><i>组选4</i></b>
+        <li data-name="三重号">
+            <b><i>三重号</i></b>
+            <span><i>0</i></span>
+            <span><i>1</i></span>
+            <span><i>2</i></span>
+            <span><i>3</i></span>
+            <span><i>4</i></span>
+            <span><i>5</i></span>
+            <span><i>6</i></span>
+            <span><i>7</i></span>
+            <span><i>8</i></span>
+            <span><i>9</i></span>
+            <div class="clear re-5x-i">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </div>
+        </li>
+        <li data-name="单号">
+            <b><i>单号</i></b>
             <span><i>0</i></span>
             <span><i>1</i></span>
             <span><i>2</i></span>
@@ -526,6 +547,10 @@
                 stateTouZhu(flagName);
             } else if(flagName == "rx4-zux12"){
                 stateTouZhu(flagName);
+            } else if(flagName == "rx4-zux6"){
+                stateTouZhu(flagName);
+            } else if(flagName == "rx4-zux4"){
+                stateTouZhu(flagName);
             }
         });
 
@@ -578,6 +603,40 @@
                 $("#positioninfo-zux12").html(0);
             }
             stateTouZhu("rx4-zux12");
+        });
+
+        //任选四-组选6
+        $(".re-select-zux6 input[name='position_zux6']").click(function () {
+            var arrTemp = [];
+            $(".re-select-zux6 input[name='position_zux6']:checked").each(function () {
+                arrTemp.push($(this).val());
+            });
+            $("#positioncount-zux6").html(arrTemp.length);
+            if(arrTemp.length == 4){
+                $("#positioninfo-zux6").html(1);
+            } else if(arrTemp.length == 5){
+                $("#positioninfo-zux6").html(5);
+            } else{
+                $("#positioninfo-zux6").html(0);
+            }
+            stateTouZhu("rx4-zux6");
+        });
+
+        //任选四-组选4
+        $(".re-select-zux4 input[name='position_zux4']").click(function () {
+            var arrTemp = [];
+            $(".re-select-zux4 input[name='position_zux4']:checked").each(function () {
+                arrTemp.push($(this).val());
+            });
+            $("#positioncount-zux4").html(arrTemp.length);
+            if(arrTemp.length == 4){
+                $("#positioninfo-zux4").html(1);
+            } else if(arrTemp.length == 5){
+                $("#positioninfo-zux4").html(5);
+            } else{
+                $("#positioninfo-zux4").html(0);
+            }
+            stateTouZhu("rx4-zux4");
         });
 
 
@@ -667,7 +726,61 @@
         return lengthArr;
     }
 
-    //任选四-组选24
+    //任选四-组选6
+    function getZux4Zhushu() {
+        var sanChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [];
+        $.each($(".recl-1007-zux4 ul li[data-name = '三重号'] span.acti"), function (index, value) {
+            sanChongHaoArr.push($.trim($(this).find("i").html()));
+        });
+
+        $.each($(".recl-1007-zux4 ul li[data-name = '单号'] span.acti"), function (index, value) {
+            danHaoArr.push($.trim($(this).find("i").html()));
+        });
+
+        for (var d = 0; d < sanChongHaoArr.length; d++) {
+            for (var n = 0; n < danHaoArr.length; n++) {
+                if (sanChongHaoArr[d] != danHaoArr[n]) {
+                    tempArr.push(sanChongHaoArr[d] + "" + danHaoArr[n]);
+                }
+            }
+        }
+        if (tempArr.length < 1) {
+            return 0;
+        }
+        var zhushu = tempArr.length;
+        var shu = $("#positioninfo-zux4").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+    }
+
+    //任选四-组选6
+    function getZux6Zhushu() {
+        var erChongHaoArr = [], tempArr = [], nowArr = [];
+        $.each($(".recl-1006-zux6 ul li[data-name = '二重号'] span.acti"), function (index, value) {
+            erChongHaoArr.push($.trim($(this).find("i").html()));
+        });
+        if (erChongHaoArr.length < 2) {
+            return;
+        }
+        for (var d = 0; d < erChongHaoArr.length; d++) {
+            for (var n = 0; n < erChongHaoArr.length; n++) {
+                if (erChongHaoArr[d] != erChongHaoArr[n]) {
+                    var arr = [];
+                    arr.push(erChongHaoArr[d]);
+                    arr.push(erChongHaoArr[n]);
+                    arr.sort();
+                    tempArr.push(arr.join(""));
+                }
+            }
+        }
+        tempArr = tempArr.uniqueArr();
+        var zhushu = tempArr.length;
+        var shu = $("#positioninfo-zux6").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+    }
+
+    //任选四-组选12
     function getZux12Zhushu() {
         var erChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [];
         $.each($(".recl-1005-zux12 ul li[data-name = '二重号'] span.acti"), function (index, value) {
@@ -677,7 +790,7 @@
             danHaoArr.push($.trim($(this).find("i").html()));
         });
 
-        if (danHaoArr.length < 2 && danHaoArr.length < 1) {
+        if (danHaoArr.length < 2 && erChongHaoArr.length < 1) {
             return;
         }
         //单号两两组合一共有若干对
@@ -904,8 +1017,91 @@
             var html = template("template_touzhu", betForm);
             $("#zhudanList").append(html);
             calcAll();
+        } else if (typeof $('.recl-1006-zux6').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getZux6Zhudan(betForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        } else if (typeof $('.recl-1007-zux4').attr('data-flag') != 'undefined') {
+            var betForm = {};
+            if (!getZux4Zhudan(betForm)) {
+                return;
+            }
+            clearSelected();
+            var html = template("template_touzhu", betForm);
+            $("#zhudanList").append(html);
+            calcAll();
+        }
+    }
+
+    //任选四-组选4
+    function getZux4Zhudan(obj) {
+        var sanChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [];
+        $.each($(".recl-1007-zux4 ul li[data-name = '三重号'] span.acti"), function (index, value) {
+            sanChongHaoArr.push($.trim($(this).find("i").html()));
+        });
+
+        $.each($(".recl-1007-zux4 ul li[data-name = '单号'] span.acti"), function (index, value) {
+            danHaoArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getZux4Zhushu();
+        $(".re-select-zux4 input[name='position_zux4']:checked").each(function () {
+            tempArr.push($(this).val());
+        });
+        if (tempArr.length < 4) {
+            alert("[任选四]至少需要选择4个位置");
+            return false;
         }
 
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "任四组选-组选4";
+        obj.content = "三重号: (" + sanChongHaoArr.join(",") + "), " + "单号: (" + danHaoArr.join(",") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change-zux4").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
+    }
+
+    //任选四-组选6
+    function getZux6Zhudan(obj) {
+        var erChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [], arrTemp = [];
+        $.each($(".recl-1006-zux6 ul li[data-name = '二重号'] span.acti"), function (index, value) {
+            erChongHaoArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zhushu = getZux6Zhushu();
+        $(".re-select-zux6 input[name='position_zux6']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 4) {
+            alert("[任选四]至少需要选择4个位置");
+            return false;
+        }
+
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+        obj.playName = "任四组选-组选6";
+        obj.content = "二重号: (" + erChongHaoArr.join(",") + ")";
+        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
+        obj.zhushu = zhushu;
+        obj.beishu = $("#inputBeishu").data("beishu");
+        obj.money = $("#inputMoney").data("money");
+        obj.jiangJfanD = $(".jiangjin-change-zux6").html() + "/" + $(".fandian-bfb").html();
+        obj.playGroupId = playGroupId;
+        return true;
     }
 
     //任选四-组选12
@@ -928,7 +1124,7 @@
             return false;
         }
 
-        if (zhushu <= 0) {
+        if (zhushu <= 0 || typeof zhushu == "undefined") {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1122,6 +1318,12 @@
         } else if (typeof $('.recl-1005-zux12').attr('data-flag') != 'undefined') {
             playNameStr = "任四组选-组选12";
             flag_zhi = "rx4-zux12";
+        } else if (typeof $('.recl-1006-zux6').attr('data-flag') != 'undefined') {
+            playNameStr = "任四组选-组选6";
+            flag_zhi = "rx4-zux6";
+        } else if (typeof $('.recl-1007-zux4').attr('data-flag') != 'undefined') {
+            playNameStr = "任四组选-组选4";
+            flag_zhi = "rx4-zux4";
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -1172,6 +1374,30 @@
                 var numZux12 = $("#positioninfo-zux12").html();
                 contentStr = arrZux12[0];
                 zhushu = numZux12;
+            } else if(flag_zhi == "rx4-zux6"){
+                var arrZux6 = [];
+                while (arrZux6.length < 1) {
+                    var x1 = parseInt(Math.random() * 10);
+                    var x2 = parseInt(Math.random() * 10);
+                    if (x1 != x2) {
+                        arrZux6.push("二重号: (" + x1 + "," + x2 +")");
+                    }
+                }
+                var numZux6 = $("#positioninfo-zux6").html();
+                contentStr = arrZux6[0];
+                zhushu = numZux6;
+            } else if(flag_zhi == "rx4-zux4"){
+                var arrZux4 = [];
+                while (arrZux4.length < 1) {
+                    var x1 = parseInt(Math.random() * 10);
+                    var x2 = parseInt(Math.random() * 10);
+                    if (x1 != x2) {
+                        arrZux4.push("三重号: (" + x1 + "), 单号: (" + x2 +")");
+                    }
+                }
+                var numZux4 = $("#positioninfo-zux4").html();
+                contentStr = arrZux4[0];
+                zhushu = numZux4;
             }
 
             var obj = {};
@@ -1186,6 +1412,12 @@
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
             } else if(flag_zhi == "rx4-zux24"){
                 obj.jiangJfanD = $(".jiangjin-change-zux24").html() + "/" + $(".fandian-bfb").html();
+            } else if(flag_zhi == "rx4-zux12"){
+                obj.jiangJfanD = $(".jiangjin-change-zux12").html() + "/" + $(".fandian-bfb").html();
+            } else if(flag_zhi == "rx4-zux6"){
+                obj.jiangJfanD = $(".jiangjin-change-zux6").html() + "/" + $(".fandian-bfb").html();
+            } else if(flag_zhi == "rx4-zux4"){
+                obj.jiangJfanD = $(".jiangjin-change-zux4").html() + "/" + $(".fandian-bfb").html();
             }
             obj.zhushu = zhushu;
             obj.playGroupId = playGroupId;

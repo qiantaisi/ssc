@@ -317,8 +317,12 @@ stateTouZhu(flag_str) {
         zhushu = getZxdsrx4Zhushu();
     } else if (flagStrInner == "rx4-zux24"){ // 任选四-组选24
         zhushu = getZux24Zhushu();
-    } else if (flagStrInner == "rx4-zux12"){ // 任选四-组选24
+    } else if (flagStrInner == "rx4-zux12"){ // 任选四-组选12
         zhushu = getZux12Zhushu();
+    } else if (flagStrInner == "rx4-zux6"){ // 任选四-组选6
+        zhushu = getZux6Zhushu();
+    } else if (flagStrInner == "rx4-zux4"){ // 任选四-组选4
+        zhushu = getZux4Zhushu();
     }
 
     if(zhushu <= 0 || typeof zhushu == "undefined"){
