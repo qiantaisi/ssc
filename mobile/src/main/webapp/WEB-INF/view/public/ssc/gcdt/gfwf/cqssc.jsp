@@ -97,4 +97,12 @@
         </span>
     </div>
 </script>
+<script>
+    //加载页面时隐藏蒙版
+    function Hide_Show() {
+        $(".consele").hide()
+        $(".gfwf_mask").hide();
+    }
+    Hide_Show();
+</script>
 <c:import url="../../../common/bodyEnd.jsp"/>
