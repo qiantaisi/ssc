@@ -19,7 +19,7 @@
     <div class="list_menu">
         <ul>
             <li class="show">
-                <h2><a href="javascript:void(0)" onclick="getPage('<%=basePath%>ssc/gcdt.html')"><span><div
+                <h2><a href="javascript:void(0)" onclick="getPageNew('<%=basePath%>ssc/gcdt.html')"><span><div
                         class="pict"><var><img src="${resPath}img/ico3.png" alt=""></var></div></span><b>购彩大厅</b></a>
                 </h2>
                 <a class="Refresh"></a>
@@ -182,7 +182,7 @@
                     <li>
                         <h2><a href="<%=basePath%>" target="_blank">首页</a></h2>
                         <p>
-                            <a href="javascript:void(0)" onclick="getPage('<%=basePath%>ssc/gcdt.html')">购彩大厅</a>
+                            <a href="javascript:void(0)" onclick="getPageNew('<%=basePath%>ssc/gcdt.html')">购彩大厅</a>
                             <a href="<%=basePath%>?u=<%=basePath%>kjjg.html" target="_blank">开奖结果</a>
                             <a href="javascript:void(0)" onclick="getZstPage()">走势图表</a>
                             <a href="<%=basePath%>?u=<%=basePath%>yhhd.html" target="_blank">优惠活动</a>
@@ -237,8 +237,8 @@
         var money = '${param.money}';
 
         if (typeof module == 'undefined' || module == 'null' || !module || module == '') {
-            module = 'gcdt/gcdt';
-            getPage('<%=basePath%>ssc/' + module + '.html');
+            //module = 'gcdt/cqssc';
+            getPageNew(parent.urlGcdt);
         } else if (module == 'zstIndex') {
             getPage('<%=basePath%>ssc/zst/index.html');
         } else if (module == 'xyxh') {
@@ -490,15 +490,31 @@
             shade: [0.1, '#000'] //0.1透明度的白色背景
         })
     }
+
     function hideLoading() {
         layer.closeAll();
     }
+
     function getPage(url) {
         showLoading();
         $("#rightContent").attr("src", url);
     }
+
+    function getPageNew(url) {
+        goSubUrl(url);
+    }
+
     function getSscPage(url) {
-        getPage("<%=basePath%>ssc/gcdt/" + url + ".html");
+        <%--getPage("<%=basePath%>ssc/gcdt/" + url + ".html");--%>
+        var urlStr = "<%=basePath%>ssc/gcdt/" + url + ".html";
+        goSubUrl(urlStr);
+    }
+
+    function goSubUrl(urlS) {
+        //父级窗口改变当前地址栏状态
+        top.location.href = CONFIG.BASEURL + "ssc/index.html#" + urlS;
+        //获取当前连接页面
+        getPage(urlS);
     }
 
     <%--function getCaiZhongEnable(playGroupId, callback) {--%>

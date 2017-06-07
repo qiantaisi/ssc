@@ -761,14 +761,19 @@
 
     function openXyxhGcdt(caizhong, nums, money, navIndex) {
         windowOpenBlank('<%=basePath%>ssc/index.html?caizhong=' + caizhong + '&nums=' + nums + '&money=' + money + '&navIndex=' + navIndex);
-//        goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + caizhong + ".html?caizhong=" + caizhong + "&nums=" + nums + "&money=" + money + "&navIndex=" + navIndex);
+        //goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + caizhong + ".html?caizhong=" + caizhong + "&nums=" + nums + "&money=" + money + "&navIndex=" + navIndex);
     }
 
     function openGcdt(module) {
-        if (typeof module == 'undefined') {
-            module = '';
+//        if (typeof module == 'undefined') {
+//            module = '';
+//        }
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + "ssc/" +module + ".html";
         }
-        windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);
+        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
     }
 
 //    function getCaiZhongEnable(playGroupId) {

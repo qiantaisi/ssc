@@ -75,5 +75,13 @@
 </c:choose>
 <c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/checkOnline.jsp"/>
+<script>
+    var urlGcdt = '';
+    var subPageUrl = '';
+    $(function () {
+        subPageUrl = window.location.toString();
+        urlGcdt = Tools.getSubUrlFromSurl(subPageUrl);
+    });
+</script>
 </body>
 </html>
