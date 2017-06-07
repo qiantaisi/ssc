@@ -164,7 +164,7 @@
             </div>
         {{/if}}
         <h2>{{title}}<p>发布时间：{{createTime}}</p></h2>
-        <div class="pict">
+        <div class="pict repict">
             <img src="<%=basePath%>images/{{bigImageId}}" alt="">
         </div>
         <div class="text">
