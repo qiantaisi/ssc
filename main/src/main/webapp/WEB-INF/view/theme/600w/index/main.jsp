@@ -70,7 +70,7 @@
                             class="sp1 jiangchi"></span><span><a
                             <%--href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=cqssc&navIndex=1"--%>
                             href="javascript:void(0);"
-                            onclick="openGcdt('cqssc')"
+                            onclick="openGcdt('gcdt/cqssc')"
                             target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,1)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/zst/cqssc.html" target="_blank"
                             class="sp0">走势图</a></span></p>
@@ -102,7 +102,7 @@
                             class="sp1 angchi"></span><span><a
                             <%--href="<%=basePath%>ssc/index.html?module=gcdt/lhc&caizhong=lhc&navIndex=0"--%>
                             href="javascript:void(0);"
-                            onclick="openGcdt('lhc')"
+                            onclick="openGcdt('gcdt/lhc')"
                             target="_blank">手动选号</a> | <a
                             href="javascript:void(0)" onclick="xyxh(this,6)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/zst/lhc.html" target="_blank" class="sp0">走势图</a></span>
@@ -147,7 +147,7 @@
                             class="sp1 jiangchi"></span><span><a
                             <%--href="<%=basePath%>ssc/index.html?module=gcdt/lhc&caizhong=pk10&navIndex=1"--%>
                             href="javascript:void(0);"
-                            onclick="openGcdt('pk10')"
+                            onclick="openGcdt('gcdt/pk10')"
                             target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,9)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/zst/pk10.html" target="_blank" class="sp0">走势图</a></span>
                     </p>
@@ -230,7 +230,7 @@
                             class="sp1 jiangchi"></span><span><a
                             <%--href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=xjssc&navIndex=1"--%>
                             href="javascript:void(0);"
-                            onclick="openGcdt('xjssc')"
+                            onclick="openGcdt('gcdt/xjssc')"
                             target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,3)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/zst/xjssc.html" target="_blank"
                             class="sp0">走势图</a></span></p>
@@ -262,7 +262,7 @@
                             class="sp1 jiangchi"></span><span><a
                             <%--href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=tjssc&navIndex=1"--%>
                             href="javascript:void(0);"
-                            onclick="openGcdt('tjssc')"
+                            onclick="openGcdt('gcdt/tjssc')"
                             target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,2)">幸运选号</a> | <a
                             href="<%=basePath%>ssc/zst/tjssc.html" target="_blank" class="sp0">走势图</a></span>
                     </p>
