@@ -30,7 +30,7 @@
                                 value="${item.endTime}" pattern="yy/MM/dd"/></div>
                     </div>
                     <div valign="bottom" class="card-header color-white no-border no-padding"
-                         style="padding:15px!important">
+                         style="padding:5px!important">
                         <img class='card-cover' src="<%=basePath%>images/${item.smallImageId}" alt="">
                     </div>
                     <div class="card-footer">

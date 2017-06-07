@@ -118,6 +118,10 @@
                     </a>
                 </div>
                 <div class="row cl-5">
+                    <a class="col-25" href="<%=basePath%>ssc/gcdt/lhc.html">
+                        <span class="bg-img-lhc"></span>
+                        <span>香港六合彩</span>
+                    </a>
                     <a class="col-25" href="<%=basePath%>ssc/gcdt/ahk3.html">
                         <span class="bg-img-ahk3"></span>
                         <span>安徽快3</span>
@@ -130,10 +134,6 @@
                         <span class="bg-img-jsk3"></span>
                         <span>江苏快3</span>
                     </a>--%>
-                    <a class="col-25" href="<%=basePath%>ssc/gcdt/lhc.html">
-                        <span class="bg-img-lhc"></span>
-                        <span>香港六合彩</span>
-                    </a>
                     <%--<a class="col-25" href="<%=basePath%>ssc/gcdt/sflhc.html">
                         <span class="bg-img-sflhc"></span>
                         <span>10分六合彩</span>
