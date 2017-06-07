@@ -8,11 +8,16 @@
 %>
 <script>
     function openGcdt(module) {
-        if (typeof module == 'undefined') {
-            module = '';
+        <%--if (typeof module == 'undefined') {--%>
+            <%--module = '';--%>
+        <%--}--%>
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
+        <%--&lt;%&ndash;windowOpen('<%=basePath%>ssc/index.html?module=' + module, '购彩大厅', 1285, 800);&ndash;%&gt;--%>
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + "ssc/" +module + ".html";
         }
-        windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);
-        <%--windowOpen('<%=basePath%>ssc/index.html?module=' + module, '购彩大厅', 1285, 800);--%>
+        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
     }
     function openHyzx(module) {
         if (typeof module == 'undefined') {
