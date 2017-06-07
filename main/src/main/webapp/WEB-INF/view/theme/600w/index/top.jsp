@@ -96,7 +96,7 @@
                 <li class="l"><a href="javascript:void(0)"><b>网站导航</b><i class="ico-d"></i></a>
                     <div class="link">
                         <h5>
-                            <a href="<%=basePath%>ssc/index.html" target="_blank">购买彩票</a>
+                            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt/gcdt')" target="_blank">购买彩票</a>
                             <a href="<%=mHostName%>" target="_blank">手机购彩</a>
                             <a href="<%=basePath%>/help/index.html">规则说明</a>
                         </h5>
