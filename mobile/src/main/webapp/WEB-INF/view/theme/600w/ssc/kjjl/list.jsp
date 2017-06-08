@@ -35,9 +35,12 @@
                         <a href="#" class="tab-link button" data-id="btn-thisMonth"><span>本月</span></a>
                     </c:when>
                     <c:otherwise>
+                        <a href="#" class="tab-link button" data-id="btn-now"><span>最新</span></a>
                         <a href="#" class="tab-link button" data-id="btn-today"><span>今日</span></a>
                         <a href="#" class="tab-link button" data-id="btn-yesterday"><span>昨日</span></a>
-                        <a href="#" class="tab-link button" data-id="btn-preYesterday"><span>前日</span></a>
+                        <%--<a href="#" class="tab-link button" data-id="btn-today"><span>今日</span></a>--%>
+                        <%--<a href="#" class="tab-link button" data-id="btn-yesterday"><span>昨日</span></a>--%>
+                        <%--<a href="#" class="tab-link button" data-id="btn-preYesterday"><span>前日</span></a>--%>
                     </c:otherwise>
                 </c:choose>
                 <a href="#" class="tab-link button" data-id="btn-zdy"><span>自定义</span></a>
