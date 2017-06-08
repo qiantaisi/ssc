@@ -28,18 +28,18 @@
             </h1>
         </header>
         <c:import url="common/commonBet.jsp"/>
-        <div class="gfwf_consele">
-            <div class="gfwf_one">
-                <div class="border_one color_one">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
-                </div>
-            </div>
-            <div class="gfwf_two">
-                <div class="border_two color_two">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
-                </div>
-            </div>
-        </div>
+        <%--<div class="gfwf_consele">--%>
+            <%--<div class="gfwf_one">--%>
+                <%--<div class="border_one color_one">--%>
+                    <%--<a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<div class="gfwf_two">--%>
+                <%--<div class="border_two color_two">--%>
+                    <%--<a class="F2_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
         <div class="gfwf_mask">
             <%--实现蒙版--%>
         </div>
