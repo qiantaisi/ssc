@@ -1,4 +1,5 @@
 var extractFunc = null;
+var nowDataFlag = false;
 $(function () {
     "use strict";
 
@@ -962,6 +963,7 @@ $(function () {
         });
 
         $("#buttonsTabList .button").click(function () {
+            Tools.alert("df");
             var id = $(this).attr("data-id");
             if (id == "btn-today") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -970,6 +972,7 @@ $(function () {
                 pageIndex = 1;
                 startTime = dateFormat(getTodayStart(), "yyyy-mm-dd HH:MM");
                 endTime = dateFormat(getTodayEnd(), "yyyy-mm-dd HH:MM");
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-yesterday") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -978,6 +981,7 @@ $(function () {
                 pageIndex = 1;
                 startTime = dateFormat(getYesterdayStart(), "yyyy-mm-dd HH:MM");
                 endTime = dateFormat(getYesterdayEnd(), "yyyy-mm-dd HH:MM");
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-month") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -5092,7 +5096,11 @@ $(function () {
                         }
                     });
 
-                    $("#dataList .list-container").append(str);
+                    if(nowDataFlag == true){
+                        $("#dataList .list-container").append(str);
+                    }else{
+                        $("#dataList .list-container").html(str);
+                    }
 
                     if (json.total == 0) {
                         $("#dataList").hide();
@@ -5114,7 +5122,10 @@ $(function () {
                         $('.infinite-scroll-preloader').show();
                     }
 
-                    pageIndex = json.nextPage;
+                    //当不是最新数据选项时无限制加载数据
+                    if(nowDataFlag == true){
+                        pageIndex = json.nextPage;
+                    }
                 },
                 error: function (a, b, c) {
                     if (b == 'timeout') {
@@ -5130,6 +5141,9 @@ $(function () {
                     $.refreshScroller();
                     // 下拉刷新重置
                     $.pullToRefreshDone('.pull-to-refresh-content');
+                    if(nowDataFlag == false){
+                        $('.infinite-scroll-preloader').hide();
+                    }
                 }
             });
         }
@@ -5149,7 +5163,16 @@ $(function () {
 
         $("#buttonsTabList .button").click(function () {
             var id = $(this).attr("data-id");
-            if (id == "btn-today") {
+            if (id == "btn-now") {
+                $("#buttonsTabList .button.active").removeClass("active");
+                $(this).addClass("active");
+
+                pageIndex = 1;
+                openDate = dateFormat(getTodayStart(), "yyyy-mm-dd");
+                startTime = '';
+                endTime = '';
+                getData(true);
+            }else if (id == "btn-today") {
                 $("#buttonsTabList .button.active").removeClass("active");
                 $(this).addClass("active");
 
