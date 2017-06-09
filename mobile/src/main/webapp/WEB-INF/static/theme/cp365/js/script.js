@@ -963,7 +963,6 @@ $(function () {
         });
 
         $("#buttonsTabList .button").click(function () {
-            Tools.alert("df");
             var id = $(this).attr("data-id");
             if (id == "btn-today") {
                 $("#buttonsTabList .button.active").removeClass("active");
