@@ -66,7 +66,7 @@
     }</style>
     <script>
         // 防止被frame
-        if (top.location != self.location) top.location = self.location;
+      //  if (top.location != self.location) top.location = self.location;
         // 屏蔽右键
         document.oncontextmenu = false;
     </script>
