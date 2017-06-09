@@ -5094,7 +5094,6 @@ $(function () {
                             str += html;
                         }
                     });
-
                     if(nowDataFlag == true){
                         $("#dataList .list-container").append(str);
                     }else{
@@ -5170,6 +5169,7 @@ $(function () {
                 openDate = dateFormat(getTodayStart(), "yyyy-mm-dd");
                 startTime = '';
                 endTime = '';
+                nowDataFlag = false;
                 getData(true);
             }else if (id == "btn-today") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -5179,6 +5179,7 @@ $(function () {
                 openDate = dateFormat(getTodayStart(), "yyyy-mm-dd");
                 startTime = '';
                 endTime = '';
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-yesterday") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -5188,6 +5189,7 @@ $(function () {
                 openDate = dateFormat(getYesterdayStart(), "yyyy-mm-dd");
                 startTime = '';
                 endTime = '';
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-preYesterday") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -5197,6 +5199,7 @@ $(function () {
                 openDate = dateFormat(getPreYesterdayStart(), "yyyy-mm-dd");
                 startTime = '';
                 endTime = '';
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-thisWeek") {
                 $("#buttonsTabList .button.active").removeClass("active");
