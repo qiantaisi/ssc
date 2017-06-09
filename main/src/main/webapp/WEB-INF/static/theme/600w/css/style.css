@@ -475,7 +475,9 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .process .layout .list_tems h2{font-size:20px;color: #444444;font-weight: normal;border-bottom: 1px  dotted #666666;padding-bottom: 21px;margin-top:35px;width: 742px;}
 .process .layout .list_tems h2 p{font-size: 14px;float: right;color: #999999;line-height: 1.2;}
 .process .layout .list_tems .pict{ box-shadow:3px 4px 3px rgba(0,0,0,0.3);float: left;margin-top:18px;}
+.process .layout .list_tems .repict{width: auto;max-width: 740px;}
 .process .layout .list_tems .pict img{margin: 2px;}
+.process .layout .list_tems .repict img{width: auto;max-width: 740px;}
 .process .layout .list_tems .text{float: left;margin-top:26px;width: 742px;}
 .process .layout .list_tems .text p{color: #7c7c7c;line-height: 26px;}
 .process .layout .list_tems .text a{height: 36px;display: block;line-height: 36px;background: #f0f0f0;width: 100%;text-align: center;color: #848484;margin-top:10px;cursor: pointer;margin-bottom: 10px;}
@@ -794,7 +796,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .main_layout .right_layotu .right_wrap .Notice b{font-size: 14px;font-weight: normal;color: #fa6200;border-bottom: 1px solid #e8e8e8;padding-bottom:6px;display: block;text-indent: 6px;}
 .main_layout .right_layotu .right_wrap .Notice p{cursor:pointer; font-size: 12px;color: #666666;margin-top:6px;line-height:1.9;}
 
-.main_layout .right_layotu .chart{width：100%;border: 1px solid #dbdbdb;height: 203px;margin-top:13px;float: left;}
+.main_layout .right_layotu .chart{width:100%;border: 1px solid #dbdbdb;height: 203px;margin-top:13px;float: left;}
 .main_layout .right_layotu .chart .title{border-bottom: 1px solid #fa6200;padding-bottom: 15px;height:28px;margin-top:6px;}
 .main_layout .right_layotu .chart .title a{float: right;color: #fa6200;line-height: 35px;margin-right: 6px;}
 .main_layout .right_layotu .chart .title a:hover{ text-decoration:underline;}

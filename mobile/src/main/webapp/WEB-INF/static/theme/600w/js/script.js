@@ -1,4 +1,5 @@
 var extractFunc = null;
+var nowDataFlag = false;
 $(function () {
     "use strict";
 
@@ -3701,6 +3702,7 @@ $(function () {
                     Tools.toast("请求错误，请稍后重试");
                 },
                 complete: function () {
+
                     loading = false;
                     // 无限滚动重置
                     $.refreshScroller();
@@ -4741,6 +4743,7 @@ $(function () {
         $(".cl-610 a").eq(0).trigger("click");
     });
 
+
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-list", function (e, id, page) {
         $("#inputOpenDate").datetimePicker2({});
@@ -5091,8 +5094,11 @@ $(function () {
                             str += html;
                         }
                     });
-
-                    $("#dataList .list-container").append(str);
+                    if(nowDataFlag == true){
+                        $("#dataList .list-container").append(str);
+                    }else{
+                        $("#dataList .list-container").html(str);
+                    }
 
                     if (json.total == 0) {
                         $("#dataList").hide();
@@ -5114,22 +5120,27 @@ $(function () {
                         $('.infinite-scroll-preloader').show();
                     }
 
-                    pageIndex = json.nextPage;
+                    //当不是最新数据选项时无限制加载数据
+                    if(nowDataFlag == true){
+                        pageIndex = json.nextPage;
+                    }
                 },
                 error: function (a, b, c) {
                     if (b == 'timeout') {
                         Tools.toast("操作超时，请稍后重试");
                         return;
                     }
-
                     Tools.toast("请求错误，请稍后重试");
                 },
                 complete: function () {
-                    loading = false;
-                    // 无限滚动重置
-                    $.refreshScroller();
-                    // 下拉刷新重置
-                    $.pullToRefreshDone('.pull-to-refresh-content');
+                        loading = false;
+                        // 无限滚动重置
+                        $.refreshScroller();
+                        // 下拉刷新重置
+                        $.pullToRefreshDone('.pull-to-refresh-content');
+                        if(nowDataFlag == false){
+                           $('.infinite-scroll-preloader').hide();
+                        }
                 }
             });
         }
@@ -5143,13 +5154,15 @@ $(function () {
         // 下拉刷新
         // 添加'refresh'监听器
         $(document).on('refresh', '.pull-to-refresh-content', function (e) {
-            pageIndex = 1;
-            getData(true);
+            if(nowDataFlag == true){
+                pageIndex = 1;
+                getData(true);
+            }
         });
 
         $("#buttonsTabList .button").click(function () {
             var id = $(this).attr("data-id");
-            if (id == "btn-today") {
+            if (id == "btn-now") {
                 $("#buttonsTabList .button.active").removeClass("active");
                 $(this).addClass("active");
 
@@ -5157,6 +5170,17 @@ $(function () {
                 openDate = dateFormat(getTodayStart(), "yyyy-mm-dd");
                 startTime = '';
                 endTime = '';
+                nowDataFlag = false;
+                getData(true);
+            }else if (id == "btn-today") {
+                $("#buttonsTabList .button.active").removeClass("active");
+                $(this).addClass("active");
+
+                pageIndex = 1;
+                openDate = dateFormat(getTodayStart(), "yyyy-mm-dd");
+                startTime = '';
+                endTime = '';
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-yesterday") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -5166,6 +5190,7 @@ $(function () {
                 openDate = dateFormat(getYesterdayStart(), "yyyy-mm-dd");
                 startTime = '';
                 endTime = '';
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-preYesterday") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -5175,6 +5200,7 @@ $(function () {
                 openDate = dateFormat(getPreYesterdayStart(), "yyyy-mm-dd");
                 startTime = '';
                 endTime = '';
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-thisWeek") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -5193,6 +5219,7 @@ $(function () {
                 openDate = '';
                 startTime = dateFormat(getLastWeekStart(), "yyyy-mm-dd");
                 endTime = dateFormat(getLastWeekEnd(), "yyyy-mm-dd");
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-thisMonth") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -5204,6 +5231,7 @@ $(function () {
                 openDate = '';
                 startTime = dateFormat(getThisMonthStart(), "yyyy-mm-dd");
                 endTime = dateFormat(getThisMonthEnd(), "yyyy-mm-dd");
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-zdy") {
                 $.openPanel("#panel-right");
@@ -5623,7 +5651,7 @@ $(function () {
                     } else {
                         // 重新绑定无限滚动
                         $.attachInfiniteScroll($('.infinite-scroll'));
-                        $('.infinite-scroll-preloader').show();
+                        // $('.infinite-scroll-preloader').show();
                     }
 
                     pageIndex = json.nextPage;
