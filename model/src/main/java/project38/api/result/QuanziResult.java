@@ -20,6 +20,8 @@ public class QuanziResult extends PageResult {
     }
 
     public static class Quanzi {
+        private String nickname;
+
         private String account;
 
         private Date createTime;
@@ -27,6 +29,14 @@ public class QuanziResult extends PageResult {
         private String content;
 
         private List<Long> imageIdList;
+
+        public String getNickname() {
+            return nickname;
+        }
+
+        public void setNickname(String nickname) {
+            this.nickname = nickname;
+        }
 
         public String getAccount() {
             return account;
