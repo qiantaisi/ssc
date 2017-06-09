@@ -1904,6 +1904,19 @@ $(function () {
             }
             if (globalLeftTime < 0) {
                 querySscLeftTime(playGroupId);
+                if(globalOpening){
+                    showClearBetTemplate();
+                    //定义弹框宽度大小
+                    $("#layui-m-layer" + layerId + " .layui-m-layerchild").css("width","85%");
+                    $("#layui-m-layer" + layerId + " .layui-m-layerchild h3").css({"font-size":"0.68rem","height":"1.6rem!important","line-height":"1.6rem!important"});
+                    $("#layui-m-layer" + layerId + " .btn_close").click(function(){
+                        if (layerId != null) {
+                            layer.close(layerId);
+                            layerId = null;
+                        }
+                    });
+                }
+
                 return;
             }
             var tmpTime = globalLeftTime;
@@ -1948,6 +1961,84 @@ $(function () {
 
     }
 
+    // 清除内容提示框
+    var layerId = null;
+    var T = null;
+    function showClearBetTemplate() {
+        if (layerId != null) {
+            return;
+        }
+        var clearBet_template = '\
+    <div class="clearBet_template" >\
+        <div class="l">\
+            <span>\
+            <i></i>\
+            </span>\
+        </div>\
+        <div class="r">\
+            <p>当前期已结束</p>\
+            <p>是否要清空已投注内容？</p>\
+            <p>要清空已投注内容请单击"确定"</p>\
+            <p>不刷新页面请点击"取消"</p>\
+        </div>\
+        <div style="clear:both"></div>\
+        <div class="btns" style="text-align:center">\
+            <a href="javascript:void(0)" data-btn="ok" class="btn1">确定</a>\
+            <a href="javascript:void(0)" data-btn="cancel" class="btn2">取消<font class="time"></font></a>\
+        </div>\
+    </div>\
+    ';
+
+        layer.closeAll();
+        //页面层
+        layerId = layer.open({
+            type: 0, //默认为 0 信息框
+            time: 15000,
+            title: '温馨提示'+ '<a href="javascript:void(0)" class="close-img btn_close"><span></span></a>',
+            shadeClose: false,
+            content: clearBet_template
+        });
+
+
+        var time = 5;
+        T = setInterval(function() {
+            if (time == 0) {
+                closeClearBetTemplate("cancel");
+                return;
+            }
+            $(".clearBet_template .time").html('(' + time + ')');
+            --time;
+        }, 1000)
+    }
+
+    $(document).on("click", ".clearBet_template .btns a", function (e) {
+        var btnName = $(this).data("btn");
+        closeClearBetTemplate(btnName);
+    });
+
+    function closeClearBetTemplate(btnName) {
+        if (T != null) {
+            clearInterval(T);
+            T = null;
+        }
+        if (layerId != null) {
+            layer.close(layerId);
+            layerId = null;
+        }
+
+        if (typeof btnName != 'undefined' && btnName == "ok") {
+            if (typeof reset == 'function') {
+                reset();
+            }
+        }
+    }
+
+    //清除正在下注的内容及金额
+    function reset() {
+        $("body tbody tr td.active").removeClass('active');
+        $("#inputMoney").val("");
+    }
+
     var querySscLeftTime_Running = false; // querySscLeftTime函数是否正在调用
     function querySscLeftTime(playGroupId) {
         if (querySscLeftTime_Running) {
@@ -1969,7 +2060,7 @@ $(function () {
 
                 globalLeftTime = json.leftTime;
                 // globalLeftOpenTime = json.leftOpenTime;
-                // globalOpening = json.opening;
+                globalOpening = json.opening;
 
                 $("#number").attr("data-number", json.number);
                 $("#number font").html(json.number);
@@ -6705,19 +6796,21 @@ function kefuToast() {
     Tools.toast("请联系在线客服");
 }
 
-$(".title").click(  // 官方玩法点击事件
-    function () {
-        if ($(".content").is(".show_hide")) {
-            $(".page").find(".show_hide").removeClass("show_hide");
-            $(".gfwf_consele").addClass("show_hide").show();
-            $(".gfwf_mask").addClass("show_hide").show();
-        } else {
-            $(".gfwf_consele").removeClass("show_hide").show();
-            $(".gfwf_mask").removeClass("show_hide").hide();
-            $(".page").find(".content").addClass("show_hide");
+$(function () {
+    $(".title_cq").click(  // 官方玩法点击事件
+        function () {
+            if ($(".content").is(".show_hide")) {
+                $(".page").find(".show_hide").removeClass("show_hide");
+                $(".gfwf_consele").addClass("show_hide").show();
+                $(".gfwf_mask").addClass("show_hide").show();
+            } else {
+                $(".gfwf_consele").removeClass("show_hide").show();
+                $(".gfwf_mask").removeClass("show_hide").hide();
+                $(".page").find(".content").addClass("show_hide");
+            }
         }
-    }
-);
+    );
+});
 
 //实现 直选方式 的点击事件。
 $(".x_3 span").click(

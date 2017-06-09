@@ -39,6 +39,10 @@
 <script src="${resPath}js/global.js?v=201702280310"></script>
 <script>
     config.basePath = '<%=basePath%>';
+    var CONFIG = {
+        BASEURL: "<%=basePath%>",    // 根路径
+        RESURL: "${resPath}"         // 资源路径
+    };
 </script>
 <script src="${resPath}js/script.js?v=20170526"></script>
 <script>
