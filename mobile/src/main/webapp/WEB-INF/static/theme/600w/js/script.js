@@ -5107,7 +5107,6 @@ $(function () {
                         $("#dataList").show();
                         $(".no-right-record").hide();
                     }
-
                     // 没有更多数据了
                     if (!json.hasNextPage) {
                         // 加载完毕，则注销无限加载事件，以防不必要的加载
@@ -5124,6 +5123,7 @@ $(function () {
                     if(nowDataFlag == true){
                         pageIndex = json.nextPage;
                     }
+
                 },
                 error: function (a, b, c) {
                     if (b == 'timeout') {
@@ -5148,16 +5148,16 @@ $(function () {
         // 无限滚动
         // 注册'infinite'事件处理函数
         $(document).on('infinite', '.infinite-scroll-bottom', function () {
-            getData();
+            if(nowDataFlag != false){
+                getData();
+            }
         });
 
         // 下拉刷新
         // 添加'refresh'监听器
         $(document).on('refresh', '.pull-to-refresh-content', function (e) {
-            if(nowDataFlag == true){
                 pageIndex = 1;
                 getData(true);
-            }
         });
 
         $("#buttonsTabList .button").click(function () {
