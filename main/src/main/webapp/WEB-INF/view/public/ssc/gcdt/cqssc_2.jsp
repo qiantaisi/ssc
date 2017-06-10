@@ -142,7 +142,7 @@
         $(obj).parent().parent().remove();
         calcAll();
         bindYuxuan();
-        if ($("#zhudanList").html() == "") {
+        if ($("#zhudanList .re_touzhu_tem").length <= 0) {
             $("#zhudanList").html('<tr class="noRecord"><td>暂无投注项</td></tr>');
         }
     }
