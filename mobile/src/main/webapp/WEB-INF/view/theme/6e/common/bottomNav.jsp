@@ -8,6 +8,14 @@
 %>
 <nav class="bar bar-tab cl-10 cl-1001">
     <div class="tab-item" onclick="showSubMenu(this)">
+        <a href="<%=basePath%>main.html">
+            <div class="cl-1003">
+                <span class="icon icon-dhome"></span>
+                <span class="tab-label">首页</span>
+            </div>
+        </a>
+    </div>
+    <div class="tab-item" onclick="showSubMenu(this)">
         <a href="<%=basePath%>member/cqk/ck.html">
             <div class="cl-1003">
                 <span class="icon icon-cqk"></span>
