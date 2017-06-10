@@ -63,7 +63,7 @@
             <p>
                 <span class="<c:if test="${param.playGroupId == 3}">acti</c:if>"><a href="<%=basePath%>help/rule/Extension.html">推广赚钱</a></span>
                 <span class="<c:if test="${param.playGroupId == 3}">acti</c:if>"><a href="${kefuUrl}" target="_blank">在线客服</a></span>
-                <span class="<c:if test="${param.playGroupId == 3}">acti</c:if>"><a href="tencent://message/?uin=2247777777&Site=在线客服&Menu=yes">代理QQ</a></span>
+                <span class="<c:if test="${param.playGroupId == 3}">acti</c:if>"><a href="tencent://message/?uin=97185551&Site=在线客服&Menu=yes">代理QQ</a></span>
             <%--<p class="<c:if test="${param.playGroupId == 4}">acti</c:if>"><a href="<%=basePath%>help/rule/Extension.html">推广赚钱</a></p>--%>
             <%--<p class="<c:if test="${param.playGroupId == 4}">acti</c:if>"><a href="<%=basePath%>help/rule/Extension.html">在线客服</a></p>--%>
             <%--<p class="<c:if test="${param.playGroupId == 4}">acti</c:if>"><a href="<%=basePath%>help/rule/Extension.html">代理QQ</a></p>--%>
