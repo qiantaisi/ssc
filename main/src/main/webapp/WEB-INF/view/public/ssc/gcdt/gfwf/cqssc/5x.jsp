@@ -11,8 +11,8 @@
         <li>
             <b>五星直选</b>
             <p class="btn_fu_zhi">
-                <span class="acti" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
-                <span data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_pl_id="14207" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14208" data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -268,11 +268,6 @@
         }
         calc();
     }
-
-    function removeThisItem(obj) {
-        $(obj).parent().parent().parent().remove();
-        calcAll();
-    }
     function clearZhudan() {
         $("#zhudanList li:not('.head')").remove();
         calcAll();
@@ -318,8 +313,7 @@
                 return;
             }
             clearSelected();
-            var html = template("template_touzhu", betForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betForm);
             calcAll();
         }
     }
@@ -380,6 +374,13 @@
     }
 
     function getZhudan(obj) {
+        var zhushu = getZhushu();
+
+        if (zhushu <= 0) {
+            alert("至少选择1注号码才能投注");
+            return false;
+        }
+
         var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
         $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
             wanArr.push($.trim($(this).find("i").html()));
@@ -396,20 +397,42 @@
         $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
             geArr.push($.trim($(this).find("i").html()));
         });
-        var zhushu = getZhushu();
 
-        if (zhushu <= 0) {
-            alert("至少选择1注号码才能投注");
-            return false;
-        }
-        obj.playName = "五星直选-复式";
-        obj.content = "万位: " + wanArr.join("") + " 千位: " + qianArr.join("") + " 百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+        // 模板显示内容
+        obj.showContent = "万位：({0})，千位：({1})，百位：({2})，十位：({3})，个位：({4})".format(
+            wanArr.join(","),
+            qianArr.join(","),
+            baiArr.join(","),
+            shiArr.join(","),
+            geArr.join(",")
+        );
+        // 转换投注格式
+        // 玩法名称
+        obj.showPlayName = "五星直选-复式";
+        // 投注内容
+        obj.betContent = gfwf_5xfs(
+            wanArr,
+            qianArr,
+            baiArr,
+            shiArr,
+            geArr
+        );
+        // 每注金额
+        obj.betPerMoney = $("#inputMoney").data("money");
+        // 注数
+        obj.betZhushu = zhushu;
+        // 倍数（1-元，2-角，3-分，4-厘）
+        obj.betMode = 1;
+        // 每单总金额
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode);
+        // 彩种
+        obj.betPlayGroupId = playGroupId;
+        // 返点比例
+        obj.betFandian = $(".fandian-bfb").data("value");
+        // 赔率
+        obj.betPlayPl = $(".jiangjin-change").data("value");
+        // 赔率ID
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -532,8 +555,12 @@
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
+
+                $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
+
                 money_jangjin = 98000 - (money_jangjin * 1000);
+                $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(money_jangjin);
                 if(typeof stateTouZhu == "function"){
                     var flag_str = '';
@@ -600,28 +627,4 @@
 
 
     });
-</script>
-
-<script type="text/html" id="template_touzhu">
-    <li
-            data-zhushu="{{zhushu}}"
-            data-beishu="{{beishu}}"
-            data-total_money="{{totalMoney}}"
-            data-money="{{money}}"
-            data-play_group_id="{{playGroupId}}"
-            data-content="{{content}}"
-            class="re_touzhu_tem"
-    >
-            <div class="head-name">
-                <span>{{playName}}</span>
-            </div>
-            <div class="content-jiang">
-                <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-                <span class="span1">{{zhushu}}注&nbsp;&nbsp;{{jiangJfanD}}&nbsp;&nbsp;<var class="varColor">{{totalMoney}}元</var></span>
-                <%--<span class="span2">{{jiangJfanD}}</span>--%>
-                <%--<span class="span3">{{totalMoney}}元</span>--%>
-                <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
-                        src="${resPath}img/ico53.png" alt=""></a></span>
-            </div>
-    </li>
 </script>

@@ -315,3 +315,42 @@
 .selposition .rxdesc .rx-b-hao, .selposition .rxdesc .rx-b-ts{
     font-weight: normal;
 }
+.content-jiang{overflow:hidden;}
+.Detailedlist .layout .boxt .left table tbody tr{font-size:12px;color:#2b2b2b;line-height:30px;}
+.Detailedlist .layout .boxt .left table tbody tr:hover{cursor:pointer;background: rgba(234, 114, 26, 0.10);box-shadow: 0 3px 5px #d4bead inset;}
+.Detailedlist .layout .boxt .left table tbody tr td{border:none;margin:0;padding:0;}
+.re_touzhu_tem .span_1{width:240px;text-align:left;}
+.re_touzhu_tem .span_2{width:25px}
+.re_touzhu_tem .span_3{width:75px}
+.re_touzhu_tem .span_4{width:70px}
+.re_touzhu_tem .span_5{width:50px}
+.re_touzhu_tem .span_6{width:40px}
+.Detailedlist .layout .boxt .left{padding-right:10px;}
+.moreZhudan{
+    position:absolute;
+    top:155px;
+    left:155px;
+    color:#fff;
+}
+.moreZhudan:after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50px;
+    bottom: -4px;
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: #e84f31 transparent;
+}
+.moreZhudan .box{
+    background:#e84f31;display:block;
+    padding:10px 25px;
+    line-height:25px;font-size:14px;
+    border-radius: 5px;
+}
+.moreZhudan .box span{display:block;max-width:250px;overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.noRecord{text-align:center;}

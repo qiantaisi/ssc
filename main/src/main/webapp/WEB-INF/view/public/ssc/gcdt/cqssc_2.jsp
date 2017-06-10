@@ -104,10 +104,11 @@
             <h1 class="at">投注清单</h1>
             <div class="boxt at reboxt">
                 <div class="left">
-                    <ul id="zhudanList">
-                        <%--<li class="head"><span class="sp1">玩法</span><span class="sp2">投注号码</span><span--%>
-                                <%--class="sp3">金额</span><span class="sp4">操作</span></li>--%>
-                    </ul>
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tbody id="zhudanList">
+                            <tr class="noRecord"><td>暂无投注项</td></tr>
+                        </tbody>
+                    </table>
                 </div><!--left-->
                 <div class="right">
                     <ul>
@@ -136,6 +137,15 @@
     var playId = 111;
 </script>
 <script>
+    function removeThisItem(obj) {
+        $(obj).parent().parent().trigger("mouseout");
+        $(obj).parent().parent().remove();
+        calcAll();
+        bindYuxuan();
+        if ($("#zhudanList").html() == "") {
+            $("#zhudanList").html('<tr class="noRecord"><td>暂无投注项</td></tr>');
+        }
+    }
     // 随机号码
     function randomNumber() {
         var arr = [];
@@ -167,5 +177,125 @@
         {{/each}}
         {{/if}}
     </li>
+</script>
+
+<script type="text/html" id="template_touzhu">
+    <tr
+            data-show_content="{{showContent}}"
+            data-show_play_name="{{showPlayName}}"
+            data-bet_content="{{betContent}}"
+            data-bet_per_money="{{betPerMoney}}"
+            data-bet_zhushu="{{betZhushu}}"
+            data-bet_total_money="{{betTotalMoney}}"
+            data-bet_mode="{{betMode}}"
+            data-bet_play_group_id="{{betPlayGroupId}}"
+            data-bet_beishu="{{betBeishu}}"
+            data-bet_fandian="{{betFandian}}"
+            data-bet_play_pl="{{betPlayPl}}"
+            data-bet_play_id="{{betPlayId}}"
+            class="re_touzhu_tem"
+    >
+        <td class="span_1">
+            [{{showPlayName}}]
+            <br />
+            {{showContent}}
+        </td>
+        <td class="span_2">
+            {{if betMode == 1}}
+            元
+            {{else if betMode == 2}}
+            角
+            {{else if betMode == 3}}
+            分
+            {{/if}}
+        </td>
+        <td class="span_3">
+            {{betZhushu}}注
+        </td>
+        <td class="span_4">
+            {{betMode}}
+        </td>
+        <td class="span_5">
+            {{betPlayPl}}/{{betFandian}}%
+        </td>
+        <td class="span_6" title="删除">
+            <a href="javascript:void(0)" onclick="removeThisItem(this)"><img src="${resPath}img/ico53.png" alt=""></a>
+        </td>
+    </tr>
+</script>
+<script>
+    function addYuxuan(betForm) {
+        $("#zhudanList .noRecord").remove();
+        var html = template("template_touzhu", betForm);
+        $("#zhudanList").append(html);
+        bindYuxuan();
+    }
+
+    function bindYuxuan() {
+        unbindYuxuan();
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").hover(
+            function() {
+                $("#moreZhudan").remove();
+                var width = $(this).width() / 2;
+                var top = $(this).offset().top - 150;
+                var left = $(this).offset().left + $(this).width() / 2 * 1 / 3;
+                var html = template("template_moreZhudan", {
+                    top: top,
+                    left: left,
+                    showPlayName: $(this).data("show_play_name"),
+                    showContent: $(this).data("show_ontent"),
+                    showMode: $(this).data("bet_mode"),
+                    showFandian: $(this).data("bet_fandian"),
+                    showPlayPl: $(this).data("bet_play_pl"),
+                    betPerMoney: $(this).data("bet_per_money"),
+                    showContent: $(this).data("show_content")
+                })
+                $("body").append(html);
+            }, function() {
+                $("#moreZhudan").remove();
+            }
+        );
+    }
+
+    function unbindYuxuan() {
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").unbind('mouseenter').unbind('mouseleave');
+    }
+</script>
+<script type="text/html" id="template_moreZhudan">
+    <div id="moreZhudan" class="moreZhudan" style="top:{{top}}px;left:{{left}}px">
+        <div class="box">
+            <div class="line">
+                <span>玩法：[{{showPlayName}}]</span>
+            </div>
+            <div class="line">
+                <span>号码：{{showContent}}</span>
+            </div>
+            <div class="line">
+                <span>模式：
+                    {{if showMode == 1}}
+                    元
+                    {{else if showMode == 2}}
+                    角
+                    {{else if showMode == 3}}
+                    分
+                    {{/if}}
+                    模式, 奖金&nbsp;{{showPlayPl}}, 返点&nbsp;{{showFandian}}%</span>
+            </div>
+            <div class="line">
+                <span>包含&nbsp;1&nbsp;注，每注金额&nbsp;{{betPerMoney}}&nbsp;
+                {{if showMode == 1}}
+                元
+                {{else if showMode == 2}}
+                角
+                {{else if showMode == 3}}
+                分
+                {{/if}}
+                </span>
+            </div>
+            <div class="line">
+                <span>共计&nbsp;1111&nbsp;元</span>
+            </div>
+        </div>
+    </div>
 </script>
 <c:import url="../../common/bodyEnd.jsp"/>
