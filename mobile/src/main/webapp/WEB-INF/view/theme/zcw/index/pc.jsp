@@ -35,25 +35,26 @@
         <div class="main">
             <div class="pic">
                 <div class="i-m1 download">
-                    <p class="fl sj"><img src="${resPath}images/ios_icon.png" alt=""></p>
+                    <p class="fl sj"><img src="${resPath}images/and_icon.png" alt=""></p>
                     <div class="fr btn-grp">
                         <p class="box">下载APP送您38元现金</p>
                         <p><img src="${resPath}images/ewm.png" alt=""></p>
-                        <a href="<%=mHostName%>" class="btn-down-android mt10" target="_self"><i class="icon i-iphone"></i><span class="a-txt">iPhone版下载</span>
-                            <span class="layer-down"><i class="icon i-down"></i><span class="a-txt">2.35M</span></span></a>
+                        <a href="http://d.zhcai8899.com/zhcaicom138178_2014.apk" class="btn-down-android mt10" target="_self"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span>
+                            <span class="layer-down"><i class="icon i-down"></i><span class="a-txt">3.76M</span></span></a>
                     </div>
                 </div>
             </div>
             <div class="con fr">
-                <p class="fl sj"><img src="${resPath}images/and_icon.png" alt=""></p>
+                <p class="fl sj"><img src="${resPath}images/ios_icon.png" alt=""></p>
                 <div class="fr">
                     <div class="title">
-                        <p class="logo"><span class="box">下载APP送您38元现金</span></p>
+                        <p class="logo"><span class="box">iPhone在线版 极速体验<span></p>
                         <div class="txt"><img src="${resPath}images/ewm.png" alt=""></div>
                     </div>
                     <div class="download">
                         <div class="btn-grp">
-                            <a href="<%=mHostName%>" class="btn-down-iphone mt10" target="_blank"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span><span class="layer-down"><i class="icon i-down"></i><span class="a-txt">25.9M</span></span></a>
+                            <a href="javascript:;" class="btn-down-iphone mt10" onclick="javascript:alert('请使用iPhome手机打开')"><i class="icon i-iphone"></i><span class="a-txt">iPhone在线版</span>
+                                <span class="layer-down"><span class="a-txt">点击进入</span></span></a>
                         </div>
                     </div>
                 </div>

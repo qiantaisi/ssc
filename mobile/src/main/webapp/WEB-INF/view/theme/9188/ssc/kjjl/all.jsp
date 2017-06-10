@@ -11,161 +11,31 @@
 <c:import url="../../common/bodyStart.jsp"/>
 <div class="page-group">
     <div class="page page-current" id="page-kjjl-all">
-        <header class="bar bar-nav rekjcl-1">
-            <a href="javascript:void(0)" class="button button-link button-nav pull-left fanhui">
-                <span class="icon icon-left reicon"></span>
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
+                <span class="icon icon-left"></span>
+                返回
             </a>
-            <h1 class="title reimg">
-                <%--<img src="${resPath}img/kaihead_06.png"/>--%>
-                彩票开奖
-            </h1>
-            <a href="javascript:void(0)" class="button button-link button-nav pull-right btn_xz">
-                <span>选择彩种</span>
+            <a class="button button-link pull-right shouye">
+                <span class="icon icon-home"></span>
             </a>
-
+            <h1 class="title">开奖结果</h1>
         </header>
-        <c:import url="../../common/bottomNav.jsp"/>
-        <%--隐藏块--%>
-        <%--弹窗--%>
-        <div class="modal-overlay modal-overlay-visible re-modal vipcp-hide"></div>
-
-        <div class="outer vipcp-hide">
-            <div class="clearfix_ alert_main">
-                <p class="alert_tl">选择您想看的彩种</p>
-                <ul class="clearfix alert_ul">
-                    <li data-id="15">
-                        <a href="javascript:void(0);">分分时时彩
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="9">
-                        <a href="javascript:void(0);">北京pk10
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="1">
-                        <a href="javascript:void(0);">重庆时时彩
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="18">
-                        <a href="javascript:void(0);">江苏快3
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="21">
-                        <a href="javascript:void(0);">吉林快3
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="13">
-                        <a href="javascript:void(0);">三分时时彩
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="16">
-                        <a href="javascript:void(0);">两分时时彩
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="14">
-                        <a href="javascript:void(0);">幸运飞艇
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="23">
-                        <a href="javascript:void(0);">极速PK10
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="20">
-                        <a href="javascript:void(0);">安徽快3
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="19">
-                        <a href="javascript:void(0);">湖北快3
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="3">
-                        <a href="javascript:void(0);">新疆时时彩
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="2">
-                        <a href="javascript:void(0);">天津时时彩
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="11">
-                        <a href="javascript:void(0);">广东快乐十分
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="17">
-                        <a href="javascript:void(0);">五分时时彩
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="7">
-                        <a href="javascript:void(0);">幸运28
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="10">
-                        <a href="javascript:void(0);">重庆幸运农场
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="8">
-                        <a href="javascript:void(0);">北京快乐8
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="6">
-                        <a href="javascript:void(0);">香港六合彩
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="5">
-                        <a href="javascript:void(0);">福彩3d
-                            <em></em>
-                        </a>
-                    </li>
-                    <li data-id="4">
-                        <a href="javascript:void(0);">体彩排列3
-                            <em></em>
-                        </a>
-                    </li>
-                </ul>
-                <div class="alert_xuan clearfix">
-                    <a href="javascript:void(0);" class="quanxuan left">全选</a>
-                    <a href="javascript:void(0);" class="fangxuan right">反选</a>
-                </div>
-                <a href="javascript:void(0);" class="alertbtn">确定</a>
-            </div>
-        </div>
-        <div class="content pull-to-refresh-content re-conten-kjjg">
+        <div class="content pull-to-refresh-content">
             <!-- 默认的下拉刷新层 -->
             <div class="pull-to-refresh-layer">
                 <div class="preloader"></div>
                 <div class="pull-to-refresh-arrow"></div>
             </div>
-            <%--<div class="row cl-102-kjjg">--%>
-                <div class="row cl-scroll swiper-container swiper-container-horizontal re-vipvp-head">
-                    <div class="swiper-wrapper">
-                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.jpg" alt=""></div>
-                        <%--<div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>--%>
-                        <%--<div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.png" alt=""></div>--%>
-                    </div>
-                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets re-swiper-pag"></div>
-                </div>
-            <%--</div>--%>
+            <div class="buttons-tab" id="buttonsTabList">
+                <a href="#" class="tab-link button" data-id="btn-all"><span>全部彩种</span></a>
+                <a href="#" class="tab-link button" data-id="btn-gpc"><span>高频彩</span></a>
+                <a href="#" class="tab-link button" data-id="btn-dpc"><span>低频彩</span></a>
+            </div>
             <div class="content-block cl-8 cl-990">
                 <div class="no-right-record hide"></div>
                 <div class="list-block media-list" id="dataList">
-                    <ul class="list-container re-l-con">
+                    <ul class="list-container">
                     </ul>
                 </div>
             </div>
@@ -174,7 +44,7 @@
 </div>
 <c:import url="../../common/commonJs.jsp"/>
 <script type="text/html" id="template_1">
-    <li data-id="1">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=1">
             <div class="item-media"><img src="${resPath}img/cz/cz-1.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -202,7 +72,7 @@
     </li>
 </script>
 <script type="text/html" id="template_2">
-    <li data-id="2">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=2">
             <div class="item-media"><img src="${resPath}img/cz/cz-2.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -230,7 +100,7 @@
     </li>
 </script>
 <script type="text/html" id="template_3">
-    <li data-id="3">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=3">
             <div class="item-media"><img src="${resPath}img/cz/cz-3.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -258,7 +128,7 @@
     </li>
 </script>
 <script type="text/html" id="template_4">
-    <li data-id="4">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=4">
             <div class="item-media"><img src="${resPath}img/cz/cz-4.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -279,7 +149,7 @@
     </li>
 </script>
 <script type="text/html" id="template_5">
-    <li data-id="5">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=5">
             <div class="item-media"><img src="${resPath}img/cz/cz-5.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -301,7 +171,7 @@
     </li>
 </script>
 <script type="text/html" id="template_6">
-    <li data-id="6">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=6">
             <div class="item-media"><img src="${resPath}img/cz/cz-6.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -336,8 +206,8 @@
     </li>
 </script>
 <script type="text/html" id="template_7">
-    <li data-id="7">
-        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=7">
+    <li>
+        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=8">
             <div class="item-media"><img src="${resPath}img/cz/cz-7.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
                 <div class="item-title-row">
@@ -358,7 +228,7 @@
     </li>
 </script>
 <script type="text/html" id="template_8">
-    <li data-id="8">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=8">
             <div class="item-media"><img src="${resPath}img/cz/cz-8.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -397,7 +267,7 @@
     </li>
 </script>
 <script type="text/html" id="template_9">
-    <li data-id="9">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=9">
             <div class="item-media"><img src="${resPath}img/cz/cz-9.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -426,7 +296,7 @@
     </li>
 </script>
 <script type="text/html" id="template_10">
-    <li data-id="10">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=10">
             <div class="item-media"><img src="${resPath}img/cz/cz-10.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -458,7 +328,7 @@
     </li>
 </script>
 <script type="text/html" id="template_11">
-    <li data-id="11">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=11">
             <div class="item-media"><img src="${resPath}img/cz/cz-11.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -490,7 +360,7 @@
     </li>
 </script>
 <script type="text/html" id="template_13">
-    <li data-id="13">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=13">
             <div class="item-media"><img src="${resPath}img/cz/cz-13.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -518,7 +388,7 @@
     </li>
 </script>
 <script type="text/html" id="template_14">
-    <li data-id="14">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=14">
             <div class="item-media"><img src="${resPath}img/cz/cz-14.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -547,7 +417,7 @@
     </li>
 </script>
 <script type="text/html" id="template_15">
-    <li data-id="15">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=15">
             <div class="item-media"><img src="${resPath}img/cz/cz-15.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -575,7 +445,7 @@
     </li>
 </script>
 <script type="text/html" id="template_16">
-    <li data-id="16">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=16">
             <div class="item-media"><img src="${resPath}img/cz/cz-16.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -603,7 +473,7 @@
     </li>
 </script>
 <script type="text/html" id="template_17">
-    <li data-id="17">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=17">
             <div class="item-media"><img src="${resPath}img/cz/cz-17.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -631,7 +501,7 @@
     </li>
 </script>
 <script type="text/html" id="template_18">
-    <li data-id="18">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=18">
             <div class="item-media"><img src="${resPath}img/cz/cz-18.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -656,7 +526,7 @@
     </li>
 </script>
 <script type="text/html" id="template_19">
-    <li data-id="19">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=19">
             <div class="item-media"><img src="${resPath}img/cz/cz-19.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -681,7 +551,7 @@
     </li>
 </script>
 <script type="text/html" id="template_20">
-    <li data-id="20">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=20">
             <div class="item-media"><img src="${resPath}img/cz/cz-20.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -706,7 +576,7 @@
     </li>
 </script>
 <script type="text/html" id="template_21">
-    <li data-id="21">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=21">
             <div class="item-media"><img src="${resPath}img/cz/cz-21.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
@@ -766,7 +636,7 @@
     <%--</li>--%>
 <%--</script>--%>
 <script type="text/html" id="template_23">
-    <li data-id="23">
+    <li>
         <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=23">
             <div class="item-media"><img src="${resPath}img/cz/cz-23.png" style='width: 2.2rem;'></div>
             <div class="item-inner">

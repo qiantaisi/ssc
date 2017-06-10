@@ -27,11 +27,6 @@
 //            return false;
 //        }
     }
-
-    var CONFIG = {
-        BASEURL: "<%=basePath%>",
-        RESURL: "${resPath}"
-    }
 </script>
 <script type="text/javascript" src="${resPath}sui/js/sm.js?v=20170220"></script>
 <script type="text/javascript" src="${resPath}sui/js/sm-city-picker.js?v=20170227" charset="utf-8"></script>
@@ -45,4 +40,6 @@
 <script>
     config.basePath = '<%=basePath%>';
 </script>
-<script src="${resPath}js/script.js?v=20170526_1"></script>
+<script src="${resPath}js/script.js?v=20170503"></script>
+<script>
+</script>

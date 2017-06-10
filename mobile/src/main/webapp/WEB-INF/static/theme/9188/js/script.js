@@ -1,4 +1,5 @@
 var extractFunc = null;
+var nowDataFlag = false;
 $(function () {
     "use strict";
 
@@ -26,15 +27,6 @@ $(function () {
 
     // 返回按钮
     $(".bar-nav .fanhui").click(function () {
-        if ($.config.router == true) {
-            $.router.back();
-        } else {
-            back();
-        }
-    });
-
-    // 返回按钮
-    $(".vipcp .fanhui").click(function () {
         if ($.config.router == true) {
             $.router.back();
         } else {
@@ -87,40 +79,8 @@ $(function () {
         });
     });
 
-
     // 注册页面
     $(document).on("pageInit", "#page-register", function (e, id, page) {
-         //实现立即注册处的，本人同意开户协议勾选事件
-        $(".agree span").click(
-            function () {
-                if ($(".agree span img").is(".show_hide")) {
-                    $(".agree span").find("img").removeClass("show_hide");
-                } else {
-                    $(".agree span").find("img").addClass("show_hide");
-                }
-            }
-        );
-
-        //协议关闭按钮
-        $(".layui-m-layermain h3 .btn_close").live('click',function () {
-            layer.closeAll();
-        });
-
-        //协议对话框
-        $(".agree-btn").live('click',function () {
-            //自定页
-            layer.open({
-                type: 1,
-                skin: 'layui-layer-popup', //样式类名
-                closeBtn: 0, //显示关闭按钮
-                anim: 2,
-                title: '开户协议'+ '<a href="javascript:void(0)" class="jb_img btn_close"><span></span></a>',
-                shadeClose: true, //开启遮罩关闭
-                content: $("#template_khxy").html()
-            });
-        });
-
-
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
@@ -335,70 +295,6 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
-       // 置顶按钮
-        $(".top-click").click(function () {
-           $("#navBar").scrollTop(0);
-        });
-
-        $(".c1-101 .tab-item .re-icon-home").css("background-image","url("+ CONFIG.RESURL +"img/footer2.png)");
-        $(".c1-101 .tab-item .tab-indx").css("color","red");
-
-        $(".sanjiao").hide();//隐藏所有三角号 系列彩种中
-
-        //0代表为隐藏 1为显示标签
-        $(".recl-7 .cl-row-5 .xl-select").click(function () {
-            $(".xlcz").hide();
-            $(".sanjiao").hide();
-
-            var sp_s = $(this).attr("sp");
-            var nameFlag = $(this).data("name");
-            if (nameFlag == "sscxl" && sp_s == 0) {
-                $(".sscxl").show();
-                $(".sj_sscxl").show();
-                $(this).parent().css("border-bottom", "none");
-                $(this).attr("sp", 1);
-
-                var flag1 = $("#btn_k3xl").attr("sp");
-                if (flag1 == 1) {
-                    $("#btn_k3xl").attr("sp", 0);
-                }
-            } else if (nameFlag == "sscxl" && sp_s == 1) {
-                $(".sscxl").hide();
-                $(".sj_sscxl").hide();
-                $(this).parent().css("border-bottom", "#DEDFDE 1px solid");
-                $(this).attr("sp", 0);
-
-                var flag1 = $("#btn_k3xl").attr("sp");
-                if (flag1 == 1) {
-                    $("#btn_k3xl").attr("sp", 0);
-                }
-            }
-
-            if (nameFlag == "k3xl" && sp_s == 0) {
-                $(".k3xl").show();
-                $(".sj_k3xl").show();
-                $(this).parent().css("border-bottom", "none");
-                $(this).attr("sp", 1);
-
-                var flag1 = $("#btn_sscxl").attr("sp");
-                if (flag1 == 1) {
-                    $("#btn_sscxl").attr("sp", 0);
-                }
-            } else if (nameFlag == "k3xl" && sp_s == 1) {
-                $(".k3xl").hide();
-                $(".sj_k3xl").hide();
-                $(this).parent().css("border-bottom", "#DEDFDE 1px solid");
-                $(this).attr("sp", 0);
-
-                var flag1 = $("#btn_sscxl").attr("sp");
-                if (flag1 == 1) {
-                    $("#btn_sscxl").attr("sp", 0);
-                }
-            }
-
-        });
-
-
         // 首页图片轮播
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
@@ -433,10 +329,9 @@ $(function () {
         //
         // });
 
-
         function renderAllData(data) {
             var str = '';
-            str += '';
+            str += '<ul>';
 
             var htmlArr = [];
             $.each(data, function (index, value) { //函数用于遍历指定的对象和数组
@@ -524,6 +419,7 @@ $(function () {
                     obj.playGroupId = playGroupId;
                     obj.number = value.lastOpenNumber;
 
+
                     var numArr = value.lastOpenData.split(",");
                     var num1 = Tools.parseInt(numArr[0]);
                     var num2 = Tools.parseInt(numArr[1]);
@@ -558,144 +454,12 @@ $(function () {
                 }
                 str += value;
             });
-            // str += '</ul>';
+            str += '</ul>';
             // $('.Color_type').hide();
             $(".cl-8 .list-block .kjjg_div").html(str).show();
         }
 
-        //后台设置热门开奖个数
         renderAllData(kjjgJsonData.sscTimeList);
-
-        $(".lhc-kjjg .lhc-touzhu .shuaxin").live('click',function(){
-            xyxh(this, 6);
-            //刷新
-            setTimeout(function(){
-                renderAllData(kjjgJsonData.sscTimeList)
-            },1200);
-        });
-
-
-
-
-        function xyxh(obj, type) {
-            if (typeof type == 'undefined') {
-                return;
-            }
-
-            var index_6 = null;
-            var index_1 = null;
-            var index_2 = null;
-            var index_3 = null;
-            var index_9 = null;
-            if (type == 6) {
-                $("#xyxhContent_6 span").each(function () {
-                    $(this).data("num", '');
-                });
-
-                index_6 = setInterval(function () {
-                    var num1 = Math.floor(Math.random() * 49 + 1);
-                    var num2 = Math.floor(Math.random() * 49 + 1);
-                    var num3 = Math.floor(Math.random() * 49 + 1);
-                    var num4 = Math.floor(Math.random() * 49 + 1);
-                    var num5 = Math.floor(Math.random() * 49 + 1);
-                    var num6 = Math.floor(Math.random() * 49 + 1);
-                    var num7 = Math.floor(Math.random() * 49 + 1);
-
-                    var bose1 = getBose(num1);
-                    var bose2 = getBose(num2);
-                    var bose3 = getBose(num3);
-                    var bose4 = getBose(num4);
-                    var bose5 = getBose(num5);
-                    var bose6 = getBose(num6);
-                    var bose7 = getBose(num7);
-
-                    bose1 = bose1 == 0 ? 'ball' : (bose1 == 1 ? 'ball col0' : 'ball col1');
-                    bose2 = bose2 == 0 ? 'ball' : (bose2 == 1 ? 'ball col0' : 'ball col1');
-                    bose3 = bose3 == 0 ? 'ball' : (bose3 == 1 ? 'ball col0' : 'ball col1');
-                    bose4 = bose4 == 0 ? 'ball' : (bose4 == 1 ? 'ball col0' : 'ball col1');
-                    bose5 = bose5 == 0 ? 'ball' : (bose5 == 1 ? 'ball col0' : 'ball col1');
-                    bose6 = bose6 == 0 ? 'ball' : (bose6 == 1 ? 'ball col0' : 'ball col1');
-                    bose7 = bose7 == 0 ? 'ball' : (bose7 == 1 ? 'ball col0' : 'ball col1');
-
-                    $("#xyxhContent_6 span").eq(0).attr("class", bose1).html(num1);
-                    $("#xyxhContent_6 span").eq(1).attr("class", bose2).html(num2);
-                    $("#xyxhContent_6 span").eq(2).attr("class", bose3).html(num3);
-                    $("#xyxhContent_6 span").eq(3).attr("class", bose4).html(num4);
-                    $("#xyxhContent_6 span").eq(4).attr("class", bose5).html(num5);
-                    $("#xyxhContent_6 span").eq(5).attr("class", bose6).html(num6);
-                    $("#xyxhContent_6 span").eq(6).attr("class", bose7).html(num7);
-
-                    $("#xyxhContent_6_sx span").eq(0).html(getSxName(num1));
-                    $("#xyxhContent_6_sx span").eq(1).html(getSxName(num2));
-                    $("#xyxhContent_6_sx span").eq(2).html(getSxName(num3));
-                    $("#xyxhContent_6_sx span").eq(3).html(getSxName(num4));
-                    $("#xyxhContent_6_sx span").eq(4).html(getSxName(num5));
-                    $("#xyxhContent_6_sx span").eq(5).html(getSxName(num6));
-                    $("#xyxhContent_6_sx span").eq(6).html(getSxName(num7));
-                }, 50);
-
-                setTimeout(function () {
-                    var arr = [];
-                    while (arr.length != 7) {
-                        var randNum = Math.floor(Math.random() * 49 + 1);
-
-                        var hasExist = false;
-                        for (var j = 0; j < arr.length; ++j) {
-                            if (arr[j] == randNum) {
-                                hasExist = true;
-                                break;
-                            }
-                        }
-                        if (!hasExist) {
-                            arr.push(randNum);
-                        }
-                    }
-
-                    var num1 = arr[0];
-                    var num2 = arr[1];
-                    var num3 = arr[2];
-                    var num4 = arr[3];
-                    var num5 = arr[4];
-                    var num6 = arr[5];
-                    var num7 = arr[6];
-
-                    var bose1 = getBose(num1);
-                    var bose2 = getBose(num2);
-                    var bose3 = getBose(num3);
-                    var bose4 = getBose(num4);
-                    var bose5 = getBose(num5);
-                    var bose6 = getBose(num6);
-                    var bose7 = getBose(num7);
-
-                    bose1 = bose1 == 0 ? 'ball' : (bose1 == 1 ? 'ball col0' : 'ball col1');
-                    bose2 = bose2 == 0 ? 'ball' : (bose2 == 1 ? 'ball col0' : 'ball col1');
-                    bose3 = bose3 == 0 ? 'ball' : (bose3 == 1 ? 'ball col0' : 'ball col1');
-                    bose4 = bose4 == 0 ? 'ball' : (bose4 == 1 ? 'ball col0' : 'ball col1');
-                    bose5 = bose5 == 0 ? 'ball' : (bose5 == 1 ? 'ball col0' : 'ball col1');
-                    bose6 = bose6 == 0 ? 'ball' : (bose6 == 1 ? 'ball col0' : 'ball col1');
-                    bose7 = bose7 == 0 ? 'ball' : (bose7 == 1 ? 'ball col0' : 'ball col1');
-
-                    clearInterval(index_6);
-                    $("#xyxhContent_6 span").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
-                    $("#xyxhContent_6 span").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
-                    $("#xyxhContent_6 span").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
-                    $("#xyxhContent_6 span").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
-                    $("#xyxhContent_6 span").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
-                    $("#xyxhContent_6 span").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
-                    $("#xyxhContent_6 span").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
-
-                    $("#xyxhContent_6_sx span").eq(0).html(getSxName(num1));
-                    $("#xyxhContent_6_sx span").eq(1).html(getSxName(num2));
-                    $("#xyxhContent_6_sx span").eq(2).html(getSxName(num3));
-                    $("#xyxhContent_6_sx span").eq(3).html(getSxName(num4));
-                    $("#xyxhContent_6_sx span").eq(4).html(getSxName(num5));
-                    $("#xyxhContent_6_sx span").eq(5).html(getSxName(num6));
-                    $("#xyxhContent_6_sx span").eq(6).html(getSxName(num7));
-                }, 1000);
-            }
-            return 1;
-        }
-
 
         $("#btn-shiwan").click(function () {
             shiwan();
@@ -716,87 +480,8 @@ $(function () {
         $(".timeInfo").html(hour);
     });
 
-
-
-
-    function openXyxh(type) {
-        var caizhong = '';
-        var nums = '';
-        var navIndex = '';
-
-        if (type == 6) {
-            caizhong = 'lhc';
-            navIndex = 0;
-            numsArr = [];
-            for (var i = 0; i < 7; ++i) {
-                var v = $("#xyxhContent_6 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。
-            }
-            nums = numsArr.join(",");
-        } else if (type == 1) {
-            caizhong = 'cqssc';
-            navIndex = 1;
-            var numsArr = [];
-            for (var i = 0; i < 5; ++i) {
-                var v = $("#xyxhContent_1 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-        } else if (type == 2) {
-            caizhong = 'tjssc';
-            navIndex = 1;
-            var numsArr = [];
-            for (var i = 0; i < 5; ++i) {
-                var v = $("#xyxhContent_2 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-        } else if (type == 3) {
-            caizhong = 'xjssc';
-            navIndex = 1;
-            var numsArr = [];
-            for (var i = 0; i < 5; ++i) {
-                var v = $("#xyxhContent_3 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-        } else if (type == 9) {
-            caizhong = 'pk10';
-            navIndex = 1;
-            var numsArr = [];
-            for (var i = 0; i < 10; ++i) {
-                var v = $("#xyxhContent_9 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-        }
-
-        if (numsArr.length == 0) {
-            return;
-        }
-        openXyxhGcdt(caizhong, nums, navIndex);
-    }
-
     // 会员首页
     $(document).on("pageInit", "#page-member-index", function (e, id, page) {
-        $(".c1-101 .tab-item .icon-info").css("background-image", "url(" + CONFIG.RESURL + "img/footer33.png)");
-        $(".c1-101 .tab-item .tab-info").css("color", "red");
-
         var hour = (new Date()).getHours();
         if (hour <= 6) {
             hour = '凌晨好！';
@@ -1278,6 +963,7 @@ $(function () {
         });
 
         $("#buttonsTabList .button").click(function () {
+            Tools.alert("df");
             var id = $(this).attr("data-id");
             if (id == "btn-today") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -1286,6 +972,7 @@ $(function () {
                 pageIndex = 1;
                 startTime = dateFormat(getTodayStart(), "yyyy-mm-dd HH:MM");
                 endTime = dateFormat(getTodayEnd(), "yyyy-mm-dd HH:MM");
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-yesterday") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -1294,6 +981,7 @@ $(function () {
                 pageIndex = 1;
                 startTime = dateFormat(getYesterdayStart(), "yyyy-mm-dd HH:MM");
                 endTime = dateFormat(getYesterdayEnd(), "yyyy-mm-dd HH:MM");
+                nowDataFlag = true;
                 getData(true);
             } else if (id == "btn-month") {
                 $("#buttonsTabList .button.active").removeClass("active");
@@ -2736,78 +2424,6 @@ $(function () {
 
     // 购彩大厅首页
     $(document).on("pageInit", "#page-gcdt", function (e, id, page) {
-        $(".re-con-out .btn-xl-ssc").click(function(){
-            var sp = $(".ssc-div-content").attr("sp");
-            if(sp == 0){
-                $(".ssc-div-content").hide();
-                $(".ssc-div-content").attr("sp","1");
-                $(".btn-xl-ssc .img_jian").addClass("goucai_sj");
-
-            }else if(sp == 1){
-                $(".ssc-div-content").show();
-                $(".ssc-div-content").attr("sp","0");
-                $(".btn-xl-ssc .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".re-con-out .btn-xl-k3").click(function(){
-            var sp = $(".k3-div-content").attr("sp");
-            if(sp == 0){
-                $(".k3-div-content").hide();
-                $(".k3-div-content").attr("sp","1");
-                $(".btn-xl-k3 .img_jian").addClass("goucai_sj");
-
-            }else if(sp == 1){
-                $(".k3-div-content").show();
-                $(".k3-div-content").attr("sp","0");
-                $(".btn-xl-k3 .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".re-con-out .btn-xl-pk10").click(function(){
-            var sp = $(".pk10-div-content").attr("sp");
-            if(sp == 0){
-                $(".pk10-div-content").hide();
-                $(".pk10-div-content").attr("sp","1");
-                $(".btn-xl-pk10 .img_jian").addClass("goucai_sj");
-
-            }else if(sp == 1){
-                $(".pk10-div-content").show();
-                $(".pk10-div-content").attr("sp","0");
-                $(".btn-xl-pk10 .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".re-con-out .btn-xl-gp").click(function(){
-            var sp = $(".gp-div-content").attr("sp");
-            if(sp == 0){
-                $(".gp-div-content").hide();
-                $(".gp-div-content").attr("sp","1");
-                $(".btn-xl-gp .img_jian").addClass("goucai_sj");
-
-            }else if(sp == 1){
-                $(".gp-div-content").show();
-                $(".gp-div-content").attr("sp","0");
-                $(".btn-xl-gp .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".re-con-out .btn-xl-dp").click(function(){
-            var sp = $(".dp-div-content").attr("sp");
-            if(sp == 0){
-                $(".dp-div-content").hide();
-                $(".dp-div-content").attr("sp","1");
-                $(".btn-xl-dp .img_jian").addClass("goucai_sj");
-
-            }else if(sp == 1){
-                $(".dp-div-content").show();
-                $(".dp-div-content").attr("sp","0");
-                $(".btn-xl-dp .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".c1-101 .tab-item .icon-gc").css("background-image", "url(" + CONFIG.RESURL + "img/footer_100.png)");
-        $(".c1-101 .tab-item .tab-gcdt").css("color","red");
         // // 公告滚动
         // var mySwiper = new Swiper('.swiper-container', {
         //     pagination: '.swiper-pagination',
@@ -2867,10 +2483,10 @@ $(function () {
                                 if (json.opening == false) {
                                     flagArr[playGroupId] = false;
 
-                                    // $(obj).find(".info").remove();
-                                    // $(obj).find(".time").addClass('tingshou');
-                                    $(obj).find(".jc").html("<span class='goucai_biaoqian'>停售</span>");
-                                    // $(obj).attr("data-is_enable", 0);
+                                    $(obj).find(".info").remove();
+                                    $(obj).find(".time").addClass('tingshou');
+                                    $(obj).find(".time").html("已停售");
+                                    $(obj).attr("data-is_enable", 0);
                                     return;
                                 }
 
@@ -5480,7 +5096,11 @@ $(function () {
                         }
                     });
 
-                    $("#dataList .list-container").append(str);
+                    if(nowDataFlag == true){
+                        $("#dataList .list-container").append(str);
+                    }else{
+                        $("#dataList .list-container").html(str);
+                    }
 
                     if (json.total == 0) {
                         $("#dataList").hide();
@@ -5502,7 +5122,10 @@ $(function () {
                         $('.infinite-scroll-preloader').show();
                     }
 
-                    pageIndex = json.nextPage;
+                    //当不是最新数据选项时无限制加载数据
+                    if(nowDataFlag == true){
+                        pageIndex = json.nextPage;
+                    }
                 },
                 error: function (a, b, c) {
                     if (b == 'timeout') {
@@ -5518,6 +5141,9 @@ $(function () {
                     $.refreshScroller();
                     // 下拉刷新重置
                     $.pullToRefreshDone('.pull-to-refresh-content');
+                    if(nowDataFlag == false){
+                        $('.infinite-scroll-preloader').hide();
+                    }
                 }
             });
         }
@@ -5537,7 +5163,16 @@ $(function () {
 
         $("#buttonsTabList .button").click(function () {
             var id = $(this).attr("data-id");
-            if (id == "btn-today") {
+            if (id == "btn-now") {
+                $("#buttonsTabList .button.active").removeClass("active");
+                $(this).addClass("active");
+
+                pageIndex = 1;
+                openDate = dateFormat(getTodayStart(), "yyyy-mm-dd");
+                startTime = '';
+                endTime = '';
+                getData(true);
+            }else if (id == "btn-today") {
                 $("#buttonsTabList .button.active").removeClass("active");
                 $(this).addClass("active");
 
@@ -6049,120 +5684,13 @@ $(function () {
         // 预加载
         getData();
     });
-
-
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-all", function (e, id, page) {
-        $(".c1-101 .tab-item .icon-kj").css("background-image", "url(" + CONFIG.RESURL + "img/footer44.png)");
-        $(".c1-101 .tab-item .tab-kj").css("color", "red");
-
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            paginationClickable: true,
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: 2500,
-            autoplayDisableOnInteraction: false
-        });
-
-
-        $(".outer .alert_main ul li").each(function () {
-            var f = $(this).hasClass('lihover');
-            if (!f) {
-                $(this).addClass('lihover');
-            }
-        });
-
-        $(".alert_ul li").click(function () {
-            var flag_TF = $(this).hasClass('lihover');
-            if (flag_TF) {
-                $(this).removeClass('lihover');
-            } else {
-                $(this).addClass('lihover');
-            }
-        });
-
-        // 全选择
-        $(".quanxuan").click(function () {
-            $(".alert_ul li").each(function () {
-                var flag_TF = $(this).hasClass('lihover');
-                if (!flag_TF) {
-                    $(this).addClass('lihover');
-                }
-            });
-        });
-
-        // 反选
-        $(".fangxuan").click(function () {
-            $(".alert_ul li").each(function () {
-                var flag_TF = $(this).hasClass('lihover');
-                if (flag_TF) {
-                    $(this).removeClass('lihover');
-                }
-            });
-        });
-
-        // 确认按钮
-        $(".alertbtn").click(function () {
-            var idArr = [];
-            $(".outer .alert_main ul li.lihover").each(function () {
-                var pid = $(this).data("id");
-                idArr.push(pid);
-            });
-            Tools.setCookie("idStr", idArr.join(","));
-
-            getKjjgSetData(idArr);
-
-            //隐藏选框和蒙版框
-            $(".outer").hide();
-            $(".re-modal").hide();
-        });
-
-        $(".btn_xz").click(function () {
-            $(".outer").removeClass('vipcp-hide');
-            $(".re-modal").removeClass('vipcp-hide');
-
-            var cookieVal = Tools.getCookie("idStr");
-            if (cookieVal != null) {
-                $(".outer .alert_main ul li").each(function () {
-                    var f = $(this).hasClass('lihover');
-                    if (f) {
-                        $(this).removeClass('lihover');
-                    }
-                });
-
-                var idArr = cookieVal.split(",");
-                for (var n = 0; n < idArr.length; n++) {
-                    $(".outer .alert_main ul li[data-id='" + idArr[n] + "']").addClass('lihover');
-                }
-            }
-        });
-
-
         // 无限滚动
         var loading = false;    // 加载flag
-        getData(true); //获取开奖结果
-
-        //显示选中设置相应开奖结果
-        function getKjjgSetData(arrTemp) {
-            //移除所有彩种开奖
-            $(".list-block .re-l-con li").each(function () {
-                var f = $(this).hasClass('vipcp-hide');
-                if (!f) {
-                    $(this).addClass('vipcp-hide');
-                }
-            });
-
-            //根据选中id 显示相对应开奖彩种
-            for (var n = 0; n < arrTemp.length; n++) {
-                $(".list-block .re-l-con li[data-id='" + arrTemp[n] + "']").removeClass('vipcp-hide');
-            }
-        }
+        var type = 0;
 
         function getData(isInit) {
-            var type = 0;
             if (loading) return;
             ajaxRequest({
                 url: config.basePath + "ssc/ajaxGetAllDataHistory.json",
@@ -6182,7 +5710,6 @@ $(function () {
                     }
 
                     var str = "";
-
                     $.each(json.sscHistoryList, function (index, value) {
                         var tmpPlayGroupId = Tools.parseInt(value.playGroupId);
                         if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17]) >= 0) {
@@ -6443,11 +5970,6 @@ $(function () {
                     loading = false;
                     // 下拉刷新重置
                     $.pullToRefreshDone('.pull-to-refresh-content');
-                    var cookieVal = Tools.getCookie("idStr");
-                    if (cookieVal != null) {
-                        var idArr = cookieVal.split(",");
-                        getKjjgSetData(idArr);
-                    }
                 }
             });
         }
@@ -6464,31 +5986,31 @@ $(function () {
             getData(true);
         });
 
-        // $("#buttonsTabList .button").click(function () {
-        //     var id = $(this).attr("data-id");
-        //     if (id == "btn-all") {
-        //         $("#buttonsTabList .button.active").removeClass("active");
-        //         $(this).addClass("active");
-        //
-        //         type = 0;
-        //         getData(true);
-        //     } else if (id == "btn-gpc") {
-        //         $("#buttonsTabList .button.active").removeClass("active");
-        //         $(this).addClass("active");
-        //
-        //         type = 1;
-        //         getData(true);
-        //     } else if (id == "btn-dpc") {
-        //         $("#buttonsTabList .button.active").removeClass("active");
-        //         $(this).addClass("active");
-        //
-        //         type = 2;
-        //         getData(true);
-        //     }
-        // });
-        //
-        // // 预加载
-        // $("#buttonsTabList .button").eq(0).trigger("click");
+        $("#buttonsTabList .button").click(function () {
+            var id = $(this).attr("data-id");
+            if (id == "btn-all") {
+                $("#buttonsTabList .button.active").removeClass("active");
+                $(this).addClass("active");
+
+                type = 0;
+                getData(true);
+            } else if (id == "btn-gpc") {
+                $("#buttonsTabList .button.active").removeClass("active");
+                $(this).addClass("active");
+
+                type = 1;
+                getData(true);
+            } else if (id == "btn-dpc") {
+                $("#buttonsTabList .button.active").removeClass("active");
+                $(this).addClass("active");
+
+                type = 2;
+                getData(true);
+            }
+        });
+
+        // 预加载
+        $("#buttonsTabList .button").eq(0).trigger("click");
     });
 
     // 开奖记录
@@ -7153,7 +6675,7 @@ function kefuToast() {
     Tools.toast("请联系在线客服");
 }
 
-$(".title").click(
+$(".title").click(  // 官方玩法点击事件
     function () {
         if ($(".content").is(".show_hide")) {
             $(".page").find(".show_hide").removeClass("show_hide");
@@ -7167,14 +6689,23 @@ $(".title").click(
     }
 );
 
-
-//实现登录处的记住密码勾选事件
-$(".remenber span").click(
+$(".cus-tabs-scroll .xuan").click(    //(直选方式)点击事件
     function () {
-        if ($(".content .remenber span img").is(".show_hide")) {
-            $(".content .remenber span").find("img").removeClass("show_hide");
+        if ($(".coveron1").is(".hw") && $(".cover1").is(".hw")) { //进行判断，当满足两个条件时为 true
+            $(".page").find(".hw").removeClass("hw");
         } else {
-            $(".content .remenber span").find("img").addClass("show_hide");
+            $(".page").find(".coveron1").addClass("hw");
+            $(".page").find(".cover1").addClass("hw");
         }
     }
 );
+
+$(".cus-area-box .staer span").click(      //玩法选择点击事件
+    function () {
+        $(this).siblings("span").removeClass("active"); //删除其他兄弟元素的样式
+        $(this).addClass("active");   //添加当前元素的样式
+    }
+);
+
+
+
