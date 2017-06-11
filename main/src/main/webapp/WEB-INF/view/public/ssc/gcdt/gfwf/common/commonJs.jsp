@@ -47,7 +47,7 @@
             return 0.1;
         } else if (mode == 3) { // 分
             return 0.01;
-        } else if (mode == 4) {  // 厘
+        } else if (mode == 4) { // 厘
             return 0.001;
         }
         return;

@@ -64,7 +64,7 @@ function changeStateCommon(){
     var p1_i2 = totalMoney * num;
     p1_i2 = isNaN(p1_i2) == true ? "0.0000" : p1_i2;
     $('.p1 .i_fanD').html(p1_i2.toFixed(2));
-    $('.p1 .i_money').html(totalMoney);
+    $('.p1 .i_money').html(parseFloat(totalMoney).toFixed(2));
 }
 
 // 数字批量选择算法
@@ -335,11 +335,10 @@ stateTouZhu(flag_str) {
     var strFd = $(".fandian-bfb").html();
     var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
     var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
-    console.log($("#inputBeishu").data("beishu"));
     var p1_i2 = totalMoney * num;
     p1_i2 = isNaN(p1_i2) == true ? "0.0000" :p1_i2;
     $('.p1 .i_fanD').html(p1_i2.toFixed(2));
-    $('.p1 .i_money').html(totalMoney);
+    $('.p1 .i_money').html(parseFloat(totalMoney).toFixed(2));
 }
 
 //清除状态

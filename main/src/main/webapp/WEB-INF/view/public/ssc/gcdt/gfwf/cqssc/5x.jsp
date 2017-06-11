@@ -280,8 +280,11 @@
 </script>
 <script>
     function getSuiji(total) {
-        var betFormList = suiji(total);
-        addYuxuan(betFormList);
+        var betFormList = [];
+        betFormList = suiji(total);
+        $.each(betFormList, function (index, value) {
+            addYuxuan(value);
+        })
         calcAll();
     }
 
@@ -295,19 +298,8 @@
         calc();
     }
     function clearZhudan() {
-        $("#zhudanList li:not('.head')").remove();
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
         calcAll();
-    }
-
-    function calc() {
-        var money = $("#inputMoney").data("money");
-        var beishu = $("#inputBeishu").data("beishu");
-        var zhushu = $("#zhushuInfo").data("zhushu");
-
-        var totalMoney = mul(beishu * zhushu, money);
-
-        $("#beishuInfo").html(beishu);
-        $("#totalMoneyInfo").data("total_money", totalMoney).html(totalMoney);
     }
 
     function clearTextarea() {
@@ -525,7 +517,6 @@
 
 
     function suiji(total) {
-
         var result = [];
         var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
         var flag_dan_zhi = "dan";//默认为单式
@@ -588,8 +579,9 @@
             obj.betPlayPl = $(".jiangjin-change").data("value");
             // 赔率ID
             obj.betPlayPlId = getPlayPlId();
+            result.push(obj);
         }
-        return obj;
+        return result;
     }
 </script>
 <script>
@@ -637,7 +629,6 @@
             $(this).parent().hide();
 
             $(this).parent().parent().find('input').data("money", parseInt(text));
-            calc();
             changeStateCommon();
         });
 
@@ -661,8 +652,6 @@
             --val;
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
-
-            calc();
             changeStateCommon();
         });
 
@@ -676,8 +665,6 @@
             ++val;
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
-
-            calc();
             changeStateCommon();
         });
 
