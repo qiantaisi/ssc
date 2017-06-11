@@ -295,7 +295,6 @@
         if(typeof clearStateTouZhu == 'function'){
             clearStateTouZhu();
         }
-        calc();
     }
     function clearZhudan() {
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
