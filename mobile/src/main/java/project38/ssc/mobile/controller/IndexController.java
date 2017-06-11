@@ -107,7 +107,7 @@ public class IndexController extends BaseController{
     public ModelAndView yhhd() {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null,companyShortName).getPromotionList());
+        modelMap.put("promotionList", ApiUtils.getPromotion(companyShortName).getPromotionList());
         return this.renderView("index/yhhd", modelMap);
     }
 

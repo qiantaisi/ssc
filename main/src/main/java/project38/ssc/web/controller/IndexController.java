@@ -107,7 +107,7 @@ public class IndexController extends BaseController{
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null,companyShortName).getPromotionList());
+        modelMap.put("promotionList", ApiUtils.getPromotion(companyShortName).getPromotionList());
         modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("index/yhhd", modelMap);
     }

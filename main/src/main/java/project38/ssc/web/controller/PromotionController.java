@@ -26,6 +26,6 @@ public class PromotionController extends BaseController {
     @ResponseBody
     public PromotionResult getList(Integer pageIndex, Integer pageSize, Date startTime, Date endTime ) {
         String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getPromotion(pageIndex, pageSize, startTime, endTime, companyShortName);
+        return ApiUtils.getPromotion(companyShortName);
     }
 }

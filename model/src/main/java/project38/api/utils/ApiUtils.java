@@ -456,15 +456,11 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SAFE_INFO, paramsMap, companyShortName), SafeInfoResult.class);
     }
 
-    public static PromotionResult getPromotion(Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String companyShortName) {
+    public static PromotionResult getPromotion(String companyShortName) {
         if (IS_DEBUG) {
             return new PromotionResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        paramsMap.put("pageIndex", pageIndex);
-        paramsMap.put("pageSize", pageSize);
-        paramsMap.put("startTime", formatDate(startTime, "yyyy-MM-dd HH:mm:ss"));
-        paramsMap.put("endTime", formatDate(endTime, "yyyy-MM-dd HH:mm:ss"));
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_PROMOTION, paramsMap, companyShortName), PromotionResult.class);
     }
 

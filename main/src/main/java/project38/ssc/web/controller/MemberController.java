@@ -242,7 +242,7 @@ public class MemberController extends BaseController {
         modelMap.put("bindStatus", ApiUtils.getBindStatus(uid, token, companyShortName));
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("userInboxList", ApiUtils.getUserInboxList(uid, token, null, null, null, 1, 4, companyShortName).getUserInboxList());
-        modelMap.put("promotionList", ApiUtils.getPromotion(1, 4, null, null, companyShortName).getPromotionList());
+        modelMap.put("promotionList", ApiUtils.getPromotion(companyShortName).getPromotionList());
 
         return this.renderPublicView("member/main", modelMap);
     }
