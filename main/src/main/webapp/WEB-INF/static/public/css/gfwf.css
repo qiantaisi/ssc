@@ -401,10 +401,11 @@
     -o-transform: scale(1.3);
     transform: scale(1.3);
     border: 1px #e84f31 solid;
+    background: white;
 }
 .Single .layout .Pick.cl-1002 ul li span{height:auto;width:auto;}
 .Single .layout .Pick ul li span.acti i{background:#e84f31;border:1px solid #e84f31}
-.Single .layout .Pick ul li b i{margin:15px 0}
+.Single .layout .Pick ul li b i{margin:12px 0}
 .Single .layout .Pick p.p1 span.fr a var{padding:10px 20px;}
 .pointer{
     cursor:pointer!important;
@@ -415,3 +416,16 @@
 #inputMoney{
     background: white;
 }
+.renumHeigth{
+    height: 35px;
+}
+.Single .layout .Pick ul li .tsh-b i{
+    margin: 5px 0!important;
+}
+.Single .layout .Pick ul li .tsh-b{
+    margin-right: 33px!important;
+}
+.Single .layout .Pick ul li span:hover{
+    border-color: red;
+}
+

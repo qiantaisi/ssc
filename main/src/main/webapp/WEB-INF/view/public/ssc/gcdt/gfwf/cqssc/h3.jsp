@@ -11,30 +11,31 @@
         <li>
             <b>后三直选</b>
             <p class="btn_h3_zx">
-                <span class="acti" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span data-name="hszh"><a href="javascript:void(0)">后三组合</a></span>
-                <span data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
-                <span data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
+
+                <span class="playPlIdBtn acti" data-play_pl_id="14211" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14212" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14213" data-name="hszh"><a href="javascript:void(0)">后三组合</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14214" data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14215" data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
             </p>
         </li>
         <li>
             <b>后三组选</b>
             <p class="btn_h3_zux">
-                <span data-name="zsfs"><a href="javascript:void(0)">组三复式</a></span>
-                <span data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
-                <span data-name="zlfs"><a href="javascript:void(0)">组六复式</a></span>
-                <span data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
-                <span data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
-                <span data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <span data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14216" data-name="zsfs"><a href="javascript:void(0)">组三复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14217" data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14218" data-name="zlfs"><a href="javascript:void(0)">组六复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14219" data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14220" data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14221" data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14222" data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
             </p>
         </li>
         <li>
             <b>后三其它</b>
             <p class="btn_h3_qt">
-                <span data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
-                <span data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14223" data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14224" data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
             </p>
         </li>
     </ul>
@@ -55,16 +56,18 @@
     <ul>
         <li data-name="百">
             <b><i>百位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -76,16 +79,18 @@
         </li>
         <li data-name="十">
             <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -97,16 +102,18 @@
         </li>
         <li data-name="个">
             <b><i>个位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -163,16 +170,18 @@
     <ul>
         <li data-name="百">
             <b><i>百位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -184,16 +193,18 @@
         </li>
         <li data-name="十">
             <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -205,16 +216,18 @@
         </li>
         <li data-name="个">
             <b><i>个位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -243,34 +256,38 @@
     <ul>
         <li class="li1005_hezhi" data-name="和值">
             <b><i>和值</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <span><i>10</i></span>
-            <span><i>11</i></span>
-            <span><i>12</i></span>
-            <span><i>13</i></span>
-            <span><i>14</i></span>
-            <span><i>15</i></span>
-            <span><i>16</i></span>
-            <span><i>17</i></span>
-            <span><i>18</i></span>
-            <span><i>19</i></span>
-            <span><i>20</i></span>
-            <span><i>21</i></span>
-            <span><i>22</i></span>
-            <span><i>23</i></span>
-            <span><i>24</i></span>
-            <span><i>25</i></span>
-            <span><i>26</i></span>
-            <span><i>27</i></span>
+            <var class="numLine renumHeigth">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+                <span><i>10</i></span>
+                <span><i>11</i></span>
+                <span><i>12</i></span>
+                <span><i>13</i></span>
+            </var>
+            <var class="numLine renumHeigth">
+                <span><i>14</i></span>
+                <span><i>15</i></span>
+                <span><i>16</i></span>
+                <span><i>17</i></span>
+                <span><i>18</i></span>
+                <span><i>19</i></span>
+                <span><i>20</i></span>
+                <span><i>21</i></span>
+                <span><i>22</i></span>
+                <span><i>23</i></span>
+                <span><i>24</i></span>
+                <span><i>25</i></span>
+                <span><i>26</i></span>
+                <span><i>27</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -291,16 +308,18 @@
     <ul>
         <li data-name="跨度">
             <b><i>跨度</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -329,16 +348,18 @@
     <ul>
         <li data-name="组三">
             <b><i>组三</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -396,16 +417,18 @@
     <ul>
         <li data-name="组六">
             <b><i>组六</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -491,32 +514,36 @@
     <ul>
         <li class="li1012_hezhi" data-name="和值">
             <b><i>和值</i></b>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <span><i>10</i></span>
-            <span><i>11</i></span>
-            <span><i>12</i></span>
-            <span><i>13</i></span>
-            <span><i>14</i></span>
-            <span><i>15</i></span>
-            <span><i>16</i></span>
-            <span><i>17</i></span>
-            <span><i>18</i></span>
-            <span><i>19</i></span>
-            <span><i>20</i></span>
-            <span><i>21</i></span>
-            <span><i>22</i></span>
-            <span><i>23</i></span>
-            <span><i>24</i></span>
-            <span><i>25</i></span>
-            <span><i>26</i></span>
+            <var class="numLine renumHeigth">
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+                <span><i>10</i></span>
+                <span><i>11</i></span>
+                <span><i>12</i></span>
+                <span><i>13</i></span>
+            </var>
+            <var class="numLine renumHeigth">
+                <span><i>14</i></span>
+                <span><i>15</i></span>
+                <span><i>16</i></span>
+                <span><i>17</i></span>
+                <span><i>18</i></span>
+                <span><i>19</i></span>
+                <span><i>20</i></span>
+                <span><i>21</i></span>
+                <span><i>22</i></span>
+                <span><i>23</i></span>
+                <span><i>24</i></span>
+                <span><i>25</i></span>
+                <span><i>26</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -538,16 +565,18 @@
     <ul>
         <li data-name="包胆">
             <b><i>包胆</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -568,16 +597,18 @@
     <ul>
         <li class="hzws_li" data-name="和值尾数">
             <b><i>和值尾数</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -597,7 +628,7 @@
     </p>
     <ul>
         <li class="hzws_li tsh_li" data-name="特殊号">
-            <b><i>特殊号</i></b>
+            <b class="tsh-b"><i>特殊号</i></b>
             <span>豹子</span>
             <span>顺子</span>
             <span>对子</span>

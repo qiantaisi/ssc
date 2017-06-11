@@ -40,6 +40,25 @@
         );
     }
 
+    function gfwf_4xfs(
+        qianArr,
+        baiArr,
+        shiArr,
+        geArr
+    ) {
+        var tmpStr_1 = qianArr.join(",");
+        var tmpStr_2 = baiArr.join(",");
+        var tmpStr_3 = shiArr.join(",");
+        var tmpStr_4 = geArr.join(",");
+
+        return "{0}|{1}|{2}|{3}".format(
+            tmpStr_1,
+            tmpStr_2,
+            tmpStr_3,
+            tmpStr_4
+        );
+    }
+
     function getMode(mode) {
         if (mode == 1) {    // 元
             return 1;
