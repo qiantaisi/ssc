@@ -406,3 +406,12 @@
 .Single .layout .Pick ul li span.acti i{background:#e84f31;border:1px solid #e84f31}
 .Single .layout .Pick ul li b i{margin:15px 0}
 .Single .layout .Pick p.p1 span.fr a var{padding:10px 20px;}
+.pointer{
+    cursor:pointer!important;
+}
+.Single .layout .add_spot .releft{
+    width: 692px!important;
+}
+#inputMoney{
+    background: white;
+}

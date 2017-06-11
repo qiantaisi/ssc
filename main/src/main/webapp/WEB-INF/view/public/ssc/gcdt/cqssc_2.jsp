@@ -213,7 +213,7 @@
             {{betZhushu}}注
         </td>
         <td class="span_4">
-            {{betMode}}
+            {{betPerMoney}}
         </td>
         <td class="span_5">
             {{betPlayPl}}/{{betFandian}}%
@@ -248,6 +248,8 @@
                     showFandian: $(this).data("bet_fandian"),
                     showPlayPl: $(this).data("bet_play_pl"),
                     betPerMoney: $(this).data("bet_per_money"),
+                    betTotalMoney: $(this).data("bet_total_money"),
+                    betZhushu: $(this).data("bet_zhushu"),
                     showContent: $(this).data("show_content")
                 })
                 $("body").append(html);
@@ -271,18 +273,10 @@
                 <span>号码：{{showContent}}</span>
             </div>
             <div class="line">
-                <span>模式：
-                    {{if showMode == 1}}
-                    元
-                    {{else if showMode == 2}}
-                    角
-                    {{else if showMode == 3}}
-                    分
-                    {{/if}}
-                    模式, 奖金&nbsp;{{showPlayPl}}, 返点&nbsp;{{showFandian}}%</span>
+                <span>模式：{{if showMode == 1}}元{{else if showMode == 2}}角{{else if showMode == 3}}分{{/if}}模式, 奖金&nbsp;{{showPlayPl}}, 返点&nbsp;{{showFandian}}%</span>
             </div>
             <div class="line">
-                <span>包含&nbsp;1&nbsp;注，每注金额&nbsp;{{betPerMoney}}&nbsp;
+                <span>包含&nbsp;{{betZhushu}}&nbsp;注，每注金额&nbsp;{{betPerMoney}}&nbsp;
                 {{if showMode == 1}}
                 元
                 {{else if showMode == 2}}
@@ -293,7 +287,7 @@
                 </span>
             </div>
             <div class="line">
-                <span>共计&nbsp;1111&nbsp;元</span>
+                <span>共计&nbsp;{{betTotalMoney}}&nbsp;元</span>
             </div>
         </div>
     </div>
