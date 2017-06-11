@@ -22,27 +22,27 @@
             </a>
             <h1 class="title title_cq">
                 重庆时时彩
-                <%--<div class="gfwf_triangle_down">--%>
-                    <%--&lt;%&ndash;画出一个向下的三角形图标&ndash;%&gt;--%>
-                <%--</div>--%>
+                <div class="gfwf_triangle_down">
+                    <%--画出一个向下的三角形图标--%>
+                </div>
             </h1>
         </header>
         <c:import url="common/commonBet.jsp"/>
-        <%--<div class="gfwf_consele">--%>
-            <%--<div class="gfwf_one">--%>
-                <%--<div class="border_one color_one">--%>
-                    <%--<a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-            <%--<div class="gfwf_two">--%>
-                <%--<div class="border_two color_two">--%>
-                    <%--<a class="F2_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-        <%--<div class="gfwf_mask">--%>
-            <%--&lt;%&ndash;实现蒙版&ndash;%&gt;--%>
-        <%--</div>--%>
+        <div class="gfwf_consele">
+            <div class="gfwf_one">
+                <div class="border_one color_one">
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
+                </div>
+            </div>
+            <div class="gfwf_two">
+                <div class="border_two color_two">
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
+                </div>
+            </div>
+        </div>
+        <div class="gfwf_mask">
+            <%--实现蒙版--%>
+        </div>
         <div class="content cl-601 show_hide">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
