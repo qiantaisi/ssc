@@ -7380,3 +7380,46 @@ function getThreeNewArrs(baiA, shiA, geA) {
     return tempArr;
 }
 
+// 数字批量选择算法
+function selectFun_1(obj) {
+    $(obj).find(".active_gfwf").removeClass("active_gfwf");
+    $(obj).addClass("active_gfwf");
+
+    var objArr = $(obj).parent().parent().find("span");
+    objArr.each(function() {
+        $(this).removeClass("acti");
+        var num = parseInt($(this).find("i").html());
+        if ($.inArray(num, [0,1,2,3,4,5,6,7,8,9]) >= 0) {
+            $(this).addClass("acti");
+        }
+    });
+    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
+    if(typeof stateTouZhu == "function"){
+        stateTouZhu(flag_name);
+    }
+}
+
+function selectFun_2(obj){
+    $(obj).find(".active_gfwf").removeClass("active_gfwf");
+    $(obj).addClass("active_gfwf");
+}
+
+function selectFun_3(obj){
+    $(obj).find(".active_gfwf").removeClass("active_gfwf");
+    $(obj).addClass("active_gfwf");
+}
+
+function selectFun_4(obj){
+    $(obj).find(".active_gfwf").removeClass("active_gfwf");
+    $(obj).addClass("active_gfwf");
+}
+
+function selectFun_5(obj){
+    $(obj).find(".active_gfwf").removeClass("active_gfwf");
+    $(obj).addClass("active_gfwf");
+}
+
+function selectFun_6(obj){
+    $(obj).find(".active_gfwf").removeClass("active_gfwf");
+    $(obj).addClass("active_gfwf");
+}

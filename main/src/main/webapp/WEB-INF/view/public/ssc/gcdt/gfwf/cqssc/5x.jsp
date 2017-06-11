@@ -1,7 +1,7 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -21,7 +21,8 @@
     <p class="p1">
         <span class="fr fl cl-1001">
             从万位、千位、百位、十位、个位各选一个号码组成一注。
-            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+            <a>
+                <img src="${resPath}img/ico60.png" alt="">选号规则
                 <var>投注方案：13456 开奖号码：13456，即中五星直选。</var>
             </a>
             <a>
