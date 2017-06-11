@@ -259,15 +259,20 @@
         //输入倍数十重新计算
         $("#inputBeishu").keyup(function(){
             var valStr = $("#inputBeishu").val();
-            if(valStr == "" || valStr == null || typeof valStr == "undefined"){
-                $("#inputBeishu").val("0");
-            }
             $("#inputBeishu").data("beishu",$("#inputBeishu").val());
+            if(valStr != ""){
+                if (typeof $('.recl-1003').attr('statef') != 'undefined') {
+                    stateTouZhu('dan');
+                } else {
+                    stateTouZhu('fu');
+                }
+            }
+        });
 
-            if (typeof $('.recl-1003').attr('statef') != 'undefined') {
-                stateTouZhu('dan');
-            } else {
-                stateTouZhu('fu');
+        $("#inputBeishu").blur(function(){
+            var valStr = $("#inputBeishu").val();
+            if(valStr == "" || valStr == null || typeof valStr == "undefined"){
+                $("#inputBeishu").val("1");
             }
         });
 
@@ -575,7 +580,6 @@
             obj.betMode = 1;
             // 每单总金额
             obj.betTotalMoney = obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
-            console.log(obj.zhushu );
             // 彩种
             obj.betPlayGroupId = playGroupId;
             // 返点比例
