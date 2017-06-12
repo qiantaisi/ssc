@@ -13,7 +13,14 @@
     <div class="cus_common">
         <div class="wan_top">
             <span class="wanwei">千位</span>
-            <span class="xz"><i>全</i><i>大</i><i>小</i><i>奇</i><i>偶</i><i>清</i></span>
+            <span class="xz">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </span>
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">
@@ -62,7 +69,14 @@
     <div class="cus_common">
         <div class="wan_top">
             <span class="wanwei">百位</span>
-            <span class="xz"><i>全</i><i>大</i><i>小</i><i>奇</i><i>偶</i><i>清</i></span>
+            <span class="xz">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </span>
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">
@@ -111,7 +125,14 @@
     <div class="cus_common">
         <div class="wan_top">
             <span class="wanwei">十位</span>
-            <span class="xz"><i>全</i><i>大</i><i>小</i><i>奇</i><i>偶</i><i>清</i></span>
+            <span class="xz">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </span>
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">
@@ -161,7 +182,14 @@
     <div class="cus_common">
         <div class="wan_top">
             <span class="wanwei">个位</span>
-            <span class="xz"><i>全</i><i>大</i><i>小</i><i>奇</i><i>偶</i><i>清</i></span>
+            <span class="xz">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_2(this)">大</i>
+                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_4(this)">奇</i>
+                <i onclick="selectFun_5(this)">偶</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </span>
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">
