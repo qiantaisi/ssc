@@ -1836,46 +1836,46 @@ $(function () {
 
         $("#ssc-parent-menu .cl-602 a").click(
             function () {
-            var type = $(this).attr("data-type");
-            if (type == "page") {
-                var url = $(this).attr("data-url");
-                $("#sub-menu-list .cl-610").hide();
+                var type = $(this).attr("data-type");
+                if (type == "page") {
+                    var url = $(this).attr("data-url");
+                    $("#sub-menu-list .cl-610").hide();
 
-                var o = $(this);
-                // sscFengPan();
-                getSubSscPage(url, function () {
+                    var o = $(this);
+                    // sscFengPan();
+                    getSubSscPage(url, function () {
+                        $(o).parent().find(".active").removeClass("active");
+                        $(o).addClass("active");
+                        // 重置
+                        resetSelect();
+
+                        // 获取赔率
+                        querySscPlData();
+                    });
+                } else if (type == "sub-menu") {
+                    var subMenuId = $(this).attr("data-sub_menu_id");
+                    $("#sub-menu-list .cl-610").hide();
+                    $("#" + subMenuId).show();
+                    var url = $("#sub-menu-list #" + subMenuId + " .cl-602 a:first-child").attr("data-url");
+                    // sscFengPan();
+                    getSubSscPage(url, function () {
+                        $("#sub-menu-list" + " #" + subMenuId + " .cl-602").find(".active").removeClass("active");
+                        $("#sub-menu-list" + " #" + subMenuId + " .cl-602 a:first-child").addClass("active");
+                        // 重置
+                        resetSelect();
+
+                        // 获取赔率
+                        querySscPlData();
+                    });
+
+                    var o = $(this);
                     $(o).parent().find(".active").removeClass("active");
                     $(o).addClass("active");
-                    // 重置
-                    resetSelect();
 
-                    // 获取赔率
-                    querySscPlData();
-                });
-            } else if (type == "sub-menu") {
-                var subMenuId = $(this).attr("data-sub_menu_id");
-                $("#sub-menu-list .cl-610").hide();
-                $("#" + subMenuId).show();
-                 var url = $("#sub-menu-list #" + subMenuId + " .cl-602 a:first-child").attr("data-url");
-                // sscFengPan();
-                getSubSscPage(url, function () {
-                    $("#sub-menu-list" + " #" + subMenuId + " .cl-602").find(".active").removeClass("active");
-                    $("#sub-menu-list" + " #" + subMenuId + " .cl-602 a:first-child").addClass("active");
-                    // 重置
-                    resetSelect();
-
-                    // 获取赔率
-                    querySscPlData();
-                });
-
-                var o = $(this);
-                $(o).parent().find(".active").removeClass("active");
-                $(o).addClass("active");
-
-            } else {
-                return;
-            }
-        });
+                } else {
+                    return;
+                }
+            });
         $("#sub-menu-list .cl-602 a").click(function () {
             var type = $(this).attr("data-type");
             var url = $(this).attr("data-url");
@@ -1904,12 +1904,16 @@ $(function () {
             }
             if (globalLeftTime < 0) {
                 querySscLeftTime(playGroupId);
-                if(globalOpening){
+                if (globalOpening) {
                     showClearBetTemplate();
                     //定义弹框宽度大小
-                    $("#layui-m-layer" + layerId + " .layui-m-layerchild").css("width","85%");
-                    $("#layui-m-layer" + layerId + " .layui-m-layerchild h3").css({"font-size":"0.68rem","height":"1.6rem!important","line-height":"1.6rem!important"});
-                    $("#layui-m-layer" + layerId + " .btn_close").click(function(){
+                    $("#layui-m-layer" + layerId + " .layui-m-layerchild").css("width", "85%");
+                    $("#layui-m-layer" + layerId + " .layui-m-layerchild h3").css({
+                        "font-size": "0.68rem",
+                        "height": "1.6rem!important",
+                        "line-height": "1.6rem!important"
+                    });
+                    $("#layui-m-layer" + layerId + " .btn_close").click(function () {
                         if (layerId != null) {
                             layer.close(layerId);
                             layerId = null;
@@ -1964,6 +1968,7 @@ $(function () {
     // 清除内容提示框
     var layerId = null;
     var T = null;
+
     function showClearBetTemplate() {
         if (layerId != null) {
             return;
@@ -1994,14 +1999,14 @@ $(function () {
         layerId = layer.open({
             type: 0, //默认为 0 信息框
             time: 15000,
-            title: '温馨提示'+ '<a href="javascript:void(0)" class="close-img btn_close"><span></span></a>',
+            title: '温馨提示' + '<a href="javascript:void(0)" class="close-img btn_close"><span></span></a>',
             shadeClose: false,
             content: clearBet_template
         });
 
 
         var time = 5;
-        T = setInterval(function() {
+        T = setInterval(function () {
             if (time == 0) {
                 closeClearBetTemplate("cancel");
                 return;
@@ -6850,7 +6855,7 @@ $(function () {
             $(".right_it1").show();
             $(".Detailedlist").show();
         } else {
-            var flag_acti =  $(this).parent().parent().prev().find("b").hasClass('acti');
+            var flag_acti = $(this).parent().parent().prev().find("b").hasClass('acti');
             if (flag_acti == true) {
                 $(this).parent().parent().prev().find("b").removeClass('acti');
             }
@@ -6863,40 +6868,40 @@ $(function () {
     });
 
 
-    $(".btn-cgwf").click(function(){
+    $(".btn-cgwf").click(function () {
         var flagFT_cg = $(".gf-cgwf").hasClass("hide_flag");
         var flagFT_rx = $(".gf-rxwf").hasClass("hide_flag");
-        if(flagFT_cg){
+        if (flagFT_cg) {
             $(".gf-cgwf").removeClass("hide_flag");
         }
-        if(!flagFT_rx){
+        if (!flagFT_rx) {
             $(".gf-rxwf").addClass("hide_flag");
         }
         $(".Single .layout  .Playmethod ul li.gf-li p span:first-child").addClass("acti");
     });
-    $(".btn-rxwf").click(function(){
+    $(".btn-rxwf").click(function () {
         var flagFT_cg = $(".gf-cgwf").hasClass("hide_flag");
         var flagFT_rx = $(".gf-rxwf").hasClass("hide_flag");
-        if(!flagFT_cg){
+        if (!flagFT_cg) {
             $(".gf-cgwf").addClass("hide_flag");
         }
-        if(flagFT_rx){
+        if (flagFT_rx) {
             $(".gf-rxwf").removeClass("hide_flag");
         }
         $(".Single .layout  .Playmethod ul li.gf-li p span.rx2-span").addClass("acti");
     });
 });
 //加倍数 或 重新选钱时改变当前显示注数金额状态
-function changeStateCommon(){
+function changeStateCommon() {
     var zhushu = $('.p1 .i0').html();
-    if(zhushu == null || typeof zhushu == "undefined"){
+    if (zhushu == null || typeof zhushu == "undefined") {
         zhushu = 0;
-    }else{
+    } else {
         zhushu = parseInt(zhushu);
     }
     $('.p1 .i_beishu').html($("#inputBeishu").val());
     var strFd = $(".fandian-bfb").html();
-    var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
+    var num = parseFloat(strFd.toString().substr(0, strFd.length - 1)) / 100;
     var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
     var p1_i2 = totalMoney * num;
     p1_i2 = isNaN(p1_i2) == true ? "0.0000" : p1_i2;
@@ -6922,8 +6927,8 @@ function getZxfsZshu() {
         return;
     }
 
-    for(var i = 0; i < wanArr.length; i++){
-        for(var i1 = 0; i1 < qianArr.length; i1++){
+    for (var i = 0; i < wanArr.length; i++) {
+        for (var i1 = 0; i1 < qianArr.length; i1++) {
             tempArr.push(wanArr[i] + "" + qianArr[i1]);
         }
     }
@@ -6942,10 +6947,10 @@ function getZuxfsZshu() {
         return;
     }
 
-    for(var i = 0; i < zuxArr.length; i++){
-        for(var i1 = 0; i1 < zuxArr.length; i1++){
-            if(zuxArr[i] != zuxArr[i1]){
-                var xArr =[];
+    for (var i = 0; i < zuxArr.length; i++) {
+        for (var i1 = 0; i1 < zuxArr.length; i1++) {
+            if (zuxArr[i] != zuxArr[i1]) {
+                var xArr = [];
                 xArr.push(zuxArr[i]);
                 xArr.push(zuxArr[i1]);
                 xArr.sort();
@@ -6987,61 +6992,61 @@ stateTouZhu(flag_str) {
         zhushu = getZuLiuZhushu();
     } else if (flagStrInner == "zlds_zux") { //后三组选-组六单式
         zhushu = getZldsZhushu();
-    } else if (flagStrInner == "hhzx_zux"){ //后三组选-混合组选
+    } else if (flagStrInner == "hhzx_zux") { //后三组选-混合组选
         zhushu = getHhzxZhushu();
-    } else if (flagStrInner == "zxhz_zux"){ //后三组选-组选和值
+    } else if (flagStrInner == "zxhz_zux") { //后三组选-组选和值
         zhushu = getZxhzZhushu();
-    } else if (flagStrInner == "zxbd_zux"){ //后三组选-组选包胆
+    } else if (flagStrInner == "zxbd_zux") { //后三组选-组选包胆
         zhushu = getZxbdZhushu();
-    } else if (flagStrInner == "hzws_qt"){ //后三其它-和值尾数
+    } else if (flagStrInner == "hzws_qt") { //后三其它-和值尾数
         zhushu = getZxwsZhushu();
-    } else if (flagStrInner == "tsh_qt"){ //后三其它-特殊号
+    } else if (flagStrInner == "tsh_qt") { //后三其它-特殊号
         zhushu = getTshZhushu();
-    } else if (flagStrInner == "zxfs-q2"){ //直选复式-前二
+    } else if (flagStrInner == "zxfs-q2") { //直选复式-前二
         zhushu = getZxfsZshu();
-    } else if (flagStrInner == "zxds-q2"){ //直选单式-前二
+    } else if (flagStrInner == "zxds-q2") { //直选单式-前二
         zhushu = getZxdsZhushu();
-    } else if (flagStrInner == "zxhz-q2"){ //直选和值-前二
+    } else if (flagStrInner == "zxhz-q2") { //直选和值-前二
         zhushu = getZxhzZshu();
-    } else if (flagStrInner == "zxkd-q2"){ // 直选跨度-前二
+    } else if (flagStrInner == "zxkd-q2") { // 直选跨度-前二
         zhushu = getZxkdZshu();
-    } else if (flagStrInner == "zuxfs-q2"){ // 组选复式-前二
+    } else if (flagStrInner == "zuxfs-q2") { // 组选复式-前二
         zhushu = getZuxfsZshu();
-    } else if (flagStrInner == "zuxds-q2"){ // 组选单式-前二
+    } else if (flagStrInner == "zuxds-q2") { // 组选单式-前二
         zhushu = getZuxdsZhushu();
-    } else if (flagStrInner == "zuxhz-q2"){ // 组选和值-前二
+    } else if (flagStrInner == "zuxhz-q2") { // 组选和值-前二
         zhushu = getZuxhzZhushu();
-    } else if (flagStrInner == "zuxbd-q2"){ // 组选包胆-前二
+    } else if (flagStrInner == "zuxbd-q2") { // 组选包胆-前二
         zhushu = getZuxbdZhushu();
-    } else if (flagStrInner == "dwd"){ // 定位胆
+    } else if (flagStrInner == "dwd") { // 定位胆
         zhushu = getDwdZhushu();
     } else if (flagStrInner == "qsym-budw" || flagStrInner == "qsem-budw" || flagStrInner == "hsym-budw" || flagStrInner == "hsem-budw"
         || flagStrInner == "q4ym-budw" || flagStrInner == "q4em-budw" || flagStrInner == "h4ym-budw" || flagStrInner == "h4em-budw"
-        || flagStrInner == "wxym-budw" || flagStrInner == "wxem-budw"){ // 不定位
+        || flagStrInner == "wxym-budw" || flagStrInner == "wxem-budw") { // 不定位
         zhushu = getBuwdZhushu(flagStrInner);
-    } else if (flagStrInner == "wx3m-budw"){ // 不定位
+    } else if (flagStrInner == "wx3m-budw") { // 不定位
         zhushu = getWx3mZhushu();
-    } else if (flagStrInner == "rx2-zxfs"){ // 任选二-直选复式
+    } else if (flagStrInner == "rx2-zxfs") { // 任选二-直选复式
         zhushu = stateZxfsZhuShu();
-    } else if (flagStrInner == "rx2-zxds"){ // 任选二-直选单式
+    } else if (flagStrInner == "rx2-zxds") { // 任选二-直选单式
         zhushu = getZxdsRx2Zhushu();
-    } else if (flagStrInner == "rx2-zxhz"){ // 任选二-直选和值
+    } else if (flagStrInner == "rx2-zxhz") { // 任选二-直选和值
         zhushu = getZxhzRx2Zhushu();
-    } else if (flagStrInner == "rx2-zuxfs"){ // 任选二-组选复式
+    } else if (flagStrInner == "rx2-zuxfs") { // 任选二-组选复式
         zhushu = stateZuxfsZhuShu();
-    } else if (flagStrInner == "rx2-zuxds"){ // 任选二-组选单式
+    } else if (flagStrInner == "rx2-zuxds") { // 任选二-组选单式
         zhushu = getZuxdsRx2Zhushu();
-    } else if (flagStrInner == "rx2-zuxhz"){ // 任选二-组选和值
+    } else if (flagStrInner == "rx2-zuxhz") { // 任选二-组选和值
         zhushu = getZuxhzRx2Zhushu();
-    } else if (flagStrInner == "rx3-zxfs"){ // 任选三-直选复式
+    } else if (flagStrInner == "rx3-zxfs") { // 任选三-直选复式
         zhushu = getZxfsRx3Zhushu();
-    } else if (flagStrInner == "rx3-zxds"){ // 任选三-直选单式
+    } else if (flagStrInner == "rx3-zxds") { // 任选三-直选单式
         zhushu = getZxdsRx3Zhushu();
-    } else if (flagStrInner == "rx3-zxhz"){ // 任选三-直选和值
+    } else if (flagStrInner == "rx3-zxhz") { // 任选三-直选和值
         zhushu = getZxhzRx3Zhushu();
-    } else if (flagStrInner == "rx3-zu3fs"){ // 任选三-组三复式
+    } else if (flagStrInner == "rx3-zu3fs") { // 任选三-组三复式
         zhushu = stateZu3fsZhuShu();
-    } else if (flagStrInner == "rx3-zu3ds"){ // 任选三-组三单式
+    } else if (flagStrInner == "rx3-zu3ds") { // 任选三-组三单式
         zhushu = getZu3dsRx3Zhushu();
     } else if (flagStrInner == "rx3-zu6fs") { // 任选三-组六复式
         zhushu = getZu6fsRx3Zhushu();
@@ -7053,19 +7058,19 @@ stateTouZhu(flag_str) {
         zhushu = getZuxhzRx3Zhushu();
     } else if (flagStrInner == "rx4-zxfs") { // 任选四-直选复式
         zhushu = getZxfsRx4Zhushu();
-    } else if (flagStrInner == "rx4-zxds"){ // 任选四-直选单式
+    } else if (flagStrInner == "rx4-zxds") { // 任选四-直选单式
         zhushu = getZxdsrx4Zhushu();
-    } else if (flagStrInner == "rx4-zux24"){ // 任选四-组选24
+    } else if (flagStrInner == "rx4-zux24") { // 任选四-组选24
         zhushu = getZux24Zhushu();
-    } else if (flagStrInner == "rx4-zux12"){ // 任选四-组选12
+    } else if (flagStrInner == "rx4-zux12") { // 任选四-组选12
         zhushu = getZux12Zhushu();
-    } else if (flagStrInner == "rx4-zux6"){ // 任选四-组选6
+    } else if (flagStrInner == "rx4-zux6") { // 任选四-组选6
         zhushu = getZux6Zhushu();
-    } else if (flagStrInner == "rx4-zux4"){ // 任选四-组选4
+    } else if (flagStrInner == "rx4-zux4") { // 任选四-组选4
         zhushu = getZux4Zhushu();
     }
 
-    if(zhushu <= 0 || typeof zhushu == "undefined"){
+    if (zhushu <= 0 || typeof zhushu == "undefined") {
         clearStateTouZhu();
         return 0;
     }
@@ -7073,16 +7078,16 @@ stateTouZhu(flag_str) {
     $('.p1 .i0').html(zhushu);
     $('.p1 .i_beishu').html($("#inputBeishu").val());
     var strFd = $(".fandian-bfb").html();
-    var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
+    var num = parseFloat(strFd.toString().substr(0, strFd.length - 1)) / 100;
     var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
     var p1_i2 = totalMoney * num;
-    p1_i2 = isNaN(p1_i2) == true ? "0.0000" :p1_i2;
+    p1_i2 = isNaN(p1_i2) == true ? "0.0000" : p1_i2;
     $('.p1 .i_fanD').html(p1_i2.toFixed(2));
     $('.p1 .i_money').html(totalMoney);
 }
 
 //清除状态
-function clearStateTouZhu(){
+function clearStateTouZhu() {
     $('.p1 .i0').html('0');
     $('.p1 .i_beishu').html('0');
     $('.p1 .i_fanD').html('0.00');
@@ -7092,12 +7097,12 @@ function clearStateTouZhu(){
 
 //后三组选-组三复式
 function getZuXuanNewArrs(zuXuanArr) {
-    var tempArr = [],zxArr = [];
+    var tempArr = [], zxArr = [];
     zxArr = zuXuanArr;
 
-    for(var i = 0; i < zxArr.length - 1; i++){
-        for(var i1 = 1; i1 < zxArr.length; i1++){
-            if(zxArr[i1] != zxArr[i]){
+    for (var i = 0; i < zxArr.length - 1; i++) {
+        for (var i1 = 1; i1 < zxArr.length; i1++) {
+            if (zxArr[i1] != zxArr[i]) {
                 tempArr.push(zxArr[i] + "" + zxArr[i1] + "" + zxArr[i1]);
                 tempArr.push(zxArr[i1] + "" + zxArr[i] + "" + zxArr[i]);
             }
@@ -7112,10 +7117,10 @@ function getZuXuanNewArrs(zuXuanArr) {
 function getZxbdNewArrs(zuXuanArr) {
     var tempArr = [], bdArr = [];
     bdArr = zuXuanArr;
-    for(var n = 0; n < bdArr.length; n++) {
-        for(var n1 = 0; n1 < 10; n1++){
-            for(var n2 = 0; n2 < 10; n2++){
-                if(bdArr[n] != n1 && bdArr != n2 && n1 != n2 || n1 == n2 && bdArr[n] != n2 || n2 == bdArr[n] && bdArr[n] != n1 || n1 == bdArr[n] && bdArr[n] != n2){
+    for (var n = 0; n < bdArr.length; n++) {
+        for (var n1 = 0; n1 < 10; n1++) {
+            for (var n2 = 0; n2 < 10; n2++) {
+                if (bdArr[n] != n1 && bdArr != n2 && n1 != n2 || n1 == n2 && bdArr[n] != n2 || n2 == bdArr[n] && bdArr[n] != n1 || n1 == bdArr[n] && bdArr[n] != n2) {
                     var sortArr = [];
                     sortArr.push(bdArr[n]);
                     sortArr.push(n1);
@@ -7127,7 +7132,7 @@ function getZxbdNewArrs(zuXuanArr) {
         }
     }
 
-    tempArr =tempArr.uniqueArr();
+    tempArr = tempArr.uniqueArr();
     return tempArr;
 }
 
@@ -7162,7 +7167,7 @@ function getZxhzNewArrs(zuXuanArr) {
     var fjHaoZuhe = []; //分解号组合
 
     heZhiArr = zuXuanArr;
-    for(var d = 0; d < 28; d++){
+    for (var d = 0; d < 28; d++) {
         shuArr[d] = 0;
     }
     //号码分解---所选号分解成所有组合的值等于此号的所有组合
@@ -7176,10 +7181,10 @@ function getZxhzNewArrs(zuXuanArr) {
 
         //获取所选号的组选三和组选六形态的所有组数（不包含豹子号、顺序不限）
         for (var n = 0; n < temp.length; n++) {
-            for(var m = 0; m < temp.length; m++){
-                for(var mn = 0; mn < temp.length; mn++){
-                    if(temp[n] + temp[m] + temp[mn] == num && temp[mn] <= 9 && temp[m] <= 9 && temp[n] <= 9){
-                        if(temp[m] != temp[n] && temp[n] != temp[mn] && temp[mn] != temp[n]){
+            for (var m = 0; m < temp.length; m++) {
+                for (var mn = 0; mn < temp.length; mn++) {
+                    if (temp[n] + temp[m] + temp[mn] == num && temp[mn] <= 9 && temp[m] <= 9 && temp[n] <= 9) {
+                        if (temp[m] != temp[n] && temp[n] != temp[mn] && temp[mn] != temp[n]) {
                             var sortArr = [];
                             sortArr.push(temp[n]);
                             sortArr.push(temp[m]);
@@ -7215,9 +7220,9 @@ function getKaduNewArrs(kDArr) {
             for (var n1 = 0; n1 < tempArr2.length; n1++) {
                 for (var n2 = 0; n2 < tempArr3.length; n2++) {
                     maxZhi = tempArr1[n] > tempArr2[n1] ? tempArr1[n] : tempArr2[n1];
-                    maxZhi= maxZhi > tempArr3[n2] ? maxZhi :tempArr3[n2];
+                    maxZhi = maxZhi > tempArr3[n2] ? maxZhi : tempArr3[n2];
                     minZhi = tempArr1[n] < tempArr2[n1] ? tempArr1[n] : tempArr2[n1];
-                    minZhi= minZhi < tempArr3[n2] ? minZhi :tempArr3[n2];
+                    minZhi = minZhi < tempArr3[n2] ? minZhi : tempArr3[n2];
                     if ((maxZhi - minZhi) == tempZhi) {
                         allArr.push(n + "" + n1 + "" + n2);
                         maxZhi = 0;
@@ -7239,7 +7244,7 @@ function getHezNewArrs(hZArr) {
     var fjHaoZuhe = []; //分解号组合
 
     heZhiArr = hZArr;
-    for(var d = 0; d < 28; d++){
+    for (var d = 0; d < 28; d++) {
         shuArr[d] = 0;
     }
     //号码分解---所选号分解成所有组合的值等于此号的所有组合
@@ -7253,9 +7258,9 @@ function getHezNewArrs(hZArr) {
 
         //所选号码分解至零，被分解出所有的号码三个为一组，所组成的所有组合的每一组值等于所选号的值的组合数
         for (var n = 0; n < temp.length; n++) {
-            for(var m = 0; m < temp.length; m++){
-                for(var mn = 0; mn < temp.length; mn++){
-                    if(temp[n] + temp[m] + temp[mn] == num && temp[mn] <= 9 && temp[m] <= 9 && temp[n] <= 9){
+            for (var m = 0; m < temp.length; m++) {
+                for (var mn = 0; mn < temp.length; mn++) {
+                    if (temp[n] + temp[m] + temp[mn] == num && temp[mn] <= 9 && temp[m] <= 9 && temp[n] <= 9) {
                         fjHaoZuhe.push(temp[n] + "" + temp[m] + "" + temp[mn]);
                     }
                 }
@@ -7285,37 +7290,29 @@ function getThreeNewArrs(baiA, shiA, geA) {
 
 // 数字批量选择算法
 function selectFun_1(obj) {
-    $(obj).click(
-        function () {
-            $(obj).addClass("active_gfwf");
-        }
-    );
+    $(obj).addClass("active_gfwf");
 }
 
-function selectFun_2(obj){
-    $(obj).click(
-        function () {
-            $(obj).addClass("active_gfwf");
-        }
-    );
+function selectFun_2(obj) {
+    $(obj).addClass("active_gfwf");
 }
 
-function selectFun_3(obj){
+function selectFun_3(obj) {
     $(obj).find(".active_gfwf").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
 }
 
-function selectFun_4(obj){
+function selectFun_4(obj) {
     $(obj).find(".active_gfwf").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
 }
 
-function selectFun_5(obj){
+function selectFun_5(obj) {
     $(obj).find(".active_gfwf").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
 }
 
-function selectFun_6(obj){
+function selectFun_6(obj) {
     $(obj).find(".active_gfwf").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
 }
