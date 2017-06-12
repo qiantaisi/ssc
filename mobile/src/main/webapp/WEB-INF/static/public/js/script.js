@@ -6904,103 +6904,6 @@ function changeStateCommon(){
     $('.p1 .i_money').html(totalMoney);
 }
 
-// 数字批量选择算法
-function selectFun_1(obj) {
-    $(obj).parent().find(".acti").removeClass("acti");
-    $(obj).addClass("acti");
-
-    var objArr = $(obj).parent().parent().find("span");
-    objArr.each(function() {
-        $(this).removeClass("acti");
-        var num = parseInt($(this).find("i").html());
-        if ($.inArray(num, [0,1,2,3,4,5,6,7,8,9]) >= 0) {
-            $(this).addClass("acti");
-        }
-    });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
-}
-
-function selectFun_2(obj) {
-    $(obj).parent().find(".acti").removeClass("acti");
-    $(obj).addClass("acti");
-
-    var objArr = $(obj).parent().parent().find("span");
-    objArr.each(function() {
-        $(this).removeClass("acti");
-        var num = parseInt($(this).find("i").html());
-        if ($.inArray(num, [5,6,7,8,9]) >= 0) {
-            $(this).addClass("acti");
-        }
-    });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
-}
-
-function selectFun_3(obj) {
-    $(obj).parent().find(".acti").removeClass("acti");
-    $(obj).addClass("acti");
-
-    var objArr = $(obj).parent().parent().find("span");
-    objArr.each(function() {
-        $(this).removeClass("acti");
-        var num = parseInt($(this).find("i").html());
-        if ($.inArray(num, [0,1,2,3,4]) >= 0) {
-            $(this).addClass("acti");
-        }
-    });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
-}
-
-function selectFun_4(obj) {
-    $(obj).parent().find(".acti").removeClass("acti");
-    $(obj).addClass("acti");
-
-    var objArr = $(obj).parent().parent().find("span");
-    objArr.each(function() {
-        $(this).removeClass("acti");
-        var num = parseInt($(this).find("i").html());
-        if ($.inArray(num, [1,3,5,7,9]) >= 0) {
-            $(this).addClass("acti");
-        }
-    });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
-}
-
-function selectFun_5(obj) {
-    $(obj).parent().find(".acti").removeClass("acti");
-    $(obj).addClass("acti");
-
-    var objArr = $(obj).parent().parent().find("span");
-    objArr.each(function() {
-        $(this).removeClass("acti");
-        var num = parseInt($(this).find("i").html());
-        if ($.inArray(num, [0,2,4,6,8,10]) >= 0) {
-            $(this).addClass("acti");
-        }
-    });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
-}
-
-function selectFun_6(obj) {
-    $(obj).parent().parent().find(".acti").removeClass("acti");
-    $(obj).addClass("acti");
-    clearStateTouZhu();//清除投注状态栏
-}
-
 //前二直选-直选复式
 function getZxfsZshu() {
     var tempArr = [];
@@ -7382,21 +7285,13 @@ function getThreeNewArrs(baiA, shiA, geA) {
 
 // 数字批量选择算法
 function selectFun_1(obj) {
-    $(obj).find(".active_gfwf").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
-
-    var objArr = $(obj).parent().parent().find("span");
-    objArr.each(function() {
-        $(this).removeClass("acti");
-        var num = parseInt($(this).find("i").html());
-        if ($.inArray(num, [0,1,2,3,4,5,6,7,8,9]) >= 0) {
-            $(this).addClass("acti");
+    $(obj).click(
+        function () {
+            $(".cus_common .wan_bottom .cus-flex-item").find("xz").removeClass("xz");
+            $(".cus_common .wan_bottom .cus-flex-item").find("xz2").addClass("xz2");
         }
-    });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
+    );
 }
 
 function selectFun_2(obj){

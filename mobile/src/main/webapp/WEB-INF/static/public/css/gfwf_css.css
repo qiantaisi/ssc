@@ -369,7 +369,15 @@
 .gfwf_xz .xuan .xuan2 {
     color: #999;
 }
-
+.wrap .cus_common .wan_bottom .cus-flex-item .xz2{
+    display: block;
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    color: #fff;
+    background:red;
+}
 .staer {
     line-height: 1.2rem;
     width: 100%;
