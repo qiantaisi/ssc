@@ -42,16 +42,18 @@
     <ul>
         <li data-name="万">
             <b><i>万位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -63,16 +65,18 @@
         </li>
         <li data-name="千">
             <b><i>千位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -84,16 +88,18 @@
         </li>
         <li data-name="百">
             <b><i>百位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -105,16 +111,18 @@
         </li>
         <li data-name="十">
             <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -126,16 +134,18 @@
         </li>
         <li data-name="个">
             <b><i>个位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -164,11 +174,16 @@
         </span>
     </p>
     <div class="selposition re-select-ds">
-        <label for="position_ds_0"><input type="checkbox" class="selpositioninput" name="position_ds" id="position_ds_0" value="1"/>万位</label>
-        <label for="position_ds_1"><input type="checkbox" class="selpositioninput" name="position_ds" id="position_ds_1" value="2"/>千位</label>
-        <label for="position_ds_2"><input type="checkbox" class="selpositioninput" name="position_ds" id="position_ds_2" value="3"/>百位</label>
-        <label for="position_ds_3"><input type="checkbox" class="selpositioninput" name="position_ds" checked="checked" id="position_ds_3" value="4"/>十位</label>
-        <label for="position_ds_4"><input type="checkbox" class="selpositioninput" name="position_ds" checked="checked" id="position_ds_4" value="5"/>个位</label>
+        <label for="position_ds_0"><input type="checkbox" class="selpositioninput" name="position_ds" id="position_ds_0"
+                                          value="1"/>万位</label>
+        <label for="position_ds_1"><input type="checkbox" class="selpositioninput" name="position_ds" id="position_ds_1"
+                                          value="2"/>千位</label>
+        <label for="position_ds_2"><input type="checkbox" class="selpositioninput" name="position_ds" id="position_ds_2"
+                                          value="3"/>百位</label>
+        <label for="position_ds_3"><input type="checkbox" class="selpositioninput" name="position_ds" checked="checked"
+                                          id="position_ds_3" value="4"/>十位</label>
+        <label for="position_ds_4"><input type="checkbox" class="selpositioninput" name="position_ds" checked="checked"
+                                          id="position_ds_4" value="5"/>个位</label>
         <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
@@ -186,7 +201,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -212,11 +227,16 @@
     <ul>
         <li class="re2-1004-li">
             <div class="selposition recl-1004-hz">
-                <label for="position_0"><input type="checkbox" class="selpositioninput" name="position_hz" id="position_0" value="1"/>万位</label>
-                <label for="position_1"><input type="checkbox" class="selpositioninput" name="position_hz" id="position_1" value="2"/>千位</label>
-                <label for="position_2"><input type="checkbox" class="selpositioninput" name="position_hz" id="position_2" value="3"/>百位</label>
-                <label for="position_3"><input type="checkbox" class="selpositioninput" name="position_hz" checked="checked" id="position_3" value="4"/>十位</label>
-                <label for="position_4"><input type="checkbox" class="selpositioninput" name="position_hz" checked="checked" id="position_4" value="5"/>个位</label>
+                <label for="position_0"><input type="checkbox" class="selpositioninput" name="position_hz"
+                                               id="position_0" value="1"/>万位</label>
+                <label for="position_1"><input type="checkbox" class="selpositioninput" name="position_hz"
+                                               id="position_1" value="2"/>千位</label>
+                <label for="position_2"><input type="checkbox" class="selpositioninput" name="position_hz"
+                                               id="position_2" value="3"/>百位</label>
+                <label for="position_3"><input type="checkbox" class="selpositioninput" name="position_hz"
+                                               checked="checked" id="position_3" value="4"/>十位</label>
+                <label for="position_4"><input type="checkbox" class="selpositioninput" name="position_hz"
+                                               checked="checked" id="position_4" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
@@ -231,27 +251,31 @@
                 </span>
             </div>
         </li>
-        <li data-name="和值" class="hz-q2 re-zxhz-rx2">
+        <li data-name="和值" class="hz-q2 re-zxhz-rx2 rehz-q2">
             <b class="hz-dir"><i>和值</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <span><i>10</i></span>
-            <span><i>11</i></span>
-            <span><i>12</i></span>
-            <span><i>13</i></span>
-            <span><i>14</i></span>
-            <span><i>15</i></span>
-            <span><i>16</i></span>
-            <span><i>17</i></span>
-            <span><i>18</i></span>
+            <var class="numLine renumHeigth">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
+            <var class="numLine renumHeigth">
+                <span><i>10</i></span>
+                <span><i>11</i></span>
+                <span><i>12</i></span>
+                <span><i>13</i></span>
+                <span><i>14</i></span>
+                <span><i>15</i></span>
+                <span><i>16</i></span>
+                <span><i>17</i></span>
+                <span><i>18</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -273,11 +297,16 @@
     <ul>
         <li class="re2-1004-li">
             <div class="selposition recl-1005-fs">
-                <label for="position_zux0"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zux0" value="1"/>万位</label>
-                <label for="position_zux1"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zux1" value="2"/>千位</label>
-                <label for="position_zux2"><input type="checkbox" class="selpositioninput" name="position_zufs" id="position_zux2" value="3"/>百位</label>
-                <label for="position_zux3"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zux3" value="4"/>十位</label>
-                <label for="position_zux4"><input type="checkbox" class="selpositioninput" name="position_zufs" checked="checked" id="position_zux4" value="5"/>个位</label>
+                <label for="position_zux0"><input type="checkbox" class="selpositioninput" name="position_zufs"
+                                                  id="position_zux0" value="1"/>万位</label>
+                <label for="position_zux1"><input type="checkbox" class="selpositioninput" name="position_zufs"
+                                                  id="position_zux1" value="2"/>千位</label>
+                <label for="position_zux2"><input type="checkbox" class="selpositioninput" name="position_zufs"
+                                                  id="position_zux2" value="3"/>百位</label>
+                <label for="position_zux3"><input type="checkbox" class="selpositioninput" name="position_zufs"
+                                                  checked="checked" id="position_zux3" value="4"/>十位</label>
+                <label for="position_zux4"><input type="checkbox" class="selpositioninput" name="position_zufs"
+                                                  checked="checked" id="position_zux4" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
@@ -294,16 +323,18 @@
         </li>
         <li data-name="组选">
             <b><i>组选</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -332,11 +363,16 @@
         </span>
     </p>
     <div class="selposition re-select-zuxds">
-        <label for="position_zuds_0"><input type="checkbox" class="selpositioninput" name="position_zuds" id="position_zuds_0" value="1"/>万位</label>
-        <label for="position_zuds_1"><input type="checkbox" class="selpositioninput" name="position_zuds" id="position_zuds_1" value="2"/>千位</label>
-        <label for="position_zuds_2"><input type="checkbox" class="selpositioninput" name="position_zuds" id="position_zuds_2" value="3"/>百位</label>
-        <label for="position_zuds_3"><input type="checkbox" class="selpositioninput" name="position_zuds" checked="checked" id="position_zuds_3" value="4"/>十位</label>
-        <label for="position_zuds_4"><input type="checkbox" class="selpositioninput" name="position_zuds" checked="checked" id="position_zuds_4" value="5"/>个位</label>
+        <label for="position_zuds_0"><input type="checkbox" class="selpositioninput" name="position_zuds"
+                                            id="position_zuds_0" value="1"/>万位</label>
+        <label for="position_zuds_1"><input type="checkbox" class="selpositioninput" name="position_zuds"
+                                            id="position_zuds_1" value="2"/>千位</label>
+        <label for="position_zuds_2"><input type="checkbox" class="selpositioninput" name="position_zuds"
+                                            id="position_zuds_2" value="3"/>百位</label>
+        <label for="position_zuds_3"><input type="checkbox" class="selpositioninput" name="position_zuds"
+                                            checked="checked" id="position_zuds_3" value="4"/>十位</label>
+        <label for="position_zuds_4"><input type="checkbox" class="selpositioninput" name="position_zuds"
+                                            checked="checked" id="position_zuds_4" value="5"/>个位</label>
         <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
@@ -354,7 +390,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -381,11 +417,16 @@
     <ul>
         <li class="re2-1004-li">
             <div class="selposition re-select-zuxhz">
-                <label for="position_zuxhz0"><input type="checkbox" class="selpositioninput" name="position_zuxhz" id="position_zuxhz0" value="1"/>万位</label>
-                <label for="position_zuxhz1"><input type="checkbox" class="selpositioninput" name="position_zuxhz" id="position_zuxhz1" value="2"/>千位</label>
-                <label for="position_zuxhz2"><input type="checkbox" class="selpositioninput" name="position_zuxhz" id="position_zuxhz2" value="3"/>百位</label>
-                <label for="position_zuxhz3"><input type="checkbox" class="selpositioninput" name="position_zuxhz" checked="checked" id="position_zuxhz3" value="4"/>十位</label>
-                <label for="position_zuxhz4"><input type="checkbox" class="selpositioninput" name="position_zuxhz" checked="checked" id="position_zuxhz4" value="5"/>个位</label>
+                <label for="position_zuxhz0"><input type="checkbox" class="selpositioninput" name="position_zuxhz"
+                                                    id="position_zuxhz0" value="1"/>万位</label>
+                <label for="position_zuxhz1"><input type="checkbox" class="selpositioninput" name="position_zuxhz"
+                                                    id="position_zuxhz1" value="2"/>千位</label>
+                <label for="position_zuxhz2"><input type="checkbox" class="selpositioninput" name="position_zuxhz"
+                                                    id="position_zuxhz2" value="3"/>百位</label>
+                <label for="position_zuxhz3"><input type="checkbox" class="selpositioninput" name="position_zuxhz"
+                                                    checked="checked" id="position_zuxhz3" value="4"/>十位</label>
+                <label for="position_zuxhz4"><input type="checkbox" class="selpositioninput" name="position_zuxhz"
+                                                    checked="checked" id="position_zuxhz4" value="5"/>个位</label>
                 <span class="rxdesc">
                     <b class="rx-b-ts">温馨提示：</b>
                     你选择了
@@ -402,30 +443,32 @@
         </li>
         <li data-name="和值" class="hz-q2 re-zuxhz-rx2">
             <b><i>和值</i></b>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <span><i>10</i></span>
-            <span><i>11</i></span>
-            <span><i>12</i></span>
-            <span><i>13</i></span>
-            <span><i>14</i></span>
-            <span><i>15</i></span>
-            <span><i>16</i></span>
-            <span><i>17</i></span>
+            <var class="numLine renumHeigth">
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+                <span><i>10</i></span>
+                <span><i>11</i></span>
+                <span><i>12</i></span>
+                <span><i>13</i></span>
+                <span><i>14</i></span>
+                <span><i>15</i></span>
+                <span><i>16</i></span>
+                <span><i>17</i></span>
+            </var>
         </li>
     </ul>
 </div>
 
 
 <div class="add_spot">
-    <div class="left">
+    <div class="left releft">
         <div class="sopt_wrap">
             <div class="slide_sp">
                 奖金/返点
@@ -436,8 +479,10 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i class="base-i base-rx2"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
-                <i class="base-i base-rx2-zux"><var class="jiangjin-change-zux">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i class="base-i base-rx2"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var
+                        class="fandian-bfb">1.0%</var></i>
+                <i class="base-i base-rx2-zux"><var class="jiangjin-change-zux">0.0</var><var>&nbsp;/&nbsp;</var><var
+                        class="fandian-bfb">1.0%</var></i>
             </div>
             <div class="reduce">
                 <a class="fl">-</a>
@@ -459,7 +504,8 @@
             </div>
         </div>
         <p class="p1">
-            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i class="i1 i_money">0.00</i>元。
+            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i
+                class="i1 i_money">0.00</i>元。
         </p>
     </div>
     <div class="rigth">
@@ -468,30 +514,30 @@
 
 </div>
 <script>
-    $(function(){
+    $(function () {
         $(".Pick").hide();
         $(".base-i").hide();
         $(".base-rx2").show();
         $('.recl-1002').show();
 
         $(".btn_fu_zhi span").click(function () {
-           if($(this).siblings().hasClass('acti')){
-               $(this).siblings().removeClass('acti');
-           }
+            if ($(this).siblings().hasClass('acti')) {
+                $(this).siblings().removeClass('acti');
+            }
 
-           $(this).addClass('acti');
+            $(this).addClass('acti');
         });
 
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
             var flagName = $(this).parent().parent().parent().parent().attr("data-flag");
-            if(flagName == "rx2-zxfs"){
+            if (flagName == "rx2-zxfs") {
                 stateTouZhu(flagName);
-            } else if(flagName == "rx2-zxhz"){
+            } else if (flagName == "rx2-zxhz") {
                 stateTouZhu(flagName);
-            } else if(flagName == "rx2-zuxfs"){
+            } else if (flagName == "rx2-zuxfs") {
                 stateTouZhu(flagName);
-            } else if(flagName == "rx2-zuxhz"){
+            } else if (flagName == "rx2-zuxhz") {
                 stateTouZhu(flagName);
             }
         });
@@ -503,15 +549,15 @@
                 arrTemp.push($(this).val());
             });
             $("#positioncount-ds").html(arrTemp.length);
-            if(arrTemp.length == 3){
+            if (arrTemp.length == 3) {
                 $("#positioninfo-ds").html(3);
-            } else if(arrTemp.length == 4){
+            } else if (arrTemp.length == 4) {
                 $("#positioninfo-ds").html(6);
-            } else if(arrTemp.length == 5){
+            } else if (arrTemp.length == 5) {
                 $("#positioninfo-ds").html(10);
-            } else if(arrTemp.length == 2){
+            } else if (arrTemp.length == 2) {
                 $("#positioninfo-ds").html(1);
-            } else{
+            } else {
                 $("#positioninfo-ds").html(0);
             }
             stateTouZhu("rx2-zxds");
@@ -524,15 +570,15 @@
                 arrTemp.push($(this).val());
             });
             $("#positioncount-zuds").html(arrTemp.length);
-            if(arrTemp.length == 3){
+            if (arrTemp.length == 3) {
                 $("#positioninfo-zuds").html(3);
-            } else if(arrTemp.length == 4){
+            } else if (arrTemp.length == 4) {
                 $("#positioninfo-zuds").html(6);
-            } else if(arrTemp.length == 5){
+            } else if (arrTemp.length == 5) {
                 $("#positioninfo-zuds").html(10);
-            } else if(arrTemp.length == 2){
+            } else if (arrTemp.length == 2) {
                 $("#positioninfo-zuds").html(1);
-            } else{
+            } else {
                 $("#positioninfo-zuds").html(0);
             }
             stateTouZhu("rx2-zuxds");
@@ -545,15 +591,15 @@
                 arrTemp.push($(this).val());
             });
             $("#positioncount-zufs").html(arrTemp.length);
-            if(arrTemp.length == 3){
+            if (arrTemp.length == 3) {
                 $("#positioninfo-zufs").html(3);
-            } else if(arrTemp.length == 4){
+            } else if (arrTemp.length == 4) {
                 $("#positioninfo-zufs").html(6);
-            } else if(arrTemp.length == 5){
+            } else if (arrTemp.length == 5) {
                 $("#positioninfo-zufs").html(10);
-            } else if(arrTemp.length == 2){
+            } else if (arrTemp.length == 2) {
                 $("#positioninfo-zufs").html(1);
-            } else{
+            } else {
                 $("#positioninfo-zufs").html(0);
             }
             stateTouZhu("rx2-zuxfs");
@@ -566,15 +612,15 @@
                 arrTemp.push($(this).val());
             });
             $("#positioncount-hz").html(arrTemp.length);
-            if(arrTemp.length == 3){
+            if (arrTemp.length == 3) {
                 $("#positioninfo-hz").html(3);
-            } else if(arrTemp.length == 4){
+            } else if (arrTemp.length == 4) {
                 $("#positioninfo-hz").html(6);
-            } else if(arrTemp.length == 5){
+            } else if (arrTemp.length == 5) {
                 $("#positioninfo-hz").html(10);
-            } else if(arrTemp.length == 2){
+            } else if (arrTemp.length == 2) {
                 $("#positioninfo-hz").html(1);
-            } else{
+            } else {
                 $("#positioninfo-hz").html(0);
             }
             stateTouZhu("rx2-zxhz");
@@ -587,15 +633,15 @@
                 arrTemp.push($(this).val());
             });
             $("#positioncount_zuhz").html(arrTemp.length);
-            if(arrTemp.length == 3){
+            if (arrTemp.length == 3) {
                 $("#positioninfo-zuhz").html(3);
-            } else if(arrTemp.length == 4){
+            } else if (arrTemp.length == 4) {
                 $("#positioninfo-zuhz").html(6);
-            } else if(arrTemp.length == 5){
+            } else if (arrTemp.length == 5) {
                 $("#positioninfo-zuhz").html(10);
-            } else if(arrTemp.length == 2){
+            } else if (arrTemp.length == 2) {
                 $("#positioninfo-zuhz").html(1);
-            } else{
+            } else {
                 $("#positioninfo-zuhz").html(0);
             }
             stateTouZhu("rx2-zuxhz");
@@ -606,7 +652,7 @@
             $(this).addClass('acti');
 
             var nameVal = $(this).data("name");
-            if(nameVal == "zxfs"){
+            if (nameVal == "zxfs") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1002').show();
@@ -614,7 +660,7 @@
                 $(".base-i").hide();
                 $(".base-rx2").show();
                 allClearJl();
-            } else if(nameVal == "zxds"){
+            } else if (nameVal == "zxds") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1003-zxds').show();
@@ -622,7 +668,7 @@
                 $(".base-i").hide();
                 $(".base-rx2").show();
                 allClearJl();
-            } else if(nameVal == "zxhz"){
+            } else if (nameVal == "zxhz") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1004-zxhz').show();
@@ -630,7 +676,7 @@
                 $(".base-i").hide();
                 $(".base-rx2").show();
                 allClearJl();
-            } else if(nameVal == "zuxfs"){
+            } else if (nameVal == "zuxfs") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1005-zuxfs').show();
@@ -638,7 +684,7 @@
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
                 allClearJl();
-            } else if(nameVal == "zuxds"){
+            } else if (nameVal == "zuxds") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1006-zuxds').show();
@@ -646,7 +692,7 @@
                 $(".base-i").hide();
                 $(".base-rx2-zux").show();
                 allClearJl();
-            } else if(nameVal == "zuxhz"){
+            } else if (nameVal == "zuxhz") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1007-zuxhz').show();
@@ -683,7 +729,7 @@
 
         var temp = newArr.length;
         var shu = $("#positioninfo-ds").html();
-            lengthArr = temp * shu;
+        lengthArr = temp * shu;
         return lengthArr;
     }
 
@@ -697,8 +743,8 @@
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
-                var oneStr = (arr_new[i].toString()).substr(0,1);
-                var twoStr = (arr_new[i].toString()).substr(1,1);
+                var oneStr = (arr_new[i].toString()).substr(0, 1);
+                var twoStr = (arr_new[i].toString()).substr(1, 1);
                 var arr = [];
                 arr.push(parseInt(oneStr));
                 arr.push(parseInt(twoStr));
@@ -721,7 +767,7 @@
             hzArr.push($.trim($(this).find("i").html()));
         });
 
-        if(hzArr.length <= 0){
+        if (hzArr.length <= 0) {
             return 0;
         }
         var zhushu = getRx2zxhzZhushu(hzArr);
@@ -737,7 +783,7 @@
             hzArr.push($.trim($(this).find("i").html()));
         });
 
-        if(hzArr.length <= 0){
+        if (hzArr.length <= 0) {
             return 0;
         }
         var zhushu = getRx2zuxhzZhushu(hzArr);
@@ -747,7 +793,7 @@
     }
 
     //获取注数--直选复式
-    function stateZxfsZhuShu(){
+    function stateZxfsZhuShu() {
         var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
         $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
             wanArr.push($.trim($(this).find("i").html()));
@@ -765,19 +811,19 @@
             geArr.push($.trim($(this).find("i").html()));
         });
 
-        if(wanArr.length > 0){
+        if (wanArr.length > 0) {
             newArr.push(wanArr);
         }
-        if(qianArr.length > 0){
+        if (qianArr.length > 0) {
             newArr.push(qianArr);
         }
-        if(baiArr.length > 0){
+        if (baiArr.length > 0) {
             newArr.push(baiArr);
         }
-        if(shiArr.length > 0){
+        if (shiArr.length > 0) {
             newArr.push(shiArr);
         }
-        if(geArr.length > 0){
+        if (geArr.length > 0) {
             newArr.push(geArr);
         }
 
@@ -791,7 +837,7 @@
     }
 
     //获取注数--组选复式
-    function stateZuxfsZhuShu(){
+    function stateZuxfsZhuShu() {
         var zuArr = [], newArr = [];
         $.each($(".recl-1005-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
             zuArr.push($.trim($(this).find("i").html()));
@@ -811,13 +857,13 @@
     }
 
     // 任选二直选和值注数算法
-    function getRx2zxhzZhushu(arr){
+    function getRx2zxhzZhushu(arr) {
         var newArr = [];
-        for(var i = 0; i < arr.length; i++){
-            for(var x = 0; x < 10; x++){
-                for(var y = 0; y < 10; y++){
-                    if(x + y == arr[i]){
-                       newArr.push(x + "" + y);
+        for (var i = 0; i < arr.length; i++) {
+            for (var x = 0; x < 10; x++) {
+                for (var y = 0; y < 10; y++) {
+                    if (x + y == arr[i]) {
+                        newArr.push(x + "" + y);
                     }
                 }
             }
@@ -827,12 +873,12 @@
     }
 
     // 任选二组选和值注数算法
-    function getRx2zuxhzZhushu(zuxhzArr){
+    function getRx2zuxhzZhushu(zuxhzArr) {
         var newArr = [];
-        for(var i = 0; i < zuxhzArr.length; i++){
-            for(var x = 0; x < 10; x++){
-                for(var y = 0; y < 10; y++){
-                    if((x + y) == zuxhzArr[i] && x != y){
+        for (var i = 0; i < zuxhzArr.length; i++) {
+            for (var x = 0; x < 10; x++) {
+                for (var y = 0; y < 10; y++) {
+                    if ((x + y) == zuxhzArr[i] && x != y) {
                         var arr = [];
                         arr.push(x);
                         arr.push(y);
@@ -865,27 +911,27 @@
         return tempArr.length;
     }
 
-    function getRx2zxfsZhushu(wanArr, qianArr, baiArr, shiArr, geArr){
+    function getRx2zxfsZhushu(wanArr, qianArr, baiArr, shiArr, geArr) {
         var arrNew = [], tempArr = [];
-        if(wanArr.length > 0){
-           arrNew.push(wanArr);
+        if (wanArr.length > 0) {
+            arrNew.push(wanArr);
         }
-        if(qianArr.length > 0){
-           arrNew.push(qianArr);
+        if (qianArr.length > 0) {
+            arrNew.push(qianArr);
         }
-        if(baiArr.length > 0){
-           arrNew.push(baiArr);
+        if (baiArr.length > 0) {
+            arrNew.push(baiArr);
         }
-        if(shiArr.length > 0){
-           arrNew.push(shiArr);
+        if (shiArr.length > 0) {
+            arrNew.push(shiArr);
         }
-        if(geArr.length > 0){
-           arrNew.push(geArr);
+        if (geArr.length > 0) {
+            arrNew.push(geArr);
         }
-        for(var i = 0; i < arrNew.length; i++){
-            for(var i1 = 0; i1 < arrNew[i].length; i1++){
-                for(var x = i + 1; x < arrNew.length; x++){
-                    for(var n = 0; n < arrNew[x].length; n++){
+        for (var i = 0; i < arrNew.length; i++) {
+            for (var i1 = 0; i1 < arrNew[i].length; i1++) {
+                for (var x = i + 1; x < arrNew.length; x++) {
+                    for (var n = 0; n < arrNew[x].length; n++) {
                         tempArr.push(arrNew[i][i1] + "" + arrNew[x][n]);
                     }
                 }
@@ -904,7 +950,7 @@
         calcAll();
     }
 
-    function allClearJl(){
+    function allClearJl() {
         clearSelected();
         clearTextarea();
     }
@@ -913,30 +959,14 @@
         $(".Single .layout .Pick ul li span.acti").removeClass("acti");
         $(".re-5x-i i.acti").removeClass("acti");
         $("#zhushuInfo").data("zhushu", 0);
-        if(typeof clearStateTouZhu == 'function'){
+        if (typeof clearStateTouZhu == 'function') {
             clearStateTouZhu();
         }
-        calc();
     }
 
-    function removeThisItem(obj) {
-        $(obj).parent().parent().parent().remove();
-        calcAll();
-    }
     function clearZhudan() {
-        $("#zhudanList li:not('.head')").remove();
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
         calcAll();
-    }
-
-    function calc() {
-        var money = $("#inputMoney").data("money");
-        var beishu = $("#inputBeishu").data("beishu");
-        var zhushu = $("#zhushuInfo").data("zhushu");
-
-        var totalMoney = mul(beishu * zhushu, money);
-
-        $("#beishuInfo").html(beishu);
-        $("#totalMoneyInfo").data("total_money", totalMoney).html(totalMoney);
     }
 
     function clearTextarea() {
@@ -1114,15 +1144,15 @@
         var arr_new = textStr.split(",");
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
-                var oneStr = (arr_new[i].toString()).substr(0,1);
-                var twoStr = (arr_new[i].toString()).substr(1,1);
+                var oneStr = (arr_new[i].toString()).substr(0, 1);
+                var twoStr = (arr_new[i].toString()).substr(1, 1);
                 var arr = [];
                 arr.push(parseInt(oneStr));
                 arr.push(parseInt(twoStr));
                 arr.sort();
                 newArr.push(arr.join(""));
-            }else{
-                if(arr_new[i] != ""){
+            } else {
+                if (arr_new[i] != "") {
                     errorArr.push(arr_new[i]);
                 }
             }
@@ -1147,7 +1177,7 @@
         }
         if (repeatArr.length > 0) {
             allErrorArr.push("自动过滤重复号码:");
-            for(var r = 0; r < repeatArr.length; r++){
+            for (var r = 0; r < repeatArr.length; r++) {
                 allErrorArr.push(repeatArr[r]);
             }
         }
@@ -1204,7 +1234,7 @@
         var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : '';
         var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : '';
         var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : '';
-        var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : '';
+        var shiStr = shiArr.length > 0 ? (" 十位: " + shiArr.join("")) : '';
         var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : '';
         obj.content = $.trim(wanStr + qianStr + baiStr + shiStr + geStr);
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
@@ -1302,24 +1332,24 @@
                     arr.push(num);
                 }
             }
-            if(flag_zhi == "rx2-zxfs"){
+            if (flag_zhi == "rx2-zxfs") {
                 contentStr = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
-            } else if(flag_zhi == "rx2-zxds" || flag_zhi == "rx2-zuxds"){
-                contentStr = "号码: (" + arr[0] + "" + arr[1] +")";
-            } else if(flag_zhi == "rx2-zxhz"){
+            } else if (flag_zhi == "rx2-zxds" || flag_zhi == "rx2-zuxds") {
+                contentStr = "号码: (" + arr[0] + "" + arr[1] + ")";
+            } else if (flag_zhi == "rx2-zxhz") {
                 var hzsj = [];
                 hzsj.push(parseInt(Math.random() * 19));
                 shu = getRx2zxhzZhushu(hzsj);
                 hz_shu = $("#positioninfo-hz").html();
-                contentStr = "号码: (" + hzsj[0] +")";
-            } else if(flag_zhi == "rx2-zuxhz"){
+                contentStr = "号码: (" + hzsj[0] + ")";
+            } else if (flag_zhi == "rx2-zuxhz") {
                 var zuxhz = [];
                 zuxhz.push(parseInt(Math.random() * 19));
                 shu = getRx2zuxhzZhushu(zuxhz);
                 hz_shu = $("#positioninfo-zuhz").html();
-                contentStr = "号码: (" + zuxhz[0] +")";
-            } else if(flag_zhi == "rx2-zuxfs"){
-                contentStr = "号码: (" + arr[0] + "," + arr[1] +")";
+                contentStr = "号码: (" + zuxhz[0] + ")";
+            } else if (flag_zhi == "rx2-zuxfs") {
+                contentStr = "号码: (" + arr[0] + "," + arr[1] + ")";
             }
 
             var obj = {};
@@ -1329,25 +1359,25 @@
 
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");
-            if(flag_zhi == "rx2-zuxfs"){
+            if (flag_zhi == "rx2-zuxfs") {
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
                 var zufs_shu = $("#positioninfo-zufs").html();
                 obj.zhushu = zufs_shu;
-            } else if(flag_zhi == "rx2-zuxds"){
+            } else if (flag_zhi == "rx2-zuxds") {
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
                 var zuds_shu = $("#positioninfo-zuds").html();
                 obj.zhushu = zuds_shu;
-            } else if(flag_zhi == "rx2-zuxhz"){
+            } else if (flag_zhi == "rx2-zuxhz") {
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
                 obj.zhushu = hz_shu * shu;
-            } else if(flag_zhi == "rx2-zxds"){
+            } else if (flag_zhi == "rx2-zxds") {
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
                 var ds_shu = $("#positioninfo-ds").html();
                 obj.zhushu = ds_shu;
-            } else if(flag_zhi == "rx2-zxhz"){
+            } else if (flag_zhi == "rx2-zxhz") {
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
                 obj.zhushu = hz_shu * shu;
-            } else{
+            } else {
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
                 obj.zhushu = 10;
             }
@@ -1383,7 +1413,7 @@
                 money_jangjin = 98 - (98 - 85) / 13 * money_jangjin;
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
                 $(".jiangjin-change-zux").html(parseFloat(money_jangjin_zux).toFixed(2));
-                if(typeof stateTouZhu == "function"){
+                if (typeof stateTouZhu == "function") {
                     var flag_str = '';
                     if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
                         flag_str = 'rx2-zxfs';
@@ -1414,7 +1444,6 @@
             $(this).parent().hide();
 
             $(this).parent().parent().find('input').data("money", parseInt(text));
-            calc();
             changeStateCommon();
         });
 
@@ -1439,7 +1468,7 @@
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
 
-            calc();
+
             changeStateCommon();
         });
 
@@ -1453,32 +1482,8 @@
             ++val;
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
-
-            calc();
             changeStateCommon();
         });
 
     });
-</script>
-
-<script type="text/html" id="template_touzhu">
-    <li
-            data-zhushu="{{zhushu}}"
-            data-beishu="{{beishu}}"
-            data-total_money="{{totalMoney}}"
-            data-money="{{money}}"
-            data-play_group_id="{{playGroupId}}"
-            data-content="{{content}}"
-            class="re_touzhu_tem"
-    >
-        <div class="head-name">
-            <span>{{playName}}</span>
-        </div>
-        <div class="content-jiang">
-            <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-            <span class="span1">{{zhushu}}注&nbsp;&nbsp;{{jiangJfanD}}&nbsp;&nbsp;<var class="varColor">{{totalMoney}}元</var></span>
-            <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
-                    src="${resPath}img/ico53.png" alt=""></a></span>
-        </div>
-    </li>
 </script>

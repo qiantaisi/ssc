@@ -184,7 +184,8 @@
     text-align: center;
 }
 .Single .layout .Pick ul.dxds li .re-5x-i{
-    margin-right: 550px;
+    margin-right: 536px;
+    margin-top: 5px;
 }
 .Playmethod ul li p .rxwf{
     width: 75px!important;
@@ -252,9 +253,6 @@
     /*height: 50px;*/
     /*line-height: 60px;*/
     margin-bottom: 0!important;
-}
-.Pick ul .re-zuxhz-rx2 b{
-    margin-right: 9px!important;
 }
 .Pick ul .re-zuxhz-rx2 span{
     margin-left: 10px!important;
@@ -427,5 +425,14 @@
 }
 .Single .layout .Pick ul li span:hover{
     border-color: red;
+}
+.recl-1004-zxhz ul li.rehz-q2,.recl-1008-zuxhz ul li.rehz-q2 {
+    width: 700px !important;
+}
+.Single .layout .Pick ul li.re-zuxhz-rx2 span{
+    margin-left: 0!important;
+}
+.Single .layout .Pick ul li.re-zuxhz-rx2 span{
+    margin: 0!important;
 }
 
