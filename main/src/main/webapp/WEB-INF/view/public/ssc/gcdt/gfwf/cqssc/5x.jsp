@@ -296,10 +296,7 @@
             clearStateTouZhu();
         }
     }
-    function clearZhudan() {
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
-        calcAll();
-    }
+
 
     function clearTextarea() {
         $(".content_jiang textarea").val('');
