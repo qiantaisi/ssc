@@ -143,7 +143,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>

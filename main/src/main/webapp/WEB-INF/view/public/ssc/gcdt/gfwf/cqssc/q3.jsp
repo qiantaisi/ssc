@@ -11,30 +11,31 @@
         <li>
             <b>前三直选</b>
             <p class="btn_h3_zx">
-                <span class="acti" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span data-name="hszh"><a href="javascript:void(0)">前三组合</a></span>
-                <span data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
-                <span data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
+                <span class="playPlIdBtn acti" data-play_pl_id="14224" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14225" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14226" data-name="hszh"><a href="javascript:void(0)">前三组合</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14227" data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14228" data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
             </p>
         </li>
         <li>
             <b>前三组选</b>
             <p class="btn_h3_zux">
-                <span data-name="zsfs"><a href="javascript:void(0)">组三复式</a></span>
-                <span data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
-                <span data-name="zlfs"><a href="javascript:void(0)">组六复式</a></span>
-                <span data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
-                <span data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
-                <span data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <span data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14229" data-name="zsfs"><a href="javascript:void(0)">组三复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14230" data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14231" data-name="zlfs"><a href="javascript:void(0)">组六复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14232" data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14233" data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14234" data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14235" data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
             </p>
         </li>
         <li>
             <b>前三其它</b>
             <p class="btn_h3_qt">
-                <span data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
-                <span data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14236" data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14237" data-name="tsh"><a
+                        href="javascript:void(0)">特殊号</a></span>
             </p>
         </li>
     </ul>
@@ -55,16 +56,18 @@
     <ul>
         <li data-name="万">
             <b><i>万位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -76,16 +79,18 @@
         </li>
         <li data-name="千">
             <b><i>千位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -97,16 +102,18 @@
         </li>
         <li data-name="十">
             <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -129,14 +136,13 @@
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
                 <var>从万、千、十位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
             </a>
-
         </span>
     </p>
     <div class="content_jiang">
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -163,16 +169,18 @@
     <ul>
         <li data-name="万">
             <b><i>万位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -184,16 +192,18 @@
         </li>
         <li data-name="千">
             <b><i>千位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -205,16 +215,18 @@
         </li>
         <li data-name="十">
             <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -243,34 +255,38 @@
     <ul>
         <li class="li1005_hezhi" data-name="和值">
             <b><i>和值</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <span><i>10</i></span>
-            <span><i>11</i></span>
-            <span><i>12</i></span>
-            <span><i>13</i></span>
-            <span><i>14</i></span>
-            <span><i>15</i></span>
-            <span><i>16</i></span>
-            <span><i>17</i></span>
-            <span><i>18</i></span>
-            <span><i>19</i></span>
-            <span><i>20</i></span>
-            <span><i>21</i></span>
-            <span><i>22</i></span>
-            <span><i>23</i></span>
-            <span><i>24</i></span>
-            <span><i>25</i></span>
-            <span><i>26</i></span>
-            <span><i>27</i></span>
+            <var class="numLine renumHeigth">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+                <span><i>10</i></span>
+                <span><i>11</i></span>
+                <span><i>12</i></span>
+                <span><i>13</i></span>
+            </var>
+            <var class="numLine renumHeigth">
+                <span><i>14</i></span>
+                <span><i>15</i></span>
+                <span><i>16</i></span>
+                <span><i>17</i></span>
+                <span><i>18</i></span>
+                <span><i>19</i></span>
+                <span><i>20</i></span>
+                <span><i>21</i></span>
+                <span><i>22</i></span>
+                <span><i>23</i></span>
+                <span><i>24</i></span>
+                <span><i>25</i></span>
+                <span><i>26</i></span>
+                <span><i>27</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -291,16 +307,18 @@
     <ul>
         <li data-name="跨度">
             <b><i>跨度</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -329,16 +347,18 @@
     <ul>
         <li data-name="组三">
             <b><i>组三</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -369,7 +389,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -396,16 +416,18 @@
     <ul>
         <li data-name="组六">
             <b><i>组六</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -437,7 +459,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -465,7 +487,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -491,32 +513,36 @@
     <ul>
         <li class="li1012_hezhi" data-name="和值">
             <b><i>和值</i></b>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <span><i>10</i></span>
-            <span><i>11</i></span>
-            <span><i>12</i></span>
-            <span><i>13</i></span>
-            <span><i>14</i></span>
-            <span><i>15</i></span>
-            <span><i>16</i></span>
-            <span><i>17</i></span>
-            <span><i>18</i></span>
-            <span><i>19</i></span>
-            <span><i>20</i></span>
-            <span><i>21</i></span>
-            <span><i>22</i></span>
-            <span><i>23</i></span>
-            <span><i>24</i></span>
-            <span><i>25</i></span>
-            <span><i>26</i></span>
+            <var class="numLine renumHeigth">
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+                <span><i>10</i></span>
+                <span><i>11</i></span>
+                <span><i>12</i></span>
+                <span><i>13</i></span>
+            </var>
+            <var class="numLine renumHeigth">
+                <span><i>14</i></span>
+                <span><i>15</i></span>
+                <span><i>16</i></span>
+                <span><i>17</i></span>
+                <span><i>18</i></span>
+                <span><i>19</i></span>
+                <span><i>20</i></span>
+                <span><i>21</i></span>
+                <span><i>22</i></span>
+                <span><i>23</i></span>
+                <span><i>24</i></span>
+                <span><i>25</i></span>
+                <span><i>26</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -538,16 +564,18 @@
     <ul>
         <li data-name="包胆">
             <b><i>包胆</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -568,16 +596,18 @@
     <ul>
         <li class="hzws_li" data-name="和值尾数">
             <b><i>和值尾数</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -597,7 +627,7 @@
     </p>
     <ul>
         <li class="hzws_li tsh_li" data-name="特殊号">
-            <b><i>特殊号</i></b>
+            <b class="tsh-b"><i>特殊号</i></b>
             <span>豹子</span>
             <span>顺子</span>
             <span>对子</span>
@@ -618,14 +648,22 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i class="change-base"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-base-hszx"><var class="jiangjin-change-hszx">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-base-zl"><var class="jiangjin-change-zl">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-base-ws"><var class="jiangjin-change-ws">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-base-tsh"><var class="jiangjin-change-tsh">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-sz">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-dz">0.0</var></i>
+                <i class="change-base"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var
+                        class="fandian-bfb">0.0%</var></i>
+                <i class="change-base-hszx"><var class="jiangjin-change-hszx">0.0</var><var>&nbsp;/&nbsp;</var><var
+                        class="fandian-bfb">0.0%</var></i>
+                <i class="change-base-zl"><var class="jiangjin-change-zl">0.0</var><var>&nbsp;/&nbsp;</var><var
+                        class="fandian-bfb">0.0%</var></i>
+                <i class="change-base-ws"><var class="jiangjin-change-ws">0.0</var><var>&nbsp;/&nbsp;</var><var
+                        class="fandian-bfb">0.0%</var></i>
+                <i class="change-base-tsh"><var class="jiangjin-change-tsh">0.0</var>&nbsp;/&nbsp;<var
+                        class="jiangjin-change-tsh-sz">0.0</var>&nbsp;/&nbsp;<var
+                        class="jiangjin-change-tsh-dz">0.0</var></i>
                 <i class="change-1"><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-2"><var class="jiangjin-change-2">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-3">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-4">0.0</var></i>
-                <i class="change-3"><var class="jiangjin-change-hszx">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-zl">0.0</var></i>
+                <i class="change-2"><var class="jiangjin-change-2">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-3">0.0</var>&nbsp;/&nbsp;<var
+                        class="jiangjin-change-4">0.0</var></i>
+                <i class="change-3"><var class="jiangjin-change-hszx">0.0</var>&nbsp;/&nbsp;<var
+                        class="jiangjin-change-zl">0.0</var></i>
 
             </div>
             <div class="reduce">
@@ -637,7 +675,7 @@
                 <span>倍</span>
             </div>
             <div class="down">
-                <input type="text" value="2元" id="inputMoney" data-money="2">
+                <input type="text" value="2元" id="inputMoney" data-money="2" disabled="disabled">
                 <span></span>
                 <div class="down_menu">
                     <i>2元</i>
@@ -693,10 +731,12 @@
                 $(".Pick").hide();
                 $('.recl-1003').show();
                 $('.recl-1003').attr("data-flag", "zxds_zx");
+                allClear();
             } else if (flag_name == 'zxfs') {
                 $(".Pick").hide();
                 $('.recl-1002').show();
                 $('.recl-1002').attr("data-flag", "zxfs_zx");
+                allClear();
             } else if (flag_name == "hszh") {
                 $(".Pick").hide();
                 $('.cl-1004-hszh').show();
@@ -704,16 +744,19 @@
                 $(".change-1").show();
                 $(".change-2").show();
                 $(".change-base").hide();
+                allClear();
             } else if (flag_name == "zxhz") {
                 $(".Pick").hide();
                 $('.cl-1005-zxhz').show();
                 $('.cl-1005-zxhz').attr("data-flag", "zxhz_zx");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                allClear();
             } else if (flag_name == "zxkd") {
                 $(".Pick").hide();
                 $('.cl-1006-zxkd').show();
                 $('.cl-1006-zxkd').attr("data-flag", "zxkd_zx");
+                allClear();
             }
         });
 
@@ -739,22 +782,26 @@
                 $(".Pick").hide();
                 $('.cl-1007-zsfs').show();
                 $('.cl-1007-zsfs').attr("data-flag", "zsfs_zux");
+                allClear();
             } else if (flag_name == "zsds") {
                 $(".Pick").hide();
                 $(".cl-1008-zsds").show();
                 $('.cl-1008-zsds').attr("data-flag", "zsds_zux");
+                allClear();
             } else if (flag_name == "zlfs") {
                 $(".Pick").hide();
                 $(".cl-1009-zlfs").show();
                 $(".cl-1009-zlfs").attr("data-flag", "zlfs_zux");
                 $(".change-base-zl").show();
                 $(".change-base-hszx").hide();
+                allClear();
             } else if (flag_name == "zlds") {
                 $(".Pick").hide();
                 $(".cl-1010-zlds").show();
                 $(".cl-1010-zlds").attr("data-flag", "zlds_zux");
                 $(".change-base-zl").show();
                 $(".change-base-hszx").hide();
+                allClear();
             } else if (flag_name == "hhzx") {
                 $(".Pick").hide();
                 $(".cl-1011-hhzx").show();
@@ -762,6 +809,7 @@
                 $(".change-base-hszx").hide();
                 $(".change-1").show();
                 $(".change-3").show();
+                allClear();
             } else if (flag_name == "zxhz") {
                 $(".Pick").hide();
                 $(".cl-1012-zxhz").show();
@@ -771,6 +819,7 @@
                 $(".change-base-hszx").hide();
                 $(".change-1").show();
                 $(".change-3").show();
+                allClear();
             } else if (flag_name == "zxbd") {
                 $(".Pick").hide();
                 $(".cl-1013-zxbd").show();
@@ -780,6 +829,7 @@
                 $(".change-base-hszx").hide();
                 $(".change-1").show();
                 $(".change-3").show();
+                allClear();
             }
         });
 
@@ -802,6 +852,7 @@
                 $(".Pick").hide();
                 $('.cl-1014-hzws').show();
                 $(".cl-1014-hzws").attr("data-flag", "hzws_qt");
+                allClear();
             } else if (flag_name == "tsh") {
                 $(".Pick").hide();
                 $('.cl-1015-tsh').show();
@@ -809,6 +860,7 @@
                 $(".change-base-ws").hide();
                 $(".change-1").show();
                 $(".change-base-tsh").show();
+                allClear();
             }
         });
 
@@ -823,14 +875,17 @@
 
         $(".Pick ul li span i").click(function () {
             var flag_name = $(this).parent().parent().parent().parent().attr("data-flag");
-            if(flag_name == "zxbd_zux"){
-                if( $(this).parent().hasClass('acti')){
+            if(typeof flag_name == "undefined"){
+                flag_name = $(this).parent().parent().parent().parent().parent().attr("data-flag");
+            }
+            if (flag_name == "zxbd_zux") {
+                if ($(this).parent().hasClass('acti')) {
                     $(this).parent().removeClass('acti');
-                }else{
+                } else {
                     $(".cl-1013-zxbd ul li span.acti").removeClass('acti');
                     $(this).parent().addClass('acti');
                 }
-            }else{
+            } else {
                 $(this).parent().toggleClass('acti');
             }
 
@@ -857,21 +912,65 @@
             }
         });
 
+        //输入倍数十重新计算
+        $("#inputBeishu").keyup(function(){
+            var valStr = $("#inputBeishu").val();
+            $("#inputBeishu").data("beishu",$("#inputBeishu").val());
+            if(valStr != ""){
+                if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
+                    stateTouZhu('dan');
+                } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
+                    stateTouZhu('hszh_zx');
+                } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
+                    stateTouZhu('zxhz_zx');
+                } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
+                    stateTouZhu('zxkd_zx');
+                } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
+                    stateTouZhu('zsfs_zux');
+                } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
+                    stateTouZhu('zsds_zux');
+                } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
+                    stateTouZhu('zlfs_zux');
+                } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
+                    stateTouZhu('zlds_zux');
+                } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
+                    stateTouZhu('hhzx_zux');
+                } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
+                    stateTouZhu('zxhz_zux');
+                } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
+                    stateTouZhu('zxbd_zux');
+                } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
+                    stateTouZhu('hzws_qt');
+                } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
+                    stateTouZhu('tsh_qt');
+                } else {
+                    stateTouZhu('fu');
+                }
+            }
+        });
+
+        $("#inputBeishu").blur(function(){
+            var valStr = $("#inputBeishu").val();
+            if(valStr == "" || valStr == null || typeof valStr == "undefined"){
+                $("#inputBeishu").val("1");
+            }
+        });
+
     });
 </script>
 <script>
     function getSuiji(total) {
-        var betFormList = suiji(total);
+        var betFormList = [];
+        betFormList = suiji(total);
         $.each(betFormList, function (index, value) {
-            var html = template("template_touzhu", value);
-            $("#zhudanList").append(html);
+            addYuxuan(value);
         });
         calcAll();
     }
 
     function clearSelected() {
         var flag = $(".cl-1015-tsh").attr("data-flag");
-        if(typeof flag != "undefined"){
+        if (typeof flag != "undefined") {
             $(".cl-1015-tsh ul li span.acti_tsh").removeClass("acti_tsh");
         }
         $(".Single .layout .Pick ul li span.acti").removeClass("acti");
@@ -880,27 +979,16 @@
         if (typeof clearStateTouZhu == 'function') {
             clearStateTouZhu();
         }
-        calc();
     }
 
-    function removeThisItem(obj) {
-        $(obj).parent().parent().parent().remove();
-        calcAll();
+    function allClear(){
+        clearTextarea();
+        clearSelected();
     }
+
     function clearZhudan() {
-        $("#zhudanList li:not('.head')").remove();
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
         calcAll();
-    }
-
-    function calc() {
-        var money = $("#inputMoney").data("money");
-        var beishu = $("#inputBeishu").data("beishu");
-        var zhushu = $("#zhushuInfo").data("zhushu");
-
-        var totalMoney = mul(beishu * zhushu, money);
-
-        $("#beishuInfo").html(beishu);
-        $("#totalMoneyInfo").data("total_money", totalMoney).html(totalMoney);
     }
 
     function clearTextarea() {
@@ -918,8 +1006,7 @@
                 return;
             }
             clearSelected();
-            var html = template("template_touzhu", betForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betForm);
             calcAll();
         } else if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -928,10 +1015,8 @@
             }
             clearTextarea();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
-
         } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getHsZhudan(betDsForm)) {
@@ -940,10 +1025,8 @@
             clearTextarea();
             clearSelected();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
-
         } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getHeZhiZhudan(betDsForm)) {
@@ -951,10 +1034,8 @@
             }
             clearSelected();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
-
         } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
             var betDsForm = {};
             if (!getZhudan(betDsForm)) {
@@ -962,8 +1043,7 @@
             }
             clearSelected();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -972,8 +1052,7 @@
             }
             clearSelected();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -982,8 +1061,7 @@
             }
             clearTextarea();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -992,8 +1070,7 @@
             }
             clearSelected();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -1002,8 +1079,7 @@
             }
             clearTextarea();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -1012,8 +1088,7 @@
             }
             clearTextarea();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -1022,8 +1097,7 @@
             }
             clearSelected();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -1032,8 +1106,7 @@
             }
             clearSelected();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -1042,8 +1115,7 @@
             }
             clearSelected();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
             var betDsForm = {};
@@ -1052,8 +1124,7 @@
             }
             clearSelected();
             clearStateTouZhu();
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betDsForm);
             calcAll();
         }
     }
@@ -1119,16 +1190,7 @@
                 newArr.push(arr_new[i]);
             }
         }
-        for (var n = 0; n < newArr.length; n++) {
-            var temp = newArr[n].toString();
-            var oneStr = temp.substr(0, 1);
-            var twoStr = temp.substr(1, 1);
-            var threeStr = temp.substr(2, 1);
-            if (oneStr != twoStr && twoStr != threeStr && threeStr != oneStr) {
-                tempArr.push(newArr[n]);
-            }
-        }
-        return tempArr.length;
+        return newArr.length;
     }
 
     //获取手动输入的有效注数-组三单式
@@ -1142,16 +1204,7 @@
                 newArr.push(arr_new[i]);
             }
         }
-        for (var n = 0; n < newArr.length; n++) {
-            var temp = newArr[n].toString();
-            var oneStr = temp.substr(0, 1);
-            var twoStr = temp.substr(1, 1);
-            var threeStr = temp.substr(2, 1);
-            if (oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && threeStr != oneStr || threeStr == oneStr && oneStr != twoStr) {
-                tempArr.push(newArr[n]);
-            }
-        }
-        return tempArr.length;
+        return newArr.length;
     }
 
     //前三直选-直选单式
@@ -1184,14 +1237,17 @@
         }
 
         zhushu = newArr.length;
-        obj.playName = "前三直选-单式";
-        obj.content = "号码: (" + newArr + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+        obj.showPlayName = "前三直选-单式";
+        obj.showContent = "号码: (" + newArr + ")";
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1233,14 +1289,17 @@
         }
 
         zhushu = tempArr.length;
-        obj.playName = "前三组选-组三单式";
-        obj.content = "号码: (" + tempArr.join(', ') + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+        obj.showPlayName = "前三组选-组三单式";
+        obj.showContent = "号码: (" + tempArr.join(', ') + ")";
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1260,14 +1319,18 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = playNameDan;
-        obj.content = contentDan;
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+
+        obj.showPlayName = playNameDan;
+        obj.showContent = contentDan;
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1287,14 +1350,18 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = playNameDan;
-        obj.content = contentDan;
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-zl").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+
+        obj.showPlayName = playNameDan;
+        obj.showContent = contentDan;
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change-zl").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1309,6 +1376,8 @@
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
                 newArr.push(arr_new[i]);
+            } else{
+                errorArr.push(arr_new[i]);
             }
         }
         for (var n = 0; n < newArr.length; n++) {
@@ -1336,14 +1405,17 @@
         }
 
         zhushu = tempArr.length;
-        obj.playName = "前三组选-混合组选";
-        obj.content = "号码: (" + tempArr.join(', ') + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+        obj.showPlayName = "前三组选-混合组选";
+        obj.showContent = "号码: (" + tempArr.join(', ') + ")";
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change-zl").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1384,14 +1456,17 @@
         }
 
         zhushu = tempArr.length;
-        obj.playName = "前三组选-组六单式";
-        obj.content = "号码: (" + tempArr.join(', ') + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-zl").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+        obj.showPlayName = "前三组选-组六单式";
+        obj.showContent = "号码: (" + tempArr.join(', ') + ")";
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change-zl").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1405,34 +1480,57 @@
                 kaDuArr.push($.trim($(this).find("i").html()));
             });
             playNameDan = "前三直选-跨度";
-            contentDan = "跨度: (" + kaDuArr.join(", ") + ")";
+            obj.showContent = "跨度: (" + kaDuArr.join(", ") + ")";
         } else {
-            var baiArr = [], shiArr = [], geArr = [];
+            var wanArr = [], qianArr = [], shiArr = [];
             $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
-                baiArr.push($.trim($(this).find("i").html()));
+                wanArr.push($.trim($(this).find("i").html()));
             });
             $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
-                shiArr.push($.trim($(this).find("i").html()));
+                qianArr.push($.trim($(this).find("i").html()));
             });
             $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
-                geArr.push($.trim($(this).find("i").html()));
+                shiArr.push($.trim($(this).find("i").html()));
             });
             playNameDan = "前三直选-复式";
-            contentDan = "万位: " + baiArr.join("") + " 千位: " + shiArr.join("") + " 十位: " + geArr.join("");
+            // 模板显示内容
+            obj.showContent = "万位：({0})，千位：({1})，十位：({2})".format(
+                wanArr.join(","),
+                qianArr.join(","),
+                shiArr.join(",")
+            );
+            // 转换投注格式
+            // 投注内容
+            obj.betContent = gfwf_3xfs(
+                wanArr,
+                qianArr,
+                shiArr
+            );
         }
         var zhushu = getZhushu(flag_name);
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = playNameDan;
-        obj.content = contentDan;
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+        // 玩法名称
+        obj.showPlayName = playNameDan;
+        // 每注金额
+        obj.betPerMoney = $("#inputMoney").data("money");
+        // 注数
+        obj.betZhushu = zhushu;
+        // 倍数（1-元，obj.betMode2-角，3-分，4-厘）
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        // 每单总金额
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        // 彩种
+        obj.betPlayGroupId = playGroupId;
+        // 返点比例
+        obj.betFandian = $(".fandian-bfb").data("value");
+        // 赔率
+        obj.betPlayPl = $(".jiangjin-change").data("value");
+        // 赔率ID
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1449,14 +1547,18 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "前三直选-和值";
-        obj.content = "和值: (" + heZhiArr.join(", ") + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+
+        obj.showPlayName = "前三直选-和值";
+        obj.showContent = "和值: (" + heZhiArr.join(", ") + ")";
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change-zl").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1474,14 +1576,18 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "前三组选-组选和值";
-        obj.content = "和值: (" + heZhiArr.join(", ") + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+
+        obj.showPlayName = "前三组选-组选和值";
+        obj.showContent = "和值: (" + heZhiArr.join(", ") + ")";
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1497,25 +1603,27 @@
             return false;
         }
 
-        obj.playName = "前三其它-特殊号";
-        obj.content = "特殊号: (" + bdArr.join(", ") + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * bdArr.length;
-        obj.zhushu = bdArr.length;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
+        obj.showPlayName = "前三其它-特殊号";
+        obj.showContent = "特殊号: (" + bdArr.join(", ") + ")";
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = bdArr.length ;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
         if(bdArr.length == 1) {
-           var flag_name = $(".cl-1015-tsh ul li[data-name = '特殊号'] span.acti_tsh").html();
-           if(flag_name == "豹子"){
-               obj.jiangJfanD = $(".jiangjin-change-tsh").html() + "/" + $(".fandian-bfb").html();
-           }else if(flag_name == "顺子"){
-               obj.jiangJfanD = $(".jiangjin-change-tsh-sz").html() + "/" + $(".fandian-bfb").html();
-           }else if(flag_name == "对子"){
-               obj.jiangJfanD = $(".jiangjin-change-tsh-dz").html() + "/" + $(".fandian-bfb").html();
-           }
+            var flag_name = $(".cl-1015-tsh ul li[data-name = '特殊号'] span.acti_tsh").html();
+            if(flag_name == "豹子"){
+                obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
+            }else if(flag_name == "顺子"){
+                obj.betPlayPl = $(".jiangjin-change-tsh-sz").data("value");
+            }else if(flag_name == "对子"){
+                obj.betPlayPl = $(".jiangjin-change-tsh-dz").data("value");
+            }
         }else if(bdArr.length > 1){
-            obj.jiangJfanD = $(".jiangjin-change-tsh").html() + "/" + $(".fandian-bfb").html();
+            obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
         }
         obj.playGroupId = playGroupId;
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1531,14 +1639,18 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "前三组选-和值尾数";
-        obj.content = "和值: (" + bdArr.join(", ") + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * bdArr.length;
-        obj.zhushu = bdArr.length;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-ws").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+
+        obj.showPlayName = "前三组选-和值尾数";
+        obj.showContent = "和值: (" + bdArr.join(", ") + ")";
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = bdArr.length;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change-ws").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1555,29 +1667,33 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "前三组选-组选包胆";
-        obj.content = "包胆: (" + bdArr.join(", ") + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+
+        obj.showPlayName = "前三组选-组选包胆";
+        obj.showContent = "包胆: (" + bdArr.join(", ") + ")";
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
 
     //前三直选--前三组合
     function getHsZhudan(obj) {
-        var baiArr = [], shiArr = [], geArr = [];
+        var wanArr = [], qianArr = [], shiArr = [];
         $.each($(".cl-1004-hszh ul li[data-name = '万'] span.acti"), function (index, value) {
-            baiArr.push($.trim($(this).find("i").html()));
+            wanArr.push($.trim($(this).find("i").html()));
         });
         $.each($(".cl-1004-hszh ul li[data-name = '千'] span.acti"), function (index, value) {
-            shiArr.push($.trim($(this).find("i").html()));
+            qianArr.push($.trim($(this).find("i").html()));
         });
         $.each($(".cl-1004-hszh ul li[data-name = '十'] span.acti"), function (index, value) {
-            geArr.push($.trim($(this).find("i").html()));
+            shiArr.push($.trim($(this).find("i").html()));
         });
         var zhushu = getHsZhushu();
 
@@ -1585,14 +1701,27 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "前三直选-组合";
-        obj.content = "万位: " + baiArr.join("") + " 千位: " + shiArr.join("") + " 十位: " + geArr.join("");
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+        obj.showPlayName = "后三直选-组合";
+        // 模板显示内容
+        obj.showContent = "万位：({0})，千位：({1})，十位：({2})".format(
+            wanArr.join(","),
+            qianArr.join(","),
+            shiArr.join(",")
+        );
+        obj.betContent = gfwf_3xfs(
+            wanArr,
+            qianArr,
+            shiArr
+        );
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change").data("value");
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -1762,16 +1891,16 @@
         return newArr.length;
     }
 
-
+    //投注总状态
     function calcAll() {
         var totalZhushu = 0;
         var totalBeishu = 0;
         var totalMoney = 0;
 
-        $("#zhudanList li:not('.head')").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("beishu"));
-            totalMoney = add(totalMoney, $(this).data("total_money"));
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
+            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
+            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
+            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
         });
 
         var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
@@ -1866,11 +1995,11 @@
                 }
                 zhushu = 1;
                 contentStr = "特殊号: (" + newArr[0] + ")";
-                if(newArr[0] == "对子"){
+                if (newArr[0] == "对子") {
                     tsh_pl_flag = 1;
-                } else if(newArr[0] == "顺子"){
+                } else if (newArr[0] == "顺子") {
                     tsh_pl_flag = 2;
-                } else if(newArr[0] == "豹子"){
+                } else if (newArr[0] == "豹子") {
                     tsh_pl_flag = 3;
                 }
             } else if (flag_zhi == "zxbd-zux") {  //组选包胆
@@ -1955,30 +2084,40 @@
             }
 
             var obj = {};
-            obj.playName = playNameStr;
-            obj.content = contentStr;
-            obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-            obj.zhushu = zhushu;
-            obj.beishu = $("#inputBeishu").data("beishu");
-            obj.money = $("#inputMoney").data("money");
+            obj.showPlayName = playNameStr;
+            obj.showContent = contentStr;
+            obj.betPerMoney = $("#inputMoney").data("money");
+            obj.betZhushu = 1;
+            obj.betBeishu = $("#inputBeishu").data("beishu");
+            obj.betMode = 1;
+            obj.betTotalMoney = obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
             if(flag_zhi == "zxfs-zux" || flag_zhi == "zsds-zux" || flag_zhi == "hhzx-zux" || flag_zhi == "zxhz-zux" || flag_zhi == "zxbd-zux"){
-                obj.jiangJfanD = $(".jiangjin-change-hszx").html() + "/" + $(".fandian-bfb").html();
+                obj.betFandian = $(".fandian-bfb").data("value");
+                obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
             }else if(flag_zhi == "zlfs-zux" || flag_zhi == "zlds-zux"){
-                obj.jiangJfanD = $(".jiangjin-change-zl").html() + "/" + $(".fandian-bfb").html();
+                obj.betFandian = $(".fandian-bfb").data("value");
+                obj.betPlayPl = $(".jiangjin-change-zl").data("value");
             }else if(flag_zhi == "hzws-qt"){
-                obj.jiangJfanD = $(".jiangjin-change-ws").html() + "/" + $(".fandian-bfb").html();
+                obj.betFandian = $(".fandian-bfb").data("value");
+                obj.betPlayPl = $(".jiangjin-change-ws").data("value");
             }else if(flag_zhi == "tsh-qt"){
                 if(tsh_pl_flag == 1){
-                    obj.jiangJfanD = $(".jiangjin-change-tsh-dz").html() + "/" + $(".fandian-bfb").html();
+                    obj.betFandian = $(".fandian-bfb").data("value");
+                    obj.betPlayPl = $(".jiangjin-change-tsh-dz").data("value");
                 }else if(tsh_pl_flag == 2){
-                    obj.jiangJfanD = $(".jiangjin-change-tsh-sz").html() + "/" + $(".fandian-bfb").html();
+                    obj.betFandian = $(".fandian-bfb").data("value");
+                    obj.betPlayPl = $(".jiangjin-change-tsh-sz").data("value");
                 }else if(tsh_pl_flag == 3){
-                    obj.jiangJfanD = $(".jiangjin-change-tsh").html() + "/" + $(".fandian-bfb").html();
+                    obj.betFandian = $(".fandian-bfb").data("value");
+                    obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
                 }
             }else{
-                obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
+                // 返点比例
+                obj.betFandian = $(".fandian-bfb").data("value");
+                // 赔率
+                obj.betPlayPl = $(".jiangjin-change").data("value");
             }
-            obj.playGroupId = playGroupId;
+            obj.betPlayGroupId = playGroupId;
             result.push(obj);
         }
         return result;
@@ -2009,78 +2148,88 @@
             showScale: false,
             snap: true,
             onstatechange: function () {
-                    var money_jangjin = $(".slider-input").val();
-                    money_jangjin = parseFloat(money_jangjin).toFixed(1);
-                    $(".fandian-bfb").html(money_jangjin + "%");
-                    money_jangjin = 980 - (money_jangjin * 10);
-                    $(".jiangjin-change").html(money_jangjin);
-                    //特殊号的拉动杆值
-                    var money_tsh = parseFloat(money_jangjin / 10).toFixed(2);
-                    $(".jiangjin-change-tsh").html(money_tsh);
-                    money_tsh = parseFloat(money_tsh / 6).toFixed(2);
-                    $(".jiangjin-change-tsh-sz").html(money_tsh);
-                    money_tsh = parseFloat(money_tsh / 4.5).toFixed(2);
-                    $(".jiangjin-change-tsh-dz").html(money_tsh);
-                    //特殊号尾数和值的拉动杆值
-                    var money_ws = parseFloat(money_jangjin / 100).toFixed(2);
-                    $(".jiangjin-change-ws").html(money_ws);
-                    //组三拉动干值
-                    var money_hszx = parseFloat(money_jangjin / 3).toFixed(2);
-                    $(".jiangjin-change-hszx").html(money_hszx);
-                    //组六拉动杆值
-                    var money_zl = parseFloat(money_jangjin / 6).toFixed(2);
-                    $(".jiangjin-change-zl").html(money_zl);
-                    $(".jiangjin-change-2").html(money_jangjin);
-                    $(".jiangjin-change-3").html(money_jangjin / 10);
-                    $(".jiangjin-change-4").html(money_jangjin / 100);
+                var money_jangjin = $(".slider-input").val();
+                money_jangjin = parseFloat(money_jangjin).toFixed(1);
+                $(".fandian-bfb").html(money_jangjin + "%");
+                money_jangjin = 980 - (money_jangjin * 10);
+                $(".jiangjin-change").data("value", money_jangjin);
+                $(".jiangjin-change").html(money_jangjin);
+                //特殊号的拉动杆值
+                var money_tsh = parseFloat(money_jangjin / 10).toFixed(2);
+                $(".jiangjin-change-tsh").data("value", money_tsh);
+                $(".jiangjin-change-tsh").html(money_tsh);
+                money_tsh = parseFloat(money_tsh / 6).toFixed(2);
+                $(".jiangjin-change-tsh-sz").data("value", money_tsh);
+                $(".jiangjin-change-tsh-sz").html(money_tsh);
+                money_tsh = parseFloat(money_tsh / 4.5).toFixed(2);
+                $(".jiangjin-change-tsh-dz").data("value", money_tsh);
+                $(".jiangjin-change-tsh-dz").html(money_tsh);
+                //特殊号尾数和值的拉动杆值
+                var money_ws = parseFloat(money_jangjin / 100).toFixed(2);
+                $(".jiangjin-change-ws").data("value", money_ws);
+                $(".jiangjin-change-ws").html(money_ws);
+                //组三拉动干值
+                var money_hszx = parseFloat(money_jangjin / 3).toFixed(2);
+                $(".jiangjin-change-hszx").data("value", money_hszx);
+                $(".jiangjin-change-hszx").html(money_hszx);
+                //组六拉动杆值
+                var money_zl = parseFloat(money_jangjin / 6).toFixed(2);
+                $(".jiangjin-change-zl").data("value", money_zl);
+                $(".jiangjin-change-zl").html(money_zl);
+                $(".jiangjin-change-2").data("value", money_jangjin);
+                $(".jiangjin-change-2").html(money_jangjin);
+                $(".jiangjin-change-3").data("value", money_jangjin / 10);
+                $(".jiangjin-change-3").html(money_jangjin / 10);
+                $(".jiangjin-change-3").data("value", money_jangjin / 100);
+                $(".jiangjin-change-4").html(money_jangjin / 100);
 
 
-                    if (typeof stateTouZhu == "function") {
-                        var flag_str = '';
-                        if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
-                            flag_str = 'dan';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
-                            flag_str = 'fu';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
-                            flag_str = 'hszh_zx';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
-                            flag_str = 'zxhz_zx';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
-                            flag_str = 'zxkd_zx';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
-                            flag_str = 'zsfs_zux';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
-                            flag_str = 'zsds_zux';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
-                            flag_str = 'zlfs_zux';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
-                            flag_str = 'zlds_zux';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
-                            flag_str = 'hhzx_zux';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
-                            flag_str = 'zxhz_zux';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
-                            flag_str = 'zxbd_zux';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
-                            flag_str = 'hzws_qt';
-                            stateTouZhu(flag_str);
-                        } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
-                            flag_str = 'tsh_qt';
-                            stateTouZhu(flag_str);
-                        }
+                if (typeof stateTouZhu == "function") {
+                    var flag_str = '';
+                    if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
+                        flag_str = 'dan';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
+                        flag_str = 'fu';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
+                        flag_str = 'hszh_zx';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
+                        flag_str = 'zxhz_zx';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
+                        flag_str = 'zxkd_zx';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
+                        flag_str = 'zsfs_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
+                        flag_str = 'zsds_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
+                        flag_str = 'zlfs_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
+                        flag_str = 'zlds_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
+                        flag_str = 'hhzx_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
+                        flag_str = 'zxhz_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
+                        flag_str = 'zxbd_zux';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
+                        flag_str = 'hzws_qt';
+                        stateTouZhu(flag_str);
+                    } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
+                        flag_str = 'tsh_qt';
+                        stateTouZhu(flag_str);
                     }
+                }
             }
         });
 
@@ -2090,7 +2239,6 @@
             $(this).parent().hide();
 
             $(this).parent().parent().find('input').data("money", parseInt(text));
-            calc();
             changeStateCommon();
         });
 
@@ -2114,8 +2262,6 @@
             --val;
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
-
-            calc();
             changeStateCommon();
         });
 
@@ -2129,30 +2275,7 @@
             ++val;
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
-
-            calc();
             changeStateCommon();
         });
     });
-</script>
-<script type="text/html" id="template_touzhu">
-    <li
-            data-zhushu="{{zhushu}}"
-            data-beishu="{{beishu}}"
-            data-total_money="{{totalMoney}}"
-            data-money="{{money}}"
-            data-play_group_id="{{playGroupId}}"
-            data-content="{{content}}"
-            class="re_touzhu_tem"
-    >
-        <div class="head-name">
-            <span>{{playName}}</span>
-        </div>
-        <div class="content-jiang">
-            <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-            <span class="span1">{{zhushu}}注&nbsp;&nbsp;{{jiangJfanD}}&nbsp;&nbsp;<var class="varColor">{{totalMoney}}元</var></span>
-            <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
-                    src="${resPath}img/ico53.png" alt=""></a></span>
-        </div>
-    </li>
 </script>

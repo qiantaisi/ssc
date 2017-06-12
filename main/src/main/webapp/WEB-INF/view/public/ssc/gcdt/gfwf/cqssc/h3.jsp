@@ -143,7 +143,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -390,7 +390,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -460,7 +460,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -488,7 +488,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -724,10 +724,12 @@
                 $(".Pick").hide();
                 $('.recl-1003').show();
                 $('.recl-1003').attr("data-flag", "zxds_zx");
+                allClear();
             } else if (flag_name == 'zxfs') {
                 $(".Pick").hide();
                 $('.recl-1002').show();
                 $('.recl-1002').attr("data-flag", "zxfs_zx");
+                allClear();
             } else if (flag_name == "hszh") {
                 $(".Pick").hide();
                 $('.cl-1004-hszh').show();
@@ -735,16 +737,19 @@
                 $(".change-1").show();
                 $(".change-2").show();
                 $(".change-base").hide();
+                allClear();
             } else if (flag_name == "zxhz") {
                 $(".Pick").hide();
                 $('.cl-1005-zxhz').show();
                 $('.cl-1005-zxhz').attr("data-flag", "zxhz_zx");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                allClear();
             } else if (flag_name == "zxkd") {
                 $(".Pick").hide();
                 $('.cl-1006-zxkd').show();
                 $('.cl-1006-zxkd').attr("data-flag", "zxkd_zx");
+                allClear();
             }
         });
 
@@ -770,22 +775,26 @@
                 $(".Pick").hide();
                 $('.cl-1007-zsfs').show();
                 $('.cl-1007-zsfs').attr("data-flag", "zsfs_zux");
+                allClear();
             } else if (flag_name == "zsds") {
                 $(".Pick").hide();
                 $(".cl-1008-zsds").show();
                 $('.cl-1008-zsds').attr("data-flag", "zsds_zux");
+                allClear();
             } else if (flag_name == "zlfs") {
                 $(".Pick").hide();
                 $(".cl-1009-zlfs").show();
                 $(".cl-1009-zlfs").attr("data-flag", "zlfs_zux");
                 $(".change-base-zl").show();
                 $(".change-base-hszx").hide();
+                allClear();
             } else if (flag_name == "zlds") {
                 $(".Pick").hide();
                 $(".cl-1010-zlds").show();
                 $(".cl-1010-zlds").attr("data-flag", "zlds_zux");
                 $(".change-base-zl").show();
                 $(".change-base-hszx").hide();
+                allClear();
             } else if (flag_name == "hhzx") {
                 $(".Pick").hide();
                 $(".cl-1011-hhzx").show();
@@ -793,6 +802,7 @@
                 $(".change-base-hszx").hide();
                 $(".change-1").show();
                 $(".change-3").show();
+                allClear();
             } else if (flag_name == "zxhz") {
                 $(".Pick").hide();
                 $(".cl-1012-zxhz").show();
@@ -802,6 +812,7 @@
                 $(".change-base-hszx").hide();
                 $(".change-1").show();
                 $(".change-3").show();
+                allClear();
             } else if (flag_name == "zxbd") {
                 $(".Pick").hide();
                 $(".cl-1013-zxbd").show();
@@ -811,6 +822,7 @@
                 $(".change-base-hszx").hide();
                 $(".change-1").show();
                 $(".change-3").show();
+                allClear();
             }
         });
 
@@ -833,6 +845,7 @@
                 $(".Pick").hide();
                 $('.cl-1014-hzws').show();
                 $(".cl-1014-hzws").attr("data-flag", "hzws_qt");
+                allClear();
             } else if (flag_name == "tsh") {
                 $(".Pick").hide();
                 $('.cl-1015-tsh').show();
@@ -840,6 +853,7 @@
                 $(".change-base-ws").hide();
                 $(".change-1").show();
                 $(".change-base-tsh").show();
+                allClear();
             }
         });
 
@@ -963,6 +977,11 @@
     function clearZhudan() {
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
         calcAll();
+    }
+
+    function allClear(){
+        clearTextarea();
+        clearSelected();
     }
 
     function clearTextarea() {
@@ -1164,16 +1183,7 @@
                 newArr.push(arr_new[i]);
             }
         }
-        for (var n = 0; n < newArr.length; n++) {
-            var temp = newArr[n].toString();
-            var oneStr = temp.substr(0, 1);
-            var twoStr = temp.substr(1, 1);
-            var threeStr = temp.substr(2, 1);
-            if (oneStr != twoStr && twoStr != threeStr && threeStr != oneStr) {
-                tempArr.push(newArr[n]);
-            }
-        }
-        return tempArr.length;
+        return newArr.length;
     }
 
     //获取手动输入的有效注数-组三单式
@@ -1358,6 +1368,8 @@
         for (var i = 0; i < arr_new.length; i++) {
             if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
                 newArr.push(arr_new[i]);
+            } else{
+                errorArr.push(arr_new[i]);
             }
         }
         for (var n = 0; n < newArr.length; n++) {

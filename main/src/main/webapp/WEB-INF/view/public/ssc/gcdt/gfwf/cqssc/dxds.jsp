@@ -492,10 +492,6 @@
         alert("开发中，敬请期待...");
     }
 
-    function delRrepet() {
-        alert("开发中，敬请期待...");
-    }
-
     //添加注单
     function tjzd() {
         if (typeof $('.cl-1002').attr('data-flag') != 'undefined') {

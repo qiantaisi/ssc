@@ -394,11 +394,13 @@
                 $(".Pick").hide();
                 $('.recl-1003').show();
                 $('.recl-1003').attr("data-flag", "zxds-q2");
+                allClear();
             } else if (flagName == "zxfs") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1002').show();
                 $('.recl-1002').attr("data-flag", "zxfs-q2");
+                allClear();
             } else if (flagName == "zxhz") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -406,6 +408,7 @@
                 $('.recl-1004-zxhz').attr("data-flag", "zxhz-q2");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                allClear();
             } else if (flagName == "zxkd") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -413,6 +416,7 @@
                 $('.recl-1005-zxkd').attr("data-flag", "zxkd-q2");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                allClear();
             } else if (flagName == "zuxfs") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -420,6 +424,7 @@
                 $('.recl-1006-zuxfs').attr("data-flag", "zuxfs-q2");
                 $(".q2-base-chnage").hide();
                 $(".q2-chnage-zux").show();
+                allClear();
             } else if (flagName == "zuxds") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -427,6 +432,7 @@
                 $('.recl-1007-zuxds').attr("data-flag", "zuxds-q2");
                 $(".q2-base-chnage").hide();
                 $(".q2-chnage-zux").show();
+                allClear();
             } else if (flagName == "zuxhz") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -436,6 +442,7 @@
                 $(".q2-chnage-zux").show();
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                allClear();
             } else if (flagName == "zuxbd") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -443,6 +450,7 @@
                 $('.recl-1009-zuxbd').attr("data-flag", "zuxbd-q2");
                 $(".q2-base-chnage").hide();
                 $(".q2-chnage-zux").show();
+                allClear();
             }
         });
 
@@ -503,6 +511,11 @@
     function clearZhudan() {
         $("#zhudanList li:not('.head')").remove();
         calcAll();
+    }
+
+    function allClear(){
+        clearTextarea();
+        clearSelected();
     }
 
     function calc() {
