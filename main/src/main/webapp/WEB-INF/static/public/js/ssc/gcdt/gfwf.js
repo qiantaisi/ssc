@@ -354,7 +354,6 @@ function clearStateTouZhu(){
 function delRrepet(obj) {
     var xObj = $(obj).parent().parent().parent();
     var textStr = $(xObj).find(".content_tex").val();
-    console.log(textStr);
     var newArr = [],repeatArr = [], tempArr = [];
     textStr = $.trim(textStr.replace(/[^0-9]/g,','));
     var arr_new = textStr.split(",");

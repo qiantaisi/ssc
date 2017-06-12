@@ -75,6 +75,18 @@
         );
     }
 
+    function gfwf_2xfs(
+        shiArr,
+        geArr
+    ) {
+        var tmpStr_1 = shiArr.join(",");
+        var tmpStr_2 = geArr.join(",");
+        return "{0}|{1}".format(
+            tmpStr_1,
+            tmpStr_2
+        );
+    }
+
     function getMode(mode) {
         if (mode == 1) {    // 元
             return 1;
