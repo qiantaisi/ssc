@@ -11,19 +11,23 @@
         <li>
             <b>前二直选</b>
             <p class="btn_fu_zhi">
-                <span class="acti" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
-                <span data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
+                <span class="playPlIdBtn acti" data-play_pl_id="14238" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14239" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14240" data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14241" data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
             </p>
         </li>
         <li>
             <b>前二组选</b>
             <p class="btn_fu_zhi">
-                <span data-name="zuxfs"><a href="javascript:void(0)">组选复式</a></span>
-                <span data-name="zuxds"><a href="javascript:void(0)">组选单式</a></span>
-                <span data-name="zuxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <span data-name="zuxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14242" data-name="zuxfs"><a
+                        href="javascript:void(0)">组选复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14243" data-name="zuxds"><a
+                        href="javascript:void(0)">组选单式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14244" data-name="zuxhz"><a
+                        href="javascript:void(0)">组选和值</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14245" data-name="zuxbd"><a
+                        href="javascript:void(0)">组选包胆</a></span>
             </p>
         </li>
     </ul>
@@ -45,16 +49,18 @@
     <ul>
         <li data-name="万">
             <b><i>万位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -66,16 +72,18 @@
         </li>
         <li data-name="千">
             <b><i>千位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -106,7 +114,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -130,27 +138,31 @@
         </span>
     </p>
     <ul>
-        <li data-name="和值" class="hz-q2">
+        <li data-name="和值" class="hz-q2 rehz-q2">
             <b class="hz-dir"><i>和值</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <span><i>10</i></span>
-            <span><i>11</i></span>
-            <span><i>12</i></span>
-            <span><i>13</i></span>
-            <span><i>14</i></span>
-            <span><i>15</i></span>
-            <span><i>16</i></span>
-            <span><i>17</i></span>
-            <span><i>18</i></span>
+            <var class="numLine renumHeigth">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
+            <var class="numLine renumHeigth">
+                <span><i>10</i></span>
+                <span><i>11</i></span>
+                <span><i>12</i></span>
+                <span><i>13</i></span>
+                <span><i>14</i></span>
+                <span><i>15</i></span>
+                <span><i>16</i></span>
+                <span><i>17</i></span>
+                <span><i>18</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -171,16 +183,18 @@
     <ul>
         <li data-name="跨度">
             <b><i>跨度</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -209,16 +223,18 @@
     <ul>
         <li data-name="组选">
             <b><i>组选</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -249,7 +265,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -273,25 +289,29 @@
         </span>
     </p>
     <ul>
-        <li data-name="和值" class="hz-q2">
+        <li data-name="和值" class="hz-q2 rehz-q2">
             <b class="hz-dir"><i>和值</i></b>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
-            <span><i>10</i></span>
-            <span><i>11</i></span>
-            <span><i>12</i></span>
-            <span><i>13</i></span>
-            <span><i>14</i></span>
-            <span><i>15</i></span>
-            <span><i>16</i></span>
-            <span><i>17</i></span>
+            <var class="numLine renumHeigth">
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+                <span><i>10</i></span>
+            </var>
+            <var class="numLine renumHeigth">
+                <span><i>11</i></span>
+                <span><i>12</i></span>
+                <span><i>13</i></span>
+                <span><i>14</i></span>
+                <span><i>15</i></span>
+                <span><i>16</i></span>
+                <span><i>17</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -312,16 +332,18 @@
     <ul>
         <li data-name="胆码">
             <b><i>胆码</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+                <span><i>10</i></span>
+            </var>
         </li>
     </ul>
 </div>
@@ -338,8 +360,10 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i class="q2-base-chnage"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
-                <i class="q2-chnage-zux"><var class="jiangjin-change-zux">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">1.0%</var></i>
+                <i class="q2-base-chnage"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var
+                        class="fandian-bfb">1.0%</var></i>
+                <i class="q2-chnage-zux"><var class="jiangjin-change-zux">0.0</var><var>&nbsp;/&nbsp;</var><var
+                        class="fandian-bfb">1.0%</var></i>
             </div>
             <div class="reduce">
                 <a class="fl">-</a>
@@ -394,11 +418,13 @@
                 $(".Pick").hide();
                 $('.recl-1003').show();
                 $('.recl-1003').attr("data-flag", "zxds-q2");
+                allClear();
             } else if (flagName == "zxfs") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
                 $('.recl-1002').show();
                 $('.recl-1002').attr("data-flag", "zxfs-q2");
+                allClear();
             } else if (flagName == "zxhz") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -406,6 +432,7 @@
                 $('.recl-1004-zxhz').attr("data-flag", "zxhz-q2");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                allClear();
             } else if (flagName == "zxkd") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -413,6 +440,7 @@
                 $('.recl-1005-zxkd').attr("data-flag", "zxkd-q2");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                allClear();
             } else if (flagName == "zuxfs") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -420,6 +448,7 @@
                 $('.recl-1006-zuxfs').attr("data-flag", "zuxfs-q2");
                 $(".q2-base-chnage").hide();
                 $(".q2-chnage-zux").show();
+                allClear();
             } else if (flagName == "zuxds") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -427,6 +456,7 @@
                 $('.recl-1007-zuxds').attr("data-flag", "zuxds-q2");
                 $(".q2-base-chnage").hide();
                 $(".q2-chnage-zux").show();
+                allClear();
             } else if (flagName == "zuxhz") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -436,6 +466,7 @@
                 $(".q2-chnage-zux").show();
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
+                allClear();
             } else if (flagName == "zuxbd") {
                 $(".Pick").removeAttr("data-flag");
                 $(".Pick").hide();
@@ -443,20 +474,21 @@
                 $('.recl-1009-zuxbd').attr("data-flag", "zuxbd-q2");
                 $(".q2-base-chnage").hide();
                 $(".q2-chnage-zux").show();
+                allClear();
             }
         });
 
         $(".Pick ul li span i").click(function () {
             var flagName = $(this).parent().parent().parent().parent().data("name");
-            if(flagName == "zuxbd"){
-                if( $(this).parent().hasClass('acti')){
+            if (flagName == "zuxbd") {
+                if ($(this).parent().hasClass('acti')) {
                     $(this).parent().removeClass('acti');
-                }else if(!$(this).parent().hasClass('acti')){
+                } else if (!$(this).parent().hasClass('acti')) {
                     $(".recl-1009-zuxbd ul li span.acti").removeClass('acti');
                     $(this).parent().addClass('acti');
                 }
                 stateTouZhu("zuxbd-q2");
-            }else{
+            } else {
                 $(this).parent().toggleClass('acti');
             }
 
@@ -493,25 +525,16 @@
         if (typeof clearStateTouZhu == 'function') {
             clearStateTouZhu();
         }
-        calc();
     }
 
-    function removeThisItem(obj) {
-        $(obj).parent().parent().parent().remove();
-        calcAll();
-    }
     function clearZhudan() {
-        $("#zhudanList li:not('.head')").remove();
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
         calcAll();
     }
 
-    function calc() {
-        var money = $("#inputMoney").data("money");
-        var beishu = $("#inputBeishu").data("beishu");
-        var zhushu = $("#zhushuInfo").data("zhushu");
-        var totalMoney = mul(beishu * zhushu, money);
-        $("#beishuInfo").html(beishu);
-        $("#totalMoneyInfo").data("total_money", totalMoney).html(totalMoney);
+    function allClear() {
+        clearTextarea();
+        clearSelected();
     }
 
     function clearTextarea() {
@@ -629,9 +652,9 @@
                 var strTemp = "", strTemp1 = "";
                 var str1 = arr_new[i].toString();
                 var str2 = arr_new[i].toString();
-                strTemp = str1.substr(0,1);
-                strTemp1 = str2.substr(1,1);
-                if(strTemp != strTemp1){
+                strTemp = str1.substr(0, 1);
+                strTemp1 = str2.substr(1, 1);
+                if (strTemp != strTemp1) {
                     var tempArr = [];
                     tempArr.push(parseInt(strTemp));
                     tempArr.push(parseInt(strTemp1));
@@ -647,14 +670,14 @@
     //前二直选-直选跨度
     function getZxkdZshu(valArr) {
         var tempArr = [];
-        var kdArr = [],numTemp = [];
+        var kdArr = [], numTemp = [];
         var num = 0;
         $.each($(".recl-1005-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
             numTemp.push($.trim($(this).find("i").html()));
         });
-        if(typeof valArr != "undefined"){
+        if (typeof valArr != "undefined") {
             kdArr = valArr;
-        }else{
+        } else {
             kdArr = numTemp;
         }
 
@@ -753,7 +776,7 @@
             for (var i = 0; i < temp.length; i++) {
                 for (var i1 = 0; i1 < temp.length; i1++) {
                     if (temp[i] + temp[i1] == num && temp[i] <= 9 && temp[i1] <= 9) {
-                        if(temp[i] != temp[i1]){
+                        if (temp[i] != temp[i1]) {
                             var arr1 = [];
                             arr1.push(temp[i]);
                             arr1.push(temp[i1]);
@@ -787,8 +810,8 @@
             return;
         }
         for (var n = 0; n < bdArr.length; n++) {
-            for (var i = 0; i < 10; i++){
-                if(i != bdArr[n]){
+            for (var i = 0; i < 10; i++) {
+                if (i != bdArr[n]) {
                     tempArr.push(i + "" + bdArr[n]);
                 }
             }
@@ -839,7 +862,7 @@
     function getZuxdsZhudan(obj) {
         var textStr = $(".recl-1007-zuxds .content_jiang .content_tex").val();
         var newArr = [];
-        var repeatArr = [], errorArr = [], allErrorArr = [],pairArr = [];
+        var repeatArr = [], errorArr = [], allErrorArr = [], pairArr = [];
         var errorStr = '';
         var zhushu = 0;
         textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
@@ -849,19 +872,19 @@
                 var strTemp = "", strTemp1 = "";
                 var str1 = arr_new[i].toString();
                 var str2 = arr_new[i].toString();
-                strTemp = str1.substr(0,1);
-                strTemp1 = str2.substr(1,1);
-                if(strTemp != strTemp1){
+                strTemp = str1.substr(0, 1);
+                strTemp1 = str2.substr(1, 1);
+                if (strTemp != strTemp1) {
                     var tempArr = [];
                     tempArr.push(parseInt(strTemp));
                     tempArr.push(parseInt(strTemp1));
                     tempArr.sort();
                     newArr.push(tempArr.join(""));
-                }else{
+                } else {
                     pairArr.push(arr_new[i]);
                 }
             } else {
-                if(arr_new[i] != ""){
+                if (arr_new[i] != "") {
                     errorArr.push(arr_new[i]);
                 }
             }
@@ -875,13 +898,13 @@
 
         if (pairArr.length > 0) {
             allErrorArr.push("自动过滤对子号码:");
-            for(var p = 0; p < pairArr.length; p++){
+            for (var p = 0; p < pairArr.length; p++) {
                 allErrorArr.push(pairArr[p]);
             }
         }
         if (repeatArr.length > 0) {
             allErrorArr.push("自动过滤重复号码:");
-            for(var r = 0; r < repeatArr.length; r++){
+            for (var r = 0; r < repeatArr.length; r++) {
                 allErrorArr.push(repeatArr[r]);
             }
         }
@@ -1158,10 +1181,10 @@
                 while (zuxArr.length != 1) {
                     var zuxnum0 = parseInt(Math.random() * 10);
                     var zuxnum1 = parseInt(Math.random() * 10);
-                    if(zuxnum0 != zuxnum1){
-                        if(flagZhi === "zuxfs"){
+                    if (zuxnum0 != zuxnum1) {
+                        if (flagZhi === "zuxfs") {
                             zuxArr.push(zuxnum0 + "," + zuxnum1);
-                        }else{
+                        } else {
                             zuxArr.push(zuxnum0 + "" + zuxnum1);
                         }
                     }
@@ -1177,9 +1200,9 @@
             obj.zhushu = zhushu;
             obj.beishu = $("#inputBeishu").data("beishu");
             obj.money = $("#inputMoney").data("money");
-            if(flagZhi == "zuxfs" || flagZhi == "zuxds" || flagZhi == "zuxhz"){
+            if (flagZhi == "zuxfs" || flagZhi == "zuxds" || flagZhi == "zuxhz") {
                 obj.jiangJfanD = $(".jiangjin-change-zux").html() + "/" + $(".fandian-bfb").html();
-            }else{
+            } else {
                 obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
             }
             obj.playGroupId = playGroupId;
@@ -1254,7 +1277,6 @@
             $(this).parent().hide();
 
             $(this).parent().parent().find('input').data("money", parseInt(text));
-            calc();
             changeStateCommon();
         });
 
@@ -1278,8 +1300,6 @@
             --val;
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
-
-            calc();
             changeStateCommon();
         });
 
@@ -1293,30 +1313,7 @@
             ++val;
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
-
-            calc();
             changeStateCommon();
         });
     });
-</script>
-<script type="text/html" id="template_touzhu">
-    <li
-            data-zhushu="{{zhushu}}"
-            data-beishu="{{beishu}}"
-            data-total_money="{{totalMoney}}"
-            data-money="{{money}}"
-            data-play_group_id="{{playGroupId}}"
-            data-content="{{content}}"
-            class="re_touzhu_tem"
-    >
-        <div class="head-name">
-            <span>{{playName}}</span>
-        </div>
-        <div class="content-jiang">
-            <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-            <span class="span1">{{zhushu}}注&nbsp;&nbsp;{{jiangJfanD}}&nbsp;&nbsp;<var class="varColor">{{totalMoney}}元</var></span>
-            <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
-                    src="${resPath}img/ico53.png" alt=""></a></span>
-        </div>
-    </li>
 </script>

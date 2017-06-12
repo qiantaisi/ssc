@@ -49,6 +49,7 @@ $(function () {
         $(".Single .layout  .Playmethod ul li.gf-li p span.rx2-span").addClass("acti");
     });
 });
+
 //加倍数 或 重新选钱时改变当前显示注数金额状态
 function changeStateCommon(){
     var zhushu = $('.p1 .i0').html();
@@ -64,7 +65,7 @@ function changeStateCommon(){
     var p1_i2 = totalMoney * num;
     p1_i2 = isNaN(p1_i2) == true ? "0.0000" : p1_i2;
     $('.p1 .i_fanD').html(p1_i2.toFixed(2));
-    $('.p1 .i_money').html(totalMoney);
+    $('.p1 .i_money').html(parseFloat(totalMoney).toFixed(2));
 }
 
 // 数字批量选择算法
@@ -239,7 +240,7 @@ stateTouZhu(flag_str) {
         zhushu = getHezhiZhushu();
     } else if (flagStrInner == "zxkd_zx") { //后三直选-后三跨度
         zhushu = getKaDuZhushu();
-    } else if (flagStrInner == "zsfs_zux") { //后三直选-直选复式
+    } else if (flagStrInner == "zsfs_zux") { //后三直选-组选复式
         zhushu = getZuSanZhushu();
     } else if (flagStrInner == "zsds_zux") { //后三组选-组选单式
         zhushu = getZsdsZhushu();
@@ -338,7 +339,7 @@ stateTouZhu(flag_str) {
     var p1_i2 = totalMoney * num;
     p1_i2 = isNaN(p1_i2) == true ? "0.0000" :p1_i2;
     $('.p1 .i_fanD').html(p1_i2.toFixed(2));
-    $('.p1 .i_money').html(totalMoney);
+    $('.p1 .i_money').html(parseFloat(totalMoney).toFixed(2));
 }
 
 //清除状态
@@ -350,8 +351,10 @@ function clearStateTouZhu(){
 }
 
 //删除重复号码
-function delRrepet() {
-    var textStr = $(".content_jiang .content_tex").val();
+function delRrepet(obj) {
+    var xObj = $(obj).parent().parent().parent();
+    var textStr = $(xObj).find(".content_tex").val();
+    console.log(textStr);
     var newArr = [],repeatArr = [], tempArr = [];
     textStr = $.trim(textStr.replace(/[^0-9]/g,','));
     var arr_new = textStr.split(",");

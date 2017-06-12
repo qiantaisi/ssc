@@ -40,6 +40,41 @@
         );
     }
 
+    function gfwf_4xfs(
+        qianArr,
+        baiArr,
+        shiArr,
+        geArr
+    ) {
+        var tmpStr_1 = qianArr.join(",");
+        var tmpStr_2 = baiArr.join(",");
+        var tmpStr_3 = shiArr.join(",");
+        var tmpStr_4 = geArr.join(",");
+
+        return "{0}|{1}|{2}|{3}".format(
+            tmpStr_1,
+            tmpStr_2,
+            tmpStr_3,
+            tmpStr_4
+        );
+    }
+
+    function gfwf_3xfs(
+        baiArr,
+        shiArr,
+        geArr
+    ) {
+        var tmpStr_1 = baiArr.join(",");
+        var tmpStr_2 = shiArr.join(",");
+        var tmpStr_3 = geArr.join(",");
+
+        return "{0}|{1}|{2}".format(
+            tmpStr_1,
+            tmpStr_2,
+            tmpStr_3
+        );
+    }
+
     function getMode(mode) {
         if (mode == 1) {    // 元
             return 1;
@@ -47,7 +82,7 @@
             return 0.1;
         } else if (mode == 3) { // 分
             return 0.01;
-        } else if (mode == 4) {  // 厘
+        } else if (mode == 4) { // 厘
             return 0.001;
         }
         return;
@@ -81,6 +116,5 @@
         }
         return result;
     }
-
 
 </script>

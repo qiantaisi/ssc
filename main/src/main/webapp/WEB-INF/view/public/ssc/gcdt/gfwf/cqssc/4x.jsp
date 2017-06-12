@@ -11,8 +11,8 @@
         <li>
             <b>四星直选</b>
             <p class="btn_fu_zhi">
-                <span class="acti" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
-                <span data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_pl_id="14209" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_pl_id="14210" data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -33,16 +33,18 @@
     <ul>
         <li data-name="千">
             <b><i>千位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -54,16 +56,18 @@
         </li>
         <li data-name="百">
             <b><i>百位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -75,16 +79,18 @@
         </li>
         <li data-name="十">
             <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -96,16 +102,18 @@
         </li>
         <li data-name="个">
             <b><i>个位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -135,7 +143,7 @@
         <textarea class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
-                <li onclick="delRrepet()"><a href="javascript:void(0)">删除重复号</a></li>
+                <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                 <li onclick="daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                 <li onclick="clearTextarea()"><a href="javascript:void(0)">清空</a></li>
             </ul>
@@ -145,7 +153,7 @@
     <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
 </div>
 <div class="add_spot">
-    <div class="left">
+    <div class="left releft">
         <div class="sopt_wrap">
             <div class="slide_sp">
                 奖金/返点
@@ -167,7 +175,7 @@
                 <span>倍</span>
             </div>
             <div class="down">
-                <input type="text" value="2元" id="inputMoney" data-money="2">
+                <input type="text" value="2元" id="inputMoney" data-money="2" disabled="disabled">
                 <span></span>
                 <div class="down_menu">
                     <i>2元</i>
@@ -222,14 +230,34 @@
                 stateTouZhu('fu');
             }
         });
+
+        //输入倍数十重新计算
+        $("#inputBeishu").keyup(function(){
+            var valStr = $("#inputBeishu").val();
+            $("#inputBeishu").data("beishu",$("#inputBeishu").val());
+            if(valStr != ""){
+                if (typeof $('.recl-1003').attr('statef') != 'undefined') {
+                    stateTouZhu('dan');
+                } else {
+                    stateTouZhu('fu');
+                }
+            }
+        });
+
+        $("#inputBeishu").blur(function(){
+            var valStr = $("#inputBeishu").val();
+            if(valStr == "" || valStr == null || typeof valStr == "undefined"){
+                $("#inputBeishu").val("1");
+            }
+        });
     });
 </script>
 <script>
     function getSuiji(total) {
-        var betFormList = suiji(total);
+        var betFormList = [];
+        betFormList = suiji(total);
         $.each(betFormList, function (index, value) {
-            var html = template("template_touzhu", value);
-            $("#zhudanList").append(html);
+            addYuxuan(value);
         });
         calcAll();
     }
@@ -241,27 +269,11 @@
         if(typeof clearStateTouZhu == 'function'){
             clearStateTouZhu();
         }
-        calc();
     }
 
-    function removeThisItem(obj) {
-        $(obj).parent().parent().parent().remove();
-        calcAll();
-    }
     function clearZhudan() {
-        $("#zhudanList li:not('.head')").remove();
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
         calcAll();
-    }
-
-    function calc() {
-        var money = $("#inputMoney").data("money");
-        var beishu = $("#inputBeishu").data("beishu");
-        var zhushu = $("#zhushuInfo").data("zhushu");
-
-        var totalMoney = mul(beishu * zhushu, money);
-
-        $("#beishuInfo").html(beishu);
-        $("#totalMoneyInfo").data("total_money", totalMoney).html(totalMoney);
     }
 
     function clearTextarea() {
@@ -281,21 +293,16 @@
                 return;
             }
             clearTextarea();
-            if(typeof clearStateTouZhu == 'function'){
-                clearStateTouZhu();
-            }
-            var html = template("template_touzhu", betDsForm);
-            $("#zhudanList").append(html);
+            clearStateTouZhu();
+            addYuxuan(betDsForm);
             calcAll();
-
         } else {
             var betForm = {};
             if (!getZhudan(betForm)) {
                 return;
             }
             clearSelected();
-            var html = template("template_touzhu", betForm);
-            $("#zhudanList").append(html);
+            addYuxuan(betForm);
             calcAll();
         }
     }
@@ -344,20 +351,29 @@
         }
 
         zhushu = newArr.length;
-        obj.playName = "四星直选-单式";
-        obj.content = "号码: (" + newArr + ")";
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+        obj.showPlayName = "四星直选-单式";
+        obj.showContent = "号码: (" + newArr + ")";
+        // 每注金额
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        // 倍数（1-元，obj.betMode2-角，3-分，4-厘）
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        // 每单总金额
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        // 彩种
+        obj.betPlayGroupId = playGroupId;
+        // 返点比例
+        obj.betFandian = $(".fandian-bfb").data("value");
+        // 赔率
+        obj.betPlayPl = $(".jiangjin-change").data("value");
+        // 赔率ID
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
     function getZhudan(obj) {
         var qianArr = [], baiArr = [], shiArr = [], geArr = [];
-
         $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
             qianArr.push($.trim($(this).find("i").html()));
         });
@@ -376,14 +392,40 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "四星直选-复式";
-        obj.content = "千位: " + qianArr.join("") + " 百位: " + baiArr.join("") + " 十位: " + shiArr.join("") + " 个位: " + geArr.join("");
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
+        // 模板显示内容
+        obj.showContent = "千位：({0})，百位：({1})，十位：({2})，个位：({3})".format(
+            qianArr.join(","),
+            baiArr.join(","),
+            shiArr.join(","),
+            geArr.join(",")
+        );
+        // 转换投注格式
+        // 玩法名称
+        obj.showPlayName = "四星直选-复式";
+        // 投注内容
+        obj.betContent = gfwf_4xfs(
+            qianArr,
+            baiArr,
+            shiArr,
+            geArr
+        );
+        // 每注金额
+        obj.betPerMoney = $("#inputMoney").data("money");
+        // 注数
+        obj.betZhushu = zhushu;
+        // 倍数（1-元，obj.betMode2-角，3-分，4-厘）
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        // 每单总金额
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        // 彩种
+        obj.betPlayGroupId = playGroupId;
+        // 返点比例
+        obj.betFandian = $(".fandian-bfb").data("value");
+        // 赔率
+        obj.betPlayPl = $(".jiangjin-change").data("value");
+        // 赔率ID
+        obj.betPlayPlId = getPlayPlId();
         return true;
     }
 
@@ -415,16 +457,16 @@
         return newArr.length;
     }
 
-
+    //投注总状态
     function calcAll() {
         var totalZhushu = 0;
         var totalBeishu = 0;
         var totalMoney = 0;
 
-        $("#zhudanList li:not('.head')").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("beishu"));
-            totalMoney = add(totalMoney, $(this).data("total_money"));
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
+            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
+            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
+            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
         });
 
         var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
@@ -433,7 +475,8 @@
 
     function suiji(total) {
         var result = [];
-        var flag_dan_zhi = "dan";//默认为单式
+        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        var flag_dan_zhi = '';//默认为单式
         var playNameStr = '';
         var contentStr = '';
         if (typeof $('.recl-1003').attr('statef') != 'undefined') {
@@ -458,6 +501,7 @@
                     arr.push(num);
                 }
             }
+            qianArr.push(arr[0]); baiArr.push(arr[1]); shiArr.push(arr[2]); baiArr.push(arr[3]);
             if(flag_dan_zhi == "dan"){
                 contentStr = "号码: (" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
             }else if(flag_dan_zhi == "fu"){
@@ -465,14 +509,32 @@
             }
 
             var obj = {};
-            obj.playName = playNameStr;
-            obj.content = contentStr;
-            obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
-            obj.zhushu = 1;
-            obj.beishu = $("#inputBeishu").data("beishu");
-            obj.money = $("#inputMoney").data("money");
-            obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-            obj.playGroupId = playGroupId;
+            // 模板显示内容
+            obj.showContent = contentStr;
+            obj.showPlayName = playNameStr;
+            // 投注内容
+            obj.betContent = gfwf_4xfs(
+                qianArr,
+                baiArr,
+                shiArr,
+                geArr
+            );
+            // 每注金额
+            obj.betPerMoney = $("#inputMoney").data("money");
+            obj.betZhushu = 1;
+            // 倍数（1-元，obj.betMode2-角，3-分，4-厘）
+            obj.betBeishu = $("#inputBeishu").data("beishu");
+            obj.betMode = 1;
+            // 每单总金额
+            obj.betTotalMoney = obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+            // 彩种
+            obj.betPlayGroupId = playGroupId;
+            // 返点比例
+            obj.betFandian = $(".fandian-bfb").data("value");
+            // 赔率
+            obj.betPlayPl = $(".jiangjin-change").data("value");
+            // 赔率ID
+            obj.betPlayPlId = getPlayPlId();
             result.push(obj);
         }
         return result;
@@ -496,8 +558,12 @@
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
+
+                $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
+
                 money_jangjin = 9800 - (money_jangjin * 100);
+                $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(money_jangjin);
                 if(typeof stateTouZhu == "function"){
                     var flag_str = '';
@@ -518,7 +584,6 @@
             $(this).parent().hide();
 
             $(this).parent().parent().find('input').data("money", parseInt(text));
-            calc();
             changeStateCommon();
         });
 
@@ -542,8 +607,6 @@
             --val;
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
-
-            calc();
             changeStateCommon();
         });
 
@@ -557,32 +620,8 @@
             ++val;
             val = val < 1 ? 1 : val;
             $(".Single .layout .add_spot .left .sopt_wrap .reduce input").data("beishu", val).val(val);
-
-            calc();
             changeStateCommon();
         });
 
     });
-</script>
-
-<script type="text/html" id="template_touzhu">
-    <li
-            data-zhushu="{{zhushu}}"
-            data-beishu="{{beishu}}"
-            data-total_money="{{totalMoney}}"
-            data-money="{{money}}"
-            data-play_group_id="{{playGroupId}}"
-            data-content="{{content}}"
-            class="re_touzhu_tem"
-    >
-            <div class="head-name">
-                <span>{{playName}}</span>
-            </div>
-           <div class="content-jiang">
-              <span class="neirong"><font color="red">{{content.split("|")[0]}}</font>&nbsp;</span>
-              <span class="span1">{{zhushu}}注&nbsp;&nbsp;{{jiangJfanD}}&nbsp;&nbsp;<var class="varColor">{{totalMoney}}元</var></span>
-              <span class="span4"><a href="javascript:void(0)" onclick="removeThisItem(this)"><img
-                    src="${resPath}img/ico53.png" alt=""></a></span>
-           </div>
-    </li>
 </script>
