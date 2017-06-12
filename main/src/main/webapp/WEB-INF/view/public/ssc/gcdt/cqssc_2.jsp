@@ -193,6 +193,7 @@
             data-bet_fandian="{{betFandian}}"
             data-bet_play_pl="{{betPlayPl}}"
             data-bet_play_id="{{betPlayId}}"
+            data-bet_play_pl_id="{{betPlayPlId}}"
             class="re_touzhu_tem"
     >
         <td class="span_1">
@@ -224,6 +225,61 @@
     </tr>
 </script>
 <script>
+    function sureGfwtXz() {
+        var betForm = {
+            totalMoney: 0,
+            totalZhushu: 0,
+            sscBetList: []
+        };
+        $("#zhudanList .re_touzhu_tem").each(function() {
+            betForm.sscBetList.push({
+                playGroupId: $(this).data("bet_play_group_id"),
+                number: getNumber(),
+                playId: $(this).data("bet_play_id"),
+                zhushu: $(this).data("bet_zhushu"),
+                perMoney: $(this).data("bet_per_money"),
+                content: $(this).data("bet_content"),
+                playPlId: $(this).data("bet_play_pl_id"),
+                playPl: $(this).data("bet_play_pl"),
+                beishu: $(this).data("bet_beishu"),
+                totalMoney: $(this).data("bet_total_money"),
+                type: 2,
+                mode: $(this).data("bet_mode"),
+                fandian: $(this).data("bet_fandian")
+            });
+            betForm.totalMoney += $(this).data("bet_total_money");
+            betForm.totalZhushu += $(this).data("bet_zhushu");
+        });
+
+        ajaxRequest({
+            url: CONFIG.BASEURL + "ssc/ajaxBet.json",
+            data: {
+                betForm: JSON.stringify(betForm)
+            },
+            beforeSend: function() {
+                layer.closeAll();
+                parent.showLoading();
+            },
+            success: function(json) {
+                parent.hideLoading();
+                if (json.result == 1) {
+                    layer.msg("下注成功", {icon: 1});
+                    // 刷新我的投注
+                    getBetDetails();
+                    // 刷新余额
+                    parent.getUserSession();
+                    // 重置表格
+                    reset();
+                } else {
+                    layer.msg("下注失败：" + json.description, {icon: 2});
+                }
+            },
+            complete: function() {
+            }
+        });
+    }
+</script>
+<script>
     function addYuxuan(betForm) {
         $("#zhudanList .noRecord").remove();
         var html = template("template_touzhu", betForm);
@@ -249,8 +305,7 @@
                     showPlayPl: $(this).data("bet_play_pl"),
                     betPerMoney: $(this).data("bet_per_money"),
                     betTotalMoney: $(this).data("bet_total_money"),
-                    betZhushu: $(this).data("bet_zhushu"),
-                    showContent: $(this).data("show_content")
+                    betZhushu: $(this).data("bet_zhushu")
                 })
                 $("body").append(html);
             }, function() {
@@ -284,6 +339,7 @@
                 {{else if showMode == 3}}
                 分
                 {{/if}}
+                ，{{betZhushu}}倍
                 </span>
             </div>
             <div class="line">

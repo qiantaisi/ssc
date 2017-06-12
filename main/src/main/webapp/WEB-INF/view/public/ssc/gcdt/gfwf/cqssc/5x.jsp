@@ -11,8 +11,8 @@
         <li>
             <b>五星直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_pl_id="14207" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14208" data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="497" data-play_pl_id="14207" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="498" data-play_pl_id="14208" data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -467,6 +467,8 @@
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
         // 彩种
         obj.betPlayGroupId = playGroupId;
+        // 玩法ID
+        obj.betPlayId = getPlayId();
         // 返点比例
         obj.betFandian = $(".fandian-bfb").data("value");
         // 赔率

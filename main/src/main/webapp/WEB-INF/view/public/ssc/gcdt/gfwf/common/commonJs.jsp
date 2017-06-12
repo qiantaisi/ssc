@@ -6,7 +6,7 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-%>gfwf_wxfx
+%>
 <script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170610"></script>
 <script>
     // 官方玩法数据转换，转换为提交格式
@@ -102,6 +102,14 @@
 
     function getPlayPlId() {
         return $(".playPlIdBtn.acti").data("play_pl_id");
+    }
+
+    function getPlayId() {
+        return $(".playPlIdBtn.acti").data("play_id");
+    }
+
+    function getNumber() {
+        return $("#number").data("number");
     }
 </script>
 <script>
