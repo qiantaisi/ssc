@@ -637,7 +637,7 @@
 
 
 <div class="add_spot">
-    <div class="left">
+    <div class="left releft">
         <div class="sopt_wrap">
             <div class="slide_sp h3_slide_sp">
                 奖金/返点

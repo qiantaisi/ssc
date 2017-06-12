@@ -6,7 +6,8 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<div class="Pick cl-1002 recl-1002" data-flag="dwd">
+<input lass="playPlIdBtn" data-play_pl_id="14246" data-name="dwd" type="hidden" />
+<div class="Pick cl-1002 recl-1002" data-flag="dwd" style="border-top:none;">
     <p class="p1">
         <span class="fr fl cl-1001">
             在万位、千位、百位、十位、个位任意位置上任意选择1个或1个以上号码。
@@ -254,10 +255,10 @@
 </script>
 <script>
     function getSuiji(total) {
-        var betFormList = suiji(total);
+        var betFormList = [];
+        betFormList = suiji(total);
         $.each(betFormList, function (index, value) {
-            var html = template("template_touzhu", value);
-            $("#zhudanList").append(html);
+            addYuxuan(value);
         });
         calcAll();
     }
@@ -291,8 +292,7 @@
             return;
         }
         clearSelected();
-        var html = template("template_touzhu", betForm);
-        $("#zhudanList").append(html);
+        addYuxuan(betForm);
         calcAll();
     }
 
@@ -320,13 +320,9 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName = "定位胆-定位胆";
-        var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : "";
-        var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : "";
-        var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : "";
-        var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : "";
-        var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : "";
-        obj.content = wanStr + qianStr + baiStr + shiStr + geStr;
+        obj.playName =
+
+        obj.content =
         obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
         obj.zhushu = zhushu;
         obj.beishu = $("#inputBeishu").data("beishu");
@@ -334,18 +330,44 @@
         obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
         obj.playGroupId = playGroupId;
         return true;
+
+        obj.showPlayName =  "定位胆-定位胆";
+        var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : "";
+        var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : "";
+        var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : "";
+        var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : "";
+        var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : "";
+        // 模板显示内容
+        obj.showContent = $.trim(wanStr + qianStr + baiStr + shiStr + geStr);
+//        // 转换投注格式
+//        // 投注内容
+//        obj.betContent = gfwf_2xfs(
+//            wanArr,
+//            qianArr
+//        );
+        obj.betPerMoney = $("#inputMoney").data("money");
+        obj.betZhushu = zhushu;
+        obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betMode = 1;
+        obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        obj.betPlayGroupId = playGroupId;
+        obj.betFandian = $(".fandian-bfb").data("value");
+        obj.betPlayPl = $(".jiangjin-change").data("value");
+        obj.betPlayPlId = getPlayPlId();
+        return true;
     }
 
 
+    //投注总状态
     function calcAll() {
         var totalZhushu = 0;
         var totalBeishu = 0;
         var totalMoney = 0;
 
-        $("#zhudanList li:not('.head')").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("beishu"));
-            totalMoney = add(totalMoney, $(this).data("total_money"));
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
+            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
+            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
+            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
         });
 
         var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
@@ -355,29 +377,46 @@
     function suiji(total) {
         var result = [];
         for (var numIndex = 0; numIndex < total; ++numIndex) {
-            var redArr = [];
-            for (var i = 0; i <= 9; ++i) {
-                redArr[i] = 0;
+            var xArr = [], numArr = [];
+            for(var n = 0; n < 10; n++){
+                numArr[n] = n;
+            }
+            for (var i = 0; i <= 4; ++i) {
+                if(i == 0){
+                    xArr[i] = "万位";
+                } else if(i == 1){
+                    xArr[i] = "千位";
+                } else if(i == 2){
+                    xArr[i] = "百位";
+                } else if(i == 3){
+                    xArr[i] = "十位";
+                } else if(i == 4){
+                    xArr[i] = "个位";
+                }
+
             }
 
             var arr = [];
-            while (arr.length != 6) {
+            while (arr.length >= 1) {
                 var num = parseInt(Math.random() * 10);
-                if (redArr[num] != 1) {
-                    redArr[num] = 1;
-                    arr.push(num);
-                }
+                var str = xArr[num];
+                str = str + ": (" + numArr[num] + ")"
+                arr.push(str);
             }
-
             var obj = {};
-            obj.playName = "定位胆-定位胆";
-            obj.content = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
-            obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money"));
-            obj.zhushu = 1;
-            obj.beishu = $("#inputBeishu").data("beishu");
-            obj.money = $("#inputMoney").data("money");
             obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
             obj.playGroupId = playGroupId;
+            obj.showPlayName = "定位胆-定位胆";
+            obj.showContent = arr[0];
+            obj.betPerMoney = $("#inputMoney").data("money");
+            obj.betZhushu = 1;
+            obj.betBeishu = $("#inputBeishu").data("beishu");
+            obj.betMode = 1;
+            obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+            obj.betPlayGroupId = playGroupId;
+            obj.betFandian = $(".fandian-bfb").data("value");
+            obj.betPlayPl = $(".jiangjin-change").data("value");
+            obj.betPlayPlId = getPlayPlId();
             result.push(obj);
         }
         return result;
@@ -401,8 +440,10 @@
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
+                $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
                 money_jangjin = (98 - money_jangjin) / 10;
+                $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
                 if(typeof stateTouZhu == "function"){
                     var flag_str = '';
