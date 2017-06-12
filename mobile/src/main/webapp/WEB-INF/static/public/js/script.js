@@ -7285,18 +7285,19 @@ function getThreeNewArrs(baiA, shiA, geA) {
 
 // 数字批量选择算法
 function selectFun_1(obj) {
-    $(obj).addClass("active_gfwf");
     $(obj).click(
         function () {
-            $(".cus_common .wan_bottom .cus-flex-item").find("xz").removeClass("xz");
-            $(".cus_common .wan_bottom .cus-flex-item").find("xz2").addClass("xz2");
+            $(obj).addClass("active_gfwf");
         }
     );
 }
 
 function selectFun_2(obj){
-    $(obj).find(".active_gfwf").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
+    $(obj).click(
+        function () {
+            $(obj).addClass("active_gfwf");
+        }
+    );
 }
 
 function selectFun_3(obj){
