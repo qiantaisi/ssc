@@ -129,4 +129,11 @@
         return result;
     }
 
+    function clearZhudan() {
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
+        calcAll();
+        if ($("#zhudanList .re_touzhu_tem").length <= 0) {
+            $("#zhudanList").html('<tr class="noRecord"><td>暂无投注项</td></tr>');
+        }
+    }
 </script>
