@@ -59,6 +59,22 @@
         );
     }
 
+    function gfwf_3xfs(
+        baiArr,
+        shiArr,
+        geArr
+    ) {
+        var tmpStr_1 = baiArr.join(",");
+        var tmpStr_2 = shiArr.join(",");
+        var tmpStr_3 = geArr.join(",");
+
+        return "{0}|{1}|{2}".format(
+            tmpStr_1,
+            tmpStr_2,
+            tmpStr_3
+        );
+    }
+
     function getMode(mode) {
         if (mode == 1) {    // 元
             return 1;
@@ -100,6 +116,5 @@
         }
         return result;
     }
-
 
 </script>

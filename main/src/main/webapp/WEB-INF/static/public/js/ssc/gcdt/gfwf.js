@@ -49,6 +49,7 @@ $(function () {
         $(".Single .layout  .Playmethod ul li.gf-li p span.rx2-span").addClass("acti");
     });
 });
+
 //加倍数 或 重新选钱时改变当前显示注数金额状态
 function changeStateCommon(){
     var zhushu = $('.p1 .i0').html();
@@ -239,7 +240,7 @@ stateTouZhu(flag_str) {
         zhushu = getHezhiZhushu();
     } else if (flagStrInner == "zxkd_zx") { //后三直选-后三跨度
         zhushu = getKaDuZhushu();
-    } else if (flagStrInner == "zsfs_zux") { //后三直选-直选复式
+    } else if (flagStrInner == "zsfs_zux") { //后三直选-组选复式
         zhushu = getZuSanZhushu();
     } else if (flagStrInner == "zsds_zux") { //后三组选-组选单式
         zhushu = getZsdsZhushu();
