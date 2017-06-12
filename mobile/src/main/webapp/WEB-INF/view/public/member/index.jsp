@@ -32,7 +32,8 @@
                     <span>
                       <var>
                         <i>v1</i>
-                        ${userSession.layerName}
+                        <%--${userSession.layerName}--%>
+                          普通会员
                       </var>
                     </span>
                 </div>
