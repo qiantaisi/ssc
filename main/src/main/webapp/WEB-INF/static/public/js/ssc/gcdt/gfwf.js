@@ -566,3 +566,64 @@ function getThreeNewArrs(baiA, shiA, geA) {
     return tempArr;
 }
 
+function buyBtn() {
+    showloadTxtTemplate();
+    $(".clearBet_template").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px"});
+}
+
+var layerId = null;
+function showloadTxtTemplate() {
+    if (layerId != null) {
+        return;
+    }
+    var loadTxt_template = '\
+    <div class="clearBet_template">\
+        <h3>温馨提示</h3>\
+        <table style="width: 100%">\
+             <tobody>\
+                 <tr>\
+                     <td>\
+                        <h4>\
+                              <i class="imgTishi"></i>\
+                              <sapn class="qiTishi">您确定加入 20170612096 期？</span>\
+                        </h4>\
+                        <div class="data">\
+                             <table style="border: 0; width: 100%; cellspacing: 0; cellpadding: 0;">\
+                               <tobody>\
+                                  <tr>\
+                                     <td width="150">玩法</td>\
+                                     <td width="40">单位</td>\
+                                     <td width="80">内容</td>\
+                                     <td>金额</td>\
+                                  </tr>\
+                               </tobody>\
+                             </table>\
+                        </div>\
+                        <div class="binfo">\
+                            <span class="bbm">\
+                               投注总金额: 2 元\
+                            </span>\
+                        </div>\
+                      </td>\
+                 </tr>\
+                 <tr>\
+                    <td class="btns">\
+                        <button type="button" onclick="loadTxt()">确定</button>\
+                        <button type="button" onclick="loadTxt()">取消</button>\
+                    </td>\
+                  </tr>\
+             </tobody>\
+        </table>\
+    </div>\
+    ';
+
+    layer.closeAll();
+    //页面层
+    layerId = layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        area: ['561px', '366px'], //宽高
+        content: loadTxt_template
+    });
+}
