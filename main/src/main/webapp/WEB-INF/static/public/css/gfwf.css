@@ -437,7 +437,10 @@
 }
 
 /*投注框确认框*/
-.clearBet_template h3 {
+.tzTishiTemplate{
+    margin: 15px;
+}
+.tzTishiTemplate h3 {
     display: inline-block;
     float: left;
     position: relative;
@@ -448,20 +451,22 @@
     z-index: 20;
     margin-bottom: -1px;
 }
-.clearBet_template>table {
+.tzTishiTemplate>table {
     border-top: 1px #8f8f8f solid;
     border-collapse: collapse;
     border-spacing: 0;
 }
-
-.clearBet_template h4 {
+.tzTishiTemplate>table td {
+    padding-top: 20px;
+}
+.tzTishiTemplate h4 {
     position: relative;
     font-weight: normal;
     color: #555;
-    height:28px;
-    line-height: 28px;
+    height:48px;
+    line-height: 48px;
 }
-.clearBet_template .imgTishi{
+.tzTishiTemplate .imgTishi{
     text-align: center;
     background: url(../img/mdl-icon.png) no-repeat;
     background-position: 0 -42px;
@@ -470,16 +475,16 @@
     height: 42px;
     background-size: 42px;
     position: absolute;
-    top: 18%;
+    top: 30%;
     left: 28%;
 }
-.clearBet_template .qiTishi{
+.tzTishiTemplate .qiTishi{
     display: inline-block;
     position: absolute;
-    top: 43%;
+    top: 23%;
     left: 38%;
 }
-.clearBet_template .data {
+.tzTishiTemplate .tz-data {
     margin-top: 25px;
     background: #fff;
     font-size: 12px;
@@ -491,19 +496,22 @@
     border: 1px solid #ccc;
     padding: 5px 10px;
 }
-.clearBet_template .binfo {
+.tzTishiTemplate .content-table{
+    border-spacing:0;
+}
+.tzTishiTemplate .binfo {
     position: relative;
-    top: 0px;
+    top: 0;
     color: #f87b1f;
     font-size: 13px;
     font-weight: 500;
     text-align: left;
     padding-top: 3px;
 }
-.clearBet_template .btns{
-    padding-top: 18px;
+.tzTishiTemplate .btns{
+    padding-top: 10px;
 }
-.clearBet_template .btns button{
+.tzTishiTemplate .btns button{
     font-size: 16px;
     width: 120px;
     height: 35px;
@@ -515,7 +523,8 @@
     margin: 0 15px;
     border-radius: 5px;
 }
-.clearBet_template .data table td {
+
+.tz-data table.content-table td {
     padding: 0;
     border-bottom: 1px dashed #d5d5d5;
     height: 30px;
@@ -523,4 +532,31 @@
     table-layout: fixed;
     word-wrap: break-word;
     word-break: break-all;
+    overflow: hidden;
+    text-align: left;
 }
+
+
+#block_close {
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+    background: url(../img/mdl-icon.png) no-repeat -11px -80px;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+}
+
+/*#block_close:hover {*/
+    /*transform: rotate(180deg);*/
+    /*-moz-transform: rotate(180deg);*/
+    /*-webkit-transform: rotate(180deg);*/
+    /*-o-transform: rotate(180deg);*/
+    /*-ms-transform: rotate(180deg);*/
+/*}*/
