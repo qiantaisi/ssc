@@ -225,63 +225,6 @@
     </tr>
 </script>
 <script>
-    function sureGfwtXz() {
-        var betForm = {
-            totalMoney: 0,
-            totalZhushu: 0,
-            sscBetList: []
-        };
-        $("#zhudanList .re_touzhu_tem").each(function() {
-            betForm.sscBetList.push({
-                playGroupId: $(this).data("bet_play_group_id"),
-                number: getNumber(),
-                playId: $(this).data("bet_play_id"),
-                zhushu: $(this).data("bet_zhushu"),
-                perMoney: $(this).data("bet_per_money"),
-                content: $(this).data("bet_content"),
-                playPlId: $(this).data("bet_play_pl_id"),
-                playPl: $(this).data("bet_play_pl"),
-                beishu: $(this).data("bet_beishu"),
-                totalMoney: $(this).data("bet_total_money"),
-                type: 2,
-                mode: $(this).data("bet_mode"),
-                fandian: $(this).data("bet_fandian")
-            });
-            betForm.totalMoney += $(this).data("bet_total_money");
-            betForm.totalZhushu += $(this).data("bet_zhushu");
-        });
-
-        if (betForm.totalZhushu <= 0) {
-            alert("请先添加投注内容");
-        }
-
-        ajaxRequest({
-            url: CONFIG.BASEURL + "ssc/ajaxBet.json",
-            data: {
-                betForm: JSON.stringify(betForm)
-            },
-            beforeSend: function() {
-                layer.closeAll();
-                parent.showLoading();
-            },
-            success: function(json) {
-                parent.hideLoading();
-                if (json.result == 1) {
-                    layer.msg("下注成功", {icon: 1});
-                    // 刷新我的投注
-                    getBetDetails();
-                    // 刷新余额
-                    parent.getUserSession();
-                    // 重置预投注
-                    clearZhudan();
-                } else {
-                    layer.msg("下注失败：" + json.description, {icon: 2});
-                }
-            },
-            complete: function() {
-            }
-        });
-    }
 </script>
 <script>
     function addYuxuan(betForm) {
@@ -295,33 +238,15 @@
         var strHtml = '';
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function(){
             var modelStr = '';
-            var conStr = '';
             var playName = $(this).data('show_play_name');
             var model = $(this).data('bet_mode');
-            var contentStr = $(this).data('bet_content');
+            var betContent = $(this).data('bet_content');
+            var showContent = $(this).data("show_content");
             var zhushu = $(this).data('bet_zhushu');
             var perMoney = $(this).data('bet_per_money');
             var beishu = $(this).data('bet_beishu');
             var totalMoney = $(this).data('bet_beishu');
-            contentStr = contentStr.split('|');
-            $.each(contentStr, function(index, value){
-                 var str = value;
-                 if(str.length > 1){
-                     if(index == 4){
-                         conStr += str.split(",").join('');
-                     } else{
-                         conStr += str.split(",").join('') + ',';
-                     }
 
-                 }else{
-                     if(index == 4){
-                         conStr += str;
-                     } else{
-                         conStr += str + ',';
-                     }
-                 }
-            });
-            contentStr = conStr;
             if(model == 1){
                 modelStr = '元';
             } else if(model == 2){
@@ -332,7 +257,7 @@
 
             var newStr = '<tr>' +
                     '<td>' + playName + '</td>' +
-                    '<td>' + contentStr + '</td>' +
+                    '<td>' + showContent + '</td>' +
                     '<td>' + zhushu + '</td>' +
                     '<td>' + perMoney + '</td>' +
                     '<td>' + modelStr + '</td>' +

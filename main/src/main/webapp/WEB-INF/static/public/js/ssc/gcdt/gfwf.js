@@ -597,11 +597,72 @@ function buyBtn() {
         var totalM = $("#zongtouInfo .totalM").html();
         $(".total-money").html(totalM);
         $(".qihao").html(getNumber());
+
+        // 注单内容
+        var betForm = {
+            totalMoney: 0,
+            totalZhushu: 0,
+            sscBetList: []
+        };
+        $("#zhudanList .re_touzhu_tem").each(function() {
+            betForm.sscBetList.push({
+                playGroupId: $(this).data("bet_play_group_id"),
+                number: getNumber(),
+                playId: $(this).data("bet_play_id"),
+                zhushu: $(this).data("bet_zhushu"),
+                perMoney: $(this).data("bet_per_money"),
+                content: $(this).data("bet_content"),
+                playPlId: $(this).data("bet_play_pl_id"),
+                playPl: $(this).data("bet_play_pl"),
+                beishu: $(this).data("bet_beishu"),
+                totalMoney: $(this).data("bet_total_money"),
+                type: 2,
+                mode: $(this).data("bet_mode"),
+                fandian: $(this).data("bet_fandian")
+            });
+            betForm.totalMoney += $(this).data("bet_total_money");
+            betForm.totalZhushu += $(this).data("bet_zhushu");
+        });
+        betForm = JSON.stringify(betForm);
+        $("#gfwfBetForm_input").val(betForm);
+
+        // 确定按钮
+        $("#gfwfBetForm_submit").click(function() {
+            sureGfwtXz($("#gfwfBetForm_input").val());
+        });
     } else{
         showTishi2Template();
         $(".del-TishiType2").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
     }
+}
 
+function sureGfwtXz(betForm) {
+    ajaxRequest({
+        url: CONFIG.BASEURL + "ssc/ajaxBet.json",
+        data: {
+            betForm: betForm
+        },
+        beforeSend: function() {
+            layer.closeAll();
+            parent.showLoading();
+        },
+        success: function(json) {
+            parent.hideLoading();
+            if (json.result == 1) {
+                layer.msg("下注成功", {icon: 1});
+                // 刷新我的投注
+                getBetDetails();
+                // 刷新余额
+                parent.getUserSession();
+                // 重置预投注
+                clearZhudan();
+            } else {
+                layer.msg("下注失败：" + json.description, {icon: 2});
+            }
+        },
+        complete: function() {
+        }
+    });
 }
 
 function cancel() {
@@ -657,7 +718,8 @@ function showloadTxtTemplate() {
                  </tr>\
                  <tr>\
                     <td class="btns">\
-                        <button type="button" onclick="enterQr()">确定</button>\
+                        <input type="hidden" id="gfwfBetForm_input">\
+                        <button type="button" id="gfwfBetForm_submit">确定</button>\
                         <button type="button" onclick="cancel()">取消</button>\
                     </td>\
                   </tr>\
