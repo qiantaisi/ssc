@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.*;
+import project38.api.utils.SessionUtils;
 import project38.ssc.web.auth.Authentication;
 import project38.ssc.web.form.SscBetForm;
 import project38.api.utils.ApiUtils;
@@ -27,8 +28,8 @@ import java.util.*;
  */
 @Controller
 @RequestMapping("/ssc")
-public class SscController extends BaseController {
-    private Log log = LogFactory.getLog(SscController.class);
+public class SscController extends CacheController {
+    private static final Log log = LogFactory.getLog(SscController.class);
 
     @Autowired
     private HttpServletRequest httpServletRequest;
@@ -73,26 +74,18 @@ public class SscController extends BaseController {
     }
 
 //    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-//    public ModelAndView gcdtGroup(@PathVariable String group) {
+//    public ModelAndView gcdtGroup(@PathVariable String group) throws UserException {
 //        Map<String, Object> modelMap = new HashMap<String, Object>();
-//
-//        modelMap.put("kefuUrl", ApiUtils.getKefu().getKefuUrl());
+//        String companyShortName = this.getCompanyShortName();
+//        if (!"gcdt".equals(group)) {
+//            // 彩种禁用
+//            SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group, companyShortName);
+//            if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
+//                return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
+//            }
+//        }
 //        return this.renderPublicView("ssc/gcdt/" + group, modelMap);
 //    }
-
-    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroup(@PathVariable String group) throws UserException {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        String companyShortName = this.getCompanyShortName();
-        if (!"gcdt".equals(group)) {
-            // 彩种禁用
-            SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group, companyShortName);
-            if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
-                return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
-            }
-        }
-        return this.renderPublicView("ssc/gcdt/" + group, modelMap);
-    }
 
 
     @RequestMapping(value = "/zst/{module}.html", method = RequestMethod.GET)
@@ -330,5 +323,27 @@ public class SscController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         modelMap.put("icoData", ApiUtils.getLogo(3, companyShortName));
         return this.renderPublicView("ssc/gcdt/index", modelMap);
+    }
+
+    @RequestMapping(value = "/gcdt/cqssc_2.html", method = RequestMethod.GET)
+    public ModelAndView gcdt_cqsc_2() throws UserException {
+        // 彩种ID
+        Long playGroupId = 1L;
+
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+
+        // 公司标志
+        String companyShortName = this.getCompanyShortName();
+
+        // 彩种禁用
+        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(playGroupId, companyShortName);
+        if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
+            return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
+        }
+
+        // 官方玩法赔率
+        modelMap.put("playPlListJson", this.getCacheGfwfPl(httpServletRequest, companyShortName, playGroupId));
+
+        return this.renderPublicView("ssc/gcdt/cqssc_2", modelMap);
     }
 }

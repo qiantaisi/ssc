@@ -256,6 +256,30 @@ public class SscOpenTimeResult extends CommonResult {
          * 赔率
          */
         private BigDecimal pl;
+        /**
+         *
+         */
+        private BigDecimal convertBlMoney;
+        /**
+         *
+         */
+        private BigDecimal maxFdBl;
+
+        public BigDecimal getConvertBlMoney() {
+            return convertBlMoney;
+        }
+
+        public void setConvertBlMoney(BigDecimal convertBlMoney) {
+            this.convertBlMoney = convertBlMoney;
+        }
+
+        public BigDecimal getMaxFdBl() {
+            return maxFdBl;
+        }
+
+        public void setMaxFdBl(BigDecimal maxFdBl) {
+            this.maxFdBl = maxFdBl;
+        }
 
         public Long getId() {
             return id;

@@ -1215,4 +1215,13 @@ public class ApiUtils{
         paramsMap.put("type", type);
         return JSONUtils.toObject(HttpUtils.post(ApiConstant.API_WEB_SETTING_GET_FENGGE, paramsMap), FenggeResult.class);
     }
+
+    public static SscPlayPlResult getSscPlayPl_gfwf(Long playGroupId, String companyShortName) {
+        if (IS_DEBUG) {
+            return new SscPlayPlResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("playGroupId", playGroupId);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_PLAY_PL_GFWF, paramsMap, companyShortName), SscPlayPlResult.class);
+    }
 }

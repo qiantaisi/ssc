@@ -135,6 +135,9 @@
 <script>
     var playGroupId = 1;
     var playId = 111;
+
+    // 全局官方玩法赔率
+    var gfwfPlJson = ${playPlListJson};
 </script>
 <script>
     function removeThisItem(obj) {
