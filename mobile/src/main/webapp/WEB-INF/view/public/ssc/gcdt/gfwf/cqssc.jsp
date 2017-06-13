@@ -27,7 +27,6 @@
             </h1>
         </header>
         <c:import url="../common/commonBet.jsp"/>
-
         <div class="gfwf_consele">
             <div class="gfwf_one">
                 <div class="border_one color_two">
@@ -56,7 +55,11 @@
                 <div class="cl-903" id="openHistoryList">
                 </div>
             </div>
-            <c:import url="./cqssc/wx.jsp"/> <%--彩种主体内容--%>
+            <div id="betContainer_gfwf">
+                <%--彩种主体内容--%>
+
+            </div>
+            <%--<c:import url="./cqssc/wx.jsp"/>--%>
         </div>
     </div>
     <c:import url="../../../common/leftSscPanel.jsp"/>

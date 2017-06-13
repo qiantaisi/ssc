@@ -173,5 +173,3 @@
         <span class="staer1">组选4</span>
     </div>
 </div>
-
-
