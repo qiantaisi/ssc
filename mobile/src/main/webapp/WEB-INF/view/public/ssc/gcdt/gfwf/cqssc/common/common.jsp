@@ -25,7 +25,6 @@
     </div>
 </div>
 
-
 <div class="gfwf_xz gfwf_wh">
     <div class="xuan">
         <div class="xuan1"></div>
@@ -172,4 +171,8 @@
         <span class="staer1">组选6</span>
         <span class="staer1">组选4</span>
     </div>
+</div>
+
+<div class="gfwf_mask2 Hide_Show2">
+    <%--蒙版--%>
 </div>

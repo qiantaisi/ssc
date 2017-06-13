@@ -46,25 +46,24 @@
                 <%--实现蒙版--%>
             </div>
         </div>
-        <div class="content cl-601">
-            <c:import url="./cqssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
-            <div class="cl-900" id="lastOpenInfo">
-                <%--显示第几期彩种--%>
-            </div>
-            <div class="cl-901">
-                <div class="cl-902">
-                    <span class="left" data-number="" id="number">第<font>..数据读取中..</font>期</span>
-                    <span class="right">距离下一期还有：<font id="leftTime">00:00:00</font></span>
+            <div class="content cl-601">
+                <c:import url="./cqssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
+                <div class="cl-900" id="lastOpenInfo">
+                    <%--显示第几期彩种--%>
                 </div>
-                <div class="cl-903" id="openHistoryList">
+                <div class="cl-901">
+                    <div class="cl-902">
+                        <span class="left" data-number="" id="number">第<font>..数据读取中..</font>期</span>
+                        <span class="right">距离下一期还有：<font id="leftTime">00:00:00</font></span>
+                    </div>
+                    <div class="cl-903" id="openHistoryList">
+                    </div>
+                </div>
+                <div id="betContainer_gfwf">
+                    <%--彩种主体内容--%>
+                    <c:import url="./cqssc/wx.jsp"/>
                 </div>
             </div>
-            <div id="betContainer_gfwf">
-                <%--彩种主体内容--%>
-
-            </div>
-            <%--<c:import url="./cqssc/wx.jsp"/>--%>
-        </div>
     </div>
     <c:import url="../../../common/leftSscPanel.jsp"/>
     <c:import url="../../../common/rightPanel.jsp">
