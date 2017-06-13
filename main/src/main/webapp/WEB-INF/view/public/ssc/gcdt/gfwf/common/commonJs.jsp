@@ -156,7 +156,7 @@
     }
 
 
-
+    //清除投注内容确认按钮
     function enterType1(){
         var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
         if(len > 0) {
@@ -167,6 +167,7 @@
         }
     }
 
+    //清除注单提示取消按钮
     function cancelType1() {
         closeLayer();
     }
@@ -175,6 +176,7 @@
         closeLayer2();
     }
 
+    //清除注单内容
     function clearContent(){
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
         calcAll();

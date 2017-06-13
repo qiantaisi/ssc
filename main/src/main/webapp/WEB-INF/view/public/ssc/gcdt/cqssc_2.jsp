@@ -291,7 +291,7 @@
         bindYuxuan();
     }
 
-    function addConten(){
+    function addContent(){
         var strHtml = '';
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function(){
             var modelStr = '';

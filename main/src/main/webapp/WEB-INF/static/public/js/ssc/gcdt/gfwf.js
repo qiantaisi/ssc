@@ -586,7 +586,7 @@ function buyBtn() {
         });
 
         //投注内容模板
-        var htmlStr = addConten();
+        var htmlStr = addContent();
         $(".tzTishiTemplate .content-table .head-tr").after(htmlStr);
 
         $(".tzTishiTemplate .content-table tr").each(function () {
@@ -672,7 +672,7 @@ function showloadTxtTemplate() {
         type: 1,
         title: false,
         closeBtn: 0,
-        area: ['615px', '420px'], //宽高
+        area: ['615px', '428px'], //宽高
         content: loadTxt_template
     });
 }
