@@ -20,11 +20,12 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title title_cq">
-                重庆时时彩
-                <div class="gfwf_triangle_down">
-                    <%--画出一个向下的三角形图标--%>
-                </div>
+            <h1 class="title">
+                <i class="title_cq">重庆时时彩
+                    <div class="gfwf_triangle_down">
+                        <%--画出一个向下的三角形图标--%>
+                    </div>
+                </i>
             </h1>
         </header>
         <c:import url="common/commonBet.jsp"/>
