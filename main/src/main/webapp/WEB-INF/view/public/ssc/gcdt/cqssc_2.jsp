@@ -251,6 +251,10 @@
             betForm.totalZhushu += $(this).data("bet_zhushu");
         });
 
+        if (betForm.totalZhushu <= 0) {
+            alert("请先添加投注内容");
+        }
+
         ajaxRequest({
             url: CONFIG.BASEURL + "ssc/ajaxBet.json",
             data: {
@@ -268,8 +272,8 @@
                     getBetDetails();
                     // 刷新余额
                     parent.getUserSession();
-                    // 重置表格
-                    reset();
+                    // 重置预投注
+                    clearZhudan();
                 } else {
                     layer.msg("下注失败：" + json.description, {icon: 2});
                 }
@@ -299,7 +303,7 @@
                     top: top,
                     left: left,
                     showPlayName: $(this).data("show_play_name"),
-                    showContent: $(this).data("show_ontent"),
+                    showContent: $(this).data("show_content"),
                     showMode: $(this).data("bet_mode"),
                     showFandian: $(this).data("bet_fandian"),
                     showPlayPl: $(this).data("bet_play_pl"),
