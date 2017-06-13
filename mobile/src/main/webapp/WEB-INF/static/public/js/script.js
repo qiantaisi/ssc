@@ -6801,33 +6801,19 @@ function kefuToast() {
     Tools.toast("请联系在线客服");
 }
 
-// $(function () {
-//     $(".title_cq").click(  // 官方玩法点击事件
-//         function () {
-//             if ($(".content").is(".show_hide")) {
-//                 $(".page").find(".show_hide").removeClass("show_hide");
-//                 $(".gfwf_consele").addClass("show_hide").show();
-//                 $(".gfwf_mask").addClass("show_hide").show();
-//             } else {
-//                 $(".gfwf_consele").removeClass("show_hide").show();
-//                 $(".gfwf_mask").removeClass("show_hide").hide();
-//                 $(".page").find(".content").addClass("show_hide");
-//             }
-//         }
-//     );
-// });
-$(function () {
+$(function () {     // 官方玩法点击事件
         $(".title_cq").click(
             function () {
                 if ($(".BeginFind").is(".Hide_Show")) {   //判断是否存在  Hide_Show
                     $(".page").find(".Hide_Show").removeClass("Hide_Show");
-                }else{
+                } else {
                     $(".page").find(".BeginFind").addClass("Hide_Show");
                 }
             }
         );
     }
 );
+
 //实现 直选方式 的点击事件。
 $(".x_3 span").click(
     function () {
