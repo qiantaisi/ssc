@@ -568,7 +568,7 @@ function getThreeNewArrs(baiA, shiA, geA) {
 
 function buyBtn() {
     showloadTxtTemplate();
-    $(".tzTishiTemplate").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px"});
+    $(".tzTishiTemplate").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"80px"});
     $("#block_close").click(function(){
         if (layerId != null) {
             layer.close(layerId);
@@ -583,9 +583,18 @@ function buyBtn() {
         var strString = '';
         if(strNr.length >= 0 && strNr.length > 40){
             strString = strNr.toString();
-            newStr = strString.substr(0,40) + "...";
+            newStr = strString.substr(0,40);
+            newStr = $.trim(newStr.replace(/[^0-9]/g, ','));
+            newStr = newStr.substr(0,newStr.length - 1);
+            newStr = newStr + "...";
             $(this).find("td:eq(1)").html(newStr);
         }
+    });
+
+    $(".tzTishiTemplate .content-table tr").each(function () {
+        $(this).find("td:eq(3)").css("text-align","center");
+        $(this).find("td:eq(4)").css("text-align","center");
+        $(this).find("td:eq(5)").css("text-align","center");
     });
 
 }
@@ -614,8 +623,8 @@ function showloadTxtTemplate() {
                                          <td width="110">玩法</td>\
                                          <td width="180">内容</td>\
                                          <td width="80">注数</td>\
-                                         <td width="30">每注</td>\
-                                         <td width="20">模式</td>\
+                                         <td width="40">每注</td>\
+                                         <td width="30">模式</td>\
                                          <td width="40">倍数</td>\
                                          <td >金额</td>\
                                       </tr>\
@@ -639,7 +648,7 @@ function showloadTxtTemplate() {
                                       </tr>\
                                       <tr>\
                                          <td>直任选二_直选复式</td>\
-                                         <td>12,32,65，23</td>\
+                                         <td>12,32,65,23</td>\
                                          <td>10000</td>\
                                          <td>1000</td>\
                                          <td>元</td>\
@@ -673,7 +682,7 @@ function showloadTxtTemplate() {
         type: 1,
         title: false,
         closeBtn: 0,
-        area: ['615px', '390px'], //宽高
+        area: ['615px', '420px'], //宽高
         content: loadTxt_template
     });
 }
