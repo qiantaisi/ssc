@@ -341,7 +341,7 @@
             totalMoney = add(totalMoney, $(this).data("bet_total_money"));
         });
 
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
+        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span class="totalM">' + totalMoney + '</span> 元。';
         $("#zongtouInfo").html(str);
     }
 

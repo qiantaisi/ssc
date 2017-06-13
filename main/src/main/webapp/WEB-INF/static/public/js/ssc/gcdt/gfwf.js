@@ -602,6 +602,8 @@ function buyBtn() {
         $(this).find("td:eq(4)").css("text-align","center");
         $(this).find("td:eq(5)").css("text-align","center");
     });
+    var totalM = $("#zongtouInfo .totalM").html();
+    $(".total-money").html(totalM);
 }
 
 function cancel() {
@@ -647,7 +649,7 @@ function showloadTxtTemplate() {
                         </div>\
                         <div class="binfo">\
                             <span class="bbm">\
-                               投注总金额: 2 元\
+                               投注总金额: <span class="total-money">2</span> 元\
                             </span>\
                         </div>\
                       </td>\
