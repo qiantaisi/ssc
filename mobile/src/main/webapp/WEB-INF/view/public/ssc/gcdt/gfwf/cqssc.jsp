@@ -27,22 +27,24 @@
             </h1>
         </header>
         <c:import url="../common/commonBet.jsp"/>
-        <div class="gfwf_consele">
-            <div class="gfwf_one">
-                <div class="border_one color_two">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
+        <div class="BeginFind Hide_Show">
+            <div class="gfwf_consele">
+                <div class="gfwf_one">
+                    <div class="border_one color_two">
+                        <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
+                    </div>
+                </div>
+                <div class="gfwf_two">
+                    <div class="border_two color_one">
+                        <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
+                    </div>
                 </div>
             </div>
-            <div class="gfwf_two">
-                <div class="border_two color_one">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
-                </div>
+            <div class="gfwf_mask">
+                <%--实现蒙版--%>
             </div>
         </div>
-        <div class="gfwf_mask">
-            <%--实现蒙版--%>
-        </div>
-        <div class="content cl-601 show_hide">
+        <div class="content cl-601">
             <c:import url="./cqssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
             <div class="cl-900" id="lastOpenInfo">
                 <%--显示第几期彩种--%>
@@ -99,13 +101,5 @@
             {{/each}}
         </span>
     </div>
-</script>
-<script>
-    //加载页面时隐藏蒙版
-    function Hide_Show() {
-        $(".consele").hide()
-        $(".gfwf_mask").hide();
-    }
-    Hide_Show();
 </script>
 <c:import url="../../../common/bodyEnd.jsp"/>

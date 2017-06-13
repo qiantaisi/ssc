@@ -170,6 +170,7 @@
     background-color: #fff;
     position: absolute;
     top: 2.2rem;
+    z-index:9;
 }
 
 .gfwf_mask {
@@ -179,6 +180,7 @@
     position: absolute;
     background: #000;
     margin-top: 5.5rem;
+    z-index: 9;
 }
 
 .gfwf_mask2 {
@@ -199,7 +201,9 @@
     position: relative;
     top: 0.6rem;
 }
-
+.Hide_Show{
+    display: none;
+}
 .gfwf_triangle_down {
     width: 0px;
     height: 0px;
