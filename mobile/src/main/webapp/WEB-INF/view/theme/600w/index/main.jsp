@@ -62,7 +62,7 @@
                                  width="100%" onmouseover="this.stop();" onmouseout="this.start();">
                             <c:forEach items="${popupNoticeList}" var="item" varStatus="status">
                                 <c:if test="${status.count != 1}"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></c:if>
-                                <span>${item.title}：${item.content}</span>
+                                <span${item.title}：${item.content}</span>
                             </c:forEach>
                         </marquee>
                     </div>

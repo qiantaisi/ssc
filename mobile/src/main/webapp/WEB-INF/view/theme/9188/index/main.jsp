@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
     String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("m.", "").replace("www.", "");
-    String pcHostName = request.getScheme() + "://" + "www." + request.getServerName().replace("m.", "").replace("www.", "");
+    String pcHostName = request.getScheme() + "://" + "www." + request.getServerName().replace("m.", "").replace("www.", "").replace("ios.", "").replace("app.", "");
 %>
 <c:import url="../common/bodyStart.jsp"/>
 <div class="page-group">
@@ -62,7 +62,7 @@
                                  width="100%" onmouseover="this.stop();" onmouseout="this.start();">
                             <c:forEach items="${popupNoticeList}" var="item" varStatus="status">
                                 <c:if test="${status.count != 1}"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></c:if>
-                                <span>${item.title}：${item.content}</span>
+                                <span style="overflow:visible;display:block;white-space:nowrap">${item.title}：${item.content}</span>
                             </c:forEach>
                         </marquee>
                     </div>
