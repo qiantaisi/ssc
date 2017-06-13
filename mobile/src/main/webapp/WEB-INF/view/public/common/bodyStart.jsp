@@ -34,6 +34,6 @@
         // -->
     </script>
     <title></title>
-    <jsp:include page="customTheme.jsp" />
+    <jsp:include page="customTheme.jsp"/>
 </head>
 <body>

@@ -568,7 +568,35 @@ function getThreeNewArrs(baiA, shiA, geA) {
 
 function buyBtn() {
     showloadTxtTemplate();
-    $(".clearBet_template").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px"});
+    $(".tzTishiTemplate").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"80px"});
+    $("#block_close").click(function(){
+        if (layerId != null) {
+            layer.close(layerId);
+            layerId = null;
+        }
+    });
+
+    //投注内容显示处理
+    $(".tzTishiTemplate .content-table tr:not(.head-tr)").each(function () {
+        var strNr = $(this).find("td:eq(1)").html();
+        var newStr = '';
+        var strString = '';
+        if(strNr.length >= 0 && strNr.length > 40){
+            strString = strNr.toString();
+            newStr = strString.substr(0,40);
+            newStr = $.trim(newStr.replace(/[^0-9]/g, ','));
+            newStr = newStr.substr(0,newStr.length - 1);
+            newStr = newStr + "...";
+            $(this).find("td:eq(1)").html(newStr);
+        }
+    });
+
+    $(".tzTishiTemplate .content-table tr").each(function () {
+        $(this).find("td:eq(3)").css("text-align","center");
+        $(this).find("td:eq(4)").css("text-align","center");
+        $(this).find("td:eq(5)").css("text-align","center");
+    });
+
 }
 
 var layerId = null;
@@ -577,8 +605,9 @@ function showloadTxtTemplate() {
         return;
     }
     var loadTxt_template = '\
-    <div class="clearBet_template">\
+    <div class="tzTishiTemplate">\
         <h3>温馨提示</h3>\
+        <span id="block_close"></span>\
         <table style="width: 100%">\
              <tobody>\
                  <tr>\
@@ -587,16 +616,46 @@ function showloadTxtTemplate() {
                               <i class="imgTishi"></i>\
                               <sapn class="qiTishi">您确定加入 20170612096 期？</span>\
                         </h4>\
-                        <div class="data">\
-                             <table style="border: 0; width: 100%; cellspacing: 0; cellpadding: 0;">\
-                               <tobody>\
-                                  <tr>\
-                                     <td width="150">玩法</td>\
-                                     <td width="40">单位</td>\
-                                     <td width="80">内容</td>\
-                                     <td>金额</td>\
-                                  </tr>\
-                               </tobody>\
+                        <div class="tz-data">\
+                             <table class="content-table" style="border: 0; width: 100%;">\
+                                   <tobody>\
+                                      <tr class="head-tr">\
+                                         <td width="110">玩法</td>\
+                                         <td width="180">内容</td>\
+                                         <td width="80">注数</td>\
+                                         <td width="40">每注</td>\
+                                         <td width="30">模式</td>\
+                                         <td width="40">倍数</td>\
+                                         <td >金额</td>\
+                                      </tr>\
+                                      <tr>\
+                                         <td>直任选二_直选复式</td>\
+                                         <td>123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123</td>\
+                                         <td>10000</td>\
+                                         <td>1000</td>\
+                                         <td>元</td>\
+                                         <td>10</td>\
+                                         <td>20000</td>\
+                                      </tr>\
+                                      <tr>\
+                                         <td>直任选二_直选复式</td>\
+                                         <td>256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256</td>\
+                                         <td>10000</td>\
+                                         <td>1000</td>\
+                                         <td>元</td>\
+                                         <td>10</td>\
+                                         <td>20000</td>\
+                                      </tr>\
+                                      <tr>\
+                                         <td>直任选二_直选复式</td>\
+                                         <td>12,32,65,23</td>\
+                                         <td>10000</td>\
+                                         <td>1000</td>\
+                                         <td>元</td>\
+                                         <td>10</td>\
+                                         <td>20000</td>\
+                                      </tr>\
+                                   </tobody>\
                              </table>\
                         </div>\
                         <div class="binfo">\
@@ -623,7 +682,7 @@ function showloadTxtTemplate() {
         type: 1,
         title: false,
         closeBtn: 0,
-        area: ['561px', '366px'], //宽高
+        area: ['615px', '420px'], //宽高
         content: loadTxt_template
     });
 }
