@@ -245,9 +245,9 @@
             var zhushu = $(this).data('bet_zhushu');
             var perMoney = $(this).data('bet_per_money');
             var beishu = $(this).data('bet_beishu');
-            var totalMoney = $(this).data('bet_beishu');
+            var totalMoney = $(this).data('bet_total_money');
 
-            if(model == 1){
+                if(model == 1){
                 modelStr = '元';
             } else if(model == 2){
                 modelStr = '角';

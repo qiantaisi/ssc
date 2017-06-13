@@ -589,11 +589,6 @@ function buyBtn() {
         var htmlStr = addContent();
         $(".tzTishiTemplate .content-table .head-tr").after(htmlStr);
 
-        $(".tzTishiTemplate .content-table tr").each(function () {
-            $(this).find("td:eq(3)").css("text-align","center");
-            $(this).find("td:eq(4)").css("text-align","center");
-            $(this).find("td:eq(5)").css("text-align","center");
-        });
         var totalM = $("#zongtouInfo .totalM").html();
         $(".total-money").html(totalM);
         $(".qihao").html(getNumber());
@@ -629,10 +624,11 @@ function buyBtn() {
         // 确定按钮
         $("#gfwfBetForm_submit").click(function() {
             sureGfwtXz($("#gfwfBetForm_input").val());
+            //清除弹框layerID
+            cancel();
         });
     } else{
         showTishi2Template();
-        $(".del-TishiType2").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
     }
 }
 
@@ -655,7 +651,7 @@ function sureGfwtXz(betForm) {
                 // 刷新余额
                 parent.getUserSession();
                 // 重置预投注
-                clearZhudan();
+                clearContent();
             } else {
                 layer.msg("下注失败：" + json.description, {icon: 2});
             }
@@ -821,4 +817,5 @@ function showTishi2Template(infoStr) {
         area: ['282px', '222px'], //宽高
         content: tiShi_template
     });
+    $(".del-TishiType2").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
 }

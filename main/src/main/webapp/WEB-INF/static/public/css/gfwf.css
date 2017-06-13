@@ -523,6 +523,21 @@
     margin: 0 15px;
     border-radius: 5px;
 }
+.tzTishiTemplate .tz-data table.content-table td:nth-child(3){
+    text-align: center;
+}
+.tzTishiTemplate .tz-data table.content-table td:nth-child(4){
+    text-align: center;
+}
+.tzTishiTemplate .tz-data table.content-table td:nth-child(5){
+    text-align: center;
+}
+.tzTishiTemplate .tz-data table.content-table td:nth-child(6){
+    text-align: center;
+}
+.tzTishiTemplate .tz-data table.content-table td:nth-child(7){
+    text-align: center;
+}
 
 .tz-data table.content-table td {
     padding: 0;
@@ -535,7 +550,6 @@
     overflow: hidden;
     text-align: left;
 }
-
 
 #block_close {
     width: 18px;
@@ -593,6 +607,6 @@
     top: 30%;
     left: 19%;
 }
-.tzTishiTemplate .btns button{
+.del-TishiType2 .btns button{
     width: 100px;
 }

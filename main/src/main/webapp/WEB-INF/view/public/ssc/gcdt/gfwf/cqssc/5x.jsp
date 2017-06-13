@@ -324,7 +324,6 @@
             }
             clearSelected();
             addYuxuan(betForm);
-            addConten(betForm)
             calcAll();
         }
     }
@@ -562,7 +561,6 @@
                 shiArr,
                 geArr
             );
-            console.log();
             // 每注金额
             obj.betPerMoney = $("#inputMoney").data("money");
             obj.betZhushu = 1;
@@ -571,6 +569,8 @@
             obj.betMode = 1;
             // 每单总金额
             obj.betTotalMoney = obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+            // 玩法ID
+            obj.betPlayId = getPlayId();
             // 彩种
             obj.betPlayGroupId = playGroupId;
             // 返点比例
