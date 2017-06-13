@@ -299,6 +299,17 @@ $(function () {
         $("#btn-shiwan").click(function () {
             shiwan();
         });
+
+        //实现登录处的记住密码勾选事件
+        $(".remenber span").click(
+            function () {
+                if ($(".content .remenber span img").is(".show_hide")) {
+                    $(".content .remenber span").find("img").removeClass("show_hide");
+                } else {
+                    $(".content .remenber span").find("img").addClass("show_hide");
+                }
+            }
+        );
     });
 
     function shiwan() {
@@ -7153,28 +7164,16 @@ function kefuToast() {
     Tools.toast("请联系在线客服");
 }
 
-$(".title").click(
-    function () {
-        if ($(".content").is(".show_hide")) {
-            $(".page").find(".show_hide").removeClass("show_hide");
-            $(".consele").addClass("show_hide").show();
-            $(".bott").addClass("show_hide").show();
-        } else {
-            $(".consele").removeClass("show_hide").show();
-            $(".bott").removeClass("show_hide").hide();
-            $(".page").find(".content").addClass("show_hide");
-        }
-    }
-);
-
-
-//实现登录处的记住密码勾选事件
-$(".remenber span").click(
-    function () {
-        if ($(".content .remenber span img").is(".show_hide")) {
-            $(".content .remenber span").find("img").removeClass("show_hide");
-        } else {
-            $(".content .remenber span").find("img").addClass("show_hide");
-        }
-    }
-);
+// $(".title").click(
+//     function () {
+//         if ($(".content").is(".show_hide")) {
+//             $(".page").find(".show_hide").removeClass("show_hide");
+//             $(".consele").addClass("show_hide").show();
+//             $(".bott").addClass("show_hide").show();
+//         } else {
+//             $(".consele").removeClass("show_hide").show();
+//             $(".bott").removeClass("show_hide").hide();
+//             $(".page").find(".content").addClass("show_hide");
+//         }
+//     }
+// );
