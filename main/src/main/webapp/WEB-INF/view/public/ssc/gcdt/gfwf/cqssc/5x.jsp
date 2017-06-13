@@ -11,8 +11,8 @@
         <li>
             <b>五星直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_pl_id="14207" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14208" data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="497" data-play_pl_id="14207" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="498" data-play_pl_id="14208" data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -284,7 +284,7 @@
         betFormList = suiji(total);
         $.each(betFormList, function (index, value) {
             addYuxuan(value);
-        })
+        });
         calcAll();
     }
 
@@ -324,6 +324,7 @@
             }
             clearSelected();
             addYuxuan(betForm);
+            addConten(betForm)
             calcAll();
         }
     }
@@ -340,7 +341,7 @@
             totalMoney = add(totalMoney, $(this).data("bet_total_money"));
         });
 
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
+        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span class="totalM">' + totalMoney + '</span> 元。';
         $("#zongtouInfo").html(str);
     }
 
@@ -464,6 +465,8 @@
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
         // 彩种
         obj.betPlayGroupId = playGroupId;
+        // 玩法ID
+        obj.betPlayId = getPlayId();
         // 返点比例
         obj.betFandian = $(".fandian-bfb").data("value");
         // 赔率
@@ -514,7 +517,6 @@
 
     function suiji(total) {
         var result = [];
-        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
         var flag_dan_zhi = "dan";//默认为单式
         var playNameStr = '';
         var contentStr = '';
@@ -540,7 +542,8 @@
                     arr.push(num);
                 }
             }
-            wanArr.push(arr[0]); qianArr.push(arr[1]); baiArr.push(arr[2]); shiArr.push(arr[3]); baiArr.push(arr[4]);
+            var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+            wanArr.push(arr[0]); qianArr.push(arr[1]); baiArr.push(arr[2]); shiArr.push(arr[3]); geArr.push(arr[4]);
             if(flag_dan_zhi == "dan"){
                 contentStr = "号码: (" +  + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
             }else if(flag_dan_zhi == "fu"){
@@ -559,6 +562,7 @@
                 shiArr,
                 geArr
             );
+            console.log();
             // 每注金额
             obj.betPerMoney = $("#inputMoney").data("money");
             obj.betZhushu = 1;

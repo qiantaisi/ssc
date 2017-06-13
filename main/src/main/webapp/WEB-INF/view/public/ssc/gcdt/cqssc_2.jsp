@@ -120,7 +120,7 @@
                                                                                       alt="">清空注单</a></li>
                     </ul>
                     <p id="zongtouInfo">总投 <span>0</span> 注，<span>0</span> 倍，共 <span>0</span> 元。</p>
-                    <a href="javascript:void(0)" class="ok" onclick="sureXd()"><img src="${resPath}img/ico54.png"
+                    <a href="javascript:void(0)" class="ok" onclick="buyBtn()"><img src="${resPath}img/ico54.png"
                                                                                     alt="">确认投注</a>
                 </div>
             </div>
@@ -193,6 +193,7 @@
             data-bet_fandian="{{betFandian}}"
             data-bet_play_pl="{{betPlayPl}}"
             data-bet_play_id="{{betPlayId}}"
+            data-bet_play_pl_id="{{betPlayPlId}}"
             class="re_touzhu_tem"
     >
         <td class="span_1">
@@ -224,11 +225,48 @@
     </tr>
 </script>
 <script>
+</script>
+<script>
     function addYuxuan(betForm) {
         $("#zhudanList .noRecord").remove();
         var html = template("template_touzhu", betForm);
         $("#zhudanList").append(html);
         bindYuxuan();
+    }
+
+    function addContent(){
+        var strHtml = '';
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function(){
+            var modelStr = '';
+            var playName = $(this).data('show_play_name');
+            var model = $(this).data('bet_mode');
+            var betContent = $(this).data('bet_content');
+            var showContent = $(this).data("show_content");
+            var zhushu = $(this).data('bet_zhushu');
+            var perMoney = $(this).data('bet_per_money');
+            var beishu = $(this).data('bet_beishu');
+            var totalMoney = $(this).data('bet_beishu');
+
+            if(model == 1){
+                modelStr = '元';
+            } else if(model == 2){
+                modelStr = '角';
+            } else if(model == 3){
+                modelStr = '分';
+            }
+
+            var newStr = '<tr>' +
+                    '<td>' + playName + '</td>' +
+                    '<td>' + showContent + '</td>' +
+                    '<td>' + zhushu + '</td>' +
+                    '<td>' + perMoney + '</td>' +
+                    '<td>' + modelStr + '</td>' +
+                    '<td>' + beishu + '</td>' +
+                    '<td>' + totalMoney + '</td>' +
+                    '</tr>';
+            strHtml += newStr;
+        });
+        return strHtml;
     }
 
     function bindYuxuan() {
@@ -243,14 +281,13 @@
                     top: top,
                     left: left,
                     showPlayName: $(this).data("show_play_name"),
-                    showContent: $(this).data("show_ontent"),
+                    showContent: $(this).data("show_content"),
                     showMode: $(this).data("bet_mode"),
                     showFandian: $(this).data("bet_fandian"),
                     showPlayPl: $(this).data("bet_play_pl"),
                     betPerMoney: $(this).data("bet_per_money"),
                     betTotalMoney: $(this).data("bet_total_money"),
-                    betZhushu: $(this).data("bet_zhushu"),
-                    showContent: $(this).data("show_content")
+                    betZhushu: $(this).data("bet_zhushu")
                 })
                 $("body").append(html);
             }, function() {
@@ -284,6 +321,7 @@
                 {{else if showMode == 3}}
                 分
                 {{/if}}
+                ，{{betZhushu}}倍
                 </span>
             </div>
             <div class="line">

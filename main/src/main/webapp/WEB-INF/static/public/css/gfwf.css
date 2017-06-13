@@ -436,3 +436,163 @@
     margin: 0!important;
 }
 
+/*投注框确认框*/
+.tzTishiTemplate{
+    margin: 15px;
+}
+.tzTishiTemplate h3 {
+    display: inline-block;
+    float: left;
+    position: relative;
+    font-size: 16px;
+    padding: 0 5px 13px 0;
+    font-weight: normal;
+    border-bottom: 3px #ea721a solid;
+    z-index: 20;
+    margin-bottom: -1px;
+}
+.tzTishiTemplate>table {
+    border-top: 1px #8f8f8f solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.tzTishiTemplate>table td {
+    padding-top: 20px;
+}
+.tzTishiTemplate h4 {
+    position: relative;
+    font-weight: normal;
+    color: #555;
+    height:48px;
+    line-height: 48px;
+}
+.tzTishiTemplate .imgTishi{
+    text-align: center;
+    background: url(../img/mdl-icon.png) no-repeat;
+    background-position: 0 -42px;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background-size: 42px;
+    position: absolute;
+    top: 30%;
+    left: 28%;
+}
+.tzTishiTemplate .qiTishi{
+    display: inline-block;
+    position: absolute;
+    top: 23%;
+    left: 38%;
+}
+.tzTishiTemplate .tz-data {
+    margin-top: 25px;
+    background: #fff;
+    font-size: 12px;
+    color: #555;
+    line-height: 20px;
+    text-align: left;
+    height: 150px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+.tzTishiTemplate .content-table{
+    border-spacing:0;
+}
+.tzTishiTemplate .binfo {
+    position: relative;
+    top: 0;
+    color: #f87b1f;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    padding-top: 3px;
+}
+.tzTishiTemplate .btns{
+    padding-top: 40px;
+}
+.tzTishiTemplate .btns button{
+    font-size: 16px;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #5d5d5d;
+    color: #fff;
+    border: none;
+    margin: 0 15px;
+    border-radius: 5px;
+}
+
+.tz-data table.content-table td {
+    padding: 0;
+    border-bottom: 1px dashed #d5d5d5;
+    height: 30px;
+    line-height: 30px;
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    text-align: left;
+}
+
+
+#block_close {
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+    background: url(../img/mdl-icon.png) no-repeat -11px -80px;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+}
+
+/*#block_close:hover {*/
+    /*transform: rotate(180deg);*/
+    /*-moz-transform: rotate(180deg);*/
+    /*-webkit-transform: rotate(180deg);*/
+    /*-o-transform: rotate(180deg);*/
+    /*-ms-transform: rotate(180deg);*/
+/*}*/
+
+/*清空投注内容提示框*/
+.del-Tishi .imgTishi{
+    top: 15px;
+    left: 11%;
+}
+.del-Tishi .des-txt{
+    display: block;
+    float: right;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+.del-Tishi .btns button{
+    margin: 0 5px;
+}
+.del-Tishi .btns{
+    padding-top: 25px;
+}
+.del-TishiType2 .des-txt {
+    margin-right: 16%;
+}
+.del-TishiType2 .imgTishi{
+    text-align: center;
+    display: inline-block;
+    margin: 0 15px 0 0!important;
+    background: url(../img/mdl-icon.png) no-repeat;
+    width: 42px;
+    height: 42px;
+    background-size: 42px;
+    position: absolute;
+    top: 30%;
+    left: 19%;
+}
+.tzTishiTemplate .btns button{
+    width: 100px;
+}

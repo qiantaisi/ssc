@@ -6801,30 +6801,47 @@ function kefuToast() {
     Tools.toast("请联系在线客服");
 }
 
-$(function () {
-    $(".title_cq").click(  // 官方玩法点击事件
-        function () {
-            if ($(".content").is(".show_hide")) {
-                $(".page").find(".show_hide").removeClass("show_hide");
-                $(".gfwf_consele").addClass("show_hide").show();
-                $(".gfwf_mask").addClass("show_hide").show();
-            } else {
-                $(".gfwf_consele").removeClass("show_hide").show();
-                $(".gfwf_mask").removeClass("show_hide").hide();
-                $(".page").find(".content").addClass("show_hide");
+$(function () {     // 官方玩法点击事件
+        $(".title_cq").click(
+            function () {
+                if ($(".BeginFind").is(".Hide_Show")) {   //判断是否存在  Hide_Show ,否则就执行 else
+                    $(".page").find(".Hide_Show").removeClass("Hide_Show");
+                } else {
+                    $(".page").find(".BeginFind").addClass("Hide_Show");
+                }
             }
-        }
-    );
-});
+        );
+    }
+);
 
 //实现 直选方式 的点击事件。
 $(".x_3 span").click(
     function () {
         if ($(".gfwf_xz").is(".gfwf_wh")) {
             $(".page").find(".gfwf_xz").removeClass("gfwf_wh");    // 显示
+            $(".page").find(".gfwf_mask2").removeClass("Hide_Show2");
         } else {
             $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+            $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
         }
+    }
+);
+
+
+$(function () {
+        $(".x_3 span").click(
+            function () {
+                if($(".x_wrap").is(".Fixed")){
+                    $(".page").find(".x_wrap").removeClass("Fixed");
+                    $(".page").find(".gfwf_xz").removeClass("Fixed");
+                    $(".page").find(".gfwf_mask2").removeClass("Fixed");
+                }else{
+                    $(".page").find(".x_wrap").addClass("Fixed");
+                    $(".page").find(".gfwf_xz").addClass("Fixed");
+                    $(".page").find(".gfwf_mask2").addClass("Fixed");
+                }
+            }
+        );
     }
 );
 

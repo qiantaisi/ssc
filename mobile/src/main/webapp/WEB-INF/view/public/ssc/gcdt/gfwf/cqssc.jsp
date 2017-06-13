@@ -20,44 +20,50 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title title_cq">重庆时时彩
-                <div class="gfwf_triangle_down">
-                    <%--画出一个向下的三角形图标--%>
-                </div>
+            <h1 class="title">
+                <i class="title_cq">重庆时时彩
+                    <div class="gfwf_triangle_down">
+                        <%--画出一个向下的三角形图标--%>
+                    </div>
+                </i>
             </h1>
         </header>
         <c:import url="../common/commonBet.jsp"/>
-
-        <div class="gfwf_consele">
-            <div class="gfwf_one">
-                <div class="border_one color_two">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
+        <div class="BeginFind Hide_Show">
+            <div class="gfwf_consele">
+                <div class="gfwf_one">
+                    <div class="border_one color_two">
+                        <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
+                    </div>
+                </div>
+                <div class="gfwf_two">
+                    <div class="border_two color_one">
+                        <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
+                    </div>
                 </div>
             </div>
-            <div class="gfwf_two">
-                <div class="border_two color_one">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
-                </div>
+            <div class="gfwf_mask">
+                <%--实现蒙版--%>
             </div>
         </div>
-        <div class="gfwf_mask">
-            <%--实现蒙版--%>
-        </div>
-        <div class="content cl-601 show_hide">
-            <c:import url="./cqssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
-            <div class="cl-900" id="lastOpenInfo">
-                <%--显示第几期彩种--%>
-            </div>
-            <div class="cl-901">
-                <div class="cl-902">
-                    <span class="left" data-number="" id="number">第<font>..数据读取中..</font>期</span>
-                    <span class="right">距离下一期还有：<font id="leftTime">00:00:00</font></span>
+            <div class="content cl-601">
+                <c:import url="./cqssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
+                <div class="cl-900" id="lastOpenInfo">
+                    <%--显示第几期彩种--%>
                 </div>
-                <div class="cl-903" id="openHistoryList">
+                <div class="cl-901">
+                    <div class="cl-902">
+                        <span class="left" data-number="" id="number">第<font>..数据读取中..</font>期</span>
+                        <span class="right">距离下一期还有：<font id="leftTime">00:00:00</font></span>
+                    </div>
+                    <div class="cl-903" id="openHistoryList">
+                    </div>
+                </div>
+                <div id="betContainer_gfwf">
+                    <%--彩种主体内容--%>
+                    <c:import url="./cqssc/wx.jsp"/>
                 </div>
             </div>
-            <c:import url="./cqssc/wx.jsp"/> <%--彩种主体内容--%>
-        </div>
     </div>
     <c:import url="../../../common/leftSscPanel.jsp"/>
     <c:import url="../../../common/rightPanel.jsp">
@@ -96,13 +102,5 @@
             {{/each}}
         </span>
     </div>
-</script>
-<script>
-    //加载页面时隐藏蒙版
-    function Hide_Show() {
-        $(".consele").hide()
-        $(".gfwf_mask").hide();
-    }
-    Hide_Show();
 </script>
 <c:import url="../../../common/bodyEnd.jsp"/>

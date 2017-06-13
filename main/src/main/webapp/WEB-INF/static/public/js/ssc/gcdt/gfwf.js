@@ -566,3 +566,259 @@ function getThreeNewArrs(baiA, shiA, geA) {
     return tempArr;
 }
 
+function buyBtn() {
+    var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
+    if(len > 0) {
+        showloadTxtTemplate();
+
+        $(".tzTishiTemplate").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"80px"});
+        $("#block_close").click(function(){
+            if (layerId != null) {
+                layer.close(layerId);
+                layerId = null;
+            }
+        });
+
+        //投注内容显示处理
+        $(".tzTishiTemplate .content-table tr:not(.head-tr)").each(function () {
+            var strNr = $(this).find("td:eq(1)").html();
+            $(this).find("td:eq(1)").html(strNr);
+        });
+
+        //投注内容模板
+        var htmlStr = addContent();
+        $(".tzTishiTemplate .content-table .head-tr").after(htmlStr);
+
+        $(".tzTishiTemplate .content-table tr").each(function () {
+            $(this).find("td:eq(3)").css("text-align","center");
+            $(this).find("td:eq(4)").css("text-align","center");
+            $(this).find("td:eq(5)").css("text-align","center");
+        });
+        var totalM = $("#zongtouInfo .totalM").html();
+        $(".total-money").html(totalM);
+        $(".qihao").html(getNumber());
+
+        // 注单内容
+        var betForm = {
+            totalMoney: 0,
+            totalZhushu: 0,
+            sscBetList: []
+        };
+        $("#zhudanList .re_touzhu_tem").each(function() {
+            betForm.sscBetList.push({
+                playGroupId: $(this).data("bet_play_group_id"),
+                number: getNumber(),
+                playId: $(this).data("bet_play_id"),
+                zhushu: $(this).data("bet_zhushu"),
+                perMoney: $(this).data("bet_per_money"),
+                content: $(this).data("bet_content"),
+                playPlId: $(this).data("bet_play_pl_id"),
+                playPl: $(this).data("bet_play_pl"),
+                beishu: $(this).data("bet_beishu"),
+                totalMoney: $(this).data("bet_total_money"),
+                type: 2,
+                mode: $(this).data("bet_mode"),
+                fandian: $(this).data("bet_fandian")
+            });
+            betForm.totalMoney += $(this).data("bet_total_money");
+            betForm.totalZhushu += $(this).data("bet_zhushu");
+        });
+        betForm = JSON.stringify(betForm);
+        $("#gfwfBetForm_input").val(betForm);
+
+        // 确定按钮
+        $("#gfwfBetForm_submit").click(function() {
+            sureGfwtXz($("#gfwfBetForm_input").val());
+        });
+    } else{
+        showTishi2Template();
+        $(".del-TishiType2").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
+    }
+}
+
+function sureGfwtXz(betForm) {
+    ajaxRequest({
+        url: CONFIG.BASEURL + "ssc/ajaxBet.json",
+        data: {
+            betForm: betForm
+        },
+        beforeSend: function() {
+            layer.closeAll();
+            parent.showLoading();
+        },
+        success: function(json) {
+            parent.hideLoading();
+            if (json.result == 1) {
+                layer.msg("下注成功", {icon: 1});
+                // 刷新我的投注
+                getBetDetails();
+                // 刷新余额
+                parent.getUserSession();
+                // 重置预投注
+                clearZhudan();
+            } else {
+                layer.msg("下注失败：" + json.description, {icon: 2});
+            }
+        },
+        complete: function() {
+        }
+    });
+}
+
+function cancel() {
+    if (layerId != null) {
+        layer.close(layerId);
+        layerId = null;
+    }
+}
+
+var layerId = null;
+var layerTishi1 = null;
+var layerTishi2 = null;
+
+function showloadTxtTemplate() {
+    if (layerId != null) {
+        return;
+    }
+    var loadTxt_template = '\
+    <div class="tzTishiTemplate">\
+        <h3>温馨提示</h3>\
+        <span id="block_close"></span>\
+        <table style="width: 100%">\
+             <tobody>\
+                 <tr>\
+                     <td>\
+                        <h4>\
+                              <i class="imgTishi"></i>\
+                              <sapn class="qiTishi">您确定加入 <var class="qihao"></var> 期？</span>\
+                        </h4>\
+                        <div class="tz-data">\
+                             <table class="content-table" style="border: 0; width: 100%;">\
+                                   <tobody>\
+                                      <tr class="head-tr">\
+                                         <td width="110">玩法</td>\
+                                         <td width="180">内容</td>\
+                                         <td width="80">注数</td>\
+                                         <td width="40">每注</td>\
+                                         <td width="30">模式</td>\
+                                         <td width="40">倍数</td>\
+                                         <td >金额</td>\
+                                      </tr>\
+                                      <span class="content-td">\
+                                      </span>\
+                                   </tobody>\
+                             </table>\
+                        </div>\
+                        <div class="binfo">\
+                            <span class="bbm">\
+                               投注总金额: <span class="total-money">2</span> 元\
+                            </span>\
+                        </div>\
+                      </td>\
+                 </tr>\
+                 <tr>\
+                    <td class="btns">\
+                        <input type="hidden" id="gfwfBetForm_input">\
+                        <button type="button" id="gfwfBetForm_submit">确定</button>\
+                        <button type="button" onclick="cancel()">取消</button>\
+                    </td>\
+                  </tr>\
+             </tobody>\
+        </table>\
+    </div>\
+    ';
+
+    layer.closeAll();
+    //页面层
+    layerId = layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        area: ['615px', '428px'], //宽高
+        content: loadTxt_template
+    });
+}
+
+
+function showTishi1Template(infoStr) {
+    if (layerTishi1 != null) {
+        return;
+    }
+
+    var tiShi_template = '\
+    <div class="tzTishiTemplate del-Tishi">\
+        <h3>温馨提示</h3>\
+        <span id="block_close"></span>\
+        <table style="width: 100%">\
+             <tobody>\
+                 <tr>\
+                     <td>\
+                        <h4>\
+                              <i class="imgTishi"></i>\
+                              <sapn class="des-txt">是否清空确认区中所有投注内容？</span>\
+                        </h4>\
+                     </td>\
+                 </tr>\
+                 <tr>\
+                    <td class="btns">\
+                        <button type="button" onclick="enterType1()">确定</button>\
+                        <button type="button" onclick="cancelType1()">取消</button>\
+                    </td>\
+                  </tr>\
+             </tobody>\
+        </table>\
+    </div>\
+    ';
+
+    layer.closeAll();
+    //页面层
+    layerTishi1 = layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        shade: 0,
+        area: ['370px', '220px'], //宽高
+        content: tiShi_template
+    });
+}
+
+function showTishi2Template(infoStr) {
+    if (layerTishi2 != null) {
+        return;
+    }
+
+    var tiShi_template = '\
+    <div class="tzTishiTemplate del-Tishi del-TishiType2">\
+        <h3>温馨提示</h3>\
+        <span id="block_close"></span>\
+        <table style="width: 100%">\
+             <tobody>\
+                 <tr>\
+                     <td>\
+                        <h4>\
+                              <i class="imgTishi"></i>\
+                              <sapn class="des-txt">无添加投注内容</span>\
+                        </h4>\
+                     </td>\
+                 </tr>\
+                 <tr>\
+                    <td class="btns">\
+                        <button type="button" onclick="enterType2()">确定</button>\
+                    </td>\
+                  </tr>\
+             </tobody>\
+        </table>\
+    </div>\
+    ';
+
+    layer.closeAll();
+    //页面层
+    layerTishi2 = layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        shade: 0,
+        area: ['282px', '222px'], //宽高
+        content: tiShi_template
+    });
+}

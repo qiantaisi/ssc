@@ -25,7 +25,6 @@
     </div>
 </div>
 
-
 <div class="gfwf_xz gfwf_wh">
     <div class="xuan">
         <div class="xuan1"></div>
@@ -174,4 +173,6 @@
     </div>
 </div>
 
-
+<div class="gfwf_mask2 Hide_Show2">
+    <%--蒙版--%>
+</div>
