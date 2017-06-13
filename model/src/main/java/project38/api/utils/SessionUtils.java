@@ -33,4 +33,34 @@ public class SessionUtils {
         session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
         session.setAttribute("COMPANY_SHORT_NAME", companyShortName);
     }
+
+    /**
+     * 获取官方赔率
+     * @param httpServletRequest
+     * @param playGroupId
+     * @return
+     */
+    public static String getGfwfPl(HttpServletRequest httpServletRequest, Long playGroupId) {
+        if (null == httpServletRequest || null == playGroupId) {
+            return null;
+        }
+
+        return (String) httpServletRequest.getSession().getAttribute("GFWF_PL_" + playGroupId);
+    }
+
+    /**
+     * 设置官方赔率
+     * @param httpServletRequest
+     * @param playGroupId
+     * @param jsonData
+     */
+    public static void setGfwfPl(HttpServletRequest httpServletRequest, Long playGroupId, String jsonData) {
+        if (null == playGroupId) {
+            return;
+        }
+
+        HttpSession session = httpServletRequest.getSession();
+        session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
+        session.setAttribute("GFWF_PL_" + playGroupId, jsonData);
+    }
 }

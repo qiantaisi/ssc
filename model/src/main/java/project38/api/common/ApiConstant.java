@@ -112,4 +112,6 @@ public class ApiConstant {
     public static String API_WEB_SETTING_GET_COMPANY_SHORT_NAME = API_DOMAIN+"webSetting/getCompanyShortName.json";  // 获取公司标志
 
     public static String API_WEB_SETTING_GET_FENGGE= API_DOMAIN+"webSetting/getFengge.json";  // 获取风格
+
+    public static String API_SSC_GET_SSC_PLAY_PL_GFWF = API_DOMAIN + "ssc/getSscPlayPl_gfwf.json"; // 官方玩法赔率
 }

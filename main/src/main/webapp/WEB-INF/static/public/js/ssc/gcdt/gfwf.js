@@ -1,3 +1,17 @@
+/**
+ * 获取赔率和最高返点
+ */
+function getPlAndMaxFd() {
+    // 全局赔率变量
+    var playPlId = getPlayPlId();   // 当前赔率ID
+    for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
+        var o = gfwfPlJson.sscPlayPlList[i];
+        if (o.playPlId == playPlId) {
+            return o;
+        }
+    }
+    return;
+}
 $(function () {
     //官方玩法
     $(".Playmethod ul li span").click(function () {

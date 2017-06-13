@@ -586,12 +586,18 @@
 </script>
 <script>
     $(function () {
+        var plAndMaxFd = getPlAndMaxFd();
+        var maxPlayPl = plAndMaxFd.playPl;
+        var maxFandian = plAndMaxFd.maxFdBl;
+        var convertBlMoney = plAndMaxFd.convertBlMoney;
+
         $('.content_jiang .content_tex').keyup(function () {
             stateTouZhu('dan');
         });
+
         $('.slider-input').jRange({
             from: 0,
-            to: 13,
+            to: maxFandian,
             step: 0.1,
             format: '%s',
             width: $(".cl-1004").width(),
@@ -606,7 +612,7 @@
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
 
-                money_jangjin = 98000 - (money_jangjin * 1000);
+                money_jangjin = maxPlayPl - (parseInt(money_jangjin * 10) * convertBlMoney);
                 $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(money_jangjin);
                 if(typeof stateTouZhu == "function"){
