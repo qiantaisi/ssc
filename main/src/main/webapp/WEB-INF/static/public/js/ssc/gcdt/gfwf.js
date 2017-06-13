@@ -567,44 +567,41 @@ function getThreeNewArrs(baiA, shiA, geA) {
 }
 
 function buyBtn() {
-    showloadTxtTemplate();
+    var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
+    if(len > 0) {
+        showloadTxtTemplate();
 
-    $(".tzTishiTemplate").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"80px"});
-    $("#block_close").click(function(){
-        if (layerId != null) {
-            layer.close(layerId);
-            layerId = null;
-        }
-    });
+        $(".tzTishiTemplate").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"80px"});
+        $("#block_close").click(function(){
+            if (layerId != null) {
+                layer.close(layerId);
+                layerId = null;
+            }
+        });
 
-    //投注内容显示处理
-    $(".tzTishiTemplate .content-table tr:not(.head-tr)").each(function () {
-        var strNr = $(this).find("td:eq(1)").html();
-        // var newStr = '';
-        // var strString = '';
-        // if(strNr.length >= 0 && strNr.length > 40){
-        //     strString = strNr.toString();
-        //     newStr = strString.substr(0,40);
-        //     newStr = $.trim(newStr.replace(/[^0-9]/g, ','));
-        //     newStr = newStr.substr(0,newStr.length - 1);
-        //     newStr = newStr + "...";
-        //     $(this).find("td:eq(1)").html(newStr);
-        // }
-        $(this).find("td:eq(1)").html(strNr);
-    });
+        //投注内容显示处理
+        $(".tzTishiTemplate .content-table tr:not(.head-tr)").each(function () {
+            var strNr = $(this).find("td:eq(1)").html();
+            $(this).find("td:eq(1)").html(strNr);
+        });
 
-    //投注内容模板
-    var htmlStr = addConten();
-    $(".tzTishiTemplate .content-table .head-tr").after(htmlStr);
+        //投注内容模板
+        var htmlStr = addConten();
+        $(".tzTishiTemplate .content-table .head-tr").after(htmlStr);
 
-    $(".tzTishiTemplate .content-table tr").each(function () {
-        $(this).find("td:eq(3)").css("text-align","center");
-        $(this).find("td:eq(4)").css("text-align","center");
-        $(this).find("td:eq(5)").css("text-align","center");
-    });
-    var totalM = $("#zongtouInfo .totalM").html();
-    $(".total-money").html(totalM);
-    $(".qihao").html(getNumber());
+        $(".tzTishiTemplate .content-table tr").each(function () {
+            $(this).find("td:eq(3)").css("text-align","center");
+            $(this).find("td:eq(4)").css("text-align","center");
+            $(this).find("td:eq(5)").css("text-align","center");
+        });
+        var totalM = $("#zongtouInfo .totalM").html();
+        $(".total-money").html(totalM);
+        $(".qihao").html(getNumber());
+    } else{
+        showTishi2Template();
+        $(".del-TishiType2").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
+    }
+
 }
 
 function cancel() {
@@ -615,6 +612,9 @@ function cancel() {
 }
 
 var layerId = null;
+var layerTishi1 = null;
+var layerTishi2 = null;
+
 function showloadTxtTemplate() {
     if (layerId != null) {
         return;
@@ -674,5 +674,89 @@ function showloadTxtTemplate() {
         closeBtn: 0,
         area: ['615px', '420px'], //宽高
         content: loadTxt_template
+    });
+}
+
+
+function showTishi1Template(infoStr) {
+    if (layerTishi1 != null) {
+        return;
+    }
+
+    var tiShi_template = '\
+    <div class="tzTishiTemplate del-Tishi">\
+        <h3>温馨提示</h3>\
+        <span id="block_close"></span>\
+        <table style="width: 100%">\
+             <tobody>\
+                 <tr>\
+                     <td>\
+                        <h4>\
+                              <i class="imgTishi"></i>\
+                              <sapn class="des-txt">是否清空确认区中所有投注内容？</span>\
+                        </h4>\
+                     </td>\
+                 </tr>\
+                 <tr>\
+                    <td class="btns">\
+                        <button type="button" onclick="enterType1()">确定</button>\
+                        <button type="button" onclick="cancelType1()">取消</button>\
+                    </td>\
+                  </tr>\
+             </tobody>\
+        </table>\
+    </div>\
+    ';
+
+    layer.closeAll();
+    //页面层
+    layerTishi1 = layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        shade: 0,
+        area: ['370px', '220px'], //宽高
+        content: tiShi_template
+    });
+}
+
+function showTishi2Template(infoStr) {
+    if (layerTishi2 != null) {
+        return;
+    }
+
+    var tiShi_template = '\
+    <div class="tzTishiTemplate del-Tishi del-TishiType2">\
+        <h3>温馨提示</h3>\
+        <span id="block_close"></span>\
+        <table style="width: 100%">\
+             <tobody>\
+                 <tr>\
+                     <td>\
+                        <h4>\
+                              <i class="imgTishi"></i>\
+                              <sapn class="des-txt">无添加投注内容</span>\
+                        </h4>\
+                     </td>\
+                 </tr>\
+                 <tr>\
+                    <td class="btns">\
+                        <button type="button" onclick="enterType2()">确定</button>\
+                    </td>\
+                  </tr>\
+             </tobody>\
+        </table>\
+    </div>\
+    ';
+
+    layer.closeAll();
+    //页面层
+    layerTishi2 = layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        shade: 0,
+        area: ['282px', '222px'], //宽高
+        content: tiShi_template
     });
 }

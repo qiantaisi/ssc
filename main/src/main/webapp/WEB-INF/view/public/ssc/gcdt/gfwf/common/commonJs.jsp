@@ -138,10 +138,62 @@
     }
 
     function clearZhudan() {
+        var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
+        if(len > 0) {
+            showTishi1Template();
+            $("#block_close").click(function(){
+                closeLayer();
+            });
+            $(".del-Tishi").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
+        } else{
+            showTishi2Template();
+            $("#block_close").click(function(){
+                closeLayer2();
+            });
+            $(".del-TishiType2").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
+        }
+
+    }
+
+
+
+    function enterType1(){
+        var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
+        if(len > 0) {
+            closeLayer();
+            clearContent();
+        } else{
+            closeLayer();
+        }
+    }
+
+    function cancelType1() {
+        closeLayer();
+    }
+
+    function enterType2(){
+        closeLayer2();
+    }
+
+    function clearContent(){
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
         calcAll();
         if ($("#zhudanList .re_touzhu_tem").length <= 0) {
             $("#zhudanList").html('<tr class="noRecord"><td>暂无投注项</td></tr>');
+        }
+    }
+
+    function closeLayer(){
+        if (layerTishi1 != null) {
+            layer.close(layerTishi1);
+            layerTishi1 = null;
+        }
+    }
+
+    function closeLayer2(){
+        if (layerTishi2 != null) {
+            layer.close(layerTishi2);
+            layerTishi2 = null;
         }
     }
 </script>
