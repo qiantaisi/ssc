@@ -287,6 +287,59 @@
         bindYuxuan();
     }
 
+    function addConten(){
+        var strHtml = '';
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function(){
+            var modelStr = '';
+            var conStr = '';
+            var playName = $(this).data('show_play_name');
+            var model = $(this).data('bet_mode');
+            var contentStr = $(this).data('bet_content');
+            var zhushu = $(this).data('bet_zhushu');
+            var perMoney = $(this).data('bet_per_money');
+            var beishu = $(this).data('bet_beishu');
+            var totalMoney = $(this).data('bet_beishu');
+            contentStr = contentStr.split('|');
+            $.each(contentStr, function(index, value){
+                 var str = value;
+                 if(str.length > 1){
+                     if(index == 4){
+                         conStr += str.split(",").join('');
+                     } else{
+                         conStr += str.split(",").join('') + ',';
+                     }
+
+                 }else{
+                     if(index == 4){
+                         conStr += str;
+                     } else{
+                         conStr += str + ',';
+                     }
+                 }
+            });
+            contentStr = conStr;
+            if(model == 1){
+                modelStr = '元';
+            } else if(model == 2){
+                modelStr = '角';
+            } else if(model == 3){
+                modelStr = '分';
+            }
+
+            var newStr = '<tr>' +
+                    '<td>' + playName + '</td>' +
+                    '<td>' + contentStr + '</td>' +
+                    '<td>' + zhushu + '</td>' +
+                    '<td>' + perMoney + '</td>' +
+                    '<td>' + modelStr + '</td>' +
+                    '<td>' + beishu + '</td>' +
+                    '<td>' + totalMoney + '</td>' +
+                    '</tr>';
+            strHtml += newStr;
+        });
+        return strHtml;
+    }
+
     function bindYuxuan() {
         unbindYuxuan();
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").hover(

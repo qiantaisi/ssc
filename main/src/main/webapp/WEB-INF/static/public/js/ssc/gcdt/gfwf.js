@@ -568,6 +568,7 @@ function getThreeNewArrs(baiA, shiA, geA) {
 
 function buyBtn() {
     showloadTxtTemplate();
+
     $(".tzTishiTemplate").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"80px"});
     $("#block_close").click(function(){
         if (layerId != null) {
@@ -579,24 +580,35 @@ function buyBtn() {
     //投注内容显示处理
     $(".tzTishiTemplate .content-table tr:not(.head-tr)").each(function () {
         var strNr = $(this).find("td:eq(1)").html();
-        var newStr = '';
-        var strString = '';
-        if(strNr.length >= 0 && strNr.length > 40){
-            strString = strNr.toString();
-            newStr = strString.substr(0,40);
-            newStr = $.trim(newStr.replace(/[^0-9]/g, ','));
-            newStr = newStr.substr(0,newStr.length - 1);
-            newStr = newStr + "...";
-            $(this).find("td:eq(1)").html(newStr);
-        }
+        // var newStr = '';
+        // var strString = '';
+        // if(strNr.length >= 0 && strNr.length > 40){
+        //     strString = strNr.toString();
+        //     newStr = strString.substr(0,40);
+        //     newStr = $.trim(newStr.replace(/[^0-9]/g, ','));
+        //     newStr = newStr.substr(0,newStr.length - 1);
+        //     newStr = newStr + "...";
+        //     $(this).find("td:eq(1)").html(newStr);
+        // }
+        $(this).find("td:eq(1)").html(strNr);
     });
+
+    //投注内容模板
+    var htmlStr = addConten();
+    $(".tzTishiTemplate .content-table .head-tr").after(htmlStr);
 
     $(".tzTishiTemplate .content-table tr").each(function () {
         $(this).find("td:eq(3)").css("text-align","center");
         $(this).find("td:eq(4)").css("text-align","center");
         $(this).find("td:eq(5)").css("text-align","center");
     });
+}
 
+function cancel() {
+    if (layerId != null) {
+        layer.close(layerId);
+        layerId = null;
+    }
 }
 
 var layerId = null;
@@ -628,33 +640,8 @@ function showloadTxtTemplate() {
                                          <td width="40">倍数</td>\
                                          <td >金额</td>\
                                       </tr>\
-                                      <tr>\
-                                         <td>直任选二_直选复式</td>\
-                                         <td>123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123</td>\
-                                         <td>10000</td>\
-                                         <td>1000</td>\
-                                         <td>元</td>\
-                                         <td>10</td>\
-                                         <td>20000</td>\
-                                      </tr>\
-                                      <tr>\
-                                         <td>直任选二_直选复式</td>\
-                                         <td>256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256</td>\
-                                         <td>10000</td>\
-                                         <td>1000</td>\
-                                         <td>元</td>\
-                                         <td>10</td>\
-                                         <td>20000</td>\
-                                      </tr>\
-                                      <tr>\
-                                         <td>直任选二_直选复式</td>\
-                                         <td>12,32,65,23</td>\
-                                         <td>10000</td>\
-                                         <td>1000</td>\
-                                         <td>元</td>\
-                                         <td>10</td>\
-                                         <td>20000</td>\
-                                      </tr>\
+                                      <span class="content-td">\
+                                      </span>\
                                    </tobody>\
                              </table>\
                         </div>\
@@ -667,8 +654,8 @@ function showloadTxtTemplate() {
                  </tr>\
                  <tr>\
                     <td class="btns">\
-                        <button type="button" onclick="loadTxt()">确定</button>\
-                        <button type="button" onclick="loadTxt()">取消</button>\
+                        <button type="button" onclick="enterQr()">确定</button>\
+                        <button type="button" onclick="cancel()">取消</button>\
                     </td>\
                   </tr>\
              </tobody>\
