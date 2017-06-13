@@ -560,3 +560,39 @@
     /*-o-transform: rotate(180deg);*/
     /*-ms-transform: rotate(180deg);*/
 /*}*/
+
+/*清空投注内容提示框*/
+.del-Tishi .imgTishi{
+    top: 15px;
+    left: 11%;
+}
+.del-Tishi .des-txt{
+    display: block;
+    float: right;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+.del-Tishi .btns button{
+    margin: 0 5px;
+}
+.del-Tishi .btns{
+    padding-top: 25px;
+}
+.del-TishiType2 .des-txt {
+    margin-right: 16%;
+}
+.del-TishiType2 .imgTishi{
+    text-align: center;
+    display: inline-block;
+    margin: 0 15px 0 0!important;
+    background: url(../img/mdl-icon.png) no-repeat;
+    width: 42px;
+    height: 42px;
+    background-size: 42px;
+    position: absolute;
+    top: 30%;
+    left: 19%;
+}
+.tzTishiTemplate .btns button{
+    width: 100px;
+}
