@@ -604,6 +604,7 @@ function buyBtn() {
     });
     var totalM = $("#zongtouInfo .totalM").html();
     $(".total-money").html(totalM);
+    $(".qihao").html(getNumber());
 }
 
 function cancel() {
@@ -628,7 +629,7 @@ function showloadTxtTemplate() {
                      <td>\
                         <h4>\
                               <i class="imgTishi"></i>\
-                              <sapn class="qiTishi">您确定加入 20170612096 期？</span>\
+                              <sapn class="qiTishi">您确定加入 <var class="qihao"></var> 期？</span>\
                         </h4>\
                         <div class="tz-data">\
                              <table class="content-table" style="border: 0; width: 100%;">\
