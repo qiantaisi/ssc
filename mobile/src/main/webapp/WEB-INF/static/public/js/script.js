@@ -6828,7 +6828,7 @@ $(".x_3 span").click(
 );
 
 
-$(function () {
+$(function () {    //直选方式点击事件
         $(".x_3 span").click(
             function () {
                 if($(".x_wrap").is(".Fixed")){

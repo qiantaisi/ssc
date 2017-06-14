@@ -351,4 +351,5 @@ public class SscController extends CacheController {
 
         return this.renderPublicView("ssc/gcdt/cqssc_2", modelMap);
     }
+
 }

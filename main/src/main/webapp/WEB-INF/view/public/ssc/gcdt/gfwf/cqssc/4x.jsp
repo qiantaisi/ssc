@@ -11,8 +11,8 @@
         <li>
             <b>四星直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_pl_id="14209" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14210" data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="499" data-play_pl_id="14209" data-name="fux"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="500" data-play_pl_id="14210" data-name="zhix"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -262,21 +262,6 @@
         calcAll();
     }
 
-    function clearSelected() {
-        $(".Single .layout .Pick ul li span.acti").removeClass("acti");
-        $(".re-5x-i i.acti").removeClass("acti");
-        $("#zhushuInfo").data("zhushu", 0);
-        if(typeof clearStateTouZhu == 'function'){
-            clearStateTouZhu();
-        }
-    }
-
-
-    function clearTextarea() {
-        $(".content_jiang textarea").val('');
-        clearStateTouZhu();
-    }
-
     function daoRu() {
         alert("开发中，敬请期待...");
     }
@@ -359,6 +344,8 @@
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
         // 彩种
         obj.betPlayGroupId = playGroupId;
+        // 玩法ID
+        obj.betPlayId = getPlayId();
         // 返点比例
         obj.betFandian = $(".fandian-bfb").data("value");
         // 赔率
@@ -414,6 +401,8 @@
         obj.betMode = 1;
         // 每单总金额
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        // 玩法ID
+        obj.betPlayId = getPlayId();
         // 彩种
         obj.betPlayGroupId = playGroupId;
         // 返点比例
@@ -471,10 +460,11 @@
 
     function suiji(total) {
         var result = [];
-        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
         var flag_dan_zhi = '';//默认为单式
         var playNameStr = '';
         var contentStr = '';
+        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+
         if (typeof $('.recl-1003').attr('statef') != 'undefined') {
             playNameStr = "四星直选-单式";
             flag_dan_zhi = "dan";
@@ -484,37 +474,35 @@
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
-            var redArr = [];
-            for (var i = 0; i <= 9; ++i) {
-                redArr[i] = 0;
-            }
-
-            var arr = [];
-            while (arr.length != 6) {
-                var num = parseInt(Math.random() * 10);
-                if (redArr[num] != 1) {
-                    redArr[num] = 1;
-                    arr.push(num);
-                }
-            }
-            qianArr.push(arr[0]); baiArr.push(arr[1]); shiArr.push(arr[2]); baiArr.push(arr[3]);
-            if(flag_dan_zhi == "dan"){
-                contentStr = "号码: (" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
-            }else if(flag_dan_zhi == "fu"){
-                contentStr = "千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
-            }
-
             var obj = {};
+            var tempArr = [];
+            var arr = [];
+            for (var i = 0; i <= 9; ++i) {
+                tempArr[i] = i;
+            }
+
+            while (arr.length < 4) {
+                var num = parseInt(Math.random() * 10);
+                arr.push(tempArr[num]);
+            }
+            qianArr.push(arr[0]); baiArr.push(arr[1]); shiArr.push(arr[2]); geArr.push(arr[3]);
+            if(flag_dan_zhi == "dan"){
+                contentStr = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + ")";
+                obj.betContent = arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3];
+            } else if(flag_dan_zhi == "fu"){
+                contentStr = " 千位: " + arr[0] + " 百位: " + arr[1] + " 十位: " + arr[2] + " 个位: " + arr[3];
+                // 投注内容
+                obj.betContent = gfwf_4xfs(
+                    qianArr,
+                    baiArr,
+                    shiArr,
+                    geArr
+                );
+            }
+
             // 模板显示内容
             obj.showContent = contentStr;
             obj.showPlayName = playNameStr;
-            // 投注内容
-            obj.betContent = gfwf_4xfs(
-                qianArr,
-                baiArr,
-                shiArr,
-                geArr
-            );
             // 每注金额
             obj.betPerMoney = $("#inputMoney").data("money");
             obj.betZhushu = 1;
@@ -525,6 +513,8 @@
             obj.betTotalMoney = obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
             // 彩种
             obj.betPlayGroupId = playGroupId;
+            // 玩法ID
+            obj.betPlayId = getPlayId();
             // 返点比例
             obj.betFandian = $(".fandian-bfb").data("value");
             // 赔率
