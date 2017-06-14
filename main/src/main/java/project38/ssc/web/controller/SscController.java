@@ -73,19 +73,19 @@ public class SscController extends CacheController {
         return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
     }
 
-//    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-//    public ModelAndView gcdtGroup(@PathVariable String group) throws UserException {
-//        Map<String, Object> modelMap = new HashMap<String, Object>();
-//        String companyShortName = this.getCompanyShortName();
-//        if (!"gcdt".equals(group)) {
-//            // 彩种禁用
-//            SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group, companyShortName);
-//            if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
-//                return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
-//            }
-//        }
-//        return this.renderPublicView("ssc/gcdt/" + group, modelMap);
-//    }
+    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
+    public ModelAndView gcdtGroup(@PathVariable String group) throws UserException {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        String companyShortName = this.getCompanyShortName();
+        if (!"gcdt".equals(group)) {
+            // 彩种禁用
+            SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group, companyShortName);
+            if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
+                return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
+            }
+        }
+        return this.renderPublicView("ssc/gcdt/" + group, modelMap);
+    }
 
 
     @RequestMapping(value = "/zst/{module}.html", method = RequestMethod.GET)
