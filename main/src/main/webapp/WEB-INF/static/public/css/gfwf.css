@@ -607,6 +607,6 @@
     top: 30%;
     left: 19%;
 }
-.del-TishiType2 .btns button{
+.del-TishiType2 .btns button,.del-Tishi .btns button{
     width: 100px;
 }

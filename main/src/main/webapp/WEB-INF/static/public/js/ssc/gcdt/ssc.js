@@ -64,6 +64,9 @@ function closeClearBetTemplate(isReset) {
             reset();
         }
     }
+    clearSelected();
+    clearTextarea();
+    clearContent();
 }
 
 // 显示封盘

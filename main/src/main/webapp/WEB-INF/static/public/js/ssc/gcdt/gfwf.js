@@ -686,6 +686,7 @@ var layerId = null;
 var layerTishi1 = null;
 var layerTishi2 = null;
 
+//投注信息框
 function showloadTxtTemplate() {
     if (layerId != null) {
         return;
@@ -749,7 +750,7 @@ function showloadTxtTemplate() {
     });
 }
 
-
+//清除注单内容提示框
 function showTishi1Template(infoStr) {
     if (layerTishi1 != null) {
         return;
@@ -792,6 +793,7 @@ function showTishi1Template(infoStr) {
     });
 }
 
+//无注单内容提示框
 function showTishi2Template(infoStr) {
     if (layerTishi2 != null) {
         return;

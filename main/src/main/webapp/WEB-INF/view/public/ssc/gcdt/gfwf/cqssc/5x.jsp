@@ -288,21 +288,6 @@
         calcAll();
     }
 
-    function clearSelected() {
-        $(".Single .layout .Pick ul li span.acti").removeClass("acti");
-        $(".re-5x-i i.acti").removeClass("acti");
-        $("#zhushuInfo").data("zhushu", 0);
-        if(typeof clearStateTouZhu == 'function'){
-            clearStateTouZhu();
-        }
-    }
-
-
-    function clearTextarea() {
-        $(".content_jiang textarea").val('');
-        clearStateTouZhu();
-    }
-
     function daoRu() {
         alert("开发中，敬请期待...");
     }
@@ -521,7 +506,6 @@
         var flag_dan_zhi = "dan";//默认为单式
         var playNameStr = '';
         var contentStr = '';
-        var obj = {}; //注单属性
         if (typeof $('.recl-1003').attr('statef') != 'undefined') {
             playNameStr = "五星直选-单式";
             flag_dan_zhi = "dan";
@@ -531,18 +515,16 @@
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
-            var redArr = [];
+            var obj = {}; //注单属性
+            var tempArr = [];
             for (var i = 0; i <= 9; ++i) {
-                redArr[i] = 0;
+                tempArr[i] = i;
             }
 
             var arr = [];
-            while (arr.length != 6) {
+            while (arr.length < 5) {
                 var num = parseInt(Math.random() * 10);
-                if (redArr[num] != 1) {
-                    redArr[num] = 1;
-                    arr.push(num);
-                }
+                    arr.push(tempArr[num]);
             }
             var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
             wanArr.push(arr[0]); qianArr.push(arr[1]); baiArr.push(arr[2]); shiArr.push(arr[3]); geArr.push(arr[4]);
