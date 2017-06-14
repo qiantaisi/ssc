@@ -6815,27 +6815,29 @@ $(function () {     // 官方玩法点击事件
 );
 
 //实现 直选方式 的点击事件。
-$(".x_3 span").click(
-    function () {
-        if ($(".gfwf_xz").is(".gfwf_wh")) {
-            $(".page").find(".gfwf_xz").removeClass("gfwf_wh");    // 显示
-            $(".page").find(".gfwf_mask2").removeClass("Hide_Show2");
-        } else {
-            $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
-            $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
-        }
+$(function () {
+        $(".x_3 span").click(
+            function () {
+                if ($(".gfwf_xz").is(".gfwf_wh")) {
+                    $(".page").find(".gfwf_xz").removeClass("gfwf_wh");    // 显示
+                    $(".page").find(".gfwf_mask2").removeClass("Hide_Show2");
+                } else {
+                    $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+                    $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+                }
+            }
+        );
     }
 );
 
-
-$(function () {    //直选方式点击事件
+$(function () {
         $(".x_3 span").click(
             function () {
-                if($(".x_wrap").is(".Fixed")){
+                if ($(".x_wrap").is(".Fixed")) {
                     $(".page").find(".x_wrap").removeClass("Fixed");
                     $(".page").find(".gfwf_xz").removeClass("Fixed");
                     $(".page").find(".gfwf_mask2").removeClass("Fixed");
-                }else{
+                } else {
                     $(".page").find(".x_wrap").addClass("Fixed");
                     $(".page").find(".gfwf_xz").addClass("Fixed");
                     $(".page").find(".gfwf_mask2").addClass("Fixed");
