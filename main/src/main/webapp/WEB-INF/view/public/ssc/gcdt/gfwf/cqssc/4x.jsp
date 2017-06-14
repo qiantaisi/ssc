@@ -333,7 +333,8 @@
 
         zhushu = newArr.length;
         obj.showPlayName = "四星直选-单式";
-        obj.showContent = "号码: (" + newArr + ")";
+        obj.showContent = "号码: (" + newArr.join(",") + ")";
+        obj.betContent = newArr.join(",");
         // 每注金额
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
@@ -442,21 +443,6 @@
         return newArr.length;
     }
 
-    //投注总状态
-    function calcAll() {
-        var totalZhushu = 0;
-        var totalBeishu = 0;
-        var totalMoney = 0;
-
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
-            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
-        });
-
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
-        $("#zongtouInfo").html(str);
-    }
 
     function suiji(total) {
         var result = [];
@@ -521,6 +507,7 @@
             obj.betPlayPl = $(".jiangjin-change").data("value");
             // 赔率ID
             obj.betPlayPlId = getPlayPlId();
+            obj.betPlayId = getPlayId();
             result.push(obj);
         }
         return result;
@@ -528,12 +515,17 @@
 </script>
 <script>
     $(function () {
+        var plAndMaxFd = getPlAndMaxFd();
+        var maxPlayPl = plAndMaxFd.playPl;
+        var maxFandian = plAndMaxFd.maxFdBl;
+        var convertBlMoney = plAndMaxFd.convertBlMoney;
+
         $('.content_jiang .content_tex').keyup(function () {
             stateTouZhu('dan');
         });
         $('.slider-input').jRange({
             from: 0,
-            to: 13,
+            to: maxFandian,
             step: 0.1,
             format: '%s',
             width: $(".cl-1004").width(),
@@ -548,7 +540,7 @@
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
 
-                money_jangjin = 9800 - (money_jangjin * 100);
+                money_jangjin = maxPlayPl - ((money_jangjin * 10) * convertBlMoney);
                 $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(money_jangjin);
                 if(typeof stateTouZhu == "function"){

@@ -137,6 +137,7 @@
         return result;
     }
 
+    //清除注单内容按钮
     function clearZhudan() {
         var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
         if(len > 0) {
@@ -214,5 +215,20 @@
             layer.close(layerTishi2);
             layerTishi2 = null;
         }
+    }
+
+    function calcAll() {
+        var totalZhushu = 0;
+        var totalBeishu = 0;
+        var totalMoney = 0;
+
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
+            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
+            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
+            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
+        });
+
+        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span class="totalM">' + totalMoney + '</span> 元。';
+        $("#zongtouInfo").html(str);
     }
 </script>

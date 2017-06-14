@@ -32,7 +32,9 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <span class="staer1">直选复式</span>
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+            <span class="staer1">直选复式</span>
+        </a>
     </div>
 
     <div class="xuan">
@@ -41,16 +43,22 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <span class="staer1">直选复式</span>
+        <a href="javascript:void(0)" data-type="gfwf_page" href="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+            <span class="staer1">直选复式</span>
+        </a>
     </div>
 
     <div class="xuan">
         <div class="xuan1"></div>
-        <div class="xuan2">四星</div>
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+            <div class="xuan2">四星</div>
+        </a>
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <span class="staer1">直选复式</span>
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+            <span class="staer1">直选复式</span>
+        </a>
     </div>
 
     <div class="xuan">
