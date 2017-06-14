@@ -330,8 +330,8 @@ public class SscController extends CacheController {
      * @return
      * @throws UserException
      */
-    @RequestMapping(value = "/gcdt/cqssc_2.html", method = RequestMethod.GET)
-    public ModelAndView gcdt_cqsc_2() throws UserException {
+    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
+    public ModelAndView gcdt_cqsc_2(@PathVariable String group) throws UserException {
         // 彩种ID
         Long playGroupId = 1L;
 
