@@ -257,7 +257,15 @@ ding {
     color: #fa6200;
     z-index: 9;
 }
-
+.zxfs{
+    border: 1px solid #fa6200;
+    border-radius: 4px;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    margin: 0.3em;
+    color: #fa6200;
+}
 .x_wrap .x_1 {
     width: 45%;
     display: inline-block;
@@ -405,7 +413,9 @@ ding {
     margin-top: 0.5em;
     color: #999;
 }
-
+.staer a{
+    color: #999;
+}
 .staer .staer1 {
     border: 1px solid #ddd;
     border-radius: 4px;

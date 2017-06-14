@@ -6847,6 +6847,19 @@ $(function () {
     }
 );
 
+$(function () {
+        $(".gfwf_xz .staer a").click(
+            function () {
+                var conditions = $(this).attr("data-type");
+                var o = $(this);
+                if (conditions == "gfwf_page") {
+                    $(this).find("span").removeClass("staer1");
+                    $(this).find("span").addClass("zxfs");
+                }
+            }
+        );
+    }
+);
 
 // $(".cus-tabs-scroll .xuan").ckick(
 //   function () {
