@@ -325,6 +325,11 @@ public class SscController extends CacheController {
         return this.renderPublicView("ssc/gcdt/index", modelMap);
     }
 
+    /**
+     * 重庆时时彩（官方_测试）
+     * @return
+     * @throws UserException
+     */
     @RequestMapping(value = "/gcdt/cqssc_2.html", method = RequestMethod.GET)
     public ModelAndView gcdt_cqsc_2() throws UserException {
         // 彩种ID
