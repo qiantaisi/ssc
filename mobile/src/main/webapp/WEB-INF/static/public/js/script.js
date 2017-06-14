@@ -6815,27 +6815,29 @@ $(function () {     // 官方玩法点击事件
 );
 
 //实现 直选方式 的点击事件。
-$(".x_3 span").click(
-    function () {
-        if ($(".gfwf_xz").is(".gfwf_wh")) {
-            $(".page").find(".gfwf_xz").removeClass("gfwf_wh");    // 显示
-            $(".page").find(".gfwf_mask2").removeClass("Hide_Show2");
-        } else {
-            $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
-            $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
-        }
+$(function () {
+        $(".x_3 span").click(
+            function () {
+                if ($(".gfwf_xz").is(".gfwf_wh")) {
+                    $(".page").find(".gfwf_xz").removeClass("gfwf_wh");    // 显示
+                    $(".page").find(".gfwf_mask2").removeClass("Hide_Show2");
+                } else {
+                    $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+                    $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+                }
+            }
+        );
     }
 );
-
 
 $(function () {
         $(".x_3 span").click(
             function () {
-                if($(".x_wrap").is(".Fixed")){
+                if ($(".x_wrap").is(".Fixed")) {
                     $(".page").find(".x_wrap").removeClass("Fixed");
                     $(".page").find(".gfwf_xz").removeClass("Fixed");
                     $(".page").find(".gfwf_mask2").removeClass("Fixed");
-                }else{
+                } else {
                     $(".page").find(".x_wrap").addClass("Fixed");
                     $(".page").find(".gfwf_xz").addClass("Fixed");
                     $(".page").find(".gfwf_mask2").addClass("Fixed");
@@ -6845,6 +6847,19 @@ $(function () {
     }
 );
 
+$(function () {
+        $(".gfwf_xz .staer a").click(
+            function () {
+                var conditions = $(this).attr("data-type");
+                var o = $(this);
+                if (conditions == "gfwf_page") {
+                    $(this).find("span").removeClass("staer1");
+                    $(this).find("span").addClass("zxfs");
+                }
+            }
+        );
+    }
+);
 
 // $(".cus-tabs-scroll .xuan").ckick(
 //   function () {

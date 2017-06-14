@@ -170,7 +170,7 @@
     background-color: #fff;
     position: absolute;
     top: 2.2rem;
-    z-index:99;
+    z-index: 99;
 }
 
 .gfwf_mask {
@@ -182,12 +182,15 @@
     margin-top: 5.5rem;
     z-index: 99;
 }
-ding{
+
+ding {
     position: fixed;
 }
-.Hide_Show2{
+
+.Hide_Show2 {
     display: none;
 }
+
 .gfwf_mask2 {
     width: 100%;
     height: 100%;
@@ -206,9 +209,11 @@ ding{
     position: relative;
     top: 0.6rem;
 }
-.Hide_Show{
+
+.Hide_Show {
     display: none;
 }
+
 .gfwf_triangle_down {
     width: 0px;
     height: 0px;
@@ -252,14 +257,22 @@ ding{
     color: #fa6200;
     z-index: 9;
 }
-
+.zxfs{
+    border: 1px solid #fa6200;
+    border-radius: 4px;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    margin: 0.3em;
+    color: #fa6200;
+}
 .x_wrap .x_1 {
     width: 45%;
     display: inline-block;
     position: relative;
     top: 0.3rem;
-    border-bottom: 1.5px solid #fa6200;
-    height: 1.6rem;
+    border-bottom: 2.5px solid #fa6200;
+    height: 1.52rem;
 }
 
 .x_wrap .x_2 {
@@ -380,9 +393,11 @@ ding{
 .gfwf_xz .xuan .xuan2 {
     color: #999;
 }
-.Fixed{
+
+.Fixed {
     position: fixed;
 }
+
 .wrap .cus_common .wan_bottom .cus-flex-item .xz2 {
     display: block;
     width: 2.5em;
@@ -398,7 +413,9 @@ ding{
     margin-top: 0.5em;
     color: #999;
 }
-
+.staer a{
+    color: #999;
+}
 .staer .staer1 {
     border: 1px solid #ddd;
     border-radius: 4px;

@@ -137,6 +137,7 @@
         return result;
     }
 
+    //清除注单内容按钮
     function clearZhudan() {
         var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
         if(len > 0) {
@@ -172,6 +173,7 @@
         closeLayer();
     }
 
+    //清除
     function enterType2(){
         closeLayer2();
     }
@@ -182,6 +184,22 @@
         calcAll();
         if ($("#zhudanList .re_touzhu_tem").length <= 0) {
             $("#zhudanList").html('<tr class="noRecord"><td>暂无投注项</td></tr>');
+        }
+    }
+
+    //清除手动输入区域
+    function clearTextarea() {
+        $(".content_jiang textarea").val('');
+        clearStateTouZhu();
+    }
+
+    //清除手动选中内容
+    function clearSelected() {
+        $(".Single .layout .Pick ul li span.acti").removeClass("acti");
+        $(".re-5x-i i.acti").removeClass("acti");
+        $("#zhushuInfo").data("zhushu", 0);
+        if(typeof clearStateTouZhu == 'function'){
+            clearStateTouZhu();
         }
     }
 
@@ -197,5 +215,20 @@
             layer.close(layerTishi2);
             layerTishi2 = null;
         }
+    }
+
+    function calcAll() {
+        var totalZhushu = 0;
+        var totalBeishu = 0;
+        var totalMoney = 0;
+
+        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
+            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
+            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
+            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
+        });
+
+        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span class="totalM">' + totalMoney + '</span> 元。';
+        $("#zongtouInfo").html(str);
     }
 </script>

@@ -58,10 +58,28 @@ function closeClearBetTemplate(isReset) {
         layer.close(layerId);
         layerId = null;
     }
+    if (layerInfo != null) {
+        layer.close(layerInfo);
+        layerInfo = null;
+    }
+    if (layerTishi1 != null) {
+        layer.close(layerTishi1);
+        layerTishi1 = null;
+    }
+    if (layerTishi2 != null) {
+        layer.close(layerTishi2);
+        layerTishi2 = null;
+    }
 
     if (typeof isReset != 'undefined') {
         if (isReset && typeof reset == 'function') {
             reset();
+        }
+
+        if(isReset){
+            clearSelected();
+            clearTextarea();
+            clearContent();
         }
     }
 }
