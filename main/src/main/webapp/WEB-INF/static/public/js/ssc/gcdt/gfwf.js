@@ -587,9 +587,9 @@ function buyBtn() {
 
         $(".tzTishiTemplate").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"80px"});
         $("#block_close").click(function(){
-            if (layerId != null) {
-                layer.close(layerId);
-                layerId = null;
+            if (layerInfo != null) {
+                layer.close(layerInfo);
+                layerInfo = null;
             }
         });
 
@@ -638,7 +638,7 @@ function buyBtn() {
         // 确定按钮
         $("#gfwfBetForm_submit").click(function() {
             sureGfwtXz($("#gfwfBetForm_input").val());
-            //清除弹框layerID
+            //清除弹框layerInfo
             cancel();
         });
     } else{
@@ -676,19 +676,19 @@ function sureGfwtXz(betForm) {
 }
 
 function cancel() {
-    if (layerId != null) {
-        layer.close(layerId);
-        layerId = null;
+    if (layerInfo != null) {
+        layer.close(layerInfo);
+        layerInfo = null;
     }
 }
 
-var layerId = null;
+var layerInfo = null;
 var layerTishi1 = null;
 var layerTishi2 = null;
 
 //投注信息框
 function showloadTxtTemplate() {
-    if (layerId != null) {
+    if (layerInfo != null) {
         return;
     }
     var loadTxt_template = '\
@@ -741,7 +741,7 @@ function showloadTxtTemplate() {
 
     layer.closeAll();
     //页面层
-    layerId = layer.open({
+    layerInfo = layer.open({
         type: 1,
         title: false,
         closeBtn: 0,
