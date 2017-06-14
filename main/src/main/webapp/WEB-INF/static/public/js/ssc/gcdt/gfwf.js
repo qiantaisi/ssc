@@ -603,11 +603,6 @@ function buyBtn() {
         var htmlStr = addContent();
         $(".tzTishiTemplate .content-table .head-tr").after(htmlStr);
 
-        $(".tzTishiTemplate .content-table tr").each(function () {
-            $(this).find("td:eq(3)").css("text-align","center");
-            $(this).find("td:eq(4)").css("text-align","center");
-            $(this).find("td:eq(5)").css("text-align","center");
-        });
         var totalM = $("#zongtouInfo .totalM").html();
         $(".total-money").html(totalM);
         $(".qihao").html(getNumber());
@@ -643,10 +638,11 @@ function buyBtn() {
         // 确定按钮
         $("#gfwfBetForm_submit").click(function() {
             sureGfwtXz($("#gfwfBetForm_input").val());
+            //清除弹框layerID
+            cancel();
         });
     } else{
         showTishi2Template();
-        $(".del-TishiType2").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
     }
 }
 
@@ -669,7 +665,7 @@ function sureGfwtXz(betForm) {
                 // 刷新余额
                 parent.getUserSession();
                 // 重置预投注
-                clearZhudan();
+                clearContent();
             } else {
                 layer.msg("下注失败：" + json.description, {icon: 2});
             }
@@ -690,6 +686,7 @@ var layerId = null;
 var layerTishi1 = null;
 var layerTishi2 = null;
 
+//投注信息框
 function showloadTxtTemplate() {
     if (layerId != null) {
         return;
@@ -753,7 +750,7 @@ function showloadTxtTemplate() {
     });
 }
 
-
+//清除注单内容提示框
 function showTishi1Template(infoStr) {
     if (layerTishi1 != null) {
         return;
@@ -796,6 +793,7 @@ function showTishi1Template(infoStr) {
     });
 }
 
+//无注单内容提示框
 function showTishi2Template(infoStr) {
     if (layerTishi2 != null) {
         return;
@@ -835,4 +833,5 @@ function showTishi2Template(infoStr) {
         area: ['282px', '222px'], //宽高
         content: tiShi_template
     });
+    $(".del-TishiType2").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
 }

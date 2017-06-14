@@ -349,6 +349,7 @@ public class SscController extends CacheController {
         // 官方玩法赔率
         modelMap.put("playPlListJson", this.getCacheGfwfPl(httpServletRequest, companyShortName, playGroupId));
 
-        return this.renderPublicView("ssc/gcdt/cqssc_2", modelMap);
+        return this.renderPublicView("ssc/gcdt/" + group, modelMap);
     }
+
 }
