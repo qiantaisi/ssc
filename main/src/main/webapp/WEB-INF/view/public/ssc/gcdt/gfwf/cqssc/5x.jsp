@@ -374,7 +374,6 @@
                errorArr.push(arr_new[i]);
            }
         }
-
         if(newArr.length <= 0){
             alert("号码或金额输入有误，请重新输入");
             return;
@@ -389,7 +388,8 @@
 
         zhushu = newArr.length;
         obj.showPlayName = "五星直选-单式";
-        obj.showContent = "号码: (" + newArr + ")";
+        obj.showContent = "号码: (" + newArr.join(",") + ")";
+        obj.betContent = newArr.join(",");
         // 每注金额
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
@@ -398,6 +398,8 @@
         obj.betMode = 1;
         // 每单总金额
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+        // 玩法ID
+        obj.betPlayId = getPlayId();
         // 彩种
         obj.betPlayGroupId = playGroupId;
         // 返点比例
@@ -442,9 +444,9 @@
             shiArr.join(","),
             geArr.join(",")
         );
-        // 转换投注格式
         // 玩法名称
         obj.showPlayName = "五星直选-复式";
+        // 转换投注格式
         // 投注内容
         obj.betContent = gfwf_5xfs(
             wanArr,
@@ -519,6 +521,7 @@
         var flag_dan_zhi = "dan";//默认为单式
         var playNameStr = '';
         var contentStr = '';
+        var obj = {}; //注单属性
         if (typeof $('.recl-1003').attr('statef') != 'undefined') {
             playNameStr = "五星直选-单式";
             flag_dan_zhi = "dan";
@@ -544,23 +547,23 @@
             var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
             wanArr.push(arr[0]); qianArr.push(arr[1]); baiArr.push(arr[2]); shiArr.push(arr[3]); geArr.push(arr[4]);
             if(flag_dan_zhi == "dan"){
-                contentStr = "号码: (" +  + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+                contentStr = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+                obj.betContent = arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4];
             }else if(flag_dan_zhi == "fu"){
                 contentStr = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+                // 投注内容
+                obj.betContent = gfwf_5xfs(
+                    wanArr,
+                    qianArr,
+                    baiArr,
+                    shiArr,
+                    geArr
+                );
             }
 
-            var obj = {};
             // 模板显示内容
             obj.showContent = contentStr;
             obj.showPlayName = playNameStr;
-            // 投注内容
-            obj.betContent = gfwf_5xfs(
-                wanArr,
-                qianArr,
-                baiArr,
-                shiArr,
-                geArr
-            );
             // 每注金额
             obj.betPerMoney = $("#inputMoney").data("money");
             obj.betZhushu = 1;
