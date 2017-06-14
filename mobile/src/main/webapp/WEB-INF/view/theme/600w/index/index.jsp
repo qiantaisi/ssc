@@ -72,8 +72,7 @@
     </script>
 </head>
 <body>
-<iframe src="<%=u%>" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm"
-        name="ifm" width="100%"></iframe>
+    <iframe src="<%=u%>" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm" width="100%"></iframe>
 
 <script type="text/javascript" src="${resPath}js/zepto.min.js?v=201702280308"></script>
 <script>

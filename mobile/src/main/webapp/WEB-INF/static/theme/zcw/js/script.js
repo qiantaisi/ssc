@@ -7013,7 +7013,7 @@ function refreshMoney() {
         },
         success: function (json) {
             if (json.result != 1) {
-                reutnr;
+                return;
             }
             $(".userMoney").html(json.balance);
         }

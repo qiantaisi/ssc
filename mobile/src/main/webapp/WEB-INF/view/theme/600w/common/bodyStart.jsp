@@ -32,6 +32,7 @@
         //        window.onerror = function(){return true;}
         // -->
     </script>
+        <style>.content{}</style>
     <title></title>
 </head>
 <body>
