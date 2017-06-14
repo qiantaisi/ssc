@@ -602,7 +602,6 @@ function buyBtn() {
         //投注内容模板
         var htmlStr = addContent();
         $(".tzTishiTemplate .content-table .head-tr").after(htmlStr);
-
         var totalM = $("#zongtouInfo .totalM").html();
         $(".total-money").html(totalM);
         $(".qihao").html(getNumber());
@@ -787,7 +786,6 @@ function showTishi1Template(infoStr) {
         type: 1,
         title: false,
         closeBtn: 0,
-        shade: 0,
         area: ['370px', '220px'], //宽高
         content: tiShi_template
     });
@@ -829,7 +827,6 @@ function showTishi2Template(infoStr) {
         type: 1,
         title: false,
         closeBtn: 0,
-        shade: 0,
         area: ['282px', '222px'], //宽高
         content: tiShi_template
     });

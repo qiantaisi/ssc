@@ -313,22 +313,6 @@
         }
     }
 
-
-    function calcAll() {
-        var totalZhushu = 0;
-        var totalBeishu = 0;
-        var totalMoney = 0;
-
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
-            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
-        });
-
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span class="totalM">' + totalMoney + '</span> 元。';
-        $("#zongtouInfo").html(str);
-    }
-
     //获取手动输入的有效注数
     function getDsZhushu() {
         var textStr = $(".content_jiang .content_tex").val();
