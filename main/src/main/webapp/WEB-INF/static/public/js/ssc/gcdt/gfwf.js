@@ -7,11 +7,22 @@ function getPlAndMaxFd() {
     for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
         var o = gfwfPlJson.sscPlayPlList[i];
         if (o.playPlId == playPlId) {
+            // console.log(gfwfPlJson.sscPlayPlList[i].playPl);
             return o;
         }
     }
     return;
 }
+
+
+function getH3PlAndMaxFd() {
+    var o = "";
+    for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
+       o = gfwfPlJson.sscPlayPlList;
+    }
+    return o;
+}
+
 $(function () {
     //官方玩法
     $(".Playmethod ul li span").click(function () {

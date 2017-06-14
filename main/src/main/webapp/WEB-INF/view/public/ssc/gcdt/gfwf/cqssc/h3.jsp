@@ -28,16 +28,21 @@
                 <span class="playPlIdBtn" data-play_id="508" data-play_pl_id="14213" data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
                 <span class="playPlIdBtn" data-play_id="509" data-play_pl_id="14212" data-name="zlfs"><a href="javascript:void(0)">组六复式</a></span>
                 <span class="playPlIdBtn" data-play_id="510" data-play_pl_id="14211" data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
-                <span class="playPlIdBtn" data-play_id="511" data-play_pl_id="14232,14231" data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
-                <span class="playPlIdBtn" data-play_id="512" data-play_pl_id="14230,14229" data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <span class="playPlIdBtn" data-play_id="515" data-play_pl_id="14228,14227" data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_id="511" data-play_pl_id="14232" data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="511" data-play_pl_id="14231" data-name="hhzx-2"/>
+                <span class="playPlIdBtn" data-play_id="512" data-play_pl_id="14230" data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="512" data-play_pl_id="14229" data-name="zxhz-2"/>
+                <span class="playPlIdBtn" data-play_id="513" data-play_pl_id="14228" data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="513" data-play_pl_id="14227" data-name="zxbd-2"/>
             </p>
         </li>
         <li>
             <b>后三其它</b>
             <p class="btn_h3_qt">
                 <span class="playPlIdBtn" data-play_id="514" data-play_pl_id="14226" data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
-                <span class="playPlIdBtn" data-play_id="506" data-play_pl_id="1423,14224,14225" data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
+                <span class="playPlIdBtn" data-play_id="515" data-play_pl_id="14223" data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="515" data-play_pl_id="14224" data-name="tsh-2"/>
+                <input type="hidden" class="playPlIdBtn" data-play_id="515" data-play_pl_id="14225" data-name="tsh-3"/>
             </p>
         </li>
     </ul>
@@ -1617,6 +1622,7 @@
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = thArr.length;
         obj.betBeishu = $("#inputBeishu").data("beishu");
+        obj.betPlayGroupId = playGroupId;
         obj.betMode = 1;
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
         if(thArr.length == 1) {
@@ -1632,7 +1638,6 @@
             obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
         }
         obj.betFandian = $(".fandian-bfb").data("value");
-        obj.playGroupId = playGroupId;
         obj.betPlayPlId = getPlayPlId();
         obj.betPlayId = getPlayId();
         return true;
@@ -1912,7 +1917,7 @@
         var playNameStr = '';
         var contentStr = '';
         var tsh_pl_flag = 0;
-        var zhushu = 1; //默认为1注
+        var zhushu = 1; //默认为1注i
         if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
             playNameStr = "后三直选-单式";
             flag_zhi = "dan";
@@ -2027,6 +2032,7 @@
                     }
                 }
                 contentStr = "组三: (" + arrTemp.join(',') + ")";
+                zhushu = (getZuXuanNewArrs(arrTemp)).length;
                 obj.betContent = arrTemp.join(',');
             } else if (flag_zhi == "hhzx-zux") {
                 var arrTemp_hhzx = [];
@@ -2069,7 +2075,13 @@
                     }
                 }
                 contentStr = "号码: (" + arrTemp_zlfs.join(",") + ")";
-                obj.betContent = arrTemp_zlfs.join("");
+                zhushu = (getZuLiuNewArrs(arrTemp_zlfs)).length;
+                if(flag_zhi == "zlds-zux"){
+                    obj.betContent = arrTemp_zlfs.join(""); //组六复式投注格式 123,456
+                }else{
+                    obj.betContent = arrTemp_zlfs.join(","); //组六复式投注格式 1,2,3
+                }
+
             } else {
                 var tempArr = [];
                 for (var i = 0; i <= 9; ++i) {
@@ -2143,6 +2155,10 @@
 </script>
 <script>
     $(function () {
+        var plAndMaxFd = getH3PlAndMaxFd();
+        var maxFd = getPlAndMaxFd();
+        var maxFandian = maxFd.maxFdBl;
+
         $('.recl-1003 .content_jiang .content_tex').keyup(function () {
             stateTouZhu('dan');
         });
@@ -2157,7 +2173,7 @@
         });
         $('.slider-input').jRange({
             from: 0,
-            to: 13,
+            to: maxFandian,
             step: 0.1,
             format: '%s',
             width: $(".cl-1004").width(),
@@ -2171,39 +2187,62 @@
                     $(".fandian-bfb").data("value", money_jangjin);
                     $(".fandian-bfb").html(money_jangjin + "%");
 
-                    money_jangjin = 980 - (money_jangjin * 10);
-                    $(".jiangjin-change").data("value", money_jangjin);
-                    $(".jiangjin-change").html(money_jangjin);
+                    //显示返点与赔率
+                    $.each(plAndMaxFd, function(index, value){
+                        //直选复式、直选单式、直选和值、直选跨度
+                        if(value.playPlId == 14221){
+                            var money_zxfs = value.playPl - ((money_jangjin * 10) * value.convertBlMoney);
+                            $(".jiangjin-change").data("value", money_zxfs);
+                            $(".jiangjin-change").html(money_zxfs);
+                        }
+                        //后三组合
+                        if(value.playPlId == 14219){
+                            var money_hszh = value.playPl - ((money_jangjin * 10) * value.convertBlMoney);
+                            $(".jiangjin-change-2").html(money_hszh);
+                            $(".jiangjin-change-3").html(money_hszh / 10);
+                            $(".jiangjin-change-4").html(money_hszh / 100);
+                        }
 
-                    //特殊号的拉动杆值
-                    var money_tsh = parseFloat(money_jangjin / 10).toFixed(2);
-                    $(".jiangjin-change-tsh").data("value", money_tsh);
-                    $(".jiangjin-change-tsh").html(money_tsh);
-                    money_tsh = parseFloat(money_tsh / 6).toFixed(2);
-                    $(".jiangjin-change-tsh-sz").data("value", money_tsh);
-                    $(".jiangjin-change-tsh-sz").html(money_tsh);
-                    money_tsh = parseFloat(money_tsh / 4.5).toFixed(2);
-                    $(".jiangjin-change-tsh-dz").data("value", money_tsh);
-                    $(".jiangjin-change-tsh-dz").html(money_tsh);
-                    //特殊号尾数和值的拉动杆值
-                    var money_ws = parseFloat(money_jangjin / 100).toFixed(2);
-                    $(".jiangjin-change-ws").data("value", money_ws);
-                    $(".jiangjin-change-ws").html(money_ws);
-                    //组三拉动干值
-                    var money_hszx = parseFloat(money_jangjin / 3).toFixed(2);
-                    $(".jiangjin-change-hszx").data("value", money_hszx);
-                    $(".jiangjin-change-hszx").html(money_hszx);
-                    //组六拉动杆值
-                    var money_zl = parseFloat(money_jangjin / 6).toFixed(2);
-                    $(".jiangjin-change-zl").data("value", money_zl);
-                    $(".jiangjin-change-2").data("value", money_jangjin);
-                    $(".jiangjin-change-3").data("value", money_jangjin / 10);
-                    $(".jiangjin-change-4").data("value", money_jangjin / 100);
-                    $(".jiangjin-change-zl").html(money_zl);
-                    $(".jiangjin-change-2").html(money_jangjin);
-                    $(".jiangjin-change-3").html(money_jangjin / 10);
-                    $(".jiangjin-change-4").html(money_jangjin / 100);
+                        //组选复式、组选单式
+                        if(value.playPlId == 14214){
+                            var money_hszx = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            $(".jiangjin-change-hszx").data("value", money_hszx);
+                            $(".jiangjin-change-hszx").html(money_hszx);
+                        }
+                        //组六复式、组六单式
+                        if(value.playPlId == 14212){
+                            var money_zulfs = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            $(".jiangjin-change-zl").data("value", money_zulfs);
+                            $(".jiangjin-change-zl").html(money_zulfs);
+                        }
 
+                        //和值尾数
+                        if(value.playPlId == 14226){
+                            var money_ws = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            $(".jiangjin-change-ws").data("value", money_ws);
+                            $(".jiangjin-change-ws").html(money_ws);
+                        }
+
+                        //特殊号的拉动杆值 -豹子
+                        if(value.playPlId == 14225){
+                            var money_bz = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            $(".jiangjin-change-tsh").data("value", money_bz);
+                            $(".jiangjin-change-tsh").html(money_bz);
+                        }
+                        //特殊号的拉动杆值 -顺子
+                        if(value.playPlId == 14224){
+                            var money_sz = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            $(".jiangjin-change-tsh-sz").data("value", money_sz);
+                            $(".jiangjin-change-tsh-sz").html(money_sz);
+                        }
+                        //特殊号的拉动杆值 -对子
+                        if(value.playPlId == 14223){
+                            var money_dz = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            $(".jiangjin-change-tsh-dz").data("value", money_dz);
+                            $(".jiangjin-change-tsh-dz").html(money_dz);
+                        }
+
+                    });
 
                     if (typeof stateTouZhu == "function") {
                         var flag_str = '';
