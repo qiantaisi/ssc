@@ -234,9 +234,9 @@ $(function () {
                         } else {
                             window.location.href = config.basePath;
                         }
-
                         // 保存登录名
                         Tools.setCookie("loginFormAccount", account, {path: "/"});
+
                         return;
                     }
 
@@ -457,6 +457,8 @@ $(function () {
             str += '</ul>';
             // $('.Color_type').hide();
             $(".cl-8 .list-block .kjjg_div").html(str).show();
+
+            $.refreshScroller();
         }
 
         renderAllData(kjjgJsonData.sscTimeList);
@@ -6480,9 +6482,9 @@ $(function () {
         // $(".qishu-btns a").eq(0).trigger("click");
     });
 
-
     // 初始化
     $.init();
+
 });
 
 function copy(str) {
@@ -6529,7 +6531,7 @@ function refreshMoney() {
         },
         success: function (json) {
             if (json.result != 1) {
-                reutnr;
+                return;
             }
             $(".userMoney").html(json.balance);
         }
