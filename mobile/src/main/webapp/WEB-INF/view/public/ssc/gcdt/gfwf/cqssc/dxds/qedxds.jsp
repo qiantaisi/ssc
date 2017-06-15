@@ -9,3 +9,60 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+<div class="wrap">
+    <div class="cus_common">
+        <div class="wan_top">
+            <span class="wanwei">万位</span>
+            <span class="xz">
+                <i onclick="selectFun_6(this)">清</i>
+            </span>
+        </div>
+
+        <div class="wan_bottom">
+            <div class="cus-flex-item">
+                <span class="xz">大</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">小</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">单</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">双</span>
+                <span class="pl">8.8</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cus_common">
+        <div class="wan_top">
+            <span class="wanwei">千位</span>
+            <span class="xz">
+                <i onclick="selectFun_6(this)">清</i>
+            </span>
+        </div>
+
+        <div class="wan_bottom">
+            <div class="cus-flex-item">
+                <span class="xz">大</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">小</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">单</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">双</span>
+                <span class="pl">8.8</span>
+            </div>
+        </div>
+    </div>
+</div>
