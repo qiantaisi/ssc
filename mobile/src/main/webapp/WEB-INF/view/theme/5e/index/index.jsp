@@ -14,6 +14,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <script>if (window.top !== window.self) {top.location.href = "<%=basePath%>";}</script>
     <script src="${resPath}js/mobile-detect.min.js"></script>
     <script>
         var md = new MobileDetect(window.navigator.userAgent);
