@@ -9,3 +9,25 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+<div class="wrap">
+    <div class="cus_common">
+        <div class="wan_top">
+            <span class="wanwei">特殊号</span>
+        </div>
+
+        <div class="wan_bottom">
+            <div class="cus-flex-item">
+                <span class="xz">豹子</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">顺子</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">对子</span>
+                <span class="pl">8.8</span>
+            </div>
+        </div>
+    </div>
+</div>

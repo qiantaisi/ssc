@@ -17,15 +17,15 @@
     </div>
     <div class="wan_bottom">
         <div class="cus-flex-item">
-            <span class="xz">0</span>
+            <span class="xz">豹子</span>
             <span class="pl">8.8</span>
         </div>
         <div class="cus-flex-item">
-            <span class="xz">0</span>
+            <span class="xz">顺子</span>
             <span class="pl">8.8</span>
         </div>
         <div class="cus-flex-item">
-            <span class="xz">0</span>
+            <span class="xz">对子</span>
             <span class="pl">8.8</span>
         </div>
     </div>
