@@ -9,3 +9,89 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+<div class="wrap">
+    <div class="cus_common">
+        <div class="wan_top">
+            <span class="wanwei">和值</span>
+        </div>
+
+        <div class="wan_bottom">
+            <div class="cus-flex-item">
+                <span class="xz">0</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">1</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">2</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">3</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">4</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">5</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">6</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">7</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">8</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">9</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">10</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">11</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">12</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">13</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">14</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">15</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">16</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">17</span>
+                <span class="pl">8.8</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz">18</span>
+                <span class="pl">8.8</span>
+            </div>
+        </div>
+    </div>
+</div>
