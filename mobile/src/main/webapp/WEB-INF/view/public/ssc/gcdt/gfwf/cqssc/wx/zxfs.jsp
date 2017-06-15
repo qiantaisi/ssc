@@ -235,7 +235,6 @@
         </div>
     </div>
 
-
     <div class="cus_common">
         <div class="wan_top">
             <span class="wanwei">个位</span>
@@ -290,8 +289,5 @@
                 <span class="pl">8.8</span>
             </div>
         </div>
-    </div>
-    <div>
-
     </div>
 </div>

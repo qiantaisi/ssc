@@ -296,7 +296,7 @@ ding {
 .wrap {
     background: #f7f7f7;
     width: 100%;
-    height: 53rem;
+    /*height: 53rem;*/
 }
 
 .wrap .cus_common {
