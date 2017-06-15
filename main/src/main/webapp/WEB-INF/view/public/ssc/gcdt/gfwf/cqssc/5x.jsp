@@ -566,7 +566,8 @@
         var plAndMaxFd = getPlAndMaxFd();
         var maxPlayPl = plAndMaxFd.playPl;
         var maxFandian = plAndMaxFd.maxFdBl;
-        var convertBlMoney = plAndMaxFd.convertBlMoney;
+        var minPl = plAndMaxFd.minPl;
+        var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
 
         $('.content_jiang .content_tex').keyup(function () {
             stateTouZhu('dan');
@@ -589,7 +590,7 @@
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
 
-                money_jangjin = maxPlayPl - (parseInt(money_jangjin * 10) * convertBlMoney);
+                money_jangjin = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                 $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(money_jangjin);
                 if(typeof stateTouZhu == "function"){
