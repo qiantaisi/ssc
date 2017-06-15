@@ -641,7 +641,7 @@
             </div>
         </div>
         <p class="p1">
-            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i class="i1 i_money">0.00</i>元。
+            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">1</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i class="i1 i_money">0.00</i>元。
         </p>
     </div>
     <div class="rigth">
@@ -2074,7 +2074,7 @@
             snap: true,
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(1);
+                money_jangjin = parseFloat(money_jangjin).toFixed(0);
                 $(".fandian-bfb").html(money_jangjin + "%");
                 var money_jangjin_zu6 = 163.333 - (163.333 - 141.667) / 13 * money_jangjin;
                 var money_jangjin_zux = 326.666 - (326.666 - 283.333) / 13 * money_jangjin;

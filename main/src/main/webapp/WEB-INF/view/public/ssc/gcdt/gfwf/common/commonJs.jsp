@@ -221,6 +221,8 @@
         var totalZhushu = 0;
         var totalBeishu = 0;
         var totalMoney = 0;
+        var valStr = $("#inputBeishu").val();
+        var str = '';
 
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
             totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
@@ -228,7 +230,9 @@
             totalMoney = add(totalMoney, $(this).data("bet_total_money"));
         });
 
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span class="totalM">' + totalMoney + '</span> 元。';
+        str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span class="totalM">' + totalMoney + '</span> 元。';
         $("#zongtouInfo").html(str);
+        $(".i_beishu").html(valStr);
+
     }
 </script>

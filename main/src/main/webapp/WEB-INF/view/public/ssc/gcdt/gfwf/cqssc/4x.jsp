@@ -186,7 +186,7 @@
             </div>
         </div>
         <p class="p1">
-            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i class="i1 i_money">0.00</i>元。
+            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">1</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i class="i1 i_money">0.00</i>元。
         </p>
     </div>
     <div class="rigth">
@@ -231,18 +231,28 @@
             }
         });
 
+
         //输入倍数十重新计算
         $("#inputBeishu").keyup(function(){
             var valStr = $("#inputBeishu").val();
-            $("#inputBeishu").data("beishu",$("#inputBeishu").val());
+            var nowValue = 0;
+            if(typeof valStr == "undefined" || valStr == ""){
+                nowValue = 1;
+            }
+
             if(valStr != ""){
+                $("#inputBeishu").data("beishu",$("#inputBeishu").val());
+                nowValue = $("#inputBeishu").val();
                 if (typeof $('.recl-1003').attr('statef') != 'undefined') {
                     stateTouZhu('dan');
                 } else {
                     stateTouZhu('fu');
                 }
             }
+
+            $(".i_beishu").html(nowValue);
         });
+
 
         $("#inputBeishu").blur(function(){
             var valStr = $("#inputBeishu").val();
@@ -535,7 +545,7 @@
             snap: true,
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(1);
+                money_jangjin = parseFloat(money_jangjin).toFixed(0);
 
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");

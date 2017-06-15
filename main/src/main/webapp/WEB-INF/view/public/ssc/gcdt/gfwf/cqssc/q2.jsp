@@ -11,23 +11,19 @@
         <li>
             <b>前二直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_pl_id="14238" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14239" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14240" data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14241" data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
+                <span class="playPlIdBtn acti" data-play_id="535" data-play_pl_id="14253" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="536" data-play_pl_id="14254" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="537" data-play_pl_id="14255" data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
+                <span class="playPlIdBtn" data-play_id="538" data-play_pl_id="14256" data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
             </p>
         </li>
         <li>
             <b>前二组选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn" data-play_pl_id="14242" data-name="zuxfs"><a
-                        href="javascript:void(0)">组选复式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14243" data-name="zuxds"><a
-                        href="javascript:void(0)">组选单式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14244" data-name="zuxhz"><a
-                        href="javascript:void(0)">组选和值</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14245" data-name="zuxbd"><a
-                        href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_id="539" data-play_pl_id="14257" data-name="zuxfs"><a href="javascript:void(0)">组选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="540" data-play_pl_id="14258" data-name="zuxds"><a href="javascript:void(0)">组选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="541" data-play_pl_id="14259" data-name="zuxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span class="playPlIdBtn" data-play_id="542" data-play_pl_id="14260" data-name="zuxbd"><a href="javascript:void(0)">组选包胆</a></span>
             </p>
         </li>
     </ul>
@@ -385,8 +381,7 @@
             </div>
         </div>
         <p class="p1">
-            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">0</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i
-                class="i1 i_money">0.00</i>元。
+            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">1</i> 倍，返还 <i class="i1 i_fanD">0.00</i> 元，共投注 <i class="i1 i_money">0.00</i>元。
         </p>
     </div>
     <div class="rigth">
@@ -879,6 +874,7 @@
         zhushu = newArr.length;
         obj.showPlayName ="前二直选-单式";
         obj.showContent = "号码: (" + newArr + ")";
+        obj.betContent = newArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -888,6 +884,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -958,6 +955,7 @@
         zhushu = newArr.length;
         obj.showPlayName = "前二组选-单式";
         obj.showContent = "号码: (" + newArr + ")";
+        obj.betContent = newArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -967,6 +965,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-zux").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -984,6 +983,7 @@
         }
         obj.showPlayName = "前二直选-和值";
         obj.showContent = "和值: (" + hzArr.join(",") + ")";
+        obj.betContent = hzArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -993,6 +993,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1011,6 +1012,7 @@
 
         obj.showPlayName = "前二组选-和值";
         obj.showContent = "和值: (" + hzArr.join(",") + ")";
+        obj.betContent = hzArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1020,6 +1022,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-zux").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1038,6 +1041,7 @@
 
         obj.showPlayName = "前二组选-包胆";
         obj.showContent = "包胆: (" + dmArr.join(",") + ")";
+        obj.betContent = dmArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1047,6 +1051,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-zux").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1065,6 +1070,7 @@
 
         obj.showPlayName = "前二直选-跨度";
         obj.showContent = "跨度: (" + kdArr.join(",") + ")";
+        obj.betContent = kdArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1074,6 +1080,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-zux").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1092,6 +1099,7 @@
 
         obj.showPlayName = "前二组选-复式";
         obj.showContent = "组选: (" + zuxArr.join(",") + ")";
+        obj.betContent = zuxArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1101,6 +1109,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-zux").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1140,6 +1149,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1193,6 +1203,8 @@
         }
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
+            var obj = {};
+
             if (flagZhi == "zxds" || flagZhi == "zxfs") {
                 var redArr = [];
                 for (var i = 0; i <= 2; ++i) {
@@ -1211,8 +1223,10 @@
 
             if (flagZhi == "zxds") {
                 contentStr = "号码: (" + arr[0] + "" + arr[1] + ")";
+                obj.betContent = arr[0] + "," + arr[1];
             } else if (flagZhi == "zxfs") {
                 contentStr = "万位: (" + arr[0] + ") 千位: (" + arr[1] + ")";
+                obj.betContent = arr[0] + "|" + arr[1];
             } else if (flagZhi == "zxhz") {
                 var hzArr = [];
                 while (hzArr.length != 1) {
@@ -1221,6 +1235,7 @@
                 }
                 zhushu = getZxhzZshu(hzArr);
                 contentStr = "和值: (" + hzArr[0] + ")";
+                obj.betContent = hzArr.join(",");
             } else if (flagZhi == "zuxbd") {
                 var bdArr = [];
                 while (bdArr.length != 1) {
@@ -1229,6 +1244,7 @@
                 }
                 zhushu = getZuxbdZhushu(bdArr);
                 contentStr = "包胆: (" + bdArr[0] + ")";
+                obj.betContent = bdArr.join(",");
             } else if (flagZhi == "zxkd") {
                 var kdArr = [];
                 while (kdArr.length != 1) {
@@ -1237,6 +1253,7 @@
                 }
                 zhushu = getZxkdZshu(kdArr);
                 contentStr = "跨度: (" + kdArr[0] + ")";
+                obj.betContent = kdArr.join(",");
             } else if (flagZhi == "zuxhz") {
                 var zuxhzArr = [];
                 while (zuxhzArr.length != 1) {
@@ -1245,6 +1262,7 @@
                 }
                 zhushu = getZuxhzZhushu(zuxhzArr);
                 contentStr = "和值: (" + zuxhzArr[0] + ")";
+                obj.betContent = zuxhzArr.join(",");
             } else if (flagZhi == "zuxfs" || flagZhi == "zuxds") {
                 var zuxArr = [];
                 while (zuxArr.length != 1) {
@@ -1260,9 +1278,9 @@
                 }
                 zhushu = 1;
                 contentStr = "组选: (" + zuxArr[0] + ")";
+                obj.betContent = zuxArr[0];
             }
 
-            var obj = {};
             obj.showPlayName = playNameStr;
             obj.showContent = contentStr;
             obj.betPerMoney = $("#inputMoney").data("money");
@@ -1276,9 +1294,10 @@
             } else {
                 obj.betPlayPl = $(".jiangjin-change").data("value");
             }
-            obj.playGroupId = playGroupId;
+            obj.betPlayGroupId = playGroupId;
             obj.betFandian = $(".fandian-bfb").data("value");
             obj.betPlayPlId = getPlayPlId();
+            obj.betPlayId = getPlayId();
             result.push(obj);
         }
         return result;
@@ -1286,6 +1305,11 @@
 </script>
 <script>
     $(function () {
+        var plAndMaxFd = getPlAndMaxFd();
+        var maxPlayPl = plAndMaxFd.playPl;
+        var maxFandian = plAndMaxFd.maxFdBl;
+        var convertBlMoney = plAndMaxFd.convertBlMoney;
+
         $('.recl-1002 .content_jiang .content_tex').keyup(function () {
             stateTouZhu('zxfs-q2');
         });
@@ -1297,7 +1321,7 @@
         });
         $('.slider-input').jRange({
             from: 0,
-            to: 13,
+            to: maxFandian,
             step: 0.1,
             format: '%s',
             width: $(".cl-1004").width(),
@@ -1307,10 +1331,10 @@
             snap: true,
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(1);
+                money_jangjin = parseFloat(money_jangjin).toFixed(0);
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                money_jangjin = 98.00 - money_jangjin;
+                money_jangjin = maxPlayPl - (parseInt(money_jangjin * 10) * convertBlMoney);
                 $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
                 money_jangjin = money_jangjin / 2;
