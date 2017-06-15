@@ -2137,9 +2137,8 @@
 </script>
 <script>
     $(function () {
-        var plAndMaxFd = getH3PlAndMaxFd();
-        var maxFd = getPlAndMaxFd();
-        var maxFandian = maxFd.maxFdBl;
+        var plAndMaxFd = getAllPlAndMaxFd();
+        var maxFandian = plAndMaxFd[0].maxFdBl;
 
         $('.recl-1003 .content_jiang .content_tex').keyup(function () {
             stateTouZhu('dan');
@@ -2173,13 +2172,21 @@
                     $.each(plAndMaxFd, function(index, value){
                         //直选复式、直选单式、直选和值、直选跨度
                         if(value.playPlId == 14221){
-                            var money_zxfs = value.playPl - ((money_jangjin * 10) * value.convertBlMoney);
+                            var maxPlayPl = value.playPl;
+                            var maxFandian = value.maxFdBl;
+                            var minPl = value.minPl;
+                            var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+                            var money_zxfs = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                             $(".jiangjin-change").data("value", money_zxfs);
                             $(".jiangjin-change").html(money_zxfs);
                         }
                         //后三组合
                         if(value.playPlId == 14219){
-                            var money_hszh = value.playPl - ((money_jangjin * 10) * value.convertBlMoney);
+                            var maxPlayPl = value.playPl;
+                            var maxFandian = value.maxFdBl;
+                            var minPl = value.minPl;
+                            var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+                            var money_hszh  = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                             $(".jiangjin-change-2").html(money_hszh);
                             $(".jiangjin-change-3").html(money_hszh / 10);
                             $(".jiangjin-change-4").html(money_hszh / 100);
@@ -2187,39 +2194,63 @@
 
                         //组选复式、组选单式
                         if(value.playPlId == 14214){
-                            var money_hszx = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            var maxPlayPl = value.playPl;
+                            var maxFandian = value.maxFdBl;
+                            var minPl = value.minPl;
+                            var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+                            var money_hszx  = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                             $(".jiangjin-change-hszx").data("value", money_hszx);
                             $(".jiangjin-change-hszx").html(money_hszx);
                         }
                         //组六复式、组六单式
                         if(value.playPlId == 14212){
-                            var money_zulfs = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            var maxPlayPl = value.playPl;
+                            var maxFandian = value.maxFdBl;
+                            var minPl = value.minPl;
+                            var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+                            var money_zulfs  = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                             $(".jiangjin-change-zl").data("value", money_zulfs);
                             $(".jiangjin-change-zl").html(money_zulfs);
                         }
 
                         //和值尾数
                         if(value.playPlId == 14226){
-                            var money_ws = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            var maxPlayPl = value.playPl;
+                            var maxFandian = value.maxFdBl;
+                            var minPl = value.minPl;
+                            var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+                            var money_ws  = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                             $(".jiangjin-change-ws").data("value", money_ws);
                             $(".jiangjin-change-ws").html(money_ws);
                         }
 
                         //特殊号的拉动杆值 -豹子
                         if(value.playPlId == 14225){
-                            var money_bz = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            var maxPlayPl = value.playPl;
+                            var maxFandian = value.maxFdBl;
+                            var minPl = value.minPl;
+                            var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+                            var money_bz  = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                             $(".jiangjin-change-tsh").data("value", money_bz);
                             $(".jiangjin-change-tsh").html(money_bz);
                         }
                         //特殊号的拉动杆值 -顺子
                         if(value.playPlId == 14224){
-                            var money_sz = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            var maxPlayPl = value.playPl;
+                            var maxFandian = value.maxFdBl;
+                            var minPl = value.minPl;
+                            var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+                            var money_sz  = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                             $(".jiangjin-change-tsh-sz").data("value", money_sz);
                             $(".jiangjin-change-tsh-sz").html(money_sz);
                         }
                         //特殊号的拉动杆值 -对子
                         if(value.playPlId == 14223){
-                            var money_dz = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                            var maxPlayPl = value.playPl;
+                            var maxFandian = value.maxFdBl;
+                            var minPl = value.minPl;
+                            var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+                            var money_dz  = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                             $(".jiangjin-change-tsh-dz").data("value", money_dz);
                             $(".jiangjin-change-tsh-dz").html(money_dz);
                         }

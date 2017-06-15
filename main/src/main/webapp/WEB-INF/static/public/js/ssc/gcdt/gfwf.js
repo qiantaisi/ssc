@@ -13,13 +13,9 @@ function getPlAndMaxFd() {
     return;
 }
 
-
-function getH3PlAndMaxFd() {
-    var o = "";
-    for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
-       o = gfwfPlJson.sscPlayPlList;
-    }
-    return o;
+//返回全部倍率金额和返点数
+function getAllPlAndMaxFd() {
+    return gfwfPlJson.sscPlayPlList;
 }
 
 $(function () {
