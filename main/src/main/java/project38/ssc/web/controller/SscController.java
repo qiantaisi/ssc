@@ -330,8 +330,8 @@ public class SscController extends CacheController {
      * @return
      * @throws UserException
      */
-    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-    public ModelAndView gcdt_cqsc_2(@PathVariable String group) throws UserException {
+    @RequestMapping(value = "/gcdt/cqssc_2.html", method = RequestMethod.GET)
+    public ModelAndView gcdt_cqsc_2() throws UserException {
         // 彩种ID
         Long playGroupId = 1L;
 
@@ -349,7 +349,7 @@ public class SscController extends CacheController {
         // 官方玩法赔率
         modelMap.put("playPlListJson", this.getCacheGfwfPl(httpServletRequest, companyShortName, playGroupId));
 
-        return this.renderPublicView("ssc/gcdt/" + group, modelMap);
+        return this.renderPublicView("ssc/gcdt/cqssc_2", modelMap);
     }
 
 }

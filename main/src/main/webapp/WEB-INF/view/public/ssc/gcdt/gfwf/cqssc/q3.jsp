@@ -11,31 +11,37 @@
         <li>
             <b>前三直选</b>
             <p class="btn_h3_zx">
-                <span class="playPlIdBtn acti" data-play_pl_id="14224" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14225" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14226" data-name="hszh"><a href="javascript:void(0)">前三组合</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14227" data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14228" data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
+                <span class="playPlIdBtn acti" data-play_id="516" data-play_pl_id="14222" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="517" data-play_pl_id="14233" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="518" data-play_pl_id="14234" data-name="hszh"><a href="javascript:void(0)">前三组合</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="518" data-play_pl_id="14235" data-name="hszh-2"/>
+                <input type="hidden" class="playPlIdBtn" data-play_id="518" data-play_pl_id="14236" data-name="hszh-3"/>
+                <span class="playPlIdBtn" data-play_id="519" data-play_pl_id="14237" data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
+                <span class="playPlIdBtn" data-play_id="520" data-play_pl_id="14238" data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
             </p>
         </li>
         <li>
             <b>前三组选</b>
             <p class="btn_h3_zux">
-                <span class="playPlIdBtn" data-play_pl_id="14229" data-name="zsfs"><a href="javascript:void(0)">组三复式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14230" data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14231" data-name="zlfs"><a href="javascript:void(0)">组六复式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14232" data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14233" data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14234" data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14235" data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_id="521" data-play_pl_id="14239" data-name="zsfs"><a href="javascript:void(0)">组三复式</a></span>
+                <span class="playPlIdBtn" data-play_id="522" data-play_pl_id="14240" data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
+                <span class="playPlIdBtn" data-play_id="523" data-play_pl_id="14241" data-name="zlfs"><a href="javascript:void(0)">组六复式</a></span>
+                <span class="playPlIdBtn" data-play_id="524" data-play_pl_id="14242" data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
+                <span class="playPlIdBtn" data-play_id="526" data-play_pl_id="14243" data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="526" data-play_pl_id="14244" data-name="hhzx-2"/>
+                <span class="playPlIdBtn" data-play_id="528" data-play_pl_id="14245" data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="528" data-play_pl_id="14246" data-name="zxhz-2"/>
+                <span class="playPlIdBtn" data-play_id="529" data-play_pl_id="14247" data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="529" data-play_pl_id="14247" data-name="zxbd-2"/>
             </p>
         </li>
         <li>
             <b>前三其它</b>
             <p class="btn_h3_qt">
-                <span class="playPlIdBtn" data-play_pl_id="14236" data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
-                <span class="playPlIdBtn" data-play_pl_id="14237" data-name="tsh"><a
-                        href="javascript:void(0)">特殊号</a></span>
+                <span class="playPlIdBtn" data-play_id="531" data-play_pl_id="14249" data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
+                <span class="playPlIdBtn" data-play_id="534" data-play_pl_id="14250" data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="534" data-play_pl_id="14251" data-name="tsh-2"/>
+                <input type="hidden" class="playPlIdBtn" data-play_id="534" data-play_pl_id="14252" data-name="tsh-3"/>
             </p>
         </li>
     </ul>
@@ -986,11 +992,6 @@
         clearSelected();
     }
 
-    function clearZhudan() {
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
-        calcAll();
-    }
-
     function clearTextarea() {
         $(".content_jiang textarea").val('');
     }
@@ -1239,6 +1240,7 @@
         zhushu = newArr.length;
         obj.showPlayName = "前三直选-单式";
         obj.showContent = "号码: (" + newArr + ")";
+        obj.betContent = newArr.join("");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1248,6 +1250,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1291,6 +1294,7 @@
         zhushu = tempArr.length;
         obj.showPlayName = "前三组选-组三单式";
         obj.showContent = "号码: (" + tempArr.join(', ') + ")";
+        obj.betContent = tempArr.join("");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1300,6 +1304,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1313,7 +1318,7 @@
         });
         playNameDan = "前三组选-组三复式";
         contentDan = "组三: (" + zuSanArr.join(", ") + ")";
-
+        obj.betContent = zuSanArr.join(",");
         var zhushu = getZuSanZhushu();
         if (zhushu <= 0) {
             alert("至少选择1注号码才能投注");
@@ -1331,6 +1336,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1353,6 +1359,7 @@
 
         obj.showPlayName = playNameDan;
         obj.showContent = contentDan;
+        obj.betContent = zuLiuArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1362,6 +1369,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-zl").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1407,6 +1415,7 @@
         zhushu = tempArr.length;
         obj.showPlayName = "前三组选-混合组选";
         obj.showContent = "号码: (" + tempArr.join(', ') + ")";
+        obj.betContent = tempArr.join(',');
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1416,6 +1425,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-zl").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1458,6 +1468,7 @@
         zhushu = tempArr.length;
         obj.showPlayName = "前三组选-组六单式";
         obj.showContent = "号码: (" + tempArr.join(', ') + ")";
+        obj.betContent = tempArr.join(',');
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1467,6 +1478,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-zl").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1481,6 +1493,7 @@
             });
             playNameDan = "前三直选-跨度";
             obj.showContent = "跨度: (" + kaDuArr.join(", ") + ")";
+            obj.betContent = kaDuArr.join(",");
         } else {
             var wanArr = [], qianArr = [], shiArr = [];
             $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
@@ -1531,6 +1544,7 @@
         obj.betPlayPl = $(".jiangjin-change").data("value");
         // 赔率ID
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1550,6 +1564,7 @@
 
         obj.showPlayName = "前三直选-和值";
         obj.showContent = "和值: (" + heZhiArr.join(", ") + ")";
+        obj.betContent = heZhiArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1557,8 +1572,9 @@
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
         obj.betPlayGroupId = playGroupId;
         obj.betFandian = $(".fandian-bfb").data("value");
-        obj.betPlayPl = $(".jiangjin-change-zl").data("value");
+        obj.betPlayPl = $(".jiangjin-change").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1579,6 +1595,7 @@
 
         obj.showPlayName = "前三组选-组选和值";
         obj.showContent = "和值: (" + heZhiArr.join(", ") + ")";
+        obj.betContent = heZhiArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1588,29 +1605,31 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
     //前三组选--特殊号
     function getTshZhudan(obj) {
-        var bdArr = [];
+        var thArr = [];
         $.each($(".cl-1015-tsh ul li[data-name = '特殊号'] span.acti_tsh"), function (index, value) {
-            bdArr.push($.trim($(this).html()));
+            thArr.push($.trim($(this).html()));
         });
 
-        if (bdArr.length <= 0) {
+        if (thArr.length <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
 
         obj.showPlayName = "前三其它-特殊号";
-        obj.showContent = "特殊号: (" + bdArr.join(", ") + ")";
+        obj.showContent = "特殊号: (" + thArr.join(", ") + ")";
+        obj.betContent = thArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
-        obj.betZhushu = bdArr.length ;
+        obj.betZhushu = thArr.length ;
         obj.betBeishu = $("#inputBeishu").data("beishu");
         obj.betMode = 1;
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
-        if(bdArr.length == 1) {
+        if(thArr.length == 1) {
             var flag_name = $(".cl-1015-tsh ul li[data-name = '特殊号'] span.acti_tsh").html();
             if(flag_name == "豹子"){
                 obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
@@ -1619,29 +1638,31 @@
             }else if(flag_name == "对子"){
                 obj.betPlayPl = $(".jiangjin-change-tsh-dz").data("value");
             }
-        }else if(bdArr.length > 1){
+        }else if(thArr.length > 1){
             obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
         }
         obj.playGroupId = playGroupId;
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
 
     //前三组选--和值尾数
     function getHzwsZhudan(obj) {
-        var bdArr = [];
+        var hzArr = [];
         $.each($(".cl-1014-hzws ul li[data-name = '和值尾数'] span.acti"), function (index, value) {
-            bdArr.push($.trim($(this).find("i").html()));
+            hzArr.push($.trim($(this).find("i").html()));
         });
 
-        if (bdArr.length <= 0) {
+        if (hzArr.length <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
 
         obj.showPlayName = "前三组选-和值尾数";
-        obj.showContent = "和值: (" + bdArr.join(", ") + ")";
+        obj.showContent = "和值: (" + hzArr.join(", ") + ")";
+        obj.betContent = hzArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = bdArr.length;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1651,6 +1672,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-ws").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1670,6 +1692,7 @@
 
         obj.showPlayName = "前三组选-组选包胆";
         obj.showContent = "包胆: (" + bdArr.join(", ") + ")";
+        obj.betContent = bdArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -1679,6 +1702,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1701,7 +1725,7 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.showPlayName = "后三直选-组合";
+        obj.showPlayName = "前三直选-组合";
         // 模板显示内容
         obj.showContent = "万位：({0})，千位：({1})，十位：({2})".format(
             wanArr.join(","),
@@ -1722,6 +1746,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
@@ -1891,22 +1916,6 @@
         return newArr.length;
     }
 
-    //投注总状态
-    function calcAll() {
-        var totalZhushu = 0;
-        var totalBeishu = 0;
-        var totalMoney = 0;
-
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
-            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
-        });
-
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
-        $("#zongtouInfo").html(str);
-    }
-
     function suiji(total) {
         var result = [];
         var flag_zhi = "dan";//默认为单式
@@ -1922,10 +1931,10 @@
             flag_zhi = "fu";
         } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
             playNameStr = "前三直选-组合";
-            flag_zhi = "hszh-zx";
+            flag_zhi = "qszh-zx";
         } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
             playNameStr = "前三直选-和值";
-            flag_zhi = "hshz-zx";
+            flag_zhi = "qshz-zx";
         } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
             playNameStr = "前三直选-跨度";
             flag_zhi = "zxkd-zx";
@@ -1960,7 +1969,9 @@
 
 
         for (var numIndex = 0; numIndex < total; ++numIndex) {
-            if (flag_zhi == "hshz-zx") {  //直选和值
+            var obj = {};
+
+            if (flag_zhi == "qshz-zx") {  //直选和值
                 var arrZx = [];
                 while (arrZx.length != 1) {
                     var m = parseInt(Math.random() * 28);
@@ -1968,6 +1979,7 @@
                 }
                 zhushu = getHezNewArrs(arrZx).length;
                 contentStr = "和值: (" + arrZx[0] + ")";
+                obj.betContent = arrZx[0];
             } else if (flag_zhi == "zxhz-zux") {  //组选和值
                 var arrZxhz = [];
                 while (arrZxhz.length != 1) {
@@ -1976,6 +1988,7 @@
                 }
                 zhushu = getZxhzNewArrs(arrZxhz).length;
                 contentStr = "和值: (" + arrZxhz[0] + ")";
+                obj.betContent = arrZxhz[0];
             } else if (flag_zhi == "hzws-qt") {  //和值尾数
                 var arrHzws = [];
                 while (arrHzws.length != 1) {
@@ -1984,6 +1997,7 @@
                 }
                 zhushu = arrHzws.length;
                 contentStr = "和值: (" + arrHzws[0] + ")";
+                obj.betContent = arrHzws[0];
             } else if (flag_zhi == "tsh-qt") {  //特殊号
                 var arrTsh = [], newArr = [];
                 arrTsh[0] = "对子";
@@ -2002,6 +2016,7 @@
                 } else if (newArr[0] == "豹子") {
                     tsh_pl_flag = 3;
                 }
+                obj.betContent = newArr[0];
             } else if (flag_zhi == "zxbd-zux") {  //组选包胆
                 var arrZxbd = [];
                 while (arrZxbd.length != 1) {
@@ -2010,6 +2025,7 @@
                 }
                 zhushu = getZxbdNewArrs(arrZxbd).length;
                 contentStr = "包胆: (" + arrZxbd[0] + ")";
+                obj.betContent = arrZxbd[0];
             } else if (flag_zhi == "zxfs-zux") {  //组三复式
                 var arrTemp = [];
                 while (arrTemp.length != 2) {
@@ -2021,6 +2037,7 @@
                     }
                 }
                 contentStr = "组三: (" + arrTemp.join(', ') + ")";
+                obj.betContent = arrTemp.join(',');
             } else if (flag_zhi == "hhzx-zux") {
                 var arrTemp_hhzx = [];
                 while (arrTemp_hhzx.length != 3) {
@@ -2034,6 +2051,7 @@
                     }
                 }
                 contentStr = "号码: (" + arrTemp_hhzx.join("") + ")";
+                obj.betContent = arrTemp_hhzx.join("");
             } else if (flag_zhi == "zsds-zux") {
                 var arrTemp_zxds = [];
                 while (arrTemp_zxds.length != 3) {
@@ -2047,6 +2065,7 @@
                     }
                 }
                 contentStr = "号码: (" + arrTemp_zxds.join("") + ")";
+                obj.betContent = arrTemp_zxds.join("");
             } else if (flag_zhi == "zlfs-zux" || flag_zhi == "zlds-zux") {
                 var arrTemp_zlfs = [];
                 while (arrTemp_zlfs.length != 3) {
@@ -2060,37 +2079,49 @@
                     }
                 }
                 contentStr = "号码: (" + arrTemp_zlfs.join("") + ")";
+                zhushu = (getZuLiuNewArrs(arrTemp_zlfs)).length;
+                if(flag_zhi == "zlds-zux"){
+                    obj.betContent = arrTemp_zlfs.join(""); //组六复式投注格式 123,456
+                }else{
+                    obj.betContent = arrTemp_zlfs.join(","); //组六复式投注格式 1,2,3
+                }
             } else {
-                var redArr = [];
+                var tempArr = [];
                 for (var i = 0; i <= 9; ++i) {
-                    redArr[i] = 0;
+                    tempArr[i] = i;
                 }
 
                 var arr = [];
-                while (arr.length != 6) {
+                while (arr.length < 3) {
                     var num = parseInt(Math.random() * 10);
-                    if (redArr[num] != 1) {
-                        redArr[num] = 1;
-                        arr.push(num);
-                    }
+                    arr.push(tempArr[num]);
                 }
                 if (flag_zhi == "dan") {
-                    contentStr = "号码: (" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+                    contentStr = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + ")";
+                    obj.betContent = arr[0] + "" + arr[1] + "" + arr[2];
                 } else if (flag_zhi == "zxkd-zx") {
-                    contentStr = "跨度: (" + arr[4] + ")";
-                } else if (flag_zhi == "fu" || flag_zhi == "hszh-zx") {
-                    contentStr = "万位: " + arr[2] + " 千位: " + arr[3] + " 十位: " + arr[4];
+                    var nowArr = [];
+                    contentStr = "跨度: (" + arr[0] + ")";
+                    obj.betContent = arr[0];
+                    nowArr[0] = arr[0];
+                    var temp = getKaduNewArrs(nowArr);
+                    zhushu = temp.length;
+                } else if (flag_zhi == "fu" || flag_zhi == "qszh-zx") {
+                    contentStr = "百位: (" + arr[0] + ") 十位: (" + arr[1] + ") 个位: (" + arr[2] + ")";
+                    obj.betContent = arr[0] + "|" + arr[1] + "|" +arr[2];
+                    if(flag_zhi == "qszh-zx"){
+                        zhushu = 3;
+                    }
                 }
             }
 
-            var obj = {};
             obj.showPlayName = playNameStr;
             obj.showContent = contentStr;
             obj.betPerMoney = $("#inputMoney").data("money");
-            obj.betZhushu = 1;
+            obj.betZhushu = zhushu;
             obj.betBeishu = $("#inputBeishu").data("beishu");
             obj.betMode = 1;
-            obj.betTotalMoney = obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+            obj.betTotalMoney = obj.betZhushu  * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
             if(flag_zhi == "zxfs-zux" || flag_zhi == "zsds-zux" || flag_zhi == "hhzx-zux" || flag_zhi == "zxhz-zux" || flag_zhi == "zxbd-zux"){
                 obj.betFandian = $(".fandian-bfb").data("value");
                 obj.betPlayPl = $(".jiangjin-change-hszx").data("value");
@@ -2118,6 +2149,10 @@
                 obj.betPlayPl = $(".jiangjin-change").data("value");
             }
             obj.betPlayGroupId = playGroupId;
+            // 赔率ID
+            obj.betPlayPlId = getPlayPlId();
+            // 玩法ID
+            obj.betPlayId = getPlayId();
             result.push(obj);
         }
         return result;
@@ -2125,6 +2160,10 @@
 </script>
 <script>
     $(function () {
+        var plAndMaxFd = getH3PlAndMaxFd();
+        var maxFd = getPlAndMaxFd();
+        var maxFandian = maxFd.maxFdBl;
+
         $('.recl-1003 .content_jiang .content_tex').keyup(function () {
             stateTouZhu('dan');
         });
@@ -2150,38 +2189,65 @@
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
+                $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                money_jangjin = 980 - (money_jangjin * 10);
-                $(".jiangjin-change").data("value", money_jangjin);
-                $(".jiangjin-change").html(money_jangjin);
-                //特殊号的拉动杆值
-                var money_tsh = parseFloat(money_jangjin / 10).toFixed(2);
-                $(".jiangjin-change-tsh").data("value", money_tsh);
-                $(".jiangjin-change-tsh").html(money_tsh);
-                money_tsh = parseFloat(money_tsh / 6).toFixed(2);
-                $(".jiangjin-change-tsh-sz").data("value", money_tsh);
-                $(".jiangjin-change-tsh-sz").html(money_tsh);
-                money_tsh = parseFloat(money_tsh / 4.5).toFixed(2);
-                $(".jiangjin-change-tsh-dz").data("value", money_tsh);
-                $(".jiangjin-change-tsh-dz").html(money_tsh);
-                //特殊号尾数和值的拉动杆值
-                var money_ws = parseFloat(money_jangjin / 100).toFixed(2);
-                $(".jiangjin-change-ws").data("value", money_ws);
-                $(".jiangjin-change-ws").html(money_ws);
-                //组三拉动干值
-                var money_hszx = parseFloat(money_jangjin / 3).toFixed(2);
-                $(".jiangjin-change-hszx").data("value", money_hszx);
-                $(".jiangjin-change-hszx").html(money_hszx);
-                //组六拉动杆值
-                var money_zl = parseFloat(money_jangjin / 6).toFixed(2);
-                $(".jiangjin-change-zl").data("value", money_zl);
-                $(".jiangjin-change-zl").html(money_zl);
-                $(".jiangjin-change-2").data("value", money_jangjin);
-                $(".jiangjin-change-2").html(money_jangjin);
-                $(".jiangjin-change-3").data("value", money_jangjin / 10);
-                $(".jiangjin-change-3").html(money_jangjin / 10);
-                $(".jiangjin-change-3").data("value", money_jangjin / 100);
-                $(".jiangjin-change-4").html(money_jangjin / 100);
+
+                //显示返点与赔率
+                $.each(plAndMaxFd, function(index, value){
+                    //直选复式、直选单式、直选和值、直选跨度
+                    if(value.playPlId == 14221){
+                        var money_zxfs = value.playPl - ((money_jangjin * 10) * value.convertBlMoney);
+                        $(".jiangjin-change").data("value", money_zxfs);
+                        $(".jiangjin-change").html(money_zxfs);
+                    }
+                    //后三组合
+                    if(value.playPlId == 14219){
+                        var money_hszh = value.playPl - ((money_jangjin * 10) * value.convertBlMoney);
+                        $(".jiangjin-change-2").html(money_hszh);
+                        $(".jiangjin-change-3").html(money_hszh / 10);
+                        $(".jiangjin-change-4").html(money_hszh / 100);
+                    }
+
+                    //组选复式、组选单式
+                    if(value.playPlId == 14214){
+                        var money_hszx = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                        $(".jiangjin-change-hszx").data("value", money_hszx);
+                        $(".jiangjin-change-hszx").html(money_hszx);
+                    }
+                    //组六复式、组六单式
+                    if(value.playPlId == 14212){
+                        var money_zulfs = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                        $(".jiangjin-change-zl").data("value", money_zulfs);
+                        $(".jiangjin-change-zl").html(money_zulfs);
+                    }
+
+                    //和值尾数
+                    if(value.playPlId == 14226){
+                        var money_ws = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                        $(".jiangjin-change-ws").data("value", money_ws);
+                        $(".jiangjin-change-ws").html(money_ws);
+                    }
+
+                    //特殊号的拉动杆值 -豹子
+                    if(value.playPlId == 14225){
+                        var money_bz = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                        $(".jiangjin-change-tsh").data("value", money_bz);
+                        $(".jiangjin-change-tsh").html(money_bz);
+                    }
+                    //特殊号的拉动杆值 -顺子
+                    if(value.playPlId == 14224){
+                        var money_sz = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                        $(".jiangjin-change-tsh-sz").data("value", money_sz);
+                        $(".jiangjin-change-tsh-sz").html(money_sz);
+                    }
+                    //特殊号的拉动杆值 -对子
+                    if(value.playPlId == 14223){
+                        var money_dz = parseFloat(value.playPl - ((money_jangjin * 10) * value.convertBlMoney)).toFixed(3);
+                        $(".jiangjin-change-tsh-dz").data("value", money_dz);
+                        $(".jiangjin-change-tsh-dz").html(money_dz);
+                    }
+
+                });
 
 
                 if (typeof stateTouZhu == "function") {

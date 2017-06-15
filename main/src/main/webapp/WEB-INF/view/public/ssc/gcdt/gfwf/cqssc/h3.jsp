@@ -2106,7 +2106,9 @@
                 } else if (flag_zhi == "fu" || flag_zhi == "hszh-zx") {
                     contentStr = "百位: " + arr[0] + " 十位: " + arr[1] + " 个位: " + arr[2];
                     obj.betContent = arr[0] + "|" + arr[1] + "|" +arr[2];
-                    zhushu = 3;
+                    if(flag_zhi == "hszh-zx"){
+                        zhushu = 3;
+                    }
                 }
             }
 
