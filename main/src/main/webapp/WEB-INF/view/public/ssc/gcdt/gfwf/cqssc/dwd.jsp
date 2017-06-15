@@ -6,7 +6,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<input class="playPlIdBtn acti" ddata-play_id="543" data-play_pl_id="14261" data-name="dwd" type="hidden" />
+<input class="playPlIdBtn acti" data-play_id="543" data-play_pl_id="14261" data-name="dwd" type="hidden" />
 <div class="Pick cl-1002 recl-1002" data-flag="dwd" style="border-top:none;">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -329,10 +329,24 @@
         var geStr = geArr.length > 0 ? (" 个位: (" + geArr.join(",") + ")") : "";
         // 模板显示内容
         obj.showContent = $.trim(wanStr + qianStr + baiStr + shiStr + geStr);
+        var nowArr = [];
+        var strTemp = $.trim(
+            (wanStr == ' ' ? ' ' : wanArr.join(",") + "|") +
+            (qianStr == ' ' ? ' ': qianArr.join(",") + "|") +
+            (baiStr == ' ' ? ' ': baiArr.join(",") + "|") +
+            (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
+            (geStr == ' ' ? ' ': geArr.join(",") + "|")
+        );
+        var arr = (strTemp.toString()).split("|");
+        $.each(arr, function (index, value) {
+            if(value != ""){
+                var valNow = (value.toString()).split(",").join("");
+                nowArr.push(valNow);
+            }
+        });
         // 转换投注格式
         // 投注内容
-        obj.betContent = "||" + $.trim((wanStr == ' ' ? ' ' : wanArr.join(",")) + (qianStr == ' ' ? ' ': qianArr.join(","))  + (baiStr == ' ' ? ' ': baiArr.join(",")) + (shiStr == ' ' ? ' ' : shiArr.join(",")) + (geStr == ' ' ? ' ': geArr.join(",")))  + "||";
-
+        obj.betContent = nowArr.join("|");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
