@@ -43,7 +43,7 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" href="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" href="<%=basePath%>ssc/gcdt/cqssc/wx/zxfs.html">
             <span class="staer1">直选复式</span>
         </a>
     </div>
