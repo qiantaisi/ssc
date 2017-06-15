@@ -40,9 +40,9 @@
             <b>后三其它</b>
             <p class="btn_h3_qt">
                 <span class="playPlIdBtn" data-play_id="514" data-play_pl_id="14226" data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
-                <span class="playPlIdBtn" data-play_id="515" data-play_pl_id="14223" data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
+                <span class="playPlIdBtn" data-play_id="515" data-play_pl_id="14225" data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="515" data-play_pl_id="14224" data-name="tsh-2"/>
-                <input type="hidden" class="playPlIdBtn" data-play_id="515" data-play_pl_id="14225" data-name="tsh-3"/>
+                <input type="hidden" class="playPlIdBtn" data-play_id="515" data-play_pl_id="14223" data-name="tsh-3"/>
             </p>
         </li>
     </ul>
@@ -1624,18 +1624,7 @@
         obj.betPlayGroupId = playGroupId;
         obj.betMode = 1;
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
-        if(thArr.length == 1) {
-           var flag_name = $(".cl-1015-tsh ul li[data-name = '特殊号'] span.acti_tsh").html();
-           if(flag_name == "豹子"){
-               obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
-           }else if(flag_name == "顺子"){
-               obj.betPlayPl = $(".jiangjin-change-tsh-sz").data("value");
-           }else if(flag_name == "对子"){
-               obj.betPlayPl = $(".jiangjin-change-tsh-dz").data("value");
-           }
-        }else if(thArr.length > 1){
-            obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
-        }
+        obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPlId = getPlayPlId();
         obj.betPlayId = getPlayId();
@@ -2003,13 +1992,6 @@
                 }
                 zhushu = 1;
                 contentStr = "特殊号: (" + newArr[0] + ")";
-                if(newArr[0] == "对子"){
-                    tsh_pl_flag = 1;
-                } else if(newArr[0] == "顺子"){
-                    tsh_pl_flag = 2;
-                } else if(newArr[0] == "豹子"){
-                    tsh_pl_flag = 3;
-                }
                 obj.betContent = newArr[0];
             } else if (flag_zhi == "zxbd-zux") {  //组选包胆
                 var arrZxbd = [];
@@ -2128,16 +2110,8 @@
                 obj.betFandian = $(".fandian-bfb").data("value");
                 obj.betPlayPl = $(".jiangjin-change-ws").data("value");
             }else if(flag_zhi == "tsh-qt"){
-                if(tsh_pl_flag == 1){
-                    obj.betFandian = $(".fandian-bfb").data("value");
-                    obj.betPlayPl = $(".jiangjin-change-tsh-dz").data("value");
-                }else if(tsh_pl_flag == 2){
-                    obj.betFandian = $(".fandian-bfb").data("value");
-                    obj.betPlayPl = $(".jiangjin-change-tsh-sz").data("value");
-                }else if(tsh_pl_flag == 3){
-                    obj.betFandian = $(".fandian-bfb").data("value");
-                    obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
-                }
+                obj.betFandian = $(".fandian-bfb").data("value");
+                obj.betPlayPl = $(".jiangjin-change-tsh").data("value");
             }else{
                 // 返点比例
                 obj.betFandian = $(".fandian-bfb").data("value");
