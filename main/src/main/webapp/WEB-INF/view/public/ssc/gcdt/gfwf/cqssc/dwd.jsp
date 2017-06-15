@@ -6,7 +6,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<input lass="playPlIdBtn" data-play_pl_id="14246" data-name="dwd" type="hidden" />
+<input class="playPlIdBtn acti" ddata-play_id="543" data-play_pl_id="14261" data-name="dwd" type="hidden" />
 <div class="Pick cl-1002 recl-1002" data-flag="dwd" style="border-top:none;">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -320,31 +320,19 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
-        obj.playName =
-
-        obj.content =
-        obj.totalMoney = parseInt($("#inputBeishu").data("beishu")) * parseInt($("#inputMoney").data("money")) * zhushu;
-        obj.zhushu = zhushu;
-        obj.beishu = $("#inputBeishu").data("beishu");
-        obj.money = $("#inputMoney").data("money");
-        obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
-        obj.playGroupId = playGroupId;
-        return true;
 
         obj.showPlayName =  "定位胆-定位胆";
-        var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : "";
-        var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : "";
-        var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : "";
-        var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : "";
-        var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : "";
+        var wanStr = wanArr.length > 0 ? ("万位: (" + wanArr.join(",") + ")") : "";
+        var qianStr = qianArr.length > 0 ? (" 千位: (" + qianArr.join(",") + ")") : "";
+        var baiStr = baiArr.length > 0 ? (" 百位: (" + baiArr.join(",") + ")") : "";
+        var shiStr = shiArr.length > 0 ?  (" 十位: (" + shiArr.join(",") + ")") : "";
+        var geStr = geArr.length > 0 ? (" 个位: (" + geArr.join(",") + ")") : "";
         // 模板显示内容
         obj.showContent = $.trim(wanStr + qianStr + baiStr + shiStr + geStr);
-//        // 转换投注格式
-//        // 投注内容
-//        obj.betContent = gfwf_2xfs(
-//            wanArr,
-//            qianArr
-//        );
+        // 转换投注格式
+        // 投注内容
+        obj.betContent = "||" + $.trim((wanStr == ' ' ? ' ' : wanArr.join(",")) + (qianStr == ' ' ? ' ': qianArr.join(","))  + (baiStr == ' ' ? ' ': baiArr.join(",")) + (shiStr == ' ' ? ' ' : shiArr.join(",")) + (geStr == ' ' ? ' ': geArr.join(",")))  + "||";
+
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -354,6 +342,7 @@
         obj.betFandian = $(".fandian-bfb").data("value");
         obj.betPlayPl = $(".jiangjin-change").data("value");
         obj.betPlayPlId = getPlayPlId();
+        obj.betPlayId = getPlayId();
         return true;
     }
 
