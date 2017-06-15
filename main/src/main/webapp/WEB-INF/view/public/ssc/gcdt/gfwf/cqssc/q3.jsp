@@ -918,40 +918,47 @@
         });
 
         //输入倍数十重新计算
-        $("#inputBeishu").keyup(function(){
+        $("#inputBeishu").keyup(function () {
             var valStr = $("#inputBeishu").val();
-            $("#inputBeishu").data("beishu",$("#inputBeishu").val());
-            if(valStr != ""){
-                if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
-                    stateTouZhu('dan');
-                } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
-                    stateTouZhu('hszh_zx');
-                } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zxhz_zx');
-                } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zxkd_zx');
-                } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zsfs_zux');
-                } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zsds_zux');
-                } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zlfs_zux');
-                } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zlds_zux');
-                } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
-                    stateTouZhu('hhzx_zux');
-                } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zxhz_zux');
-                } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zxbd_zux');
-                } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
-                    stateTouZhu('hzws_qt');
-                } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
-                    stateTouZhu('tsh_qt');
-                } else {
-                    stateTouZhu('fu');
-                }
+            var nowValue = 0;
+            if (typeof valStr == "undefined" || valStr == "") {
+                nowValue = 1;
+            } else {
+                nowValue = $("#inputBeishu").val();
             }
+
+            $("#inputBeishu").data("beishu", nowValue);
+
+            if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
+                stateTouZhu('dan');
+            } else if (typeof $('.cl-1004-hszh').attr('data-flag') != 'undefined') {
+                stateTouZhu('hszh_zx');
+            } else if (typeof $('.cl-1005-zxhz').attr('data-flag') != 'undefined') {
+                stateTouZhu('zxhz_zx');
+            } else if (typeof $('.cl-1006-zxkd').attr('data-flag') != 'undefined') {
+                stateTouZhu('zxkd_zx');
+            } else if (typeof $('.cl-1007-zsfs').attr('data-flag') != 'undefined') {
+                stateTouZhu('zsfs_zux');
+            } else if (typeof $('.cl-1008-zsds').attr('data-flag') != 'undefined') {
+                stateTouZhu('zsds_zux');
+            } else if (typeof $('.cl-1009-zlfs').attr('data-flag') != 'undefined') {
+                stateTouZhu('zlfs_zux');
+            } else if (typeof $('.cl-1010-zlds').attr('data-flag') != 'undefined') {
+                stateTouZhu('zlds_zux');
+            } else if (typeof $('.cl-1011-hhzx').attr('data-flag') != 'undefined') {
+                stateTouZhu('hhzx_zux');
+            } else if (typeof $('.cl-1012-zxhz').attr('data-flag') != 'undefined') {
+                stateTouZhu('zxhz_zux');
+            } else if (typeof $('.cl-1013-zxbd').attr('data-flag') != 'undefined') {
+                stateTouZhu('zxbd_zux');
+            } else if (typeof $('.cl-1014-hzws').attr('data-flag') != 'undefined') {
+                stateTouZhu('hzws_qt');
+            } else if (typeof $('.cl-1015-tsh').attr('data-flag') != 'undefined') {
+                stateTouZhu('tsh_qt');
+            } else {
+                stateTouZhu('fu');
+            }
+            $(".i_beishu").html(nowValue);
         });
 
         $("#inputBeishu").blur(function(){

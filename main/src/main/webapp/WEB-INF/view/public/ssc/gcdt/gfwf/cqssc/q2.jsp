@@ -508,28 +508,35 @@
         });
 
         //输入倍数十重新计算
-        $("#inputBeishu").keyup(function(){
+        $("#inputBeishu").keyup(function () {
             var valStr = $("#inputBeishu").val();
-            $("#inputBeishu").data("beishu",$("#inputBeishu").val());
-            if(valStr != ""){
-                if(typeof $('.recl-1002').attr('data-flag') != 'undefined'){
-                    stateTouZhu('zxfs-q2');
-                } else if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zxds-q2');
-                } else if (typeof $('.recl-1004-zxhz').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zxhz-q2');
-                } else if (typeof $('.recl-1005-zxkd').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zxkd_q2');
-                } else if (typeof $('.recl-1006-zuxfs').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zuxfs-q2');
-                } else if (typeof $('.recl-1007-zuxds').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zuxds-q2');
-                } else if (typeof $('.recl-1008-zuxhz').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zuxhz-q2');
-                } else if (typeof $('.recl-1009-zuxbd').attr('data-flag') != 'undefined') {
-                    stateTouZhu('zuxbd-q2');
-                }
+            var nowValue = 0;
+            if (typeof valStr == "undefined" || valStr == "") {
+                nowValue = 1;
+            } else {
+                nowValue = $("#inputBeishu").val();
             }
+
+            $("#inputBeishu").data("beishu", nowValue);
+            if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
+                stateTouZhu('zxfs-q2');
+            } else if (typeof $('.recl-1003').attr('data-flag') != 'undefined') {
+                stateTouZhu('zxds-q2');
+            } else if (typeof $('.recl-1004-zxhz').attr('data-flag') != 'undefined') {
+                stateTouZhu('zxhz-q2');
+            } else if (typeof $('.recl-1005-zxkd').attr('data-flag') != 'undefined') {
+                stateTouZhu('zxkd_q2');
+            } else if (typeof $('.recl-1006-zuxfs').attr('data-flag') != 'undefined') {
+                stateTouZhu('zuxfs-q2');
+            } else if (typeof $('.recl-1007-zuxds').attr('data-flag') != 'undefined') {
+                stateTouZhu('zuxds-q2');
+            } else if (typeof $('.recl-1008-zuxhz').attr('data-flag') != 'undefined') {
+                stateTouZhu('zuxhz-q2');
+            } else if (typeof $('.recl-1009-zuxbd').attr('data-flag') != 'undefined') {
+                stateTouZhu('zuxbd-q2');
+            }
+
+            $(".i_beishu").html(nowValue);
         });
 
         $("#inputBeishu").blur(function(){
@@ -560,10 +567,6 @@
         }
     }
 
-    function clearZhudan() {
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
-        calcAll();
-    }
 
     function allClear() {
         clearTextarea();
@@ -866,7 +869,7 @@
         }
         if (errorArr.length > 0) {
             for (var e = 0; e < errorArr.length; e++) {
-                errorStr += errorArr[e] + " ";
+                errorStr += errorArr[e] + "";
             }
             alert("被过滤掉的错误号码" + errorStr);
         }
@@ -1078,7 +1081,7 @@
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
         obj.betPlayGroupId = playGroupId;
         obj.betFandian = $(".fandian-bfb").data("value");
-        obj.betPlayPl = $(".jiangjin-change-zux").data("value");
+        obj.betPlayPl = $(".jiangjin-change").data("value");
         obj.betPlayPlId = getPlayPlId();
         obj.betPlayId = getPlayId();
         return true;
@@ -1153,22 +1156,6 @@
         return true;
     }
 
-    //投注总状态
-    function calcAll() {
-        var totalZhushu = 0;
-        var totalBeishu = 0;
-        var totalMoney = 0;
-
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
-            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
-        });
-
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
-        $("#zongtouInfo").html(str);
-    }
-
     //随机生成注数
     function suiji(total) {
         var result = [];
@@ -1223,7 +1210,7 @@
 
             if (flagZhi == "zxds") {
                 contentStr = "号码: (" + arr[0] + "" + arr[1] + ")";
-                obj.betContent = arr[0] + "," + arr[1];
+                obj.betContent = arr[0] + "" + arr[1];
             } else if (flagZhi == "zxfs") {
                 contentStr = "万位: (" + arr[0] + ") 千位: (" + arr[1] + ")";
                 obj.betContent = arr[0] + "|" + arr[1];
@@ -1289,7 +1276,7 @@
             obj.betMode = 1;
             obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
 
-            if (flagZhi == "zuxfs" || flagZhi == "zuxds" || flagZhi == "zuxhz") {
+            if (flagZhi == "zuxfs" || flagZhi == "zuxds" || flagZhi == "zuxhz" || flagZhi == "zuxbd") {
                 obj.betPlayPl = $(".jiangjin-change-zux").data("value");
             } else {
                 obj.betPlayPl = $(".jiangjin-change").data("value");
@@ -1310,9 +1297,6 @@
         var maxFandian = plAndMaxFd.maxFdBl;
         var convertBlMoney = plAndMaxFd.convertBlMoney;
 
-        $('.recl-1002 .content_jiang .content_tex').keyup(function () {
-            stateTouZhu('zxfs-q2');
-        });
         $('.recl-1003 .content_jiang .content_tex').keyup(function () {
             stateTouZhu('zxds-q2');
         });

@@ -257,21 +257,20 @@
         });
 
         //输入倍数十重新计算
-        $("#inputBeishu").keyup(function(){
+        $("#inputBeishu").keyup(function () {
             var valStr = $("#inputBeishu").val();
             var nowValue = 0;
-            if(typeof valStr == "undefined" || valStr == ""){
+            if (typeof valStr == "undefined" || valStr == "") {
                 nowValue = 1;
+            } else {
+                nowValue = $("#inputBeishu").val();
             }
 
-            if(valStr != ""){
-                $("#inputBeishu").data("beishu",$("#inputBeishu").val());
-                nowValue = $("#inputBeishu").val();
-                if (typeof $('.recl-1003').attr('statef') != 'undefined') {
-                    stateTouZhu('dan');
-                } else {
-                    stateTouZhu('fu');
-                }
+            $("#inputBeishu").data("beishu", nowValue);
+            if (typeof $('.recl-1003').attr('statef') != 'undefined') {
+                stateTouZhu('dan');
+            } else {
+                stateTouZhu('fu');
             }
 
             $(".i_beishu").html(nowValue);
