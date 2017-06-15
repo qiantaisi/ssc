@@ -7,7 +7,6 @@ function getPlAndMaxFd() {
     for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
         var o = gfwfPlJson.sscPlayPlList[i];
         if (o.playPlId == playPlId) {
-            // console.log(gfwfPlJson.sscPlayPlList[i].playPl);
             return o;
         }
     }
