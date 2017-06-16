@@ -656,14 +656,14 @@
                         <input type="hidden" class="slider-input"/>
                     </div>
                 </div>
-                <i class="change-base"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-base-hszx"><var class="jiangjin-change-hszx">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-base-zl"><var class="jiangjin-change-zl">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-base-ws"><var class="jiangjin-change-ws">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-base-tsh"><var class="jiangjin-change-tsh">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-sz">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-dz">0.0</var></i>
-                <i class="change-1"><var class="fandian-bfb">0.0%</var></i>
-                <i class="change-2"><var class="jiangjin-change-2">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-3">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-4">0.0</var></i>
-                <i class="change-3"><var class="jiangjin-change-hszx">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-zl">0.0</var></i>
+                <i class="base-fd change-base"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base-fd change-base-hszx"><var class="jiangjin-change-hszx">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base-fd change-base-zl"><var class="jiangjin-change-zl">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base-fd change-base-ws"><var class="jiangjin-change-ws">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
+                <i class="base-fd change-base-tsh"><var class="jiangjin-change-tsh">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-sz">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-dz">0.0</var></i>
+                <i class="base-fd change-1"><var class="fandian-bfb">0.0%</var></i>
+                <i class="base-fd change-2"><var class="jiangjin-change-2">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-3">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-4">0.0</var></i>
+                <i class="base-fd change-3"><var class="jiangjin-change-hszx">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-zl">0.0</var></i>
 
             </div>
             <div class="reduce">
@@ -699,22 +699,11 @@
         //初始化复式选号模式
         $(".Pick").hide();
         $('.recl-1002').show();
-        $(".change-1").hide();
-        $(".change-2").hide();
-        $(".change-3").hide();
-        $(".change-base-hszx").hide();
-        $(".change-base-zl").hide();
-        $(".change-base-ws").hide();
-        $(".change-base-tsh").hide();
+        $(".base-fd").hide();
+        $(".change-base").show();
 
         $(".btn_h3_zx span").click(function () {
-            $(".change-1").hide();
-            $(".change-2").hide();
-            $(".change-3").hide();
-            $(".change-base-hszx").hide();
-            $(".change-base-zl").hide();
-            $(".change-base-ws").hide();
-            $(".change-base-tsh").hide();
+            $(".base-fd").hide();
             $(".change-base").show();
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
@@ -740,9 +729,9 @@
                 $(".Pick").hide();
                 $('.cl-1004-hszh').show();
                 $('.cl-1004-hszh').attr("data-flag", "hszh_zx");
+                $(".base-fd").hide();
                 $(".change-1").show();
                 $(".change-2").show();
-                $(".change-base").hide();
                 allClear();
             } else if (flag_name == "zxhz") {
                 $(".Pick").hide();
@@ -760,13 +749,7 @@
         });
 
         $(".btn_h3_zux span").click(function () {
-            $(".change-1").hide();
-            $(".change-2").hide();
-            $(".change-3").hide();
-            $(".change-base").hide();
-            $(".change-base-zl").hide();
-            $(".change-base-ws").hide();
-            $(".change-base-tsh").hide();
+            $(".base-fd").hide();
             $(".change-base-hszx").show();
 
             if ($(".group ul li p span").hasClass('acti')) {
@@ -791,21 +774,21 @@
                 $(".Pick").hide();
                 $(".cl-1009-zlfs").show();
                 $(".cl-1009-zlfs").attr("data-flag", "zlfs_zux");
+                $(".base-fd").hide();
                 $(".change-base-zl").show();
-                $(".change-base-hszx").hide();
                 allClear();
             } else if (flag_name == "zlds") {
                 $(".Pick").hide();
                 $(".cl-1010-zlds").show();
                 $(".cl-1010-zlds").attr("data-flag", "zlds_zux");
+                $(".base-fd").hide();
                 $(".change-base-zl").show();
-                $(".change-base-hszx").hide();
                 allClear();
             } else if (flag_name == "hhzx") {
                 $(".Pick").hide();
                 $(".cl-1011-hhzx").show();
                 $(".cl-1011-hhzx").attr("data-flag", "hhzx_zux");
-                $(".change-base-hszx").hide();
+                $(".base-fd").hide();
                 $(".change-1").show();
                 $(".change-3").show();
                 allClear();
@@ -815,7 +798,7 @@
                 $(".cl-1012-zxhz").attr("data-flag", "zxhz_zux");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
-                $(".change-base-hszx").hide();
+                $(".base-fd").hide();
                 $(".change-1").show();
                 $(".change-3").show();
                 allClear();
@@ -825,7 +808,7 @@
                 $(".cl-1013-zxbd").attr("data-flag", "zxbd_zux");
                 $(".reboxt .right .suiji5").html("随机五组");
                 $(".reboxt .right .suiji1").html("随机一组");
-                $(".change-base-hszx").hide();
+                $(".base-fd").hide();
                 $(".change-1").show();
                 $(".change-3").show();
                 allClear();
@@ -833,11 +816,7 @@
         });
 
         $(".btn_h3_qt span").click(function () {
-            $(".change-1").hide();
-            $(".change-2").hide();
-            $(".change-3").hide();
-            $(".change-base").hide();
-            $(".change-base-hszx").hide();
+            $(".base-fd").hide();
             $(".change-base-ws").show();
             if ($(".group ul li p span").hasClass('acti')) {
                 $(".group ul li p span").removeClass('acti');
@@ -856,7 +835,7 @@
                 $(".Pick").hide();
                 $('.cl-1015-tsh').show();
                 $('.cl-1015-tsh').attr("data-flag", "tsh_qt");
-                $(".change-base-ws").hide();
+                $(".base-fd").hide();
                 $(".change-1").show();
                 $(".change-base-tsh").show();
                 allClear();
