@@ -336,6 +336,7 @@ ding {
     background: #fff;
     border-bottom: 1px solid #dddddd;
     padding: 0.1rem;
+    text-align:justify;
 }
 
 .wrap .cus_common .wan_bottom .cus-flex-item {
