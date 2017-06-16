@@ -378,17 +378,21 @@
             }
 
             var arr = [];
-            while (arr.length >= 1) {
-                var num = parseInt(Math.random() * 10);
-                var str = xArr[num];
-                str = str + ": (" + numArr[num] + ")"
+            var betStr = '';
+            while (arr.length < 1) {
+                var num1 = parseInt(Math.random() * 10);
+                var num2 = parseInt(Math.random() * 10);
+                var str = xArr[num1];
+                str = str + ": (" + numArr[num2] + ")";
                 arr.push(str);
+                betStr = numArr[num2];
             }
             var obj = {};
             obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
             obj.playGroupId = playGroupId;
             obj.showPlayName = "定位胆-定位胆";
             obj.showContent = arr[0];
+            obj.betContent = betStr;
             obj.betPerMoney = $("#inputMoney").data("money");
             obj.betZhushu = 1;
             obj.betBeishu = $("#inputBeishu").data("beishu");

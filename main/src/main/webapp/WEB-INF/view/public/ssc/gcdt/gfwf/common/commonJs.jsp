@@ -136,7 +136,7 @@
         }
         return result;
     }
-·
+
     //清除注单内容按钮
     function clearZhudan() {
         var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
