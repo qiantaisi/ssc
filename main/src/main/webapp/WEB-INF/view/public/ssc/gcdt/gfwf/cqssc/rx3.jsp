@@ -667,6 +667,9 @@
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
             var flagName = $(this).parent().parent().parent().parent().attr("data-flag");
+            if(typeof flagName == "undefined"){
+                flagName = $(this).parent().parent().parent().parent().parent().attr("data-flag");
+            }
             if(flagName == "rx3-zxfs"){
                 stateTouZhu(flagName);
             } else if(flagName == "rx3-zxds"){

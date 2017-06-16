@@ -113,6 +113,27 @@
     }
 </script>
 <script>
+    // 获取当前选中位数
+    function getWeiStr(arr){
+        var checkArr = [], checkStrArr = [];
+        checkArr = arr;
+        for(var i = 0; i < checkArr.length; i++){
+            if(checkArr[i] == 1){
+                checkStrArr.push("万位");
+            } else if(checkArr[i] == 2){
+                checkStrArr.push("千位");
+            } else if(checkArr[i] == 3){
+                checkStrArr.push("百位");
+            } else if(checkArr[i] == 4){
+                checkStrArr.push("十位");
+            } else if(checkArr[i] == 5){
+                checkStrArr.push("个位");
+            }
+        }
+        return checkStrArr;
+    }
+
+
     // 字符串格式化函数
     String.prototype.format = function(args) {
         var result = this;
