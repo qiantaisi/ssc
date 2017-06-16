@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170610"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170616"></script>
 <script>
     // 官方玩法数据转换，转换为提交格式
     /**
