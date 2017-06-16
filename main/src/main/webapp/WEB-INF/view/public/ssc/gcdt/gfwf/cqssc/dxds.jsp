@@ -467,10 +467,10 @@
     }
 
     function getSuiji(total) {
-        var betFormList = suiji(total);
+        var betFormList = [];
+        betFormList = suiji(total);
         $.each(betFormList, function (index, value) {
-            var html = template("template_touzhu", value);
-            $("#zhudanList").append(html);
+            addYuxuan(value);
         });
         calcAll();
     }
@@ -482,11 +482,6 @@
         if (typeof clearStateTouZhu == 'function') {
             clearStateTouZhu();
         }
-    }
-
-    function clearZhudan() {
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
-        calcAll();
     }
 
     function clearTextarea() {
@@ -787,7 +782,7 @@
             obj.showContent = contentStr;
             obj.betContent = betContent;
             obj.betPerMoney = $("#inputMoney").data("money");
-            obj.betZhushu = zhushu;
+            obj.betZhushu = 1;
             obj.betBeishu = $("#inputBeishu").data("beishu");
             obj.betMode = 1;
             obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
