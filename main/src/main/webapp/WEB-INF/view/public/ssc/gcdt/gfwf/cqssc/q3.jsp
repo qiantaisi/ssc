@@ -29,9 +29,9 @@
                 <span class="playPlIdBtn" data-play_id="524" data-play_pl_id="14242" data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
                 <span class="playPlIdBtn" data-play_id="526" data-play_pl_id="14243" data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="526" data-play_pl_id="14244" data-name="hhzx-2"/>
-                <span class="playPlIdBtn" data-play_id="528" data-play_pl_id="14245" data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <input type="hidden" class="playPlIdBtn" data-play_id="528" data-play_pl_id="14246" data-name="zxhz-2"/>
-                <span class="playPlIdBtn" data-play_id="529" data-play_pl_id="14247" data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_id="528" data-play_pl_id="14246" data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <input type="hidden" class="playPlIdBtn" data-play_id="528" data-play_pl_id="14245" data-name="zxhz-2"/>
+                <span class="playPlIdBtn" data-play_id="529" data-play_pl_id="14248" data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="529" data-play_pl_id="14247" data-name="zxbd-2"/>
             </p>
         </li>
@@ -1470,7 +1470,7 @@
                 kaDuArr.push($.trim($(this).find("i").html()));
             });
             playNameDan = "前三直选-跨度";
-            obj.showContent = "跨度: (" + kaDuArr.join(", ") + ")";
+            obj.showContent = "跨度: (" + kaDuArr.join(",") + ")";
             obj.betContent = kaDuArr.join(",");
         } else {
             var wanArr = [], qianArr = [], shiArr = [];
@@ -1997,6 +1997,7 @@
                     }
                 }
                 contentStr = "组三: (" + arrTemp.join(', ') + ")";
+                zhushu = (getZuXuanNewArrs(arrTemp)).length;
                 obj.betContent = arrTemp.join(',');
             } else if (flag_zhi == "hhzx-zux") {
                 var arrTemp_hhzx = [];
