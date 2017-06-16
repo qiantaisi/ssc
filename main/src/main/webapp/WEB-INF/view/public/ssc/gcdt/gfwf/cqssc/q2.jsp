@@ -1295,7 +1295,8 @@
         var plAndMaxFd = getPlAndMaxFd();
         var maxPlayPl = plAndMaxFd.playPl;
         var maxFandian = plAndMaxFd.maxFdBl;
-        var convertBlMoney = plAndMaxFd.convertBlMoney;
+        var minPl = plAndMaxFd.minPl;
+        var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
 
         $('.recl-1003 .content_jiang .content_tex').keyup(function () {
             stateTouZhu('zxds-q2');
@@ -1318,7 +1319,7 @@
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                money_jangjin = maxPlayPl - (parseInt(money_jangjin * 10) * convertBlMoney);
+                money_jangjin = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                 $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
                 money_jangjin = money_jangjin / 2;

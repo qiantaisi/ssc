@@ -136,7 +136,7 @@
         }
         return result;
     }
-
+·
     //清除注单内容按钮
     function clearZhudan() {
         var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
@@ -217,6 +217,7 @@
         }
     }
 
+    // 当前注数内容状态
     function calcAll() {
         var totalZhushu = 0;
         var totalBeishu = 0;

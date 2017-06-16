@@ -1164,22 +1164,6 @@
         return true;
     }
 
-
-    function calcAll() {
-        var totalZhushu = 0;
-        var totalBeishu = 0;
-        var totalMoney = 0;
-
-        $("#zhudanList li:not('.head')").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("beishu"));
-            totalMoney = add(totalMoney, $(this).data("total_money"));
-        });
-
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
-        $("#zongtouInfo").html(str);
-    }
-
     function suiji(total) {
         var result = [];
         var playName = '';

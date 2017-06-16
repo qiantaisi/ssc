@@ -272,11 +272,6 @@
         }
     }
 
-    function clearZhudan() {
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
-        calcAll();
-    }
-
     function clearTextarea() {
         $(".content_jiang textarea").val('');
         clearStateTouZhu();
@@ -360,23 +355,6 @@
         return true;
     }
 
-
-    //投注总状态
-    function calcAll() {
-        var totalZhushu = 0;
-        var totalBeishu = 0;
-        var totalMoney = 0;
-
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
-            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
-        });
-
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
-        $("#zongtouInfo").html(str);
-    }
-
     function suiji(total) {
         var result = [];
         for (var numIndex = 0; numIndex < total; ++numIndex) {
@@ -427,6 +405,12 @@
 </script>
 <script>
     $(function () {
+        var plAndMaxFd = getPlAndMaxFd();
+        var maxPlayPl = plAndMaxFd.playPl;
+        var maxFandian = plAndMaxFd.maxFdBl;
+        var minPl = plAndMaxFd.minPl;
+        var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+
         $('.content_jiang .content_tex').keyup(function () {
             stateTouZhu('dan');
         });
@@ -445,7 +429,7 @@
                 money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                money_jangjin = (98 - money_jangjin) / 10;
+                money_jangjin = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                 $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
                 if(typeof stateTouZhu == "function"){
