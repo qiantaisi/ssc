@@ -479,7 +479,7 @@
                 flagName = $(this).parent().parent().parent().parent().parent().attr("data-flag");
             }
 
-            if (flagName == "zuxbd") {
+            if (flagName == "zuxbd-q2") {
                 if ($(this).parent().hasClass('acti')) {
                     $(this).parent().removeClass('acti');
                 } else if (!$(this).parent().hasClass('acti')) {
