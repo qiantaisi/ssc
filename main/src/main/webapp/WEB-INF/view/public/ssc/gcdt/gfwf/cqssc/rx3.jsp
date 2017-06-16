@@ -2074,7 +2074,7 @@
             snap: true,
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(0);
+                money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").html(money_jangjin + "%");
                 var money_jangjin_zu6 = 163.333 - (163.333 - 141.667) / 13 * money_jangjin;
                 var money_jangjin_zux = 326.666 - (326.666 - 283.333) / 13 * money_jangjin;

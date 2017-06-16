@@ -1310,7 +1310,7 @@
 
     //后三组选-组三复式
     function getZuSanZhudan(obj) {
-        var flag_name = '', contentDan = '', playNameDan = '';//标签名称  注单内容  注单名称
+        var contentDan = '', playNameDan = '';//标签名称  注单内容  注单名称
         var zuSanArr = [];
 
         $.each($(".cl-1007-zsfs ul li[data-name = '组三'] span.acti"), function (index, value) {
@@ -2164,7 +2164,7 @@
             snap: true,
             onstatechange: function () {
                     var money_jangjin = $(".slider-input").val();
-                    money_jangjin = parseFloat(money_jangjin).toFixed(0);
+                    money_jangjin = parseFloat(money_jangjin).toFixed(1);
                     $(".fandian-bfb").data("value", money_jangjin);
                     $(".fandian-bfb").html(money_jangjin + "%");
 

@@ -1660,7 +1660,7 @@
         obj.showContent = "和值: (" + hzArr.join(", ") + ")";
         obj.betContent = hzArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
-        obj.betZhushu = bdArr.length;
+        obj.betZhushu = hzArr.length;
         obj.betBeishu = $("#inputBeishu").data("beishu");
         obj.betMode = 1;
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
@@ -2167,7 +2167,7 @@
             snap: true,
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(0);
+                money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
 
