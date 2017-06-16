@@ -207,7 +207,7 @@ ding {
     border-color: #101010 transparent transparent transparent;
     display: inline;
     position: relative;
-    top: 0.6rem;
+    top: 0.54rem;
 }
 
 .Hide_Show {
@@ -222,7 +222,7 @@ ding {
     border-color: #fff transparent transparent transparent;
     display: inline;
     position: relative;
-    top: 0.6rem;
+    top: 0.54rem;
 }
 
 .cus-tabs-scroll {
