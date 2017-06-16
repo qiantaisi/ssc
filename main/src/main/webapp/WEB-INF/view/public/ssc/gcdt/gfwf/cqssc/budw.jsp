@@ -817,7 +817,7 @@
                 return;
             }
             clearSelected();
-            addYuxuan(betForm);
+            addYuxuan(betDsForm);
             calcAll();
         } else if (typeof $('.recl-1002').attr('data-flag') != 'undefined') {
             var betForm = {};
@@ -975,7 +975,7 @@
 
         obj.showPlayName = "三星-前三二码";
         obj.showContent = "不定位: (" + budwArr.join(",") + ")";
-        obj.betContent = budwArr.join(",")
+        obj.betContent = budwArr.join(",");
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");

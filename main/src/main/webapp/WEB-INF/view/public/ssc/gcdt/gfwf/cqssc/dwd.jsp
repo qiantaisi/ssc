@@ -330,18 +330,11 @@
             (qianStr == ' ' ? ' ': qianArr.join(",") + "|") +
             (baiStr == ' ' ? ' ': baiArr.join(",") + "|") +
             (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
-            (geStr == ' ' ? ' ': geArr.join(",") + "|")
+            (geStr == ' ' ? ' ': geArr.join(","))
         );
-        var arr = (strTemp.toString()).split("|");
-        $.each(arr, function (index, value) {
-            if(value != ""){
-                var valNow = (value.toString()).split(",").join("");
-                nowArr.push(valNow);
-            }
-        });
         // 转换投注格式
         // 投注内容
-        obj.betContent = nowArr.join("|");
+        obj.betContent =strTemp;
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
