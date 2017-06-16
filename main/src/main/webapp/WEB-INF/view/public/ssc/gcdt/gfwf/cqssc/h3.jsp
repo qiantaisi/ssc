@@ -1542,6 +1542,7 @@
             alert("至少选择1注号码才能投注");
             return false;
         }
+
         obj.showContent = "和值: (" + heZhiArr.join(",") + ")";
         obj.betContent = heZhiArr.join(",");
         obj.showPlayName = "后三直选-和值";
