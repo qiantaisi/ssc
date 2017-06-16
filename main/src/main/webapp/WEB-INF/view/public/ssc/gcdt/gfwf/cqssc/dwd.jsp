@@ -380,7 +380,7 @@
             var arr = [];
             var betStr = '';
             while (arr.length < 1) {
-                var num1 = parseInt(Math.random() * 10);
+                var num1 = parseInt(Math.random() * 5);
                 var num2 = parseInt(Math.random() * 10);
                 var str = xArr[num1];
                 str = str + ": (" + numArr[num2] + ")";
@@ -402,6 +402,7 @@
             obj.betFandian = $(".fandian-bfb").data("value");
             obj.betPlayPl = $(".jiangjin-change").data("value");
             obj.betPlayPlId = getPlayPlId();
+            obj.betPlayId = getPlayId();
             result.push(obj);
         }
         return result;
