@@ -667,6 +667,9 @@
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');
             var flagName = $(this).parent().parent().parent().parent().attr("data-flag");
+            if(typeof flagName == "undefined"){
+                flagName = $(this).parent().parent().parent().parent().parent().attr("data-flag");
+            }
             if(flagName == "rx3-zxfs"){
                 stateTouZhu(flagName);
             } else if(flagName == "rx3-zxds"){
@@ -1291,11 +1294,6 @@
         }
     }
 
-    function clearZhudan() {
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
-        calcAll();
-    }
-
     function clearTextarea() {
         $(".content_jiang textarea").val('');
         clearStateTouZhu();
@@ -1883,22 +1881,6 @@
         return true;
     }
 
-
-    function calcAll() {
-        var totalZhushu = 0;
-        var totalBeishu = 0;
-        var totalMoney = 0;
-
-        $("#zhudanList li:not('.head')").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("beishu"));
-            totalMoney = add(totalMoney, $(this).data("total_money"));
-        });
-
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
-        $("#zongtouInfo").html(str);
-    }
-
     function suiji(total) {
         var result = [];
         var playNameStr = '', flag_zhi = '', contentStr = '';
@@ -2074,7 +2056,7 @@
             snap: true,
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(0);
+                money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").html(money_jangjin + "%");
                 var money_jangjin_zu6 = 163.333 - (163.333 - 141.667) / 13 * money_jangjin;
                 var money_jangjin_zux = 326.666 - (326.666 - 283.333) / 13 * money_jangjin;

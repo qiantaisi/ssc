@@ -601,6 +601,7 @@ function getThreeNewArrs(baiA, shiA, geA) {
     return tempArr;
 }
 
+var tmpBetContent = null;
 function buyBtn() {
     var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
     if(len > 0) {
@@ -653,11 +654,12 @@ function buyBtn() {
             betForm.totalZhushu += $(this).data("bet_zhushu");
         });
         betForm = JSON.stringify(betForm);
-        $("#gfwfBetForm_input").val(betForm);
+        // 解决双引号冲突
+        tmpBetContent = betForm;
 
         // 确定按钮
         $("#gfwfBetForm_submit").click(function() {
-            sureGfwtXz($("#gfwfBetForm_input").val());
+            sureGfwtXz(tmpBetContent);
             //清除弹框layerInfo
             cancel();
         });
@@ -679,6 +681,8 @@ function sureGfwtXz(betForm) {
         success: function(json) {
             parent.hideLoading();
             if (json.result == 1) {
+                // 清空临时变量
+                tmpBetContent = null;
                 layer.msg("下注成功", {icon: 1});
                 // 刷新我的投注
                 getBetDetails();

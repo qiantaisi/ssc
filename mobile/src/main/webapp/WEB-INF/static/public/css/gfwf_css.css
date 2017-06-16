@@ -207,7 +207,7 @@ ding {
     border-color: #101010 transparent transparent transparent;
     display: inline;
     position: relative;
-    top: 0.6rem;
+    top: 0.54rem;
 }
 
 .Hide_Show {
@@ -222,7 +222,7 @@ ding {
     border-color: #fff transparent transparent transparent;
     display: inline;
     position: relative;
-    top: 0.6rem;
+    top: 0.54rem;
 }
 
 .cus-tabs-scroll {
@@ -336,6 +336,7 @@ ding {
     background: #fff;
     border-bottom: 1px solid #dddddd;
     padding: 0.1rem;
+    text-align:justify;
 }
 
 .wrap .cus_common .wan_bottom .cus-flex-item {
@@ -360,7 +361,7 @@ ding {
 
 .gfwf_xz {
     width: 100%;
-    height: 40%;
+    height: 50%;
     background: #fff;
     position: absolute;
     top: 6em;

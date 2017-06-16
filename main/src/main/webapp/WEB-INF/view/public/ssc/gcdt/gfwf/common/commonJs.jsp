@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170610"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170616"></script>
 <script>
     // 官方玩法数据转换，转换为提交格式
     /**
@@ -113,6 +113,27 @@
     }
 </script>
 <script>
+    // 获取当前选中位数
+    function getWeiStr(arr){
+        var checkArr = [], checkStrArr = [];
+        checkArr = arr;
+        for(var i = 0; i < checkArr.length; i++){
+            if(checkArr[i] == 1){
+                checkStrArr.push("万位");
+            } else if(checkArr[i] == 2){
+                checkStrArr.push("千位");
+            } else if(checkArr[i] == 3){
+                checkStrArr.push("百位");
+            } else if(checkArr[i] == 4){
+                checkStrArr.push("十位");
+            } else if(checkArr[i] == 5){
+                checkStrArr.push("个位");
+            }
+        }
+        return checkStrArr;
+    }
+
+
     // 字符串格式化函数
     String.prototype.format = function(args) {
         var result = this;
@@ -217,6 +238,7 @@
         }
     }
 
+    // 当前注数内容状态
     function calcAll() {
         var totalZhushu = 0;
         var totalBeishu = 0;

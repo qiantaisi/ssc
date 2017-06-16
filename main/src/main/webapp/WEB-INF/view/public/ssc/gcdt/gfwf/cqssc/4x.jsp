@@ -458,7 +458,6 @@
         var flag_dan_zhi = '';//默认为单式
         var playNameStr = '';
         var contentStr = '';
-        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
 
         if (typeof $('.recl-1003').attr('statef') != 'undefined') {
             playNameStr = "四星直选-单式";
@@ -480,6 +479,7 @@
                 var num = parseInt(Math.random() * 10);
                 arr.push(tempArr[num]);
             }
+            var qianArr = [], baiArr = [], shiArr = [], geArr = [];
             qianArr.push(arr[0]); baiArr.push(arr[1]); shiArr.push(arr[2]); geArr.push(arr[3]);
             if(flag_dan_zhi == "dan"){
                 contentStr = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + ")";
@@ -545,7 +545,7 @@
             snap: true,
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(0);
+                money_jangjin = parseFloat(money_jangjin).toFixed(1);
 
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");

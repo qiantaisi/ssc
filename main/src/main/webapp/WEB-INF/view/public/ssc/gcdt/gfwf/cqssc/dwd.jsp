@@ -272,11 +272,6 @@
         }
     }
 
-    function clearZhudan() {
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").remove();
-        calcAll();
-    }
-
     function clearTextarea() {
         $(".content_jiang textarea").val('');
         clearStateTouZhu();
@@ -335,18 +330,11 @@
             (qianStr == ' ' ? ' ': qianArr.join(",") + "|") +
             (baiStr == ' ' ? ' ': baiArr.join(",") + "|") +
             (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
-            (geStr == ' ' ? ' ': geArr.join(",") + "|")
+            (geStr == ' ' ? ' ': geArr.join(","))
         );
-        var arr = (strTemp.toString()).split("|");
-        $.each(arr, function (index, value) {
-            if(value != ""){
-                var valNow = (value.toString()).split(",").join("");
-                nowArr.push(valNow);
-            }
-        });
         // 转换投注格式
         // 投注内容
-        obj.betContent = nowArr.join("|");
+        obj.betContent =strTemp;
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -358,23 +346,6 @@
         obj.betPlayPlId = getPlayPlId();
         obj.betPlayId = getPlayId();
         return true;
-    }
-
-
-    //投注总状态
-    function calcAll() {
-        var totalZhushu = 0;
-        var totalBeishu = 0;
-        var totalMoney = 0;
-
-        $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-            totalZhushu = add(totalZhushu, $(this).data("bet_zhushu"));
-            totalBeishu = add(totalBeishu, $(this).data("bet_beishu"));
-            totalMoney = add(totalMoney, $(this).data("bet_total_money"));
-        });
-
-        var str = '总投 <span>' + totalZhushu + '</span> 注，<span>' + totalBeishu + '</span> 倍，共 <span>' + totalMoney + '</span> 元。';
-        $("#zongtouInfo").html(str);
     }
 
     function suiji(total) {
@@ -400,17 +371,21 @@
             }
 
             var arr = [];
-            while (arr.length >= 1) {
-                var num = parseInt(Math.random() * 10);
-                var str = xArr[num];
-                str = str + ": (" + numArr[num] + ")"
+            var betStr = '';
+            while (arr.length < 1) {
+                var num1 = parseInt(Math.random() * 5);
+                var num2 = parseInt(Math.random() * 10);
+                var str = xArr[num1];
+                str = str + ": (" + numArr[num2] + ")";
                 arr.push(str);
+                betStr = numArr[num2];
             }
             var obj = {};
             obj.jiangJfanD = $(".jiangjin-change").html() + "/" + $(".fandian-bfb").html();
             obj.playGroupId = playGroupId;
             obj.showPlayName = "定位胆-定位胆";
             obj.showContent = arr[0];
+            obj.betContent = betStr;
             obj.betPerMoney = $("#inputMoney").data("money");
             obj.betZhushu = 1;
             obj.betBeishu = $("#inputBeishu").data("beishu");
@@ -420,6 +395,7 @@
             obj.betFandian = $(".fandian-bfb").data("value");
             obj.betPlayPl = $(".jiangjin-change").data("value");
             obj.betPlayPlId = getPlayPlId();
+            obj.betPlayId = getPlayId();
             result.push(obj);
         }
         return result;
@@ -427,12 +403,18 @@
 </script>
 <script>
     $(function () {
+        var plAndMaxFd = getPlAndMaxFd();
+        var maxPlayPl = plAndMaxFd.playPl;
+        var maxFandian = plAndMaxFd.maxFdBl;
+        var minPl = plAndMaxFd.minPl;
+        var convertBlMoney = (maxPlayPl - minPl) / maxFandian;
+
         $('.content_jiang .content_tex').keyup(function () {
             stateTouZhu('dan');
         });
         $('.slider-input').jRange({
             from: 0,
-            to: 13,
+            to: maxFandian,
             step: 0.1,
             format: '%s',
             width: $(".cl-1004").width(),
@@ -442,10 +424,10 @@
             snap: true,
             onstatechange: function () {
                 var money_jangjin = $(".slider-input").val();
-                money_jangjin = parseFloat(money_jangjin).toFixed(0);
+                money_jangjin = parseFloat(money_jangjin).toFixed(1);
                 $(".fandian-bfb").data("value", money_jangjin);
                 $(".fandian-bfb").html(money_jangjin + "%");
-                money_jangjin = (98 - money_jangjin) / 10;
+                money_jangjin = (maxPlayPl - parseFloat(money_jangjin).toFixed(1) * convertBlMoney).toFixed(3);
                 $(".jiangjin-change").data("value", money_jangjin);
                 $(".jiangjin-change").html(parseFloat(money_jangjin).toFixed(2));
                 if(typeof stateTouZhu == "function"){
