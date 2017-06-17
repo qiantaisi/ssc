@@ -61,6 +61,18 @@
                 renderZhushu();
             }
         });
+        $(".my-slide-theme .back-bar .pointer").attr("tabIndex", -1);    // 滑块添加tabIndex来获得focus事件
+//        $(".my-slide-theme .back-bar .pointer").focus(function() {
+//            console.log($(this));
+//            if ($(this).hasClass("my-slide-theme-focus")) {
+//                return;
+//            }
+//            $(this).addClass("my-slide-theme-focus");
+//        });
+//
+//        $(".my-slide-theme .back-bar .pointer").focus(function() {
+//            $(this).addClass("my-slide-theme-focus");
+//        });
     }
 
     function initJjh() {
