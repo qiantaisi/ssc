@@ -264,30 +264,34 @@
     margin-bottom: 0!important;
 }
 .recl-1004-zxhz ul li.hz-rx3{
-    width: 780px !important;
-    height: 95px!important;
+    width: 880px !important;
     margin-bottom: 0!important;
 }
 .recl-1004-zxhz ul li.hz-rx3 .hz-dir{
     height: 95px;
     margin-right: 9px;
 }
+.Single .layout .Pick.cl-1002 ul li.hz-rx3 span{
+    width: 38px;
+}
+
 .Single .layout .Pick ul .re-zuxhz-rx3{
-    width: 75%!important;
+    width: 85%!important;
     height: 95px;
-    margin-bottom: 0!important;
     line-height: 0!important;
 
 }
 .Single .layout .Pick ul .re-zuxhz-rx3 span{
-    margin-left: 10px!important;
-    margin-bottom: 10px!important;
+    margin-left: 5px!important;
 }
 .Single .layout .Pick ul .re-zuxhz-rx3 .hz-dir{
     margin-right: 9px!important;
 }
+.Single .layout .Pick.cl-1002 ul li.re-zuxhz-rx3 span{
+    width: 38px;
+}
 .Single .layout .Pick ul li.hz-rx3 span{
-    margin-left: 10px!important;
+    margin-left: 4px!important;
     margin-bottom: 10px;
 }
 .Pick ul .re-zuxhz-rx3{

@@ -1691,7 +1691,7 @@
             geArr.push($.trim($(this).find("i").html()));
         });
         var zhushu = getHsZhushu();
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }

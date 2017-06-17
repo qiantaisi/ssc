@@ -11,17 +11,17 @@
         <li>
             <b>任四直选</b>
             <p class="btn_fu_zhi">
-                <span class="acti" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="574" data-play_pl_id="14294" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="575" data-play_pl_id="14295" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
         <li>
             <b>任四组选</b>
             <p class="btn_fu_zhi">
-                <span data-name="zux24"><a href="javascript:void(0)">组选24</a></span>
-                <span data-name="zux12"><a href="javascript:void(0)">组选12</a></span>
-                <span data-name="zux6"><a href="javascript:void(0)">组选6</a></span>
-                <span data-name="zux4"><a href="javascript:void(0)">组选4</a></span>
+                <span class="playPlIdBtn" data-play_id="576" data-play_pl_id="14296" data-name="zux24"><a href="javascript:void(0)">组选24</a></span>
+                <span class="playPlIdBtn" data-play_id="577" data-play_pl_id="14297" data-name="zux12"><a href="javascript:void(0)">组选12</a></span>
+                <span class="playPlIdBtn" data-play_id="578" data-play_pl_id="14298" data-name="zux6"><a href="javascript:void(0)">组选6</a></span>
+                <span class="playPlIdBtn" data-play_id="579" data-play_pl_id="14299" data-name="zux4"><a href="javascript:void(0)">组选4</a></span>
             </p>
         </li>
     </ul>
@@ -42,16 +42,18 @@
     <ul>
         <li data-name="万">
             <b><i>万位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -63,16 +65,18 @@
         </li>
         <li data-name="千">
             <b><i>千位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -84,16 +88,18 @@
         </li>
         <li data-name="百">
             <b><i>百位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -105,16 +111,18 @@
         </li>
         <li data-name="十">
             <b><i>十位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -126,16 +134,18 @@
         </li>
         <li data-name="个">
             <b><i>个位</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -234,16 +244,18 @@
         </li>
         <li data-name="组选24">
             <b><i>组选24</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -294,16 +306,18 @@
         </li>
         <li data-name="二重号">
             <b><i>二重号</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -315,16 +329,18 @@
         </li>
         <li data-name="单号">
             <b><i>单号</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -375,16 +391,18 @@
         </li>
         <li data-name="二重号">
             <b><i>二重号</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -434,16 +452,18 @@
         </li>
         <li data-name="三重号">
             <b><i>三重号</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -455,16 +475,18 @@
         </li>
         <li data-name="单号">
             <b><i>单号</i></b>
-            <span><i>0</i></span>
-            <span><i>1</i></span>
-            <span><i>2</i></span>
-            <span><i>3</i></span>
-            <span><i>4</i></span>
-            <span><i>5</i></span>
-            <span><i>6</i></span>
-            <span><i>7</i></span>
-            <span><i>8</i></span>
-            <span><i>9</i></span>
+            <var class="numLine">
+                <span><i>0</i></span>
+                <span><i>1</i></span>
+                <span><i>2</i></span>
+                <span><i>3</i></span>
+                <span><i>4</i></span>
+                <span><i>5</i></span>
+                <span><i>6</i></span>
+                <span><i>7</i></span>
+                <span><i>8</i></span>
+                <span><i>9</i></span>
+            </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
@@ -1035,7 +1057,7 @@
             return false;
         }
 
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1066,7 +1088,7 @@
             return false;
         }
 
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1101,7 +1123,7 @@
             return false;
         }
 
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
