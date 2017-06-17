@@ -290,23 +290,23 @@
     // 随机生成注数
     function getSuiji(total) {
         var suijiFun = getPlayPlFun_suiji();
-        if (typeof suijiFun != 'function') {
+        if (typeof suijiFun == 'undefined') {
             return;
         }
 
         // 获取随机注数
-        var data = suijiFun();
-        if (typeof data == 'undefined' || data.length <= 0) {
-            return;
-        }
+        for (var i = 0; i < total; ++i) {
+            var data = eval(suijiFun + "()");
+            if (typeof data == 'undefined' || data.length <= 0) {
+                return;
+            }
 
-        $.each(data, function(index, value) {
             var obj = {};
             //======函数获取=====
-            obj.showPlayName = value.showPlayName;
-            obj.showContent = value.showContent;
-            obj.betContent = value.betContent;
-            obj.betPlayGroupId = value.playGroupId;
+            obj.showPlayName = data.showPlayName;
+            obj.showContent = data.showContent;
+            obj.betContent = data.betContent;
+            obj.betPlayGroupId = data.playGroupId;
             //========动态获取=====
             obj.betPerMoney = $("#inputMoney").data("money");
             obj.betZhushu = 1;
@@ -320,7 +320,7 @@
 
             // 添加预算
             addYuxuan(obj);
-        });
+        }
 
         // 统计右侧注数，金额
         calcAll();
