@@ -1035,7 +1035,7 @@
             return false;
         }
 
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1066,7 +1066,7 @@
             return false;
         }
 
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1101,7 +1101,7 @@
             return false;
         }
 
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }

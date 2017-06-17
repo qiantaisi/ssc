@@ -980,7 +980,7 @@
         });
 
         var zhushu = getZxhzZshu(hzArr);
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1008,7 +1008,7 @@
         });
 
         var zhushu = getZuxhzZhushu();
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1037,7 +1037,7 @@
         });
 
         var zhushu = getZuxbdZhushu();
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1066,7 +1066,7 @@
         });
 
         var zhushu = getZxkdZshu();
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1095,7 +1095,7 @@
         });
 
         var zhushu = getZuxfsZshu();
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }
@@ -1126,7 +1126,7 @@
             qianArr.push($.trim($(this).find("i").html()));
         });
         var zhushu = getZxfsZshu();
-        if (zhushu <= 0 || typeof zhushu == "undefined") {
+        if (typeof zhushu == "undefined" || zhushu <= 0) {
             alert("至少选择1注号码才能投注");
             return false;
         }

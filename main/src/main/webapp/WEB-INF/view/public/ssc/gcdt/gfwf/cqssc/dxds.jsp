@@ -450,7 +450,7 @@
 
     function stateCommon(zhushu){
 
-        if(zhushu <= 0 || typeof zhushu == "undefined"){
+        if(typeof zhushu == "undefined" || zhushu <= 0){
             clearStateTouZhu();
             return 0;
         }
