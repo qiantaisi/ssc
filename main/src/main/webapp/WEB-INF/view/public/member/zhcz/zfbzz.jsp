@@ -23,7 +23,7 @@
                     <label for="money" class="error" id="moneyError"> </label>
                 </li>
                 <li>
-                    <span>支付宝昵称：</span>
+                    <span>昵称：</span>
                     <input type="text" size="5" name="userAlipayName" class="suminp wxName" id="name">
                     <label for="name" class="error" id="nameError"></label>
                 </li>
@@ -72,13 +72,13 @@
 
         if ( $("#payId").val() > 0) {
             var str = '';
-            str += '<span>支付宝信息：</span>';
+            str += '<span>信息：</span>';
             str += '<div class="bankInfo">';
             if (imageId) {
                 str += '<p>';
                 str += '<img src="<%=basePath%>images/' + imageId + '" alt="" width="240" height="240" class="img-responsive __web-inspector-hide-shortcut__" style="margin:auto;">';
                 str += '</p>';
-                str += '<div class="name">请使用支付宝扫码完成付款，或转账给以下支付宝号</div>';
+                str += '<div class="name">请使用扫码完成付款，或转账给以下账号</div>';
             }
             str += '<p>收款帐号：' + account + '</p>';
             str += '<p>收款人：' + username + '</p>';
@@ -165,7 +165,7 @@
         }
 
         if ($("#name").val() == '') {
-            $("#nameError").html(" * 请输入支付宝昵称");
+            $("#nameError").html(" * 请输入昵称");
             hasError = true;
         } else {
             $("#nameError").html('');

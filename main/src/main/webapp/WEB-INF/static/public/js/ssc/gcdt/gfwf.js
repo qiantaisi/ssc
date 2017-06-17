@@ -33,28 +33,28 @@ $(function () {
     });
 
 
-    $(".btn-cgwf").click(function(){
-        var flagFT_cg = $(".gf-cgwf").hasClass("hide_flag");
-        var flagFT_rx = $(".gf-rxwf").hasClass("hide_flag");
-        if(flagFT_cg){
-            $(".gf-cgwf").removeClass("hide_flag");
-        }
-        if(!flagFT_rx){
-            $(".gf-rxwf").addClass("hide_flag");
-        }
-        $(".Single .layout  .Playmethod ul li.gf-li p span:first-child").addClass("acti");
-    });
-    $(".btn-rxwf").click(function(){
-        var flagFT_cg = $(".gf-cgwf").hasClass("hide_flag");
-        var flagFT_rx = $(".gf-rxwf").hasClass("hide_flag");
-        if(!flagFT_cg){
-            $(".gf-cgwf").addClass("hide_flag");
-        }
-        if(flagFT_rx){
-            $(".gf-rxwf").removeClass("hide_flag");
-        }
-        $(".Single .layout  .Playmethod ul li.gf-li p span.rx2-span").addClass("acti");
-    });
+    // $(".btn-cgwf").click(function(){
+    //     var flagFT_cg = $(".gf-cgwf").hasClass("hide_flag");
+    //     var flagFT_rx = $(".gf-rxwf").hasClass("hide_flag");
+    //     if(flagFT_cg){
+    //         $(".gf-cgwf").removeClass("hide_flag");
+    //     }
+    //     if(!flagFT_rx){
+    //         $(".gf-rxwf").addClass("hide_flag");
+    //     }
+    //     $(".Single .layout  .Playmethod ul li.gf-li p span:first-child").addClass("acti");
+    // });
+    // $(".btn-rxwf").click(function(){
+    //     var flagFT_cg = $(".gf-cgwf").hasClass("hide_flag");
+    //     var flagFT_rx = $(".gf-rxwf").hasClass("hide_flag");
+    //     if(!flagFT_cg){
+    //         $(".gf-cgwf").addClass("hide_flag");
+    //     }
+    //     if(flagFT_rx){
+    //         $(".gf-rxwf").removeClass("hide_flag");
+    //     }
+    //     $(".Single .layout  .Playmethod ul li.gf-li p span.rx2-span").addClass("acti");
+    // });
 });
 
 // //加倍数 或 重新选钱时改变当前显示注数金额状态

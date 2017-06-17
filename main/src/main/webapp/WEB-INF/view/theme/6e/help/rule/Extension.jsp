@@ -37,7 +37,7 @@
                     <strong>如果想要获得更多的赚钱机会，欢迎您成为我们的代理，进行推广赚钱。</strong>
                 </p>
                 <p>
-                    <strong>详情咨询代理QQ <a href="tencent://message/?uin=2247777777&amp;Site=在线客服&amp;Menu=yes">2247777777(<span style="color:red;">点击号码添加QQ</span>)</a></strong>
+                    <strong>详情咨询代理QQ <a href="tencent://message/?uin=6586161&amp;Site=在线客服&amp;Menu=yes">6586161(<span style="color:red;">点击号码添加QQ</span>)</a></strong>
                 </p>
                 <p>
                     1、如果您还未登录 QQ ，点击此链接后将会自动帮您启动您的 QQ。
