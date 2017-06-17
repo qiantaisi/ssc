@@ -350,11 +350,11 @@
                     </c:otherwise>
                 </c:choose>
             </div>
-            <div class="down_file">
+            <div class="down_file" style="display:none;">
                 <p><i class="iphone"></i>手机客户端下载<a href="<%=mHostName%>" target="_blank">more&gt;&gt;</a></p>
             </div>
-            <div class="code_layout">
-                <div class="code_wrap">
+            <div class="code_layout" style="height:247px;margin-top:13px;border-top:1px  solid #dbdbdb">
+                <div class="code_wrap" style="display:none;">
                     <img src="${resPath}img/ico89.png" alt="" width="102" height="102">
                     <div class="text">
                         <a href="<%=mHostName%>" target="_blank"><img src="${resPath}img/ico87.png" alt="">iOS下载</a>
@@ -363,7 +363,7 @@
                 </div>
                 <div class="Notice">
                     <b>公告</b>
-                    <div style="height:50px;overflow:hidden;">
+                    <div style="height:210px;overflow:hidden;">
                         <div id="gonggao_marquee" style="width: 100%;height:100%;background:#fff"></div>
                     </div>
                 </div>

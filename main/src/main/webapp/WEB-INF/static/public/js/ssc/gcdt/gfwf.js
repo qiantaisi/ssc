@@ -1,17 +1,4 @@
-/**
- * 获取赔率和最高返点
- */
-function getPlAndMaxFd() {
-    // 全局赔率变量
-    var playPlId = getPlayPlId();   // 当前赔率ID
-    for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
-        var o = gfwfPlJson.sscPlayPlList[i];
-        if (o.playPlId == playPlId) {
-            return o;
-        }
-    }
-    return;
-}
+
 
 //返回全部倍率金额和返点数
 function getAllPlAndMaxFd() {
@@ -70,31 +57,31 @@ $(function () {
     // });
 });
 
-//加倍数 或 重新选钱时改变当前显示注数金额状态
-function changeStateCommon(){
-    var zhushu = $('.p1 .i0').html();
-    if(zhushu == null || typeof zhushu == "undefined"){
-        zhushu = 0;
-    }else{
-        zhushu = parseInt(zhushu);
-    }
-    $('.p1 .i_beishu').html($("#inputBeishu").val());
-    var strFd = $(".fandian-bfb").html();
-    var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
-    var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
-    var p1_i2 = totalMoney * num;
-    if(isNaN(p1_i2) || p1_i2 == 0){
-        $('.p1 .i_fanD').html(0);
-    } else {
-        $('.p1 .i_fanD').html(p1_i2.toFixed(2));
-    }
-    if(parseInt(totalMoney) == 0){
-        $('.p1 .i_money').html(0);
-    } else{
-        $('.p1 .i_money').html(parseFloat(totalMoney).toFixed(2));
-    }
-
-}
+// //加倍数 或 重新选钱时改变当前显示注数金额状态
+// function changeStateCommon(){
+//     var zhushu = $('.p1 .i0').html();
+//     if(zhushu == null || typeof zhushu == "undefined"){
+//         zhushu = 0;
+//     }else{
+//         zhushu = parseInt(zhushu);
+//     }
+//     $('.p1 .i_beishu').html($("#inputBeishu").val());
+//     var strFd = $(".fandian-bfb").html();
+//     var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
+//     var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
+//     var p1_i2 = totalMoney * num;
+//     if(isNaN(p1_i2) || p1_i2 == 0){
+//         $('.p1 .i_fanD').html(0);
+//     } else {
+//         $('.p1 .i_fanD').html(p1_i2.toFixed(2));
+//     }
+//     if(parseInt(totalMoney) == 0){
+//         $('.p1 .i_money').html(0);
+//     } else{
+//         $('.p1 .i_money').html(parseFloat(totalMoney).toFixed(2));
+//     }
+//
+// }
 
 // 数字批量选择算法
 function selectFun_1(obj) {
@@ -377,13 +364,7 @@ stateTouZhu(flag_str) {
     }
 }
 
-//清除状态
-function clearStateTouZhu(){
-    $('.p1 .i0').html('0');
-    $('.p1 .i_beishu').html('1');
-    $('.p1 .i_fanD').html('0');
-    $('.p1 .i_money').html('0');
-}
+
 
 //删除重复号码
 function delRrepet(obj) {

@@ -295,6 +295,11 @@ function getSscSubPage(url) {
             // 读取HTML页内容
             $("#sscContent").html(html);
 
+            // 兼容官方玩法
+            if (typeof playId == 'undefined') {
+                return;
+            }
+
             // 读取赔率
             getSscPlayPl(playId);
 
