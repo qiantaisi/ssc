@@ -753,6 +753,24 @@
     }
 </script>
 <script>
+    // 最近最新开奖时间（默认50期），用于追号模板渲染
+    function renderZhuihao() {
+        ajaxRequest({
+            url: CONFIG.BASEURL + "ssc/ajaxGetLatestOpenTimeList.json",
+            data: {
+                playGroupId: playGroupId,   // 全局变量
+            },
+            success: function(json) {
+                if (json.result != 1) {
+                    return;
+                }
+
+                // 模板逻辑处理.......
+//                var html = "";
+            }
+        });
+    }
+
     // 获取当前选中位数
     function getWeiStr(arr){
         var checkArr = [], checkStrArr = [];

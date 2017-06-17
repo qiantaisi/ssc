@@ -156,7 +156,8 @@ public class ApiUtils{
             String url,
             String qq,
             Long agentId,
-            String companyShortName
+            String companyShortName,
+            String deviceNo
     ) {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("account", account);
@@ -166,6 +167,7 @@ public class ApiUtils{
         paramsMap.put("url", url);
         paramsMap.put("qq", qq);
         paramsMap.put("agentId", agentId);
+        paramsMap.put("deviceNo", deviceNo);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER, paramsMap, companyShortName), CommonResult.class);
     }
 
@@ -1223,5 +1225,14 @@ public class ApiUtils{
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("playGroupId", playGroupId);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_PLAY_PL_GFWF, paramsMap, companyShortName), SscPlayPlResult.class);
+    }
+
+    public static SscOpenTimeListResult getLatestOpenTimeList(Long playGroupId, String companyShortName) {
+        if (IS_DEBUG) {
+            return new SscOpenTimeListResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("playGroupId", playGroupId);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_LATEST_OPEN_TIME_LIST, paramsMap, companyShortName), SscOpenTimeListResult.class);
     }
 }

@@ -44,6 +44,7 @@ public class MemberController extends BaseController {
      * @param yzm 验证码
      * @param name 姓名
      * @param agentId 代理ID
+     * @param deviceNo 设备号
      * @return
      */
     @RequestMapping(value = "/ajaxRegister.json", method = {RequestMethod.GET, RequestMethod.POST})
@@ -53,7 +54,8 @@ public class MemberController extends BaseController {
             String password,
             String yzm,
             String name,
-            Long agentId
+            Long agentId,
+            String deviceNo
     ) {
         LoginResult result = new LoginResult();
 
@@ -103,7 +105,8 @@ public class MemberController extends BaseController {
                     httpServletRequest.getServerName(),
                     null,
                     agentId,
-                    companyShortName
+                    companyShortName,
+                    deviceNo
             );
 
             // 注册成功则登录
