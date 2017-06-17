@@ -70,5 +70,5 @@
         fade(".banner .bann ul li",".banner .four_men ul li",30000,"","");
     });
 </script>
-<c:import url="../common/checkOnline.jsp" />
+<c:import url="../../../public/common/checkOnline.jsp" />
 <c:import url="../common/bodyEnd.jsp" />

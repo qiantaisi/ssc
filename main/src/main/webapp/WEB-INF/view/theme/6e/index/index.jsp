@@ -72,6 +72,6 @@
         });
     </script>
 
-    <c:import url="../common/checkOnline.jsp" />
+    <c:import url="../../../public/common/checkOnline.jsp" />
 </body>
 </html>
