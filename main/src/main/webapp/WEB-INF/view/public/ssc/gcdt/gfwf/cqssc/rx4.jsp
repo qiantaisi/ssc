@@ -11,17 +11,17 @@
         <li>
             <b>任四直选</b>
             <p class="btn_fu_zhi">
-                <span class="acti" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="574" data-play_pl_id="14294" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="575" data-play_pl_id="14295" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
         <li>
             <b>任四组选</b>
             <p class="btn_fu_zhi">
-                <span data-name="zux24"><a href="javascript:void(0)">组选24</a></span>
-                <span data-name="zux12"><a href="javascript:void(0)">组选12</a></span>
-                <span data-name="zux6"><a href="javascript:void(0)">组选6</a></span>
-                <span data-name="zux4"><a href="javascript:void(0)">组选4</a></span>
+                <span class="playPlIdBtn" data-play_id="576" data-play_pl_id="14296" data-name="zux24"><a href="javascript:void(0)">组选24</a></span>
+                <span class="playPlIdBtn" data-play_id="577" data-play_pl_id="14297" data-name="zux12"><a href="javascript:void(0)">组选12</a></span>
+                <span class="playPlIdBtn" data-play_id="578" data-play_pl_id="14298" data-name="zux6"><a href="javascript:void(0)">组选6</a></span>
+                <span class="playPlIdBtn" data-play_id="579" data-play_pl_id="14299" data-name="zux4"><a href="javascript:void(0)">组选4</a></span>
             </p>
         </li>
     </ul>

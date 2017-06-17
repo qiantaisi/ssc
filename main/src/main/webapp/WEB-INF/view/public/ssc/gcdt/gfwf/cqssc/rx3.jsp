@@ -244,7 +244,7 @@
                 </span>
             </div>
         </li>
-        <li data-name="和值" class="hz-rx3">
+        <li data-name="和值" class="hz-rx3 li1005_hezhi">
             <b class="hz-dir"><i>和值</i></b>
             <var class="numLine renumHeigth">
                 <span><i>0</i></span>
@@ -626,7 +626,7 @@
 
 
 <div class="add_spot">
-    <div class="left">
+    <div class="left releft">
         <div class="sopt_wrap">
             <div class="slide_sp rx3_slide_sp">
                 奖金/返点
