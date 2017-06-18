@@ -21,8 +21,12 @@
         // 内容点击，触发统计注数函数
         $(".Pick ul li span i").click(function () {
             $(this).parent().toggleClass('acti');   // 变色
-
             // 渲染中部注数，赔率，返点等等
+            renderZhushu();
+        });
+
+        // 手动输入，触发统计注数函数
+        $('.content_jiang .content_tex').keyup(function () {
             renderZhushu();
         });
 
@@ -82,7 +86,7 @@
             $(this).parent().hide();
 
             $(this).parent().parent().find('input').data("money", parseInt(text));
-            changeStateCommon();
+            renderZhushu();
         });
 
         $(".Single .layout .add_spot .left .sopt_wrap .down span").click(function () {
@@ -149,6 +153,20 @@
             // 返点金额 = 投注总金额 * 返点比例
             var fandianMoney = parseFloat((totalMoney * inputFandianBili).toFixed(3));
             $('.p1 .i_fanD').html(fandianMoney);
+
+            //输入倍数十重新计算
+            $("#inputBeishu").keyup(function (){
+                renderZhushu();
+            });
+
+            //输入倍数失去焦点计算
+            $("#inputBeishu").blur(function(){
+                var valStr = $("#inputBeishu").val();
+                if(typeof valStr == "undefined" || valStr == "" || valStr == null){
+                    $("#inputBeishu").val("1");
+                }
+                renderZhushu();
+            });
         }
     }
 
@@ -229,6 +247,328 @@
 </script>
 <script>
     //=======================注数统计===================================
+    /**
+     * 注数-组选和值
+     */
+    function zhushu_h3zuxhz(){
+        var fuShiArr = [], newArr = [];
+        $.each($(".cl-1012-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            fuShiArr.push($.trim($(this).find("i").html()));
+        });
+        var zlLength = fuShiArr.length;
+        if (zlLength <= 0) {
+            return 0;
+        }
+        newArr = getZxhzNewArrs(fuShiArr);
+        return newArr.length;
+    }
+
+    /**
+     * 注数-混合组选
+     */
+    function zhushu_h3hhzx(){
+        var textStr = $(".cl-1011-hhzx .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [], errorStr = '';
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        for (var n = 0; n < newArr.length; n++) {
+            var temp = newArr[n].toString();
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            if (twoStr != threeStr && oneStr != threeStr && twoStr != oneStr || oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr) {
+                tempArr.push(newArr[n]);
+            }
+        }
+        return tempArr.length;
+    }
+
+    /**
+     * 注数-组六单式
+     */
+    function zhushu_h3z6fds(){
+        var textStr = $(".cl-1010-zlds .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        return newArr.length;
+    }
+
+    /**
+     * 注数-组六复式
+     */
+    function zhushu_h3z6fs(){
+        var fuShiArr = [], newArr = [];
+        $.each($(".cl-1009-zlfs ul li[data-name = '组六'] span.acti"), function (index, value) {
+            fuShiArr.push($.trim($(this).find("i").html()));
+        });
+        var zlLength = fuShiArr.length;
+        if (zlLength < 3) {
+            return 0;
+        }
+        newArr = getZuLiuNewArrs(fuShiArr);
+        return newArr.length;
+    }
+
+    /**
+     * 注数-组三单式
+     */
+    function zhushu_h3z3ds(){
+        var textStr = $(".cl-1008-zsds .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        return newArr.length;
+    }
+
+    /**
+     * 注数-组三复式
+     */
+    function zhushu_h3z3fs(){
+        var fuShiArr = [], newArr = [];
+        $.each($(".cl-1007-zsfs ul li[data-name = '组三'] span.acti"), function (index, value) {
+            fuShiArr.push($.trim($(this).find("i").html()));
+        });
+
+        var heZhiLength = fuShiArr.length;
+        if (heZhiLength <= 1) {
+            return 0;
+        }
+        newArr = getZuXuanNewArrs(fuShiArr);
+        return newArr.length;
+    }
+
+    /**
+     * 注数-直选跨度
+     */
+    function zhushu_h3zxkd(){
+        var newArr = [];
+        var kaDuArr = [];
+        $.each($(".cl-1006-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
+             kaDuArr.push($.trim($(this).find("i").html()));
+        });
+        if (kaDuArr.length <= 0) {
+        return 0;
+        }
+        newArr = getKaduNewArrs(kaDuArr);
+        return newArr.length;
+    }
+
+    /**
+     * 注数-直选和值
+     */
+    function zhushu_h3zxhz() {
+        var heZhiArr = [], newArr = [];
+        $.each($(".cl-1005-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            heZhiArr.push($.trim($(this).find("i").html()));
+        });
+
+        var heZhiLength = heZhiArr.length;
+        if (heZhiLength <= 0) {
+            return 0;
+        }
+
+        newArr = getHezNewArrs(heZhiArr);
+        return newArr.length;
+    }
+
+    /**
+     * 注数-后3组合
+     */
+    function zhushu_h3zh() {
+        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        var baiLength = baiArr.length;
+        var shiLength = shiArr.length;
+        var geLength = geArr.length;
+
+        if (baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+            return;
+        }
+
+        var newArr = getHszhNewArrs(baiArr, shiArr, geArr);
+        return newArr.length;
+    }
+
+    /**
+     * 注数-后3直选单式
+     */
+    function zhushu_h3zxds() {
+        var textStr = $(".content_jiang .content_tex").val();
+        var newArr = [];
+        var errorArr = [];
+        var errorStr = '';
+        var zhushu = 0;
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        return newArr.length;
+    }
+
+    /**
+     * 注数-后3直选复式
+     */
+    function zhushu_h3zxfs() {
+        var newArr = [];
+        var baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        var baiLength = baiArr.length;
+        var shiLength = shiArr.length;
+        var geLength = geArr.length;
+        if (baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+            return 0;
+        }
+        newArr = getThreeNewArrs(baiArr, shiArr, geArr);
+        return newArr.length;
+    }
+
+    /**
+     * 注数-5星直选单式
+     */
+    function zhushu_5xzxds() {
+        var textStr = $(".content_jiang .content_tex").val();
+        var newArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 5) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        return newArr.length;
+    }
+
+    /**
+     * 注数-4星直选单式
+     */
+    function zhushu_4xzxds() {
+        var textStr = $(".content_jiang .content_tex").val();
+        var newArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        return newArr.length;
+    }
+
+    /**
+     * 注数-5星直选复式
+     */
+    function zhushu_5xzxfs() {
+        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
+            wanArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+            qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        var wanLength = wanArr.length;
+        var qianLength = qianArr.length;
+        var baiLength = baiArr.length;
+        var shiLength = shiArr.length;
+        var geLength = geArr.length;
+
+        if (wanLength <= 0 || qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+            return 0;
+        }
+
+        var newArr = getNewArrs(wanArr, qianArr, baiArr, shiArr, geArr);
+        if (typeof newArr == "undefined" || newArr.length <= 0) {
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            return;
+        }
+        return newArr.length;
+    }
+
+    /**
+     * 注数-4星直选复式
+     */
+    function zhushu_4xzxfs() {
+        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+            qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        var qianLength = qianArr.length;
+        var baiLength = baiArr.length;
+        var shiLength = shiArr.length;
+        var geLength = geArr.length;
+
+        if (qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+            return 0;
+        }
+
+        var newArr = getFourNewArrs(qianArr, baiArr, shiArr, geArr);
+        if (typeof newArr == "undefined" || newArr.length <= 0) {
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            return;
+        }
+        return newArr.length;
+    }
+
     /**
      * 注数-前二大小单双
      */
@@ -336,6 +676,114 @@
 
         // 统计右侧注数，金额
         calcAll();
+    }
+
+    /**
+     * 5星直选复式
+     */
+    function suiji_5xzxfs() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 5) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "五星直选-复式";
+        showContent = "万位: ({0}), 千位: ({1}), 百位: ({2}), 十位: ({3}), 个位: ({4})".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
+        betContent = "{0}|{1}|{2}|{3}|{4}".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 4星直选复式
+     */
+    function suiji_4xzxfs() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 4) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "四星直选-复式";
+        showContent = "千位: ({1}), 百位: ({2}), 十位: ({3}), 个位: ({4})".format(arr[0], arr[1], arr[2], arr[3]);
+        betContent = "{0}|{1}|{2}|{3}".format(arr[0], arr[1], arr[2], arr[3]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 5星直选单式
+     */
+    function suiji_5xzxds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 5) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "五星直选-单式";
+        showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+        betContent = "{0}{1}{2}{3}{4}".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 4星直选单式
+     */
+    function suiji_4xzxds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 4) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "4星直选-单式";
+        showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+        betContent = "{0}{1}{2}{3}{4}".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
     }
 
     /**
@@ -481,9 +929,203 @@
         obj.betPlayId = getPlayId();
 
         clearSelected();
+        clearTextarea();
         clearStateTouZhu();
         addYuxuan(obj);
         calcAll();
+    }
+
+    /**
+     * 5星直选复式
+     */
+    function content_5xzxfs() {
+        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+        baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+        shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+        geArr.push($.trim($(this).find("i").html()));
+        });
+
+        if(wanArr.length <= 0 || qianArr.length <= 0|| baiArr.length <= 0|| shiArr.length <= 0|| geArr.length <= 0){
+            return;
+        }
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "五星直选-复式";
+        showContent = "万位：({0})，千位：({1})，百位：({2})，十位：({3})，个位：({4})".format(
+            wanArr.join(","),
+            qianArr.join(","),
+            baiArr.join(","),
+            shiArr.join(","),
+            geArr.join(",")
+        );
+        betContent = gfwf_5xfs(
+            wanArr,
+            qianArr,
+            baiArr,
+            shiArr,
+            geArr
+        );
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 4星直选复式
+     */
+    function content_4xzxfs() {
+        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+            qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        if(qianArr.length <= 0|| baiArr.length <= 0|| shiArr.length <= 0|| geArr.length <= 0){
+            return;
+        }
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "四星直选-复式";
+        showContent = "千位：({1})，百位：({2})，十位：({3})，个位：({4})".format(
+            qianArr.join(","),
+            baiArr.join(","),
+            shiArr.join(","),
+            geArr.join(",")
+        );
+        betContent = gfwf_4xfs(
+            qianArr,
+            baiArr,
+            shiArr,
+            geArr
+        );
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 5星直选单式
+     */
+    function content_5xzxds() {
+        var textStr = $(".content_jiang .content_tex").val();
+        var newArr = [];
+        var errorArr = [];
+        var errorStr = '';
+        var zhushu = 0;
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 5) {
+                newArr.push(arr_new[i]);
+            } else {
+                errorArr.push(arr_new[i]);
+            }
+        }
+        if (newArr.length <= 0) {
+            alert("号码或金额输入有误，请重新输入");
+            return;
+        }
+
+        if (errorArr.length > 0) {
+            for (var e = 0; e < errorArr.length; e++) {
+                errorStr += errorArr[e] + ",";
+            }
+            alert("被过滤掉的错误号码" + errorStr);
+        }
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "五星直选-单式";
+        showContent = "号码: (" + newArr.join(",") + ")";
+        betContent = newArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 4星直选单式
+     */
+    function content_4xzxds() {
+        var textStr = $(".content_jiang .content_tex").val();
+        var newArr = [];
+        var errorArr = [];
+        var errorStr = '';
+        var zhushu = 0;
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+                newArr.push(arr_new[i]);
+            } else {
+                errorArr.push(arr_new[i]);
+            }
+        }
+        if (newArr.length <= 0) {
+            alert("号码或金额输入有误，请重新输入");
+            return;
+        }
+
+        if (errorArr.length > 0) {
+            for (var e = 0; e < errorArr.length; e++) {
+                errorStr += errorArr[e] + ",";
+            }
+            alert("被过滤掉的错误号码" + errorStr);
+        }
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "四星直选-单式";
+        showContent = "号码: (" + newArr.join(",") + ")";
+        betContent = newArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
     }
 
     /**
@@ -884,11 +1526,6 @@
         clearStateTouZhu();
     }
 
-    function clearTextarea() {
-        $(".content_jiang textarea").val('');
-        clearStateTouZhu();
-    }
-
     //清除手动选中内容
     function clearSelected() {
         $(".Single .layout .Pick ul li span.acti").removeClass("acti");
@@ -934,7 +1571,7 @@
 </script>
 <script type="text/html" id="template_jRange">
     <div class="add_spot">
-        <div class="left">
+        <div class="left releft">
             <div class="sopt_wrap">
                 <div class="slide_sp dxds-i">
                     奖金/返点

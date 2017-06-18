@@ -1,5 +1,4 @@
 
-
 //返回全部倍率金额和返点数
 function getAllPlAndMaxFd() {
     return gfwfPlJson.sscPlayPlList;
@@ -96,10 +95,11 @@ function selectFun_1(obj) {
             $(this).addClass("acti");
         }
     });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
+    renderZhushu();
+    // var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
+    // if(typeof stateTouZhu == "function"){
+    //     stateTouZhu(flag_name);
+    // }
 }
 
 function selectFun_2(obj) {
@@ -114,10 +114,7 @@ function selectFun_2(obj) {
             $(this).addClass("acti");
         }
     });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
+    renderZhushu();
 }
 
 function selectFun_3(obj) {
@@ -132,10 +129,7 @@ function selectFun_3(obj) {
             $(this).addClass("acti");
         }
     });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
+    renderZhushu();
 }
 
 function selectFun_4(obj) {
@@ -150,10 +144,7 @@ function selectFun_4(obj) {
             $(this).addClass("acti");
         }
     });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
+    renderZhushu();
 }
 
 function selectFun_5(obj) {
@@ -168,10 +159,7 @@ function selectFun_5(obj) {
             $(this).addClass("acti");
         }
     });
-    var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    if(typeof stateTouZhu == "function"){
-        stateTouZhu(flag_name);
-    }
+    renderZhushu();
 }
 
 function selectFun_6(obj) {
