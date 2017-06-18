@@ -253,6 +253,22 @@
     }
 
     /**
+     * 注数-4星直选单式
+     */
+    function zhushu_4xzxds() {
+        var textStr = $(".content_jiang .content_tex").val();
+        var newArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        return newArr.length;
+    }
+
+    /**
      * 注数-5星直选复式
      */
     function zhushu_5xzxfs() {
@@ -284,6 +300,43 @@
         }
 
         var newArr = getNewArrs(wanArr, qianArr, baiArr, shiArr, geArr);
+        if (typeof newArr == "undefined" || newArr.length <= 0) {
+            if (typeof clearStateTouZhu == 'function') {
+                clearStateTouZhu();
+            }
+            return;
+        }
+        return newArr.length;
+    }
+
+    /**
+     * 注数-4星直选复式
+     */
+    function zhushu_4xzxfs() {
+        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+            qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        var qianLength = qianArr.length;
+        var baiLength = baiArr.length;
+        var shiLength = shiArr.length;
+        var geLength = geArr.length;
+
+        if (qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+            return 0;
+        }
+
+        var newArr = getFourNewArrs(qianArr, baiArr, shiArr, geArr);
         if (typeof newArr == "undefined" || newArr.length <= 0) {
             if (typeof clearStateTouZhu == 'function') {
                 clearStateTouZhu();
@@ -403,7 +456,7 @@
     }
 
     /**
-     * 前二大小单双
+     * 5星直选复式
      */
     function suiji_5xzxfs() {
         // 初始化变量
@@ -420,6 +473,87 @@
         showPlayName = "五星直选-复式";
         showContent = "万位: ({0}), 千位: ({1}), 百位: ({2}), 十位: ({3}), 个位: ({4})".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
         betContent = "{0}|{1}|{2}|{3}|{4}".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 4星直选复式
+     */
+    function suiji_4xzxfs() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 4) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "四星直选-复式";
+        showContent = "千位: ({1}), 百位: ({2}), 十位: ({3}), 个位: ({4})".format(arr[0], arr[1], arr[2], arr[3]);
+        betContent = "{0}|{1}|{2}|{3}".format(arr[0], arr[1], arr[2], arr[3]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 5星直选单式
+     */
+    function suiji_5xzxds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 5) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "五星直选-单式";
+        showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+        betContent = "{0}{1}{2}{3}{4}".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 4星直选单式
+     */
+    function suiji_4xzxds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 4) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "4星直选-单式";
+        showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
+        betContent = "{0}{1}{2}{3}{4}".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
 
         return {
             showPlayName: showPlayName,
@@ -632,6 +766,54 @@
     }
 
     /**
+     * 4星直选复式
+     */
+    function content_4xzxfs() {
+        var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+            qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        if(qianArr.length <= 0|| baiArr.length <= 0|| shiArr.length <= 0|| geArr.length <= 0){
+            return;
+        }
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "四星直选-复式";
+        showContent = "千位：({1})，百位：({2})，十位：({3})，个位：({4})".format(
+            qianArr.join(","),
+            baiArr.join(","),
+            shiArr.join(","),
+            geArr.join(",")
+        );
+        betContent = gfwf_4xfs(
+            qianArr,
+            baiArr,
+            shiArr,
+            geArr
+        );
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
      * 5星直选单式
      */
     function content_5xzxds() {
@@ -667,6 +849,52 @@
         var betContent = '';
 
         showPlayName = "五星直选-单式";
+        showContent = "号码: (" + newArr.join(",") + ")";
+        betContent = newArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 4星直选单式
+     */
+    function content_4xzxds() {
+        var textStr = $(".content_jiang .content_tex").val();
+        var newArr = [];
+        var errorArr = [];
+        var errorStr = '';
+        var zhushu = 0;
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+                newArr.push(arr_new[i]);
+            } else {
+                errorArr.push(arr_new[i]);
+            }
+        }
+        if (newArr.length <= 0) {
+            alert("号码或金额输入有误，请重新输入");
+            return;
+        }
+
+        if (errorArr.length > 0) {
+            for (var e = 0; e < errorArr.length; e++) {
+                errorStr += errorArr[e] + ",";
+            }
+            alert("被过滤掉的错误号码" + errorStr);
+        }
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "四星直选-单式";
         showContent = "号码: (" + newArr.join(",") + ")";
         betContent = newArr.join(",");
 
