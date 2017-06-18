@@ -11,41 +11,46 @@
         <li>
             <b>前三直选</b>
             <p class="btn_h3_zx">
-                <span class="playPlIdBtn acti" data-play_id="516" data-play_pl_id="14222" data-name="zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="517" data-play_pl_id="14233" data-name="zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span class="playPlIdBtn" data-play_id="518" data-play_pl_id="14234" data-name="hszh"><a href="javascript:void(0)">前三组合</a></span>
+                <span class="playPlIdBtn acti" data-play_id="516" data-play_pl_id="14222" data-name="q3zxfs" data-suiji_fun="suiji_q3zxfs" data-fun_zhushu="zhushu_q3zxfs" data-fun_content="content_q3zxfs" data-fun_suiji="suiji_q3zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="517" data-play_pl_id="14233" data-name="q3zxds" data-suiji_fun="suiji_q3zxds" data-fun_zhushu="zhushu_q3zxds" data-fun_content="content_q3zxds" data-fun_suiji="suiji_q3zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="518" data-play_pl_id="14234" data-name="q3zh" data-suiji_fun="suiji_q3zh" data-fun_zhushu="zhushu_q3zh" data-fun_content="content_q3zh" data-fun_suiji="suiji_q3zh"><a href="javascript:void(0)">前三组合</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="518" data-play_pl_id="14235" data-name="hszh-2"/>
                 <input type="hidden" class="playPlIdBtn" data-play_id="518" data-play_pl_id="14236" data-name="hszh-3"/>
-                <span class="playPlIdBtn" data-play_id="519" data-play_pl_id="14237" data-name="zxhz"><a href="javascript:void(0)">直选和值</a></span>
-                <span class="playPlIdBtn" data-play_id="520" data-play_pl_id="14238" data-name="zxkd"><a href="javascript:void(0)">直选跨度</a></span>
+                <span class="playPlIdBtn" data-play_id="519" data-play_pl_id="14237" data-name="q3z6fs" data-suiji_fun="suiji_q3z6fs" data-fun_zhushu="zhushu_q3z6fs" data-fun_content="content_q3z6fs" data-fun_suiji="suiji_q3z6fs"><a href="javascript:void(0)">直选和值</a></span>
+                <span class="playPlIdBtn" data-play_id="520" data-play_pl_id="14238" data-name="q3zxkd" data-suiji_fun="suiji_q3zxkd" data-fun_zhushu="zhushu_q3zxkd" data-fun_content="content_q3zxkd" data-fun_suiji="suiji_q3zxkd"><a href="javascript:void(0)">直选跨度</a></span>
             </p>
         </li>
         <li>
             <b>前三组选</b>
             <p class="btn_h3_zux">
-                <span class="playPlIdBtn" data-play_id="521" data-play_pl_id="14239" data-name="zsfs"><a href="javascript:void(0)">组三复式</a></span>
-                <span class="playPlIdBtn" data-play_id="522" data-play_pl_id="14240" data-name="zsds"><a href="javascript:void(0)">组三单式</a></span>
-                <span class="playPlIdBtn" data-play_id="523" data-play_pl_id="14241" data-name="zlfs"><a href="javascript:void(0)">组六复式</a></span>
-                <span class="playPlIdBtn" data-play_id="524" data-play_pl_id="14242" data-name="zlds"><a href="javascript:void(0)">组六单式</a></span>
-                <span class="playPlIdBtn" data-play_id="526" data-play_pl_id="14243" data-name="hhzx"><a href="javascript:void(0)">混合组选</a></span>
+                <span class="playPlIdBtn" data-play_id="521" data-play_pl_id="14239" data-name="q3z3fs" data-suiji_fun="suiji_q3z3fs" data-fun_zhushu="zhushu_q3z3fs" data-fun_content="content_q3z3fs" data-fun_suiji="suiji_q3z3fs"><a href="javascript:void(0)">组三复式</a></span>
+                <span class="playPlIdBtn" data-play_id="522" data-play_pl_id="14240" data-name="q3z3ds" data-suiji_fun="suiji_q3z3ds" data-fun_zhushu="zhushu_q3z3ds" data-fun_content="content_q3z3ds" data-fun_suiji="suiji_q3z3ds"><a href="javascript:void(0)">组三单式</a></span>
+                <span class="playPlIdBtn" data-play_id="523" data-play_pl_id="14241" data-name="q3z6fs" data-suiji_fun="suiji_q3z6fs" data-fun_zhushu="zhushu_q3z6fs" data-fun_content="content_q3z6fs" data-fun_suiji="suiji_q3z6fs"><a href="javascript:void(0)">组六复式</a></span>
+                <span class="playPlIdBtn" data-play_id="524" data-play_pl_id="14242" data-name="q3z6ds" data-suiji_fun="suiji_q3z6ds" data-fun_zhushu="zhushu_q3z6ds" data-fun_content="content_q3z6ds" data-fun_suiji="suiji_q3z6ds"><a href="javascript:void(0)">组六单式</a></span>
+                <span class="playPlIdBtn" data-play_id="526" data-play_pl_id="14243" data-name="q3hhzx" data-suiji_fun="suiji_q3hhzx" data-fun_zhushu="zhushu_q3hhzx" data-fun_content="content_q3hhzx" data-fun_suiji="suiji_q3hhzx"><a href="javascript:void(0)">混合组选</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="526" data-play_pl_id="14244" data-name="hhzx-2"/>
-                <span class="playPlIdBtn" data-play_id="528" data-play_pl_id="14246" data-name="zxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span class="playPlIdBtn" data-play_id="528" data-play_pl_id="14246" data-name="q3zuxhz" data-suiji_fun="suiji_q3zuxhz" data-fun_zhushu="zhushu_q3zuxhz" data-fun_content="content_q3zuxhz" data-fun_suiji="suiji_q3zuxhz"><a href="javascript:void(0)">组选和值</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="528" data-play_pl_id="14245" data-name="zxhz-2"/>
-                <span class="playPlIdBtn" data-play_id="529" data-play_pl_id="14248" data-name="zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_id="529" data-play_pl_id="14248" data-name="q3zxbd" data-suiji_fun="suiji_q3zxbd" data-fun_zhushu="zhushu_q3zxbd" data-fun_content="content_q3zxbd" data-fun_suiji="suiji_q3zxbd"><a href="javascript:void(0)">组选包胆</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="529" data-play_pl_id="14247" data-name="zxbd-2"/>
             </p>
         </li>
         <li>
             <b>前三其它</b>
             <p class="btn_h3_qt">
-                <span class="playPlIdBtn" data-play_id="531" data-play_pl_id="14249" data-name="hzws"><a href="javascript:void(0)">和值尾数</a></span>
-                <span class="playPlIdBtn" data-play_id="534" data-play_pl_id="14250" data-name="tsh"><a href="javascript:void(0)">特殊号</a></span>
+                <span class="playPlIdBtn" data-play_id="531" data-play_pl_id="14249" data-name="q3zxhz" data-suiji_fun="suiji_q3zxhz" data-fun_zhushu="zhushu_q3zxhz" data-fun_content="content_q3zxhz" data-fun_suiji="suiji_q3zxhz"><a href="javascript:void(0)">和值尾数</a></span>
+                <span class="playPlIdBtn" data-play_id="534" data-play_pl_id="14250" data-name="q3tsh" data-suiji_fun="suiji_q3tsh" data-fun_zhushu="zhushu_q3tsh" data-fun_content="content_q3tsh" data-fun_suiji="suiji_q3tsh"><a href="javascript:void(0)">特殊号</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="534" data-play_pl_id="14251" data-name="tsh-2"/>
                 <input type="hidden" class="playPlIdBtn" data-play_id="534" data-play_pl_id="14252" data-name="tsh-3"/>
             </p>
         </li>
     </ul>
 </div>
+
+<c:import url="../common/commonMiddle.jsp" />
+<c:import url="../common/subCommonJs.jsp" />
+
+<script type="text/html" id="template_q3zxfs">
 <div class="Pick cl-1002 recl-1002" data-flag="zxfs_zx">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -131,6 +136,9 @@
         </li>
     </ul>
 </div>
+</script>
+
+<script type="text/html" id="template_q3zxds">
 <div class="Pick cl-1003 recl-1003">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -157,7 +165,10 @@
 
     <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
 </div>
+</script>
+
 <%--前三组合--%>
+<script type="text/html" id="template_q3zh">
 <div class="Pick cl-1002 cl-1004-hszh">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -244,7 +255,10 @@
         </li>
     </ul>
 </div>
+</script>
+
 <%--直选和值--%>
+<script type="text/html" id="template_q3zxhz">
 <div class="Pick cl-1005-zxhz">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -296,7 +310,10 @@
         </li>
     </ul>
 </div>
+</script>
+
 <%--直选跨度--%>
+<script type="text/html" id="template_q3zxkd">
 <div class="Pick cl-1002 cl-1006-zxkd">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -336,7 +353,10 @@
         </li>
     </ul>
 </div>
+</script>
+
 <%--组三复式--%>
+<script type="text/html" id="template_q3z3fs">
 <div class="Pick cl-1002 cl-1007-zsfs">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -376,7 +396,10 @@
         </li>
     </ul>
 </div>
+</script>
+
 <%--组三单式--%>
+<script type="text/html" id="template_q3z3ds">
 <div class="Pick cl-1008-zsds">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -404,8 +427,10 @@
 
     <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
 </div>
+</script>
 
 <%--组六复式--%>
+<script type="text/html" id="template_q3z6fs">
 <div class="Pick cl-1002 cl-1009-zlfs">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -445,8 +470,10 @@
         </li>
     </ul>
 </div>
+</script>
 
 <%--组六单式--%>
+<script type="text/html" id="template_q3z6ds">
 <div class="Pick cl-1010-zlds">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -474,7 +501,10 @@
 
     <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
 </div>
+</script>
+
 <%--混合组选--%>
+<script type="text/html" id="template_q3hhzx">
 <div class="Pick cl-1011-hhzx">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -502,7 +532,10 @@
 
     <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
 </div>
+</script>
+
 <%--组选和值--%>
+<script type="text/html" id="template_q3zuxhz">
 <div class="Pick cl-1012-zxhz">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -552,8 +585,11 @@
         </li>
     </ul>
 </div>
+</script>
+
 
 <%--组选包胆--%>
+<script type="text/html" id="template_q3zxbd">
 <div class="Pick cl-1002 cl-1013-zxbd">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -585,7 +621,10 @@
         </li>
     </ul>
 </div>
+</script>
+
 <%--和值尾数--%>
+<script type="text/html" id="template_q3hzws">
 <div class="Pick cl-1002 cl-1014-hzws">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -617,7 +656,10 @@
         </li>
     </ul>
 </div>
+</script>
+
 <%--特殊号--%>
+<script type="text/html" id="template_q3tsh">
 <div class="Pick cl-1002 cl-1015-tsh">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -640,58 +682,9 @@
         </li>
     </ul>
 </div>
+</script>
 
 
-<div class="add_spot">
-    <div class="left releft">
-        <div class="sopt_wrap">
-            <div class="slide_sp h3_slide_sp">
-                奖金/返点
-                <%--<p><span style="width: 4.89063px;"></span><var style="left: 4.89063px;"></var></p>--%>
-                <%--<i><var>934058.63</var> / 7.0%</i>--%>
-                <div class="cl-1003">
-                    <div class="cl-1004">
-                        <input type="hidden" class="slider-input"/>
-                    </div>
-                </div>
-                <i class="base-fd change-base"><var class="jiangjin-change">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="base-fd change-base-hszx"><var class="jiangjin-change-hszx">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="base-fd change-base-zl"><var class="jiangjin-change-zl">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="base-fd change-base-ws"><var class="jiangjin-change-ws">0.0</var><var>&nbsp;/&nbsp;</var><var class="fandian-bfb">0.0%</var></i>
-                <i class="base-fd change-base-tsh"><var class="jiangjin-change-tsh">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-sz">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-tsh-dz">0.0</var></i>
-                <i class="base-fd change-1"><var class="fandian-bfb">0.0%</var></i>
-                <i class="base-fd change-2"><var class="jiangjin-change-2">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-3">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-4">0.0</var></i>
-                <i class="base-fd change-3"><var class="jiangjin-change-hszx">0.0</var>&nbsp;/&nbsp;<var class="jiangjin-change-zl">0.0</var></i>
-
-            </div>
-            <div class="reduce">
-                <a class="fl">-</a>
-                <input data-beishu="1" type="text" value="1" id="inputBeishu"
-                       onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
-                       onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
-                <a class="fr">+</a>
-                <span>倍</span>
-            </div>
-            <div class="down">
-                <input type="text" value="2元" id="inputMoney" data-money="2" disabled="disabled">
-                <span></span>
-                <div class="down_menu">
-                    <i>2元</i>
-                    <i>5元</i>
-                    <i>10元</i>
-                    <i>20元</i>
-                </div>
-            </div>
-        </div>
-        <p class="p1">
-            您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">1</i> 倍，返还 <i class="i1 i_fanD">0</i> 元，共投注 <i class="i1 i_money">0</i>元。
-        </p>
-    </div>
-    <div class="rigth">
-        <a href="javascript:void(0)" onclick="tjzd()"><img src="${resPath}img/ico65.png" alt="">添加注单</a>
-    </div>
-
-</div>
 <script>
     $(function () {
         //初始化复式选号模式
