@@ -114,4 +114,6 @@ public class ApiConstant {
     public static String API_WEB_SETTING_GET_FENGGE= API_DOMAIN+"webSetting/getFengge.json";  // 获取风格
 
     public static String API_SSC_GET_SSC_PLAY_PL_GFWF = API_DOMAIN + "ssc/getSscPlayPl_gfwf.json"; // 官方玩法赔率
+    public static String API_SSC_GET_LATEST_OPEN_TIME_LIST = API_DOMAIN + "ssc/getLatestOpenTimeList.json"; // 最近最新开奖时间
+
 }

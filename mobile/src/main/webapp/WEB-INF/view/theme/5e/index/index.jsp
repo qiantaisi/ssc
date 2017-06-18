@@ -102,6 +102,6 @@
     });
 </script>
 <script>${webTjjs}</script>
-<c:import url="../common/checkOnline.jsp"/>
+<c:import url="../../../common/checkOnline.jsp" />
 </body>
 </html>

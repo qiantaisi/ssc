@@ -352,4 +352,26 @@ public class SscController extends CacheController {
         return this.renderPublicView("ssc/gcdt/cqssc_2", modelMap);
     }
 
+    /**
+     * 最近最新开奖时间
+     * @param playGroupId
+     * @return
+     */
+    @RequestMapping(value = "/ajaxGetLatestOpenTimeList.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public SscOpenTimeListResult ajaxGetLatestOpenTimeList(Long playGroupId) {
+        SscOpenTimeListResult result = new SscOpenTimeListResult();
+        String companyShortName = this.getCompanyShortName();
+
+        try {
+            result = ApiUtils.getLatestOpenTimeList(playGroupId, companyShortName);
+        } catch (Exception e) {
+            log.error(this, e);
+            result.setResult(-1000);
+            result.setDescription("服务器错误");
+        }
+
+        return result;
+    }
+
 }

@@ -127,13 +127,28 @@ $(function () {
                 return;
             }
 
+            // 处理设备信息返回值的函数
+            function DoWithDeviceInformation(info) {
+                registerUser(account, password, name, info);
+            }
+
+            if (typeof YDB != "undefined") {
+                YDB.GetDeviceInformation("DoWithDeviceInformation");
+                console.log("DoWithDeviceInformation");
+            } else {
+                registerUser(account, password, name, "test");
+            }
+        });
+
+        function registerUser(account, password, name, deviceNo) {
             ajaxRequest({
                 url: config.basePath + "member/ajaxRegister.json",
                 data: {
                     account: account,
                     password: $.md5(password),
                     name: name,
-                    agentId: Tools.getCookie("agentId")
+                    agentId: Tools.getCookie("agentId"),
+                    deviceNo: deviceNo
                 },
                 beforeSend: function () {
                     Tools.showLoading("注册中...");
@@ -175,7 +190,7 @@ $(function () {
                     Tools.hideLoading();
                 }
             });
-        });
+        }
     });
 
     // 登录页面
