@@ -14,7 +14,7 @@
 
                 <span class="playPlIdBtn acti" data-play_id="502" data-play_pl_id="14221" data-name="h3zxfs" data-suiji_fun="suiji_h3zxfs" data-fun_zhushu="zhushu_h3zxfs" data-fun_content="content_h3zxfs" data-fun_suiji="suiji_h3zxfs"><a href="javascript:void(0)">直选复式</a></span>
                 <span class="playPlIdBtn" data-play_id="503" data-play_pl_id="14220" data-name="h3zxds" data-suiji_fun="suiji_h3zxds" data-fun_zhushu="zhushu_h3zxds" data-fun_content="content_h3zxds" data-fun_suiji="suiji_h3zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span class="playPlIdBtn" data-play_id="504" data-play_pl_id="14219"  data-name="h3zh" data-suiji_fun="suiji_h3zh" data-fun_zhushu="zhushu_h3zh" data-fun_content="content_h3zh" data-fun_suiji="suiji_h3zh"><a href="javascript:void(0)">后三组合</a></span>
+                <span class="playPlIdBtn" data-play_id="504" data-play_pl_id="14219|14218|14217"  data-name="h3zh" data-suiji_fun="suiji_h3zh" data-fun_zhushu="zhushu_h3zh" data-fun_content="content_h3zh" data-fun_suiji="suiji_h3zh"><a href="javascript:void(0)">后三组合</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="504" data-play_pl_id="14218" data-name="hszh-2"/>
                 <input type="hidden" class="playPlIdBtn" data-play_id="504" data-play_pl_id="14217" data-name="hszh-3"/>
                 <span class="playPlIdBtn" data-play_id="505" data-play_pl_id="14216"  data-name="h3zxhz" data-suiji_fun="suiji_h3zxhz" data-fun_zhushu="zhushu_h3zxhz" data-fun_content="content_h3zxhz" data-fun_suiji="suiji_h3zxhz"><a href="javascript:void(0)">直选和值</a></span>
