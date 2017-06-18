@@ -1,4 +1,3 @@
-<%@ page import="java.util.Date" %>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -7,14 +6,13 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<!DOCTYPE html>
-<html>
-<head>
-    <jsp:include page="../../../common/commonMeta.jsp" />
-    <jsp:include page="../../../common/commonCss.jsp" />
-
-    <link rel="stylesheet" href="${resPath}css/style.css?v=201703222201">
-    <link rel="stylesheet" href="${resPath}css/other.css?v=20170421">
-    <title></title>
-</head>
-<body>
+<script src="${commonResPath}js/YdbOnline.js" type="text/javascript"></script>
+<script>
+    // 嵌套APP获取设备号
+    var YDB;
+    var domain = document.domain;
+    // 指定域名开头
+    if (domain.startsWith("123")) {
+        YDB = new YDBOBJ();
+    }
+</script>

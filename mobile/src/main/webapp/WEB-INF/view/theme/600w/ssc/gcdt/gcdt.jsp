@@ -1,6 +1,3 @@
-<%@ page import="org.apache.commons.lang3.StringUtils" %>
-<%@ page import="project38.api.common.utils.DateUtils" %>
-<%@ page import="project38.api.common.utils.JSONUtils" %>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -260,36 +257,7 @@
                         <span class="img bg-img-wfssc"></span>
                         <span>五分时时彩</span>
                     </a>
-                </div><%--
-                <div class="row cl-318 gcdtList">
-                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="21"
-                       href="<%=basePath%>ssc/gcdt/jlk3.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-jlk3"></span>
-                        <span>吉林快3</span>
-                    </a>
-                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="18"
-                       href="<%=basePath%>ssc/gcdt/jsk3.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-jsk3"></span>
-                        <span>江苏快3</span>
-                    </a>
-                    <a class="col-25 col-33 re_a_bottom"></a>
-                </div>--%>
+                </div>
                 <div class="row cl-318 gcdtList">
 
                 </div>
@@ -338,25 +306,6 @@
                         <span>体彩排列3</span>
                     </a>
                 </div>
-                <%--<div class="row cl-318 gcdtList">--%>
-                <%--<a class="col-25 col-33 " data-play_group_id="22" href="<%=basePath%>ssc/gcdt/sflhc.html">--%>
-                <%--<span class="info">距离开盘</span>--%>
-                <%--<span class="time">--%>
-                <%--<i>00</i>--%>
-                <%--<font>:</font>--%>
-                <%--<i>00</i>--%>
-                <%--<font>:</font>--%>
-                <%--<i>00</i>--%>
-                <%--</span>--%>
-                <%--<span class="img bg-img-sflhc"></span>--%>
-                <%--<span>十分六合彩</span>--%>
-                <%--</a>--%>
-                <%--<a class="col-25 col-33 "></a>--%>
-                <%--<a class="col-25 col-33 "></a>--%>
-                <%--</div>--%>
-                <%--<div class="row cl-318 gcdtList">--%>
-                <%--<a class="col-25 col-33 re_a_bottom"></a>--%>
-                <%--</div>--%>
             </div>
             <c:import url="../../common/copyright.jsp"/>
         </div>
