@@ -32,7 +32,7 @@
                 <input type="hidden" class="playPlIdBtn" data-play_id="511" data-play_pl_id="14231" data-name="hhzx-2"/>
                 <span class="playPlIdBtn" data-play_id="512" data-play_pl_id="14230" data-name="h3zuxhz" data-suiji_fun="suiji_h3zuxhz" data-fun_zhushu="zhushu_h3zuxhz" data-fun_content="content_h3zuxhz" data-fun_suiji="suiji_h3zuxhz"><a href="javascript:void(0)">组选和值</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="512" data-play_pl_id="14229" data-name="zxhz-2"/>
-                <span class="playPlIdBtn" data-play_id="513" data-play_pl_id="14228"  data-name="h3zxbd" data-suiji_fun="suiji_h3zxbd" data-fun_zhushu="zhushu_h3zxbd" data-fun_content="content_h3zxbd" data-fun_suiji="suiji_h3zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_id="513" data-play_pl_id="14228" data-name="h3zxbd" data-suiji_fun="suiji_h3zxbd" data-fun_zhushu="zhushu_h3zxbd" data-fun_content="content_h3zxbd" data-fun_suiji="suiji_h3zxbd"><a href="javascript:void(0)">组选包胆</a></span>
                 <input type="hidden" class="playPlIdBtn" data-play_id="513" data-play_pl_id="14227" data-name="zxbd-2"/>
             </p>
         </li>
