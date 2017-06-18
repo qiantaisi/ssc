@@ -34,10 +34,20 @@
         initJjh();
 
         var plAndMaxFd = getPlAndMaxFd();   // 获取当前选中的玩法赔率和返点
-        var maxPlayPl = plAndMaxFd.playPl;  // 最高赔率
-        var maxFandian = plAndMaxFd.maxFdBl;    // 最大返点
-        var minPl = plAndMaxFd.minPl;   // 最低赔率
-        var convertBlMoney = (maxPlayPl - minPl) / maxFandian;  // 每1%转换赔率
+        var maxPlayPl;  // 最高赔率
+        var maxFandian;    // 最大返点
+        var minPl;   // 最低赔率
+        var convertBlMoney;  // 每1%转换赔率
+        if (plAndMaxFd instanceof Array) {  // 多赔率
+            maxPlayPl = plAndMaxFd[0].playPl;  // 最高赔率
+            maxFandian = plAndMaxFd[0].maxFdBl;    // 最大返点
+            minPl = plAndMaxFd[0].minPl;   // 最低赔率
+        } else {
+            maxPlayPl = plAndMaxFd.playPl;  // 最高赔率
+            maxFandian = plAndMaxFd.maxFdBl;    // 最大返点
+            minPl = plAndMaxFd.minPl;   // 最低赔率
+        }
+        convertBlMoney = (maxPlayPl - minPl) / maxFandian;  // 每1%转换赔率
 
         // 初始化返点赔率滚动条
         $('.slider-input').jRange({
@@ -59,7 +69,18 @@
                 // 赔率 = 最搭配率 - 返点比例 * 转换比例
                 var pl = (maxPlayPl - fandianBili * convertBlMoney).toFixed(3);
                 $("#jiangjin-change").data("value", pl);
-                $("#jiangjin-change").html(pl);  // 渲染界面中赔率部分
+
+                // 渲染界面中赔率部分
+                if (plAndMaxFd instanceof Array) {  // 多赔率
+                    var strArr = [];
+                    $.each(plAndMaxFd, function(index, value) {
+                        var tmpConvertBlMoney = (value.playPl - value.minPl) / value.maxFdBl;
+                        strArr.push((value.playPl - fandianBili * tmpConvertBlMoney).toFixed(3))
+                    });
+                    $("#jiangjin-change").html(strArr.join('|'))
+                } else {
+                    $("#jiangjin-change").html(pl);
+                }
 
                 // 渲染中部注数，赔率，返点等等
                 renderZhushu();
@@ -225,10 +246,24 @@
     function getPlAndMaxFd() {
         // 全局赔率变量
         var playPlId = getPlayPlId();   // 当前赔率ID
-        for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
-            var o = gfwfPlJson.sscPlayPlList[i];
-            if (o.playPlId == playPlId) {
-                return o;
+        if (playPlId.toString().indexOf('|') > 0) {    // 多赔率
+            var result = [];
+            var tmpArr = playPlId.split('|');
+            $.each(tmpArr, function(index, value) {
+                for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
+                    var o = gfwfPlJson.sscPlayPlList[i];
+                    if (o.playPlId == value) {
+                        result.push(o);
+                    }
+                }
+            });
+            return result;
+        } else {    // 单一赔率
+            for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
+                var o = gfwfPlJson.sscPlayPlList[i];
+                if (o.playPlId == playPlId) {
+                    return o;
+                }
             }
         }
         return;
