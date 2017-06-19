@@ -168,60 +168,6 @@ function selectFun_6(obj) {
     clearStateTouZhu();//清除投注状态栏
 }
 
-//前二直选-直选复式
-function getZxfsZshu() {
-    var tempArr = [];
-    var wanArr = [], qianArr = [];
-    $.each($(".recl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
-        wanArr.push($.trim($(this).find("i").html()));
-    });
-    $.each($(".recl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
-        qianArr.push($.trim($(this).find("i").html()));
-    });
-
-    var wanLength = wanArr.length;
-    var qianLength = qianArr.length;
-
-    if (wanLength <= 0 || qianLength <= 0) {
-        return;
-    }
-
-    for(var i = 0; i < wanArr.length; i++){
-        for(var i1 = 0; i1 < qianArr.length; i1++){
-            tempArr.push(wanArr[i] + "" + qianArr[i1]);
-        }
-    }
-    return tempArr.length;
-}
-
-//前二直选-组选复式
-function getZuxfsZshu() {
-    var tempArr = [], zuxArr = [];
-    $.each($(".recl-1006-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
-        zuxArr.push($.trim($(this).find("i").html()));
-    });
-
-    var xLength = zuxArr.length;
-    if (xLength < 2) {
-        return;
-    }
-
-    for(var i = 0; i < zuxArr.length; i++){
-        for(var i1 = 0; i1 < zuxArr.length; i1++){
-            if(zuxArr[i] != zuxArr[i1]){
-                var xArr =[];
-                xArr.push(zuxArr[i]);
-                xArr.push(zuxArr[i1]);
-                xArr.sort();
-                tempArr.push(xArr.join(""));
-            }
-        }
-    }
-
-    tempArr = tempArr.uniqueArr();
-    return tempArr.length;
-}
-
 
 //获取状态
 function
