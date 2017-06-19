@@ -47,7 +47,7 @@
             </a>
         </li>
         <li>
-            <a href="<%=mHostName%>" target="_blank">
+            <a href="<%=basePath%>" target="_blank">
                 <img src="${resPath}img/ico39.png" alt="">
                 <p>手机购彩</p>
             </a>
