@@ -25,6 +25,13 @@
             renderZhushu();
         });
 
+        // 内容点击，触发统计注数函数（特殊号）
+        $(".Pick ul li.tsh_li span").click(function () {
+            $(this).toggleClass('acti_tsh');   // 变色
+            // 渲染中部注数，赔率，返点等等
+            renderZhushu();
+        });
+
         // 手动输入，触发统计注数函数
         $('.content_jiang .content_tex').keyup(function () {
             renderZhushu();
@@ -35,8 +42,8 @@
 
         var plAndMaxFd = getPlAndMaxFd();   // 获取当前选中的玩法赔率和返点
         var maxPlayPl;  // 最高赔率
-        var maxFandian;    // 最大返点
-        var minPl;   // 最低赔率
+        var maxFandian;  // 最大返点
+        var minPl;  // 最低赔率
         var convertBlMoney;  // 每1%转换赔率
         if (plAndMaxFd instanceof Array) {  // 多赔率
             maxPlayPl = plAndMaxFd[0].playPl;  // 最高赔率
@@ -66,7 +73,7 @@
                 $("#fandian-bfb").data("value", fandianBili);
                 $("#fandian-bfb").html(fandianBili + "%");    // 渲染界面中百分比部分
 
-                // 赔率 = 最搭配率 - 返点比例 * 转换比例
+                // 赔率 = 最大配率 - 返点比例 * 转换比例
                 var pl = (maxPlayPl - fandianBili * convertBlMoney).toFixed(3);
                 $("#jiangjin-change").data("value", pl);
 
@@ -75,9 +82,9 @@
                     var strArr = [];
                     $.each(plAndMaxFd, function(index, value) {
                         var tmpConvertBlMoney = (value.playPl - value.minPl) / value.maxFdBl;
-                        strArr.push((value.playPl - fandianBili * tmpConvertBlMoney).toFixed(3))
+                        strArr.push((value.playPl - fandianBili * tmpConvertBlMoney).toFixed(3));
                     });
-                    $("#jiangjin-change").html(strArr.join('|'))
+                    $("#jiangjin-change").html(strArr.join('|'));
                 } else {
                     $("#jiangjin-change").html(pl);
                 }
@@ -86,9 +93,9 @@
                 renderZhushu();
             }
         });
+
         $(".my-slide-theme .back-bar .pointer").attr("tabIndex", -1);    // 滑块添加tabIndex来获得focus事件
 //        $(".my-slide-theme .back-bar .pointer").focus(function() {
-//            console.log($(this));
 //            if ($(this).hasClass("my-slide-theme-focus")) {
 //                return;
 //            }
@@ -156,7 +163,7 @@
         if (typeof zhushuFun != 'undefined') {
             var zhushu = eval(zhushuFun + "()");   // 注数
 
-            if (typeof zhushu == "undefined" || zhushu <= 0){
+            if (typeof zhushu == "undefined" || zhushu < 0){
 //                clearStateTouZhu();
                 return;
             }
@@ -283,6 +290,52 @@
 <script>
     //=======================注数统计===================================
     /**
+     * 注数-特殊号
+     */
+    function zhushu_h3tsh() {
+        var tsArr = [];
+        $.each($(".cl-1015-tsh ul li.tsh_li[data-name = '特殊号'] span.acti_tsh"), function (index, value) {
+            tsArr.push($.trim($(this).html()));
+        });
+        var zlLength = tsArr.length;
+        if (zlLength <= 0) {
+            return 0;
+        }
+        return tsArr.length;
+    }
+
+    /**
+     * 注数-和值尾数
+     */
+    function zhushu_h3hzws() {
+        var wsArr = [], newArr = [];
+        $.each($(".cl-1014-hzws ul li[data-name = '和值尾数'] span.acti"), function (index, value) {
+            wsArr.push($.trim($(this).find("i").html()));
+        });
+        var zlLength = wsArr.length;
+        if (zlLength < 0) {
+            return 0;
+        }
+        return zlLength;
+    }
+
+    /**
+     * 注数-组选包胆
+     */
+    function zhushu_h3zxbd(){
+        var baoDanArr = [], newArr = [];
+        $.each($(".cl-1013-zxbd ul li[data-name = '包胆'] span.acti"), function (index, value) {
+        baoDanArr.push($.trim($(this).find("i").html()));
+        });
+        var zlLength = baoDanArr.length;
+        if (zlLength < 0) {
+        return 0;
+        }
+        newArr = getZxbdNewArrs(baoDanArr);
+        return newArr.length;
+    }
+
+    /**
      * 注数-组选和值
      */
     function zhushu_h3zuxhz(){
@@ -326,7 +379,7 @@
     /**
      * 注数-组六单式
      */
-    function zhushu_h3z6fds(){
+    function zhushu_h3z6ds(){
         var textStr = $(".cl-1010-zlds .content_jiang .content_tex").val();
         var newArr = [], tempArr = [];
         textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
@@ -702,7 +755,12 @@
             obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
             obj.betPlayPl = $("#jiangjin-change").data("value");
             obj.betFandian = $("#fandian-bfb").data("value");
-            obj.betPlayPlId = getPlayPlId();
+            var  strPlId = getPlayPlId();
+            if(strPlId.toString().indexOf('|') > 0){
+                obj.betPlayPlId = (strPlId.toString().split("|"))[0];
+            } else{
+                obj.betPlayPlId = getPlayPlId();
+            }
             obj.betPlayId = getPlayId();
 
             // 添加预算
@@ -711,6 +769,142 @@
 
         // 统计右侧注数，金额
         calcAll();
+    }
+
+
+    /**
+     * 后三直选-跨度
+     */
+    function suiji_h3zxkd () {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 1) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "后三直选-跨度";
+        showContent = "跨度: ({0})".format(arr[0]);
+        betContent = "{0}".format(arr[0]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 后三直选-和值
+     */
+    function suiji_h3zxhz () {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
+        var arr = [];
+        while (arr.length < 1) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "后三直选-和值";
+        showContent = "和值: ({0})".format(arr[0]);
+        betContent = "{0}".format(arr[0]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 后三直选-组合
+     */
+    function suiji_h3zh () {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 3) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "后三直选-组合";
+        showContent = "百位: ({0}), 十位: ({1}), 个位: ({2})".format(arr[0], arr[1], arr[2]);
+        betContent = "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 后三直选-单式
+     */
+    function suiji_h3zxds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 3) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "后三直选-单式";
+        showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + ")";
+        betContent = "{0}{1}{2}".format(arr[0], arr[1], arr[2]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 后三直选复式
+     */
+    function suiji_h3zxfs () {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var tempArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var arr = [];
+        while (arr.length < 3) {
+            arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        }
+
+        showPlayName = "后三直选-复式";
+        showContent = "百位: ({0}), 十位: ({1}), 个位: ({2})".format(arr[0], arr[1], arr[2]);
+        betContent = "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
     }
 
     /**
@@ -810,8 +1004,8 @@
         }
 
         showPlayName = "4星直选-单式";
-        showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + "" + arr[4] + ")";
-        betContent = "{0}{1}{2}{3}{4}".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
+        showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + "" + arr[3] + ")";
+        betContent = "{0}{1}{2}{3}{4}".format(arr[0], arr[1], arr[2], arr[3]);
 
         return {
             showPlayName: showPlayName,
