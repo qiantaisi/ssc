@@ -134,9 +134,8 @@ $(function () {
 
             if (typeof YDB != "undefined") {
                 YDB.GetDeviceInformation("DoWithDeviceInformation");
-                console.log("DoWithDeviceInformation");
             } else {
-                registerUser(account, password, name, "test");
+                registerUser(account, password, name, "");
             }
         });
 
