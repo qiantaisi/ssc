@@ -6833,7 +6833,7 @@ $(function () {
 $(function () {
         $(".x_3 span").click(
             function () {
-                if ($(".x_wrap").is(".Fixed")) {
+                if ($(".x_wrap").is(".Fixed")) {   //判断  Fixed 是否存在，否则else
                     $(".page").find(".x_wrap").removeClass("Fixed");
                     $(".page").find(".gfwf_xz").removeClass("Fixed");
                     $(".page").find(".gfwf_mask2").removeClass("Fixed");
@@ -6847,19 +6847,19 @@ $(function () {
     }
 );
 
-$(function () {
-        $(".gfwf_xz .staer a").click(
-            function () {
-                var conditions = $(this).attr("data-type");
-                var o = $(this);
-                if (conditions == "gfwf_page") {
-                    $(this).find("span").removeClass("staer1");
-                    $(this).find("span").addClass("zxfs");
-                }
-            }
-        );
-    }
-);
+// $(function () {
+//         $(".gfwf_xz .staer a").click(
+//             function () {
+//                 var conditions = $(this).attr("data-type");
+//                 var o = $(this);
+//                 if (conditions == "gfwf_page") {
+//                     $(this).find("span").removeClass("staer1");
+//                     $(this).find("span").addClass("zxfs");
+//                 }
+//             }
+//         );
+//     }
+// );
 
 // $(".cus-tabs-scroll .xuan").ckick(
 //   function () {
@@ -7348,3 +7348,28 @@ function selectFun_6(obj) {
     $(obj).find(".active_gfwf").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
 }
+
+$(function () {     //官方玩法，彩种玩法选择点击事件
+        $(".gfwf_xz .staer a").click(
+            function () {
+                $(".gfwf_xz .staer a").find("span").removeClass("zxfs");
+                $(".gfwf_xz .staer a").find("span").addClass("staer1");
+                $(this).find("span").removeClass("staer1");
+                $(this).find("span").addClass("zxfs");
+            }
+        );
+    }
+);
+
+$(function () {
+        $(".gfwf_xz .staer a").click(
+            function () {
+                $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+                $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+                $(".page").find(".x_wrap").removeClass("Fixed");
+                $(".page").find(".gfwf_xz").removeClass("Fixed");
+                $(".page").find(".gfwf_mask2").removeClass("Fixed");
+            }
+        );
+    }
+);
