@@ -12,7 +12,7 @@
     var YDB;
     var domain = document.domain;
     // 指定域名开头
-    if (domain.startsWith("123")) {
+    if (domain.startsWith("app.") || domain.startsWith("apps.")) {
         YDB = new YDBOBJ();
     }
 </script>

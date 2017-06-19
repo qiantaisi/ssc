@@ -87,40 +87,8 @@ $(function () {
         });
     });
 
-
-    // 注册页面
+// 注册页面
     $(document).on("pageInit", "#page-register", function (e, id, page) {
-         //实现立即注册处的，本人同意开户协议勾选事件
-        $(".agree span").click(
-            function () {
-                if ($(".agree span img").is(".show_hide")) {
-                    $(".agree span").find("img").removeClass("show_hide");
-                } else {
-                    $(".agree span").find("img").addClass("show_hide");
-                }
-            }
-        );
-
-        //协议关闭按钮
-        $(".layui-m-layermain h3 .btn_close").live('click',function () {
-            layer.closeAll();
-        });
-
-        //协议对话框
-        $(".agree-btn").live('click',function () {
-            //自定页
-            layer.open({
-                type: 1,
-                skin: 'layui-layer-popup', //样式类名
-                closeBtn: 0, //显示关闭按钮
-                anim: 2,
-                title: '开户协议'+ '<a href="javascript:void(0)" class="jb_img btn_close"><span></span></a>',
-                shadeClose: true, //开启遮罩关闭
-                content: $("#template_khxy").html()
-            });
-        });
-
-
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
@@ -167,13 +135,27 @@ $(function () {
                 return;
             }
 
+            // 处理设备信息返回值的函数
+            function DoWithDeviceInformation(info) {
+                registerUser(account, password, name, info);
+            }
+
+            if (typeof YDB != "undefined") {
+                YDB.GetDeviceInformation("DoWithDeviceInformation");
+            } else {
+                registerUser(account, password, name, "");
+            }
+        });
+
+        function registerUser(account, password, name, deviceNo) {
             ajaxRequest({
                 url: config.basePath + "member/ajaxRegister.json",
                 data: {
                     account: account,
                     password: $.md5(password),
                     name: name,
-                    agentId: Tools.getCookie("agentId")
+                    agentId: Tools.getCookie("agentId"),
+                    deviceNo: deviceNo
                 },
                 beforeSend: function () {
                     Tools.showLoading("注册中...");
@@ -215,7 +197,7 @@ $(function () {
                     Tools.hideLoading();
                 }
             });
-        });
+        }
     });
 
     // 登录页面
