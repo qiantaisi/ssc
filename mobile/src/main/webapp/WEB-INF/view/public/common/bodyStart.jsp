@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="${resPath}css/style.css?v=201703222201">
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170421">
+    <link rel="stylesheet" href="${resPath}css/gfwf_css.css?v=20170619">
     <title></title>
 </head>
 <body>
