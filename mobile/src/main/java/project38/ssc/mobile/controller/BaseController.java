@@ -187,6 +187,8 @@ public abstract class BaseController {
         // 公司标志
         String companyShortName = getCompanyShortName();
         httpServletRequest.setAttribute("resPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
+        httpServletRequest.setAttribute("commonResPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/common/");
+
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         try{
