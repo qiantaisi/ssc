@@ -614,3 +614,7 @@
 .del-TishiType2 .btns button,.del-Tishi .btns button{
     width: 100px;
 }
+
+.tzTishiTemplate .btns button:hover{
+    background: #f31a1a;
+}

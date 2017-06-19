@@ -824,5 +824,9 @@ function showTishi2Template(infoStr) {
         area: ['282px', '222px'], //宽高
         content: tiShi_template
     });
+
+    $("#block_close").click(function(){
+        closeLayer2();
+    });
     $(".del-TishiType2").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px","top":"150px"});
 }

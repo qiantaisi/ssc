@@ -602,7 +602,7 @@
     <ul>
         <li data-name="包胆">
             <b><i>包胆</i></b>
-            <var class="numLine">
+            <var class="numLine" data-flag="bdDanXuan">
                 <span><i>0</i></span>
                 <span><i>1</i></span>
                 <span><i>2</i></span>
