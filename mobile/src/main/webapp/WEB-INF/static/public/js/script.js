@@ -6847,19 +6847,19 @@ $(function () {
     }
 );
 
-$(function () {
-        $(".gfwf_xz .staer a").click(
-            function () {
-                var conditions = $(this).attr("data-type");
-                var o = $(this);
-                if (conditions == "gfwf_page") {
-                    $(this).find("span").removeClass("staer1");
-                    $(this).find("span").addClass("zxfs");
-                }
-            }
-        );
-    }
-);
+// $(function () {
+//         $(".gfwf_xz .staer a").click(
+//             function () {
+//                 var conditions = $(this).attr("data-type");
+//                 var o = $(this);
+//                 if (conditions == "gfwf_page") {
+//                     $(this).find("span").removeClass("staer1");
+//                     $(this).find("span").addClass("zxfs");
+//                 }
+//             }
+//         );
+//     }
+// );
 
 // $(".cus-tabs-scroll .xuan").ckick(
 //   function () {
@@ -7348,3 +7348,15 @@ function selectFun_6(obj) {
     $(obj).find(".active_gfwf").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
 }
+
+$(function () {     //官方玩法，彩种玩法选择点击事件
+        $(".gfwf_xz .staer a").click(
+            function () {
+                $(".gfwf_xz .staer a").find("span").removeClass("zxfs");
+                $(".gfwf_xz .staer a").find("span").addClass("staer1");
+                $(this).find("span").removeClass("staer1");
+                $(this).find("span").addClass("zxfs");
+            }
+        );
+    }
+);
