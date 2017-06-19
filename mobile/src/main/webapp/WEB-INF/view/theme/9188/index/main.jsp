@@ -14,7 +14,7 @@
     <div class="page page-current" id="page-index">
         <header class="bar bar-nav cl-1">
             <a href="javascript:void(0)" class="cl-2" onclick="location.reload()">
-                <img src="<%=basePath%>images/${logo.imageId}" alt="">
+                <img src="<%=basePath%>images/${logo.imageId}" alt="" style="height:1.5rem!important">
             </a>
 
             <c:choose>

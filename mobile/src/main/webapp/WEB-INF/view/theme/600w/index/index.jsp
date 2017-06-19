@@ -100,7 +100,7 @@
 //        }
     });
 </script>
-<c:import url="../common/checkOnline.jsp"/>
+<c:import url="../../../common/checkOnline.jsp"/>
 <script>${webTjjs}</script>
 </body>
 </html>
