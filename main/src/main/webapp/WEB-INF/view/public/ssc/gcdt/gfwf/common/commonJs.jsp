@@ -304,13 +304,18 @@
     /**
      * 注数-组选包胆
      */
-    function zhushu_q2zuxbd(){
+    function zhushu_q2zuxbd(valArr){
         var tempArr = [];
         var bdArr = [], nowTemp = [];
         $.each($(".recl-1009-zuxbd ul li[data-name = '胆码'] span.acti"), function (index, value) {
-            bdArr.push($.trim($(this).find("i").html()));
+            nowTemp.push($.trim($(this).find("i").html()));
         });
 
+        if (typeof valArr != "undefined") {
+            bdArr = valArr;
+        } else {
+            bdArr = nowTemp;
+        }
         var bdLength = bdArr.length;
         if (bdLength <= 0) {
             return 0;
@@ -328,14 +333,18 @@
     /**
      * 注数-组选和值
      */
-    function zhushu_q2zuxhz(){
+    function zhushu_q2zuxhz(valArr){
         var tempArr = [];
         var hzArr = [], temp = [], nowTemp = [];
         var sumTemp = 0, num = 0;
         $.each($(".recl-1008-zuxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
-            hzArr.push($.trim($(this).find("i").html()));
+            nowTemp.push($.trim($(this).find("i").html()));
         });
-
+        if (typeof valArr != "undefined") {
+            hzArr = valArr;
+        } else {
+            hzArr = nowTemp;
+        }
         var hzLength = hzArr.length;
         if (hzLength <= 0) {
             return 0;
@@ -1352,6 +1361,65 @@
     }
 
     /**
+     * 前2直选-组选包胆"
+     */
+    function suiji_q2zuxbd() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = '';
+
+        var arrTsh = [], newArr = [];
+        while (newArr.length < 1) {
+            var zhiTsh = parseInt(Math.random() * 10);
+            newArr.push(zhiTsh);
+        }
+        betZhushu = zhushu_q2zuxbd(newArr);
+        showPlayName = "前二组选-包胆";
+        showContent = "包胆: (" + newArr[0] + ")";
+        betContent = newArr.join("");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+
+    /**
+     * 前2直选-组选和值"
+     */
+    function suiji_q2zuxhz() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = '';
+
+        var arrTsh = [], newArr = [];
+        while (newArr.length < 1) {
+            var zhiTsh = parseInt(Math.random() * 17) + 1;
+            newArr.push(zhiTsh);
+        }
+        betZhushu = zhushu_q2zuxhz(newArr);
+        showPlayName = "前二组选-和值";
+        showContent = "和值: (" + newArr[0] + ")";
+        betContent = newArr.join("");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
      * 前2直选-组选单式"
      */
     function suiji_q2zuxds() {
@@ -1369,9 +1437,9 @@
                 newArr.push(zhiHao2);
             }
         }
-        showPlayName = "前二组选-复式";
-        showContent = "组选: (" + newArr.join(",") + ")";
-        betContent = newArr.join(",");
+        showPlayName = "前二组选-单式";
+        showContent = "号码: (" + newArr.join(",") + ")";
+        betContent = newArr.join("");
 
         return {
             showPlayName: showPlayName,
