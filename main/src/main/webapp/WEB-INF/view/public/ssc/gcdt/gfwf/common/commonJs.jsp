@@ -2744,7 +2744,7 @@
         var dmArr = [];
         $.each($(".recl-1009-zuxbd ul li[data-name = '胆码'] span.acti"), function (index, value) {
             dmArr.push($.trim($(this).find("i").html()));
-        })
+        });
 
         // 初始化变量
         var showPlayName = '';

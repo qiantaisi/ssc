@@ -11,8 +11,8 @@
         <li>
             <b>四星直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_id="499" data-play_pl_id="14209" data-name="4xzxfs" data-suiji_fun="suiji_4xzxfs" data-fun_zhushu="zhushu_4xzxfs" data-fun_content="content_4xzxfs" data-fun_suiji="suiji_4xzxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="500" data-play_pl_id="14210" data-name="4xzxds" data-suiji_fun="suiji_4xzxds" data-fun_zhushu="zhushu_4xzxds" data-fun_content="content_4xzxds" data-fun_suiji="suiji_4xzxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="499" data-play_pl_id="14209" data-name="4xzxfs" data-fun_zhushu="zhushu_4xzxfs" data-fun_content="content_4xzxfs" data-fun_suiji="suiji_4xzxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="500" data-play_pl_id="14210" data-name="4xzxds" data-fun_zhushu="zhushu_4xzxds" data-fun_content="content_4xzxds" data-fun_suiji="suiji_4xzxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
