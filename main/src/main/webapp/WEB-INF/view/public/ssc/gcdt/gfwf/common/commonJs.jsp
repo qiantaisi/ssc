@@ -1881,14 +1881,180 @@
 
     //**********************任选2************************
     /**
-     * 任选2-直选和值
+     * 任选2-组选和值
      */
-    function suiji_rx2zxhz() {
+    function suiji_rx2zuxhz() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var zuxhz = [];
+        var checkArr = [], checkStrArr = [];
+        var newArr = [];
+        //选取选中checkbox
+        $.each($(".re-select-zuxhz input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+        zuxhz.push(parseInt(Math.random() * 17) + 1);
+
+        for (var i = 0; i < zuxhz.length; i++) {
+            for (var x = 0; x < 10; x++) {
+                for (var y = 0; y < 10; y++) {
+                    if ((x + y) == zuxhz[i] && x != y) {
+                        var arr = [];
+                        arr.push(x);
+                        arr.push(y);
+                        arr.sort();
+                        newArr.push(arr.join(""));
+                    }
+                }
+            }
+        }
+        var shu = $("#positioninfo-zuhz").html();
+        showPlayName = "任二直选-组选和值";
+        betZhushu = newArr.length * shu;
+        showContent = "号码: (" + zuxhz[0] + ")";
+        betContent = checkStrArr.join(',') + "|" + zuxhz.join(',');
 
         return {
             showPlayName: showPlayName,
             showContent: showContent,
             betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选2-组选单式
+     */
+    function suiji_rx2zuxds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var checkArr = [], checkStrArr = [];
+        var arr = [];
+
+        while (arr.length < 2) {
+            var num1 = parseInt(Math.random() * 10);
+            var num2 = parseInt(Math.random() * 10);
+            if(num1 != num2){
+                arr.push(num1);
+                arr.push(num2);
+            }
+        }
+
+        //选取选中checkbox
+        $.each($(".re-select-zuxds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var shu = $("#positioninfo-zuds").html();
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+        betZhushu = shu;
+        showPlayName = "任二组选-组选单式";
+        showContent = "号码: (" + arr[0] + "" + arr[1] + ")";
+        betContent = checkStrArr.join(',') + "|" + arr[0] + "" + arr[1];
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选2-组选复式
+     */
+    function suiji_rx2zuxfs() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var arr = [];
+
+        while (arr.length < 2) {
+            var num1 = parseInt(Math.random() * 10);
+            var num2 = parseInt(Math.random() * 10);
+            if (num1 != num2) {
+                arr.push(num1);
+                arr.push(num2);
+            }
+        }
+        var checkArr = [], checkStrArr = [];
+        var shu = $("#positioninfo-zufs").html();
+        //选取选中checkbox
+        $.each($(".recl-1005-fs input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+
+        });
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+
+        showPlayName = "任二组选-组选复式";
+        showContent = "号码: (" + arr[0] + "," + arr[1] + ")";
+        betContent = checkStrArr.join(',') + "|" + arr[0] + "," + arr[1];
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选2-直选和值
+     */
+    function suiji_rx2zxhz() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var hzsj = [];
+        var checkArr = [], checkStrArr = [];
+        //选取选中checkbox
+        $.each($(".recl-1004-hz input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+        hzsj.push(parseInt(Math.random() * 19));
+        var newArr = [];
+        for (var i = 0; i < hzsj.length; i++) {
+            for (var x = 0; x < 10; x++) {
+                for (var y = 0; y < 10; y++) {
+                    if (x + y == hzsj[i]) {
+                        newArr.push(x + "" + y);
+                    }
+                }
+            }
+        }
+
+        var shu = $("#positioninfo-hz").html();
+
+        showPlayName = "任二直选-直选和值";
+        betZhushu = newArr.length * shu;
+        showContent = "号码: (" + hzsj[0] + ")";
+        betContent = checkStrArr.join(',') + "|" + hzsj.join(',');
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
             playGroupId: playGroupId
         };
     }
@@ -1901,37 +2067,32 @@
         var showPlayName = '';
         var showContent = '';
         var betContent = '';
-        var tempArr = [];
+        var betZhushu = 0;
+        var checkArr = [], checkStrArr = [];
         var arr = [];
 
-        for (var i = 0; i <= 9; ++i) {
-            tempArr[i] = 0;
-        }
-
-        while (arr.length != 6) {
+        while (arr.length < 2) {
             var num = parseInt(Math.random() * 10);
-            if (tempArr[num] != 1) {
-                tempArr[num] = 1;
-                arr.push(num);
-            }
+            arr.push(num);
         }
 
-        var checkArr = [], checkStrArr = [];
         //选取选中checkbox
         $.each($(".re-select-ds input[type='checkbox']:checked"), function (index, value) {
             checkArr.push($(this).val());
         });
+
+        var shu = $("#positioninfo-ds").html();
         //获取位数字符串
         checkStrArr = getWeiStr(checkArr);
-
+        betZhushu = shu;
         showPlayName = "任二直选-直选单式";
         showContent = "号码: (" + arr[0] + "" + arr[1] + ")";
         betContent = checkStrArr.join(',') + "|" + arr[0] + "" + arr[1];
-
         return {
             showPlayName: showPlayName,
             showContent: showContent,
             betContent: betContent,
+            betZhushu: betZhushu,
             playGroupId: playGroupId
         };
     }
