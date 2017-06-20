@@ -301,6 +301,54 @@
 <script>
     //=======================注数统计=================================
 
+    function zhushu_dwd(){
+        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
+        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
+            wanArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+            qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        var wanLength = wanArr.length;
+        var qianLength = qianArr.length;
+        var baiLength = baiArr.length;
+        var shiLength = shiArr.length;
+        var geLength = geArr.length;
+
+        if (wanLength <= 0 && qianLength <= 0 && baiLength <= 0 && shiLength <= 0 && geLength <= 0) {
+            return 0;
+        }
+
+        if (wanLength > 0) {
+            newArr = newArr.concat(wanArr);
+        }
+        if (qianLength > 0) {
+            newArr = newArr.concat(qianArr);
+        }
+        if (baiLength > 0) {
+            newArr = newArr.concat(baiArr);
+        }
+        if (shiLength > 0) {
+            newArr = newArr.concat(shiArr);
+        }
+        if (geLength > 0) {
+            newArr = newArr.concat(geArr);
+        }
+
+        return newArr.length;
+    }
+
+    //*************************前2****************************
     /**
      * 注数-组选包胆
      */
@@ -1360,6 +1408,53 @@
         calcAll();
     }
 
+    /**
+     * 定位胆"
+     */
+    function suiji_dwd() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var numArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var xArr = ["万位", "千位", "百位", "十位", "个位"];
+
+        var arr = [];
+        var betStr = '';
+        while (arr.length < 1) {
+            var num1 = parseInt(Math.random() * 5);
+            var num2 = parseInt(Math.random() * 10);
+            var str = xArr[num1];
+            str = str + ": (" + numArr[num2] + ")";
+            arr.push(str);
+            if(num1 == 0){
+                betStr = numArr[num2] + "|" + "|" + "|" + "|";
+            } else if(num1 == 1){
+                betStr = "|" + numArr[num2] + "|" + "|" + "|";
+            } else if(num1 == 2){
+                betStr = "|" + "|" + numArr[num2] + "|" + "|";
+            } else if(num1 == 3){
+                betStr = "|" + "|" + "|" + numArr[num2] +  "|";
+            } else if(num1 == 4){
+                betStr = "|" + "|" + "|" + "|" + numArr[num2];
+            }
+
+        }
+
+        showPlayName = "定位胆-定位胆";
+        showContent = arr[0];
+        betContent = betStr;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    //**********************前二**********************
     /**
      * 前2直选-组选包胆"
      */
@@ -2737,6 +2832,61 @@
         calcAll();
     }
 
+    //**************定位胆***************
+    /**
+     * 定位胆
+     */
+    function content_dwd(){
+        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
+            wanArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+            qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        var wanStr = wanArr.length > 0 ? ("万位: (" + wanArr.join(",") + ")") : "";
+        var qianStr = qianArr.length > 0 ? (" 千位: (" + qianArr.join(",") + ")") : "";
+        var baiStr = baiArr.length > 0 ? (" 百位: (" + baiArr.join(",") + ")") : "";
+        var shiStr = shiArr.length > 0 ?  (" 十位: (" + shiArr.join(",") + ")") : "";
+        var geStr = geArr.length > 0 ? (" 个位: (" + geArr.join(",") + ")") : "";
+
+        var nowArr = [];
+        var strTemp = $.trim(
+            (wanStr == ' ' ? ' ' : wanArr.join(",") + "|") +
+            (qianStr == ' ' ? ' ': qianArr.join(",") + "|") +
+            (baiStr == ' ' ? ' ': baiArr.join(",") + "|") +
+            (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
+            (geStr == ' ' ? ' ': geArr.join(","))
+        );
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "定位胆-定位胆";
+        showContent = $.trim(wanStr + qianStr + baiStr + shiStr + geStr);
+        // 转换投注格式
+        betContent = strTemp;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    //**************前2***************
     /**
      * 前二组选-组选包胆
      */
