@@ -2737,9 +2737,297 @@
         calcAll();
     }
 
+    /**
+     * 前二组选-组选包胆
+     */
+    function content_q2zuxbd(){
+        var dmArr = [];
+        $.each($(".recl-1009-zuxbd ul li[data-name = '胆码'] span.acti"), function (index, value) {
+            dmArr.push($.trim($(this).find("i").html()));
+        })
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "前二组选-包胆";
+        showContent = "包胆: (" + dmArr.join(",") + ")";
+        // 转换投注格式
+        betContent = dmArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
 
     /**
-     * 后三组选-特殊号
+     * 前二组选-组选复式
+     */
+    function content_q2zuxhz(){
+        var hzArr = [];
+        $.each($(".recl-1008-zuxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            hzArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "前二组选-和值";
+        showContent = "和值: (" + hzArr.join(",") + ")";
+        // 转换投注格式
+        betContent = hzArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 前二组选-组选单式
+     */
+    function content_q2zuxds(){
+        var textStr = $(".recl-1007-zuxds .content_jiang .content_tex").val();
+        var newArr = [];
+        var repeatArr = [], errorArr = [], allErrorArr = [], pairArr = [];
+        var errorStr = '';
+        var zhushu = 0;
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
+                var strTemp = "", strTemp1 = "";
+                var str1 = arr_new[i].toString();
+                var str2 = arr_new[i].toString();
+                strTemp = str1.substr(0, 1);
+                strTemp1 = str2.substr(1, 1);
+                if (strTemp != strTemp1) {
+                    var tempArr = [];
+                    tempArr.push(parseInt(strTemp));
+                    tempArr.push(parseInt(strTemp1));
+                    tempArr.sort();
+                    newArr.push(tempArr.join(""));
+                } else {
+                    pairArr.push(arr_new[i]);
+                }
+            } else {
+                if (arr_new[i] != "") {
+                    errorArr.push(arr_new[i]);
+                }
+            }
+        }
+        repeatArr = newArr.duplicate(); //获取重复元素
+
+        if (pairArr.length > 0) {
+            allErrorArr.push("自动过滤对子号码:");
+            for (var p = 0; p < pairArr.length; p++) {
+                allErrorArr.push(pairArr[p]);
+            }
+        }
+        if (repeatArr.length > 0) {
+            allErrorArr.push("自动过滤重复号码:");
+            for (var r = 0; r < repeatArr.length; r++) {
+                allErrorArr.push(repeatArr[r]);
+            }
+        }
+        if (errorArr.length > 0) {
+            allErrorArr.push(" 被过滤掉的错误号码");
+            for (var l = 0; l < errorArr.length; l++) {
+                allErrorArr.push(errorArr[l]);
+            }
+        }
+
+        if (allErrorArr.length > 0) {
+            for (var e = 0; e < allErrorArr.length; e++) {
+                errorStr += allErrorArr[e] + " ";
+            }
+            alert(errorStr);
+        }
+        newArr = newArr.uniqueArr(); //去掉重复值
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "前二组选-单式";
+        showContent = "号码: (" + newArr + ")";
+        // 转换投注格式
+        betContent = newArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 前二组选-组选复式
+     */
+    function content_q2zuxfs(){
+        var zuxArr = [];
+        $.each($(".recl-1006-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
+            zuxArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "前二组选-复式";
+        showContent = "组选: (" + zuxArr.join(",") + ")";
+        // 转换投注格式
+        betContent = zuxArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+
+    /**
+     * 前二直选-直选跨度
+     */
+    function content_q2zxkd(){
+        var kdArr = [];
+        $.each($(".recl-1005-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
+            kdArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "前二直选-跨度";
+        showContent = "跨度: (" + kdArr.join(",") + ")";
+        // 转换投注格式
+        betContent = kdArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 前二直选-直选和值
+     */
+    function content_q2zxhz(){
+        var hzArr = [];
+        $.each($(".recl-1004-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            hzArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "前二直选-和值";
+        showContent = "和值: (" + hzArr.join(",") + ")";
+        // 转换投注格式
+        betContent = hzArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 前二直选-直选单式
+     */
+    function content_q2zxds(){
+        var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+        var newArr = [];
+        var errorArr = [];
+        var errorStr = '';
+        var zhushu = 0;
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
+                newArr.push(arr_new[i]);
+            } else {
+                errorArr.push(arr_new[i]);
+            }
+        }
+
+        if (errorArr.length > 0) {
+            for (var e = 0; e < errorArr.length; e++) {
+                errorStr += errorArr[e] + "";
+            }
+            alert("被过滤掉的错误号码" + errorStr);
+        }
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "前二直选-单式";
+        showContent = "号码: (" + newArr + ")";
+        // 转换投注格式
+        betContent = newArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 前二直选-直选复式
+     */
+    function content_q2zxfs(){
+        var wanArr = [], qianArr = [];
+        $.each($(".recl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".recl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "前二直选-复式";
+        showContent = "万位：({0})，千位：({1})".format(
+            wanArr.join(","),
+            qianArr.join(",")
+        );
+        // 转换投注格式
+        betContent = gfwf_2xfs(
+            wanArr,
+            qianArr
+        );
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    //*************************前三***************************
+    /**
+     * 前三组选-特殊号
      */
     function content_q3tsh(){
         var thArr = [];
