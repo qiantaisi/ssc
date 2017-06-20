@@ -1435,7 +1435,7 @@
             } else if(num1 == 2){
                 betStr = "|" + "|" + numArr[num2] + "|" + "|";
             } else if(num1 == 3){
-                betStr = "|" + "|" + "|" + numArr[num2] +  "|";
+                betStr = "|" + "|" + "|" + numArr[num2] + "|";
             } else if(num1 == 4){
                 betStr = "|" + "|" + "|" + "|" + numArr[num2];
             }
