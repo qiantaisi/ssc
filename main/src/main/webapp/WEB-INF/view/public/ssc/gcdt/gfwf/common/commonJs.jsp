@@ -301,6 +301,223 @@
 <script>
     //=======================注数统计=================================
 
+
+    //******************不定位*******************
+    /**
+     * 注数-五星三码
+     */
+    function zhushu_wx3m(){
+        var budwArr = [];
+        $.each($(".recl-1012-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+        var newArr = [];
+        for (var i = 0; i < budwArr.length; i++) {
+            for (var j = 0; j < budwArr.length; j++) {
+                for (var x = 0; x < budwArr.length; x++) {
+                    if (i != j && j != x && i != x) {
+                        var arr = [];
+                        arr.push(budwArr[i]);
+                        arr.push(budwArr[j]);
+                        arr.push(budwArr[x]);
+                        arr.sort();
+                        newArr.push(arr.join(","));
+                    }
+                }
+            }
+        }
+
+        newArr = newArr.uniqueArr();
+        return newArr.length;
+    }
+
+    /**
+     * 注数-五星二码
+     */
+    function zhushu_wxem(){
+        var budwArr = [];
+        $.each($(".recl-1011-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+        var newArr = [];
+        for (var i = 0; i < budwArr.length; i++) {
+            for (var j = 0; j < budwArr.length; j++) {
+                if (i != j) {
+                    var arr = [];
+                    arr.push(budwArr[i]);
+                    arr.push(budwArr[j]);
+                    arr.sort();
+                    newArr.push(arr.join(","));
+                }
+            }
+        }
+
+        newArr = newArr.uniqueArr();
+        return newArr.length;
+    }
+
+    /**
+     * 注数-五星一码
+     */
+    function zhushu_wxym(){
+        var budwArr = [];
+        $.each($(".recl-1010-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        return budwArr.length;
+    }
+
+    /**
+     * 注数-后四二码
+     */
+    function zhushu_h4em(){
+        var budwArr = [];
+        $.each($(".recl-1009-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+        var newArr = [];
+        for (var i = 0; i < budwArr.length; i++) {
+            for (var j = 0; j < budwArr.length; j++) {
+                if (i != j) {
+                    var arr = [];
+                    arr.push(budwArr[i]);
+                    arr.push(budwArr[j]);
+                    arr.sort();
+                    newArr.push(arr.join(","));
+                }
+            }
+        }
+
+        newArr = newArr.uniqueArr();
+        return newArr.length;
+    }
+
+    /**
+     * 注数-后四一码
+     */
+    function zhushu_h4ym(){
+        var budwArr = [];
+        $.each($(".recl-1008-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        return budwArr.length;
+    }
+
+    /**
+     * 注数-前四二码
+     */
+    function zhushu_q4em(){
+        var budwArr = [];
+        $.each($(".recl-1007-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+        var newArr = [];
+        for (var i = 0; i < budwArr.length; i++) {
+            for (var j = 0; j < budwArr.length; j++) {
+                if (i != j) {
+                    var arr = [];
+                    arr.push(budwArr[i]);
+                    arr.push(budwArr[j]);
+                    arr.sort();
+                    newArr.push(arr.join(","));
+                }
+            }
+        }
+
+        newArr = newArr.uniqueArr();
+        return newArr.length;
+    }
+
+    /**
+     * 注数-前四一码
+     */
+    function zhushu_q4ym(){
+        var budwArr = [];
+        $.each($(".recl-1006-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+        budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        return budwArr.length;
+    }
+
+    /**
+     * 注数-后三二码
+     */
+    function zhushu_hsem(){
+        var budwArr = [];
+        $.each($(".recl-1005-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+        var newArr = [];
+        for (var i = 0; i < budwArr.length; i++) {
+            for (var j = 0; j < budwArr.length; j++) {
+                if (i != j) {
+                    var arr = [];
+                    arr.push(budwArr[i]);
+                    arr.push(budwArr[j]);
+                    arr.sort();
+                    newArr.push(arr.join(","));
+                }
+            }
+        }
+        newArr = newArr.uniqueArr();
+        return newArr.length;
+    }
+
+    /**
+     * 注数-后三一码
+     */
+    function zhushu_hsym(){
+        var budwArr = [];
+        $.each($(".recl-1004-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        return budwArr.length;
+    }
+
+    /**
+     * 注数-前三二码
+     */
+    function zhushu_qsem(){
+        var budwArr = [];
+        $.each($(".recl-1003-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+        var newArr = [];
+        for (var i = 0; i < budwArr.length; i++) {
+            for (var j = 0; j < budwArr.length; j++) {
+                if (i != j) {
+                    var arr = [];
+                    arr.push(budwArr[i]);
+                    arr.push(budwArr[j]);
+                    arr.sort();
+                    newArr.push(arr.join(","));
+                }
+            }
+        }
+        newArr = newArr.uniqueArr();
+        return newArr.length;
+    }
+
+    /**
+     * 注数-前三一码
+     */
+    function zhushu_qsym(){
+        var budwArr = [];
+        $.each($(".cl-1002 ul li[data-name = '不定位'] span.acti"), function (index, value) {
+        budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        return budwArr.length;
+    }
+
+    //*************************定位胆****************************
+    /**
+     * 注数-定位胆
+     */
     function zhushu_dwd(){
         var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
         $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
@@ -344,7 +561,6 @@
         if (geLength > 0) {
             newArr = newArr.concat(geArr);
         }
-
         return newArr.length;
     }
 
@@ -1408,6 +1624,302 @@
         calcAll();
     }
 
+    /**
+     * 不定位-五星三码"
+     */
+    function suiji_wx3m() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var arr = [];
+        while(arr.length < 3){
+            var zhiHao1 = parseInt(Math.random() * 10);
+            var zhiHao2 = parseInt(Math.random() * 10);
+            var zhiHao3 = parseInt(Math.random() * 10);
+            if(zhiHao1 != zhiHao2 && zhiHao2 != zhiHao3 && zhiHao1 != zhiHao3){
+                arr.push(zhiHao1);
+                arr.push(zhiHao2);
+                arr.push(zhiHao3);
+            }
+        }
+
+        showPlayName = "五星-五星三码";
+        showContent = "不定位: (" + zhiHao1 + "," + zhiHao2 + "," + zhiHao3 + ")";
+        betContent = zhiHao1 + "," + zhiHao2 + "," + zhiHao3;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 不定位-五星二码"
+     */
+    function suiji_wxem() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var arr = getRandom2num();
+        var zhiHao1 = arr[0];
+        var zhiHao2 = arr[1];
+
+        showPlayName = "五星-五星二码";
+        showContent = "不定位: (" + zhiHao1 + "," + zhiHao2 + ")";
+        betContent = zhiHao1 + "," + zhiHao2;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 不定位-五星一码"
+     */
+    function suiji_wxym() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var zhiHao1 = parseInt(Math.random() * 10);
+
+        showPlayName = "五星-五星一码";
+        showContent = "不定位: (" + zhiHao1 + ")";
+        betContent = zhiHao1;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 不定位-后四二码"
+     */
+    function suiji_h4em() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var arr = getRandom2num();
+        var zhiHao1 = arr[0];
+        var zhiHao2 = arr[1];
+
+        showPlayName = "四星-后四二码";
+        showContent = "不定位: (" + zhiHao1 + "," + zhiHao2 + ")";
+        betContent = zhiHao1 + "," + zhiHao2;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 不定位-后四一码"
+     */
+    function suiji_h4ym() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var zhiHao1 = parseInt(Math.random() * 10);
+
+        showPlayName = "四星-后四一码";
+        showContent = "不定位: (" + zhiHao1 + ")";
+        betContent = zhiHao1;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 不定位-前四二码"
+     */
+    function suiji_q4em() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var arr = getRandom2num();
+        var zhiHao1 = arr[0];
+        var zhiHao2 = arr[1];
+
+        showPlayName = "四星-前四二码";
+        showContent = "不定位: (" + zhiHao1 + "," + zhiHao2 + ")";
+        betContent = zhiHao1 + "," + zhiHao2;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 不定位-前四一码"
+     */
+    function suiji_q4ym() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var zhiHao1 = parseInt(Math.random() * 10);
+
+        showPlayName = "四星-前四一码";
+        showContent = "不定位: (" + zhiHao1 + ")";
+        betContent = zhiHao1;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 不定位-后三二码"
+     */
+    function suiji_hsem() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var arr = getRandom2num();
+        var zhiHao1 = arr[0];
+        var zhiHao2 = arr[1];
+
+        showPlayName = "三星-后三二码";
+        showContent = "不定位: (" + zhiHao1 + "," + zhiHao2 + ")";
+        betContent = zhiHao1 + "," + zhiHao2;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 不定位-后三一码"
+     */
+    function suiji_hsym() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var arrTsh = [], newArr = [];
+        while (newArr.length < 1) {
+            var zhiTsh = parseInt(Math.random() * 10);
+            newArr.push(zhiTsh);
+        }
+
+        showPlayName = "三星-后三一码";
+        showContent = "不定位: (" + newArr[0] + ")";
+        betContent = newArr.join("");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 不定位-前三二码"
+     */
+    function suiji_qsem() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var arr = getRandom2num();
+        var zhiHao1 = arr[0];
+        var zhiHao2 = arr[1];
+
+        showPlayName = "三星-前三二码";
+        showContent = "不定位: (" + zhiHao1 + "," + zhiHao2 + ")";
+        betContent = zhiHao1 + "," + zhiHao2;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    //获取两位0到9之间的随机数
+    function getRandom2num(){
+        var arr = [];
+        while(arr.length < 2){
+            var zhiHao1 = parseInt(Math.random() * 10);
+            var zhiHao2 = parseInt(Math.random() * 10);
+            if(zhiHao1 != zhiHao2){
+                arr.push(zhiHao1);
+                arr.push(zhiHao2);
+            }
+        }
+        return arr;
+    }
+
+    /**
+     * 不定位-前三一码"
+     */
+    function suiji_qsym() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        var arrTsh = [], newArr = [];
+        while (newArr.length < 1) {
+            var zhiTsh = parseInt(Math.random() * 10);
+            newArr.push(zhiTsh);
+        }
+
+        showPlayName = "三星-前三一码";
+        showContent = "不定位: (" + newArr[0] + ")";
+        betContent = newArr.join("");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    //**************定位胆***************
     /**
      * 定位胆"
      */
@@ -2830,6 +3342,295 @@
         clearStateTouZhu();
         addYuxuan(obj);
         calcAll();
+    }
+
+    //**************不定位***************
+
+    /**
+     * 不定位-五星三码
+     */
+    function content_wx3m(){
+        var budwArr = [];
+        $.each($(".recl-1012-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "五星-五星三码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 不定位-五星二码
+     */
+    function content_wxem(){
+        var budwArr = [];
+        $.each($(".recl-1011-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "五星-五星二码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 不定位-五星一码
+     */
+    function content_wxym(){
+        var budwArr = [];
+        $.each($(".recl-1010-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "五星-五星一码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+
+    /**
+     * 不定位-后三二码
+     */
+    function content_h4em(){
+        var budwArr = [];
+        $.each($(".recl-1009-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "四星-后四二码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 不定位-后四一码
+     */
+    function content_h4ym(){
+        var budwArr = [];
+        $.each($(".recl-1008-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "四星-后四一码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 不定位-前四二码
+     */
+    function content_q4em(){
+        var budwArr = [];
+        $.each($(".recl-1007-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "四星-前四二码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 不定位-前四一码
+     */
+    function content_q4ym(){
+        var budwArr = [];
+        $.each($(".recl-1006-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "四星-前四一码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 不定位-后三二码
+     */
+    function content_hsem(){
+        var budwArr = [];
+        $.each($(".recl-1005-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "三星-后三二码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 不定位-后三一码
+     */
+    function content_hsym(){
+        var budwArr = [];
+        $.each($(".recl-1004-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "三星-后三一码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 不定位-前三二码
+     */
+    function content_qsem(){
+        var budwArr = [];
+        $.each($(".recl-1003-budw ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "三星-前三二码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",")
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
+    }
+
+    /**
+     * 不定位-前三一码
+     */
+    function content_qsym(){
+        var budwArr = [];
+        $.each($(".cl-1002 ul li[data-name = '不定位'] span.acti"), function (index, value) {
+            budwArr.push($.trim($(this).find("i").html()));
+        });
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "三星-前三一码";
+        showContent = "不定位: (" + budwArr.join(",") + ")";
+        // 转换投注格式
+        betContent = budwArr.join(",")
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent
+        };
     }
 
     //**************定位胆***************
