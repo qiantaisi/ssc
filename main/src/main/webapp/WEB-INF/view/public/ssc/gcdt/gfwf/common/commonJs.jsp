@@ -49,6 +49,18 @@
             renderZhushu();
         });
 
+        //位置选择
+        $(".selposition label input").click(function(){
+            var flag = $(this).parent().parent().attr("data-flag");
+            var obj = $(this).parent().parent();
+            if(typeof flag != "undefined" && flag == "wei-r2"){
+                //方案id
+                var fnId = $(obj).attr("data-name");
+                getZuChengFangAnR2(obj,fnId);
+            }
+            renderZhushu();
+        });
+
         // 加减号
         initJjh();
 
@@ -118,6 +130,35 @@
 //            $(this).addClass("my-slide-theme-focus");
 //        });
     }
+
+    //任选2 组成方案获取函数
+    function getZuChengFangAnR2(obj, fnId) {
+        //选中位置自动获取组成方案-直选单式
+        var arrTemp = [];
+        $(obj).find("input[type='checkbox']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length == 3) {
+            $("#positioninfo-"+ fnId +"").html(3);
+            $("#positioncount-"+ fnId +"").html(3);
+        } else if (arrTemp.length == 4) {
+            $("#positioninfo-"+ fnId +"").html(6);
+            $("#positioncount-"+ fnId +"").html(4);
+        } else if (arrTemp.length == 5) {
+            $("#positioninfo-"+ fnId +"").html(10);
+            $("#positioncount-"+ fnId +"").html(5);
+        } else if (arrTemp.length == 2) {
+            $("#positioninfo-"+ fnId +"").html(1);
+            $("#positioncount-"+ fnId +"").html(2);
+        } else if (arrTemp.length == 1) {
+            $("#positioninfo-"+ fnId +"").html(0);
+            $("#positioncount-"+ fnId +"").html(1);
+        } else {
+            $("#positioninfo-"+ fnId +"").html(0);
+            $("#positioncount-"+ fnId +"").html(0);
+        }
+    }
+
 
     function initJjh() {
         $(".Single .layout .add_spot .left .sopt_wrap .down .down_menu i").click(function () {
@@ -301,6 +342,220 @@
 <script>
     //=======================注数统计=================================
 
+    //******************任选2*******************
+    /**
+     * 注数-组选和值
+     */
+    function zhushu_rx2zuxhz(){
+        var hzArr = [];
+        $.each($(".recl-1007-zuxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            hzArr.push($.trim($(this).find("i").html()));
+        });
+
+        if (hzArr.length <= 0) {
+            return 0;
+        }
+        var newArr = [];
+        for (var i = 0; i < hzArr.length; i++) {
+            for (var x = 0; x < 10; x++) {
+                for (var y = 0; y < 10; y++) {
+                    if ((x + y) == hzArr[i] && x != y) {
+                        var arr = [];
+                        arr.push(x);
+                        arr.push(y);
+                        arr.sort();
+                        newArr.push(arr.join(""));
+                    }
+                }
+            }
+        }
+        newArr = newArr.uniqueArr();
+        var zhushu = newArr.length;
+        var shu = $("#positioninfo-zuhz").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+    }
+
+    /**
+     * 注数-直选单式
+     */
+    function zhushu_rx2zuxds(){
+        var checkStrArr = [], checkArr = [];
+        var zhushu = 0;
+        //选取选中checkbox
+        $.each($(".re-select-zuxds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var errorStr = '';
+        var repeatArr = [], allErrorArr = [];
+        var errorArr = [], arrTemp = [];
+        var textStr = $(".recl-1006-zuxds .content_jiang .content_tex").val();
+        var newArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
+                var oneStr = (arr_new[i].toString()).substr(0, 1);
+                var twoStr = (arr_new[i].toString()).substr(1, 1);
+                var arr = [];
+                arr.push(parseInt(oneStr));
+                arr.push(parseInt(twoStr));
+                arr.sort();
+                newArr.push(arr.join(""));
+            }
+        }
+
+        repeatArr = newArr.duplicate(); //重复号码
+        newArr = newArr.uniqueArr();
+        var temp = newArr.length;
+        var shu = $("#positioninfo-zuds").html();
+        zhushu = temp * shu;
+        return zhushu;
+    }
+
+    /**
+     * 注数-组选复式
+     */
+    function zhushu_rx2zuxfs(){
+        var zuArr = [];
+        var tempArr = [];
+        $.each($(".recl-1005-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
+            zuArr.push($.trim($(this).find("i").html()));
+        });
+
+        var zuLength = zuArr.length;
+
+        if (zuLength < 2) {
+            return;
+        }
+
+        for (var i = 0; i < zuArr.length; i++) {
+            for (var i1 = 0; i1 < zuArr.length; i1++) {
+                if (zuArr[i] != zuArr[i1]) {
+                    var arr = [];
+                    arr.push(zuArr[i]);
+                    arr.push(zuArr[i1]);
+                    arr.sort();
+                    tempArr.push(arr.join(""));
+                }
+            }
+        }
+
+        tempArr = tempArr.uniqueArr();
+        var zhushu = tempArr.length;
+        var shu = $("#positioninfo-zufs").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+    }
+
+    /**
+     * 注数-直选和值
+     */
+    function zhushu_rx2zxhz(){
+        var hzArr = [];
+        var newArr = [];
+        $.each($(".recl-1004-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            hzArr.push($.trim($(this).find("i").html()));
+        });
+
+        if (hzArr.length <= 0) {
+            return 0;
+        }
+        for (var i = 0; i < hzArr.length; i++) {
+            for (var x = 0; x < 10; x++) {
+                for (var y = 0; y < 10; y++) {
+                    if (x + y == hzArr[i]) {
+                        newArr.push(x + "" + y);
+                    }
+                }
+            }
+        }
+        var zhushu = newArr.length;
+        var shu = $("#positioninfo-hz").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+    }
+
+    /**
+     * 注数-直选单式
+     */
+    function zhushu_rx2zxds(){
+        var checkStrArr = [], checkArr = [];
+        var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
+        //选取选中checkbox
+        $.each($(".re-select-ds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+        var newArr = [], arrTemp = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
+                newArr.push(arr_new[i]);
+            }
+        }
+
+        var temp = newArr.length;
+        var shu = $("#positioninfo-ds").html();
+        var zhushu = temp * shu;
+        return zhushu;
+    }
+
+    /**
+     * 注数-直选复式
+     */
+    function zhushu_rx2zxfs(){
+        var arrNew = [], tempArr = [];
+        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
+            wanArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+            qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        if (wanArr.length > 0) {
+            arrNew.push(wanArr);
+        }
+        if (qianArr.length > 0) {
+            arrNew.push(qianArr);
+        }
+        if (baiArr.length > 0) {
+            arrNew.push(baiArr);
+        }
+        if (shiArr.length > 0) {
+            arrNew.push(shiArr);
+        }
+        if (geArr.length > 0) {
+            arrNew.push(geArr);
+        }
+
+        if (arrNew.length < 2) {
+            return 0;
+        }
+
+        for (var i = 0; i < arrNew.length; i++) {
+            for (var i1 = 0; i1 < arrNew[i].length; i1++) {
+                for (var x = i + 1; x < arrNew.length; x++) {
+                    for (var n = 0; n < arrNew[x].length; n++) {
+                        tempArr.push(arrNew[i][i1] + "" + arrNew[x][n]);
+                    }
+                }
+            }
+        }
+        return tempArr.length;
+
+    }
 
     //******************不定位*******************
     /**
@@ -1624,6 +1879,102 @@
         calcAll();
     }
 
+    //**********************任选2************************
+    /**
+     * 任选2-直选和值
+     */
+    function suiji_rx2zxhz() {
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选2-直选单式
+     */
+    function suiji_rx2zxds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var tempArr = [];
+        var arr = [];
+
+        for (var i = 0; i <= 9; ++i) {
+            tempArr[i] = 0;
+        }
+
+        while (arr.length != 6) {
+            var num = parseInt(Math.random() * 10);
+            if (tempArr[num] != 1) {
+                tempArr[num] = 1;
+                arr.push(num);
+            }
+        }
+
+        var checkArr = [], checkStrArr = [];
+        //选取选中checkbox
+        $.each($(".re-select-ds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+
+        showPlayName = "任二直选-直选单式";
+        showContent = "号码: (" + arr[0] + "" + arr[1] + ")";
+        betContent = checkStrArr.join(',') + "|" + arr[0] + "" + arr[1];
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选2-直选复式
+     */
+    function suiji_rx2zxfs() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var tempArr = [];
+        var arr = [];
+
+        for (var i = 0; i <= 9; ++i) {
+            tempArr[i] = 0;
+        }
+
+        while (arr.length != 6) {
+            var num = parseInt(Math.random() * 10);
+            if (tempArr[num] != 1) {
+                tempArr[num] = 1;
+                arr.push(num);
+            }
+        }
+
+        showPlayName = "任二直选-直选复式";
+        showContent = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+        betContent = arr[0] + "|" + arr[1] + "|" + arr[2] + "|" + arr[3] + "|" + arr[4];
+        betZhushu = 10;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    //**********************不定位************************
     /**
      * 不定位-五星三码"
      */
