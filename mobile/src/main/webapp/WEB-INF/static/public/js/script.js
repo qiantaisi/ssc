@@ -7358,10 +7358,8 @@ function selectFun_4(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
-    var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var Barr = [, 1, , 3, , 5, , 7, , 9];
-    for (var i = 0; i < 10; ++i) {
-        if (Aarr[i] == Barr[i]) {
+    for (var i = 0; i < 10; i++) {
+        if (i%2 != 0) {
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
     }
@@ -7371,10 +7369,8 @@ function selectFun_5(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
-    var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var Barr = [0, , 2, , 4, , 6, , 8];
     for (var i = 0; i < 10; ++i) {
-        if (Aarr[i] == Barr[i]) {
+        if (i%2 == 0) {
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
     }
