@@ -2648,7 +2648,7 @@
 
         if(checkArr.length < 4){
             alert("[任选四]至少需要选择4个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-zux12").html();
@@ -2697,7 +2697,7 @@
 
         if(checkArr.length < 4){
             alert("[任选四]至少需要选择4个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-zux24").html();
@@ -2743,7 +2743,7 @@
 
         if(checkArr.length < 4){
             alert("[任选四]至少需要选择4个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-ds").html();
