@@ -5223,76 +5223,76 @@
         calcAll();
     }
 
-//    function content_rx4zxds() {
-//        var errorStr = '';
-//        var repeatArr = [], allErrorArr = [];
-//        var errorArr = [];
-//        var checkArr = [], checkStrArr = [];
-//        var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
-//        var newArr = [];
-//        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
-//        var arr_new = textStr.split(",");
-//        for (var i = 0; i < arr_new.length; i++) {
-//            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
-//                newArr.push(arr_new[i]);
-//            }else{
-//                if(arr_new[i] != ""){
-//                    errorArr.push(arr_new[i]);
-//                }
-//            }
-//        }
-//
-//        repeatArr = newArr.duplicate(); //重复号码
-//        newArr = newArr.uniqueArr();
-//        var arrTemp = [];
-//        $(".re-select-ds input[name='position_ds']:checked").each(function () {
-//            checkArr.push($(this).val());
-//        });
-//
-//        if (arrTemp.length < 4) {
-//            alert("[任选四]至少需要选择4个位置");
-//            return -1;
-//        }
-//
-//        //获取位数字符串
-//        checkStrArr = getNoWeiStr(checkArr);
-//
-//        if (repeatArr.length > 0) {
-//            allErrorArr.push("自动过滤重复号码:");
-//            for(var r = 0; r < repeatArr.length; r++){
-//                allErrorArr.push(repeatArr[r]);
-//            }
-//        }
-//        if (errorArr.length > 0) {
-//            allErrorArr.push(" 被过滤掉的错误号码");
-//            for (var l = 0; l < errorArr.length; l++) {
-//                allErrorArr.push(errorArr[l]);
-//            }
-//        }
-//
-//        if (allErrorArr.length > 0) {
-//            for (var e = 0; e < allErrorArr.length; e++) {
-//                errorStr += allErrorArr[e] + " ";
-//            }
-//            alert(errorStr);
-//        }
-//
-//        // 初始化变量
-//        var showPlayName = '';
-//        var showContent = '';
-//        var betContent = '';
-//
-//        showPlayName = "任四直选-直选单式";
-//        showContent = "号码: (" + newArr.join(",") + ")";
-//        betContent = checkStrArr.join(',') + "|" + newArr.join(",");
-//
-//        return {
-//            showPlayName: showPlayName,
-//            showContent: showContent,
-//            betContent: betContent,
-//            playGroupId: playGroupId
-//        }
-//    }
+    function content_rx4zxds() {
+        var errorStr = '';
+        var repeatArr = [], allErrorArr = [];
+        var errorArr = [];
+        var checkArr = [], checkStrArr = [];
+        var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
+        var newArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+                newArr.push(arr_new[i]);
+            }else{
+                if(arr_new[i] != ""){
+                    errorArr.push(arr_new[i]);
+                }
+            }
+        }
+
+        repeatArr = newArr.duplicate(); //重复号码
+        newArr = newArr.uniqueArr();
+        var arrTemp = [];
+        $(".re-select-ds input[name='position_ds']:checked").each(function () {
+            checkArr.push($(this).val());
+        });
+
+        if (arrTemp.length < 4) {
+            alert("[任选四]至少需要选择4个位置");
+            return -1;
+        }
+
+        //获取位数字符串
+        checkStrArr = getNoWeiStr(checkArr);
+
+        if (repeatArr.length > 0) {
+            allErrorArr.push("自动过滤重复号码:");
+            for(var r = 0; r < repeatArr.length; r++){
+                allErrorArr.push(repeatArr[r]);
+            }
+        }
+        if (errorArr.length > 0) {
+            allErrorArr.push(" 被过滤掉的错误号码");
+            for (var l = 0; l < errorArr.length; l++) {
+                allErrorArr.push(errorArr[l]);
+            }
+        }
+
+        if (allErrorArr.length > 0) {
+            for (var e = 0; e < allErrorArr.length; e++) {
+                errorStr += allErrorArr[e] + " ";
+            }
+            alert(errorStr);
+        }
+
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+
+        showPlayName = "任四直选-直选单式";
+        showContent = "号码: (" + newArr.join(",") + ")";
+        betContent = checkStrArr.join(',') + "|" + newArr.join(",");
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            playGroupId: playGroupId
+        }
+    }
 
     //**************任选3***************
     /**
