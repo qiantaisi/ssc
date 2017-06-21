@@ -5223,7 +5223,7 @@
         calcAll();
     }
 
-    function content_rx4zxds() {
+//    function content_rx4zxds() {
 //        var errorStr = '';
 //        var repeatArr = [], allErrorArr = [];
 //        var errorArr = [];
@@ -5292,7 +5292,7 @@
 //            betContent: betContent,
 //            playGroupId: playGroupId
 //        }
-    }
+//    }
 
     //**************任选3***************
     /**
