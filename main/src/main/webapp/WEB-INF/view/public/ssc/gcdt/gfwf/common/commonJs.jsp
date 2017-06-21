@@ -4578,9 +4578,7 @@
 
         var data = eval(contentFun + "()");
         var zhushu = eval(zhushuFun + "()");
-        if(dta){
-
-        }
+        
         if (typeof data == 'undefined' || typeof zhushu == 'undefined' || zhushu <= 0) {
             alert("号码选择不完整，请重新选择");
             return;
