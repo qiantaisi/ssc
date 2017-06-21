@@ -140,11 +140,7 @@ $(function () {
                 registerUser(account, password, name, info);
             }
 
-            if (typeof YDB != "undefined") {
-                YDB.GetDeviceInformation("DoWithDeviceInformation");
-            } else {
-                registerUser(account, password, name, "");
-            }
+            registerUser(account, password, name, Tools.getCookie("deviceNo"));
         });
 
         function registerUser(account, password, name, deviceNo) {
