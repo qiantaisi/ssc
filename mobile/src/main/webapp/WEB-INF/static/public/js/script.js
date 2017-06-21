@@ -7387,11 +7387,12 @@ function selectFun_6(obj) {
 }
 //数字单选算法
 function danSelect(obj) {
-    if ($(obj).parent().find(".cus-flex-item .xz").is("active_gfwf")) {
+    if ($(obj).parent().find(".wan_bottom .cus-flex-item .xz").hasClass("active_gfwf")) {
         $(obj).parent().find(".cus-flex-item .xz").removeClass("active_gfwf");
     } else {
         $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
     }
+    $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
 }
 
 $(function () {     //官方玩法，彩种玩法选择点击事件
