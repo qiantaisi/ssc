@@ -7385,6 +7385,14 @@ function selectFun_6(obj) {
     $(obj).parent().find(".xz i").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
 }
+//数字单选算法
+function danSelect(obj) {
+    if ($(obj).parent().find(".cus-flex-item .xz").is("active_gfwf")) {
+        $(obj).parent().find(".cus-flex-item .xz").removeClass("active_gfwf");
+    } else {
+        $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+    }
+}
 
 $(function () {     //官方玩法，彩种玩法选择点击事件
         $(".gfwf_xz .staer a").click(
