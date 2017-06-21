@@ -344,6 +344,7 @@ ding {
     margin: 0.6em;
     line-height: 2.5em;
     text-align: center;
+    color: red;
 }
 
 .wrap .cus_common .wan_bottom .cus-flex-item .xz {
@@ -352,9 +353,8 @@ ding {
     height: 2.5em;
     border: 1px solid #dddddd;
     border-radius: 50%;
-    color: red;
 }
-
+.wrap .cus_common .wan_bottom .cus-flex-item .num{}
 .wrap .cus_common .wan_bottom .cus-flex-item .pl {
     color: #838383;
 }
@@ -407,7 +407,10 @@ ding {
     border-radius: 50%;
     color: red;
 }
-
+.active_gfwf2{
+    color: #fff;
+    background: red;
+}
 .staer {
     line-height: 1.2rem;
     width: 100%;
