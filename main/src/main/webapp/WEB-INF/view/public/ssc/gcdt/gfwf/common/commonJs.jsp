@@ -53,10 +53,12 @@
         $(".selposition label input").click(function(){
             var flag = $(this).parent().parent().attr("data-flag");
             var obj = $(this).parent().parent();
+            var fnId = $(obj).attr("data-name");   //方案id
+
             if(typeof flag != "undefined" && flag == "wei-r2"){
-                //方案id
-                var fnId = $(obj).attr("data-name");
                 getZuChengFangAnR2(obj,fnId);
+            } else if(typeof flag != "undefined" && flag == "wei-r3"){
+                getZuChengFangAnR3(obj,fnId);
             }
             renderZhushu();
         });
@@ -149,6 +151,35 @@
             $("#positioncount-"+ fnId +"").html(5);
         } else if (arrTemp.length == 2) {
             $("#positioninfo-"+ fnId +"").html(1);
+            $("#positioncount-"+ fnId +"").html(2);
+        } else if (arrTemp.length == 1) {
+            $("#positioninfo-"+ fnId +"").html(0);
+            $("#positioncount-"+ fnId +"").html(1);
+        } else {
+            $("#positioninfo-"+ fnId +"").html(0);
+            $("#positioncount-"+ fnId +"").html(0);
+        }
+    }
+
+
+    //任选3 组成方案获取函数
+    function getZuChengFangAnR3(obj, fnId) {
+        //选中位置自动获取组成方案-直选单式
+        var arrTemp = [];
+        $(obj).find("input[type='checkbox']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length == 3) {
+            $("#positioninfo-"+ fnId +"").html(1);
+            $("#positioncount-"+ fnId +"").html(3);
+        } else if (arrTemp.length == 4) {
+            $("#positioninfo-"+ fnId +"").html(4);
+            $("#positioncount-"+ fnId +"").html(4);
+        } else if (arrTemp.length == 5) {
+            $("#positioninfo-"+ fnId +"").html(10);
+            $("#positioncount-"+ fnId +"").html(5);
+        } else if (arrTemp.length == 2) {
+            $("#positioninfo-"+ fnId +"").html(0);
             $("#positioncount-"+ fnId +"").html(2);
         } else if (arrTemp.length == 1) {
             $("#positioninfo-"+ fnId +"").html(0);
@@ -341,6 +372,350 @@
 </script>
 <script>
     //=======================注数统计=================================
+
+    //******************任选3*******************
+    /**
+     * 注数-组选和值
+     */
+    function zhushu_rx3zuxhz(){
+        var hzArr = [];
+        $.each($(".recl-1010-zuxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            hzArr.push($.trim($(this).find("i").html()));
+        });
+
+        if (hzArr.length <= 0) {
+            return 0;
+        }
+
+        var newArr = [];
+        for (var i = 0; i < hzArr.length; i++) {
+            for (var x = 0; x < 10; x++) {
+                for (var y = 0; y < 10; y++) {
+                    for (var y1 = 0; y1 < 10; y1++) {
+                        if (x + y + y1 == hzArr[i] && !(x == y && x == y1 && y == y1)) {
+                            var arr = [];
+                            arr.push(x);
+                            arr.push(y);
+                            arr.push(y1);
+                            arr.sort();
+                            newArr.push(arr.join(""));
+                        }
+                    }
+                }
+            }
+        }
+
+        newArr = newArr.uniqueArr();
+        var zhushu = newArr.length;
+        var shu = $("#positioninfo-zuxhz").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+    }
+
+    /**
+     * 注数-混合组合
+     */
+    function zhushu_rx3hhzux(){
+        var zhushu = 0;
+        var arrTemp = [];
+        var checkArr = [], checkStrArr = [];
+        //选取选中checkbox
+        $.each($(".re-select-hhzux input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var textStr = $(".recl-1009-hhzux .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        for (var n = 0; n < newArr.length; n++) {
+            var arr = [];
+            var temp = newArr[n].toString();
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            arr.push(oneStr);
+            arr.push(twoStr);
+            arr.push(threeStr);
+            arr.sort();
+            if (!(twoStr == threeStr && oneStr == threeStr && twoStr == oneStr)) {
+                tempArr.push(arr.join(""));
+            }
+        }
+        tempArr = tempArr.uniqueArr(); // 去掉重复号码
+
+        zhushu = tempArr.length;
+        var tempNum = $("#positioninfo-hhzux").html();
+        zhushu = tempNum * zhushu;
+        return zhushu;
+    }
+
+    /**
+     * 注数-组六单式
+     */
+    function zhushu_rx3z6ds(){
+        var zhushu = 0;
+        var arrTemp = [];
+        var checkArr = [], checkStrArr = [];
+        //选取选中checkbox
+        $.each($(".re-select-zu6ds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var textStr = $(".recl-1008-zu6ds .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [], errorStr = '', errorArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            }
+        }
+        for (var n = 0; n < newArr.length; n++) {
+            var arr = [];
+            var temp = newArr[n].toString();
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            arr.push(oneStr);
+            arr.push(twoStr);
+            arr.push(threeStr);
+            arr.sort();
+            if (twoStr != threeStr && oneStr != threeStr && twoStr != oneStr) {
+                tempArr.push(arr.join(""));
+            }
+        }
+
+        tempArr = tempArr.uniqueArr(); // 去掉重复号码
+
+        zhushu = tempArr.length;
+        var tempNum = $("#positioninfo-zu6ds").html();
+        zhushu = tempNum * zhushu;
+        return zhushu;
+    }
+
+    /**
+     * 注数-组六复式
+     */
+    function zhushu_rx3z6fs(){
+        var fuShiArr = [], newArr = [];
+        $.each($(".recl-1007-zu6fs ul li[data-name = '组六'] span.acti"), function (index, value) {
+            fuShiArr.push($.trim($(this).find("i").html()));
+        });
+        var zlLength = fuShiArr.length;
+        if (zlLength < 3) {
+            return 0;
+        }
+
+        newArr = getZuLiuNewArrs(fuShiArr);
+        var zhushu = newArr.length;
+        var shu = $("#positioninfo-zu6fs").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+    }
+
+    /**
+     * 注数-组三单式
+     */
+    function zhushu_rx3z3ds(){
+        var zhushu = 0;
+        var repeatArr = [], allErrorArr = [];
+        var errorArr = [], arrTemp = [];
+        var textStr = $(".recl-1006-zu3ds .content_jiang .content_tex").val();
+        var newArr = [], tempArr = [];
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+
+        var checkArr = [], checkStrArr = [];
+        //选取选中checkbox
+        $.each($(".re-select-zu3ds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var arr_new = textStr.split(",");
+
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            } else {
+                errorArr.push(arr_new[i]);
+            }
+        }
+
+        for (var n = 0; n < newArr.length; n++) {
+            var arr = [];
+            var temp = newArr[n].toString();
+            var oneStr = temp.substr(0, 1);
+            var twoStr = temp.substr(1, 1);
+            var threeStr = temp.substr(2, 1);
+            arr.push(oneStr);
+            arr.push(twoStr);
+            arr.push(threeStr);
+            arr.sort();
+            if (oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr) {
+                tempArr.push(arr.join(""));
+            } else {
+                errorArr.push(newArr[n]);
+            }
+        }
+        tempArr = tempArr.uniqueArr(); // 去掉重复号码
+
+        zhushu = tempArr.length;
+        var tempNum = $("#positioninfo-zu3ds").html();
+        zhushu = tempNum * zhushu;
+        return zhushu;
+    }
+
+    /**
+     * 注数-组三复式
+     */
+    function zhushu_rx3z3fs(){
+        var zuArr = [];
+        $.each($(".recl-1005-zu3fs ul li[data-name = '组三'] span.acti"), function (index, value) {
+            zuArr.push($.trim($(this).find("i").html()));
+        });
+        var tempArr = [];
+        for (var i = 0; i < zuArr.length; i++) {
+            for (var i1 = 0; i1 < zuArr.length; i1++) {
+                if (zuArr[i] != zuArr[i1]) {
+                    tempArr.push(zuArr[i] + "" + zuArr[i1]);
+                }
+            }
+
+        }
+        var shu = $("#positioninfo-zu3fs").html();
+        var lengthArr = tempArr.length * shu;
+        return lengthArr;
+    }
+
+    /**
+     * 注数-直选和值
+     */
+    function zhushu_rx3zxhz(){
+        var hzArr = [];
+        $.each($(".recl-1004-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
+            hzArr.push($.trim($(this).find("i").html()));
+        });
+
+        if (hzArr.length <= 0) {
+            return 0;
+        }
+
+        var newArr = [];
+        for (var i = 0; i < hzArr.length; i++) {
+            for (var x = 0; x < 10; x++) {
+                for (var y = 0; y < 10; y++) {
+                    for (var y1 = 0; y1 < 10; y1++) {
+                        if (x + y + y1 == hzArr[i]) {
+                            newArr.push(x + "" + y + "" + y1);
+                        }
+                    }
+                }
+            }
+        }
+
+        var zhushu = newArr.length;
+        var shu = $("#positioninfo-hz").html();
+        var lengthArr = zhushu * shu;
+        return lengthArr;
+    }
+
+    /**
+     * 注数-直选单式
+     */
+    function zhushu_rx3zxds(){
+        var errorStr = '';
+        var allErrorArr = [];
+        var errorArr = [];
+        var newArr = [];
+        var checkArr = [], checkStrArr = [];
+        //选取选中checkbox
+        $.each($(".re-select-ds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
+        var shu = $("#positioninfo-ds").html();
+        var zhushu = 0;
+
+        textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+
+        var arr_new = textStr.split(",");
+        for (var i = 0; i < arr_new.length; i++) {
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
+                newArr.push(arr_new[i]);
+            }
+        }
+
+        newArr = newArr.uniqueArr(); //去掉重复代码
+
+        var temp = newArr.length;
+        zhushu = temp * shu;
+        return zhushu;
+    }
+
+    /**
+     * 注数-直选复式
+     */
+    function zhushu_rx3zxfs(){
+        var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
+        $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
+            wanArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+            qianArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+            baiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+            shiArr.push($.trim($(this).find("i").html()));
+        });
+        $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+            geArr.push($.trim($(this).find("i").html()));
+        });
+
+        var numArr = [];
+        var indexArr = [wanArr, qianArr, baiArr, shiArr, geArr];
+
+        if (wanArr.length > 0) {
+            numArr.push(0);
+        }
+        if (qianArr.length > 0) {
+            numArr.push(1);
+        }
+        if (baiArr.length > 0) {
+            numArr.push(2);
+        }
+        if (shiArr.length > 0) {
+            numArr.push(3);
+        }
+        if (geArr.length > 0) {
+            numArr.push(4);
+        }
+
+        if (numArr.length < 3) {
+            return 0;
+        }
+
+        var tmpArr = getFlagArrs(numArr, 3);
+        var result = 0;
+        $.each(tmpArr, function (index, value) {
+            var tmpResult = 0;
+            var tmpIndexArr = value.split(" ");
+            $.each(tmpIndexArr, function (index2, value2) {
+                tmpResult = tmpResult == 0 ? 1 : tmpResult;
+                tmpResult *= indexArr[parseInt(value2)].length;
+
+            });
+            result += tmpResult;
+        });
+        return result;
+    }
 
     //******************任选2*******************
     /**
@@ -1879,6 +2254,334 @@
         calcAll();
     }
 
+
+    //**********************任选3***********************
+    /**
+     * 任选3-混合组选
+     */
+    function suiji_rx3hhzx() {
+//        // 初始化变量
+//        var showPlayName = '';
+//        var showContent = '';
+//        var betContent = '';
+//        var betZhushu = 0;
+//        var checkStrArr = [], checkArr = [];
+//        var arrZu6 = [];
+//        while (arrZu6.length < 1) {
+//            var x1 = parseInt(Math.random() * 10);
+//            var x2 = parseInt(Math.random() * 10);
+//            var x3 = parseInt(Math.random() * 10);
+//            if (!(x1 == x2 && x2 == x3 && x3 == x2)) {
+//                arrZu6.push(x1 + "" + x2 + "" + x3);
+//            }
+//        }
+//        //选取选中checkbox
+//        $.each($(".re-select-hhzux input[type='checkbox']:checked"), function (index, value) {
+//            checkArr.push($(this).val());
+//        });
+//
+//        var shu = $("#positioninfo-hhzux").html();
+//        //获取位数字符串
+//        checkStrArr = getWeiStr(checkArr);
+//        showPlayName = "任三直选-混合组选";
+//        showContent = "号码: (" + arrZu6[0] + ")";
+//        betContent = checkStrArr.join(',') + "|" + arrZu6[0];
+//        betZhushu = shu;
+//
+//        return {
+//            showPlayName: showPlayName,
+//            showContent: showContent,
+//            betContent: betContent,
+//            betZhushu: betZhushu,
+//            playGroupId: playGroupId
+//        };
+    }
+
+    /**
+     * 任选3-组六单式
+     */
+    function suiji_rx3z6ds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var checkStrArr = [], checkArr = [];
+        var arrZu6 = [];
+        while (arrZu6.length < 1) {
+            var x1 = parseInt(Math.random() * 10);
+            var x2 = parseInt(Math.random() * 10);
+            var x3 = parseInt(Math.random() * 10);
+            if (x1 != x2 && x2 != x3 && x3 != x2) {
+                arrZu6.push(x1 + "" + x2 + "" + x3);
+            }
+        }
+        //选取选中checkbox
+        $.each($(".re-select-zu6ds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var shu = $("#positioninfo-zu6ds").html();
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+        showPlayName = "任三直选-组六单式";
+        showContent = "号码: (" + arrZu6[0] + ")";
+        betContent = checkStrArr.join(',') + "|" + arrZu6[0];
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选3-组六复式
+     */
+    function suiji_rx3z6fs() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var checkStrArr = [], checkArr = [];
+        var arrZu6 = [];
+        while (arrZu6.length < 1) {
+            var x1 = parseInt(Math.random() * 10);
+            var x2 = parseInt(Math.random() * 10);
+            var x3 = parseInt(Math.random() * 10);
+            if (x1 != x2 && x2 != x3 && x3 != x2) {
+                arrZu6.push(x1 + "," + x2 + "," + x3);
+            }
+        }
+        //选取选中checkbox
+        $.each($(".re-select-zu6fs input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var shu = $("#positioninfo-zu6fs").html();
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+        showPlayName = "任三直选-组六复式";
+        showContent = "号码: (" + arrZu6[0] + ")";
+        betContent = checkStrArr.join(',') + "|" + arrZu6[0];
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+
+    /**
+     * 任选3-组三单式
+     */
+    function suiji_rx3z3ds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var arrZu3ds = [];
+        var checkStrArr = [], checkArr = [];
+        while (arrZu3ds.length < 1) {
+            var num1 = parseInt(Math.random() * 10);
+            var num2 = parseInt(Math.random() * 10);
+            var num3 = parseInt(Math.random() * 10);
+            if (num1 == num2 && num2 != num3 || num2 == num3 && num3 != num1 || num3 == num1 && num1 != num2) {
+                arrZu3ds.push(num1 + "" + num2 + "" + num3);
+            }
+        }
+        //选取选中checkbox
+        $.each($(".re-select-zu3ds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var shu = $("#positioninfo-zu3ds").html();
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+        showPlayName = "任三直选-组三单式";
+        showContent = "号码: (" + arrZu3ds[0] + ")";
+        betContent = checkStrArr.join(',') + "|" + arrZu3ds[0];
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选3-组三复式
+     */
+    function suiji_rx3z3fs() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var arr = [];
+        var checkStrArr = [], checkArr = [];
+
+        while (arr.length < 2) {
+            var num1 = parseInt(Math.random() * 10);
+            var num2 = parseInt(Math.random() * 10);
+            if (num1 != num2) {
+                arr.push(num1);
+                arr.push(num2);
+            }
+
+        }
+        //选取选中checkbox
+        $.each($(".recl-1005-zu3Rx3 input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var shu = $("#positioninfo-zu3fs").html();
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+        showPlayName = "任三直选-组三复式";
+        showContent = "号码: (" + arr[0] + "," + arr[1] + ")";
+        betContent = checkStrArr.join(',') + "|" + arr[0] + "," + arr[1];
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选3-直选和值
+     */
+    function suiji_rx3zxhz(){
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var hzArr = [], checkStrArr = [], checkArr = [];
+
+        while (hzArr.length < 1) {
+            var num1 = parseInt(Math.random() * 28);
+            hzArr.push(num1);
+        }
+        var newArr = [];
+        for (var i = 0; i < hzArr.length; i++) {
+            for (var x = 0; x < 10; x++) {
+                for (var y = 0; y < 10; y++) {
+                    for (var y1 = 0; y1 < 10; y1++) {
+                        if (x + y + y1 == hzArr[i]) {
+                            newArr.push(x + "" + y + "" + y1);
+                        }
+                    }
+                }
+            }
+        }
+
+        //选取选中checkbox
+        $.each($(".re-select-hz input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var shu = $("#positioninfo-hz").html();
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+        showPlayName = "任三直选-直选和值";
+        showContent = "号码: (" + hzArr[0] +")";;
+        betContent =  hzArr[0];
+        betZhushu = shu * newArr.length;;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+
+    /**
+     * 任选3-直选单式
+     */
+    function suiji_rx3zxds(){
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var arr = [], checkStrArr = [], checkArr = [];
+
+        while (arr.length < 3) {
+            var num1 = parseInt(Math.random() * 10);
+            arr.push(num1);
+        }
+        //选取选中checkbox
+        $.each($(".re-select-ds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        var shu = $("#positioninfo-ds").html();
+        //获取位数字符串
+        checkStrArr = getWeiStr(checkArr);
+        showPlayName = "任三直选-直选复式";
+        showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + ")";
+        betContent =  checkStrArr.join(',') + "|" +  arr[0] + "" + arr[1] + "" + arr[2];
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选3-直选复式
+     */
+    function suiji_rx3zxfs(){
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var arr = [];
+
+        while (arr.length < 5) {
+            var num1 = parseInt(Math.random() * 10);
+            arr.push(num1);
+        }
+
+        showPlayName = "任三直选-直选复式";
+        showContent = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+        betContent = arr[0] + "|" + arr[1] + "|" + arr[2] + "|" + arr[3] + "|" + arr[4];
+        betZhushu = 10;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
     //**********************任选2************************
     /**
      * 任选2-组选和值
@@ -2113,12 +2816,9 @@
             tempArr[i] = 0;
         }
 
-        while (arr.length != 6) {
+        while (arr.length < 5) {
             var num = parseInt(Math.random() * 10);
-            if (tempArr[num] != 1) {
-                tempArr[num] = 1;
-                arr.push(num);
-            }
+            arr.push(num);
         }
 
         showPlayName = "任二直选-直选复式";
@@ -4122,12 +4822,6 @@
         $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
             geArr.push($.trim($(this).find("i").html()));
         });
-        var zhushu = getRx2zxfsZhushu(wanArr, qianArr, baiArr, shiArr, geArr);
-
-        if (zhushu <= 0) {
-            alert("至少选择1注号码才能投注");
-            return false;
-        }
 
         var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : '';
         var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : '';
