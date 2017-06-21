@@ -2656,7 +2656,7 @@
             checkArr.push($(this).val());
         });
         //获取位数字符串
-        checkStrArr = getWeiStr(checkArr);
+        checkStrArr = getNoWeiStr(checkArr);
         zuxhz.push(parseInt(Math.random() * 17) + 1);
 
         for (var i = 0; i < zuxhz.length; i++) {
@@ -2672,6 +2672,7 @@
                 }
             }
         }
+        newArr = newArr.uniqueArr();
         var shu = $("#positioninfo-zuhz").html();
         showPlayName = "任二直选-组选和值";
         betZhushu = newArr.length * shu;
@@ -2715,7 +2716,7 @@
 
         var shu = $("#positioninfo-zuds").html();
         //获取位数字符串
-        checkStrArr = getWeiStr(checkArr);
+        checkStrArr = getNoWeiStr(checkArr);
         betZhushu = shu;
         showPlayName = "任二组选-组选单式";
         showContent = "号码: (" + arr[0] + "" + arr[1] + ")";
@@ -2756,7 +2757,7 @@
 
         });
         //获取位数字符串
-        checkStrArr = getWeiStr(checkArr);
+        checkStrArr = getNoWeiStr(checkArr);
 
         showPlayName = "任二组选-组选复式";
         showContent = "号码: (" + arr[0] + "," + arr[1] + ")";
@@ -2789,7 +2790,7 @@
         });
 
         //获取位数字符串
-        checkStrArr = getWeiStr(checkArr);
+        checkStrArr = getNoWeiStr(checkArr);
         hzsj.push(parseInt(Math.random() * 19));
         var newArr = [];
         for (var i = 0; i < hzsj.length; i++) {
@@ -2842,7 +2843,7 @@
 
         var shu = $("#positioninfo-ds").html();
         //获取位数字符串
-        checkStrArr = getWeiStr(checkArr);
+        checkStrArr = getNoWeiStr(checkArr);
         betZhushu = shu;
         showPlayName = "任二直选-直选单式";
         showContent = "号码: (" + arr[0] + "" + arr[1] + ")";
@@ -4578,7 +4579,11 @@
 
         var data = eval(contentFun + "()");
         var zhushu = eval(zhushuFun + "()");
-        
+
+        if(data == -1){
+            return;
+        }
+
         if (typeof data == 'undefined' || typeof zhushu == 'undefined' || zhushu <= 0) {
             alert("号码选择不完整，请重新选择");
             return;
@@ -4621,7 +4626,7 @@
         var hzArr = [];
         var checkArr = [], checkStrArr = [];
         //选取选中checkbox
-        $.each($(".re-select-hz input[type='checkbox']:checked"), function (index, value) {
+        $.each($(".recl-1004-hz input[type='checkbox']:checked"), function (index, value) {
             checkArr.push($(this).val());
         });
         //获取位数字符串
@@ -4632,7 +4637,7 @@
 
         if (checkArr.length < 3) {
             alert("[任选三]至少需要选择3个位置");
-            return false;
+            return -1;
         }
 
         // 初始化变量
@@ -4687,7 +4692,7 @@
 
         if (checkArr.length < 3) {
             alert("[任选三]至少需要选择3个位置");
-            return false;
+            return -1;
         }
 
         if (repeatArr.length > 0) {
@@ -4790,7 +4795,7 @@
             checkArr.push($(this).val());
         });
         //获取位数字符串
-        checkStrArr = getWeiStr(checkArr);
+        checkStrArr = getNoWeiStr(checkArr);
         $.each($(".recl-1007-zuxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
             hzArr.push($.trim($(this).find("i").html()));
         });
@@ -4800,7 +4805,7 @@
         });
         if (arrTemp.length < 2) {
             alert("[任选二]至少需要选择2个位置");
-            return false;
+            return -1;
         }
 
         // 初始化变量
@@ -4830,7 +4835,7 @@
             checkArr.push($(this).val());
         });
         //获取位数字符串
-        checkStrArr = getWeiStr(checkArr);
+        checkStrArr = getNoWeiStr(checkArr);
 
         var errorStr = '';
         var repeatArr = [], allErrorArr = [];
@@ -4860,7 +4865,7 @@
 
         if (checkArr.length < 2) {
             alert("[任选二]至少需要选择2个位置");
-            return false;
+            return -1;
         }
 
         if (repeatArr.length > 0) {
@@ -4881,6 +4886,14 @@
                 errorStr += allErrorArr[e] + " ";
             }
             alert(errorStr);
+        }
+
+        $(".re-select-zuxds input[type='checkbox']:checked").each(function () {
+            arrTemp.push($(this).val());
+        });
+        if (arrTemp.length < 2) {
+            alert("[任选二]至少需要选择2个位置");
+            return -1;
         }
 
         // 初始化变量
@@ -4910,7 +4923,7 @@
             checkArr.push($(this).val());
         });
         //获取位数字符串
-        checkStrArr = getWeiStr(checkArr);
+        checkStrArr = getNoWeiStr(checkArr);
 
         var zuArr = [], arrTemp = [];
         $.each($(".recl-1005-zuxfs ul li[data-name = '组选'] span.acti"), function (index, value) {
@@ -4919,7 +4932,7 @@
 
         if (checkArr.length < 2) {
             alert("[任选二]至少需要选择2个位置");
-            return false;
+            return -1;
         }
 
         // 初始化变量
@@ -4952,14 +4965,14 @@
             checkArr.push($(this).val());
         });
         //获取位数字符串
-        checkStrArr = getWeiStr(checkArr);
+        checkStrArr = getNoWeiStr(checkArr);
 
         $(".recl-1004-zxhz input[name='position_hz']:checked").each(function () {
             arrTemp.push($(this).val());
         });
         if (arrTemp.length < 2) {
             alert("[任选二]至少需要选择2个位置");
-            return false;
+            return -1;
         }
 
         // 初始化变量
@@ -5005,7 +5018,7 @@
         });
         if (arrTemp.length < 2) {
             alert("[任选二]至少需要选择2个位置");
-            return false;
+            return -1;
         }
 
         // 初始化变量
@@ -7374,7 +7387,7 @@
                     <span>倍</span>
                 </div>
                 <div class="down">
-                    <input type="text" value="2元" id="inputMoney" data-money="2">
+                    <input type="text" value="2元" id="inputMoney" data-money="2" disabled="disabled">
                     <span></span>
                     <div class="down_menu">
                         <i>2元</i>
