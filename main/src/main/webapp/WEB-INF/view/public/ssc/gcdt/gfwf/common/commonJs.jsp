@@ -2302,7 +2302,7 @@
 
         if(checkArr.length < 3){
             alert("[任选三]至少需要选择3个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-zuxhz").html();
@@ -2347,7 +2347,7 @@
         });
         if(checkArr.length < 3){
             alert("[任选三]至少需要选择3个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-hhzux").html();
@@ -2393,7 +2393,7 @@
 
         if(checkArr.length < 3){
             alert("[任选三]至少需要选择3个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-zu6ds").html();
@@ -2438,7 +2438,7 @@
         });
         if(checkArr.length < 3){
             alert("[任选三]至少需要选择3个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-zu6fs").html();
@@ -2484,7 +2484,7 @@
         });
         if(checkArr.length < 3){
             alert("[任选三]至少需要选择3个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-zu3ds").html();
@@ -2531,7 +2531,7 @@
         });
         if(checkArr.length < 3){
             alert("[任选三]至少需要选择3个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-zu3fs").html();
@@ -2585,7 +2585,7 @@
         });
         if(checkArr.length < 3){
             alert("[任选三]至少需要选择3个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-hz").html();
@@ -2627,7 +2627,7 @@
         });
         if(checkArr.length < 3){
             alert("[任选三]至少需要选择3个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-ds").html();
@@ -2696,7 +2696,7 @@
         });
         if(checkArr.length < 2){
             alert("[任选二]至少需要选择2个位置");
-            retutn -1;
+            return -1;
         }
 
         //获取位数字符串
@@ -2759,7 +2759,7 @@
         });
         if(checkArr.length < 2){
             alert("[任选二]至少需要选择2个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-zuds").html();
@@ -2805,7 +2805,7 @@
         });
         if(checkArr.length < 2){
             alert("[任选二]至少需要选择2个位置");
-            retutn -1;
+            return -1;
         }
 
         //获取位数字符串
@@ -2842,7 +2842,7 @@
         });
         if(checkArr.length < 2){
             alert("[任选二]至少需要选择2个位置");
-            retutn -1;
+            return -1;
         }
 
         //获取位数字符串
@@ -2898,7 +2898,7 @@
         });
         if(checkArr.length < 2){
             alert("[任选二]至少需要选择2个位置");
-            retutn -1;
+            return -1;
         }
 
         var shu = $("#positioninfo-ds").html();
