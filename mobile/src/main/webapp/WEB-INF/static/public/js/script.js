@@ -7392,6 +7392,7 @@ function danSelect(obj) {
     } else {
         $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
     }
+    $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
 }
 
 $(function () {     //官方玩法，彩种玩法选择点击事件
