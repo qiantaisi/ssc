@@ -11,8 +11,8 @@
         <li>
             <b>五星直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_id="497" data-play_pl_id="14207" data-name="5xzxfs" data-suiji_fun="suiji_5xzxfs" data-fun_zhushu="zhushu_5xzxfs" data-fun_content="content_5xzxfs" data-fun_suiji="suiji_5xzxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="498" data-play_pl_id="14208" data-name="5xzxds" data-suiji_fun="suiji_5xzxds" data-fun_zhushu="zhushu_5xzxds" data-fun_content="content_5xzxds" data-fun_suiji="suiji_5xzxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="497" data-play_pl_id="14207" data-name="5xzxfs" data-fun_zhushu="zhushu_5xzxfs" data-fun_content="content_5xzxfs" data-fun_suiji="suiji_5xzxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="498" data-play_pl_id="14208" data-name="5xzxds" data-fun_zhushu="zhushu_5xzxds" data-fun_content="content_5xzxds" data-fun_suiji="suiji_5xzxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
