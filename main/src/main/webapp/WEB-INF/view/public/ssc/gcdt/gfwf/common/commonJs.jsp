@@ -2520,6 +2520,280 @@
         calcAll();
     }
 
+    //**********************任选4***********************
+    /**
+     * 任选4-组选4
+     */
+    function suiji_rx4zu4() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var checkStrArr = [], checkArr = [];
+        var arrZux4 = [], str1 = '',  str2 = '';
+        while (arrZux4.length < 1) {
+            var x1 = parseInt(Math.random() * 10);
+            var x2 = parseInt(Math.random() * 10);
+            if (x1 != x2) {
+                arrZux4.push("三重号: (" + x1 + "), 单号: (" + x2 + ")");
+                str1 = x1;
+                str2 = x2;
+            }
+        }
+
+        //选取选中checkbox
+        $.each($(".re-select-zux4 input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        if(checkArr.length < 4){
+            alert("[任选四]至少需要选择4个位置");
+            return -1;
+        }
+
+        var shu =  $("#positioninfo-zux4").html();
+        //获取位数字符串
+        checkStrArr = getNoWeiStr(checkArr);
+        showPlayName = "任四组选-组选4";
+        showContent = arrZux4.join("");
+        betContent = checkStrArr.join(',') + "|" + str1 + "|" + str2;
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        }
+    }
+
+    /**
+     * 任选4-组选6
+     */
+    function suiji_rx4zu6() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var checkStrArr = [], checkArr = [];
+        var arrZux6 = [];
+        var str1 = '', str2 = '';
+        ;        while (arrZux6.length < 1) {
+            var x1 = parseInt(Math.random() * 10);
+            var x2 = parseInt(Math.random() * 10);
+            if (x1 != x2) {
+                arrZux6.push("二重号: (" + x1 + "," + x2 + ")");
+                str1 = x1;
+                str2 = x2;
+            }
+        }
+
+        //选取选中checkbox
+        $.each($(".re-select-zux6 input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        if(checkArr.length < 4){
+            alert("[任选四]至少需要选择4个位置");
+            return -1;
+        }
+
+        var shu =  $("#positioninfo-zux6").html();
+        //获取位数字符串
+        checkStrArr = getNoWeiStr(checkArr);
+        showPlayName = "任四组选-组选6";
+        showContent = arrZux6.join("");
+        betContent = checkStrArr.join(',') + "|" + str1 + "," + str2;
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选4-组选12
+     */
+    function suiji_rx4zu12() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var checkStrArr = [], checkArr = [];
+        var arrZux12 = [];
+        var str1 = '', str2 = '';
+        while (arrZux12.length < 1) {
+            var x1 = parseInt(Math.random() * 10);
+            var x2 = parseInt(Math.random() * 10);
+            var x3 = parseInt(Math.random() * 10);
+            if (x1 != x2 && x1 != x3 && x2 != x3) {
+                arrZux12.push("二重号: (" + x1 + "), " + "单号: (" + x2 + "," + x3 + ")");
+                str1 = x1;
+                str2 = x2 + "," + x3;
+            }
+        }
+
+        //选取选中checkbox
+        $.each($(".re-select-zux12 input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        if(checkArr.length < 4){
+            alert("[任选四]至少需要选择4个位置");
+            retutn -1;
+        }
+
+        var shu = $("#positioninfo-zux12").html();
+        //获取位数字符串
+        checkStrArr = getNoWeiStr(checkArr);
+        showPlayName = "任四组选-组选12";
+        showContent = arrZux12.join("");
+        betContent = checkStrArr.join(',') + "|" + str1 + "|" + str2;
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选4-组选24
+     */
+    function suiji_rx4zu24() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var checkStrArr = [], checkArr = [];
+        var arrZu6 = [];
+        var arrZux24 = [];
+        while (arrZux24.length < 1) {
+            var x1 = parseInt(Math.random() * 10);
+            var x2 = parseInt(Math.random() * 10);
+            var x3 = parseInt(Math.random() * 10);
+            var x4 = parseInt(Math.random() * 10);
+            if (x1 != x2 && x1 != x3 && x1 != x4 && x2 != x3 && x2 != x4 && x3 != x4) {
+                arrZux24.push(x1 + "," + x2 + "," + x3 + "," + x4);
+            }
+        }
+
+        //选取选中checkbox
+        $.each($(".re-select-zux24 input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        if(checkArr.length < 4){
+            alert("[任选四]至少需要选择4个位置");
+            retutn -1;
+        }
+
+        var shu = $("#positioninfo-zux24").html();
+        //获取位数字符串
+        checkStrArr = getNoWeiStr(checkArr);
+        showPlayName = "任四组选-组选24";
+        showContent = "组选24: (" + arrZux24.join("") + ")";
+        betContent = checkStrArr.join(',') + "|" + arrZux24.join(",");
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选4-直选单式
+     */
+    function suiji_rx4zxds() {
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var checkStrArr = [], checkArr = [];
+        var arrZu6 = [];
+        while (arrZu6.length < 1) {
+            var x1 = parseInt(Math.random() * 10);
+            var x2 = parseInt(Math.random() * 10);
+            var x3 = parseInt(Math.random() * 10);
+            var x4 = parseInt(Math.random() * 10);
+            arrZu6.push(x1 + "" + x2 + "" + x3 + "" + x4);
+
+        }
+        //选取选中checkbox
+        $.each($(".re-select-ds input[type='checkbox']:checked"), function (index, value) {
+            checkArr.push($(this).val());
+        });
+
+        if(checkArr.length < 4){
+            alert("[任选四]至少需要选择4个位置");
+            retutn -1;
+        }
+
+        var shu = $("#positioninfo-ds").html();
+        //获取位数字符串
+        checkStrArr = getNoWeiStr(checkArr);
+        showPlayName = "任四直选-直选单式";
+        showContent = "号码: (" + arrZu6[0] + ")";
+        betContent = checkStrArr.join(',') + "|" + arrZu6[0];
+        betZhushu = shu;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+    /**
+     * 任选4-直选复式
+     */
+    function suiji_rx4zxfs(){
+        // 初始化变量
+        var showPlayName = '';
+        var showContent = '';
+        var betContent = '';
+        var betZhushu = 0;
+        var arr = [];
+
+        while (arr.length < 5) {
+            var num1 = parseInt(Math.random() * 10);
+            arr.push(num1);
+        }
+
+        showPlayName = "任四直选-直选复式";
+        showContent = "万位: " + arr[0] + " 千位: " + arr[1] + " 百位: " + arr[2] + " 十位: " + arr[3] + " 个位: " + arr[4];
+        betContent =  arr[0] + '|' + arr[1] + '|' + arr[2] + '|' + arr[3] + '|' + arr[4];
+        betZhushu = 5;
+
+        return {
+            showPlayName: showPlayName,
+            showContent: showContent,
+            betContent: betContent,
+            betZhushu: betZhushu,
+            playGroupId: playGroupId
+        };
+    }
+
+
 
     //**********************任选3***********************
 
