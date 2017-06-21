@@ -7359,7 +7359,7 @@ function selectFun_4(obj) {
     $(obj).parent().find(".xz i").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
     for (var i = 0; i < 10; i++) {
-        if (i%2 != 0) {
+        if (i%2 != 0) {   //奇数
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
     }
@@ -7370,7 +7370,7 @@ function selectFun_5(obj) {
     $(obj).parent().find(".xz i").removeClass("active_gfwf");
     $(obj).addClass("active_gfwf");
     for (var i = 0; i < 10; ++i) {
-        if (i%2 == 0) {
+        if (i%2 == 0) {   //偶数
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
     }
