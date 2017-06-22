@@ -245,7 +245,7 @@ var PatternUtils = {
 };
 
 var ajaxRequest = function (obj) {
-    var data = new Array();
+    var data = new Array();       //创建一个空数组对象
     if (typeof obj.url != "string") {
         return;
     }

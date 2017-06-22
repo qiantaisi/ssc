@@ -21,19 +21,19 @@
         <div class="wan_bottom">
             <div class="cus-flex-item">
                 <span class="xz">大</span>
-                <span class="pl">8.8</span>
+                            
             </div>
             <div class="cus-flex-item">
                 <span class="xz">小</span>
-                <span class="pl">8.8</span>
+                            
             </div>
             <div class="cus-flex-item">
                 <span class="xz">单</span>
-                <span class="pl">8.8</span>
+                            
             </div>
             <div class="cus-flex-item">
                 <span class="xz">双</span>
-                <span class="pl">8.8</span>
+                            
             </div>
         </div>
     </div>
@@ -49,19 +49,19 @@
         <div class="wan_bottom">
             <div class="cus-flex-item">
                 <span class="xz">大</span>
-                <span class="pl">8.8</span>
+                            
             </div>
             <div class="cus-flex-item">
                 <span class="xz">小</span>
-                <span class="pl">8.8</span>
+                            
             </div>
             <div class="cus-flex-item">
                 <span class="xz">单</span>
-                <span class="pl">8.8</span>
+                            
             </div>
             <div class="cus-flex-item">
                 <span class="xz">双</span>
-                <span class="pl">8.8</span>
+                            
             </div>
         </div>
     </div>
@@ -78,19 +78,19 @@
         <div class="wan_bottom">
             <div class="cus-flex-item">
                 <span class="xz">大</span>
-                <span class="pl">8.8</span>
+                            
             </div>
             <div class="cus-flex-item">
                 <span class="xz">小</span>
-                <span class="pl">8.8</span>
+                            
             </div>
             <div class="cus-flex-item">
                 <span class="xz">单</span>
-                <span class="pl">8.8</span>
+                            
             </div>
             <div class="cus-flex-item">
                 <span class="xz">双</span>
-                <span class="pl">8.8</span>
+                            
             </div>
         </div>
     </div>

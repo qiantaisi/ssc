@@ -10,8 +10,8 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="x_wrap">
-    <div class="x_1">
-        <span>五星直选</span>
+    <div class="x_1 gfwf-title">
+        <span>五星-直选复式</span>
     </div>
     <div class="x_2">
         <span><img src="${resPath}img/ico22.png"/></span>
@@ -32,7 +32,7 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page">
             <span class="staer1">直选复式</span>
         </a>
     </div>
@@ -43,7 +43,7 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" href="<%=basePath%>ssc/gcdt/cqssc/wx/zxfs.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html" data-name="五星-直选复式">
             <span class="staer1">直选复式</span>
         </a>
     </div>
@@ -54,7 +54,7 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html" data-name="四星-直选复式">
             <span class="staer1">直选复式</span>
         </a>
     </div>
@@ -65,10 +65,10 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html" data-name="直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html">
             <span class="staer1">直选和值</span>
         </a>
         <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
