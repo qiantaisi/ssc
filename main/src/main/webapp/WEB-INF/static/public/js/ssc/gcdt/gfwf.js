@@ -5941,7 +5941,6 @@ function suiji_h3dxds() {
 // 官方玩法数据转换，转换为提交格式
 //===============================获取内容算法===================================
 function tjzd() {
-    console.log("---------------"+ getPlayPlFun_content());
     var contentFun = getPlayPlFun_content();    // 内容算法
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
     if (typeof contentFun == 'undefined' || typeof zhushuFun == 'undefined') {
@@ -5988,7 +5987,99 @@ function tjzd() {
     addYuxuan(obj);
     calcAll();
 }
+//**************任选4***************
+/**
+ * 任选4-组选24
+ */
+function content_rx4zu24() {
+    var zu24Arr = [];
+    var checkArr = [], checkStrArr = [];
+    $.each($(".recl-1004-zux24 ul li[data-name = '组选24'] span.acti"), function (index, value) {
+        zu24Arr.push($.trim($(this).find("i").html()));
+    });
 
+    $(".re-select-zux24 input[type='checkbox']:checked").each(function () {
+        checkArr.push($(this).val());
+    });
+
+    if (checkArr.length < 4) {
+        alert("[任选四]至少需要选择4个位置");
+        return -1;
+    }
+    //获取位数字符串
+    checkStrArr = getNoWeiStr(checkArr);
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任四组选-组选24";
+    showContent = "组选24: (" + zu24Arr.join(",") + ")";
+    betContent = checkStrArr.join(',') + "|" + zu24Arr.join(",");
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    }
+}
+
+/**
+ * 任选4-直选单式
+ */
+function content_rx4zxfs() {
+    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).find("i").html()));
+    });
+    $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).find("i").html()));
+    });
+    $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
+        baiArr.push($.trim($(this).find("i").html()));
+    });
+    $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
+        shiArr.push($.trim($(this).find("i").html()));
+    });
+    $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
+        geArr.push($.trim($(this).find("i").html()));
+    });
+
+    var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : '';
+    var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : '';
+    var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : '';
+    var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : '';
+    var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : '';
+
+    var strTemp = $.trim(
+        (wanStr == ' ' ? ' ' : wanArr.join(",") + "|") +
+        (qianStr == ' ' ? ' ' : qianArr.join(",") + "|") +
+        (baiStr == ' ' ? ' ' : baiArr.join(",") + "|") +
+        (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
+        (geStr == ' ' ? ' ' : geArr.join(","))
+    );
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任四直选-直选复式";
+    showContent = $.trim(wanStr + qianStr + baiStr + shiStr + geStr);
+    betContent = strTemp;
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    }
+}
+/**
+ * 任选4-直选单式
+ */
 function content_rx4zxds() {
     var errorStr = '';
     var repeatArr = [], allErrorArr = [];
@@ -6011,11 +6102,11 @@ function content_rx4zxds() {
     repeatArr = newArr.duplicate(); //重复号码
     newArr = newArr.uniqueArr();
     var arrTemp = [];
-    $(".re-select-ds input[name='position_ds']:checked").each(function () {
+    $(".re-select-ds input[type='checkbox']:checked").each(function () {
         checkArr.push($(this).val());
     });
 
-    if (arrTemp.length < 4) {
+    if (checkArr.length < 4) {
         alert("[任选四]至少需要选择4个位置");
         return -1;
     }
