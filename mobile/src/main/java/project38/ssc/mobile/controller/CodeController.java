@@ -17,9 +17,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
 
-/**
- * Created by Administrator on 2016/11/24.
- */
+
 @Controller
 @RequestMapping("/code")
 public class CodeController {
@@ -116,5 +114,4 @@ public class CodeController {
         ImageIO.write(buffImg, "jpeg", sos);
         sos.close();
     }
-
 }
