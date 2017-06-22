@@ -143,7 +143,8 @@ $(function () {
                     password: $.md5(password),
                     name: name,
                     agentId: Tools.getCookie("agentId"),
-                    deviceNo: deviceNo
+                    deviceNo: deviceNo,
+                    yzm: $("#yzm").val()
                 },
                 beforeSend: function () {
                     Tools.showLoading("注册中...");
