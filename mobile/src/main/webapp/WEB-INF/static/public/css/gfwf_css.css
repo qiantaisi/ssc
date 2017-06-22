@@ -333,6 +333,7 @@ ding {
 }
 
 .wrap .cus_common .wan_bottom {
+    line-height: 5.5em;
     background: #fff;
     border-bottom: 1px solid #dddddd;
     padding: 0.1rem;
@@ -342,15 +343,15 @@ ding {
 .wrap .cus_common .wan_bottom .cus-flex-item {
     display: inline-block;
     margin: 2.22%;
-    line-height: 2.5em;
+    line-height: 2.8em;
     text-align: center;
     color: red;
 }
 
 .wrap .cus_common .wan_bottom .cus-flex-item .xz {
     display: block;
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.8em;
+    height: 2.8em;
     border: 1px solid #dddddd;
     border-radius: 50%;
 }
