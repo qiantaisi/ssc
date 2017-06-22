@@ -1,12 +1,9 @@
 package project38.ssc.mobile.controller;
 
-<<<<<<< HEAD
+
 /**
  * Created by Administrator on 2017/6/22.
  */
-public class CodeController {
-}
-=======
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,9 +18,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
 
-/**
- * Created by Administrator on 2016/11/24.
- */
+
 @Controller
 @RequestMapping("/code")
 public class CodeController {
@@ -122,6 +117,4 @@ public class CodeController {
         ImageIO.write(buffImg, "jpeg", sos);
         sos.close();
     }
-
 }
->>>>>>> 8012d66043c6c2e92fbd17bb13aaa72d61cfa283

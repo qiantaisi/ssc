@@ -76,7 +76,8 @@
                                 <div class="item-inner">
                                     <div class="item-input">
                                         <input type="text" placeholder="验证码" name="yzm" id="yzm" style="">
-                                        <img src="<%=basePath%>code/yzm" alt="" onclick="this.src='<%=basePath%>code/yzm'">
+                                        <img src="<%=basePath%>code/yzm" alt=""
+                                             onclick="this.src='<%=basePath%>code/yzm'">
                                     </div>
                                 </div>
                             </div>
