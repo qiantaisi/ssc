@@ -108,6 +108,13 @@ public class SscController extends BaseController {
         return this.renderPublicView("ssc/gcdt/" + group + "/" + play, modelMap);
     }
 
+    @RequestMapping(value = "/gcdt/gfwf/{group}/{playName}/{play}.html", method = RequestMethod.GET)
+    public ModelAndView gcdtGfwfGroupPlay(@PathVariable String group, @PathVariable String playName, @PathVariable String play) throws UserException {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        return this.renderPublicView("ssc/gcdt/gfwf/" + group + "/"  + playName + "/" + play, modelMap);
+    }
+
+
     @Authentication
     @RequestMapping(value = "/ajaxBet.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody

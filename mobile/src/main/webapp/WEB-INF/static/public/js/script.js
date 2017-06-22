@@ -7398,10 +7398,47 @@ $(function () {     //官方玩法，彩种玩法选择点击事件
                 $(".gfwf_xz .staer a").find("span").addClass("staer1");
                 $(this).find("span").removeClass("staer1");
                 $(this).find("span").addClass("zxfs");
+
+                var namePage = $(this).attr("data-name");
+                var url = $(this).attr("data-url");
+                console.log(url);
+                getSubGfwfSscPage(url, function(){
+                    $(".gfwf-title span").html(namePage);
+                });
+
             }
         );
     }
 );
+
+
+function getSubGfwfSscPage(url, callback) {
+    ajaxRequest({
+        url: url,
+        dataType: "html",
+        type: "GET",
+        beforeSend: function () {
+            Tools.showLoading("加载中...");
+        },
+        success: function (html) {
+            $("#betContainer_gfwf").html(html);
+            if (typeof callback == 'function') {
+                callback();
+            }
+        },
+        error: function (a, b, c) {
+            if (b == 'timeout') {
+                Tools.toast("操作超时，请稍后重试");
+                return;
+            }
+
+            Tools.toast("请求错误，请稍后重试");
+        },
+        complete: function () {
+            Tools.hideLoading();
+        }
+    });
+}
 
 $(function () {    //彩中玩法选中后，隐藏覆盖的模块
         $(".gfwf_xz .staer a").click(
