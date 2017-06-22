@@ -5989,6 +5989,129 @@ function tjzd() {
 }
 //**************任选4***************
 /**
+ * 任选4-组选4
+ */
+function content_rx4zu4() {
+    var sanChongHaoArr = [], danHaoArr = [];
+    var checkStrArr = [], checkArr = [];
+
+    $.each($(".recl-1007-zux4 ul li[data-name = '三重号'] span.acti"), function (index, value) {
+        sanChongHaoArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1007-zux4 ul li[data-name = '单号'] span.acti"), function (index, value) {
+        danHaoArr.push($.trim($(this).find("i").html()));
+    });
+
+    $(".re-select-zux4 input[name='position_zux4']:checked").each(function () {
+        checkArr.push($(this).val());
+    });
+
+    if (checkArr.length < 4) {
+        alert("[任选四]至少需要选择4个位置");
+        return -1;
+    }
+    //获取位数字符串
+    checkStrArr = getNoWeiStr(checkArr);
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任四组选-组选4";
+    showContent = "三重号: (" + sanChongHaoArr.join(",") + "), " + "单号: (" + danHaoArr.join(",") + ")";
+    betContent = checkStrArr.join(',') + "|" + sanChongHaoArr.join(",") + "|" + danHaoArr.join(",");
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    }
+}
+
+/**
+ * 任选4-组选6
+ */
+function content_rx4zu6() {
+    var erChongHaoArr = [];
+    var checkStrArr = [], checkArr = [];
+    $.each($(".recl-1006-zux6 ul li[data-name = '二重号'] span.acti"), function (index, value) {
+        erChongHaoArr.push($.trim($(this).find("i").html()));
+    });
+
+    $(".re-select-zux6 input[name='position_zux6']:checked").each(function () {
+        checkArr.push($(this).val());
+    });
+
+    if (checkArr.length < 4) {
+        alert("[任选四]至少需要选择4个位置");
+        return -1;
+    }
+    //获取位数字符串
+    checkStrArr = getNoWeiStr(checkArr);
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任四组选-组选6";
+    showContent = "二重号: (" + erChongHaoArr.join(",") + ")";
+    betContent = checkStrArr.join(',') + "|" + erChongHaoArr.join(",");
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    }
+}
+
+/**
+ * 任选4-组选12
+ */
+function content_rx4zu12() {
+    var erChongHaoArr = [], danHaoArr = [];
+    var checkStrArr = [], checkArr = [];
+    $.each($(".recl-1005-zux12 ul li[data-name = '二重号'] span.acti"), function (index, value) {
+        erChongHaoArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1005-zux12 ul li[data-name = '单号'] span.acti"), function (index, value) {
+        danHaoArr.push($.trim($(this).find("i").html()));
+    });
+
+    $(".re-select-zux12 input[name='position_zux12']:checked").each(function () {
+        checkArr.push($(this).val());
+    });
+
+    if (checkArr.length < 4) {
+        alert("[任选四]至少需要选择4个位置");
+        return -1;
+    }
+    //获取位数字符串
+    checkStrArr = getNoWeiStr(checkArr);
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任四组选-组选12";
+    showContent = "二重号: (" + erChongHaoArr.join(",") + "), " + "单号: (" + danHaoArr.join(",") + ")";
+    betContent = checkStrArr.join(',') + "|" + erChongHaoArr.join(",") + "|" + danHaoArr.join(",");
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    }
+}
+
+/**
  * 任选4-组选24
  */
 function content_rx4zu24() {
