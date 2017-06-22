@@ -1,16 +1,12 @@
 package project38.ssc.mobile.controller;
 
-<<<<<<< HEAD
+
 /**
  * Created by Administrator on 2017/6/22.
  */
-public class CodeController {
-}
-=======
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -108,8 +104,6 @@ public class CodeController {
         HttpSession session = req.getSession();
         session.setAttribute("yzmCode", randomCode.toString());
 
-
-
         // 禁止图像缓存。
         resp.setHeader("Pragma", "no-cache");
         resp.setHeader("Cache-Control", "no-cache");
@@ -124,4 +118,3 @@ public class CodeController {
     }
 
 }
->>>>>>> 8012d66043c6c2e92fbd17bb13aaa72d61cfa283
