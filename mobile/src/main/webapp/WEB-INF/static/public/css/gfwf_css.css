@@ -336,12 +336,12 @@ ding {
     background: #fff;
     border-bottom: 1px solid #dddddd;
     padding: 0.1rem;
-    text-align:justify;
+    /*text-align:justify;*/
 }
 
 .wrap .cus_common .wan_bottom .cus-flex-item {
     display: inline-block;
-    margin: 0.6em;
+    margin: 0.66em;
     line-height: 2.5em;
     text-align: center;
     color: red;
