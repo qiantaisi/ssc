@@ -75,6 +75,9 @@
     </c:import>
 </div>
 <c:import url="../../../common/commonJs.jsp"/>
+<script>
+    var playName = null;
+</script>
 <script type="text/html" id="template_openNumber_item">
     <div class="cl-904">
         <div class="cl-981"><span class="number">第<font class="style_blue">{{number}}</font>期&nbsp;|&nbsp;</span></div>
