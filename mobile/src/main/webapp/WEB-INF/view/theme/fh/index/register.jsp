@@ -8,6 +8,9 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <c:import url="../common/bodyStart.jsp"/>
+<style>
+    .list-block ul li:after, .list-block ul li:first-child:before{content:none}
+</style>
 <div class="page-group">
     <div class="page page-current" id="page-register">
         <header class="bar bar-nav">
@@ -71,20 +74,24 @@
                             </div>
                         </li>
                         <li>
-                            <div class="item-content">
-                                <div class="item-media"><i class="icon icon-form-password"></i></div>
-                                <div class="item-inner">
-                                    <div class="item-input">
-                                        <input type="text" placeholder="验证码" name="yzm" id="yzm" style="">
-                                        <img src="<%=basePath%>code/yzm" alt=""
-                                             onclick="this.src='<%=basePath%>code/yzm'">
+                            <div style="width:70%;float:left">
+                                <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" placeholder="验证码" name="yzm" id="yzm" style="">
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div style="width:30%;float:right;text-align:right">
+                                <img src="<%=basePath%>code/yzm?imgWidth=100&imgHeight=48&imgFontHeight=38" alt="" onclick="javascript:this.src=this.src+'&timestamp='+Math.random()">
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
+            <div style="clear:both"></div>
             <div class="cl-102">
                 <a href="javascript:void(0)" class="cl-103" id="btn-register">立即注册</a>
                 <strong>已有账号↓</strong>
