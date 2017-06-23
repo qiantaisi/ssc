@@ -89,6 +89,12 @@ public class MemberController extends BaseController {
                 return result;
             }
 
+            if (!StringUtils.isNumeric(yzm)) {
+                result.setResult(-51);
+                result.setDescription("请输入纯数字的验证码");
+                return result;
+            }
+
             if (!StringUtils.equals(yzmCode, yzm)) {
                 result.setResult(-5);
                 result.setDescription("验证码不正确");
@@ -170,6 +176,12 @@ public class MemberController extends BaseController {
             if (StringUtils.isBlank(yzmCode)) {
                 result.setResult(-4);
                 result.setDescription("验证码已过期，请重新获取");
+                return result;
+            }
+
+            if (!StringUtils.isNumeric(yzm)) {
+                result.setResult(-51);
+                result.setDescription("请输入纯数字的验证码");
                 return result;
             }
 
