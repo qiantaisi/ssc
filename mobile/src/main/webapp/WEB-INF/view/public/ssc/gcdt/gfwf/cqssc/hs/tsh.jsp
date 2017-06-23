@@ -14,16 +14,16 @@
         <div class="wan_top">
             <span class="wanwei">特殊号</span>
         </div>
-    </div>
-    <div class="wan_bottom">
-        <div class="cus-flex-item">
-            <span class="xz">豹子</span>
-        </div>
-        <div class="cus-flex-item">
-            <span class="xz">顺子</span>
-        </div>
-        <div class="cus-flex-item">
-            <span class="xz">对子</span>
+        <div class="wan_bottom">
+            <div class="cus-flex-item">
+                <span class="xz n0" onclick="danSelect(this)">豹子</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz n1" onclick="danSelect(this)">顺子</span>
+            </div>
+            <div class="cus-flex-item">
+                <span class="xz n2" onclick="danSelect(this)">对子</span>
+            </div>
         </div>
     </div>
 </div>
