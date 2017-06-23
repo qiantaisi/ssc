@@ -11,7 +11,7 @@
 %>
 <c:import url="../../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-gcdt-cqssc">
+    <div class="page page-current" id="page-gcdt-cqssc-gfwf">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
                 <font>彩种切换</font>
@@ -65,7 +65,7 @@
             </div>
             <div id="betContainer_gfwf">
                 <%--彩种主体内容--%>
-                <c:import url="cqssc/wx/wx.jsp"/>
+                <%--<c:import url="cqssc/wx/wx.jsp"/>--%>
             </div>
         </div>
     </div>
