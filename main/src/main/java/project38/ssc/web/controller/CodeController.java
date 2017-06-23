@@ -75,7 +75,7 @@ public class CodeController {
         gd.drawRect(0, 0, width - 1, height - 1);
 
         // 随机产生40条干扰线，使图象中的认证码不易被其它程序探测到。
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 10; i++) {
             // 用随机产生的颜色将验证码绘制到图像中。
             gd.setColor(new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
             int x = random.nextInt(width);
