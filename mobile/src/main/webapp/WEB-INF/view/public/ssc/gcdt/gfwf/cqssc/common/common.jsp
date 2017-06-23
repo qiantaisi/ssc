@@ -173,7 +173,7 @@
             <span class="staer1">直选和值</span>
         </a>
         <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zxkd.html"
-           datta-name="前二-直选跨度">
+           data-name="前二-直选跨度">
             <span class="staer1">直选跨度</span>
         </a>
         <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zuxfs.html"
