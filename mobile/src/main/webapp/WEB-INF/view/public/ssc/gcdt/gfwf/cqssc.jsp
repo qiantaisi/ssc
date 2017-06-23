@@ -61,7 +61,7 @@
             </div>
             <div id="betContainer_gfwf">
                 <%--彩种主体内容--%>
-                <c:import url="cqssc/sx/sx.jsp"/>
+                <c:import url="cqssc/wx/wx.jsp"/>
             </div>
         </div>
     </div>

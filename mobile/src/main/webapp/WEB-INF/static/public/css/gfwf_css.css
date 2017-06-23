@@ -352,7 +352,7 @@ ding {
     text-align: center;
     width: 3.2em;
     width: calc(100% / 7);
-    padding: 0.5em 0;
+    padding: 1.2em 0;
 }
 
 .wrap .cus_common .wan_bottom .cus-flex-item .xz {
