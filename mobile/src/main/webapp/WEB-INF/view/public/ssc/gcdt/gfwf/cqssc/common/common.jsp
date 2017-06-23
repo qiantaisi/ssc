@@ -253,7 +253,7 @@
             <span class="staer1">前二大小单双</span>
         </a>
         <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/hedxds.html"
-           data-name="大小单双-前二大小单双">
+           data-name="大小单双-后二大小单双">
             <span class="staer1">后二大小单双</span>
         </a>
         <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/qsdxds.html"
@@ -304,7 +304,7 @@
            data-name="任选三-直选和值">
             <span class="staer1">直选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zuxfs.html"
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zusfs.html"
            data-name="任选三-组三复式">
             <span class="staer1">组三复式</span>
         </a>

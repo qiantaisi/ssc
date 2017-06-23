@@ -12,7 +12,15 @@
 <div class="wrap">
     <div class="cus_common">
         <div class="wan_top">
-            <span class="wanwei">和值</span>
+            <span class="wanwei">组三</span>
+            <%--<span class="xz">--%>
+                <%--<i onclick="selectFun_1(this)">全</i>--%>
+                <%--<i onclick="selectFun_2(this)">大</i>--%>
+                <%--<i onclick="selectFun_3(this)">小</i>--%>
+                <%--<i onclick="selectFun_4(this)">奇</i>--%>
+                <%--<i onclick="selectFun_5(this)">偶</i>--%>
+                <%--<i onclick="selectFun_6(this)">清</i>--%>
+            <%--</span>--%>
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">
@@ -44,30 +52,6 @@
             </div>
             <div class="cus-flex-item">
                 <span class="xz n9" onclick="danSelect(this)">9</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz n10" onclick="danSelect(this)">10</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz n11" onclick="danSelect(this)">11</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz n12" onclick="danSelect(this)">12</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz n13" onclick="danSelect(this)">13</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz n14" onclick="danSelect(this)">14</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz n15" onclick="danSelect(this)">15</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz n16" onclick="danSelect(this)">16</span>
-            </div>
-            <div class="cus-flex-item">
-                <span class="xz n17" onclick="danSelect(this)">17</span>
             </div>
         </div>
     </div>
