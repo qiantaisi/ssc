@@ -32,14 +32,18 @@
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <div class="border_one color_one">
-                        <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
-                    </div>
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">
+                        <div class="border_one color_one">
+                            官方玩法
+                        </div>
+                    </a>
                 </div>
                 <div class="gfwf_two">
-                    <div class="border_two color_two">
-                        <a class="F2_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
-                    </div>
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/cqssc.html">
+                        <div class="border_two color_two">
+                            快捷玩法
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="gfwf_mask">
@@ -50,13 +54,17 @@
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/sm.html">双面</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/szp.html">数字盘</a>
+                    <a href="javascript:void(0)" data-type="page"
+                       data-url="<%=basePath%>ssc/gcdt/cqssc/szp.html">数字盘</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-yzdw">一字定</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/ezdw.html">二字定</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/szdw.html">三字定</a>
+                    <a href="javascript:void(0)" data-type="page"
+                       data-url="<%=basePath%>ssc/gcdt/cqssc/ezdw.html">二字定</a>
+                    <a href="javascript:void(0)" data-type="page"
+                       data-url="<%=basePath%>ssc/gcdt/cqssc/szdw.html">三字定</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-yzzh">一字组</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-ezzh">二字组</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/cqssc/ezhs.html">二字和</a>
+                    <a href="javascript:void(0)" data-type="page"
+                       data-url="<%=basePath%>ssc/gcdt/cqssc/ezhs.html">二字和</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-zxs">组选三</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-zxl">组选六</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-kd">跨度</a>

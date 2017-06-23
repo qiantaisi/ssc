@@ -5765,7 +5765,7 @@ function suiji_4xzxfs() {
     }
 
     showPlayName = "四星直选-复式";
-    showContent = "千位: ({1}), 百位: ({2}), 十位: ({3}), 个位: ({4})".format(arr[0], arr[1], arr[2], arr[3]);
+    showContent = "千位: ({0}), 百位: ({1}), 十位: ({2}), 个位: ({3})".format(arr[0], arr[1], arr[2], arr[3]);
     betContent = "{0}|{1}|{2}|{3}".format(arr[0], arr[1], arr[2], arr[3]);
 
     return {
@@ -8643,7 +8643,7 @@ function content_h3zxhz() {
     var showContent = '';
     var betContent = '';
 
-    showPlayName = "后三直选-和值";;
+    showPlayName = "后三直选-和值";
     showContent = "和值: (" + heZhiArr.join(",") + ")";
     betContent = heZhiArr.join(",");
 
@@ -8826,7 +8826,7 @@ function content_4xzxfs() {
     var betContent = '';
 
     showPlayName = "四星直选-复式";
-    showContent = "千位：({1})，百位：({2})，十位：({3})，个位：({4})".format(
+    showContent = "千位：({0})，百位：({1})，十位：({2})，个位：({3})".format(
         qianArr.join(","),
         baiArr.join(","),
         shiArr.join(","),
@@ -9228,6 +9228,19 @@ function renderZhuihao() {
                 return;
             }
 
+            var sp = $("#bottomInfo .tabs ul .hy-zh").attr('open');
+            if(sp == 0){
+                $("#bottomInfo .tabs ul li").eq(2).trigger("click");
+                $("#bottomInfo .tabs ul .hy-zh").removeClass('hide');
+                $("#bottomInfo .tabs ul .hy-zh").attr('open',1);
+                // $("#bottomInfo .tabs ul .hy-zh").addClass('acti');
+            } else if(sp == 1){
+                $("#bottomInfo .tabs ul li").eq(0).trigger("click");
+                $("#bottomInfo .tabs ul .hy-zh").addClass('hide');
+                $("#bottomInfo .tabs ul .hy-zh").attr('open',1);
+
+            }
+
             // 模板逻辑处理.......
 //                var html = "";
         }
@@ -9316,7 +9329,6 @@ function clearZhudan() {
     }
 
 }
-
 
 //清除投注内容确认按钮
 function enterType1(){

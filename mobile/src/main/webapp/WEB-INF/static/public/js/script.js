@@ -1848,7 +1848,6 @@ $(function () {
                         $(o).addClass("active");
                         // 重置
                         resetSelect();
-
                         // 获取赔率
                         querySscPlData();
                     });
@@ -1863,7 +1862,6 @@ $(function () {
                         $("#sub-menu-list" + " #" + subMenuId + " .cl-602 a:first-child").addClass("active");
                         // 重置
                         resetSelect();
-
                         // 获取赔率
                         querySscPlData();
                     });
@@ -1871,7 +1869,6 @@ $(function () {
                     var o = $(this);
                     $(o).parent().find(".active").removeClass("active");
                     $(o).addClass("active");
-
                 } else {
                     return;
                 }
@@ -1888,7 +1885,6 @@ $(function () {
                 $(o).addClass("active");
                 // 重置
                 resetSelect();
-
                 // 获取赔率
                 querySscPlData();
             });
@@ -1962,6 +1958,26 @@ $(function () {
         if (playGroupId == 9 && navStr != "undefined" && navStr != '') {
             $("#ssc-parent-menu .cl-602 .szp").trigger("click");
         }
+
+
+        //官方玩法，彩种玩法选择点击事件
+        $(".gfwf_xz .staer a").click(
+            function () {
+                $(".gfwf_xz .staer a").find("span").removeClass("zxfs");
+                $(".gfwf_xz .staer a").find("span").addClass("staer1");
+                $(this).find("span").removeClass("staer1");
+                $(this).find("span").addClass("zxfs");
+
+                var namePage = $(this).attr("data-name");
+                var url = $(this).attr("data-url");
+                // console.log(url);
+                getSubGfwfSscPage(url, function(){
+                    $(".gfwf-title span").html(namePage);
+                });
+
+                playName = $(this).data("fun_zhushu");
+            }
+        );
 
     }
 
@@ -4797,6 +4813,13 @@ $(function () {
         initSscPage(1);
         $(".cl-602 a").eq(0).trigger("click");
     });
+
+    //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-cqssc-gfwf", function (e, id, page) {
+        initSscPage(1);
+        $(".gfwf_xz .wx-select a").trigger("click");
+    });
+
     $(document).on("pageInit", "#page-gcdt-tjssc", function (e, id, page) {
         initSscPage(2);
         $(".cl-602 a").eq(0).trigger("click");
@@ -7320,135 +7343,3 @@ function getThreeNewArrs(baiA, shiA, geA) {
     return tempArr;
 }
 
-// 数字批量选择算法
-function selectFun_1(obj) {
-    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");  //初始化选择的特效，清零
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");                                     //始化选择的特效，清零
-    $(obj).addClass("active_gfwf");
-    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").addClass("active_gfwf");
-}
-
-function selectFun_2(obj) {
-    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
-    var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var Barr = [, , , , , 5, 6, 7, 8, 9];
-    for (var i = 0; i <= Aarr.length; ++i) {
-        if (Aarr[i] == Barr[i]) {
-            $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
-        }
-    }
-}
-
-function selectFun_3(obj) {
-    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
-    var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var Barr = [0, 1, 2, 3, 4, , , , ,];
-    for (var i = 0; i <= Aarr.length; ++i) {
-        if (Aarr[i] == Barr[i]) {
-            $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
-        }
-    }
-}
-
-function selectFun_4(obj) {
-    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
-    for (var i = 0; i < 10; i++) {
-        if (i%2 != 0) {   //奇数
-            $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
-        }
-    }
-}
-
-function selectFun_5(obj) {
-    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
-    for (var i = 0; i < 10; ++i) {
-        if (i%2 == 0) {   //偶数
-            $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
-        }
-    }
-}
-
-function selectFun_6(obj) {
-    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
-}
-//数字单选算法
-function danSelect(obj) {
-    if ($(obj).parent().find(".wan_bottom .cus-flex-item .xz").hasClass("active_gfwf")) {
-        $(obj).parent().find(".cus-flex-item .xz").removeClass("active_gfwf");
-    } else {
-        $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
-    }
-    $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
-}
-
-$(function () {     //官方玩法，彩种玩法选择点击事件
-        $(".gfwf_xz .staer a").click(
-            function () {
-                $(".gfwf_xz .staer a").find("span").removeClass("zxfs");
-                $(".gfwf_xz .staer a").find("span").addClass("staer1");
-                $(this).find("span").removeClass("staer1");
-                $(this).find("span").addClass("zxfs");
-
-                var namePage = $(this).attr("data-name");
-                var url = $(this).attr("data-url");
-                console.log(url);
-                getSubGfwfSscPage(url, function(){
-                    $(".gfwf-title span").html(namePage);
-                });
-
-            }
-        );
-    }
-);
-
-
-function getSubGfwfSscPage(url, callback) {
-    ajaxRequest({
-        url: url,
-        dataType: "html",
-        type: "GET",
-        beforeSend: function () {
-            Tools.showLoading("加载中...");
-        },
-        success: function (html) {
-            $("#betContainer_gfwf").html(html);
-            if (typeof callback == 'function') {
-                callback();
-            }
-        },
-        error: function (a, b, c) {
-            if (b == 'timeout') {
-                Tools.toast("操作超时，请稍后重试");
-                return;
-            }
-
-            Tools.toast("请求错误，请稍后重试");
-        },
-        complete: function () {
-            Tools.hideLoading();
-        }
-    });
-}
-
-$(function () {    //彩中玩法选中后，隐藏覆盖的模块
-        $(".gfwf_xz .staer a").click(
-            function () {
-                $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
-                $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
-                $(".page").find(".x_wrap").removeClass("Fixed");
-                $(".page").find(".gfwf_xz").removeClass("Fixed");
-                $(".page").find(".gfwf_mask2").removeClass("Fixed");
-            }
-        );
-    }
-);
