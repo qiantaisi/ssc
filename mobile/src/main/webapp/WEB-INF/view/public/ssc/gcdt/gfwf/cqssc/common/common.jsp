@@ -46,7 +46,7 @@
     <div class="staer">
         <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html"
            data-name="五星-直选复式">
-            <span class="staer1">直选复式</span>
+            <span class="zxfs">直选复式</span>
         </a>
     </div>
 

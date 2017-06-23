@@ -338,14 +338,21 @@ ding {
     border-bottom: 1px solid #dddddd;
     padding: 0.1rem;
     /*text-align:justify;*/
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .wrap .cus_common .wan_bottom .cus-flex-item {
-    display: inline-block;
-    margin: 2.22%;
     line-height: 2.8em;
-    text-align: center;
     color: red;
+    text-align: center;
+    width: 3.2em;
+    width: calc(100% / 7);
+    padding: 1.2em 0;
 }
 
 .wrap .cus_common .wan_bottom .cus-flex-item .xz {
@@ -354,7 +361,9 @@ ding {
     height: 2.8em;
     border: 1px solid #dddddd;
     border-radius: 50%;
+    margin: 0 auto;
 }
+
 .wrap .cus_common .wan_bottom .cus-flex-item .num{}
 .wrap .cus_common .wan_bottom .cus-flex-item .pl {
     color: #838383;
