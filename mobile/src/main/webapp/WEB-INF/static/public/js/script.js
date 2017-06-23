@@ -1848,7 +1848,6 @@ $(function () {
                         $(o).addClass("active");
                         // 重置
                         resetSelect();
-
                         // 获取赔率
                         querySscPlData();
                     });
@@ -1863,7 +1862,6 @@ $(function () {
                         $("#sub-menu-list" + " #" + subMenuId + " .cl-602 a:first-child").addClass("active");
                         // 重置
                         resetSelect();
-
                         // 获取赔率
                         querySscPlData();
                     });
@@ -1871,7 +1869,6 @@ $(function () {
                     var o = $(this);
                     $(o).parent().find(".active").removeClass("active");
                     $(o).addClass("active");
-
                 } else {
                     return;
                 }
@@ -1888,7 +1885,6 @@ $(function () {
                 $(o).addClass("active");
                 // 重置
                 resetSelect();
-
                 // 获取赔率
                 querySscPlData();
             });
@@ -7405,7 +7401,6 @@ $(function () {     //官方玩法，彩种玩法选择点击事件
                 getSubGfwfSscPage(url, function(){
                     $(".gfwf-title span").html(namePage);
                 });
-
             }
         );
     }

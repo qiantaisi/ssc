@@ -32,14 +32,18 @@
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <div class="border_one color_two">
-                        <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
-                    </div>
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">
+                        <div class="border_one color_two">
+                            官方玩法
+                        </div>
+                    </a>
                 </div>
                 <div class="gfwf_two">
-                    <div class="border_two color_one">
-                        <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
-                    </div>
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">
+                        <div class="border_two color_one">
+                            快捷玩法
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="gfwf_mask">
@@ -61,7 +65,7 @@
             </div>
             <div id="betContainer_gfwf">
                 <%--彩种主体内容--%>
-                <c:import url="cqssc/sx/sx.jsp"/>
+                <%--<c:import url="cqssc/sx/sx.jsp"/>--%>
             </div>
         </div>
     </div>
