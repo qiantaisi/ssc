@@ -43,7 +43,8 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html" data-name="五星-直选复式">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html"
+           data-name="五星-直选复式">
             <span class="staer1">直选复式</span>
         </a>
     </div>
@@ -54,7 +55,8 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html" data-name="四星-直选复式">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html"
+           data-name="四星-直选复式">
             <span class="staer1">直选复式</span>
         </a>
     </div>
@@ -65,34 +67,44 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html" data-name="直选复式">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxfs.html"
+           data-name="后三-直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxhz.html"
+           data-name="后三-直选和值">
             <span class="staer1">直选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxkd.html"
+           data-name="后三-直选跨度">
             <span class="staer1">直选跨度</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/hszh.html"
+           data-name="后三-后三组合">
             <span class="staer1">后三组合</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zsfs.html"
+           data-name="后三-组三复式">
             <span class="staer1">组三复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zlfs.html"
+           data-name="后三-组六复式">
             <span class="staer1">组六复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zuxhz.html"
+           data-name="后三-组选和值">
             <span class="staer1">组选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
-            <span class="staer1">组选包单</span>
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxbd.html"
+           data-name="后三-组选包胆">
+            <span class="staer1">组选包胆</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/hzws.html"
+           data-name="后三-和值尾数">
             <span class="staer1">和值尾数</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/tsh.html"
+           data-name="后三-特殊号">
             <span class="staer1">特殊号</span>
         </a>
     </div>
@@ -103,34 +115,44 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxfs.html"
+           data-name="前三-直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxhz.html"
+           data-name="前三-直选和值">
             <span class="staer1">直选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxkd.html"
+           data-name="前三-直选跨度">
             <span class="staer1">直选跨度</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/hszh.html"
+           data-name="前三-后三组合">
             <span class="staer1">前三组合</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zsfs.html"
+           data-name="前三-组三复式">
             <span class="staer1">组三复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zlfs.html"
+           data-name="前三-组六复式">
             <span class="staer1">组六复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zuxhz.html"
+           data-name="前三-组选和值">
             <span class="staer1">组选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxbd.html"
+           data-name="前三-组选包胆">
             <span class="staer1">组选包胆</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/hzws.html"
+           data-name="前三-和值尾数">
             <span class="staer1">和值尾数</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/tsh.html"
+           data-name="后三-特殊号">
             <span class="staer1">特殊号</span>
         </a>
     </div>
@@ -141,23 +163,29 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zxfs.html"
+           data-name="前二-直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zxhz.html"
+           data-name="前二-直选和值">
             <span class="staer1">直选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zxkd.html"
+           datta-name="前二-直选跨度">
             <span class="staer1">直选跨度</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zuxfs.html"
+           data-name="前二-组选复式">
             <span class="staer1">组选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zuxhz.html"
+           data-name="前二-直选和值">
             <span class="staer1">组选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
-            <span class="staer1">组选包但</span>
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zuxbd.html"
+           data-name="前二 -组选包胆">
+            <span class="staer1">组选包胆</span>
         </a>
     </div>
 
@@ -167,37 +195,48 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/qsym.html"
+           data-name="不定位-前三一码">
             <span class="staer1">前三一码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/qsem.html"
+           data-name="不定位-前三二码">
             <span class="staer1">前三二码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/hsym.html"
+           data-name="不定位-后三一码">
             <span class="staer1">后三一码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/hsem.html"
+           data-name="不定位-后三二码">
             <span class="staer1">后三二码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/qsiym.html"
+           data-name="不定位-前四一码">
             <span class="staer1">前四一码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/qsiem.html"
+           data-name="不定位-前四二码">
             <span class="staer1">前四二码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/hsiym.html"
+           data-name="不定位-后四一码">
             <span class="staer1">后四一码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/hsiem.html"
+           data-name="不定位-后四二码">
             <span class="staer1">后四二码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/wxym.html"
+           data-name="不定位-五星一码">
             <span class="staer1">五星一码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/wxem.html"
+           data-name="不定位-五星二码">
             <span class="staer1">五星二码</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/wxsm.html"
+           data-name="不定位-五星三码">
             <span class="staer1">五星三码</span>
         </a>
     </div>
@@ -208,16 +247,20 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/qedxds.html"
+           data-name="大小单双-前二大小单双">
             <span class="staer1">前二大小单双</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/hedxds.html"
+           data-name="大小单双-前二大小单双">
             <span class="staer1">后二大小单双</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/qsdxds.html"
+           data-name="大小单双-前三大小单双">
             <span class="staer1">前三大小单双</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/hsdxds.html"
+           data-name="大小单双-后三大小单双">
             <span class="staer1">后三大小单双</span>
         </a>
     </div>
@@ -228,16 +271,20 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zxfs.html"
+           data-name="任选二-直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zxhz.html"
+           data-name="任选二-直选和值">
             <span class="staer1">直选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zuxfs.html"
+           data-name="任选二-组选复式">
             <span class="staer1">组选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zuxhz.html"
+           data-name="任选二-组选和值 ">
             <span class="staer1">组选和值</span>
         </a>
     </div>
@@ -248,19 +295,24 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zxfs.html"
+           data-name="任选三-直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zxhz.html"
+           data-name="任选三-直选和值">
             <span class="staer1">直选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zuxfs.html"
+           data-name="任选三-组三复式">
             <span class="staer1">组三复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zuxfs.html"
+           data-name="任选三-组六复式">
             <span class="staer1">组六复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zuxhz.html"
+           data-name="任选三-组选和值">
             <span class="staer1">组选和值</span>
         </a>
     </div>
@@ -271,19 +323,24 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zxfs.html"
+           data-name="任选四-直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zx24.html"
+           data-name="任选四-组选24">
             <span class="staer1">组选24</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zx12.html"
+           data-name="任选四-组选12">
             <span class="staer1">组选12</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zx6.html"
+           data-name="任选四-组选6">
             <span class="staer1">组选6</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/cqssc/sx.html">
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zx4.html"
+           data-name="任选四-组选4">
             <span class="staer1">组选4</span>
         </a>
     </div>

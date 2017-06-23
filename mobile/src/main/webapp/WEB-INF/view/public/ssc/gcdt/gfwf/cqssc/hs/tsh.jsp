@@ -18,15 +18,12 @@
     <div class="wan_bottom">
         <div class="cus-flex-item">
             <span class="xz">豹子</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">顺子</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">对子</span>
-                        
         </div>
     </div>
 </div>

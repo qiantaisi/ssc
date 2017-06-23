@@ -7401,7 +7401,7 @@ $(function () {     //官方玩法，彩种玩法选择点击事件
 
                 var namePage = $(this).attr("data-name");
                 var url = $(this).attr("data-url");
-                console.log(url);
+                // console.log(url);
                 getSubGfwfSscPage(url, function(){
                     $(".gfwf-title span").html(namePage);
                 });

@@ -18,83 +18,63 @@
     <div class="wan_bottom">
         <div class="cus-flex-item">
             <span class="xz">0</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">1</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">2</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">3</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">4</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">5</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">6</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">7</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">8</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">9</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">9</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">10</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">11</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">12</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">13</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">14</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">15</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">9</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">9</span>
-                        
         </div>
         <div class="cus-flex-item">
             <span class="xz">9</span>
-                        
         </div>
     </div>
 </div>
