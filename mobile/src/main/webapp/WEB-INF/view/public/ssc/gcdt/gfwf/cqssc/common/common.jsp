@@ -308,7 +308,7 @@
            data-name="任选三-组三复式">
             <span class="staer1">组三复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zuxfs.html"
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zulfs.html"
            data-name="任选三-组六复式">
             <span class="staer1">组六复式</span>
         </a>
@@ -324,23 +324,23 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zxfs.html"
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zxfs.html"
            data-name="任选四-直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zx24.html"
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx24.html"
            data-name="任选四-组选24">
             <span class="staer1">组选24</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zx12.html"
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx12.html"
            data-name="任选四-组选12">
             <span class="staer1">组选12</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zx6.html"
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx6.html"
            data-name="任选四-组选6">
             <span class="staer1">组选6</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zx4.html"
+        <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx4.html"
            data-name="任选四-组选4">
             <span class="staer1">组选4</span>
         </a>
