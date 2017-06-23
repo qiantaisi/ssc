@@ -9228,6 +9228,19 @@ function renderZhuihao() {
                 return;
             }
 
+            var sp = $("#bottomInfo .tabs ul .hy-zh").attr('open');
+            if(sp == 0){
+                $("#bottomInfo .tabs ul li").eq(2).trigger("click");
+                $("#bottomInfo .tabs ul .hy-zh").removeClass('hide');
+                $("#bottomInfo .tabs ul .hy-zh").attr('open',1);
+                // $("#bottomInfo .tabs ul .hy-zh").addClass('acti');
+            } else if(sp == 1){
+                $("#bottomInfo .tabs ul li").eq(0).trigger("click");
+                $("#bottomInfo .tabs ul .hy-zh").addClass('hide');
+                $("#bottomInfo .tabs ul .hy-zh").attr('open',1);
+
+            }
+
             // 模板逻辑处理.......
 //                var html = "";
         }
@@ -9316,14 +9329,6 @@ function clearZhudan() {
     }
 
 }
-
-//追号点击按钮
-function zhuihao(){
-    $("#bottomInfo .tabs ul .hy-info").addClass('hide');
-    $("#bottomInfo .tabs ul .hy-zh").removeClass('hide');
-
-}
-
 
 //清除投注内容确认按钮
 function enterType1(){
