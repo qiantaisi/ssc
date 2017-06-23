@@ -1,4 +1,5 @@
 
+
 //获取具体子页面
 function getSubGfwfSscPage(url, callback) {
     ajaxRequest({
@@ -26,4 +27,16 @@ function getSubGfwfSscPage(url, callback) {
             Tools.hideLoading();
         }
     });
+}
+
+//数字单选算法
+function danSelect(obj) {
+    if ($(obj).parent().find(".wan_bottom .cus-flex-item .xz").hasClass("active_gfwf")) {
+        $(obj).parent().find(".cus-flex-item .xz").removeClass("active_gfwf");
+    } else {
+        $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+    }
+    $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
+
+
 }
