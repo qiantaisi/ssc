@@ -64,7 +64,7 @@
                     $.cookie("uid", json.userId, {path: "/"});
                     $.cookie("token", json.token, {path: "/"});
                     parent.parent.ifm.window.location.reload();
-                    location.reload();
+//                    location.reload();
                 } else {
                     refreshYzm(document.getElementById('registerYzmImg2'));
                     Tools.toast("登录失败：" + json.description);
