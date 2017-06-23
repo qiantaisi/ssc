@@ -9,3 +9,4 @@
 %>
 <jsp:include page="../../common/commonJs.jsp" />
 <script src="${resPath}js/script.js?v=<%=(new Date()).getTime()%>"></script>
+<script src="${resPath}js/gfwf.js?v=<%=(new Date()).getTime()%>"></script>

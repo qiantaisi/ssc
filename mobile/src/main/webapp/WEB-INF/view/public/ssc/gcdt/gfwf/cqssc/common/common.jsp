@@ -43,7 +43,7 @@
         <div class="xuan2">五星</div>
         <div class="xuan1"></div>
     </div>
-    <div class="staer">
+    <div class="staer wx-select">
         <a href="javascript:void(0)" data-type="gfwf_page" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html"
            data-name="五星-直选复式">
             <span class="zxfs">直选复式</span>
