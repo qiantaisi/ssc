@@ -443,3 +443,29 @@ ding {
     color: #fff;
     background: #fa6200;
 }
+
+/*官方玩法投注界面底部*/
+.gfwf-cl-608{
+    width: 100%;
+    text-align: center;
+}
+.gfwf-cl-608 .tab-item-clear{
+    float: left;
+}
+.gfwf-cl-608 .tab-item-clear .cl-953{
+    width: inherit;
+    text-align: center;
+    padding: .27rem .4rem!important;
+    border-radius: 5px;
+    background: #ccc;
+    color: #545156;
+}
+.gfwf-cl-608 .zs-span{
+    margin-left: 2%;
+}
+.gfwf-cl-608 .tab-item-touzhu{
+    float: right;
+}
+#nowMoney{
+    color:red;
+}

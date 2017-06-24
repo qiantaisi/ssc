@@ -28,7 +28,7 @@
                 </i>
             </h1>
         </header>
-        <c:import url="../common/commonBet.jsp"/>
+        <c:import url="./common/commonBet.jsp"/>
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
