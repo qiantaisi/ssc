@@ -5,8 +5,10 @@ function gfwfEvent(){
         showBetTemplate();
     });
 
+    $("#btn-reset-gfwf").click(function () {
+        clearSelected();
+    });
 }
-
 
 //获取具体子页面
 function getSubGfwfSscPage(url, callback) {
@@ -635,7 +637,7 @@ function showBetTemplate(infoStr) {
     // 滑块事件绑定
     $("#playPlRange").RangeSlider({
         min: 0,
-        max: 13,
+        max: maxFandian,
         step: 0.1,
         onChange: function(obj) {
             // 返点比例
