@@ -519,3 +519,66 @@ ding {
     margin: 0;
     color: #005ddc;
 }
+.betContent{
+    padding: 0 10px;
+    margin:auto;
+}
+/***滑块美化***/
+.playPlRangeContainer{
+    padding:5px;
+    height:14px;
+    border-radius: 10px; /*将轨道设为圆角的*/
+    /*box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; !*轨道内置阴影效果*!*/
+    border: 1px solid #fa6200;
+    background:#fafafa;
+    box-shadow: 0 1px 1px #fa6200, inset 0 1px 1px #fa6200
+}
+.playPlRangeContainer input[type=range] {
+    -webkit-appearance: none;
+    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+}
+.playPlRangeContainer input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+.playPlRangeContainer input[type=range]::-webkit-slider-runnable-track {
+    height: 15px;
+    border-radius: 10px; /*将轨道设为圆角的*/
+    /*box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; !*轨道内置阴影效果*!*/
+    border: 1px solid #ddd;
+}
+.playPlRangeContainer input[type=range]:focus {
+    outline: none;
+}
+.playPlRangeContainer input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 22px;
+    width: 22px;
+    margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #ffffff;
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+/****************/
+.betContent .slide-item{
+    display:block;
+    margin:10px 0;
+    overflow:hidden;
+}
+.betContent .slide-item:last-child{
+    /*margin-bottom:0*/
+}
+/**官方layer**/
+.layui-m-layer-gfwf{
+    width:90%;
+}
+.layui-m-layer-gfwf .layui-m-layercont{
+    padding:0!important;
+}
+
+.slide-item .ft{float:left;}
+.slide-item .fr{float:right;}
+.slide-item input[type=number]{
+    width: 50px;
+    border: 1px solid #dedede;
+}

@@ -76,7 +76,12 @@
 </div>
 <c:import url="../../../common/commonJs.jsp"/>
 <script>
-    var playName = null;
+//    var playName = null;
+    var playGroupId = ${playGroupId};
+    // 全局官方玩法赔率
+    <c:if test="${not empty playPlListJson}">
+    var gfwfPlJson = ${playPlListJson};
+    </c:if>
 </script>
 <script type="text/html" id="template_openNumber_item">
     <div class="cl-904">
