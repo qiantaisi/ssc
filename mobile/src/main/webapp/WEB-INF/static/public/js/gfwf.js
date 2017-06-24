@@ -60,7 +60,6 @@ function getGfwfZhushu(){
         if (typeof zhushu == "undefined" || zhushu < 0) {
             return;
         }
-
         $("#zhushu").html(zhushu);
     }
 }
@@ -176,7 +175,7 @@ function selectFun_6(obj) {
 }
 
 
-$(function () {    //彩中玩法选中后，隐藏覆盖的模块
+$(function () {    //彩种玩法选中后，隐藏正在显示的 直线方式 的模块
         $(".gfwf_xz .staer a").click(
             function () {
                 $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
@@ -252,7 +251,7 @@ function showBetTemplate(infoStr) {
 
 //*****************mobile注数算法******************
 
-// 获取万、千、百、十、个固定位数的个数所组成5位所有组合
+// 获取万、千、百、十、个，固定位数的个数所组成5位所有组合
 function getNewArrs(wanA, qianA, baiA, shiA, geA) {
     var wArr = [], qArr = [], bArr = [], sArr = [], gArr = [];
     wArr = wanA;
