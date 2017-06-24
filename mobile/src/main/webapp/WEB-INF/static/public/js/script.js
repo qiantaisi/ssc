@@ -1974,11 +1974,12 @@ $(function () {
                 getSubGfwfSscPage(url, function(){
                     $(".gfwf-title span").html(namePage);
                 });
-
                 playName = $(this).data("fun_zhushu");
             }
         );
-
+        
+        //执行官方玩法事件
+        gfwfEvent();
     }
 
     // 清除内容提示框
