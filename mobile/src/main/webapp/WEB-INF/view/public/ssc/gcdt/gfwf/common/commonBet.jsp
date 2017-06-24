@@ -21,7 +21,7 @@
             <span id="nowMoney">0</span>
             元
 
-        <a class="tab-item tab-item-touzhu" href="javascript:void(0)" id="btn-submit">
+        <a class="tab-item tab-item-touzhu" href="javascript:void(0)" id="btn-submit-gfwf">
             <span class="tab-label cl-952">&nbsp;投注&nbsp;</span>
         </a>
     </div>

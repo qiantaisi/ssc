@@ -1,3 +1,11 @@
+//****
+// 官方玩法事件绑定
+function gfwfEvent(){
+    $("#btn-submit-gfwf").click(function () {
+        showBetTemplate();
+    });
+
+}
 
 
 //获取具体子页面
@@ -41,8 +49,6 @@ function danSelect(obj) {
     getGfwfZhushu();
 
 }
-
-
 
 
 //获取注数方法
@@ -183,10 +189,68 @@ $(function () {    //彩中玩法选中后，隐藏覆盖的模块
     }
 );
 
+//清除注单内容提示框
+var layerBet = null;
+function showBetTemplate(infoStr) {
+    if (layerBet != null) {
+        return;
+    }
+
+    var bet_template = '\
+    <div class="betTemplate">\
+        <div class="betHead">\
+          <span>注单设定</span>\
+        </div>\
+        <div class="betContent">\
+           <div class="slidebg">\
+               <div class="slide-top">\
+                  <span class="ft"><label>赔率：</label><label id="amount" class="fandian"></label></span>\
+                  <span class="fr"><label>返利：</label><label class="fanli"></label></span>\
+               </div>\
+               <div aria-disabled="false" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider-range-min">\
+                  <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min"></div>\
+                  <a id="slide_a" href="javascript:;" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a>\
+               </div>\
+           </div>\
+        </div>\
+        <div class="betFoot">\
+           <a href="javascript:void(0)" class="yes-btn"><span>确认</span></a>\
+           <a href="javascript:void(0)" class="no-btn"><span>取消</span></a>\
+        </div>\
+    </div>\
+    ';
+
+    layer.closeAll();
+    //页面层
+    layerBet = layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        content: bet_template
+    });
+
+    //定义弹框宽度大小
+    $("#layui-m-layer" + layerBet + " .layui-m-layerchild").css("width", "85%");
+    $(".betTemplate").parent().css("padding", "0 0!important");
+
+    // $("#slider-range-min").slider({
+    //     range: "min",
+    //     value: 13,
+    //     min: 0,
+    //     max: 100,
+    //
+    //     slide: function (event, ui) {
+    //         $("#amount").html("" + ui.value);
+    //     }
+    // });
+    // $("#amount").html("$" + $("#slider-range-min").slider("value"));
+
+}
 
 
 
-//*****************mobile算法******************
+
+//*****************mobile注数算法******************
 
 // 获取万、千、百、十、个固定位数的个数所组成5位所有组合
 function getNewArrs(wanA, qianA, baiA, shiA, geA) {

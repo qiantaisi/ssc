@@ -457,8 +457,8 @@ ding {
     text-align: center;
     padding: .27rem .4rem!important;
     border-radius: 5px;
-    background: #ccc;
-    color: #545156;
+    background: #eee;
+    color: #88828b;
 }
 .gfwf-cl-608 .zs-span{
     margin-left: 2%;
@@ -468,4 +468,54 @@ ding {
 }
 #nowMoney{
     color:red;
+}
+
+/*投注蒙版*/
+.tips-bg {
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    z-index: 110;
+}
+
+/*投注确认框*/
+.betTemplate .betHead{
+    height: 1.8rem;
+    line-height: 1.8rem;
+    font-size: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.betTemplate .betContent{
+    min-height: 10rem;
+    height: auto;
+}
+.betTemplate .betFoot{
+    height: 1.8rem;
+    line-height: 1.8rem;
+    border-top: solid 1px #ddd;
+    font-size: 0.75rem;
+}
+.betTemplate .betFoot .yes-btn, .betTemplate .betFoot .no-btn{
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+.betTemplate .betFoot .yes-btn span{
+    display: block;
+    padding: 0.02rem 1rem;
+    margin: 0;
+    color: #005ddc;
+    border-right: 1px solid #ddd;
+}
+.betTemplate .betFoot .no-btn span{
+    display: block;
+    padding: 0.02rem 1rem;
+    margin: 0;
+    color: #005ddc;
 }
