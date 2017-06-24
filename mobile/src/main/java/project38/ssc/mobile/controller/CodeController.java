@@ -27,7 +27,8 @@ public class CodeController {
     private int codeY = 20;     //y坐标绘图
     private int codeX = 0;     //x坐标绘图
     char[] codeSequence = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}; //定义随机生成验证码的数组。
-    private char[] codeFantiSequence = {'零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖'};
+//    private char[] codeFantiSequence = {'零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖'};
+    private char[] codeFantiSequence = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'Z', 'M'};
 //    private String[] codeFantiSequence = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
     private String[] fontNames = {"宋体"};
 
@@ -99,16 +100,21 @@ public class CodeController {
                 Font font = new Font(fontNames[random.nextInt(fontNames.length)], style, fontHeight);
                 // 设置字体。
                 gd.setFont(font);
+
+                // 将产生的四个随机数组合在一起。
+                randomCode.append(codeSequence[randomIndex]);
             }  else {
                 code = String.valueOf(codeFantiSequence[randomIndex]);
 
-                tmpY = codeY - 3;
-                Font font = new Font(fontNames[random.nextInt(fontNames.length)], style, fontHeight - 10);
+                tmpY = codeY;
+//                tmpY = codeY - 3;
+                Font font = new Font(fontNames[random.nextInt(fontNames.length)], style, fontHeight);
                 // 设置字体。
                 gd.setFont(font);
+
+                // 将产生的四个随机数组合在一起。
+                randomCode.append(codeFantiSequence[randomIndex]);
             }
-            // 将产生的四个随机数组合在一起。
-            randomCode.append(codeSequence[randomIndex]);
 
             // 产生随机的颜色分量来构造颜色值，这样输出的每位数字的颜色值都将不同。
             red = random.nextInt(255);
