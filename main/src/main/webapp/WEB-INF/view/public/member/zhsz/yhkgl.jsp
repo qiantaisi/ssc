@@ -56,6 +56,7 @@
                             <option value="中国邮政储蓄银行">中国邮政储蓄银行</option>
                             <option value="平安银行">平安银行</option>
                             <option value="上海银行">上海银行</option>
+                            <option value="广东省商业银行">广东省商业银行</option>
                         </select>
                         <label class="error" for="bankName"></label>
                     </li>

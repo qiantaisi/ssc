@@ -74,18 +74,18 @@
                             </div>
                         </li>
                         <li>
-                            <div style="width:70%;float:left">
-                                <div class="item-content">
-                                    <div class="item-media"><i class="icon icon-form-password"></i></div>
-                                    <div class="item-inner">
-                                        <div class="item-input">
+                            <div class="item-content">
+                                <div class="item-media"><i class="icon icon-form-password"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <div style="width:70%;float:left;display:inline-block;">
                                             <input type="text" placeholder="验证码" name="yzm" id="yzm" style="">
+                                        </div>
+                                        <div style="width:30%;float:right;margin-top:5px;display:inline-block;">
+                                            <img src="<%=basePath%>code/yzm?imgWidth=88&imgHeight=40&imgFontHeight=35&imgCodeY=33" alt="" onclick="javascript:this.src=this.src+'&timestamp='+Math.random()">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div style="width:30%;float:right;text-align:right">
-                                <img src="<%=basePath%>code/yzm?imgWidth=100&imgHeight=48&imgFontHeight=38" alt="" onclick="javascript:this.src=this.src+'&timestamp='+Math.random()">
                             </div>
                         </li>
                     </ul>
