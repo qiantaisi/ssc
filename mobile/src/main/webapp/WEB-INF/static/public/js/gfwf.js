@@ -5,8 +5,10 @@ function gfwfEvent(){
         showBetTemplate();
     });
 
+    $("#btn-reset-gfwf").click(function () {
+        clearSelected();
+    });
 }
-
 
 //获取具体子页面
 function getSubGfwfSscPage(url, callback) {

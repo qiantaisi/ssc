@@ -82,9 +82,6 @@
     <c:if test="${not empty playPlListJson}">
     var gfwfPlJson = ${playPlListJson};
     </c:if>
-    $(function() {
-        showBetTemplate();
-    });
 </script>
 <script type="text/html" id="template_openNumber_item">
     <div class="cl-904">
