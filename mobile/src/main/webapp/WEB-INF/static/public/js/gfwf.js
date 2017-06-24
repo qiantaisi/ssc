@@ -170,7 +170,7 @@ function selectFun_6(obj) {
 }
 
 
-$(function () {    //彩中玩法选中后，隐藏覆盖的模块
+$(function () {    //彩种玩法选中后，隐藏正在显示的 直线方式 的模块
         $(".gfwf_xz .staer a").click(
             function () {
                 $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
