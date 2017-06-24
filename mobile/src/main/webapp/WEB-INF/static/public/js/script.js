@@ -1974,7 +1974,11 @@ $(function () {
                 getSubGfwfSscPage(url, function(){
                     $(".gfwf-title span").html(namePage);
                 });
-                playName = $(this).data("fun_zhushu");
+                // playName = $(this).data("fun_zhushu");
+
+                // 添加选中状态，方便获取相关数据
+                $(".gfwf_xz .staer a.selected").removeClass("selected");
+                $(this).addClass("selected");
             }
         );
         

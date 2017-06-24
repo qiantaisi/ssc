@@ -375,6 +375,8 @@ public class SscController extends CacheController {
             modelMap.put("playPlListJson", this.getCacheGfwfPl(httpServletRequest, companyShortName, playGroupId));
         }
 
+        // 彩种ID
+        modelMap.put("playGroupId", playGroupIdEnum.getId());
         return this.renderPublicView("ssc/gcdt/" + group, modelMap);
     }
 }

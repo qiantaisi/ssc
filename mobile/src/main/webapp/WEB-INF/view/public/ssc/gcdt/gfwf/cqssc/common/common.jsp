@@ -44,7 +44,13 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer wx-select">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_5xzxfs" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_5xzxfs"
+           data-fun_content="content_5xzxfs"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html"
+           data-play_id="497"
+           data-play_pl_id="14207"
            data-name="五星-直选复式">
             <span class="zxfs">直选复式</span>
         </a>

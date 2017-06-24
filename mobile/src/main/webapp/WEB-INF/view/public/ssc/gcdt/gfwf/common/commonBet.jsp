@@ -26,3 +26,66 @@
         </a>
     </div>
 </div>
+
+<script type="text/html" id="template_betTemplate">
+    <div class="betTemplate" id="gfwfBetTemplate">
+        <div class="betHead">
+            <span>注单设定</span>
+        </div>
+        <div class="betContent">
+            <div class="slidebg">
+                <div class="slide-top slide-item">
+                    <span class="ft"><label>赔率：</label><label id="betContent_playPl" class="fandian" data-value="{{defaultPlayPl}}">{{defaultPlayPl}}</label></span>&nbsp;&nbsp;
+                    <span class="fr"><label>返利：</label><label id="betContent_fanli" class="fanli" data-value="0">0%</label></span>
+                </div>
+                <div class="playPlRangeContainer slide-item">
+                    <input id="playPlRange" type="range">
+                </div>
+                <div class="slide-item">
+                    <span>单注金额：
+                        <input type="number" min="2" value="2" id="betContent_inputMoney"
+                               onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                               onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                        >&nbsp;元
+                    </span>
+                </div>
+                <div class="slide-item">
+                    <span>下注倍数：
+                        <input type="number" min="1" value="1" id="betContent_inputBeishu"
+                               onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                               onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                        >&nbsp;倍
+                    </span>
+                </div>
+                <div class="slide-item">
+                    <span>下注注数：
+                        <font id="betContent_zhushu" data-value="{{zhushu}}">{{zhushu}}</font>注
+                    </span>
+                </div>
+                <div class="slide-item">
+                    <span>下注总额：
+                        <font id="betContent_totalMoney">{{totalMoney}}</font>元
+                    </span>
+                </div>
+                <div class="slide-item">
+                    <span>若中奖，单注最高中：
+                        <font id="betContent_canWin">{{canWin}}</font>元
+                    </span>
+                </div>
+                <div class="slide-item"></div>
+            </div>
+        </div>
+        <div class="betFoot">
+            <a href="javascript:void(0)" class="yes-btn" id="yes-btn"
+               data-bet_play_group_id="{{playGroupId}}"
+               data-bet_number="{{number}}"
+               data-bet_play_id="{{playId}}"
+               data-bet_play_pl_id="{{playPlId}}"
+               data-zhushu="{{zhushu}}"
+               <%--data-bet_content="{{betContent}}"--%>
+               data-bet_mode="{{betMode}}"
+            ><span>确认</span></a>
+            <a href="javascript:void(0)" class="no-btn" id="no-btn"><span>取消</span></a>
+        </div>
+    </div>
+</script>
