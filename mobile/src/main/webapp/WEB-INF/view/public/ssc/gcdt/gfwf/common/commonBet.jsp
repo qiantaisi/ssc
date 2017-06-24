@@ -18,7 +18,7 @@
             注&nbsp;
         </span>
             共
-            <span id="nowMoney">10000000</span>
+            <span id="nowMoney">0</span>
             元
 
         <a class="tab-item tab-item-touzhu" href="javascript:void(0)" id="btn-submit">
