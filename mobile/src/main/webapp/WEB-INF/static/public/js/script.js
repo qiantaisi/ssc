@@ -1974,11 +1974,9 @@ $(function () {
                 getSubGfwfSscPage(url, function(){
                     $(".gfwf-title span").html(namePage);
                 });
-
                 playName = $(this).data("fun_zhushu");
             }
         );
-
     }
 
     // 清除内容提示框
