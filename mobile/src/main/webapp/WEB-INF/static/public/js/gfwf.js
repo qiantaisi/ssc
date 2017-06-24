@@ -71,22 +71,21 @@ function getGfwfZhushu(){
  */
 function zhushu_dwd(){
     var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
-    $.each($(".cl-1002 ul li[data-name = '万'] span.acti"), function (index, value) {
-        wanArr.push($.trim($(this).find("i").html()));
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
     });
-    $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
-        qianArr.push($.trim($(this).find("i").html()));
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
     });
-    $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
-        baiArr.push($.trim($(this).find("i").html()));
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
     });
-    $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
-        shiArr.push($.trim($(this).find("i").html()));
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
     });
-    $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
-        geArr.push($.trim($(this).find("i").html()));
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
     });
-
     var wanLength = wanArr.length;
     var qianLength = qianArr.length;
     var baiLength = baiArr.length;
@@ -149,6 +148,45 @@ function zhushu_5xzxfs() {
     var newArr = getNewArrs(wanArr, qianArr, baiArr, shiArr, geArr);
     return newArr.length;
 }
+
+/**********四星直选复式**********/
+/**
+ * 注数-4星直选复式
+ */
+function zhushu_4xzxfs() {
+    var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    var qianLength = qianArr.length;
+    var baiLength = baiArr.length;
+    var shiLength = shiArr.length;
+    var geLength = geArr.length;
+
+    if (qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+        return 0;
+    }
+
+    var newArr = getFourNewArrs(qianArr, baiArr, shiArr, geArr);
+    if (typeof newArr == "undefined" || newArr.length <= 0) {
+        if (typeof clearStateTouZhu == 'function') {
+            clearStateTouZhu();
+        }
+        return;
+    }
+    return newArr.length;
+}
+
 /**********后三**********/
 
 /**
@@ -156,7 +194,7 @@ function zhushu_5xzxfs() {
  */
 function zhushu_h3tsh() {
     var tsArr = [];
-    $.each($(".cl-1015-tsh ul li.tsh_li[data-name = '特殊号'] span.acti_tsh"), function (index, value) {
+    $.each($(".tshStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         tsArr.push($.trim($(this).html()));
     });
     var zlLength = tsArr.length;
@@ -331,47 +369,6 @@ function zhushu_h3zxfs() {
 }
 
 
-//*************************四星直选****************************
-/**
- * 注数-4星直选复式
- */
-function zhushu_4xzxfs() {
-    var qianArr = [], baiArr = [], shiArr = [], geArr = [];
-    $.each($(".cl-1002 ul li[data-name = '千'] span.acti"), function (index, value) {
-        qianArr.push($.trim($(this).find("i").html()));
-    });
-    $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
-        baiArr.push($.trim($(this).find("i").html()));
-    });
-    $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
-        shiArr.push($.trim($(this).find("i").html()));
-    });
-    $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
-        geArr.push($.trim($(this).find("i").html()));
-    });
-
-    var qianLength = qianArr.length;
-    var baiLength = baiArr.length;
-    var shiLength = shiArr.length;
-    var geLength = geArr.length;
-
-    if (qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
-        return 0;
-    }
-
-    var newArr = getFourNewArrs(qianArr, baiArr, shiArr, geArr);
-    if (typeof newArr == "undefined" || newArr.length <= 0) {
-        if (typeof clearStateTouZhu == 'function') {
-            clearStateTouZhu();
-        }
-        return;
-    }
-    return newArr.length;
-}
-
-
-
-
 //******************常用方法****************
 
 // 数字批量选择算法
@@ -535,6 +532,26 @@ function getNewArrs(wanA, qianA, baiA, shiA, geA) {
                     for (var g = 0; g < gArr.length; g++) {
                         tempArr.push(wArr[w] + "" + qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
                     }
+                }
+            }
+        }
+    }
+    return tempArr;
+}
+
+// 获取千、百、十、个固定位数的个数所组成4位所有组合
+function getFourNewArrs(qianA, baiA, shiA, geA) {
+    var qArr = [], bArr = [], sArr = [], gArr = [];
+    qArr = qianA;
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var q = 0; q < qArr.length; q++) {
+        for (var b = 0; b < bArr.length; b++) {
+            for (var s = 0; s < sArr.length; s++) {
+                for (var g = 0; g < gArr.length; g++) {
+                    tempArr.push(qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
                 }
             }
         }
