@@ -354,7 +354,160 @@ function content_h3tsh(){
 
 }
 
+/***************前三****************/
 
+/**
+ * 前三直选复式
+ */
+function content_q3zxfs() {
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0|| qianArr.length <= 0|| baiArr.length <= 0){
+        return;
+    }
+
+    return gfwf_3xfs(
+        wanArr,
+        qianArr,
+        baiArr
+    );
+}
+
+/**
+ * 前三直选-和值
+ */
+function content_q3zxhz() {
+    var heZhiArr = [];
+    var zhushu = 0;
+    $.each($(".q3zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        heZhiArr.push($.trim($(this).html()));
+    });
+
+    return heZhiArr.join(",");
+}
+
+/**
+ * 前三直选-跨度
+ */
+function content_q3zxkd() {
+    var kaDuArr = [];
+    $.each($(".h3kdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        kaDuArr.push($.trim($(this).html()));
+    });
+
+    return kaDuArr.join(",");
+}
+
+/**
+ * 前三直选-前三组合
+ */
+function content_q3zh() {
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+
+    return gfwf_3xfs(
+        wanArr,
+        qianArr,
+        baiArr
+    );
+}
+
+/**
+ * 前三组选-组三复式
+ */
+function content_q3z3fs() {
+    var zuSanArr = [];
+    $.each($(".z3fsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuSanArr.push($.trim($(this).html()));
+    });
+
+    return zuSanArr.join(",");
+}
+
+/**
+ * 前三组选-组六复式
+ */
+function content_q3z6fs(){
+    var zuLiuArr = [];
+
+    $.each($(".z6fsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuLiuArr.push($.trim($(this).html()));
+    });
+    console.log(zuLiuArr.join(","));
+    return zuLiuArr.join(",");
+}
+
+/**
+ * 前三组选-和值
+ */
+function content_q3zuxhz() {
+    var heZhiArr = [];
+    var zhushu = 0;
+    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        heZhiArr.push($.trim($(this).html()));
+    });
+
+    return heZhiArr.join(",");
+}
+
+/**
+ * 前三组选-前三和值尾数
+ */
+function content_q3hzws(){
+    var hzArr = [];
+    $.each($(".hzwsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    return hzArr.join(",");
+}
+
+/**
+ * 前三组选-组选包胆
+ */
+function content_q3zuxbd(){
+    var bdArr = [];
+    $.each($(".bdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        bdArr.push($.trim($(this).html()));
+    });
+
+    return bdArr.join(",");
+}
+
+/**
+ * 前三组选-特殊号
+ */
+function content_q3tsh(){
+    var thArr = [];
+    $.each($(".tshStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        thArr.push($.trim($(this).html()));
+    });
+
+    if (thArr.length <= 0) {
+        alert("至少选择1注号码才能投注");
+        return false;
+    }
+
+    return thArr.join(",");
+
+}
 
 //======================================================注数算法====================================
 
