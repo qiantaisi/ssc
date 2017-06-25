@@ -196,6 +196,48 @@ function content_5xzxfs() {
     );
 }
 
+/**
+ * 4星直选复式
+ */
+function content_4xzxfs() {
+    var qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    if(qianArr.length <= 0|| baiArr.length <= 0|| shiArr.length <= 0|| geArr.length <= 0){
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "四星直选-复式";
+    showContent = "千位：({0})，百位：({1})，十位：({2})，个位：({3})".format(
+        qianArr.join(","),
+        baiArr.join(","),
+        shiArr.join(","),
+        geArr.join(",")
+    );
+    return betContent = gfwf_4xfs(
+        qianArr,
+        baiArr,
+        shiArr,
+        geArr
+    );
+}
+
 /**********四星直选复式**********/
 /**
  * 注数-4星直选复式
@@ -589,6 +631,7 @@ function showBetTemplate(infoStr) {
     }
 
     var data = eval(contentFun + "()");
+
     var zhushu = eval(zhushuFun + "()");
 
     if(data == -1){
@@ -833,6 +876,25 @@ function getHszhNewArrs(baiA, shiA, geA) {
         }
     }
     return tempArr;
+}
+
+function gfwf_4xfs(
+    qianArr,
+    baiArr,
+    shiArr,
+    geArr
+) {
+    var tmpStr_1 = qianArr.join(",");
+    var tmpStr_2 = baiArr.join(",");
+    var tmpStr_3 = shiArr.join(",");
+    var tmpStr_4 = geArr.join(",");
+
+    return "{0}|{1}|{2}|{3}".format(
+        tmpStr_1,
+        tmpStr_2,
+        tmpStr_3,
+        tmpStr_4
+    );
 }
 
 /**
