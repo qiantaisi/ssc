@@ -344,8 +344,8 @@
         </a>
         <a href="javascript:void(0)"
            data-type="gfwf_page"
-           data-fun_zhushu="zhushu_q2zxhz"
-           data-fun_content="content_q2zxhz"
+           data-fun_zhushu="zhushu_q2zuxhz"
+           data-fun_content="content_q2zuxhz"
            data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zuxhz.html"
            data-play_id="541"
            data-play_pl_id="14259"
