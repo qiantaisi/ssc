@@ -57,7 +57,6 @@ function getGfwfZhushu(){
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
     //执行注数方法
     if (typeof zhushuFun != 'undefined') {
-        var zhushuFun = zhushuFun;
         var zhushu = eval(zhushuFun + "()");   // 注数
         if (typeof zhushu == "undefined" || zhushu < 0) {
             return;
@@ -816,7 +815,7 @@ function getFourNewArrs(qianA, baiA, shiA, geA) {
 $.fn.RangeSlider = function(cfg) {
     var min = cfg.min;    // 最小值
     var max = cfg.max;    // 最大值
-    var step = cfg.step;    // 每部
+    var step = cfg.step;    // 每步
     var width = cfg.width ? cfg.width : '100%';  // 容器长度
     var orientation = cfg.orientation ? cfg.orientation : 'vertical';
     var leftColor = cfg.leftColor ? cfg.leftColor : "#fa6200";
