@@ -852,6 +852,44 @@ function content_h3dxds() {
     return "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
 }
 
+/***************任选2*************/
+/**
+ * 任选二-直选复式
+ */
+function content_rx2zxfs(){
+    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+
+    var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : '';
+    var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : '';
+    var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : '';
+    var shiStr = shiArr.length > 0 ? (" 十位: " + shiArr.join("")) : '';
+    var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : '';
+    var strTemp = $.trim(
+        (wanStr == ' ' ? ' ' : wanArr.join(",") + "|") +
+        (qianStr == ' ' ? ' ' : qianArr.join(",") + "|") +
+        (baiStr == ' ' ? ' ' : baiArr.join(",") + "|") +
+        (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
+        (geStr == ' ' ? ' ' : geArr.join(","))
+    );
+
+    return strTemp;
+}
 
 //======================================================注数算法====================================
 
