@@ -73,91 +73,8 @@ function getGfwfZhushu(){
     $("#nowMoney").html(parseFloat((zhushu * 2 * 1).toFixed(3)));
 }
 
-//*************************定位胆****************************
 
-/**
- * 注数-定位胆
- */
-function zhushu_dwd(){
-    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
-    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        wanArr.push($.trim($(this).html()));
-    });
-    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        qianArr.push($.trim($(this).html()));
-    });
-    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        baiArr.push($.trim($(this).html()));
-    });
-    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        shiArr.push($.trim($(this).html()));
-    });
-    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        geArr.push($.trim($(this).html()));
-    });
-    var wanLength = wanArr.length;
-    var qianLength = qianArr.length;
-    var baiLength = baiArr.length;
-    var shiLength = shiArr.length;
-    var geLength = geArr.length;
 
-    if (wanLength <= 0 && qianLength <= 0 && baiLength <= 0 && shiLength <= 0 && geLength <= 0) {
-        return 0;
-    }
-
-    if (wanLength > 0) {
-        newArr = newArr.concat(wanArr);
-    }
-    if (qianLength > 0) {
-        newArr = newArr.concat(qianArr);
-    }
-    if (baiLength > 0) {
-        newArr = newArr.concat(baiArr);
-    }
-    if (shiLength > 0) {
-        newArr = newArr.concat(shiArr);
-    }
-    if (geLength > 0) {
-        newArr = newArr.concat(geArr);
-    }
-    return newArr.length;
-}
-
-//*************************五星直选****************************
-/**
- * 注数-5星直选复式
- */
-function zhushu_5xzxfs() {
-    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
-    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        wanArr.push($.trim($(this).html()));
-    });
-    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        qianArr.push($.trim($(this).html()));
-    });
-    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        baiArr.push($.trim($(this).html()));
-    });
-    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        shiArr.push($.trim($(this).html()));
-    });
-    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        geArr.push($.trim($(this).html()));
-    });
-
-    var wanLength = wanArr.length;
-    var qianLength = qianArr.length;
-    var baiLength = baiArr.length;
-    var shiLength = shiArr.length;
-    var geLength = geArr.length;
-
-    if (wanLength <= 0 || qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
-        return 0;
-    }
-
-    var newArr = getNewArrs(wanArr, qianArr, baiArr, shiArr, geArr);
-    return newArr.length;
-}
 
 //======================================================内容算法====================================
 /**
@@ -306,8 +223,94 @@ function content_4xzxfs() {
 }
 
 
+//======================================================注数算法====================================
 
-/**********四星直选复式**********/
+/**************定位胆***************/
+/**
+ * 注数-定位胆
+ */
+function zhushu_dwd(){
+    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
+    var baiLength = baiArr.length;
+    var shiLength = shiArr.length;
+    var geLength = geArr.length;
+
+    if (wanLength <= 0 && qianLength <= 0 && baiLength <= 0 && shiLength <= 0 && geLength <= 0) {
+        return 0;
+    }
+
+    if (wanLength > 0) {
+        newArr = newArr.concat(wanArr);
+    }
+    if (qianLength > 0) {
+        newArr = newArr.concat(qianArr);
+    }
+    if (baiLength > 0) {
+        newArr = newArr.concat(baiArr);
+    }
+    if (shiLength > 0) {
+        newArr = newArr.concat(shiArr);
+    }
+    if (geLength > 0) {
+        newArr = newArr.concat(geArr);
+    }
+    return newArr.length;
+}
+
+/***********五星直选复式*************/
+/**
+ * 注数-5星直选复式
+ */
+function zhushu_5xzxfs() {
+    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
+    var baiLength = baiArr.length;
+    var shiLength = shiArr.length;
+    var geLength = geArr.length;
+
+    if (wanLength <= 0 || qianLength <= 0 || baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+        return 0;
+    }
+
+    var newArr = getNewArrs(wanArr, qianArr, baiArr, shiArr, geArr);
+    return newArr.length;
+}
+
+/***********四星直选复式*************/
 /**
  * 注数-4星直选复式
  */
@@ -345,8 +348,7 @@ function zhushu_4xzxfs() {
     return newArr.length;
 }
 
-/**********后三**********/
-
+/***************后三****************/
 /**
  * 注数-特殊号
  */
@@ -469,6 +471,7 @@ function zhushu_h3zh() {
     var newArr = getHszhNewArrs(baiArr, shiArr, geArr);
     return newArr.length;
 }
+
 /**
  * 注数-直选跨度
  */
