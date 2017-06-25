@@ -10,7 +10,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="wrap">
-    <div class="cus_common">
+    <div class="cus_common hzwsStr">
         <div class="wan_top">
             <span class="wanwei">和值尾数</span>
             <span class="xz">

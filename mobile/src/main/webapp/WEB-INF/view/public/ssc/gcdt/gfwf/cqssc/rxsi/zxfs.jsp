@@ -184,7 +184,7 @@
                 <span class="xz n6" onclick="danSelect(this)">6</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n7" onclick="danSelect(this)">7</span
+                <span class="xz n7" onclick="danSelect(this)">7</span>
             </div>
             <div class="cus-flex-item">
                 <span class="xz n8" onclick="danSelect(this)">8</span>

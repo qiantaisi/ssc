@@ -10,7 +10,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="wrap">
-    <div class="cus_common">
+    <div class="cus_common zxhzStr">
         <div class="wan_top">
             <span class="wanwei">和值</span>
         </div>
@@ -72,6 +72,19 @@
             <div class="cus-flex-item">
                 <span class="xz n18" onclick="danSelect(this)">18</span>
             </div>
+
+            <div class="foot_checkbox" id="checkSelected" data-fun_checkbox="checkCkRx2">
+                <label class="myLabel"><input type="checkbox" value="万"><i>✓</i>万位</label>
+                <label class="myLabel"><input type="checkbox" value="千"><i>✓</i>千位</label>
+                <label class="myLabel"><input type="checkbox" value="百"><i>✓</i>百位</label>
+                <label class="myLabel"><input type="checkbox" value="十" checked><i>✓</i>十位</label>
+                <label class="myLabel"><input type="checkbox" value="个" checked><i>✓</i>个位</label>
+            </div>
         </div>
     </div>
 </div>
+<script>
+    $(function() {
+
+    });
+</script>
