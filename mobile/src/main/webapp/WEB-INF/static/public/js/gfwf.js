@@ -13,6 +13,37 @@ function gfwfEvent(){
         console.log("ss");
         getGfwfZhushu();
     });
+
+    // checkbox触发事件
+    if ($("#checkSelected").length > 0) {
+        // // 兼容IE的checkbox选中
+        // if ($.browser.msie) {
+        //     $('input:checkbox').click(function () {
+        //         this.blur();
+        //         this.focus();
+        //     });
+        // }
+
+        $("#checkSelected input[type='checkbox']").change(function() {
+            var checkSelectedFun = $("#checkSelected").data("fun_checkbox");
+            if (typeof checkSelectedFun != 'undefined') {
+                eval(checkSelectedFun + "()");
+            }
+        });
+    }
+}
+
+/**
+ * 获得checkbox选中值列表
+ */
+function getCheckboxValue() {
+    var result = [];
+    $("#checkSelected input[type='checkbox']").each(function() {
+        if ($(this).is(":checked")) {
+            result.push($(this).val());
+        }
+    });
+    return result;
 }
 
 function checkCkRx2(){
@@ -1961,18 +1992,11 @@ function zhushu_rx2zxhz(){
         }
     }
     var zhushu = newArr.length;
-    var checkArr = [], checkLen = 0, lengthArr = 0;
-    //选取选中checkbox
-    $.each($(".foot_checkbox label input[name='position_zxhzrx2']:checked"), function () {
-        checkArr.push($(this).val());
-    });
-    console.log(zhushu + "===");
-    checkLen = checkArr.length;
-    var shu = getRx2WeiFn(checkLen);
-    console.log(shu);
-    lengthArr = zhushu * shu;
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 2).length;
 
-    return lengthArr;
+    return zhushu * shu;
 }
 
 //注数-组选复式
@@ -2463,17 +2487,16 @@ function selectFun_6(obj) {
 
 
 $(function () {    //彩种玩法选中后，隐藏正在显示的 直线方式 的模块
-        $(".gfwf_xz .staer a").click(
-            function () {
-                $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
-                $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
-                $(".page").find(".x_wrap").removeClass("Fixed");
-                $(".page").find(".gfwf_xz").removeClass("Fixed");
-                $(".page").find(".gfwf_mask2").removeClass("Fixed");
-            }
-        );
-    }
-);
+    $(".gfwf_xz .staer a").click(
+        function () {
+            $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+            $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+            $(".page").find(".x_wrap").removeClass("Fixed");
+            $(".page").find(".gfwf_xz").removeClass("Fixed");
+            $(".page").find(".gfwf_mask2").removeClass("Fixed");
+        }
+    );
+});
 
 /**
  * 获取当前赔率随机算法
@@ -2741,10 +2764,9 @@ function showBetTemplate(infoStr) {
         $("#betContent_canWin").html(canWin.toFixed(3));
     }
 
-    // //定义弹框宽度大小
-    // 转移到layer的skin
-    // $("#layui-m-layer" + layerBet + " .layui-m-layerchild").css("width", "85%");
-    // $(".betTemplate").parent().css("padding", "0 0!important");
+    $("#ischange").change(function() {
+        alert("checked");
+    });
 }
 
 // 清除所有选择
@@ -2754,22 +2776,22 @@ function clearSelected() {
     $("#nowMoney").html(0);
 }
 
-//*****************mobile注数算法******************
-//获取任二位置方案
-function getRx2WeiFn(checkLen) {
-    var shu = 0;
-    if(checkLen == 2){
-        shu = 1
-    } else if(checkLen == 3){
-        shu = 3
-    } else if(checkLen == 4){
-        shu = 6
-    } else if(checkLen == 5){
-        shu = 10
-    }
-
-    return shu;
-}
+// //*****************mobile注数算法******************
+// //获取任二位置方案
+// function getRx2WeiFn(checkLen) {
+//     var shu = 0;
+//     if(checkLen == 2){
+//         shu = 1
+//     } else if(checkLen == 3){
+//         shu = 3
+//     } else if(checkLen == 4){
+//         shu = 6
+//     } else if(checkLen == 5){
+//         shu = 10
+//     }
+//
+//     return shu;
+// }
 
 // 获取万、千、百、十、个，固定位数的个数所组成5位所有组合
 function getNewArrs(wanA, qianA, baiA, shiA, geA) {
