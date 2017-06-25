@@ -1794,6 +1794,153 @@ function zhushu_h3dxds(){
     return dxdsBArr.length * dxdsSArr.length * dxdsGArr.length;
 }
 
+
+//********* 注数-任选二 ****************
+
+//注数-直选复式
+function zhushu_rx2zxfs() {
+    var arrNew = [], tempArr = [];
+    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    if (wanArr.length > 0) {
+        arrNew.push(wanArr);
+    }
+    if (qianArr.length > 0) {
+        arrNew.push(qianArr);
+    }
+    if (baiArr.length > 0) {
+        arrNew.push(baiArr);
+    }
+    if (shiArr.length > 0) {
+        arrNew.push(shiArr);
+    }
+    if (geArr.length > 0) {
+        arrNew.push(geArr);
+    }
+
+    if (arrNew.length < 2) {
+        return 0;
+    }
+
+    for (var i = 0; i < arrNew.length; i++) {
+        for (var i1 = 0; i1 < arrNew[i].length; i1++) {
+            for (var x = i + 1; x < arrNew.length; x++) {
+                for (var n = 0; n < arrNew[x].length; n++) {
+                    tempArr.push(arrNew[i][i1] + "" + arrNew[x][n]);
+                }
+            }
+        }
+    }
+    return tempArr.length;
+}
+
+//注数-直选和值
+function zhushu_rx2zxhz(){
+    var hzArr = [];
+    var newArr = [];
+
+    $.each($(".zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    if (hzArr.length <= 0) {
+        return 0;
+    }
+    for (var i = 0; i < hzArr.length; i++) {
+        for (var x = 0; x < 10; x++) {
+            for (var y = 0; y < 10; y++) {
+                if (x + y == hzArr[i]) {
+                    newArr.push(x + "" + y);
+                }
+            }
+        }
+    }
+    var zhushu = newArr.length;
+    var shu = $("#positioninfo-hz").html();
+    var lengthArr = zhushu * shu;
+    return lengthArr;
+}
+
+//注数-组选复式
+function zhushu_rx2zuxfs(){
+    var zuArr = [];
+    var tempArr = [];
+    $.each($(".zuxfsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuArr.push($.trim($(this).html()));
+    });
+    var zuLength = zuArr.length;
+
+    if (zuLength < 2) {
+        return;
+    }
+
+    for (var i = 0; i < zuArr.length; i++) {
+        for (var i1 = 0; i1 < zuArr.length; i1++) {
+            if (zuArr[i] != zuArr[i1]) {
+                var arr = [];
+                arr.push(zuArr[i]);
+                arr.push(zuArr[i1]);
+                arr.sort();
+                tempArr.push(arr.join(""));
+            }
+        }
+    }
+
+    tempArr = tempArr.uniqueArr();
+    var zhushu = tempArr.length;
+    var shu = $("#positioninfo-zufs").html();
+    var lengthArr = zhushu * shu;
+    return lengthArr;
+}
+
+//注数-组选和值
+function zhushu_rx2zuxhz(){
+    var hzArr = [];
+    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        hzArr.push($.trim($(this).html()));
+    });
+    if (hzArr.length <= 0) {
+        return 0;
+    }
+    var newArr = [];
+    for (var i = 0; i < hzArr.length; i++) {
+        for (var x = 0; x < 10; x++) {
+            for (var y = 0; y < 10; y++) {
+                if ((x + y) == hzArr[i] && x != y) {
+                    var arr = [];
+                    arr.push(x);
+                    arr.push(y);
+                    arr.sort();
+                    newArr.push(arr.join(""));
+                }
+            }
+        }
+    }
+    newArr = newArr.uniqueArr();
+    var zhushu = newArr.length;
+    var shu = $("#positioninfo-zuhz").html();
+    var lengthArr = zhushu * shu;
+    return lengthArr;
+}
+
+
+
+
 // 数字批量选择算法
 function selectFun_1(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");  //初始化选择的特效，清零
