@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <h4><span><img src="${resPath}img/r3.png" /></span></h4>
-                        <p><input id="registerYzm" class="short" type="text" placeholder="请输入验证码" onfocus="refreshYzm(document.getElementById('registerYzmImg1'))" /><img id="registerYzmImg1" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=65&imgHeight=30&imgFontHeight=26&imgCodeY=23&imgCodeX=2" /></p>
+                        <p><input id="registerYzm" class="short" type="text" placeholder="请输入验证码" /><img id="registerYzmImg1" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=65&imgHeight=30&imgFontHeight=26&imgCodeY=23&imgCodeX=2" /></p>
                     </div>
                     <div class="no">
                         <h3><input type="submit"  value="立即注册"/><br><span>注册即表示同意<a href="javascript:void(0)" onclick="showKhxy()">《${webName}服务使用协议》</a></span></h3>
