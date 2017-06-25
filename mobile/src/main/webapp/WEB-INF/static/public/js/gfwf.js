@@ -851,9 +851,9 @@ function zhushu_q3zxfs() {
 
 
 
-//***************** 前二 *********************
+//***************** 注数 - 前二 *********************
 
-//直选复式
+//注数-直选复式
 function zhushu_q2zxfs() {
     var tempArr = [];
     var wanArr = [], qianArr = [];
@@ -879,7 +879,7 @@ function zhushu_q2zxfs() {
     return tempArr.length;
 }
 
-//直选和值
+//注数-直选和值
 function zhushu_q2zxhz() {
     var tempArr = [];
     var hzArr = [], temp = [], nowTemp = [];
@@ -919,6 +919,45 @@ function zhushu_q2zxhz() {
     return tempArr.length;
 }
 
+//注数-直选跨度
+function zhushu_q2zxkd() {
+    var tempArr = [];
+    var kdArr = [], numTemp = [];
+    var num = 0;
+
+    $.each($(".kdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        numTemp.push($.trim($(this).html()));
+    });
+
+    if (typeof valArr != "undefined") {
+        kdArr = valArr;
+    } else {
+        kdArr = numTemp;
+    }
+
+    var hzLength = kdArr.length;
+    if (hzLength <= 0) {
+        return 0;
+    }
+
+    for (var n = 0; n < kdArr.length; n++) {
+        num = kdArr[n];
+        for (var i = 0; i < 10; i++) {
+            for (var i1 = 0; i1 < 10; i1++) {
+                var numTemp = [];
+                numTemp.push(i);
+                numTemp.push(i1);
+                numTemp.sort();
+                if (numTemp[1] - numTemp[0] == num) {
+                    tempArr.push(i + "" + i1);
+                }
+            }
+        }
+    }
+
+    tempArr = tempArr.uniqueArr();
+    return tempArr.length;
+}
 
 
 // 数字批量选择算法
@@ -1645,4 +1684,3 @@ Array.prototype.uniqueArr = function () {
     }
     return temp;
 }
-
