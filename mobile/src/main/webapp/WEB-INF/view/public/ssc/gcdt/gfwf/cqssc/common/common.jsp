@@ -31,13 +31,13 @@
         <div class="xuan2">定位胆</div>
         <div class="xuan1"></div>
     </div>
-    <div class="staer">
+    <div class="staer dwd-select">
         <a href="javascript:void(0)"
            data-type="gfwf_page"
            data-fun_zhushu="zhushu_dwd"
            data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dwd/zxfs.html"
            data-name="定位胆-直选复式">
-            <span class="staer1">直选复式</span>
+            <span class="zxfs">直选复式</span>
         </a>
     </div>
 
@@ -55,7 +55,7 @@
            data-play_id="497"
            data-play_pl_id="14207"
            data-name="五星-直选复式">
-            <span class="zxfs">直选复式</span>
+            <span>直选复式</span>
         </a>
     </div>
 
