@@ -680,7 +680,7 @@ function zhushu_q3zxkd() {
  */
 function zhushu_q3zxhz() {
     var heZhiArr = [], newArr = [];
-    $.each($(".h3zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".q3zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         heZhiArr.push($.trim($(this).html()));
     });
 
@@ -694,7 +694,7 @@ function zhushu_q3zxhz() {
 }
 
 /**
- * 注数-后3直选复式
+ * 注数-前3直选复式
  */
 function zhushu_q3zxfs() {
     var newArr = [];
@@ -1153,8 +1153,7 @@ function getThreeNewArrs(baiA, shiA, geA) {
     }
     return tempArr;
 }
-
-//后三直选--获取所选号码分散为三位所有组合的和值
+//前三直选，获取多选号码分散为三位所有组合的和值
 function getHezNewArrs(hZArr) {
     var heZhiArr = [], shuArr = [], tempArr = [];
     var temp = [];
@@ -1190,7 +1189,8 @@ function getHezNewArrs(hZArr) {
     return tempArr;
 }
 
-// 后三直选-跨度所选跨度值所有组合
+
+// 前三和后三直选-跨度所选跨度值所有组合
 function getKaduNewArrs(kDArr) {
     var kaDuArr = [], tempArr1 = [], tempArr2 = [], tempArr3 = [];
     var allArr = [];
