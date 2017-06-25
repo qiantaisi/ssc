@@ -155,7 +155,7 @@ function content_5xzxfs() {
 }
 
 /**
- * 4星直选复式
+ * 四星直选复式
  */
 function content_4xzxfs() {
     var qianArr = [], baiArr = [], shiArr = [], geArr = [];
@@ -222,6 +222,132 @@ function content_h3zxfs() {
     );
 }
 
+/**
+ * 后三直选-和值
+ */
+function content_h3zxhz() {
+    var heZhiArr = [];
+    var zhushu = 0;
+    $.each($(".h3zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        heZhiArr.push($.trim($(this).html()));
+    });
+
+    return heZhiArr.join(",");
+}
+
+/**
+ * 后三直选-跨度
+ */
+function content_h3zxkd() {
+    var kaDuArr = [];
+    $.each($(".h3kdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        kaDuArr.push($.trim($(this).html()));
+    });
+
+    return kaDuArr.join(",");
+}
+
+/**
+ * 后三直选-后三组合
+ */
+function content_h3zh() {
+    var baiArr = [], shiArr = [], geArr = [];
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    return gfwf_3xfs(
+        baiArr,
+        shiArr,
+        geArr
+    );
+}
+
+/**
+ * 后三组选-组三复式
+ */
+function content_h3z3fs() {
+    var zuSanArr = [];
+    $.each($(".z3fsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuSanArr.push($.trim($(this).html()));
+    });
+
+    return zuSanArr.join(",");
+}
+
+/**
+ * 后三组选-组六复式
+ */
+function content_h3z6fs(){
+    var zuLiuArr = [];
+
+    $.each($(".z6fsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuLiuArr.push($.trim($(this).html()));
+    });
+        console.log(zuLiuArr.join(","));
+    return zuLiuArr.join(",");
+}
+
+/**
+ * 后三组选-和值
+ */
+function content_h3zuxhz() {
+    var heZhiArr = [];
+    var zhushu = 0;
+    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        heZhiArr.push($.trim($(this).html()));
+    });
+
+    return heZhiArr.join(",");
+}
+
+/**
+ * 后三组选-后三和值尾数
+ */
+function content_h3hzws(){
+    var hzArr = [];
+    $.each($(".hzwsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    return hzArr.join(",");
+}
+
+/**
+ * 后三组选-组选包胆
+ */
+function content_h3zuxbd(){
+    var bdArr = [];
+    $.each($(".bdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        bdArr.push($.trim($(this).html()));
+    });
+
+    return bdArr.join(",");
+}
+
+/**
+ * 后三组选-特殊号
+ */
+function content_h3tsh(){
+    var thArr = [];
+    $.each($(".tshStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        thArr.push($.trim($(this).html()));
+    });
+
+    if (thArr.length <= 0) {
+        alert("至少选择1注号码才能投注");
+        return false;
+    }
+
+    return thArr.join(",");
+
+}
 
 
 
@@ -534,7 +660,6 @@ function zhushu_h3zxfs() {
     return newArr.length;
 }
 
-
 //******************前三****************
 /**
  * 注数-特殊号
@@ -719,9 +844,6 @@ function zhushu_q3zxfs() {
     return newArr.length;
 }
 
-
-//******************常用方法****************
-
 // 数字批量选择算法
 function selectFun_1(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");  //初始化选择的特效，清零
@@ -829,7 +951,15 @@ function getPlayPlFun_content() {
  * 获取当前赔率ID
  */
 function getPlayPlId() {
-    return $(".gfwf_xz .staer a.selected").data("play_pl_id");
+    var arrTemp = null;
+    var indexStr = ($(".gfwf_xz .staer a.selected").data("play_pl_id")).toString();
+    if(indexStr.indexOf("|") > 0){
+        arrTemp = (indexStr.split("|"))[0];
+    }else {
+        arrTemp = $(".gfwf_xz .staer a.selected").data("play_pl_id");
+    }
+
+    return arrTemp;
 }
 
 /**
@@ -868,6 +998,7 @@ function getPlAndMaxFd() {
         for (var i = 0; i < gfwfPlJson.sscPlayPlList.length; ++i) {
             var o = gfwfPlJson.sscPlayPlList[i];
             if (o.playPlId == playPlId) {
+
                 return o;
             }
         }
@@ -1153,7 +1284,8 @@ function getThreeNewArrs(baiA, shiA, geA) {
     }
     return tempArr;
 }
-//前三直选，获取多选号码分散为三位所有组合的和值
+
+// 后三直选--获取所选号码分散为三位所有组合的和值
 function getHezNewArrs(hZArr) {
     var heZhiArr = [], shuArr = [], tempArr = [];
     var temp = [];
@@ -1222,7 +1354,7 @@ function getKaduNewArrs(kDArr) {
     return allArr;
 }
 
-//后三组选-组三复式
+// 后三组选-组三复式
 function getZuXuanNewArrs(zuXuanArr) {
     var tempArr = [],zxArr = [];
     zxArr = zuXuanArr;
@@ -1239,7 +1371,7 @@ function getZuXuanNewArrs(zuXuanArr) {
     return tempArr;
 }
 
-//后三组选-组六复式
+// 后三组选-组六复式
 function getZuLiuNewArrs(zuXuanArr) {
     var tempArr = [], zxArr = [];
     zxArr = zuXuanArr;
@@ -1261,7 +1393,7 @@ function getZuLiuNewArrs(zuXuanArr) {
     return tempArr;
 }
 
-//后三组选-组选和值
+// 后三组选-组选和值
 function getZxhzNewArrs(zuXuanArr) {
     var heZhiArr = [], shuArr = [], tempArr = [];
     var temp = [];
@@ -1306,7 +1438,7 @@ function getZxhzNewArrs(zuXuanArr) {
     return tempArr;
 }
 
-//后三组选-组选包胆
+// 后三组选-组选包胆
 function getZxbdNewArrs(zuXuanArr) {
     var tempArr = [], bdArr = [];
     bdArr = zuXuanArr;
