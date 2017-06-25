@@ -879,6 +879,45 @@ function zhushu_q2zxfs() {
     return tempArr.length;
 }
 
+//直选和值
+function zhushu_q2zxhz() {
+    var tempArr = [];
+    var hzArr = [], temp = [], nowTemp = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        nowTemp.push($.trim($(this).html()));
+    });
+
+    if (typeof valArr != "undefined") {
+        hzArr = valArr;
+    } else {
+        hzArr = nowTemp;
+    }
+
+    var hzLength = hzArr.length;
+    if (hzLength <= 0) {
+        return 0;
+    }
+
+    for (var n = 0; n < hzArr.length; n++) {
+        sumTemp = parseInt(hzArr[n]);
+        num = parseInt(hzArr[n]);
+        while (sumTemp >= 0) {
+            temp.push(sumTemp);
+            sumTemp--;
+        }
+
+        for (var i = 0; i < temp.length; i++) {
+            for (var i1 = 0; i1 < temp.length; i1++) {
+                if (temp[i] + temp[i1] == num && temp[i] <= 9 && temp[i1] <= 9) {
+                    tempArr.push(temp[i] + "" + temp[i1]);
+                }
+            }
+        }
+    }
+
+    tempArr = tempArr.uniqueArr();
+    return tempArr.length;
+}
 
 
 
