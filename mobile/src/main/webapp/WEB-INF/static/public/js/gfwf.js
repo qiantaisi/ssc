@@ -569,7 +569,7 @@ function content_q2zuxfs(){
  */
 function content_q2zuxhz(){
     var hzArr = [];
-    $.each($(".q2zuxfsStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+    $.each($(".q2zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         hzArr.push($.trim($(this).html()));
     });
 
@@ -1481,6 +1481,51 @@ function zhushu_q2zuxbd() {
             }
         }
     }
+    return tempArr.length;
+}
+
+/**
+ * 注数-组选和值
+ */
+function zhushu_q2zuxhz(){
+    var tempArr = [];
+    var hzArr = [], temp = [];
+    var sumTemp = 0, num = 0;
+    $.each($(".q2zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    var hzLength = hzArr.length;
+    if (hzLength <= 0) {
+        return 0;
+    }
+
+    for (var n = 0; n < hzArr.length; n++) {
+        sumTemp = parseInt(hzArr[n]);
+        num = parseInt(hzArr[n]);
+        while (sumTemp >= 0) {
+            temp.push(sumTemp);
+            sumTemp--;
+        }
+
+        for (var i = 0; i < temp.length; i++) {
+            for (var i1 = 0; i1 < temp.length; i1++) {
+                if (temp[i] + temp[i1] == num && temp[i] <= 9 && temp[i1] <= 9) {
+                    if (temp[i] != temp[i1]) {
+                        var arr1 = [];
+                        arr1.push(temp[i]);
+                        arr1.push(temp[i1]);
+                        arr1.sort();
+                        tempArr.push(arr1.join(""));
+                    }
+                }
+            }
+        }
+    }
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+    tempArr = tempArr.uniqueArr();
     return tempArr.length;
 }
 
