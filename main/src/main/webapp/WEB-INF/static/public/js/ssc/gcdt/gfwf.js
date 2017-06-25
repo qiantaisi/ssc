@@ -7498,7 +7498,7 @@ function content_q2zuxbd(){
 }
 
 /**
- * 前二组选-组选复式
+ * 前二组选-组选和值
  */
 function content_q2zuxhz(){
     var hzArr = [];

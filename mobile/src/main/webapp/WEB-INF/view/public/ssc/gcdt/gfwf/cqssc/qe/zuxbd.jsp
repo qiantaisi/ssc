@@ -14,7 +14,7 @@
         <div class="wan_top">
             <span class="wanwei">包胆</span>
         </div>
-        <div class="wan_bottom">
+        <div class="wan_bottom" data-name="bd">
             <div class="cus-flex-item">
                 <span class="xz n0" onclick="danSelect(this)">0</span>
             </div>
