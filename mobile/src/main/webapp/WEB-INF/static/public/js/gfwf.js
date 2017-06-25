@@ -159,6 +159,59 @@ function zhushu_5xzxfs() {
 }
 
 //======================================================内容算法====================================
+/**
+ * 定位胆
+ */
+function content_dwd(){
+    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    var wanStr = wanArr.length > 0 ? ("万位: (" + wanArr.join(",") + ")") : "";
+    var qianStr = qianArr.length > 0 ? (" 千位: (" + qianArr.join(",") + ")") : "";
+    var baiStr = baiArr.length > 0 ? (" 百位: (" + baiArr.join(",") + ")") : "";
+    var shiStr = shiArr.length > 0 ?  (" 十位: (" + shiArr.join(",") + ")") : "";
+    var geStr = geArr.length > 0 ? (" 个位: (" + geArr.join(",") + ")") : "";
+
+    var nowArr = [];
+    return $.trim(
+        (wanStr == ' ' ? ' ' : wanArr.join(",") + "|") +
+        (qianStr == ' ' ? ' ': qianArr.join(",") + "|") +
+        (baiStr == ' ' ? ' ': baiArr.join(",") + "|") +
+        (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
+        (geStr == ' ' ? ' ': geArr.join(","))
+    );
+
+    // // 初始化变量
+    // var showPlayName = '';
+    // var showContent = '';
+    // var betContent = '';
+    //
+    // showPlayName = "定位胆-定位胆";
+    // showContent = $.trim(wanStr + qianStr + baiStr + shiStr + geStr);
+    // // 转换投注格式
+    // betContent = strTemp;
+    //
+    // return {
+    //     showPlayName: showPlayName,
+    //     showContent: showContent,
+    //     betContent: betContent
+    // };
+}
+
 function content_5xzxfs() {
     var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
     $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
