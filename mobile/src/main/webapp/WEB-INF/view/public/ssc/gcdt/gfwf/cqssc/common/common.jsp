@@ -65,7 +65,13 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_4xzxfs" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_4xzxfs"
+           data-fun_content="content_4xzxfs"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html"
+           data-play_id="499"
+           data-play_pl_id="14209"
            data-name="四星-直选复式">
             <span class="staer1">直选复式</span>
         </a>
@@ -77,43 +83,103 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3zxfs" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxfs.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3zxfs"
+           data-fun_content="content_h3zxfs"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxfs.html"
+           data-play_id="502"
+           data-play_pl_id="14221"
            data-name="后三-直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3zxhz" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxhz.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3zxhz"
+           data-fun_content="content_h3zxhz"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxhz.html"
+           data-play_id="505"
+           data-play_pl_id="14216"
            data-name="后三-直选和值">
             <span class="staer1">直选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3zxkd" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxkd.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3zxkd"
+           data-fun_content="content_h3zxkd"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxkd.html"
+           data-play_id="506"
+           data-play_pl_id="14215"
            data-name="后三-直选跨度">
             <span class="staer1">直选跨度</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3zh"v data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/hszh.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3zh"
+           data-fun_content="content_h3zh"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/hszh.html"
+           data-play_id="504"
+           data-play_pl_id="14217|14218|14219"
            data-name="后三-后三组合">
             <span class="staer1">后三组合</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3z3fs" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zsfs.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3z3fs"
+           data-fun_content="content_h3z3fs"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zsfs.html"
+           data-play_id="507"
+           data-play_pl_id="14214"
            data-name="后三-组三复式">
             <span class="staer1">组三复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3z6fs" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zlfs.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3z6fs"
+           data-fun_content="content_h3z6fs"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zlfs.html"
+           data-play_id="509"
+           data-play_pl_id="14212"
            data-name="后三-组六复式">
             <span class="staer1">组六复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3zuxhz" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zuxhz.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3zuxhz"
+           data-fun_content="content_h3zuxhz"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zuxhz.html"
+           data-play_id="512"
+           data-play_pl_id="14229\14230"
            data-name="后三-组选和值">
             <span class="staer1">组选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3zuxbd" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxbd.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3zuxbd"
+           data-fun_content="content_h3zuxbd"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxbd.html"
+           data-play_id="513"
+           data-play_pl_id="14227\14228"
            data-name="后三-组选包胆">
             <span class="staer1">组选包胆</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3hzws" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/hzws.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3hzws"
+           data-fun_content="content_h3hzws"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/hzws.html"
+           data-play_id="514"
+           data-play_pl_id="14226"
            data-name="后三-和值尾数">
             <span class="staer1">和值尾数</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_h3tsh" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/tsh.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_h3tsh"
+           data-fun_content="content_h3tsh"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/tsh.html"
+           data-play_id="515"
+           data-play_pl_id="14223|14224|14225"
            data-name="后三-特殊号">
             <span class="staer1">特殊号</span>
         </a>
@@ -125,43 +191,103 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3zxfs" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxfs.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3zxfs"
+           data-fun_content="content_q3zxfs"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxfs.html"
+           data-play_id="516"
+           data-play_pl_id="14222"
            data-name="前三-直选复式">
             <span class="staer1">直选复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3zxhz" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxhz.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3zxhz"
+           data-fun_content="content_q3zxhz"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxhz.html"
+           data-play_id="519"
+           data-play_pl_id="14237"
            data-name="前三-直选和值">
             <span class="staer1">直选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3zxkd" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxkd.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3zxkd"
+           data-fun_content="content_q3zxkd"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxkd.html"
+           data-play_id="520"
+           data-play_pl_id="14238"
            data-name="前三-直选跨度">
             <span class="staer1">直选跨度</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3zh" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/hszh.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3zh"
+           data-fun_content="content_q3zh"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/hszh.html"
+           data-play_id="518"
+           data-play_pl_id="14234|14235|14236"
            data-name="前三-后三组合">
             <span class="staer1">前三组合</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3z3fs" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zsfs.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3z3fs"
+           data-fun_content="content_q3z3fs"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zsfs.html"
+           data-play_id="521"
+           data-play_pl_id="14239"
            data-name="前三-组三复式">
             <span class="staer1">组三复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3z6fs" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zlfs.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3z6fs"
+           data-fun_content="content_q3z6fs"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zlfs.html"
+           data-play_id="523"
+           data-play_pl_id="14241"
            data-name="前三-组六复式">
             <span class="staer1">组六复式</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3zuxhz" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zuxhz.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3zuxhz"
+           data-fun_content="content_q3zuxhz"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zuxhz.html"
+           data-play_id="528"
+           data-play_pl_id="14246"
            data-name="前三-组选和值">
             <span class="staer1">组选和值</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3zuxbd" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxbd.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3zuxbd"
+           data-fun_content="content_q3zuxbd"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxbd.html"
+           data-play_id="529"
+           data-play_pl_id="14247"
            data-name="前三-组选包胆">
             <span class="staer1">组选包胆</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3hzws" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/hzws.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3hzws"
+           data-fun_content="content_q3hzws"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/hzws.html"
+           data-play_id="531"
+           data-play_pl_id="14249"
            data-name="前三-和值尾数">
             <span class="staer1">和值尾数</span>
         </a>
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q3tsh" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/tsh.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q3tsh"
+           data-fun_content="content_q3tsh"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/tsh.html"
+           data-play_id="534"
+           data-play_pl_id="14250|14251|14252"
            data-name="前三-特殊号">
             <span class="staer1">特殊号</span>
         </a>
@@ -173,7 +299,13 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_q2zxfs" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zxfs.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_q2zxfs"
+           data-fun_content="content_q2zxfs"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zxfs.html"
+           data-play_id="534"
+           data-play_pl_id=""
            data-name="前二-直选复式">
             <span class="staer1">直选复式</span>
         </a>
