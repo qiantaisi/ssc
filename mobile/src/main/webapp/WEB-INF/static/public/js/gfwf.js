@@ -43,7 +43,12 @@ function getSubGfwfSscPage(url, callback) {
 function danSelect(obj) {
     var flag = $(obj).parent().parent().data("name");
     if(typeof flag != "undefined" && flag == "bd"){
-        $(obj).parent().parent().find("span.active_gfwf").removeClass("active_gfwf");
+        var tOrF = $(obj).hasClass("active_gfwf");
+        if(tOrF){
+            $(this).removeClass("active_gfwf");
+        } else {
+            $(obj).parent().parent().find("span.active_gfwf").removeClass("active_gfwf");
+        }
     }
 
     if ($(obj).parent().find(".wan_bottom .cus-flex-item .xz").hasClass("active_gfwf")) {
@@ -761,26 +766,26 @@ function zhushu_q3z3fs(){
  * 注数-前3组合
  */
 function zhushu_q3zh() {
-    var baiArr = [], shiArr = [], geArr = [];
-    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         baiArr.push($.trim($(this).html()));
     });
-    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        shiArr.push($.trim($(this).html()));
-    });
-    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        geArr.push($.trim($(this).html()));
-    });
 
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
     var baiLength = baiArr.length;
-    var shiLength = shiArr.length;
-    var geLength = geArr.length;
 
-    if (baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+    if (wanLength <= 0 || qianLength <= 0 || baiLength <= 0) {
         return;
     }
 
-    var newArr = getHszhNewArrs(baiArr, shiArr, geArr);
+    var newArr = getHszhNewArrs(wanArr, qianArr, baiArr);
     return newArr.length;
 }
 
@@ -823,24 +828,24 @@ function zhushu_q3zxhz() {
  */
 function zhushu_q3zxfs() {
     var newArr = [];
-    var baiArr = [], shiArr = [], geArr = [];
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
     $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         baiArr.push($.trim($(this).html()));
     });
-    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        shiArr.push($.trim($(this).html()));
-    });
-    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        geArr.push($.trim($(this).html()));
-    });
 
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
     var baiLength = baiArr.length;
-    var shiLength = shiArr.length;
-    var geLength = geArr.length;
-    if (baiLength <= 0 || shiLength <= 0 || geLength <= 0) {
+    if (wanLength <= 0 || qianLength <= 0 || baiLength <= 0) {
         return 0;
     }
-    newArr = getThreeNewArrs(baiArr, shiArr, geArr);
+    newArr = getThreeNewArrs(wanArr, qianArr, baiArr);
     return newArr.length;
 }
 

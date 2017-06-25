@@ -1979,6 +1979,9 @@ $(function () {
                 // 添加选中状态，方便获取相关数据
                 $(".gfwf_xz .staer a.selected").removeClass("selected");
                 $(this).addClass("selected");
+                //清除当前注数与金额状态
+                $("#zhushu").html("0");
+                $("#nowMoney").html("0");
             }
         );
         
