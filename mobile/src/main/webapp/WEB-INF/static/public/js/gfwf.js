@@ -8,6 +8,15 @@ function gfwfEvent(){
     $("#btn-reset-gfwf").click(function () {
         clearSelected();
     });
+
+    $("#checkboxRx2 label a").click(function () {
+        console.log("ss");
+        getGfwfZhushu();
+    });
+}
+
+function checkCkRx2(){
+    getGfwfZhushu();
 }
 
 //获取具体子页面
@@ -68,9 +77,13 @@ function getGfwfZhushu(){
     //执行注数方法
     if (typeof zhushuFun != 'undefined') {
         var zhushu = eval(zhushuFun + "()");   // 注数
-        if (typeof zhushu == "undefined" || zhushu < 0) {
+        if(zhushu == 0){
+            $("#zhushu").html(zhushu);
+            return;
+        }else if (typeof zhushu == "undefined" || zhushu < 0) {
             return;
         }
+
         $("#zhushu").html(zhushu);
     }
 
@@ -858,19 +871,19 @@ function content_h3dxds() {
  */
 function content_rx2zxfs(){
     var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
-    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         wanArr.push($.trim($(this).html()));
     });
-    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         qianArr.push($.trim($(this).html()));
     });
-    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".baiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         baiArr.push($.trim($(this).html()));
     });
-    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         shiArr.push($.trim($(this).html()));
     });
-    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".geStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         geArr.push($.trim($(this).html()));
     });
 
@@ -889,6 +902,29 @@ function content_rx2zxfs(){
     );
 
     return strTemp;
+}
+
+/**
+ * 任选二-直选和值
+ */
+function content_rx2zxhz() {
+    var hzArr = [], arrTemp = [], checkStrArr = [], checkArr = [];
+    $.each($(".zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        hzArr.push($.trim($(this).html()));
+    });
+    //选取选中checkbox
+    $.each($(".foot_checkbox label input[name='position_zxhzrx2']:checked"), function () {
+        checkArr.push($(this).val());
+    });
+    //获取位数字符串
+    checkStrArr = getNoWeiStr(checkArr);
+
+    if (checkArr.length < 2) {
+        Tools.alert("[任选二]至少需要选择2个位置");
+        return -1;
+    }
+
+    return checkStrArr.join(',') + "|" + hzArr.join(",");
 }
 
 //======================================================注数算法====================================
@@ -1925,8 +1961,17 @@ function zhushu_rx2zxhz(){
         }
     }
     var zhushu = newArr.length;
-    var shu = $("#positioninfo-hz").html();
-    var lengthArr = zhushu * shu;
+    var checkArr = [], checkLen = 0, lengthArr = 0;
+    //选取选中checkbox
+    $.each($(".foot_checkbox label input[name='position_zxhzrx2']:checked"), function () {
+        checkArr.push($(this).val());
+    });
+    console.log(zhushu + "===");
+    checkLen = checkArr.length;
+    var shu = getRx2WeiFn(checkLen);
+    console.log(shu);
+    lengthArr = zhushu * shu;
+
     return lengthArr;
 }
 
@@ -2710,6 +2755,21 @@ function clearSelected() {
 }
 
 //*****************mobile注数算法******************
+//获取任二位置方案
+function getRx2WeiFn(checkLen) {
+    var shu = 0;
+    if(checkLen == 2){
+        shu = 1
+    } else if(checkLen == 3){
+        shu = 3
+    } else if(checkLen == 4){
+        shu = 6
+    } else if(checkLen == 5){
+        shu = 10
+    }
+
+    return shu;
+}
 
 // 获取万、千、百、十、个，固定位数的个数所组成5位所有组合
 function getNewArrs(wanA, qianA, baiA, shiA, geA) {
@@ -3084,4 +3144,23 @@ Array.prototype.uniqueArr = function () {
         temp[temp.length]=this[i];
     }
     return temp;
+}
+
+function getNoWeiStr(arr){
+    var checkArr = [], checkStrArr = [];
+    checkArr = arr;
+    for(var i = 0; i < checkArr.length; i++){
+        if(checkArr[i] == 1){
+            checkStrArr.push("万");
+        } else if(checkArr[i] == 2){
+            checkStrArr.push("千");
+        } else if(checkArr[i] == 3){
+            checkStrArr.push("百");
+        } else if(checkArr[i] == 4){
+            checkStrArr.push("十");
+        } else if(checkArr[i] == 5){
+            checkStrArr.push("个");
+        }
+    }
+    return checkStrArr;
 }

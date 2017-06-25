@@ -582,3 +582,24 @@ ding {
     width: 50px;
     border: 1px solid #dedede;
 }
+
+.foot_checkbox{
+    width: 100%;
+    line-height: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+    margin-top: 5%;
+    font-size: 0.8rem;
+}
+.foot_checkbox label input{
+    zoom:150%;
+    vertical-align:middle;
+}
+
+.foot_checkbox label span{
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: -0.2rem;
+    margin-top: -0.01rem;
+}

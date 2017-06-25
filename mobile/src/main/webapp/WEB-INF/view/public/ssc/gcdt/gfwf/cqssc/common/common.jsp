@@ -549,6 +549,7 @@
         <a href="javascript:void(0)"
            data-type="gfwf_page"
            data-fun_zhushu="zhushu_rx2zxhz"
+           data-fun_content="content_rx2zxhz"
            data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zxhz.html"
            data-play_id="561"
            data-play_pl_id="14279"

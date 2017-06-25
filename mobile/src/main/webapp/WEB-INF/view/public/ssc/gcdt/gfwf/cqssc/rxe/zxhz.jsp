@@ -72,6 +72,29 @@
             <div class="cus-flex-item">
                 <span class="xz n18" onclick="danSelect(this)">18</span>
             </div>
+
+            <div class="foot_checkbox" id="checkboxRx2">
+                <label>
+                    <input type="checkbox" onclick="checkCkRx2()" name="position_zxhzrx2" class="rx2zxhz" value="1"/>
+                    <span>万位</span>
+                </label>
+                <label>
+                    <input type="checkbox" onclick="checkCkRx2()" name="position_zxhzrx2" value="2"/>
+                    <span>千位</span>
+                </label>
+                <label>
+                    <input type="checkbox" onclick="checkCkRx2()" name="position_zxhzrx2" value="3"/>
+                    <span>百位</span>
+                </label>
+                <label>
+                    <input type="checkbox" onclick="checkCkRx2()" checked="checked" name="position_zxhzrx2" value="4"/>
+                    <span>十位</span>
+                </label>
+                <label>
+                    <input type="checkbox" onclick="checkCkRx2()" checked="checked" name="position_zxhzrx2" value="5"/>
+                    <span>个位</span>
+                </label>
+            </div>
         </div>
     </div>
 </div>
