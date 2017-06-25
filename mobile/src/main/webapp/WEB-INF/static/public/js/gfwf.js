@@ -592,9 +592,9 @@ function content_q2zuxbd(){
 /**
  * 不定位-前三一码
  */
-function content_qsym(){
+function content_q3ym(){
     var budwArr = [];
-    $.each($(".qsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".q3ymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         budwArr.push($.trim($(this).html()));
     });
 
@@ -604,9 +604,9 @@ function content_qsym(){
 /**
  * 不定位-前三二码
  */
-function content_qsem(){
+function content_q3em(){
     var budwArr = [];
-    $.each($(".qsemStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+    $.each($(".q3emStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         budwArr.push($.trim($(this).html()));
     });
 
@@ -616,9 +616,9 @@ function content_qsem(){
 /**
  * 不定位-后三一码
  */
-function content_hsym(){
+function content_h3ym(){
     var budwArr = [];
-    $.each($(".hsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+    $.each($(".h3ymStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         budwArr.push($.trim($(this).html()));
     });
 
@@ -628,9 +628,9 @@ function content_hsym(){
 /**
  * 不定位-后三二码
  */
-function content_hsem(){
+function content_h3em(){
     var budwArr = [];
-    $.each($(".hsemStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+    $.each($(".h3emStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         budwArr.push($.trim($(this).html()));
     });
 
@@ -654,7 +654,7 @@ function content_q4ym(){
  */
 function content_q4em(){
     var budwArr = [];
-    $.each($(".q4ymStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+    $.each($(".q4emStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         budwArr.push($.trim($(this).html()));
     });
 
@@ -666,7 +666,19 @@ function content_q4em(){
  */
 function content_h4ym(){
     var budwArr = [];
-    $.each($(".q4emStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+    $.each($(".h4ymStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        budwArr.push($.trim($(this).html()));
+    });
+
+    return budwArr.join(",");
+}
+
+/**
+ * 不定位-后四二码
+ */
+function content_h4em(){
+    var budwArr = [];
+    $.each($(".h4emStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         budwArr.push($.trim($(this).html()));
     });
 
@@ -1532,18 +1544,18 @@ function zhushu_q2zuxhz(){
 //********************* 不定位 ************************
 
 //注数-前三一码
-function zhushu_qsym() {
+function zhushu_q3ym() {
     var budwArr = [];
-    $.each($(".qsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".q3ymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         budwArr.push($.trim($(this).html()));
     });
     return budwArr.length;
 }
 
 //注数-前三二码
-function zhushu_qsem() {
+function zhushu_q3em() {
     var budwArr = [];
-    $.each($(".qsemStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".q3emStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         budwArr.push($.trim($(this).html()));
     });
 
@@ -1564,18 +1576,18 @@ function zhushu_qsem() {
 }
 
 //注数-后三一码
-function zhushu_hsym() {
+function zhushu_h3ym() {
     var budwArr = [];
-    $.each($(".hsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".h3ymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         budwArr.push($.trim($(this).html()));
     });
     return budwArr.length;
 }
 
 //注数-后三二码
-function zhushu_hsem() {
+function zhushu_h3em() {
     var budwArr = [];
-    $.each($(".hsemStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".h3emStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         budwArr.push($.trim($(this).html()));
     });
     var newArr = [];
@@ -1597,7 +1609,7 @@ function zhushu_hsem() {
 //注数-前四一码
 function zhushu_q4ym() {
     var budwArr = [];
-    $.each($(".qsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".q4ymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         budwArr.push($.trim($(this).html()));
     });
     return budwArr.length;
@@ -1606,7 +1618,7 @@ function zhushu_q4ym() {
 //注数-前四二码
 function zhushu_q4em() {
     var budwArr = [];
-    $.each($(".qsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".q4emStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         budwArr.push($.trim($(this).html()));
     });
 
@@ -1630,7 +1642,7 @@ function zhushu_q4em() {
 //注数-后四一码
 function zhushu_h4ym() {
     var budwArr = [];
-    $.each($(".hsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".h4ymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         budwArr.push($.trim($(this).html()));
     });
     return budwArr.length;
@@ -1639,7 +1651,7 @@ function zhushu_h4ym() {
 //注数-后四二码
 function zhushu_h4em() {
     var budwArr = [];
-    $.each($(".hsemStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".h4emStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         budwArr.push($.trim($(this).html()));
     });
     var newArr = [];
@@ -1954,6 +1966,7 @@ function showBetTemplate(infoStr) {
 
     var contentFun = getPlayPlFun_content();    // 内容算法
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
+
     if (typeof contentFun == 'undefined' || typeof zhushuFun == 'undefined') {
         return;
     }
