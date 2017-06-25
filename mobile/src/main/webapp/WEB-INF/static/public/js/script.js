@@ -1984,7 +1984,7 @@ $(function () {
                 $("#nowMoney").html("0");
             }
         );
-        
+
         //执行官方玩法事件
         gfwfEvent();
     }
@@ -4825,7 +4825,7 @@ $(function () {
     //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-cqssc-gfwf", function (e, id, page) {
         initSscPage(1);
-        $(".gfwf_xz .dwd-select a").trigger("click");
+        $(".gfwf_xz .wx-select a").trigger("click");
     });
 
     $(document).on("pageInit", "#page-gcdt-tjssc", function (e, id, page) {
