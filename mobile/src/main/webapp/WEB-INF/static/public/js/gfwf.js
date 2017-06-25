@@ -509,6 +509,85 @@ function content_q3tsh(){
 
 }
 
+/***************前二****************/
+/**
+ * 前二直选-直选复式
+ */
+function content_q2zxfs(){
+    var wanArr = [], qianArr = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    return gfwf_2xfs(
+        wanArr,
+        qianArr
+    );
+}
+
+/**
+ * 前二直选-直选和值
+ */
+function content_q2zxhz(){
+    var hzArr = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    return hzArr.join(",");
+}
+
+/**
+ * 前二直选-直选跨度
+ */
+function content_q2zxkd(){
+    var kdArr = [];
+    $.each($(".kdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        kdArr.push($.trim($(this).html()));
+    });
+
+    return kdArr.join(",");
+}
+
+/**
+ * 前二组选-组选复式
+ */
+function content_q2zuxfs(){
+    var zuxArr = [];
+    $.each($(".zuxStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuxArr.push($.trim($(this).html()));
+    });
+
+    return zuxArr.join(",");
+}
+
+/**
+ * 前二组选-组选和值
+ */
+function content_q2zuxhz(){
+    var hzArr = [];
+    $.each($(".q2zuxfsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    return hzArr.join(",");
+}
+
+/**
+ * 前二组选-组选包胆
+ */
+function content_q2zuxbd(){
+    var dmArr = [];
+    $.each($(".q2zuxbdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        dmArr.push($.trim($(this).find("i").html()));
+    });
+
+    return dmArr.join(",");
+}
+
 //======================================================注数算法====================================
 
 /**************定位胆***************/
@@ -1006,7 +1085,9 @@ function zhushu_q3zxfs() {
 
 //***************** 注数 - 前二 *********************
 
-//注数-直选复式
+/**
+ * 注数-直选复式
+ */
 function zhushu_q2zxfs() {
     var tempArr = [];
     var wanArr = [], qianArr = [];
@@ -1111,6 +1192,7 @@ function zhushu_q2zxkd() {
     tempArr = tempArr.uniqueArr();
     return tempArr.length;
 }
+
 //注数-组选复式
 function zhushu_q2zuxfs() {
     var tempArr = [], zuxArr = [];
@@ -1791,6 +1873,18 @@ function gfwf_3xfs(
         tmpStr_1,
         tmpStr_2,
         tmpStr_3
+    );
+}
+
+function gfwf_2xfs(
+    shiArr,
+    geArr
+) {
+    var tmpStr_1 = shiArr.join(",");
+    var tmpStr_2 = geArr.join(",");
+    return "{0}|{1}".format(
+        tmpStr_1,
+        tmpStr_2
     );
 }
 
