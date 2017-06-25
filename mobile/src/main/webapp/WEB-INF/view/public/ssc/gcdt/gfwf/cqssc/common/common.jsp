@@ -32,7 +32,10 @@
         <div class="xuan1"></div>
     </div>
     <div class="staer">
-        <a href="javascript:void(0)" data-type="gfwf_page" data-fun_zhushu="zhushu_dwd" data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dwd/zxfs.html"
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_dwd"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dwd/zxfs.html"
            data-name="定位胆-直选复式">
             <span class="staer1">直选复式</span>
         </a>
