@@ -41,6 +41,11 @@ function getSubGfwfSscPage(url, callback) {
 
 //数字单选算法
 function danSelect(obj) {
+    var flag = $(obj).parent().parent().data("name");
+    if(typeof flag != "undefined" && flag == "bd"){
+        $(obj).parent().parent().find("span.active_gfwf").removeClass("active_gfwf");
+    }
+
     if ($(obj).parent().find(".wan_bottom .cus-flex-item .xz").hasClass("active_gfwf")) {
         $(obj).parent().find(".cus-flex-item .xz").removeClass("active_gfwf");
     } else {
@@ -251,8 +256,8 @@ function zhushu_h3tsh() {
  */
 function zhushu_h3hzws() {
     var wsArr = [], newArr = [];
-    $.each($(".cl-1014-hzws ul li[data-name = '和值尾数'] span.acti"), function (index, value) {
-        wsArr.push($.trim($(this).find("i").html()));
+    $.each($(".hzwsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wsArr.push($.trim($(this).html()));
     });
     var zlLength = wsArr.length;
     if (zlLength < 0) {
@@ -264,10 +269,10 @@ function zhushu_h3hzws() {
 /**
  * 注数-组选包胆
  */
-function zhushu_h3zxbd(){
+function zhushu_h3zuxbd(){
     var baoDanArr = [], newArr = [];
-    $.each($(".cl-1013-zxbd ul li[data-name = '包胆'] span.acti"), function (index, value) {
-        baoDanArr.push($.trim($(this).find("i").html()));
+    $.each($(".bdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baoDanArr.push($.trim($(this).html()));
     });
     var zlLength = baoDanArr.length;
     if (zlLength < 0) {
@@ -282,9 +287,10 @@ function zhushu_h3zxbd(){
  */
 function zhushu_h3zuxhz(){
     var fuShiArr = [], newArr = [];
-    $.each($(".cl-1012-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
-        fuShiArr.push($.trim($(this).find("i").html()));
+    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        fuShiArr.push($.trim($(this).html()));
     });
+
     var zlLength = fuShiArr.length;
     if (zlLength <= 0) {
         return 0;
@@ -292,13 +298,14 @@ function zhushu_h3zuxhz(){
     newArr = getZxhzNewArrs(fuShiArr);
     return newArr.length;
 }
+
 /**
  * 注数-组六复式
  */
 function zhushu_h3z6fs(){
     var fuShiArr = [], newArr = [];
-    $.each($(".cl-1009-zlfs ul li[data-name = '组六'] span.acti"), function (index, value) {
-        fuShiArr.push($.trim($(this).find("i").html()));
+    $.each($(".z6fsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        fuShiArr.push($.trim($(this).html()));
     });
     var zlLength = fuShiArr.length;
     if (zlLength < 3) {
@@ -313,8 +320,8 @@ function zhushu_h3z6fs(){
  */
 function zhushu_h3z3fs(){
     var fuShiArr = [], newArr = [];
-    $.each($(".cl-1007-zsfs ul li[data-name = '组三'] span.acti"), function (index, value) {
-        fuShiArr.push($.trim($(this).find("i").html()));
+    $.each($(".z3fsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        fuShiArr.push($.trim($(this).html()));
     });
 
     var heZhiLength = fuShiArr.length;
@@ -330,14 +337,14 @@ function zhushu_h3z3fs(){
  */
 function zhushu_h3zh() {
     var baiArr = [], shiArr = [], geArr = [];
-    $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
-        baiArr.push($.trim($(this).find("i").html()));
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
     });
-    $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
-        shiArr.push($.trim($(this).find("i").html()));
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
     });
-    $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
-        geArr.push($.trim($(this).find("i").html()));
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
     });
 
     var baiLength = baiArr.length;
@@ -357,8 +364,8 @@ function zhushu_h3zh() {
 function zhushu_h3zxkd() {
     var newArr = [];
     var kaDuArr = [];
-    $.each($(".cl-1006-zxkd ul li[data-name = '跨度'] span.acti"), function (index, value) {
-        kaDuArr.push($.trim($(this).find("i").html()));
+    $.each($(".h3kdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        kaDuArr.push($.trim($(this).html()));
     });
     if (kaDuArr.length <= 0) {
         return 0;
@@ -366,13 +373,14 @@ function zhushu_h3zxkd() {
     newArr = getKaduNewArrs(kaDuArr);
     return newArr.length;
 }
+
 /**
  * 注数-直选和值
  */
 function zhushu_h3zxhz() {
     var heZhiArr = [], newArr = [];
-    $.each($(".cl-1005-zxhz ul li[data-name = '和值'] span.acti"), function (index, value) {
-        heZhiArr.push($.trim($(this).find("i").html()));
+    $.each($(".h3zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        heZhiArr.push($.trim($(this).html()));
     });
 
     var heZhiLength = heZhiArr.length;
@@ -390,14 +398,14 @@ function zhushu_h3zxhz() {
 function zhushu_h3zxfs() {
     var newArr = [];
     var baiArr = [], shiArr = [], geArr = [];
-    $.each($(".cl-1002 ul li[data-name = '百'] span.acti"), function (index, value) {
-        baiArr.push($.trim($(this).find("i").html()));
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
     });
-    $.each($(".cl-1002 ul li[data-name = '十'] span.acti"), function (index, value) {
-        shiArr.push($.trim($(this).find("i").html()));
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
     });
-    $.each($(".cl-1002 ul li[data-name = '个'] span.acti"), function (index, value) {
-        geArr.push($.trim($(this).find("i").html()));
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
     });
 
     var baiLength = baiArr.length;
@@ -618,7 +626,7 @@ function showBetTemplate(infoStr) {
         playId: getPlayId(),
         playPlId: getPlayPlId(),
         zhushu: zhushu,
-        // betContent: data,
+        betContent: data,
         betMode: 1,
         totalMoney: parseFloat((2 * zhushu * 1).toFixed(3)), // 默认2元 * 1倍 * 注数
         canWin: parseFloat((2 * maxPlayPl * 1).toFixed(3))  // 默认2元 * 1倍 * 赔率
@@ -808,6 +816,25 @@ function getFourNewArrs(qianA, baiA, shiA, geA) {
     return tempArr;
 }
 
+// 获取百、十、个固定位数的个数所组成(后三直选--后三组合)
+function getHszhNewArrs(baiA, shiA, geA) {
+    var bArr = [], sArr = [], gArr = [];
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var b = 0; b < bArr.length; b++) {
+        for (var s = 0; s < sArr.length; s++) {
+            for (var g = 0; g < gArr.length; g++) {
+                tempArr.push(bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                tempArr.push(sArr[s] + "" + gArr[g]);
+                tempArr.push(gArr[g]);
+            }
+        }
+    }
+    return tempArr;
+}
+
 /**
  * 初始化滚动条
  * @param cfg
@@ -863,3 +890,17 @@ String.prototype.format = function(args) {
     }
     return result;
 }
+
+//去掉数组重复
+Array.prototype.uniqueArr = function () {
+    var temp = new Array();
+    this.sort();
+    for(i = 0; i < this.length; i++) {
+        if( this[i] == this[i+1]) {
+            continue;
+        }
+        temp[temp.length]=this[i];
+    }
+    return temp;
+}
+

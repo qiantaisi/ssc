@@ -82,7 +82,7 @@
                data-bet_play_id="{{playId}}"
                data-bet_play_pl_id="{{playPlId}}"
                data-zhushu="{{zhushu}}"
-               <%--data-bet_content="{{betContent}}"--%>
+               data-bet_content="{{betContent}}"
                data-bet_mode="{{betMode}}"
             ><span>确认</span></a>
             <a href="javascript:void(0)" class="no-btn" id="no-btn"><span>取消</span></a>
