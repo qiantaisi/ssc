@@ -1040,9 +1040,9 @@ function initJjh() {
  * 渲染中部注数，赔率，返点等等
  */
 function renderZhushu() {
+
     // 注数算法
     var zhushuFun = getPlayPlFun_zhushu();
-
     if (typeof zhushuFun != 'undefined') {
         var zhushu = eval(zhushuFun + "()");   // 注数
         if (typeof zhushu == "undefined" || zhushu < 0){
