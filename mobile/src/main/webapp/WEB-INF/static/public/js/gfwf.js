@@ -122,6 +122,7 @@ function zhushu_dwd(){
     }
     return newArr.length;
 }
+
 //*************************五星直选****************************
 /**
  * 注数-5星直选复式
@@ -194,24 +195,11 @@ function content_dwd(){
         (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
         (geStr == ' ' ? ' ': geArr.join(","))
     );
-
-    // // 初始化变量
-    // var showPlayName = '';
-    // var showContent = '';
-    // var betContent = '';
-    //
-    // showPlayName = "定位胆-定位胆";
-    // showContent = $.trim(wanStr + qianStr + baiStr + shiStr + geStr);
-    // // 转换投注格式
-    // betContent = strTemp;
-    //
-    // return {
-    //     showPlayName: showPlayName,
-    //     showContent: showContent,
-    //     betContent: betContent
-    // };
 }
 
+/**
+ * 后三五星直选复式
+ */
 function content_5xzxfs() {
     var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
     $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
@@ -246,6 +234,32 @@ function content_5xzxfs() {
         baiArr.join(","),
         shiArr.join(","),
         geArr.join(",")
+    );
+}
+
+/**
+ * 后三直选复式
+ */
+function content_h3zxfs() {
+    var baiArr = [], shiArr = [], geArr = [];
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    if(baiArr.length <= 0|| shiArr.length <= 0|| geArr.length <= 0){
+        return;
+    }
+
+    return gfwf_3xfs(
+        baiArr,
+        shiArr,
+        geArr
     );
 }
 
@@ -290,6 +304,8 @@ function content_4xzxfs() {
         geArr
     );
 }
+
+
 
 /**********四星直选复式**********/
 /**
@@ -931,6 +947,24 @@ function getHszhNewArrs(baiA, shiA, geA) {
     return tempArr;
 }
 
+// 获取百、十、个固定位数的个数所组成3位所有组合
+function getThreeNewArrs(baiA, shiA, geA) {
+    var bArr = [], sArr = [], gArr = [];
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var b = 0; b < bArr.length; b++) {
+        for (var s = 0; s < sArr.length; s++) {
+            for (var g = 0; g < gArr.length; g++) {
+                tempArr.push(bArr[b] + "" + sArr[s] + "" + gArr[g]);
+            }
+        }
+    }
+    return tempArr;
+}
+
+
 function gfwf_4xfs(
     qianArr,
     baiArr,
@@ -947,6 +981,22 @@ function gfwf_4xfs(
         tmpStr_2,
         tmpStr_3,
         tmpStr_4
+    );
+}
+
+function gfwf_3xfs(
+    baiArr,
+    shiArr,
+    geArr
+) {
+    var tmpStr_1 = baiArr.join(",");
+    var tmpStr_2 = shiArr.join(",");
+    var tmpStr_3 = geArr.join(",");
+
+    return "{0}|{1}|{2}".format(
+        tmpStr_1,
+        tmpStr_2,
+        tmpStr_3
     );
 }
 
