@@ -1138,7 +1138,7 @@ function zhushu_q2zuxfs() {
     return tempArr.length;
 }
 
-//组选包胆
+//注数-组选包胆
 function zhushu_q2zuxbd() {
     var tempArr = [];
     var bdArr = [], nowTemp = [];
@@ -1165,7 +1165,16 @@ function zhushu_q2zuxbd() {
     return tempArr.length;
 }
 
+//********************* 不定位 ************************
 
+//注数-前三一码
+function zhushu_qsym() {
+    var budwArr = [];
+    $.each($(".qsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+    return budwArr.length;
+}
 
 // 数字批量选择算法
 function selectFun_1(obj) {
