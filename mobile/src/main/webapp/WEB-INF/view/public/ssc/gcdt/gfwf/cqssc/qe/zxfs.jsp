@@ -10,7 +10,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="wrap">
-    <div class="cus_common">
+    <div class="cus_common wanStr">
         <div class="wan_top">
             <span class="wanwei">万位</span>
             <span class="xz">
@@ -58,7 +58,7 @@
     </div>
 
 
-    <div class="cus_common">
+    <div class="cus_common qianStr">
         <div class="wan_top">
             <span class="wanwei">千位</span>
             <span class="xz">

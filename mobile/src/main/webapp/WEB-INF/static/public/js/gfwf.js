@@ -844,6 +844,39 @@ function zhushu_q3zxfs() {
     return newArr.length;
 }
 
+
+
+//***************** 前二 *********************
+
+//直选复式
+function zhushu_q2zxfs() {
+    var tempArr = [];
+    var wanArr = [], qianArr = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
+
+    if (wanLength <= 0 || qianLength <= 0) {
+        return 0;
+    }
+
+    for(var i = 0; i < wanArr.length; i++){
+        for(var i1 = 0; i1 < qianArr.length; i1++){
+            tempArr.push(wanArr[i] + "" + qianArr[i1]);
+        }
+    }
+    return tempArr.length;
+}
+
+
+
+
 // 数字批量选择算法
 function selectFun_1(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");  //初始化选择的特效，清零
