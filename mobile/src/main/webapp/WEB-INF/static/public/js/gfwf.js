@@ -703,7 +703,7 @@ function content_wxym(){
 function content_wxem(){
     var budwArr = [];
     $.each($(".wxemStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
-        budwArr.push($.trim($(this).find("i").html()));
+        budwArr.push($.trim($(this).html()));
     });
 
     return budwArr.join(",");
@@ -714,7 +714,7 @@ function content_wxem(){
  */
 function content_wx3m(){
     var budwArr = [];
-    $.each($(".wx3mStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+    $.each($(".wxsmStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         budwArr.push($.trim($(this).html()));
     });
 
@@ -747,6 +747,11 @@ function content_q2dxds() {
         return;
     }
 
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(",")
+    ];
+
     return "{0}|{1}".format(arr[0], arr[1]);
 }
 
@@ -757,10 +762,10 @@ function content_h2dxds() {
     var zhushu = 0;
     var dxdsSArr = [], dxdsGArr = [], tempArr = [];
     $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        dxdsSArr.push($.trim($(this).find("i").html()));
+        dxdsSArr.push($.trim($(this).html()));
     });
     $.each($(".geStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        dxdsGArr.push($.trim($(this).find("i").html()));
+        dxdsGArr.push($.trim($(this).html()));
     });
 
     for (var n = 0; n < dxdsSArr.length; n++) {
@@ -771,7 +776,10 @@ function content_h2dxds() {
     if(dxdsSArr.length <= 0 || dxdsGArr.length <= 0){
         return;
     }
-
+    var arr = [
+        dxdsSArr.join(","),
+        dxdsGArr.join(",")
+    ];
     return "{0}|{1}".format(arr[0], arr[1]);
 }
 
@@ -802,7 +810,11 @@ function content_q3dxds() {
     if(dxdsWArr.length <= 0 || dxdsQArr.length <= 0|| dxdsBArr.length <= 0){
         return;
     }
-
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(","),
+        dxdsBArr.join(",")
+    ];
     return "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
 }
 
@@ -832,7 +844,11 @@ function content_h3dxds() {
     if(dxdsBArr.length <= 0 || dxdsSArr.length <= 0 || dxdsGArr.length <= 0){
         return;
     }
-
+    var arr = [
+        dxdsBArr.join(","),
+        dxdsSArr.join(","),
+        dxdsGArr.join(",")
+    ];
     return "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
 }
 
@@ -1754,10 +1770,10 @@ function zhushu_q2dxds() {
 //注数-后二大小单爽
 function zhushu_h2dxds(){
     var dxdsSArr = [], dxdsGArr = [];
-    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         dxdsSArr.push($.trim($(this).html()));
     });
-    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".geStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         dxdsGArr.push($.trim($(this).html()));
     });
 
@@ -1782,13 +1798,13 @@ function zhushu_q3dxds(){
 //注数-后三大小单双
 function zhushu_h3dxds(){
     var dxdsBArr = [],dxdsSArr = [], dxdsGArr = [];
-    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".baiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         dxdsBArr.push($.trim($(this).html()));
     });
-    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         dxdsSArr.push($.trim($(this).html()));
     });
-    $.each($(".baiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".geStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         dxdsGArr.push($.trim($(this).html()));
     });
     return dxdsBArr.length * dxdsSArr.length * dxdsGArr.length;
@@ -2113,7 +2129,7 @@ function showBetTemplate(infoStr) {
 
     var contentFun = getPlayPlFun_content();    // 内容算法
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
-
+    console.log(zhushuFun);
     if (typeof contentFun == 'undefined' || typeof zhushuFun == 'undefined') {
         return;
     }
@@ -2121,7 +2137,7 @@ function showBetTemplate(infoStr) {
     var data = eval(contentFun + "()");
 
     var zhushu = eval(zhushuFun + "()");
-
+    console.log(zhushu);
     if(data == -1){
         return;
     }
