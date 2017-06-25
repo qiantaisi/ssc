@@ -1176,6 +1176,185 @@ function zhushu_qsym() {
     return budwArr.length;
 }
 
+//注数-前三二码
+function zhushu_qsem() {
+    var budwArr = [];
+    $.each($(".qsemStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+
+    var newArr = [];
+    for (var i = 0; i < budwArr.length; i++) {
+        for (var j = 0; j < budwArr.length; j++) {
+            if (i != j) {
+                var arr = [];
+                arr.push(budwArr[i]);
+                arr.push(budwArr[j]);
+                arr.sort();
+                newArr.push(arr.join(","));
+            }
+        }
+    }
+    newArr = newArr.uniqueArr();
+    return newArr.length;
+}
+
+//注数-后三一码
+function zhushu_hsym() {
+    var budwArr = [];
+    $.each($(".hsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+    return budwArr.length;
+}
+
+//注数-后三二码
+function zhushu_hsem() {
+    var budwArr = [];
+    $.each($(".hsemStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+    var newArr = [];
+    for (var i = 0; i < budwArr.length; i++) {
+        for (var j = 0; j < budwArr.length; j++) {
+            if (i != j) {
+                var arr = [];
+                arr.push(budwArr[i]);
+                arr.push(budwArr[j]);
+                arr.sort();
+                newArr.push(arr.join(","));
+            }
+        }
+    }
+    newArr = newArr.uniqueArr();
+    return newArr.length;
+}
+
+//注数-前四一码
+function zhushu_q4ym() {
+    var budwArr = [];
+    $.each($(".qsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+    return budwArr.length;
+}
+
+//注数-前四二码
+function zhushu_q4em() {
+    var budwArr = [];
+    $.each($(".qsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+
+    var newArr = [];
+    for (var i = 0; i < budwArr.length; i++) {
+        for (var j = 0; j < budwArr.length; j++) {
+            if (i != j) {
+                var arr = [];
+                arr.push(budwArr[i]);
+                arr.push(budwArr[j]);
+                arr.sort();
+                newArr.push(arr.join(","));
+            }
+        }
+    }
+
+    newArr = newArr.uniqueArr();
+    return newArr.length;
+}
+
+//注数-后四一码
+function zhushu_h4ym() {
+    var budwArr = [];
+    $.each($(".hsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+    return budwArr.length;
+}
+
+//注数-后四二码
+function zhushu_h4em() {
+    var budwArr = [];
+    $.each($(".hsemStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+    var newArr = [];
+    for (var i = 0; i < budwArr.length; i++) {
+        for (var j = 0; j < budwArr.length; j++) {
+            if (i != j) {
+                var arr = [];
+                arr.push(budwArr[i]);
+                arr.push(budwArr[j]);
+                arr.sort();
+                newArr.push(arr.join(","));
+            }
+        }
+    }
+
+    newArr = newArr.uniqueArr();
+    return newArr.length;
+}
+
+//注数-五星一码
+function zhushu_wxym() {
+    var budwArr = [];
+    $.each($(".wxymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+    return budwArr.length;
+}
+
+//注数-五星二码
+function zhushu_wxem() {
+    var budwArr = [];
+    $.each($(".wxemStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+
+    var newArr = [];
+    for (var i = 0; i < budwArr.length; i++) {
+        for (var j = 0; j < budwArr.length; j++) {
+            if (i != j) {
+                var arr = [];
+                arr.push(budwArr[i]);
+                arr.push(budwArr[j]);
+                arr.sort();
+                newArr.push(arr.join(","));
+            }
+        }
+    }
+
+    newArr = newArr.uniqueArr();
+    return newArr.length;
+}
+
+//注数-五星三码
+function zhushu_wx3m() {
+    var budwArr = [];
+    $.each($(".wxsmStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+
+    var newArr = [];
+    for (var i = 0; i < budwArr.length; i++) {
+        for (var j = 0; j < budwArr.length; j++) {
+            for (var x = 0; x < budwArr.length; x++) {
+                if (i != j && j != x && i != x) {
+                    var arr = [];
+                    arr.push(budwArr[i]);
+                    arr.push(budwArr[j]);
+                    arr.push(budwArr[x]);
+                    arr.sort();
+                    newArr.push(arr.join(","));
+                }
+            }
+        }
+    }
+
+    newArr = newArr.uniqueArr();
+    return newArr.length;
+}
+
 // 数字批量选择算法
 function selectFun_1(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");  //初始化选择的特效，清零
