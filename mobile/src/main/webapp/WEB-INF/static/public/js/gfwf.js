@@ -115,7 +115,7 @@ function content_dwd(){
 }
 
 /**
- * 后三五星直选复式
+ * 五星直选复式
  */
 function content_5xzxfs() {
     var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
@@ -151,32 +151,6 @@ function content_5xzxfs() {
         baiArr.join(","),
         shiArr.join(","),
         geArr.join(",")
-    );
-}
-
-/**
- * 后三直选复式
- */
-function content_h3zxfs() {
-    var baiArr = [], shiArr = [], geArr = [];
-    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        baiArr.push($.trim($(this).html()));
-    });
-    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        shiArr.push($.trim($(this).html()));
-    });
-    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        geArr.push($.trim($(this).html()));
-    });
-
-    if(baiArr.length <= 0|| shiArr.length <= 0|| geArr.length <= 0){
-        return;
-    }
-
-    return gfwf_3xfs(
-        baiArr,
-        shiArr,
-        geArr
     );
 }
 
@@ -221,6 +195,34 @@ function content_4xzxfs() {
         geArr
     );
 }
+
+/**
+ * 后三直选复式
+ */
+function content_h3zxfs() {
+    var baiArr = [], shiArr = [], geArr = [];
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    if(baiArr.length <= 0|| shiArr.length <= 0|| geArr.length <= 0){
+        return;
+    }
+
+    return gfwf_3xfs(
+        baiArr,
+        shiArr,
+        geArr
+    );
+}
+
+
 
 
 //======================================================注数算法====================================
