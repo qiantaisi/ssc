@@ -1002,6 +1002,142 @@ function zhushu_q3zxfs() {
     return newArr.length;
 }
 
+
+
+//***************** 注数 - 前二 *********************
+
+//注数-直选复式
+function zhushu_q2zxfs() {
+    var tempArr = [];
+    var wanArr = [], qianArr = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
+
+    if (wanLength <= 0 || qianLength <= 0) {
+        return 0;
+    }
+
+    for(var i = 0; i < wanArr.length; i++){
+        for(var i1 = 0; i1 < qianArr.length; i1++){
+            tempArr.push(wanArr[i] + "" + qianArr[i1]);
+        }
+    }
+    return tempArr.length;
+}
+
+//注数-直选和值
+function zhushu_q2zxhz() {
+    var tempArr = [];
+    var hzArr = [], temp = [], nowTemp = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        nowTemp.push($.trim($(this).html()));
+    });
+
+    if (typeof valArr != "undefined") {
+        hzArr = valArr;
+    } else {
+        hzArr = nowTemp;
+    }
+
+    var hzLength = hzArr.length;
+    if (hzLength <= 0) {
+        return 0;
+    }
+
+    for (var n = 0; n < hzArr.length; n++) {
+        sumTemp = parseInt(hzArr[n]);
+        num = parseInt(hzArr[n]);
+        while (sumTemp >= 0) {
+            temp.push(sumTemp);
+            sumTemp--;
+        }
+
+        for (var i = 0; i < temp.length; i++) {
+            for (var i1 = 0; i1 < temp.length; i1++) {
+                if (temp[i] + temp[i1] == num && temp[i] <= 9 && temp[i1] <= 9) {
+                    tempArr.push(temp[i] + "" + temp[i1]);
+                }
+            }
+        }
+    }
+
+    tempArr = tempArr.uniqueArr();
+    return tempArr.length;
+}
+
+//注数-直选跨度
+function zhushu_q2zxkd() {
+    var tempArr = [];
+    var kdArr = [], numTemp = [];
+    var num = 0;
+
+    $.each($(".kdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        numTemp.push($.trim($(this).html()));
+    });
+
+    if (typeof valArr != "undefined") {
+        kdArr = valArr;
+    } else {
+        kdArr = numTemp;
+    }
+
+    var hzLength = kdArr.length;
+    if (hzLength <= 0) {
+        return 0;
+    }
+
+    for (var n = 0; n < kdArr.length; n++) {
+        num = kdArr[n];
+        for (var i = 0; i < 10; i++) {
+            for (var i1 = 0; i1 < 10; i1++) {
+                var numTemp = [];
+                numTemp.push(i);
+                numTemp.push(i1);
+                numTemp.sort();
+                if (numTemp[1] - numTemp[0] == num) {
+                    tempArr.push(i + "" + i1);
+                }
+            }
+        }
+    }
+
+    tempArr = tempArr.uniqueArr();
+    return tempArr.length;
+}
+//注数-组选复式
+function zhushu_q2zuxfs() {
+    var tempArr = [], zuxArr = [];
+    $.each($(".zuxStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuxArr.push($.trim($(this).html()));
+    });
+
+    var xLength = zuxArr.length;
+    if (xLength < 2) {
+        return 0;
+    }
+
+    for(var i = 0; i < zuxArr.length; i++){
+        for(var i1 = 0; i1 < zuxArr.length; i1++){
+            if(zuxArr[i] != zuxArr[i1]){
+                var xArr =[];
+                xArr.push(zuxArr[i]);
+                xArr.push(zuxArr[i1]);
+                xArr.sort();
+                tempArr.push(xArr.join(""));
+            }
+        }
+    }
+    tempArr = tempArr.uniqueArr();
+    return tempArr.length;
+}
+
 // 数字批量选择算法
 function selectFun_1(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");  //初始化选择的特效，清零
@@ -1726,4 +1862,3 @@ Array.prototype.uniqueArr = function () {
     }
     return temp;
 }
-
