@@ -1220,6 +1220,44 @@ function zhushu_q2zuxfs() {
     return tempArr.length;
 }
 
+//注数-组选包胆
+function zhushu_q2zuxbd() {
+    var tempArr = [];
+    var bdArr = [], nowTemp = [];
+    $.each($(".zuxbdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        nowTemp.push($.trim($(this).html()));
+    });
+
+    if (typeof valArr != "undefined") {
+        bdArr = valArr;
+    } else {
+        bdArr = nowTemp;
+    }
+    var bdLength = bdArr.length;
+    if (bdLength <= 0) {
+        return 0;
+    }
+    for (var n = 0; n < bdArr.length; n++) {
+        for (var i = 0; i < 10; i++) {
+            if (i != bdArr[n]) {
+                tempArr.push(i + "" + bdArr[n]);
+            }
+        }
+    }
+    return tempArr.length;
+}
+
+//********************* 不定位 ************************
+
+//注数-前三一码
+function zhushu_qsym() {
+    var budwArr = [];
+    $.each($(".qsymStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        budwArr.push($.trim($(this).html()));
+    });
+    return budwArr.length;
+}
+
 // 数字批量选择算法
 function selectFun_1(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");  //初始化选择的特效，清零

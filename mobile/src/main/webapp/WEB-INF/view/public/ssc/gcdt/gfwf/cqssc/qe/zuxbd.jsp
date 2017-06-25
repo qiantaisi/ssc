@@ -10,17 +10,9 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="wrap">
-    <div class="cus_common q2zuxbdStr">
+    <div class="cus_common zuxbdStr">
         <div class="wan_top">
             <span class="wanwei">包胆</span>
-            <span class="xz">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
-            </span>
         </div>
         <div class="wan_bottom" data-name="bd">
             <div class="cus-flex-item">
