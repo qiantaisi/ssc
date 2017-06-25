@@ -69,16 +69,16 @@
 
         <div class="wan_bottom">
             <div class="cus-flex-item">
-                <span class="xz">大</span>
+                <span class="xz" onclick="danSelect(this)">大</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">小</span>
+                <span class="xz" onclick="danSelect(this)">小</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">单</span>
+                <span class="xz" onclick="danSelect(this)">单</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">双</span>
+                <span class="xz" onclick="danSelect(this)">双</span>
             </div>
         </div>
     </div>
