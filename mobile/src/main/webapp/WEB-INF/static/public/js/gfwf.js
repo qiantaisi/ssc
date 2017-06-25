@@ -958,7 +958,32 @@ function zhushu_q2zxkd() {
     tempArr = tempArr.uniqueArr();
     return tempArr.length;
 }
+//注数-组选复式
+function zhushu_q2zuxfs() {
+    var tempArr = [], zuxArr = [];
+    $.each($(".zuxStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuxArr.push($.trim($(this).html()));
+    });
 
+    var xLength = zuxArr.length;
+    if (xLength < 2) {
+        return 0;
+    }
+
+    for(var i = 0; i < zuxArr.length; i++){
+        for(var i1 = 0; i1 < zuxArr.length; i1++){
+            if(zuxArr[i] != zuxArr[i1]){
+                var xArr =[];
+                xArr.push(zuxArr[i]);
+                xArr.push(zuxArr[i1]);
+                xArr.sort();
+                tempArr.push(xArr.join(""));
+            }
+        }
+    }
+    tempArr = tempArr.uniqueArr();
+    return tempArr.length;
+}
 
 // 数字批量选择算法
 function selectFun_1(obj) {
