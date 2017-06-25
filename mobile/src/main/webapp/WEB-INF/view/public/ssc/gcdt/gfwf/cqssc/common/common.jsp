@@ -228,7 +228,7 @@
            data-type="gfwf_page"
            data-fun_zhushu="zhushu_q3zh"
            data-fun_content="content_q3zh"
-           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/hszh.html"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/qszh.html"
            data-play_id="518"
            data-play_pl_id="14234|14235|14236"
            data-name="前三-后三组合">
@@ -349,7 +349,7 @@
            data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zuxhz.html"
            data-play_id="541"
            data-play_pl_id="14259"
-           data-name="前二-直选和值">
+           data-name="前二-组选和值">
             <span class="staer1">组选和值</span>
         </a>
         <a href="javascript:void(0)"
