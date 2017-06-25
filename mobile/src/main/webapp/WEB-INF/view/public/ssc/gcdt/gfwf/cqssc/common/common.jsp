@@ -152,7 +152,7 @@
            data-fun_content="content_h3zuxhz"
            data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zuxhz.html"
            data-play_id="512"
-           data-play_pl_id="14229\14230"
+           data-play_pl_id="14229|14230"
            data-name="后三-组选和值">
             <span class="staer1">组选和值</span>
         </a>
@@ -162,7 +162,7 @@
            data-fun_content="content_h3zuxbd"
            data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxbd.html"
            data-play_id="513"
-           data-play_pl_id="14227\14228"
+           data-play_pl_id="14227|14228"
            data-name="后三-组选包胆">
             <span class="staer1">组选包胆</span>
         </a>
