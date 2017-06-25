@@ -581,7 +581,7 @@ function content_q2zuxhz(){
  */
 function content_q2zuxbd(){
     var dmArr = [];
-    $.each($(".q2zuxbdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zuxbdStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         dmArr.push($.trim($(this).find("i").html()));
     });
 
