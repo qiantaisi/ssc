@@ -46,7 +46,10 @@
                         <input type="number" min="2" value="2" id="betContent_inputMoney"
                                onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
                                onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
-                        >&nbsp;元
+                        >&nbsp;
+                        <span class="mode_select selected" data-value="1">元</span>
+                        <span class="mode_select" data-value="2">角</span>
+                        <span class="mode_select" data-value="3">分</span>
                     </span>
                 </div>
                 <div class="slide-item">
@@ -83,7 +86,7 @@
                data-bet_play_pl_id="{{playPlId}}"
                data-zhushu="{{zhushu}}"
                data-bet_content="{{betContent}}"
-               data-bet_mode="{{betMode}}"
+               <%--data-bet_mode="{{betMode}}"--%>
             ><span>确认</span></a>
             <a href="javascript:void(0)" class="no-btn" id="no-btn"><span>取消</span></a>
         </div>
