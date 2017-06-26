@@ -939,7 +939,7 @@ function content_rx2zxfs(){
  * 任选二-直选和值
  */
 function content_rx2zxhz() {
-    var hzArr = [], arrTemp = [], checkStrArr = [];
+    var hzArr = [], checkStrArr = [];
     $.each($(".zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         hzArr.push($.trim($(this).html()));
     });
@@ -947,12 +947,53 @@ function content_rx2zxhz() {
     checkStrArr = getCheckboxValue();
 
     if (checkStrArr.length < 2) {
-        Tools.alert("[任选二]至少需要选择2个位置");
         return -1;
     }
 
     return checkStrArr.join(',') + "|" + hzArr.join(",");
 }
+
+
+/**
+ * 任选二-组选复式
+ */
+function content_rx2zuxfs() {
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    var zuArr = [], arrTemp = [];
+    $.each($(".zuxfsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 2) {
+        return -1;
+    }
+
+    return checkStrArr.join(',') + "|" + zuArr.join(",");
+}
+
+/**
+ * 任选二-组选和值
+ */
+function content_rx2zuxhz() {
+    var hzArr = [];
+    var checkStrArr = [];
+
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 2) {
+        return -1;
+    }
+    // 转换投注格式
+    return checkStrArr.join(',') + "|" + hzArr.join(",");
+}
+
 
 //======================================================注数算法====================================
 
@@ -1995,7 +2036,7 @@ function zhushu_rx2zxhz(){
     return zhushu * shu;
 }
 
-//注数-组选复式
+//注数-组选复式`
 function zhushu_rx2zuxfs(){
     var zuArr = [];
     var tempArr = [];
@@ -2022,9 +2063,11 @@ function zhushu_rx2zuxfs(){
 
     tempArr = tempArr.uniqueArr();
     var zhushu = tempArr.length;
-    var shu = $("#positioninfo-zufs").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 2).length;
+    return zhushu * shu;
 }
 
 //注数-组选和值
@@ -2052,9 +2095,11 @@ function zhushu_rx2zuxhz(){
     }
     newArr = newArr.uniqueArr();
     var zhushu = newArr.length;
-    var shu = $("#positioninfo-zuhz").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 2).length;
+    return zhushu * shu;
 }
 
 
@@ -2592,6 +2637,7 @@ function showBetTemplate(infoStr) {
     var zhushu = eval(zhushuFun + "()");
 
     if(data == -1){
+        Tools.alert("[任选二]至少需要选择2个位置");
         return;
     }
 
