@@ -1000,6 +1000,65 @@ function content_rx2zuxhz() {
     return checkStrArr.join(',') + "|" + hzArr.join(",");
 }
 
+/***************任选3*************/
+/**
+ * 任选3-直选复式
+ */
+function content_rx3zxfs() {
+    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : '';
+    var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : '';
+    var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : '';
+    var shiStr = shiArr.length > 0 ? (" 十位: " + shiArr.join("")) : '';
+    var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : '';
+    var strTemp = $.trim(
+        (wanStr == ' ' ? ' ' : wanArr.join(",") + "|") +
+        (qianStr == ' ' ? ' ' : qianArr.join(",") + "|") +
+        (baiStr == ' ' ? ' ' : baiArr.join(",") + "|") +
+        (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
+        (geStr == ' ' ? ' ' : geArr.join(","))
+    );
+
+    return strTemp;
+}
+
+/**
+ * 任选3-直选和值
+ */
+function content_rx3zxhz() {
+    var hzArr = [];
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    $.each($(".zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 3) {
+        Tools.alert("[任选三]至少需要选择3个位置");
+        return -1;
+    }
+    return checkStrArr.join(',') + "|" + hzArr.join(",");
+}
+
+
 
 //======================================================注数算法====================================
 
@@ -2190,9 +2249,10 @@ function zhushu_rx3zxhz(){
         }
     }
     var zhushu = newArr.length;
-    //var shu = $("#positioninfo-hz").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 3).length;
+    return zhushu * shu;
 }
 
 //注数-组三复式
