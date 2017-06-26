@@ -53,7 +53,7 @@
         <span class="fr fl cl-1001">
             从万位、千位、十位各选一个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：345 开奖号码前三位：1345，即中前三位直选。</var>
+                <var>投注方案：345 开奖号码前三位：345，即中前三位直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明

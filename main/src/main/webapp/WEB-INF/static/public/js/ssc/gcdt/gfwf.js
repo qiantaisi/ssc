@@ -8190,8 +8190,8 @@ function content_q3zxds() {
     var betContent = '';
 
     showPlayName = "前三直选-单式";
-    showContent = "号码: (" + newArr.join("") + ")";
-    betContent = newArr.join("");
+    showContent = "号码: (" + newArr.join(",") + ")";
+    betContent = newArr.join(",");
 
     return {
         showPlayName: showPlayName,
