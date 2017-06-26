@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Date;
 
 /**
  * Created by Administrator on 2016/5/28.
@@ -43,6 +44,13 @@ public class ImageController extends BaseController {
 
             httpServletResponse.setContentType("image/jpeg");
             httpServletResponse.setCharacterEncoding("UTF-8");
+
+            // 增加缓存
+            httpServletResponse.setDateHeader("Last-Modified", new Date().getTime());
+            httpServletResponse.setDateHeader("Expires", System.currentTimeMillis() + 1000L * 30 * 24 * 3600);
+            httpServletResponse.setHeader("Cache-Control", "Public");
+            httpServletResponse.setHeader("Pragma", "Pragma");
+
             outputSream = httpServletResponse.getOutputStream();
             InputStream in = new ByteArrayInputStream(bytes);
             int len = 0;
