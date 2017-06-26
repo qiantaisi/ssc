@@ -943,10 +943,8 @@ function content_rx2zxhz() {
     $.each($(".zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         hzArr.push($.trim($(this).html()));
     });
-    //选取选中checkbox
-    $.each($(".foot_checkbox label input[name='position_zxhzrx2']:checked"), function () {
-        checkArr.push($(this).val());
-    });
+
+    checkArr.push(getCheckboxValue());
     //获取位数字符串
     checkStrArr = getNoWeiStr(checkArr);
 
