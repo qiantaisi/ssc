@@ -14,11 +14,6 @@
         <div class="wan_top">
             <span class="wanwei">组选24</span>
             <span class="xz">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
                 <i onclick="selectFun_6(this)">清</i>
             </span>
         </div>
@@ -52,6 +47,13 @@
             </div>
             <div class="cus-flex-item">
                 <span class="xz n9" onclick="danSelect(this)">9</span>
+            </div>
+            <div class="foot_checkbox" id="checkSelected" data-fun_checkbox="checkCkRx2">
+                <label class="myLabel"><input type="checkbox" value="万"><i>✓</i>万位</label>
+                <label class="myLabel"><input type="checkbox" value="千"><i>✓</i>千位</label>
+                <label class="myLabel"><input type="checkbox" value="百"><i>✓</i>百位</label>
+                <label class="myLabel"><input type="checkbox" value="十" checked><i>✓</i>十位</label>
+                <label class="myLabel"><input type="checkbox" value="个" checked><i>✓</i>个位</label>
             </div>
         </div>
     </div>
