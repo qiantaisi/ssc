@@ -4988,7 +4988,7 @@ function suiji_q3hhzx() {
         }
     }
 
-    showPlayName = "前三组选-组三单式";
+    showPlayName = "前三组选-混合组选";
     showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + ")";
     betContent = "{0}{1}{2}".format(arr[0], arr[1], arr[2]);
 
@@ -5429,7 +5429,7 @@ function suiji_h3hhzx() {
         }
     }
 
-    showPlayName = "后三组选-组三单式";
+    showPlayName = "后三组选-混合组选";
     showContent = "号码: (" + arr[0] + "" + arr[1] + "" + arr[2] + ")";
     betContent = "{0}{1}{2}".format(arr[0], arr[1], arr[2]);
 
