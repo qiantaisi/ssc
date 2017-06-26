@@ -102,7 +102,7 @@
             <div class="foot_checkbox" id="checkSelected" data-fun_checkbox="checkCkRx2">
                 <label class="myLabel"><input type="checkbox" value="万"><i>✓</i>万位</label>
                 <label class="myLabel"><input type="checkbox" value="千"><i>✓</i>千位</label>
-                <label class="myLabel"><input type="checkbox" value="百"><i>✓</i>百位</label>
+                <label class="myLabel"><input type="checkbox" value="百" checked><i>✓</i>百位</label>
                 <label class="myLabel"><input type="checkbox" value="十" checked><i>✓</i>十位</label>
                 <label class="myLabel"><input type="checkbox" value="个" checked><i>✓</i>个位</label>
             </div>
