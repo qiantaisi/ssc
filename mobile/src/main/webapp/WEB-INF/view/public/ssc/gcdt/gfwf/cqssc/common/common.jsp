@@ -26,23 +26,6 @@
 </div>
 
 <div class="gfwf_xz gfwf_wh">
-    <div class="xuan">
-        <div class="xuan1"></div>
-        <div class="xuan2">定位胆</div>
-        <div class="xuan1"></div>
-    </div>
-    <div class="staer dwd-select">
-        <a href="javascript:void(0)"
-           data-type="gfwf_page"
-           data-fun_zhushu="zhushu_dwd"
-           data-fun_content="content_dwd"
-           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dwd/zxfs.html"
-           data-play_id="543"
-           data-play_pl_id="14261"
-           data-name="定位胆-直选复式">
-            <span class="zxfs">直选复式</span>
-        </a>
-    </div>
 
     <div class="xuan">
         <div class="xuan1"></div>
@@ -58,7 +41,7 @@
            data-play_id="497"
            data-play_pl_id="14207"
            data-name="五星-直选复式">
-            <span>直选复式</span>
+            <span class="zxfs">直选复式</span>
         </a>
     </div>
 
@@ -361,6 +344,24 @@
            data-play_pl_id="14260"
            data-name="前二-组选包胆">
             <span class="staer1">组选包胆</span>
+        </a>
+    </div>
+
+    <div class="xuan">
+        <div class="xuan1"></div>
+        <div class="xuan2">定位胆</div>
+        <div class="xuan1"></div>
+    </div>
+    <div class="staer dwd-select">
+        <a href="javascript:void(0)"
+           data-type="gfwf_page"
+           data-fun_zhushu="zhushu_dwd"
+           data-fun_content="content_dwd"
+           data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dwd/zxfs.html"
+           data-play_id="543"
+           data-play_pl_id="14261"
+           data-name="定位胆-直选复式">
+            <span>直选复式</span>
         </a>
     </div>
 

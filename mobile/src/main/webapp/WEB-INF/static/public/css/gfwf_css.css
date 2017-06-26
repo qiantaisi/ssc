@@ -20,7 +20,10 @@
     float: left;
     position: relative;
 }
-
+.bett-number2{
+    text-align:center;
+    padding: 5px;
+}
 .consele-two {
     width: 50%;
     height: 100%;
