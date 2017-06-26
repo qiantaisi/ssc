@@ -10,7 +10,6 @@
     <div class="tabs">
         <ul>
             <li class="hy-info" data-opertype="wdtz">我的投注</li>
-            <li class="hy-zh hide" data-opertype="wdzh" sp="0">我的追号</li>
             <li class="hy-info" data-opertype="wdzj">我的中奖</li>
             <li class="hy-info" data-opertype="kjhm">今日开奖号码</li>
             <li class="hy-info" data-opertype="jjsm">奖金计算说明</li>
