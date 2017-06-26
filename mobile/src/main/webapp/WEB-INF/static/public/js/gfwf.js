@@ -1,7 +1,7 @@
 //****
 // 官方玩法事件绑定
 function gfwfEvent(){
-    $("#btn-submit-gfwf").click(function () {
+    $("#btn-submit-gfwf").unbind('click').click(function () {
         showBetTemplate();
     });
 
@@ -9,12 +9,8 @@ function gfwfEvent(){
         clearSelected();
     });
 
-    $("#checkboxRx2 label a").click(function () {
-        console.log("ss");
-        getGfwfZhushu();
-    });
 
-    // checkbox触发事件
+    // checkbox触发事件f
     if ($("#checkSelected").length > 0) {
         // // 兼容IE的checkbox选中
         // if ($.browser.msie) {
@@ -28,6 +24,7 @@ function gfwfEvent(){
             var checkSelectedFun = $("#checkSelected").data("fun_checkbox");
             if (typeof checkSelectedFun != 'undefined') {
                 eval(checkSelectedFun + "()");
+                getGfwfZhushu();
             }
         });
     }
@@ -50,7 +47,9 @@ function checkCkRx2(){
     getGfwfZhushu();
 }
 
-//获取具体子页面
+/**
+ *获取具体子页面
+ */
 function getSubGfwfSscPage(url, callback) {
     ajaxRequest({
         url: url,
@@ -79,7 +78,9 @@ function getSubGfwfSscPage(url, callback) {
     });
 }
 
-//数字单选算法
+/**
+ *数字单选算法
+ */
 function danSelect(obj) {
     var flag = $(obj).parent().parent().data("name");
     if(typeof flag != "undefined" && flag == "bd"){
@@ -102,14 +103,18 @@ function danSelect(obj) {
 }
 
 
-//获取注数方法
+/**
+ * 获取注数方法
+ */
 function getGfwfZhushu(){
+
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
     //执行注数方法
     if (typeof zhushuFun != 'undefined') {
         var zhushu = eval(zhushuFun + "()");   // 注数
         if(zhushu == 0){
             $("#zhushu").html(zhushu);
+            $("#nowMoney").html(0);
             return;
         }else if (typeof zhushu == "undefined" || zhushu < 0) {
             return;
@@ -339,7 +344,6 @@ function content_h3z6fs(){
     $.each($(".z6fsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         zuLiuArr.push($.trim($(this).html()));
     });
-        console.log(zuLiuArr.join(","));
     return zuLiuArr.join(",");
 }
 
@@ -494,7 +498,6 @@ function content_q3z6fs(){
     $.each($(".z6fsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         zuLiuArr.push($.trim($(this).html()));
     });
-    console.log(zuLiuArr.join(","));
     return zuLiuArr.join(",");
 }
 
@@ -939,24 +942,317 @@ function content_rx2zxfs(){
  * 任选二-直选和值
  */
 function content_rx2zxhz() {
-    var hzArr = [], arrTemp = [], checkStrArr = [], checkArr = [];
+    var hzArr = [], checkStrArr = [];
     $.each($(".zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         hzArr.push($.trim($(this).html()));
     });
-    //选取选中checkbox
-    $.each($(".foot_checkbox label input[name='position_zxhzrx2']:checked"), function () {
-        checkArr.push($(this).val());
-    });
-    //获取位数字符串
-    checkStrArr = getNoWeiStr(checkArr);
 
-    if (checkArr.length < 2) {
+    checkStrArr = getCheckboxValue();
+
+    if (checkStrArr.length < 2) {
         Tools.alert("[任选二]至少需要选择2个位置");
         return -1;
     }
 
     return checkStrArr.join(',') + "|" + hzArr.join(",");
 }
+
+
+/**
+ * 任选二-组选复式
+ */
+function content_rx2zuxfs() {
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    var zuArr = [], arrTemp = [];
+    $.each($(".zuxfsStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 2) {
+        Tools.alert("[任选二]至少需要选择2个位置");
+        return -1;
+    }
+
+    return checkStrArr.join(',') + "|" + zuArr.join(",");
+}
+
+/**
+ * 任选二-组选和值
+ */
+function content_rx2zuxhz() {
+    var hzArr = [];
+    var checkStrArr = [];
+
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 2) {
+        Tools.alert("[任选二]至少需要选择2个位置");
+        return -1;
+    }
+    // 转换投注格式
+    return checkStrArr.join(',') + "|" + hzArr.join(",");
+}
+
+/***************任选3*************/
+/**
+ * 任选3-直选复式
+ */
+function content_rx3zxfs() {
+    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : '';
+    var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : '';
+    var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : '';
+    var shiStr = shiArr.length > 0 ? (" 十位: " + shiArr.join("")) : '';
+    var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : '';
+    var strTemp = $.trim(
+        (wanStr == ' ' ? ' ' : wanArr.join(",") + "|") +
+        (qianStr == ' ' ? ' ' : qianArr.join(",") + "|") +
+        (baiStr == ' ' ? ' ' : baiArr.join(",") + "|") +
+        (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
+        (geStr == ' ' ? ' ' : geArr.join(","))
+    );
+
+    return strTemp;
+}
+
+/**
+ * 任选3-直选和值
+ */
+function content_rx3zxhz() {
+    var hzArr = [];
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    $.each($(".zxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 3) {
+        Tools.alert("[任选三]至少需要选择3个位置");
+        return -1;
+    }
+    return checkStrArr.join(',') + "|" + hzArr.join(",");
+}
+
+/**
+ * 任选3-组三复式
+ */
+function content_rx3z3fs() {
+    var zuArr = [];
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    $.each($(".zu3fStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 3) {
+        Tools.alert("[任选三]至少需要选择3个位置");
+        return -1;
+    }
+
+    return checkStrArr.join(',') + "|" + zuArr.join(",");
+}
+
+/**
+ * 任选3-组六复式
+ */
+function content_rx3z6fs() {
+    var zuArr = [];
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    $.each($(".zu6fStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        zuArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 3) {
+        Tools.alert("[任选三]至少需要选择3个位置");
+        return -1;
+    }
+
+    return checkStrArr.join(',') + "|" + zuArr.join(",");
+}
+
+/**
+ * 任选3-组选和值
+ */
+function content_rx3zuxhz() {
+    var hzArr = [];
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    if (checkStrArr.length < 3) {
+        Tools.alert("[任选三]至少需要选择3个位置");
+        return -1;
+    }
+
+    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        hzArr.push($.trim($(this).html()));
+    });
+
+    return checkStrArr.join(',') + "|" + hzArr.join(",");
+}
+
+/***************任选4*************/
+/**
+ * 任选4-直选单式
+ */
+function content_rx4zxfs() {
+    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+    $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        shiArr.push($.trim($(this).html()));
+    });
+    $.each($(".geStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        geArr.push($.trim($(this).html()));
+    });
+
+    var wanStr = wanArr.length > 0 ? ("万位: " + wanArr.join("")) : '';
+    var qianStr = qianArr.length > 0 ? (" 千位: " + qianArr.join("")) : '';
+    var baiStr = baiArr.length > 0 ? (" 百位: " + baiArr.join("")) : '';
+    var shiStr = shiArr.length > 0 ?  (" 十位: " + shiArr.join("")) : '';
+    var geStr = geArr.length > 0 ? (" 个位: " + geArr.join("")) : '';
+
+    var strTemp = $.trim(
+        (wanStr == ' ' ? ' ' : wanArr.join(",") + "|") +
+        (qianStr == ' ' ? ' ' : qianArr.join(",") + "|") +
+        (baiStr == ' ' ? ' ' : baiArr.join(",") + "|") +
+        (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
+        (geStr == ' ' ? ' ' : geArr.join(","))
+    );
+
+    return strTemp;
+}
+
+/**
+ * 任选4-组选24
+ */
+function content_rx4zu24() {
+    var zu24Arr = [];
+    var checkStrArr = [];
+    $.each($(".zu24Str .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        zu24Arr.push($.trim($(this).html()));
+    });
+
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    if (checkStrArr.length < 4) {
+        Tools.alert("[任选四]至少需要选择4个位置");
+        return -1;
+    }
+
+    return checkStrArr.join(',') + "|" + zu24Arr.join(",");
+}
+
+/**
+ * 任选4-组选12
+ */
+function content_rx4zu12() {
+    var erChongHaoArr = [], danHaoArr = [];
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    $.each($(".zu12chStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        erChongHaoArr.push($.trim($(this).html()));
+    });
+
+    $.each($(".zu12dhStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        danHaoArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 4) {
+        Tools.alert("[任选四]至少需要选择4个位置");
+        return -1;
+    }
+
+    return checkStrArr.join(',') + "|" + erChongHaoArr.join(",") + "|" + danHaoArr.join(",");
+
+}
+
+/**
+ * 任选4-组选6
+ */
+function content_rx4zu6() {
+    var erChongHaoArr = [];
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    $.each($(".zu6chStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        erChongHaoArr.push($.trim($(this).html()));
+    });
+
+    if (checkStrArr.length < 4) {
+        Tools.alert("[任选四]至少需要选择4个位置");
+        return -1;
+    }
+
+    return checkStrArr.join(',') + "|" + erChongHaoArr.join(",");
+}
+
+/**
+ * 任选4-组选4
+ */
+function content_rx4zu4() {
+    var sanChongHaoArr = [], danHaoArr = [];
+    var checkStrArr = [];
+    //获取位数字符串
+    checkStrArr = getCheckboxValue();
+
+    $.each($(".zu4chStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        sanChongHaoArr.push($.trim($(this).html()));
+    });
+
+    $.each($(".zu4dhStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        danHaoArr.push($.trim($(this).html()));
+    });
+
+
+    if (checkStrArr.length < 4) {
+        Tools.alert("[任选四]至少需要选择4个位置");
+        return -1;
+    }
+    return checkStrArr.join(',') + "|" + sanChongHaoArr.join(",") + "|" + danHaoArr.join(",");
+}
+
 
 //======================================================注数算法====================================
 
@@ -1994,12 +2290,12 @@ function zhushu_rx2zxhz(){
     var zhushu = newArr.length;
     // 选取选中checkbox
     var checkArr = getCheckboxValue();
-    var shu = getFlagArrs(checkArr, 2).length;
 
+    var shu = getFlagArrs(checkArr, 2).length;
     return zhushu * shu;
 }
 
-//注数-组选复式
+//注数-组选复式`
 function zhushu_rx2zuxfs(){
     var zuArr = [];
     var tempArr = [];
@@ -2026,9 +2322,11 @@ function zhushu_rx2zuxfs(){
 
     tempArr = tempArr.uniqueArr();
     var zhushu = tempArr.length;
-    var shu = $("#positioninfo-zufs").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 2).length;
+    return zhushu * shu;
 }
 
 //注数-组选和值
@@ -2056,9 +2354,11 @@ function zhushu_rx2zuxhz(){
     }
     newArr = newArr.uniqueArr();
     var zhushu = newArr.length;
-    var shu = $("#positioninfo-zuhz").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 2).length;
+    return zhushu * shu;
 }
 
 
@@ -2143,15 +2443,16 @@ function zhushu_rx3zxhz(){
         }
     }
     var zhushu = newArr.length;
-    //var shu = $("#positioninfo-hz").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 3).length;
+    return zhushu * shu;
 }
 
 //注数-组三复式
 function zhushu_rx3z3fs(){
     var zuArr = [];
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu3fStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         zuArr.push($.trim($(this).html()));
     });
     var tempArr = [];
@@ -2163,15 +2464,17 @@ function zhushu_rx3z3fs(){
         }
 
     }
-    var shu = $("#positioninfo-zu3fs").html();
-    var lengthArr = tempArr.length * shu;
-    return lengthArr;
+
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 3).length;
+    return tempArr.length * shu;
 }
 
 //注数-组六复式
 function zhushu_rx3z6fs(){
     var fuShiArr = [], newArr = [];
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu6fStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         fuShiArr.push($.trim($(this).html()));
     });
     var zlLength = fuShiArr.length;
@@ -2181,9 +2484,10 @@ function zhushu_rx3z6fs(){
 
     newArr = getZuLiuNewArrs(fuShiArr);
     var zhushu = newArr.length;
-    var shu = $("#positioninfo-zu6fs").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 3).length;
+    return zhushu * shu;
 }
 
 //注数-组选和值
@@ -2217,9 +2521,10 @@ function zhushu_rx3zuxhz(){
 
     newArr = newArr.uniqueArr();
     var zhushu = newArr.length;
-    var shu = $("#positioninfo-zuxhz").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 3).length;
+    return zhushu * shu;
 }
 
 
@@ -2285,7 +2590,7 @@ function zhushu_rx4zxfs(){
 //注数-组选24
 function zhushu_rx4zu24(){
     var fuShiArr = [], newArr = [];
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu24Str .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         fuShiArr.push($.trim($(this).html()));
     });
     var zlLength = fuShiArr.length;
@@ -2312,18 +2617,19 @@ function zhushu_rx4zu24(){
     }
     newArr = newArr.uniqueArr();
     var zhushu = newArr.length;
-    var shu = $("#positioninfo-zux24").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 4).length;
+    return zhushu * shu;
 }
 
 //注数-组选12
 function zhushu_rx4zu12(){
     var erChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [];
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu12chStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         erChongHaoArr.push($.trim($(this).html()));
     });
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu12dhStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         danHaoArr.push($.trim($(this).html()));
     });
 
@@ -2359,15 +2665,16 @@ function zhushu_rx4zu12(){
     }
     nowArr = nowArr.uniqueArr();
     var zhushu = nowArr.length;
-    var shu = $("#positioninfo-zux12").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 4).length;
+    return zhushu * shu;
 }
 
 //注数-组选6
 function zhushu_rx4zu6(){
     var erChongHaoArr = [], tempArr = [], nowArr = [];
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu6chStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         erChongHaoArr.push($.trim($(this).html()));
     });
     if (erChongHaoArr.length < 2) {
@@ -2386,18 +2693,19 @@ function zhushu_rx4zu6(){
     }
     tempArr = tempArr.uniqueArr();
     var zhushu = tempArr.length;
-    var shu = $("#positioninfo-zux6").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 4).length;
+    return zhushu * shu;
 }
 
 //注数-组选4
 function zhushu_rx4zu4(){
     var sanChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [];
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu6chStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         sanChongHaoArr.push($.trim($(this).html()));
     });
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu6dhStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         danHaoArr.push($.trim($(this).html()));
     });
     for (var d = 0; d < sanChongHaoArr.length; d++) {
@@ -2411,9 +2719,10 @@ function zhushu_rx4zu4(){
         return 0;
     }
     var zhushu = tempArr.length;
-    var shu = $("#positioninfo-zux4").html();
-    var lengthArr = zhushu * shu;
-    return lengthArr;
+    // 选取选中checkbox
+    var checkArr = getCheckboxValue();
+    var shu = getFlagArrs(checkArr, 4).length;
+    return zhushu * shu;
 }
 
 
@@ -2581,22 +2890,20 @@ function getPlAndMaxFd() {
 //清除注单内容提示框
 // var layerBet = null;
 var tmpBetContent = null;
-function showBetTemplate(infoStr) {
+function showBetTemplate() {
     // if (layerBet != null) {
     //     return;
     // }
 
     var contentFun = getPlayPlFun_content();    // 内容算法
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
-    console.log(zhushuFun);
     if (typeof contentFun == 'undefined' || typeof zhushuFun == 'undefined') {
         return;
     }
 
     var data = eval(contentFun + "()");
-
     var zhushu = eval(zhushuFun + "()");
-    console.log(zhushu);
+
     if(data == -1){
         return;
     }
@@ -3166,23 +3473,4 @@ Array.prototype.uniqueArr = function () {
         temp[temp.length]=this[i];
     }
     return temp;
-}
-
-function getNoWeiStr(arr){
-    var checkArr = [], checkStrArr = [];
-    checkArr = arr;
-    for(var i = 0; i < checkArr.length; i++){
-        if(checkArr[i] == 1){
-            checkStrArr.push("万");
-        } else if(checkArr[i] == 2){
-            checkStrArr.push("千");
-        } else if(checkArr[i] == 3){
-            checkStrArr.push("百");
-        } else if(checkArr[i] == 4){
-            checkStrArr.push("十");
-        } else if(checkArr[i] == 5){
-            checkStrArr.push("个");
-        }
-    }
-    return checkStrArr;
 }
