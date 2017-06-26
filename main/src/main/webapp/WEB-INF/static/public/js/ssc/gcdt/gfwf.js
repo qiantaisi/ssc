@@ -834,6 +834,20 @@ function initSubPage() {
         renderZhushu();
     });
 
+    //输入倍数十重新计算
+    $("#inputBeishu").keyup(function (){
+        renderZhushu();
+    });
+
+    //输入倍数失去焦点计算
+    $("#inputBeishu").blur(function(){
+        var valStr = $("#inputBeishu").val();
+        if(typeof valStr == "undefined" || valStr == "" || valStr == null){
+            $("#inputBeishu").val("1");
+        }
+        renderZhushu();
+    });
+
     // 加减号
     initJjh();
 
@@ -1063,20 +1077,6 @@ function renderZhushu() {
         // 返点金额 = 投注总金额 * 返点比例
         var fandianMoney = parseFloat((totalMoney * inputFandianBili).toFixed(3));
         $('.p1 .i_fanD').html(fandianMoney);
-
-        //输入倍数十重新计算
-        $("#inputBeishu").keyup(function (){
-            renderZhushu();
-        });
-
-        //输入倍数失去焦点计算
-        $("#inputBeishu").blur(function(){
-            var valStr = $("#inputBeishu").val();
-            if(typeof valStr == "undefined" || valStr == "" || valStr == null){
-                $("#inputBeishu").val("1");
-            }
-            renderZhushu();
-        });
     }
 }
 
