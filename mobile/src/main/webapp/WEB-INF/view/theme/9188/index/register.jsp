@@ -19,7 +19,7 @@
                 登录
             </a>
             <h1 class="title">
-                <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt="" height="100%"></a>
+                <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}.png" alt="" height="100%"></a>
             </h1>
         </header>
         <div class="content bg-white">

@@ -31,7 +31,7 @@
                     </div>
                     <div valign="bottom" class="card-header color-white no-border no-padding"
                          style="padding:15px!important">
-                        <img class='card-cover' src="<%=basePath%>images/${item.smallImageId}" alt="">
+                        <img class='card-cover' src="<%=basePath%>images/${item.smallimageId}.png" alt="">
                     </div>
                     <div class="card-footer">
                         <a href="javascript:void(0)" class="link" style="font-size:0.7rem;color:#000">查看详情</a>
@@ -44,7 +44,7 @@
                 <%--<p class="tit-time">活动时间： <fmt:formatDate value="${item.startTime}" pattern="yyyy/MM/dd" /></p>--%>
                 <%--</div>--%>
                 <%--<div class="list-pic">--%>
-                <%--<img src="<%=basePath%>images/${item.smallImageId}" class="detail-cont" data-id="${item.id}" alt="">--%>
+                <%--<img src="<%=basePath%>images/${item.smallimageId}.png" class="detail-cont" data-id="${item.id}" alt="">--%>
                 <%--</div>--%>
                 <%--<div class="yhhd-detail">--%>
                 <%--<a class="item-content item-link detail-cont" data-id="${item.id}">--%>

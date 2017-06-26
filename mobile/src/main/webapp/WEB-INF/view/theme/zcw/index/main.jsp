@@ -14,7 +14,7 @@
     <div class="page page-current re-bg" id="page-index">
         <header class="bar bar-nav cl-1-vipcp">
             <a href="javascript:void(0)" class="cl-2" onclick="location.reload()">
-                <img src="<%=basePath%>images/${logo.imageId}" alt="">
+                <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
             </a>
 
             <c:choose>
@@ -57,11 +57,11 @@
                     <c:forEach items="${carouseList.carouselList}" var="item">
                         <c:choose>
                             <c:when test="${empty item.url}">
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}"
+                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
                                                                       alt="${item.title}"></div>
                             </c:when>
                             <c:otherwise>
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}"
+                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
                                                                       alt="${item.title}"></div>
                             </c:otherwise>
                         </c:choose>
