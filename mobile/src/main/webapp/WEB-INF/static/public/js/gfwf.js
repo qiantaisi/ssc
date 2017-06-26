@@ -3082,6 +3082,20 @@ function showBetTemplate() {
         // 渲染下注总额，奖金等等
         renderZhushu();
     });
+
+    // 加号
+    $(".dzje_add").click(function() {
+        $("#betContent_inputMoney").val(parseInt($("#betContent_inputMoney").val()) + 1);
+
+        // 渲染下注总额，奖金等等
+        renderZhushu();
+    });
+    $(".beishu_add").click(function() {
+        $("#betContent_inputBeishu").val(parseInt($("#betContent_inputBeishu").val()) + 1);
+
+        // 渲染下注总额，奖金等等
+        renderZhushu();
+    });
 }
 
 // 清除所有选择

@@ -50,6 +50,7 @@
                         <span class="mode_select selected" data-value="1">元</span>
                         <span class="mode_select" data-value="2">角</span>
                         <span class="mode_select" data-value="3">分</span>
+                        <span class="dzje_add">+</span>
                     </span>
                 </div>
                 <div class="slide-item">
@@ -58,6 +59,7 @@
                                onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
                                onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
                         >&nbsp;倍
+                        <span class="beishu_add">+</span>
                     </span>
                 </div>
                 <div class="slide-item">
@@ -72,13 +74,14 @@
                 </div>
                 <div class="slide-item">
                     <span>若中奖，单注最高中：
-                        <font id="betContent_canWin">{{canWin}}</font>元
+                        <font id="betContent_canWin" color="green">{{canWin}}</font>元
                     </span>
                 </div>
                 <div class="slide-item"></div>
             </div>
         </div>
         <div class="betFoot">
+            <a href="javascript:void(0)" class="no-btn" id="no-btn"><span>取消</span></a>
             <a href="javascript:void(0)" class="yes-btn" id="yes-btn"
                data-bet_play_group_id="{{playGroupId}}"
                data-bet_number="{{number}}"
@@ -86,9 +89,8 @@
                data-bet_play_pl_id="{{playPlId}}"
                data-zhushu="{{zhushu}}"
                data-bet_content="{{betContent}}"
-               <%--data-bet_mode="{{betMode}}"--%>
+            <%--data-bet_mode="{{betMode}}"--%>
             ><span>确认</span></a>
-            <a href="javascript:void(0)" class="no-btn" id="no-btn"><span>取消</span></a>
         </div>
     </div>
 </script>
