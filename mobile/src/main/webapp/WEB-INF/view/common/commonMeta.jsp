@@ -24,6 +24,7 @@
 </script>
 <script>
     CONFIG = {
-        BASEURL: '<%=basePath%>'
+        BASEURL: '<%=basePath%>',
+        RESURL: '${resPath}'
     }
 </script>
