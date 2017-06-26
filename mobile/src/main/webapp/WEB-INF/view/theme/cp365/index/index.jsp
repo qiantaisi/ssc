@@ -32,8 +32,8 @@
     <meta name="keywords" content="${webKeywords}"/>
     <meta name="description" content="${webDescription}"/>
     <link href="${resPath}img/apple_touch_icon.jpg" rel="apple-touch-icon">
-    <link rel="icon" href="<%=basePath%>images/${icoData.imageId}" type="image/x-icon">
-    <link rel="shortcut icon" href="<%=basePath%>images/${icoData.imageId}" mce_href="<%=basePath%>images/${icoData.imageId}" type="image/x-icon">
+    <link rel="icon" href="<%=basePath%>images/${icoData.imageId}.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<%=basePath%>images/${icoData.imageId}.png" mce_href="<%=basePath%>images/${icoData.imageId}.png" type="image/x-icon">
 
     <link rel="stylesheet" href="${resPath}css/style.css?v=201702280308">
     <style>html {
