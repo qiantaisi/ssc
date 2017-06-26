@@ -6235,6 +6235,10 @@ function content_rx4zxds() {
         return -1;
     }
 
+    if(newArr.length <= 0){
+        return 0;
+    }
+
     //获取位数字符串
     checkStrArr = getNoWeiStr(checkArr);
 
@@ -6455,6 +6459,10 @@ function content_rx3z6ds() {
         return -1;
     }
 
+    if(tempArr.length <= 0){
+        return 0;
+    }
+
     if (repeatArr.length > 0) {
         allErrorArr.push("自动过滤重复号码:");
         for (var r = 0; r < repeatArr.length; r++) {
@@ -6581,6 +6589,10 @@ function content_rx3z3ds() {
     if (checkArr.length < 3) {
         alert("[任选三]至少需要选择3个位置");
         return -1;
+    }
+
+    if(tempArr.length <= 0){
+        return 0;
     }
 
     if (repeatArr.length > 0) {
@@ -6733,6 +6745,10 @@ function content_rx3zxds() {
     if (checkArr.length < 3) {
         alert("[任选三]至少需要选择3个位置");
         return -1;
+    }
+
+    if(newArr.length <= 0){
+        return 0;
     }
 
     if (repeatArr.length > 0) {
@@ -6906,6 +6922,10 @@ function content_rx2zuxds() {
     if (checkArr.length < 2) {
         alert("[任选二]至少需要选择2个位置");
         return -1;
+    }
+
+    if(newArr.length <= 0){
+        return 0;
     }
 
     if (repeatArr.length > 0) {
@@ -7557,7 +7577,13 @@ function content_q2zuxds(){
             }
         }
     }
+
     repeatArr = newArr.duplicate(); //获取重复元素
+    newArr = newArr.uniqueArr();
+
+    if(newArr.length <= 0){
+        return 0;
+    }
 
     if (pairArr.length > 0) {
         allErrorArr.push("自动过滤对子号码:");
@@ -7699,6 +7725,10 @@ function content_q2zxds(){
         } else {
             errorArr.push(arr_new[i]);
         }
+    }
+
+    if(newArr.length <= 0){
+        return 0;
     }
 
     if (errorArr.length > 0) {
@@ -7890,6 +7920,9 @@ function content_q3hhzx(){
         }
     }
 
+    if(tempArr.length <= 0){
+        return 0;
+    }
 
     if (errorArr.length > 0) {
         for (var e = 0; e < errorArr.length; e++) {
@@ -7937,6 +7970,10 @@ function content_q3z6ds(){
         } else {
             errorArr.push(newArr[n]);
         }
+    }
+
+    if(tempArr.length <= 0){
+        return 0;
     }
 
     if (errorArr.length > 0) {
