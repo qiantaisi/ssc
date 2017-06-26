@@ -47,7 +47,9 @@ function checkCkRx2(){
     getGfwfZhushu();
 }
 
-//获取具体子页面
+/**
+ *获取具体子页面
+ */
 function getSubGfwfSscPage(url, callback) {
     ajaxRequest({
         url: url,
@@ -76,7 +78,9 @@ function getSubGfwfSscPage(url, callback) {
     });
 }
 
-//数字单选算法
+/**
+ *数字单选算法
+ */
 function danSelect(obj) {
     var flag = $(obj).parent().parent().data("name");
     if(typeof flag != "undefined" && flag == "bd"){
@@ -99,7 +103,9 @@ function danSelect(obj) {
 }
 
 
-//获取注数方法
+/**
+ * 获取注数方法
+ */
 function getGfwfZhushu(){
 
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
