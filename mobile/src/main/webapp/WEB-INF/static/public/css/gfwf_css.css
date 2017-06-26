@@ -616,3 +616,7 @@ input[type="checkbox"]:disabled + i,input[type="radio"]:disabled + i {border-col
 input[type="checkbox"]:checked:disabled + i,input[type="radio"]:checked:disabled + i {background:#ccc;}
 
 .foot_checkbox .myLabel{margin:0 5px;}
+.hide{display:none;}
+.show{display:inherit}
+.mode_select{display:inline-block;border:1px solid #ccc;width:20px;height:20px;line-height:20px;text-align:center;margin:0 5px;}
+.mode_select.selected{background:#fa6200;color:#fff}

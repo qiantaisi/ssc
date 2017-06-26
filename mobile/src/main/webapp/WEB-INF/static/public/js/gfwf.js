@@ -21,7 +21,7 @@ function gfwfEvent(){
         // }
 
         $("#checkSelected input[type='checkbox']").change(function() {
-            var checkSelectedFun = $("#checkSelected").data("fun_checkbox");
+            var checkSelectedFun = $("#checkSelected").attr("data-fun_checkbox");
             if (typeof checkSelectedFun != 'undefined') {
                 eval(checkSelectedFun + "()");
                 getGfwfZhushu();
@@ -82,7 +82,7 @@ function getSubGfwfSscPage(url, callback) {
  *数字单选算法
  */
 function danSelect(obj) {
-    var flag = $(obj).parent().parent().data("name");
+    var flag = $(obj).parent().parent().attr("data-name");
     if(typeof flag != "undefined" && flag == "bd"){
         var tOrF = $(obj).hasClass("active_gfwf");
         if(tOrF){
@@ -2794,38 +2794,25 @@ function selectFun_6(obj) {
     getGfwfZhushu();
 }
 
-
-$(function () {    //彩种玩法选中后，隐藏正在显示的 直线方式 的模块
-    $(".gfwf_xz .staer a").click(
-        function () {
-            $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
-            $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
-            $(".page").find(".x_wrap").removeClass("Fixed");
-            $(".page").find(".gfwf_xz").removeClass("Fixed");
-            $(".page").find(".gfwf_mask2").removeClass("Fixed");
-        }
-    );
-});
-
 /**
  * 获取当前赔率随机算法
  */
 function getPlayPlFun_suiji() {
-    return $(".gfwf_xz .staer a.selected").data("fun_suiji");
+    return $(".gfwf_xz .wx-select a.selected").attr("data-fun_suiji");
 }
 
 /**
  * 获取当前赔率注数算法
  */
 function getPlayPlFun_zhushu() {
-    return $(".gfwf_xz .staer a.selected").data("fun_zhushu");
+    return $(".gfwf_xz .wx-select a.selected").attr("data-fun_zhushu");
 }
 
 /**
  * 获取当前赔率内容算法
  */
 function getPlayPlFun_content() {
-    return $(".gfwf_xz .staer a.selected").data("fun_content");
+    return $(".gfwf_xz .wx-select a.selected").attr("data-fun_content");
 }
 
 /**
@@ -2833,11 +2820,11 @@ function getPlayPlFun_content() {
  */
 function getPlayPlId() {
     var arrTemp = null;
-    var indexStr = ($(".gfwf_xz .staer a.selected").data("play_pl_id")).toString();
+    var indexStr = ($(".gfwf_xz .wx-select a.selected").attr("data-play_pl_id")).toString();
     if(indexStr.indexOf("|") > 0){
         arrTemp = (indexStr.split("|"))[0];
     }else {
-        arrTemp = $(".gfwf_xz .staer a.selected").data("play_pl_id");
+        arrTemp = $(".gfwf_xz .wx-select a.selected").attr("data-play_pl_id");
     }
 
     return arrTemp;
@@ -2847,14 +2834,14 @@ function getPlayPlId() {
  * 获取当前玩法ID
  */
 function getPlayId() {
-    return $(".gfwf_xz .staer a.selected").data("play_id");
+    return $(".gfwf_xz .wx-select a.selected").attr("data-play_id");
 }
 
 /**
  * 获取当前期数
  */
 function getNumber() {
-    return $("#number").data("number");
+    return $("#number").attr("data-number");
 }
 
 /**
@@ -2940,7 +2927,7 @@ function showBetTemplate() {
         playPlId: getPlayPlId(),
         zhushu: zhushu,
         betContent: data,
-        betMode: 1,
+        // betMode: 1,
         totalMoney: parseFloat((2 * zhushu * 1).toFixed(3)), // 默认2元 * 1倍 * 注数
         canWin: parseFloat((2 * maxPlayPl * 1).toFixed(3))  // 默认2元 * 1倍 * 赔率
     });
@@ -2962,12 +2949,12 @@ function showBetTemplate() {
         onChange: function(obj) {
             // 返点比例
             var fandianBili = parseFloat($(obj).val()).toFixed(1); // 当前滚动条移动的比例
-            $("#betContent_fanli").data("value", fandianBili);
+            $("#betContent_fanli").attr("data-value", fandianBili);
             $("#betContent_fanli").html(fandianBili + "%");    // 渲染界面中百分比部分
 
             // 赔率 = 最大配率 - 返点比例 * 转换比例
             var pl = (maxPlayPl - fandianBili * convertBlMoney).toFixed(3);
-            $("#betContent_playPl").data("value", pl);
+            $("#betContent_playPl").attr("data-value", pl);
 
             // 渲染界面中赔率部分
             if (plAndMaxFd instanceof Array) {  // 多赔率
@@ -3001,20 +2988,21 @@ function showBetTemplate() {
         };
         // 手机版只有选择一单
         betForm.sscBetList.push({
-            playGroupId: $(this).data("bet_play_group_id"),
-            number: $(this).data("bet_number"),
-            playId: $(this).data("bet_play_id"),
-            playPlId: $(this).data("bet_play_pl_id"),
-            zhushu: $(this).data("zhushu"),
-            // content: $(this).data("bet_content"),
+            playGroupId: $(this).attr("data-bet_play_group_id"),
+            number: $(this).attr("data-bet_number"),
+            playId: $(this).attr("data-bet_play_id"),
+            playPlId: $(this).attr("data-bet_play_pl_id"),
+            zhushu: $(this).attr("data-zhushu"),
+            // content: $(this).attr("data-bet_content"),
             content: tmpBetContent,
             perMoney: $("#betContent_inputMoney").val(),
-            playPl: $("#betContent_playPl").data("value"),
+            playPl: $("#betContent_playPl").attr("data-value"),
             beishu: $("#betContent_inputBeishu").val(),
             totalMoney: parseFloat($("#betContent_totalMoney").html()),
             type: 2,
-            mode: $(this).data("bet_mode"),
-            fandian: $("#betContent_fanli").data("value")
+            // mode: $(this).attr("data-bet_mode"),
+            mode: $(".mode_select.selected").attr("data-value"),
+            fandian: $("#betContent_fanli").attr("data-value")
         });
         betForm.totalMoney += betForm.sscBetList[0].totalMoney;
         betForm.totalZhushu += betForm.sscBetList[0].zhushu;
@@ -3062,10 +3050,21 @@ function showBetTemplate() {
         var money = $("#betContent_inputMoney").val();
         var beishu = $("#betContent_inputBeishu").val();
         var zhushu = parseInt($("#betContent_zhushu").html());
-        var playPl = parseFloat($("#betContent_playPl").data("value"));
+        var playPl = parseFloat($("#betContent_playPl").attr("data-value"));
+        var mode = parseInt($(".mode_select.selected").attr("data-value"));
+        var tmpMode = 1;
+        if (mode == 1) {
+            tmpMode = 1;
+        } else if (mode == 2) {
+            tmpMode = 0.1;
+        } else if (mode == 3) {
+            tmpMode = 0.01;
+        } else {
+            return;
+        }
 
-        var totalMoney = parseFloat((money * zhushu * beishu).toFixed(3));  // 总金额
-        var canWin = parseFloat(money * beishu * playPl);  // 可获奖金
+        var totalMoney = parseFloat((money * zhushu * beishu * tmpMode).toFixed(3));  // 总金额
+        var canWin = parseFloat(money * beishu * playPl * tmpMode);  // 可获奖金
 
         $("#betContent_totalMoney").html(totalMoney.toFixed(3));
         $("#betContent_canWin").html(canWin.toFixed(3));
@@ -3073,6 +3072,15 @@ function showBetTemplate() {
 
     $("#ischange").change(function() {
         alert("checked");
+    });
+
+    // 模式选择
+    $(".mode_select").click(function() {
+        $(".mode_select.selected").removeClass("selected");
+        $(this).addClass("selected");
+
+        // 渲染下注总额，奖金等等
+        renderZhushu();
     });
 }
 
