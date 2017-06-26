@@ -603,3 +603,13 @@ ding {
     margin-left: -0.2rem;
     margin-top: -0.01rem;
 }
+/*************checkbox美化************/
+.myLabel {cursor:pointer;}
+.myLabel i {font-size:0.5rem;font-style:normal;display:inline-block;width:12px;height:12px;text-align:center;line-height:12px;color:#fff;vertical-align:middle;margin:-2px 2px 1px 0px;border:#2489c5 1px solid;}
+input[type="checkbox"],input[type="radio"] {display:none;}
+input[type="radio"] + i {border-radius:7px;}
+input[type="checkbox"]:checked + i,input[type="radio"]:checked + i {background:#2489c5;}
+input[type="checkbox"]:disabled + i,input[type="radio"]:disabled + i {border-color:#ccc;}
+input[type="checkbox"]:checked:disabled + i,input[type="radio"]:checked:disabled + i {background:#ccc;}
+
+.foot_checkbox .myLabel{margin:0 5px;}

@@ -1973,6 +1973,9 @@ $(function () {
                 // console.log(url);
                 getSubGfwfSscPage(url, function(){
                     $(".gfwf-title span").html(namePage);
+
+                    //执行官方玩法事件
+                    gfwfEvent();
                 });
                 // playName = $(this).data("fun_zhushu");
 

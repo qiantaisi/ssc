@@ -73,28 +73,18 @@
                 <span class="xz n18" onclick="danSelect(this)">18</span>
             </div>
 
-            <div class="foot_checkbox" id="checkboxRx2">
-                <label>
-                    <input type="checkbox" onclick="checkCkRx2()" name="position_zxhzrx2" class="rx2zxhz" value="1"/>
-                    <span>万位</span>
-                </label>
-                <label>
-                    <input type="checkbox" onclick="checkCkRx2()" name="position_zxhzrx2" value="2"/>
-                    <span>千位</span>
-                </label>
-                <label>
-                    <input type="checkbox" onclick="checkCkRx2()" name="position_zxhzrx2" value="3"/>
-                    <span>百位</span>
-                </label>
-                <label>
-                    <input type="checkbox" onclick="checkCkRx2()" checked="checked" name="position_zxhzrx2" value="4"/>
-                    <span>十位</span>
-                </label>
-                <label>
-                    <input type="checkbox" onclick="checkCkRx2()" checked="checked" name="position_zxhzrx2" value="5"/>
-                    <span>个位</span>
-                </label>
+            <div class="foot_checkbox" id="checkSelected" data-fun_checkbox="checkCkRx2">
+                <label class="myLabel"><input type="checkbox" value="万"><i>✓</i>万位</label>
+                <label class="myLabel"><input type="checkbox" value="千"><i>✓</i>千位</label>
+                <label class="myLabel"><input type="checkbox" value="百"><i>✓</i>百位</label>
+                <label class="myLabel"><input type="checkbox" value="十" checked><i>✓</i>十位</label>
+                <label class="myLabel"><input type="checkbox" value="个" checked><i>✓</i>个位</label>
             </div>
         </div>
     </div>
 </div>
+<script>
+    $(function() {
+
+    });
+</script>
