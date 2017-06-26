@@ -1123,7 +1123,7 @@ function content_rx3zuxhz() {
 
 /***************任选4*************/
 /**
- * 任选4-直选单式
+ * 任选4-直选复式
  */
 function content_rx4zxfs() {
     var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
@@ -2534,19 +2534,19 @@ function zhushu_rx3zuxhz(){
 //注数-直选复式
 function zhushu_rx4zxfs(){
     var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [], newArr = [];
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".wanStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         wanArr.push($.trim($(this).html()));
     });
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".qianStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         qianArr.push($.trim($(this).html()));
     });
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".baiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         baiArr.push($.trim($(this).html()));
     });
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         shiArr.push($.trim($(this).html()));
     });
-    $.each($(".zuxhzStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".geStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         geArr.push($.trim($(this).html()));
     });
     var numArr = [];
@@ -2702,10 +2702,10 @@ function zhushu_rx4zu6(){
 //注数-组选4
 function zhushu_rx4zu4(){
     var sanChongHaoArr = [], danHaoArr = [], tempArr = [], nowArr = [];
-    $.each($(".zu6chStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu4chStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         sanChongHaoArr.push($.trim($(this).html()));
     });
-    $.each($(".zu6dhStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+    $.each($(".zu4dhStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
         danHaoArr.push($.trim($(this).html()));
     });
     for (var d = 0; d < sanChongHaoArr.length; d++) {
