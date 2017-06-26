@@ -110,6 +110,6 @@
                 <label class="myLabel"><input type="checkbox" value="个" checked><i>✓</i>个位</label>
             </div>
         </div>
-        </div>
     </div>
+</div>
 </div>
