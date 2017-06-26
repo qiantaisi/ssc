@@ -1,7 +1,7 @@
 //****
 // 官方玩法事件绑定
 function gfwfEvent(){
-    $("#btn-submit-gfwf").click(function () {
+    $("#btn-submit-gfwf").unbind('click').click(function () {
         showBetTemplate();
     });
 
@@ -9,9 +9,6 @@ function gfwfEvent(){
         clearSelected();
     });
 
-    // $("#checkboxRx2 label a").click(function () {
-    //     getGfwfZhushu();
-    // });
 
     // checkbox触发事件f
     if ($("#checkSelected").length > 0) {
@@ -947,6 +944,7 @@ function content_rx2zxhz() {
     checkStrArr = getCheckboxValue();
 
     if (checkStrArr.length < 2) {
+        Tools.alert("[任选二]至少需要选择2个位置");
         return -1;
     }
 
@@ -968,6 +966,7 @@ function content_rx2zuxfs() {
     });
 
     if (checkStrArr.length < 2) {
+        Tools.alert("[任选二]至少需要选择2个位置");
         return -1;
     }
 
@@ -988,6 +987,7 @@ function content_rx2zuxhz() {
     });
 
     if (checkStrArr.length < 2) {
+        Tools.alert("[任选二]至少需要选择2个位置");
         return -1;
     }
     // 转换投注格式
@@ -2622,7 +2622,7 @@ function getPlAndMaxFd() {
 //清除注单内容提示框
 // var layerBet = null;
 var tmpBetContent = null;
-function showBetTemplate(infoStr) {
+function showBetTemplate() {
     // if (layerBet != null) {
     //     return;
     // }
@@ -2637,7 +2637,6 @@ function showBetTemplate(infoStr) {
     var zhushu = eval(zhushuFun + "()");
 
     if(data == -1){
-        Tools.alert("[任选二]至少需要选择2个位置");
         return;
     }
 
