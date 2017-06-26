@@ -622,3 +622,4 @@ input[type="checkbox"]:checked:disabled + i,input[type="radio"]:checked:disabled
 .mode_select.selected{background:#fa6200;color:#fff}
 .dzje_add,.beishu_add{cursor:pointer;display:inline-block;border:1px solid #ccc;width:20px;height:20px;line-height:20px;text-align:center;margin:0 5px;}
 .wrap .cus_common .wan_bottom .cus-flex-item{padding:0.4rem;}
+.wrap .cus_common .wan_bottom .cus-flex-item .xz{font-size:1.4rem;width:auto;height:auto;width:1.}
