@@ -8012,6 +8012,9 @@ function content_q3z3ds() {
             errorArr.push(newArr[n]);
         }
     }
+    if(tempArr.length <= 0){
+        return 0;
+    }
 
     if (errorArr.length > 0) {
         for (var e = 0; e < errorArr.length; e++) {
@@ -8173,8 +8176,7 @@ function content_q3zxds() {
     }
 
     if (newArr.length <= 0) {
-        alert("号码或金额输入有误，请重新输入");
-        return;
+        return 0;
     }
 
     if (errorArr.length > 0) {
@@ -8378,8 +8380,7 @@ function content_h3hhzx(){
     }
 
     if (tempArr.length <= 0) {
-        alert("号码或金额输入有误，请重新输入");
-        return;
+        return 0;
     }
 
     if (errorArr.length > 0) {
@@ -8431,8 +8432,7 @@ function content_h3z6ds(){
     }
 
     if (tempArr.length <= 0) {
-        alert("号码或金额输入有误，请重新输入");
-        return;
+        return 0;
     }
 
     if (errorArr.length > 0) {
@@ -8509,8 +8509,7 @@ function content_h3z3ds() {
         }
     }
     if (tempArr.length <= 0) {
-        alert("号码或金额输入有误，请重新输入");
-        return;
+        return 0;
     }
 
     if (errorArr.length > 0) {
@@ -8676,8 +8675,7 @@ function content_h3zxds() {
     }
 
     if (newArr.length <= 0) {
-        alert("号码或金额输入有误，请重新输入");
-        return;
+        return 0;
     }
 
     if (errorArr.length > 0) {
@@ -8866,8 +8864,7 @@ function content_5xzxds() {
         }
     }
     if (newArr.length <= 0) {
-        alert("号码或金额输入有误，请重新输入");
-        return;
+        return 0;
     }
 
     if (errorArr.length > 0) {
@@ -8912,8 +8909,7 @@ function content_4xzxds() {
         }
     }
     if (newArr.length <= 0) {
-        alert("号码或金额输入有误，请重新输入");
-        return;
+        return 0;
     }
 
     if (errorArr.length > 0) {
