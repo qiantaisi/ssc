@@ -214,7 +214,7 @@
                     str += '<td>' + getPlayName(value.playId) + '</td>';
                     str += '<td>' + value.playPl + '</td>';
                     str += '<td>' + value.number + '</td>';
-                    str += '<td>' + value.content + '</td>';
+                    str += '<td class="content-tzjl">' + value.content + '</td>';
                     str += '<td>' + value.zhushu + '</td>';
                     str += '<td>' + value.totalMoney + '</td>';
                     str += '<td>' + value.zjMoney + '</td>';
