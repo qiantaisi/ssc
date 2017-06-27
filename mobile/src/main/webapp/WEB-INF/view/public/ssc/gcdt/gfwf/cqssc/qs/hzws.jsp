@@ -13,16 +13,16 @@
     <div class="cus_common hzwsStr">
         <div class="wan_top">
             <span class="wanwei">和值尾数</span>
-            <span class="xz">
+            <span class="xz rewsbtn">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
                 <i onclick="selectFun_3(this)">小</i>
                 <i onclick="selectFun_4(this)">奇</i>
                 <i onclick="selectFun_5(this)">偶</i>
-                <i onclick="selectFun_6(this)">清</i>
+                <i onclick="selectFun_6(this)" class="rewsbtn-clear">清</i>
             </span>
         </div>
-        <div class="wan_bottom">
+        <div class="wan_bottom wsre_wan_bottom">
             <div class="cus-flex-item">
                 <span class="xz n0" onclick="danSelect(this)">0</span>
             </div>
