@@ -388,18 +388,15 @@ function getZuLiuNewArrs(zuXuanArr) {
 
 //后三组选-组选和值
 function getZxhzNewArrs(zuXuanArr) {
-    var heZhiArr = [], shuArr = [], tempArr = [];
-    var temp = [];
+    var heZhiArr = [], tempArr = [];
     var sumTemp = 0;
     var num = 0; //当前号码
     var fjHaoZuhe = []; //分解号组合
 
     heZhiArr = zuXuanArr;
-    for(var d = 0; d < 28; d++){
-        shuArr[d] = 0;
-    }
     //号码分解---所选号分解成所有组合的值等于此号的所有组合
     for (var i = 0; i < heZhiArr.length; i++) {
+        var temp = [];
         sumTemp = parseInt(heZhiArr[i]);
         num = parseInt(heZhiArr[i]);
         while (sumTemp >= 0) {
@@ -466,17 +463,15 @@ function getKaduNewArrs(kDArr) {
 //后三直选--获取所选号码分散为三位所有组合的和值
 function getHezNewArrs(hZArr) {
     var heZhiArr = [], shuArr = [], tempArr = [];
-    var temp = [];
     var sumTemp = 0;
     var num = 0; //当前号码
     var fjHaoZuhe = []; //分解号组合
 
     heZhiArr = hZArr;
-    for(var d = 0; d < 28; d++){
-        shuArr[d] = 0;
-    }
+
     //号码分解---所选号分解成所有组合的值等于此号的所有组合
     for (var i = 0; i < heZhiArr.length; i++) {
+        var temp = [];
         sumTemp = parseInt(heZhiArr[i]);
         num = parseInt(heZhiArr[i]);
         while (sumTemp >= 0) {
@@ -836,6 +831,13 @@ function initSubPage() {
 
     //输入倍数十重新计算
     $("#inputBeishu").keyup(function (){
+        var val = parseInt($(this).val());
+        if (isNaN(val) || typeof val != 'number') {
+            val = 1;
+        }
+        val = parseInt(val);
+        val = val < 1 ? 1 : val;
+        $(this).data("beishu", val).val(val);
         renderZhushu();
     });
 

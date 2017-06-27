@@ -4809,13 +4809,17 @@ $(function () {
 
             var namePage = $(this).attr("data-name");
             var url = $(this).attr("data-url");
-            console.log(url);
             getSubGfwfSscPage(url, function(){
 
                 //执行官方玩法事件
                 gfwfEvent();
 
                 renderPlayName();
+                $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+                $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+                $(".page").find(".x_wrap").removeClass("Fixed");
+                $(".page").find(".gfwf_xz").removeClass("Fixed");
+                $(".page").find(".gfwf_mask2").removeClass("Fixed");
             });
 
             // 添加选中状态，方便获取相关数据
