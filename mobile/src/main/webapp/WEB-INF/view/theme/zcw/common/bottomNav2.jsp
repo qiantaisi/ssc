@@ -7,31 +7,25 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<ul class="Bott">
-    <li>
-        <a>
-            <img src=""/>
-            <img src=""/>
-        </a>
-    </li>
-    <li>
-        <a>
-
-        </a>
-    </li>
-    <li>
-        <a>
-
-        </a>
-    </li>
-    <li>
-        <a>
-
-        </a>
-    </li>
-    <li>
-        <a>
-
-        </a>
-    </li>
-</ul>
+<nav class="bar bar-tab c1-101">
+    <a class="tab-item external active" href="<%=basePath%>" data-name="index">
+        <span class="icon re-icon-home"></span>
+        <span class="tab-label tab-indx">首页</span>
+    </a>
+    <a class="tab-item external" href="<%=basePath%>ssc/gcdt.html" data-name="gcdt">
+        <span class="icon icon-gc"></span>
+        <span class="tab-label tab-gcdt">购彩大厅</span>
+    </a>
+    <a class="tab-item external" href="<%=basePath%>ssc/kjjl/all.html" data-name="kj">
+        <span class="icon icon-kj"></span>
+        <span class="tab-label tab-kj">开奖</span>
+    </a>
+    <a class="tab-item external" href="<%=basePath%>ssc/zst/ffssc/jbzst.html" data-name="zst">
+        <span class="icon icon-zst"></span>
+        <span class="tab-label tab-zst">走势图</span>
+    </a>
+    <a class="tab-item external" href="<%=basePath%>member/index.html" data-name="grzx">
+        <span class="icon icon-info"></span>
+        <span class="tab-label tab-info">个人中心</span>
+    </a>
+</nav>

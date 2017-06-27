@@ -34,7 +34,7 @@
                 </c:otherwise>
             </c:choose>
         </header>
-        <c:import url="../common/bottomNav.jsp"/>
+        <c:import url="../common/bottomNav2.jsp"/>
 
         <div class="content content-img content-vipvp" id="navBar">
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
