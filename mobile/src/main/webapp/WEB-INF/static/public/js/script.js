@@ -4798,7 +4798,7 @@ $(function () {
         initSscPage(1);
 
         //官方玩法，彩种玩法选择点击事件
-        $(".wx-select a").unbind("click");
+        $(".wx-select a").unbind("click");  //移除被选元素的事件处理程序
         $(".wx-select a").click(function () {
             $(".wx-select a").removeClass("selected");
             $(".wx-select a").find("span").removeClass("zxfs");
@@ -4840,7 +4840,7 @@ $(function () {
             $(this).find("span").removeClass("staer1");
             $(this).find("span").addClass("zxfs");
 
-            var id = $(this).data("name");
+            var id = $(this).data("name");    //获取被选元素的数据
             $(".wx-select .show").removeClass("show").addClass("hide");
             $("#playGroup_" + id).removeClass("hide").addClass("show");
 
