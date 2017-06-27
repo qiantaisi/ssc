@@ -50,7 +50,7 @@
         <div class="xuan2" id="gfwf_playName"></div>
         <div class="xuan1"></div>
     </div>
-    <div class="staer wx-select">
+    <div class="staer wx-select restaer">
         <div class="hide" id="playGroup_dwd">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
