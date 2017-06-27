@@ -627,3 +627,24 @@ input[type="checkbox"]:checked:disabled + i,input[type="radio"]:checked:disabled
 .wrap .cus_common .wan_bottom .cus-flex-item{padding:0.4rem;}
 .wrap .cus_common .wan_bottom .cus-flex-item .xz{font-size:1.4rem;width:2rem;height:2rem;line-height:2rem;}
 .wrap .cus_common .wan_bottom .cus-flex-item{width:20%}
+
+/*特殊号*/
+.wrap .cus_common .wan_bottom .recus-flex-item{
+    width: auto!important;
+}
+
+.tshStr .wan_bottom .cus-flex-item span{
+    width: 3rem!important;
+    height: 3rem!important;
+    line-height: 3rem!important;
+    font-size: 1.2rem!important;
+    margin-left: 0.2rem!important;
+}
+
+.wrap .hzwsStr .wan_top span.rewsbtn i{
+    margin-right: 0!important;
+}
+
+.wrap .hzwsStr .wan_top span.rewsbtn i.rewsbtn-clear{
+    margin-right: 0.4rem!important;
+}
