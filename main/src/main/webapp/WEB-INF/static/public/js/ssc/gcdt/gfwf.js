@@ -312,14 +312,18 @@ function delRrepet(obj) {
             newArr.push(arr_new[i]);
         }
     }
-    repeatArr = newArr.duplicate();
+
+    repeatArr = newArr.duplicateNew().uniqueArr();
     tempArr = newArr.uniqueArr();
+
     if(repeatArr.length <= 0){
         alert("无重复号码！");
     }else{
         alert("已删除掉重复号: " + repeatArr.join(" "));
         $(".content_jiang .content_tex").val(tempArr.join(" "));
     }
+    //重新计算注数
+    renderZhushu();
 }
 
 
@@ -1322,9 +1326,7 @@ function zhushu_rx4zu24(){
  * 注数-直选单式
  */
 function zhushu_rx4zxds(){
-    var errorStr = '';
-    var repeatArr = [], allErrorArr = [];
-    var errorArr = [];
+    var tempArr = [];
     var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
     var newArr = [];
     textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
@@ -1332,19 +1334,12 @@ function zhushu_rx4zxds(){
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
-        } else {
-            if (arr_new[i] != "") {
-                errorArr.push(arr_new[i]);
-            }
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
-    newArr = newArr.uniqueArr();
     var temp = newArr.length;
     var shu = $("#positioninfo-ds").html();
-    var zhushu = temp * shu;
-    return zhushu;
+    return temp * shu;
 }
 
 /**
