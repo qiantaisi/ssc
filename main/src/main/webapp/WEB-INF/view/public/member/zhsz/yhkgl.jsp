@@ -26,7 +26,8 @@
             </c:choose>
             <div class="item w105">${item.bankName}</div>
             <div class="item w105">${item.userName}</div>
-            <div class="item w205">${fn:substring(item.bankAccount, 0, 4)} **** **** **** ${fn:substring(item.bankAccount, 16, 20)}</div>
+            <c:set var="len" scope="session" value="${fn:length(item.bankAccount)}"/>
+            <div class="item w205">${fn:substring(item.bankAccount, 0, 4)}**** **** ${fn:substring(item.bankAccount, len - 4, len)}</div>
             <div class="item w230">${item.subBankName}</div>
             <div class="item">
                 <a href="javascript:void(0)" class="mr10 color-c4463c" onclick="setDefault(${item.id})">设为默认</a>
