@@ -836,6 +836,13 @@ function initSubPage() {
 
     //输入倍数十重新计算
     $("#inputBeishu").keyup(function (){
+        var val = parseInt($(this).val());
+        if (isNaN(val) || typeof val != 'number') {
+            val = 1;
+        }
+        val = parseInt(val);
+        val = val < 1 ? 1 : val;
+        $(this).data("beishu", val).val(val);
         renderZhushu();
     });
 
