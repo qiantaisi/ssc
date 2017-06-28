@@ -324,13 +324,13 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
-       // 置顶按钮
+        // 置顶按钮
         $(".top-click").click(function () {
-           $("#navBar").scrollTop(0);
+            $("#navBar").scrollTop(0);
         });
 
-        $(".c1-101 .tab-item .re-icon-home").css("background-image","url("+ CONFIG.RESURL +"img/footer2.png)");
-        $(".c1-101 .tab-item .tab-indx").css("color","red");
+        $(".c1-101 .tab-item .re-icon-home").css("background-image", "url(" + CONFIG.RESURL + "img/footer2.png)");
+        $(".c1-101 .tab-item .tab-indx").css("color", "red");
 
         $(".sanjiao").hide();//隐藏所有三角号 系列彩种中
 
@@ -555,15 +555,13 @@ $(function () {
         //后台设置热门开奖个数
         renderAllData(kjjgJsonData.sscTimeList);
 
-        $(".lhc-kjjg .lhc-touzhu .shuaxin").live('click',function(){
+        $(".lhc-kjjg .lhc-touzhu .shuaxin").live('click', function () {
             xyxh(this, 6);
             //刷新
-            setTimeout(function(){
+            setTimeout(function () {
                 renderAllData(kjjgJsonData.sscTimeList)
-            },1200);
+            }, 1200);
         });
-
-
 
 
         function xyxh(obj, type) {
@@ -704,8 +702,6 @@ $(function () {
         }
         $(".timeInfo").html(hour);
     });
-
-
 
 
     function openXyxh(type) {
@@ -2725,78 +2721,78 @@ $(function () {
 
     // 购彩大厅首页
     $(document).on("pageInit", "#page-gcdt", function (e, id, page) {
-        $(".re-con-out .btn-xl-ssc").click(function(){
+        $(".re-con-out .btn-xl-ssc").click(function () {
             var sp = $(".ssc-div-content").attr("sp");
-            if(sp == 0){
+            if (sp == 0) {
                 $(".ssc-div-content").hide();
-                $(".ssc-div-content").attr("sp","1");
+                $(".ssc-div-content").attr("sp", "1");
                 $(".btn-xl-ssc .img_jian").addClass("goucai_sj");
 
-            }else if(sp == 1){
+            } else if (sp == 1) {
                 $(".ssc-div-content").show();
-                $(".ssc-div-content").attr("sp","0");
+                $(".ssc-div-content").attr("sp", "0");
                 $(".btn-xl-ssc .img_jian").removeClass("goucai_sj");
             }
         });
 
-        $(".re-con-out .btn-xl-k3").click(function(){
+        $(".re-con-out .btn-xl-k3").click(function () {
             var sp = $(".k3-div-content").attr("sp");
-            if(sp == 0){
+            if (sp == 0) {
                 $(".k3-div-content").hide();
-                $(".k3-div-content").attr("sp","1");
+                $(".k3-div-content").attr("sp", "1");
                 $(".btn-xl-k3 .img_jian").addClass("goucai_sj");
 
-            }else if(sp == 1){
+            } else if (sp == 1) {
                 $(".k3-div-content").show();
-                $(".k3-div-content").attr("sp","0");
+                $(".k3-div-content").attr("sp", "0");
                 $(".btn-xl-k3 .img_jian").removeClass("goucai_sj");
             }
         });
 
-        $(".re-con-out .btn-xl-pk10").click(function(){
+        $(".re-con-out .btn-xl-pk10").click(function () {
             var sp = $(".pk10-div-content").attr("sp");
-            if(sp == 0){
+            if (sp == 0) {
                 $(".pk10-div-content").hide();
-                $(".pk10-div-content").attr("sp","1");
+                $(".pk10-div-content").attr("sp", "1");
                 $(".btn-xl-pk10 .img_jian").addClass("goucai_sj");
 
-            }else if(sp == 1){
+            } else if (sp == 1) {
                 $(".pk10-div-content").show();
-                $(".pk10-div-content").attr("sp","0");
+                $(".pk10-div-content").attr("sp", "0");
                 $(".btn-xl-pk10 .img_jian").removeClass("goucai_sj");
             }
         });
 
-        $(".re-con-out .btn-xl-gp").click(function(){
+        $(".re-con-out .btn-xl-gp").click(function () {
             var sp = $(".gp-div-content").attr("sp");
-            if(sp == 0){
+            if (sp == 0) {
                 $(".gp-div-content").hide();
-                $(".gp-div-content").attr("sp","1");
+                $(".gp-div-content").attr("sp", "1");
                 $(".btn-xl-gp .img_jian").addClass("goucai_sj");
 
-            }else if(sp == 1){
+            } else if (sp == 1) {
                 $(".gp-div-content").show();
-                $(".gp-div-content").attr("sp","0");
+                $(".gp-div-content").attr("sp", "0");
                 $(".btn-xl-gp .img_jian").removeClass("goucai_sj");
             }
         });
 
-        $(".re-con-out .btn-xl-dp").click(function(){
+        $(".re-con-out .btn-xl-dp").click(function () {
             var sp = $(".dp-div-content").attr("sp");
-            if(sp == 0){
+            if (sp == 0) {
                 $(".dp-div-content").hide();
-                $(".dp-div-content").attr("sp","1");
+                $(".dp-div-content").attr("sp", "1");
                 $(".btn-xl-dp .img_jian").addClass("goucai_sj");
 
-            }else if(sp == 1){
+            } else if (sp == 1) {
                 $(".dp-div-content").show();
-                $(".dp-div-content").attr("sp","0");
+                $(".dp-div-content").attr("sp", "0");
                 $(".btn-xl-dp .img_jian").removeClass("goucai_sj");
             }
         });
 
         $(".c1-101 .tab-item .icon-gc").css("background-image", "url(" + CONFIG.RESURL + "img/footer_100.png)");
-        $(".c1-101 .tab-item .tab-gcdt").css("color","red");
+        $(".c1-101 .tab-item .tab-gcdt").css("color", "red");
         // // 公告滚动
         // var mySwiper = new Swiper('.swiper-container', {
         //     pagination: '.swiper-pagination',
@@ -7157,3 +7153,29 @@ function kefuToast() {
 // );
 
 
+$(function () {
+        $(".number_bar a").click(
+            function () {
+                var lin = $(this).attr("data-name");
+                switch (lin) {
+                    case n1:
+
+                        break;
+                    case n2:
+                        $(".number_bar").find(".n1").removeClass("active");
+                        $(".number_bar").find(".n2").addClass("active");
+                        break;
+                    case n3:
+
+                        break;
+                    case n4:
+
+                        break;
+                    case n5:
+
+                        break;
+                }
+            }
+        );
+    }
+)
