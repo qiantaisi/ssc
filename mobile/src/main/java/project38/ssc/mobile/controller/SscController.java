@@ -222,11 +222,11 @@ public class SscController extends CacheController {
 
     @RequestMapping(value = "/ajaxGetHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date) {
+    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date, String number) {
         SscHistoryResult result = new SscHistoryResult();
         String companyShortName = this.getCompanyShortName();
         try {
-            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date,companyShortName);
+            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date, number, companyShortName);
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");
