@@ -1675,8 +1675,6 @@ function zhushu_rx3zxds(){
         }
     }
 
-    newArr = newArr.uniqueArr(); //去掉重复代码
-
     var temp = newArr.length;
     zhushu = temp * shu;
     return zhushu;
@@ -1805,7 +1803,7 @@ function zhushu_rx2zuxds(){
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
     newArr = newArr.uniqueArr();
     var temp = newArr.length;
     var shu = $("#positioninfo-zuds").html();
@@ -6447,7 +6445,7 @@ function content_rx3z6ds() {
         }
     }
 
-    repeatArr = tempArr.duplicateNew(); //重复号码
+    repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
     tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     if (checkArr.length < 3) {
@@ -6581,7 +6579,7 @@ function content_rx3z3ds() {
             errorArr.push(newArr[n]);
         }
     }
-    repeatArr = tempArr.duplicateNew(); //重复号码
+    repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
     tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     if (checkArr.length < 3) {
@@ -6737,7 +6735,7 @@ function content_rx3zxds() {
         }
     }
 
-    repeatArr = newArr.duplicateNew(); //重复号码
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
     newArr = newArr.uniqueArr(); //去掉重复代码
 
     if (checkArr.length < 3) {
@@ -6914,7 +6912,7 @@ function content_rx2zuxds() {
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
     newArr = newArr.uniqueArr();
 
     if (checkArr.length < 2) {
