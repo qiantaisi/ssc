@@ -1,13 +1,12 @@
 .numbar {
     position: absolute;
-
 }
 
 .number_bar-tab {
     border-top: 1px solid #aaaaaa;
     bottom: 0;
     width: 100%;
-    height: 2.8rem;
+    height: 3.05rem;
     background: #030303;
     position: absolute;
     z-index: 9999;
@@ -19,21 +18,18 @@
 }
 
 .number_bar-tab img {
-    height: 22px;
+    width: 26px;
     position: relative;
     top: 0.1rem;
-    /*display: block;*/
 }
 
 .number_bar-tab a {
     display: inline-block;
-    width: 19%;
+    padding-top: 1.6%!important;
+    width: 20%;
     color: #9a9a9a;
-    padding-top: 1.6%;
-    line-height: 20px;
-    height: 2.8rem;
+    height: 3.05rem;
     float: left;
-    padding: 0;
     margin: 0;
 }
 
@@ -49,5 +45,9 @@
 .number_bar-tab .active {
     border-bottom: 5px solid #ed9142;
     color: #ed9142;
+}
+.number_bar-tab .active span {
+    font-size: 14px!important;
+    margin-top: 1px;
 }
 
