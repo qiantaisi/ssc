@@ -7153,24 +7153,10 @@ $(function () {
         $(".number_bar a").click(
             function () {
                 var lin = $(this).attr("data-name");
-                switch (lin) {
-                    case n1:
-
-                        break;
-                    case n2:
-                        $(".number_bar").find(".n1").removeClass("active");
-                        $(".number_bar").find(".n2").addClass("active");
-                        break;
-                    case n3:
-
-                        break;
-                    case n4:
-
-                        break;
-                    case n5:
-
-                        break;
-                }
+                console.url(lin);
+                $(".number_bar"+lin).find(".H").addClass("active");
+                $(".number_bar"+lin).find(".H").removeClass("H");
+                $().find(".W").addClass("H")
             }
         );
     }

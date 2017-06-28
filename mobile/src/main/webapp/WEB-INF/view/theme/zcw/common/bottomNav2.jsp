@@ -14,19 +14,23 @@
         <span>首页</span>
     </a>
     <a data-name="n2" class="n2" href="<%=basePath%>ssc/gcdt.html" data-name="gcdt">
-        <img src="${resPath}img/Bottom/footer_02.png"/>
+        <img class="W" src="${resPath}img/Bottom/footer_02.png"/>
+        <img class="H" src="${resPath}img/Bottom/footer_020.png"/>
         <span>购彩大厅</span>
     </a>
     <a data-name="n3" href="<%=basePath%>ssc/kjjl/all.html" data-name="kj">
-        <img src="${resPath}img/Bottom/footer_03.png"/>
+        <img class="W" src="${resPath}img/Bottom/footer_03.png"/>
+        <img class="H" src="${resPath}img/Bottom/footer_003.png"/>
         <span>开奖</span>
     </a>
     <a data-name="n4" href="<%=basePath%>ssc/zst/ffssc/jbzst.html" data-name="zst">
-        <img src="${resPath}img/Bottom/footer5_08.png"/>
+        <img class="W" src="${resPath}img/Bottom/footer5_08.png"/>
+        <img class="H" src="${resPath}img/Bottom/footer5_088.png"/>
         <span>走势图</span>
     </a>
     <a data-name="n5" href="<%=basePath%>member/index.html" data-name="grzx">
-        <img src="${resPath}img/Bottom/footer_05.png"/>
+        <img  class="W" src="${resPath}img/Bottom/footer_05.png"/>
+        <img  class="H" src="${resPath}img/Bottom/footer_005.png"/>
         <span>个人中心</span>
     </a>
 </nav>

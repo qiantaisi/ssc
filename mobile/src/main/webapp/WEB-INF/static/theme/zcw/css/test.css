@@ -21,7 +21,7 @@
 .number_bar-tab img {
     height: 22px;
     position: relative;
-    top:0.1rem;
+    top: 0.1rem;
     /*display: block;*/
 }
 
@@ -32,15 +32,20 @@
     padding-top: 1.6%;
     line-height: 20px;
     height: 2.8rem;
+    float: left;
+    padding: 0;
+    margin: 0;
 }
 
 .number_bar-tab span {
     display: block;
     font-size: smaller;
 }
-.number_bar .H{
+
+.number_bar .H {
     display: none;
 }
+
 .number_bar-tab .active {
     border-bottom: 5px solid #ed9142;
     color: #ed9142;
