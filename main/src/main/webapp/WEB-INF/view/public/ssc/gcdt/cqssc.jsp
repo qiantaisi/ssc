@@ -55,7 +55,7 @@
             <div class="Playmethod">
                 <ul>
                     <li>
-                        <b>快钱玩法</b>
+                        <b class="acti">快钱玩法</b>
                         <p class="kuaiqian">
                             <style>.Single .layout .Playmethod ul li p.kuaiqian span {
                                 width: 61px;
@@ -74,20 +74,20 @@
                             <span><a href="javascript:void(0)" data-url="cqssc-lh">龙虎</a></span>
                         </p>
                     </li>
-                    <%--<li>--%>
-                    <%--<b class="acti">官方玩法</b>--%>
-                    <%--<p>--%>
-                    <%--<span class="acti"><a href="javascript:void(0)">五星</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">四星</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">前三</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">中三</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">后三</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">二星</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">定位胆</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">大小单双</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">趣味</a></span>--%>
-                    <%--</p>--%>
-                    <%--</li>--%>
+                    <li>
+                    <b>官方玩法</b>
+                    <p>
+                    <span class="acti"><a href="javascript:void(0)">五星</a></span>
+                    <span><a href="javascript:void(0)">四星</a></span>
+                    <span><a href="javascript:void(0)">前三</a></span>
+                    <span><a href="javascript:void(0)">中三</a></span>
+                    <span><a href="javascript:void(0)">后三</a></span>
+                    <span><a href="javascript:void(0)">二星</a></span>
+                    <span><a href="javascript:void(0)">定位胆</a></span>
+                    <span><a href="javascript:void(0)">大小单双</a></span>
+                    <span><a href="javascript:void(0)">趣味</a></span>
+                    </p>
+                    </li>
                 </ul>
             </div>
 
