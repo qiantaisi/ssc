@@ -167,7 +167,7 @@ public class SscController extends CacheController {
 
     @RequestMapping(value = "/ajaxGetHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String startT, String endT, String date) {
+    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String startT, String endT, String date, String number) {
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 0);
         calendar.set(Calendar.MINUTE, 0);
@@ -203,7 +203,7 @@ public class SscController extends CacheController {
         }
         String companyShortName = this.getCompanyShortName();
         try {
-            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, startTime, endTime, date, companyShortName);
+            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, startTime, endTime, date, number, companyShortName);
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");

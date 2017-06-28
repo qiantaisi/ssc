@@ -34,10 +34,10 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/ajaxGetHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date) {
+    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date, String number) {
         SscHistoryResult result = new SscHistoryResult();
         try {
-            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date, "ddxRB4Ha3BuyiflO37OSTZF2quLlb8gN");
+            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date, number, "ddxRB4Ha3BuyiflO37OSTZF2quLlb8gN");
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");
