@@ -68,9 +68,11 @@ public class SscController extends CacheController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,companyShortName).getWebNoticeList());
+        modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("ssc/gcdt/gcdt", modelMap);
     }
 

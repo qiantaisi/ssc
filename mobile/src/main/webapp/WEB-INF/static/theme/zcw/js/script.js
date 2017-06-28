@@ -2855,11 +2855,7 @@ $(function () {
 
                                 if (json.opening == false) {
                                     flagArr[playGroupId] = false;
-
-                                    // $(obj).find(".info").remove();
-                                    // $(obj).find(".time").addClass('tingshou');
                                     $(obj).find(".jc").html("<span class='goucai_biaoqian'>停售</span>");
-                                    // $(obj).attr("data-is_enable", 0);
                                     return;
                                 }
 
