@@ -10,7 +10,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <div class="page-group">
     <div class="page page-current" id="page-yhhd">
-        <header class="bar bar-nav">
+        <header class="bar bar-nav reheader-bg-zcw">
             <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
                 <span class="icon icon-left"></span>
                 返回
