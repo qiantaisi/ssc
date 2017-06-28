@@ -1518,8 +1518,6 @@ function zhushu_rx3z6ds(){
         }
     }
 
-    tempArr = tempArr.uniqueArr(); // 去掉重复号码
-
     zhushu = tempArr.length;
     var tempNum = $("#positioninfo-zu6ds").html();
     zhushu = tempNum * zhushu;
@@ -1589,7 +1587,6 @@ function zhushu_rx3z3ds(){
             errorArr.push(newArr[n]);
         }
     }
-    tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     zhushu = tempArr.length;
     var tempNum = $("#positioninfo-zu3ds").html();
@@ -1677,8 +1674,6 @@ function zhushu_rx3zxds(){
             newArr.push(arr_new[i]);
         }
     }
-
-    newArr = newArr.uniqueArr(); //去掉重复代码
 
     var temp = newArr.length;
     zhushu = temp * shu;
@@ -1808,7 +1803,7 @@ function zhushu_rx2zuxds(){
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
     newArr = newArr.uniqueArr();
     var temp = newArr.length;
     var shu = $("#positioninfo-zuds").html();
@@ -6220,7 +6215,7 @@ function content_rx4zxds() {
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew(); //重复号码
     newArr = newArr.uniqueArr();
     var arrTemp = [];
     $(".re-select-ds input[type='checkbox']:checked").each(function () {
@@ -6428,7 +6423,9 @@ function content_rx3z6ds() {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if(arr_new[i] != ""){
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -6448,7 +6445,7 @@ function content_rx3z6ds() {
         }
     }
 
-    repeatArr = tempArr.duplicate(); //重复号码
+    repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
     tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     if (checkArr.length < 3) {
@@ -6560,7 +6557,9 @@ function content_rx3z3ds() {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if(arr_new[i] != ""){
+                errorArr.push(arr_new[i]);
+            }
         }
     }
 
@@ -6580,7 +6579,7 @@ function content_rx3z3ds() {
             errorArr.push(newArr[n]);
         }
     }
-    repeatArr = tempArr.duplicate(); //重复号码
+    repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
     tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     if (checkArr.length < 3) {
@@ -6736,7 +6735,7 @@ function content_rx3zxds() {
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
     newArr = newArr.uniqueArr(); //去掉重复代码
 
     if (checkArr.length < 3) {
@@ -6913,7 +6912,7 @@ function content_rx2zuxds() {
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
     newArr = newArr.uniqueArr();
 
     if (checkArr.length < 2) {
