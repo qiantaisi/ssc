@@ -387,7 +387,10 @@ public class SscController extends CacheController {
 
     @RequestMapping(value = "/kjjl/all.html",method = RequestMethod.GET)
     public ModelAndView kjjlAll() throws UserException {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
+        modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("ssc/kjjl/all", modelMap);
     }
 

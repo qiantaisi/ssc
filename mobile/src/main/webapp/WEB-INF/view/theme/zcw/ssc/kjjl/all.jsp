@@ -17,7 +17,7 @@
             </a>
             <h1 class="title reimg">
                 <%--<img src="${resPath}img/kaihead_06.png"/>--%>
-                    中彩网彩票开奖
+                    ${webName}彩票开奖
             </h1>
             <a href="javascript:void(0)" class="button button-link button-nav pull-right btn_xz">
                 <span>选择彩种</span>

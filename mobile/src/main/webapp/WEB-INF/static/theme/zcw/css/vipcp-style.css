@@ -299,7 +299,7 @@
     width: 16px;
     height: 7px;
     right: 43%;
-    bottom: 0.22%;
+    bottom: 0;
     z-index: 100
 }
 .hide-xl{
@@ -751,8 +751,9 @@ img{
     background: #FF3C39!important;
 }
 
-/*底部菜单 在Nexus 6p与Galaxy S5中异常显示修复样式*/
+/*!*底部菜单 在Nexus 6p与Galaxy S5中异常显示修复样式*!*/
 .rebar-tab{
-    display: -webkit-box;
-    display: -moz-box;
+    display: -webkit-box!important;
+    display: -moz-box!important;
+
 }
