@@ -2726,6 +2726,9 @@ $(function () {
 
     // 购彩大厅首页
     $(document).on("pageInit", "#page-gcdt", function (e, id, page) {
+        if (typeof initBottomNav == 'function') {
+            initBottomNav();
+        }
         //底部按钮选中状态
         $(".number_c1-101 a.active").removeClass('active');
         $(".number_c1-101 a.n2").addClass('active');
