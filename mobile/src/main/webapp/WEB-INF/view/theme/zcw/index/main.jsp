@@ -37,7 +37,7 @@
         <%--<c:import url="../common/bottomNav2.jsp"/>--%>
         <c:import url="../../../public/theme/common/bottomNav.jsp" />
 
-        <div class="content content-img content-vipvp tex_bottom bottom2" id="navBar">
+        <div class="content content-img content-vipvp tex_bottom bottom2 top2" id="navBar">
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -46,7 +46,7 @@
                                  width="100%" onmouseover="this.stop();" onmouseout="this.start();">
                             <c:forEach items="${popupNoticeList}" var="item" varStatus="status">
                                 <c:if test="${status.count != 1}"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></c:if>
-                                <span class="sp_scroll_txt">${item.title}：${item.content}</span>
+                                <span class="sp_scroll_txt" style="white-space:nowrap;">${item.title}：${item.content}</span>
                             </c:forEach>
                         </marquee>
                     </div>
