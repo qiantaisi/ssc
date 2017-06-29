@@ -508,7 +508,8 @@ ding {
 }
 .betTemplate .betFoot .yes-btn, .betTemplate .betFoot .no-btn{
     display: inline-block;
-    width: 49%;
+    float: left;
+    width: 49.5%;
     text-align: center;
 }
 
@@ -517,13 +518,13 @@ ding {
     padding: 0.02rem 1rem;
     margin: 0;
     color: #005ddc;
-    border-right: 1px solid #ddd;
 }
 .betTemplate .betFoot .no-btn span{
     display: block;
     padding: 0.02rem 1rem;
     margin: 0;
     color: #005ddc;
+    border-right: 1px solid #ddd;
 }
 .betContent{
     padding: 0 10px;
@@ -634,10 +635,10 @@ input[type="checkbox"]:checked:disabled + i,input[type="radio"]:checked:disabled
 }
 
 .tshStr .wan_bottom .cus-flex-item span{
-    width: 3rem!important;
-    height: 3rem!important;
-    line-height: 3rem!important;
-    font-size: 1.2rem!important;
+    width: 2.5rem!important;
+    height: 2.5rem!important;
+    line-height: 2.5rem!important;
+    font-size: 1rem!important;
     margin-left: 0.2rem!important;
 }
 
