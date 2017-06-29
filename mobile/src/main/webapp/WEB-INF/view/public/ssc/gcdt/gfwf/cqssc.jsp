@@ -11,7 +11,7 @@
 %>
 <c:import url="../../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-gcdt-cqssc">
+    <div class="page page-current" id="page-gcdt-cqssc-gfwf">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
                 <font>彩种切换</font>
@@ -28,18 +28,22 @@
                 </i>
             </h1>
         </header>
-        <c:import url="../common/commonBet.jsp"/>
+        <c:import url="./common/commonBet.jsp"/>
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <div class="border_one color_two">
-                        <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">官方玩法</a>
-                    </div>
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">
+                        <div class="border_one color_two">
+                            官方玩法
+                        </div>
+                    </a>
                 </div>
                 <div class="gfwf_two">
-                    <div class="border_two color_one">
-                        <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">快捷玩法</a>
-                    </div>
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">
+                        <div class="border_two color_one">
+                            快捷玩法
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="gfwf_mask">
@@ -61,7 +65,7 @@
             </div>
             <div id="betContainer_gfwf">
                 <%--彩种主体内容--%>
-                <c:import url="cqssc/wx/zxfs.jsp"/>
+                <%--<c:import url="cqssc/wx/wx.jsp"/>--%>
             </div>
         </div>
     </div>
@@ -71,6 +75,14 @@
     </c:import>
 </div>
 <c:import url="../../../common/commonJs.jsp"/>
+<script>
+//    var playName = null;
+    var playGroupId = ${playGroupId};
+    // 全局官方玩法赔率
+    <c:if test="${not empty playPlListJson}">
+    var gfwfPlJson = ${playPlListJson};
+    </c:if>
+</script>
 <script type="text/html" id="template_openNumber_item">
     <div class="cl-904">
         <div class="cl-981"><span class="number">第<font class="style_blue">{{number}}</font>期&nbsp;|&nbsp;</span></div>

@@ -17,14 +17,14 @@
             </a>
             <h1 class="title reimg">
                 <%--<img src="${resPath}img/kaihead_06.png"/>--%>
-                    中彩网彩票开奖
+                    ${webName}彩票开奖
             </h1>
             <a href="javascript:void(0)" class="button button-link button-nav pull-right btn_xz">
                 <span>选择彩种</span>
             </a>
 
         </header>
-        <c:import url="../../common/bottomNav.jsp"/>
+        <c:import url="../../common/bottomNav2.jsp"/>
         <%--隐藏块--%>
         <%--弹窗--%>
         <div class="modal-overlay modal-overlay-visible re-modal vipcp-hide"></div>
@@ -164,7 +164,7 @@
             <%--</div>--%>
             <div class="content-block cl-8 cl-990">
                 <div class="no-right-record hide"></div>
-                <div class="list-block media-list" id="dataList">
+                <div class="list-block media-list bottom2" id="dataList">
                     <ul class="list-container re-l-con">
                     </ul>
                 </div>

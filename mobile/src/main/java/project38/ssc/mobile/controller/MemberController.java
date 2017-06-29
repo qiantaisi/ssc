@@ -43,7 +43,7 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxRegister.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxRegister(String account, String password, String name, Long agentId, String deviceNo) {
+    public LoginResult ajaxRegister(String yzm, String account, String password, String name, Long agentId, String deviceNo) {
         LoginResult result = new LoginResult();
         try {
             if (StringUtils.isBlank(account)) {
@@ -59,6 +59,24 @@ public class MemberController extends BaseController {
             }
 
             String companyShortName = this.getCompanyShortName();
+
+            if (StringUtils.equals(companyShortName, "fh")) {
+                HttpSession session = httpServletRequest.getSession();
+                String yzmCode = (String) session.getAttribute("yzmCode");
+                session.removeAttribute("yzmCode");
+
+//                if (!StringUtils.isNumeric(yzm)) {
+//                    result.setResult(-51);
+//                    result.setDescription("请输入纯数字的验证码");
+//                    return result;
+//                }
+
+                if (!StringUtils.equalsIgnoreCase(yzmCode, yzm)) {
+                    result.setResult(-5);
+                    result.setDescription("验证码不正确");
+                    return result;
+                }
+            }
 
             // 接口返回数据
             String ip = IPHelper.getIpAddr(httpServletRequest);

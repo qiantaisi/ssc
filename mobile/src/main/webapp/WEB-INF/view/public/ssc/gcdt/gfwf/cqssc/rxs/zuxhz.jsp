@@ -10,119 +10,101 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="wrap">
-    <div class="cus_common">
+    <div class="cus_common zuxhzStr">
         <div class="wan_top">
-            <span class="wanwei">和值</span>
+            <span class="wanwei">组选和值</span>
+            <span class="xz">
+            <i onclick="selectFun_6(this)">清</i>
+            </span>
         </div>
-
         <div class="wan_bottom">
             <div class="cus-flex-item">
-                <span class="xz">0</span>
-                <span class="pl">8.8</span>
+                <span class="xz n0" onclick="danSelect(this)">0</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">1</span>
-                <span class="pl">8.8</span>
+                <span class="xz n1" onclick="danSelect(this)">1</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">2</span>
-                <span class="pl">8.8</span>
+                <span class="xz n2" onclick="danSelect(this)">2</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">3</span>
-                <span class="pl">8.8</span>
+                <span class="xz n3" onclick="danSelect(this)">3</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">4</span>
-                <span class="pl">8.8</span>
+                <span class="xz n4" onclick="danSelect(this)">4</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">5</span>
-                <span class="pl">8.8</span>
+                <span class="xz n5" onclick="danSelect(this)">5</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">6</span>
-                <span class="pl">8.8</span>
+                <span class="xz n6" onclick="danSelect(this)">6</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">7</span>
-                <span class="pl">8.8</span>
+                <span class="xz n7" onclick="danSelect(this)">7</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">8</span>
-                <span class="pl">8.8</span>
+                <span class="xz n8" onclick="danSelect(this)">8</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">9</span>
-                <span class="pl">8.8</span>
+                <span class="xz n9" onclick="danSelect(this)">9</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">10</span>
-                <span class="pl">8.8</span>
+                <span class="xz n10" onclick="danSelect(this)">10</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">11</span>
-                <span class="pl">8.8</span>
+                <span class="xz n11" onclick="danSelect(this)">11</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">12</span>
-                <span class="pl">8.8</span>
+                <span class="xz n12" onclick="danSelect(this)">12</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">13</span>
-                <span class="pl">8.8</span>
+                <span class="xz n13" onclick="danSelect(this)">13</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">14</span>
-                <span class="pl">8.8</span>
+                <span class="xz n14" onclick="danSelect(this)">14</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">15</span>
-                <span class="pl">8.8</span>
+                <span class="xz n15" onclick="danSelect(this)">15</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">16</span>
-                <span class="pl">8.8</span>
+                <span class="xz n16" onclick="danSelect(this)">16</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">17</span>
-                <span class="pl">8.8</span>
+                <span class="xz n17" onclick="danSelect(this)">17</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">18</span>
-                <span class="pl">8.8</span>
+                <span class="xz n18" onclick="danSelect(this)">18</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">19</span>
-                <span class="pl">8.8</span>
+                <span class="xz n19" onclick="danSelect(this)">19</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">20</span>
-                <span class="pl">8.8</span>
+                <span class="xz n20" onclick="danSelect(this)">20</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">21</span>
-                <span class="pl">8.8</span>
+                <span class="xz n21" onclick="danSelect(this)">21</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">22</span>
-                <span class="pl">8.8</span>
+                <span class="xz n22" onclick="danSelect(this)">22</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">23</span>
-                <span class="pl">8.8</span>
+                <span class="xz n23" onclick="danSelect(this)">23</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">24</span>
-                <span class="pl">8.8</span>
+                <span class="xz n24" onclick="danSelect(this)">24</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">25</span>
-                <span class="pl">8.8</span>
+                <span class="xz n25" onclick="danSelect(this)">25</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">26</span>
-                <span class="pl">8.8</span>
+                <span class="xz n26" onclick="danSelect(this)">26</span>
+            </div>
+            <div class="foot_checkbox" id="checkSelected" data-fun_checkbox="checkCkRx2">
+                <label class="myLabel"><input type="checkbox" value="万"><i>✓</i>万位</label>
+                <label class="myLabel"><input type="checkbox" value="千"><i>✓</i>千位</label>
+                <label class="myLabel"><input type="checkbox" value="百" checked><i>✓</i>百位</label>
+                <label class="myLabel"><input type="checkbox" value="十" checked><i>✓</i>十位</label>
+                <label class="myLabel"><input type="checkbox" value="个" checked><i>✓</i>个位</label>
             </div>
         </div>
     </div>

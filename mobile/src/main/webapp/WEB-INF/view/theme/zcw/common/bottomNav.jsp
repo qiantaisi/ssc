@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<nav class="bar bar-tab c1-101">
+<nav class="bar bar-tab c1-101 rebar-tab">
     <a class="tab-item external active" href="<%=basePath%>" data-name="index">
         <span class="icon re-icon-home"></span>
         <span class="tab-label tab-indx">首页</span>

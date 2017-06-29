@@ -132,11 +132,7 @@ $(function () {
                 registerUser(account, password, name, info);
             }
 
-            if (typeof YDB != "undefined") {
-                YDB.GetDeviceInformation("DoWithDeviceInformation");
-            } else {
-                registerUser(account, password, name, "");
-            }
+            registerUser(account, password, name, Tools.getCookie("deviceNo"));
         });
 
         function registerUser(account, password, name, deviceNo) {
@@ -147,7 +143,8 @@ $(function () {
                     password: $.md5(password),
                     name: name,
                     agentId: Tools.getCookie("agentId"),
-                    deviceNo: deviceNo
+                    deviceNo: deviceNo,
+                    yzm: $("#yzm").val()
                 },
                 beforeSend: function () {
                     Tools.showLoading("注册中...");

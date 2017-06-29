@@ -10,9 +10,9 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="wrap">
-    <div class="cus_common">
+    <div class="cus_common shiStr">
         <div class="wan_top">
-            <span class="wanwei">万位</span>
+            <span class="wanwei">十位</span>
             <span class="xz">
                 <i onclick="selectFun_6(this)">清</i>
             </span>
@@ -20,27 +20,23 @@
 
         <div class="wan_bottom">
             <div class="cus-flex-item">
-                <span class="xz">大</span>
-                <span class="pl">8.8</span>
+                <span class="xz n0" onclick="danSelect(this)">大</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">小</span>
-                <span class="pl">8.8</span>
+                <span class="xz n1" onclick="danSelect(this)">小</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">单</span>
-                <span class="pl">8.8</span>
+                <span class="xz n2" onclick="danSelect(this)">单</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">双</span>
-                <span class="pl">8.8</span>
+                <span class="xz n3" onclick="danSelect(this)">双</span>
             </div>
         </div>
     </div>
 
-    <div class="cus_common">
+    <div class="cus_common geStr">
         <div class="wan_top">
-            <span class="wanwei">千位</span>
+            <span class="wanwei">个位</span>
             <span class="xz">
                 <i onclick="selectFun_6(this)">清</i>
             </span>
@@ -48,20 +44,16 @@
 
         <div class="wan_bottom">
             <div class="cus-flex-item">
-                <span class="xz">大</span>
-                <span class="pl">8.8</span>
+                <span class="xz n0" onclick="danSelect(this)">大</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">小</span>
-                <span class="pl">8.8</span>
+                <span class="xz n1" onclick="danSelect(this)">小</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">单</span>
-                <span class="pl">8.8</span>
+                <span class="xz n2" onclick="danSelect(this)">单</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz">双</span>
-                <span class="pl">8.8</span>
+                <span class="xz n3" onclick="danSelect(this)">双</span>
             </div>
         </div>
     </div>

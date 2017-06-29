@@ -209,6 +209,7 @@
     text-align: center;
     color: #fff !important;
 }
+
 .ball-orange {
     background: #fa6200;
 }
@@ -1153,7 +1154,7 @@ input[type="number"] {
 }
 
 .xuan2 {
-    width: 16%;
+    width: 26%;
     line-height: 1px;
     text-align: center;
 }
@@ -1175,24 +1176,28 @@ input[type="number"] {
 }
 
 /*投注界面弹框提示信息*/
-.clearBet_template{
-    padding: 0 0.25rem!important;
+.clearBet_template {
+    padding: 0 0.25rem !important;
     margin-top: -0.5rem;
     margin-bottom: -0.3rem;
 }
-.clearBet_template .l{
+
+.clearBet_template .l {
     display: block;
     width: 3.0rem;
     height: 3.6rem;
     float: left;
 }
-.clearBet_template .r{
+
+.clearBet_template .r {
     line-height: 1rem;
 }
-.clearBet_template .btns{
+
+.clearBet_template .btns {
     margin-top: 0.5rem;
 }
-.clearBet_template .l span i{
+
+.clearBet_template .l span i {
     display: block;
     width: 1.68rem;
     height: 1.68rem;
@@ -1202,17 +1207,20 @@ input[type="number"] {
     margin-top: 30%;
     margin-left: 12%;
 }
-.clearBet_template .btns a{
+
+.clearBet_template .btns a {
     width: 2rem;
     padding: 0.3rem 1.5rem;
     background: #f1f1f1;
     border: 1px solid #DEDFDE;
-    border-radius:5px;
+    border-radius: 5px;
     color: #706969;
 }
-.clearBet_template .btns a .time{
+
+.clearBet_template .btns a .time {
     color: #ff342a;
 }
+
 .close-img {
     display: inline-block;
     margin-left: 33.6%;
@@ -1223,9 +1231,6 @@ input[type="number"] {
     height: 0.6rem;
     padding: 0.2rem 0.2rem;
 }
-
-
-
 
 
 

@@ -337,6 +337,66 @@ function getFourNewArrs(qianA, baiA, shiA, geA) {
     return tempArr;
 }
 
+// 获取千、百、十、个固定位数的个数所组成4位所有组合
+function getFourNewArrs(qianA, baiA, shiA, geA) {
+    var qArr = [], bArr = [], sArr = [], gArr = [];
+    qArr = qianA;
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var q = 0; q < qArr.length; q++) {
+        for (var b = 0; b < bArr.length; b++) {
+            for (var s = 0; s < sArr.length; s++) {
+                for (var g = 0; g < gArr.length; g++) {
+                    tempArr.push(qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                }
+            }
+        }
+    }
+    return tempArr;
+}
+
+// 获取千、百、十、个固定位数的个数所组成4位所有组合
+function getFourNewArrs(qianA, baiA, shiA, geA) {
+    var qArr = [], bArr = [], sArr = [], gArr = [];
+    qArr = qianA;
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var q = 0; q < qArr.length; q++) {
+        for (var b = 0; b < bArr.length; b++) {
+            for (var s = 0; s < sArr.length; s++) {
+                for (var g = 0; g < gArr.length; g++) {
+                    tempArr.push(qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                }
+            }
+        }
+    }
+    return tempArr;
+}
+
+// 获取千、百、十、个固定位数的个数所组成4位所有组合
+function getFourNewArrs(qianA, baiA, shiA, geA) {
+    var qArr = [], bArr = [], sArr = [], gArr = [];
+    qArr = qianA;
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var q = 0; q < qArr.length; q++) {
+        for (var b = 0; b < bArr.length; b++) {
+            for (var s = 0; s < sArr.length; s++) {
+                for (var g = 0; g < gArr.length; g++) {
+                    tempArr.push(qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                }
+            }
+        }
+    }
+    return tempArr;
+}
+
 
 //去掉数组重复
 Array.prototype.uniqueArr = function () {
@@ -349,7 +409,20 @@ Array.prototype.uniqueArr = function () {
         temp[temp.length]=this[i];
     }
     return temp;
-}
+};
+
+//获取重复元素
+Array.prototype.duplicateNew = function () {
+    var tempArr = new Array();
+    this.sort();
+    for(i = 0; i < this.length; i++) {
+        if( this[i] == this[i+1]) {
+            tempArr.push(this[i]);
+            continue;
+        }
+    }
+    return tempArr;
+};
 
 // 获取百、十、个固定位数的个数所组成(后三直选--后三组合)
 function getHszhNewArrs(baiA, shiA, geA) {
@@ -364,6 +437,26 @@ function getHszhNewArrs(baiA, shiA, geA) {
                 tempArr.push(bArr[b] + "" + sArr[s] + "" + gArr[g]);
                 tempArr.push(sArr[s] + "" + gArr[g]);
                 tempArr.push(gArr[g]);
+            }
+        }
+    }
+    return tempArr;
+}
+
+// 获取千、百、十、个固定位数的个数所组成4位所有组合
+function getFourNewArrs(qianA, baiA, shiA, geA) {
+    var qArr = [], bArr = [], sArr = [], gArr = [];
+    qArr = qianA;
+    bArr = baiA;
+    sArr = shiA;
+    gArr = geA;
+    var tempArr = [];
+    for (var q = 0; q < qArr.length; q++) {
+        for (var b = 0; b < bArr.length; b++) {
+            for (var s = 0; s < sArr.length; s++) {
+                for (var g = 0; g < gArr.length; g++) {
+                    tempArr.push(qArr[q] + "" + bArr[b] + "" + sArr[s] + "" + gArr[g]);
+                }
             }
         }
     }

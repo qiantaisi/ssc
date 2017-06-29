@@ -22,3 +22,9 @@
     //        window.onerror = function(){return true;}
     // -->
 </script>
+<script>
+    CONFIG = {
+        BASEURL: '<%=basePath%>',
+        RESURL: '${resPath}'
+    }
+</script>

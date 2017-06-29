@@ -14,7 +14,7 @@
     <div class="page page-current re-bg" id="page-index">
         <header class="bar bar-nav cl-1-vipcp">
             <a href="javascript:void(0)" class="cl-2" onclick="location.reload()">
-                <img src="<%=basePath%>images/${logo.imageId}" alt="">
+                <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
             </a>
 
             <c:choose>
@@ -34,9 +34,9 @@
                 </c:otherwise>
             </c:choose>
         </header>
-        <c:import url="../common/bottomNav.jsp"/>
+        <c:import url="../common/bottomNav2.jsp"/>
 
-        <div class="content content-img content-vipvp" id="navBar">
+        <div class="content content-img content-vipvp tex_bottom bottom2" id="navBar">
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -57,11 +57,11 @@
                     <c:forEach items="${carouseList.carouselList}" var="item">
                         <c:choose>
                             <c:when test="${empty item.url}">
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}"
+                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
                                                                       alt="${item.title}"></div>
                             </c:when>
                             <c:otherwise>
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}"
+                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
                                                                       alt="${item.title}"></div>
                             </c:otherwise>
                         </c:choose>

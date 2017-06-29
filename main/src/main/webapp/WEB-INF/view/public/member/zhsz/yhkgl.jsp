@@ -26,7 +26,8 @@
             </c:choose>
             <div class="item w105">${item.bankName}</div>
             <div class="item w105">${item.userName}</div>
-            <div class="item w205">${fn:substring(item.bankAccount, 0, 4)} **** **** **** ${fn:substring(item.bankAccount, 12, 16)}</div>
+            <c:set var="len" scope="session" value="${fn:length(item.bankAccount)}"/>
+            <div class="item w205">${fn:substring(item.bankAccount, 0, 4)} **** **** **** ${fn:substring(item.bankAccount, len - 4, len)}</div>
             <div class="item w230">${item.subBankName}</div>
             <div class="item">
                 <a href="javascript:void(0)" class="mr10 color-c4463c" onclick="setDefault(${item.id})">设为默认</a>
@@ -56,6 +57,7 @@
                             <option value="中国邮政储蓄银行">中国邮政储蓄银行</option>
                             <option value="平安银行">平安银行</option>
                             <option value="上海银行">上海银行</option>
+                            <option value="广东省商业银行">广东省商业银行</option>
                         </select>
                         <label class="error" for="bankName"></label>
                     </li>

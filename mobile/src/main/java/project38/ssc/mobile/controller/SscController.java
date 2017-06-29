@@ -1,5 +1,7 @@
 package project38.ssc.mobile.controller;
 
+import org.apache.commons.lang3.StringUtils;
+import project38.api.common.enums.PlayGroupIdEnum;
 import project38.api.common.exception.UserException;
 import project38.api.common.result.CommonResult;
 import project38.api.common.utils.JSONUtils;
@@ -34,7 +36,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/ssc")
-public class SscController extends BaseController {
+public class SscController extends CacheController {
     private Log log = LogFactory.getLog(SscController.class);
 
     @Autowired
@@ -66,9 +68,11 @@ public class SscController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,companyShortName).getWebNoticeList());
+        modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("ssc/gcdt/gcdt", modelMap);
     }
 
@@ -107,6 +111,57 @@ public class SscController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/gcdt/" + group + "/" + play, modelMap);
     }
+
+    /**
+     * 官方玩法-购彩页面
+     * @param group 彩种简称，jsp文件名
+     * @return
+     * @throws UserException
+     */
+    @RequestMapping(value = "/gcdt/gfwf/{group}.html", method = RequestMethod.GET)
+    public ModelAndView gcdtGfwfPlay(@PathVariable String group) throws UserException {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+
+        // 公司标志
+        String companyShortName = this.getCompanyShortName();
+
+        // 彩种ID
+        PlayGroupIdEnum playGroupIdEnum = null;
+        for (PlayGroupIdEnum tmpObj : PlayGroupIdEnum.values()) {
+            if (StringUtils.equals(group, tmpObj.getShortName())) { // 通过简称获得彩种常量
+                playGroupIdEnum = tmpObj;
+            }
+        }
+
+        // 彩种不存在
+        if (null == playGroupIdEnum) {
+            throw new UserException(-1, "404");
+        }
+
+        Long playGroupId = playGroupIdEnum.getId(); // 彩种ID
+        // 彩种禁用
+        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(playGroupId, companyShortName);
+        if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
+            return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
+        }
+
+        Boolean hasGuanfang = playGroupIdEnum.getHasGuanfang(); // 该彩种是否含有官方玩法
+        if (hasGuanfang) {
+            // 官方玩法赔率
+            modelMap.put("playPlListJson", this.getCacheGfwfPl(httpServletRequest, companyShortName, playGroupId));
+        }
+
+        // 彩种ID
+        modelMap.put("playGroupId", playGroupIdEnum.getId());
+        return this.renderPublicView("ssc/gcdt/gfwf/" + group, modelMap);
+    }
+
+    @RequestMapping(value = "/gcdt/gfwf/{group}/{playName}/{play}.html", method = RequestMethod.GET)
+    public ModelAndView gcdtGfwfGroupPlay(@PathVariable String group, @PathVariable String playName, @PathVariable String play) throws UserException {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        return this.renderPublicView("ssc/gcdt/gfwf/" + group + "/"  + playName + "/" + play, modelMap);
+    }
+
 
     @Authentication
     @RequestMapping(value = "/ajaxBet.json", method = {RequestMethod.GET, RequestMethod.POST})
@@ -169,11 +224,11 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/ajaxGetHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date) {
+    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date, String number) {
         SscHistoryResult result = new SscHistoryResult();
         String companyShortName = this.getCompanyShortName();
         try {
-            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date,companyShortName);
+            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date, number, companyShortName);
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");
@@ -332,7 +387,10 @@ public class SscController extends BaseController {
 
     @RequestMapping(value = "/kjjl/all.html",method = RequestMethod.GET)
     public ModelAndView kjjlAll() throws UserException {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
+        modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("ssc/kjjl/all", modelMap);
     }
 

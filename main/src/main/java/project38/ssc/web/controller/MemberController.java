@@ -89,7 +89,13 @@ public class MemberController extends BaseController {
                 return result;
             }
 
-            if (!StringUtils.equals(yzmCode, yzm)) {
+//            if (!StringUtils.isNumeric(yzm)) {
+//                result.setResult(-51);
+//                result.setDescription("请输入纯数字的验证码");
+//                return result;
+//            }
+
+            if (!StringUtils.equalsIgnoreCase(yzmCode, yzm)) {
                 result.setResult(-5);
                 result.setDescription("验证码不正确");
                 return result;
@@ -173,7 +179,13 @@ public class MemberController extends BaseController {
                 return result;
             }
 
-            if (!StringUtils.equals(yzmCode, yzm)) {
+//            if (!StringUtils.isNumeric(yzm)) {
+//                result.setResult(-51);
+//                result.setDescription("请输入纯数字的验证码");
+//                return result;
+//            }
+
+            if (!StringUtils.equalsIgnoreCase(yzmCode, yzm)) {
                 result.setResult(-5);
                 result.setDescription("验证码不正确");
                 return result;

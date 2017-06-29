@@ -1,5 +1,6 @@
 package project38.ssc.web.controller;
 import org.apache.commons.lang3.StringUtils;
+import project38.api.common.enums.PlayGroupIdEnum;
 import project38.api.common.exception.UserException;
 import project38.api.common.result.CommonResult;
 import project38.api.common.utils.JSONUtils;
@@ -71,20 +72,6 @@ public class SscController extends CacheController {
     public ModelAndView tingcaipage() throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
-    }
-
-    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
-    public ModelAndView gcdtGroup(@PathVariable String group) throws UserException {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        String companyShortName = this.getCompanyShortName();
-        if (!"gcdt".equals(group)) {
-            // 彩种禁用
-            SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(group, companyShortName);
-            if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
-                return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
-            }
-        }
-        return this.renderPublicView("ssc/gcdt/" + group, modelMap);
     }
 
 
@@ -180,7 +167,7 @@ public class SscController extends CacheController {
 
     @RequestMapping(value = "/ajaxGetHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String startT, String endT, String date) {
+    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String startT, String endT, String date, String number) {
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 0);
         calendar.set(Calendar.MINUTE, 0);
@@ -216,7 +203,7 @@ public class SscController extends CacheController {
         }
         String companyShortName = this.getCompanyShortName();
         try {
-            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, startTime, endTime, date, companyShortName);
+            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, startTime, endTime, date, number, companyShortName);
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");
@@ -326,33 +313,6 @@ public class SscController extends CacheController {
     }
 
     /**
-     * 重庆时时彩（官方_测试）
-     * @return
-     * @throws UserException
-     */
-    @RequestMapping(value = "/gcdt/cqssc_2.html", method = RequestMethod.GET)
-    public ModelAndView gcdt_cqsc_2() throws UserException {
-        // 彩种ID
-        Long playGroupId = 1L;
-
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-
-        // 公司标志
-        String companyShortName = this.getCompanyShortName();
-
-        // 彩种禁用
-        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(playGroupId, companyShortName);
-        if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
-            return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
-        }
-
-        // 官方玩法赔率
-        modelMap.put("playPlListJson", this.getCacheGfwfPl(httpServletRequest, companyShortName, playGroupId));
-
-        return this.renderPublicView("ssc/gcdt/cqssc_2", modelMap);
-    }
-
-    /**
      * 最近最新开奖时间
      * @param playGroupId
      * @return
@@ -374,4 +334,49 @@ public class SscController extends CacheController {
         return result;
     }
 
+    //========================================================
+
+    /**
+     * 购彩页面
+     * @param group 彩种简称，jsp文件名
+     * @return
+     * @throws UserException
+     */
+    @RequestMapping(value = "/gcdt/{group}.html", method = RequestMethod.GET)
+    public ModelAndView gcdtGroup(@PathVariable String group) throws UserException {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+
+        // 公司标志
+        String companyShortName = this.getCompanyShortName();
+
+        // 彩种ID
+        PlayGroupIdEnum playGroupIdEnum = null;
+        for (PlayGroupIdEnum tmpObj : PlayGroupIdEnum.values()) {
+            if (StringUtils.equals(group, tmpObj.getShortName())) { // 通过简称获得彩种常量
+                playGroupIdEnum = tmpObj;
+            }
+        }
+
+        // 彩种不存在
+        if (null == playGroupIdEnum) {
+            throw new UserException(-1, "404");
+        }
+
+        Long playGroupId = playGroupIdEnum.getId(); // 彩种ID
+        // 彩种禁用
+        SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(playGroupId, companyShortName);
+        if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
+            return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
+        }
+
+        Boolean hasGuanfang = playGroupIdEnum.getHasGuanfang(); // 该彩种是否含有官方玩法
+        if (hasGuanfang) {
+            // 官方玩法赔率
+            modelMap.put("playPlListJson", this.getCacheGfwfPl(httpServletRequest, companyShortName, playGroupId));
+        }
+
+        // 彩种ID
+        modelMap.put("playGroupId", playGroupIdEnum.getId());
+        return this.renderPublicView("ssc/gcdt/" + group, modelMap);
+    }
 }

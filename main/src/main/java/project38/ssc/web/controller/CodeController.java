@@ -27,6 +27,10 @@ public class CodeController {
     private int codeY = 20;     //y坐标绘图
     private int codeX = 0;     //x坐标绘图
     char[] codeSequence = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}; //定义随机生成验证码的数组。
+//    private char[] codeFantiSequence = {'零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖'};
+    private char[] codeFantiSequence = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'Z', 'M'};
+//    private String[] codeFantiSequence = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    private String[] fontNames = {"宋体"};
 
     @RequestMapping(value = "/yzm", method = {RequestMethod.GET})
     public void getCode(HttpServletRequest req, HttpServletResponse resp, Integer imgWidth, Integer imgHeight, Integer imgFontHeight, Integer imgCodeY, Integer imgCodeX)
@@ -59,21 +63,21 @@ public class CodeController {
         gd.fillRect(0, 0, width, height);
 
         // 创建字体，字体的大小应该根据图片的高度来定。
-        Font font = new Font("宋体", Font.BOLD, fontHeight);
-        // 设置字体。
-        gd.setFont(font);
+//        Integer style = random.nextInt(4);//0 无 1 粗体 2 斜体 3 粗+斜
+        Integer style = 0;
 
         // 画边框。
         gd.setColor(Color.BLACK);
         gd.drawRect(0, 0, width - 1, height - 1);
 
         // 随机产生40条干扰线，使图象中的认证码不易被其它程序探测到。
-        gd.setColor(Color.BLACK);
         for (int i = 0; i < 1; i++) {
+            // 用随机产生的颜色将验证码绘制到图像中。
+            gd.setColor(new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
             int x = random.nextInt(width);
             int y = random.nextInt(height);
-            int xl = random.nextInt(2);
-            int yl = random.nextInt(2);
+            int xl = random.nextInt(40);
+            int yl = random.nextInt(40);
             gd.drawLine(x, y, x + xl, y + yl);
         }
 
@@ -81,10 +85,37 @@ public class CodeController {
         StringBuffer randomCode = new StringBuffer();
         int red = 0, green = 0, blue = 0;
 
+        Integer fantiOrShuziFirst = random.nextInt(2);
         // 随机产生codeCount数字的验证码。
         for (int i = 0; i < codeCount; i++) {
             // 得到随机产生的验证码数字。
-            String code = String.valueOf(codeSequence[random.nextInt(codeSequence.length)]);
+            Integer randomIndex = random.nextInt(codeSequence.length);
+            String code;
+
+            Integer tmpY;
+            if (i != codeCount - 1) {
+                code = String.valueOf(codeSequence[randomIndex]);
+
+                tmpY = codeY;
+                Font font = new Font(fontNames[random.nextInt(fontNames.length)], style, fontHeight);
+                // 设置字体。
+                gd.setFont(font);
+
+                // 将产生的四个随机数组合在一起。
+                randomCode.append(codeSequence[randomIndex]);
+            }  else {
+                code = String.valueOf(codeFantiSequence[randomIndex]);
+
+                tmpY = codeY;
+//                tmpY = codeY - 3;
+                Font font = new Font(fontNames[random.nextInt(fontNames.length)], style, fontHeight);
+                // 设置字体。
+                gd.setFont(font);
+
+                // 将产生的四个随机数组合在一起。
+                randomCode.append(codeFantiSequence[randomIndex]);
+            }
+
             // 产生随机的颜色分量来构造颜色值，这样输出的每位数字的颜色值都将不同。
             red = random.nextInt(255);
             green = random.nextInt(255);
@@ -92,10 +123,7 @@ public class CodeController {
 
             // 用随机产生的颜色将验证码绘制到图像中。
             gd.setColor(new Color(red, green, blue));
-            gd.drawString(code, i * ((width - 3) / codeCount) + codeX, codeY);
-
-            // 将产生的四个随机数组合在一起。
-            randomCode.append(code);
+            gd.drawString(code, i * ((width - 3) / codeCount) + codeX, tmpY);
         }
         // 将四位数字的验证码保存到Session中。
         HttpSession session = req.getSession();

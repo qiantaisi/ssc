@@ -17,7 +17,7 @@
         </li>
         <li>
             <%--<a href="<%=basePath%>ssc/gcdt/index.html" target="_blank">--%>
-            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt/gcdt')" target="_blank">
+            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')" target="_blank">
                 <img src="${resPath}img/ico34.png" alt="购彩大厅">
                 <p>购彩大厅</p>
             </a>

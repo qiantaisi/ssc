@@ -14,7 +14,7 @@
     <div class="page page-current" id="page-index">
         <header class="bar bar-nav cl-1">
             <a href="javascript:void(0)" class="cl-2" onclick="location.reload()">
-                <img src="<%=basePath%>images/${logo.imageId}" alt="">
+                <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
             </a>
 
             <c:choose>
@@ -42,11 +42,11 @@
                     <c:forEach items="${carouseList.carouselList}" var="item">
                         <c:choose>
                             <c:when test="${empty item.url}">
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}"
+                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
                                                                       alt="${item.title}"></div>
                             </c:when>
                             <c:otherwise>
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}"
+                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
                                                                       alt="${item.title}"></div>
                             </c:otherwise>
                         </c:choose>
@@ -62,7 +62,7 @@
                                  width="100%" onmouseover="this.stop();" onmouseout="this.start();">
                             <c:forEach items="${popupNoticeList}" var="item" varStatus="status">
                                 <c:if test="${status.count != 1}"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></c:if>
-                                <span>${item.title}：${item.content}</span>
+                                <span style="white-space:nowrap;">${item.title}：${item.content}</span>
                             </c:forEach>
                         </marquee>
                     </div>

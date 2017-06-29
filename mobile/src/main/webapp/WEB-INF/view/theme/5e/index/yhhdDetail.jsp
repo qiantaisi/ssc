@@ -30,7 +30,7 @@
                 </div>
                 <div valign="bottom" class="card-header color-white no-border no-padding"
                      style="margin:10px 15px!important">
-                    <img class='card-cover' src="<%=basePath%>images/${promotion.smallImageId}" alt="">
+                    <img class='card-cover' src="<%=basePath%>images/${promotion.smallImageId}.png" alt="">
                 </div>
                 <div class="card-detail" style="padding:0 15px 10px 15px!important">
                     ${promotion.content}

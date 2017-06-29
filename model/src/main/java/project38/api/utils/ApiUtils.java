@@ -749,7 +749,7 @@ public class ApiUtils{
      * @param date 开奖日期（可为空）
      * @return
      */
-    public static SscHistoryResult getHistory(Long playGroupId, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String date, String companyShortName) {
+    public static SscHistoryResult getHistory(Long playGroupId, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String date, String number, String companyShortName) {
         if (IS_DEBUG) {
             return new SscHistoryResult();
         }
@@ -760,6 +760,7 @@ public class ApiUtils{
         paramsMap.put("pageIndex", pageIndex);
         paramsMap.put("pageSize", pageSize);
         paramsMap.put("date", date);
+        paramsMap.put("number", number);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_HISTORY, paramsMap, companyShortName), SscHistoryResult.class);
     }
 
