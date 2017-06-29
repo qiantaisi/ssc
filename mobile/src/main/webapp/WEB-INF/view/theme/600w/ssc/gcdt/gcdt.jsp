@@ -40,7 +40,7 @@
                     <div class="swiper-wrapper">
                         <marquee behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="5" width="100%" onmouseover="this.stop();" onmouseout="this.start();">
                             <c:forEach items="${popupNoticeList}" var="item">
-                                <span>${item.title}：${item.content}</span>
+                                <span style="white-space:nowrap;">${item.title}：${item.content}</span>
                             </c:forEach>
                         </marquee>
                     </div>
