@@ -25,7 +25,7 @@
 
 .number_bar-tab a {
     display: inline-block;
-    padding-top: 1.6%!important;
+    padding-top: 1.6% !important;
     width: 20%;
     color: #9a9a9a;
     height: 3.05rem;
@@ -38,7 +38,7 @@
     font-size: smaller;
 }
 
-.number_bar .barImg2{
+.number_bar .barImg2 {
     display: none;
 }
 
@@ -46,8 +46,67 @@
     border-bottom: 5px solid #ed9142;
     color: #ed9142;
 }
+
 .number_bar-tab .active span {
-    font-size: 14px!important;
+    font-size: 14px !important;
     margin-top: 1px;
 }
 
+.h_bar-nav {
+    background: #e73030 !important;
+    position: relative;
+    height: 2.4rem;
+    z-index: 99;
+    text-align: center;
+    font-size: 16px;
+}
+
+.top2 {
+    top: 2.4rem;
+}
+
+.h_cl-3 {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+}
+
+.h_cl-3 img {
+    height: 26px;
+    position: relative;
+    top: 0.39rem;
+    right: 0.1rem;
+}
+
+.h_cl-3 a {
+    color: #ffffff;
+    position: relative;
+    top: 0.26rem;
+}
+
+.h_cl-2 img {
+    height: 28px;
+    position: relative;
+    top: 0.39rem;
+}
+
+.cl-22 img {
+    display: inline-block;
+    height:1.8rem !important;
+    vertical-align: middle;
+    top:0.28rem;
+    position: relative;
+}
+
+.h_cl-2 a {
+    color: #ffffff;
+    position: relative;
+    top: 0.18rem;
+    left: 0.3rem;
+}
+
+.h_cl-2 {
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+}
