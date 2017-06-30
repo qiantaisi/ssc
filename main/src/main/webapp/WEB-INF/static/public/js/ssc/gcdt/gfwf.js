@@ -3258,7 +3258,7 @@ function getSuiji(total) {
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
-        obj.betMode = 1;
+        obj.betMode = getSelectMode();
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
         obj.betPlayPl = $("#jiangjin-change").data("value");
         obj.betFandian = $("#fandian-bfb").data("value");
@@ -5959,7 +5959,7 @@ function tjzd() {
     obj.betPerMoney = $("#inputMoney").data("money");
     obj.betZhushu = zhushu;
     obj.betBeishu = $("#inputBeishu").data("beishu");
-    obj.betMode = 1;
+    obj.betMode = getSelectMode();
     obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
     obj.betPlayGroupId = playGroupId;
     obj.betFandian = $("#fandian-bfb").data("value");
@@ -9274,6 +9274,19 @@ function getMode(mode) {
         return 0.01;
     } else if (mode == 4) { // 厘
         return 0.001;
+    }
+    return;
+}
+
+// 获取选中的模式
+function getSelectMode() {
+    var mode = $("#inputMoneyStr").val();
+    if (mode == '元') {
+        return 1;
+    } else if (mode == '角') {
+        return 2;
+    } else if (mode == '分') {
+        return 3;
     }
     return;
 }

@@ -44,10 +44,10 @@
                         <i>20</i>
                     </div>
                 </div>
-                <div class="down redown-gfwf">
+                <div class="down redown-gfwf selectMode_gfwf" style="">
                     <input type="text" value="元" id="inputMoneyStr" disabled="disabled">
                     <span></span>
-                    <div class="down_menu_str">
+                    <div class="down_menu down_menu_str">
                         <i>元</i>
                         <i>角</i>
                         <i>分</i>
