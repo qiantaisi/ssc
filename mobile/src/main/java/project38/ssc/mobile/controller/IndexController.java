@@ -1,5 +1,6 @@
 package project38.ssc.mobile.controller;
 
+import project38.api.common.exception.UserException;
 import project38.api.common.helper.IPHelper;
 import project38.api.common.utils.JSONUtils;
 import org.apache.commons.logging.Log;
@@ -37,7 +38,7 @@ public class IndexController extends BaseController{
 
 
     @RequestMapping(value = "/kefu.html", method = RequestMethod.GET)
-    public ModelAndView kefu() {
+    public ModelAndView kefu() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
@@ -46,7 +47,7 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
-    public ModelAndView index() {
+    public ModelAndView index() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
@@ -59,7 +60,7 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
-    public ModelAndView main() {
+    public ModelAndView main() throws UserException {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
@@ -91,7 +92,7 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/register.html", method = RequestMethod.GET)
-    public ModelAndView register() {
+    public ModelAndView register() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
@@ -104,7 +105,7 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/yhhd.html", method = RequestMethod.GET)
-    public ModelAndView yhhd() {
+    public ModelAndView yhhd() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("promotionList", ApiUtils.getPromotion(companyShortName).getPromotionList());
@@ -112,7 +113,7 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/yhhd/{id}.html", method = RequestMethod.GET)
-    public ModelAndView yhhdDetail(@PathVariable Long id) {
+    public ModelAndView yhhdDetail(@PathVariable Long id) throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("promotion", ApiUtils.promotionGetById(id,companyShortName));
@@ -120,7 +121,7 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/login.html", method = RequestMethod.GET)
-    public ModelAndView login(String refer) {
+    public ModelAndView login(String refer) throws UserException {
         String companyShortName = this.getCompanyShortName();
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
@@ -154,7 +155,7 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/pc.html", method = RequestMethod.GET)
-    public ModelAndView pc(HttpServletResponse response,HttpServletRequest request) {
+    public ModelAndView pc(HttpServletResponse response,HttpServletRequest request) throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);

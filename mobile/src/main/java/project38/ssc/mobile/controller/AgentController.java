@@ -33,7 +33,7 @@ public class AgentController extends BaseController {
     private HttpServletRequest httpServletRequest;
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
-    public ModelAndView agentindex(String companyShortName) {
+    public ModelAndView agentindex(String companyShortName) throws UserException {
         return this.renderView("agent/index", null);
     }
 

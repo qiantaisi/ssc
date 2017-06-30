@@ -33,7 +33,7 @@ public abstract class BaseController {
      * 基于@ExceptionHandler异常处理
      */
     @ExceptionHandler
-    public ModelAndView exp(HttpServletRequest request, Exception ex) {
+    public ModelAndView exp(HttpServletRequest request, Exception ex) throws UserException {
         log.error(this, ex);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
@@ -48,7 +48,7 @@ public abstract class BaseController {
      * @param modelMap
      * @return
      */
-    protected ModelAndView renderView(HttpServletRequest request, String jspLocation, Map<String, Object> modelMap) {
+    protected ModelAndView renderView(HttpServletRequest request, String jspLocation, Map<String, Object> modelMap) throws UserException {
         if (null == modelMap) {
             modelMap = new HashMap<String, Object>();
         }
@@ -79,6 +79,18 @@ public abstract class BaseController {
             modelMap.put("userSession", userSessionResult);
         }
 
+        // 公共模板读取风格
+        FenggeResult fenggeResult = ApiUtils.getWebFengge(
+                companyShortName,
+                2
+        );
+
+        if (null == fenggeResult || fenggeResult.getResult() != 1) {
+            throw new UserException(-997, "服务器错误");
+        }
+        modelMap.put("fengge_1", fenggeResult.getFengge_1());
+        modelMap.put("fengge_2", fenggeResult.getFengge_2());
+
         ModelAndView modelAndView = new ModelAndView("theme/" + theme + "/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
         return modelAndView;
@@ -91,7 +103,7 @@ public abstract class BaseController {
      * @param modelMap
      * @return
      */
-    protected ModelAndView renderView(String jspLocation, Map<String, Object> modelMap) {
+    protected ModelAndView renderView(String jspLocation, Map<String, Object> modelMap) throws UserException {
         return this.renderView(httpServletRequest, jspLocation, modelMap);
     }
 
