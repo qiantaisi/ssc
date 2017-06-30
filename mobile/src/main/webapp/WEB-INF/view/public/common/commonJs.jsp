@@ -15,9 +15,8 @@
     var colorStr = "#${fengge_1}";
     function changeColor() {
         var color = "blue|" + colorStr + "";
-        console.log("12");
         color = color.split("|");
-        document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
+        $("#blink").css("color",color[parseInt(Math.random() * color.length)]);
     }
     setInterval("changeColor()", 230);
 </script>
