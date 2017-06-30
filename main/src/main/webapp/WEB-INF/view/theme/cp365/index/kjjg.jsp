@@ -252,6 +252,7 @@
             data: {
                 playGroupId: playGroupId,
                 pageIndex: 1,
+                number: qiHao,
                 startT:startT
             },
             beforeSend: function() {
