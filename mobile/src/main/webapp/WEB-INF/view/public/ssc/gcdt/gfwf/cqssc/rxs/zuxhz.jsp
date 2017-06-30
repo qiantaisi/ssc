@@ -19,9 +19,6 @@
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">
-                <span class="xz n0" onclick="danSelect(this)">0</span>
-            </div>
-            <div class="cus-flex-item">
                 <span class="xz n1" onclick="danSelect(this)">1</span>
             </div>
             <div class="cus-flex-item">

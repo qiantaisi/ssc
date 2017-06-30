@@ -618,3 +618,37 @@
 .tzTishiTemplate .btns button:hover{
     background: #f31a1a;
 }
+
+/*投注状态*/
+.Single .layout .add_spot .left .sopt_wrap .down{
+    width: 48px;
+}
+.Single .layout .add_spot .left .sopt_wrap .down input{
+    width: 24px;
+}
+.Single .layout .add_spot .left .sopt_wrap .redown-gfwf{
+    margin-left: 5px;
+}
+.Single .layout .add_spot .left .sopt_wrap .redown-gfwf input{
+    background: white;
+}
+
+.Single .layout .add_spot .left .sopt_wrap .redown-gfwf .down_menu {
+    position: absolute;
+    top: 23px;
+    width: 100%;
+    border: 1px solid #dadada;
+    border-top: none;
+    left: -1px;
+    display: none;
+}
+
+.Single .layout .add_spot .left .sopt_wrap .redown-gfwf .down_menu_str i {
+    display: block;
+    background: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    text-indent: 10px;
+    cursor: pointer;
+}
+.selectMode_gfwf{margin-left:10px;}
