@@ -323,12 +323,4 @@
         //context.stroke();
     }
 </script>
-<script language="javascript">
-    function changeColor() {
-        var color = "blue|red";
-        color = color.split("|");
-        document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
-    }
-    setInterval("changeColor()", 230);
-</script>
 <c:import url="../../../common/bodyEnd.jsp"/>

@@ -9,8 +9,8 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<div class="wrap">
-    <div class="cus_common h3emStr">
+<div class="wrap">    <div class="cus_common h3emStr">
+
         <div class="wan_top">
             <span class="wanwei">后三二码</span>
             <span class="xz">

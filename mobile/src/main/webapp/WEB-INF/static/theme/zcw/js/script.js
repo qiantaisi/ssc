@@ -7173,11 +7173,10 @@ $(function () {
         $(".number_bar a").click(
             function () {
                 var lin = $(this).attr("data-name");
-                console.url(lin);
                 $(".number_bar"+lin).find(".H").addClass("active");
                 $(".number_bar"+lin).find(".H").removeClass("H");
                 $().find(".W").addClass("H")
             }
         );
     }
-)
+);
