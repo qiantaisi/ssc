@@ -15,6 +15,12 @@
         .cl-701 .button.active{border-bottom:1px solid #${fengge_1}!important}
         #page-yhhd .bar-nav{ background:#${fengge_1}!important;}
 
+        /*快钱投注界面*/
+        .cl-1201 i,.cl-904 .openNumber i{background-color:#${fengge_1}!important}
+        #ssc-parent-menu .cl-602 a.active{border-bottom: 2px solid #${fengge_1}!important;color:#${fengge_1}!important;}
+        .cl-604 table tbody tr td.active,.layui-m-layerchild h3{background:#${fengge_1}!important;}
+        .cl-604 table tbody tr td span:nth-child(1),.cl-607 font,.native-scroll .cl-603{color:#${fengge_1}!important;}
+
         <%--.eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #${fengge_1}!important;}--%>
         <%--.eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}--%>
         <%--.eveb_nav_sub .on a{border-top:1px #${fengge_1} solid!important;}--%>
