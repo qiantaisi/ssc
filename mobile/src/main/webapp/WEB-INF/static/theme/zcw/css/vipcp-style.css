@@ -747,9 +747,9 @@ img{
     font-size: 16px;
 }
 
-.reheader-bg-zcw{
-    background: #FF3C39!important;
-}
+/*.reheader-bg-zcw{*/
+    /*background: #FF3C39!important;*/
+/*}*/
 
 /*!*底部菜单 在Nexus 6p与Galaxy S5中异常显示修复样式*!*/
 .rebar-tab{
