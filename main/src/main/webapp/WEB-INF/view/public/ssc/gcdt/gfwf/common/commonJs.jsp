@@ -35,13 +35,22 @@
                     <span>倍</span>
                 </div>
                 <div class="down">
-                    <input type="text" value="2元" id="inputMoney" data-money="2" disabled="disabled">
+                    <input type="text" value="2" id="inputMoney" data-money="2" disabled="disabled">
                     <span></span>
                     <div class="down_menu">
-                        <i>2元</i>
-                        <i>5元</i>
-                        <i>10元</i>
-                        <i>20元</i>
+                        <i>2</i>
+                        <i>5</i>
+                        <i>10</i>
+                        <i>20</i>
+                    </div>
+                </div>
+                <div class="down redown-gfwf selectMode_gfwf" style="">
+                    <input type="text" value="元" id="inputMoneyStr" disabled="disabled">
+                    <span></span>
+                    <div class="down_menu down_menu_str">
+                        <i>元</i>
+                        <i>角</i>
+                        <i>分</i>
                     </div>
                 </div>
             </div>

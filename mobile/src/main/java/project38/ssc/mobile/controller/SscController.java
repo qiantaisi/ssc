@@ -68,9 +68,11 @@ public class SscController extends CacheController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,companyShortName).getWebNoticeList());
+        modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("ssc/gcdt/gcdt", modelMap);
     }
 
@@ -222,11 +224,11 @@ public class SscController extends CacheController {
 
     @RequestMapping(value = "/ajaxGetHistory.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date) {
+    public SscHistoryResult ajaxGetHistory(Long playGroupId, Integer pageIndex, Integer pageSize, String date, String number) {
         SscHistoryResult result = new SscHistoryResult();
         String companyShortName = this.getCompanyShortName();
         try {
-            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date,companyShortName);
+            result = ApiUtils.getHistory(playGroupId, pageIndex, pageSize, null, null, date, number, companyShortName);
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");
@@ -385,7 +387,10 @@ public class SscController extends CacheController {
 
     @RequestMapping(value = "/kjjl/all.html",method = RequestMethod.GET)
     public ModelAndView kjjlAll() throws UserException {
+        String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
+        modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("ssc/kjjl/all", modelMap);
     }
 

@@ -39,7 +39,7 @@
                     <div class="fr btn-grp">
                         <p class="box">下载APP送您38元现金</p>
                         <p><img src="${resPath}images/ewm.png" alt=""></p>
-                        <a href="http://d.81cai3.com/81cai139275_202.apk" class="btn-down-android mt10" target="_self"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span>
+                        <a href="http://d.6e6e00.com/6e6e.apk" class="btn-down-android mt10" target="_self"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span>
                             <span class="layer-down"><i class="icon i-down"></i><span class="a-txt">3.85M</span></span></a>
 
                     </div>

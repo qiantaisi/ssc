@@ -13,6 +13,10 @@
     <div class="cus_common h3zxhzStr">
         <div class="wan_top">
             <span class="wanwei">和值</span>
+            <span class="xz">
+                <i onclick="selectFun_1(this)">全</i>
+                <i onclick="selectFun_6(this)">清</i>
+            </span>
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">

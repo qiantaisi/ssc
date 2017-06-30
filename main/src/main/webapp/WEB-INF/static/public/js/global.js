@@ -409,7 +409,20 @@ Array.prototype.uniqueArr = function () {
         temp[temp.length]=this[i];
     }
     return temp;
-}
+};
+
+//获取重复元素
+Array.prototype.duplicateNew = function () {
+    var tempArr = new Array();
+    this.sort();
+    for(i = 0; i < this.length; i++) {
+        if( this[i] == this[i+1]) {
+            tempArr.push(this[i]);
+            continue;
+        }
+    }
+    return tempArr;
+};
 
 // 获取百、十、个固定位数的个数所组成(后三直选--后三组合)
 function getHszhNewArrs(baiA, shiA, geA) {

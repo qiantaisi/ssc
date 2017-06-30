@@ -312,14 +312,18 @@ function delRrepet(obj) {
             newArr.push(arr_new[i]);
         }
     }
-    repeatArr = newArr.duplicate();
+
+    repeatArr = newArr.duplicateNew().uniqueArr();
     tempArr = newArr.uniqueArr();
+
     if(repeatArr.length <= 0){
         alert("无重复号码！");
     }else{
         alert("已删除掉重复号: " + repeatArr.join(" "));
         $(".content_jiang .content_tex").val(tempArr.join(" "));
     }
+    //重新计算注数
+    renderZhushu();
 }
 
 
@@ -388,18 +392,15 @@ function getZuLiuNewArrs(zuXuanArr) {
 
 //后三组选-组选和值
 function getZxhzNewArrs(zuXuanArr) {
-    var heZhiArr = [], shuArr = [], tempArr = [];
-    var temp = [];
+    var heZhiArr = [], tempArr = [];
     var sumTemp = 0;
     var num = 0; //当前号码
     var fjHaoZuhe = []; //分解号组合
 
     heZhiArr = zuXuanArr;
-    for(var d = 0; d < 28; d++){
-        shuArr[d] = 0;
-    }
     //号码分解---所选号分解成所有组合的值等于此号的所有组合
     for (var i = 0; i < heZhiArr.length; i++) {
+        var temp = [];
         sumTemp = parseInt(heZhiArr[i]);
         num = parseInt(heZhiArr[i]);
         while (sumTemp >= 0) {
@@ -466,17 +467,15 @@ function getKaduNewArrs(kDArr) {
 //后三直选--获取所选号码分散为三位所有组合的和值
 function getHezNewArrs(hZArr) {
     var heZhiArr = [], shuArr = [], tempArr = [];
-    var temp = [];
     var sumTemp = 0;
     var num = 0; //当前号码
     var fjHaoZuhe = []; //分解号组合
 
     heZhiArr = hZArr;
-    for(var d = 0; d < 28; d++){
-        shuArr[d] = 0;
-    }
+
     //号码分解---所选号分解成所有组合的值等于此号的所有组合
     for (var i = 0; i < heZhiArr.length; i++) {
+        var temp = [];
         sumTemp = parseInt(heZhiArr[i]);
         num = parseInt(heZhiArr[i]);
         while (sumTemp >= 0) {
@@ -836,6 +835,13 @@ function initSubPage() {
 
     //输入倍数十重新计算
     $("#inputBeishu").keyup(function (){
+        var val = parseInt($(this).val());
+        if (isNaN(val) || typeof val != 'number') {
+            val = 1;
+        }
+        val = parseInt(val);
+        val = val < 1 ? 1 : val;
+        $(this).data("beishu", val).val(val);
         renderZhushu();
     });
 
@@ -1320,9 +1326,7 @@ function zhushu_rx4zu24(){
  * 注数-直选单式
  */
 function zhushu_rx4zxds(){
-    var errorStr = '';
-    var repeatArr = [], allErrorArr = [];
-    var errorArr = [];
+    var tempArr = [];
     var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
     var newArr = [];
     textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
@@ -1330,19 +1334,12 @@ function zhushu_rx4zxds(){
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
-        } else {
-            if (arr_new[i] != "") {
-                errorArr.push(arr_new[i]);
-            }
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
-    newArr = newArr.uniqueArr();
     var temp = newArr.length;
     var shu = $("#positioninfo-ds").html();
-    var zhushu = temp * shu;
-    return zhushu;
+    return temp * shu;
 }
 
 /**
@@ -1521,8 +1518,6 @@ function zhushu_rx3z6ds(){
         }
     }
 
-    tempArr = tempArr.uniqueArr(); // 去掉重复号码
-
     zhushu = tempArr.length;
     var tempNum = $("#positioninfo-zu6ds").html();
     zhushu = tempNum * zhushu;
@@ -1592,7 +1587,6 @@ function zhushu_rx3z3ds(){
             errorArr.push(newArr[n]);
         }
     }
-    tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     zhushu = tempArr.length;
     var tempNum = $("#positioninfo-zu3ds").html();
@@ -1680,8 +1674,6 @@ function zhushu_rx3zxds(){
             newArr.push(arr_new[i]);
         }
     }
-
-    newArr = newArr.uniqueArr(); //去掉重复代码
 
     var temp = newArr.length;
     zhushu = temp * shu;
@@ -1811,7 +1803,7 @@ function zhushu_rx2zuxds(){
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
     newArr = newArr.uniqueArr();
     var temp = newArr.length;
     var shu = $("#positioninfo-zuds").html();
@@ -2330,7 +2322,6 @@ function zhushu_q2zuxds(){
     if (newArr.length <= 0) {
         return 0;
     }
-    newArr = newArr.uniqueArr(); //去掉重复值
     return newArr.length;
 }
 
@@ -2464,7 +2455,6 @@ function zhushu_q2zxds(){
     if (newArr.length <= 0) {
         return 0;
     }
-
     return newArr.length;
 }
 
@@ -3268,7 +3258,7 @@ function getSuiji(total) {
         obj.betPerMoney = $("#inputMoney").data("money");
         obj.betZhushu = zhushu;
         obj.betBeishu = $("#inputBeishu").data("beishu");
-        obj.betMode = 1;
+        obj.betMode = getSelectMode();
         obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
         obj.betPlayPl = $("#jiangjin-change").data("value");
         obj.betFandian = $("#fandian-bfb").data("value");
@@ -5969,7 +5959,7 @@ function tjzd() {
     obj.betPerMoney = $("#inputMoney").data("money");
     obj.betZhushu = zhushu;
     obj.betBeishu = $("#inputBeishu").data("beishu");
-    obj.betMode = 1;
+    obj.betMode = getSelectMode();
     obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
     obj.betPlayGroupId = playGroupId;
     obj.betFandian = $("#fandian-bfb").data("value");
@@ -6223,7 +6213,7 @@ function content_rx4zxds() {
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew(); //重复号码
     newArr = newArr.uniqueArr();
     var arrTemp = [];
     $(".re-select-ds input[type='checkbox']:checked").each(function () {
@@ -6431,7 +6421,9 @@ function content_rx3z6ds() {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if(arr_new[i] != ""){
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -6451,7 +6443,7 @@ function content_rx3z6ds() {
         }
     }
 
-    repeatArr = tempArr.duplicate(); //重复号码
+    repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
     tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     if (checkArr.length < 3) {
@@ -6563,7 +6555,9 @@ function content_rx3z3ds() {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if(arr_new[i] != ""){
+                errorArr.push(arr_new[i]);
+            }
         }
     }
 
@@ -6583,7 +6577,7 @@ function content_rx3z3ds() {
             errorArr.push(newArr[n]);
         }
     }
-    repeatArr = tempArr.duplicate(); //重复号码
+    repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
     tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     if (checkArr.length < 3) {
@@ -6739,7 +6733,7 @@ function content_rx3zxds() {
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
     newArr = newArr.uniqueArr(); //去掉重复代码
 
     if (checkArr.length < 3) {
@@ -6916,7 +6910,7 @@ function content_rx2zuxds() {
         }
     }
 
-    repeatArr = newArr.duplicate(); //重复号码
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
     newArr = newArr.uniqueArr();
 
     if (checkArr.length < 2) {
@@ -7057,6 +7051,10 @@ function content_rx2zxhz() {
  */
 function content_rx2zxds() {
     var checkStrArr = [], checkArr = [];
+    var errorStr = '';
+    var repeatArr = [], allErrorArr = [];
+    var errorArr = [];
+
     var textStr = $(".recl-1003-zxds .content_jiang .content_tex").val();
     //选取选中checkbox
     $.each($(".re-select-ds input[type='checkbox']:checked"), function (index, value) {
@@ -7070,8 +7068,15 @@ function content_rx2zxds() {
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
             newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != "") {
+                errorArr.push(arr_new[i]);
+            }
         }
     }
+
+    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
+    newArr = newArr.uniqueArr();
 
     $(".recl-1003-zxds input[name='position_ds']:checked").each(function () {
         arrTemp.push($(this).val());
@@ -7079,6 +7084,30 @@ function content_rx2zxds() {
     if (arrTemp.length < 2) {
         alert("[任选二]至少需要选择2个位置");
         return -1;
+    }
+
+    if(newArr.length <= 0){
+        return 0;
+    }
+
+    if (repeatArr.length > 0) {
+        allErrorArr.push("自动过滤重复号码:");
+        for (var r = 0; r < repeatArr.length; r++) {
+            allErrorArr.push(repeatArr[r]);
+        }
+    }
+    if (errorArr.length > 0) {
+        allErrorArr.push(" 被过滤掉的错误号码");
+        for (var l = 0; l < errorArr.length; l++) {
+            allErrorArr.push(errorArr[l]);
+        }
+    }
+
+    if (allErrorArr.length > 0) {
+        for (var e = 0; e < allErrorArr.length; e++) {
+            errorStr += allErrorArr[e] + " ";
+        }
+        alert(errorStr);
     }
 
     // 初始化变量
@@ -7578,7 +7607,7 @@ function content_q2zuxds(){
         }
     }
 
-    repeatArr = newArr.duplicate(); //获取重复元素
+    repeatArr = newArr.duplicateNew().uniqueArr(); //获取重复元素
     newArr = newArr.uniqueArr();
 
     if(newArr.length <= 0){
@@ -7610,7 +7639,6 @@ function content_q2zuxds(){
         }
         alert(errorStr);
     }
-    newArr = newArr.uniqueArr(); //去掉重复值
 
     // 初始化变量
     var showPlayName = '';
@@ -9246,6 +9274,19 @@ function getMode(mode) {
         return 0.01;
     } else if (mode == 4) { // 厘
         return 0.001;
+    }
+    return;
+}
+
+// 获取选中的模式
+function getSelectMode() {
+    var mode = $("#inputMoneyStr").val();
+    if (mode == '元') {
+        return 1;
+    } else if (mode == '角') {
+        return 2;
+    } else if (mode == '分') {
+        return 3;
     }
     return;
 }
