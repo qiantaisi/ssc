@@ -34,14 +34,14 @@
                 <div class="gfwf_one">
                     <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">
                         <div class="border_one color_two">
-                            官方玩法
+                            官方模式
                         </div>
                     </a>
                 </div>
                 <div class="gfwf_two">
                     <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">
                         <div class="border_two color_one">
-                            快捷玩法
+                            快捷模式
                         </div>
                     </a>
                 </div>
