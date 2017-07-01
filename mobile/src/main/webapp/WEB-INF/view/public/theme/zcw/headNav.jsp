@@ -23,7 +23,7 @@
             <a class="head_per_ico" href="<%=basePath%>login.html">
                 <span>登录</span>
             </a>
-            <img class="logo"/>
+            <sapn class="logo"></sapn>
             <a class="head_bj_ico" href="<%=basePath%>register.html">
                 <span>注册</span>
             </a>
