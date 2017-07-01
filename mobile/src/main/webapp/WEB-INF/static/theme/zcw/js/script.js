@@ -784,8 +784,8 @@ $(function () {
 
     // 会员首页
     $(document).on("pageInit", "#page-member-index", function (e, id, page) {
-        $(".c1-101 .tab-item .icon-info").css("background-image", "url(" + CONFIG.RESURL + "img/footer33.png)");
-        $(".c1-101 .tab-item .tab-info").css("color", "red");
+        // $(".c1-101 .tab-item .icon-info").css("background-image", "url(" + CONFIG.RESURL + "img/footer33.png)");
+        // $(".c1-101 .tab-item .tab-info").css("color", "red");
 
         var hour = (new Date()).getHours();
         if (hour <= 6) {
@@ -6043,7 +6043,7 @@ $(function () {
 
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-all", function (e, id, page) {
-        if(typeof initBottomNavKjjg != "undefined"){
+        if(typeof initBottomNavKjjg == 'function'){
             initBottomNavKjjg();
         }
 

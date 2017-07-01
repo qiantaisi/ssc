@@ -72,7 +72,7 @@ public class SscController extends CacheController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,companyShortName).getWebNoticeList());
-        modelMap.put("webName", webInfoResult.getWebName());
+        modelMap.put("webCompanyName", webInfoResult.getCompanyShortName());
         return this.renderView("ssc/gcdt/gcdt", modelMap);
     }
 

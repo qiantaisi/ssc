@@ -482,6 +482,10 @@ $(function () {
 
     // 会员首页
     $(document).on("pageInit", "#page-member-index", function (e, id, page) {
+        if(typeof initBottomNavMbmber == 'function'){
+            initBottomNavMbmber();
+        }
+
         var hour = (new Date()).getHours();
         if (hour <= 6) {
             hour = '凌晨好！';
