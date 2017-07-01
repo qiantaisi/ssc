@@ -49,9 +49,9 @@
         <div class="content cl-700">
             <div class="buttons-tab cl-701" id="buttonsTabList">
                 <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="active button"
-                   data-id="btn-bqxq"><span>玩法说明</span></a>
+                   data-id="btn-bqxq"><span>传统模式</span></a>
                 <a href="<%=basePath%>ssc/wfsm/lskj.html?playGroupId=${playGroupId}" class="button"
-                   data-id="btn-gdqc"><span>历史开奖</span></a>
+                   data-id="btn-gdqc"><span>官方模式</span></a>
             </div>
             <div class="content-block cl-8 cl-990">
                 <div class="cl-1300">

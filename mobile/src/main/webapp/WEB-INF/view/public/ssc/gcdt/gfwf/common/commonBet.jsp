@@ -59,6 +59,7 @@
                                onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
                                onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
                         >&nbsp;倍
+                        <span class="beishu_remove">-</span>
                         <span class="beishu_add">+</span>
                     </span>
                 </div>
