@@ -35,6 +35,11 @@ public class WebInfoResult extends CommonResult {
      */
     private String webName;
 
+    /**
+     * 公司名称
+     */
+    private String companyShortName;
+
     public String getWebName() {
         return webName;
     }
@@ -81,5 +86,13 @@ public class WebInfoResult extends CommonResult {
 
     public void setWebTjjs(String webTjjs) {
         this.webTjjs = webTjjs;
+    }
+
+    public String getCompanyShortName() {
+        return companyShortName;
+    }
+
+    public void setCompanyShortName(String companyShortName) {
+        this.companyShortName = companyShortName;
     }
 }
