@@ -4804,27 +4804,28 @@ $(function () {
         //官方玩法，彩种玩法选择点击事件
         $(".wx-select a").unbind("click");  //移除被选元素的事件处理程序
         $(".wx-select a").click(function () {
+            var nowPageToN = $(this).hasClass("selected");
+            // 判断当前按钮是否已被触发
+            if(!nowPageToN){
+                var url = $(this).attr("data-url");
+                getSubGfwfSscPage(url, function(){
+                    //执行官方玩法事件
+                    gfwfEvent();
+                    renderPlayName();
+                    $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+                    $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+                    $(".page").find(".x_wrap").removeClass("Fixed");
+                    $(".page").find(".gfwf_xz").removeClass("Fixed");
+                    $(".page").find(".gfwf_mask2").removeClass("Fixed");
+                });
+            }
+
             $(".wx-select a").removeClass("selected");
             $(".wx-select a").find("span").removeClass("zxfs");
             $(".wx-select a").find("span").addClass("staer1");
             $(this).addClass("selected");
             $(this).find("span").removeClass("staer1");
             $(this).find("span").addClass("zxfs");
-
-            var namePage = $(this).attr("data-name");
-            var url = $(this).attr("data-url");
-            getSubGfwfSscPage(url, function(){
-
-                //执行官方玩法事件
-                gfwfEvent();
-
-                renderPlayName();
-                $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
-                $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
-                $(".page").find(".x_wrap").removeClass("Fixed");
-                $(".page").find(".gfwf_xz").removeClass("Fixed");
-                $(".page").find(".gfwf_mask2").removeClass("Fixed");
-            });
 
             // 添加选中状态，方便获取相关数据
             $(".wx-select a.selected").removeClass("selected");
@@ -4836,7 +4837,6 @@ $(function () {
 
         // $(".gfwf_xz .wx-select a").trigger("click");
         $(".wx-select2 a").click(function() {
-
             $(".wx-select2 a").removeClass("selected");
             $(".wx-select2 a").find("span").removeClass("zxfs");
             $(".wx-select2 a").find("span").addClass("staer1");
@@ -4854,15 +4854,6 @@ $(function () {
             $(".wx-select .show a").find("span").eq(0).removeClass("staer1");
             $(".wx-select .show a").find("span").eq(0).addClass("zxfs");
 
-            var namePage = $(".wx-select .show a").eq(0).attr("data-name");
-            var url = $(".wx-select .show a").eq(0).attr("data-url");
-            getSubGfwfSscPage(url, function(){
-                //执行官方玩法事件
-                gfwfEvent();
-
-                renderPlayName();
-            });
-
             // 添加选中状态，方便获取相关数据
             $(".wx-select a.selected").removeClass("selected");
             $(".wx-select .show a").eq(0).addClass("selected");
@@ -4871,6 +4862,13 @@ $(function () {
             $("#nowMoney").html("0");
 
             if ($(".wx-select .show a").length <= 1) {
+                var url = $(".wx-select .show a").eq(0).attr("data-url");
+                getSubGfwfSscPage(url, function(){
+                    //执行官方玩法事件
+                    gfwfEvent();
+                    renderPlayName();
+                });
+
                 $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
                 $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
                 $(".page").find(".x_wrap").removeClass("Fixed");

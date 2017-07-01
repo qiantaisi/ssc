@@ -3092,13 +3092,15 @@ function showBetTemplate() {
     });
     $(".beishu_add").click(function() {
         $("#betContent_inputBeishu").val(parseInt($("#betContent_inputBeishu").val()) + 1);
-
         // 渲染下注总额，奖金等等
         renderZhushu();
     });
     $(".beishu_remove").click(function() {
+        var num = parseInt($("#betContent_inputBeishu").val()) - 1;
+        if(num <= 0){
+           return;
+        }
         $("#betContent_inputBeishu").val(parseInt($("#betContent_inputBeishu").val()) - 1);
-
         // 渲染下注总额，奖金等等
         renderZhushu();
     });
