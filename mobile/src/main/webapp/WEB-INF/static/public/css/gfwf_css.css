@@ -443,6 +443,7 @@ ding {
     display: inline-block;
     text-align: center;
     margin: 0.3em;
+    margin-top:0.15rem;
 }
 
 .active_gfwf {
