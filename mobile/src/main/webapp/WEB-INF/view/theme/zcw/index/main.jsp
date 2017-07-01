@@ -12,29 +12,30 @@
 <c:import url="../common/bodyStart.jsp"/>
 <div class="page-group">
     <div class="page page-current re-bg" id="page-index">
-        <header class="bar bar-nav cl-1-vipcp">
-            <a href="javascript:void(0)" class="cl-2" onclick="location.reload()">
-                <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
-            </a>
+        <%--<header class="bar bar-nav cl-1-vipcp">--%>
+            <%--<a href="javascript:void(0)" class="cl-2" onclick="location.reload()">--%>
+                <%--<img src="<%=basePath%>images/${logo.imageId}.png" alt="">--%>
+            <%--</a>--%>
 
-            <c:choose>
-                <c:when test="${not empty userSession}">
-                    <div class="pull-right cl-328">
-                        <a href="<%=basePath%>member/index.html"><font class="timeInfo"></font>${userSession.account}
-                        </a>
-                        <a class="button button-link pull-right open-panel" data-panel='#panel-right'>菜单</a>
-                    </div>
-                </c:when>
-                <c:otherwise>
-                    <div class="pull-right cl-3">
-                        <a href="<%=basePath%>login.html">登录</a>
-                        <a href="<%=basePath%>register.html">注册</a>
-                        <a href="javascript:void(0)" id="btn-shiwan">试玩</a>
-                    </div>
-                </c:otherwise>
-            </c:choose>
-        </header>
+            <%--<c:choose>--%>
+                <%--<c:when test="${not empty userSession}">--%>
+                    <%--<div class="pull-right cl-328">--%>
+                        <%--<a href="<%=basePath%>member/index.html"><font class="timeInfo"></font>${userSession.account}--%>
+                        <%--</a>--%>
+                        <%--<a class="button button-link pull-right open-panel" data-panel='#panel-right'>菜单</a>--%>
+                    <%--</div>--%>
+                <%--</c:when>--%>
+                <%--<c:otherwise>--%>
+                    <%--<div class="pull-right cl-3">--%>
+                        <%--<a href="<%=basePath%>login.html">登录</a>--%>
+                        <%--<a href="<%=basePath%>register.html">注册</a>--%>
+                        <%--<a href="javascript:void(0)" id="btn-shiwan">试玩</a>--%>
+                    <%--</div>--%>
+                <%--</c:otherwise>--%>
+            <%--</c:choose>--%>
+        <%--</header>--%>
         <%--<c:import url="../common/bottomNav2.jsp"/>--%>
+        <c:import url="../common/headNav.jsp"/>
         <c:import url="../../../public/theme/common/bottomNav.jsp" />
 
         <div class="content content-img content-vipvp tex_bottom bottom2 top2" id="navBar">

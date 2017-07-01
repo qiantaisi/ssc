@@ -2,6 +2,32 @@
     position: absolute;
 }
 
+.h_cl-22 img {
+    position: absolute;
+    height: 40px;
+    left: 0.6rem;
+    top: 0.4rem;
+}
+
+.h_pull-right {
+
+}
+
+.h_cl-328 a {
+    position: absolute;
+    top:0.7rem;
+    color: #ffffff;
+    right:2.5rem;
+}
+
+.h_cl-328 .caidan {
+    color: #ffffff;
+    position: relative;
+    top:0.6rem;
+    border:1px solid #e73030;
+    right:1px;
+}
+
 .number_bar-tab {
     border-top: 1px solid #aaaaaa;
     bottom: 0;
@@ -92,9 +118,9 @@
 
 .cl-22 img {
     display: inline-block;
-    height:1.8rem !important;
+    height: 1.8rem !important;
     vertical-align: middle;
-    top:0.28rem;
+    top: 0.28rem;
     position: relative;
 }
 

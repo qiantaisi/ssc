@@ -10,13 +10,13 @@
 <header class="h_bar-nav">
     <c:choose>
         <c:when test="${not empty userSession}">
-            <a href="javascript:void(0)" class="cl-22" onclick="location.reload()">
+            <a href="javascript:void(0)" class="h_cl-22" onclick="location.reload()">
                 <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
             </a>
-            <div class="pull-right cl-328">
+            <div class="h_pull-right h_cl-328">
                 <a href="<%=basePath%>member/index.html"><font class="timeInfo"></font>${userSession.account}
                 </a>
-                <a class="button button-link pull-right open-panel" data-panel='#panel-right'>菜单</a>
+                <a class="button button-link pull-right open-panel caidan" data-panel='#panel-right'>菜单</a>
             </div>
         </c:when>
         <c:otherwise>
