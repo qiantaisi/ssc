@@ -8,6 +8,6 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 
     // 测试，暂时写死
-    request.setAttribute("themeBottomNav", "zcw");
+    request.setAttribute("themeBottomNav", "theme1");
 %>
 <jsp:include page="../${themeBottomNav}/bottomNav.jsp" />

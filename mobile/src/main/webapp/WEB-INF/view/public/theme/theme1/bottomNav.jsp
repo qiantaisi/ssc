@@ -35,7 +35,30 @@
     </a>
 </nav>
 <script>
-    function initBottomNav() {
+    //购彩大厅页底部按钮初始化选中状态
+    function initBottomNavGcdt() {
+        //底部按钮选中状态
+        $(".number_c1-101 a.active").removeClass('active');
+        $(".number_c1-101 a.n2").addClass('active');
+        $(".number_c1-101 .n2 .barImg1").hide();
+        $(".number_c1-101 .n2 .barImg2").show();
+    }
 
+    //首页页底部按钮初始化选中状态
+    function initBottomNavIndex() {
+        //底部按钮选中状态
+        $(".number_c1-101 a.active").removeClass('active');
+        $(".number_c1-101 a.n1").addClass('active');
+        $(".number_c1-101 .n1 .barImg1").hide();
+        $(".number_c1-101 .n1 .barImg2").show();
+    }
+
+    //开奖结果页底部按钮初始化选中状态
+    function initBottomNavKjjg() {
+        //底部按钮选中状态
+        $(".number_c1-101 a.active").removeClass('active');
+        $(".number_c1-101 a.n3").addClass('active');
+        $(".number_c1-101 .n3 .barImg1").hide();
+        $(".number_c1-101 .n3 .barImg2").show();
     }
 </script>
