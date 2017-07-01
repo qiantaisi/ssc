@@ -15,11 +15,15 @@
         .cl-701 .button.active{border-bottom:1px solid #${fengge_1}!important}
         #page-yhhd .bar-nav{ background:#${fengge_1}!important;}
 
-        /*快钱投注界面*/
-        .cl-1201 i,.cl-904 .openNumber i{background-color:#${fengge_1}!important}
+        /*快钱投注界面风格样式*/
+        .cl-1201 i:not(.ball-ts),.ball-orange{background-color:#${fengge_1}!important}
+        .cl-904 .openNumber i:not(.ball-ts){background-color:#${fengge_1}!important}
         #ssc-parent-menu .cl-602 a.active{border-bottom: 2px solid #${fengge_1}!important;color:#${fengge_1}!important;}
-        .cl-604 table tbody tr td.active,.layui-m-layerchild h3{background:#${fengge_1}!important;}
-        .cl-604 table tbody tr td span:nth-child(1),.cl-607 font,.native-scroll .cl-603{color:#${fengge_1}!important;}
+        .cl-604 table tbody tr td.active,#btn-submit .cl-952{background:#${fengge_1}!important; color:white!important;}
+        .cl-604 table tbody tr td span:nth-child(1),.cl-603,.cl-607 font,.native-scroll .cl-603{color:#${fengge_1}!important;}
+        #betContainer .cl-604 span.ball-blue,#betContainer .cl-604 span.ball-green,#betContainer .cl-604 span.ball-red{color: #fff!important;}
+        #betContainer .cl-604 .pkbg-1, #betContainer .cl-604 .pkbg-2, #betContainer .cl-604 .pkbg-3, #betContainer .cl-604 .pkbg-4, #betContainer .cl-604 .pkbg-5, #betContainer .cl-604 .pkbg-6, #betContainer .cl-604 .pkbg-7, #betContainer .cl-604 .pkbg-8, #betContainer .cl-604 .pkbg-9, #betContainer .cl-604 .pkbg-10{color: #fff!important;}
+       .cl-604 table tbody tr td.active span:nth-child(1){color: white!important;}
 
         <%--.eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #${fengge_1}!important;}--%>
         <%--.eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}--%>

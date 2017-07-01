@@ -149,9 +149,9 @@
             <span class="openNumber">
                 {{if openCodeArr != null}}
                     {{each openCodeArr as value index}}
-                        <i class="bose-{{openCodeArr[index]}} lhc_ball">{{value}}</i>
+                        <i class="ball-ts bose-{{openCodeArr[index]}} lhc_ball">{{value}}</i>
                         {{if index == 5}}
-                        <i class="cl-1210 lhc_ball">&nbsp;</i>
+                        <i class="ball-ts cl-1210 lhc_ball">&nbsp;</i>
                         {{/if}}
                     {{/each}}
                 {{else}}
@@ -166,23 +166,23 @@
     <div class="left">
         <span class="cl-1201 cl-1203" id="numInfo">
             {{each openCodeArr as value index}}
-                <i class="bose-{{openCodeArr[index]}} lhc_ball">{{value}}</i>
+                <i class="ball-ts bose-{{openCodeArr[index]}} lhc_ball">{{value}}</i>
                 {{if index == 5}}
-                <i class="cl-1210 lhc_ball">&nbsp;</i>
+                <i class="ball-ts cl-1210 lhc_ball">&nbsp;</i>
                 {{/if}}
                 {{if index == 6}}
-                <i class="cl-1211 lhc_ball" onclick="showLhcLastDataSx()">&nbsp;</i>
+                <i class="ball-ts cl-1211 lhc_ball" onclick="showLhcLastDataSx()">&nbsp;</i>
                 {{/if}}
             {{/each}}
         </span>
         <span class="cl-1201 cl-1203" id="sxInfo" style="display:none;">
             {{each sxArr as value index}}
-                <i class="bose-{{openCodeArr[index]}} lhc_ball">{{value}}</i>
+                <i class="ball-ts bose-{{openCodeArr[index]}} lhc_ball">{{value}}</i>
                 {{if index == 5}}
-                <i class="cl-1210 lhc_ball">&nbsp;</i>
+                <i class="ball-ts cl-1210 lhc_ball">&nbsp;</i>
                 {{/if}}
                 {{if index == 6}}
-                <i class="cl-1211 lhc_ball" onclick="showLhcLastDataNum()">&nbsp;</i>
+                <i class="ball-ts cl-1211 lhc_ball" onclick="showLhcLastDataNum()">&nbsp;</i>
                 {{/if}}
             {{/each}}
         </span>

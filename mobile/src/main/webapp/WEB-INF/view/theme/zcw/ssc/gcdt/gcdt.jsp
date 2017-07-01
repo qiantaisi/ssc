@@ -22,7 +22,8 @@
                     ${webName}购彩大厅
             </h1>
         </header>
-        <c:import url="../../common/bottomNav2.jsp"/>
+        <%--<c:import url="../../common/bottomNav2.jsp"/>--%>
+        <c:import url="../../../../public/theme/common/bottomNav.jsp" />
         <div class="content re-con-out bottom2">
             <a href="javascript:void(0)" class="list-block relb btn-xl-ssc">
                  <div class="item-content item-link reitem-link reitem-link-ed" href="javascript:void(0)">
