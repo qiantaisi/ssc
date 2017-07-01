@@ -41,7 +41,7 @@
                 <div class="gfwf_two">
                     <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">
                         <div class="border_two color_one">
-                            快捷模式
+                            传统模式
                         </div>
                     </a>
                 </div>
