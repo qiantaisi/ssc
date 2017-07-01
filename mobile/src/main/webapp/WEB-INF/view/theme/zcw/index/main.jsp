@@ -34,9 +34,9 @@
                 <%--</c:otherwise>--%>
             <%--</c:choose>--%>
         <%--</header>--%>
-        <%--<c:import url="../common/bottomNav2.jsp"/>--%>
-        <c:import url="../common/headNav.jsp"/>
-        <c:import url="../../../public/theme/common/bottomNav.jsp" />
+        <%--<c:import url="../common/bottomNav.jsp"/>--%>
+        <c:import url="../../../public/theme/common/headNav.jsp"/>
+        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
 
         <div class="content content-img content-vipvp tex_bottom bottom2 top2" id="navBar">
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">

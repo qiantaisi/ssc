@@ -20,18 +20,13 @@
             </div>
         </c:when>
         <c:otherwise>
-            <div class="h_cl-2">
-                <a href="<%=basePath%>login.html">
-                    <img src="${resPath}img/Header/index_01.png"/>
-                    登录</a>
-            </div>
-            <div class="h_cl-3">
-                    <%--<a href="<%=basePath%>login.html">登录</a>--%>
-                <a href="<%=basePath%>register.html">
-                    <img src="${resPath}img/Header/index_02.png"/>
-                    注册</a>
-                    <%--<a href="javascript:void(0)" id="btn-shiwan">试玩</a>--%>
-            </div>
+            <a class="head_per_ico" href="<%=basePath%>login.html">
+                <span>登录</span>
+            </a>
+            <img class="logo"/>
+            <a class="head_bj_ico" href="<%=basePath%>register.html">
+                <span>注册</span>
+            </a>
         </c:otherwise>
     </c:choose>
 </header>

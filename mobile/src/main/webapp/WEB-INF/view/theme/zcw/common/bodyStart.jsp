@@ -6,6 +6,8 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+    // 测试，暂时写死
+    request.setAttribute("themeBottomNav", "zcw");
 %>
 <!DOCTYPE html>
 <html>
@@ -17,7 +19,7 @@
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170421">
     <link rel="stylesheet" href="${resPath}css/vipcp-style.css?v=20170527_1">
     <link rel="stylesheet" href="${resPath}css/vipcp-login-reg.css?v=20170519">
-    <link rel="stylesheet" href="${resPath}css/test.css?v=20170628"/>
+    <link rel="stylesheet" href="${bottomCssResPath}${themeBottomNav}/css/base-template.css?v=20170628"/>
 
     <jsp:include page="../../../public/common/customTheme.jsp" />
 </head>
