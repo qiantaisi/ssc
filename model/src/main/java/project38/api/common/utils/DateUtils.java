@@ -1,14 +1,8 @@
 package project38.api.common.utils;
 
-import org.apache.commons.net.ntp.NTPUDPClient;
-import org.apache.commons.net.ntp.TimeInfo;
-import org.apache.commons.net.ntp.TimeStamp;
+import org.apache.commons.lang3.time.DateFormatUtils;
 
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
@@ -76,7 +70,7 @@ public class DateUtils {
         if (dayOfWeek == 0) {
             dayOfWeek = 7;
         }
-        calendar.add(Calendar.DAY_OF_WEEK, 7 - dayOfWeek);
+        calendar.add(Calendar.DAY_OF_WEEK, 7 - dayOfWeek + 1);
         calendar.set(Calendar.HOUR_OF_DAY, 0);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
@@ -123,6 +117,7 @@ public class DateUtils {
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
+        calendar.add(Calendar.DAY_OF_MONTH, 1);
         // calendar.add(Calendar.SECOND, -1);
 
         return calendar.getTime();
@@ -148,6 +143,7 @@ public class DateUtils {
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
+        calendar.add(Calendar.DAY_OF_MONTH, 1);
         // calendar.add(Calendar.SECOND, -1);
 
         return calendar.getTime();
@@ -161,22 +157,56 @@ public class DateUtils {
 
     public static Calendar getBeijingCalendar() {
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT+8"));
+        calendar.set(Calendar.MILLISECOND, 0);
         return calendar;
     }
 
-    public static void main(String[] args) {
-        try {
-            NTPUDPClient timeClient = new NTPUDPClient();
-            String timeServerUrl = "time-a.nist.gov";
-            InetAddress timeServerAddress = InetAddress.getByName(timeServerUrl);
-            TimeInfo timeInfo = timeClient.getTime(timeServerAddress);
-            TimeStamp timeStamp = timeInfo.getMessage().getTransmitTimeStamp();
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-//            System.out.println(dateFormat.format(timeStamp.getDate()));
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+    public static void main(String[] args) throws ParseException {
+        Date endTime = org.apache.commons.lang3.time.DateUtils.parseDate("2017-05-22 2:4:1", "yyyy-MM-dd HH:mm:ss");
+        Date startTime = org.apache.commons.lang3.time.DateUtils.parseDate("2017-01-22 2:4:1", "yyyy-MM-dd HH:mm:ss");
+        System.out.println(DateFormatUtils.format(getMinArchiveDateTime(startTime, endTime), "yyyy-MM-dd HH:mm:ss"));
+    }
+
+    private static Date getMinArchiveDateTime(Date dateTime) throws ParseException {
+        Date archiveStartTime = org.apache.commons.lang3.time.DateUtils.parseDate("2016-01-01 00:00:00","yyyy-MM-dd HH:mm:ss");
+        Date archiveEndTime = getBeijingCalendar().getTime();
+
+        if (null == dateTime || dateTime.getTime() < archiveStartTime.getTime() || dateTime.getTime() > archiveEndTime.getTime()) {
+            return archiveStartTime;
         }
+        return dateTime;
+    }
+
+    public static Date getMaxArchiveDateTime(Date dateTime) throws ParseException {
+        Date archiveStartTime = org.apache.commons.lang3.time.DateUtils.parseDate("2016-01-01 00:00:00","yyyy-MM-dd HH:mm:ss");
+        Date archiveEndTime = getTodayEnd();
+
+        if (null == dateTime || dateTime.getTime() < archiveStartTime.getTime() || dateTime.getTime() > archiveEndTime.getTime()) {
+            return archiveEndTime;
+        }
+        return dateTime;
+    }
+
+    /**
+     * 根据endTime获取startTime，间隔不超过60天
+     * @param startTime
+     * @param endTime
+     * @return
+     * @throws ParseException
+     */
+    public static Date getMinArchiveDateTime(Date startTime, Date endTime) throws ParseException {
+        Date minTime = getMinArchiveDateTime(startTime);
+        Date maxTime = getMaxArchiveDateTime(endTime);
+
+        Long betweenDays = (maxTime.getTime() - minTime.getTime()) / (24 * 3600 * 1000);
+        // 间隔超过60天
+        if (betweenDays > 60) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(maxTime);
+            calendar.add(Calendar.DAY_OF_MONTH, -60);
+            minTime = calendar.getTime();
+        }
+
+        return minTime;
     }
 }
