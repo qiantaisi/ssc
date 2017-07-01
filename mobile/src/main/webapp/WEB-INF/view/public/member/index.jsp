@@ -20,7 +20,8 @@
             </a>
             <h1 class="title">会员中心</h1>
         </header>
-        <c:import url="../common/bottomNav.jsp" />
+        <%--<c:import url="../common/bottomNav.jsp" />--%>
+        <c:import url="../theme/common/bottomNav.jsp" />
         <div class="content">
             <div class="row cl-200">
                 <div class="col-20 cl-201">
