@@ -15,17 +15,17 @@
 
 .h_cl-328 a {
     position: absolute;
-    top:0.7rem;
+    top: 0.7rem;
     color: #ffffff;
-    right:2.5rem;
+    right: 2.5rem;
 }
 
 .h_cl-328 .caidan {
     color: #ffffff;
     position: relative;
-    top:0.6rem;
-    border:1px solid #e73030;
-    right:1px;
+    top: 0.6rem;
+    border: 1px solid #e73030;
+    right: 1px;
 }
 
 .number_bar-tab {
@@ -135,4 +135,29 @@
     display: inline-block;
     position: absolute;
     left: 15px;
+}
+
+/*首页样式*/
+.daohang {
+    background: #ffffff;
+    height: 4.4rem;
+    width: 100%;
+    text-align: center;
+}
+
+.daohang1 {
+    float: left;
+    width: 25%;
+    height:4.4rem;
+}
+.daohang1 a{
+    position: relative;
+    top:0.5rem;
+}
+.daohang1 a img {
+    height: 55px;
+}
+
+.daohang a span {
+    color: #000;
 }
