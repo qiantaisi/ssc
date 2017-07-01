@@ -31,7 +31,7 @@
                 <div class="re-cl-602">
                     <a data-name="jb" href="javascript:void(0)" class="choose">基本走势</a>
                     <%--<a data-name="sm" href="javascript:void(0)" class="sm">双面走势</a>--%>
-                    <span class="goucai"><a id="blink" href="<%=basePath%>ssc/gcdt/fc3d.html">购彩</a></span>
+                    <span class="goucai"><a id="blink" href="<%=basePath%>ssc/gcdt/fc3d.html">立即购彩</a></span>
                     <span class="gengduo">更多期数</span>
                 </div>
             </div>
