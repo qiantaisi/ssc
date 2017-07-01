@@ -377,7 +377,7 @@ ding {
     /*height: 50%;*/
     background: #fff;
     position: absolute;
-    top: 3.7rem;
+    top: 3.8rem;
     overflow-y: auto;
     z-index: 9;
 }
@@ -396,7 +396,7 @@ ding {
 .gfwf_xz .xuan {
     width: 100%;
     height: 0.4rem;
-    margin-top: 22px;
+    margin-top: 10px;
 }
 
 .gfwf_xz .xuan .xuan1 {
@@ -427,7 +427,7 @@ ding {
 .staer {
     line-height: 1.2rem;
     width: 100%;
-    margin-top: 0.5em;
+    /*margin-top: 0.5em;*/
     color: #999;
 }
 .restaer{
