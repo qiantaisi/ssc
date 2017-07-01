@@ -24,7 +24,7 @@
             </a>
 
         </header>
-        <c:import url="../../common/bottomNav2.jsp"/>
+        <c:import url="../../../../public/theme/common/bottomNav.jsp"/>
         <%--隐藏块--%>
         <%--弹窗--%>
         <div class="modal-overlay modal-overlay-visible re-modal vipcp-hide"></div>

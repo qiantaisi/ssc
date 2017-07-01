@@ -71,6 +71,7 @@ public abstract class BaseController {
 
         request.setAttribute("resPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/theme/" + theme + "/");
         request.setAttribute("commonResPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/common/");
+        request.setAttribute("bottomCssResPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/public/theme/");
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
