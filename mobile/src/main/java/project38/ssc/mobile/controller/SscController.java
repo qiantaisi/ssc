@@ -419,6 +419,14 @@ public class SscController extends CacheController {
         return this.renderPublicView("ssc/wfsm/wfsm", modelMap);
     }
 
+    @RequestMapping(value = "/wfsm/wfsm-gfwf.html",method = RequestMethod.GET)
+    public ModelAndView wfsmWfsmGfwf( Long playGroupId ) throws UserException {
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        modelMap.put("playGroupId", playGroupId);
+        return this.renderPublicView("ssc/wfsm/wfsm-gfwf", modelMap);
+    }
+
     @RequestMapping(value = "/zst/{playGroupName}/{zstName}.html",method = RequestMethod.GET)
     public ModelAndView wfsmWfsm(@PathVariable String playGroupName, @PathVariable String zstName) throws UserException {
         Map<String, Object> modelMap = new HashMap<String, Object>();

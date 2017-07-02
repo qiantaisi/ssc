@@ -9,7 +9,7 @@
 %>
 <c:import url="../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-wfsm-wfsm">
+    <div class="page page-current" id="page-wfsm-wfsm-gfwf">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
                 <span class="icon icon-left"></span>
@@ -48,9 +48,9 @@
         </header>
         <div class="content cl-700">
             <div class="buttons-tab cl-701" id="buttonsTabList">
-                <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="active button"
+                <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="button"
                    data-id="btn-bqxq"><span>传统模式</span></a>
-                <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="button"
+                <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="active button"
                    data-id="btn-gdqc"><span>官方模式</span></a>
                 <%--<a href="<%=basePath%>ssc/wfsm/lskj.html?playGroupId=${playGroupId}" class="button"--%>
                    <%--data-id="btn-gdqc"><span>官方模式</span></a>--%>
@@ -62,70 +62,70 @@
                             <div class="content-block">
                                 <c:choose>
                                     <c:when test="${playGroupId == 1}">
-                                        <c:import url="rule/cqssc.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 2}">
-                                        <c:import url="rule/tjssc.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 3}">
-                                        <c:import url="rule/xjssc.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 4}">
-                                        <c:import url="rule/pl3.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 5}">
-                                        <c:import url="rule/fc3d.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 6}">
-                                        <c:import url="rule/lhc.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 7}">
-                                        <c:import url="rule/xy28.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 8}">
-                                        <c:import url="rule/bjkl8.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 9}">
-                                        <c:import url="rule/bjpk10.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 10}">
-                                        <c:import url="rule/cqxync.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 11}">
-                                        <c:import url="rule/gd10.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 13}">
-                                        <c:import url="rule/sfssc.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 14}">
-                                        <c:import url="rule/xyft.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 15}">
-                                        <c:import url="rule/ffssc.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 16}">
-                                        <c:import url="rule/efssc.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 17}">
-                                        <c:import url="rule/wfssc.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 18}">
-                                        <c:import url="rule/jsk3.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 19}">
-                                        <c:import url="rule/hbk3.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 20}">
-                                        <c:import url="rule/ahk3.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 21}">
-                                        <c:import url="rule/jlk3.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 22}">
-                                        <c:import url="rule/sflhc.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 23}">
-                                        <c:import url="rule/jspk10.jsp"/>
+                                        <c:import url="rule/gfwf/base.jsp"/>
                                     </c:when>
                                 </c:choose>
                             </div>
