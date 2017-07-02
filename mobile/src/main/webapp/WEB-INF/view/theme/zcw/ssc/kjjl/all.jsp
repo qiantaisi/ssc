@@ -155,9 +155,9 @@
             <%--<div class="row cl-102-kjjg">--%>
                 <div class="row cl-scroll swiper-container swiper-container-horizontal re-vipvp-head">
                     <div class="swiper-wrapper">
-                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.jpg" alt=""></div>
-                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.jpg" alt=""></div>
-                        <div class="img-sz swiper-slide"><img src="${resPath}img/qiuban_02.jpg" alt=""></div>
+                        <div class="img-sz swiper-slide"><a href="http://zhcai01.com/zhcaicom138178_2014.apk"><img src="${resPath}img/qiuban_02.jpg" alt=""></a></div>
+                        <div class="img-sz swiper-slide"><a href="http://zhcai01.com/zhcaicom138178_2014.apk"><img src="${resPath}img/qiuban_02.jpg" alt=""></a></div>
+                        <div class="img-sz swiper-slide"><a href="http://zhcai01.com/zhcaicom138178_2014.apk"><img src="${resPath}img/qiuban_02.jpg" alt=""></a></div>
                     </div>
                     <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets re-swiper-pag"></div>
                 </div>
