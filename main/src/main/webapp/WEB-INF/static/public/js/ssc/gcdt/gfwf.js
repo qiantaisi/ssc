@@ -169,136 +169,6 @@ function selectFun_6(obj) {
 }
 
 
-//获取状态
-function
-stateTouZhu(flag_str) {
-    var flagStrInner = '';
-    var zhushu = 0;
-    if (typeof flag_str == 'undefined' || flag_str == null || flag_str == '') {
-        flagStrInner = 'zxfs_zx';
-    } else {
-        flagStrInner = flag_str;
-    }
-    if (flagStrInner == 'dan') {
-        zhushu = getDsZhushu();
-    } else if (flagStrInner == "zxfs_zx" || flagStrInner == "fu") {
-        zhushu = getZhushu();
-    } else if (flagStrInner == "hszh_zx") { //后三直选-后三组合
-        zhushu = getHsZhushu();
-    } else if (flagStrInner == "zxhz_zx") { //后三直选-后三和值
-        zhushu = getHezhiZhushu();
-    } else if (flagStrInner == "zxkd_zx") { //后三直选-后三跨度
-        zhushu = getKaDuZhushu();
-    } else if (flagStrInner == "zsfs_zux") { //后三直选-组选复式
-        zhushu = getZuSanZhushu();
-    } else if (flagStrInner == "zsds_zux") { //后三组选-组选单式
-        zhushu = getZsdsZhushu();
-    } else if (flagStrInner == "zlfs_zux") { //后三组选-组六复式
-        zhushu = getZuLiuZhushu();
-    } else if (flagStrInner == "zlds_zux") { //后三组选-组六单式
-        zhushu = getZldsZhushu();
-    } else if (flagStrInner == "hhzx_zux"){ //后三组选-混合组选
-        zhushu = getHhzxZhushu();
-    } else if (flagStrInner == "zxhz_zux"){ //后三组选-组选和值
-        zhushu = getZxhzZhushu();
-    } else if (flagStrInner == "zxbd_zux"){ //后三组选-组选包胆
-        zhushu = getZxbdZhushu();
-    } else if (flagStrInner == "hzws_qt"){ //后三其它-和值尾数
-        zhushu = getZxwsZhushu();
-    } else if (flagStrInner == "tsh_qt"){ //后三其它-特殊号
-        zhushu = getTshZhushu();
-    } else if (flagStrInner == "zxfs-q2"){ //直选复式-前二
-        zhushu = getZxfsZshu();
-    } else if (flagStrInner == "zxds-q2"){ //直选单式-前二
-        zhushu = getZxdsZhushu();
-    } else if (flagStrInner == "zxhz-q2"){ //直选和值-前二
-        zhushu = getZxhzZshu();
-    } else if (flagStrInner == "zxkd-q2"){ // 直选跨度-前二
-        zhushu = getZxkdZshu();
-    } else if (flagStrInner == "zuxfs-q2"){ // 组选复式-前二
-        zhushu = getZuxfsZshu();
-    } else if (flagStrInner == "zuxds-q2"){ // 组选单式-前二
-        zhushu = getZuxdsZhushu();
-    } else if (flagStrInner == "zuxhz-q2"){ // 组选和值-前二
-        zhushu = getZuxhzZhushu();
-    } else if (flagStrInner == "zuxbd-q2"){ // 组选包胆-前二
-        zhushu = getZuxbdZhushu();
-    } else if (flagStrInner == "dwd"){ // 定位胆
-        zhushu = getDwdZhushu();
-    } else if (flagStrInner == "qsym-budw" || flagStrInner == "qsem-budw" || flagStrInner == "hsym-budw" || flagStrInner == "hsem-budw"
-        || flagStrInner == "q4ym-budw" || flagStrInner == "q4em-budw" || flagStrInner == "h4ym-budw" || flagStrInner == "h4em-budw"
-        || flagStrInner == "wxym-budw" || flagStrInner == "wxem-budw"){ // 不定位
-        zhushu = getBuwdZhushu(flagStrInner);
-    } else if (flagStrInner == "wx3m-budw"){ // 不定位
-        zhushu = getWx3mZhushu();
-    } else if (flagStrInner == "rx2-zxfs"){ // 任选二-直选复式
-        zhushu = stateZxfsZhuShu();
-    } else if (flagStrInner == "rx2-zxds"){ // 任选二-直选单式
-        zhushu = getZxdsRx2Zhushu();
-    } else if (flagStrInner == "rx2-zxhz"){ // 任选二-直选和值
-        zhushu = getZxhzRx2Zhushu();
-    } else if (flagStrInner == "rx2-zuxfs"){ // 任选二-组选复式
-        zhushu = stateZuxfsZhuShu();
-    } else if (flagStrInner == "rx2-zuxds"){ // 任选二-组选单式
-        zhushu = getZuxdsRx2Zhushu();
-    } else if (flagStrInner == "rx2-zuxhz"){ // 任选二-组选和值
-        zhushu = getZuxhzRx2Zhushu();
-    } else if (flagStrInner == "rx3-zxfs"){ // 任选三-直选复式
-        zhushu = getZxfsRx3Zhushu();
-    } else if (flagStrInner == "rx3-zxds"){ // 任选三-直选单式
-        zhushu = getZxdsRx3Zhushu();
-    } else if (flagStrInner == "rx3-zxhz"){ // 任选三-直选和值
-        zhushu = getZxhzRx3Zhushu();
-    } else if (flagStrInner == "rx3-zu3fs"){ // 任选三-组三复式
-        zhushu = stateZu3fsZhuShu();
-    } else if (flagStrInner == "rx3-zu3ds"){ // 任选三-组三单式
-        zhushu = getZu3dsRx3Zhushu();
-    } else if (flagStrInner == "rx3-zu6fs") { // 任选三-组六复式
-        zhushu = getZu6fsRx3Zhushu();
-    } else if (flagStrInner == "rx3-zu6ds") { // 任选三-组六复式
-        zhushu = getZu6dsRx3Zhushu();
-    } else if (flagStrInner == "rx3-hhzux") { // 任选三-混合组选
-        zhushu = getHhzuxRx3Zhushu();
-    } else if (flagStrInner == "rx3-zuxhz") { // 任选三-组选和值
-        zhushu = getZuxhzRx3Zhushu();
-    } else if (flagStrInner == "rx4-zxfs") { // 任选四-直选复式
-        zhushu = getZxfsRx4Zhushu();
-    } else if (flagStrInner == "rx4-zxds"){ // 任选四-直选单式
-        zhushu = getZxdsrx4Zhushu();
-    } else if (flagStrInner == "rx4-zux24"){ // 任选四-组选24
-        zhushu = getZux24Zhushu();
-    } else if (flagStrInner == "rx4-zux12"){ // 任选四-组选12
-        zhushu = getZux12Zhushu();
-    } else if (flagStrInner == "rx4-zux6"){ // 任选四-组选6
-        zhushu = getZux6Zhushu();
-    } else if (flagStrInner == "rx4-zux4"){ // 任选四-组选4
-        zhushu = getZux4Zhushu();
-    }
-
-    if(zhushu <= 0 || typeof zhushu == "undefined"){
-        clearStateTouZhu();
-        return 0;
-    }
-
-    $('.p1 .i0').html(zhushu);
-    $('.p1 .i_beishu').html($("#inputBeishu").val());
-    var strFd = $(".fandian-bfb").html();
-    var num = parseFloat(strFd.toString().substr(0,strFd.length-1)) / 100;
-    var totalMoney = parseFloat($("#inputBeishu").data("beishu")) * zhushu * parseFloat($("#inputMoney").data("money"));
-    var p1_i2 = totalMoney * num;
-    if(isNaN(p1_i2) || p1_i2 == 0){
-        $('.p1 .i_fanD').html(0);
-    } else {
-        $('.p1 .i_fanD').html(p1_i2.toFixed(2));
-    }
-    if(parseInt(totalMoney) == 0){
-        $('.p1 .i_money').html(0);
-    } else{
-        $('.p1 .i_money').html(parseFloat(totalMoney).toFixed(2));
-    }
-}
-
-
 
 //删除重复号码
 function delRrepet(obj) {
@@ -1072,12 +942,14 @@ function renderZhushu() {
 
         var inputBeishu = $("#inputBeishu").val();
         var inputFandianBili = $("#fandian-bfb").data("value") / 100;
+        var mode = getSelectMode();//获取模式
+        var moneyMode = getMode(mode);
 
         $('.p1 .i0').html(zhushu);  // 渲染注数
         $('.p1 .i_beishu').html($("#inputBeishu").val());   // 渲染倍数
 
         // 投注总金额 = 倍数 * 注数 * 单注金额
-        var totalMoney = parseFloat((inputBeishu * zhushu * $("#inputMoney").data("money")).toFixed(3));
+        var totalMoney = parseFloat((moneyMode * inputBeishu * zhushu * $("#inputMoney").data("money")).toFixed(3));
         $('.p1 .i_money').html(totalMoney);
 
         // 返点金额 = 投注总金额 * 返点比例
