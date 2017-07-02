@@ -5832,7 +5832,7 @@ function tjzd() {
     obj.betZhushu = zhushu;
     obj.betBeishu = $("#inputBeishu").data("beishu");
     obj.betMode = getSelectMode();
-    obj.betTotalMoney = obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu;
+    obj.betTotalMoney = (obj.betZhushu * obj.betPerMoney * getMode(obj.betMode) * obj.betBeishu).toFixed(3);
     obj.betPlayGroupId = playGroupId;
     obj.betFandian = $("#fandian-bfb").data("value");
     obj.betPlayPl = $("#jiangjin-change").data("value");
@@ -7623,7 +7623,9 @@ function content_q2zxds(){
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if(arr_new[i] != ''){
+                errorArr.push(arr_new[i]);
+            }
         }
     }
 
@@ -7868,7 +7870,9 @@ function content_q3z6ds(){
         if (twoStr != threeStr && oneStr != threeStr && twoStr != oneStr) {
             tempArr.push(newArr[n]);
         } else {
-            errorArr.push(newArr[n]);
+            if(newArr[n] != ''){
+              errorArr.push(newArr[n]);
+            }
         }
     }
 
@@ -7946,7 +7950,9 @@ function content_q3z3ds() {
         if (oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr) {
             tempArr.push(newArr[n]);
         } else {
-            errorArr.push(newArr[n]);
+            if(newArr[n] != ''){
+                errorArr.push(newArr[n]);
+            }
         }
     }
     if(tempArr.length <= 0){
@@ -8108,7 +8114,9 @@ function content_q3zxds() {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if(arr_new[i] != ''){
+                errorArr.push(arr_new[i]);
+            }
         }
     }
 
@@ -8364,7 +8372,9 @@ function content_h3z6ds(){
         if (twoStr != threeStr && oneStr != threeStr && twoStr != oneStr) {
             tempArr.push(newArr[n]);
         } else {
-            errorArr.push(newArr[n]);
+            if(newArr[n] != ''){
+              errorArr.push(newArr[n]);
+            }
         }
     }
 
@@ -8442,7 +8452,9 @@ function content_h3z3ds() {
         if (oneStr == twoStr && twoStr != threeStr || twoStr == threeStr && oneStr != threeStr || threeStr == oneStr && twoStr != oneStr) {
             tempArr.push(newArr[n]);
         } else {
-            errorArr.push(newArr[n]);
+            if (newArr[n] != '') {
+                errorArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -8607,7 +8619,9 @@ function content_h3zxds() {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
         }
     }
 
@@ -8797,7 +8811,9 @@ function content_5xzxds() {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 5) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if(arr_new[i] != ''){
+              errorArr.push(arr_new[i]);
+            }
         }
     }
     if (newArr.length <= 0) {
@@ -8842,9 +8858,12 @@ function content_4xzxds() {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if(arr_new[i] != ''){
+                errorArr.push(arr_new[i]);
+            }
         }
     }
+
     if (newArr.length <= 0) {
         return 0;
     }
