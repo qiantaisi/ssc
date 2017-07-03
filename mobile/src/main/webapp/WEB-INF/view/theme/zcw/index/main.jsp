@@ -57,19 +57,19 @@
                     </div>
                     <div class="daohang1">
                         <a>
-                            <span>存款/提款</span>
+                            <span>投注记录</span>
                             <img src="${resPath}img/new_zcw/index1_3.png"/>
                         </a>
                     </div>
                     <div class="daohang1">
                         <a>
-                            <span>存款/提款</span>
+                            <span>优惠活动</span>
                             <img src="${resPath}img/new_zcw/index1_4.png"/>
                         </a>
                     </div>
                     <div class="daohang1">
                         <a>
-                            <span>存款/提款</span>
+                            <span>在线客服</span>
                             <img src="${resPath}img/new_zcw/index1_5.png"/>
                         </a>
                     </div>
@@ -279,7 +279,7 @@
                             <a href="<%=basePath%>ssc/gcdt.html">
                                 <img src="${resPath}img/new_zcw/index1_24.png"/>
                                 <div>
-                                    <span class="dus_a">更多</span>
+                                    <span class="dus_a">+更多......</span>
                                     <span class="dus_b">查看全部彩种</span>
                                 </div>
                             </a>
