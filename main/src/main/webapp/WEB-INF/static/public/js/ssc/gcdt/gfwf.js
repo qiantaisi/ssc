@@ -434,7 +434,7 @@ function buyBtn() {
                 mode: $(this).data("bet_mode"),
                 fandian: $(this).data("bet_fandian")
             });
-            betForm.totalMoney += $(this).data("bet_total_money");
+            betForm.totalMoney += parseFloat($(this).data("bet_total_money"));
             betForm.totalZhushu += $(this).data("bet_zhushu");
         });
         betForm = JSON.stringify(betForm);
