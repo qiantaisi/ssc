@@ -172,11 +172,11 @@
     margin-top: 0.4rem;
 }
 
-.wrap .index_tl .left {
-    color: #161616;
-    padding-left: 13px;
-    border-left: 3px solid #e4935d;
-}
+/*.wrap .index_tl .left {*/
+    /*color: #161616;*/
+    /*padding-left: 13px;*/
+    /*border-left: 3px solid #e4935d;*/
+/*}*/
 
 .wrap .index_tl .right {
     background: #c00c0c;
