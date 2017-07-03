@@ -273,7 +273,7 @@
                     <li>
                         <a data-play_group_id="15"
                            href="<%=basePath%>ssc/gcdt/ffssc.html">
-                            <img src="${resPath}images/buy_22.png" />
+                            <img src="${resPath}images/buy11.png" />
                             <p>
                                 分分时时彩
                             </p>
@@ -287,7 +287,7 @@
                     </li>
                     <li>
                         <a data-play_group_id="1" href="<%=basePath%>ssc/gcdt/cqssc.html">
-                            <img src="${resPath}/images/buy_23.png" />
+                            <img src="${resPath}/images/buy_07.png" />
                             <p>
                                 重庆时时彩
                             </p>
@@ -301,7 +301,7 @@
                     </li>
                     <li>
                         <a data-play_group_id="9" href="<%=basePath%>ssc/gcdt/pk10.html">
-                            <img src="${resPath}/images/buy_23.png" />
+                            <img src="${resPath}/images/buy_09.png" />
                             <p>
                                 北京PK10
                             </p>
@@ -316,7 +316,7 @@
                     <li>
                         <a data-play_group_id="23"
                            href="<%=basePath%>ssc/gcdt/jspk10.html">
-                            <img src="${resPath}/images/buy28.png" />
+                            <img src="${resPath}/images/buy_16.png" />
                             <p>
                                 极速PK10
                             </p>
@@ -330,7 +330,7 @@
                     </li>
                     <li>
                         <a data-play_group_id="14" href="<%=basePath%>ssc/gcdt/xyft.html">
-                            <img src="${resPath}/images/buy_29.png" />
+                            <img src="${resPath}/images/buy_18.png" />
                             <p>
                                 幸运飞艇
                             </p>
@@ -342,25 +342,25 @@
                             </p>
                         </a>
                     </li>
-                    <li>
-                        <a data-play_group_id="20"
-                           href="<%=basePath%>ssc/gcdt/ahk3.html">
-                            <img src="${resPath}/images/buy_30.png" />
-                            <p>
-                                安徽快3
-                            </p>
-                            <p class="buydate buy_date12">
+                    <%--<li>--%>
+                        <%--<a data-play_group_id="20"--%>
+                           <%--href="<%=basePath%>ssc/gcdt/ahk3.html">--%>
+                            <%--<img src="${resPath}/images/buy_29.png" />--%>
+                            <%--<p>--%>
+                                <%--安徽快3--%>
+                            <%--</p>--%>
+                            <%--<p class="buydate buy_date12">--%>
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
-                                <span class="sec">00</span>
-                            </p>
-                        </a>
-                    </li>
+                                <%--<span class="hour">00</span>:--%>
+                                <%--<span class="mini">00</span>:--%>
+                                <%--<span class="sec">00</span>--%>
+                            <%--</p>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
                     <li>
                         <a data-play_group_id="19"
                            href="<%=basePath%>ssc/gcdt/hbk3.html">
-                            <img src="${resPath}/images/buy34.png" />
+                            <img src="${resPath}/images/buy_29.png" />
                             <p>
                                 湖北快3
                             </p>
@@ -374,7 +374,7 @@
                     </li>
                     <li>
                         <a data-play_group_id="3" href="<%=basePath%>ssc/gcdt/xjssc.html">
-                            <img src="${resPath}/images/buy_34.png" />
+                            <img src="${resPath}/images/buy34.png" />
                             <p>
                                 新疆时时彩
                             </p>
@@ -388,7 +388,7 @@
                     </li>
                     <li>
                         <a data-play_group_id="2" href="<%=basePath%>ssc/gcdt/tjssc.html">
-                            <img src="${resPath}/images/buy36.png" />
+                            <img src="${resPath}/images/buy_30.png" />
                             <p>
                                 天津时时彩
                             </p>
@@ -416,7 +416,7 @@
                     </li>
                     <li>
                         <a data-play_group_id="11" href="<%=basePath%>ssc/gcdt/klsf.html">
-                            <img src="${resPath}/images/buy_41.png" />
+                            <img src="${resPath}/images/buy_40.png" />
                             <p>
                                 广东快乐十分
                             </p>
@@ -430,7 +430,7 @@
                     </li>
                     <li>
                         <a data-play_group_id="7" href="<%=basePath%>ssc/gcdt/xy28.html">
-                            <img src="${resPath}/images/buy40.png" />
+                            <img src="${resPath}/images/buy_22.png" />
                             <p>
                                 幸运28
                             </p>
@@ -444,7 +444,7 @@
                     </li>
                     <li>
                         <a  data-play_group_id="8" href="<%=basePath%>ssc/gcdt/kl8.html">
-                            <img src="${resPath}/images/buy40.png" />
+                            <img src="${resPath}/images/buy_40.png" />
                             <p>
                                 北京快乐8
                             </p>
@@ -459,7 +459,7 @@
                     <li>
                         <a data-play_group_id="16"
                            href="<%=basePath%>ssc/gcdt/efssc.html">
-                            <img src="${resPath}/images/buy40.png" />
+                            <img src="${resPath}/images/buy28.png" />
                             <p>
                                 两分时时彩
                             </p>
@@ -473,7 +473,7 @@
                     </li>
                     <li>
                         <a data-play_group_id="13" href="<%=basePath%>ssc/gcdt/sfssc.html">
-                            <img src="${resPath}/images/buy40.png" />
+                            <img src="${resPath}/images/buy_23.png" />
                             <p>
                                 三分时时彩
                             </p>
@@ -488,7 +488,7 @@
                     <li>
                         <a data-play_group_id="17"
                            href="<%=basePath%>ssc/gcdt/wfssc.html">
-                            <img src="${resPath}/images/buy40.png" />
+                            <img src="${resPath}/images/buy_24.png" />
                             <p>
                                 五分时时彩
                             </p>
@@ -514,7 +514,7 @@
                 <ul class="buy_ul clearfix">
                     <li>
                         <a  data-play_group_id="6" href="<%=basePath%>ssc/gcdt/lhc.html">
-                            <img src="${resPath}images/buy_22.png"/>
+                            <img src="${resPath}images/buy1_16.png"/>
                             <p>
                                 香港六合彩
                             </p>
@@ -528,7 +528,7 @@
                     </li>
                     <li>
                         <a data-play_group_id="5" href="<%=basePath%>ssc/gcdt/fc3d.html">
-                            <img src="${resPath}images/buy_22.png"/>
+                            <img src="${resPath}images/buy_34.png"/>
                             <p>
                                 福彩3D
                             </p>
@@ -542,7 +542,7 @@
                     </li>
                     <li>
                         <a  data-play_group_id="4" href="<%=basePath%>ssc/gcdt/pl3.html">
-                            <img src="${resPath}images/buy_22.png"/>
+                            <img src="${resPath}images/buy36.png"/>
                             <p>
                                 体彩排列3
                             </p>

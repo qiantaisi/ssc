@@ -2850,9 +2850,9 @@ $(function () {
 
                     var tmpStr = "";
                     if (hour > 0) {
-                        tmpStr += '<span class="hour">' + (hour < 10 ? '0' + hour : hour) + '</span><font>:</font>';
+                        tmpStr += '<span class="hour">' + (hour < 10 ? '0' + hour : hour) + '</span><font>&nbsp;:&nbsp;</font>';
                     }
-                    tmpStr += '<span class="mini">' + (minute < 10 ? '0' + minute : minute) + '</span><font>:</font>';
+                    tmpStr += '<span class="mini">' + (minute < 10 ? '0' + minute : minute) + '</span><font>&nbsp;:&nbsp;</font>';
                     tmpStr += '<span class="sec">' + (second < 10 ? '0' + second : second) + '</span>';
                     $(obj).find(".buydate").html(tmpStr);
                 }
