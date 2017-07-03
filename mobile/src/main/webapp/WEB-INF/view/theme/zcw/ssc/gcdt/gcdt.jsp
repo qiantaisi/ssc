@@ -262,7 +262,7 @@
                 </ul>
             </div>
 
-            <div class="buy_main ">
+            <div class="buy_main gpcai">
                 <div class="index_tl">
 	     		<span>
 	     			高频彩
@@ -501,6 +501,59 @@
                         </a>
                     </li>
 
+                </ul>
+            </div>
+
+            <div class="buy_main dpcai">
+                <div class="index_tl">
+	     		<span>
+	     			低频彩
+	     		</span>
+                </div>
+
+                <ul class="buy_ul clearfix">
+                    <li>
+                        <a  data-play_group_id="6" href="<%=basePath%>ssc/gcdt/lhc.html">
+                            <img src="${resPath}images/buy_22.png"/>
+                            <p>
+                                香港六合彩
+                            </p>
+                            <p class="buydate buy_date1">
+
+                                <span class="hour">00</span>:
+                                <span class="mini">00</span>:
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-play_group_id="5" href="<%=basePath%>ssc/gcdt/fc3d.html">
+                            <img src="${resPath}images/buy_22.png"/>
+                            <p>
+                                福彩3D
+                            </p>
+                            <p class="buydate buy_date1">
+
+                                <span class="hour">00</span>:
+                                <span class="mini">00</span>:
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a  data-play_group_id="4" href="<%=basePath%>ssc/gcdt/pl3.html">
+                            <img src="${resPath}images/buy_22.png"/>
+                            <p>
+                                体彩排列3
+                            </p>
+                            <p class="buydate buy_date1">
+
+                                <span class="hour">00</span>:
+                                <span class="mini">00</span>:
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
