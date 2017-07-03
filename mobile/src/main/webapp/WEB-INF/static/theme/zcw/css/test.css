@@ -311,7 +311,10 @@
     color: #989898;
     overflow: hidden;
 }
-
+.zcw_main .zcw_cus_a div{
+    white-space:nowrap;
+    overflow: hidden;
+}
 
 
 /*主体*/
@@ -352,10 +355,13 @@
     display: block;
     font-size: 18px;
     color: #000;
+    white-space:nowrap;
+    overflow: hidden;
 }
 .zcw_content .dus_b{
     display: block;
     color: #989898;
+    white-space:nowrap;
     overflow: hidden;
 }
 .zcw_content {
