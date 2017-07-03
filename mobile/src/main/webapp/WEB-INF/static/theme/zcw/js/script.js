@@ -198,6 +198,19 @@ $(function () {
 
     // 登录页面
     $(document).on("pageInit", "#page-login", function (e, id, page) {
+        if (typeof initBottomNavIndex == 'function') {
+            initBottomNavIndex();
+        }
+
+        // 返回按钮
+        $(".head_back").click(function () {
+            if ($.config.router == true) {
+                $.router.back();
+            } else {
+                back();
+            }
+        });
+
         // 读取cookie中的用户名
         var account = Tools.getCookie("loginFormAccount");
         if (account) {
