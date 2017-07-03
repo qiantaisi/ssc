@@ -150,14 +150,16 @@
     border-radius: 50%;
     Vertical-aliagn: top;
     border: 0;
+    margin: 0;
 }
 
 /*注册页面*/
-.zcw-reg-main{
-    height: 86%;
-    overflow-y: scroll;
+#page-register{
     background: white;
-    padding-bottom: 7px;
+}
+.zcw-reg-main{
+    height: 81.6%;
+    overflow-y: scroll;
 }
 
 .form_text {

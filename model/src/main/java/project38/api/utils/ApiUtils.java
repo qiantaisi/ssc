@@ -243,6 +243,8 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_USER_LAST_INFO, paramsMap, companyShortName), UserLastInfoResult.class);
     }
 
+
+
     public static UserDepositListResult getDepositList(Long uid, String token, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type, String companyShortName) {
         if (IS_DEBUG) {
             return JSONUtils.toObject("{\"result\":1,\"description\":null,\"pageNum\":1,\"pageSize\":25,\"size\":1,\"total\":1,\"firstPage\":1,\"prePage\":0,\"nextPage\":0,\"lastPage\":1,\"hasPreviousPage\":false,\"hasNextPage\":false,\"navigatePages\":8,\"navigatepageNums\":[1],\"pageMoney\":111.000,\"totalMoney\":111.000,\"userDepositList\":[{\"orderNo\":\"2\",\"time\":1479982169000,\"type\":1,\"money\":111.000,\"remarks\":\"1\",\"status\":1}]}", UserDepositListResult.class);

@@ -186,6 +186,8 @@ public class MemberController extends BaseController {
         }
 
         modelMap.put("userLastInfo", ApiUtils.getUserLastInfo(uid, token,companyShortName));
+        modelMap.put("userLastGames", ApiUtils.getLatelyGames(uid, token,companyShortName));
+
         modelMap.put("logo", ApiUtils.getLogo(2,companyShortName));
         return this.renderPublicView("member/grzl/index", modelMap);
     }

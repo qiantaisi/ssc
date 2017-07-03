@@ -89,6 +89,19 @@ $(function () {
 
 // 注册页面
     $(document).on("pageInit", "#page-register", function (e, id, page) {
+        if (typeof initBottomNavIndex == 'function') {
+            initBottomNavIndex();
+        }
+
+        // 返回按钮
+        $(".head_back").click(function () {
+            if ($.config.router == true) {
+                $.router.back();
+            } else {
+                back();
+            }
+        });
+
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
