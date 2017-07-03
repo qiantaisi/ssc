@@ -14,8 +14,8 @@
 <div class="page-group re-bg-group">
     <div class="page page-current re-background" id="page-gcdt">
         <header class="bar bar-nav cl-1 recl-1">
-            <a href="javascript:void(0)" class="button button-link button-nav pull-left fanhui">
-                <span class="icon icon-left reicon"></span>
+            <a href="javascript:void(0)" class="fanhui head_back_gcdt">
+                <span>返回</span>
             </a>
             <h1 class="title reimg">
                 <%--<img src="${resPath}img/kaihead_06.png"/>--%>

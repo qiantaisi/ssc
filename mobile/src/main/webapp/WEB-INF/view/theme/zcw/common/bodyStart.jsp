@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="${bottomCssResPath}${themeBottomNav}/css/base-template.css?v=20170628"/>
     <link rel="stylesheet" href="${resPath}css/test.css"/>
     <link rel="stylesheet" href="${resPath}css/gcdt.css"/>
+    <link rel="stylesheet" type="text/css" href="${resPath}css/login-register.css">
 
     <jsp:include page="../../../public/common/customTheme.jsp" />
 </head>
