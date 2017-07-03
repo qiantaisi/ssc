@@ -124,6 +124,168 @@
                 <div class="index_tl">
                     <span class="left">全部彩种</span>
                 </div>
+                <div class="zcw_content">
+                    <div class="zcw_cus_a">
+                        <div class="cus_a">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_6.png"/>
+                                <div>
+                                    <span class="dus_a">重庆时时彩</span>
+                                    <span class="dus_b">百万用户的选择</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_7.png"/>
+                                <div>
+                                    <span class="dus_a">北京赛车</span>
+                                    <span class="dus_b">赚钱快10分满意</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="zcw_cus_a">
+                        <div class="cus_a">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_26.png"/>
+                                <div>
+                                    <span class="dus_a">分分时时彩</span>
+                                    <span class="dus_b">24小时在线玩</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_9.png"/>
+                                <div>
+                                    <span class="dus_a">极速PK10</span>
+                                    <span class="dus_b">中奖率高达99.99%</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="zcw_cus_a">
+                        <div class="cus_a">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_6.png"/>
+                                <div>
+                                    <span class="dus_a">重庆时时彩</span>
+                                    <span class="dus_b">百万用户的选择</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_7.png"/>
+                                <div>
+                                    <span class="dus_a">北京赛车</span>
+                                    <span class="dus_b">赚钱快10分满意</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="zcw_cus_a">
+                        <div class="cus_a">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_26.png"/>
+                                <div>
+                                    <span class="dus_a">分分时时彩</span>
+                                    <span class="dus_b">24小时在线玩</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_9.png"/>
+                                <div>
+                                    <span class="dus_a">极速PK10</span>
+                                    <span class="dus_b">中奖率高达99.99%</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="zcw_cus_a">
+                        <div class="cus_a">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_6.png"/>
+                                <div>
+                                    <span class="dus_a">重庆时时彩</span>
+                                    <span class="dus_b">百万用户的选择</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_7.png"/>
+                                <div>
+                                    <span class="dus_a">北京赛车</span>
+                                    <span class="dus_b">赚钱快10分满意</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="zcw_cus_a">
+                        <div class="cus_a">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_26.png"/>
+                                <div>
+                                    <span class="dus_a">分分时时彩</span>
+                                    <span class="dus_b">24小时在线玩</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_9.png"/>
+                                <div>
+                                    <span class="dus_a">极速PK10</span>
+                                    <span class="dus_b">中奖率高达99.99%</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="zcw_cus_a">
+                        <div class="cus_a">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_6.png"/>
+                                <div>
+                                    <span class="dus_a">重庆时时彩</span>
+                                    <span class="dus_b">百万用户的选择</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_7.png"/>
+                                <div>
+                                    <span class="dus_a">北京赛车</span>
+                                    <span class="dus_b">赚钱快10分满意</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="zcw_cus_a">
+                        <div class="cus_a">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_26.png"/>
+                                <div>
+                                    <span class="dus_a">分分时时彩</span>
+                                    <span class="dus_b">24小时在线玩</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a>
+                                <img src="${resPath}img/new_zcw/index1_9.png"/>
+                                <div>
+                                    <span class="dus_a">极速PK10</span>
+                                    <span class="dus_b">中奖率高达99.99%</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
