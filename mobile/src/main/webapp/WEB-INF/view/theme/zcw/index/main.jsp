@@ -49,34 +49,44 @@
 
             <div class="wrap">
                 <div class="daohang">
-                    <div class="daohang1">
-                        <a>
-                            <span>存款/提款</span>
-                            <img src="${resPath}img/new_zcw/index1_2.png"/>
-                        </a>
-                    </div>
-                    <div class="daohang1">
-                        <a>
-                            <span>投注记录</span>
-                            <img src="${resPath}img/new_zcw/index1_3.png"/>
-                        </a>
-                    </div>
-                    <div class="daohang1">
-                        <a>
-                            <span>优惠活动</span>
-                            <img src="${resPath}img/new_zcw/index1_4.png"/>
-                        </a>
-                    </div>
-                    <div class="daohang1">
-                        <a>
-                            <span>在线客服</span>
-                            <img src="${resPath}img/new_zcw/index1_5.png"/>
-                        </a>
-                    </div>
+                    <ul class="clearfix">
+                        <li>
+                            <a href="<%=basePath%>member/cqk/ck.html">
+                                <p>
+                                    存款/提款
+                                </p>
+                                <img src="${resPath}img/new_zcw/index1_2.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%=basePath%>member/tzjl/list.html">
+                                <p>
+                                    投注记录
+                                </p>
+                                <img src="${resPath}img/new_zcw/index1_3.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%=basePath%>yhhd.html">
+                                <p>
+                                    优惠活动
+                                </p>
+                                <img src="${resPath}img/new_zcw/index1_4.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<%=basePath%>kefu.html">
+                                <p>
+                                    在线客服
+                                </p>
+                                <img src="${resPath}img/new_zcw/index1_5.png" />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="index_tl">
                     <span class="left">热门彩种</span>
-                    <a class="right">免费试玩</a>
+                    <a href="javascript:void(0);" class="right shiwan_btn">免费试玩</a>
                 </div>
 
                 <div class="zcw_main">

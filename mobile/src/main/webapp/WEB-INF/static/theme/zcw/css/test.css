@@ -138,12 +138,12 @@
 }
 
 /*首页样式*/
-.daohang {
-    background: #ffffff;
-    height: 4.4rem;
-    width: 100%;
-    text-align: center;
-}
+/*.daohang {*/
+    /*background: #ffffff;*/
+    /*height: 4.4rem;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+/*}*/
 
 .daohang1 {
     float: left;
@@ -160,9 +160,9 @@
     height: 55px;
 }
 
-.daohang a span {
-    color: #000;
-}
+/*.daohang a span {*/
+    /*color: #000;*/
+/*}*/
 
 .wrap .index_tl {
     font-size: 18px;
@@ -286,7 +286,6 @@
     display: inline-block;
     float: left;
     padding:12px 0px;
-    /*border-right:1px solid #ebebeb;*/
 }
 .wrap .zcw_main .zcw_cus_a .cus_b{
     padding:12px 0px;
@@ -299,23 +298,30 @@
     float: left;
 }
 .wrap .zcw_main .zcw_cus_a a{
-    width:50%;
+    display: block;
+    border-right: 1px solid #ebebeb;
 }
 .zcw_main .dus_a{
     display: block;
     font-size: 18px;
     color: #000;
+    height: 26px;
+    line-height: 26px;
 }
 .zcw_main .dus_b{
     display: block;
     color: #989898;
+    height: 26px;
+    line-height: 26px;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 .zcw_main .zcw_cus_a div{
-    white-space:nowrap;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow:ellipsis;
-    border-right: 1.3px solid #ebebeb;
+    text-overflow: ellipsis;
+    padding-left: 8px;
 }
 
 
@@ -377,3 +383,53 @@
 .zcw_content .zcw_cus_a .cus_a div{
     border-right:1px solid #ebebeb;
 }
+
+/*重写导航样式*/
+.daohang {
+    background: #fff;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+.clearfix {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.daohang li {
+    float: left;
+    width: 25%;
+    list-style: none;
+    vertical-align: bottom;
+    padding: 0;
+    margin: 0;
+}
+
+.daohang li a {
+    display: block;
+    border-right: 1px solid #eee;
+    font-size: 14px;
+    color: #222222;
+    text-align: center;
+}
+
+.daohang li a p {
+    margin-bottom: 4px;
+    padding: 0;
+    margin: 0;
+}
+
+.daohang li a img {
+    max-width: 95px;
+    width: 50%;
+    vertical-align: middle;
+    Vertical-aliagn: top;
+    border: 0;
+}
+
+
+
+
+
+

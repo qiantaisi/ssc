@@ -359,13 +359,13 @@ $(function () {
             $("#navBar").scrollTop(0);
         });
 
-        //底部按钮选中状态
-        // $(".c1-101 .tab-item .re-icon-home").css("background-image", "url(" + CONFIG.RESURL + "img/footer2.png)");
-        // $(".c1-101 .tab-item .tab-indx").css("color", "red");
+        $(".shiwan_btn").click(function () {
+            shiwan();
+        });
 
         $(".sanjiao").hide();//隐藏所有三角号 系列彩种中
 
-        //0代表为隐藏 1为显示标签
+        //0代表为隐藏 1为显示标签avage
         $(".recl-7 .cl-row-5 .xl-select").click(function () {
             $(".xlcz").hide();
             $(".sanjiao").hide();
@@ -2755,6 +2755,31 @@ $(function () {
         if (typeof initBottomNavGcdt == 'function') {
             initBottomNavGcdt();
         }
+
+        //所彩种按钮
+        $(".buy_fenlei .allcai-btn").click(function(){
+            $(".buy_main").hide();
+            $(".allcai").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
+
+        //高频彩
+        $(".gpcai-btn").click(function(){
+            $(".buy_main").hide();
+            $(".gpcai").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
+
+        //低频彩
+        $(".dpcai-btn").click(function(){
+            $(".buy_main").hide();
+            $(".dpcai").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
+
 
         var flagArr = [];
         var flagEnableArr = [];

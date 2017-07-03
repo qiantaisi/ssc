@@ -25,15 +25,15 @@
         </header>
         <%--<c:import url="../../common/bottomNav2.jsp"/>--%>
         <c:import url="../../../../public/theme/common/bottomNav.jsp" />
-        <div class="content re-con-out bottom2">
+        <div class="content re-con-out bottom2 gcdt-content">
             <div class="buy_fenlei">
-                <a href="javascript:;" class="ahover">
+                <a href="javascript:void(0);" class="ahover allcai-btn">
                     全部分类
                 </a>
-                <a href="javascript:void(0);">
+                <a href="javascript:void(0);" class="gpcai-btn">
                     高频彩
                 </a>
-                <a href="javascript:void(0);">
+                <a href="javascript:void(0);" class="dpcai-btn">
                     低频彩
                 </a>
             </div>
@@ -72,7 +72,7 @@
             </div>
 
 
-            <div class="buy_main">
+            <div class="buy_main allcai">
                 <div class="index_tl">
 	     		<span>
 	     			全部种类
