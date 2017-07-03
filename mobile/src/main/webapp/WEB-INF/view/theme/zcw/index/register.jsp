@@ -49,12 +49,12 @@
                     请输入您的QQ
                 </p>
                 <input type="text" placeholder="QQ" />
-                <input type="button" value="注册" class="login_btn" />
+                <input type="button" value="注册" id="btn-register"/>
                 <div class="agree clearfix">
                     <div class="left agree_lf">
-                        我已阅读并同意<a href="#">彩票协议</a>
+                        我已阅读并同意<a href="javascript:void(0)">彩票协议</a>
                     </div>
-                    <a href="javascript:void(0)" class="right agree_rt">
+                    <a href="<%=basePath%>login.html" class="right agree_rt">
                         已有账号登录>
                     </a>
                 </div>
