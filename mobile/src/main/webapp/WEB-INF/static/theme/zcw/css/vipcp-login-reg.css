@@ -61,13 +61,28 @@
     font-size: 0.8rem;
     line-height: 0.8rem;
 }
+
+.head_back_gcdt{
+    display: inline-block;
+    background: url(../images/reg_03.png) no-repeat;
+    background-size: 13px 23px;
+    padding-left: 18px!important;
+    font-size: 14px!important;
+    line-height: 24px!important;
+    position: absolute;
+    left: 20px;
+    top: 13px!important;
+    z-index: 10;
+    color: #fff!important;
+}
+
 .bar-nav .reimg img{
     height: 45%;
     vertical-align: middle;
     width: 86px;
 }
 .bar-nav .reimg{
-    font-size: 18px;
+    font-size: 22px!important;
 }
 
 .page .vipcp .button, .page .vipcp .title {

@@ -1,3 +1,32 @@
+.head {
+    height: 50px;
+    background: #f42023;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.head_back {
+    display: inline-block;
+    background: url(../images/reg_03.png) no-repeat;
+    background-size: 13px 23px;
+    padding-left: 18px;
+    font-size: 14px;
+    line-height: 24px;
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    z-index: 10;
+    color: #fff;
+}
+
+.head_text {
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 22px;
+}
+
 .buy_fenlei {
     background: #fff;
     border-bottom: 1px solid #ebebeb;
