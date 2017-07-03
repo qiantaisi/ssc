@@ -12,7 +12,7 @@ public class MobileFgResult extends CommonResult {
 
     public static class MobileFg{
 
-        //顶部
+        //d顶部
         private String dingbu;
 
         //底部
@@ -29,7 +29,7 @@ public class MobileFgResult extends CommonResult {
 
         public String getDingbu() {
             return dingbu;
-        }
+        } 
 
         public void setDingbu(String dingbu) {
             this.dingbu = dingbu;
