@@ -151,3 +151,61 @@
     Vertical-aliagn: top;
     border: 0;
 }
+
+/*注册页面*/
+.zcw-reg-main{
+    height: 86%;
+    overflow-y: scroll;
+    background: white;
+    padding-bottom: 7px;
+}
+
+.form_text {
+    color: #999999;
+    margin-bottom: 5px!important;
+    margin-top: 10px!important;
+    padding: 0;
+    font-size: 12px!important;
+}
+
+.form_main #btn-register {
+    -webkit-appearance: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px;
+    border: none;
+    background: #e73030;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 8px rgba(253,9,9,.5);
+    -moz-box-shadow: 0px 2px 8px rgba(253,9,9,.5);
+    box-shadow: 0px 2px 8px rgba(253,9,9,.5);
+}
+
+.agree {
+    font-size: 14px;
+    color: #666666;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.agree_lf a {
+    color: #1a83d4;
+    text-decoration: underline;
+}
+
+.left{
+  float: left;
+}
+
+.agree_rt {
+    color: #c40d0d;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.right{
+    float: right;
+}
