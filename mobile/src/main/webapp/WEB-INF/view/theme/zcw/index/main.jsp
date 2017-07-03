@@ -130,8 +130,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_6.png"/>
                                 <div>
-                                    <span class="dus_a">重庆时时彩</span>
-                                    <span class="dus_b">百万用户的选择</span>
+                                    <span class="dus_a">香港六合彩</span>
+                                    <span class="dus_b">全网最高48.8倍</span>
                                 </div>
                             </a>
                         </div>
@@ -139,8 +139,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>
                                 <div>
-                                    <span class="dus_a">北京赛车</span>
-                                    <span class="dus_b">赚钱快10分满意</span>
+                                    <span class="dus_a">幸运飞艇</span>
+                                    <span class="dus_b">每5分钟一期</span>
                                 </div>
                             </a>
                         </div>
@@ -150,8 +150,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_26.png"/>
                                 <div>
-                                    <span class="dus_a">分分时时彩</span>
-                                    <span class="dus_b">24小时在线玩</span>
+                                    <span class="dus_a">PC蛋蛋</span>
+                                    <span class="dus_b">幸运28赢大奖</span>
                                 </div>
                             </a>
                         </div>
@@ -159,8 +159,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_9.png"/>
                                 <div>
-                                    <span class="dus_a">极速PK10</span>
-                                    <span class="dus_b">中奖率高达99.99%</span>
+                                    <span class="dus_a">三分时时彩</span>
+                                    <span class="dus_b">24小时在线玩</span>
                                 </div>
                             </a>
                         </div>
@@ -170,8 +170,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_6.png"/>
                                 <div>
-                                    <span class="dus_a">重庆时时彩</span>
-                                    <span class="dus_b">百万用户的选择</span>
+                                    <span class="dus_a">五分时时彩</span>
+                                    <span class="dus_b">24小时在线玩</span>
                                 </div>
                             </a>
                         </div>
@@ -179,8 +179,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>
                                 <div>
-                                    <span class="dus_a">北京赛车</span>
-                                    <span class="dus_b">赚钱快10分满意</span>
+                                    <span class="dus_a">两分时时彩</span>
+                                    <span class="dus_b">全天在线可玩</span>
                                 </div>
                             </a>
                         </div>
@@ -190,8 +190,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_26.png"/>
                                 <div>
-                                    <span class="dus_a">分分时时彩</span>
-                                    <span class="dus_b">24小时在线玩</span>
+                                    <span class="dus_a">安徽快3</span>
+                                    <span class="dus_b">每10分钟一期</span>
                                 </div>
                             </a>
                         </div>
@@ -199,8 +199,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_9.png"/>
                                 <div>
-                                    <span class="dus_a">极速PK10</span>
-                                    <span class="dus_b">中奖率高达99.99%</span>
+                                    <span class="dus_a">湖北快3</span>
+                                    <span class="dus_b">每10分钟一期</span>
                                 </div>
                             </a>
                         </div>
@@ -210,8 +210,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_6.png"/>
                                 <div>
-                                    <span class="dus_a">重庆时时彩</span>
-                                    <span class="dus_b">百万用户的选择</span>
+                                    <span class="dus_a">天津时时彩</span>
+                                    <span class="dus_b">每10分钟一期</span>
                                 </div>
                             </a>
                         </div>
@@ -219,8 +219,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>
                                 <div>
-                                    <span class="dus_a">北京赛车</span>
-                                    <span class="dus_b">赚钱快10分满意</span>
+                                    <span class="dus_a">新疆时时彩</span>
+                                    <span class="dus_b">每10分钟一期</span>
                                 </div>
                             </a>
                         </div>
@@ -230,8 +230,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_26.png"/>
                                 <div>
-                                    <span class="dus_a">分分时时彩</span>
-                                    <span class="dus_b">24小时在线玩</span>
+                                    <span class="dus_a">福彩3D</span>
+                                    <span class="dus_b">每天08:30</span>
                                 </div>
                             </a>
                         </div>
@@ -239,8 +239,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_9.png"/>
                                 <div>
-                                    <span class="dus_a">极速PK10</span>
-                                    <span class="dus_b">中奖率高达99.99%</span>
+                                    <span class="dus_a">体育排列3</span>
+                                    <span class="dus_b">每天08:30</span>
                                 </div>
                             </a>
                         </div>
@@ -250,8 +250,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_6.png"/>
                                 <div>
-                                    <span class="dus_a">重庆时时彩</span>
-                                    <span class="dus_b">百万用户的选择</span>
+                                    <span class="dus_a">北京快乐8</span>
+                                    <span class="dus_b">每5分钟一期</span>
                                 </div>
                             </a>
                         </div>
@@ -259,8 +259,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>
                                 <div>
-                                    <span class="dus_a">北京赛车</span>
-                                    <span class="dus_b">赚钱快10分满意</span>
+                                    <span class="dus_a">重庆幸运农场</span>
+                                    <span class="dus_b">白天10点到凌晨2点</span>
                                 </div>
                             </a>
                         </div>
@@ -270,8 +270,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_26.png"/>
                                 <div>
-                                    <span class="dus_a">分分时时彩</span>
-                                    <span class="dus_b">24小时在线玩</span>
+                                    <span class="dus_a">广东快乐十分</span>
+                                    <span class="dus_b">每10分钟一期</span>
                                 </div>
                             </a>
                         </div>
@@ -279,8 +279,8 @@
                             <a>
                                 <img src="${resPath}img/new_zcw/index1_9.png"/>
                                 <div>
-                                    <span class="dus_a">极速PK10</span>
-                                    <span class="dus_b">中奖率高达99.99%</span>
+                                    <span class="dus_a">更多</span>
+                                    <span class="dus_b">查看全部彩种</span>
                                 </div>
                             </a>
                         </div>
