@@ -285,11 +285,11 @@
     height:3.5rem;
     display: inline-block;
     float: left;
-    padding:10px 0px;
-    border-right:1px solid #ebebeb;
+    padding:12px 0px;
+    /*border-right:1px solid #ebebeb;*/
 }
 .wrap .zcw_main .zcw_cus_a .cus_b{
-    padding:10px 0px;
+    padding:12px 0px;
     width:50%;
     height:3.5rem;
     display: inline-block;
@@ -315,6 +315,7 @@
     white-space:nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
+    border-right: 1.3px solid #ebebeb;
 }
 
 
@@ -336,11 +337,11 @@
     height:3.5rem;
     display: inline-block;
     float: left;
-    padding:9px 0px;
-    border-right:1px solid #ebebeb;
+    padding:13px 0px;
+    /*border-right:1px solid #ebebeb;*/
 }
 .wrap .zcw_content .zcw_cus_a .cus_b{
-    padding:9px 0px;
+    padding:13px 0px;
     width:50%;
     height:3.5rem;
     display: inline-block;
@@ -372,4 +373,7 @@
     height:28rem;
     width:100%;
     border-top:1px solid #ebebeb;
+}
+.zcw_content .zcw_cus_a .cus_a div{
+    border-right:1px solid #ebebeb;
 }
