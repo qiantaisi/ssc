@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import project38.api.common.ApiConstant;
 import project38.api.common.result.CommonResult;
 import project38.api.common.utils.HttpUtils;
 import project38.api.common.utils.JSONUtils;
 import org.apache.commons.collections.map.HashedMap;
 import org.apache.commons.lang3.time.DateFormatUtils;
-import project38.api.common.ApiConstant;
 import project38.api.result.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -1236,4 +1236,12 @@ public class ApiUtils{
         paramsMap.put("playGroupId", playGroupId);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_LATEST_OPEN_TIME_LIST, paramsMap, companyShortName), SscOpenTimeListResult.class);
     }
+
+    public static MobileFgResult getMobileFg(String companyShortName) {
+        if (IS_DEBUG) {
+            return new MobileFgResult();
+        }
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_MOBILE_GET_FG, null, companyShortName), MobileFgResult.class);
+    }
+
 }

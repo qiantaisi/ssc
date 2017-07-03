@@ -117,4 +117,6 @@ public class ApiConstant {
     public static String API_SSC_GET_SSC_PLAY_PL_GFWF = API_DOMAIN + "ssc/getSscPlayPl_gfwf.json"; // 官方玩法赔率
     public static String API_SSC_GET_LATEST_OPEN_TIME_LIST = API_DOMAIN + "ssc/getLatestOpenTimeList.json"; // 最近最新开奖时间
 
+    public static String API_MOBILE_GET_FG = API_DOMAIN + "webSetting/getMobileFg.json"; //获取手机顶部底部风格
+
 }
