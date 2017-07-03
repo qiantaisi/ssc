@@ -153,6 +153,13 @@
 }
 
 /*注册页面*/
+.zcw-reg-main{
+    height: 86%;
+    overflow-y: scroll;
+    background: white;
+    padding-bottom: 7px;
+}
+
 .form_text {
     color: #999999;
     margin-bottom: 5px!important;

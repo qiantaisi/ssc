@@ -14,7 +14,8 @@
             <a href="javascript:void(0)" class="head_back"><span>返回</span></a>
             <span class="head_text">注册</span>
         </div>
-        <div class="main z">
+        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
+        <div class="main zcw-reg-main">
             <div class="ny_logo">
                 <img src="${resPath}images/reg_07.png" />
             </div>
@@ -23,19 +24,19 @@
                 <p class="form_text">
                     字母开头的6-12位字母数字组成的用户名
                 </p>
-                <input type="text" placeholder="账号" />
+                <input type="text" placeholder="账号" name="account" />
                 <p class="form_text">
                     请输入6-12位字母、数字的密码
                 </p>
-                <input type="password" placeholder="密码" />
+                <input type="password" placeholder="密码" name="password" />
                 <p class="form_text">
                     与上面输入密码必须保持一致
                 </p>
-                <input type="password" placeholder="确认密码" />
+                <input type="password" placeholder="确认密码" name="confirmPassword" />
                 <p class="form_text">
                     姓名必须和绑定的银行卡户名一致
                 </p>
-                <input type="text" placeholder="姓名" />
+                <input type="text" placeholder="姓名" name="name" />
                 <p class="form_text">
                     请输入您的手机
                 </p>
