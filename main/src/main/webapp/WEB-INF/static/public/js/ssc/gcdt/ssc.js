@@ -54,19 +54,19 @@ function closeClearBetTemplate(isReset) {
         clearInterval(T);
         T = null;
     }
-    if (layerId != null) {
+    if (typeof layerId != 'undefined' && layerId != null) {
         layer.close(layerId);
         layerId = null;
     }
-    if (layerInfo != null) {
+    if (typeof layerInfo != 'undefined' && layerInfo != null) {
         layer.close(layerInfo);
         layerInfo = null;
     }
-    if (layerTishi1 != null) {
+    if typeof layerTishi1 != 'undefined' && layerTishi1 != null) {
         layer.close(layerTishi1);
         layerTishi1 = null;
     }
-    if (layerTishi2 != null) {
+    if (typeof layerTishi2 != 'undefined' && layerTishi2 != null) {
         layer.close(layerTishi2);
         layerTishi2 = null;
     }
