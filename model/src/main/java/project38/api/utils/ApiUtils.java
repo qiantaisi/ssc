@@ -1244,4 +1244,14 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_MOBILE_GET_FG, null, companyShortName), MobileFgResult.class);
     }
 
+    public static LatelyGameResult getLatelyGames(Long uid, String token, String companyShortName) {
+        if (IS_DEBUG) {
+            return new LatelyGameResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("uid", uid);
+        paramsMap.put("token", token);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_LATElYGAMES, paramsMap, companyShortName), LatelyGameResult.class);
+    }
+
 }
