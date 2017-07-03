@@ -2730,99 +2730,10 @@ $(function () {
             initBottomNavGcdt();
         }
 
-        $(".re-con-out .btn-xl-ssc").click(function () {
-            var sp = $(".ssc-div-content").attr("sp");
-            if (sp == 0) {
-                $(".ssc-div-content").hide();
-                $(".ssc-div-content").attr("sp", "1");
-                $(".btn-xl-ssc .img_jian").addClass("goucai_sj");
-
-            } else if (sp == 1) {
-                $(".ssc-div-content").show();
-                $(".ssc-div-content").attr("sp", "0");
-                $(".btn-xl-ssc .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".re-con-out .btn-xl-k3").click(function () {
-            var sp = $(".k3-div-content").attr("sp");
-            if (sp == 0) {
-                $(".k3-div-content").hide();
-                $(".k3-div-content").attr("sp", "1");
-                $(".btn-xl-k3 .img_jian").addClass("goucai_sj");
-
-            } else if (sp == 1) {
-                $(".k3-div-content").show();
-                $(".k3-div-content").attr("sp", "0");
-                $(".btn-xl-k3 .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".re-con-out .btn-xl-pk10").click(function () {
-            var sp = $(".pk10-div-content").attr("sp");
-            if (sp == 0) {
-                $(".pk10-div-content").hide();
-                $(".pk10-div-content").attr("sp", "1");
-                $(".btn-xl-pk10 .img_jian").addClass("goucai_sj");
-
-            } else if (sp == 1) {
-                $(".pk10-div-content").show();
-                $(".pk10-div-content").attr("sp", "0");
-                $(".btn-xl-pk10 .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".re-con-out .btn-xl-gp").click(function () {
-            var sp = $(".gp-div-content").attr("sp");
-            if (sp == 0) {
-                $(".gp-div-content").hide();
-                $(".gp-div-content").attr("sp", "1");
-                $(".btn-xl-gp .img_jian").addClass("goucai_sj");
-
-            } else if (sp == 1) {
-                $(".gp-div-content").show();
-                $(".gp-div-content").attr("sp", "0");
-                $(".btn-xl-gp .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".re-con-out .btn-xl-dp").click(function () {
-            var sp = $(".dp-div-content").attr("sp");
-            if (sp == 0) {
-                $(".dp-div-content").hide();
-                $(".dp-div-content").attr("sp", "1");
-                $(".btn-xl-dp .img_jian").addClass("goucai_sj");
-
-            } else if (sp == 1) {
-                $(".dp-div-content").show();
-                $(".dp-div-content").attr("sp", "0");
-                $(".btn-xl-dp .img_jian").removeClass("goucai_sj");
-            }
-        });
-
-        $(".c1-101 .tab-item .icon-gc").css("background-image", "url(" + CONFIG.RESURL + "img/footer_100.png)");
-        $(".c1-101 .tab-item .tab-gcdt").css("color", "red");
-        // // 公告滚动
-        // var mySwiper = new Swiper('.swiper-container', {
-        //     pagination: '.swiper-pagination',
-        //     autoplay: 2000,
-        //     direction: 'vertical'
-        // });
-        //
-        // $(".cl-4 .swiper-container .swiper-wrapper .swiper-slide").click(function () {
-        //     layer.open({
-        //         title: [
-        //             $(this).attr("data-title") + '<a href="javascript:void(0)" onclick="layer.closeAll()" style="float:right;color: #fff;">X</a>',
-        //             ''
-        //         ]
-        //         , content: $(this).attr("data-content")
-        //     });
-        // });
-
         var flagArr = [];
         var flagEnableArr = [];
         setInterval(function () {
-            $(".gcdtList a").each(function () {
+            $(".buy_main .buy_ul li a").each(function () {
                 var obj = $(this);
                 var time = $(this).attr("data-time");
                 var playGroupId = $(obj).attr("data-play_group_id");
@@ -2860,12 +2771,11 @@ $(function () {
 
                                 if (json.opening == false) {
                                     flagArr[playGroupId] = false;
-                                    $(obj).find(".jc").html("<span class='goucai_biaoqian'>停售</span>");
+                                    $(obj).find(".buydate").html("<span class='goucai_biaoqian'>停售</span>");
                                     return;
                                 }
 
                                 $(obj).attr("data-time", json.leftTime);
-                                $(obj).find(".info").html(json.opening ? "<font style='color:#fa6200'>距离下期</font>" : "<font style='color:#ec1818'>距离开奖</font>");
                             },
                             error: function (a, b, c) {
                             },
@@ -2889,52 +2799,16 @@ $(function () {
 
                     var tmpStr = "";
                     if (hour > 0) {
-                        tmpStr += '<i>' + (hour < 10 ? '0' + hour : hour) + '</i><font>:</font>';
+                        tmpStr += '<span class="hour">' + (hour < 10 ? '0' + hour : hour) + '</span><font>:</font>';
                     }
-                    tmpStr += '<i>' + (minute < 10 ? '0' + minute : minute) + '</i><font>:</font>';
-                    tmpStr += '<i>' + (second < 10 ? '0' + second : second) + '</i>';
-                    $(obj).find(".time").html(tmpStr);
+                    tmpStr += '<span class="mini">' + (minute < 10 ? '0' + minute : minute) + '</span><font>:</font>';
+                    tmpStr += '<span class="sec">' + (second < 10 ? '0' + second : second) + '</span>';
+                    $(obj).find(".buydate").html(tmpStr);
                 }
-                var updateTime = $(obj).attr("data-update_time");
+
             });
         }, 1000);
 
-        // function getPidEnable(pidParam, callback){
-        //     ajaxRequest({
-        //          url: config.basePath + "ssc/getSscOpenTime2.json",
-        //          data: {
-        //             playGroupId:pidParam
-        //          },
-        //          success: function (json) {
-        //              if(json.result != -888){ //彩种未关闭
-        //                  return;
-        //              }
-        //
-        //              if(typeof callback == 'function'){
-        //                 callback();
-        //              }
-        //          }
-        //      });
-        //
-        //
-        //
-        //     // ajaxRequest({
-        //     //     url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
-        //     //     data: {
-        //     //         playGroupId: playGroupId
-        //     //     },
-        //     //     success: function(json) {
-        //     //         if (json.result == -888) {  // 彩种已关闭
-        //     //             $("#rightContent").attr("src", '<%=basePath%>ssc/tingcaipage.html');
-        //     //             return;
-        //     //         }
-        //     //
-        //     //         if (typeof callback == 'function') {
-        //     //             callback();
-        //     //         }
-        //     //     }
-        //     // });
-        // }
     });
 
     $(document).on("pageInit", "#page-grzl-index", function (e, id, page) {
@@ -5118,6 +4992,8 @@ $(function () {
         $(".cl-602 a").eq(0).trigger("click");
         $(".cl-610 a").eq(0).trigger("click");
     });
+
+
 
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-list", function (e, id, page) {
