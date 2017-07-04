@@ -167,6 +167,22 @@ public class MemberController extends BaseController {
         return this.renderPublicView("member/index", modelMap);
     }
 
+
+//    /**
+//     * 开奖状态
+//     * @return
+//     */
+//    @RequestMapping(value = "/statsKj.json", method = RequestMethod.GET)
+//    @ResponseBody
+//    public String kjstatus(Long id) throws Exception {
+//        String companyShortName = this.getCompanyShortName();
+//        CommonResult result = ApiUtils.getTodayIsOpen(id, companyShortName);
+//        if(null != result && result.getResult() == 1){
+//            return "1";
+//        }
+//        return "0";
+//    }
+
     /**
      * 个人资料
      *

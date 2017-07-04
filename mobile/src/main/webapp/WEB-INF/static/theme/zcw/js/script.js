@@ -108,6 +108,8 @@ $(function () {
             var phone = $("input[name='phone']").val();   // 手机号码
             var email = $("input[name='email']").val();   // 邮箱号码
             var qq = $("input[name='qq']").val();   // QQ
+            console.log(qq+"------------");
+
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
             var name = $("input[name='name']").val();   // 姓名
 
@@ -171,7 +173,7 @@ $(function () {
                 registerUser(account, password, name, info);
             }
 
-            registerUser(account, password, name, Tools.getCookie("deviceNo"));
+            registerUser(account, password, name, Tools.getCookie("deviceNo"), phone, email, qq);
         });
 
         function registerUser(account, password, name, deviceNo, phone, email, qq) {
@@ -374,6 +376,31 @@ $(function () {
         if (typeof initBottomNavIndex == 'function') {
             initBottomNavIndex();
         }
+
+        // ajaxRequest({
+        //     url: config.basePath + "member/statsKj.json",
+        //     data: {
+        //         id: 1
+        //     },
+        //     success: function (json) {
+        //         if (json == 1) {
+        //             return;
+        //         }
+        //         console.log(json + "------------------");
+        //
+        //     },
+        //     error: function (a, b, c) {
+        //         if (b == 'timeout') {
+        //             Tools.toast("操作超时，请稍后重试");
+        //             return;
+        //         }
+        //
+        //         Tools.toast("请求错误，请稍后重试");
+        //     },
+        //     complete: function () {
+        //         Tools.hideLoading();
+        //     }
+        // });
 
         // 置顶按钮
         $(".top-click").click(function () {
