@@ -22,7 +22,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/*")
-public class IndexController extends BaseController{
+public class IndexController extends BaseController {
     private static Log log = LogFactory.getLog(IndexController.class);
 
     @Autowired
@@ -32,7 +32,7 @@ public class IndexController extends BaseController{
     @ResponseBody
     public WebInfoResult ajaxGetWebInfo() {
         String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getWebInfo(1,companyShortName);
+        return ApiUtils.getWebInfo(1, companyShortName);
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
@@ -46,7 +46,7 @@ public class IndexController extends BaseController{
         modelMap.put("webDescription", webInfoResult.getWebDescription());
         modelMap.put("webTjjs", webInfoResult.getWebTjjs());
         modelMap.put("icoData", ApiUtils.getLogo(4, companyShortName));
-        modelMap.put("webName",webInfoResult.getWebName());
+        modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("index/index", modelMap);
     }
 
@@ -57,11 +57,11 @@ public class IndexController extends BaseController{
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
-        modelMap.put("carouseList", ApiUtils.getCarouselList(true, 2,companyShortName));
+        modelMap.put("carouseList", ApiUtils.getCarouselList(true, 2, companyShortName));
         modelMap.put("serverTime", ApiUtils.getServerTime(companyShortName).getServerTime());
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        modelMap.put("webName",webInfoResult.getWebName());
+        modelMap.put("webName", webInfoResult.getWebName());
 
 //      modelMap.put("userInboxResult", ApiUtils.getUserInboxList(uid, token, null, null, null, 0, 2));
         return this.renderView("index/main", modelMap);
@@ -104,7 +104,7 @@ public class IndexController extends BaseController{
     public ModelAndView yhhd() {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("promotionList", ApiUtils.getPromotion(companyShortName).getPromotionList());
@@ -119,7 +119,7 @@ public class IndexController extends BaseController{
         String companyShortName = this.getCompanyShortName();
         LoginResult loginResult = new LoginResult();
         try {
-            return ApiUtils.memberShiwanLogin(IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), 2,companyShortName);
+            return ApiUtils.memberShiwanLogin(IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), 2, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             loginResult.setResult(-100);

@@ -10,6 +10,11 @@
     String pcHostName = request.getScheme() + "://" + "www." + request.getServerName().replace("m.", "").replace("www.", "");
 %>
 <c:import url="../common/bodyStart.jsp"/>
+<style>
+    .kj{display:block;position:relative;}
+    .wrap .kj img{right:0;}
+    .wrap .zcw_main .zcw_cus_a .cus_a,.wrap .zcw_main .zcw_cus_a .cus_b{position:relative;}
+</style>
 <div class="page-group">
     <div class="page page-current re-bg" id="page-index">
         <c:import url="../../../public/theme/common/headNav.jsp"/>
@@ -104,10 +109,10 @@
 
                 <div class="zcw_main">
                     <div class="zcw_cus_a">
-                        <em class="kj">
-                            <img src="${resPath}img/new_zcw/jrkj.png"/>
-                        </em>
                         <div class="cus_a">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="1" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/cqssc.html">
                                 <img src="${resPath}img/new_zcw/index1_6.png"/>
                                 <div>
@@ -117,6 +122,9 @@
                             </a>
                         </div>
                         <div class="cus_b">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="9" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/pk10.html">
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>
                                 <div>
@@ -128,6 +136,9 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="23" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/ffssc.html">
                                 <img src="${resPath}img/new_zcw/index1_26.png"/>
                                 <div>
@@ -137,6 +148,9 @@
                             </a>
                         </div>
                         <div class="cus_b">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="23" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/jspk10.html">
                                 <img src="${resPath}img/new_zcw/index1_9.png"/>
                                 <div>
