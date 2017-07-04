@@ -20,6 +20,24 @@
         <c:import url="../../../public/theme/common/headNav.jsp"/>
         <c:import url="../../../public/theme/common/bottomNav.jsp"/>
 
+            <div class="block_home_slider">
+                <div id="home_slider" class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img src="${resPath}images/banner_02.jpg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img src="${resPath}images/banner_02.jpg" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
         <div class="content content-img content-vipvp tex_bottom bottom2 top2" id="navBar"> <%--内容主体--%>
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
@@ -332,7 +350,7 @@
                 <div class="gg">
                     <img src="${resPath}img/new_zcw/gg.png" class="left"/>
                     <div    class="gg_nr">
-                        <marquee direction="up" behavior="scroll" scrollamount="3" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
+                        <marquee direction="up" behavior="scroll" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                             <c:forEach items="${Notices.noticeList}" var="noticelists">
                                 <li class="clearfix">
                                     <span class="left gongxi">恭喜</span>
