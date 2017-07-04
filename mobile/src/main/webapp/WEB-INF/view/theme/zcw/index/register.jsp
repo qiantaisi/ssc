@@ -40,15 +40,15 @@
                 <p class="form_text">
                     请输入您的手机
                 </p>
-                <input type="text" placeholder="手机"/>
+                <input type="text" placeholder="手机" name="phone"/>
                 <p class="form_text">
                     请输入您的邮箱
                 </p>
-                <input type="text" placeholder="邮箱"/>
+                <input type="text" placeholder="邮箱" name="email"/>
                 <p class="form_text">
                     请输入您的QQ
                 </p>
-                <input type="text" placeholder="QQ"/>
+                <input type="text" placeholder="QQ" name="qq"/>
                 <input type="button" value="注册" id="btn-register"/>
                 <div class="agree clearfix">
                     <div class="left agree_lf">
