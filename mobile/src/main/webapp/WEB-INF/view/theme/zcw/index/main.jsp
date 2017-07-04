@@ -111,11 +111,11 @@
 
                 <div class="zcw_main">
                     <div class="zcw_cus_a">
-                        <div class="cus_a">
-                            <c:import url="../common/mainKj.jsp">
-                                <c:param name="playGroupId" value="1" />
-                            </c:import>
+                        <div class="cus_a rekj">
                             <a href="<%=basePath%>ssc/gcdt/cqssc.html">
+                                <c:import url="../common/mainKj.jsp">
+                                    <c:param name="playGroupId" value="1" />
+                                </c:import>
                                 <img src="${resPath}img/new_zcw/index1_6.png"/>
                                 <div>
                                     <span class="dus_a">重庆时时彩</span>
@@ -123,10 +123,10 @@
                                 </div>
                             </a>
                         </div>
+                        <c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="9" />
+                        </c:import>
                         <div class="cus_b">
-                            <c:import url="../common/mainKj.jsp">
-                                <c:param name="playGroupId" value="9" />
-                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/pk10.html">
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>
                                 <div>
@@ -137,7 +137,7 @@
                         </div>
                     </div>
                     <div class="zcw_cus_a">
-                        <div class="cus_a">
+                        <div class="cus_a rekj">
                             <c:import url="../common/mainKj.jsp">
                                 <c:param name="playGroupId" value="23" />
                             </c:import>
@@ -149,10 +149,10 @@
                                 </div>
                             </a>
                         </div>
+                        <c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="23" />
+                        </c:import>
                         <div class="cus_b">
-                            <c:import url="../common/mainKj.jsp">
-                                <c:param name="playGroupId" value="23" />
-                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/jspk10.html">
                                 <img src="${resPath}img/new_zcw/index1_9.png"/>
                                 <div>
@@ -168,7 +168,10 @@
                 </div>
                 <div class="zcw_content">
                     <div class="zcw_cus_a">
-                        <div class="cus_a">
+                        <div class="cus_a rekj">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="6" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/lhc.html">
                                 <img src="${resPath}img/new_zcw/index1_10.png"/>
                                 <div>
@@ -177,6 +180,9 @@
                                 </div>
                             </a>
                         </div>
+                        <c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="14" />
+                        </c:import>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/xyft.html">
                                 <img src="${resPath}img/new_zcw/index1_11.png"/>
@@ -188,7 +194,10 @@
                         </div>
                     </div>
                     <div class="zcw_cus_a">
-                        <div class="cus_a">
+                        <div class="cus_a rekj">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="7" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/xy28.html">
                                 <img src="${resPath}img/new_zcw/index1_25.png"/>
                                 <div>
@@ -197,6 +206,9 @@
                                 </div>
                             </a>
                         </div>
+                        <c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="13" />
+                        </c:import>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/sfssc.html">
                                 <img src="${resPath}img/new_zcw/index1_12.png"/>
@@ -208,7 +220,10 @@
                         </div>
                     </div>
                     <div class="zcw_cus_a">
-                        <div class="cus_a">
+                        <div class="cus_a rekj">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="17" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/wfssc.html">
                                 <img src="${resPath}img/new_zcw/index1_13.png"/>
                                 <div>
@@ -217,6 +232,9 @@
                                 </div>
                             </a>
                         </div>
+                        <c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="16" />
+                        </c:import>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/efssc.html">
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>
@@ -228,7 +246,10 @@
                         </div>
                     </div>
                     <div class="zcw_cus_a">
-                        <div class="cus_a">
+                        <div class="cus_a rekj">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="20" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/ahk3.html">
                                 <img src="${resPath}img/new_zcw/index1_15.png"/>
                                 <div>
@@ -237,6 +258,9 @@
                                 </div>
                             </a>
                         </div>
+                        <c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="19" />
+                        </c:import>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/hbk3.html">
                                 <img src="${resPath}img/new_zcw/index1_16.png"/>
@@ -248,10 +272,10 @@
                         </div>
                     </div>
                     <div class="zcw_cus_a">
-                        <em class="kj">
-                            <img src="${resPath}img/new_zcw/jrkj.png"/>
-                        </em>
-                        <div class="cus_a">
+                        <div class="cus_a rekj">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="2" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/tjssc.html">
                                 <img src="${resPath}img/new_zcw/index1_17.png"/>
                                 <div>
@@ -260,6 +284,9 @@
                                 </div>
                             </a>
                         </div>
+                        <c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="3" />
+                        </c:import>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/xjssc.html">
                                 <img src="${resPath}img/new_zcw/index1_18.png"/>
@@ -271,7 +298,10 @@
                         </div>
                     </div>
                     <div class="zcw_cus_a">
-                        <div class="cus_a">
+                        <div class="cus_a rekj">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="5" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/fc3d.html">
                                 <img src="${resPath}img/new_zcw/index1_19.png"/>
                                 <div>
@@ -280,6 +310,9 @@
                                 </div>
                             </a>
                         </div>
+                        <c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="4" />
+                        </c:import>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/pl3.html">
                                 <img src="${resPath}img/new_zcw/index1_20.png"/>
@@ -291,7 +324,10 @@
                         </div>
                     </div>
                     <div class="zcw_cus_a">
-                        <div class="cus_a">
+                        <div class="cus_a rekj">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="8" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/kl8.html">
                                 <img src="${resPath}img/new_zcw/index1_21.png"/>
                                 <div>
@@ -300,6 +336,9 @@
                                 </div>
                             </a>
                         </div>
+                        <c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="10" />
+                        </c:import>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/xync.html">
                                 <img src="${resPath}img/new_zcw/index1_22.png"/>
@@ -311,7 +350,10 @@
                         </div>
                     </div>
                     <div class="zcw_cus_a">
-                        <div class="cus_a">
+                        <div class="cus_a rekj">
+                            <c:import url="../common/mainKj.jsp">
+                                <c:param name="playGroupId" value="11" />
+                            </c:import>
                             <a href="<%=basePath%>ssc/gcdt/klsf.html">
                                 <img src="${resPath}img/new_zcw/index1_23.png"/>
                                 <div>

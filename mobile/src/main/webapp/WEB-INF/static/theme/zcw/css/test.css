@@ -461,6 +461,9 @@
     right:50%;
     height:53px;
 }
+.wrap .rekj img{
+    top: -0.65rem;
+}
 .left{
     float:left;
 }
