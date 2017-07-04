@@ -17,7 +17,7 @@
         </li>
         <li>
             <%--<a href="<%=basePath%>ssc/gcdt/index.html" target="_blank">--%>
-            <a href="<%=basePath%>ssc/index.html" target="_blank">
+            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')" target="_blank">
                 <img src="${resPath}img/ico34.png" alt="购彩大厅">
                 <p>购彩大厅</p>
             </a>
@@ -35,7 +35,7 @@
             </a>
         </li>
         <li>
-            <a href="javascript:void(0)" onclick="openHyzx('jfmx/hylb')">
+            <a href="javascript:void(0)" onclick="openHyzx('member/jfmx.html?module=hylb')">
                 <img src="${resPath}img/ico37.png" alt="">
                 <p>代理合作</p>
             </a>

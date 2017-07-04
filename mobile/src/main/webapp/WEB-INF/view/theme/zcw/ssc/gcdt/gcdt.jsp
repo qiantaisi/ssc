@@ -57,8 +57,8 @@
                                             </p>
                                             <p class="buydate buy_date1">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -74,8 +74,8 @@
                                             </p>
                                             <p class="buydate buy_date1">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -91,8 +91,8 @@
                                             </p>
                                             <p class="buydate buy_date8">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -127,8 +127,8 @@
                                             </p>
                                             <p class="buydate buy_date10">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -145,8 +145,8 @@
                                             </p>
                                             <p class="buydate buy_date11">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -163,8 +163,8 @@
                                             </p>
                                             <p class="buydate buy_date12">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -181,8 +181,8 @@
                                             </p>
                                             <p class="buydate buy_date13">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -199,8 +199,8 @@
                                             </p>
                                             <p class="buydate buy_date15">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -217,8 +217,8 @@
                                             </p>
                                             <p class="buydate buy_date14">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -234,8 +234,8 @@
                                             </p>
                                             <p class="buydate buy_date1">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -252,8 +252,8 @@
                                             </p>
                                             <p class="buydate buy_date16">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -270,8 +270,8 @@
                                             </p>
                                             <p class="buydate buy_date17">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -288,8 +288,8 @@
                                             </p>
                                             <p class="buydate buy_date18">
 
-                                                <span class="hour">00</span>:
-                                                <span class="mini">00</span>:
+                                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                                <span class="mini">00</span>&nbsp;:&nbsp;
                                                 <span class="sec">00</span>
                                             </p>
                                         </a>
@@ -317,8 +317,8 @@
                             </p>
                             <p class="buydate buy_date1">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -331,8 +331,8 @@
                             </p>
                             <p class="buydate buy_date8">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -346,8 +346,8 @@
                             </p>
                             <p class="buydate buy_date9">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -361,8 +361,8 @@
                             </p>
                             <p class="buydate buy_date10">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -376,8 +376,8 @@
                             </p>
                             <p class="buydate buy_date11">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -391,8 +391,8 @@
                             </p>
                             <p class="buydate buy_date12">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -406,8 +406,8 @@
                             </p>
                             <p class="buydate buy_date13">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -421,8 +421,8 @@
                             </p>
                             <p class="buydate buy_date14">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -436,8 +436,8 @@
                             </p>
                             <p class="buydate buy_date15">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -451,8 +451,8 @@
                             </p>
                             <p class="buydate buy_date16">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -466,8 +466,8 @@
                             </p>
                             <p class="buydate buy_date17">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -481,8 +481,8 @@
                             </p>
                             <p class="buydate buy_date18">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -508,8 +508,8 @@
                             </p>
                             <p class="buydate buy_date1">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -522,8 +522,8 @@
                             </p>
                             <p class="buydate buy_date8">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -536,8 +536,8 @@
                             </p>
                             <p class="buydate buy_date9">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -551,8 +551,8 @@
                             </p>
                             <p class="buydate buy_date10">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -565,8 +565,8 @@
                             </p>
                             <p class="buydate buy_date11">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -595,8 +595,8 @@
                             </p>
                             <p class="buydate buy_date13">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -609,8 +609,8 @@
                             </p>
                             <p class="buydate buy_date14">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -623,8 +623,8 @@
                             </p>
                             <p class="buydate buy_date15">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -637,8 +637,8 @@
                             </p>
                             <p class="buydate buy_date16">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -651,8 +651,8 @@
                             </p>
                             <p class="buydate buy_date17">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -665,8 +665,8 @@
                             </p>
                             <p class="buydate buy_date18">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -679,8 +679,8 @@
                             </p>
                             <p class="buydate buy_date18">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -694,8 +694,8 @@
                             </p>
                             <p class="buydate buy_date18">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -708,8 +708,8 @@
                             </p>
                             <p class="buydate buy_date18">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -723,8 +723,8 @@
                             </p>
                             <p class="buydate buy_date18">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -749,8 +749,8 @@
                             </p>
                             <p class="buydate buy_date1">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -763,8 +763,8 @@
                             </p>
                             <p class="buydate buy_date1">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
@@ -777,8 +777,8 @@
                             </p>
                             <p class="buydate buy_date1">
 
-                                <span class="hour">00</span>:
-                                <span class="mini">00</span>:
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
                                 <span class="sec">00</span>
                             </p>
                         </a>
