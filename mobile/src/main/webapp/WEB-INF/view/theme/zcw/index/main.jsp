@@ -15,6 +15,7 @@
         <c:import url="../../../public/theme/common/headNav.jsp"/>
         <c:import url="../../../public/theme/common/bottomNav.jsp"/>
         <div class="content content-img content-vipvp tex_bottom bottom2 top2" id="navBar"> <%--内容主体--%>
+            fd
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -302,10 +303,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="zjgg">
-                    <img src="${resPath}img/new_zcw/gg.png"/>
+                <div class="gg">
+                    <img src="${resPath}img/new_zcw/gg.png" class="left"/>
                     <div    class="gg_nr">
-                        <marquee direction="up" behavior="scroll" scrollamount="1" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
+                        <marquee direction="up" behavior="scroll" scrollamount="5" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                         <ul id="view_apply">
                             <li class="clearfix">
                                 <span class="left gongxi">恭喜</span>

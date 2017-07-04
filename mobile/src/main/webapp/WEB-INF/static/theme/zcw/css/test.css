@@ -465,7 +465,9 @@
     float:left;
 }
 .gg_nr{
-    margin-top: -1.95px;
+    padding-left: 5px;
+    height: 44px;
+    overflow: hidden;
 }
 .gg_nr li {
     font-size: 14px;
@@ -490,6 +492,19 @@
     margin-top: 2px;
 }
 
+.gg  {
+    background: #Fff;
+    padding: 12px 10px;
+}
+.gg img {
+    width: 47px;
+    height: 44px;
+    vertical-align: middle;
+    border-right: 1px solid #e6e6e6;
+    padding-right: 5px;
+}
+
+
 .clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
 /* Hides from IE-mac \*/
 *:first-child+html .clearfix{zoom:1;} /* IE7 */
@@ -497,7 +512,6 @@
 .clearfix {display: block;}
 .left{float: left;}
 .right{float: right;}
-
 
 
 
