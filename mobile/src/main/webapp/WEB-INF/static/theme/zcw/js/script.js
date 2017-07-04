@@ -324,7 +324,9 @@ $(function () {
         });
 
         $("#btn-shiwan").click(function () {
+
             shiwan();
+
         });
 
         //实现登录处的记住密码勾选事件
@@ -408,7 +410,8 @@ $(function () {
         });
 
         $(".shiwan_btn").click(function () {
-            shiwan();
+              shiwan();
+            $(".shiwan_btn").remove();
         });
 
         $(".sanjiao").hide();//隐藏所有三角号 系列彩种中
