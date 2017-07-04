@@ -347,7 +347,6 @@
                                     <span class="left" style="color: #ff7e00;">${noticelists.amount}</span>
                                 </li>
                             </c:forEach>
-
                         </ul>
                         </marquee>
 
