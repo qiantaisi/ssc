@@ -92,6 +92,9 @@
                 <div class="zcw_main">
                     <div class="zcw_cus_a">
                         <div class="cus_a">
+                            <em class="kj">
+                                <img src="${resPath}img/new_zcw/jrkj.png"/>
+                            </em>
                             <a href="<%=basePath%>ssc/gcdt/cqssc.html">
                                 <img src="${resPath}img/new_zcw/index1_6.png"/>
                                 <div>
@@ -217,6 +220,9 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
+                            <em class="kj">
+                                <img src="${resPath}img/new_zcw/jrkj.png"/>
+                            </em>
                             <a href="<%=basePath%>ssc/gcdt/tjssc.html">
                                 <img src="${resPath}img/new_zcw/index1_17.png"/>
                                 <div>
@@ -298,6 +304,9 @@
                 </div>
                 <div class="zjgg">
                     <img src="${resPath}img/new_zcw/gg.png"/>
+                    <div>
+
+                    </div>
                 </div>
             </div>
         </div>
