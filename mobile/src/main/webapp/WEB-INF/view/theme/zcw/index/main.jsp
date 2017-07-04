@@ -308,86 +308,25 @@
                     <div    class="gg_nr">
                         <marquee direction="up" behavior="scroll" scrollamount="5" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                         <ul id="view_apply">
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
-                            <li class="clearfix">
-                                <span class="left gongxi">恭喜</span>
-                                <span class="left">风度***挣</span>
-                                <span class="left">投注</span>
-                                <span class="left" style="color: #ff0101;">五分时时彩</span>
-                                <span class="left">中奖</span>
-                                <span class="left" style="color: #ff7e00;">86000</span>
-                            </li>
+                            <c:forEach items="${Notices.noticeList}" var="noticelists">
+                                <li class="clearfix">
+                                    <span class="left gongxi">恭喜</span>
+                                    <span class="left">${noticelists.userName}</span>
+                                    <span class="left">投注</span>
+                                    <span class="left" style="color: #ff0101;">${noticelists.type}</span>
+                                    <span class="left">中奖</span>
+                                    <span class="left" style="color: #ff7e00;">${noticelists.amount}</span>
+                                </li>
+                            </c:forEach>
+                            <%--<li class="clearfix">--%>
+                                <%--<span class="left gongxi">恭喜</span>--%>
+                                <%--<span class="left">风度***挣</span>--%>
+                                <%--<span class="left">投注</span>--%>
+                                <%--<span class="left" style="color: #ff0101;">五分时时彩</span>--%>
+                                <%--<span class="left">中奖</span>--%>
+                                <%--<span class="left" style="color: #ff7e00;">86000</span>--%>
+                            <%--</li>--%>
+
                         </ul>
                         </marquee>
 
