@@ -65,6 +65,19 @@ public class CzInfoResult extends CommonResult {
          */
         private Integer appMode;
 
+        /**
+         * 图片ID
+         */
+        private Long imageId;
+
+        public Long getImageId() {
+            return imageId;
+        }
+
+        public void setImageId(Long imageId) {
+            this.imageId = imageId;
+        }
+
         public Integer getAppMode() {
             return appMode;
         }
