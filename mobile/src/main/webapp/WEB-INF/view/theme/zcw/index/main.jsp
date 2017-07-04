@@ -15,6 +15,24 @@
         <c:import url="../../../public/theme/common/headNav.jsp"/>
         <c:import url="../../../public/theme/common/bottomNav.jsp"/>
 
+            <div class="block_home_slider">
+                <div id="home_slider" class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img src="${resPath}images/banner_02.jpg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img src="${resPath}images/banner_02.jpg" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
         <div class="content content-img content-vipvp tex_bottom bottom2 top2" id="navBar"> <%--内容主体--%>
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
