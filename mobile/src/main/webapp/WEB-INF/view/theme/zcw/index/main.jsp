@@ -304,7 +304,91 @@
                 </div>
                 <div class="zjgg">
                     <img src="${resPath}img/new_zcw/gg.png"/>
-                    <div>
+                    <div    class="gg_nr">
+                        <marquee direction="up" behavior="scroll" scrollamount="1" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
+                        <ul id="view_apply">
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="left gongxi">恭喜</span>
+                                <span class="left">风度***挣</span>
+                                <span class="left">投注</span>
+                                <span class="left" style="color: #ff0101;">五分时时彩</span>
+                                <span class="left">中奖</span>
+                                <span class="left" style="color: #ff7e00;">86000</span>
+                            </li>
+                        </ul>
+                        </marquee>
 
                     </div>
                 </div>
@@ -314,6 +398,7 @@
     <c:import url="../common/rightPanel.jsp"/>
 </div>
 <c:import url="../common/commonJs.jsp"/>
+
 <script>
     var kjjgJsonData = ${kjjgJsonData};
 </script>

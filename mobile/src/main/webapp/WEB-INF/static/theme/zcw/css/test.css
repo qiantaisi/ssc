@@ -460,6 +460,42 @@
     position: absolute;
     right:50%;
 }
+.left{
+    float:left;
+}
+.gg_nr{
+    margin-top: -1.95px;
+}
+.gg_nr li {
+    font-size: 14px;
+    line-height: 22px;
+    height: 22px;
+    overflow: hidden;
+}
+.gg_li{
+    display: block;
+}
+
+.gg_nr span {
+    margin-right: 3px;
+}
+.gongxi {
+    color: #ff0000;
+    font-size: 12px;
+    border: 1px solid #ff0000;
+    border-radius: 3px;
+    line-height: 18px;
+    padding: 0px 5px;
+    margin-top: 2px;
+}
+
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+/* Hides from IE-mac \*/
+*:first-child+html .clearfix{zoom:1;} /* IE7 */
+* html .clearfix { height: 1%;zoom:1;}
+.clearfix {display: block;}
+.left{float: left;}
+.right{float: right;}
 
 
 
