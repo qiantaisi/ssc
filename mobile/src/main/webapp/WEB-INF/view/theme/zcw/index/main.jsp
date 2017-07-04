@@ -91,10 +91,10 @@
 
                 <div class="zcw_main">
                     <div class="zcw_cus_a">
+                        <em class="kj">
+                            <img src="${resPath}img/new_zcw/jrkj.png"/>
+                        </em>
                         <div class="cus_a">
-                            <em class="kj">
-                                <img src="${resPath}img/new_zcw/jrkj.png"/>
-                            </em>
                             <a href="<%=basePath%>ssc/gcdt/cqssc.html">
                                 <img src="${resPath}img/new_zcw/index1_6.png"/>
                                 <div>
@@ -219,10 +219,10 @@
                         </div>
                     </div>
                     <div class="zcw_cus_a">
+                        <em class="kj">
+                            <img src="${resPath}img/new_zcw/jrkj.png"/>
+                        </em>
                         <div class="cus_a">
-                            <em class="kj">
-                                <img src="${resPath}img/new_zcw/jrkj.png"/>
-                            </em>
                             <a href="<%=basePath%>ssc/gcdt/tjssc.html">
                                 <img src="${resPath}img/new_zcw/index1_17.png"/>
                                 <div>

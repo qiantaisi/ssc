@@ -459,6 +459,7 @@
 .wrap .kj img{
     position: absolute;
     right:50%;
+    height:53px;
 }
 .left{
     float:left;
