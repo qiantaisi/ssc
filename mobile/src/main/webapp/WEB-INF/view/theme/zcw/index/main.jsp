@@ -87,7 +87,19 @@
                 </div>
                 <div class="index_tl">
                     <span class="left">热门彩种</span>
-                    <a href="javascript:void(0);" class="right shiwan_btn">免费试玩</a>
+                    <c:choose>
+                        <c:when test="${not empty userSession}">
+                            <div>
+
+                            </div>
+                        </c:when>
+                        <c:otherwise>
+                            <div class="pull-right cl-3">
+                                <a href="javascript:void(0);" class="right shiwan_btn">免费试玩</a>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
+
                 </div>
 
                 <div class="zcw_main">
