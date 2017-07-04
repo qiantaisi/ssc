@@ -867,3 +867,13 @@ img {
     display: -moz-box !important;
 
 }
+
+/*轮播底部切换圆圈按钮*/
+.repagination{
+    bottom: 1%!important;
+}
+.repagination span{
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+}
