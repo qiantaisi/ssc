@@ -55,7 +55,7 @@
                                 <p>
                                     存款/提款
                                 </p>
-                                <img src="${resPath}img/new_zcw/index1_2.png" />
+                                <img src="${resPath}img/new_zcw/index1_2.png"/>
                             </a>
                         </li>
                         <li>
@@ -63,7 +63,7 @@
                                 <p>
                                     投注记录
                                 </p>
-                                <img src="${resPath}img/new_zcw/index1_3.png" />
+                                <img src="${resPath}img/new_zcw/index1_3.png"/>
                             </a>
                         </li>
                         <li>
@@ -71,7 +71,7 @@
                                 <p>
                                     优惠活动
                                 </p>
-                                <img src="${resPath}img/new_zcw/index1_4.png" />
+                                <img src="${resPath}img/new_zcw/index1_4.png"/>
                             </a>
                         </li>
                         <li>
@@ -79,7 +79,7 @@
                                 <p>
                                     在线客服
                                 </p>
-                                <img src="${resPath}img/new_zcw/index1_5.png" />
+                                <img src="${resPath}img/new_zcw/index1_5.png"/>
                             </a>
                         </li>
                     </ul>
@@ -92,7 +92,7 @@
                 <div class="zcw_main">
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/cqssc.html">
+                            <a href="<%=basePath%>ssc/gcdt/cqssc.html">
                                 <img src="${resPath}img/new_zcw/index1_6.png"/>
                                 <div>
                                     <span class="dus_a">重庆时时彩</span>
@@ -101,7 +101,7 @@
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a  href="<%=basePath%>ssc/gcdt/pk10.html">
+                            <a href="<%=basePath%>ssc/gcdt/pk10.html">
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>
                                 <div>
                                     <span class="dus_a">北京赛车</span>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/ffssc.html">
+                            <a href="<%=basePath%>ssc/gcdt/ffssc.html">
                                 <img src="${resPath}img/new_zcw/index1_26.png"/>
                                 <div>
                                     <span class="dus_a">分分时时彩</span>
@@ -121,7 +121,7 @@
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a  href="<%=basePath%>ssc/gcdt/jspk10.html">
+                            <a href="<%=basePath%>ssc/gcdt/jspk10.html">
                                 <img src="${resPath}img/new_zcw/index1_9.png"/>
                                 <div>
                                     <span class="dus_a">极速PK10</span>
@@ -137,7 +137,7 @@
                 <div class="zcw_content">
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/lhc.html">
+                            <a href="<%=basePath%>ssc/gcdt/lhc.html">
                                 <img src="${resPath}img/new_zcw/index1_10.png"/>
                                 <div>
                                     <span class="dus_a">香港六合彩</span>
@@ -146,7 +146,7 @@
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a  href="<%=basePath%>ssc/gcdt/xyft.html">
+                            <a href="<%=basePath%>ssc/gcdt/xyft.html">
                                 <img src="${resPath}img/new_zcw/index1_11.png"/>
                                 <div>
                                     <span class="dus_a">幸运飞艇</span>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/xy28.html">
+                            <a href="<%=basePath%>ssc/gcdt/xy28.html">
                                 <img src="${resPath}img/new_zcw/index1_25.png"/>
                                 <div>
                                     <span class="dus_a">PC蛋蛋</span>
@@ -166,7 +166,7 @@
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a  href="<%=basePath%>ssc/gcdt/sfssc.html">
+                            <a href="<%=basePath%>ssc/gcdt/sfssc.html">
                                 <img src="${resPath}img/new_zcw/index1_12.png"/>
                                 <div>
                                     <span class="dus_a">三分时时彩</span>
@@ -177,7 +177,7 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/wfssc.html">
+                            <a href="<%=basePath%>ssc/gcdt/wfssc.html">
                                 <img src="${resPath}img/new_zcw/index1_13.png"/>
                                 <div>
                                     <span class="dus_a">五分时时彩</span>
@@ -186,7 +186,7 @@
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a  href="<%=basePath%>ssc/gcdt/efssc.html">
+                            <a href="<%=basePath%>ssc/gcdt/efssc.html">
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>
                                 <div>
                                     <span class="dus_a">两分时时彩</span>
@@ -197,7 +197,7 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/ahk3.html">
+                            <a href="<%=basePath%>ssc/gcdt/ahk3.html">
                                 <img src="${resPath}img/new_zcw/index1_15.png"/>
                                 <div>
                                     <span class="dus_a">安徽快3</span>
@@ -206,7 +206,7 @@
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a  href="<%=basePath%>ssc/gcdt/hbk3.html">
+                            <a href="<%=basePath%>ssc/gcdt/hbk3.html">
                                 <img src="${resPath}img/new_zcw/index1_16.png"/>
                                 <div>
                                     <span class="dus_a">湖北快3</span>
@@ -217,7 +217,7 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/tjssc.html">
+                            <a href="<%=basePath%>ssc/gcdt/tjssc.html">
                                 <img src="${resPath}img/new_zcw/index1_17.png"/>
                                 <div>
                                     <span class="dus_a">天津时时彩</span>
@@ -226,7 +226,7 @@
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a  href="<%=basePath%>ssc/gcdt/xjssc.html">
+                            <a href="<%=basePath%>ssc/gcdt/xjssc.html">
                                 <img src="${resPath}img/new_zcw/index1_18.png"/>
                                 <div>
                                     <span class="dus_a">新疆时时彩</span>
@@ -237,7 +237,7 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/fc3d.html">
+                            <a href="<%=basePath%>ssc/gcdt/fc3d.html">
                                 <img src="${resPath}img/new_zcw/index1_19.png"/>
                                 <div>
                                     <span class="dus_a">福彩3D</span>
@@ -246,7 +246,7 @@
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a  href="<%=basePath%>ssc/gcdt/pl3.html">
+                            <a href="<%=basePath%>ssc/gcdt/pl3.html">
                                 <img src="${resPath}img/new_zcw/index1_20.png"/>
                                 <div>
                                     <span class="dus_a">体育排列3</span>
@@ -257,7 +257,7 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/kl8.html">
+                            <a href="<%=basePath%>ssc/gcdt/kl8.html">
                                 <img src="${resPath}img/new_zcw/index1_21.png"/>
                                 <div>
                                     <span class="dus_a">北京快乐8</span>
@@ -266,7 +266,7 @@
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a  href="<%=basePath%>ssc/gcdt/xync.html">
+                            <a href="<%=basePath%>ssc/gcdt/xync.html">
                                 <img src="${resPath}img/new_zcw/index1_22.png"/>
                                 <div>
                                     <span class="dus_a">重庆幸运农场</span>
@@ -277,7 +277,7 @@
                     </div>
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a  href="<%=basePath%>ssc/gcdt/klsf.html">
+                            <a href="<%=basePath%>ssc/gcdt/klsf.html">
                                 <img src="${resPath}img/new_zcw/index1_23.png"/>
                                 <div>
                                     <span class="dus_a">广东快乐十分</span>
@@ -295,6 +295,9 @@
                             </a>
                         </div>
                     </div>
+                </div>
+                <div class="zjgg">
+                    <img src="${resPath}img/new_zcw/gg.png"/>
                 </div>
             </div>
         </div>

@@ -428,7 +428,16 @@
     border: 0;
 }
 
-
+.wrap .zjgg{
+    width:100%;
+    background: #ffffff;
+    margin-top:1rem;
+    padding:10px;
+    margin-bottom:1rem;
+}
+.wrap .zjgg img{
+    height:46px;
+}
 
 
 
