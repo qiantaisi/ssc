@@ -120,5 +120,6 @@ public class ApiConstant {
     public static String API_MOBILE_GET_FG = API_DOMAIN + "webSetting/getMobileFg.json"; //获取手机顶部底部风格
 
     public static String API_SSC_LATElYGAMES = API_DOMAIN + "ssc/getSscLatelyGameList.json"; //获取最近游戏记录
+    public static String API_INDEX_GETZJNOTICE = API_DOMAIN + "notice/getZjNotice.json"; //获取中奖公告信息
 
 }
