@@ -14,7 +14,13 @@
     <div class="page page-current re-bg" id="page-index">
         <c:import url="../../../public/theme/common/headNav.jsp"/>
         <c:import url="../../../public/theme/common/bottomNav.jsp"/>
+
         <div class="content content-img content-vipvp tex_bottom bottom2 top2" id="navBar"> <%--内容主体--%>
+            <header class="bar bar-nav cl-1">
+                <a href="javascript:void(0)" class="cl-2" onclick="location.reload()">
+                    <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
+                </a>
+            </header>
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -387,7 +393,7 @@
                                 <span class="left">中奖</span>
                                 <span class="left" style="color: #ff7e00;">86000</span>
                             </li>
-=======
+
                             <c:forEach items="${Notices.noticeList}" var="noticelists">
                                 <li class="clearfix">
                                     <span class="left gongxi">恭喜</span>
