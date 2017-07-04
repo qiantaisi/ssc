@@ -43,7 +43,7 @@ public class MemberController extends BaseController {
      */
     @RequestMapping(value = "/ajaxRegister.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxRegister(String yzm, String account, String password, String name, Long agentId, String deviceNo) {
+    public LoginResult ajaxRegister(String yzm, String account, String password, String name, Long agentId, String deviceNo, String phone, String email, String qq) {
         LoginResult result = new LoginResult();
         try {
             if (StringUtils.isBlank(account)) {
@@ -80,7 +80,7 @@ public class MemberController extends BaseController {
 
             // 接口返回数据
             String ip = IPHelper.getIpAddr(httpServletRequest);
-            CommonResult responseResult = ApiUtils.register(account, password, name, ip, httpServletRequest.getServerName(), null, agentId,companyShortName, deviceNo);
+            CommonResult responseResult = ApiUtils.register(account, password, name, ip, httpServletRequest.getServerName(), qq, agentId,companyShortName, deviceNo, phone, email);
             if (responseResult.getResult() == 1) {
                 // 登录
                 result = ApiUtils.login(account, password, ip, 1,companyShortName);
