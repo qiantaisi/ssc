@@ -1265,4 +1265,13 @@ public class ApiUtils{
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         return JSONUtils.toObject(commonRequest(ApiConstant.API_INDEX_GETZJNOTICE, paramsMap, companyShortName), SscZJNoticeResult.class);
     }
+
+    public static CommonResult getTodayIsOpen(Long playGroupId,String companyShortName){
+        if(IS_DEBUG){
+            return new CommonResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("playGroupId", playGroupId);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_INDEX_GETZJNOTICE, paramsMap, companyShortName), CommonResult.class);
+    }
 }
