@@ -10,100 +10,85 @@
 <c:import url="../common/bodyStart.jsp"/>
 <div class="page-group">
     <div class="page page-current" id="page-register">
-        <header class="bar vipcp">
-            <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
-                <span class="icon icon-left"></span>
-            </a>
-            <h1 class="title">
-                <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}.png" alt="" height="100%"></a>
-                <%--<img src="${resPath}img/reg_06.png"/>--%>
-            </h1>
-        </header>
-        <div class="content bg-white">
-            <div class="row cl-100">
-                <%--<div class="col-100">欢迎您注册600w彩票网${WebInfoResult.webName}</div>--%>
-                <div class="col-100">${WebInfoResult.webName}</div>
+        <div class="head">
+            <a href="javascript:void(0)" class="head_back"><span>返回</span></a>
+            <span class="head_text">注册</span>
+        </div>
+        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
+        <div class="main zcw-reg-main">
+            <div class="ny_logo">
+                <img src="${resPath}images/reg_07.png"/>
             </div>
-            <div class="cl-101">
-                <div class="list-block vipcp-list-block">
-                    <ul>
-                        <span class="Prompt">字母开头的6-12位字母数字组成的用户名</span>
-                        <li>
-                            <div class="item-content re-item-vipcp-zh">
-                                <div class=""><i class="icon icon-form-name re-item-form"></i></div>
-                                <div class="item-inner">
-                                    <div class="item-input">
-                                        <input type="text" placeholder="账号" name="account">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul>
-                        <span class="Prompt">请输入6-12位字母、数字的密码</span>
-                        <li>
-                            <div class="item-content re-item-vipcp-zh">
-                                <div class=""><i class="icon icon-form-password re-item-form"></i></div>
-                                <div class="item-inner">
-                                    <div class="item-input">
-                                        <input type="password" placeholder="密码" name="password">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul>
-                        <span class="Prompt">请再次输入您的密码</span>
-                        <li>
-                            <div class="item-content re-item-vipcp-zh">
-                                <div class=""><i class="icon icon-form-password re-item-form"></i></div>
-                                <div class="item-inner">
-                                    <div class="item-input">
-                                        <input type="password" placeholder="确认密码" name="confirmPassword">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul>
-                        <span class="Prompt">请输入真实姓名</span>
-                        <li>
-                            <div class="item-content re-item-vipcp-zh">
-                                <div class=""><i class="icon icon-form-password re-item-form re_reg_18_img"></i></div>
-                                <div class="item-inner">
-                                    <div class="item-input">
-                                        <input type="text" placeholder="姓名" name="name">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+
+            <div class="form_main">
+                <p class="form_text">
+                    字母开头的6-12位字母数字组成的用户名
+                </p>
+                <input type="text" placeholder="账号" name="account"/>
+                <p class="form_text">
+                    请输入6-12位字母、数字的密码
+                </p>
+                <input type="password" placeholder="密码" name="password"/>
+                <p class="form_text">
+                    与上面输入密码必须保持一致
+                </p>
+                <input type="password" placeholder="确认密码" name="confirmPassword"/>
+                <p class="form_text">
+                    姓名必须和绑定的银行卡户名一致
+                </p>
+                <input type="text" placeholder="姓名" name="name"/>
+                <p class="form_text">
+                    请输入您的手机
+                </p>
+                <input type="text" placeholder="手机" name="phone"/>
+                <p class="form_text">
+                    请输入您的邮箱
+                </p>
+                <input type="text" placeholder="邮箱" name="email"/>
+                <p class="form_text">
+                    请输入您的QQ
+                </p>
+                <input type="text" placeholder="QQ" name="qq"/>
+                <input type="button" value="注册" id="btn-register"/>
+                <div class="agree clearfix">
+                    <div class="left agree_lf">
+                        我已阅读并同意<a href="javascript:void(0)">彩票协议</a>
+                    </div>
+                    <a href="<%=basePath%>login.html" class="right agree_rt">
+                        已有账号登录>
+                    </a>
                 </div>
             </div>
-            <div class="agree">
-                <a href="javascript:void(0)">
-                    <span>
-                           <img src="${resPath}img/reg_21.png"/>
-                    </span>
-                </a>
-                本人同意
-                <a href="javascript:void(0)" class="agree-btn">
-                    《开户协议》
-                </a>
 
+            <div class="share">
+                <span>分享送彩金</span>
             </div>
-            <div class="cl-102">
-                <a href="javascript:void(0)" class="outInsert" id="btn-register">立即注册</a>
-            </div>
-            <div class="Center">
-                <span>已有账号?</span>
-                <a href="<%=basePath%>login.html">马上登录</a>
-            </div>
+            <ul class="share_main clearfix">
+                <li>
+                    <a href="javascript:void(0)">
+                        <img src="${resPath}/images/reg_11.png"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <img src="${resPath}/images/reg_13.png"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <img src="${resPath}/images/reg_15.png"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <img src="${resPath}/images/reg_17.png"/>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-</div>
-<script type="text/html" id="template_khxy">
-${khxy.khxy}
-</script>
-<c:import url="../common/commonJs.jsp"/>
+    <script type="text/html" id="template_khxy">
+        ${khxy.khxy}
+    </script>
+    <c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/bodyEnd.jsp"/>

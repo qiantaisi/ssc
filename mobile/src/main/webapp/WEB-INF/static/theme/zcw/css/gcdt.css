@@ -126,3 +126,6 @@
     padding: 0;
 }
 
+.gpcai,.dpcai{
+    display: none;
+}

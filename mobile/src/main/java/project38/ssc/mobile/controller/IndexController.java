@@ -84,6 +84,8 @@ public class IndexController extends BaseController{
             //        modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token).getSkInfoList());
             //获取在线支付信息
             modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[]{2, 3}, companyShortName));
+            modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
+
         } catch (Exception e) {
             log.error(this, e);
         }

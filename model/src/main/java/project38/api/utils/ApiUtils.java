@@ -1,5 +1,6 @@
 package project38.api.utils;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -242,6 +243,8 @@ public class ApiUtils{
         paramsMap.put("token", token);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_USER_LAST_INFO, paramsMap, companyShortName), UserLastInfoResult.class);
     }
+
+
 
     public static UserDepositListResult getDepositList(Long uid, String token, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type, String companyShortName) {
         if (IS_DEBUG) {
@@ -1244,4 +1247,31 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_MOBILE_GET_FG, null, companyShortName), MobileFgResult.class);
     }
 
+    public static LatelyGameResult getLatelyGames(Long uid, String token, String companyShortName) {
+        if (IS_DEBUG) {
+            return new LatelyGameResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("uid", uid);
+        paramsMap.put("token", token);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_LATElYGAMES, paramsMap, companyShortName), LatelyGameResult.class);
+    }
+
+    public static SscZJNoticeResult getNotices(String companyShortName){
+        if(IS_DEBUG){
+            return new SscZJNoticeResult();
+        }
+
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_INDEX_GETZJNOTICE, paramsMap, companyShortName), SscZJNoticeResult.class);
+    }
+
+    public static CommonResult getTodayIsOpen(Long playGroupId,String companyShortName){
+        if(IS_DEBUG){
+            return new CommonResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("playGroupId", playGroupId);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_INDEX_GETZJNOTICE, paramsMap, companyShortName), CommonResult.class);
+    }
 }

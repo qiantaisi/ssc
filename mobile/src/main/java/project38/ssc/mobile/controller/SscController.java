@@ -25,10 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.swing.text.html.HTML;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * SSC控制器
@@ -68,11 +65,32 @@ public class SscController extends CacheController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
+        int countCz = 0;
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
         Map<String, Object> modelMap = new HashMap<String, Object>();
         
         modelMap.put("popupNoticeList", ApiUtils.getPopupNoticeList(uid, token,companyShortName).getWebNoticeList());
         modelMap.put("webCompanyName", webInfoResult.getCompanyShortName());
+
+        LatelyGameResult latelyGr = ApiUtils.getLatelyGames(uid, token,companyShortName);
+
+        if(null != latelyGr && null != latelyGr.getLogUserGames()){
+            List<LatelyGameResult.LogUserGame> logUserGameLists =new ArrayList<LatelyGameResult.LogUserGame>();
+            logUserGameLists = latelyGr.getLogUserGames();
+
+            Set<Long> setLogUserGames = new HashSet();
+            for(LatelyGameResult.LogUserGame loguser : latelyGr.getLogUserGames()){
+                countCz++;
+                if(countCz < 6){
+                    setLogUserGames.add(loguser.getGameId());
+                }
+            }
+
+            modelMap.put("setLogUserGames", setLogUserGames);
+        } else{
+            modelMap.put("setLogUserGames", null);
+        }
+
         return this.renderView("ssc/gcdt/gcdt", modelMap);
     }
 
@@ -96,7 +114,6 @@ public class SscController extends CacheController {
             httpServletResponse.sendRedirect(basePath);
             return null;
         }
-
         return this.renderPublicView("ssc/gcdt/" + group, modelMap);
     }
 

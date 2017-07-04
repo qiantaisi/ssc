@@ -89,6 +89,19 @@ $(function () {
 
 // 注册页面
     $(document).on("pageInit", "#page-register", function (e, id, page) {
+        if (typeof initBottomNavIndex == 'function') {
+            initBottomNavIndex();
+        }
+
+        // 返回按钮
+        $(".head_back").click(function () {
+            if ($.config.router == true) {
+                $.router.back();
+            } else {
+                back();
+            }
+        });
+
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
@@ -346,13 +359,13 @@ $(function () {
             $("#navBar").scrollTop(0);
         });
 
-        //底部按钮选中状态
-        // $(".c1-101 .tab-item .re-icon-home").css("background-image", "url(" + CONFIG.RESURL + "img/footer2.png)");
-        // $(".c1-101 .tab-item .tab-indx").css("color", "red");
+        $(".shiwan_btn").click(function () {
+            shiwan();
+        });
 
         $(".sanjiao").hide();//隐藏所有三角号 系列彩种中
 
-        //0代表为隐藏 1为显示标签
+        //0代表为隐藏 1为显示标签avage
         $(".recl-7 .cl-row-5 .xl-select").click(function () {
             $(".xlcz").hide();
             $(".sanjiao").hide();
@@ -2743,6 +2756,31 @@ $(function () {
             initBottomNavGcdt();
         }
 
+        //所彩种按钮
+        $(".buy_fenlei .allcai-btn").click(function(){
+            $(".buy_main").hide();
+            $(".allcai").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
+
+        //高频彩
+        $(".gpcai-btn").click(function(){
+            $(".buy_main").hide();
+            $(".gpcai").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
+
+        //低频彩
+        $(".dpcai-btn").click(function(){
+            $(".buy_main").hide();
+            $(".dpcai").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
+
+
         var flagArr = [];
         var flagEnableArr = [];
         setInterval(function () {
@@ -2812,9 +2850,9 @@ $(function () {
 
                     var tmpStr = "";
                     if (hour > 0) {
-                        tmpStr += '<span class="hour">' + (hour < 10 ? '0' + hour : hour) + '</span><font>:</font>';
+                        tmpStr += '<span class="hour">' + (hour < 10 ? '0' + hour : hour) + '</span><font>&nbsp;:&nbsp;</font>';
                     }
-                    tmpStr += '<span class="mini">' + (minute < 10 ? '0' + minute : minute) + '</span><font>:</font>';
+                    tmpStr += '<span class="mini">' + (minute < 10 ? '0' + minute : minute) + '</span><font>&nbsp;:&nbsp;</font>';
                     tmpStr += '<span class="sec">' + (second < 10 ? '0' + second : second) + '</span>';
                     $(obj).find(".buydate").html(tmpStr);
                 }
