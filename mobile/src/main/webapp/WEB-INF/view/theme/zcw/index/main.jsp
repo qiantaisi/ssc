@@ -336,7 +336,7 @@
                 <div class="gg">
                     <img src="${resPath}img/new_zcw/gg.png" class="left"/>
                     <div    class="gg_nr">
-                        <marquee direction="up" behavior="scroll" scrollamount="3" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
+                        <marquee direction="up" behavior="scroll" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                             <c:forEach items="${Notices.noticeList}" var="noticelists">
                                 <li class="clearfix">
                                     <span class="left gongxi">恭喜</span>
