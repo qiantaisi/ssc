@@ -17,38 +17,38 @@
         <c:import url="../../../public/theme/common/bottomNav.jsp"/>
         <div class="main zcw-reg-main">
             <div class="ny_logo">
-                <img src="${resPath}images/reg_07.png" />
+                <img src="${resPath}images/reg_07.png"/>
             </div>
 
             <div class="form_main">
                 <p class="form_text">
                     字母开头的6-12位字母数字组成的用户名
                 </p>
-                <input type="text" placeholder="账号" name="account" />
+                <input type="text" placeholder="账号" name="account"/>
                 <p class="form_text">
                     请输入6-12位字母、数字的密码
                 </p>
-                <input type="password" placeholder="密码" name="password" />
+                <input type="password" placeholder="密码" name="password"/>
                 <p class="form_text">
                     与上面输入密码必须保持一致
                 </p>
-                <input type="password" placeholder="确认密码" name="confirmPassword" />
+                <input type="password" placeholder="确认密码" name="confirmPassword"/>
                 <p class="form_text">
                     姓名必须和绑定的银行卡户名一致
                 </p>
-                <input type="text" placeholder="姓名" name="name" />
+                <input type="text" placeholder="姓名" name="name"/>
                 <p class="form_text">
                     请输入您的手机
                 </p>
-                <input type="text" placeholder="手机" />
+                <input type="text" placeholder="手机"/>
                 <p class="form_text">
                     请输入您的邮箱
                 </p>
-                <input type="text" placeholder="邮箱" />
+                <input type="text" placeholder="邮箱"/>
                 <p class="form_text">
                     请输入您的QQ
                 </p>
-                <input type="text" placeholder="QQ" />
+                <input type="text" placeholder="QQ"/>
                 <input type="button" value="注册" id="btn-register"/>
                 <div class="agree clearfix">
                     <div class="left agree_lf">
@@ -66,29 +66,29 @@
             <ul class="share_main clearfix">
                 <li>
                     <a href="javascript:void(0)">
-                        <img src="${resPath}/images/reg_11.png" />
+                        <img src="${resPath}/images/reg_11.png"/>
                     </a>
                 </li>
                 <li>
                     <a href="javascript:void(0)">
-                        <img src="${resPath}/images/reg_13.png" />
+                        <img src="${resPath}/images/reg_13.png"/>
                     </a>
                 </li>
                 <li>
                     <a href="javascript:void(0)">
-                        <img src="${resPath}/images/reg_15.png" />
+                        <img src="${resPath}/images/reg_15.png"/>
                     </a>
                 </li>
                 <li>
                     <a href="javascript:void(0)">
-                        <img src="${resPath}/images/reg_17.png" />
+                        <img src="${resPath}/images/reg_17.png"/>
                     </a>
                 </li>
             </ul>
         </div>
-</div>
-<script type="text/html" id="template_khxy">
-${khxy.khxy}
-</script>
-<c:import url="../common/commonJs.jsp"/>
+    </div>
+    <script type="text/html" id="template_khxy">
+        ${khxy.khxy}
+    </script>
+    <c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/bodyEnd.jsp"/>
