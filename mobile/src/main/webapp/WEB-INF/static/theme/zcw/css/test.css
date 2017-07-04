@@ -513,5 +513,6 @@
 .left{float: left;}
 .right{float: right;}
 
+div,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input, textarea,blockquote,p{padding:0;margin:0;}
 
 
