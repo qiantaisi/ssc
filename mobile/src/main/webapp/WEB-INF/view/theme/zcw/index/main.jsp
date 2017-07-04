@@ -387,7 +387,6 @@
                                 <span class="left">中奖</span>
                                 <span class="left" style="color: #ff7e00;">86000</span>
                             </li>
-=======
                             <c:forEach items="${Notices.noticeList}" var="noticelists">
                                 <li class="clearfix">
                                     <span class="left gongxi">恭喜</span>
@@ -398,16 +397,6 @@
                                     <span class="left" style="color: #ff7e00;">${noticelists.amount}</span>
                                 </li>
                             </c:forEach>
-                            <%--<li class="clearfix">--%>
-                                <%--<span class="left gongxi">恭喜</span>--%>
-                                <%--<span class="left">风度***挣</span>--%>
-                                <%--<span class="left">投注</span>--%>
-                                <%--<span class="left" style="color: #ff0101;">五分时时彩</span>--%>
-                                <%--<span class="left">中奖</span>--%>
-                                <%--<span class="left" style="color: #ff7e00;">86000</span>--%>
-                            <%--</li>--%>
-
->>>>>>> e7da49992d1418de9a709f207fbceb6d142f753e
                         </ul>
                         </marquee>
 
