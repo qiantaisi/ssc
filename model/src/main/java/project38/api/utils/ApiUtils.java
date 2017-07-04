@@ -158,7 +158,9 @@ public class ApiUtils{
             String qq,
             Long agentId,
             String companyShortName,
-            String deviceNo
+            String deviceNo,
+            String phone,
+            String email
     ) {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("account", account);
@@ -169,6 +171,9 @@ public class ApiUtils{
         paramsMap.put("qq", qq);
         paramsMap.put("agentId", agentId);
         paramsMap.put("deviceNo", deviceNo);
+        paramsMap.put("phone", phone);
+        paramsMap.put("email", email);
+
         return JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER, paramsMap, companyShortName), CommonResult.class);
     }
 

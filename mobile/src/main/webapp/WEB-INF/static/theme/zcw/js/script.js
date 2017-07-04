@@ -105,6 +105,9 @@ $(function () {
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
+            var phone = $("input[name='phone']").val();   // 手机号码
+            var email = $("input[name='email']").val();   // 邮箱号码
+            var qq = $("input[name='qq']").val();   // QQ
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
             var name = $("input[name='name']").val();   // 姓名
 
@@ -122,6 +125,21 @@ $(function () {
                 Tools.alert("请输入密码");
                 return;
             }
+
+            // if (!phone) {
+            //     Tools.alert("请输如手机号码");
+            //     return;
+            // }
+            //
+            // if (!email) {
+            //     Tools.alert("请输如邮箱号码");
+            //     return;
+            // }
+            //
+            // if (!qq) {
+            //     Tools.alert("请输入QQ");
+            //     return;
+            // }
 
             if (!password.match(/^[0-9a-zA-Z]{6,12}$/)) {
                 Tools.alert("请输入6-12位字母、数字的密码");
@@ -156,7 +174,7 @@ $(function () {
             registerUser(account, password, name, Tools.getCookie("deviceNo"));
         });
 
-        function registerUser(account, password, name, deviceNo) {
+        function registerUser(account, password, name, deviceNo, phone, email, qq) {
             ajaxRequest({
                 url: config.basePath + "member/ajaxRegister.json",
                 data: {
@@ -164,7 +182,10 @@ $(function () {
                     password: $.md5(password),
                     name: name,
                     agentId: Tools.getCookie("agentId"),
-                    deviceNo: deviceNo
+                    deviceNo: deviceNo,
+                    phone: phone,
+                    email: email,
+                    qq: qq
                 },
                 beforeSend: function () {
                     Tools.showLoading("注册中...");

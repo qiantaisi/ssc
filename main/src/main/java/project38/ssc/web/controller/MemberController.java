@@ -55,7 +55,10 @@ public class MemberController extends BaseController {
             String yzm,
             String name,
             Long agentId,
-            String deviceNo
+            String deviceNo,
+            String phone,
+            String email,
+            String qq
     ) {
         LoginResult result = new LoginResult();
 
@@ -112,7 +115,9 @@ public class MemberController extends BaseController {
                     null,
                     agentId,
                     companyShortName,
-                    deviceNo
+                    deviceNo,
+                    phone,
+                    email
             );
 
             // 注册成功则登录
