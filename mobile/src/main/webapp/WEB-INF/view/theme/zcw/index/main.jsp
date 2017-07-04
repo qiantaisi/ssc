@@ -302,8 +302,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="zjgg">
-                    <img src="${resPath}img/new_zcw/gg.png"/>
+                <div class="gg">
+                    <img src="${resPath}img/new_zcw/gg.png" class="left"/>
                     <div    class="gg_nr">
                         <marquee direction="up" behavior="scroll" scrollamount="1" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                         <ul id="view_apply">
