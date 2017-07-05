@@ -24,11 +24,16 @@
     }
 
     function openGcdt(module) {
-        if (typeof module == 'undefined') {
-            module = '';
-        }
-        windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);
+        <%--if (typeof module == 'undefined') {--%>
+            <%--module = '';--%>
+        <%--}--%>
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
         <%--windowOpen('<%=basePath%>ssc/index.html?module=' + module, '购彩大厅', 1285, 800);--%>
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + "ssc/" +module + ".html";
+        }
+        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
     }
 
     function goZst(url) {
