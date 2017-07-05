@@ -112,7 +112,10 @@
     border: 1px solid #97c13c;
     position: relative;
 }
-
+.number_bar-tab .active {
+    border-bottom: 5px solid #ed9142;
+    color: #ed9142;
+}
 .share span {
     display: block;
     width: 142px;

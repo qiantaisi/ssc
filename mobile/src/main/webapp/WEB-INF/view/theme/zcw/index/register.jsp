@@ -12,12 +12,12 @@
     <div class="page page-current" id="page-register">
         <div class="head">
             <a href="javascript:void(0)" class="head_back"><span>返回</span></a>
-            <span class="head_text">注册</span>
+            <span class="head_text">注册</span>　
         </div>
         <c:import url="../../../public/theme/common/bottomNav.jsp"/>
         <div class="main zcw-reg-main">
             <div class="ny_logo">
-                <img src="${resPath}images/reg_07.png"/>
+                <img src="<%=basePath%>images/${logo.imageId}.png"/>
             </div>
 
             <div class="form_main">
@@ -52,7 +52,7 @@
                 <input type="button" value="注册" id="btn-register"/>
                 <div class="agree clearfix">
                     <div class="left agree_lf">
-                        我已阅读并同意<a href="javascript:void(0)">彩票协议</a>
+                        我已阅读并同意<a href="javascript:void(0)" onclick="showKhxy()">${webName}《开户协议》</a>
                     </div>
                     <a href="<%=basePath%>login.html" class="right agree_rt">
                         已有账号登录>
@@ -87,6 +87,20 @@
             </ul>
         </div>
     </div>
+    <script>
+        function showKhxy() {
+            //自定页
+            layer.open({
+                type: 1,
+                skin: 'layui-layer-popup', //样式类名
+                closeBtn: 2, //显示关闭按钮
+                anim: 2,
+                title: '开户协议',
+                shadeClose: true, //开启遮罩关闭
+                content: $("#template_khxy").html()
+            });
+        }
+    </script>
     <script type="text/html" id="template_khxy">
         ${khxy.khxy}
     </script>

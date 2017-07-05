@@ -42,8 +42,8 @@
 
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <marquee behavior="scroll" contenteditable="true"
+                    <div class="swiper-wrapper  c">
+                        <marquee behavior="scroll" direction="left" scrolldelay="100" contenteditable="true"
                                  onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="5"
                                  width="100%" onmouseover="this.stop();" onmouseout="this.start();">
                             <c:forEach items="${popupNoticeList}" var="item" varStatus="status">
@@ -194,6 +194,22 @@
                             </a>
                         </div>
                     </div>
+                   <%-- <div class="zcw_cus_a">
+
+                        &lt;%&ndash;<c:import url="../common/mainKj.jsp">
+                            <c:param name="playGroupId" value="13" />
+                        </c:import>&ndash;%&gt;
+                       &lt;%&ndash; <div class="cus_b">
+                            <a href="<%=basePath%>ssc/gcdt/sfssc.html">
+                                <img src="${resPath}img/new_zcw/index1_12.png"/>
+                                <div>
+                                    <span class="dus_a">三分时时彩</span>
+                                    <span class="dus_b">24小时在线玩</span>
+                                </div>
+                            </a>
+                        </div>
+                        &ndash;%&gt;
+                    </div>--%>
                     <div class="zcw_cus_a">
                         <div class="cus_a rekj">
                             <c:import url="../common/mainKj.jsp">
@@ -207,21 +223,7 @@
                                 </div>
                             </a>
                         </div>
-                        <c:import url="../common/mainKj.jsp">
-                            <c:param name="playGroupId" value="13" />
-                        </c:import>
-                        <div class="cus_b">
-                            <a href="<%=basePath%>ssc/gcdt/sfssc.html">
-                                <img src="${resPath}img/new_zcw/index1_12.png"/>
-                                <div>
-                                    <span class="dus_a">三分时时彩</span>
-                                    <span class="dus_b">24小时在线玩</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="zcw_cus_a">
-                        <div class="cus_a rekj">
+                        <%--<div class="cus_a rekj">
                             <c:import url="../common/mainKj.jsp">
                                 <c:param name="playGroupId" value="17" />
                             </c:import>
@@ -232,10 +234,10 @@
                                     <span class="dus_b">24小时在线玩</span>
                                 </div>
                             </a>
-                        </div>
-                        <c:import url="../common/mainKj.jsp">
+                        </div>--%>
+                        <%--<c:import url="../common/mainKj.jsp">
                             <c:param name="playGroupId" value="16" />
-                        </c:import>
+                        </c:import>--%>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/efssc.html">
                                 <img src="${resPath}img/new_zcw/index1_7.png"/>

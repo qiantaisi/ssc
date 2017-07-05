@@ -35,6 +35,15 @@
                 <a href="javascript:void(0);" class="dpcai-btn">
                     低频彩
                 </a>
+                <a href="javascript:void(0);" class="PK10-btn">
+                    PK10
+                </a>
+                <a href="javascript:void(0);" class="ssc-btn">
+                    时时彩
+                </a>
+                <a href="javascript:void(0);" class="k3-btn">
+                     快3
+                </a>
             </div>
 
             <c:if test="${setLogUserGames != null || fn:length(setLogUserGames) != 0}">
@@ -733,6 +742,119 @@
                 </ul>
             </div>
 
+            <div class="buy_main ssc">
+                <div class="index_tl">
+	     		<span>
+	     			时时彩
+	     		</span>
+                </div>
+
+                <ul class="buy_ul clearfix">
+                    <li>
+                        <a data-play_group_id="15"
+                           href="<%=basePath%>ssc/gcdt/ffssc.html">
+                            <img src="${resPath}images/buy11.png" />
+                            <p>
+                                分分时时彩
+                            </p>
+                            <p class="buydate buy_date1">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-play_group_id="1" href="<%=basePath%>ssc/gcdt/cqssc.html">
+                            <img src="${resPath}/images/buy_07.png" />
+                            <p>
+                                重庆时时彩
+                            </p>
+                            <p class="buydate buy_date8">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-play_group_id="3" href="<%=basePath%>ssc/gcdt/xjssc.html">
+                            <img src="${resPath}/images/buy34.png" />
+                            <p>
+                                新疆时时彩
+                            </p>
+                            <p class="buydate buy_date14">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-play_group_id="2" href="<%=basePath%>ssc/gcdt/tjssc.html">
+                            <img src="${resPath}/images/buy_30.png" />
+                            <p>
+                                天津时时彩
+                            </p>
+                            <p class="buydate buy_date15">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-play_group_id="16"
+                           href="<%=basePath%>ssc/gcdt/efssc.html">
+                            <img src="${resPath}/images/buy28.png" />
+                            <p>
+                                两分时时彩
+                            </p>
+                            <p class="buydate buy_date18">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-play_group_id="17"
+                           href="<%=basePath%>ssc/gcdt/wfssc.html">
+                            <img src="${resPath}/images/buy_24.png" />
+                            <p>
+                                五分时时彩
+                            </p>
+                            <p class="buydate buy_date18">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-play_group_id="13" href="<%=basePath%>ssc/gcdt/sfssc.html">
+                            <img src="${resPath}/images/buy_23.png" />
+                            <p>
+                                三分时时彩
+                            </p>
+                            <p class="buydate buy_date18">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
             <div class="buy_main dpcai">
                 <div class="index_tl">
 	     		<span>
@@ -783,6 +905,87 @@
                             </p>
                         </a>
                     </li>
+                </ul>
+            </div>
+
+            <div class="buy_main PK10">
+            <div class="index_tl">
+	     		<span>
+	     			PK10
+	     		</span>
+            </div>
+
+            <ul class="buy_ul clearfix">
+                <li>
+                    <a data-play_group_id="23"
+                       href="<%=basePath%>ssc/gcdt/jspk10.html">
+                        <img src="${resPath}/images/buy_16.png" />
+                        <p>
+                            极速PK10
+                        </p>
+                        <p class="buydate buy_date10">
+
+                            <span class="hour">00</span>&nbsp;:&nbsp;
+                            <span class="mini">00</span>&nbsp;:&nbsp;
+                            <span class="sec">00</span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a data-play_group_id="9" href="<%=basePath%>ssc/gcdt/pk10.html">
+                        <img src="${resPath}/images/buy_09.png" />
+                        <p>
+                            北京PK10
+                        </p>
+                        <p class="buydate buy_date9">
+
+                            <span class="hour">00</span>&nbsp;:&nbsp;
+                            <span class="mini">00</span>&nbsp;:&nbsp;
+                            <span class="sec">00</span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+            <div class="buy_main k3">
+                <div class="index_tl">
+	     		<span>
+	     			快3
+	     		</span>
+                </div>
+
+                <ul class="buy_ul clearfix">
+                    <li>
+                        <a data-play_group_id="19"
+                           href="<%=basePath%>ssc/gcdt/hbk3.html">
+                            <img src="${resPath}/images/buy_29.png" />
+                            <p>
+                                湖北快3
+                            </p>
+                            <p class="buydate buy_date11">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-play_group_id="20"
+                        href="<%=basePath%>ssc/gcdt/ahk3.html">
+                        <img src="${resPath}/images/buy_29.png" />
+                        <p>
+                        安徽快3
+                        </p>
+                        <p class="buydate buy_date12">
+
+                        <span class="hour">00</span>
+                        <span class="mini">00</span>
+                        <span class="sec">00</span>
+                        </p>
+                        </a>
+                        </li>
                 </ul>
             </div>
 

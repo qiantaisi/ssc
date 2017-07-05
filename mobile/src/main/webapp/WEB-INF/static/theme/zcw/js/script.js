@@ -2393,6 +2393,29 @@ $(function () {
             $(this).addClass("ahover");
         });
 
+        //时时彩
+        $(".ssc-btn").click(function(){
+            $(".buy_main").hide();
+            $(".ssc").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
+
+        //PK10
+        $(".PK10-btn").click(function(){
+            $(".buy_main").hide();
+            $(".PK10").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
+
+        //
+        $(".k3-btn").click(function(){
+            $(".buy_main").hide();
+            $(".k3").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
 
         var flagArr = [];
         var flagEnableArr = [];
@@ -2513,13 +2536,6 @@ $(function () {
             var email = $('input[name="email"]').val();
             var qq = $('input[name="qq"]').val();
 
-            if (qq) {
-                if (!PatternUtils.checkQq(qq)) {
-                    Tools.toast("请输入正确格式的QQ号");
-                    return;
-                }
-            }
-
             if (telephone) {
                 if (!PatternUtils.checkPhone(telephone)) {
                     Tools.toast("请输入正确格式的手机号码");
@@ -2530,6 +2546,12 @@ $(function () {
             if (email) {
                 if (!PatternUtils.checkEmail(email)) {
                     Tools.toast("请输入正确格式的电子邮件");
+                    return;
+                }
+            }
+            if (qq) {
+                if (!PatternUtils.checkQq(qq)) {
+                    Tools.toast("请输入正确格式的QQ号");
                     return;
                 }
             }

@@ -3,11 +3,13 @@
     background: #E7E7E7 !important;
     font-size: 12px;
     font-family: "微软雅黑", "Microsoft YaHei";
+    background: #fff;
+    padding: 0px 10px;
 }
 
 .sp_scroll_txt {
     font-size: 14px;
-    color: #000;
+    color: #969696;
     line-height: 1.5rem;
 }
 
@@ -30,8 +32,10 @@
     color: white;
 }
 
-.recl-4 {
+.recl-4 .swiper-wrapper {
     margin-bottom: 10px;
+    padding: 1px 10px;
+    float: right;
 }
 
 .bar .button-link {
