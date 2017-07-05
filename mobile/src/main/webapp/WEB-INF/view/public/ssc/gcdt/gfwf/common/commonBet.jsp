@@ -8,8 +8,11 @@
 %>
 <div class="bar bar-footer-secondary cl-606">
     <div class="cl-608 gfwf-cl-608">
-        <a class="tab-item tab-item-clear" href="javascript:void(0)" id="btn-reset-gfwf">
+        <a class="tab-item tab-item-clear hide" href="javascript:void(0)" id="btn-reset-gfwf">
             <span class="tab-label cl-953">&nbsp;清除&nbsp;</span>
+        </a>
+        <a class="tab-item tab-item-clear" href="javascript:void(0)" id="btn-jixuan-gfwf" onclick="jixuanClick()">
+            <span class="tab-label cl-953 cl-953-jx">&nbsp;机选&nbsp;</span>
         </a>
 
         <span class="zs-span">

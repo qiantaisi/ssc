@@ -34,7 +34,6 @@
                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" />
         </div>
         <a class="tab-item" href="javascript:void(0)" id="btn-reset">
-            <%--<span class="icon icon-qingchu"></span>--%>
             <span class="tab-label cl-953">&nbsp;清除&nbsp;</span>
         </a>
         <a class="tab-item" href="javascript:void(0)" id="btn-submit">

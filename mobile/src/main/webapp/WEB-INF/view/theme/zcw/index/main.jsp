@@ -39,7 +39,6 @@
                 </div>
                 <div class="swiper-pagination repagination"></div>
             </div>
-
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper  c">
