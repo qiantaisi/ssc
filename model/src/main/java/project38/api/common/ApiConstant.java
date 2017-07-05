@@ -124,4 +124,6 @@ public class ApiConstant {
 
     public static String API_SSC_TODAYISOPEN = API_DOMAIN + "notice/getSscTodayIsOpen.json"; //获取彩种今日是否开奖
 
+    public static String API_GAME_SET = API_DOMAIN + "webSetting/getGameSet.json"; //获取游戏默认模式
+
 }
