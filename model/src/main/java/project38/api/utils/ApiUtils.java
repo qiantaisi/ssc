@@ -1279,4 +1279,12 @@ public class ApiUtils{
         paramsMap.put("playGroupId", playGroupId);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_INDEX_GETZJNOTICE, paramsMap, companyShortName), CommonResult.class);
     }
+
+    public static GameSetResult getGameSet(String companyShortName){
+        if(IS_DEBUG){
+            return new GameSetResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_GAME_SET, paramsMap, companyShortName), GameSetResult.class);
+    }
 }
