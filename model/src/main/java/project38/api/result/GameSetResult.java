@@ -7,7 +7,7 @@ import project38.api.common.result.CommonResult;
  */
 public class GameSetResult extends CommonResult {
 
-    //游戏模式  0 代表官方  1代表快钱
+    //游戏模式  0官方  1快钱
     public String type;
 
     public String getType() { return type; }
