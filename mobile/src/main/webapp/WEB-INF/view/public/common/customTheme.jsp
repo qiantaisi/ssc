@@ -19,7 +19,7 @@
         .cl-1201 i:not(.ball-ts),.ball-orange{background-color:#${fengge_1}!important}
         .cl-904 .openNumber i:not(.ball-ts){background-color:#${fengge_1}!important}
         #ssc-parent-menu .cl-602 a.active{border-bottom: 2px solid #${fengge_1}!important;color:#${fengge_1}!important;}
-        .cl-604 table tbody tr td.active,#btn-submit .cl-952{background:#${fengge_1}!important; color:white!important;}
+        .cl-604 table tbody tr td.active,#btn-submit .cl-952,.cl-953-jx{background:#${fengge_1}!important; color:white!important;}
         .cl-604 table tbody tr td span:nth-child(1),.cl-603,.cl-607 font,.native-scroll .cl-603{color:#${fengge_1}!important;}
         #betContainer .cl-604 span.ball-blue,#betContainer .cl-604 span.ball-green,#betContainer .cl-604 span.ball-red{color: #fff!important;}
         #betContainer .cl-604 .pkbg-1, #betContainer .cl-604 .pkbg-2, #betContainer .cl-604 .pkbg-3, #betContainer .cl-604 .pkbg-4, #betContainer .cl-604 .pkbg-5, #betContainer .cl-604 .pkbg-6, #betContainer .cl-604 .pkbg-7, #betContainer .cl-604 .pkbg-8, #betContainer .cl-604 .pkbg-9, #betContainer .cl-604 .pkbg-10{color: #fff!important;}

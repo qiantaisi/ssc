@@ -1,5 +1,16 @@
 //****
 // 官方玩法事件绑定
+function jixuanClick() {
+    var randomFun = getPlayPlFun_random();
+    if (typeof randomFun == "undefined") {
+        return;
+    }
+
+    eval(randomFun + "()");
+    $("#btn-reset-gfwf").show();
+    $("#btn-jixuan-gfwf").hide();
+}
+
 function gfwfEvent(){
     $("#btn-submit-gfwf").unbind('click').click(function () {
         showBetTemplate();
@@ -8,7 +19,6 @@ function gfwfEvent(){
     $("#btn-reset-gfwf").click(function () {
         clearSelected();
     });
-
 
     // checkbox触发事件f
     if ($("#checkSelected").length > 0) {
@@ -107,6 +117,16 @@ function danSelect(obj) {
  * 获取注数方法
  */
 function getGfwfZhushu(){
+
+    // 显示机选
+    var randomFun = getPlayPlFun_random();
+    if ($(".active_gfwf").length == 0 && typeof randomFun != "undefined") {
+        $("#btn-jixuan-gfwf").show();
+        $("#btn-reset-gfwf").hide();
+    } else {
+        $("#btn-reset-gfwf").show();
+        $("#btn-jixuan-gfwf").hide();
+    }
 
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
     //执行注数方法
@@ -2816,6 +2836,13 @@ function getPlayPlFun_content() {
 }
 
 /**
+ * 获取当前赔率随机算法
+ */
+function getPlayPlFun_random() {
+    return $(".gfwf_xz .wx-select a.selected").attr("data-fun_random");
+}
+
+/**
  * 获取当前赔率ID
  */
 function getPlayPlId() {
@@ -3111,6 +3138,10 @@ function clearSelected() {
     $(".active_gfwf").removeClass("active_gfwf");
     $("#zhushu").html(0);
     $("#nowMoney").html(0);
+
+    // 机选
+    $("#btn-jixuan-gfwf").show();
+    $("#btn-reset-gfwf").hide();
 }
 
 // //*****************mobile注数算法******************
@@ -3498,4 +3529,22 @@ Array.prototype.uniqueArr = function () {
         temp[temp.length]=this[i];
     }
     return temp;
+}
+
+//======================================================随机算法====================================
+/**
+ * 随机算法-五星直选复式
+ */
+function random_5xzxfs() {
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+    var random_3 = parseInt(Math.random() * 10);
+    var random_4 = parseInt(Math.random() * 10);
+    var random_5 = parseInt(Math.random() * 10);
+
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".baiweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".shiweiStr .wan_bottom .xz").eq(random_4).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".geweiStr .wan_bottom .xz").eq(random_5).removeClass("active_gfwf").addClass("active_gfwf");
 }

@@ -66,6 +66,7 @@
         <div class="hide" id="playGroup_5x">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
+               data-fun_random="random_5xzxfs"
                data-fun_zhushu="zhushu_5xzxfs"
                data-fun_content="content_5xzxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html"
