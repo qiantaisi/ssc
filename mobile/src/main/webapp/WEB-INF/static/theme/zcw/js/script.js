@@ -234,8 +234,8 @@ $(function () {
 
     // 登录页面
     $(document).on("pageInit", "#page-login", function (e, id, page) {
-        if (typeof initBottomNavIndex == 'function') {
-            initBottomNavIndex();
+        if (typeof initBottomNavMbmber == 'function') {
+            initBottomNavMbmber();
         }
 
         // 返回按钮

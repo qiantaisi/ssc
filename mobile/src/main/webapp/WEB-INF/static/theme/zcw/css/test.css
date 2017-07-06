@@ -9,9 +9,6 @@
     top: 0.4rem;
 }
 
-.h_pull-right {
-
-}
 
 .h_cl-328 a {
     position: absolute;
@@ -334,7 +331,7 @@
 /*主体*/
 .zcw_content {
     background: #ffffff;
-    height: 28rem;
+    height: 24rem;
     width: 100%;
     border-top: 1px solid #ebebeb;
 }
