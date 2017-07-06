@@ -2901,10 +2901,10 @@ function getPlAndMaxFd() {
     return;
 }
 
-//清除注单内容
+//清除注单内容提示框
 // var layerBet = null;
 var tmpBetContent = null;
-function showBetTemplate() {提示框
+function showBetTemplate() {
     // if (layerBet != null) {
     //     return;
     // }

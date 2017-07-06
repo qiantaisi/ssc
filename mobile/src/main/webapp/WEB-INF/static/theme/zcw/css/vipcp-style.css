@@ -4,7 +4,7 @@
     font-size: 12px;
     font-family: "微软雅黑", "Microsoft YaHei";
     background: #fff;
-    padding: 0px 10px;
+    /*padding: 0px 10px;*/
 }
 
 .sp_scroll_txt {
@@ -30,6 +30,10 @@
 .cl-3 a:last-child {
     background: #16da69;
     color: white;
+}
+
+.recl-4{
+    margin-bottom: 10px;
 }
 
 .recl-4 .swiper-wrapper {

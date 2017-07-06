@@ -12,408 +12,240 @@
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp"/>
 <c:import url="top.jsp"/>
-<div class="men_list">
-    <div class="wid1">
-        <div class="logo mt0">
-            <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a>
+<div class="head_middle">
+    <div class="container clearfix">
+        <a href="index.html" class="left logo">
+            <img src="${resPath}images/common/index_11.png" />
+        </a>
+        <div class="left head_middle_yuye">
+            <a href="#">
+                <img src="${resPath}images/common/index_14.png" />
+            </a>
         </div>
-        <c:import url="../common/navList.jsp"/>
+        <div class="right clearfix">
+            <div class="left head_middle_tel">
+                400-690-8888
+            </div>
+            <a href="#" class="left head_middle_kf">
+                <img src="${resPath}images/common/index_20.png" />
+                联系客服
+            </a>
+        </div>
     </div>
 </div>
 
-<div class="main_layout wid1">
-    <div class="left_layout">
-        <h1>选择彩种</h1>
-        <c:import url="leftMenu.jsp"/>
-    </div>
-
-    <div class="right_layotu">
-        <div class="left_wrap">
-            <div class="scroll_pic">
-                <ul>
-                    <c:forEach items="${carouseList.carouselList}" var="item">
-                        <c:choose>
-                            <c:when test="${empty item.url}">
-                                <li><a href="javascript:void(0)"><img src="<%=basePath%>images/${item.imageId}"
-                                                                      alt="${item.title}"></a></li>
-                            </c:when>
-                            <c:otherwise>
-                                <li><a href="${item.url}" target="_blank"><img
-                                        src="<%=basePath%>images/${item.imageId}" alt="${item.title}"></a></li>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
-                </ul>
-                <p>
-                    <c:forEach items="${carouseList.carouselList}" var="item" varStatus="status">
-                        <c:choose>
-                            <c:when test="${status.index == 0}"><i class="acti">${status.index + 1}</i></c:when>
-                            <c:otherwise><i>${status.index + 1}</i></c:otherwise>
-                        </c:choose>
-                    </c:forEach>
-                </p>
-            </div>
-            <div class="Bettingbag">
-                <div class="tabs_cg" >
-                    <ul>
-                        <li class="acti first"><i>重庆时时彩</i></li>
-                        <li><i>香港六合彩</i></li>
-                        <li><i>PK10</i></li>
-                        <%--<li><i>双色球</i></li>--%>
-                        <%--<li><i>大乐透</i></li>--%>
-                        <li><i>新疆时时彩</i></li>
-                        <li><i>天津时时彩</i></li>
-                    </ul>
-                </div>
-                <div class="num_bett" id="ssc_id_1">
-                    <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
-                            class="sp1 jiangchi"></span><span><a
-                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=cqssc&navIndex=1"--%>
-                            href="javascript:void(0);"
-                            onclick="openGcdt('gcdt/cqssc')"
-                            target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,1)">幸运选号</a> | <a
-                            href="<%=basePath%>ssc/zst/cqssc.html" target="_blank"
-                            class="sp0">走势图</a></span></p>
-                    <div class="box_n at hei1" id="xyxhContent_1">
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
+<div class="menu">
+    <div class="container clearfix">
+        <div class="left all_fenlei clearfix">
+            <span class="left all_fenlei_tl">全部彩种</span>
+            <img src="${resPath}images/common/index_30.png" class="right all_fenlei_img" />
+            <div class="all_fenlei_yin">
+                <a href="#" class="all_fenlei_yin_list clearfix">
+                    <div class="left">
+                        <img src="${resPath}images/common/index_39.png"/>
                     </div>
-                    <div class="val_add at">
-                        <div class="reduce">
-                            <a onclick="xyxhMinute(1, 5)" class="fl" href="javascript:void(0)">-</a>
-                            <input type="text" value="1" id="xyxhInput_1"
-                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
-                            <a onclick="xyxhAdd(1, 5)" class="fr" href="javascript:void(0)">+</a>
-                            <span id="xyxhMoney_1">共：<i>5</i> 元</span>
+                    <div class="all_fenlei_yin_list_rt">
+                        分分时时彩
+                    </div>
+                </a>
+                <a href="#" class="all_fenlei_yin_list clearfix">
+                    <div class="left">
+                        <img src="${resPath}images/common/index_42.png"/>
+                    </div>
+                    <div class="all_fenlei_yin_list_rt">
+                        极速PK拾
+                    </div>
+                </a>
+                <a href="#" class="all_fenlei_yin_list clearfix">
+                    <div class="left">
+                        <img src="${resPath}images/common/index_45.png"/>
+                    </div>
+                    <div class="all_fenlei_yin_list_rt">
+                        三分彩
+                    </div>
+                </a>
+                <a href="#" class="all_fenlei_yin_list clearfix">
+                    <div class="left">
+                        <img src="${resPath}images/common/index_49.png"/>
+                    </div>
+                    <div class="all_fenlei_yin_list_rt">
+                        北京PK拾
+                    </div>
+                </a>
+                <a href="#" class="all_fenlei_yin_list clearfix">
+                    <div class="left">
+                        <img src="${resPath}images/common/index51.png"/>
+                    </div>
+                    <div class="all_fenlei_yin_list_rt">
+                        北京快乐8
+                    </div>
+                </a>
+                <a href="#" class="all_fenlei_yin_list clearfix">
+                    <div class="left">
+                        <img src="${resPath}images/common/index1-16.png"/>
+                    </div>
+                    <div class="all_fenlei_yin_list_rt">
+                        天津时时彩
+                    </div>
+                </a>
+                <a href="#" class="all_fenlei_yin_list clearfix">
+                    <div class="left">
+                        <img src="${resPath}images/common/index51-17.png"/>
+                    </div>
+                    <div class="all_fenlei_yin_list_rt">
+                        香港六合彩
+                    </div>
+                </a>
+                <div class="all_fenlei_b">
+                    <div class="all_fenlei_b_gp clearfix">
+                        <div class="left all_fenlei_b_name" style="background: #ffcdcd;border: 1px solid #ffcdcd;color: #ff4444;">
+                            高频彩
                         </div>
-                        <p class="fr">
-                            <a href="javascript:void(0)" onclick="xyxh(this,1)"><img src="${resPath}img/ico82.png"
-                                                                                     alt="">换一注</a>
-                            <a href="javascript:void(0)" class="a1" onclick="openXyxh(1)">立即投注</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="num_bett" id="ssc_id_6">
-                    <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
-                            class="sp1 angchi"></span><span><a
-                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/lhc&caizhong=lhc&navIndex=0"--%>
-                            href="javascript:void(0);"
-                            onclick="openGcdt('gcdt/lhc')"
-                            target="_blank">手动选号</a> | <a
-                            href="javascript:void(0)" onclick="xyxh(this,6)">幸运选号</a> | <a
-                            href="<%=basePath%>ssc/zst/lhc.html" target="_blank" class="sp0">走势图</a></span>
-                    </p>
-                    <div class="box_n at hei1" id="xyxhContent_6">
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <p>
-                            <var><em></em></var>
-                            <var><em></em></var>
-                            <var><em></em></var>
-                            <var><em></em></var>
-                            <var><em></em></var>
-                            <var><em></em></var>
-                            <var><em></em></var>
-                        </p>
-                    </div>
-                    <div class="val_add at">
-                        <div class="reduce">
-                            <a onclick="xyxhMinute(6, 7)" class="fl" href="javascript:void(0)">-</a>
-                            <input type="text" value="1" id="xyxhInput_6"
-                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(6, 7);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
-                            <a onclick="xyxhAdd(6, 7)" class="fr" href="javascript:void(0)">+</a>
-                            <span id="xyxhMoney_6">共：<i>7</i> 元</span>
-                        </div>
-                        <p class="fr">
-                            <a href="javascript:void(0)" onclick="xyxh(this,6)"><img src="${resPath}img/ico82.png"
-                                                                                     alt="">换一注</a>
-                            <a href="javascript:void(0)" class="a1" onclick="openXyxh(6)">立即投注</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="num_bett" id="ssc_id_9">
-                    <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
-                            class="sp1 jiangchi"></span><span><a
-                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/lhc&caizhong=pk10&navIndex=1"--%>
-                            href="javascript:void(0);"
-                            onclick="openGcdt('gcdt/pk10')"
-                            target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,9)">幸运选号</a> | <a
-                            href="<%=basePath%>ssc/zst/pk10.html" target="_blank" class="sp0">走势图</a></span>
-                    </p>
-                    <div class="box_n at hei1 pk10" id="xyxhContent_9">
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                    </div>
-                    <div class="val_add at">
-                        <div class="reduce">
-                            <a onclick="xyxhMinute(9, 10)" class="fl" href="javascript:void(0)">-</a>
-                            <input type="text" value="1" id="xyxhInput_9"
-                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(9, 10);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
-                            <a onclick="xyxhAdd(9, 10)" class="fr" href="javascript:void(0)">+</a>
-                            <span id="xyxhMoney_9">共：<i>10</i> 元</span>
-                        </div>
-                        <p class="fr">
-                            <a href="javascript:void(0)" onclick="xyxh(this,9)"><img src="${resPath}img/ico82.png"
-                                                                                     alt="">换一注</a>
-                            <a href="javascript:void(0)" class="a1" onclick="openXyxh(9)">立即投注</a>
-                        </p>
-                    </div>
-                </div>
-                <%--<div class="num_bett">--%>
-                <%--<p class="p1"><span class="sp0">第2016292期</span> 截止：0天5小时6分0秒 <span class="sp1">当前奖池：11.6亿</span><span><a href="javascript:void(0)">手动选号</a> | <a  href="javascript:void(0)" onclick="xyxh(this)">幸运选号</a> | <a href="javascript:void(0)" class="sp0">走势图</a></span></p>--%>
-                <%--<div class="box_n at">--%>
-                <%--<span  class="s0">5</span>--%>
-                <%--<span  class="s1">6</span>--%>
-                <%--<span  class="s0">11</span>--%>
-                <%--<span  class="s2">23</span>--%>
-                <%--<span  class="s0">29</span>--%>
-                <%--<span  class="s1">33</span>--%>
-                <%--</div>--%>
-                <%--<div class="val_add at">--%>
-                <%--<div class="reduce">--%>
-                <%--<a class="fl">-</a>--%>
-                <%--<input type="text" value="1">--%>
-                <%--<a class="fr">+</a>--%>
-                <%--<span>共：<i>200</i> 元</span>--%>
-                <%--</div>--%>
-                <%--<p class="fr">--%>
-                <%--<a><img src="${resPath}img/ico82.png" alt="">换一注</a>--%>
-                <%--<a href="javascript:void(0)" onclick="touzhutishi()" class="a1">立即投注</a>--%>
-                <%--</p>--%>
-                <%--</div>--%>
-                <%--</div>--%>
-                <%--<div class="num_bett">--%>
-                <%--<p class="p1"><span class="sp0">第2016292期</span> 截止：0天5小时6分0秒 <span class="sp1">当前奖池：11.6亿</span><span><a href="javascript:void(0)">手动选号</a> | <a  href="javascript:void(0)" onclick="xyxh(this)">幸运选号</a> | <a href="javascript:void(0)" class="sp0">走势图</a></span></p>--%>
-                <%--<div class="box_n at">--%>
-                <%--<span class="s0">5</span>--%>
-                <%--<span class="s2">6</span>--%>
-                <%--<span class="s0">11</span>--%>
-                <%--<span class="s1">23</span>--%>
-                <%--<span class="s0">29</span>--%>
-                <%--<span class="s1">33</span>--%>
-                <%--</div>--%>
-                <%--<div class="val_add at">--%>
-                <%--<div class="reduce">--%>
-                <%--<a class="fl">-</a>--%>
-                <%--<input type="text" value="1">--%>
-                <%--<a class="fr">+</a>--%>
-                <%--<span>共：<i>200</i> 元</span>--%>
-                <%--</div>--%>
-                <%--<p class="fr">--%>
-                <%--<a><img src="${resPath}img/ico82.png" alt="">换一注</a>--%>
-                <%--<a href="javascript:void(0)" onclick="touzhutishi()" class="a1">立即投注</a>--%>
-                <%--</p>--%>
-                <%--</div>--%>
-                <%--</div>--%>
-                <div class="num_bett" id="ssc_id_3">
-                    <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
-                            class="sp1 jiangchi"></span><span><a
-                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=xjssc&navIndex=1"--%>
-                            href="javascript:void(0);"
-                            onclick="openGcdt('gcdt/xjssc')"
-                            target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,3)">幸运选号</a> | <a
-                            href="<%=basePath%>ssc/zst/xjssc.html" target="_blank"
-                            class="sp0">走势图</a></span></p>
-                    <div class="box_n at hei1" id="xyxhContent_3">
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                    </div>
-                    <div class="val_add at">
-                        <div class="reduce">
-                            <a onclick="xyxhMinute(3, 5)" class="fl" href="javascript:void(0)">-</a>
-                            <input type="text" value="1" id="xyxhInput_3"
-                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(3, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
-                            <a onclick="xyxhAdd(3, 5)" class="fr" href="javascript:void(0)">+</a>
-                            <span id="xyxhMoney_3">共：<i>5</i> 元</span>
-                        </div>
-                        <p class="fr">
-                            <a href="javascript:void(0)" onclick="xyxh(this,3)"><img src="${resPath}img/ico82.png"
-                                                                                     alt="">换一注</a>
-                            <a href="javascript:void(0)" class="a1" onclick="openXyxh(3)">立即投注</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="num_bett" id="ssc_id_2">
-                    <p class="p1"><span class="sp0 number"></span><span class="currentTime leftTime"></span><span
-                            class="sp1 jiangchi"></span><span><a
-                            <%--href="<%=basePath%>ssc/index.html?module=gcdt/cqssc&caizhong=tjssc&navIndex=1"--%>
-                            href="javascript:void(0);"
-                            onclick="openGcdt('gcdt/tjssc')"
-                            target="_blank">手动选号</a> | <a href="javascript:void(0)" onclick="xyxh(this,2)">幸运选号</a> | <a
-                            href="<%=basePath%>ssc/zst/tjssc.html" target="_blank" class="sp0">走势图</a></span>
-                    </p>
-                    <div class="box_n at hei1" id="xyxhContent_2">
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                        <span class="s0"></span>
-                    </div>
-                    <div class="val_add at">
-                        <div class="reduce">
-                            <a onclick="xyxhMinute(2, 5)" class="fl" href="javascript:void(0)">-</a>
-                            <input type="text" value="1" id="xyxhInput_2"
-                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(2, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
-                            <a onclick="xyxhAdd(2, 5)" class="fr" href="javascript:void(0)">+</a>
-                            <span id="xyxhMoney_2">共：<i>5</i> 元</span>
-                        </div>
-                        <p class="fr">
-                            <a href="javascript:void(0)" onclick="xyxh(this,2)"><img src="${resPath}img/ico82.png"
-                                                                                     alt="">换一注</a>
-                            <a href="javascript:void(0)" class="a1" onclick="openXyxh(2)">立即投注</a>
-                        </p>
-                    </div>
-                </div>
-            </div><!--Bettingbag-->
-        </div>
-        <div class="right_wrap" style="overflow:hidden;">
-            <div class="login">
-                <h2>
-                    <p><img src="${resPath}img/ico84.png" alt="">登录</p>
-                </h2>
-
-                <c:choose>
-                    <c:when test="${not empty userSession}">
-                        <ul class="state">
-                            <li>尊敬的：<i style="cursor: pointer;" onclick="openHyzx()">${userSession.account}</i>
-                                <script>
-                                    var hour = (new Date()).getHours();
-                                    if (hour < 6) {
-                                        hour = '凌晨好！';
-                                    } else if (hour < 12) {
-                                        hour = '上午好！';
-                                    } else if (hour < 14) {
-                                        hour = '中午好！';
-                                    } else if (hour < 18) {
-                                        hour = '下午好！';
-                                    } else if (hour < 24) {
-                                        hour = '晚上好！'
-                                    }
-                                    document.write(hour);
-                                </script>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" onclick="openHyzx('member/zhcz.html?module=yhzz')">充值</a>|
-                                <a href="javascript:void(0)" onclick="openHyzx('member/withdraw.html')">提款</a>|
-                                <a onclick="openHyzx('member/lsjl.html?module=ckjl')" href="javascript:void(0)">历史记录</a>|
-                                <a onclick="openHyzx()" href="javascript:void(0)">会员中心</a>
-                            </li>
-                            <li>余额：<i class="i0">${userSession.balance}</i> 元</li>
-                            <li>
-                                <button onclick="sigout()" type="button">退出</button>
-                            </li>
-                        </ul>
-                    </c:when>
-                    <c:otherwise>
-                        <form onsubmit="login1();return false;">
-                            <ul>
-                                <li><input type="text" placeholder="会员名" id="loginAccount1"></li>
-                                <li><input type="password" placeholder="密码" id="loginPassword1"></li>
-                                <li><input type="text" style="vertical-align:middle"
-                                           placeholder="验证码"
-                                           id="loginYzm1" class="short"><img id="yzmImg1" onclick="refreshYzm(this)"
-                                                                             style="vertical-align:middle"
-                                                                             src="<%=basePath%>code/yzm?imgWidth=50&imgHeight=30&imgFontHeight=26&imgCodeY=23&imgCodeX=2"
-                                                                             alt=""><a
-                                        href="${kefuUrl}" target="_blank">忘记密码?</a></li>
+                        <div class="all_fenlei_b_gp_rt clearfix">
+                            <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <button type="submit">登录</button>
-                                    <a href="<%=basePath%>register.html" class="a0">立即注册</a><a
-                                        href="javascript:void(0)" onclick="shiwan()" class="a0">免费试玩</a></li>
+                                    <a href="#">分分时时彩</a>
+                                </li>
+                                <li>
+                                    <a href="#">极速PK拾</a>
+                                </li>
+                                <li>
+                                    <a href="#">三分彩</a>
+                                </li>
+                                <li>
+                                    <a href="#">北京PK拾</a>
+                                </li>
                             </ul>
-                        </form>
-                    </c:otherwise>
-                </c:choose>
-            </div>
-            <div class="down_file">
-                <p><i class="iphone"></i>手机客户端下载<a href="<%=mHostName%>" target="_blank">more&gt;&gt;</a></p>
-            </div>
-            <div class="code_layout">
-                <div class="code_wrap">
-                    <img src="${resPath}img/ico89.png" alt="" width="102" height="102">
-                    <div class="text">
-                        <a href="<%=mHostName%>" target="_blank"><img src="${resPath}img/ico87.png" alt="">iOS下载</a>
-                        <a href="<%=mHostName%>" target="_blank"><img src="${resPath}img/ico88.png" alt="">Android下载</a>
+                        </div>
+                        <div class="all_fenlei_b_yin">
+                            <p class="all_fenlei_b_yin_tl">高频彩</p>
+                            <div class="clearfix all_fenlei_b_yin_a">
+                                <a href="#">北京PK10</a>
+                                <a href="#">极速PK10</a>
+                                <a href="#">幸运飞艇</a>
+                                <a href="#">重庆时时彩</a>
+                                <a href="#">天津时时彩</a>
+                                <a href="#">新疆时时彩</a>
+                                <a href="#">分分时时彩</a>
+                                <a href="#">两分时时彩</a>
+                                <a href="#">三分时时彩</a>
+                                <a href="#">五分时时彩</a>
+                                <a href="#">江苏快3</a>
+                                <a href="#">湖北快3</a>
+                                <a href="#">安徽快3</a>
+                                <a href="#">吉林快3</a>
+                                <a href="#">重庆幸运农场</a>
+                                <a href="#">广东快乐十分</a>
+                                <a href="#">北京快乐8</a>
+                                <a href="#">幸运28</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="all_fenlei_b_gp clearfix">
+                        <div class="left all_fenlei_b_name" style="background: #c3cbf6;border: 1px solid #a7bdfd;color: #4041d0;">
+                            低频彩
+                        </div>
+                        <div class="all_fenlei_b_gp_rt clearfix">
+                            <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
+                                <li>
+                                    <a href="#">香港六合彩</a>
+                                </li>
+                                <li>
+                                    <a href="#">福彩3d</a>
+                                </li>
+                                <li>
+                                    <a href="#">排列三</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="all_fenlei_b_yin">
+                            <p class="all_fenlei_b_yin_tl">低频彩</p>
+                            <div class="clearfix all_fenlei_b_yin_a">
+
+                                <a href="#">香港六合彩</a>
+                                <a href="#">福彩3D</a>
+                                <a href="#">体彩排列3</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="all_fenlei_b_gp clearfix">
+                        <div class="left all_fenlei_b_name" style="background: #d9f9df;border: 1px solid #c5f4cf;color: #005d19;padding-top: 11px;height: 47px;">
+                            全部
+                        </div>
+                        <div class="all_fenlei_b_gp_rt clearfix">
+                            <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
+                                <li>
+                                    <a href="#">分分时时彩</a>
+                                </li>
+                                <li>
+                                    <a href="#">极速PK拾</a>
+                                </li>
+                                <li>
+                                    <a href="#">三分彩</a>
+                                </li>
+                                <li>
+                                    <a href="#">北京PK拾</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="all_fenlei_b_yin">
+                            <p class="all_fenlei_b_yin_tl">全部</p>
+                            <div class="clearfix all_fenlei_b_yin_a">
+
+                                <a href="#">重庆时时彩</a>
+                                <a href="#">天津时时彩</a>
+                                <a href="#">新疆时时彩</a>
+                                <a href="#">分分时时彩</a>
+                                <a href="#">两分时时彩</a>
+                                <a href="#">三分时时彩</a>
+                                <a href="#">五分时时彩</a>
+                                <a href="#">北京PK10</a>
+                                <a href="#">极速PK10</a>
+                                <a href="#">幸运飞艇</a>
+                                <a href="#">香港六合彩</a>
+                                <a href="#">江苏快3</a>
+                                <a href="#">湖北快3</a>
+                                <a href="#">安徽快3</a>
+                                <a href="#">吉林快3</a>
+                                <a href="#">快乐十分</a>
+                                <a href="#">幸运农场</a>
+                                <a href="#">北京快乐8</a>
+                                <a href="#">福彩3D</a>
+                                <a href="#">体彩排列3</a>
+                                <a href="#">幸运28</a>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="Notice">
-                    <b>公告</b>
-                    <div style="height:50px;overflow:hidden;">
-                        <div id="gonggao_marquee" style="width: 100%;height:100%;background:#fff"></div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="chart">
-            <div class="title">
-                <h2>走势图</h2>
-                <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">更多&gt;&gt;</a>
-            </div>
-            <div class="pic_wp">
-                <div class="pic_box">
-                    <img src="${resPath}img/img11.jpg" alt="">
-                </div>
-                <div class="links">
-                    <p>
-                        <span>高频彩</span>
-                        <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank">重庆时时彩</a>
-                        <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank">天津时时彩</a>
-                        <a href="<%=basePath%>ssc/zst/xjssc.html" target="_blank">新疆时时彩</a>
-                        <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
-                        <a href="<%=basePath%>ssc/zst/efssc.html" target="_blank">两分时时彩</a>
-                        <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分时时彩</a>
-                        <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">五分时时彩</a>
-                        <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
-                        <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK10</a>
-                        <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
-                        <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">江苏快3</a>
-                        <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">湖北快3</a>
-                        <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">安徽快3</a>
-                        <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>
-                        <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">幸运农场</a>
-                        <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
-                        <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
-                        <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
-                    </p>
-                    <p>
-                        <span>低频彩</span>
-                        <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
-                        <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">福彩3D</a>
-                        <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">体彩排列3</a>
-                    </p>
-                </div>
-
             </div>
         </div>
-
-
+        <div class="menu_main clearfix left">
+            <a href="#" class="ahover">
+                首页
+            </a>
+            <a href="#">
+                购彩大厅
+            </a>
+            <a href="#">
+                优惠活动
+            </a>
+            <a href="#">
+                开奖公告
+            </a>
+            <a href="#">
+                走势图表
+            </a>
+            <a href="#">
+                <em class="hot"></em>
+                <img src="${resPath}images/common/index30.png" class="menu_a_img" />
+                手机购买
+            </a>
+        </div>
     </div>
 </div>
 
@@ -775,42 +607,6 @@
         }
         windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
     }
-
-//    function getCaiZhongEnable(playGroupId) {
-//        var enable = '';
-//        ajaxRequest({
-//            url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
-//            data: {
-//                playGroupId: playGroupId
-//            },
-//            success: function (json) {
-//                if (json.result != 1) {
-//                    return;
-//                }
-//
-//                $.each(json.sscTimeList, function (index, value) {
-//                    var obj = $("#ssc_" + value.playGroupId);
-//
-//                    if ($(obj).length == 0) {
-//                        return;
-//                    }
-//
-//                    enable = $(obj).data("enable", value.enable);
-//
-//                });
-//            }
-//        });
-//        return enable;
-//    }
-
-//    function getPlayGroupId(param_url) {
-//        var idPl = 0;
-//        if (param_url == 'jlk3') {
-//            idPl = 21;
-//        }
-//        return idPl;
-//    }
-
 
     function openZstIndex(module) {
         if (typeof module == 'undefined') {

@@ -41,7 +41,7 @@
             </div>
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
-                    <div class="swiper-wrapper  c">
+                    <div class="swiper-wrapper">
                         <marquee behavior="scroll" direction="left" scrolldelay="100" contenteditable="true"
                                  onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="5"
                                  width="100%" onmouseover="this.stop();" onmouseout="this.start();">

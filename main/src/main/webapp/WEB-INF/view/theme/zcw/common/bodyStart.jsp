@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="${resPath}css/global.css?v=<%=(new Date()).getTime()%>" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170428" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/gfwf.css?v=20170502" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="${resPath}css/index.css?v=20170705" type="text/css"><!--页面CSS-->
     <script src="${resPath}js/FancyZoom.js" language="JavaScript" type="text/javascript"></script>
     <script src="${resPath}js/FancyZoomHTML.js" language="JavaScript" type="text/javascript"></script>
     <jsp:include page="commonHeader.jsp" />
@@ -32,6 +33,10 @@
         }
         a:active{
             color:deepskyblue;
+        }
+        div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p {
+            padding: 0;
+            margin: 0;
         }
     </style>
 </head>
