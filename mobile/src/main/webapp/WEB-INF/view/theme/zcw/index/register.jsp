@@ -24,7 +24,7 @@
                 <p class="form_text">
                     字母开头的6-12位字母数字组成的用户名
                 </p>
-                <input type="text" placeholder="账号" name="account"/>
+                <input type="text" placeholder="用户名" name="account"/>
                 <p class="form_text">
                     请输入6-12位字母、数字的密码
                 </p>
