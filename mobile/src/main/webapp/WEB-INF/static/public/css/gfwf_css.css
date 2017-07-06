@@ -254,7 +254,7 @@ ding {
 
 .x_wrap {
     width: 100%;
-    height: 1.5rem;
+    height: 1.55rem;
     background: #fff;
     text-align: center;
     color: #F72021;
@@ -274,7 +274,7 @@ ding {
     display: inline-block;
     position: relative;
     border-bottom: 2px solid #F72021;
-    height: 1.3rem;
+    height: 1.35rem;
 }
 
 .x_wrap .x_2 {
@@ -376,7 +376,7 @@ ding {
     /*height: 50%;*/
     background: #fff;
     position: absolute;
-    top: 3.72rem;
+    top: 3.75rem;
     overflow-y: auto;
     z-index: 9;
 }
