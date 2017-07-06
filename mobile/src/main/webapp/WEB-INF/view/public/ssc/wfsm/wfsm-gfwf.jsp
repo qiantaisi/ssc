@@ -62,7 +62,7 @@
                             <div class="content-block">
                                 <c:choose>
                                     <c:when test="${playGroupId == 1}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
+                                        <c:import url="rule/gfwf/cqssc.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 2}">
                                         <c:import url="rule/gfwf/base.jsp"/>

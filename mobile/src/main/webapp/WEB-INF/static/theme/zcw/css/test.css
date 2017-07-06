@@ -385,13 +385,6 @@
     text-overflow: ellipsis;
 }
 
-.zcw_content {
-    background: #ffffff;
-    height: 28rem;
-    width: 100%;
-    border-top: 1px solid #ebebeb;
-}
-
 .zcw_content .zcw_cus_a .cus_a div {
     border-right: 1px solid #ebebeb;
 }

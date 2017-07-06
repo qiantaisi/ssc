@@ -27,7 +27,7 @@
 </div>
 
 <div class="gfwf_xz gfwf_wh">
-    <div class="xuan">
+    <div class="xuan yixuan">
         <div class="xuan1"></div>
         <div class="xuan2" id="gfwf_playGroupName"></div>
         <div class="xuan1"></div>

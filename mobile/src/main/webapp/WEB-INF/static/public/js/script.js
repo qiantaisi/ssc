@@ -4853,6 +4853,12 @@ $(function () {
             $(".wx-select .show a").find("span").eq(0).addClass("staer1");
             $(".wx-select .show a").find("span").eq(0).removeClass("staer1");
             $(".wx-select .show a").find("span").eq(0).addClass("zxfs");
+            var url = $(".wx-select .show a").eq(0).attr("data-url");
+            getSubGfwfSscPage(url, function(){
+                //执行官方玩法事件
+                gfwfEvent();
+                renderPlayName();
+            });
 
             // 添加选中状态，方便获取相关数据
             $(".wx-select a.selected").removeClass("selected");
@@ -4862,12 +4868,6 @@ $(function () {
             $("#nowMoney").html("0");
 
             if ($(".wx-select .show a").length <= 1) {
-                var url = $(".wx-select .show a").eq(0).attr("data-url");
-                getSubGfwfSscPage(url, function(){
-                    //执行官方玩法事件
-                    gfwfEvent();
-                    renderPlayName();
-                });
 
                 $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
                 $(".page").find(".gfwf_mask2").addClass("Hide_Show2");

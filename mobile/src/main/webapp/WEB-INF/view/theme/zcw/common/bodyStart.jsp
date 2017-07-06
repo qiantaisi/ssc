@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="${resPath}css/vipcp-style.css?v=20170527_1">
     <link rel="stylesheet" href="${resPath}css/vipcp-login-reg.css?v=20170519">
     <link rel="stylesheet" href="${bottomCssResPath}${themeBottomNav}/css/base-template.css?v=20170628"/>
-    <link rel="stylesheet" href="${resPath}css/test.css"/>
+    <link rel="stylesheet" href="${resPath}css/test.css?v=20170706"/>
     <link rel="stylesheet" href="${resPath}css/gcdt.css"/>
     <link rel="stylesheet" type="text/css" href="${resPath}css/login-register.css">
 
