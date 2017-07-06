@@ -25,54 +25,13 @@
     right: 1px;
 }
 
-.number_bar-tab {
-    border-top: 1px solid #aaaaaa;
-    bottom: 0;
-    width: 100%;
-    height: 3.05rem;
-    background: #030303;
-    position: absolute;
-    z-index: 9999;
-    text-align: center;
-}
 
 .bottom2 {
     bottom: 3rem;
 }
 
-.number_bar-tab img {
-    width: 26px;
-    position: relative;
-    top: 0.1rem;
-}
-
-.number_bar-tab a {
-    display: inline-block;
-    padding-top: 1.6% !important;
-    width: 20%;
-    color: #9a9a9a;
-    height: 3.05rem;
-    float: left;
-    margin: 0;
-}
-
-.number_bar-tab span {
-    display: block;
-    font-size: smaller;
-}
-
 .number_bar .barImg2 {
     display: none;
-}
-
-.number_bar-tab .active {
-    border-bottom: 5px solid #ed9142;
-    color: #ed9142;
-}
-
-.number_bar-tab .active span {
-    font-size: 14px !important;
-    margin-top: 1px;
 }
 
 .h_bar-nav {

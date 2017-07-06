@@ -987,19 +987,19 @@
                     </li>
                     <li>
                         <a data-play_group_id="20"
-                        href="<%=basePath%>ssc/gcdt/ahk3.html">
-                        <img src="${resPath}/images/buy_29.png" />
-                        <p>
-                        安徽快3
-                        </p>
-                        <p class="buydate buy_date12">
+                           href="<%=basePath%>ssc/gcdt/ahk3.html">
+                            <img src="${resPath}/images/buy_29.png"/>
+                            <p>
+                                安徽快3
+                            </p>
+                            <p class="buydate buy_date12">
 
-                        <span class="hour">00</span>
-                        <span class="mini">00</span>
-                        <span class="sec">00</span>
-                        </p>
+                                <span class="hour">00</span>
+                                <span class="mini">00</span>
+                                <span class="sec">00</span>
+                            </p>
                         </a>
-                        </li>
+                    </li>
                 </ul>
             </div>
 
