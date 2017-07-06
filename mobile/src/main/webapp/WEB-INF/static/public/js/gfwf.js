@@ -9,6 +9,8 @@ function jixuanClick() {
     eval(randomFun + "()");
     $("#btn-reset-gfwf").show();
     $("#btn-jixuan-gfwf").hide();
+
+    getGfwfZhushu();
 }
 
 function gfwfEvent(){
@@ -3533,6 +3535,19 @@ Array.prototype.uniqueArr = function () {
 }
 
 //======================================================随机算法====================================
+/**
+ * 随机算法-定位胆
+ */
+function random_dwd() {
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+    var random_3 = parseInt(Math.random() * 10);
+
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".baiweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
 /**
  * 随机算法-五星直选复式
  */

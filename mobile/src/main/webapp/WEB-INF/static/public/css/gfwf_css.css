@@ -257,17 +257,17 @@ ding {
     height: 1.5rem;
     background: #fff;
     text-align: center;
-    color: #F72021!important;
+    color: #F72021;
     z-index: 9;
 }
 .zxfs{
-    border: 1px solid #F72021!important;
+    border: 1px solid #F72021;
     border-radius: 4px;
     width: 30%;
     display: inline-block;
     text-align: center;
     margin: 0.3em;
-    color: #F72021!important;
+    color: #F72021;
 }
 .x_wrap .x_1 {
     width: 46%;
@@ -408,7 +408,7 @@ ding {
 }
 
 .gfwf_xz .xuan .xuan2 {
-    color: #F72021!important;
+    color: #F72021;
 }
 
 .Fixed {
