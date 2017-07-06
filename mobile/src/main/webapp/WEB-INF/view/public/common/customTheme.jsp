@@ -21,7 +21,7 @@
         #ssc-parent-menu .cl-602 a.active{border-bottom: 2px solid #${fengge_1}!important;color:#${fengge_1}!important;}
         .cl-604 table tbody tr td.active,#btn-submit .cl-952,.cl-953-jx{background:#${fengge_1}!important; color:white!important;}
         .cl-604 table tbody tr td span:nth-child(1),.cl-603,.cl-607 font,.native-scroll .cl-603,.wrap .cus_common .wan_bottom .cus-flex-item,#nowMoney{color:#${fengge_1}!important;}
-        .gfwf_xz .xuan .xuan2,.x_wrap{color:#${fengge_1}!important;}
+        .gfwf_xz .xuan .xuan2,.x_wrap,.F2_color{color:#${fengge_1}!important;}
         .zxfs{border: 1px solid #${fengge_1}!important; color:#${fengge_1}!important;}
         .color_two,.playPlRangeContainer{border: 1px solid #${fengge_1}!important;}
         .x_wrap .x_1{border-bottom:2px solid #${fengge_1}!important;}
