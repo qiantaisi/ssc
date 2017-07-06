@@ -33,6 +33,7 @@ public class ApiConstant {
     public static String API_ALIPAY_ZZ = API_DOMAIN+"member/submitAlipayzz.json";//提交支付宝转账
     public static String API_TENPAY_ZZ = API_DOMAIN+"member/submitTenpayzz.json";//提交财付通转账
     public static String API_SUBMIT_WITHDRAW = API_DOMAIN+"member/submitWithdraw.json";//快速取款
+    public static String API_NEED_WITHDRAWPASSWD = API_DOMAIN+"member/needWithdrawPasswd.json";//查询是否需求取款密码
     public static String API_GET_SYS_ALIPAY = API_DOMAIN+"member/getSystemAlipay.json";//获取系统支付宝账号
     public static String API_GET_SYS_WEIXIN = API_DOMAIN+"member/getSystemWeixin.json";//获取系统微信账号
     public static String API_GET_SYS_TENPAY = API_DOMAIN+"member/getSystemTenpay.json";//获取系统财付通账号
