@@ -3540,12 +3540,24 @@ Array.prototype.uniqueArr = function () {
  */
 function random_dwd() {
     var random_1 = parseInt(Math.random() * 10);
-    var random_2 = parseInt(Math.random() * 10);
-    var random_3 = parseInt(Math.random() * 10);
+    var wei = parseInt(Math.random() * 5);
 
-    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".qianweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".baiweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+    if(wei == 0){
+       $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 1){
+       $(".qianweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 2){
+        $(".baiweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 3){
+        $(".shiweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 4){
+        $(".geweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    }
+
+
+
+
+
 }
 
 /**
