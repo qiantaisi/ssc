@@ -110,13 +110,6 @@ function danSelect(obj) {
     $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
 
     getGfwfZhushu();
-}
-
-
-/**
- * 获取注数方法
- */
-function getGfwfZhushu(){
 
     // 显示机选
     var randomFun = getPlayPlFun_random();
@@ -127,6 +120,14 @@ function getGfwfZhushu(){
         $("#btn-reset-gfwf").show();
         $("#btn-jixuan-gfwf").hide();
     }
+
+}
+
+
+/**
+ * 获取注数方法
+ */
+function getGfwfZhushu(){
 
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
     //执行注数方法

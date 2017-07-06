@@ -16,7 +16,7 @@
         #page-yhhd .bar-nav{ background:#${fengge_1}!important;}
 
         /*快钱投注界面风格样式*/
-        .cl-1201 i:not(.ball-ts),.ball-orange{background-color:#${fengge_1}!important}
+        .cl-1201 i:not(.ball-ts),.ball-orange,.active_gfwf{background-color:#${fengge_1}!important}
         .cl-904 .openNumber i:not(.ball-ts),.wrap .cus_common .wan_top .wanwei{background-color:#${fengge_1}!important}
         #ssc-parent-menu .cl-602 a.active{border-bottom: 2px solid #${fengge_1}!important;color:#${fengge_1}!important;}
         .cl-604 table tbody tr td.active,#btn-submit .cl-952,.cl-953-jx{background:#${fengge_1}!important; color:white!important;}

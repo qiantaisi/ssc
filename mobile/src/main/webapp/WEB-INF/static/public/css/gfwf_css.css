@@ -270,7 +270,7 @@ ding {
     color: #F72021!important;
 }
 .x_wrap .x_1 {
-    width: 47%;
+    width: 46%;
     display: inline-block;
     position: relative;
     border-bottom: 2px solid #F72021!important;
@@ -451,7 +451,7 @@ ding {
 
 .active_gfwf {
     color: #fff;
-    background: #F72021!important;
+    background: #F72021;
 }
 
 /*官方玩法投注界面底部*/
