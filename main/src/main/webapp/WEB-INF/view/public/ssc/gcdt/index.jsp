@@ -228,7 +228,7 @@
     </div>
 </c:forEach>
 <c:import url="../../common/commonJs.jsp"/>
-<script src="${resPath}js/ssc/gcdt/gcdt.js?<%=(new Date()).getTime()%>"></script>
+<script src="${resPath}js/ssc/gcdt/gcdt.js?v=20170706"></script>
 <script>
 </script>
 <c:import url="../../common/bodyEnd.jsp"/>

@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="${resPath}css/style.css?v=201703222201">
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170421">
-    <link rel="stylesheet" href="${resPath}css/gfwf_css.css?v=20170619">
+    <link rel="stylesheet" href="${resPath}css/gfwf_css.css?v=20170706">
     <link rel="stylesheet" href="${resPath}theme/${themeBottomNav}/css/base-template.css?v=20170628">
 
     <jsp:include page="customTheme.jsp" />
