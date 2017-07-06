@@ -5673,11 +5673,11 @@ $(function () {
             getKjjgSetData(idArr);
 
             //隐藏选框和蒙版框
-            $(".outer").hide();
-            $(".re-modal").hide();
+            $(".outer").addClass("vipcp-hide");
+            $(".re-modal").addClass("vipcp-hide");
         });
 
-        $(".btn_xz").click(function () {
+        $(".btn_xz").live("click",function () {
             $(".outer").removeClass('vipcp-hide');
             $(".re-modal").removeClass('vipcp-hide');
 
