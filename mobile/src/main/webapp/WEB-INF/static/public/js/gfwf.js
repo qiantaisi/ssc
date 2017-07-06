@@ -3553,11 +3553,6 @@ function random_dwd() {
     } else if(wei == 4){
         $(".geweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
     }
-
-
-
-
-
 }
 
 /**
@@ -3575,4 +3570,48 @@ function random_5xzxfs() {
     $(".baiweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
     $(".shiweiStr .wan_bottom .xz").eq(random_4).removeClass("active_gfwf").addClass("active_gfwf");
     $(".geweiStr .wan_bottom .xz").eq(random_5).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-4星直选复式
+ */
+function random_4xzxfs() {
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+    var random_3 = parseInt(Math.random() * 10);
+    var random_4 = parseInt(Math.random() * 10);
+
+    $(".qianweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".baiweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".shiweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".geweiStr .wan_bottom .xz").eq(random_4).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三直选复式
+ */
+function random_h3zxfs() {
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+    var random_3 = parseInt(Math.random() * 10);
+
+    $(".baiweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".shiweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".geweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三直选和值
+ */
+function random_h3zxhz() {
+    var random_1 = parseInt(Math.random() * 28);
+    $(".h3zxhzStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三直选跨度
+ */
+function random_h3zxkd() {
+    var random_1 = parseInt(Math.random() * 10);
+    $(".h3kdStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
 }
