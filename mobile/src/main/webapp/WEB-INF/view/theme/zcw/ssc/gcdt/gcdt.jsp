@@ -917,6 +917,20 @@
 
             <ul class="buy_ul clearfix">
                 <li>
+                    <a data-play_group_id="9" href="<%=basePath%>ssc/gcdt/pk10.html">
+                        <img src="${resPath}/images/buy_09.png" />
+                        <p>
+                            北京PK10
+                        </p>
+                        <p class="buydate buy_date9">
+
+                            <span class="hour">00</span>&nbsp;:&nbsp;
+                            <span class="mini">00</span>&nbsp;:&nbsp;
+                            <span class="sec">00</span>
+                        </p>
+                    </a>
+                </li>
+                <li>
                     <a data-play_group_id="23"
                        href="<%=basePath%>ssc/gcdt/jspk10.html">
                         <img src="${resPath}/images/buy_16.png" />
@@ -932,12 +946,12 @@
                     </a>
                 </li>
                 <li>
-                    <a data-play_group_id="9" href="<%=basePath%>ssc/gcdt/pk10.html">
-                        <img src="${resPath}/images/buy_09.png" />
+                    <a data-play_group_id="14" href="<%=basePath%>ssc/gcdt/xyft.html">
+                        <img src="${resPath}/images/buy_18.png" />
                         <p>
-                            北京PK10
+                            幸运飞艇
                         </p>
-                        <p class="buydate buy_date9">
+                        <p class="buydate buy_date11">
 
                             <span class="hour">00</span>&nbsp;:&nbsp;
                             <span class="mini">00</span>&nbsp;:&nbsp;
@@ -973,19 +987,19 @@
                     </li>
                     <li>
                         <a data-play_group_id="20"
-                        href="<%=basePath%>ssc/gcdt/ahk3.html">
-                        <img src="${resPath}/images/buy_29.png" />
-                        <p>
-                        安徽快3
-                        </p>
-                        <p class="buydate buy_date12">
+                           href="<%=basePath%>ssc/gcdt/ahk3.html">
+                            <img src="${resPath}/images/buy_29.png"/>
+                            <p>
+                                安徽快3
+                            </p>
+                            <p class="buydate buy_date12">
 
-                        <span class="hour">00</span>
-                        <span class="mini">00</span>
-                        <span class="sec">00</span>
-                        </p>
+                                <span class="hour">00</span>
+                                <span class="mini">00</span>
+                                <span class="sec">00</span>
+                            </p>
                         </a>
-                        </li>
+                    </li>
                 </ul>
             </div>
 
