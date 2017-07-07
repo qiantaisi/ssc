@@ -462,6 +462,7 @@
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
+               data-fun_random="random_h4em"
                data-fun_zhushu="zhushu_h4em"
                data-fun_content="content_h4em"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/hsiem.html"
@@ -549,7 +550,7 @@
                data-name="后三大小单双">
                 <span class="staer1">后三大小单双</span>
             </a>
-        </div>
+        </div>`
         <div class="hide" id="playGroup_rx2">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
@@ -632,6 +633,7 @@
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
+               data-fun_random="random_rx3z6fs"
                data-fun_zhushu="zhushu_rx3z6fs"
                data-fun_content="content_rx3z6fs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zulfs.html"
@@ -642,6 +644,7 @@
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
+               data-fun_random="random_rx3zuxhz"
                data-fun_zhushu="zhushu_rx3zuxhz"
                data-fun_content="content_rx3zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zuxhz.html"
@@ -654,6 +657,7 @@
         <div class="hide" id="playGroup_rx4">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
+               data-fun_random="random_rx4zxfs"
                data-fun_zhushu="zhushu_rx4zxfs"
                data-fun_content="content_rx4zxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zxfs.html"
@@ -664,6 +668,7 @@
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
+               data-fun_random="random_rx4zu24"
                data-fun_zhushu="zhushu_rx4zu24"
                data-fun_content="content_rx4zu24"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx24.html"
@@ -674,6 +679,7 @@
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
+               data-fun_random="random_rx4zu12"
                data-fun_zhushu="zhushu_rx4zu12"
                data-fun_content="content_rx4zu12"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx12.html"
@@ -684,6 +690,7 @@
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
+               data-fun_random="random_rx4zu6"
                data-fun_zhushu="zhushu_rx4zu6"
                data-fun_content="content_rx4zu6"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx6.html"
@@ -694,6 +701,7 @@
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
+               data-fun_random="random_rx4zu4"
                data-fun_zhushu="zhushu_rx4zu4"
                data-fun_content="content_rx4zu4"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx4.html"

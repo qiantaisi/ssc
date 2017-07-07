@@ -12,7 +12,7 @@
 <div class="wrap">
     <div class="cus_common h4emStr">
         <div class="wan_top">
-            <span class="wanwei">前四二码</span>
+            <span class="wanwei">后四二码</span>
             <span class="xz">
                 <i onclick="selectFun_1(this)">全</i>
                 <i onclick="selectFun_2(this)">大</i>
