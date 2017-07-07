@@ -9,7 +9,7 @@
 %>
 <div class="head_middle">
     <div class="container clearfix">
-        <a href="index.html" class="left logo">
+        <a href="<%=basePath%>index.html" class="left logo">
             <img src="${resPath}images/index_11.png" />
         </a>
         <div class="left head_middle_yuye">
@@ -21,7 +21,7 @@
             <div class="left head_middle_tel">
                 400-690-8888
             </div>
-            <a href="#" class="left head_middle_kf">
+            <a href="${kefuUrl}" target="_blank" class="left head_middle_kf">
                 <img src="${resPath}images/index_20.png" />
                 联系客服
             </a>
@@ -219,22 +219,22 @@
             </div>
         </div>
         <div class="menu_main clearfix left">
-            <a href="#" class="ahover">
+            <a href="<%=basePath%>main.html" class="ahover">
                 首页
             </a>
-            <a href="#">
+            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')" target="_blank">
                 购彩大厅
             </a>
-            <a href="#">
+            <a href="<%=basePath%>yhhd.html">
                 优惠活动
             </a>
-            <a href="#">
+            <a href="<%=basePath%>kjjg.html">
                 开奖公告
             </a>
-            <a href="#">
+            <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">
                 走势图表
             </a>
-            <a href="#">
+            <a href="<%=mHostName%>" target="_blank">
                 <em class="hot"></em>
                 <img src="${resPath}images/index30.png" class="menu_a_img" />
                 手机购买
@@ -326,5 +326,17 @@
     function ate(){
         var hei=$(window).height();
         $(".back").css("height",hei-27+"px");
+    }
+
+    function openGcdt(module) {
+//        if (typeof module == 'undefined') {
+//            module = '';
+//        }
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + "ssc/" +module + ".html";
+        }
+        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
     }
 </script>
