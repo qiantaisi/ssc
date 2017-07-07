@@ -1,4 +1,13 @@
 /*/////////////*/
+body {
+    margin: 0px auto;
+    padding: 0;
+    overflow-x: hidden;
+    color: #333333;
+    font-size: 12px;
+    font-family: arial,"Microsoft YaHei";
+}
+
 .head_top {
     background: #f3f3f3;
     line-height: 30px;
@@ -111,4 +120,165 @@ a:visited {
     padding: 0 10px;
     margin-left: 30px;
     border-radius: 5px;
+}
+
+.bannernew {
+    position: relative;
+}
+
+.banner_main {
+    height: 320px;
+    display: block;
+}
+
+.flexslider .slides li {
+    display: inline-block;
+    list-style: none;
+    vertical-align: bottom;
+}
+
+.flexslider .slides ol{
+    list-style: none;
+}
+
+.flex-control-nav {
+    padding: 0;
+    margin: 0 0;
+    text-align: center!important;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.flex-control-nav li {
+    display: inline-block;
+    margin: 0 5px;
+    list-style: none;
+    vertical-align: bottom;
+    float: none;
+}
+
+.flex-control-nav li .flex-active {
+    background: #ef3130;
+}
+
+.flex-control-nav li a {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background: #fff;
+    border-radius: 50%;
+    text-indent: -9000px;
+    cursor: pointer;
+}
+
+
+.banner_shuru {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 25px;
+    z-index: 999;
+}
+
+.container {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.banner_shuru_main {
+    width: 200px;
+    padding: 15px 15px 25px 15px;
+    background: #f4f4f4;
+}
+
+.banner_shuru_main_tl {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 5px;
+}
+
+.banner_shuru_main_tl span {
+    color: #010101;
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e60000;
+    padding-right: 15px;
+    display: inline-block;
+}
+
+.banner_shuru_gp {
+    margin-top: 10px;
+    position: relative;
+}
+
+.banner_shuru_input {
+    height: 27px;
+    width: 94%;
+    padding: 5px 3%;
+    border: 1px solid #cecece;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.banner_wp {
+    display: block;
+    line-height: 24px;
+    width: 52px;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    right: 5px;
+    top: 6.5px;
+    background: #dedede;
+    color: #666666;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.banner_yz {
+    position: absolute;
+    right: 5px;
+    top: 8.5px;
+    z-index: 10;
+    color: #333;
+    text-decoration: none;
+}
+
+.banner_yz img {
+    width: 45px;
+    height: 20px;
+    vertical-align: middle;
+    border: 0;
+}
+
+.banner_shuru_btn {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.banner_shuru_btn input {
+    border: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.btn_red {
+    background: #f42023;
+    color: #fff;
+}
+
+.banner_shuru_btn a {
+    color: #2da2eb;
+    font-size: 12px;
+    text-decoration: underline;
+    margin-left: 15px;
+    margin-top: 5px;
 }
