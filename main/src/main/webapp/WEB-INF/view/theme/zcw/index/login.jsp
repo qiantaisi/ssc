@@ -20,7 +20,7 @@
                 账号登录
             </div>
             <div class="right">
-                没有账号?<a href="#">立即注册</a>
+                没有账号?<a href="<%=basePath%>register.html">立即注册</a>
             </div>
         </div>
         <div class="login_nr_b">
@@ -69,7 +69,7 @@
                     <a href="#">登录</a>
                 </p>
                 <p>
-                    <a href="#">免费开户</a>
+                    <a href="<%=basePath%>register.html">免费开户</a>
                 </p>
             </div>
             <div class="login_b_link">
