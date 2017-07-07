@@ -4206,7 +4206,7 @@ function random_rx3zxfs() {
     var wei_1 = 0;
     var wei_2 = 1;
     var wei_3 = 2;
-    while(arrTemp.length < 2){
+    while(arrTemp.length < 3){
         wei_1 = parseInt(Math.random() * 5);
         wei_2 = parseInt(Math.random() * 5);
         wei_3 = parseInt(Math.random() * 5);
@@ -4304,4 +4304,154 @@ function random_rx3zuxhz() {
     var random_1 = (parseInt(Math.random() * 27) + 1);
 
     $(".zuxhzStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+//任选四
+/**
+ * 随机算法-任四直选复式
+ */
+
+function random_rx4zxfs() {
+    var arrTemp = [];
+    arrTemp = getFourNum();
+    var wei_1 = arrTemp[0];
+    var wei_2 = arrTemp[1];
+    var wei_3 = arrTemp[2];
+    var wei_4 = arrTemp[3];
+
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+    var random_3 = parseInt(Math.random() * 10);
+    var random_4 = parseInt(Math.random() * 10);
+    var random_5 = parseInt(Math.random() * 10);
+
+    if(wei_1 == 0 || wei_2 == 0|| wei_3 == 0 || wei_4 == 0){
+        $(".wanStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    }
+
+    if(wei_1 == 1 || wei_2 == 1 || wei_3 == 1){
+        $(".qianStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_2).addClass("active_gfwf");
+    }
+
+    if(wei_1 == 2 || wei_2 == 2 || wei_3 == 2 || wei_4 == 2){
+        $(".baiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_3).addClass("active_gfwf");
+    }
+
+    if(wei_1 == 3 || wei_2 == 3 || wei_3 == 3 || wei_4 == 3){
+        $(".shiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_4).addClass("active_gfwf");
+    }
+
+    if(wei_1 == 4 || wei_2 == 4 || wei_3 == 4 || wei_4 == 4){
+        $(".geStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_5).addClass("active_gfwf");
+    }
+
+}
+
+/**
+ * 随机算法-任四组24
+ */
+
+function random_rx4zu24() {
+    var arrTemp = [];
+    arrTemp = getFourNum();
+    var random_1 = arrTemp[0];
+    var random_2 = arrTemp[1];
+    var random_3 = arrTemp[2];
+    var random_4 = arrTemp[3];
+
+    $(".zu24Str .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    $(".zu24Str .wan_bottom .xz").eq(random_2).addClass("active_gfwf");
+    $(".zu24Str .wan_bottom .xz").eq(random_3).addClass("active_gfwf");
+    $(".zu24Str .wan_bottom .xz").eq(random_4).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-任四组12
+ */
+
+function random_rx4zu12() {
+    var arrTemp = [];
+    var arrOneNum = [];
+    var random_1 = 0;
+    var random_2 = 1;
+    while(arrTemp.length < 2){
+        random_1 = parseInt(Math.random() * 10);
+        random_2 = parseInt(Math.random() * 10);
+        if(random_1 != random_2){
+            arrTemp.push(random_1);
+            arrTemp.push(random_2);
+        }
+    }
+
+    while(arrOneNum.length < 1){
+        var random_3 = parseInt(Math.random() * 10);
+        if(random_1 != random_2 && random_1 != random_3 && random_2 != random_3){
+            arrOneNum.push(random_3);
+        }
+    }
+
+    $(".zu12chStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_3).addClass("active_gfwf");
+    $(".zu12dhStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    $(".zu12dhStr .wan_bottom .xz").eq(random_2).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-任四组6
+ */
+
+function random_rx4zu6() {
+    var arrTemp = [];
+    while(arrTemp.length < 2){
+        var random_1 = parseInt(Math.random() * 10);
+        var random_2 = parseInt(Math.random() * 10);
+        if(random_1 != random_2){
+            arrTemp.push(random_1);
+            arrTemp.push(random_2);
+        }
+    }
+
+    $(".zu6chStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    $(".zu6chStr .wan_bottom .xz").eq(random_2).addClass("active_gfwf");
+}
+
+
+/**
+ * 随机算法-任四组4
+ */
+function random_rx4zu4() {
+    var arrOneNum = [];
+    var random_1 = parseInt(Math.random() * 10);
+
+    while(arrOneNum.length < 1){
+        var random_2 = parseInt(Math.random() * 10);
+        if(random_1 != random_2){
+            arrOneNum.push(2);
+        }
+    }
+
+    $(".zu4chStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_2).addClass("active_gfwf");
+    $(".zu4dhStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+//获取 0 到 9 位上4个不同号码
+function getFourNum(){
+    var arrTemp = [];
+    var wei_1 = 0;
+    var wei_2 = 1;
+    var wei_3 = 2;
+    var wei_4 = 3;
+    while(arrTemp.length < 4){
+        wei_1 = parseInt(Math.random() * 5);
+        wei_2 = parseInt(Math.random() * 5);
+        wei_3 = parseInt(Math.random() * 5);
+        wei_4 = parseInt(Math.random() * 5);
+        if(wei_1 != wei_2 && wei_3 != wei_1 && wei_1 != wei_4 && wei_2 != wei_3 && wei_2 != wei_4 && wei_3 != wei_4){
+            arrTemp.push(wei_1);
+            arrTemp.push(wei_2);
+            arrTemp.push(wei_3);
+            arrTemp.push(wei_4);
+        }
+    }
+
+    return arrTemp;
 }
