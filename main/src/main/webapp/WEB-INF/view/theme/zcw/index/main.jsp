@@ -12,242 +12,79 @@
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp"/>
 <c:import url="top.jsp"/>
-<div class="head_middle">
-    <div class="container clearfix">
-        <a href="index.html" class="left logo">
-            <img src="${resPath}images/common/index_11.png" />
-        </a>
-        <div class="left head_middle_yuye">
-            <a href="#">
-                <img src="${resPath}images/common/index_14.png" />
-            </a>
+<c:import url="menu.jsp"/>
+
+<div class="bannernew">
+    <div class="block_home_slider">
+        <div id="home_slider" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+
+            </ul>
         </div>
-        <div class="right clearfix">
-            <div class="left head_middle_tel">
-                400-690-8888
-            </div>
-            <a href="#" class="left head_middle_kf">
-                <img src="${resPath}images/common/index_20.png" />
-                联系客服
-            </a>
-        </div>
+
+        <script type="text/javascript">
+            $(function () {
+                $('#home_slider').flexslider({
+                    animation : 'slide',
+                    controlNav : true,
+                    directionNav : false,
+                    animationLoop : true,
+                    slideshow : true,
+                    pauseOnHover:true,
+                    useCSS : false
+                });
+
+            });
+        </script>
     </div>
-</div>
-
-<div class="menu">
-    <div class="container clearfix">
-        <div class="left all_fenlei clearfix">
-            <span class="left all_fenlei_tl">全部彩种</span>
-            <img src="${resPath}images/common/index_30.png" class="right all_fenlei_img" />
-            <div class="all_fenlei_yin">
-                <a href="#" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/common/index_39.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        分分时时彩
-                    </div>
-                </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/common/index_42.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        极速PK拾
-                    </div>
-                </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/common/index_45.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        三分彩
-                    </div>
-                </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/common/index_49.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        北京PK拾
-                    </div>
-                </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/common/index51.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        北京快乐8
-                    </div>
-                </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/common/index1-16.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        天津时时彩
-                    </div>
-                </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/common/index51-17.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        香港六合彩
-                    </div>
-                </a>
-                <div class="all_fenlei_b">
-                    <div class="all_fenlei_b_gp clearfix">
-                        <div class="left all_fenlei_b_name" style="background: #ffcdcd;border: 1px solid #ffcdcd;color: #ff4444;">
-                            高频彩
-                        </div>
-                        <div class="all_fenlei_b_gp_rt clearfix">
-                            <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
-                                <li>
-                                    <a href="#">分分时时彩</a>
-                                </li>
-                                <li>
-                                    <a href="#">极速PK拾</a>
-                                </li>
-                                <li>
-                                    <a href="#">三分彩</a>
-                                </li>
-                                <li>
-                                    <a href="#">北京PK拾</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="all_fenlei_b_yin">
-                            <p class="all_fenlei_b_yin_tl">高频彩</p>
-                            <div class="clearfix all_fenlei_b_yin_a">
-                                <a href="#">北京PK10</a>
-                                <a href="#">极速PK10</a>
-                                <a href="#">幸运飞艇</a>
-                                <a href="#">重庆时时彩</a>
-                                <a href="#">天津时时彩</a>
-                                <a href="#">新疆时时彩</a>
-                                <a href="#">分分时时彩</a>
-                                <a href="#">两分时时彩</a>
-                                <a href="#">三分时时彩</a>
-                                <a href="#">五分时时彩</a>
-                                <a href="#">江苏快3</a>
-                                <a href="#">湖北快3</a>
-                                <a href="#">安徽快3</a>
-                                <a href="#">吉林快3</a>
-                                <a href="#">重庆幸运农场</a>
-                                <a href="#">广东快乐十分</a>
-                                <a href="#">北京快乐8</a>
-                                <a href="#">幸运28</a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="all_fenlei_b_gp clearfix">
-                        <div class="left all_fenlei_b_name" style="background: #c3cbf6;border: 1px solid #a7bdfd;color: #4041d0;">
-                            低频彩
-                        </div>
-                        <div class="all_fenlei_b_gp_rt clearfix">
-                            <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
-                                <li>
-                                    <a href="#">香港六合彩</a>
-                                </li>
-                                <li>
-                                    <a href="#">福彩3d</a>
-                                </li>
-                                <li>
-                                    <a href="#">排列三</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="all_fenlei_b_yin">
-                            <p class="all_fenlei_b_yin_tl">低频彩</p>
-                            <div class="clearfix all_fenlei_b_yin_a">
-
-                                <a href="#">香港六合彩</a>
-                                <a href="#">福彩3D</a>
-                                <a href="#">体彩排列3</a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="all_fenlei_b_gp clearfix">
-                        <div class="left all_fenlei_b_name" style="background: #d9f9df;border: 1px solid #c5f4cf;color: #005d19;padding-top: 11px;height: 47px;">
-                            全部
-                        </div>
-                        <div class="all_fenlei_b_gp_rt clearfix">
-                            <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
-                                <li>
-                                    <a href="#">分分时时彩</a>
-                                </li>
-                                <li>
-                                    <a href="#">极速PK拾</a>
-                                </li>
-                                <li>
-                                    <a href="#">三分彩</a>
-                                </li>
-                                <li>
-                                    <a href="#">北京PK拾</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="all_fenlei_b_yin">
-                            <p class="all_fenlei_b_yin_tl">全部</p>
-                            <div class="clearfix all_fenlei_b_yin_a">
-
-                                <a href="#">重庆时时彩</a>
-                                <a href="#">天津时时彩</a>
-                                <a href="#">新疆时时彩</a>
-                                <a href="#">分分时时彩</a>
-                                <a href="#">两分时时彩</a>
-                                <a href="#">三分时时彩</a>
-                                <a href="#">五分时时彩</a>
-                                <a href="#">北京PK10</a>
-                                <a href="#">极速PK10</a>
-                                <a href="#">幸运飞艇</a>
-                                <a href="#">香港六合彩</a>
-                                <a href="#">江苏快3</a>
-                                <a href="#">湖北快3</a>
-                                <a href="#">安徽快3</a>
-                                <a href="#">吉林快3</a>
-                                <a href="#">快乐十分</a>
-                                <a href="#">幸运农场</a>
-                                <a href="#">北京快乐8</a>
-                                <a href="#">福彩3D</a>
-                                <a href="#">体彩排列3</a>
-                                <a href="#">幸运28</a>
-
-                            </div>
-                        </div>
-                    </div>
+    <div class="banner_shuru">
+        <div class="container clear">
+            <div class="banner_shuru_main right">
+                <div class="banner_shuru_main_tl">
+                    <span>欢迎登陆</span>
                 </div>
+                <form>
+                    <div class=" banner_shuru_gp">
+                        <input type="text" class="banner_shuru_input" placeholder="会员名" />
+                    </div>
+                    <div class=" banner_shuru_gp">
+                        <input type="password" class="banner_shuru_input" placeholder="密码" />
+                        <a href="#" class="banner_wp">忘记?</a>
+                    </div>
+                    <div class=" banner_shuru_gp">
+                        <input type="text" class="banner_shuru_input" placeholder="验证码" />
+                        <a href="#" class="banner_yz">
+                            <img src="${resPath}images/common/index_51.png" />
+                        </a>
+                    </div>
+                    <div class="clearfix banner_shuru_btn">
+                        <input type="button" class="left btn_red" value="登录" />
+                        <a href="#" class="left">立即注册</a>
+                    </div>
+                </form>
             </div>
-        </div>
-        <div class="menu_main clearfix left">
-            <a href="#" class="ahover">
-                首页
-            </a>
-            <a href="#">
-                购彩大厅
-            </a>
-            <a href="#">
-                优惠活动
-            </a>
-            <a href="#">
-                开奖公告
-            </a>
-            <a href="#">
-                走势图表
-            </a>
-            <a href="#">
-                <em class="hot"></em>
-                <img src="${resPath}images/common/index30.png" class="menu_a_img" />
-                手机购买
-            </a>
         </div>
     </div>
 </div>
+
 
 
 <c:import url="../common/bottomInfo.jsp"/>
