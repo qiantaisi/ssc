@@ -4817,6 +4817,7 @@ $(function () {
                     $(".page").find(".x_wrap").removeClass("Fixed");
                     $(".page").find(".gfwf_xz").removeClass("Fixed");
                     $(".page").find(".gfwf_mask2").removeClass("Fixed");
+                    statusChange();
                 });
             }
 

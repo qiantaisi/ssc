@@ -112,19 +112,25 @@ function danSelect(obj) {
     $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
 
     getGfwfZhushu();
+    statusChange();
+}
 
+/**
+ *  随机按钮状态
+ */
+
+function statusChange() {
     // 显示机选
     var randomFun = getPlayPlFun_random();
-    if ($(".active_gfwf").length == 0 && typeof randomFun != "undefined") {
+    var zhushu = $("#zhushu").html();
+    if (typeof randomFun != "undefined" && zhushu <= 0) {
         $("#btn-jixuan-gfwf").show();
         $("#btn-reset-gfwf").hide();
     } else {
         $("#btn-reset-gfwf").show();
         $("#btn-jixuan-gfwf").hide();
     }
-
 }
-
 
 /**
  * 获取注数方法
@@ -132,14 +138,18 @@ function danSelect(obj) {
 function getGfwfZhushu(){
 
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
+
     //执行注数方法
     if (typeof zhushuFun != 'undefined') {
         var zhushu = eval(zhushuFun + "()");   // 注数
+
         if(zhushu == 0){
             $("#zhushu").html(zhushu);
             $("#nowMoney").html(0);
             return;
-        }else if (typeof zhushu == "undefined" || zhushu < 0) {
+        }else if (typeof zhushu == 'undefined' || zhushu < 0) {
+            $("#zhushu").html(0);
+            $("#nowMoney").html(0);
             return;
         }
 
@@ -2752,16 +2762,17 @@ function zhushu_rx4zu4(){
 // 数字批量选择算法
 function selectFun_1(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");  //初始化选择的特效，清零
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");                                     //始化选择的特效，清零
-    $(obj).addClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");                                     //始化选择的特效，清零
+    $(obj).addClass("activeBtn");
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").addClass("active_gfwf");
     getGfwfZhushu();
+    statusChange();
 }
 
 function selectFun_2(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");
+    $(obj).addClass("activeBtn");
     var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     var Barr = [, , , , , 5, 6, 7, 8, 9];
     for (var i = 0; i <= Aarr.length; ++i) {
@@ -2770,12 +2781,13 @@ function selectFun_2(obj) {
         }
     }
     getGfwfZhushu();
+    statusChange();
 }
 
 function selectFun_3(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");
+    $(obj).addClass("activeBtn");
     var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     var Barr = [0, 1, 2, 3, 4, , , , ,];
     for (var i = 0; i <= Aarr.length; ++i) {
@@ -2784,37 +2796,41 @@ function selectFun_3(obj) {
         }
     }
     getGfwfZhushu();
+    statusChange();
 }
 
 function selectFun_4(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");
+    $(obj).addClass("activeBtn");
     for (var i = 0; i < 10; i++) {
         if (i%2 != 0) {   //奇数
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
     }
     getGfwfZhushu();
+    statusChange();
 }
 
 function selectFun_5(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");
+    $(obj).addClass("activeBtn");
     for (var i = 0; i < 10; ++i) {
         if (i%2 == 0) {   //偶数
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
     }
     getGfwfZhushu();
+    statusChange();
 }
 
 function selectFun_6(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
-    $(obj).parent().find(".xz i").removeClass("active_gfwf");
-    $(obj).addClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");
+    $(obj).addClass("activeBtn");
     getGfwfZhushu();
+    statusChange();
 }
 
 /**
@@ -3565,11 +3581,11 @@ function random_5xzxfs() {
     var random_4 = parseInt(Math.random() * 10);
     var random_5 = parseInt(Math.random() * 10);
 
-    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".qianweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".baiweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".shiweiStr .wan_bottom .xz").eq(random_4).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".geweiStr .wan_bottom .xz").eq(random_5).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".wanweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_2).addClass("active_gfwf");
+    $(".baiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_3).addClass("active_gfwf");
+    $(".shiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_4).addClass("active_gfwf");
+    $(".geweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_5).addClass("active_gfwf");
 }
 
 /**
@@ -3581,10 +3597,10 @@ function random_4xzxfs() {
     var random_3 = parseInt(Math.random() * 10);
     var random_4 = parseInt(Math.random() * 10);
 
-    $(".qianweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".baiweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".shiweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".geweiStr .wan_bottom .xz").eq(random_4).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    $(".baiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_2).addClass("active_gfwf");
+    $(".shiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_3).addClass("active_gfwf");
+    $(".geweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_4).addClass("active_gfwf");
 }
 
 /**
@@ -3595,9 +3611,9 @@ function random_h3zxfs() {
     var random_2 = parseInt(Math.random() * 10);
     var random_3 = parseInt(Math.random() * 10);
 
-    $(".baiweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".shiweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
-    $(".geweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".baiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    $(".shiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_2).addClass("active_gfwf");
+    $(".geweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_3).addClass("active_gfwf");
 }
 
 /**
@@ -3605,7 +3621,7 @@ function random_h3zxfs() {
  */
 function random_h3zxhz() {
     var random_1 = parseInt(Math.random() * 28);
-    $(".h3zxhzStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".h3zxhzStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
 }
 
 /**
@@ -3613,5 +3629,200 @@ function random_h3zxhz() {
  */
 function random_h3zxkd() {
     var random_1 = parseInt(Math.random() * 10);
-    $(".h3kdStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".h3kdStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三组合
+ */
+function random_h3zh() {
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+    var random_3 = parseInt(Math.random() * 10);
+
+    $(".baiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    $(".shiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_2).addClass("active_gfwf");
+    $(".geweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_3).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三组三复式
+ */
+function random_h3z3fs() {
+    var arrTemp = [];
+    while(arrTemp.length < 3){
+        var x1 = parseInt(Math.random() * 10);
+        var x2 = parseInt(Math.random() * 10);
+        if(x1 != x2){
+            arrTemp.push(x1);
+            arrTemp.push(x2);
+        }
+    }
+    $(".z3fsStr .wan_bottom .xz").removeClass("active_gfwf").eq(arrTemp[0]).addClass("active_gfwf");
+    $(".z3fsStr .wan_bottom .xz").eq(arrTemp[1]).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三组6复式
+ */
+function random_h3z6fs() {
+    var arrTemp = [];
+    while(arrTemp.length < 3){
+        var x1 = parseInt(Math.random() * 10);
+        var x2 = parseInt(Math.random() * 10);
+        var x3 = parseInt(Math.random() * 10);
+        if(x1 != x2 && x2 != x3 && x1 != x3){
+            arrTemp.push(x1);
+            arrTemp.push(x2);
+            arrTemp.push(x3);
+        }
+    }
+    $(".z6fsStr .wan_bottom .xz").removeClass("active_gfwf").eq(arrTemp[0]).addClass("active_gfwf");
+    $(".z6fsStr .wan_bottom .xz").eq(arrTemp[1]).addClass("active_gfwf");
+    $(".z6fsStr .wan_bottom .xz").eq(arrTemp[2]).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三组选和值
+ */
+function random_h3zuxhz() {
+    var random_1 = (parseInt(Math.random() * 26) + 1);
+    $(".zuxhzStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三组选包胆
+ */
+function random_h3zuxbd() {
+    var random_1 = parseInt(Math.random() * 10);
+    $(".bdStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三和值尾数
+ */
+function random_h3hzws() {
+    var random_1 = parseInt(Math.random() * 10);
+    $(".hzwsStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-后三特殊号
+ */
+function random_h3tsh() {
+    var random_1 = parseInt(Math.random() * 3);
+    $(".tshStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+// 前三
+
+/**
+ * 随机算法-前三直选复式
+ */
+function random_q3zxfs() {
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+    var random_3 = parseInt(Math.random() * 10);
+
+    $(".wanweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_2).addClass("active_gfwf");
+    $(".baiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_3).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-前三直选和值
+ */
+function random_q3zxhz() {
+    var random_1 = parseInt(Math.random() * 28);
+    $(".q3zxhzStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-前三直选跨度
+ */
+function random_q3zxkd() {
+    var random_1 = parseInt(Math.random() * 10);
+    $(".h3kdStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-前三组合
+ */
+function random_q3zh() {
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+    var random_3 = parseInt(Math.random() * 10);
+
+    $(".wanweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_2).addClass("active_gfwf");
+    $(".baiweiStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_3).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-前三组三复式
+ */
+function random_q3z3fs() {
+    var arrTemp = [];
+    while(arrTemp.length < 3){
+        var x1 = parseInt(Math.random() * 10);
+        var x2 = parseInt(Math.random() * 10);
+        if(x1 != x2){
+            arrTemp.push(x1);
+            arrTemp.push(x2);
+        }
+    }
+    $(".z3fsStr .wan_bottom .xz").removeClass("active_gfwf").eq(arrTemp[0]).addClass("active_gfwf");
+    $(".z3fsStr .wan_bottom .xz").eq(arrTemp[1]).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-前三组6复式
+ */
+function random_q3z6fs() {
+    var arrTemp = [];
+    while(arrTemp.length < 3){
+        var x1 = parseInt(Math.random() * 10);
+        var x2 = parseInt(Math.random() * 10);
+        var x3 = parseInt(Math.random() * 10);
+        if(x1 != x2 && x2 != x3 && x1 != x3){
+            arrTemp.push(x1);
+            arrTemp.push(x2);
+            arrTemp.push(x3);
+        }
+    }
+    $(".z6fsStr .wan_bottom .xz").removeClass("active_gfwf").eq(arrTemp[0]).addClass("active_gfwf");
+    $(".z6fsStr .wan_bottom .xz").eq(arrTemp[1]).addClass("active_gfwf");
+    $(".z6fsStr .wan_bottom .xz").eq(arrTemp[2]).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-前三组选和值
+ */
+function random_q3zuxhz() {
+    var random_1 = (parseInt(Math.random() * 26) + 1);
+    $(".zuxhzStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-前三组选包胆
+ */
+function random_q3zuxbd() {
+    var random_1 = parseInt(Math.random() * 10);
+    $(".bdStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-前三和值尾数
+ */
+function random_q3hzws() {
+    var random_1 = parseInt(Math.random() * 10);
+    $(".hzwsStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-前三特殊号
+ */
+function random_q3tsh() {
+    var random_1 = parseInt(Math.random() * 3);
+    $(".tshStr .wan_bottom .xz").removeClass("active_gfwf").eq(random_1).addClass("active_gfwf");
 }
