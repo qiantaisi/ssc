@@ -10,33 +10,244 @@
 <c:import url="../common/checkIsChildFrame.jsp" />
 <c:import url="top.jsp" />
 
-<img src="${resPath}img/bj.jpg" class="back" alt="" width="100%">
-<div class="regedit">
-    <div class="reg_col re_reg_col">
-        <div class="img re_img"><a href="<%=basePath%>">
-            <img src="<%=basePath%>images/${logo.imageId}" alt=""></a>
-        </div>
-        <div class="reg">
-            <div class="alert_log_col log_col">
-                <h5>欢迎您登录</h5>
-                <form onsubmit="registerLogin();return false;">
-                    <div>
-                        <h4><span><img src="${resPath}img/l1.png" /></span></h4>
-                        <p><input type="text" id="registerLoginAccount" placeholder="请输入您的账号" /></p>
-                    </div>
-                    <div>
-                        <h4><span><img src="${resPath}img/l2.png" /></span></h4>
-                        <p><input type="password" id="registerLoginPassword" placeholder="密码" /></p>
-                    </div>
-                    <div>
-                        <h4><span><img src="${resPath}img/l2.png" /></span></h4>
-                        <p><input type="text" id="registerLoginYzm" placeholder="验证码" onfocus="refreshYzm(document.getElementById('registerYzmImg2'))" /><img id="registerYzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2" /></p>
-                    </div>
-                    <h3><input type="checkbox" /><a href="#">记住密码</a><span><a href="${kefuUrl}" target="_blank">忘记密码？</a></span></h3>
-                    <h6><input type="submit" class="sub"  value="登录"/></h6>
-                </form>
+<c:import url="menu.jsp" />
+
+
+<div class="main login_main">
+    <div class="container login_nr">
+        <div class="login_nr_t clearfix">
+            <div class="left login_nr_t_lf">
+                账号登录
+            </div>
+            <div class="right">
+                没有账号?<a href="#">立即注册</a>
             </div>
         </div>
+        <div class="login_nr_b">
+            <div class="clearfix login_nr_gp">
+			    		<span class="left login_nr_name">
+			    			<span class="star">
+			    				*
+			    			</span>
+			    			用户名:
+			    		</span>
+                <div class="login_nr_gp_rt clearfix">
+                    <input type="text" class="left" placeholder="请输入用户名" />
+                    <div class="left erro">
+                        请输入用户名（3-15个英文、数字）
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix login_nr_gp">
+			    		<span class="left login_nr_name">
+			    			<span class="star">
+			    				*
+			    			</span>
+			    			密码:
+			    		</span>
+                <div class="login_nr_gp_rt clearfix">
+                    <input type="password" class="left" placeholder="请输入密码" />
+
+                </div>
+            </div>
+            <div class="clearfix login_nr_gp login_yz">
+			    		<span class="left login_nr_name">
+			    			<span class="star">
+			    				*
+			    			</span>
+			    			验证码:
+			    		</span>
+                <div class="login_nr_gp_rt clearfix">
+                    <input type="text" class="left" placeholder="请输入验证码" />
+                    <a href="#" class="left">
+                        <img src="${resPath}images/index_51.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="login_b">
+                <p>
+                    <a href="#">登录</a>
+                </p>
+                <p>
+                    <a href="#">免费开户</a>
+                </p>
+            </div>
+            <div class="login_b_link">
+                <a href="#">忘记密码?</a>
+                <span>|</span>
+                <a href="#">在线客服</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer_t">
+        <div class="container clearfix">
+            <div class="left footer_t1">
+                <img src="${resPath}images/index_78.png" class="footer_t1_1" />
+                <p>
+                    <img src="${resPath}images/index5.png"  class="footer_t1_2" />
+                </p>
+                <p>
+                    扫一扫 手机购彩更方便
+                </p>
+            </div>
+            <div class="footer_menu_main clearfix">
+                <div class="footer_menu left">
+                    <p class="footer_menu_t">
+                        <img src="${resPath}images/index84.png" />
+                        平台优势
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="${resPath}images/index_93.png" />
+                                账户安全
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="${resPath}images/index-36.png" />
+                                购彩简单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="${resPath}images/index2_92.png" />
+                                领奖方便
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="${resPath}images/index_135.png" />
+                                提款快速
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_menu left">
+                    <p class="footer_menu_t">
+                        <img src="${resPath}images/index81.png" />
+                        账户相关
+                    </p>
+                    <ul class="footer_menu_2">
+                        <li>
+                            <a href="#">
+                                如何注册账号
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                怎么找回登录密码
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                如何修改手机号码
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                如何修改真实姓名
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_menu left">
+                    <p class="footer_menu_t">
+                        <img src="${resPath}images/index_87.png" />
+                        充值购彩
+                    </p>
+                    <ul class="footer_menu_2">
+                        <li>
+                            <a href="#">
+                                如何进行充值
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                如何购买彩票
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                如何查询购彩记录
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                在本站购彩安全吗
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_menu left">
+                    <p class="footer_menu_t">
+                        <img src="${resPath}images/index-31.png" />
+                        兑奖提款
+                    </p>
+                    <ul class="footer_menu_2">
+                        <li>
+                            <a href="#">
+                                怎样进行兑奖
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                如何进行提款
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                提款是否收手续费
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                提款不成功怎么办
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_b">
+        <div class="container">
+            <img src="${resPath}images/index112.png" />
+            <br />
+            2009-2017©易名彩 公司版权所有 <br />
+            易名彩 郑重提示：彩票有风险，投注需谨慎。不向未满18周岁的青少年出售彩票！
+        </div>
+    </div>
+</div>
+<!--弹窗-->
+<div class="bg"></div>
+<div class="login_alert">
+    <div class="login_alert_tl clearfix">
+        <span class="left">易名彩登录</span>
+        <a href="javascript:;" class="cha right"></a>
+    </div>
+    <form>
+        <div class="login_alert_b">
+            <div class="login_alert_gp">
+                <img src="${resPath}images/alert2.png" class="login_alert_ico" />
+                <input type="text" placeholder="手机号/用户名" />
+            </div>
+            <div class="login_alert_gp">
+                <img src="${resPath}images/alert3.png" class="login_alert_ico" />
+                <input type="password" placeholder="密码" />
+            </div>
+            <input type="button" class="btn_red login_alertbtn" value="立即登录" />
+            <div class="login_alert_link">
+                <a href="#">忘记密码</a>
+                <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="#">立即注册</a>
+            </div>
+        </div>
+    </form>
+</div>
         <div class="copy recopy">
             <c:import url="../common/copyright_time.jsp"/>&nbsp;&nbsp;
         </div>
@@ -50,7 +261,8 @@ ${khxy.khxy}
 
 <c:import url="../common/commonJs.jsp" />
 <c:import url="../common/jsCommonLogin.jsp" />
-<script>
+
+<script type="text/javascript">
 
     function registerLogin() {
         var loginAccount = $.trim($("#registerLoginAccount").val());
@@ -134,6 +346,5 @@ ${khxy.khxy}
         var hei=$(window).height();
         $(".back").css("height",hei-27+"px");
     }
-
 </script>
 <c:import url="../common/bodyEnd.jsp" />
