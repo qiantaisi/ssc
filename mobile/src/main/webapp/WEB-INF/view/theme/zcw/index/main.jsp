@@ -102,7 +102,7 @@
                         </c:when>
                         <c:otherwise>
                             <div class="pull-right cl-3">
-                                <a href="javascript:void(0);" class="right shiwan_btn">免费试玩</a>
+                                <a href="javascript:void(0);" class="right" id="btn-shiwan">免费试玩</a>
                             </div>
                         </c:otherwise>
                     </c:choose>
@@ -221,7 +221,7 @@
                         </c:import>--%>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/efssc.html">
-                                <img src="${resPath}img/new_zcw/index1_7.png"/>
+                                <img src="${resPath}img/new_zcw/index1_14.png"/>
                                 <div>
                                     <span class="dus_a">两分时时彩</span>
                                     <span class="dus_b">全天在线可玩</span>

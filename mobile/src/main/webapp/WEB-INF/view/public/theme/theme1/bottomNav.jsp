@@ -6,7 +6,6 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-    request.setAttribute("themeBottomNav", "theme1");
 %>
 <nav class="number_bar number_bar-tab number_c1-101">
     <a class="n1" href="<%=basePath%>" data-name="index">

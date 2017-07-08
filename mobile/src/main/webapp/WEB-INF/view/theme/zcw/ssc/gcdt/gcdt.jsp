@@ -13,13 +13,25 @@
 <c:import url="../../common/bodyStart.jsp"/>
 <div class="page-group re-bg-group">
     <div class="page page-current re-background" id="page-gcdt">
-        <header class="bar bar-nav cl-1 recl-1">
-            <a href="javascript:void(0)" class="fanhui head_back_gcdt">
-                <span>返回</span>
+        <%--<header class="bar bar-nav cl-1 recl-1">--%>
+            <%--<a href="javascript:void(0)" class="fanhui head_back_gcdt">--%>
+                <%--<span>返回</span>--%>
+            <%--</a>--%>
+            <%--<h1 class="title reimg">--%>
+                <%--&lt;%&ndash;<img src="${resPath}img/kaihead_06.png"/>&ndash;%&gt;--%>
+            <%--${webCompanyName}购彩大厅--%>
+            <%--</h1>--%>
+        <%--</header>--%>
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
+                <span class="icon icon-left"></span>
+                返回
             </a>
-            <h1 class="title reimg">
-                <%--<img src="${resPath}img/kaihead_06.png"/>--%>
-            ${webCompanyName}购彩大厅
+            <%--<a href="<%=basePath%>login.html" class="button button-link pull-right">--%>
+            <%--登录--%>
+            <%--</a>--%>
+            <h1 class="title" style="font-size:16px">
+                购彩大厅
             </h1>
         </header>
         <%--<c:import url="../../common/bottomNav2.jsp"/>--%>
@@ -94,7 +106,7 @@
                                 <c:when test="${userItems == 9}">
                                     <li>
                                         <a href="<%=basePath%>ssc/gcdt/pk10.html" data-play_group_id="9">
-                                            <img src="${resPath}/images/buy_23.png"/>
+                                            <img src="${resPath}/images/buy_09.png"/>
                                             <p>
                                                 北京赛车
                                             </p>
@@ -334,7 +346,7 @@
                     </li>
                     <li>
                         <a href="<%=basePath%>ssc/gcdt/pk10.html" data-play_group_id="9">
-                            <img src="${resPath}/images/buy_23.png" />
+                            <img src="${resPath}/images/buy_09.png" />
                             <p>
                                 北京赛车
                             </p>
