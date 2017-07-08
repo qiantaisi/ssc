@@ -32,7 +32,7 @@
 			    			用户名:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text" class="left" placeholder="请输入用户名" />
+                    <input type="text"  name="registerLoginAccount" id="registerLoginAccount" class="left" placeholder="请输入用户名" />
                     <div class="left erro">
                         请输入用户名（3-15个英文、数字）
                     </div>
@@ -46,7 +46,7 @@
 			    			密码:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="password" class="left" placeholder="请输入密码" />
+                    <input type="password"  name="registerLoginPassword"  id="registerLoginPassword" class="left" placeholder="请输入密码" />
 
                 </div>
             </div>
@@ -58,15 +58,12 @@
 			    			验证码:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text" class="left" placeholder="请输入验证码" />
-                    <a href="#" class="left">
-                        <img src="${resPath}images/index_51.png" />
-                    </a>
+                    <p><input type="text" id="registerLoginYzm" placeholder="验证码" onfocus="refreshYzm(document.getElementById('registerYzmImg2'))" /><img id="registerYzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2" /></p>
                 </div>
             </div>
             <div class="login_b">
                 <p>
-                    <a href="#">登录</a>
+                    <a href="javascript:void(0)" onclick="login()">登录</a>
                 </p>
                 <p>
                     <a href="<%=basePath%>register.html">免费开户</a>
@@ -119,7 +116,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/tk.html">
                                 <img src="${resPath}images/index_135.png" />
                                 提款快速
                             </a>
@@ -229,17 +226,17 @@
         <span class="left">易名彩登录</span>
         <a href="javascript:;" class="cha right"></a>
     </div>
-    <form>
+    <form >
         <div class="login_alert_b">
             <div class="login_alert_gp">
                 <img src="${resPath}images/alert2.png" class="login_alert_ico" />
-                <input type="text" placeholder="手机号/用户名" />
+                <input type="text"  name="registerLoginAccount" placeholder="手机号/用户名" />
             </div>
             <div class="login_alert_gp">
                 <img src="${resPath}images/alert3.png" class="login_alert_ico" />
-                <input type="password" placeholder="密码" />
+                <input type="password"  name="registerLoginPassword" placeholder="密码" />
             </div>
-            <input type="button" class="btn_red login_alertbtn" value="立即登录" />
+            <input type="button" class="btn_red login_alertbtn"  value="立即登录" />
             <div class="login_alert_link">
                 <a href="#">忘记密码</a>
                 <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
@@ -263,11 +260,10 @@ ${khxy.khxy}
 <c:import url="../common/jsCommonLogin.jsp" />
 
 <script type="text/javascript">
-
-    function registerLogin() {
-        var loginAccount = $.trim($("#registerLoginAccount").val());
-        var loginPassword = $.trim($("#registerLoginPassword").val());
-        var yzm = $.trim($("#registerLoginYzm").val());
+    function login() {
+        var loginAccount = $("#registerLoginAccount").val();
+        var loginPassword = $("#registerLoginPassword").val();
+        var yzm = $("#registerLoginYzm").val();
 
         if (!loginAccount) {
             alert("请输入账号");
@@ -330,6 +326,7 @@ ${khxy.khxy}
     });
 
     $(function() {
+        $(".all_fenlei_yin").css("display","none");
         ate();
         $(".alert_log_col h5 i").click(function(){
             $(".two2").fadeOut();

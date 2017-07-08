@@ -7,7 +7,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <script>
-    var fengge_1 = '${fengge_1}';
+    var fengge1 = '${fengge_1}';
 </script>
 <%--自定义风格--%>
 <c:if test="${not empty fengge_1}">
@@ -31,7 +31,8 @@
         .mode_select.selected{background: #${fengge_1}!important;}
         #betContainer .cl-604 span.ball-blue,#betContainer .cl-604 span.ball-green,#betContainer .cl-604 span.ball-red{color: #fff!important;}
         #betContainer .cl-604 .pkbg-1, #betContainer .cl-604 .pkbg-2, #betContainer .cl-604 .pkbg-3, #betContainer .cl-604 .pkbg-4, #betContainer .cl-604 .pkbg-5, #betContainer .cl-604 .pkbg-6, #betContainer .cl-604 .pkbg-7, #betContainer .cl-604 .pkbg-8, #betContainer .cl-604 .pkbg-9, #betContainer .cl-604 .pkbg-10{color: #fff!important;}
-       .cl-604 table tbody tr td.active span:nth-child(1){color: white!important;}
+        .cl-604 table tbody tr td.active span:nth-child(1){color: white!important;}
+        .clearBet_template .l span i{background: #${fengge_1} url(${bottomCssResPath}${themeBottomNav}/img/tm-mdl-icon.png) no-repeat!important; background-size: 100%!important; background-position: 0 41%!important;;}
 
         <%--.eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #${fengge_1}!important;}--%>
         <%--.eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}--%>

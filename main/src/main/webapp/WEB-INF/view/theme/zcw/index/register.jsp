@@ -61,7 +61,7 @@
 			    			确认密码:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text"  name="confirmPassword" class="left" placeholder="确认密码" />
+                    <input type="password"  name="confirmPassword" class="left" placeholder="确认密码" />
                     <div class="left erro">
                         与上面输入密码必须保持一致
                     </div>
@@ -139,7 +139,7 @@
             <div class="login_b_link">
                 <a href="#">忘记密码?</a>
                 <span>|</span>
-                <a href="#">在线客服</a>
+                <a href="${kefuUrl}" target="_blank">在线客服</a>
             </div>
         </div>
     </div>
@@ -298,17 +298,17 @@
 
 <script>
     $(function() {
+        $(".all_fenlei_yin").css("display","none");
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
             var phone = $("input[name='phone']").val();   // 手机号码
             var email = $("input[name='email']").val();   // 邮箱号码
             var qq = $("input[name='qq']").val();   // QQ
-            console.log(qq + "------------");
+
 
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
             var name = $("input[name='name']").val();   // 姓名
-
             if (!account) {
                 alert("请输入用户名");
                 return;
@@ -363,6 +363,7 @@
                 alert("姓名只能是汉字");
                 return;
             }
+            alert(qq);
             ajaxRequest({
                 url: "<%=basePath%>member/ajaxRegister.json",
                 data: {
