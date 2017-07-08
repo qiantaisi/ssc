@@ -15,7 +15,7 @@
                 <span class="icon icon-left"></span>
                 返回
             </a>
-            <h1 class="title">
+            <h1 class="title" style="font-size:16px">
                 登录
             </h1>
         </header>

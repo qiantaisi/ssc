@@ -18,7 +18,7 @@
             <%--<a href="<%=basePath%>login.html" class="button button-link pull-right">--%>
                 <%--登录--%>
             <%--</a>--%>
-            <h1 class="title">
+            <h1 class="title" style="font-size:16px">
                 注册
             </h1>
         </header>
