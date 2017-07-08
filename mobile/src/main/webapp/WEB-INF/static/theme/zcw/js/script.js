@@ -1,6 +1,14 @@
 var extractFunc = null;
 $(function () {
     "use strict";
+    $(".number_bar a").click(
+        function () {
+            var lin = $(this).attr("data-name");
+            $(".number_bar"+lin).find(".H").addClass("active");
+            $(".number_bar"+lin).find(".H").removeClass("H");
+            $().find(".W").addClass("H")
+        }
+    );
 
     // 底部信息调用
     function ajaxGetDbxx() {
@@ -92,15 +100,6 @@ $(function () {
         if (typeof initBottomNavIndex == 'function') {
             initBottomNavIndex();
         }
-
-        // 返回按钮
-        $(".head_back").click(function () {
-            if ($.config.router == true) {
-                $.router.back();
-            } else {
-                back();
-            }
-        });
 
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
@@ -237,15 +236,6 @@ $(function () {
         if (typeof initBottomNavMbmber == 'function') {
             initBottomNavMbmber();
         }
-
-        // 返回按钮
-        $(".head_back").click(function () {
-            if ($.config.router == true) {
-                $.router.back();
-            } else {
-                back();
-            }
-        });
 
         // 读取cookie中的用户名
         var account = Tools.getCookie("loginFormAccount");
@@ -384,10 +374,10 @@ $(function () {
         //     $("#navBar").scrollTop(0);
         // });
 
-        $(".shiwan_btn").click(function () {
-              shiwan();
-            $(".shiwan_btn").remove();
-        });
+        // $(".shiwan_btn").click(function () {
+        //       shiwan();
+        //     $(".shiwan_btn").remove();
+        // });
 
         // 首页图片轮播
         var swiper = new Swiper('.swiper-container', {
@@ -6709,30 +6699,3 @@ function showLhcLastDataNum() {
 function kefuToast() {
     Tools.toast("请联系在线客服");
 }
-
-// $(".title").click(
-//     function () {
-//         if ($(".content").is(".show_hide")) {
-//             $(".page").find(".show_hide").removeClass("show_hide");
-//             $(".consele").addClass("show_hide").show();
-//             $(".bott").addClass("show_hide").show();
-//         } else {
-//             $(".consele").removeClass("show_hide").show();
-//             $(".bott").removeClass("show_hide").hide();
-//             $(".page").find(".content").addClass("show_hide");
-//         }
-//     }
-// );
-
-
-$(function () {
-        $(".number_bar a").click(
-            function () {
-                var lin = $(this).attr("data-name");
-                $(".number_bar"+lin).find(".H").addClass("active");
-                $(".number_bar"+lin).find(".H").removeClass("H");
-                $().find(".W").addClass("H")
-            }
-        );
-    }
-);
