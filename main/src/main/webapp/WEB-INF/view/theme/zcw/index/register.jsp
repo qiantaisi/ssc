@@ -438,7 +438,8 @@
             alert("请输入验证码");
             return;
         }
-
+    };
+</script>
 
 <c:import url="../common/bodyEnd.jsp" />
 
@@ -451,7 +452,7 @@
         var email = $("input[name='email']").val();   // 邮箱号码
         var qq = $("input[name='qq']").val();   // QQ
         console.log(qq+"------------");
-            
+
         var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
         var name = $("input[name='name']").val();   // 姓名
 
