@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="${resPath}css/gfwf.css?v=20170502" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/index.css?v=20170705" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/login.css?v=20170502" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="${resPath}css/index-allmenu.css?v=20170707" type="text/css"><!--页面CSS-->
     <script src="${resPath}js/FancyZoom.js" language="JavaScript" type="text/javascript"></script>
     <script src="${resPath}js/FancyZoomHTML.js" language="JavaScript" type="text/javascript"></script>
     <script src="${resPath}js/flexslider/jquery-1.7.2.js" language="JavaScript" type="text/javascript"></script>
