@@ -11,7 +11,7 @@
 <div class="page-group" style="background: #ffffff;">
     <div class="page page-current" id="page-login">
         <header class="bar bar-nav">
-            <a href="javascript:void(0)" class="button button-link button-nav pull-left fanhui">
+            <a href="javascript:void(0)" class="button button-link button-nav pull-left shouye">
                 <span class="icon icon-left"></span>
                 返回
             </a>

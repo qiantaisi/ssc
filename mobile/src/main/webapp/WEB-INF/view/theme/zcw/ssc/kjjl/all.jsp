@@ -12,7 +12,7 @@
 <div class="page-group">
     <div class="page page-current" id="page-kjjl-all">
         <header class="bar bar-nav rekjcl-1">
-            <a href="javascript:void(0)" class="button button-link button-nav pull-left fanhui">
+            <a href="javascript:void(0)" class="button button-link button-nav pull-left shouye">
                 <span class="icon icon-left reicon"></span>
             </a>
             <h1 class="title reimg">
