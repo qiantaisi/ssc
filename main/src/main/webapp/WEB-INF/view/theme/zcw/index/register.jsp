@@ -11,7 +11,7 @@
 <c:import url="top.jsp" />
 <c:import url="menu.jsp" />
 <div class="wrap">
-<div class="login_nr">
+<div class="register_nr">
 
 </div>
 </div>
