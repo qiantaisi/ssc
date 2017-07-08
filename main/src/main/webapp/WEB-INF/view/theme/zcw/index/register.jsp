@@ -6,118 +6,127 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<c:import url="../common/bodyStart.jsp" />
-<c:import url="../common/checkIsChildFrame.jsp" />
-<c:import url="top.jsp" />
-<c:import url="menu.jsp" />
+<c:import url="../common/bodyStart.jsp"/>
+<c:import url="../common/checkIsChildFrame.jsp"/>
+<c:import url="top.jsp"/>
+<c:import url="menu.jsp"/>
 <div class="wrap">
-<div class="register_nr">
+    <div class="register_nr">
+        <div class="register_nr_t">
+            <div class="left_register">登录帐号</div>
+            <div class="right_register">
+                已有帐号？
+                <a href="#">立即登录</a>
+            </div>
+        </div>
+        <div class="">
 
-</div>
+        </div>
+    </div>
 </div>
 <%--<div class="img"><a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a></div>--%>
 <%--<img src="${resPath}img/bj.jpg" class="back" alt="" width="100%">--%>
 <%--<div class="regedit">--%>
 
-    <%--<div class="reg_col">--%>
-        <%--<div class="reg_list">--%>
-            <%--<ul>--%>
-                <%--<li class="sli">--%>
-                    <%--<h5>1</h5>--%>
-                    <%--<p>填写信息</p>--%>
-                <%--</li>--%>
-                <%--<li>--%>
-                    <%--<h5>2</h5>--%>
-                    <%--<p>注册成功</p>--%>
-                <%--</li>--%>
-                <%--<li>--%>
-                    <%--<h5>3</h5>--%>
-                    <%--<p>充值购彩</p>--%>
-                <%--</li>--%>
-            <%--</ul>--%>
-        <%--</div>--%>
-        <%--<div class="reg">--%>
-            <%--<div class="reg_le">--%>
-                <%--<form onsubmit="ajaxRegister();return false;">--%>
-                    <%--<div>--%>
-                        <%--<h4><span><img src="${resPath}img/r1.png" /></span></h4>--%>
-                        <%--<p><input id="registerAccount" type="text" placeholder="请输入您的用户名"/></p>--%>
-                    <%--</div>--%>
-                    <%--<div>--%>
-                        <%--<h4><span><img src="${resPath}img/r2.png" /></span></h4>--%>
-                        <%--<p><input id="registerPassword" type="password" placeholder="请输入密码"/></p>--%>
-                    <%--</div>--%>
-                    <%--<div>--%>
-                        <%--<h4><span><img src="${resPath}img/r1.png" /></span></h4>--%>
-                        <%--<p><input id="registerName" type="text" placeholder="请输入您的姓名"/></p>--%>
-                    <%--</div>--%>
-                    <%--<div>--%>
-                        <%--<h4><span><img src="${resPath}img/r3.png" /></span></h4>--%>
-                        <%--<p><input id="registerYzm" class="short" type="text" placeholder="请输入验证码" /><img id="registerYzmImg1" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=65&imgHeight=30&imgFontHeight=26&imgCodeY=23&imgCodeX=2" /></p>--%>
-                    <%--</div>--%>
-                    <%--<div class="no">--%>
-                        <%--<h3><input type="submit"  value="立即注册"/><br><span>注册即表示同意<a href="javascript:void(0)" onclick="showKhxy()">《${webName}服务使用协议》</a></span></h3>--%>
-                    <%--</div>--%>
-                <%--</form>--%>
-            <%--</div>--%>
-            <%--<div class="reg_rt">--%>
-                <%--<h5>已有账号，<span>直接登录</span></h5>--%>
-                <%--<h3>注册帮助</h3>--%>
-                <%--<ul>--%>
-                    <%--<li>--%>
-                        <%--<h6>1</h6>--%>
-                        <%--<p><a href="<%=basePath%>?u=<%=basePath%>/help/question/zc.html" target="_blank">新手操作指南</a></p>--%>
-                    <%--</li>--%>
-                    <%--<li>--%>
-                        <%--<h6>2</h6>--%>
-                        <%--<p><a href="<%=basePath%>?u=<%=basePath%>/help/question/mima.html" target="_blank">手机注册时提示手机号码已被绑定怎么办?</a></p>--%>
-                    <%--</li>--%>
-                    <%--<li>--%>
-                        <%--<h6>3</h6>--%>
-                        <%--<p><a href="#">注册${webName}时昵称显示“已经被注册”如何处理?</a></p>--%>
-                    <%--</li>--%>
-                    <%--<li>--%>
-                        <%--<h6>4</h6>--%>
-                        <%--<p><a href="#">注册时提示"你所使用的IP地址异常",该怎么办?</a></p>--%>
-                    <%--</li>--%>
-                    <%--<li class="no">--%>
-                        <%--<h6></h6>--%>
-                        <%--<p><a href="<%=basePath%>?u=<%=basePath%>/help/index.html" target="_blank">更多帮助》</a></p>--%>
-                    <%--</li>--%>
-                <%--</ul>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-    <%--</div>--%>
+<%--<div class="reg_col">--%>
+<%--<div class="reg_list">--%>
+<%--<ul>--%>
+<%--<li class="sli">--%>
+<%--<h5>1</h5>--%>
+<%--<p>填写信息</p>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<h5>2</h5>--%>
+<%--<p>注册成功</p>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<h5>3</h5>--%>
+<%--<p>充值购彩</p>--%>
+<%--</li>--%>
+<%--</ul>--%>
+<%--</div>--%>
+<%--<div class="reg">--%>
+<%--<div class="reg_le">--%>
+<%--<form onsubmit="ajaxRegister();return false;">--%>
+<%--<div>--%>
+<%--<h4><span><img src="${resPath}img/r1.png" /></span></h4>--%>
+<%--<p><input id="registerAccount" type="text" placeholder="请输入您的用户名"/></p>--%>
+<%--</div>--%>
+<%--<div>--%>
+<%--<h4><span><img src="${resPath}img/r2.png" /></span></h4>--%>
+<%--<p><input id="registerPassword" type="password" placeholder="请输入密码"/></p>--%>
+<%--</div>--%>
+<%--<div>--%>
+<%--<h4><span><img src="${resPath}img/r1.png" /></span></h4>--%>
+<%--<p><input id="registerName" type="text" placeholder="请输入您的姓名"/></p>--%>
+<%--</div>--%>
+<%--<div>--%>
+<%--<h4><span><img src="${resPath}img/r3.png" /></span></h4>--%>
+<%--<p><input id="registerYzm" class="short" type="text" placeholder="请输入验证码" /><img id="registerYzmImg1" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=65&imgHeight=30&imgFontHeight=26&imgCodeY=23&imgCodeX=2" /></p>--%>
+<%--</div>--%>
+<%--<div class="no">--%>
+<%--<h3><input type="submit"  value="立即注册"/><br><span>注册即表示同意<a href="javascript:void(0)" onclick="showKhxy()">《${webName}服务使用协议》</a></span></h3>--%>
+<%--</div>--%>
+<%--</form>--%>
+<%--</div>--%>
+<%--<div class="reg_rt">--%>
+<%--<h5>已有账号，<span>直接登录</span></h5>--%>
+<%--<h3>注册帮助</h3>--%>
+<%--<ul>--%>
+<%--<li>--%>
+<%--<h6>1</h6>--%>
+<%--<p><a href="<%=basePath%>?u=<%=basePath%>/help/question/zc.html" target="_blank">新手操作指南</a></p>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<h6>2</h6>--%>
+<%--<p><a href="<%=basePath%>?u=<%=basePath%>/help/question/mima.html" target="_blank">手机注册时提示手机号码已被绑定怎么办?</a></p>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<h6>3</h6>--%>
+<%--<p><a href="#">注册${webName}时昵称显示“已经被注册”如何处理?</a></p>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<h6>4</h6>--%>
+<%--<p><a href="#">注册时提示"你所使用的IP地址异常",该怎么办?</a></p>--%>
+<%--</li>--%>
+<%--<li class="no">--%>
+<%--<h6></h6>--%>
+<%--<p><a href="<%=basePath%>?u=<%=basePath%>/help/index.html" target="_blank">更多帮助》</a></p>--%>
+<%--</li>--%>
+<%--</ul>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--</div>--%>
 <%--</div>--%>
 
 <%--<div class="alert_log two2">--%>
-    <%--<div class="alert_log_col">--%>
-        <%--<h5>欢迎您登录<i>×</i></h5>--%>
-        <%--<form onsubmit="registerLogin();return false;">--%>
-            <%--<div>--%>
-                <%--<h4><span><img src="${resPath}img/l1.png" /></span></h4>--%>
-                <%--<p><input type="text" id="registerLoginAccount" placeholder="请输入您的账号" /></p>--%>
-            <%--</div>--%>
-            <%--<div>--%>
-                <%--<h4><span><img src="${resPath}img/l2.png" /></span></h4>--%>
-                <%--<p><input type="password" id="registerLoginPassword" placeholder="密码" /></p>--%>
-            <%--</div>--%>
-            <%--<div>--%>
-                <%--<h4><span><img src="${resPath}img/l2.png" /></span></h4>--%>
-                <%--<p><input type="text" id="registerLoginYzm" placeholder="验证码" onfocus="refreshYzm(document.getElementById('registerYzmImg2'))" /><img id="registerYzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2" /></p>--%>
-            <%--</div>--%>
-            <%--<h3><input type="checkbox" /><a href="#">记住密码</a><span><a href="${kefuUrl}" target="_blank">忘记密码？</a></span></h3>--%>
-            <%--<h6><input type="submit" class="sub"  value="登录"/></h6>--%>
-        <%--</form>--%>
-    <%--</div>--%>
+<%--<div class="alert_log_col">--%>
+<%--<h5>欢迎您登录<i>×</i></h5>--%>
+<%--<form onsubmit="registerLogin();return false;">--%>
+<%--<div>--%>
+<%--<h4><span><img src="${resPath}img/l1.png" /></span></h4>--%>
+<%--<p><input type="text" id="registerLoginAccount" placeholder="请输入您的账号" /></p>--%>
+<%--</div>--%>
+<%--<div>--%>
+<%--<h4><span><img src="${resPath}img/l2.png" /></span></h4>--%>
+<%--<p><input type="password" id="registerLoginPassword" placeholder="密码" /></p>--%>
+<%--</div>--%>
+<%--<div>--%>
+<%--<h4><span><img src="${resPath}img/l2.png" /></span></h4>--%>
+<%--<p><input type="text" id="registerLoginYzm" placeholder="验证码" onfocus="refreshYzm(document.getElementById('registerYzmImg2'))" /><img id="registerYzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2" /></p>--%>
+<%--</div>--%>
+<%--<h3><input type="checkbox" /><a href="#">记住密码</a><span><a href="${kefuUrl}" target="_blank">忘记密码？</a></span></h3>--%>
+<%--<h6><input type="submit" class="sub"  value="登录"/></h6>--%>
+<%--</form>--%>
+<%--</div>--%>
 <%--</div>--%>
 
 <%--<div class="copy">--%>
-    <%--<c:import url="../common/copyright_time.jsp"/>&nbsp;&nbsp;--%>
+<%--<c:import url="../common/copyright_time.jsp"/>&nbsp;&nbsp;--%>
 <%--</div>--%>
 
 <script type="text/html" id="template_khxy">
-${khxy.khxy}
+    ${khxy.khxy}
 </script>
 
 <%--<c:import url="../common/commonJs.jsp" />--%>
@@ -160,10 +169,10 @@ ${khxy.khxy}
                 account: loginAccount,
                 password: $.md5(loginPassword)
             },
-            beforeSend: function() {
+            beforeSend: function () {
                 showLoading();
             },
-            success: function(json) {
+            success: function (json) {
                 if (json.result == 1) {
                     $.cookie("uid", json.userId, {path: "/"});
                     $.cookie("token", json.token, {path: "/"});
@@ -212,7 +221,7 @@ ${khxy.khxy}
             return;
         }
         var numLen = $("#registerName").val().length;
-        if(numLen < 2){
+        if (numLen < 2) {
             alert("姓名两位以上");
             return;
         }
@@ -224,7 +233,7 @@ ${khxy.khxy}
 
         ajaxRequest({
             url: "<%=basePath%>member/ajaxRegister.json",
-            beforeSend: function() {
+            beforeSend: function () {
                 showLoading();
             },
             data: {
@@ -234,7 +243,7 @@ ${khxy.khxy}
                 yzm: yzm,
                 agentId: $.cookie("agentId")
             },
-            success: function(json) {
+            success: function (json) {
                 hideLoading();
                 if (json.result == 1) {
                     Tools.toast("注册成功");
@@ -256,7 +265,7 @@ ${khxy.khxy}
     }
     function showLoading() {
         layer.load(2, {
-            shade: [0.1,'#000'] //0.1透明度的白色背景
+            shade: [0.1, '#000'] //0.1透明度的白色背景
         })
     }
     function hideLoading() {
@@ -267,32 +276,32 @@ ${khxy.khxy}
         var params = getRequest(src);
 
         src = "<%=basePath%>code/yzm?timestamp=" + (new Date()).getTime();
-        $.each(params, function(index, value) {
+        $.each(params, function (index, value) {
             src += '&' + value.key + '=' + value.value;
         });
         console.log(src);
         $(obj).attr("src", src);
     }
-    $(window).resize(function(){
+    $(window).resize(function () {
         ate();
     });
 
-    $(function() {
+    $(function () {
         ate();
-        $(".alert_log_col h5 i").click(function(){
+        $(".alert_log_col h5 i").click(function () {
             $(".two2").fadeOut();
         });
-        autobox(".Customerservice",1,1180,0);
-        tabs_cg(".Resultt .latyout .tabs_ce ul li","","hover","acti","","");
-        click_addname(".Resultt .latyout .wrap_select a","acti","click");
-        $('.reg_rt h5 span').click(function(){
+        autobox(".Customerservice", 1, 1180, 0);
+        tabs_cg(".Resultt .latyout .tabs_ce ul li", "", "hover", "acti", "", "");
+        click_addname(".Resultt .latyout .wrap_select a", "acti", "click");
+        $('.reg_rt h5 span').click(function () {
             $('.two2').fadeIn();
         })
     });
 
-    function ate(){
-        var hei=$(window).height();
-        $(".back").css("height",hei-27+"px");
+    function ate() {
+        var hei = $(window).height();
+        $(".back").css("height", hei - 27 + "px");
     }
 
     function login1() {
@@ -320,12 +329,12 @@ ${khxy.khxy}
                 account: loginAccount,
                 password: $.md5(loginPassword)
             },
-            beforeSend: function() {
+            beforeSend: function () {
                 layer.load(2, {
-                    shade: [0.1,'#000'] //0.1透明度的白色背景
+                    shade: [0.1, '#000'] //0.1透明度的白色背景
                 })
             },
-            success: function(json) {
+            success: function (json) {
                 layer.closeAll();
                 if (json.result == 1) {
                     $.cookie("uid", json.userId, {path: "/"});
@@ -339,4 +348,4 @@ ${khxy.khxy}
         });
     }
 </script>
-<c:import url="../common/bodyEnd.jsp" />
+<c:import url="../common/bodyEnd.jsp"/>
