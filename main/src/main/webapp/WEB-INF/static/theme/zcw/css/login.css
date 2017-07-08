@@ -369,7 +369,7 @@ body {
 
 .all_fenlei {
     width: 210px;
-    padding: 0px 20px;
+    padding: 0 20px;
     background: #d51910;
     position: relative;
     cursor: pointer;
@@ -385,6 +385,11 @@ body {
 .login_yz input {
     width: 136px;
 }
+
+.all_fenlei:hover .all_fenlei_yin {
+    display: block !important;
+}
+
 .login_b .mfkh{
     display: block;
     line-height: 44px;
