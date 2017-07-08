@@ -3492,7 +3492,7 @@ $.fn.RangeSlider = function(cfg) {
     var step = cfg.step;    // 每步
     var width = cfg.width ? cfg.width : '100%';  // 容器长度
     // var orientation = cfg.orientation ? cfg.orientation : 'vertical';
-    var leftColor = cfg.leftColor ? cfg.leftColor : "#fa6200";
+    var leftColor = cfg.leftColor ? "#" + cfg.leftColor : "#fa6200";
     // var rightColor = cfg.rightColor ? cfg.rightColor : "#fa6200";
 
     $(this).attr("min", min).attr("max", max).attr("step", step).attr("step", step).attr("value", 0);

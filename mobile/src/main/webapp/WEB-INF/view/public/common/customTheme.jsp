@@ -7,7 +7,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <script>
-    var fengge_1 = '${fengge_1}';
+    var fengge1 = '${fengge_1}';
 </script>
 <%--自定义风格--%>
 <c:if test="${not empty fengge_1}">
