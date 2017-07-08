@@ -1902,7 +1902,7 @@ $(function () {
             if (typeof playGroupId == 'undefined' || typeof globalLeftTime == 'undefined') {
                 return;
             }
-            if (globalLeftTime < 0) {
+            if (globalLeftTime == 0) {
                 querySscLeftTime(playGroupId);
                 if (globalOpening) {
                     showClearBetTemplate();
@@ -2041,6 +2041,9 @@ $(function () {
     function reset() {
         $("body tbody tr td.active").removeClass('active');
         $("#inputMoney").val("");
+
+        // 官方玩法下注内容清除
+        clearSelected();
     }
 
     var querySscLeftTime_Running = false; // querySscLeftTime函数是否正在调用
