@@ -19,7 +19,7 @@
 <script src="${resPath}js/swfobject/swfobject.js?v=2017"></script>
 <script src="${resPath}js/jquery.liMarquee.js?v=2017"></script>
 <script src="${resPath}js/placeholders.jquery.min.js?v=2017"></script>
-<script src="${resPath}jRange/jquery.range-min.js?v=2017"></script>
+<script src="${resPath}jRange/jquery.range-min.js?v=2017"></script>global.js
 <script src="${resPath}js/flexslider/jquery.flexslider-min.js?v=20170707"></script><!--轮播插件封装函数-->
 <script>
     // 闪烁
