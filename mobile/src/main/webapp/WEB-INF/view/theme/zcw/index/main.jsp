@@ -221,7 +221,7 @@
                         </c:import>--%>
                         <div class="cus_b">
                             <a href="<%=basePath%>ssc/gcdt/efssc.html">
-                                <img src="${resPath}img/new_zcw/index1_7.png"/>
+                                <img src="${resPath}img/new_zcw/index1_14.png"/>
                                 <div>
                                     <span class="dus_a">两分时时彩</span>
                                     <span class="dus_b">全天在线可玩</span>
