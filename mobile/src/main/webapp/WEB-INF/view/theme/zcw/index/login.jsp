@@ -19,10 +19,13 @@
                 登录
             </h1>
         </header>
-        <div class="content bg-white">
-            <div class="main">
+
+        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
+
+        <div class="content bg-white bottom2">
+            <div class="main" style="overflow:hidden;">
                 <div class="ny_logo">
-                    <img src="<%=basePath%>images/${logo.imageId}.png" />
+                    <img src="<%=basePath%>images/${logo.imageId}.png"/>
                 </div>
                 <div class="form_main">
 
@@ -69,8 +72,6 @@
                 </ul>
             </div>
         </div>
-
-        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
     </div>
 </div>
 <script>

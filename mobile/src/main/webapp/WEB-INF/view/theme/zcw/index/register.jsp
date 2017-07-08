@@ -22,8 +22,9 @@
                 注册
             </h1>
         </header>
-        <div class="content bg-white">
-            <div class="main zcw-reg-main">
+        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
+        <div class="content bg-white bottom2">
+            <div class="main">
                 <div class="ny_logo">
                     <img src="<%=basePath%>images/${logo.imageId}.png"/>
                 </div>
@@ -95,7 +96,6 @@
                 </ul>
             </div>
         </div>
-        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
     </div>
 </div>
 <script>
