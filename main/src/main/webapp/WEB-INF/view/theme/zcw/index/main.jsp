@@ -12,14 +12,15 @@
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp"/>
 <c:import url="top.jsp"/>
+
 <div class="head_middle">
     <div class="container clearfix">
         <a href="index.html" class="left logo">
-            <img src="${resPath}images/common/index_11.png" />
+            <img src="${resPath}images/index_11.png" />
         </a>
         <div class="left head_middle_yuye">
             <a href="#">
-                <img src="${resPath}images/common/index_14.png" />
+                <img src="${resPath}images/index_14.png" />
             </a>
         </div>
         <div class="right clearfix">
@@ -27,70 +28,69 @@
                 400-690-8888
             </div>
             <a href="#" class="left head_middle_kf">
-                <img src="${resPath}images/common/index_20.png" />
+                <img src="${resPath}images/index_20.png" />
                 联系客服
             </a>
         </div>
     </div>
 </div>
-
 <div class="menu">
     <div class="container clearfix">
         <div class="left all_fenlei clearfix">
             <span class="left all_fenlei_tl">全部彩种</span>
-            <img src="${resPath}images/common/index_30.png" class="right all_fenlei_img" />
-            <div class="all_fenlei_yin">
-                <a href="#" class="all_fenlei_yin_list clearfix">
+            <img src="${resPath}images/index_30.png" class="right all_fenlei_img" />
+            <div class="all_fenlei_yin" style="display: block;">
+                <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
-                        <img src="${resPath}images/common/index_39.png"/>
+                        <img src="${resPath}images/index_39.png"/>
                     </div>
                     <div class="all_fenlei_yin_list_rt">
                         分分时时彩
                     </div>
                 </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
-                        <img src="${resPath}images/common/index_42.png"/>
+                        <img src="${resPath}images/index_42.png"/>
                     </div>
                     <div class="all_fenlei_yin_list_rt">
                         极速PK拾
                     </div>
                 </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
-                        <img src="${resPath}images/common/index_45.png"/>
+                        <img src="${resPath}images/index_45.png"/>
                     </div>
                     <div class="all_fenlei_yin_list_rt">
                         三分彩
                     </div>
                 </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
-                        <img src="${resPath}images/common/index_49.png"/>
+                        <img src="${resPath}images/index_49.png"/>
                     </div>
                     <div class="all_fenlei_yin_list_rt">
                         北京PK拾
                     </div>
                 </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
-                        <img src="${resPath}images/common/index51.png"/>
+                        <img src="${resPath}images/index51.png"/>
                     </div>
                     <div class="all_fenlei_yin_list_rt">
                         北京快乐8
                     </div>
                 </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
-                        <img src="${resPath}images/common/index1-16.png"/>
+                        <img src="${resPath}images/index1-16.png"/>
                     </div>
                     <div class="all_fenlei_yin_list_rt">
                         天津时时彩
                     </div>
                 </a>
-                <a href="#" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
-                        <img src="${resPath}images/common/index51-17.png"/>
+                        <img src="${resPath}images/index51-17.png"/>
                     </div>
                     <div class="all_fenlei_yin_list_rt">
                         香港六合彩
@@ -104,40 +104,43 @@
                         <div class="all_fenlei_b_gp_rt clearfix">
                             <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <a href="#">分分时时彩</a>
+                                    <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
                                 </li>
                                 <li>
-                                    <a href="#">极速PK拾</a>
+                                    <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK拾</a>
                                 </li>
                                 <li>
-                                    <a href="#">三分彩</a>
+                                    <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分彩</a>
                                 </li>
                                 <li>
-                                    <a href="#">北京PK拾</a>
+                                    <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK拾</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="all_fenlei_b_yin">
                             <p class="all_fenlei_b_yin_tl">高频彩</p>
                             <div class="clearfix all_fenlei_b_yin_a">
-                                <a href="#">北京PK10</a>
-                                <a href="#">极速PK10</a>
-                                <a href="#">幸运飞艇</a>
-                                <a href="#">重庆时时彩</a>
-                                <a href="#">天津时时彩</a>
-                                <a href="#">新疆时时彩</a>
-                                <a href="#">分分时时彩</a>
-                                <a href="#">两分时时彩</a>
-                                <a href="#">三分时时彩</a>
-                                <a href="#">五分时时彩</a>
-                                <a href="#">江苏快3</a>
-                                <a href="#">湖北快3</a>
-                                <a href="#">安徽快3</a>
-                                <a href="#">吉林快3</a>
-                                <a href="#">重庆幸运农场</a>
-                                <a href="#">广东快乐十分</a>
-                                <a href="#">北京快乐8</a>
-                                <a href="#">幸运28</a>
+                                <a href="<%=basePath%>ssc/zst/pk10.html"    target="_blank">北京PK10</a>
+                                <a href="<%=basePath%>ssc/zst/jspk10.htm"  target="_blank">极速PK10</a>
+                                <a href="<%=basePath%>ssc/zst/xyft.html"    target="_blank">幸运飞艇</a>
+                                <a href="<%=basePath%>ssc/zst/cqssc.html"   target="_blank">重庆时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/tjssc.html"   target="_blank">天津时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/xjssc.html"   target="_blank">新疆时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/ffssc.html"   target="_blank">分分时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/efssc.html"   target="_blank">两分时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">五分时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
+                                <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK10</a>
+                                <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
+                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">江苏快3</a>
+                                <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">湖北快3</a>
+                                <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">安徽快3</a>
+                                <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>
+                                <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">幸运农场</a>
+                                <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
+                                <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
+                                <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
 
                             </div>
                         </div>
@@ -149,13 +152,13 @@
                         <div class="all_fenlei_b_gp_rt clearfix">
                             <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <a href="#">香港六合彩</a>
+                                    <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
                                 </li>
                                 <li>
-                                    <a href="#">福彩3d</a>
+                                    <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">福彩3d</a>
                                 </li>
                                 <li>
-                                    <a href="#">排列三</a>
+                                    <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">排列三</a>
                                 </li>
 
                             </ul>
@@ -164,9 +167,9 @@
                             <p class="all_fenlei_b_yin_tl">低频彩</p>
                             <div class="clearfix all_fenlei_b_yin_a">
 
-                                <a href="#">香港六合彩</a>
-                                <a href="#">福彩3D</a>
-                                <a href="#">体彩排列3</a>
+                                <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
+                                <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">福彩3D</a>
+                                <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">体彩排列3</a>
 
                             </div>
                         </div>
@@ -179,16 +182,16 @@
                         <div class="all_fenlei_b_gp_rt clearfix">
                             <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <a href="#">分分时时彩</a>
+                                    <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
                                 </li>
                                 <li>
-                                    <a href="#">极速PK拾</a>
+                                    <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK拾</a>
                                 </li>
                                 <li>
-                                    <a href="#">三分彩</a>
+                                    <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分彩</a>
                                 </li>
                                 <li>
-                                    <a href="#">北京PK拾</a>
+                                    <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK拾</a>
                                 </li>
                             </ul>
                         </div>
@@ -196,27 +199,24 @@
                             <p class="all_fenlei_b_yin_tl">全部</p>
                             <div class="clearfix all_fenlei_b_yin_a">
 
-                                <a href="#">重庆时时彩</a>
-                                <a href="#">天津时时彩</a>
-                                <a href="#">新疆时时彩</a>
-                                <a href="#">分分时时彩</a>
-                                <a href="#">两分时时彩</a>
-                                <a href="#">三分时时彩</a>
-                                <a href="#">五分时时彩</a>
-                                <a href="#">北京PK10</a>
-                                <a href="#">极速PK10</a>
-                                <a href="#">幸运飞艇</a>
-                                <a href="#">香港六合彩</a>
-                                <a href="#">江苏快3</a>
-                                <a href="#">湖北快3</a>
-                                <a href="#">安徽快3</a>
-                                <a href="#">吉林快3</a>
-                                <a href="#">快乐十分</a>
-                                <a href="#">幸运农场</a>
-                                <a href="#">北京快乐8</a>
-                                <a href="#">福彩3D</a>
-                                <a href="#">体彩排列3</a>
-                                <a href="#">幸运28</a>
+                                <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank">重庆时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank">天津时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/xjssc.html" target="_blank">新疆时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/efssc.html" target="_blank">两分时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">五分时时彩</a>
+                                <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
+                                <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK10</a>
+                                <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
+                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">江苏快3</a>
+                                <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">湖北快3</a>
+                                <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">安徽快3</a>
+                                <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>
+                                <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">幸运农场</a>
+                                <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
+                                <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
+                                <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
 
                             </div>
                         </div>
@@ -242,16 +242,834 @@
             </a>
             <a href="#">
                 <em class="hot"></em>
-                <img src="${resPath}images/common/index30.png" class="menu_a_img" />
+                <img src="${resPath}images/index30.png" class="menu_a_img" />
                 手机购买
             </a>
         </div>
     </div>
 </div>
 
+<div class="bannernew">
+    <div class="block_home_slider">
+        <div id="home_slider" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+                <li>
+                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
+                </li>
+            </ul>
+            <%--<p>--%>
+               <%--<i class="acti"></i>--%>
+               <%--<i></i>--%>
+               <%--<i></i>--%>
+            <%--</p>--%>
+        </div>
+
+        <script type="text/javascript">
+            $(function () {
+                $('#home_slider').flexslider({
+                    animation : 'slide',
+                    controlNav : true,
+                    directionNav : false,
+                    animationLoop : true,
+                    slideshow : true,
+                    pauseOnHover:true,
+                    useCSS : false
+                });
+
+            });
+        </script>
+    </div>
+    <div class="banner_shuru">
+        <div class="container clear">
+            <div class="banner_shuru_main right">
+                <div class="banner_shuru_main_tl">
+                    <span>欢迎登陆</span>
+                </div>
+                <form>
+                    <div class=" banner_shuru_gp">
+                        <input type="text" class="banner_shuru_input" placeholder="会员名" />
+                    </div>
+                    <div class=" banner_shuru_gp">
+                        <input type="password" class="banner_shuru_input" placeholder="密码" />
+                        <a href="#" class="banner_wp">忘记?</a>
+                    </div>
+                    <div class=" banner_shuru_gp">
+                        <input type="text" class="banner_shuru_input" placeholder="验证码" />
+                        <a href="#" class="banner_yz">
+                            <img src="${resPath}images/common/index_51.png" />
+                        </a>
+                    </div>
+                    <div class="clearfix banner_shuru_btn">
+                        <input type="button" class="left btn_red" value="登录" />
+                        <a href="#" class="left">立即注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main container index_main clearfix">
+    <div class="left kaijiang">
+        <div class="kaijiang_tl">
+            开奖公告
+        </div>
+        <div class="kaijiang_main">
+            <ul>
+                <li>
+                    <div class="clearfix kaijiang_li_t">
+                        <span class="left kaijiang_li_t_name">重庆时时彩</span>
+                        <span class="left">20170626082期	</span>
+                    </div>
+                    <p class="kaijiang_num">
+                        0  1  5  0  1
+                    </p>
+                    <div class="clearfix kaijiang_b">
+                        <span class="left">2017-06-26</span>
+                        <div class="right clearfix">
+                            <a href="#" class="left">详情 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">走势 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">投注 </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="clearfix kaijiang_li_t">
+                        <span class="left kaijiang_li_t_name">新疆时时彩</span>
+                        <span class="left">20170626082期	</span>
+                    </div>
+                    <p class="kaijiang_num">
+                        0  1  5  0  1
+                    </p>
+                    <div class="clearfix kaijiang_b">
+                        <span class="left">2017-06-26</span>
+                        <div class="right clearfix">
+                            <a href="#" class="left">详情 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">走势 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">投注 </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="clearfix kaijiang_li_t">
+                        <span class="left kaijiang_li_t_name">北京时时彩</span>
+                        <span class="left">20170626082期	</span>
+                    </div>
+                    <p class="kaijiang_num">
+                        0  1  5  0  1
+                    </p>
+                    <div class="clearfix kaijiang_b">
+                        <span class="left">2017-06-26</span>
+                        <div class="right clearfix">
+                            <a href="#" class="left">详情 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">走势 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">投注 </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="clearfix kaijiang_li_t">
+                        <span class="left kaijiang_li_t_name">天津时时彩</span>
+                        <span class="left">20170626082期	</span>
+                    </div>
+                    <p class="kaijiang_num">
+                        0  1  5  0  1
+                    </p>
+                    <div class="clearfix kaijiang_b">
+                        <span class="left">2017-06-26</span>
+                        <div class="right clearfix">
+                            <a href="#" class="left">详情 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">走势 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">投注 </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="clearfix kaijiang_li_t">
+                        <span class="left kaijiang_li_t_name">重庆时时彩</span>
+                        <span class="left">20170626082期	</span>
+                    </div>
+                    <p class="kaijiang_num">
+                        0  1  5  0  1
+                    </p>
+                    <div class="clearfix kaijiang_b">
+                        <span class="left">2017-06-26</span>
+                        <div class="right clearfix">
+                            <a href="#" class="left">详情 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">走势 </a>
+                            <span class="left">&nbsp;|&nbsp;</span>
+                            <a href="#" class="left">投注 </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="left index_main_midlle">
+        <div class="touzhu">
+            <div class="touzhu_t clearfix">
+		    			<span class="left touzhu_t_name">
+		    				快速投注
+		    			</span>
+                <div class="left touzhu_t_qht clearfix">
+                    <a href="javascript:;" class="ahover">
+                        重庆时时彩
+                    </a>
+                    <a href="javascript:;">
+                        安徽快3
+                    </a>
+                    <a href="javascript:;">
+                        香港六合彩
+                    </a>
+                    <a href="javascript:;">
+                        排列三
+                    </a>
+                </div>
+            </div>
+            <div class="touzhu_b">
+                <div class="touzhu_b_main hideContent">
+                    <div class="clearfix touzhu1">
+                        <div class="left">
+                            第20170626083期截止：<span class="time time1"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                        </div>
+                        <div class="right touzhu1_rt">
+                            <a href="#">手动选号</a>
+                            <a href="#">走势图</a>
+                        </div>
+                    </div>
+                    <div class="touzhu2 retouzhu2 clearfix">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					0
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					3
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					4
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					6
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					7
+		    	    				</span>
+                        </div>
+                    </div>
+                    <div class="clearfix touzhu3">
+                        <div class="clearfix sum left">
+                            <button class="add left">+</button>
+                            <input class="text_box left" name="" value="1" type="text">
+                            <button class="min left">-</button>
+                        </div>
+                        <div class="left sum_text">
+                            倍，共 <span class="color_red">2 </span>元
+                        </div>
+                        <div class="right clearfix">
+                            <a href="javascript:;" class="shuaxin">
+                                换一注
+                            </a>
+                            <a href="#" class="btn_red touzhubtn">
+                                立即投注
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="touzhu_b_main hideContent">
+                    <div class="clearfix touzhu1">
+                        <div class="left">
+                            第20170626083期截止：<span class="time time2"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                        </div>
+                        <div class="right touzhu1_rt">
+                            <a href="#">手动选号</a>
+                            <a href="#">走势图</a>
+                        </div>
+                    </div>
+                    <div class="touzhu2 retouzhu2 clearfix">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					2
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					3
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					4
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					6
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					7
+		    	    				</span>
+                        </div>
+                    </div>
+                    <div class="clearfix touzhu3">
+                        <div class="clearfix sum left">
+                            <button class="add left">+</button>
+                            <input class="text_box left" name="" value="1" type="text">
+                            <button class="min left">-</button>
+                        </div>
+                        <div class="left sum_text">
+                            倍，共 <span class="color_red">2 </span>元
+                        </div>
+                        <div class="right clearfix">
+                            <a href="javascript:;" class="shuaxin">
+                                换一注
+                            </a>
+                            <a href="#" class="btn_red touzhubtn">
+                                立即投注
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="touzhu_b_main active">
+                    <div class="clearfix touzhu1">
+                        <div class="left">
+                            第20170626083期截止：<span class="time time3"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                        </div>
+                        <div class="right touzhu1_rt">
+                            <a href="#">手动选号</a>
+                            <a href="#">走势图</a>
+                        </div>
+                    </div>
+                    <div class="touzhu2 clearfix" style="padding-top: 5px;height: 65px;">
+                        <div class="left">
+		    	    				<span class="qiu" style="background: #3e97ff;color: #fff;">
+		    	    					12
+		    	    				</span>
+                            <p class="biaoqian">
+		    	    					<span>
+		    	    						鸡
+		    	    					</span>
+                            </p>
+                        </div>
+                        <div class="left">
+		    	    				<span class="qiu" style="background: #e93030;color: #fff;">
+		    	    					10
+		    	    				</span>
+                            <p class="biaoqian">
+		    	    					<span>
+		    	    						鼠
+		    	    					</span>
+                            </p>
+                        </div>
+                        <div class="left">
+		    	    				<span class="qiu" style="background: #e93030;color: #fff;">
+		    	    					34
+		    	    				</span>
+                            <p class="biaoqian">
+		    	    					<span>
+		    	    						鼠
+		    	    					</span>
+                            </p>
+                        </div>
+                        <div class="left">
+		    	    				<span class="qiu" style="background: #2ed918;color: #fff;">
+		    	    					11
+		    	    				</span>
+                            <p class="biaoqian">
+		    	    					<span>
+		    	    						猪
+		    	    					</span>
+                            </p>
+                        </div>
+                        <div class="left">
+		    	    				<span class="qiu" style="background: #3e97ff;color: #fff;">
+		    	    					19
+		    	    				</span>
+                            <p class="biaoqian">
+		    	    					<span>
+		    	    						兔
+		    	    					</span>
+                            </p>
+                        </div>
+                        <div class="left">
+		    	    				<span class="qiu" style="background: #e93030;color: #fff;">
+		    	    					25
+		    	    				</span>
+                            <p class="biaoqian">
+		    	    					<span>
+		    	    						鸡
+		    	    					</span>
+                            </p>
+                        </div>
+                        <div class="left">
+		    	    				<span class="qiu" style="background: #3e97ff;color: #fff;">
+		    	    					41
+		    	    				</span>
+                            <p class="biaoqian">
+		    	    					<span>
+		    	    						蛇
+		    	    					</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clearfix touzhu3">
+                        <div class="clearfix sum left">
+                            <button class="add left">+</button>
+                            <input class="text_box left" name="" value="1" type="text">
+                            <button class="min left">-</button>
+                        </div>
+                        <div class="left sum_text">
+                            倍，共 <span class="color_red">2 </span>元
+                        </div>
+                        <div class="right clearfix">
+                            <a href="javascript:;" class="shuaxin">
+                                换一注
+                            </a>
+                            <a href="#" class="btn_red touzhubtn">
+                                立即投注
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="touzhu_b_main hideContent">
+                    <div class="clearfix touzhu1">
+                        <div class="left">
+                            第20170626083期截止：<span class="time time4"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                        </div>
+                        <div class="right touzhu1_rt">
+                            <a href="#">手动选号</a>
+                            <a href="#">走势图</a>
+                        </div>
+                    </div>
+                    <div class="touzhu2 retouzhu2 clearfix">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					6
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					3
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					4
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					6
+		    	    				</span>
+                        </div>
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
+		    	    					7
+		    	    				</span>
+                        </div>
+                    </div>
+                    <div class="clearfix touzhu3">
+                        <div class="clearfix sum left">
+                            <button class="add left">+</button>
+                            <input class="text_box left" name="" value="1" type="text">
+                            <button class="min left">-</button>
+                        </div>
+                        <div class="left sum_text">
+                            倍，共 <span class="color_red">2 </span>元
+                        </div>
+                        <div class="right clearfix">
+                            <a href="javascript:;" class="shuaxin">
+                                换一注
+                            </a>
+                            <a href="#" class="btn_red touzhubtn">
+                                立即投注
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="index_zixun">
+            <div class="index_zixun_t">
+                <img src="${resPath}images/common/index_97.png" />
+                资讯信息
+            </div>
+            <ul class="index_zixun_ul">
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right index_main_rt">
+        <div class="index_main_rt1">
+            <div class="index_zixun_t">
+                <img src="${resPath}images/common/index_65.png" />
+                手机客户端下载
+            </div>
+            <div class="index_main_rt1_1 clearfix">
+                <img src="${resPath}images/common/index5.png" class="left index_main_erw" />
+                <div class="right index_main_rt1_1_rt">
+                    <p class="down_a">
+                        <a href="#">
+                            <img src="${resPath}images/common/index_72.png" />
+                            Iphone 版
+                        </a>
+                    </p>
+                    <p class="down_a">
+                        <a href="#">
+                            <img src="${resPath}images/common/index_77.png" />
+                            Android 版
+                        </a>
+                    </p>
+                    <p class="index_main_erw_more">
+                        <a href="#">更多方式</a>
+                    </p>
+                </div>
+            </div>
+            <div class="index_main_rt1_2">
+                <div class="index_main_rt1_2t clearfix">
+                    <a href="javascript:;" class="ahover">
+                        网站公告
+                    </a>
+                    <a href="javascript:;">新手指导</a>
+                </div>
+                <div class="ndex_main_rt1_2b_main">
+                    <div class="index_main_rt1_2b active">
+                        <div id="wrap">
+                            <ul class="index_notice_ul" id="box1">
+                                <li>
+                                    <a href="#">工行入款账号停用</a>
+                                </li>
+                                <li>
+                                    <a href="#">工行入款账号停用</a>
+                                </li>
+                                <li>
+                                    <a href="#">工行入款账号停用</a>
+                                </li>
+                            </ul>
+                            <ul id="box2"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zhongjiang">
+            <div class="zhongjiang_t">
+                <p class="zhongjiang_t1">
+                    本站累计中奖
+                </p>
+                <div class="zhongjiang_t2">
+                    <span>3</span>亿<span>5230</span>万<span>8020</span>元
+                </div>
+            </div>
+            <div class="zhongjiang_ul">
+                <ul id="view_apply">
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+                    <li class="clearfix">
+                        <a href="#" class="left zhongjiang_li1">
+                            【福彩3D】
+                        </a>
+                        <span class="left zhongjiang_name">xu19***</span>
+                        <span class="left zhongjiang_jine">
+		        				17640.00元
+		        			</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 <c:import url="../common/bottomInfo.jsp"/>
-<c:import url="../common/copyright.jsp"/>
 
 <c:import url="../common/commonJs.jsp"/>
 
@@ -290,8 +1108,7 @@
 //        numadd(".main_layout .right_layotu .left_wrap .Bettingbag .num_bett .val_add .reduce a",".main_layout .right_layotu .left_wrap .Bettingbag .num_bett .val_add .reduce a.fl",".main_layout .right_layotu .left_wrap .Bettingbag .num_bett .val_add .reduce a.fr")
         tabs_cg(".Newest .tabs_cg ul li:lt(11)", ".Newest .layout .Analysis", "hover", "acti", "", "");//下面
         tabs_cg(".main_layout .right_layotu .left_wrap .tabs_cg ul li", ".main_layout .right_layotu .left_wrap .Bettingbag .num_bett", "hover", "acti", "", "");
-        two_scroll(".main_layout .right_layotu .left_wrap .scroll_pic ul li", "", "", ".main_layout .right_layotu .left_wrap .scroll_pic p i", "", 189);
-
+        //two_scroll(".bannernew .block_home_slider .flexslider ul li", "", "", ".bannernew .block_home_slider .flexslider p i", "", 320);
         $(".Newest .Analysis .box3 .timer_wrap").each(function (index, element) {
             $(this).attr("index", "ti" + index);
             $(this).addClass("ti" + index);
