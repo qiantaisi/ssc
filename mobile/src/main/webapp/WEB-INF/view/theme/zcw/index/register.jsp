@@ -22,7 +22,6 @@
                 注册
             </h1>
         </header>
-        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
         <div class="content bg-white">
             <div class="main zcw-reg-main">
                 <div class="ny_logo">
@@ -96,23 +95,25 @@
                 </ul>
             </div>
         </div>
+        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
     </div>
-    <script>
-        function showKhxy() {
-            //自定页
-            layer.open({
-                type: 1,
-                skin: 'layui-layer-popup', //样式类名
-                closeBtn: 2, //显示关闭按钮
-                anim: 2,
-                title: '开户协议',
-                shadeClose: true, //开启遮罩关闭
-                content: $("#template_khxy").html()
-            });
-        }
-    </script>
-    <script type="text/html" id="template_khxy">
-        ${khxy.khxy}
-    </script>
-    <c:import url="../common/commonJs.jsp"/>
+</div>
+<script>
+    function showKhxy() {
+        //自定页
+        layer.open({
+            type: 1,
+            skin: 'layui-layer-popup', //样式类名
+            closeBtn: 2, //显示关闭按钮
+            anim: 2,
+            title: '开户协议',
+            shadeClose: true, //开启遮罩关闭
+            content: $("#template_khxy").html()
+        });
+    }
+</script>
+<script type="text/html" id="template_khxy">
+    ${khxy.khxy}
+</script>
+<c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/bodyEnd.jsp"/>
