@@ -7,19 +7,19 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="gfwf-1">
-        <div class="gfwf-2">
-            <div class="wfsm-tou" id="top">
-                <h1><a style=""></a></h1>
-                <span >重庆时时彩玩法规则</span>
-            </div>
+    <div class="gfwf-2">
+        <div class="wfsm-tou5" id="top">
+            <h1><a style=""></a></h1>
+            <span >天津时时彩玩法规则</span>
+        </div>
         <div class="wfsm-a">
-        <a onclick="javascript:document.getElementById('test1').scrollIntoView()" href="javascript:;" class="wfsm-a">一、玩法类型及承销</a></br>
-        <a onclick="javascript:document.getElementById('test2').scrollIntoView()" href="javascript:;" class="wfsm-a">二、开奖与购买方式</a></br>
-        <a onclick="javascript:document.getElementById('test3').scrollIntoView()" href="javascript:;" class="wfsm-a">三、兑奖</a></br>
-        <a onclick="javascript:document.getElementById('test4').scrollIntoView()" href="javascript:;" class="wfsm-a">四、玩法说明</a></br>
-        <a onclick="javascript:document.getElementById('test5').scrollIntoView()" href="javascript:;" class="wfsm-a">五、设奖及中奖</a></br>
-        <a onclick="javascript:document.getElementById('test6').scrollIntoView()" href="javascript:;" class="wfsm-a">六、投注方式</a></br>
-        <a onclick="javascript:document.getElementById('test7').scrollIntoView()" href="javascript:;" class="wfsm-a">七、玩法特点</a></br>
+            <a onclick="javascript:document.getElementById('test1').scrollIntoView()" href="javascript:;" class="wfsm-a">一、玩法类型及承销</a></br>
+            <a onclick="javascript:document.getElementById('test2').scrollIntoView()" href="javascript:;" class="wfsm-a">二、开奖与购买方式</a></br>
+            <a onclick="javascript:document.getElementById('test3').scrollIntoView()" href="javascript:;" class="wfsm-a">三、兑奖</a></br>
+            <a onclick="javascript:document.getElementById('test4').scrollIntoView()" href="javascript:;" class="wfsm-a">四、玩法说明</a></br>
+            <a onclick="javascript:document.getElementById('test5').scrollIntoView()" href="javascript:;" class="wfsm-a">五、设奖及中奖</a></br>
+            <a onclick="javascript:document.getElementById('test6').scrollIntoView()" href="javascript:;" class="wfsm-a">六、投注方式</a></br>
+            <a onclick="javascript:document.getElementById('test7').scrollIntoView()" href="javascript:;" class="wfsm-a">七、玩法特点</a></br>
         </div></br>
         <p class="wfsm">
             <i class="wfsm" id="test1"></i>

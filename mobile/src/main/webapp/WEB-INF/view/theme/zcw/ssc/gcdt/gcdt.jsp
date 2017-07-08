@@ -94,7 +94,7 @@
                                 <c:when test="${userItems == 9}">
                                     <li>
                                         <a href="<%=basePath%>ssc/gcdt/pk10.html" data-play_group_id="9">
-                                            <img src="${resPath}/images/buy_23.png"/>
+                                            <img src="${resPath}/images/buy_09.png"/>
                                             <p>
                                                 北京赛车
                                             </p>
@@ -334,7 +334,7 @@
                     </li>
                     <li>
                         <a href="<%=basePath%>ssc/gcdt/pk10.html" data-play_group_id="9">
-                            <img src="${resPath}/images/buy_23.png" />
+                            <img src="${resPath}/images/buy_09.png" />
                             <p>
                                 北京赛车
                             </p>

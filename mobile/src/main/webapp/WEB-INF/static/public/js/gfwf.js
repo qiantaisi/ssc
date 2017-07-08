@@ -2992,6 +2992,7 @@ function showBetTemplate() {
         min: 0,
         max: maxFandian,
         step: 0.1,
+        leftColor: fengge1,
         onChange: function(obj) {
             // 返点比例
             var fandianBili = parseFloat($(obj).val()).toFixed(1); // 当前滚动条移动的比例
