@@ -9,7 +9,7 @@
 %>
 <div class="head_middle">
     <div class="container clearfix">
-        <a href="index.html" class="left logo">
+        <a href="<%=basePath%>index.html" class="left logo">
             <img src="${resPath}images/index_11.png" />
         </a>
         <div class="left head_middle_yuye">
@@ -21,7 +21,7 @@
             <div class="left head_middle_tel">
                 400-690-8888
             </div>
-            <a href="#" class="left head_middle_kf">
+            <a href="${kefuUrl}" target="_blank" class="left head_middle_kf">
                 <img src="${resPath}images/index_20.png" />
                 联系客服
             </a>
@@ -34,7 +34,7 @@
             <span class="left all_fenlei_tl">全部彩种</span>
             <img src="${resPath}images/index_30.png" class="right all_fenlei_img" />
             <div class="all_fenlei_yin" style="display: none;">
-                <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/gcdt/ffssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_39.png"/>
                     </div>
@@ -42,7 +42,7 @@
                         分分时时彩
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_42.png"/>
                     </div>
@@ -50,7 +50,7 @@
                         极速PK拾
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_45.png"/>
                     </div>
@@ -58,7 +58,7 @@
                         三分彩
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_49.png"/>
                     </div>
@@ -66,7 +66,7 @@
                         北京PK拾
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/gcdt/kl8.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index51.png"/>
                     </div>
@@ -74,7 +74,7 @@
                         北京快乐8
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/gcdt/tjssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index1-16.png"/>
                     </div>
@@ -82,7 +82,7 @@
                         天津时时彩
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="<%=basePath%>ssc/gcdt/lhc.html" target="_blank" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index51-17.png"/>
                     </div>
@@ -98,43 +98,43 @@
                         <div class="all_fenlei_b_gp_rt clearfix">
                             <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
+                                    <a href="<%=basePath%>ssc/gcdt/ffssc.html" target="_blank">分分时时彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK拾</a>
+                                    <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank">极速PK拾</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分彩</a>
+                                    <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank">三分彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK拾</a>
+                                    <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank">北京PK拾</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="all_fenlei_b_yin">
                             <p class="all_fenlei_b_yin_tl">高频彩</p>
                             <div class="clearfix all_fenlei_b_yin_a">
-                                <a href="<%=basePath%>ssc/zst/pk10.html"    target="_blank">北京PK10</a>
-                                <a href="<%=basePath%>ssc/zst/jspk10.htm"  target="_blank">极速PK10</a>
-                                <a href="<%=basePath%>ssc/zst/xyft.html"    target="_blank">幸运飞艇</a>
-                                <a href="<%=basePath%>ssc/zst/cqssc.html"   target="_blank">重庆时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/tjssc.html"   target="_blank">天津时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/xjssc.html"   target="_blank">新疆时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/ffssc.html"   target="_blank">分分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/efssc.html"   target="_blank">两分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">五分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
-                                <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK10</a>
-                                <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
-                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">江苏快3</a>
-                                <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">湖北快3</a>
-                                <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">安徽快3</a>
-                                <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>
-                                <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">幸运农场</a>
-                                <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
-                                <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
-                                <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
+                                <a href="<%=basePath%>ssc/gcdt/pk10.html"    target="_blank">北京PK10</a>
+                                <a href="<%=basePath%>ssc/gcdt/jspk10.htm"  target="_blank">极速PK10</a>
+                                <a href="<%=basePath%>ssc/gcdt/xyft.html"    target="_blank">幸运飞艇</a>
+                                <a href="<%=basePath%>ssc/gcdt/cqssc.html"   target="_blank">重庆时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/tjssc.html"   target="_blank">天津时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/xjssc.html"   target="_blank">新疆时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/ffssc.html"   target="_blank">分分时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/efssc.html"   target="_blank">两分时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank">三分时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/wfssc.html" target="_blank">五分时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank">北京PK10</a>
+                                <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank">极速PK10</a>
+                                <a href="<%=basePath%>ssc/gcdt/xyft.html" target="_blank">幸运飞艇</a>
+                                <a href="<%=basePath%>ssc/gcdt/wfssc.html" target="_blank">江苏快3</a>
+                                <a href="<%=basePath%>ssc/gcdt/hbk3.html" target="_blank">湖北快3</a>
+                                <a href="<%=basePath%>ssc/gcdt/ahk3.html" target="_blank">安徽快3</a>
+                                <a href="<%=basePath%>ssc/gcdt/jlk3.html" target="_blank">吉林快3</a>
+                                <a href="<%=basePath%>ssc/gcdt/xync.html" target="_blank">幸运农场</a>
+                                <a href="<%=basePath%>ssc/gcdt/klsf.html" target="_blank">快乐十分</a>
+                                <a href="<%=basePath%>ssc/gcdt/kl8.html" target="_blank">北京快乐8</a>
+                                <a href="<%=basePath%>ssc/gcdt/xy28.html" target="_blank">幸运28</a>
 
                             </div>
                         </div>
@@ -146,13 +146,13 @@
                         <div class="all_fenlei_b_gp_rt clearfix">
                             <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
+                                    <a href="<%=basePath%>ssc/gcdt/lhc.html" target="_blank">香港六合彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">福彩3d</a>
+                                    <a href="<%=basePath%>ssc/gcdt/fc3d.html" target="_blank">福彩3d</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">排列三</a>
+                                    <a href="<%=basePath%>ssc/gcdt/pl3.html" target="_blank">排列三</a>
                                 </li>
 
                             </ul>
@@ -161,9 +161,9 @@
                             <p class="all_fenlei_b_yin_tl">低频彩</p>
                             <div class="clearfix all_fenlei_b_yin_a">
 
-                                <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
-                                <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">福彩3D</a>
-                                <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">体彩排列3</a>
+                                <a href="<%=basePath%>ssc/gcdt/lhc.html" target="_blank">香港六合彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/fc3d.html" target="_blank">福彩3D</a>
+                                <a href="<%=basePath%>ssc/gcdt/pl3.html" target="_blank">体彩排列3</a>
 
                             </div>
                         </div>
@@ -176,16 +176,16 @@
                         <div class="all_fenlei_b_gp_rt clearfix">
                             <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
+                                    <a href="<%=basePath%>ssc/gcdt/ffssc.html" target="_blank">分分时时彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK拾</a>
+                                    <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank">极速PK拾</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分彩</a>
+                                    <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank">三分彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK拾</a>
+                                    <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank">北京PK拾</a>
                                 </li>
                             </ul>
                         </div>
@@ -193,24 +193,24 @@
                             <p class="all_fenlei_b_yin_tl">全部</p>
                             <div class="clearfix all_fenlei_b_yin_a">
 
-                                <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank">重庆时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank">天津时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/xjssc.html" target="_blank">新疆时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/efssc.html" target="_blank">两分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">五分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
-                                <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK10</a>
-                                <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
-                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">江苏快3</a>
-                                <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">湖北快3</a>
-                                <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">安徽快3</a>
-                                <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>
-                                <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">幸运农场</a>
-                                <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
-                                <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
-                                <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
+                                <a href="<%=basePath%>ssc/gcdt/cqssc.html" target="_blank">重庆时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/tjssc.html" target="_blank">天津时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/xjssc.html" target="_blank">新疆时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/ffssc.html" target="_blank">分分时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/efssc.html" target="_blank">两分时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank">三分时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/wfssc.html" target="_blank">五分时时彩</a>
+                                <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank">北京PK10</a>
+                                <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank">极速PK10</a>
+                                <a href="<%=basePath%>ssc/gcdt/xyft.html" target="_blank">幸运飞艇</a>
+                                <a href="<%=basePath%>ssc/gcdt/wfssc.html" target="_blank">江苏快3</a>
+                                <a href="<%=basePath%>ssc/gcdt/hbk3.html" target="_blank">湖北快3</a>
+                                <a href="<%=basePath%>ssc/gcdt/ahk3.html" target="_blank">安徽快3</a>
+                                <a href="<%=basePath%>ssc/gcdt/jlk3.html" target="_blank">吉林快3</a>
+                                <a href="<%=basePath%>ssc/gcdt/xync.html" target="_blank">幸运农场</a>
+                                <a href="<%=basePath%>ssc/gcdt/klsf.html" target="_blank">快乐十分</a>
+                                <a href="<%=basePath%>ssc/gcdt/kl8.html" target="_blank">北京快乐8</a>
+                                <a href="<%=basePath%>ssc/gcdt/xy28.html" target="_blank">幸运28</a>
 
                             </div>
                         </div>
@@ -219,22 +219,22 @@
             </div>
         </div>
         <div class="menu_main clearfix left">
-            <a href="#" class="ahover">
+            <a href="<%=basePath%>main.html" class="ahover">
                 首页
             </a>
-            <a href="#">
+            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')" target="_blank">
                 购彩大厅
             </a>
-            <a href="#">
+            <a href="<%=basePath%>yhhd.html">
                 优惠活动
             </a>
-            <a href="#">
+            <a href="<%=basePath%>kjjg.html">
                 开奖公告
             </a>
-            <a href="#">
+            <a href="<%=basePath%>ssc/index.html?module=gcdtIndex" target="_blank">
                 走势图表
             </a>
-            <a href="#">
+            <a href="<%=mHostName%>" target="_blank">
                 <em class="hot"></em>
                 <img src="${resPath}images/index30.png" class="menu_a_img" />
                 手机购买
@@ -326,5 +326,17 @@
     function ate(){
         var hei=$(window).height();
         $(".back").css("height",hei-27+"px");
+    }
+
+    function openGcdt(module) {
+//        if (typeof module == 'undefined') {
+//            module = '';
+//        }
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + "ssc/" +module + ".html";
+        }
+        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
     }
 </script>

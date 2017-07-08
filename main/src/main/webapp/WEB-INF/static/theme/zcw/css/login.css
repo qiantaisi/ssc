@@ -297,6 +297,7 @@ div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input, textarea,blockquot
     text-align: right;
     line-height: 32px;
     font-size: 14px;
+    margin-right: 10px;
 }
 .login_nr_gp_rt input {
     width: 238px;
@@ -368,7 +369,7 @@ body {
 
 .all_fenlei {
     width: 210px;
-    padding: 0px 20px;
+    padding: 0 20px;
     background: #d51910;
     position: relative;
     cursor: pointer;
@@ -387,4 +388,14 @@ body {
 
 .all_fenlei:hover .all_fenlei_yin {
     display: block !important;
+}
+
+.login_b .mfkh{
+    display: block;
+    line-height: 44px;
+    width: 204px;
+    text-align: center;
+    background: #f13131;
+    color: #fff;
+    font-size: 16px;
 }
