@@ -6,8 +6,6 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-
-    // 测试，暂时写死
-    request.setAttribute("themeBottomNav", "theme1");
 %>
+<link rel="stylesheet" href="${bottomCssResPath}${themeBottomNav}/css/base-template.css?v=20170628"/>
 <jsp:include page="../${themeBottomNav}/bottomNav.jsp" />
