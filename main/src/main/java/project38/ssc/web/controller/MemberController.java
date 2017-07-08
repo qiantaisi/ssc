@@ -77,13 +77,13 @@ public class MemberController extends BaseController {
                 return result;
             }
 
-            if (StringUtils.isBlank(yzm)) {
+            /*if (StringUtils.isBlank(yzm)) {
                 result.setResult(-2);
                 result.setDescription("验证码不能为空");
                 return result;
-            }
+            }*/
 
-            HttpSession session = httpServletRequest.getSession();
+           /* HttpSession session = httpServletRequest.getSession();
             String yzmCode = (String) session.getAttribute("yzmCode");
             session.removeAttribute("yzmCode");
             if (StringUtils.isBlank(yzmCode)) {
@@ -102,7 +102,7 @@ public class MemberController extends BaseController {
                 result.setResult(-5);
                 result.setDescription("验证码不正确");
                 return result;
-            }
+            }*/
 
             // 注册
             String ip = IPHelper.getIpAddr(httpServletRequest);
