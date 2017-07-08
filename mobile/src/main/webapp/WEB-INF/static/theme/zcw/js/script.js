@@ -379,10 +379,10 @@ $(function () {
             initBottomNavIndex();
         }
 
-        // 置顶按钮
-        $(".top-click").click(function () {
-            $("#navBar").scrollTop(0);
-        });
+        // // 置顶按钮
+        // $(".top-click").click(function () {
+        //     $("#navBar").scrollTop(0);
+        // });
 
         $(".shiwan_btn").click(function () {
               shiwan();
