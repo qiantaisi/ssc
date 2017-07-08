@@ -61,7 +61,7 @@
 			    			确认密码:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text"  name="confirmPassword" class="left" placeholder="确认密码" />
+                    <input type="password"  name="confirmPassword" class="left" placeholder="确认密码" />
                     <div class="left erro">
                         与上面输入密码必须保持一致
                     </div>
@@ -139,7 +139,7 @@
             <div class="login_b_link">
                 <a href="#">忘记密码?</a>
                 <span>|</span>
-                <a href="#">在线客服</a>
+                <a href="${kefuUrl}" target="_blank">在线客服</a>
             </div>
         </div>
     </div>
@@ -363,6 +363,7 @@
                 alert("姓名只能是汉字");
                 return;
             }
+            alert(qq);
             ajaxRequest({
                 url: "<%=basePath%>member/ajaxRegister.json",
                 data: {

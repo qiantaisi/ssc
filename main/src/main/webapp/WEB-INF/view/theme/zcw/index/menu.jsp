@@ -33,8 +33,8 @@
         <div class="left all_fenlei clearfix">
             <span class="left all_fenlei_tl">全部彩种</span>
             <img src="${resPath}images/index_30.png" class="right all_fenlei_img" />
-            <div class="all_fenlei_yin" style="display: none;">
-                <a href="<%=basePath%>ssc/gcdt/ffssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
+            <div class="all_fenlei_yin">
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_39.png"/>
                     </div>
@@ -42,7 +42,7 @@
                         分分时时彩
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_42.png"/>
                     </div>
@@ -50,7 +50,7 @@
                         极速PK拾
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')"   class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_45.png"/>
                     </div>
@@ -58,7 +58,7 @@
                         三分彩
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_49.png"/>
                     </div>
@@ -66,7 +66,7 @@
                         北京PK拾
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/gcdt/kl8.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/kl8')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index51.png"/>
                     </div>
@@ -74,7 +74,7 @@
                         北京快乐8
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/gcdt/tjssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index1-16.png"/>
                     </div>
@@ -82,7 +82,8 @@
                         天津时时彩
                     </div>
                 </a>
-                <a href="<%=basePath%>ssc/gcdt/lhc.html" target="_blank" class="all_fenlei_yin_list clearfix">
+
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index51-17.png"/>
                     </div>
@@ -98,43 +99,43 @@
                         <div class="all_fenlei_b_gp_rt clearfix">
                             <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/ffssc.html" target="_blank">分分时时彩</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')">分分时时彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank">极速PK拾</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')" >极速PK10</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank">三分彩</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')" >三分时时彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank">北京PK拾</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')">北京PK10</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="all_fenlei_b_yin">
                             <p class="all_fenlei_b_yin_tl">高频彩</p>
                             <div class="clearfix all_fenlei_b_yin_a">
-                                <a href="<%=basePath%>ssc/gcdt/pk10.html"    target="_blank">北京PK10</a>
-                                <a href="<%=basePath%>ssc/gcdt/jspk10.htm"  target="_blank">极速PK10</a>
-                                <a href="<%=basePath%>ssc/gcdt/xyft.html"    target="_blank">幸运飞艇</a>
-                                <a href="<%=basePath%>ssc/gcdt/cqssc.html"   target="_blank">重庆时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/tjssc.html"   target="_blank">天津时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/xjssc.html"   target="_blank">新疆时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/ffssc.html"   target="_blank">分分时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/efssc.html"   target="_blank">两分时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank">三分时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/wfssc.html" target="_blank">五分时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank">北京PK10</a>
-                                <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank">极速PK10</a>
-                                <a href="<%=basePath%>ssc/gcdt/xyft.html" target="_blank">幸运飞艇</a>
-                                <a href="<%=basePath%>ssc/gcdt/wfssc.html" target="_blank">江苏快3</a>
-                                <a href="<%=basePath%>ssc/gcdt/hbk3.html" target="_blank">湖北快3</a>
-                                <a href="<%=basePath%>ssc/gcdt/ahk3.html" target="_blank">安徽快3</a>
-                                <a href="<%=basePath%>ssc/gcdt/jlk3.html" target="_blank">吉林快3</a>
-                                <a href="<%=basePath%>ssc/gcdt/xync.html" target="_blank">幸运农场</a>
-                                <a href="<%=basePath%>ssc/gcdt/klsf.html" target="_blank">快乐十分</a>
-                                <a href="<%=basePath%>ssc/gcdt/kl8.html" target="_blank">北京快乐8</a>
-                                <a href="<%=basePath%>ssc/gcdt/xy28.html" target="_blank">幸运28</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">重庆时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')">天津时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/xjssc')">新疆时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')">分分时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/efssc')">两分时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')">三分时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/wfssc')">五分时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')">北京PK10</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速PK10</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/xyft')">幸运飞艇</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">香港六合彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/jsk3')">江苏快3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/hbk3')">湖北快3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')">安徽快3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/jlk3')">吉林快3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/klsf')">快乐十分</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/xync')">幸运农场</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/kl8')">北京快乐8</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/fc3d')">福彩3D</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/pl3')">体彩排列3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/xy28')">幸运28</a>
 
                             </div>
                         </div>
@@ -146,13 +147,13 @@
                         <div class="all_fenlei_b_gp_rt clearfix">
                             <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/lhc.html" target="_blank">香港六合彩</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">香港六合彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/fc3d.html" target="_blank">福彩3d</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/fc3d')">福彩3D</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/pl3.html" target="_blank">排列三</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/pl3')">体彩排列3</a>
                                 </li>
 
                             </ul>
@@ -161,9 +162,9 @@
                             <p class="all_fenlei_b_yin_tl">低频彩</p>
                             <div class="clearfix all_fenlei_b_yin_a">
 
-                                <a href="<%=basePath%>ssc/gcdt/lhc.html" target="_blank">香港六合彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/fc3d.html" target="_blank">福彩3D</a>
-                                <a href="<%=basePath%>ssc/gcdt/pl3.html" target="_blank">体彩排列3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">香港六合彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/fc3d')">福彩3D</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/pl3')">体彩排列3</a>
 
                             </div>
                         </div>
@@ -176,16 +177,16 @@
                         <div class="all_fenlei_b_gp_rt clearfix">
                             <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/ffssc.html" target="_blank">分分时时彩</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')">分分时时彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank">极速PK拾</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速PK10</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank">三分彩</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')">三分时时彩</a>
                                 </li>
                                 <li>
-                                    <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank">北京PK拾</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')">北京PK10</a>
                                 </li>
                             </ul>
                         </div>
@@ -193,24 +194,27 @@
                             <p class="all_fenlei_b_yin_tl">全部</p>
                             <div class="clearfix all_fenlei_b_yin_a">
 
-                                <a href="<%=basePath%>ssc/gcdt/cqssc.html" target="_blank">重庆时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/tjssc.html" target="_blank">天津时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/xjssc.html" target="_blank">新疆时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/ffssc.html" target="_blank">分分时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/efssc.html" target="_blank">两分时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/sfssc.html" target="_blank">三分时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/wfssc.html" target="_blank">五分时时彩</a>
-                                <a href="<%=basePath%>ssc/gcdt/pk10.html" target="_blank">北京PK10</a>
-                                <a href="<%=basePath%>ssc/gcdt/jspk10.htm" target="_blank">极速PK10</a>
-                                <a href="<%=basePath%>ssc/gcdt/xyft.html" target="_blank">幸运飞艇</a>
-                                <a href="<%=basePath%>ssc/gcdt/wfssc.html" target="_blank">江苏快3</a>
-                                <a href="<%=basePath%>ssc/gcdt/hbk3.html" target="_blank">湖北快3</a>
-                                <a href="<%=basePath%>ssc/gcdt/ahk3.html" target="_blank">安徽快3</a>
-                                <a href="<%=basePath%>ssc/gcdt/jlk3.html" target="_blank">吉林快3</a>
-                                <a href="<%=basePath%>ssc/gcdt/xync.html" target="_blank">幸运农场</a>
-                                <a href="<%=basePath%>ssc/gcdt/klsf.html" target="_blank">快乐十分</a>
-                                <a href="<%=basePath%>ssc/gcdt/kl8.html" target="_blank">北京快乐8</a>
-                                <a href="<%=basePath%>ssc/gcdt/xy28.html" target="_blank">幸运28</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">重庆时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')">天津时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/xjssc')">新疆时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')">分分时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/efssc')">两分时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')">三分时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/wfssc')">五分时时彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')">北京PK10</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速PK10</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/xyft')">幸运飞艇</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">香港六合彩</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/jsk3')">江苏快3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/hbk3')">湖北快3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')">安徽快3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/jlk3')">吉林快3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/klsf')">快乐十分</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/xync')">幸运农场</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/kl8')">北京快乐8</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/fc3d')">福彩3D</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/pl3')">体彩排列3</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/xy28')">幸运28</a>
 
                             </div>
                         </div>
@@ -244,6 +248,32 @@
 </div>
 
 <script>
+
+    $(function () {
+        $('.type_top .left .left_div .log,.type_top .left .left_div .alert_log').hover(function () {
+            $('.type_top .left .left_div .alert_log').show();
+            $('.type_top .left .left_div .alert_par').hide();
+        })
+        $('.type_top').hover(function () {
+        }, function () {
+            $('.type_top .left .left_div .alert_log').hide();
+            $('.type_top .left .left_div .alert_par').hide();
+        })
+        $('.type_top .right ul li.l').hover(function () {
+            $(this).addClass('sli');
+            $(this).find('div').show();
+        })
+        $('.type_top .right ul li').hover(function () {
+
+        }, function () {
+            $(this).removeClass('sli');
+            $(this).find('div').hide();
+        })
+        $('.type_top .left .left_div a.par').hover(function () {
+            $('.type_top .left .left_div .alert_par').show();
+            $('.type_top .left .left_div .alert_log').hide();
+        })
+    });
 
     function registerLogin() {
         var loginAccount = $.trim($("#registerLoginAccount").val());
@@ -326,6 +356,18 @@
     function ate(){
         var hei=$(window).height();
         $(".back").css("height",hei-27+"px");
+    }
+
+    function openGcdt(module) {
+//        if (typeof module == 'undefined') {
+//            module = '';
+//        }
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + "ssc/" +module + ".html";
+        }
+        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
     }
 
     function openGcdt(module) {

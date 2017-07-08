@@ -112,7 +112,7 @@ public class MemberController extends BaseController {
                     name,
                     ip,
                     httpServletRequest.getServerName(),
-                    null,
+                    qq,
                     agentId,
                     companyShortName,
                     deviceNo,

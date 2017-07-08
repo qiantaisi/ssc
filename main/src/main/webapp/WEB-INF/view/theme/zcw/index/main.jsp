@@ -12,242 +12,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp"/>
 <c:import url="top.jsp"/>
-
-<div class="head_middle">
-    <div class="container clearfix">
-        <a href="index.html" class="left logo">
-            <img src="${resPath}images/index_11.png" />
-        </a>
-        <div class="left head_middle_yuye">
-            <a href="#">
-                <img src="${resPath}images/index_14.png" />
-            </a>
-        </div>
-        <div class="right clearfix">
-            <div class="left head_middle_tel">
-                400-690-8888
-            </div>
-            <a href="#" class="left head_middle_kf">
-                <img src="${resPath}images/index_20.png" />
-                联系客服
-            </a>
-        </div>
-    </div>
-</div>
-<div class="menu">
-    <div class="container clearfix">
-        <div class="left all_fenlei clearfix">
-            <span class="left all_fenlei_tl">全部彩种</span>
-            <img src="${resPath}images/index_30.png" class="right all_fenlei_img" />
-            <div class="all_fenlei_yin" style="display: block;">
-                <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index_39.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        分分时时彩
-                    </div>
-                </a>
-                <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index_42.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        极速PK拾
-                    </div>
-                </a>
-                <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index_45.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        三分彩
-                    </div>
-                </a>
-                <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index_49.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        北京PK拾
-                    </div>
-                </a>
-                <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index51.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        北京快乐8
-                    </div>
-                </a>
-                <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index1-16.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        天津时时彩
-                    </div>
-                </a>
-                <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index51-17.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        香港六合彩
-                    </div>
-                </a>
-                <div class="all_fenlei_b">
-                    <div class="all_fenlei_b_gp clearfix">
-                        <div class="left all_fenlei_b_name" style="background: #ffcdcd;border: 1px solid #ffcdcd;color: #ff4444;">
-                            高频彩
-                        </div>
-                        <div class="all_fenlei_b_gp_rt clearfix">
-                            <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
-                                </li>
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK拾</a>
-                                </li>
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分彩</a>
-                                </li>
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK拾</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="all_fenlei_b_yin">
-                            <p class="all_fenlei_b_yin_tl">高频彩</p>
-                            <div class="clearfix all_fenlei_b_yin_a">
-                                <a href="<%=basePath%>ssc/zst/pk10.html"    target="_blank">北京PK10</a>
-                                <a href="<%=basePath%>ssc/zst/jspk10.htm"  target="_blank">极速PK10</a>
-                                <a href="<%=basePath%>ssc/zst/xyft.html"    target="_blank">幸运飞艇</a>
-                                <a href="<%=basePath%>ssc/zst/cqssc.html"   target="_blank">重庆时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/tjssc.html"   target="_blank">天津时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/xjssc.html"   target="_blank">新疆时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/ffssc.html"   target="_blank">分分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/efssc.html"   target="_blank">两分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">五分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
-                                <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK10</a>
-                                <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
-                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">江苏快3</a>
-                                <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">湖北快3</a>
-                                <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">安徽快3</a>
-                                <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>
-                                <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">幸运农场</a>
-                                <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
-                                <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
-                                <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="all_fenlei_b_gp clearfix">
-                        <div class="left all_fenlei_b_name" style="background: #c3cbf6;border: 1px solid #a7bdfd;color: #4041d0;">
-                            低频彩
-                        </div>
-                        <div class="all_fenlei_b_gp_rt clearfix">
-                            <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
-                                </li>
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">福彩3d</a>
-                                </li>
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">排列三</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="all_fenlei_b_yin">
-                            <p class="all_fenlei_b_yin_tl">低频彩</p>
-                            <div class="clearfix all_fenlei_b_yin_a">
-
-                                <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">香港六合彩</a>
-                                <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">福彩3D</a>
-                                <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">体彩排列3</a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="all_fenlei_b_gp clearfix">
-                        <div class="left all_fenlei_b_name" style="background: #d9f9df;border: 1px solid #c5f4cf;color: #005d19;padding-top: 11px;height: 47px;">
-                            全部
-                        </div>
-                        <div class="all_fenlei_b_gp_rt clearfix">
-                            <ul class="all_fenlei_b_gp_rt_ul_lf clearfix">
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
-                                </li>
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK拾</a>
-                                </li>
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分彩</a>
-                                </li>
-                                <li>
-                                    <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK拾</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="all_fenlei_b_yin">
-                            <p class="all_fenlei_b_yin_tl">全部</p>
-                            <div class="clearfix all_fenlei_b_yin_a">
-
-                                <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank">重庆时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank">天津时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/xjssc.html" target="_blank">新疆时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">分分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/efssc.html" target="_blank">两分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">三分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">五分时时彩</a>
-                                <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">北京PK10</a>
-                                <a href="<%=basePath%>ssc/zst/jspk10.htm" target="_blank">极速PK10</a>
-                                <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">幸运飞艇</a>
-                                <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">江苏快3</a>
-                                <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">湖北快3</a>
-                                <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">安徽快3</a>
-                                <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">吉林快3</a>
-                                <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">幸运农场</a>
-                                <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
-                                <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
-                                <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">幸运28</a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="menu_main clearfix left">
-            <a href="#" class="ahover">
-                首页
-            </a>
-            <a href="#">
-                购彩大厅
-            </a>
-            <a href="#">
-                优惠活动
-            </a>
-            <a href="#">
-                开奖公告
-            </a>
-            <a href="#">
-                走势图表
-            </a>
-            <a href="#">
-                <em class="hot"></em>
-                <img src="${resPath}images/index30.png" class="menu_a_img" />
-                手机购买
-            </a>
-        </div>
-    </div>
-</div>
+<c:import url="menu.jsp" />
 
 <div class="bannernew">
     <div class="block_home_slider">
@@ -294,23 +59,24 @@
                 <div class="banner_shuru_main_tl">
                     <span>欢迎登陆</span>
                 </div>
-                <form>
+                <form onsubmit="registerLogin();return false;">
                     <div class=" banner_shuru_gp">
-                        <input type="text" class="banner_shuru_input" placeholder="会员名" />
+                        <input type="text"  id="registerLoginAccount" class="banner_shuru_input" placeholder="会员名" />
                     </div>
                     <div class=" banner_shuru_gp">
-                        <input type="password" class="banner_shuru_input" placeholder="密码" />
+                        <input type="password"  id="registerLoginPassword" class="banner_shuru_input" placeholder="密码" />
                         <a href="#" class="banner_wp">忘记?</a>
                     </div>
                     <div class=" banner_shuru_gp">
-                        <input type="text" class="banner_shuru_input" placeholder="验证码" />
+                        <input type="text"  id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码" />
+
                         <a href="#" class="banner_yz">
-                            <img src="${resPath}images/common/index_51.png" />
+                            <img id="registerYzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
                         </a>
                     </div>
                     <div class="clearfix banner_shuru_btn">
-                        <input type="button" class="left btn_red" value="登录" />
-                        <a href="#" class="left">立即注册</a>
+                        <input type="submit" class="left btn_red"  value="登录"/>
+                        <a href="<%=basePath%>register.html" class="left">立即注册</a>
                     </div>
                 </form>
             </div>
@@ -1105,6 +871,7 @@
 
     $(function () {
 
+        $(".all_fenlei_yin").css("display","block");
 //        numadd(".main_layout .right_layotu .left_wrap .Bettingbag .num_bett .val_add .reduce a",".main_layout .right_layotu .left_wrap .Bettingbag .num_bett .val_add .reduce a.fl",".main_layout .right_layotu .left_wrap .Bettingbag .num_bett .val_add .reduce a.fr")
         tabs_cg(".Newest .tabs_cg ul li:lt(11)", ".Newest .layout .Analysis", "hover", "acti", "", "");//下面
         tabs_cg(".main_layout .right_layotu .left_wrap .tabs_cg ul li", ".main_layout .right_layotu .left_wrap .Bettingbag .num_bett", "hover", "acti", "", "");
@@ -1237,6 +1004,48 @@
     }
 </script>
 <script>
+
+    function registerLogin() {
+        var loginAccount = $.trim($("#registerLoginAccount").val());
+        var loginPassword = $.trim($("#registerLoginPassword").val());
+        var yzm = $.trim($("#registerLoginYzm").val());
+
+        if (!loginAccount) {
+            alert("请输入账号");
+            return;
+        }
+        if (!loginPassword) {
+            alert("请输入密码");
+            return;
+        }
+        if (!yzm) {
+            alert("请输入验证码");
+            return;
+        }
+
+        ajaxRequest({
+            url: "<%=basePath%>member/ajaxLogin.json",
+            data: {
+                yzm: yzm,
+                account: loginAccount,
+                password: $.md5(loginPassword)
+            },
+            beforeSend: function() {
+                showLoading();
+            },
+            success: function(json) {
+                if (json.result == 1) {
+                    $.cookie("uid", json.userId, {path: "/"});
+                    $.cookie("token", json.token, {path: "/"});
+                    window.location.href = "<%=basePath%>main.html";
+                } else {
+                    refreshYzm(document.getElementById('registerYzmImg2'));
+                    Tools.toast("登录失败：" + json.description);
+                }
+                hideLoading();
+            }
+        });
+    }
     function refreshYzm(obj) {
         var src = $(obj).attr("src");
         var params = getRequest(src);
