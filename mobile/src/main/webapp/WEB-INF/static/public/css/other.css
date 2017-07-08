@@ -1232,5 +1232,328 @@ input[type="number"] {
     padding: 0.2rem 0.2rem;
 }
 
+.gfwf-1 {
+    padding: 0 1px;
+}
 
+.gfwf-2 {
+    width: 355px !important;
+    height: auto !important;
+    line-height: 25px !important;
+    color: #434343 !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
 
+.wfsm-img {
+    padding: 8px 0px;
+    max-width:100%;
+}
+
+.table-wfsm {
+    font-size: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.td-wfsm {
+    border: 1px #CCCCCC solid !important;
+    word-break: break-all;
+    padding: .1rem 0 !important;
+}
+
+.th-wfsm {
+    background-color: #eee;
+    border: 1px #CCCCCC solid !important;
+}
+.gfwf-3 span a{
+    float: right;
+    background: url(../img/wfsm-07.png);
+    margin-right: 0px;
+    width: 110px;
+    height: 30px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.wfsm-a a{
+    font-weight: bold;
+    color: #7f2d00;
+    text-decoration: underline;
+}
+.wfsm-top {
+    height: 13px;
+    clear: both;
+    overflow: hidden;
+}
+.wfsm-tou1 {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.wfsm-tou {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.wfsm-tou a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy_07.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou1 span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou1 a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/index1_19.png) no-repeat;
+    display: block;
+    width: 55px;
+    height: 90px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 48px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou2 span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou2 a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy28.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou2 {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.wfsm-tou3 span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou3 a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy11.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou3 {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.wfsm-tou4 span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou4 a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy_23.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou4 {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.wfsm-tou5 span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou5 a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy_30.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou5 {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.wfsm-tou6 span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou6 a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy_24.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou6 {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.wfsm-tou7 span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou7 a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy34.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou7 {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.wfsm-tou8 span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou8 a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy_09.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou8 {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.wfsm-tou9 span {
+    float: left;
+    padding-left: 90px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    line-height: 0px;
+}
+.wfsm-tou9 a {
+    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy36.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    float: left;
+    position: absolute;
+    top: 44px;
+    z-index: 1000;
+    right: 320px;
+}
+.wfsm-tou9 {
+    background: url(../img/wfsm-08.png) no-repeat;
+    width: 400px;
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
