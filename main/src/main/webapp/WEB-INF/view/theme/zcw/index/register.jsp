@@ -11,7 +11,9 @@
 <c:import url="top.jsp" />
 <c:import url="menu.jsp" />
 <div class="wrap">
+<div class="login_nr">
 
+</div>
 </div>
 <%--<div class="img"><a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a></div>--%>
 <%--<img src="${resPath}img/bj.jpg" class="back" alt="" width="100%">--%>
