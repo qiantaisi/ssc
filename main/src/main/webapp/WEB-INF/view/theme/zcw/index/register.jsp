@@ -298,17 +298,17 @@
 
 <script>
     $(function() {
+        $(".all_fenlei_yin").css("display","none");
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
             var phone = $("input[name='phone']").val();   // 手机号码
             var email = $("input[name='email']").val();   // 邮箱号码
             var qq = $("input[name='qq']").val();   // QQ
-            console.log(qq + "------------");
+
 
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
             var name = $("input[name='name']").val();   // 姓名
-
             if (!account) {
                 alert("请输入用户名");
                 return;

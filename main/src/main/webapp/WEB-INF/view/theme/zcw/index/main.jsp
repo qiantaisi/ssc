@@ -872,63 +872,6 @@
     $(function () {
 
         $(".all_fenlei_yin").css("display","block");
-//        numadd(".main_layout .right_layotu .left_wrap .Bettingbag .num_bett .val_add .reduce a",".main_layout .right_layotu .left_wrap .Bettingbag .num_bett .val_add .reduce a.fl",".main_layout .right_layotu .left_wrap .Bettingbag .num_bett .val_add .reduce a.fr")
-        tabs_cg(".Newest .tabs_cg ul li:lt(11)", ".Newest .layout .Analysis", "hover", "acti", "", "");//下面
-        tabs_cg(".main_layout .right_layotu .left_wrap .tabs_cg ul li", ".main_layout .right_layotu .left_wrap .Bettingbag .num_bett", "hover", "acti", "", "");
-        //two_scroll(".bannernew .block_home_slider .flexslider ul li", "", "", ".bannernew .block_home_slider .flexslider p i", "", 320);
-        $(".Newest .Analysis .box3 .timer_wrap").each(function (index, element) {
-            $(this).attr("index", "ti" + index);
-            $(this).addClass("ti" + index);
-        });
-
-//        setInterval(function(){
-//            $(".Newest .Analysis .box3 .timer_wrap").each(function(index, element) {
-//                //console.log();
-//                abc('".Newest .Analysis .box3 ".'+$(this).attr("index")+'"');
-//            });
-//
-//        },1000);
-
-        function abc(mainDiv) {
-            //console.log(mainDiv);
-
-            var i = $(mainDiv + " ol.m span.sp2").text();
-            i--;
-            if (i == -1) {
-                i = 9;
-                $(mainDiv + " ol.m span.sp2").text(i);
-
-                var te = $(mainDiv + " ol.m span.sp1").text() - 1
-                if (te < 0) {
-                    if ($(mainDiv + " ol.f span.sp2").text() == 0) {
-                        $(mainDiv + " ol.f span.sp2").text(9);
-
-                        if ($(mainDiv + " ol.f span.sp1").text() == 0) { //分
-
-                            $(mainDiv + " ol.f span.sp1").text(6);
-
-                            if ($(mainDiv + " ol.s span.sp2").text() == 0) {
-                                $(mainDiv + " ol.s span.sp2").text(9);
-                                $(mainDiv + " ol.s span.sp1").text($(mainDiv + " ol.s span.sp1").text() - 1);
-
-                            } else {
-                                $(mainDiv + " ol.s span.sp2").text($(mainDiv + " ol.s span.sp2").text() - 1);
-                            }
-                        }
-                        $(mainDiv + " ol.f span.sp1").text($(mainDiv + " ol.f span.sp1").text() - 1);
-
-                    } else {
-
-                        $(mainDiv + " ol.f span.sp2").text($(mainDiv + " ol.f span.sp2").text() - 1)//分钟
-                    }
-                    te = 5;
-                }
-                $(mainDiv + " ol.m span.sp1").text(te)
-            }
-
-            $(mainDiv + " ol.m span.sp2").text(i)
-        }
-
 
     });
 
@@ -1058,7 +1001,7 @@
     }
 
     $(function () {
-        $('.type_top .left .left_div .log,.type_top .left .left_div .alert_log').hover(function () {
+       /* $('.type_top .left .left_div .log,.type_top .left .left_div .alert_log').hover(function () {
             $('.type_top .left .left_div .alert_log').show();
             $('.type_top .left .left_div .alert_par').hide();
         })
@@ -1080,7 +1023,7 @@
         $('.type_top .left .left_div a.par').hover(function () {
             $('.type_top .left .left_div .alert_par').show();
             $('.type_top .left .left_div .alert_log').hide();
-        })
+        })*/
     });
 
     function xytz(type) {

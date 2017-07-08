@@ -326,6 +326,7 @@ ${khxy.khxy}
     });
 
     $(function() {
+        $(".all_fenlei_yin").css("display","none");
         ate();
         $(".alert_log_col h5 i").click(function(){
             $(".two2").fadeOut();
