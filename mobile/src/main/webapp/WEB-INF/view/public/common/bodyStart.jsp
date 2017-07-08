@@ -6,8 +6,6 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-    // 测试，暂时写死
-    request.setAttribute("themeBottomNav", "theme1");
 %>
 <!DOCTYPE html>
 <html>
@@ -19,7 +17,6 @@
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170421">
     <link rel="stylesheet" href="${resPath}css/gfwf_css.css?v=20170706">
     <link rel="stylesheet" href="${resPath}theme/${themeBottomNav}/css/base-template.css?v=20170628">
-
     <jsp:include page="customTheme.jsp" />
 </head>
 <body>

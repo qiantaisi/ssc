@@ -207,6 +207,9 @@ public abstract class BaseController {
         httpServletRequest.setAttribute("commonResPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/common/");
         httpServletRequest.setAttribute("bottomCssResPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/theme/");
 
+        MobileFgResult mobileFgResult = ApiUtils.getMobileFg(companyShortName);
+        httpServletRequest.setAttribute("themeBottomNav", mobileFgResult.mobileFg.getDibu());
+
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         try{
