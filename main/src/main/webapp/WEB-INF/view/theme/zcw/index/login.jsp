@@ -133,17 +133,17 @@
                     </p>
                     <ul class="footer_menu_2">
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/zc_1.html">
                                 如何注册账号
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/mima_3.html">
                                 怎么找回登录密码
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/mima_1.html">
                                 如何修改手机号码
                             </a>
                         </li>
@@ -161,12 +161,12 @@
                     </p>
                     <ul class="footer_menu_2">
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/cz_4.html">
                                 如何进行充值
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/mima_2.html">
                                 如何购买彩票
                             </a>
                         </li>
@@ -176,7 +176,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/aq_1.html">
                                 在本站购彩安全吗
                             </a>
                         </li>
@@ -189,22 +189,22 @@
                     </p>
                     <ul class="footer_menu_2">
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/tk_1.html">
                                 怎样进行兑奖
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/tk_5.html">
                                 如何进行提款
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/tk_6.html">
                                 提款是否收手续费
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/tk_9.html">
                                 提款不成功怎么办
                             </a>
                         </li>
