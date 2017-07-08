@@ -102,7 +102,7 @@
                         </c:when>
                         <c:otherwise>
                             <div class="pull-right cl-3">
-                                <a href="javascript:void(0);" class="right shiwan_btn">免费试玩</a>
+                                <a href="javascript:void(0);" class="right" id="btn-shiwan">免费试玩</a>
                             </div>
                         </c:otherwise>
                     </c:choose>

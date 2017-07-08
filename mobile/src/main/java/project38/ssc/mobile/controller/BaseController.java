@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.CompanyShortNameResult;
 import project38.api.result.FenggeResult;
+import project38.api.result.MobileFgResult;
 import project38.api.result.UserSessionResult;
 import project38.api.utils.ApiUtils;
 import project38.api.utils.SessionUtils;
@@ -72,6 +73,9 @@ public abstract class BaseController {
         request.setAttribute("resPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/theme/" + theme + "/");
         request.setAttribute("commonResPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/common/");
         request.setAttribute("bottomCssResPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/public/theme/");
+
+        MobileFgResult mobileFgResult = ApiUtils.getMobileFg(companyShortName);
+        request.setAttribute("themeBottomNav", mobileFgResult.mobileFg.getDibu());
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
