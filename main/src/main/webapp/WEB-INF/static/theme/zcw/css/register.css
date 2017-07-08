@@ -5,8 +5,9 @@
     height:40rem;
     background-size:cover;
 }
-.login_nr{
+.register_nr{
     border:1px solid #dddddd;
     width:1000px;
-    margin:0px auto;
+    margin:auto;
+    height:40rem;
 }
