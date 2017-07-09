@@ -7479,9 +7479,6 @@ function content_q2zuxds(){
         }
     }
 
-    repeatArr = newArr.duplicateNew().uniqueArr(); //获取重复元素
-    newArr = newArr.uniqueArr();
-
     if(newArr.length <= 0){
         return 0;
     }
@@ -7492,12 +7489,7 @@ function content_q2zuxds(){
             allErrorArr.push(pairArr[p]);
         }
     }
-    if (repeatArr.length > 0) {
-        allErrorArr.push("自动过滤重复号码:");
-        for (var r = 0; r < repeatArr.length; r++) {
-            allErrorArr.push(repeatArr[r]);
-        }
-    }
+
     if (errorArr.length > 0) {
         allErrorArr.push(" 被过滤掉的错误号码");
         for (var l = 0; l < errorArr.length; l++) {
