@@ -6085,8 +6085,8 @@ function content_rx4zxds() {
         }
     }
 
-    repeatArr = newArr.duplicateNew(); //重复号码
-    newArr = newArr.uniqueArr();
+    // repeatArr = newArr.duplicateNew(); //重复号码
+    // newArr = newArr.uniqueArr();
     var arrTemp = [];
     $(".re-select-ds input[type='checkbox']:checked").each(function () {
         checkArr.push($(this).val());
@@ -6104,12 +6104,12 @@ function content_rx4zxds() {
     //获取位数字符串
     checkStrArr = getNoWeiStr(checkArr);
 
-    if (repeatArr.length > 0) {
-        allErrorArr.push("自动过滤重复号码:");
-        for(var r = 0; r < repeatArr.length; r++){
-            allErrorArr.push(repeatArr[r]);
-        }
-    }
+    // if (repeatArr.length > 0) {
+    //     allErrorArr.push("自动过滤重复号码:");
+    //     for(var r = 0; r < repeatArr.length; r++){
+    //         allErrorArr.push(repeatArr[r]);
+    //     }
+    // }
     if (errorArr.length > 0) {
         allErrorArr.push(" 被过滤掉的错误号码");
         for (var l = 0; l < errorArr.length; l++) {
@@ -6315,8 +6315,8 @@ function content_rx3z6ds() {
         }
     }
 
-    repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
-    tempArr = tempArr.uniqueArr(); // 去掉重复号码
+    // repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
+    // tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     if (checkArr.length < 3) {
         alert("[任选三]至少需要选择3个位置");
@@ -6327,12 +6327,12 @@ function content_rx3z6ds() {
         return 0;
     }
 
-    if (repeatArr.length > 0) {
-        allErrorArr.push("自动过滤重复号码:");
-        for (var r = 0; r < repeatArr.length; r++) {
-            allErrorArr.push(repeatArr[r]);
-        }
-    }
+    // if (repeatArr.length > 0) {
+    //     allErrorArr.push("自动过滤重复号码:");
+    //     for (var r = 0; r < repeatArr.length; r++) {
+    //         allErrorArr.push(repeatArr[r]);
+    //     }
+    // }
     if (errorArr.length > 0) {
         allErrorArr.push(" 被过滤掉的错误号码:");
         for (var l = 0; l < errorArr.length; l++) {
@@ -6449,8 +6449,8 @@ function content_rx3z3ds() {
             errorArr.push(newArr[n]);
         }
     }
-    repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
-    tempArr = tempArr.uniqueArr(); // 去掉重复号码
+    // repeatArr = tempArr.duplicateNew().uniqueArr(); //重复号码
+    // tempArr = tempArr.uniqueArr(); // 去掉重复号码
 
     if (checkArr.length < 3) {
         alert("[任选三]至少需要选择3个位置");
@@ -6461,12 +6461,12 @@ function content_rx3z3ds() {
         return 0;
     }
 
-    if (repeatArr.length > 0) {
-        allErrorArr.push("自动过滤重复号码:");
-        for (var r = 0; r < repeatArr.length; r++) {
-            allErrorArr.push(repeatArr[r]);
-        }
-    }
+    // if (repeatArr.length > 0) {
+    //     allErrorArr.push("自动过滤重复号码:");
+    //     for (var r = 0; r < repeatArr.length; r++) {
+    //         allErrorArr.push(repeatArr[r]);
+    //     }
+    // }
     if (errorArr.length > 0) {
         allErrorArr.push(" 被过滤掉的错误号码:");
         for (var l = 0; l < errorArr.length; l++) {
@@ -6605,8 +6605,6 @@ function content_rx3zxds() {
         }
     }
 
-    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
-    newArr = newArr.uniqueArr(); //去掉重复代码
 
     if (checkArr.length < 3) {
         alert("[任选三]至少需要选择3个位置");
@@ -6617,12 +6615,6 @@ function content_rx3zxds() {
         return 0;
     }
 
-    if (repeatArr.length > 0) {
-        allErrorArr.push("自动过滤重复号码:");
-        for (var r = 0; r < repeatArr.length; r++) {
-            allErrorArr.push(repeatArr[r]);
-        }
-    }
     if (errorArr.length > 0) {
         allErrorArr.push(" 被过滤掉的错误号码");
         for (var l = 0; l < errorArr.length; l++) {
@@ -6782,9 +6774,6 @@ function content_rx2zuxds() {
         }
     }
 
-    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
-    newArr = newArr.uniqueArr();
-
     if (checkArr.length < 2) {
         alert("[任选二]至少需要选择2个位置");
         return -1;
@@ -6794,12 +6783,6 @@ function content_rx2zuxds() {
         return 0;
     }
 
-    if (repeatArr.length > 0) {
-        allErrorArr.push("自动过滤重复号码:");
-        for (var r = 0; r < repeatArr.length; r++) {
-            allErrorArr.push(repeatArr[r]);
-        }
-    }
     if (errorArr.length > 0) {
         allErrorArr.push(" 被过滤掉的错误号码");
         for (var l = 0; l < errorArr.length; l++) {
@@ -6947,9 +6930,6 @@ function content_rx2zxds() {
         }
     }
 
-    repeatArr = newArr.duplicateNew().uniqueArr(); //重复号码
-    newArr = newArr.uniqueArr();
-
     $(".recl-1003-zxds input[name='position_ds']:checked").each(function () {
         arrTemp.push($(this).val());
     });
@@ -6962,12 +6942,6 @@ function content_rx2zxds() {
         return 0;
     }
 
-    if (repeatArr.length > 0) {
-        allErrorArr.push("自动过滤重复号码:");
-        for (var r = 0; r < repeatArr.length; r++) {
-            allErrorArr.push(repeatArr[r]);
-        }
-    }
     if (errorArr.length > 0) {
         allErrorArr.push(" 被过滤掉的错误号码");
         for (var l = 0; l < errorArr.length; l++) {
