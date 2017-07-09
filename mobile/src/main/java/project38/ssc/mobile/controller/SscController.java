@@ -407,7 +407,9 @@ public class SscController extends CacheController {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
-        modelMap.put("webName", webInfoResult.getWebName());
+//        modelMap.put("webName", webInfoResult.getWebName());
+        modelMap.put("webCompanyName", webInfoResult.getCompanyShortName());
+
         return this.renderView("ssc/kjjl/all", modelMap);
     }
 

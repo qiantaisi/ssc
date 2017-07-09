@@ -33,27 +33,27 @@
                     <p class="form_text">
                         字母开头的6-12位字母数字组成的用户名
                     </p>
-                    <input type="text" placeholder="用户名" name="account"/>
+                    <input type="text" placeholder="用户名" class="inputStr" name="account"/>
                     <p class="form_text">
                         请输入6-12位字母、数字的密码
                     </p>
-                    <input type="password" placeholder="密码" name="password"/>
+                    <input type="password" placeholder="密码" class="inputStr" name="password"/>
                     <p class="form_text">
                         与上面输入密码必须保持一致
                     </p>
-                    <input type="password" placeholder="确认密码" name="confirmPassword"/>
+                    <input type="password" placeholder="确认密码" class="inputStr" name="confirmPassword"/>
                     <p class="form_text">
                         姓名必须和绑定的银行卡户名一致
                     </p>
-                    <input type="text" placeholder="姓名" name="name"/>
+                    <input type="text" placeholder="姓名" class="inputStr" name="name"/>
                     <p class="form_text">
                         请输入您的手机
                     </p>
-                    <input type="text" placeholder="手机" name="phone"/>
+                    <input type="text" placeholder="手机" class="inputStr" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" name="phone"/>
                     <p class="form_text">
                         请输入您的邮箱
                     </p>
-                    <input type="text" placeholder="邮箱" name="email"/>
+                    <input type="text" placeholder="邮箱" class="inputStr" name="email"/>
                     <p class="form_text">
                         请输入您的QQ
                     </p>
@@ -111,6 +111,7 @@
             content: $("#template_khxy").html()
         });
     }
+
 </script>
 <script type="text/html" id="template_khxy">
     ${khxy.khxy}

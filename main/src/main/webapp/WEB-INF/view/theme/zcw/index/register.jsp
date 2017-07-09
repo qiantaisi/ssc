@@ -32,7 +32,7 @@
 			    			账号:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text"  name="account" class="left" placeholder="请输入用户名" />
+                    <input type="text"  name="account" class="inputStr left" placeholder="请输入用户名" />
                     <div class="left erro">
                         字母开头的6-12位字母数字组成的用户名
                     </div>
@@ -46,7 +46,7 @@
 			    			密码:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="password"  name="password" class="left" placeholder="请输入密码" />
+                    <input type="password"  name="password" class="inputStr left" placeholder="请输入密码" />
                     <div class="left erro">
                         输入6-12位字母、数字的密码
                     </div>
@@ -61,7 +61,7 @@
 			    			确认密码:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="password"  name="confirmPassword" class="left" placeholder="确认密码" />
+                    <input type="password"  name="confirmPassword" class="inputStr left" placeholder="确认密码" />
                     <div class="left erro">
                         与上面输入密码必须保持一致
                     </div>
@@ -75,7 +75,7 @@
 			    			姓名:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text"  name="name" class="left" placeholder="请输入姓名" />
+                    <input type="text"  name="name" class="inputStr left" placeholder="请输入姓名" />
                     <div class="left erro">
                         姓名必须和绑定的银行卡户名一致
                     </div>
@@ -89,7 +89,7 @@
 			    			手机:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text"  name="phone" class="left" placeholder="请输入手机" />
+                    <input type="text"  name="phone" class="inputStr left" placeholder="请输入手机" />
                     <div class="left erro">
                         请输入您的手机
                     </div>
@@ -103,7 +103,7 @@
 			    			邮箱:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text"  name="email" class="left" placeholder="请输入邮箱" />
+                    <input type="text"  name="email" class="inputStr left" placeholder="请输入邮箱" />
                     <div class="left erro">
                         请输入您的邮箱
                     </div>
@@ -117,7 +117,7 @@
 			    			QQ:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text"  name="qq" class="left" placeholder="请输入QQ" />
+                    <input type="text"  name="qq" class="inputStr left" placeholder="请输入QQ" />
                     <div class="left erro">
                         请输入QQ
                     </div>
@@ -297,7 +297,23 @@
 <c:import url="../common/bodyEnd.jsp"/>
 
 <script>
-    $(function() {
+    $(function () {
+        $(".login_nr_b .login_nr_gp .login_nr_gp_rt input.inputStr").keypress(function (e) {
+            if (e.which == 13) {// 判断所按是否回车键
+                var inputs = $(".login_nr_b").find(".inputStr"); // 获取表单中的所有输入框
+                var idx = inputs.index(this); // 获取当前焦点输入框所处的位置
+                if (idx == inputs.length - 1) {// 判断是否是最后一个输入框
+                    if (confirm("最后一个输入框已经输入,是否提交?")) // 用户确认
+                        $("#btn-register").trigger("click");// 提交表单
+                } else {
+                    inputs[idx + 1].focus(); // 设置焦点
+                    inputs[idx + 1].select(); // 选中文字
+                }
+                return false;// 取消默认的提交行为
+            }
+        });
+
+
         $(".all_fenlei_yin").css("display","none");
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号

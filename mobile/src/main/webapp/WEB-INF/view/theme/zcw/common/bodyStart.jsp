@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="${resPath}css/vipcp-login-reg.css?v=20170519">
     <link rel="stylesheet" href="${resPath}css/test.css?v=20170706"/>
     <link rel="stylesheet" href="${resPath}css/gcdt.css"/>
-    <link rel="stylesheet" type="text/css" href="${resPath}css/login-register.css">
+    <link rel="stylesheet" type="text/css" href="${resPath}css/login-register.css?v=20170709">
 
     <jsp:include page="../../../public/common/customTheme.jsp" />
 </head>

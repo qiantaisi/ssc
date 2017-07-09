@@ -98,11 +98,44 @@ $(function () {
         });
     });
 
-// 注册页面
+    // 注册页面
     $(document).on("pageInit", "#page-register", function (e, id, page) {
         if (typeof initBottomNavIndex == 'function') {
-            initBottomNavIndex();
+            initBottomNavMbmber();
         }
+
+        /**
+         * 给常用事件生成便捷方法
+         * @param event
+         * @param args
+         * @returns {*}
+         */
+        ('focusin focusout focus blur load resize scroll unload click dblclick '+
+        'mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave '+
+        'change select keydown keypress keyup error').split(' ').forEach(function(event) {
+            $.fn[event] = function(callback) {
+                return (0 in arguments) ?
+                    //有callback回调，是绑定事件，否则，触发事件  ，
+                    // 不用on？on才通用啊 ,bind也是调用on
+                    //$.fn.bind = function(event, data, callback){
+                    //             return this.on(event, data, callback)
+                    //           }
+                    this.bind(event, callback) :
+                    this.trigger(event)
+            }
+        });
+
+        $(".content .main .form_main input.inputStr").keypress(function (e) {
+            if (e.which == 13) {// 判断所按是否回车键
+                var inputs = $(".content").find(".inputStr"); // 获取表单中的所有输入框
+                var idx = inputs.index(this); // 获取当前焦点输入框所处的位置
+                if (idx != inputs.length - 1) {// 判断是否是最后一个输入框
+                    inputs[idx + 1].focus(); // 设置焦点
+                    inputs[idx + 1].select(); // 选中文字
+                }
+                return false;// 取消默认的提交行为
+            }
+        });
 
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号

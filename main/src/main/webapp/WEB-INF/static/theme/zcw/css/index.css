@@ -35,12 +35,26 @@ body {
 .head_top_lf {
     background: url(../images/common/index_03.png) no-repeat left center;
     padding-left: 25px;
-    width: 540px;
+    width: 70.5%;
     height: 30px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.index-text{
+    padding-right: 5px;
+}
+
+.login-true{
+    float: right;
+    margin-right: 6%;
+}
+
+.login-name{
+    color: red;
+}
+
 .left {
     float: left;
 }
@@ -75,7 +89,7 @@ a:visited {
 }
 
 .head_top_lottery {
-    margin-right: 10px;
+    margin-right: 5px;
     background: url(../images/common/index_06.png) no-repeat left center;
     padding-left: 22px;
 }
