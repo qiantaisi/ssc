@@ -17,7 +17,7 @@
         <img class="barImg2 hide" src="${bottomCssResPath}${themeBottomNav}/img/Bottom/footer_01.png"/>
         <span>首页</span>
     </a>
-    <a class="n2 <%=request.getRequestURI().lastIndexOf("ssc/gcdt.jsp") > 0 ? "active" : ""%>" href="<%=basePath%>ssc/gcdt.html" data-name="gcdt">
+    <a class="n2 <%=request.getRequestURI().lastIndexOf("gcdt/gcdt.jsp") > 0 ? "active" : ""%>" href="<%=basePath%>ssc/gcdt.html" data-name="gcdt">
         <img class="barImg1" src="${bottomCssResPath}${themeBottomNav}/img/Bottom/footer_02.png"/>
         <img class="barImg2 hide" src="${bottomCssResPath}${themeBottomNav}/img/Bottom/footer_002.png"/>
         <span>购彩大厅</span>
@@ -32,7 +32,7 @@
         <img class="barImg2 hide" src="${bottomCssResPath}${themeBottomNav}/img/Bottom/footer5_088.png"/>
         <span>走势图</span>
     </a>
-    <a class="n5 <%=request.getRequestURI().lastIndexOf("member/index.jsp") > 0 ? "active" : ""%>" href="<%=basePath%>member/index.html" data-name="grzx">
+    <a class="n5 <%=request.getRequestURI().lastIndexOf("member/index.jsp") > 0 ? "active" : ""%><%=request.getRequestURI().lastIndexOf("index/register.jsp") > 0 ? "active" : ""%><%=request.getRequestURI().lastIndexOf("index/login.jsp") > 0 ? "active" : ""%>" href="<%=basePath%>member/index.html" data-name="grzx">
         <img  class="barImg1" src="${bottomCssResPath}${themeBottomNav}/img/Bottom/footer_05.png"/>
         <img  class="barImg2 hide" src="${bottomCssResPath}${themeBottomNav}/img/Bottom/footer_005.png"/>
         <span>个人中心</span>

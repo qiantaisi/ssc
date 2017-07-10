@@ -57,8 +57,8 @@
             </div>
             <div class="content-block cl-8 cl-990">
                 <div class="cl-1300">
-                    <div class="cl-1301">
-                        <div class="cl-1350">
+                    <div class="cl-1301-gfwf">
+                        <div class="cl-1350-gfwf">
                             <div class="content-block">
                                 <c:choose>
                                     <c:when test="${playGroupId == 1}">

@@ -1233,17 +1233,10 @@ input[type="number"] {
     padding: 0.2rem 0.2rem;
 }
 
-.gfwf-1 {
-    padding: 0 1px;
-}
-
 .gfwf-2 {
-    width: 355px !important;
+    width: 100%;
     height: auto !important;
     line-height: 25px !important;
-    color: #434343 !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
 }
 
 .wfsm-img {
@@ -1267,6 +1260,21 @@ input[type="number"] {
     background-color: #eee;
     border: 1px #CCCCCC solid !important;
 }
+
+.cl-1301-gfwf{
+    width: 100%;
+    overflow: hidden;
+    background-color: #f6f4f5;
+}
+.cl-1350-gfwf{
+    padding: 0 15px;
+}
+
+.cl-1350-gfwf .content-block {
+    margin: 0;
+    font-size: 0.7rem;
+}
+
 .gfwf-3 span a{
     float: right;
     background: url(../img/wfsm-07.png);
@@ -1298,21 +1306,19 @@ input[type="number"] {
 .wfsm-tou {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
-    height: 45px;
-    overflow: hidden;
+    height: 49px;
     margin-bottom: 10px;
+    margin-top: 25px;
+    position: relative;
 }
 .wfsm-tou a {
-    background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy_07.png) no-repeat;
-    display: block;
+    background: url(../img/buy_07.png) no-repeat;
     width: 50px;
     height: 50px;
     background-size: 100%;
-    float: left;
     position: absolute;
-    top: 44px;
-    z-index: 1000;
-    right: 320px;
+    left: 20px;
+    top: -9px;
 }
 .wfsm-tou span {
     float: left;
@@ -1320,7 +1326,7 @@ input[type="number"] {
     font-size: 16px;
     color: #000;
     font-weight: bold;
-    line-height: 0px;
+    line-height: 49px;
 }
 .wfsm-tou1 span {
     float: left;
