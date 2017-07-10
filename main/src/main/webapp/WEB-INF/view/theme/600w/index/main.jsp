@@ -88,7 +88,7 @@
                                    onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
                                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
                             <a onclick="xyxhAdd(1, 5)" class="fr" href="javascript:void(0)">+</a>
-                            <span id="xyxhMoney_1">共：<i>5</i> 元</span>
+                            <span id="xyxhMoney_1">共：5 元</span>
                         </div>
                         <p class="fr">
                             <a href="javascript:void(0)" onclick="xyxh(this,1)"><img src="${resPath}img/ico82.png"

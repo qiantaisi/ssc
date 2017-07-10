@@ -436,6 +436,8 @@ a:visited {
     margin-top: 3px;
     text-align: center;
 }
+.s0{display: block;background: url(../images/index_84.png) no-repeat;width: 40px;height: 40px;color: #ee6d5e;font-size: 16px;text-align: center;line-height: 40px;border-radius: 50%;}
+
 
 .biaoqian span {
     display: inline-block;

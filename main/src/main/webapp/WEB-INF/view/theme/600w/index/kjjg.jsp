@@ -184,6 +184,7 @@
                     </ul>
                 </div>
                 <div class="Thelottery">
+
                 </div>
                 <div class="Color_type"></div>
             </div>

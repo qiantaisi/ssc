@@ -217,51 +217,56 @@
                             第20170626083期截止：<span class="time time1"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
-                            <a href="#">手动选号</a>
-                            <a href="#">走势图</a>
+                            <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">手动选号</a>
+                            <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank"  class="sp0">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 retouzhu2 clearfix">
+                    <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_1">
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					0
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					3
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					4
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					6
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					7
+		    	    				<span class="s0">
 		    	    				</span>
                         </div>
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left">+</button>
-                            <input class="text_box left" name="" value="1" type="text">
-                            <button class="min left">-</button>
+                            <%--<a onclick="xyxhAdd(1, 5)" class="fr left" href="javascript:void(0)">+</a>--%>
+
+                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+
+                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span class="color_red">2 </span>元
+                            倍，共 <span   id="xyxhMoney_1" class="xyxhMoney_1 color_red"><i>5</i></span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:;" class="shuaxin">
+                            <a href="javascript:void(0)" onclick="xyxh(this,1)">
+                            <%--<a href="javascript:;" class="shuaxin">--%>
                                 换一注
                             </a>
-                            <a href="#" class="btn_red touzhubtn">
+                            <a href="javascript:void(0)" class="a1 btn_red touzhubtn" onclick="openXyxh(1)">
+                      <%--      <a href="#" class="btn_red touzhubtn">--%>
                                 立即投注
                             </a>
                         </div>
@@ -279,45 +284,47 @@
                     </div>
                     <div class="touzhu2 retouzhu2 clearfix">
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					2
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					3
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					4
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					6
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					7
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left">+</button>
-                            <input class="text_box left" name="" value="1" type="text">
-                            <button class="min left">-</button>
+                           <%-- <a onclick="xyxhAdd(1, 5)" class="fr left" href="javascript:void(0)">+</a>--%>
+                            <button class="add left"onclick="xyxhAdd(1, 5)">+</button>
+                            <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+                            <button class="min left"  onclick="xyxhMinute(1, 5)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span class="color_red">2 </span>元
+                            倍，共 <span   id="xyxhMoney_3" class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:;" class="shuaxin">
+                            <a href="javascript:;" class="xyxh(this,3)">
                                 换一注
                             </a>
-                            <a href="#" class="btn_red touzhubtn">
+                            <a href="javascript:void(0)"    onclick="openXyxh(3)" class="btn_red touzhubtn">
                                 立即投注
                             </a>
                         </div>
@@ -334,8 +341,8 @@
                         </div>
                     </div>
                     <div class="touzhu2 clearfix" style="padding-top: 5px;height: 65px;">
-                        <div class="left">
-		    	    				<span class="qiu" style="background: #3e97ff;color: #fff;">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
 		    	    					12
 		    	    				</span>
                             <p class="biaoqian">
@@ -344,8 +351,8 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="left">
-		    	    				<span class="qiu" style="background: #e93030;color: #fff;">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
 		    	    					10
 		    	    				</span>
                             <p class="biaoqian">
@@ -354,8 +361,8 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="left">
-		    	    				<span class="qiu" style="background: #e93030;color: #fff;">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
 		    	    					34
 		    	    				</span>
                             <p class="biaoqian">
@@ -364,8 +371,8 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="left">
-		    	    				<span class="qiu" style="background: #2ed918;color: #fff;">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
 		    	    					11
 		    	    				</span>
                             <p class="biaoqian">
@@ -374,8 +381,8 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="left">
-		    	    				<span class="qiu" style="background: #3e97ff;color: #fff;">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
 		    	    					19
 		    	    				</span>
                             <p class="biaoqian">
@@ -384,8 +391,8 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="left">
-		    	    				<span class="qiu" style="background: #e93030;color: #fff;">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
 		    	    					25
 		    	    				</span>
                             <p class="biaoqian">
@@ -394,8 +401,8 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="left">
-		    	    				<span class="qiu" style="background: #3e97ff;color: #fff;">
+                        <div class="kai_qiu_main left">
+		    	    				<span class="qiu">
 		    	    					41
 		    	    				</span>
                             <p class="biaoqian">
@@ -404,6 +411,7 @@
 		    	    					</span>
                             </p>
                         </div>
+
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
@@ -436,28 +444,28 @@
                     </div>
                     <div class="touzhu2 retouzhu2 clearfix">
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					6
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					3
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					4
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					6
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                         <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					7
+		    	    				<span class="s0">
+
 		    	    				</span>
                         </div>
                     </div>
@@ -946,6 +954,59 @@
         });
     }
 </script>
+
+<script>
+   $(function(){
+
+       $('.index_main_rt1_2t a').click(function(){
+           var index = $(this).index();
+           $(this).addClass('ahover').siblings().removeClass('ahover');
+           $(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();
+       });
+
+       $('.touzhu_t_qht a').click(function(){
+           var index = $(this).index();
+           $(this).addClass('ahover').siblings().removeClass('ahover');
+           $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
+       });
+
+   $(".shuaxin").click(function(){
+
+       var	eedd=$(this).parents(".touzhu_b_main").index();
+
+       $(this).parents(".touzhu_b_main").find(".qiu").each(function(index) {
+
+           index=setInterval(function(){
+               $(".touzhu_b_main:eq("+eedd+") .qiu").text(parseInt(99*Math.random()))
+               setTimeout(function(){
+                   clearInterval(index);
+                   $(".touzhu_b_main:eq("+eedd+") .qiu").parents(".touzhu_b_main").find(".qiu").each(function(index) {
+                       $(this).text(parseInt(99*Math.random()));
+                   });
+               },300)
+           },10)
+
+       });
+       $(this).parents(".touzhu_b_main").find(".biaoqian").each(function(index1) {
+           var arr=['鼠','虎','兔','小','双','狗','蛇','猪']
+           index1=setInterval(function(){
+               $(".touzhu_b_main:eq("+eedd+") .biaoqian span").text(arr[Math.floor(Math.random() * arr.length)])
+               setTimeout(function(){
+                   clearInterval(index1);
+                   $(".touzhu_b_main:eq("+eedd+") .biaoqian").parents(".touzhu_b_main").find(".biaoqian span").each(function(index) {
+                       $(this).text(arr[Math.floor(Math.random() * arr.length)]);
+                   });
+               },300)
+           },10)
+
+       });
+
+
+    })
+   });
+
+</script>
+
 <script>
 
     function registerLogin() {
@@ -1105,7 +1166,7 @@
             navIndex = 1;
             var numsArr = [];
             for (var i = 0; i < 5; ++i) {
-                var v = $("#xyxhContent_1 span").eq(i).data("num");
+                var v = $("#xyxhContents_1 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
@@ -1418,7 +1479,7 @@
                 $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
             }, 2000);
         } else if (type == 1) {
-            $("#xyxhContent_1 span").each(function () {
+            $("#xyxhContents_1 span").each(function () {
                 $(this).data("num", '');
             });
 
@@ -1429,11 +1490,11 @@
                 var num4 = Math.floor(Math.random() * 10);
                 var num5 = Math.floor(Math.random() * 10);
 
-                $("#xyxhContent_1 span").eq(0).html(num1);
-                $("#xyxhContent_1 span").eq(1).html(num2);
-                $("#xyxhContent_1 span").eq(2).html(num3);
-                $("#xyxhContent_1 span").eq(3).html(num4);
-                $("#xyxhContent_1 span").eq(4).html(num5);
+                $("#xyxhContents_1 span").eq(0).html(num1);
+                $("#xyxhContents_1 span").eq(1).html(num2);
+                $("#xyxhContents_1 span").eq(2).html(num3);
+                $("#xyxhContents_1 span").eq(3).html(num4);
+                $("#xyxhContents_1 span").eq(4).html(num5);
             }, 50);
 
             setTimeout(function () {
@@ -1444,11 +1505,11 @@
                 var num5 = Math.floor(Math.random() * 10);
 
                 clearInterval(index_1);
-                $("#xyxhContent_1 span").eq(0).data("num", "wan-" + num1).html(num1);
-                $("#xyxhContent_1 span").eq(1).data("num", "qian-" + num2).html(num2);
-                $("#xyxhContent_1 span").eq(2).data("num", "bai-" + num3).html(num3);
-                $("#xyxhContent_1 span").eq(3).data("num", "shi-" + num4).html(num4);
-                $("#xyxhContent_1 span").eq(4).data("num", "ge-" + num5).html(num5);
+                $("#xyxhContents_1 span").eq(0).data("num", "wan-" + num1).html(num1);
+                $("#xyxhContents_1 span").eq(1).data("num", "qian-" + num2).html(num2);
+                $("#xyxhContents_1 span").eq(2).data("num", "bai-" + num3).html(num3);
+                $("#xyxhContents_1 span").eq(3).data("num", "shi-" + num4).html(num4);
+                $("#xyxhContents_1 span").eq(4).data("num", "ge-" + num5).html(num5);
             }, 2000);
         } else if (type == 2) {
             $("#xyxhContent_2 span").each(function () {
@@ -1571,6 +1632,7 @@
             }, 2000);
         }
     }
+
 </script>
 <c:import url="../common/popupDiv.jsp"/>
 <c:import url="../common/bodyEnd.jsp"/>
