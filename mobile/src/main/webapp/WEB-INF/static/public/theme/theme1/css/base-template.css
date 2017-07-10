@@ -27,7 +27,7 @@
 }
 
 .number_bar-tab {
-    position: fixed;
+    position: fixed!important;
     border-top: 1px solid #aaaaaa;
     bottom: 0;
     width: 100%;
