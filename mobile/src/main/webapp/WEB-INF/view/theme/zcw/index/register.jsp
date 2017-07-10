@@ -33,7 +33,8 @@
                     <p class="form_text">
                         字母开头的6-12位字母数字组成的用户名
                     </p>
-                    <input type="url" placeholder="用户名" class="inputStr" name="account"/>
+
+                    <input type="text" placeholder="用户名" class="inputStr" name="account"  style="ime-mode: disabled">/>
                     <p class="form_text">
                         请输入6-12位字母、数字的密码
                     </p>
