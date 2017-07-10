@@ -18,24 +18,20 @@
     <div class="block_home_slider">
         <div id="home_slider" class="flexslider">
             <ul class="slides">
-                <li>
-                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
-                </li>
-                <li>
-                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
-                </li>
-                <li>
-                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
-                </li>
-                <li>
-                    <a href="#" class="banner_main" style="background: url(${resPath}images/common/banner_02.jpg) no-repeat center;background-size: cover;"></a>
-                </li>
+                <c:forEach items="${carouseList.carouselList}" var="item">
+                    <c:choose>
+                        <c:when test="${empty item.url}">
+                            <li>
+                                <a href="#" class="banner_main" style="background: url(<%=basePath%>images/${item.imageId}.jpg) no-repeat center;background-size: cover;"></a>
+                            </li>
+                        </c:when>
+                    </c:choose>
+                </c:forEach>
+
+
+
             </ul>
-            <%--<p>--%>
-               <%--<i class="acti"></i>--%>
-               <%--<i></i>--%>
-               <%--<i></i>--%>
-            <%--</p>--%>
+
         </div>
 
         <script type="text/javascript">
@@ -84,7 +80,7 @@
     </div>
 </div>
 
-<div class="main container index_main clearfix">
+<v class="main container index_main clearfix">
     <div class="left kaijiang">
         <div class="kaijiang_tl">
             开奖公告
@@ -196,22 +192,22 @@
 		    				快速投注
 		    			</span>
                 <div class="left touzhu_t_qht clearfix">
-                    <a href="javascript:;" class="ahover">
+                    <a href="javascript:javascript:void(0);" class="ahover">
                         重庆时时彩
                     </a>
-                    <a href="javascript:;">
+                    <a href="javascript:javascript:void(0);">
                         安徽快3
                     </a>
-                    <a href="javascript:;">
+                    <a href="javascript:javascript:void(0);">
                         香港六合彩
                     </a>
-                    <a href="javascript:;">
+                    <a href="javascript:javascript:void(0);">
                         排列三
                     </a>
                 </div>
             </div>
             <div class="touzhu_b">
-                <div class="touzhu_b_main hideContent">
+                <div class="touzhu_b_main active" id="ssc_id_2">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time1"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -262,17 +258,15 @@
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0)" onclick="xyxh(this,1)">
-                            <%--<a href="javascript:;" class="shuaxin">--%>
                                 换一注
                             </a>
                             <a href="javascript:void(0)" class="a1 btn_red touzhubtn" onclick="openXyxh(1)">
-                      <%--      <a href="#" class="btn_red touzhubtn">--%>
                                 立即投注
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="touzhu_b_main hideContent">
+                <div class="touzhu_b_main hideContent" id="ssc_id_20">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time2"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -330,7 +324,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="touzhu_b_main active">
+                <div class="touzhu_b_main hideContent" id="ssc_id_6">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time3"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -432,7 +426,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="touzhu_b_main hideContent">
+                <div class="touzhu_b_main hideContent" id="ssc_id_4">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time4"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -637,211 +631,24 @@
                 </div>
             </div>
             <div class="zhongjiang_ul">
-                <ul id="view_apply">
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
+                <marquee direction="up" behavior="scroll" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
+                <ul>
+                    <c:forEach items="${Notices.noticeList}" var="noticelists">
+                        <li class="clearfix">
+                            <a href="#" class="left zhongjiang_li1">
+                                ${noticelists.type}
+                            </a>
+                            <span class="left zhongjiang_name">${noticelists.userName}</span>
+                            <span class="left zhongjiang_jine">
+		        				${noticelists.amount}元
 		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-                    <li class="clearfix">
-                        <a href="#" class="left zhongjiang_li1">
-                            【福彩3D】
-                        </a>
-                        <span class="left zhongjiang_name">xu19***</span>
-                        <span class="left zhongjiang_jine">
-		        				17640.00元
-		        			</span>
-                    </li>
-
-                </ul>
+                        </li>
+                    </c:forEach>
+                    </ul>
+                </marquee>
             </div>
         </div>
     </div>
-</div>
 
 <c:import url="../common/bottomInfo.jsp"/>
 
@@ -849,14 +656,15 @@
 
 <div id="gonggao_container"></div>
 <script>
+
     $(function () {
         getWebPopUpNotice();
-
         xyxh(null, 6);
         xyxh(null, 1);
         xyxh(null, 9);
         xyxh(null, 2);
         xyxh(null, 3);
+
     });
 
     function showGonggao(id) {
@@ -871,6 +679,22 @@
     <%--function openPopUpNotice() {--%>
     <%--showPopUp(popupNotice);--%>
     <%--}--%>
+    function autoScroll(obj){
+
+        var n=$(obj).find("ul").find("li")height();
+        $(obj).find("ul").animate({
+            marginTop:-n
+        },500,function(){
+            $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        })
+
+        $(function(){
+
+            setInterval('autoScroll(".zhongjiang_ul")',3000)
+
+        })
+
+    }
 
     function goZst(url) {
         showLoading();
@@ -1163,7 +987,7 @@
             money = $("#xyxhInput_6").val();
         } else if (type == 1) {
             caizhong = 'cqssc';
-            navIndex = 1;
+            navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 5; ++i) {
                 var v = $("#xyxhContents_1 span").eq(i).data("num");
@@ -1176,7 +1000,7 @@
             money = $("#xyxhInput_1").val();
         } else if (type == 2) {
             caizhong = 'tjssc';
-            navIndex = 1;
+            navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 5; ++i) {
                 var v = $("#xyxhContent_2 span").eq(i).data("num");
@@ -1189,7 +1013,7 @@
             money = $("#xyxhInput_2").val();
         } else if (type == 3) {
             caizhong = 'xjssc';
-            navIndex = 1;
+            navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 5; ++i) {
                 var v = $("#xyxhContent_3 span").eq(i).data("num");
@@ -1632,6 +1456,7 @@
             }, 2000);
         }
     }
+
 
 </script>
 <c:import url="../common/popupDiv.jsp"/>
