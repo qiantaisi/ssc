@@ -142,7 +142,7 @@
                     举例：开奖结果为：2,1,3,5,2 万为龙、千为龙虎时：结果 龙(2）大于虎（1），即为开龙；如万为龙，个为虎时，结果一样大，即为开和局！</br>
                     说明：龙1 VS 虎2 即为万为龙，千为虎；龙2 VS 虎4 即为千为龙，十为虎；</p>
             </div>
-            <div class="help_col">
+            <div class="help_col gfwf-help-col">
                 <div class="gfwf-1">
                     <div class="gfwf-2" id="top">
                         <h1><a style=""></a></h1>
@@ -379,7 +379,7 @@
                         <b><p id="test6">六、投资方式</p></b>
                             1、五星直选</br>
                             对万位、千位、百位、十位和个位各选1个号码为一注，每位号码可从0～9全选，投注号码与开奖号码按位一致，即为中奖。</br>
-                        <div>
+                        <div class="gfwf-wxsm">
                             <img src="${resPath}images/wfsm/wfsm02.png" class="wfsm-img">
                         </div>
                         </br>
@@ -389,7 +389,7 @@
                         对百位、十位和个位各选1个号码为一注，每位号码最多可0～9全选，投注号码与开奖号码后三位按位一致即为中奖。</br>
                         4、三星和值</br>
                         和值指号码各位数相加之和，如号码001，和值为1。三星和值投注指用某一个三星和值对应的所有号码进行投注，所选和值与开奖号码后三位和值一致即为中奖，单注最高奖金980元。示例：选择三星和值1投注，即用和值1所对应的号码（001、010、100）投注，如开奖号码后三位和值为1即中奖。</br>
-                        <div>
+                        <div class="gfwf-wxsm">
                             <img src="${resPath}images/wfsm/wfsm03.png" class="wfsm-img">
                         </div>
                         </br>
@@ -483,12 +483,12 @@
                         从号码0—9中任选两个数字对万位和千位进行投注，最多可0～9全选。所选号码与开奖号码前两位一致，顺序不限，即为中奖。示例：选择12，共1注，如开奖号码前两位为12或21即中奖。</br>
                         10、大小单双</br>
                         对万位和千位的大小单双4种特征中各选一种特征为一注，最多可4种特征全选，所选特征与开奖号码后两位号码特征一致即中奖。示例：开奖号码后两位为78，则大大、大双、单双、单大为中奖。</br>
-                        <div>
+                        <div class="gfwf-wxsm">
                             <img src="${resPath}images/wfsm/wfsm-04.png" class="wfsm-img">
                         </div>
                         <br>
                         <b><p id="test7">七、玩法特点</p></b>
-                        <div>
+                        <div class="gfwf-wxsm">
                             <img src="${resPath}images/wfsm/wfsm05.png" class="wfsm-img">
                         </div></br>
                         <div class="wfsm-top">
