@@ -1275,13 +1275,13 @@ input[type="number"] {
     font-size: 0.7rem;
 }
 
-.gfwf-3 span a{
+.gfwf-3 span a {
     float: right;
     background: url(../img/wfsm-07.png);
-    margin-right: 0px;
-    width: 110px;
+    margin-right: -10px;
+    width: 100px;
     height: 30px;
-    line-height: 35px;
+    line-height: 30px;
     text-align: center;
     font-weight: bold;
     text-decoration: underline;

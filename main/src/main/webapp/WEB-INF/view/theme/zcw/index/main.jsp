@@ -192,22 +192,22 @@
 		    				快速投注
 		    			</span>
                 <div class="left touzhu_t_qht clearfix">
-                    <a href="javascript:;" class="ahover">
+                    <a href="javascript:javascript:void(0);" class="ahover">
                         重庆时时彩
                     </a>
-                    <a href="javascript:;">
+                    <a href="javascript:javascript:void(0);">
                         安徽快3
                     </a>
-                    <a href="javascript:;">
+                    <a href="javascript:javascript:void(0);">
                         香港六合彩
                     </a>
-                    <a href="javascript:;">
+                    <a href="javascript:javascript:void(0);">
                         排列三
                     </a>
                 </div>
             </div>
             <div class="touzhu_b">
-                <div class="touzhu_b_main hideContent">
+                <div class="touzhu_b_main active" id="ssc_id_2">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time1"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -258,17 +258,15 @@
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0)" onclick="xyxh(this,1)">
-                            <%--<a href="javascript:;" class="shuaxin">--%>
                                 换一注
                             </a>
                             <a href="javascript:void(0)" class="a1 btn_red touzhubtn" onclick="openXyxh(1)">
-                      <%--      <a href="#" class="btn_red touzhubtn">--%>
                                 立即投注
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="touzhu_b_main hideContent">
+                <div class="touzhu_b_main hideContent" id="ssc_id_20">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time2"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -326,7 +324,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="touzhu_b_main active">
+                <div class="touzhu_b_main hideContent" id="ssc_id_6">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time3"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -428,7 +426,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="touzhu_b_main hideContent">
+                <div class="touzhu_b_main hideContent" id="ssc_id_4">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time4"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -989,7 +987,7 @@
             money = $("#xyxhInput_6").val();
         } else if (type == 1) {
             caizhong = 'cqssc';
-            navIndex = 1;
+            navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 5; ++i) {
                 var v = $("#xyxhContents_1 span").eq(i).data("num");
@@ -1002,7 +1000,7 @@
             money = $("#xyxhInput_1").val();
         } else if (type == 2) {
             caizhong = 'tjssc';
-            navIndex = 1;
+            navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 5; ++i) {
                 var v = $("#xyxhContent_2 span").eq(i).data("num");
@@ -1015,7 +1013,7 @@
             money = $("#xyxhInput_2").val();
         } else if (type == 3) {
             caizhong = 'xjssc';
-            navIndex = 1;
+            navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 5; ++i) {
                 var v = $("#xyxhContent_3 span").eq(i).data("num");
