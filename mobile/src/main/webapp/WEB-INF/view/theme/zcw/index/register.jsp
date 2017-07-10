@@ -33,7 +33,8 @@
                     <p class="form_text">
                         字母开头的6-12位字母数字组成的用户名
                     </p>
-                    <input type="text" placeholder="用户名" class="inputStr" name="account"/>
+
+                    <input type="text" placeholder="用户名" class="inputStr" name="account"  style="ime-mode: disabled"/>
                     <p class="form_text">
                         请输入6-12位字母、数字的密码
                     </p>
@@ -49,7 +50,7 @@
                     <p class="form_text">
                         请输入您的手机
                     </p>
-                    <input type="text" placeholder="手机" class="inputStr" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" name="phone"/>
+                    <input type="number" placeholder="手机" class="inputStr" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" name="phone"/>
                     <p class="form_text">
                         请输入您的邮箱
                     </p>

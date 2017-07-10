@@ -19,7 +19,7 @@ table.touzhuArea {
     margin-top: 3px;
     font-weight: bold !important;
 }
-.touzhuArea tr td{
+.touzhuArea tr a td{
     width: 33.3%;
 }
 .touzhuArea thead {

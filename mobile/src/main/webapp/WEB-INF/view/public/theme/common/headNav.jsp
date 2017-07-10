@@ -7,5 +7,5 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<link rel="stylesheet" href="${bottomCssResPath}${themeBottomNav}/css/base-template.css?v=20170628"/>
+<%--<link rel="stylesheet" href="${bottomCssResPath}${themeBottomNav}/css/base-template.css?v=20170628"/>--%>
 <jsp:include page="../${themeBottomNav}/headNav.jsp" />

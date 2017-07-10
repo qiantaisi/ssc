@@ -50,11 +50,11 @@
 
     //首页页底部按钮初始化选中状态
     function initBottomNavIndex() {
-//        //底部按钮选中状态
-//        $(".number_c1-101 a.active").removeClass('active');
-//        $(".number_c1-101 a.n1").addClass('active');
-//        $(".number_c1-101 .n1 .barImg1").hide();
-//        $(".number_c1-101 .n1 .barImg2").show();
+        //底部按钮选中状态
+        $(".number_c1-101 a.active").removeClass('active');
+        $(".number_c1-101 a.n1").addClass('active');
+        $(".number_c1-101 .n1 .barImg1").hide();
+        $(".number_c1-101 .n1 .barImg2").show();
     }
 
     //开奖结果页底部按钮初始化选中状态
