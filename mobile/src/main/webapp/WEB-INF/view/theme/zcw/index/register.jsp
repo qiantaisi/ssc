@@ -49,7 +49,7 @@
                     <p class="form_text">
                         请输入您的手机
                     </p>
-                    <input type="text" placeholder="手机" class="inputStr" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" name="phone"/>
+                    <input type="number" placeholder="手机" class="inputStr" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" name="phone"/>
                     <p class="form_text">
                         请输入您的邮箱
                     </p>
