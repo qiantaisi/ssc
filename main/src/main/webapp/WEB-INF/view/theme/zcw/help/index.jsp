@@ -146,7 +146,7 @@
                             <li><p><a href="<%=basePath%>help/question/cz_5.html">5、充值后多久可以到账？</a></p></li>
                             <li><p><a href="<%=basePath%>help/question/cz_6.html">6、充值未到账？</a></p></li>
                             <li><p><a href="<%=basePath%>help/question/cz_7.html">7、账户充值会收手续费吗?</a></p></li>
-                            <li><p><a href="<%=basePath%>help/question/cz_8.html">8、银行转账未及时到账？？</a></p></li>
+                            <li><p><a href="<%=basePath%>help/question/cz_8.html">8、银行转账未及时到账？</a></p></li>
                             <li><p><a href="<%=basePath%>help/question/cz_9.html">9、如何开通网上银行？</a></p></li>
                         </ul>
                     </div>
