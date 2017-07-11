@@ -38,20 +38,17 @@ $(function () {
             $.router.back();
         } else {
             back();
-            if (typeof initBottomNavIndex == 'function') {
-                initBottomNavIndex();
-            }
         }
     });
 
-    // 返回按钮
-    $(".vipcp .fanhui").click(function () {
-        if ($.config.router == true) {
-            $.router.back();
-        } else {
-            back();
-        }
-    });
+    // // 返回按钮
+    // $(".vipcp .fanhui").click(function () {
+    //     if ($.config.router == true) {
+    //         $.router.back();
+    //     } else {
+    //         back();
+    //     }
+    // });
 
     // 首页
     $(".bar-nav .shouye").click(function () {
@@ -64,7 +61,13 @@ $(function () {
         window.history.back = function () {
             return;
         }
-        history.go(-1);
+
+        if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
+                window.location.href = window.document.referrer;
+        } else {
+            window.history.go(-1);
+        }
+        // history.go(-1);
     }
 
     // 修复表单不focus问题

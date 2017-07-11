@@ -12,10 +12,12 @@
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta http-equiv="pragma" content="no-cache"/>
-<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"/>
-<meta http-equiv="expires" content="0"/>
 <meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
 <script>
     <!--
     // 屏蔽JS错误
