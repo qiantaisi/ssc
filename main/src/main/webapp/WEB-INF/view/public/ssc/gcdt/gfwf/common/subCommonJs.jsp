@@ -19,5 +19,39 @@
             // 初始化子页面
             initSubPage();
         });
+
+
+        // 幸运选号
+        var tmpXyxhNums = getQueryString("nums");
+        var tmpXyxhMoney = getQueryString("money");
+
+        if (typeof tmpXyxhNums != 'undefined' && typeof tmpXyxhMoney != 'undefined' && tmpXyxhNums != '' && tmpXyxhMoney != '' && tmpXyxhNums != null && tmpXyxhMoney != null) {
+            var oArr = [
+                ['wan', '万位'],['qian', '千位'],['bai', '百位'],['shi', '十位'],['ge', '个位']
+            ];
+
+            for (var i = 0; i < oArr.length; ++i) {
+                tmpXyxhNums = tmpXyxhNums.replace(new RegExp(oArr[i][0],'gm'), oArr[i][1]);
+            }
+
+            var arr = tmpXyxhNums.split(",");
+            var beishu = parseInt(tmpXyxhMoney) / 2;
+
+            for (var i = 0; i < arr.length; ++i) {
+                var strWei = arr[i].toString();
+                var wei = (strWei.split("-")[0]).replace("位",'');
+                var num = strWei.split("-")[1];
+                console.log(num + "--" + wei);
+                var obj = $("[data-name='" + wei + "'] var.numLine span").eq(num);
+                $(obj).addClass("acti");
+            }
+
+            $("#inputBeishu").val(beishu);
+            $("#inputBeishu").data("beishu",beishu);
+            $("#inputMoney").data("inputMoney",tmpXyxhMoney);
+
+            renderZhushu();
+        }
+
     });
 </script>

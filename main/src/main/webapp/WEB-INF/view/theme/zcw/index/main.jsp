@@ -243,14 +243,14 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <button class="add left" onclick="xyxhAdd(1, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
 
-                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
+                            <button class="min left" onclick="xyxhMinute(1, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span id="xyxhMoney_1" class="xyxhMoney_1 color_red"><i>5</i></span>元
+                            倍，共 <span id="xyxhMoney_1" class="xyxhMoney_1 color_red">2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0)" class="shuaxin" onclick="xyxh(this,1)">
@@ -291,13 +291,14 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left"onclick="xyxhAdd(1, 20)">+</button>
+                            <button class="add left" onclick="xyxhAdd(20, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_20" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
-                            <button class="min left"  onclick="xyxhMinute(1, 5)">-</button>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
+
+                            <button class="min left" onclick="xyxhMinute(20, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span id="xyxhMoney_20" class="color_red">2 </span>元
+                            倍，共 <span id="xyxhMoney_20" class="color_red">2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,20)">
@@ -394,14 +395,14 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <button class="add left" onclick="xyxhAdd(6, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_6" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
 
-                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
+                            <button class="min left" onclick="xyxhMinute(6, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span class="color_red" >2</span>元
+                            倍，共 <span id="xyxhMoney_6" class="color_red" >2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,6)">
@@ -442,14 +443,14 @@
                     </div>
                     <div class="clearfix touzhu4">
                         <div class="clearfix sum left">
-                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <button class="add left" onclick="xyxhAdd(4, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_4" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
 
-                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
+                            <button class="min left" onclick="xyxhMinute(4, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span id="xyxhMoney_4" class="color_red">2 </span>元
+                            倍，共 <span id="xyxhMoney_4" class="color_red">2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,4)">
@@ -703,70 +704,12 @@
         xyxh(null, 6);
         xyxh(null, 20);
     });
-    var content_G = '';
-    /*function getWebPopUpNotice() {
-        ajaxRequest({
-            url: "<%=basePath%>member/ajaxSscZJNoticeResult.json",
-            beforeSend: function () {
-            },
-            success: function (json) {
-                if (json.result != 1) {
-                    alert(json.result);
-                    return;
-                }
 
-                <c:forEach items="${SscZJNoticeResult.noticeList}" var="item" varStatus="status">
-
-                </c:forEach>
-
-                var str = '';
-                var str2 = ''
-                if (json.noticeList.length != 0) {
-                    $.each(json.webNoticeList, function (index, value) {
-                        var len = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").length;
-                        if (len > 13) {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").substr(0, 13) + "...";
-                        } else {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "");
-                        }
-
-                        str += '<p onclick="showGonggao(' + index + ')" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;height:25px;margin:0;">' + value.title + "&nbsp;:&nbsp;" + content_G + '</p></br>';
-                alert(value.userName);
-                        alert(value.amount);
-                        str2 += '<div class="alert hide" id="gonggao_' + index + '">';
-                        str2 += '<div class="alert_col">';
-                        str2 += '<ul><li class="clearfix"><a href="#" class="left zhongjiang_li1">'+value.type+
-                        '</a><span class="left zhongjiang_name">'+value.userName+'</span><span class="left zhongjiang_jine">'+ value.amount元+'</span></li></ul>'
-                    });
-                } else {
-                    str = '暂无公告';
-                }
-                $("#gonggao_marquee").html(str);
-                $("#gonggao_marquee p").css({margin: "-10px auto"});
-                $("#gonggao_container").html(str2);
-
-                $('#gonggao_marquee').liMarquee({
-                    direction: 'up',
-                    scrollamount: 10
-                });
-                $('.alert_col h5 i').click(function () {
-                    $('.alert').hide();
-                });
-            }
-        });
-    }
-    function showGonggao(id) {
-        $("#gonggao_" + id).show();
-    }*/
 
     function touzhutishi() {
         alert("游戏暂未上线，敬请期待！");
     }
 
-    <%--var popupNotice = <%=JSONUtils.toJSONStr(((WebNoticeResult)request.getAttribute("webPopUpNoticeResult")).getWebNoticeList())%>;--%>
-    <%--function openPopUpNotice() {--%>
-    <%--showPopUp(popupNotice);--%>
-    <%--}--%>
 
     function goZst(url) {
         showLoading();
@@ -1032,7 +975,7 @@
                 numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。
             }
             nums = numsArr.join(",");
-            money = $("#xyxhMoney_6").val();
+            money = $("#xyxhMoney_6").html();
         } else if (type == 1) {
             caizhong = 'cqssc';
             navIndex = 0;
@@ -1045,7 +988,8 @@
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhMoney_1").val();
+            money = $("#xyxhMoney_1").html();
+
         } else if (type == 20) {
             caizhong = 'ahk3';
             navIndex = 0;
@@ -1193,7 +1137,7 @@
             num++;
         }
         $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html('<i>' + mul(num, size) + '</i>');
+        $("#xyxhMoney_" + id).html(mul(num, size));
     }
     function checkValue(id, size) {
         var num = $("#xyxhInput_" + id).val();
@@ -1201,7 +1145,7 @@
             num = 1;
             $("#xyxhInput_" + id).val(num);
         }
-        $("#xyxhMoney_" + id).html('<i>' + mul(num, size) + '</i>');
+        $("#xyxhMoney_" + id).html(mul(num, size));
     }
     function xyxhMinute(id, size) {
         var num = $("#xyxhInput_" + id).val();
@@ -1211,7 +1155,7 @@
             num--;
         }
         $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html('<i>' + mul(num, size) + '</i>');
+        $("#xyxhMoney_" + id).html(mul(num, size));
     }
 
 
