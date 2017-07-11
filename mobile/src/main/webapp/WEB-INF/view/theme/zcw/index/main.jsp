@@ -43,16 +43,8 @@
             <div class="row cl-scroll swiper-container swiper-container-horizontal re-vipvp-head">
                 <div class="swiper-wrapper">
                     <c:forEach items="${carouseList.carouselList}" var="item">
-                        <c:choose>
-                            <c:when test="${empty item.url}">
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
+                        <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
                                                                       alt="${item.title}"></div>
-                            </c:when>
-                            <c:otherwise>
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
-                                                                      alt="${item.title}"></div>
-                            </c:otherwise>
-                        </c:choose>
                     </c:forEach>
                 </div>
                 <div class="swiper-pagination repagination"></div>
