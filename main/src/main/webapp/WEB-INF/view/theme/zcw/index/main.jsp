@@ -272,7 +272,7 @@
                             <a href="#">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 retouzhu2 clearfix">
+                    <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_20">
                         <div class="kai_qiu_main left">
 		    	    				<span class="s0">
 
@@ -301,7 +301,6 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                           <%-- <a onclick="xyxhAdd(1, 5)" class="fr left" href="javascript:void(0)">+</a>--%>
                             <button class="add left"onclick="xyxhAdd(1, 20)">+</button>
                             <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
                                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
@@ -311,7 +310,7 @@
                             倍，共 <span   id="xyxhMoney_3" class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:void(0);" class="xyxh(this,3)">
+                            <a href="javascript:void(0);" onclick="xyxh(this,20)">
                                 换一注
                             </a>
                             <a href="javascript:void(0)" onclick="openXyxh(20)" class="btn_red touzhubtn">
@@ -330,7 +329,7 @@
                             <a href="#">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 clearfix" style="padding-top: 5px;height: 65px;">
+                    <div class="touzhu2 clearfix" style="padding-top: 5px;height: 65px;" id="xyxhContents_6">
                         <div class="kai_qiu_main left">
 		    	    				<span class="qiu">
 		    	    					12
@@ -413,10 +412,10 @@
                             倍，共 <span class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:javascript:void(0);" class="shuaxin">
+                            <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,6)">
                                 换一注
                             </a>
-                            <a href="#" class="btn_red touzhubtn">
+                            <a href="javascript:void(0);" onclick="openXyxh(6)" class="btn_red touzhubtn">
                                 立即投注
                             </a>
                         </div>
@@ -432,7 +431,7 @@
                             <a href="#">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 retouzhu2 clearfix">
+                    <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_4">
                         <div class="kai_qiu_main left">
 		    	    				<span class="s0">
 
@@ -469,10 +468,10 @@
                             倍，共 <span class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:javascript:void(0);" class="shuaxin">
+                            <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,4)">
                                 换一注
                             </a>
-                            <a href="javascript:void(0);" class="btn_red touzhubtn">
+                            <a href="javascript:void(0);" onclick="openXyxh(4)" class="btn_red touzhubtn">
                                 立即投注
                             </a>
                         </div>
@@ -1283,6 +1282,7 @@
                 $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
             }, 2000);
         } else if (type == 1) {
+
             $("#xyxhContents_1 span").each(function () {
                 $(this).data("num", '');
             });
@@ -1315,7 +1315,7 @@
                 $("#xyxhContents_1 span").eq(3).data("num", "shi-" + num4).html(num4);
                 $("#xyxhContents_1 span").eq(4).data("num", "ge-" + num5).html(num5);
             }, 2000);
-        } else if (type == 2) {
+        } else if (type == 20) {
             $("#xyxhContent_2 span").each(function () {
                 $(this).data("num", '');
             });
