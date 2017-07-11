@@ -248,7 +248,7 @@
                             <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span   id="xyxhMoney_1" class="xyxhMoney_1 color_red"><i>5</i></span>元
+                            倍，共 <span id="xyxhMoney_1" class="xyxhMoney_1 color_red"><i>5</i></span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0)" class="shuaxin" onclick="xyxh(this,1)">
@@ -270,17 +270,7 @@
                             <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_20">
-                        <div class="kai_qiu_main left">
-		    	    				<span class="s0">
-
-		    	    				</span>
-                        </div>
-                        <div class="kai_qiu_main left">
-		    	    				<span class="s0">
-
-		    	    				</span>
-                        </div>
+                    <div class="touzhu2 retouzhu3 clearfix" id="xyxhContents_20">
                         <div class="kai_qiu_main left">
 		    	    				<span class="s0">
 
@@ -305,7 +295,7 @@
                             <button class="min left"  onclick="xyxhMinute(1, 5)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span   id="xyxhMoney_3" class="color_red">2 </span>元
+                            倍，共 <span id="xyxhMoney_20" class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,20)">
@@ -402,12 +392,14 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left">+</button>
-                            <input class="text_box left" name="" value="1" type="text">
-                            <button class="min left">-</button>
+                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <input class="text_box left" id="xyxhInput_6" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+
+                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span class="color_red">2 </span>元
+                            倍，共 <span class="color_red" >2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,6)">
@@ -429,17 +421,7 @@
                             <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_4">
-                        <div class="kai_qiu_main left">
-		    	    				<span class="s0">
-
-		    	    				</span>
-                        </div>
-                        <div class="kai_qiu_main left">
-		    	    				<span class="s0">
-
-		    	    				</span>
-                        </div>
+                    <div class="touzhu2 retouzhu3 clearfix" id="xyxhContents_4">
                         <div class="kai_qiu_main left">
 		    	    				<span class="s0">
 
@@ -456,14 +438,16 @@
 		    	    				</span>
                         </div>
                     </div>
-                    <div class="clearfix touzhu3">
+                    <div class="clearfix touzhu4">
                         <div class="clearfix sum left">
-                            <button class="add left">+</button>
-                            <input class="text_box left" name="" value="1" type="text">
-                            <button class="min left">-</button>
+                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <input class="text_box left" id="xyxhInput_4" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+
+                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span class="color_red">2 </span>元
+                            倍，共 <span id="xyxhMoney_4" class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,4)">
@@ -961,14 +945,14 @@
             navIndex = 0;
             numsArr = [];
             for (var i = 0; i < 7; ++i) {
-                var v = $("#xyxhContent_6 span").eq(i).data("num");
+                var v = $("#xyxhContents_6 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
                 numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。
             }
             nums = numsArr.join(",");
-            money = $("#xyxhInput_6").val();
+            money = $("#xyxhMoney_6").val();
         } else if (type == 1) {
             caizhong = 'cqssc';
             navIndex = 0;
@@ -981,46 +965,33 @@
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhInput_1").val();
-        } else if (type == 2) {
-            caizhong = 'tjssc';
+            money = $("#xyxhMoney_1").val();
+        } else if (type == 20) {
+            caizhong = 'ahk3';
             navIndex = 0;
             var numsArr = [];
-            for (var i = 0; i < 5; ++i) {
-                var v = $("#xyxhContent_2 span").eq(i).data("num");
+            for (var i = 0; i < 3; ++i) {
+                var v = $("#xyxhContent_20 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhInput_2").val();
-        } else if (type == 3) {
-            caizhong = 'xjssc';
+            money = $("#xyxhMoney_20").val();
+        } else if (type == 4) {
+            caizhong = 'pl3';
             navIndex = 0;
             var numsArr = [];
-            for (var i = 0; i < 5; ++i) {
-                var v = $("#xyxhContent_3 span").eq(i).data("num");
+            for (var i = 0; i < 3; ++i) {
+                var v = $("#xyxhContent_4 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhInput_3").val();
-        } else if (type == 9) {
-            caizhong = 'pk10';
-            navIndex = 1;
-            var numsArr = [];
-            for (var i = 0; i < 10; ++i) {
-                var v = $("#xyxhContent_9 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-            money = $("#xyxhInput_9").val();
+            money = $("#xyxhMoney_4").val();
         }
 
         if (numsArr.length == 0) {
@@ -1329,66 +1300,51 @@
                 $(this).data("num", '');
             });
 
-            index_2 = setInterval(function () {
+            index_20 = setInterval(function () {
                 var num1 = Math.floor(Math.random() * 10);
                 var num2 = Math.floor(Math.random() * 10);
                 var num3 = Math.floor(Math.random() * 10);
-                var num4 = Math.floor(Math.random() * 10);
-                var num5 = Math.floor(Math.random() * 10);
 
                 $("#xyxhContents_20 span").eq(0).html(num1);
                 $("#xyxhContents_20 span").eq(1).html(num2);
                 $("#xyxhContents_20 span").eq(2).html(num3);
-                $("#xyxhContents_20 span").eq(3).html(num4);
-                $("#xyxhContents_20 span").eq(4).html(num5);
             }, 50);
 
             setTimeout(function () {
                 var num1 = Math.floor(Math.random() * 10);
                 var num2 = Math.floor(Math.random() * 10);
                 var num3 = Math.floor(Math.random() * 10);
-                var num4 = Math.floor(Math.random() * 10);
-                var num5 = Math.floor(Math.random() * 10);
 
-                clearInterval(index_2);
+                clearInterval(index_20);
                 $("#xyxhContents_20 span").eq(0).data("num", "wan-" + num1).html(num1);
                 $("#xyxhContents_20 span").eq(1).data("num", "qian-" + num2).html(num2);
                 $("#xyxhContents_20 span").eq(2).data("num", "bai-" + num3).html(num3);
-                $("#xyxhContents_20 span").eq(3).data("num", "shi-" + num4).html(num4);
-                $("#xyxhContents_20 span").eq(4).data("num", "ge-" + num5).html(num5);
+
             }, 2000);
         } else if (type == 4) {
             $("#xyxhContents_4 span").each(function () {
                 $(this).data("num", '');
             });
 
-            index_3 = setInterval(function () {
+            index_4 = setInterval(function () {
                 var num1 = Math.floor(Math.random() * 10);
                 var num2 = Math.floor(Math.random() * 10);
                 var num3 = Math.floor(Math.random() * 10);
-                var num4 = Math.floor(Math.random() * 10);
-                var num5 = Math.floor(Math.random() * 10);
 
                 $("#xyxhContents_4 span").eq(0).html(num1);
                 $("#xyxhContents_4 span").eq(1).html(num2);
                 $("#xyxhContents_4 span").eq(2).html(num3);
-                $("#xyxhContents_4 span").eq(3).html(num4);
-                $("#xyxhContents_4 span").eq(4).html(num5);
             }, 50);
 
             setTimeout(function () {
                 var num1 = Math.floor(Math.random() * 10);
                 var num2 = Math.floor(Math.random() * 10);
                 var num3 = Math.floor(Math.random() * 10);
-                var num4 = Math.floor(Math.random() * 10);
-                var num5 = Math.floor(Math.random() * 10);
 
-                clearInterval(index_3);
+                clearInterval(index_4);
                 $("#xyxhContents_4 span").eq(0).data("num", "wan-" + num1).html(num1);
                 $("#xyxhContents_4 span").eq(1).data("num", "qian-" + num2).html(num2);
                 $("#xyxhContents_4 span").eq(2).data("num", "bai-" + num3).html(num3);
-                $("#xyxhContents_4 span").eq(3).data("num", "shi-" + num4).html(num4);
-                $("#xyxhContents_4 span").eq(4).data("num", "ge-" + num5).html(num5);
             }, 2000);
         }
     }
