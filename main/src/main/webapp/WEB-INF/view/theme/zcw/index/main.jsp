@@ -27,11 +27,7 @@
                         </c:when>
                     </c:choose>
                 </c:forEach>
-
-
-
             </ul>
-
         </div>
 
         <script type="text/javascript">
@@ -632,18 +628,18 @@
             </div>
             <div class="zhongjiang_ul">
                 <marquee direction="up" behavior="scroll" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
-                <ul>
-                    <c:forEach items="${Notices.noticeList}" var="noticelists">
-                        <li class="clearfix">
-                            <a href="#" class="left zhongjiang_li1">
-                                ${noticelists.type}
-                            </a>
-                            <span class="left zhongjiang_name">${noticelists.userName}</span>
-                            <span class="left zhongjiang_jine">
+                    <ul>
+                        <c:forEach items="${Notices.noticeList}" var="noticelists">
+                            <li class="clearfix">
+                                <a href="#" class="left zhongjiang_li1">
+                                        ${noticelists.type}
+                                </a>
+                                <span class="left zhongjiang_name">${noticelists.userName}</span>
+                                <span class="left zhongjiang_jine">
 		        				${noticelists.amount}元
 		        			</span>
-                        </li>
-                    </c:forEach>
+                            </li>
+                        </c:forEach>
                     </ul>
                 </marquee>
             </div>
@@ -657,15 +653,14 @@
 
 <div id="gonggao_container"></div>
 <script>
-
     $(function () {
         getWebPopUpNotice();
+
         xyxh(null, 6);
         xyxh(null, 1);
         xyxh(null, 9);
         xyxh(null, 2);
         xyxh(null, 3);
-
     });
 
     function showGonggao(id) {
@@ -680,22 +675,6 @@
     <%--function openPopUpNotice() {--%>
     <%--showPopUp(popupNotice);--%>
     <%--}--%>
-    function autoScroll(obj){
-
-        var n=$(obj).find("ul").find("li")height();
-        $(obj).find("ul").animate({
-            marginTop:-n
-        },500,function(){
-            $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
-        })
-
-        $(function(){
-
-            setInterval('autoScroll(".zhongjiang_ul")',3000)
-
-        })
-
-    }
 
     function goZst(url) {
         showLoading();
@@ -1457,7 +1436,6 @@
             }, 2000);
         }
     }
-
 
 </script>
 <c:import url="../common/popupDiv.jsp"/>
