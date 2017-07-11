@@ -433,8 +433,11 @@ public class MemberController extends BaseController {
             return this.renderPublicView("member/noaccess", modelMap);
         }
 
+        CommonResult result = ApiUtils.getNeedWithDrawPasswd(companyShortName);
+
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token, companyShortName));
+        modelMap.put("withdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName));
 
         return this.renderPublicView("member/withdraw", modelMap);
     }
@@ -655,6 +658,12 @@ public class MemberController extends BaseController {
         if (null == id) {
             result.setResult(-2);
             result.setDescription("请选择银行卡！");
+            return this.renderJson(result);
+        }
+
+        if (null == drawPassword){
+            result.setResult(-3);
+            result.setDescription("请输入密码！");
             return this.renderJson(result);
         }
 

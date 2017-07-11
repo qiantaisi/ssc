@@ -36,6 +36,7 @@
 <script src="${commonResPath}layer/mobile/layer.js?v=2017"></script>
 <script src="${commonResPath}js/dateFormat.js?v=2017"></script>
 <script src="${commonResPath}js/global.js?v=201702280310"></script>
+<script src="${commonResPath}js/public.js?v=2"></script>
 <script>
     config.basePath = '<%=basePath%>';
 </script>
