@@ -1066,7 +1066,17 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.sigout(uid, token,companyShortName));
     }
-
+    /**
+     * ajax获取公告
+     *
+     * @return
+     */
+    @RequestMapping(value = "/ajaxSscZJNoticeResult.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public SscZJNoticeResult ajaxSscZJNoticeResult() throws Exception {
+        String companyShortName = this.getCompanyShortName();
+        return ApiUtils.getNotices(companyShortName);
+    }
 
     /**
      * ajax获取弹窗公告

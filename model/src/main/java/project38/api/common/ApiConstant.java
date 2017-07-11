@@ -62,7 +62,7 @@ public class ApiConstant {
     public static String API_SIGOUT = API_DOMAIN+"member/sigout.json";//退出
     public static String API_GET_BET_DETAILS = API_DOMAIN+"ssc/getBetDetails.json";//获取投注列表
     public static String API_GET_CAROUSEL_LIST = API_DOMAIN+"carousel/getCarouselList.json";//获取投注列表
-    public static String API_GET_POPUP_NOTICE_LIST= API_DOMAIN+"notice/getPopupNoticeList.json";//获取公告列表
+    public static String API_GET_POPUP_NOTICE_LIST= API_DOMAIN+"notice/getPopupNoticeList.json";//获取公告列表1
     public static String API_GET_POPUP_NOTICE= API_DOMAIN+"notice/getPopupNotice.json";//获取公告列表
     public static String API_GET_SCROLL_NOTICE_LIST= API_DOMAIN+"notice/getScrollNoticeList.json";//获取公告列表
     public static String API_GET_WEB_INFO= API_DOMAIN+"webSetting/getWebInfo.json";//获取网站信息
