@@ -604,6 +604,7 @@
                 <div class="ndex_main_rt1_2b_main">
                     <div class="index_main_rt1_2b active">
                         <div id="wrap">
+                            <marquee direction="up" behavior="scroll" stoptime="2000" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                             <ul class="index_notice_ul" id="box1">
                                 <li>
                                     <a href="#">工行入款账号停用</a>
@@ -614,7 +615,7 @@
                                 <li>
                                     <a href="#">工行入款账号停用</a>
                                 </li>
-                            </ul>
+                            </ul></marquee>
                             <ul id="box2"></ul>
                         </div>
                     </div>
@@ -631,9 +632,10 @@
                 </div>
             </div>
             <div class="zhongjiang_ul">
-                <marquee direction="up" behavior="scroll" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                 <ul>
-                    <c:forEach items="${Notices.noticeList}" var="noticelists">
+                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="3" onstart="this.firstChild.innerHTML+=his.firstChild.innerHTML;"onmouseover="this.stop();" onmouseout="this.start();" width="500" height="400">
+                        <c:forEach items="${Notices.noticeList}" var="noticelists">
+                            <div  id="scrollobj" style="white-space:nowrap;overflow:hidden;width:500px;" onmouseover="aa()" onmouseout="b()">
                         <li class="clearfix">
                             <a href="#" class="left zhongjiang_li1">
                                 ${noticelists.type}
@@ -643,10 +645,14 @@
 		        				${noticelists.amount}元
 		        			</span>
                         </li>
-                    </c:forEach>
+                            </div>
+                        </c:forEach>
+                    </marquee>
                     </ul>
-                </marquee>
+
             </div>
+
+
         </div>
     </div>
 </div>
@@ -1456,6 +1462,20 @@
                 $("#xyxhContent_9 span").eq(9).attr("class", 'fang bg-' + num10).data('num', 'q10-' + num10).html(num10);
             }, 2000);
         }
+    }
+    function scroll(obj) {
+        var tmp = (obj.scrollLeft)++;
+//当滚动条到达右边顶端时
+        if (obj.scrollLeft==tmp) obj.innerHTML += obj.innerHTML;
+//当滚动条滚动了初始内容的宽度时滚动条回到最左端
+        if (obj.scrollLeft>=obj.firstChild.offsetWidth) obj.scrollLeft=0;
+    }
+    var a =	setInterval("scroll(document.getElementById('scrollobj'))",20);
+    function aa(){
+        clearInterval(a);
+    }
+    function b(){
+        a=setInterval("scroll(document.getElementById('scrollobj'))",10);
     }
 
 
