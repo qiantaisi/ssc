@@ -57,17 +57,7 @@ $(function () {
     });
 
     function back() {
-        // history.back();
-        window.history.back = function () {
-            return;
-        }
-
-        if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
-                window.location.href = window.document.referrer;
-        } else {
-            window.history.go(-1);
-        }
-        // history.go(-1);
+        PUBLIC_JS.back();
     }
 
     // 修复表单不focus问题
