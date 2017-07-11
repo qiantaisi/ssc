@@ -241,8 +241,6 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <%--<a onclick="xyxhAdd(1, 5)" class="fr left" href="javascript:void(0)">+</a>--%>
-
                             <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
                             <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
                                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
@@ -253,7 +251,7 @@
                             倍，共 <span   id="xyxhMoney_1" class="xyxhMoney_1 color_red"><i>5</i></span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:void(0)" onclick="xyxh(this,1)">
+                            <a href="javascript:void(0)" class="shuaxin" onclick="xyxh(this,1)">
                                 换一注
                             </a>
                             <a href="javascript:void(0)" class="a1 btn_red touzhubtn" onclick="openXyxh(1)">
@@ -268,8 +266,8 @@
                             第20170626083期截止：<span class="time time2"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
-                            <a href="#">手动选号</a>
-                            <a href="#">走势图</a>
+                            <a href="javascript:void(0);" onclick="openGcdt('gcdt/ahk3')">手动选号</a>
+                            <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">走势图</a>
                         </div>
                     </div>
                     <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_20">
@@ -310,7 +308,7 @@
                             倍，共 <span   id="xyxhMoney_3" class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:void(0);" onclick="xyxh(this,20)">
+                            <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,20)">
                                 换一注
                             </a>
                             <a href="javascript:void(0)" onclick="openXyxh(20)" class="btn_red touzhubtn">
@@ -325,22 +323,22 @@
                             第20170626083期截止：<span class="time time3"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
-                            <a href="#">手动选号</a>
-                            <a href="#">走势图</a>
+                            <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">手动选号</a>
+                            <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">走势图</a>
                         </div>
                     </div>
                     <div class="touzhu2 clearfix" style="padding-top: 5px;height: 65px;" id="xyxhContents_6">
-                        <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					12
-		    	    				</span>
+                        <div class="left">
+		    	    		<span class="qiu">
+		    	    			12
+		    	    		</span>
                             <p class="biaoqian">
-		    	    					<span>
-		    	    						鸡
-		    	    					</span>
+		    	    			<span>
+		    	    				鸡
+		    	    			</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					10
 		    	    				</span>
@@ -350,7 +348,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					34
 		    	    				</span>
@@ -360,7 +358,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					11
 		    	    				</span>
@@ -370,7 +368,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					19
 		    	    				</span>
@@ -380,7 +378,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					25
 		    	    				</span>
@@ -390,7 +388,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					41
 		    	    				</span>
@@ -427,8 +425,8 @@
                             第20170626083期截止：<span class="time time4"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
-                            <a href="#">手动选号</a>
-                            <a href="#">走势图</a>
+                            <a href="javascript:void(0);" onclick="openGcdt('gcdt/lhc')">手动选号</a>
+                            <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">走势图</a>
                         </div>
                     </div>
                     <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_4">
@@ -629,22 +627,22 @@
 
             <div class="zhongjiang_ul">
 
-                <ul>
-                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
-                        <c:forEach items="${Notices.noticeList}" var="noticelists">
-                        <li class="clearfix">
-                            <a href="#" class="left zhongjiang_li1">
-                                ${noticelists.type}
-                            </a>
-                            <span class="left zhongjiang_name">${noticelists.userName}</span>
-                            <span class="left zhongjiang_jine">
-		        				${noticelists.amount}元
-		        			</span>
-                        </li>
-                        </c:forEach>
-                    </marquee>
+                <%--<ul>--%>
+                    <%--<marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">--%>
+                        <%--<c:forEach items="${Notices.noticeList}" var="noticelists">--%>
+                        <%--<li class="clearfix">--%>
+                            <%--<a href="#" class="left zhongjiang_li1">--%>
+                                <%--${noticelists.type}--%>
+                            <%--</a>--%>
+                            <%--<span class="left zhongjiang_name">${noticelists.userName}</span>--%>
+                            <%--<span class="left zhongjiang_jine">--%>
+		        				<%--${noticelists.amount}元--%>
+		        			<%--</span>--%>
+                        <%--</li>--%>
+                        <%--</c:forEach>--%>
+                    <%--</marquee>--%>
 
-                </ul>
+                <%--</ul>--%>
 
             </div>
 
@@ -663,11 +661,10 @@
     $(function () {
         getWebPopUpNotice();
 
-        xyxh(null, 6);
         xyxh(null, 1);
-        xyxh(null, 9);
-        xyxh(null, 2);
-        xyxh(null, 3);
+        xyxh(null, 4);
+        xyxh(null, 6);
+        xyxh(null, 20);
     });
 
     function showGonggao(id) {
@@ -1146,7 +1143,7 @@
             num++;
         }
         $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html('共：<i>' + mul(num, size) + '</i> 元');
+        $("#xyxhMoney_" + id).html('<i>' + mul(num, size) + '</i>');
     }
     function checkValue(id, size) {
         var num = $("#xyxhInput_" + id).val();
@@ -1154,7 +1151,7 @@
             num = 1;
             $("#xyxhInput_" + id).val(num);
         }
-        $("#xyxhMoney_" + id).html('共：<i>' + mul(num, size) + '</i> 元');
+        $("#xyxhMoney_" + id).html('<i>' + mul(num, size) + '</i>');
     }
     function xyxhMinute(id, size) {
         var num = $("#xyxhInput_" + id).val();
@@ -1164,7 +1161,7 @@
             num--;
         }
         $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html('共：<i>' + mul(num, size) + '</i> 元');
+        $("#xyxhMoney_" + id).html('<i>' + mul(num, size) + '</i>');
     }
 
 
@@ -1173,13 +1170,12 @@
             return;
         }
 
-        var index_6 = null;
         var index_1 = null;
-        var index_2 = null;
-        var index_3 = null;
-        var index_9 = null;
+        var index_6 = null;
+        var index_20 = null;
+        var index_4 = null;
         if (type == 6) {
-            $("#xyxhContent_6 span").each(function () {
+            $("#xyxhContents_6 .qiu").each(function () {
                 $(this).data("num", '');
             });
 
@@ -1200,32 +1196,37 @@
                 var bose6 = getBose(num6);
                 var bose7 = getBose(num7);
 
-                bose1 = bose1 == 0 ? 's0' : (bose1 == 1 ? 's1' : 's2');
-                bose2 = bose2 == 0 ? 's0' : (bose2 == 1 ? 's1' : 's2');
-                bose3 = bose3 == 0 ? 's0' : (bose3 == 1 ? 's1' : 's2');
-                bose4 = bose4 == 0 ? 's0' : (bose4 == 1 ? 's1' : 's2');
-                bose5 = bose5 == 0 ? 's0' : (bose5 == 1 ? 's1' : 's2');
-                bose6 = bose6 == 0 ? 's0' : (bose6 == 1 ? 's1' : 's2');
-                bose7 = bose7 == 0 ? 's0' : (bose7 == 1 ? 's1' : 's2');
+                bose1 = bose1 == 0 ? 'qiu redBg' : (bose1 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose2 = bose2 == 0 ? 'qiu redBg' : (bose2 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose3 = bose3 == 0 ? 'qiu redBg' : (bose3 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose4 = bose4 == 0 ? 'qiu redBg' : (bose4 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose5 = bose5 == 0 ? 'qiu redBg' : (bose5 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose6 = bose6 == 0 ? 'qiu redBg' : (bose6 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
-                $("#xyxhContent_6 span").eq(0).attr("class", bose1).html(num1);
-                $("#xyxhContent_6 span").eq(1).attr("class", bose2).html(num2);
-                $("#xyxhContent_6 span").eq(2).attr("class", bose3).html(num3);
-                $("#xyxhContent_6 span").eq(3).attr("class", bose4).html(num4);
-                $("#xyxhContent_6 span").eq(4).attr("class", bose5).html(num5);
-                $("#xyxhContent_6 span").eq(5).attr("class", bose6).html(num6);
-                $("#xyxhContent_6 span").eq(6).attr("class", bose7).html(num7);
+                $("#xyxhContents_6 .qiu").eq(0).attr("class", bose1).html(num1);
+                $("#xyxhContents_6 .qiu").eq(1).attr("class", bose2).html(num2);
+                $("#xyxhContents_6 .qiu").eq(2).attr("class", bose3).html(num3);
+                $("#xyxhContents_6 .qiu").eq(3).attr("class", bose4).html(num4);
+                $("#xyxhContents_6 .qiu").eq(4).attr("class", bose5).html(num5);
+                $("#xyxhContents_6 .qiu").eq(5).attr("class", bose6).html(num6);
+                $("#xyxhContents_6 .qiu").eq(6).attr("class", bose7).html(num7);
 
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(1).html(getSxName(num2));
-                $("#xyxhContent_6 var em").eq(2).html(getSxName(num3));
-                $("#xyxhContent_6 var em").eq(3).html(getSxName(num4));
-                $("#xyxhContent_6 var em").eq(4).html(getSxName(num5));
-                $("#xyxhContent_6 var em").eq(5).html(getSxName(num6));
-                $("#xyxhContent_6 var em").eq(6).html(getSxName(num7));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .qiu").eq(0).html(num1);
+                $("#xyxhContents_6 .qiu").eq(1).html(num2);
+                $("#xyxhContents_6 .qiu").eq(2).html(num3);
+                $("#xyxhContents_6 .qiu").eq(3).html(num4);
+                $("#xyxhContents_6 .qiu").eq(4).html(num5);
+                $("#xyxhContents_6 .qiu").eq(5).html(num6);
+                $("#xyxhContents_6 .qiu").eq(6).html(num7);
+
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
+                $("#xyxhContents_6 .biaoqian span").eq(2).html(getSxName(num3));
+                $("#xyxhContents_6 .biaoqian span").eq(3).html(getSxName(num4));
+                $("#xyxhContents_6 .biaoqian span").eq(4).html(getSxName(num5));
+                $("#xyxhContents_6 .biaoqian span").eq(5).html(getSxName(num6));
+                $("#xyxhContents_6 .biaoqian span").eq(6).html(getSxName(num7));
             }, 50);
 
             setTimeout(function () {
@@ -1261,33 +1262,33 @@
                 var bose6 = getBose(num6);
                 var bose7 = getBose(num7);
 
-                bose1 = bose1 == 0 ? 's0' : (bose1 == 1 ? 's1' : 's2');
-                bose2 = bose2 == 0 ? 's0' : (bose2 == 1 ? 's1' : 's2');
-                bose3 = bose3 == 0 ? 's0' : (bose3 == 1 ? 's1' : 's2');
-                bose4 = bose4 == 0 ? 's0' : (bose4 == 1 ? 's1' : 's2');
-                bose5 = bose5 == 0 ? 's0' : (bose5 == 1 ? 's1' : 's2');
-                bose6 = bose6 == 0 ? 's0' : (bose6 == 1 ? 's1' : 's2');
-                bose7 = bose7 == 0 ? 's0' : (bose7 == 1 ? 's1' : 's2');
+                bose1 = bose1 == 0 ? 'qiu redBg' : (bose1 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose2 = bose2 == 0 ? 'qiu redBg' : (bose2 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose3 = bose3 == 0 ? 'qiu redBg' : (bose3 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose4 = bose4 == 0 ? 'qiu redBg' : (bose4 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose5 = bose5 == 0 ? 'qiu redBg' : (bose5 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose6 = bose6 == 0 ? 'qiu redBg' : (bose6 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
                 clearInterval(index_6);
-                $("#xyxhContent_6 span").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
-                $("#xyxhContent_6 span").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
-                $("#xyxhContent_6 span").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
-                $("#xyxhContent_6 span").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
-                $("#xyxhContent_6 span").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
-                $("#xyxhContent_6 span").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
-                $("#xyxhContent_6 span").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
+                $("#xyxhContents_6 .qiu").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
+                $("#xyxhContents_6 .qiu").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
+                $("#xyxhContents_6 .qiu").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
+                $("#xyxhContents_6 .qiu").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
+                $("#xyxhContents_6 .qiu").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
+                $("#xyxhContents_6 .qiu").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
+                $("#xyxhContents_6 .qiu").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
 
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(1).html(getSxName(num2));
-                $("#xyxhContent_6 var em").eq(2).html(getSxName(num3));
-                $("#xyxhContent_6 var em").eq(3).html(getSxName(num4));
-                $("#xyxhContent_6 var em").eq(4).html(getSxName(num5));
-                $("#xyxhContent_6 var em").eq(5).html(getSxName(num6));
-                $("#xyxhContent_6 var em").eq(6).html(getSxName(num7));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
+                $("#xyxhContents_6 .biaoqian span").eq(2).html(getSxName(num3));
+                $("#xyxhContents_6 .biaoqian span").eq(3).html(getSxName(num4));
+                $("#xyxhContents_6 .biaoqian span").eq(4).html(getSxName(num5));
+                $("#xyxhContents_6 .biaoqian span").eq(5).html(getSxName(num6));
+                $("#xyxhContents_6 .biaoqian span").eq(6).html(getSxName(num7));
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
             }, 2000);
         } else if (type == 1) {
 
@@ -1357,7 +1358,7 @@
                 $("#xyxhContents_20 span").eq(4).data("num", "ge-" + num5).html(num5);
             }, 2000);
         } else if (type == 4) {
-            $("#xyxhContent_4 span").each(function () {
+            $("#xyxhContents_4 span").each(function () {
                 $(this).data("num", '');
             });
 
@@ -1368,11 +1369,11 @@
                 var num4 = Math.floor(Math.random() * 10);
                 var num5 = Math.floor(Math.random() * 10);
 
-                $("#xyxhContent_4 span").eq(0).html(num1);
-                $("#xyxhContent_4 span").eq(1).html(num2);
-                $("#xyxhContent_4 span").eq(2).html(num3);
-                $("#xyxhContent_4 span").eq(3).html(num4);
-                $("#xyxhContent_4 span").eq(4).html(num5);
+                $("#xyxhContents_4 span").eq(0).html(num1);
+                $("#xyxhContents_4 span").eq(1).html(num2);
+                $("#xyxhContents_4 span").eq(2).html(num3);
+                $("#xyxhContents_4 span").eq(3).html(num4);
+                $("#xyxhContents_4 span").eq(4).html(num5);
             }, 50);
 
             setTimeout(function () {
@@ -1383,64 +1384,11 @@
                 var num5 = Math.floor(Math.random() * 10);
 
                 clearInterval(index_3);
-                $("#xyxhContent_4 span").eq(0).data("num", "wan-" + num1).html(num1);
-                $("#xyxhContent_4 span").eq(1).data("num", "qian-" + num2).html(num2);
-                $("#xyxhContent_4 span").eq(2).data("num", "bai-" + num3).html(num3);
-                $("#xyxhContent_4 span").eq(3).data("num", "shi-" + num4).html(num4);
-                $("#xyxhContent_4 span").eq(4).data("num", "ge-" + num5).html(num5);
-            }, 2000);
-        } else if (type == 9) {
-            $("#xyxhContent_9 span").each(function () {
-                $(this).data("num", '');
-            });
-
-            index_9 = setInterval(function () {
-                var num1 = Math.floor(Math.random() * 10 + 1);
-                var num2 = Math.floor(Math.random() * 10 + 1);
-                var num3 = Math.floor(Math.random() * 10 + 1);
-                var num4 = Math.floor(Math.random() * 10 + 1);
-                var num5 = Math.floor(Math.random() * 10 + 1);
-                var num6 = Math.floor(Math.random() * 10 + 1);
-                var num7 = Math.floor(Math.random() * 10 + 1);
-                var num8 = Math.floor(Math.random() * 10 + 1);
-                var num9 = Math.floor(Math.random() * 10 + 1);
-                var num10 = Math.floor(Math.random() * 10 + 1);
-
-                $("#xyxhContent_9 span").eq(0).attr("class", 'fang bg-' + num1).html(num1);
-                $("#xyxhContent_9 span").eq(1).attr("class", 'fang bg-' + num2).html(num2);
-                $("#xyxhContent_9 span").eq(2).attr("class", 'fang bg-' + num3).html(num3);
-                $("#xyxhContent_9 span").eq(3).attr("class", 'fang bg-' + num4).html(num4);
-                $("#xyxhContent_9 span").eq(4).attr("class", 'fang bg-' + num5).html(num5);
-                $("#xyxhContent_9 span").eq(5).attr("class", 'fang bg-' + num6).html(num6);
-                $("#xyxhContent_9 span").eq(6).attr("class", 'fang bg-' + num7).html(num7);
-                $("#xyxhContent_9 span").eq(7).attr("class", 'fang bg-' + num8).html(num8);
-                $("#xyxhContent_9 span").eq(8).attr("class", 'fang bg-' + num9).html(num9);
-                $("#xyxhContent_9 span").eq(9).attr("class", 'fang bg-' + num10).html(num10);
-            }, 50);
-
-            setTimeout(function () {
-                var num1 = Math.floor(Math.random() * 10 + 1);
-                var num2 = Math.floor(Math.random() * 10 + 1);
-                var num3 = Math.floor(Math.random() * 10 + 1);
-                var num4 = Math.floor(Math.random() * 10 + 1);
-                var num5 = Math.floor(Math.random() * 10 + 1);
-                var num6 = Math.floor(Math.random() * 10 + 1);
-                var num7 = Math.floor(Math.random() * 10 + 1);
-                var num8 = Math.floor(Math.random() * 10 + 1);
-                var num9 = Math.floor(Math.random() * 10 + 1);
-                var num10 = Math.floor(Math.random() * 10 + 1);
-
-                clearInterval(index_9);
-                $("#xyxhContent_9 span").eq(0).attr("class", 'fang bg-' + num1).data('num', 'gj-' + num1).html(num1);
-                $("#xyxhContent_9 span").eq(1).attr("class", 'fang bg-' + num2).data('num', 'yj-' + num2).html(num2);
-                $("#xyxhContent_9 span").eq(2).attr("class", 'fang bg-' + num3).data('num', 'jj-' + num3).html(num3);
-                $("#xyxhContent_9 span").eq(3).attr("class", 'fang bg-' + num4).data('num', 'q4-' + num4).html(num4);
-                $("#xyxhContent_9 span").eq(4).attr("class", 'fang bg-' + num5).data('num', 'q5-' + num5).html(num5);
-                $("#xyxhContent_9 span").eq(5).attr("class", 'fang bg-' + num6).data('num', 'q6-' + num6).html(num6);
-                $("#xyxhContent_9 span").eq(6).attr("class", 'fang bg-' + num7).data('num', 'q7-' + num7).html(num7);
-                $("#xyxhContent_9 span").eq(7).attr("class", 'fang bg-' + num8).data('num', 'q8-' + num8).html(num8);
-                $("#xyxhContent_9 span").eq(8).attr("class", 'fang bg-' + num9).data('num', 'q9-' + num9).html(num9);
-                $("#xyxhContent_9 span").eq(9).attr("class", 'fang bg-' + num10).data('num', 'q10-' + num10).html(num10);
+                $("#xyxhContents_4 span").eq(0).data("num", "wan-" + num1).html(num1);
+                $("#xyxhContents_4 span").eq(1).data("num", "qian-" + num2).html(num2);
+                $("#xyxhContents_4 span").eq(2).data("num", "bai-" + num3).html(num3);
+                $("#xyxhContents_4 span").eq(3).data("num", "shi-" + num4).html(num4);
+                $("#xyxhContents_4 span").eq(4).data("num", "ge-" + num5).html(num5);
             }, 2000);
         }
     }

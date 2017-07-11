@@ -474,7 +474,16 @@ a:visited {
     margin-top: 3px;
 }
 
-.add, .min {
+.min {
+    border: none;
+    border-left: 1px solid #dddddd;
+    width: 26px;
+    height: 26px;
+    background: none;
+    cursor: pointer;
+}
+
+.add{
     border: none;
     border-right: 1px solid #dddddd;
     width: 26px;
@@ -809,3 +818,18 @@ a:visited {
     margin-bottom: 12px;
 }
 
+/*六合彩球背景*/
+.greenBg {
+    background: #2ed918;
+    color: #fff;
+}
+
+.redBg {
+    background: #e93030;
+    color: #fff;
+}
+
+.blueBg {
+    background: #3e97ff;
+    color: #fff;
+}
