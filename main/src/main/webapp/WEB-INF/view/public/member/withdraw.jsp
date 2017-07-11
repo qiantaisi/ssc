@@ -70,19 +70,19 @@
                     <label for="money" class="error"></label>
                 </li>
 
-                <c:if test="${withdrawPassword.description == 'true'}">
-                    <li>
-                        <span>提款密码：</span>
-                        <input id="wPassword" name="withdraw" name="text" type="password" placeholder="请输入转账密码"
-                               style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
-                        <%--<label class="withdraw error"></label>--%>
-                    </li>
-                </c:if>
+                <%--<c:if test="${withdrawPassword.description == 'true'}">--%>
+                    <%--<li>--%>
+                        <%--<span>提款密码：</span>--%>
+                        <%--<input id="withdraw" name="withdraw" name="text" type="password" placeholder="请输入转账密码"--%>
+                               <%--style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">--%>
+                        <%--&lt;%&ndash;<label class="withdraw error"></label>&ndash;%&gt;--%>
+                    <%--</li>--%>
+                <%--</c:if>--%>
 
             </ul>
             <div class="eveb_form_submit">
                 <input type="submit" id="btnSubmit" value="提交" class="button_medium button_1">
-                <input type="reset" value="重置" class="ml_10 button_medium button_3">
+                <input type="reset" value="重置" class="ml_10 button_medium button_3" style="color: white;">
             </div>
         </form>
     </div>
@@ -134,8 +134,8 @@
                 , id: {required: true}
             }
             , messages: {
-                money: {required: "* 请输入金额，"}
-                , id: {required: "* 请选择的银行卡"}
+                money: {required: "* 请输入金额，"},
+                id: {required: "* 请选择的银行卡"}
             }
             , submitHandler: function (form) {
                 var options = {
