@@ -238,7 +238,8 @@
 
         if (typeof module == 'undefined' || module == 'null' || !module || module == '') {
             //module = 'gcdt/cqssc';
-            getPageNew(parent.urlGcdt);
+//            getPageNew(parent.urlGcdt);
+            getPage('<%=basePath%>ssc/gcdt.html');
         } else if (module == 'zstIndex') {
             getPage('<%=basePath%>ssc/zst/index.html');
         } else if (module == 'xyxh') {

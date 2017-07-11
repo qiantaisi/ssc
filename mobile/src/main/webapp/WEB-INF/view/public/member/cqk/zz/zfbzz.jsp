@@ -41,7 +41,7 @@
                         <div class="item-content">
                             <div class="item-inner">
                                 <div class="item-input">
-                                    <input type="text" placeholder="请输入支付宝昵称" id="name" name="name"/>
+                                    <input type="text" placeholder="请输入支付宝转账订单号的后四位" id="name" name="name"/>
                                 </div>
                             </div>
                         </div>
