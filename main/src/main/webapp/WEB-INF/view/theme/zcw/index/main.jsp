@@ -203,7 +203,7 @@
                 </div>
             </div>
             <div class="touzhu_b">
-                <div class="touzhu_b_main active" id="ssc_id_2">
+                <div class="touzhu_b_main active" id="ssc_id_1">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time1"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -302,7 +302,7 @@
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
                            <%-- <a onclick="xyxhAdd(1, 5)" class="fr left" href="javascript:void(0)">+</a>--%>
-                            <button class="add left"onclick="xyxhAdd(1, 5)">+</button>
+                            <button class="add left"onclick="xyxhAdd(1, 20)">+</button>
                             <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
                                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
                             <button class="min left"  onclick="xyxhMinute(1, 5)">-</button>
@@ -311,10 +311,10 @@
                             倍，共 <span   id="xyxhMoney_3" class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:;" class="xyxh(this,3)">
+                            <a href="javascript:void(0);" class="xyxh(this,3)">
                                 换一注
                             </a>
-                            <a href="javascript:void(0)"    onclick="openXyxh(3)" class="btn_red touzhubtn">
+                            <a href="javascript:void(0)" onclick="openXyxh(20)" class="btn_red touzhubtn">
                                 立即投注
                             </a>
                         </div>
@@ -413,7 +413,7 @@
                             倍，共 <span class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:;" class="shuaxin">
+                            <a href="javascript:javascript:void(0);" class="shuaxin">
                                 换一注
                             </a>
                             <a href="#" class="btn_red touzhubtn">
@@ -469,10 +469,10 @@
                             倍，共 <span class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:;" class="shuaxin">
+                            <a href="javascript:javascript:void(0);" class="shuaxin">
                                 换一注
                             </a>
-                            <a href="#" class="btn_red touzhubtn">
+                            <a href="javascript:void(0);" class="btn_red touzhubtn">
                                 立即投注
                             </a>
                         </div>
