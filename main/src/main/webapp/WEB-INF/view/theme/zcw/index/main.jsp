@@ -649,6 +649,7 @@
             </div>
         </div>
     </div>
+</div>
 
 <c:import url="../common/bottomInfo.jsp"/>
 
