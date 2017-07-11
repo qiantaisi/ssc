@@ -65,9 +65,20 @@
             <ul class="eveb_form eveb_withdraw">
                 <li>
                     <span>提款金额：</span>
-                    <input id="money" name="money" name="text" type="text" placeholder="请输入转账金额" style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
+                    <input id="money" name="money" name="text" type="text" placeholder="请输入转账金额"
+                           style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
                     <label for="money" class="error"></label>
                 </li>
+
+                <c:if test="${withdrawPassword.description == 'true'}">
+                    <li>
+                        <span>提款密码：</span>
+                        <input id="wPassword" name="withdraw" name="text" type="password" placeholder="请输入转账密码"
+                               style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
+                        <%--<label class="withdraw error"></label>--%>
+                    </li>
+                </c:if>
+
             </ul>
             <div class="eveb_form_submit">
                 <input type="submit" id="btnSubmit" value="提交" class="button_medium button_1">
@@ -111,6 +122,7 @@
             }
 
         });
+
 
         $("form[name='withdrawForm'] input[name='money']").change(function () {
 

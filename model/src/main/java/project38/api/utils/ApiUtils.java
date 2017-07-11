@@ -1287,4 +1287,12 @@ public class ApiUtils{
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GAME_SET, paramsMap, companyShortName), GameSetResult.class);
     }
+
+    public static CommonResult getNeedWithDrawPasswd(String companyShortName) {
+        if (IS_DEBUG) {
+            return new CommonResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_NEED_WITHDRAWPASSWD, paramsMap, companyShortName), CommonResult.class);
+    }
 }
