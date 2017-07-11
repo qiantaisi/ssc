@@ -33,7 +33,7 @@
             <ul class="eveb_form management_bank">
                 <c:choose>
                     <c:when test="${empty userBankCardResult.userBankCardList}">
-                        <div class="mb10 color-888"><font color="#999999">您还未绑定银行卡 请绑定银行卡，</font><a href="javascript:void(0)" onclick="parent.getPage('zhsz/yhkgl')" style="color:#ff7800">点击前往&gt;&gt;</a></div>
+                        <div class="mb10 color-888"><font color="#999999">您还未绑定银行卡 请绑定银行卡，</font><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=yhkgl')" style="color:#ff7800">点击前往&gt;&gt;</a></div>
                     </c:when>
                     <c:otherwise>
                         <div class="mb10 color-888">转到银行卡：<label for="id" class="error"></label></div>

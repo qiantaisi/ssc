@@ -203,7 +203,7 @@
                 </div>
             </div>
             <div class="touzhu_b">
-                <div class="touzhu_b_main active" id="ssc_id_2">
+                <div class="touzhu_b_main active" id="ssc_id_1">
                     <div class="clearfix touzhu1">
                         <div class="left">
                             第20170626083期截止：<span class="time time1"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
@@ -272,7 +272,7 @@
                             <a href="#">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 retouzhu2 clearfix">
+                    <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_20">
                         <div class="kai_qiu_main left">
 		    	    				<span class="s0">
 
@@ -301,9 +301,8 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                           <%-- <a onclick="xyxhAdd(1, 5)" class="fr left" href="javascript:void(0)">+</a>--%>
-                            <button class="add left"onclick="xyxhAdd(1, 5)">+</button>
-                            <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                            <button class="add left"onclick="xyxhAdd(1, 20)">+</button>
+                            <input class="text_box left" id="xyxhInput_20" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
                                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
                             <button class="min left"  onclick="xyxhMinute(1, 5)">-</button>
                         </div>
@@ -311,10 +310,10 @@
                             倍，共 <span   id="xyxhMoney_3" class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:;" class="xyxh(this,3)">
+                            <a href="javascript:void(0);" onclick="xyxh(this,20)">
                                 换一注
                             </a>
-                            <a href="javascript:void(0)"    onclick="openXyxh(3)" class="btn_red touzhubtn">
+                            <a href="javascript:void(0)" onclick="openXyxh(20)" class="btn_red touzhubtn">
                                 立即投注
                             </a>
                         </div>
@@ -330,7 +329,7 @@
                             <a href="#">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 clearfix" style="padding-top: 5px;height: 65px;">
+                    <div class="touzhu2 clearfix" style="padding-top: 5px;height: 65px;" id="xyxhContents_6">
                         <div class="kai_qiu_main left">
 		    	    				<span class="qiu">
 		    	    					12
@@ -413,10 +412,10 @@
                             倍，共 <span class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:;" class="shuaxin">
+                            <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,6)">
                                 换一注
                             </a>
-                            <a href="#" class="btn_red touzhubtn">
+                            <a href="javascript:void(0);" onclick="openXyxh(6)" class="btn_red touzhubtn">
                                 立即投注
                             </a>
                         </div>
@@ -432,7 +431,7 @@
                             <a href="#">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 retouzhu2 clearfix">
+                    <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_4">
                         <div class="kai_qiu_main left">
 		    	    				<span class="s0">
 
@@ -469,10 +468,10 @@
                             倍，共 <span class="color_red">2 </span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:;" class="shuaxin">
+                            <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,4)">
                                 换一注
                             </a>
-                            <a href="#" class="btn_red touzhubtn">
+                            <a href="javascript:void(0);" onclick="openXyxh(4)" class="btn_red touzhubtn">
                                 立即投注
                             </a>
                         </div>
@@ -600,6 +599,7 @@
                 <div class="ndex_main_rt1_2b_main">
                     <div class="index_main_rt1_2b active">
                         <div id="wrap">
+                            <marquee direction="up" behavior="scroll" stoptime="2000" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                             <ul class="index_notice_ul" id="box1">
                                 <li>
                                     <a href="#">工行入款账号停用</a>
@@ -610,7 +610,7 @@
                                 <li>
                                     <a href="#">工行入款账号停用</a>
                                 </li>
-                            </ul>
+                            </ul></marquee>
                             <ul id="box2"></ul>
                         </div>
                     </div>
@@ -626,23 +626,30 @@
                     <span>3</span>亿<span>5230</span>万<span>8020</span>元
                 </div>
             </div>
+
             <div class="zhongjiang_ul">
-                <marquee direction="up" behavior="scroll" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
-                    <ul>
+
+                <ul>
+                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
                         <c:forEach items="${Notices.noticeList}" var="noticelists">
-                            <li class="clearfix">
-                                <a href="#" class="left zhongjiang_li1">
-                                        ${noticelists.type}
-                                </a>
-                                <span class="left zhongjiang_name">${noticelists.userName}</span>
-                                <span class="left zhongjiang_jine">
+                        <li class="clearfix">
+                            <a href="#" class="left zhongjiang_li1">
+                                ${noticelists.type}
+                            </a>
+                            <span class="left zhongjiang_name">${noticelists.userName}</span>
+                            <span class="left zhongjiang_jine">
 		        				${noticelists.amount}元
 		        			</span>
-                            </li>
+                        </li>
                         </c:forEach>
-                    </ul>
-                </marquee>
+                    </marquee>
+
+                </ul>
+
             </div>
+
+
+
         </div>
     </div>
 </div>
@@ -1283,6 +1290,7 @@
                 $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
             }, 2000);
         } else if (type == 1) {
+
             $("#xyxhContents_1 span").each(function () {
                 $(this).data("num", '');
             });
@@ -1315,7 +1323,7 @@
                 $("#xyxhContents_1 span").eq(3).data("num", "shi-" + num4).html(num4);
                 $("#xyxhContents_1 span").eq(4).data("num", "ge-" + num5).html(num5);
             }, 2000);
-        } else if (type == 2) {
+        } else if (type == 20) {
             $("#xyxhContent_2 span").each(function () {
                 $(this).data("num", '');
             });
