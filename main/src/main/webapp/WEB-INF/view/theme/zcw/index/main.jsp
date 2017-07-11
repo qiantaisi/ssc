@@ -208,7 +208,7 @@
                 <div class="touzhu_b_main active" id="ssc_id_1">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time1"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time1"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">手动选号</a>
@@ -265,7 +265,7 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_20">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time2"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time2"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0);" onclick="openGcdt('gcdt/ahk3')">手动选号</a>
@@ -313,7 +313,7 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_6">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time3"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time3"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">手动选号</a>
@@ -417,7 +417,7 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_4">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time4"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time4"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0);" onclick="openGcdt('gcdt/lhc')">手动选号</a>
@@ -703,6 +703,13 @@
         xyxh(null, 4);
         xyxh(null, 6);
         xyxh(null, 20);
+
+        //获取中间随机彩票的截止日期和剩余时间
+        getAllOpenTime();
+
+        setInterval(function () {
+            renderOpenTimeHtml();
+        }, 1000);
     });
 
 
@@ -992,30 +999,30 @@
 
         } else if (type == 20) {
             caizhong = 'ahk3';
-            navIndex = 0;
+            navIndex = 7;
             var numsArr = [];
             for (var i = 0; i < 3; ++i) {
-                var v = $("#xyxhContent_20 span").eq(i).data("num");
+                var v = $("#xyxhContents_20 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhMoney_20").val();
+            money = $("#xyxhMoney_20").html();
         } else if (type == 4) {
             caizhong = 'pl3';
             navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 3; ++i) {
-                var v = $("#xyxhContent_4 span").eq(i).data("num");
+                var v = $("#xyxhContents_4 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhMoney_4").val();
+            money = $("#xyxhMoney_4").html();
         }
 
         if (numsArr.length == 0) {
@@ -1324,9 +1331,9 @@
             });
 
             index_20 = setInterval(function () {
-                var num1 = Math.floor(Math.random() * 10);
-                var num2 = Math.floor(Math.random() * 10);
-                var num3 = Math.floor(Math.random() * 10);
+                var num1 = Math.floor((Math.random() * 6) + 1);
+                var num2 = Math.floor((Math.random() * 6) + 1);
+                var num3 = Math.floor((Math.random() * 6) + 1);
 
                 $("#xyxhContents_20 span").eq(0).html(num1);
                 $("#xyxhContents_20 span").eq(1).html(num2);
@@ -1334,9 +1341,9 @@
             }, 50);
 
             setTimeout(function () {
-                var num1 = Math.floor(Math.random() * 10);
-                var num2 = Math.floor(Math.random() * 10);
-                var num3 = Math.floor(Math.random() * 10);
+                var num1 = Math.floor((Math.random() * 6) + 1);
+                var num2 = Math.floor((Math.random() * 6) + 1);
+                var num3 = Math.floor((Math.random() * 6) + 1);
 
                 clearInterval(index_20);
                 $("#xyxhContents_20 span").eq(0).data("num", "wan-" + num1).html(num1);
@@ -1370,6 +1377,119 @@
                 $("#xyxhContents_4 span").eq(2).data("num", "bai-" + num3).html(num3);
             }, 2000);
         }
+    }
+
+
+    // 获取所有彩种开奖时间
+    function getAllOpenTime() {
+        ajaxRequest({
+            url: CONFIG.BASEURL + "ssc/getAllSscOpenTime2.json",
+            success: function(json) {
+                if (json.result != 1) {
+                    return;
+                }
+
+                // 渲染数据
+                $.each(json.sscTimeList, function (index, value) {
+                    var obj = $("#ssc_id_" + value.playGroupId);
+
+                    if ($(obj).length == 0) {
+                        return;
+                    }
+
+                    $(obj).data("play_group_id", value.playGroupId);
+                    $(obj).data("left_time", value.leftTime);
+                    $(obj).data("number", value.number);
+
+                });
+            },
+            error: function(a, b, c) {
+                // 失败重试
+                setTimeout(function() {
+                    getAllOpenTime();
+                }, 2000);
+            }
+        });
+    }
+
+    // 时间倒计时
+    function renderOpenTimeHtml() {
+        $(".touzhu_b .touzhu_b_main").each(function () {
+            var number = $(this).data("number");
+            var leftTime = Tools.parseInt($(this).data("left_time"));
+            var playGroupId = $(this).data("play_group_id");
+
+            var time = 0;
+            var str;
+
+            time = leftTime;
+
+            $(this).data("left_time", time - 1);
+
+            if (isNaN(time) || time < -0) {
+                return;
+            }
+            var day = 0;
+            var hour = 0;
+            var minute = 0;
+            var second = 0;
+
+            day = Math.floor(time / 60 / 60 / 24);
+            time -= day * 60 * 60 * 24;
+            hour = Math.floor(time / 60 / 60);
+            time -= hour * 60 * 60;
+            minute = Math.floor(time / 60);
+            time -= minute * 60;
+            second = time;
+
+            var dayStr = (day == 0) ? '' : day + " 天 ";
+            var hourStr = (hour == 0) ? '' : hour + " 时 ";
+            var minuteStr = (minute == 0) ? '' : minute + " 分 ";
+            var secondStr = (second == 0) ? '0 秒' : second + " 秒";
+
+
+            $("#ssc_id_" + playGroupId + " .left .time").html(dayStr + '' + hourStr + '' + minuteStr + '' + secondStr); //倒计时时间
+            $(this).find('.qishu').html(number); //期号
+
+            // 时间结束，获取新开奖时间
+            if (leftTime == 0) {
+                getSscOpenTime2(playGroupId);
+                return;
+            }
+        });
+
+
+        // 获取单彩种时间
+        function getSscOpenTime2(playGroupId) {
+            ajaxRequest({
+                url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
+                data: {
+                    playGroupId: playGroupId
+                },
+                success: function(json) {
+                    if (json.result != 1) {
+                        return;
+                    }
+
+                    var obj = $("#ssc_id_" + playGroupId);
+
+                    if ($(obj).length == 0) {
+                        return;
+                    }
+
+                    $(obj).data("play_group_id", playGroupId);
+                    $(obj).data("left_time", json.leftTime);
+                    $(obj).data("number", json.number);
+                },
+                error: function(a, b, c) {
+                    // 失败重试
+                    setTimeout(function() {
+                        getSscOpenTime2();
+                    }, 2000);
+                }
+            });
+        }
+
     }
 
 </script>

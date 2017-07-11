@@ -16,8 +16,8 @@
 
         </ul>
     </div>
-    <div class="list_wrap wdtz"></div>
-    <div class="list_wrap wdzj"></div>
+    <div class="list_wrap wdtz-list-rewith wdtz"></div>
+    <div class="list_wrap wdtz-list-rewith wdzj"></div>
     <div class="list_wrap kjhm"></div>
     <div class="list_wrap jjsm"></div>
 </div>
