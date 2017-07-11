@@ -1324,7 +1324,7 @@
                 $("#xyxhContents_1 span").eq(4).data("num", "ge-" + num5).html(num5);
             }, 2000);
         } else if (type == 20) {
-            $("#xyxhContent_2 span").each(function () {
+            $("#xyxhContents_20 span").each(function () {
                 $(this).data("num", '');
             });
 
@@ -1335,11 +1335,11 @@
                 var num4 = Math.floor(Math.random() * 10);
                 var num5 = Math.floor(Math.random() * 10);
 
-                $("#xyxhContent_2 span").eq(0).html(num1);
-                $("#xyxhContent_2 span").eq(1).html(num2);
-                $("#xyxhContent_2 span").eq(2).html(num3);
-                $("#xyxhContent_2 span").eq(3).html(num4);
-                $("#xyxhContent_2 span").eq(4).html(num5);
+                $("#xyxhContents_20 span").eq(0).html(num1);
+                $("#xyxhContents_20 span").eq(1).html(num2);
+                $("#xyxhContents_20 span").eq(2).html(num3);
+                $("#xyxhContents_20 span").eq(3).html(num4);
+                $("#xyxhContents_20 span").eq(4).html(num5);
             }, 50);
 
             setTimeout(function () {
@@ -1350,14 +1350,14 @@
                 var num5 = Math.floor(Math.random() * 10);
 
                 clearInterval(index_2);
-                $("#xyxhContent_2 span").eq(0).data("num", "wan-" + num1).html(num1);
-                $("#xyxhContent_2 span").eq(1).data("num", "qian-" + num2).html(num2);
-                $("#xyxhContent_2 span").eq(2).data("num", "bai-" + num3).html(num3);
-                $("#xyxhContent_2 span").eq(3).data("num", "shi-" + num4).html(num4);
-                $("#xyxhContent_2 span").eq(4).data("num", "ge-" + num5).html(num5);
+                $("#xyxhContents_20 span").eq(0).data("num", "wan-" + num1).html(num1);
+                $("#xyxhContents_20 span").eq(1).data("num", "qian-" + num2).html(num2);
+                $("#xyxhContents_20 span").eq(2).data("num", "bai-" + num3).html(num3);
+                $("#xyxhContents_20 span").eq(3).data("num", "shi-" + num4).html(num4);
+                $("#xyxhContents_20 span").eq(4).data("num", "ge-" + num5).html(num5);
             }, 2000);
-        } else if (type == 3) {
-            $("#xyxhContent_3 span").each(function () {
+        } else if (type == 4) {
+            $("#xyxhContent_4 span").each(function () {
                 $(this).data("num", '');
             });
 
@@ -1368,11 +1368,11 @@
                 var num4 = Math.floor(Math.random() * 10);
                 var num5 = Math.floor(Math.random() * 10);
 
-                $("#xyxhContent_3 span").eq(0).html(num1);
-                $("#xyxhContent_3 span").eq(1).html(num2);
-                $("#xyxhContent_3 span").eq(2).html(num3);
-                $("#xyxhContent_3 span").eq(3).html(num4);
-                $("#xyxhContent_3 span").eq(4).html(num5);
+                $("#xyxhContent_4 span").eq(0).html(num1);
+                $("#xyxhContent_4 span").eq(1).html(num2);
+                $("#xyxhContent_4 span").eq(2).html(num3);
+                $("#xyxhContent_4 span").eq(3).html(num4);
+                $("#xyxhContent_4 span").eq(4).html(num5);
             }, 50);
 
             setTimeout(function () {
@@ -1383,11 +1383,11 @@
                 var num5 = Math.floor(Math.random() * 10);
 
                 clearInterval(index_3);
-                $("#xyxhContent_3 span").eq(0).data("num", "wan-" + num1).html(num1);
-                $("#xyxhContent_3 span").eq(1).data("num", "qian-" + num2).html(num2);
-                $("#xyxhContent_3 span").eq(2).data("num", "bai-" + num3).html(num3);
-                $("#xyxhContent_3 span").eq(3).data("num", "shi-" + num4).html(num4);
-                $("#xyxhContent_3 span").eq(4).data("num", "ge-" + num5).html(num5);
+                $("#xyxhContent_4 span").eq(0).data("num", "wan-" + num1).html(num1);
+                $("#xyxhContent_4 span").eq(1).data("num", "qian-" + num2).html(num2);
+                $("#xyxhContent_4 span").eq(2).data("num", "bai-" + num3).html(num3);
+                $("#xyxhContent_4 span").eq(3).data("num", "shi-" + num4).html(num4);
+                $("#xyxhContent_4 span").eq(4).data("num", "ge-" + num5).html(num5);
             }, 2000);
         } else if (type == 9) {
             $("#xyxhContent_9 span").each(function () {
