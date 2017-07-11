@@ -355,10 +355,6 @@
     <c:import url="../common/rightPanel.jsp"/>
 </div>
 <c:import url="../common/commonJs.jsp"/>
-
-<script>
-    var kjjgJsonData = ${kjjgJsonData};
-</script>
 <script type="text/html" id="template_6">
     <div class="item-content re-it-con lhc-kjjg">
         <div class="item-media remedia"><img src="${resPath}img/cz/cz-6.png" style='width: 2.3rem;'></div>

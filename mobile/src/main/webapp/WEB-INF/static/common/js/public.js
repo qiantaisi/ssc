@@ -9,11 +9,11 @@ var PUBLIC_JS = {
             return;
         }
 
-        if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
-            window.location.href = window.document.referrer;
-        } else {
-            window.history.go(-1);
-        }
-        // history.go(-1);
+        // if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
+        //     window.location.href = window.document.referrer;
+        // } else {
+        //     window.history.go(-1);
+        // }
+        history.go(-1);
     }
 };

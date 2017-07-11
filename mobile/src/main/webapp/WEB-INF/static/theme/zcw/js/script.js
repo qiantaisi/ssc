@@ -393,32 +393,17 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
-        if (typeof initBottomNavIndex == 'function') {
-            initBottomNavIndex();
-        }
-
-        // // 置顶按钮
-        // $(".top-click").click(function () {
-        //     $("#navBar").scrollTop(0);
+        // // 首页图片轮播
+        // var swiper = new Swiper('.swiper-container', {
+        //     pagination: '.swiper-pagination',
+        //     nextButton: '.swiper-button-next',
+        //     prevButton: '.swiper-button-prev',
+        //     paginationClickable: true,
+        //     spaceBetween: 0,
+        //     centeredSlides: true,
+        //     autoplay: 2500,
+        //     autoplayDisableOnInteraction: false
         // });
-
-        // $(".shiwan_btn").click(function () {
-        //       shiwan();
-        //     $(".shiwan_btn").remove();
-        // });
-
-        // 首页图片轮播
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            paginationClickable: true,
-            spaceBetween: 0,
-            centeredSlides: true,
-            autoplay: 2500,
-            autoplayDisableOnInteraction: false
-        });
-
 
         $("#btn-shiwan").click(function () {
             shiwan();
