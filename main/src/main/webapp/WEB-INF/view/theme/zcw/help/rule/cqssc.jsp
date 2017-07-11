@@ -146,7 +146,7 @@
                 <div class="gfwf-1">
                     <div class="gfwf-2" id="top">
                         <h1><a style=""></a></h1>
-                        <span class="gamek-5">重庆时时彩玩法规则</span>
+                        <span class="gamek-1">重庆时时彩玩法规则</span>
                     </div>
                     <br>
                     <div class="gfwf-3">
@@ -179,7 +179,7 @@
                         <b><p id="test4">四、玩法说明</p></b>
                             1.
                             时时彩投注区分为万位、千位、百位、十位和个位，各位号码范围为0～9。每期从各位上开出1个号码作为中奖号码，即开奖号码为5位数。时时彩玩法即是竞猜5位开奖号码的全部号码、部分号码或部分号码特征。
-                        <div>
+                        <div align="center">
                             <img src="${resPath}images/wfsm/wfsm01.png" class="wfsm-img">
                         </div>
                         </br>
