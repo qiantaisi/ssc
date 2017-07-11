@@ -83,9 +83,10 @@
         </div>
         <div class="kaijiang_main">
             <ul>
+
                 <li>
                     <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name">重庆时时彩</span>
+                        <span class="left kaijiang_li_t_name"></span>
                         <span class="left">20170626082期	</span>
                     </div>
                     <p class="kaijiang_num">
@@ -102,6 +103,7 @@
                         </div>
                     </div>
                 </li>
+
                 <li>
                     <div class="clearfix kaijiang_li_t">
                         <span class="left kaijiang_li_t_name">新疆时时彩</span>
@@ -610,28 +612,22 @@
             </div>
 
             <div class="zhongjiang_ul">
-
-                <%--<ul>--%>
-                    <%--<marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">--%>
-                        <%--<c:forEach items="${Notices.noticeList}" var="noticelists">--%>
-                        <%--<li class="clearfix">--%>
-                            <%--<a href="#" class="left zhongjiang_li1">--%>
-                                <%--${noticelists.type}--%>
-                            <%--</a>--%>
-                            <%--<span class="left zhongjiang_name">${noticelists.userName}</span>--%>
-                            <%--<span class="left zhongjiang_jine">--%>
-		        				<%--${noticelists.amount}元--%>
-		        			<%--</span>--%>
-                        <%--</li>--%>
-                        <%--</c:forEach>--%>
-                    <%--</marquee>--%>
-
-                <%--</ul>--%>
-
+                <ul>
+                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
+                        <c:forEach items="${Notices.noticeList}" var="noticelists">
+                        <li class="clearfix">
+                            <a href="#" class="left zhongjiang_li1">
+                                ${noticelists.type}
+                            </a>
+                            <span class="left zhongjiang_name">${noticelists.userName}</span>
+                            <span class="left zhongjiang_jine">
+		        				${noticelists.amount}元
+		        			</span>
+                        </li>
+                        </c:forEach>
+                    </marquee>
+                </ul>
             </div>
-
-
-
         </div>
     </div>
 </div>
@@ -641,8 +637,65 @@
 <c:import url="../common/commonJs.jsp"/>
 
 <div id="gonggao_container"></div>
+<script type="text/html" id="template_1">
+    <li>
+        <div class="clearfix kaijiang_li_t">
+            <span class="left kaijiang_li_t_name">重庆时时彩</span>
+            <span class="left">第{{number}}期	</span>
+        </div>
+        <p class="kaijiang_num">
+            {{num1}}
+        </p>
+        <div class="clearfix kaijiang_b">
+            <span class="left">2017-06-26</span>
+            <div class="right clearfix">
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">详情 </a>
+                <span class="left">&nbsp;|&nbsp;</span>
+                <a href="javascript:void(0)" onclick="goZst('zst/cqssc')" class="left">走势 </a>
+                <span class="left">&nbsp;|&nbsp;</span>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">投注 </a>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="clearfix kaijiang_li_t">
+            <span class="left kaijiang_li_t_name"></span>
+
+            <var class="no"></var>
+            {{/if}}
+            <div class="text">
+                <h3>重庆时时彩<span>第{{number}}期</span></h3>
+                <p>每天120期</p>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box_num">
+                <span>{{num1}}</span>
+                <span>{{num2}}</span>
+                <span>{{num3}}</span>
+                <span>{{num4}}</span>
+                <span>{{num5}}</span>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">详情</a>
+            </div>
+            <p>
+                <i>{{sum}}</i>
+                <i>{{ds}}</i>
+                <i>{{dx}}</i>
+                <i>{{lh}}</i>
+            </p>
+        </div>
+        <div class="box3">
+            <a  href="<%=basePath%>kjjg.html?playGroupId=1">历史开奖</a>
+            <a href="javascript:void(0)" onclick="goZst('zst/cqssc')">走势图表</a>
+        </div>
+        <div class="box4">
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">购买</a>
+        </div>
+    </li>
+</script>
 <script>
     $(function () {
+
         getWebPopUpNotice();
 
         xyxh(null, 1);
@@ -650,10 +703,61 @@
         xyxh(null, 6);
         xyxh(null, 20);
     });
+    var content_G = '';
+    /*function getWebPopUpNotice() {
+        ajaxRequest({
+            url: "<%=basePath%>member/ajaxSscZJNoticeResult.json",
+            beforeSend: function () {
+            },
+            success: function (json) {
+                if (json.result != 1) {
+                    alert(json.result);
+                    return;
+                }
 
+                <c:forEach items="${SscZJNoticeResult.noticeList}" var="item" varStatus="status">
+
+                </c:forEach>
+
+                var str = '';
+                var str2 = ''
+                if (json.noticeList.length != 0) {
+                    $.each(json.webNoticeList, function (index, value) {
+                        var len = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").length;
+                        if (len > 13) {
+                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").substr(0, 13) + "...";
+                        } else {
+                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "");
+                        }
+
+                        str += '<p onclick="showGonggao(' + index + ')" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;height:25px;margin:0;">' + value.title + "&nbsp;:&nbsp;" + content_G + '</p></br>';
+                alert(value.userName);
+                        alert(value.amount);
+                        str2 += '<div class="alert hide" id="gonggao_' + index + '">';
+                        str2 += '<div class="alert_col">';
+                        str2 += '<ul><li class="clearfix"><a href="#" class="left zhongjiang_li1">'+value.type+
+                        '</a><span class="left zhongjiang_name">'+value.userName+'</span><span class="left zhongjiang_jine">'+ value.amount元+'</span></li></ul>'
+                    });
+                } else {
+                    str = '暂无公告';
+                }
+                $("#gonggao_marquee").html(str);
+                $("#gonggao_marquee p").css({margin: "-10px auto"});
+                $("#gonggao_container").html(str2);
+
+                $('#gonggao_marquee').liMarquee({
+                    direction: 'up',
+                    scrollamount: 10
+                });
+                $('.alert_col h5 i').click(function () {
+                    $('.alert').hide();
+                });
+            }
+        });
+    }
     function showGonggao(id) {
         $("#gonggao_" + id).show();
-    }
+    }*/
 
     function touzhutishi() {
         alert("游戏暂未上线，敬请期待！");
@@ -853,31 +957,7 @@
         $(obj).attr("src", src);
     }
 
-    $(function () {
-       /* $('.type_top .left .left_div .log,.type_top .left .left_div .alert_log').hover(function () {
-            $('.type_top .left .left_div .alert_log').show();
-            $('.type_top .left .left_div .alert_par').hide();
-        })
-        $('.type_top').hover(function () {
-        }, function () {
-            $('.type_top .left .left_div .alert_log').hide();
-            $('.type_top .left .left_div .alert_par').hide();
-        })
-        $('.type_top .right ul li.l').hover(function () {
-            $(this).addClass('sli');
-            $(this).find('div').show();
-        })
-        $('.type_top .right ul li').hover(function () {
 
-        }, function () {
-            $(this).removeClass('sli');
-            $(this).find('div').hide();
-        })
-        $('.type_top .left .left_div a.par').hover(function () {
-            $('.type_top .left .left_div .alert_par').show();
-            $('.type_top .left .left_div .alert_log').hide();
-        })*/
-    });
 
     function xytz(type) {
         if (type == 6) {
@@ -1080,7 +1160,6 @@
 
                         str2 += '<div class="alert hide" id="gonggao_' + index + '">';
                         str2 += '<div class="alert_col">';
-                        str2 += '<h5><span>公告</span><i>×</i></h5>';
                         str2 += '<h2>' + value.title + '</h2>';
                         str2 += '<div>' + value.content + '</div>';
                         str2 += '<h4>${webName}</h4>';
