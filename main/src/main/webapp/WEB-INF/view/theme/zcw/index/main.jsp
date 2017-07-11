@@ -80,7 +80,7 @@
     </div>
 </div>
 
-<v class="main container index_main clearfix">
+<div class="main container index_main clearfix">
     <div class="left kaijiang">
         <div class="kaijiang_tl">
             开奖公告
