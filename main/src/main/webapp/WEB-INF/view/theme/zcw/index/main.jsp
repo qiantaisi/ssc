@@ -614,7 +614,7 @@
 
             <div class="zhongjiang_ul">
                 <ul>
-                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
+                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
                         <c:forEach items="${Notices.noticeList}" var="noticelists">
                         <li class="clearfix">
                             <a href="#" class="left zhongjiang_li1">
