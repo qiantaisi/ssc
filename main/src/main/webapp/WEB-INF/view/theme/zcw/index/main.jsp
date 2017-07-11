@@ -96,9 +96,9 @@
                         <div class="right clearfix">
                             <a href="#" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
+                            <a href="<%=basePath%>ssc/zst/cqssc.html" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
+                            <a href="<%=basePath%>ssc/gcdt/cqssc.html" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
@@ -115,9 +115,9 @@
                         <div class="right clearfix">
                             <a href="#" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
+                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
+                            <a href="<%=basePath%>ssc/gcdt/xjssc.html" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
@@ -134,9 +134,9 @@
                         <div class="right clearfix">
                             <a href="#" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
+                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
+                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
@@ -153,9 +153,9 @@
                         <div class="right clearfix">
                             <a href="#" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
+                            <a href="<%=basePath%>ssc/zst/tjssc.html" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
+                            <a href="<%=basePath%>ssc/zst/tjssc.html" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
