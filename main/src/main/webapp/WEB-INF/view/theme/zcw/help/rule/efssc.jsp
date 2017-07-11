@@ -143,7 +143,7 @@
                 <div class="gfwf-1">
                     <div class="gfwf-2" id="top">
                         <h1><a style=""></a></h1>
-                        <span class="gamek-1">重庆时时彩玩法规则</span>
+                        <span class="gamek-6">两分时时彩玩法规则</span>
                     </div>
                     <br>
                     <div class="gfwf-3">
