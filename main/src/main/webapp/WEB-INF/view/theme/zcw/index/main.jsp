@@ -116,7 +116,7 @@
                             <div class=" banner_shuru_gp">
                                 <input type="password" id="registerLoginPassword" class="banner_shuru_input"
                                        placeholder="密码"/>
-                                <a href="${kefu}" class="banner_wp">忘记?</a>
+                                <a href="${kefuUrl}" class="banner_wp">忘记?</a>
                             </div>
                             <div class=" banner_shuru_gp">
                                 <input type="text" id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码"/>
@@ -732,6 +732,7 @@
                         </li>
                     </c:forEach>
                 </ul>
+
             </div>
         </div>
     </div>
@@ -744,7 +745,7 @@
 <div id="gonggao_container"></div>
 <script>
     $(function () {
-
+        getWebPopUpNotice();
         getSscDataMainPage();
 
         xyxh(null, 1);
@@ -758,10 +759,17 @@
         setInterval(function () {
             renderOpenTimeHtml();
         }, 1000);
+
+        $('#zj_info_marquee').liMarquee({
+            direction: 'up',
+            scrollamount: 10
+        });
+
     });
 
+    var playIds = (1, 2, 15, 16);
+
     function getSscDataMainPage() {
-        var playIds = (1, 2, 15, 16);
         ajaxRequest({
             url: "<%=basePath%>index/ajaxGetSscDataMainPage.json",
             data: {playIds: playIds},
@@ -779,11 +787,6 @@
 
         });
     }
-
-    $('#zj_info_marquee').liMarquee({
-        direction: 'up',
-        scrollamount: 10
-    });
 
 
     function sigout() {
