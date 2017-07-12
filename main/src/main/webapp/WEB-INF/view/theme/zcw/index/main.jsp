@@ -688,18 +688,18 @@
                     <a href="javascript:void(0);">新手指导</a>
                 </div>
                 <div class="ndex_main_rt1_2b_main">
-                    <div class="index_main_rt1_2b active">
-                        <div id="wrap">
-                            <ul class="index_notice_ul" id="gonggao_marquee">
-                                <li>
-                                    <a href="javascript:void(0);"></a>
-                                </li>
+                    <div class="index_main_rt1_2b roll_rt1_2b active">
+                        <div id="wrap" class="rewrap">
+                            <ul class="index_notice_ul">
+                                <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
+                                    <li><a onclick="showGonggao(${status.count})" href="javascript:void(0)">${item.title}</a></li>
+                                </c:forEach>
                             </ul>
                             <ul id="box2"></ul>
                         </div>
                     </div>
                     <div class="index_main_rt1_2b index-content-help">
-                        <ul class="index_notice_ul">
+                        <ul class="index_notice_ul_new">
                             <li>
                                 <a href="${basPath}help/index.html">新手指导</a>
                             </li>
@@ -769,6 +769,7 @@
             scrollamount: 10
         });
 
+        newRoll(".roll_rt1_2b .rewrap ul li")
     });
 
     var playIds = (1, 2, 15, 16);
@@ -896,7 +897,6 @@
         });
     }
 
-    var content_G = '';
 
     function getWebPopUpNotice() {
         ajaxRequest({
@@ -916,15 +916,6 @@
                 var str2 = ''
                 if (json.webNoticeList.length != 0) {
                     $.each(json.webNoticeList, function (index, value) {
-                        var len = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").length;
-                        if (len > 13) {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").substr(0, 13) + "...";
-                        } else {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "");
-                        }
-
-                        str += '<p onclick="showGonggao(' + index + ')" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;height:25px;margin:0;">' + value.title + "&nbsp;:&nbsp;" + content_G + '</p></br>';
-
                         str2 += '<div class="alert hide" id="gonggao_' + index + '">';
                         str2 += '<div class="alert_col">';
                         str2 += '<h5><span>公告</span><i>×</i></h5>';
@@ -938,14 +929,9 @@
                 } else {
                     str = '暂无公告';
                 }
-                $("#gonggao_marquee").html(str);
-                $("#gonggao_marquee p").css({margin: "-10px auto"});
+
                 $("#gonggao_container").html(str2);
 
-                $('#gonggao_marquee').liMarquee({
-                    direction: 'up',
-                    scrollamount: 10
-                });
                 $('.alert_col h5 i').click(function () {
                     $('.alert').hide();
                 });
