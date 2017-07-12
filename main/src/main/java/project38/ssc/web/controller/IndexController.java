@@ -36,7 +36,7 @@ public class IndexController extends BaseController {
         return ApiUtils.getWebInfo( 1, companyShortName);
     }
 
-    @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value ="/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public SscHistoryResult3 ajaxGetSscDataMainPage(List<Long> playIds,Long playId) {
         String companyShortName = this.getCompanyShortName();
