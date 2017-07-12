@@ -531,8 +531,12 @@ a:visited {
     cursor:pointer;
 }
 
-.touzhubtn:hover{
+.touzhubtn:hover {
     color: #f0fff1;;
+}
+
+.login_afterbtn a:hover {
+    color: #f0fff1;
 }
 
 .btn_red {
