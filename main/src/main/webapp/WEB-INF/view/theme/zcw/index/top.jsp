@@ -22,8 +22,8 @@
             <c:when test="${not empty userSession}">
                 <div class="pull-right cl-328 login-true">
                     <a href="<%=basePath%>main.html" class="left index-text">首页</a>
-                    &nbsp;<span class="login-name">${userSession.account}</span>&nbsp;
-                    <a href="#" class="left head_top_lottery">我的彩票</a>
+                    &nbsp;<span class="login-name" style="color: #247fdd;">${userSession.account}</span>&nbsp;
+                    <a href="javascript:void(0)" class="left head_top_lottery">我的彩票</a>
                     <span class="left">|&nbsp;</span>
                 </div>
             </c:when>
@@ -34,7 +34,7 @@
                     <a href="<%=basePath%>login.html" class="loginbtn left blink" data-color="#ff4800|#333">登录</a>
                     <a href="<%=basePath%>register.html" class="left head_top_reg">免费注册</a>
                     <span class="left">|</span>
-                    <a href="#" class="left head_top_lottery">我的彩票</a>
+                    <a href="javascript:void(0)" class="left head_top_lottery">我的彩票</a>
                     <span class="left">|</span>
                 </div>
             </c:otherwise>

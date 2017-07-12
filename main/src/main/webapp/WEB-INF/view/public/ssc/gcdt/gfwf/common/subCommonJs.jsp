@@ -41,8 +41,8 @@
                 var strWei = arr[i].toString();
                 var wei = (strWei.split("-")[0]).replace("位",'');
                 var num = strWei.split("-")[1];
-                console.log(num + "--" + wei);
-                var obj = $("[data-name='" + wei + "'] var.numLine span").eq(num);
+
+                var obj = $(".wx-page [data-name='" + wei + "'] var.numLine span").eq(num);
                 $(obj).addClass("acti");
             }
 
