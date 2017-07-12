@@ -83,7 +83,6 @@
         </div>
         <div class="kaijiang_main">
             <ul>
-
                 <li>
                     <div class="clearfix kaijiang_li_t">
                         <span class="left kaijiang_li_t_name"></span>
@@ -103,7 +102,6 @@
                         </div>
                     </div>
                 </li>
-
                 <li>
                     <div class="clearfix kaijiang_li_t">
                         <span class="left kaijiang_li_t_name">新疆时时彩</span>
