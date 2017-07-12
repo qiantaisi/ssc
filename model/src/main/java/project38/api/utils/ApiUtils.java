@@ -1006,12 +1006,12 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_HISTORY, paramsMap, companyShortName), SscHistoryResult2.class);
     }
 
-    public static SscHistoryResult2 getSscDataMainPage(String companyShortName) {
+    public static SscHistoryResult3 getSscDataMainPage(String companyShortName) {
         if (IS_DEBUG) {
-            return new SscHistoryResult2();
+            return new SscHistoryResult3();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult2.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult3.class);
     }
 
     public static SscPlayPlResult getSscPlayPl(Long uid, String token, Long playId, String companyShortName) {

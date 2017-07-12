@@ -23,7 +23,7 @@
                     <label for="money" class="error" id="moneyError"> </label>
                 </li>
                 <li>
-                    <span>昵称：</span>
+                    <span>订单后四位：</span>
                     <input type="text" size="5" name="userAlipayName" class="suminp wxName" id="name">
                     <label for="name" class="error" id="nameError"></label>
                 </li>
@@ -165,7 +165,7 @@
         }
 
         if ($("#name").val() == '') {
-            $("#nameError").html(" * 请输入昵称");
+            $("#nameError").html(" * 请输入支付宝转账订单号的后四位。");
             hasError = true;
         } else {
             $("#nameError").html('');

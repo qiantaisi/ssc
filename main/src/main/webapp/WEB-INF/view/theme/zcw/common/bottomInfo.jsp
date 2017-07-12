@@ -28,25 +28,25 @@
                     </p>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);">
                                 <img src="${resPath}images/common/index_93.png" />
                                 账户安全
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);">
                                 <img src="${resPath}images/common/index-36.png" />
                                 购彩简单
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);">
                                 <img src="${resPath}images/common/index2_92.png" />
                                 领奖方便
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);">
                                 <img src="${resPath}images/common/index_135.png" />
                                 提款快速
                             </a>
@@ -98,12 +98,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/tk_10.html">
                                 如何查询购彩记录
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/aq.html">
                                 在本站购彩安全吗
                             </a>
                         </li>
