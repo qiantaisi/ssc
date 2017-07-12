@@ -104,19 +104,19 @@
                             <span>欢迎登陆</span>
                         </div>
                         <form onsubmit="registerLogin();return false;">
-                            <div class=" banner_shuru_gp">
+                            <div class="banner_shuru_gp">
                                 <input type="text" id="registerLoginAccount" class="banner_shuru_input"
                                        placeholder="会员名"/>
                             </div>
                             <div class=" banner_shuru_gp">
                                 <input type="password" id="registerLoginPassword" class="banner_shuru_input"
                                        placeholder="密码"/>
-                                <a href="#" class="banner_wp">忘记?</a>
+                                <a href="${kefuUrl}" class="banner_wp">忘记?</a>
                             </div>
                             <div class=" banner_shuru_gp">
                                 <input type="text" id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码"/>
 
-                                <a href="#" class="banner_yz">
+                                <a href="javascript:void(0)" class="banner_yz">
                                     <img id="registerYzmImg2" onclick="refreshYzm(this)"
                                          src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
                                 </a>
@@ -616,33 +616,32 @@
                 <img src="${resPath}images/common/index5.png" class="left index_main_erw" />
                 <div class="right index_main_rt1_1_rt">
                     <p class="down_a">
-                        <a href="#">
+                        <a href="<%=mHostName%>">
                             <img src="${resPath}images/common/index_72.png" />
                             Iphone 版
                         </a>
                     </p>
                     <p class="down_a">
-                        <a href="#">
+                        <a href="<%=mHostName%>">
                             <img src="${resPath}images/common/index_77.png" />
                             Android 版
                         </a>
                     </p>
                     <p class="index_main_erw_more">
-                        <a href="#">更多方式</a>
+                        <a href="javascript:void(0)">更多方式</a>
                     </p>
                 </div>
             </div>
             <div class="index_main_rt1_2">
                 <div class="index_main_rt1_2t clearfix">
-                    <a href="javascript:;" class="ahover">
+                    <a href="javascript:void(0);" class="ahover">
                         网站公告
                     </a>
-                    <a href="javascript:;">新手指导</a>
+                    <a href="javascript:void(0);">新手指导</a>
                 </div>
                 <div class="ndex_main_rt1_2b_main">
-                    <div class="index_main_rt1_2b active">
+                    <div class="index_main_rt1_2b index-content-notice active">
                         <div id="wrap">
-                            <marquee direction="up" behavior="scroll" stoptime="2000" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                             <ul class="index_notice_ul" id="box1">
                                 <li>
                                     <a href="#">工行入款账号停用</a>
@@ -653,9 +652,16 @@
                                 <li>
                                     <a href="#">工行入款账号停用</a>
                                 </li>
-                            </ul></marquee>
+                            </ul>
                             <ul id="box2"></ul>
                         </div>
+                    </div>
+                    <div class="index_main_rt1_2b index-content-help">
+                        <ul class="index_notice_ul">
+                            <li>
+                                <a href="#">新手指导</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -767,6 +773,7 @@
         setInterval(function () {
             renderOpenTimeHtml();
         }, 1000);
+
     });
 
 
@@ -876,13 +883,13 @@
 <script>
    $(function(){
 
-       $('.index_main_rt1_2t a').click(function(){
+       $('.index_main_rt1_2t a').mouseover(function(){
            var index = $(this).index();
            $(this).addClass('ahover').siblings().removeClass('ahover');
            $(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();
        });
 
-       $('.touzhu_t_qht a').click(function(){
+       $('.touzhu_t_qht a').mouseover(function(){
            var index = $(this).index();
            $(this).addClass('ahover').siblings().removeClass('ahover');
            $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
