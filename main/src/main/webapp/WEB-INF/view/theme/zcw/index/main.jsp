@@ -47,35 +47,93 @@
             });
         </script>
     </div>
-    <div class="banner_shuru">
-        <div class="container clear">
-            <div class="banner_shuru_main right">
-                <div class="banner_shuru_main_tl">
-                    <span>欢迎登陆</span>
-                </div>
-                <form onsubmit="registerLogin();return false;">
-                    <div class=" banner_shuru_gp">
-                        <input type="text"  id="registerLoginAccount" class="banner_shuru_input" placeholder="会员名" />
-                    </div>
-                    <div class=" banner_shuru_gp">
-                        <input type="password"  id="registerLoginPassword" class="banner_shuru_input" placeholder="密码" />
-                        <a href="#" class="banner_wp">忘记?</a>
-                    </div>
-                    <div class=" banner_shuru_gp">
-                        <input type="text"  id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码" />
 
-                        <a href="#" class="banner_yz">
-                            <img id="registerYzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
-                        </a>
+    <c:choose>
+        <c:when test="${not empty userSession}">
+            <div class="banner_shuru">
+                <div class="container clear">
+                    <div class="banner_shuru_main right">
+                        <div class="banner_shuru_main_tl">
+                            <span>欢迎登陆</span>
+                        </div>
+                        <div class="login_after">
+                            <div class="login_after1">
+                                <script>
+                                    var hour = (new Date()).getHours();
+                                    if (hour < 6) {
+                                        hour = '凌晨好！';
+                                    } else if (hour < 12) {
+                                        hour = '上午好！';
+                                    } else if (hour < 14) {
+                                        hour = '中午好！';
+                                    } else if (hour < 18) {
+                                        hour = '下午好！';
+                                    } else if (hour < 24) {
+                                        hour = '晚上好！'
+                                    }
+                                    document.write(hour);
+                                </script>
+                                <span style="color: #247fdd;">${userSession.account}</span><br/>
+                                余额：<span class="color_red">${userSession.balance}</span>
+                            </div>
+                            <div class="login_after2">
+                                <a href="javascript:void(0);" onclick="openHyzx('member/zhcz.html?module=yhzz')">存款 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0);" onclick="openHyzx('member/withdraw.html')">取款</a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0);" onclick="openHyzx('member/withdraw.html')">站内信 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0);" onclick="openHyzx('member/lsjl.html?module=tzjl')">投注记录 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0);" onclick="openHyzx('member/lsjl.html?module=ckjl')">提款记录</a>
+                                <span>&nbsp;|&nbsp;</span>
+                            </div>
+                            <div class="login_afterbtn">
+                                <a href="javascript:void(0);" onclick="sigout()" class="btn_red">
+                                    退出
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="clearfix banner_shuru_btn">
-                        <input type="submit" class="left btn_red"  value="登录"/>
-                        <a href="<%=basePath%>register.html" class="left">立即注册</a>
-                    </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </div>
+        </c:when>
+        <c:otherwise>
+            <div class="banner_shuru">
+                <div class="container clear">
+                    <div class="banner_shuru_main right">
+                        <div class="banner_shuru_main_tl">
+                            <span>欢迎登陆</span>
+                        </div>
+                        <form onsubmit="registerLogin();return false;">
+                            <div class=" banner_shuru_gp">
+                                <input type="text" id="registerLoginAccount" class="banner_shuru_input"
+                                       placeholder="会员名"/>
+                            </div>
+                            <div class=" banner_shuru_gp">
+                                <input type="password" id="registerLoginPassword" class="banner_shuru_input"
+                                       placeholder="密码"/>
+                                <a href="${kefu}" class="banner_wp">忘记?</a>
+                            </div>
+                            <div class=" banner_shuru_gp">
+                                <input type="text" id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码"/>
+
+                                <a href="javascript:void(0);" class="banner_yz">
+                                    <img id="registerYzmImg2" onclick="refreshYzm(this)"
+                                         src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
+                                </a>
+                            </div>
+                            <div class="clearfix banner_shuru_btn">
+                                <input type="submit" class="left btn_red" value="登录"/>
+                                <a href="<%=basePath%>register.html" class="left">立即注册</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </c:otherwise>
+    </c:choose>
+
 </div>
 
 <div class="main container index_main clearfix">
@@ -609,28 +667,28 @@
             </div>
             <div class="index_main_rt1_2">
                 <div class="index_main_rt1_2t clearfix">
-                    <a href="javascript:;" class="ahover">
+                    <a href="javascript:void(0);" class="ahover">
                         网站公告
                     </a>
-                    <a href="javascript:;">新手指导</a>
+                    <a href="javascript:void(0);">新手指导</a>
                 </div>
                 <div class="ndex_main_rt1_2b_main">
                     <div class="index_main_rt1_2b active">
                         <div id="wrap">
-                            <marquee direction="up" behavior="scroll" stoptime="2000" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
-                            <ul class="index_notice_ul" id="box1">
+                            <ul class="index_notice_ul" id="gonggao_marquee">
                                 <li>
-                                    <a href="#">工行入款账号停用</a>
+                                    <a href="javascript:void(0);"></a>
                                 </li>
-                                <li>
-                                    <a href="#">工行入款账号停用</a>
-                                </li>
-                                <li>
-                                    <a href="#">工行入款账号停用</a>
-                                </li>
-                            </ul></marquee>
+                            </ul>
                             <ul id="box2"></ul>
                         </div>
+                    </div>
+                    <div class="index_main_rt1_2b index-content-help">
+                        <ul class="index_notice_ul">
+                            <li>
+                                <a href="${basPath}help/index.html">新手指导</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -646,25 +704,19 @@
             </div>
 
             <div class="zhongjiang_ul">
-                <marquee direction="up" behavior="scroll" scrollamount="15" scrolldelay="1" loop="-1" width="500" height="400">
-                <ul>
-
-<%--
-                   <marquee direction="up" behavior="scroll" scrollamount="20" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
---%>
-                        <c:forEach items="${Notices.noticeList}" var="noticelists">
+                <ul id="zj_info_marquee">
+                    <c:forEach items="${Notices.noticeList}" var="noticelists">
                         <li class="clearfix">
-                            <a href="#" class="left zhongjiang_li1">
-                                ${noticelists.type}
+                            <a href="javascript:void(0);" class="left zhongjiang_li1">
+                                    ${noticelists.type}
                             </a>
                             <span class="left zhongjiang_name">${noticelists.userName}</span>
                             <span class="left zhongjiang_jine">
 		        				${noticelists.amount}元
 		        			</span>
                         </li>
-                        </c:forEach>
+                    </c:forEach>
                 </ul>
-                </marquee>
             </div>
         </div>
     </div>
@@ -691,13 +743,31 @@
         setInterval(function () {
             renderOpenTimeHtml();
         }, 1000);
+
+        $('#zj_info_marquee').liMarquee({
+            direction: 'up',
+            scrollamount: 10
+        });
     });
 
-
-    function touzhutishi() {
-        alert("游戏暂未上线，敬请期待！");
+    function sigout() {
+        ajaxRequest({
+            url: "<%=basePath%>member/ajaxSigout.json",
+            beforeSend: function() {
+                showLoading();
+            },
+            success: function(json) {
+                $.cookie("uid", '', {path: "/", expires: -1});
+                $.cookie("token", '', {path: "/", expires: -1});
+                hideLoading();
+                location.reload();
+            }
+        });
     }
 
+    function showGonggao(id) {
+        $("#gonggao_" + id).show();
+    }
 
     function goZst(url) {
         showLoading();
@@ -780,18 +850,74 @@
             }
         });
     }
+
+    var content_G = '';
+    function getWebPopUpNotice() {
+        ajaxRequest({
+            url: "<%=basePath%>member/ajaxGetWebPopUpNotice.json",
+            beforeSend: function () {
+            },
+            success: function (json) {
+                if (json.result != 1) {
+                    return;
+                }
+
+                <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
+
+                </c:forEach>
+
+                var str = '';
+                var str2 = ''
+                if (json.webNoticeList.length != 0) {
+                    $.each(json.webNoticeList, function (index, value) {
+                        var len = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").length;
+                        if (len > 13) {
+                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").substr(0, 13) + "...";
+                        } else {
+                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "");
+                        }
+
+                        str += '<p onclick="showGonggao(' + index + ')" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;height:25px;margin:0;">' + value.title + "&nbsp;:&nbsp;" + content_G + '</p></br>';
+
+                        str2 += '<div class="alert hide" id="gonggao_' + index + '">';
+                        str2 += '<div class="alert_col">';
+                        str2 += '<h5><span>公告</span><i>×</i></h5>';
+                        str2 += '<h2>' + value.title + '</h2>';
+                        str2 += '<div>' + value.content + '</div>';
+                        str2 += '<h4>${webName}</h4>';
+                        str2 += '<h4 style="margin-top:15px">' + Tools.formatDate(value.createTime) + '</h4>';
+                        str2 += '</div>';
+                        str2 += '</div>';
+                    });
+                } else {
+                    str = '暂无公告';
+                }
+                $("#gonggao_marquee").html(str);
+                $("#gonggao_marquee p").css({margin: "-10px auto"});
+                $("#gonggao_container").html(str2);
+
+                $('#gonggao_marquee').liMarquee({
+                    direction: 'up',
+                    scrollamount: 10
+                });
+                $('.alert_col h5 i').click(function () {
+                    $('.alert').hide();
+                });
+            }
+        });
+    }
 </script>
 
 <script>
    $(function(){
 
-       $('.index_main_rt1_2t a').click(function(){
+       $('.index_main_rt1_2t a').mouseover(function(){
            var index = $(this).index();
            $(this).addClass('ahover').siblings().removeClass('ahover');
            $(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();
        });
 
-       $('.touzhu_t_qht a').click(function(){
+       $('.touzhu_t_qht a').mouseover(function(){
            var index = $(this).index();
            $(this).addClass('ahover').siblings().removeClass('ahover');
            $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
