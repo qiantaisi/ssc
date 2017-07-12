@@ -4,6 +4,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -140,8 +142,30 @@
             开奖公告
         </div>
         <div class="kaijiang_main">
-            <ul>
-
+           <%-- <ul>
+                        <c:if test="${items.playGroupId==1}">
+                    <li>
+                        <div class="clearfix kaijiang_li_t">
+                            <span class="left kaijiang_li_t_name">重庆时时彩</span>
+                            <span class="left">${items.number}期	</span>
+                        </div>
+                        <p class="kaijiang_num">
+                            ${items.openCode}
+                        </p>
+                        <div class="clearfix kaijiang_b">
+                            <span class="left">
+                                ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
+                               &lt;%&ndash; <fmt:parseDate value="${fn:substring(items.number, 0, 8)}" var="date"/>&ndash;%&gt;
+                                  &lt;%&ndash; ${date}&ndash;%&gt;
+                                &lt;%&ndash;<fmt:formatDate value="${date}" pattern="yyyy-MM-dd"/>&ndash;%&gt;
+                            </span>
+                            <div class="right clearfix">
+                                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">详情 </a>
+                                <span class="left">&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" onclick="goZst('zst/cqssc')" class="left">走势 </a>
+                                <span class="left">&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">投注 </a>
+                            </div>
                 <li>
                     <div class="clearfix kaijiang_li_t">
                         <span class="left kaijiang_li_t_name"></span>
@@ -158,6 +182,7 @@
                             <a href="<%=basePath%>ssc/zst/cqssc.html" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
                             <a href="<%=basePath%>ssc/gcdt/cqssc.html" class="left">投注 </a>
+>>>>>>> 9fe64f5d4862568a65208b20377ba8396364d07f
                         </div>
                     </div>
                 </li>
@@ -171,26 +196,54 @@
                         0  1  5  0  1
                     </p>
                     <div class="clearfix kaijiang_b">
-                        <span class="left">2017-06-26</span>
+                        <span class="left">
+                             ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
+                        </span>
                         <div class="right clearfix">
-                            <a href="#" class="left">详情 </a>
+                            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">走势 </a>
+                            <a href="javascript:void(0)" onclick="goZst('zst/tjssc')" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/gcdt/xjssc.html" class="left">投注 </a>
+                            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
+
+                            </c:if>
+                            <c:if test="${items.playGroupId==3}">
+                                <li>
+                                    <div class="clearfix kaijiang_li_t">
+                                        <span class="left kaijiang_li_t_name">新疆时时彩</span>
+                                        <span class="left">${items.number}期	</span>
+                                    </div>
+                                    <p class="kaijiang_num">
+                                            ${items.openCode}
+                                    </p>
+                                    <div class="clearfix kaijiang_b">
+                        <span class="left">
+                             ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
+                        </span>
+                                        <div class="right clearfix">
+                                            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')" class="left">详情 </a>
+                                            <span class="left">&nbsp;|&nbsp;</span>
+                                            <a href="javascript:void(0)" onclick="goZst('zst/xjssc')" class="left">走势 </a>
+                                            <span class="left">&nbsp;|&nbsp;</span>
+                                            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')" class="left">投注 </a>
+                                        </div>
+                                    </div>
+                                </li>
+                        </c:if>
+                            <c:if test="${items.playGroupId==15}">
                 <li>
                     <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name">北京时时彩</span>
-                        <span class="left">20170626082期	</span>
-                    </div>
+                        <span class="left kaijiang_li_t_name">分分时时彩</span>
+                        <span class="left">${items.number}期	</span>
+                <li>
                     <p class="kaijiang_num">
-                        0  1  5  0  1
+                            ${items.openCode}
                     </p>
                     <div class="clearfix kaijiang_b">
-                        <span class="left">2017-06-26</span>
+                        <span class="left"> ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}</span>
                         <div class="right clearfix">
                             <a href="#" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
@@ -200,45 +253,32 @@
                         </div>
                     </div>
                 </li>
+                            </c:if>
+                                <c:if test="${items.playGroupId==16}"/>
                 <li>
                     <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name">天津时时彩</span>
-                        <span class="left">20170626082期	</span>
+                        <span class="left kaijiang_li_t_name"></span>
+                        <span class="left">${items.number}期	</span>
+
                     </div>
                     <p class="kaijiang_num">
-                        0  1  5  0  1
+                            ${items.openCode}
                     </p>
                     <div class="clearfix kaijiang_b">
-                        <span class="left">2017-06-26</span>
+                        <span class="left">
+                             ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
+                        </span>
                         <div class="right clearfix">
-                            <a href="#" class="left">详情 </a>
+                            <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/zst/tjssc.html" class="left">走势 </a>
+                            <a href="javascript:void(0)" onclick="goZst('zst/ffssc')" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/zst/tjssc.html" class="left">投注 </a>
+                            <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name">重庆时时彩</span>
-                        <span class="left">20170626082期	</span>
-                    </div>
-                    <p class="kaijiang_num">
-                        0  1  5  0  1
-                    </p>
-                    <div class="clearfix kaijiang_b">
-                        <span class="left">2017-06-26</span>
-                        <div class="right clearfix">
-                            <a href="#" class="left">详情 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                            </c:if>
+            </ul>--%>
         </div>
     </div>
     <div class="left index_main_midlle">
@@ -677,8 +717,13 @@
             </div>
 
             <div class="zhongjiang_ul">
+                <marquee direction="up" behavior="scroll" scrollamount="15" scrolldelay="1" loop="-1" width="500" height="400">
                 <ul>
+<%--
+                   <marquee direction="up" behavior="scroll" scrollamount="20" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
+--%>
                     <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
+
                         <c:forEach items="${Notices.noticeList}" var="noticelists">
                         <li class="clearfix">
                             <a href="#" class="left zhongjiang_li1">
@@ -690,8 +735,8 @@
 		        			</span>
                         </li>
                         </c:forEach>
-                    </marquee>
                 </ul>
+                </marquee>
             </div>
         </div>
     </div>
