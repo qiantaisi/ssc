@@ -745,8 +745,14 @@
 <div id="gonggao_container"></div>
 <script>
     $(function () {
+
+        var playIds = (1, 2, 15, 16);
+        alert("21321321");
+        getSscDataMainPage(playIds);
+
         getWebPopUpNotice();
         getSscDataMainPage();
+
 
         xyxh(null, 1);
         xyxh(null, 4);
@@ -767,9 +773,13 @@
 
     });
 
+
+    function getSscDataMainPage(playIds) {
+
     var playIds = (1, 2, 15, 16);
 
     function getSscDataMainPage() {
+
         ajaxRequest({
             url: "<%=basePath%>index/ajaxGetSscDataMainPage.json",
             data: {playIds: playIds},
@@ -777,6 +787,7 @@
                 if (json.sscHistoryList != null) {
                     var kjjglist = json.sscHistoryList;
                     for (var i in  klist) {
+                        alert(klist.playGroupId );
                         if (klist.playGroupId == 1)
                             $("#apend").append(
                                 "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>+'重庆时时彩'+</span><span class='left'>'+klist[i].number+'</span></div><p class='kaijiang_num'>'+klist[i].openCode+'</p><div class='clearfix kaijiang_b'><span class='left'>'+klist[i].date+'</span><div class='right clearfix'><a href='#'>'+详情+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+走势+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+投注+'</a></div></div></li>");
