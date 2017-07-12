@@ -204,7 +204,7 @@
                 <div class="touzhu_b_main active" id="ssc_id_1">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time1"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time1"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">手动选号</a>
@@ -239,14 +239,14 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <button class="add left" onclick="xyxhAdd(1, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
 
-                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
+                            <button class="min left" onclick="xyxhMinute(1, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span id="xyxhMoney_1" class="xyxhMoney_1 color_red"><i>5</i></span>元
+                            倍，共 <span id="xyxhMoney_1" class="xyxhMoney_1 color_red">2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0)" class="shuaxin" onclick="xyxh(this,1)">
@@ -261,7 +261,7 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_20">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time2"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time2"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0);" onclick="openGcdt('gcdt/ahk3')">手动选号</a>
@@ -287,13 +287,14 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left"onclick="xyxhAdd(1, 20)">+</button>
+                            <button class="add left" onclick="xyxhAdd(20, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_20" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
-                            <button class="min left"  onclick="xyxhMinute(1, 5)">-</button>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
+
+                            <button class="min left" onclick="xyxhMinute(20, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span id="xyxhMoney_20" class="color_red">2 </span>元
+                            倍，共 <span id="xyxhMoney_20" class="color_red">2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,20)">
@@ -308,7 +309,7 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_6">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time3"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time3"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">手动选号</a>
@@ -390,14 +391,14 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <button class="add left" onclick="xyxhAdd(6, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_6" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
 
-                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
+                            <button class="min left" onclick="xyxhMinute(6, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span class="color_red" >2</span>元
+                            倍，共 <span id="xyxhMoney_6" class="color_red" >2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,6)">
@@ -412,7 +413,7 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_4">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time4"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time4"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0);" onclick="openGcdt('gcdt/lhc')">手动选号</a>
@@ -438,14 +439,14 @@
                     </div>
                     <div class="clearfix touzhu4">
                         <div class="clearfix sum left">
-                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <button class="add left" onclick="xyxhAdd(4, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_4" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
 
-                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
+                            <button class="min left" onclick="xyxhMinute(4, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span id="xyxhMoney_4" class="color_red">2 </span>元
+                            倍，共 <span id="xyxhMoney_4" class="color_red">2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,4)">
@@ -610,6 +611,8 @@
             <div class="zhongjiang_ul">
                 <ul>
                     <marquee direction="up" behavior="scroll" scrolldelay="-2" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();" width="500" height="400">
+
+                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
                         <c:forEach items="${Notices.noticeList}" var="noticelists">
                         <li class="clearfix">
                             <a href="#" class="left zhongjiang_li1">
@@ -642,71 +645,20 @@
         xyxh(null, 4);
         xyxh(null, 6);
         xyxh(null, 20);
+
+        //获取中间随机彩票的截止日期和剩余时间
+        getAllOpenTime();
+
+        setInterval(function () {
+            renderOpenTimeHtml();
+        }, 1000);
     });
-    var content_G = '';
-    /*function getWebPopUpNotice() {
-        ajaxRequest({
-            url: "<%=basePath%>member/ajaxSscZJNoticeResult.json",
-            beforeSend: function () {
-            },
-            success: function (json) {
-                if (json.result != 1) {
-                    alert(json.result);
-                    return;
-                }
 
-                <c:forEach items="${SscZJNoticeResult.noticeList}" var="item" varStatus="status">
-
-                </c:forEach>
-
-                var str = '';
-                var str2 = ''
-                if (json.noticeList.length != 0) {
-                    $.each(json.webNoticeList, function (index, value) {
-                        var len = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").length;
-                        if (len > 13) {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").substr(0, 13) + "...";
-                        } else {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "");
-                        }
-
-                        str += '<p onclick="showGonggao(' + index + ')" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;height:25px;margin:0;">' + value.title + "&nbsp;:&nbsp;" + content_G + '</p></br>';
-                alert(value.userName);
-                        alert(value.amount);
-                        str2 += '<div class="alert hide" id="gonggao_' + index + '">';
-                        str2 += '<div class="alert_col">';
-                        str2 += '<ul><li class="clearfix"><a href="#" class="left zhongjiang_li1">'+value.type+
-                        '</a><span class="left zhongjiang_name">'+value.userName+'</span><span class="left zhongjiang_jine">'+ value.amount元+'</span></li></ul>'
-                    });
-                } else {
-                    str = '暂无公告';
-                }
-                $("#gonggao_marquee").html(str);
-                $("#gonggao_marquee p").css({margin: "-10px auto"});
-                $("#gonggao_container").html(str2);
-
-                $('#gonggao_marquee').liMarquee({
-                    direction: 'up',
-                    scrollamount: 10
-                });
-                $('.alert_col h5 i').click(function () {
-                    $('.alert').hide();
-                });
-            }
-        });
-    }
-    function showGonggao(id) {
-        $("#gonggao_" + id).show();
-    }*/
 
     function touzhutishi() {
         alert("游戏暂未上线，敬请期待！");
     }
 
-    <%--var popupNotice = <%=JSONUtils.toJSONStr(((WebNoticeResult)request.getAttribute("webPopUpNoticeResult")).getWebNoticeList())%>;--%>
-    <%--function openPopUpNotice() {--%>
-    <%--showPopUp(popupNotice);--%>
-    <%--}--%>
 
     function goZst(url) {
         showLoading();
@@ -972,7 +924,7 @@
                 numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。
             }
             nums = numsArr.join(",");
-            money = $("#xyxhMoney_6").val();
+            money = $("#xyxhMoney_6").html();
         } else if (type == 1) {
             caizhong = 'cqssc';
             navIndex = 0;
@@ -985,33 +937,34 @@
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhMoney_1").val();
+            money = $("#xyxhMoney_1").html();
+
         } else if (type == 20) {
             caizhong = 'ahk3';
-            navIndex = 0;
+            navIndex = 7;
             var numsArr = [];
             for (var i = 0; i < 3; ++i) {
-                var v = $("#xyxhContent_20 span").eq(i).data("num");
+                var v = $("#xyxhContents_20 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhMoney_20").val();
+            money = $("#xyxhMoney_20").html();
         } else if (type == 4) {
             caizhong = 'pl3';
             navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 3; ++i) {
-                var v = $("#xyxhContent_4 span").eq(i).data("num");
+                var v = $("#xyxhContents_4 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhMoney_4").val();
+            money = $("#xyxhMoney_4").html();
         }
 
         if (numsArr.length == 0) {
@@ -1133,7 +1086,7 @@
             num++;
         }
         $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html('<i>' + mul(num, size) + '</i>');
+        $("#xyxhMoney_" + id).html(mul(num, size));
     }
     function checkValue(id, size) {
         var num = $("#xyxhInput_" + id).val();
@@ -1141,7 +1094,7 @@
             num = 1;
             $("#xyxhInput_" + id).val(num);
         }
-        $("#xyxhMoney_" + id).html('<i>' + mul(num, size) + '</i>');
+        $("#xyxhMoney_" + id).html(mul(num, size));
     }
     function xyxhMinute(id, size) {
         var num = $("#xyxhInput_" + id).val();
@@ -1151,7 +1104,7 @@
             num--;
         }
         $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html('<i>' + mul(num, size) + '</i>');
+        $("#xyxhMoney_" + id).html(mul(num, size));
     }
 
 
@@ -1320,9 +1273,9 @@
             });
 
             index_20 = setInterval(function () {
-                var num1 = Math.floor(Math.random() * 10);
-                var num2 = Math.floor(Math.random() * 10);
-                var num3 = Math.floor(Math.random() * 10);
+                var num1 = Math.floor((Math.random() * 6) + 1);
+                var num2 = Math.floor((Math.random() * 6) + 1);
+                var num3 = Math.floor((Math.random() * 6) + 1);
 
                 $("#xyxhContents_20 span").eq(0).html(num1);
                 $("#xyxhContents_20 span").eq(1).html(num2);
@@ -1330,9 +1283,9 @@
             }, 50);
 
             setTimeout(function () {
-                var num1 = Math.floor(Math.random() * 10);
-                var num2 = Math.floor(Math.random() * 10);
-                var num3 = Math.floor(Math.random() * 10);
+                var num1 = Math.floor((Math.random() * 6) + 1);
+                var num2 = Math.floor((Math.random() * 6) + 1);
+                var num3 = Math.floor((Math.random() * 6) + 1);
 
                 clearInterval(index_20);
                 $("#xyxhContents_20 span").eq(0).data("num", "wan-" + num1).html(num1);
@@ -1366,6 +1319,119 @@
                 $("#xyxhContents_4 span").eq(2).data("num", "bai-" + num3).html(num3);
             }, 2000);
         }
+    }
+
+
+    // 获取所有彩种开奖时间
+    function getAllOpenTime() {
+        ajaxRequest({
+            url: CONFIG.BASEURL + "ssc/getAllSscOpenTime2.json",
+            success: function(json) {
+                if (json.result != 1) {
+                    return;
+                }
+
+                // 渲染数据
+                $.each(json.sscTimeList, function (index, value) {
+                    var obj = $("#ssc_id_" + value.playGroupId);
+
+                    if ($(obj).length == 0) {
+                        return;
+                    }
+
+                    $(obj).data("play_group_id", value.playGroupId);
+                    $(obj).data("left_time", value.leftTime);
+                    $(obj).data("number", value.number);
+
+                });
+            },
+            error: function(a, b, c) {
+                // 失败重试
+                setTimeout(function() {
+                    getAllOpenTime();
+                }, 2000);
+            }
+        });
+    }
+
+    // 时间倒计时
+    function renderOpenTimeHtml() {
+        $(".touzhu_b .touzhu_b_main").each(function () {
+            var number = $(this).data("number");
+            var leftTime = Tools.parseInt($(this).data("left_time"));
+            var playGroupId = $(this).data("play_group_id");
+
+            var time = 0;
+            var str;
+
+            time = leftTime;
+
+            $(this).data("left_time", time - 1);
+
+            if (isNaN(time) || time < -0) {
+                return;
+            }
+            var day = 0;
+            var hour = 0;
+            var minute = 0;
+            var second = 0;
+
+            day = Math.floor(time / 60 / 60 / 24);
+            time -= day * 60 * 60 * 24;
+            hour = Math.floor(time / 60 / 60);
+            time -= hour * 60 * 60;
+            minute = Math.floor(time / 60);
+            time -= minute * 60;
+            second = time;
+
+            var dayStr = (day == 0) ? '' : day + " 天 ";
+            var hourStr = (hour == 0) ? '' : hour + " 时 ";
+            var minuteStr = (minute == 0) ? '' : minute + " 分 ";
+            var secondStr = (second == 0) ? '0 秒' : second + " 秒";
+
+
+            $("#ssc_id_" + playGroupId + " .left .time").html(dayStr + '' + hourStr + '' + minuteStr + '' + secondStr); //倒计时时间
+            $(this).find('.qishu').html(number); //期号
+
+            // 时间结束，获取新开奖时间
+            if (leftTime == 0) {
+                getSscOpenTime2(playGroupId);
+                return;
+            }
+        });
+
+
+        // 获取单彩种时间
+        function getSscOpenTime2(playGroupId) {
+            ajaxRequest({
+                url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
+                data: {
+                    playGroupId: playGroupId
+                },
+                success: function(json) {
+                    if (json.result != 1) {
+                        return;
+                    }
+
+                    var obj = $("#ssc_id_" + playGroupId);
+
+                    if ($(obj).length == 0) {
+                        return;
+                    }
+
+                    $(obj).data("play_group_id", playGroupId);
+                    $(obj).data("left_time", json.leftTime);
+                    $(obj).data("number", json.number);
+                },
+                error: function(a, b, c) {
+                    // 失败重试
+                    setTimeout(function() {
+                        getSscOpenTime2();
+                    }, 2000);
+                }
+            });
+        }
+
     }
 
 </script>

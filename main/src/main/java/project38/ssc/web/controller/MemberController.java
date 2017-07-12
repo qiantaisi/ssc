@@ -661,11 +661,11 @@ public class MemberController extends BaseController {
             return this.renderJson(result);
         }
 
-        if (null == drawPassword){
-            result.setResult(-3);
-            result.setDescription("请输入密码！");
-            return this.renderJson(result);
-        }
+//        if (null == drawPassword){
+//            result.setResult(-3);
+//            result.setDescription("请输入密码！");
+//            return this.renderJson(result);
+//        }
 
 
         result = ApiUtils.submitWithdraw(uid, token, money, id, drawPassword, companyShortName);
