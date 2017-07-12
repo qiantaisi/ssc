@@ -84,8 +84,8 @@
             开奖公告
         </div>
         <div class="kaijiang_main">
-            <ul>
-                        <c:forEach  items="${SscHistoryResult2.sscHistoryList}" var="items">
+            <ul id="apend">
+                     <%--   <c:forEach  items="${SscHistoryResult2.sscHistoryList}" var="items">
 
 
                         <c:if test="${items.playGroupId==1}">
@@ -100,9 +100,9 @@
                         <div class="clearfix kaijiang_b">
                             <span class="left">
                                 ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
-                               <%-- <fmt:parseDate value="${fn:substring(items.number, 0, 8)}" var="date"/>--%>
-                                  <%-- ${date}--%>
-                                <%--<fmt:formatDate value="${date}" pattern="yyyy-MM-dd"/>--%>
+                               &lt;%&ndash; <fmt:parseDate value="${fn:substring(items.number, 0, 8)}" var="date"/>&ndash;%&gt;
+                                  &lt;%&ndash; ${date}&ndash;%&gt;
+                                &lt;%&ndash;<fmt:formatDate value="${date}" pattern="yyyy-MM-dd"/>&ndash;%&gt;
                             </span>
                             <div class="right clearfix">
                                 <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">详情 </a>
@@ -210,7 +210,7 @@
                                     </div>
                                 </li>
                             </c:if>
-                        </c:forEach>
+                        </c:forEach>--%>
 
             </ul>
 
@@ -678,7 +678,7 @@
 <script>
     $(function () {
 
-        getWebPopUpNotice();
+        getSscDataMainPage();
 
         xyxh(null, 1);
         xyxh(null, 4);
@@ -692,6 +692,26 @@
             renderOpenTimeHtml();
         }, 1000);
     });
+
+    function getSscDataMainPage() {
+        var playIds=(1,2,15,16);
+        ajaxRequest({
+            url: "<%=basePath%>index/ajaxGetSscDataMainPage.json",
+            data:{playIds:playIds},
+            success:function(json){
+                if(json.sscHistoryList!=null){
+                    var  kjjglist=json.sscHistoryList;
+                    for(var i in  klist){
+                        if(klist.playGroupId==1)
+                        $("#apend").append(
+                            "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>+'重庆时时彩'+</span><span class='left'>'+klist[i].number+'</span></div><p class='kaijiang_num'>'+klist[i].openCode+'</p><div class='clearfix kaijiang_b'><span class='left'>'+klist[i].date+'</span><div class='right clearfix'><a href='#'>'+详情+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+走势+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+投注+'</a></div></div></li>");
+                    }
+
+                }
+            }
+
+        });
+    }
 
 
     function touzhutishi() {
