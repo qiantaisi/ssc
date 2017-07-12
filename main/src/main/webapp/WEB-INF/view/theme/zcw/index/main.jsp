@@ -56,7 +56,22 @@
                         </div>
                         <div class="login_after">
                             <div class="login_after1">
-                                下午好！<span style="color: #247fdd;">${userSession.account}</span><br/>
+                                <script>
+                                    var hour = (new Date()).getHours();
+                                    if (hour < 6) {
+                                        hour = '凌晨好！';
+                                    } else if (hour < 12) {
+                                        hour = '上午好！';
+                                    } else if (hour < 14) {
+                                        hour = '中午好！';
+                                    } else if (hour < 18) {
+                                        hour = '下午好！';
+                                    } else if (hour < 24) {
+                                        hour = '晚上好！'
+                                    }
+                                    document.write(hour);
+                                </script>
+                                <span style="color: #247fdd;">${userSession.account}</span><br/>
                                 余额：<span class="color_red">${userSession.balance}</span>
                             </div>
                             <div class="login_after2">
