@@ -747,11 +747,9 @@
     $(function () {
 
         var playIds = (1, 2, 15, 16);
-        alert("21321321");
         getSscDataMainPage(playIds);
 
         getWebPopUpNotice();
-        getSscDataMainPage();
 
 
         xyxh(null, 1);
@@ -773,9 +771,6 @@
 
     });
 
-
-    function getSscDataMainPage(playIds) {
-
     var playIds = (1, 2, 15, 16);
 
     function getSscDataMainPage() {
@@ -787,7 +782,7 @@
                 if (json.sscHistoryList != null) {
                     var kjjglist = json.sscHistoryList;
                     for (var i in  klist) {
-                        alert(klist.playGroupId );
+                        alert(klist.playGroupId);
                         if (klist.playGroupId == 1)
                             $("#apend").append(
                                 "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>+'重庆时时彩'+</span><span class='left'>'+klist[i].number+'</span></div><p class='kaijiang_num'>'+klist[i].openCode+'</p><div class='clearfix kaijiang_b'><span class='left'>'+klist[i].date+'</span><div class='right clearfix'><a href='#'>'+详情+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+走势+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+投注+'</a></div></div></li>");
@@ -902,6 +897,7 @@
     }
 
     var content_G = '';
+
     function getWebPopUpNotice() {
         ajaxRequest({
             url: "<%=basePath%>member/ajaxGetWebPopUpNotice.json",
@@ -956,6 +952,7 @@
             }
         });
     }
+
 </script>
 
 <script>
@@ -1131,7 +1128,7 @@
             navIndex = 0;
             numsArr = [];
             for (var i = 0; i < 7; ++i) {
-                var v = $("#xyxhContents_6 .left:eq("+ i +") span").data("num");
+                var v = $("#xyxhContents_6 .left:eq(" + i + ") span").data("num");
                 if (v == '') {
                     continue;
                 }
@@ -1373,13 +1370,13 @@
                 bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
                 clearInterval(index_6);
-                $("#xyxhContents_6 .left:eq(0) span").attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
-                $("#xyxhContents_6 .left:eq(1) span").attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
-                $("#xyxhContents_6 .left:eq(2) span").attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
-                $("#xyxhContents_6 .left:eq(3) span").attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
-                $("#xyxhContents_6 .left:eq(4) span").attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
-                $("#xyxhContents_6 .left:eq(5) span").attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
-                $("#xyxhContents_6 .left:eq(6) span").attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
+                $("#xyxhContents_6 .left:eq(0) .qiu").attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
+                $("#xyxhContents_6 .left:eq(1) .qiu").attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
+                $("#xyxhContents_6 .left:eq(2) .qiu").attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
+                $("#xyxhContents_6 .left:eq(3) .qiu").attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
+                $("#xyxhContents_6 .left:eq(4) .qiu").attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
+                $("#xyxhContents_6 .left:eq(5) .qiu").attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
+                $("#xyxhContents_6 .left:eq(6) .qiu").attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
 
                 $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
                 $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
