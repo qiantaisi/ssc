@@ -13,7 +13,7 @@
             <img src="${resPath}images/index_11.png" />
         </a>
         <div class="left head_middle_yuye">
-            <a href="#">
+            <a href="javascript:void(0);">
                 <img src="${resPath}images/index_14.png" />
             </a>
         </div>
@@ -235,7 +235,7 @@
             <a href="<%=basePath%>kjjg.html">
                 开奖公告
             </a>
-            <a href="<%=basePath%>ssc/index.html?module=gcdtIndex" target="_blank">
+            <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">
                 走势图表
             </a>
             <a href="<%=mHostName%>" target="_blank">
