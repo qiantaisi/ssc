@@ -687,8 +687,7 @@ a:visited {
 }
 
 .zhongjiang_ul {
-    padding-bottom: 4px;
-    height: 337px;
+    height: 341px;
     overflow: hidden;
     border: 1px solid #ddd;
     border-top: none;
@@ -890,4 +889,14 @@ a:visited {
 
 .index-content-help{
     display: none;
+}
+
+#zj_info_marquee{
+    display: block;
+    height: 100%;
+}
+
+#zj_info_marquee li{
+    background: white;
+    width: 100%;
 }
