@@ -1006,11 +1006,21 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_HISTORY, paramsMap, companyShortName), SscHistoryResult2.class);
     }
 
-    public static SscHistoryResult3 getSscDataMainPage(String companyShortName) {
+    public static SscHistoryResult3 getSscDataMainPage(List<Long> playIds,Long playId, String companyShortName) {
         if (IS_DEBUG) {
             return new SscHistoryResult3();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
+        if (playId != null) {
+            paramsMap.put("playId",playId);
+        } else {
+            String ids = null;
+            for (Long id : playIds) {
+                ids += id.toString()+",";
+            }
+            ids = ids.substring(0,ids.length() - 1);
+            paramsMap.put("playIds", ids);
+        }
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult3.class);
     }
 
