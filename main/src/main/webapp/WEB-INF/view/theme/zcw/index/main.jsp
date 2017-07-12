@@ -642,7 +642,7 @@
                 <div class="ndex_main_rt1_2b_main">
                     <div class="index_main_rt1_2b index-content-notice active">
                         <div id="wrap">
-                            <ul class="index_notice_ul" id="box1">
+                            <ul class="index_notice_ul" id="gonggao_marquee">
                                 <li>
                                     <a href="#">工行入款账号停用</a>
                                 </li>
@@ -776,11 +776,9 @@
 
     });
 
-
-    function touzhutishi() {
-        alert("游戏暂未上线，敬请期待！");
+    function showGonggao(id) {
+        $("#gonggao_" + id).show();
     }
-
 
     function goZst(url) {
         showLoading();
@@ -1054,7 +1052,7 @@
             navIndex = 0;
             numsArr = [];
             for (var i = 0; i < 7; ++i) {
-                var v = $("#xyxhContents_6 span").eq(i).data("num");
+                var v = $("#xyxhContents_6 .left:eq("+ i +") span").data("num");
                 if (v == '') {
                     continue;
                 }
@@ -1171,10 +1169,6 @@
                     return;
                 }
 
-                <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
-
-                </c:forEach>
-
                 var str = '';
                 var str2 = ''
                 if (json.webNoticeList.length != 0) {
@@ -1190,6 +1184,7 @@
 
                         str2 += '<div class="alert hide" id="gonggao_' + index + '">';
                         str2 += '<div class="alert_col">';
+                        str2 += '<h5><span>公告</span><i>×</i></h5>';
                         str2 += '<h2>' + value.title + '</h2>';
                         str2 += '<div>' + value.content + '</div>';
                         str2 += '<h4>${webName}</h4>';
@@ -1255,7 +1250,7 @@
         var index_20 = null;
         var index_4 = null;
         if (type == 6) {
-            $("#xyxhContents_6 .qiu").each(function () {
+            $("#xyxhContents_6 .left .qiu").each(function () {
                 $(this).data("num", '');
             });
 
@@ -1284,21 +1279,21 @@
                 bose6 = bose6 == 0 ? 'qiu redBg' : (bose6 == 1 ? 'qiu blueBg' : 'qiu greenBg');
                 bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
-                $("#xyxhContents_6 .qiu").eq(0).attr("class", bose1).html(num1);
-                $("#xyxhContents_6 .qiu").eq(1).attr("class", bose2).html(num2);
-                $("#xyxhContents_6 .qiu").eq(2).attr("class", bose3).html(num3);
-                $("#xyxhContents_6 .qiu").eq(3).attr("class", bose4).html(num4);
-                $("#xyxhContents_6 .qiu").eq(4).attr("class", bose5).html(num5);
-                $("#xyxhContents_6 .qiu").eq(5).attr("class", bose6).html(num6);
-                $("#xyxhContents_6 .qiu").eq(6).attr("class", bose7).html(num7);
+                $("#xyxhContents_6 .left .qiu").eq(0).attr("class", bose1).html(num1);
+                $("#xyxhContents_6 .left .qiu").eq(1).attr("class", bose2).html(num2);
+                $("#xyxhContents_6 .left .qiu").eq(2).attr("class", bose3).html(num3);
+                $("#xyxhContents_6 .left .qiu").eq(3).attr("class", bose4).html(num4);
+                $("#xyxhContents_6 .left .qiu").eq(4).attr("class", bose5).html(num5);
+                $("#xyxhContents_6 .left .qiu").eq(5).attr("class", bose6).html(num6);
+                $("#xyxhContents_6 .left .qiu").eq(6).attr("class", bose7).html(num7);
 
-                $("#xyxhContents_6 .qiu").eq(0).html(num1);
-                $("#xyxhContents_6 .qiu").eq(1).html(num2);
-                $("#xyxhContents_6 .qiu").eq(2).html(num3);
-                $("#xyxhContents_6 .qiu").eq(3).html(num4);
-                $("#xyxhContents_6 .qiu").eq(4).html(num5);
-                $("#xyxhContents_6 .qiu").eq(5).html(num6);
-                $("#xyxhContents_6 .qiu").eq(6).html(num7);
+                $("#xyxhContents_6 .left .qiu").eq(0).html(num1);
+                $("#xyxhContents_6 .left .qiu").eq(1).html(num2);
+                $("#xyxhContents_6 .left .qiu").eq(2).html(num3);
+                $("#xyxhContents_6 .left .qiu").eq(3).html(num4);
+                $("#xyxhContents_6 .left .qiu").eq(4).html(num5);
+                $("#xyxhContents_6 .left .qiu").eq(5).html(num6);
+                $("#xyxhContents_6 .left .qiu").eq(6).html(num7);
 
                 $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
                 $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
@@ -1351,13 +1346,13 @@
                 bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
                 clearInterval(index_6);
-                $("#xyxhContents_6 .qiu").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
-                $("#xyxhContents_6 .qiu").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
-                $("#xyxhContents_6 .qiu").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
-                $("#xyxhContents_6 .qiu").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
-                $("#xyxhContents_6 .qiu").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
-                $("#xyxhContents_6 .qiu").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
-                $("#xyxhContents_6 .qiu").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
+                $("#xyxhContents_6 .left:eq(0) .qiu").attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
+                $("#xyxhContents_6 .left:eq(1) .qiu").attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
+                $("#xyxhContents_6 .left:eq(2) .qiu").attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
+                $("#xyxhContents_6 .left:eq(3) .qiu").attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
+                $("#xyxhContents_6 .left:eq(4) .qiu").attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
+                $("#xyxhContents_6 .left:eq(5) .qiu").attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
+                $("#xyxhContents_6 .left:eq(6) .qiu").attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
 
                 $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
                 $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
