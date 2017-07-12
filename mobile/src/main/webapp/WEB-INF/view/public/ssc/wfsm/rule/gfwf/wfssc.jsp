@@ -10,7 +10,7 @@
     <div class="gfwf-2">
         <div class="wfsm-tou6" id="top">
             <h1><a style=""></a></h1>
-            <span >万分时时彩玩法规则</span>
+            <span >五分时时彩玩法规则</span>
         </div>
         <div class="wfsm-a">
             <a onclick="javascript:document.getElementById('test1').scrollIntoView()" href="javascript:;" class="wfsm-a">一、玩法类型及承销</a></br>

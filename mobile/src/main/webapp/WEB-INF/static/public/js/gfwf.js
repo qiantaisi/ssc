@@ -2765,7 +2765,7 @@ function selectFun_1(obj) {
     $(obj).parent().find(".xz i").removeClass("activeBtn");                                     //始化选择的特效，清零
     $(obj).addClass("activeBtn");
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").addClass("active_gfwf");
-    getGfwfZhushu();
+    getGfwfZhushu(); //获取注数方法
     statusChange();
 }
 

@@ -45,35 +45,93 @@
             });
         </script>
     </div>
-    <div class="banner_shuru">
-        <div class="container clear">
-            <div class="banner_shuru_main right">
-                <div class="banner_shuru_main_tl">
-                    <span>欢迎登陆</span>
-                </div>
-                <form onsubmit="registerLogin();return false;">
-                    <div class=" banner_shuru_gp">
-                        <input type="text"  id="registerLoginAccount" class="banner_shuru_input" placeholder="会员名" />
-                    </div>
-                    <div class=" banner_shuru_gp">
-                        <input type="password"  id="registerLoginPassword" class="banner_shuru_input" placeholder="密码" />
-                        <a href="#" class="banner_wp">忘记?</a>
-                    </div>
-                    <div class=" banner_shuru_gp">
-                        <input type="text"  id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码" />
 
-                        <a href="#" class="banner_yz">
-                            <img id="registerYzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
-                        </a>
+    <c:choose>
+        <c:when test="${not empty userSession}">
+            <div class="banner_shuru">
+                <div class="container clear">
+                    <div class="banner_shuru_main right">
+                        <div class="banner_shuru_main_tl">
+                            <span>欢迎登陆</span>
+                        </div>
+                        <div class="login_after">
+                            <div class="login_after1">
+                                <script>
+                                    var hour = (new Date()).getHours();
+                                    if (hour < 6) {
+                                        hour = '凌晨好！';
+                                    } else if (hour < 12) {
+                                        hour = '上午好！';
+                                    } else if (hour < 14) {
+                                        hour = '中午好！';
+                                    } else if (hour < 18) {
+                                        hour = '下午好！';
+                                    } else if (hour < 24) {
+                                        hour = '晚上好！'
+                                    }
+                                    document.write(hour);
+                                </script>
+                                <span style="color: #247fdd;">${userSession.account}</span><br/>
+                                余额：<span class="color_red">${userSession.balance}</span>
+                            </div>
+                            <div class="login_after2">
+                                <a href="javascript:void(0)" onclick="openHyzx('member/zhcz.html?module=yhzz')">存款 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" onclick="openHyzx('member/withdraw.html')">取款 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" onclick="openHyzx('member/letter.html')">站内信 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" onclick="openHyzx('member/lsjl.html?module=tzjl')">投注记录 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" onclick="openHyzx('member/lsjl.html?module=ckjl')">存款记录 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                            </div>
+                            <div class="login_afterbtn">
+                                <a href="javascript:void(0)" onclick="sigout()" class="btn_red">
+                                    退出
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="clearfix banner_shuru_btn">
-                        <input type="submit" class="left btn_red"  value="登录"/>
-                        <a href="<%=basePath%>register.html" class="left">立即注册</a>
-                    </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </div>
+        </c:when>
+        <c:otherwise>
+            <div class="banner_shuru">
+                <div class="container clear">
+                    <div class="banner_shuru_main right">
+                        <div class="banner_shuru_main_tl">
+                            <span>欢迎登陆</span>
+                        </div>
+                        <form onsubmit="registerLogin();return false;">
+                            <div class="banner_shuru_gp">
+                                <input type="text" id="registerLoginAccount" class="banner_shuru_input"
+                                       placeholder="会员名"/>
+                            </div>
+                            <div class=" banner_shuru_gp">
+                                <input type="password" id="registerLoginPassword" class="banner_shuru_input"
+                                       placeholder="密码"/>
+                                <a href="${kefuUrl}" class="banner_wp">忘记?</a>
+                            </div>
+                            <div class=" banner_shuru_gp">
+                                <input type="text" id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码"/>
+
+                                <a href="javascript:void(0)" class="banner_yz">
+                                    <img id="registerYzmImg2" onclick="refreshYzm(this)"
+                                         src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
+                                </a>
+                            </div>
+                            <div class="clearfix banner_shuru_btn">
+                                <input type="submit" class="left btn_red" value="登录"/>
+                                <a href="<%=basePath%>register.html" class="left">立即注册</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </c:otherwise>
+    </c:choose>
+
 </div>
 
 <div class="main container index_main clearfix">
@@ -83,9 +141,10 @@
         </div>
         <div class="kaijiang_main">
             <ul>
+
                 <li>
                     <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name">重庆时时彩</span>
+                        <span class="left kaijiang_li_t_name"></span>
                         <span class="left">20170626082期	</span>
                     </div>
                     <p class="kaijiang_num">
@@ -96,12 +155,13 @@
                         <div class="right clearfix">
                             <a href="#" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
+                            <a href="<%=basePath%>ssc/zst/cqssc.html" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
+                            <a href="<%=basePath%>ssc/gcdt/cqssc.html" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
+
                 <li>
                     <div class="clearfix kaijiang_li_t">
                         <span class="left kaijiang_li_t_name">新疆时时彩</span>
@@ -115,9 +175,9 @@
                         <div class="right clearfix">
                             <a href="#" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
+                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
+                            <a href="<%=basePath%>ssc/gcdt/xjssc.html" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
@@ -134,9 +194,9 @@
                         <div class="right clearfix">
                             <a href="#" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
+                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
+                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
@@ -153,9 +213,9 @@
                         <div class="right clearfix">
                             <a href="#" class="left">详情 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
+                            <a href="<%=basePath%>ssc/zst/tjssc.html" class="left">走势 </a>
                             <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
+                            <a href="<%=basePath%>ssc/zst/tjssc.html" class="left">投注 </a>
                         </div>
                     </div>
                 </li>
@@ -206,7 +266,7 @@
                 <div class="touzhu_b_main active" id="ssc_id_1">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time1"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time1"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">手动选号</a>
@@ -241,19 +301,17 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <%--<a onclick="xyxhAdd(1, 5)" class="fr left" href="javascript:void(0)">+</a>--%>
-
-                            <button class="add left" onclick="xyxhAdd(1, 5)">+</button>
+                            <button class="add left" onclick="xyxhAdd(1, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
 
-                            <button class="min left" onclick="xyxhMinute(1, 5)">-</button>
+                            <button class="min left" onclick="xyxhMinute(1, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span   id="xyxhMoney_1" class="xyxhMoney_1 color_red"><i>5</i></span>元
+                            倍，共 <span id="xyxhMoney_1" class="xyxhMoney_1 color_red">2</span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:void(0)" onclick="xyxh(this,1)">
+                            <a href="javascript:void(0)" class="shuaxin" onclick="xyxh(this,1)">
                                 换一注
                             </a>
                             <a href="javascript:void(0)" class="a1 btn_red touzhubtn" onclick="openXyxh(1)">
@@ -265,24 +323,14 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_20">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time2"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time2"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
-                            <a href="#">手动选号</a>
-                            <a href="#">走势图</a>
+                            <a href="javascript:void(0);" onclick="openGcdt('gcdt/ahk3')">手动选号</a>
+                            <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_20">
-                        <div class="kai_qiu_main left">
-		    	    				<span class="s0">
-
-		    	    				</span>
-                        </div>
-                        <div class="kai_qiu_main left">
-		    	    				<span class="s0">
-
-		    	    				</span>
-                        </div>
+                    <div class="touzhu2 retouzhu3 clearfix" id="xyxhContents_20">
                         <div class="kai_qiu_main left">
 		    	    				<span class="s0">
 
@@ -301,16 +349,17 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left"onclick="xyxhAdd(1, 20)">+</button>
+                            <button class="add left" onclick="xyxhAdd(20, 2)">+</button>
                             <input class="text_box left" id="xyxhInput_20" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
-                            <button class="min left"  onclick="xyxhMinute(1, 5)">-</button>
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
+
+                            <button class="min left" onclick="xyxhMinute(20, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span   id="xyxhMoney_3" class="color_red">2 </span>元
+                            倍，共 <span id="xyxhMoney_20" class="color_red">2</span>元
                         </div>
                         <div class="right clearfix">
-                            <a href="javascript:void(0);" onclick="xyxh(this,20)">
+                            <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,20)">
                                 换一注
                             </a>
                             <a href="javascript:void(0)" onclick="openXyxh(20)" class="btn_red touzhubtn">
@@ -322,25 +371,25 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_6">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time3"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time3"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
-                            <a href="#">手动选号</a>
-                            <a href="#">走势图</a>
+                            <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">手动选号</a>
+                            <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">走势图</a>
                         </div>
                     </div>
                     <div class="touzhu2 clearfix" style="padding-top: 5px;height: 65px;" id="xyxhContents_6">
-                        <div class="kai_qiu_main left">
-		    	    				<span class="qiu">
-		    	    					12
-		    	    				</span>
+                        <div class="left">
+		    	    		<span class="qiu">
+		    	    			12
+		    	    		</span>
                             <p class="biaoqian">
-		    	    					<span>
-		    	    						鸡
-		    	    					</span>
+		    	    			<span>
+		    	    				鸡
+		    	    			</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					10
 		    	    				</span>
@@ -350,7 +399,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					34
 		    	    				</span>
@@ -360,7 +409,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					11
 		    	    				</span>
@@ -370,7 +419,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					19
 		    	    				</span>
@@ -380,7 +429,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					25
 		    	    				</span>
@@ -390,7 +439,7 @@
 		    	    					</span>
                             </p>
                         </div>
-                        <div class="kai_qiu_main left">
+                        <div class="left">
 		    	    				<span class="qiu">
 		    	    					41
 		    	    				</span>
@@ -404,12 +453,14 @@
                     </div>
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
-                            <button class="add left">+</button>
-                            <input class="text_box left" name="" value="1" type="text">
-                            <button class="min left">-</button>
+                            <button class="add left" onclick="xyxhAdd(6, 2)">+</button>
+                            <input class="text_box left" id="xyxhInput_6" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
+
+                            <button class="min left" onclick="xyxhMinute(6, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span class="color_red">2 </span>元
+                            倍，共 <span id="xyxhMoney_6" class="color_red" >2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,6)">
@@ -424,24 +475,14 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_4">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第20170626083期截止：<span class="time time4"><span class="day">00</span>天<span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">28</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time4"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
-                            <a href="#">手动选号</a>
-                            <a href="#">走势图</a>
+                            <a href="javascript:void(0);" onclick="openGcdt('gcdt/lhc')">手动选号</a>
+                            <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">走势图</a>
                         </div>
                     </div>
-                    <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_4">
-                        <div class="kai_qiu_main left">
-		    	    				<span class="s0">
-
-		    	    				</span>
-                        </div>
-                        <div class="kai_qiu_main left">
-		    	    				<span class="s0">
-
-		    	    				</span>
-                        </div>
+                    <div class="touzhu2 retouzhu3 clearfix" id="xyxhContents_4">
                         <div class="kai_qiu_main left">
 		    	    				<span class="s0">
 
@@ -458,14 +499,16 @@
 		    	    				</span>
                         </div>
                     </div>
-                    <div class="clearfix touzhu3">
+                    <div class="clearfix touzhu4">
                         <div class="clearfix sum left">
-                            <button class="add left">+</button>
-                            <input class="text_box left" name="" value="1" type="text">
-                            <button class="min left">-</button>
+                            <button class="add left" onclick="xyxhAdd(4, 2)">+</button>
+                            <input class="text_box left" id="xyxhInput_4" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
+
+                            <button class="min left" onclick="xyxhMinute(4, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span class="color_red">2 </span>元
+                            倍，共 <span id="xyxhMoney_4" class="color_red">2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,4)">
@@ -573,33 +616,32 @@
                 <img src="${resPath}images/common/index5.png" class="left index_main_erw" />
                 <div class="right index_main_rt1_1_rt">
                     <p class="down_a">
-                        <a href="#">
+                        <a href="<%=mHostName%>">
                             <img src="${resPath}images/common/index_72.png" />
                             Iphone 版
                         </a>
                     </p>
                     <p class="down_a">
-                        <a href="#">
+                        <a href="<%=mHostName%>">
                             <img src="${resPath}images/common/index_77.png" />
                             Android 版
                         </a>
                     </p>
                     <p class="index_main_erw_more">
-                        <a href="#">更多方式</a>
+                        <a href="javascript:void(0)">更多方式</a>
                     </p>
                 </div>
             </div>
             <div class="index_main_rt1_2">
                 <div class="index_main_rt1_2t clearfix">
-                    <a href="javascript:;" class="ahover">
+                    <a href="javascript:void(0);" class="ahover">
                         网站公告
                     </a>
-                    <a href="javascript:;">新手指导</a>
+                    <a href="javascript:void(0);">新手指导</a>
                 </div>
                 <div class="ndex_main_rt1_2b_main">
-                    <div class="index_main_rt1_2b active">
+                    <div class="index_main_rt1_2b index-content-notice active">
                         <div id="wrap">
-                            <marquee direction="up" behavior="scroll" stoptime="2000" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
                             <ul class="index_notice_ul" id="box1">
                                 <li>
                                     <a href="#">工行入款账号停用</a>
@@ -610,9 +652,16 @@
                                 <li>
                                     <a href="#">工行入款账号停用</a>
                                 </li>
-                            </ul></marquee>
+                            </ul>
                             <ul id="box2"></ul>
                         </div>
+                    </div>
+                    <div class="index_main_rt1_2b index-content-help">
+                        <ul class="index_notice_ul">
+                            <li>
+                                <a href="#">新手指导</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -628,9 +677,8 @@
             </div>
 
             <div class="zhongjiang_ul">
-
                 <ul>
-                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
+                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
                         <c:forEach items="${Notices.noticeList}" var="noticelists">
                         <li class="clearfix">
                             <a href="#" class="left zhongjiang_li1">
@@ -643,45 +691,96 @@
                         </li>
                         </c:forEach>
                     </marquee>
-
                 </ul>
-
             </div>
-
-
-
         </div>
     </div>
 </div>
 
 <c:import url="../common/bottomInfo.jsp"/>
-
 <c:import url="../common/commonJs.jsp"/>
 
 <div id="gonggao_container"></div>
+<script type="text/html" id="template_1">
+    <li>
+        <div class="clearfix kaijiang_li_t">
+            <span class="left kaijiang_li_t_name">重庆时时彩</span>
+            <span class="left">第{{number}}期	</span>
+        </div>
+        <p class="kaijiang_num">
+            {{num1}}
+        </p>
+        <div class="clearfix kaijiang_b">
+            <span class="left">2017-06-26</span>
+            <div class="right clearfix">
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">详情 </a>
+                <span class="left">&nbsp;|&nbsp;</span>
+                <a href="javascript:void(0)" onclick="goZst('zst/cqssc')" class="left">走势 </a>
+                <span class="left">&nbsp;|&nbsp;</span>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">投注 </a>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="clearfix kaijiang_li_t">
+            <span class="left kaijiang_li_t_name"></span>
+
+            <var class="no"></var>
+            {{/if}}
+            <div class="text">
+                <h3>重庆时时彩<span>第{{number}}期</span></h3>
+                <p>每天120期</p>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box_num">
+                <span>{{num1}}</span>
+                <span>{{num2}}</span>
+                <span>{{num3}}</span>
+                <span>{{num4}}</span>
+                <span>{{num5}}</span>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">详情</a>
+            </div>
+            <p>
+                <i>{{sum}}</i>
+                <i>{{ds}}</i>
+                <i>{{dx}}</i>
+                <i>{{lh}}</i>
+            </p>
+        </div>
+        <div class="box3">
+            <a  href="<%=basePath%>kjjg.html?playGroupId=1">历史开奖</a>
+            <a href="javascript:void(0)" onclick="goZst('zst/cqssc')">走势图表</a>
+        </div>
+        <div class="box4">
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">购买</a>
+        </div>
+    </li>
+</script>
 <script>
     $(function () {
+
         getWebPopUpNotice();
 
-        xyxh(null, 6);
         xyxh(null, 1);
-        xyxh(null, 9);
-        xyxh(null, 2);
-        xyxh(null, 3);
+        xyxh(null, 4);
+        xyxh(null, 6);
+        xyxh(null, 20);
+
+        //获取中间随机彩票的截止日期和剩余时间
+        getAllOpenTime();
+
+        setInterval(function () {
+            renderOpenTimeHtml();
+        }, 1000);
+
     });
 
-    function showGonggao(id) {
-        $("#gonggao_" + id).show();
-    }
 
     function touzhutishi() {
         alert("游戏暂未上线，敬请期待！");
     }
 
-    <%--var popupNotice = <%=JSONUtils.toJSONStr(((WebNoticeResult)request.getAttribute("webPopUpNoticeResult")).getWebNoticeList())%>;--%>
-    <%--function openPopUpNotice() {--%>
-    <%--showPopUp(popupNotice);--%>
-    <%--}--%>
 
     function goZst(url) {
         showLoading();
@@ -764,18 +863,33 @@
             }
         });
     }
+
+    function sigout() {
+        ajaxRequest({
+            url: "<%=basePath%>member/ajaxSigout.json",
+            beforeSend: function() {
+                showLoading();
+            },
+            success: function(json) {
+                $.cookie("uid", '', {path: "/", expires: -1});
+                $.cookie("token", '', {path: "/", expires: -1});
+                hideLoading();
+                location.reload();
+            }
+        });
+    }
 </script>
 
 <script>
    $(function(){
 
-       $('.index_main_rt1_2t a').click(function(){
+       $('.index_main_rt1_2t a').mouseover(function(){
            var index = $(this).index();
            $(this).addClass('ahover').siblings().removeClass('ahover');
            $(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();
        });
 
-       $('.touzhu_t_qht a').click(function(){
+       $('.touzhu_t_qht a').mouseover(function(){
            var index = $(this).index();
            $(this).addClass('ahover').siblings().removeClass('ahover');
            $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
@@ -872,31 +986,7 @@
         $(obj).attr("src", src);
     }
 
-    $(function () {
-       /* $('.type_top .left .left_div .log,.type_top .left .left_div .alert_log').hover(function () {
-            $('.type_top .left .left_div .alert_log').show();
-            $('.type_top .left .left_div .alert_par').hide();
-        })
-        $('.type_top').hover(function () {
-        }, function () {
-            $('.type_top .left .left_div .alert_log').hide();
-            $('.type_top .left .left_div .alert_par').hide();
-        })
-        $('.type_top .right ul li.l').hover(function () {
-            $(this).addClass('sli');
-            $(this).find('div').show();
-        })
-        $('.type_top .right ul li').hover(function () {
 
-        }, function () {
-            $(this).removeClass('sli');
-            $(this).find('div').hide();
-        })
-        $('.type_top .left .left_div a.par').hover(function () {
-            $('.type_top .left .left_div .alert_par').show();
-            $('.type_top .left .left_div .alert_log').hide();
-        })*/
-    });
 
     function xytz(type) {
         if (type == 6) {
@@ -964,14 +1054,14 @@
             navIndex = 0;
             numsArr = [];
             for (var i = 0; i < 7; ++i) {
-                var v = $("#xyxhContent_6 span").eq(i).data("num");
+                var v = $("#xyxhContents_6 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
                 numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。
             }
             nums = numsArr.join(",");
-            money = $("#xyxhInput_6").val();
+            money = $("#xyxhMoney_6").html();
         } else if (type == 1) {
             caizhong = 'cqssc';
             navIndex = 0;
@@ -984,46 +1074,34 @@
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhInput_1").val();
-        } else if (type == 2) {
-            caizhong = 'tjssc';
+            money = $("#xyxhMoney_1").html();
+
+        } else if (type == 20) {
+            caizhong = 'ahk3';
+            navIndex = 7;
+            var numsArr = [];
+            for (var i = 0; i < 3; ++i) {
+                var v = $("#xyxhContents_20 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+            money = $("#xyxhMoney_20").html();
+        } else if (type == 4) {
+            caizhong = 'pl3';
             navIndex = 0;
             var numsArr = [];
-            for (var i = 0; i < 5; ++i) {
-                var v = $("#xyxhContent_2 span").eq(i).data("num");
+            for (var i = 0; i < 3; ++i) {
+                var v = $("#xyxhContents_4 span").eq(i).data("num");
                 if (v == '') {
                     continue;
                 }
                 numsArr.push(v);
             }
             nums = numsArr.join(",");
-            money = $("#xyxhInput_2").val();
-        } else if (type == 3) {
-            caizhong = 'xjssc';
-            navIndex = 0;
-            var numsArr = [];
-            for (var i = 0; i < 5; ++i) {
-                var v = $("#xyxhContent_3 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-            money = $("#xyxhInput_3").val();
-        } else if (type == 9) {
-            caizhong = 'pk10';
-            navIndex = 1;
-            var numsArr = [];
-            for (var i = 0; i < 10; ++i) {
-                var v = $("#xyxhContent_9 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-            money = $("#xyxhInput_9").val();
+            money = $("#xyxhMoney_4").html();
         }
 
         if (numsArr.length == 0) {
@@ -1112,7 +1190,6 @@
 
                         str2 += '<div class="alert hide" id="gonggao_' + index + '">';
                         str2 += '<div class="alert_col">';
-                        str2 += '<h5><span>公告</span><i>×</i></h5>';
                         str2 += '<h2>' + value.title + '</h2>';
                         str2 += '<div>' + value.content + '</div>';
                         str2 += '<h4>${webName}</h4>';
@@ -1146,7 +1223,7 @@
             num++;
         }
         $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html('共：<i>' + mul(num, size) + '</i> 元');
+        $("#xyxhMoney_" + id).html(mul(num, size));
     }
     function checkValue(id, size) {
         var num = $("#xyxhInput_" + id).val();
@@ -1154,7 +1231,7 @@
             num = 1;
             $("#xyxhInput_" + id).val(num);
         }
-        $("#xyxhMoney_" + id).html('共：<i>' + mul(num, size) + '</i> 元');
+        $("#xyxhMoney_" + id).html(mul(num, size));
     }
     function xyxhMinute(id, size) {
         var num = $("#xyxhInput_" + id).val();
@@ -1164,7 +1241,7 @@
             num--;
         }
         $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html('共：<i>' + mul(num, size) + '</i> 元');
+        $("#xyxhMoney_" + id).html(mul(num, size));
     }
 
 
@@ -1173,13 +1250,12 @@
             return;
         }
 
-        var index_6 = null;
         var index_1 = null;
-        var index_2 = null;
-        var index_3 = null;
-        var index_9 = null;
+        var index_6 = null;
+        var index_20 = null;
+        var index_4 = null;
         if (type == 6) {
-            $("#xyxhContent_6 span").each(function () {
+            $("#xyxhContents_6 .qiu").each(function () {
                 $(this).data("num", '');
             });
 
@@ -1200,32 +1276,37 @@
                 var bose6 = getBose(num6);
                 var bose7 = getBose(num7);
 
-                bose1 = bose1 == 0 ? 's0' : (bose1 == 1 ? 's1' : 's2');
-                bose2 = bose2 == 0 ? 's0' : (bose2 == 1 ? 's1' : 's2');
-                bose3 = bose3 == 0 ? 's0' : (bose3 == 1 ? 's1' : 's2');
-                bose4 = bose4 == 0 ? 's0' : (bose4 == 1 ? 's1' : 's2');
-                bose5 = bose5 == 0 ? 's0' : (bose5 == 1 ? 's1' : 's2');
-                bose6 = bose6 == 0 ? 's0' : (bose6 == 1 ? 's1' : 's2');
-                bose7 = bose7 == 0 ? 's0' : (bose7 == 1 ? 's1' : 's2');
+                bose1 = bose1 == 0 ? 'qiu redBg' : (bose1 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose2 = bose2 == 0 ? 'qiu redBg' : (bose2 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose3 = bose3 == 0 ? 'qiu redBg' : (bose3 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose4 = bose4 == 0 ? 'qiu redBg' : (bose4 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose5 = bose5 == 0 ? 'qiu redBg' : (bose5 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose6 = bose6 == 0 ? 'qiu redBg' : (bose6 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
-                $("#xyxhContent_6 span").eq(0).attr("class", bose1).html(num1);
-                $("#xyxhContent_6 span").eq(1).attr("class", bose2).html(num2);
-                $("#xyxhContent_6 span").eq(2).attr("class", bose3).html(num3);
-                $("#xyxhContent_6 span").eq(3).attr("class", bose4).html(num4);
-                $("#xyxhContent_6 span").eq(4).attr("class", bose5).html(num5);
-                $("#xyxhContent_6 span").eq(5).attr("class", bose6).html(num6);
-                $("#xyxhContent_6 span").eq(6).attr("class", bose7).html(num7);
+                $("#xyxhContents_6 .qiu").eq(0).attr("class", bose1).html(num1);
+                $("#xyxhContents_6 .qiu").eq(1).attr("class", bose2).html(num2);
+                $("#xyxhContents_6 .qiu").eq(2).attr("class", bose3).html(num3);
+                $("#xyxhContents_6 .qiu").eq(3).attr("class", bose4).html(num4);
+                $("#xyxhContents_6 .qiu").eq(4).attr("class", bose5).html(num5);
+                $("#xyxhContents_6 .qiu").eq(5).attr("class", bose6).html(num6);
+                $("#xyxhContents_6 .qiu").eq(6).attr("class", bose7).html(num7);
 
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(1).html(getSxName(num2));
-                $("#xyxhContent_6 var em").eq(2).html(getSxName(num3));
-                $("#xyxhContent_6 var em").eq(3).html(getSxName(num4));
-                $("#xyxhContent_6 var em").eq(4).html(getSxName(num5));
-                $("#xyxhContent_6 var em").eq(5).html(getSxName(num6));
-                $("#xyxhContent_6 var em").eq(6).html(getSxName(num7));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .qiu").eq(0).html(num1);
+                $("#xyxhContents_6 .qiu").eq(1).html(num2);
+                $("#xyxhContents_6 .qiu").eq(2).html(num3);
+                $("#xyxhContents_6 .qiu").eq(3).html(num4);
+                $("#xyxhContents_6 .qiu").eq(4).html(num5);
+                $("#xyxhContents_6 .qiu").eq(5).html(num6);
+                $("#xyxhContents_6 .qiu").eq(6).html(num7);
+
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
+                $("#xyxhContents_6 .biaoqian span").eq(2).html(getSxName(num3));
+                $("#xyxhContents_6 .biaoqian span").eq(3).html(getSxName(num4));
+                $("#xyxhContents_6 .biaoqian span").eq(4).html(getSxName(num5));
+                $("#xyxhContents_6 .biaoqian span").eq(5).html(getSxName(num6));
+                $("#xyxhContents_6 .biaoqian span").eq(6).html(getSxName(num7));
             }, 50);
 
             setTimeout(function () {
@@ -1261,33 +1342,33 @@
                 var bose6 = getBose(num6);
                 var bose7 = getBose(num7);
 
-                bose1 = bose1 == 0 ? 's0' : (bose1 == 1 ? 's1' : 's2');
-                bose2 = bose2 == 0 ? 's0' : (bose2 == 1 ? 's1' : 's2');
-                bose3 = bose3 == 0 ? 's0' : (bose3 == 1 ? 's1' : 's2');
-                bose4 = bose4 == 0 ? 's0' : (bose4 == 1 ? 's1' : 's2');
-                bose5 = bose5 == 0 ? 's0' : (bose5 == 1 ? 's1' : 's2');
-                bose6 = bose6 == 0 ? 's0' : (bose6 == 1 ? 's1' : 's2');
-                bose7 = bose7 == 0 ? 's0' : (bose7 == 1 ? 's1' : 's2');
+                bose1 = bose1 == 0 ? 'qiu redBg' : (bose1 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose2 = bose2 == 0 ? 'qiu redBg' : (bose2 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose3 = bose3 == 0 ? 'qiu redBg' : (bose3 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose4 = bose4 == 0 ? 'qiu redBg' : (bose4 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose5 = bose5 == 0 ? 'qiu redBg' : (bose5 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose6 = bose6 == 0 ? 'qiu redBg' : (bose6 == 1 ? 'qiu blueBg' : 'qiu greenBg');
+                bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
                 clearInterval(index_6);
-                $("#xyxhContent_6 span").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
-                $("#xyxhContent_6 span").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
-                $("#xyxhContent_6 span").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
-                $("#xyxhContent_6 span").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
-                $("#xyxhContent_6 span").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
-                $("#xyxhContent_6 span").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
-                $("#xyxhContent_6 span").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
+                $("#xyxhContents_6 .qiu").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
+                $("#xyxhContents_6 .qiu").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
+                $("#xyxhContents_6 .qiu").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
+                $("#xyxhContents_6 .qiu").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
+                $("#xyxhContents_6 .qiu").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
+                $("#xyxhContents_6 .qiu").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
+                $("#xyxhContents_6 .qiu").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
 
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(1).html(getSxName(num2));
-                $("#xyxhContent_6 var em").eq(2).html(getSxName(num3));
-                $("#xyxhContent_6 var em").eq(3).html(getSxName(num4));
-                $("#xyxhContent_6 var em").eq(4).html(getSxName(num5));
-                $("#xyxhContent_6 var em").eq(5).html(getSxName(num6));
-                $("#xyxhContent_6 var em").eq(6).html(getSxName(num7));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
-                $("#xyxhContent_6 var em").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
+                $("#xyxhContents_6 .biaoqian span").eq(2).html(getSxName(num3));
+                $("#xyxhContents_6 .biaoqian span").eq(3).html(getSxName(num4));
+                $("#xyxhContents_6 .biaoqian span").eq(4).html(getSxName(num5));
+                $("#xyxhContents_6 .biaoqian span").eq(5).html(getSxName(num6));
+                $("#xyxhContents_6 .biaoqian span").eq(6).html(getSxName(num7));
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
+                $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
             }, 2000);
         } else if (type == 1) {
 
@@ -1328,121 +1409,166 @@
                 $(this).data("num", '');
             });
 
-            index_2 = setInterval(function () {
-                var num1 = Math.floor(Math.random() * 10);
-                var num2 = Math.floor(Math.random() * 10);
-                var num3 = Math.floor(Math.random() * 10);
-                var num4 = Math.floor(Math.random() * 10);
-                var num5 = Math.floor(Math.random() * 10);
+            index_20 = setInterval(function () {
+                var num1 = Math.floor((Math.random() * 6) + 1);
+                var num2 = Math.floor((Math.random() * 6) + 1);
+                var num3 = Math.floor((Math.random() * 6) + 1);
 
                 $("#xyxhContents_20 span").eq(0).html(num1);
                 $("#xyxhContents_20 span").eq(1).html(num2);
                 $("#xyxhContents_20 span").eq(2).html(num3);
-                $("#xyxhContents_20 span").eq(3).html(num4);
-                $("#xyxhContents_20 span").eq(4).html(num5);
             }, 50);
 
             setTimeout(function () {
-                var num1 = Math.floor(Math.random() * 10);
-                var num2 = Math.floor(Math.random() * 10);
-                var num3 = Math.floor(Math.random() * 10);
-                var num4 = Math.floor(Math.random() * 10);
-                var num5 = Math.floor(Math.random() * 10);
+                var num1 = Math.floor((Math.random() * 6) + 1);
+                var num2 = Math.floor((Math.random() * 6) + 1);
+                var num3 = Math.floor((Math.random() * 6) + 1);
 
-                clearInterval(index_2);
+                clearInterval(index_20);
                 $("#xyxhContents_20 span").eq(0).data("num", "wan-" + num1).html(num1);
                 $("#xyxhContents_20 span").eq(1).data("num", "qian-" + num2).html(num2);
                 $("#xyxhContents_20 span").eq(2).data("num", "bai-" + num3).html(num3);
-                $("#xyxhContents_20 span").eq(3).data("num", "shi-" + num4).html(num4);
-                $("#xyxhContents_20 span").eq(4).data("num", "ge-" + num5).html(num5);
+
             }, 2000);
         } else if (type == 4) {
-            $("#xyxhContent_4 span").each(function () {
+            $("#xyxhContents_4 span").each(function () {
                 $(this).data("num", '');
             });
 
-            index_3 = setInterval(function () {
+            index_4 = setInterval(function () {
                 var num1 = Math.floor(Math.random() * 10);
                 var num2 = Math.floor(Math.random() * 10);
                 var num3 = Math.floor(Math.random() * 10);
-                var num4 = Math.floor(Math.random() * 10);
-                var num5 = Math.floor(Math.random() * 10);
 
-                $("#xyxhContent_4 span").eq(0).html(num1);
-                $("#xyxhContent_4 span").eq(1).html(num2);
-                $("#xyxhContent_4 span").eq(2).html(num3);
-                $("#xyxhContent_4 span").eq(3).html(num4);
-                $("#xyxhContent_4 span").eq(4).html(num5);
+                $("#xyxhContents_4 span").eq(0).html(num1);
+                $("#xyxhContents_4 span").eq(1).html(num2);
+                $("#xyxhContents_4 span").eq(2).html(num3);
             }, 50);
 
             setTimeout(function () {
                 var num1 = Math.floor(Math.random() * 10);
                 var num2 = Math.floor(Math.random() * 10);
                 var num3 = Math.floor(Math.random() * 10);
-                var num4 = Math.floor(Math.random() * 10);
-                var num5 = Math.floor(Math.random() * 10);
 
-                clearInterval(index_3);
-                $("#xyxhContent_4 span").eq(0).data("num", "wan-" + num1).html(num1);
-                $("#xyxhContent_4 span").eq(1).data("num", "qian-" + num2).html(num2);
-                $("#xyxhContent_4 span").eq(2).data("num", "bai-" + num3).html(num3);
-                $("#xyxhContent_4 span").eq(3).data("num", "shi-" + num4).html(num4);
-                $("#xyxhContent_4 span").eq(4).data("num", "ge-" + num5).html(num5);
-            }, 2000);
-        } else if (type == 9) {
-            $("#xyxhContent_9 span").each(function () {
-                $(this).data("num", '');
-            });
-
-            index_9 = setInterval(function () {
-                var num1 = Math.floor(Math.random() * 10 + 1);
-                var num2 = Math.floor(Math.random() * 10 + 1);
-                var num3 = Math.floor(Math.random() * 10 + 1);
-                var num4 = Math.floor(Math.random() * 10 + 1);
-                var num5 = Math.floor(Math.random() * 10 + 1);
-                var num6 = Math.floor(Math.random() * 10 + 1);
-                var num7 = Math.floor(Math.random() * 10 + 1);
-                var num8 = Math.floor(Math.random() * 10 + 1);
-                var num9 = Math.floor(Math.random() * 10 + 1);
-                var num10 = Math.floor(Math.random() * 10 + 1);
-
-                $("#xyxhContent_9 span").eq(0).attr("class", 'fang bg-' + num1).html(num1);
-                $("#xyxhContent_9 span").eq(1).attr("class", 'fang bg-' + num2).html(num2);
-                $("#xyxhContent_9 span").eq(2).attr("class", 'fang bg-' + num3).html(num3);
-                $("#xyxhContent_9 span").eq(3).attr("class", 'fang bg-' + num4).html(num4);
-                $("#xyxhContent_9 span").eq(4).attr("class", 'fang bg-' + num5).html(num5);
-                $("#xyxhContent_9 span").eq(5).attr("class", 'fang bg-' + num6).html(num6);
-                $("#xyxhContent_9 span").eq(6).attr("class", 'fang bg-' + num7).html(num7);
-                $("#xyxhContent_9 span").eq(7).attr("class", 'fang bg-' + num8).html(num8);
-                $("#xyxhContent_9 span").eq(8).attr("class", 'fang bg-' + num9).html(num9);
-                $("#xyxhContent_9 span").eq(9).attr("class", 'fang bg-' + num10).html(num10);
-            }, 50);
-
-            setTimeout(function () {
-                var num1 = Math.floor(Math.random() * 10 + 1);
-                var num2 = Math.floor(Math.random() * 10 + 1);
-                var num3 = Math.floor(Math.random() * 10 + 1);
-                var num4 = Math.floor(Math.random() * 10 + 1);
-                var num5 = Math.floor(Math.random() * 10 + 1);
-                var num6 = Math.floor(Math.random() * 10 + 1);
-                var num7 = Math.floor(Math.random() * 10 + 1);
-                var num8 = Math.floor(Math.random() * 10 + 1);
-                var num9 = Math.floor(Math.random() * 10 + 1);
-                var num10 = Math.floor(Math.random() * 10 + 1);
-
-                clearInterval(index_9);
-                $("#xyxhContent_9 span").eq(0).attr("class", 'fang bg-' + num1).data('num', 'gj-' + num1).html(num1);
-                $("#xyxhContent_9 span").eq(1).attr("class", 'fang bg-' + num2).data('num', 'yj-' + num2).html(num2);
-                $("#xyxhContent_9 span").eq(2).attr("class", 'fang bg-' + num3).data('num', 'jj-' + num3).html(num3);
-                $("#xyxhContent_9 span").eq(3).attr("class", 'fang bg-' + num4).data('num', 'q4-' + num4).html(num4);
-                $("#xyxhContent_9 span").eq(4).attr("class", 'fang bg-' + num5).data('num', 'q5-' + num5).html(num5);
-                $("#xyxhContent_9 span").eq(5).attr("class", 'fang bg-' + num6).data('num', 'q6-' + num6).html(num6);
-                $("#xyxhContent_9 span").eq(6).attr("class", 'fang bg-' + num7).data('num', 'q7-' + num7).html(num7);
-                $("#xyxhContent_9 span").eq(7).attr("class", 'fang bg-' + num8).data('num', 'q8-' + num8).html(num8);
-                $("#xyxhContent_9 span").eq(8).attr("class", 'fang bg-' + num9).data('num', 'q9-' + num9).html(num9);
-                $("#xyxhContent_9 span").eq(9).attr("class", 'fang bg-' + num10).data('num', 'q10-' + num10).html(num10);
+                clearInterval(index_4);
+                $("#xyxhContents_4 span").eq(0).data("num", "wan-" + num1).html(num1);
+                $("#xyxhContents_4 span").eq(1).data("num", "qian-" + num2).html(num2);
+                $("#xyxhContents_4 span").eq(2).data("num", "bai-" + num3).html(num3);
             }, 2000);
         }
+    }
+
+
+    // 获取所有彩种开奖时间
+    function getAllOpenTime() {
+        ajaxRequest({
+            url: CONFIG.BASEURL + "ssc/getAllSscOpenTime2.json",
+            success: function(json) {
+                if (json.result != 1) {
+                    return;
+                }
+
+                // 渲染数据
+                $.each(json.sscTimeList, function (index, value) {
+                    var obj = $("#ssc_id_" + value.playGroupId);
+
+                    if ($(obj).length == 0) {
+                        return;
+                    }
+
+                    $(obj).data("play_group_id", value.playGroupId);
+                    $(obj).data("left_time", value.leftTime);
+                    $(obj).data("number", value.number);
+
+                });
+            },
+            error: function(a, b, c) {
+                // 失败重试
+                setTimeout(function() {
+                    getAllOpenTime();
+                }, 2000);
+            }
+        });
+    }
+
+    // 时间倒计时
+    function renderOpenTimeHtml() {
+        $(".touzhu_b .touzhu_b_main").each(function () {
+            var number = $(this).data("number");
+            var leftTime = Tools.parseInt($(this).data("left_time"));
+            var playGroupId = $(this).data("play_group_id");
+
+            var time = 0;
+            var str;
+
+            time = leftTime;
+
+            $(this).data("left_time", time - 1);
+
+            if (isNaN(time) || time < -0) {
+                return;
+            }
+            var day = 0;
+            var hour = 0;
+            var minute = 0;
+            var second = 0;
+
+            day = Math.floor(time / 60 / 60 / 24);
+            time -= day * 60 * 60 * 24;
+            hour = Math.floor(time / 60 / 60);
+            time -= hour * 60 * 60;
+            minute = Math.floor(time / 60);
+            time -= minute * 60;
+            second = time;
+
+            var dayStr = (day == 0) ? '' : day + " 天 ";
+            var hourStr = (hour == 0) ? '' : hour + " 时 ";
+            var minuteStr = (minute == 0) ? '' : minute + " 分 ";
+            var secondStr = (second == 0) ? '0 秒' : second + " 秒";
+
+
+            $("#ssc_id_" + playGroupId + " .left .time").html(dayStr + '' + hourStr + '' + minuteStr + '' + secondStr); //倒计时时间
+            $(this).find('.qishu').html(number); //期号
+
+            // 时间结束，获取新开奖时间
+            if (leftTime == 0) {
+                getSscOpenTime2(playGroupId);
+                return;
+            }
+        });
+
+
+        // 获取单彩种时间
+        function getSscOpenTime2(playGroupId) {
+            ajaxRequest({
+                url: CONFIG.BASEURL + "ssc/getSscOpenTime2.json",
+                data: {
+                    playGroupId: playGroupId
+                },
+                success: function(json) {
+                    if (json.result != 1) {
+                        return;
+                    }
+
+                    var obj = $("#ssc_id_" + playGroupId);
+
+                    if ($(obj).length == 0) {
+                        return;
+                    }
+
+                    $(obj).data("play_group_id", playGroupId);
+                    $(obj).data("left_time", json.leftTime);
+                    $(obj).data("number", json.number);
+                },
+                error: function(a, b, c) {
+                    // 失败重试
+                    setTimeout(function() {
+                        getSscOpenTime2();
+                    }, 2000);
+                }
+            });
+        }
+
     }
 
 </script>

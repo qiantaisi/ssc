@@ -118,6 +118,7 @@
         var tmpXyxhNums = getQueryString("nums");
 
         var tmpXyxhMoney = getQueryString("money");
+
         if (typeof tmpXyxhNums != 'undefined' && typeof tmpXyxhMoney != 'undefined' && tmpXyxhNums != '' && tmpXyxhMoney != '' && tmpXyxhNums != null && tmpXyxhMoney != null) {
             var oArr = [
                 ['wan', '万位'],['qian', '千位'],['bai', '百位'],['shi', '十位'],['ge', '个位'],
@@ -132,9 +133,31 @@
             $(".main-left .fl input").val(tmpXyxhMoney);
             var arr = tmpXyxhNums.split(",");
 
-
             for (var i = 0; i < arr.length; ++i) {
                 var obj = $("[data-name='" + arr[i] + "']");
+                $(obj).val(tmpXyxhMoney);
+                $(obj).parent().prev().addClass("bg-yellow");
+                $(obj).parent().prev().prev().addClass("bg-yellow");
+            }
+
+
+            //安徽快3
+            var arrK3 = (tmpXyxhNums.toString()).split(",");
+            for(var n = 0; n < arrK3.length; n++){
+                var strNum = (arrK3[n]).toString();
+                var subLen = strNum.substr(strNum.length - 1, 1);
+                var obj = $("[data-name='" + subLen + "']");
+                $(obj).val(tmpXyxhMoney);
+                $(obj).parent().prev().addClass("bg-yellow");
+                $(obj).parent().prev().prev().addClass("bg-yellow");
+            }
+
+            //排列3
+            var pl3 = (tmpXyxhNums.toString()).split(",");
+            for(var n = 0; n < pl3.length; n++){
+                var strNum = (pl3[n]).toString();
+                var subLen = strNum.substr(strNum.length - 1, 1);
+                var obj = $("[data-name='百定位-" + subLen + "']");
                 $(obj).val(tmpXyxhMoney);
                 $(obj).parent().prev().addClass("bg-yellow");
                 $(obj).parent().prev().prev().addClass("bg-yellow");

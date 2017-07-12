@@ -393,20 +393,6 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
-        if (typeof initBottomNavIndex == 'function') {
-            initBottomNavIndex();
-        }
-
-        // // 置顶按钮
-        // $(".top-click").click(function () {
-        //     $("#navBar").scrollTop(0);
-        // });
-
-        // $(".shiwan_btn").click(function () {
-        //       shiwan();
-        //     $(".shiwan_btn").remove();
-        // });
-
         // 首页图片轮播
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
@@ -5623,10 +5609,6 @@ $(function () {
 
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-all", function (e, id, page) {
-        if(typeof initBottomNavKjjg == 'function'){
-            initBottomNavKjjg();
-        }
-
         //底部按钮选中状态
         // $(".c1-101 .tab-item .icon-kj").css("background-image", "url(" + CONFIG.RESURL + "img/footer44.png)");
         // $(".c1-101 .tab-item .tab-kj").css("color", "red");

@@ -62,7 +62,7 @@ public class ApiConstant {
     public static String API_SIGOUT = API_DOMAIN+"member/sigout.json";//退出
     public static String API_GET_BET_DETAILS = API_DOMAIN+"ssc/getBetDetails.json";//获取投注列表
     public static String API_GET_CAROUSEL_LIST = API_DOMAIN+"carousel/getCarouselList.json";//获取投注列表
-    public static String API_GET_POPUP_NOTICE_LIST= API_DOMAIN+"notice/getPopupNoticeList.json";//获取公告列表
+    public static String API_GET_POPUP_NOTICE_LIST= API_DOMAIN+"notice/getPopupNoticeList.json";//获取公告列表1
     public static String API_GET_POPUP_NOTICE= API_DOMAIN+"notice/getPopupNotice.json";//获取公告列表
     public static String API_GET_SCROLL_NOTICE_LIST= API_DOMAIN+"notice/getScrollNoticeList.json";//获取公告列表
     public static String API_GET_WEB_INFO= API_DOMAIN+"webSetting/getWebInfo.json";//获取网站信息
@@ -92,6 +92,7 @@ public class ApiConstant {
     public static String API_SSC_GET_SSC_OPEN_TIME_PER = API_DOMAIN + "ssc/getSscOpenTimePer.json";   // 彩种封盘开盘时间
     public static String API_AGENT_GET_SSC_BETS = API_DOMAIN+"agent/getSscBets.json";//获取用户彩票投注记录
     public static String API_SSC_GET_SSC_DATA_HISTORY = API_DOMAIN+"ssc/getSscDataHistory.json";//获取彩票开奖记录
+    public static String API_SSC_GET_SSC_DATA_MAIN_PAGE = API_DOMAIN+"ssc/getSscDataMainPage.json";//获取首页彩票开奖记录（重庆，天津，新疆，分分钟，两分钟）
     public static String API_SSC_GET_SSC_PLAY_PL = API_DOMAIN+"ssc/getSscPlayPl.json";//获取彩票赔率
     public static String API_SSC_GET_LEFT_TIME = API_DOMAIN+"ssc/getSscLeftTime.json";//获取彩票剩余时间
     public static String API_SSC_GET_DATA_HISTORY = API_DOMAIN+"ssc/getDataHistory.json";//获取彩票开奖历史记录

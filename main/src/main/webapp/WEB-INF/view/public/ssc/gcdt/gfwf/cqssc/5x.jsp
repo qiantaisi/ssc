@@ -36,7 +36,7 @@
             </a>
         </span>
     </p>
-    <ul>
+    <ul class="wx-page">
         <li data-name="万">
             <b><i>万位</i></b>
             <var class="numLine">

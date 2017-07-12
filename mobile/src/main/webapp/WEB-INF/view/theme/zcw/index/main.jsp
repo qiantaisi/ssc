@@ -22,23 +22,16 @@
 
 
         <div class="content content-img content-vipvp tex_bottom bottom2 top2" id="navBar"> <%--内容主体--%>
-            <div class="row cl-scroll swiper-container swiper-container-horizontal re-row">
-                <div class="swiper-wrapper">
-                    <c:forEach items="${carouseList.carouselList}" var="item">
-                        <c:choose>
-                            <c:when test="${empty item.url}">
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
-                                                                      alt="${item.title}"></div>
-                            </c:when>
-                            <c:otherwise>
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
-                                                                      alt="${item.title}"></div>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
-                </div>
-                <div class="swiper-pagination repagination"></div>
-            </div>
+            <%--<div class="row cl-scroll swiper-container swiper-container-horizontal re-vipvp-head">--%>
+                <%--<div class="swiper-wrapper">--%>
+                    <%--<c:forEach items="${carouseList.carouselList}" var="item">--%>
+                        <%--<div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"--%>
+                                                                      <%--alt="${item.title}"></div>--%>
+                    <%--</c:forEach>--%>
+                <%--</div>--%>
+                <%--&lt;%&ndash;<div class="swiper-pagination repagination"></div>&ndash;%&gt;--%>
+            <%--</div>--%>
+
             <div class="cl-4 recl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -355,10 +348,6 @@
     <c:import url="../common/rightPanel.jsp"/>
 </div>
 <c:import url="../common/commonJs.jsp"/>
-
-<script>
-    var kjjgJsonData = ${kjjgJsonData};
-</script>
 <script type="text/html" id="template_6">
     <div class="item-content re-it-con lhc-kjjg">
         <div class="item-media remedia"><img src="${resPath}img/cz/cz-6.png" style='width: 2.3rem;'></div>

@@ -1642,8 +1642,8 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .help_list .help_col td{text-align: left;padding: 4px;border: 1px solid #525252;FONT-SIZE: 12px;line-height: 20px;}
 
 .gfwf-help-col{width: 748px;}
-.help_col .gfwf-1 .gfwf-2 span {float: left; padding-left: 85px; font-size: 16px; font-weight: bold; line-height: 65px; margin-left: 26px;}
-.gamek-5 {background: url(../img/buy_07.png) no-repeat;background-size: 59px 59px;}
+.help_col .gfwf-1 .gfwf-2 span {float: left; padding-left: 85px; font-size: 16px; font-weight: bold; line-height: 65px; margin-left: 15px;}
+.gamek-1 {background: url(../images/wfsm/ico16.png) no-repeat;background-size: 55px 55px;}
 .help_list .help_col .gfwf-3 a{height: auto; line-height: 22px; margin-left: 16px;}
 .wfsm-back{float: right; margin-right: 0px; width: 85px; height: 26px; line-height: 26px; text-align: center;}
 .gfwf-2{height: 58px; overflow: hidden; margin-bottom: 10px;}
@@ -1652,6 +1652,13 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .gfwf-3{width: 100%; height: auto; line-height: 25px;}
 .wfsm-kong{height: 25px; overflow: hidden;}
 .gfwf-wxsm img{width: 100%;}
+.gamek-2 {background: url(../images/wfsm/ico18.png) no-repeat;background-size: 55px 55px;}
+.gamek-3 {background: url(../images/wfsm/ico27.png) no-repeat;background-size: 55px 55px;}
+.gamek-4 {background: url(../images/wfsm/ico28.png) no-repeat;background-size: 55px 55px;}
+.gamek-5 {background: url(../images/wfsm/ffssc.png) no-repeat;background-size: 55px 55px;}
+.gamek-6 {background: url(../images/wfsm/efssc.png) no-repeat;background-size: 55px 55px;}
+.gamek-7 {background: url(../images/wfsm/sfssc.png) no-repeat;background-size: 55px 55px;}
+.gamek-8 {background: url(../images/wfsm/wfssc.png) no-repeat;background-size: 55px 55px;}
 
 
 

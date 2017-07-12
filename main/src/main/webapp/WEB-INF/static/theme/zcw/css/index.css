@@ -428,6 +428,10 @@ a:visited {
     padding-left: 23%;
 }
 
+.retouzhu3{
+    padding-left: 32%;
+}
+
 .kai_qiu_main{
     margin-top: 10px;
 }
@@ -474,7 +478,16 @@ a:visited {
     margin-top: 3px;
 }
 
-.add, .min {
+.min {
+    border: none;
+    border-left: 1px solid #dddddd;
+    width: 26px;
+    height: 26px;
+    background: none;
+    cursor: pointer;
+}
+
+.add{
     border: none;
     border-right: 1px solid #dddddd;
     width: 26px;
@@ -515,6 +528,11 @@ a:visited {
     display: inline-block;
     font-size: 14px;
     margin-left: 10px;
+    cursor:pointer;
+}
+
+.touzhubtn:hover{
+    color: #f0fff1;;
 }
 
 .btn_red {
@@ -614,18 +632,21 @@ a:visited {
 }
 
 #wrap {
-    height: 40px;
+    height: 45px;
     overflow: hidden;
 }
 
 .index_notice_ul {
-    padding: 0 9px;
+    display: block;
+    height: 100%;
+    padding: 3px 9px 0 9px;
     list-style: none;
 }
 
 .index_notice_ul li {
-    line-height: 40px;
-    height: 40px;
+    line-height: 20px;
+    height: 20px;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -809,3 +830,60 @@ a:visited {
     margin-bottom: 12px;
 }
 
+/*六合彩球背景*/
+.greenBg {
+    background: #2ed918;
+    color: #fff;
+}
+
+.redBg {
+    background: #e93030;
+    color: #fff;
+}
+
+.blueBg {
+    background: #3e97ff;
+    color: #fff;
+}
+
+/*登录状态*/
+.login_after1 {
+    font-size: 14px;
+    padding: 15px 0px;
+    line-height: 30px;
+}
+
+.login_after2 {
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 10px 0px;
+    color: #6b6b6b;
+}
+
+.login_after2 a {
+    display: inline-block;
+    color: #6b6b6b;
+    line-height: normal;
+}
+
+.login_afterbtn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login_afterbtn a {
+    display: inline-block;
+    line-height: 30px;
+    width: 90px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.btn_red {
+    background: #f42023;
+    color: #fff;
+}
+
+.index_main_rt1_2b{
+    display: none;
+}

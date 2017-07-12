@@ -433,8 +433,11 @@ public class MemberController extends BaseController {
             return this.renderPublicView("member/noaccess", modelMap);
         }
 
+        CommonResult result = ApiUtils.getNeedWithDrawPasswd(companyShortName);
+
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token, companyShortName));
+        modelMap.put("withdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName));
 
         return this.renderPublicView("member/withdraw", modelMap);
     }
@@ -657,6 +660,12 @@ public class MemberController extends BaseController {
             result.setDescription("请选择银行卡！");
             return this.renderJson(result);
         }
+
+//        if (null == drawPassword){
+//            result.setResult(-3);
+//            result.setDescription("请输入密码！");
+//            return this.renderJson(result);
+//        }
 
 
         result = ApiUtils.submitWithdraw(uid, token, money, id, drawPassword, companyShortName);
@@ -1066,7 +1075,17 @@ public class MemberController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         return this.renderJson(ApiUtils.sigout(uid, token,companyShortName));
     }
-
+    /**
+     * ajax获取公告
+     *
+     * @return
+     */
+    @RequestMapping(value = "/ajaxSscZJNoticeResult.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public SscZJNoticeResult ajaxSscZJNoticeResult() throws Exception {
+        String companyShortName = this.getCompanyShortName();
+        return ApiUtils.getNotices(companyShortName);
+    }
 
     /**
      * ajax获取弹窗公告

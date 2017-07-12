@@ -29,6 +29,19 @@ public class SscHistoryResult2 extends CommonResult {
          */
         private String openCode;
 
+        /**
+         * 彩种id
+         */
+        private Long playGroupId;
+
+        public Long getPlayGroupId() {
+            return playGroupId;
+        }
+
+        public void setPlayGroupId(Long playGroupId) {
+            this.playGroupId = playGroupId;
+        }
+
         public String getNumber() {
             return number;
         }
