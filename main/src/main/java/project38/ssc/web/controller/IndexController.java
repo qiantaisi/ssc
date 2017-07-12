@@ -1,5 +1,6 @@
 package project38.ssc.web.controller;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import project38.api.common.helper.IPHelper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -13,6 +14,7 @@ import project38.api.result.LoginResult;
 import project38.api.result.WebInfoResult;
 import project38.api.utils.ApiUtils;
 import project38.api.result.SscHistoryResult3;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
@@ -33,14 +35,17 @@ public class IndexController extends BaseController {
     @ResponseBody
     public WebInfoResult ajaxGetWebInfo() {
         String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getWebInfo( 1, companyShortName);
+        return ApiUtils.getWebInfo(1, companyShortName);
     }
 
     @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public SscHistoryResult3 ajaxGetSscDataMainPage(List<Long> playIds,Long playId) {
+    public SscHistoryResult3 ajaxGetSscDataMainPage(
+            @RequestParam(value = "playIds", required = false) List<Long> playIds,
+            Long playId
+    ) {
         String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getSscDataMainPage(playIds,playId,companyShortName);
+        return ApiUtils.getSscDataMainPage(playIds, playId, companyShortName);
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)

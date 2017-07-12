@@ -1120,7 +1120,7 @@
             navIndex = 0;
             numsArr = [];
             for (var i = 0; i < 7; ++i) {
-                var v = $("#xyxhContents_6 span").eq(i).data("num");
+                var v = $("#xyxhContents_6 .left:eq("+ i +") span").data("num");
                 if (v == '') {
                     continue;
                 }
@@ -1362,13 +1362,13 @@
                 bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
                 clearInterval(index_6);
-                $("#xyxhContents_6 .qiu").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
-                $("#xyxhContents_6 .qiu").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
-                $("#xyxhContents_6 .qiu").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
-                $("#xyxhContents_6 .qiu").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
-                $("#xyxhContents_6 .qiu").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
-                $("#xyxhContents_6 .qiu").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
-                $("#xyxhContents_6 .qiu").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
+                $("#xyxhContents_6 .left:eq(0) span").attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
+                $("#xyxhContents_6 .left:eq(1) span").attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
+                $("#xyxhContents_6 .left:eq(2) span").attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
+                $("#xyxhContents_6 .left:eq(3) span").attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
+                $("#xyxhContents_6 .left:eq(4) span").attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
+                $("#xyxhContents_6 .left:eq(5) span").attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
+                $("#xyxhContents_6 .left:eq(6) span").attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
 
                 $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
                 $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
