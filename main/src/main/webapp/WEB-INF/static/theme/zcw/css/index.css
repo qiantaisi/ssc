@@ -528,6 +528,11 @@ a:visited {
     display: inline-block;
     font-size: 14px;
     margin-left: 10px;
+    cursor:pointer;
+}
+
+.touzhubtn:hover{
+    color: #f0fff1;;
 }
 
 .btn_red {
@@ -835,5 +840,43 @@ a:visited {
 
 .blueBg {
     background: #3e97ff;
+    color: #fff;
+}
+
+/*登录状态*/
+.login_after1 {
+    font-size: 14px;
+    padding: 15px 0px;
+    line-height: 30px;
+}
+
+.login_after2 {
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 10px 0px;
+    color: #6b6b6b;
+}
+
+.login_after2 a {
+    display: inline-block;
+    color: #6b6b6b;
+    line-height: normal;
+}
+
+.login_afterbtn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login_afterbtn a {
+    display: inline-block;
+    line-height: 30px;
+    width: 90px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.btn_red {
+    background: #f42023;
     color: #fff;
 }

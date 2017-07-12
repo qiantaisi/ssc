@@ -45,35 +45,78 @@
             });
         </script>
     </div>
-    <div class="banner_shuru">
-        <div class="container clear">
-            <div class="banner_shuru_main right">
-                <div class="banner_shuru_main_tl">
-                    <span>欢迎登陆</span>
-                </div>
-                <form onsubmit="registerLogin();return false;">
-                    <div class=" banner_shuru_gp">
-                        <input type="text"  id="registerLoginAccount" class="banner_shuru_input" placeholder="会员名" />
-                    </div>
-                    <div class=" banner_shuru_gp">
-                        <input type="password"  id="registerLoginPassword" class="banner_shuru_input" placeholder="密码" />
-                        <a href="#" class="banner_wp">忘记?</a>
-                    </div>
-                    <div class=" banner_shuru_gp">
-                        <input type="text"  id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码" />
 
-                        <a href="#" class="banner_yz">
-                            <img id="registerYzmImg2" onclick="refreshYzm(this)" src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
-                        </a>
+    <c:choose>
+        <c:when test="${not empty userSession}">
+            <div class="banner_shuru">
+                <div class="container clear">
+                    <div class="banner_shuru_main right">
+                        <div class="banner_shuru_main_tl">
+                            <span>欢迎登陆</span>
+                        </div>
+                        <div class="login_after">
+                            <div class="login_after1">
+                                下午好！<span style="color: #247fdd;">${userSession.account}</span><br/>
+                                余额：<span class="color_red">${userSession.balance}</span>
+                            </div>
+                            <div class="login_after2">
+                                <a href="javascript:void(0)" onclick="openHyzx('member/zhcz.html?module=yhzz')">存款 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" onclick="openHyzx('member/withdraw.html')">取款 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" onclick="openHyzx('member/letter.html')">站内信 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" onclick="openHyzx('member/lsjl.html?module=tzjl')">投注记录 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0)" onclick="openHyzx('member/lsjl.html?module=ckjl')">存款记录 </a>
+                                <span>&nbsp;|&nbsp;</span>
+                            </div>
+                            <div class="login_afterbtn">
+                                <a href="javascript:void(0)" onclick="sigout()" class="btn_red">
+                                    退出
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="clearfix banner_shuru_btn">
-                        <input type="submit" class="left btn_red"  value="登录"/>
-                        <a href="<%=basePath%>register.html" class="left">立即注册</a>
-                    </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </div>
+        </c:when>
+        <c:otherwise>
+            <div class="banner_shuru">
+                <div class="container clear">
+                    <div class="banner_shuru_main right">
+                        <div class="banner_shuru_main_tl">
+                            <span>欢迎登陆</span>
+                        </div>
+                        <form onsubmit="registerLogin();return false;">
+                            <div class=" banner_shuru_gp">
+                                <input type="text" id="registerLoginAccount" class="banner_shuru_input"
+                                       placeholder="会员名"/>
+                            </div>
+                            <div class=" banner_shuru_gp">
+                                <input type="password" id="registerLoginPassword" class="banner_shuru_input"
+                                       placeholder="密码"/>
+                                <a href="#" class="banner_wp">忘记?</a>
+                            </div>
+                            <div class=" banner_shuru_gp">
+                                <input type="text" id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码"/>
+
+                                <a href="#" class="banner_yz">
+                                    <img id="registerYzmImg2" onclick="refreshYzm(this)"
+                                         src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
+                                </a>
+                            </div>
+                            <div class="clearfix banner_shuru_btn">
+                                <input type="submit" class="left btn_red" value="登录"/>
+                                <a href="<%=basePath%>register.html" class="left">立即注册</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </c:otherwise>
+    </c:choose>
+
 </div>
 
 <div class="main container index_main clearfix">
@@ -634,7 +677,6 @@
 </div>
 
 <c:import url="../common/bottomInfo.jsp"/>
-
 <c:import url="../common/commonJs.jsp"/>
 
 <div id="gonggao_container"></div>
@@ -796,6 +838,21 @@
                         alert("登录失败：" + json.description);
                     }
                 }, 1000)
+            }
+        });
+    }
+
+    function sigout() {
+        ajaxRequest({
+            url: "<%=basePath%>member/ajaxSigout.json",
+            beforeSend: function() {
+                showLoading();
+            },
+            success: function(json) {
+                $.cookie("uid", '', {path: "/", expires: -1});
+                $.cookie("token", '', {path: "/", expires: -1});
+                hideLoading();
+                location.reload();
             }
         });
     }
