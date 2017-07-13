@@ -692,7 +692,7 @@
                         <div id="wrap" class="rewrap">
                             <ul class="index_notice_ul">
                                 <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
-                                    <li><a onclick="showGonggao(${status.count})" href="javascript:void(0)">${item.title}</a></li>
+                                    <li><a onclick="showGonggao(${status.index})" href="javascript:void(0)">${item.title}</a></li>
                                 </c:forEach>
                             </ul>
                             <ul id="box2"></ul>
@@ -739,8 +739,8 @@
 </div>
 
 <c:import url="../common/bottomInfo.jsp"/>
-
 <c:import url="../common/commonJs.jsp"/>
+<c:import url="../common/jsCommonLogin.jsp"/>
 
 <div id="gonggao_container"></div>
 <script>
@@ -778,6 +778,7 @@
             data: {playIds: playIds},
             success: function (json) {
                 if (json.sscHistoryList != null) {
+
                     var klist = json.sscHistoryList;
                     for (var i in  klist) {
                         var obj = klist[i];
@@ -790,6 +791,7 @@
                                 "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>重庆时时彩</span><span class='left'>" + obj.number + "</span></div><p class='kaijiang_num'>"+openCode+"</p><div class='clearfix kaijiang_b'><span class='left'>"+obj.date+"</span><div class='right clearfix'><a href='javascript:void(0)'class='left'  onclick='openGcdt('gcdt/cqssc')' >详情</a><span class='left'>&nbsp;&nbsp;</span><a href='javascript:void(0)'class='left' onclick='goZst('zst/cqssc')'>走势</a><span class='left'>&nbsp;&nbsp;</span><a href='javascript:void(0)' class='left' onclick='openGcdt('gcdt/cqssc') '>投注</a></div></div></li>");
                         }
                         if (obj.playGroupId == 2){
+
                             $("#apend").append(
                                 "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>天津时时彩</span><span class='left'>" + obj.number + "</span></div><p class='kaijiang_num'>"+openCode+"</p><div class='clearfix kaijiang_b'><span class='left'>"+obj.date+"</span><div class='right clearfix'><a href='javascript:void(0)'class='left' onclick='openGcdt('gcdt/tjssc')'>详情</a><span class='left'> &nbsp;&nbsp; </span><a href='javascript:void(0)'  class='left' onclick='goZst('zst/tjssc')' >走势</a><span class='left'> &nbsp;&nbsp; </span><a href='javascript:void(0)'class='left' onclick='openGcdt('gcdt/tjssc')'>投注</a></div></div></li>");
                         }
