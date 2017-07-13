@@ -146,133 +146,7 @@
         </div>
         <div class="kaijiang_main">
             <ul id="apend">
-                <%--   <c:forEach  items="${SscHistoryResult2.sscHistoryList}" var="items">
-
-
-                   <c:if test="${items.playGroupId==1}">
-               <li>
-                   <div class="clearfix kaijiang_li_t">
-                       <span class="left kaijiang_li_t_name">重庆时时彩</span>
-                       <span class="left">${items.number}期	</span>
-                   </div>
-                   <p class="kaijiang_num">
-                       ${items.openCode}
-                   </p>
-                   <div class="clearfix kaijiang_b">
-                       <span class="left">
-                           ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
-                          &lt;%&ndash; <fmt:parseDate value="${fn:substring(items.number, 0, 8)}" var="date"/>&ndash;%&gt;
-                             &lt;%&ndash; ${date}&ndash;%&gt;
-                           &lt;%&ndash;<fmt:formatDate value="${date}" pattern="yyyy-MM-dd"/>&ndash;%&gt;
-                       </span>
-                       <div class="right clearfix">
-                           <a href="javascript:void(0)"  onclick="openGcdt('gcdt/cqssc')" class="left">详情 </a>
-                           <span class="left">&nbsp;|&nbsp;</span>
-                           <a href="javascript:void(0)" onclick="goZst('zst/cqssc')" class="left">走势 </a>
-                           <span class="left">&nbsp;|&nbsp;</span>
-                           <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">投注 </a>
-                       </div>
-                   </div>
-               </li>
-                   </c:if>
-
-
-                       <c:if test="${items.playGroupId==2}">
-
-           <li>
-               <div class="clearfix kaijiang_li_t">
-                   <span class="left kaijiang_li_t_name">天津时时彩</span>
-                   <span class="left">${items.number}期	</span>
-               </div>
-               <p class="kaijiang_num">
-                       ${items.openCode}
-               </p>
-               <div class="clearfix kaijiang_b">
-                   <span class="left">
-                        ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
-                   </span>
-                   <div class="right clearfix">
-                       <a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')" class="left">详情 </a>
-                       <span class="left">&nbsp;|&nbsp;</span>
-                       <a href="javascript:void(0)" onclick="goZst('zst/tjssc')" class="left">走势 </a>
-                       <span class="left">&nbsp;|&nbsp;</span>
-                       <a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')" class="left">投注 </a>
-                   </div>
-               </div>
-           </li>
-                       </c:if>
-                       <c:if test="${items.playGroupId==3}">
-                           <li>
-                               <div class="clearfix kaijiang_li_t">
-                                   <span class="left kaijiang_li_t_name">新疆时时彩</span>
-                                   <span class="left">${items.number}期	</span>
-                               </div>
-                               <p class="kaijiang_num">
-                                       ${items.openCode}
-                               </p>
-                               <div class="clearfix kaijiang_b">
-                   <span class="left">
-                        ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
-                   </span>
-                                   <div class="right clearfix">
-                                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')" class="left">详情 </a>
-                                       <span class="left">&nbsp;|&nbsp;</span>
-                                       <a href="javascript:void(0)" onclick="goZst('zst/xjssc')" class="left">走势 </a>
-                                       <span class="left">&nbsp;|&nbsp;</span>
-                                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')" class="left">投注 </a>
-                                   </div>
-                               </div>
-                           </li>
-                   </c:if>
-                       <c:if test="${items.playGroupId==15}">
-           <li>
-               <div class="clearfix kaijiang_li_t">
-                   <span class="left kaijiang_li_t_name">分分时时彩</span>
-                   <span class="left">${items.number}期	</span>
-               </div>
-               <p class="kaijiang_num">
-                       ${items.openCode}
-               </p>
-               <div class="clearfix kaijiang_b">
-                   <span class="left">
-                        ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
-                   </span>
-                   <div class="right clearfix">
-                       <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')" class="left">详情 </a>
-                       <span class="left">&nbsp;|&nbsp;</span>
-                       <a href="javascript:void(0)" onclick="goZst('zst/ffssc')" class="left">走势 </a>
-                       <span class="left">&nbsp;|&nbsp;</span>
-                       <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')" class="left">投注 </a>
-                   </div>
-               </div>
-           </li>
-                   </c:if>
-
-                       <c:if test="${items.playGroupId==16}">
-                           <li>
-                               <div class="clearfix kaijiang_li_t">
-                                   <span class="left kaijiang_li_t_name">两分时时彩</span>
-                                   <span class="left">${items.number}期	</span>
-                               </div>
-                               <p class="kaijiang_num">
-                                       ${items.openCode}
-                               </p>
-                               <div class="clearfix kaijiang_b">
-                                   <span class="left">
-                                        ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
-                                   </span>
-                                   <div class="right clearfix">
-                                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/efssc')" class="left">详情 </a>
-                                       <span class="left">&nbsp;|&nbsp;</span>
-                                       <a href="javascript:void(0)" onclick="goZst('zst/efssc')" class="left">走势 </a>
-                                       <span class="left">&nbsp;|&nbsp;</span>
-                                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/efssc')" class="left">投注 </a>
-                                   </div>
-                               </div>
-                           </li>
-                       </c:if>
-                   </c:forEach>--%>
-
+                <%--开奖内容--%>
             </ul>
 
         </div>
@@ -746,7 +620,7 @@
 <script>
     $(function () {
         var playIds="";
-        playIds+="1,"+"2,"+"3,"+"15,"+"16"
+        playIds+="1,"+"2,"+"3,"+"15,"+"16";
         getSscDataMainPage(playIds);
         getWebPopUpNotice();
 
