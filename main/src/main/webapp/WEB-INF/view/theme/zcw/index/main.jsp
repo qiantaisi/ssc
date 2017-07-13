@@ -688,18 +688,18 @@
                     <a href="javascript:void(0);">新手指导</a>
                 </div>
                 <div class="ndex_main_rt1_2b_main">
-                    <div class="index_main_rt1_2b active">
-                        <div id="wrap">
-                            <ul class="index_notice_ul" id="gonggao_marquee">
-                                <li>
-                                    <a href="javascript:void(0);"></a>
-                                </li>
+                    <div class="index_main_rt1_2b roll_rt1_2b active">
+                        <div id="wrap" class="rewrap">
+                            <ul class="index_notice_ul">
+                                <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
+                                    <li><a onclick="showGonggao(${status.count})" href="javascript:void(0)">${item.title}</a></li>
+                                </c:forEach>
                             </ul>
                             <ul id="box2"></ul>
                         </div>
                     </div>
                     <div class="index_main_rt1_2b index-content-help">
-                        <ul class="index_notice_ul">
+                        <ul class="index_notice_ul_new">
                             <li>
                                 <a href="${basPath}help/index.html">新手指导</a>
                             </li>
@@ -746,12 +746,10 @@
 <script>
     $(function () {
 
-      /*  var playIds = [{"id":1},{"id":2},{"id":15},{"id":16}];*/
-        alert("21321321");
-        getSscDataMainPage();
+        var playIds = (1, 2, 15, 16);
+        getSscDataMainPage(playIds);
 
         getWebPopUpNotice();
-
 
 
         xyxh(null, 1);
@@ -771,24 +769,25 @@
             scrollamount: 10
         });
 
+        newRoll(".roll_rt1_2b .rewrap ul li")
     });
 
+    var playIds = (1, 2, 15, 16);
 
-    function getSscDataMainPage(playIds) {
+    function getSscDataMainPage() {
 
         ajaxRequest({
             url: "<%=basePath%>index/ajaxGetSscDataMainPage.json",
             data: {playIds: playIds},
             success: function (json) {
-                alert(json);
-               /* if (json.sscHistoryList != null) {
+                if (json.sscHistoryList != null) {
                     var kjjglist = json.sscHistoryList;
                     for (var i in  klist) {
-                        alert(klist.playGroupId );
+                        alert(klist.playGroupId);
                         if (klist.playGroupId == 1)
                             $("#apend").append(
                                 "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>+'重庆时时彩'+</span><span class='left'>'+klist[i].number+'</span></div><p class='kaijiang_num'>'+klist[i].openCode+'</p><div class='clearfix kaijiang_b'><span class='left'>'+klist[i].date+'</span><div class='right clearfix'><a href='#'>'+详情+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+走势+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+投注+'</a></div></div></li>");
-                    }*/
+                    }
 
                 }
             }
@@ -898,7 +897,7 @@
         });
     }
 
-    var content_G = '';
+
     function getWebPopUpNotice() {
         ajaxRequest({
             url: "<%=basePath%>member/ajaxGetWebPopUpNotice.json",
@@ -917,15 +916,6 @@
                 var str2 = ''
                 if (json.webNoticeList.length != 0) {
                     $.each(json.webNoticeList, function (index, value) {
-                        var len = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").length;
-                        if (len > 13) {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").substr(0, 13) + "...";
-                        } else {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "");
-                        }
-
-                        str += '<p onclick="showGonggao(' + index + ')" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;height:25px;margin:0;">' + value.title + "&nbsp;:&nbsp;" + content_G + '</p></br>';
-
                         str2 += '<div class="alert hide" id="gonggao_' + index + '">';
                         str2 += '<div class="alert_col">';
                         str2 += '<h5><span>公告</span><i>×</i></h5>';
@@ -939,20 +929,16 @@
                 } else {
                     str = '暂无公告';
                 }
-                $("#gonggao_marquee").html(str);
-                $("#gonggao_marquee p").css({margin: "-10px auto"});
+
                 $("#gonggao_container").html(str2);
 
-                $('#gonggao_marquee').liMarquee({
-                    direction: 'up',
-                    scrollamount: 10
-                });
                 $('.alert_col h5 i').click(function () {
                     $('.alert').hide();
                 });
             }
         });
     }
+
 </script>
 
 <script>
@@ -1128,7 +1114,7 @@
             navIndex = 0;
             numsArr = [];
             for (var i = 0; i < 7; ++i) {
-                var v = $("#xyxhContents_6 span").eq(i).data("num");
+                var v = $("#xyxhContents_6 .left:eq(" + i + ") span").data("num");
                 if (v == '') {
                     continue;
                 }
@@ -1370,13 +1356,13 @@
                 bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
                 clearInterval(index_6);
-                $("#xyxhContents_6 .qiu").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
-                $("#xyxhContents_6 .qiu").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
-                $("#xyxhContents_6 .qiu").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
-                $("#xyxhContents_6 .qiu").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
-                $("#xyxhContents_6 .qiu").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
-                $("#xyxhContents_6 .qiu").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
-                $("#xyxhContents_6 .qiu").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
+                $("#xyxhContents_6 .left:eq(0) .qiu").attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
+                $("#xyxhContents_6 .left:eq(1) .qiu").attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
+                $("#xyxhContents_6 .left:eq(2) .qiu").attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
+                $("#xyxhContents_6 .left:eq(3) .qiu").attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
+                $("#xyxhContents_6 .left:eq(4) .qiu").attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
+                $("#xyxhContents_6 .left:eq(5) .qiu").attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
+                $("#xyxhContents_6 .left:eq(6) .qiu").attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
 
                 $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
                 $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
