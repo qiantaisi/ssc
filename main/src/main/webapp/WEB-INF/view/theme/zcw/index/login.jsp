@@ -99,31 +99,31 @@
             <div class="footer_menu_main clearfix">
                 <div class="footer_menu left">
                     <p class="footer_menu_t">
-                        <img src="${resPath}images/index84.png"/>
+                        <img src="${resPath}images/common/index84.png" />
                         平台优势
                     </p>
                     <ul>
                         <li>
-                            <a href="#">
-                                <img src="${resPath}images/index_93.png"/>
+                            <a href="javascript:void(0);">
+                                <img src="${resPath}images/common/index_93.png" />
                                 账户安全
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="${resPath}images/index-36.png"/>
+                            <a href="javascript:void(0);">
+                                <img src="${resPath}images/common/index-36.png" />
                                 购彩简单
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="${resPath}images/index2_92.png"/>
+                            <a href="javascript:void(0);">
+                                <img src="${resPath}images/common/index2_92.png" />
                                 领奖方便
                             </a>
                         </li>
                         <li>
-                            <a href="<%=basePath%>help/question/tk.html">
-                                <img src="${resPath}images/index_135.png"/>
+                            <a href="javascript:void(0);">
+                                <img src="${resPath}images/common/index_135.png" />
                                 提款快速
                             </a>
                         </li>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="footer_menu left">
                     <p class="footer_menu_t">
-                        <img src="${resPath}images/index81.png"/>
+                        <img src="${resPath}images/common/index81.png" />
                         账户相关
                     </p>
                     <ul class="footer_menu_2">
@@ -151,7 +151,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/zc_5.html">
                                 如何修改真实姓名
                             </a>
                         </li>
@@ -159,12 +159,12 @@
                 </div>
                 <div class="footer_menu left">
                     <p class="footer_menu_t">
-                        <img src="${resPath}images/index_87.png"/>
+                        <img src="${resPath}images/common/index_87.png" />
                         充值购彩
                     </p>
                     <ul class="footer_menu_2">
                         <li>
-                            <a href="<%=basePath%>help/question/cz_4.html">
+                            <a href="<%=basePath%>help/question/cz_1.html">
                                 如何进行充值
                             </a>
                         </li>
@@ -174,12 +174,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>help/question/tk_10.html">
                                 如何查询购彩记录
                             </a>
                         </li>
                         <li>
-                            <a href="<%=basePath%>help/question/aq_1.html">
+                            <a href="<%=basePath%>help/question/aq.html">
                                 在本站购彩安全吗
                             </a>
                         </li>
@@ -187,7 +187,7 @@
                 </div>
                 <div class="footer_menu left">
                     <p class="footer_menu_t">
-                        <img src="${resPath}images/index-31.png"/>
+                        <img src="${resPath}images/common/index-31.png" />
                         兑奖提款
                     </p>
                     <ul class="footer_menu_2">
