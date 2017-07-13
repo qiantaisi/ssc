@@ -692,7 +692,7 @@
                         <div id="wrap" class="rewrap">
                             <ul class="index_notice_ul">
                                 <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
-                                    <li><a onclick="showGonggao(${status.count})" href="javascript:void(0)">${item.title}</a></li>
+                                    <li><a onclick="showGonggao(${status.index})" href="javascript:void(0)">${item.title}</a></li>
                                 </c:forEach>
                             </ul>
                             <ul id="box2"></ul>
