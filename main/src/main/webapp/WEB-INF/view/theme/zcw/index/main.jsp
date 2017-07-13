@@ -765,7 +765,7 @@
 
         $('#zj_info_marquee').liMarquee({
             direction: 'up',
-            scrollamount: 10
+            scrollamount: 5
         });
 
         newRoll(".roll_rt1_2b .rewrap ul li")
@@ -797,7 +797,7 @@
                         }
                         if (obj.playGroupId == 3){
                             $("#apend").append(
-                                "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>新疆时时彩</span><span class='left'>" + obj.number + "</span></div><p class='kaijiang_num'>"+openCode+"</p><div class='clearfix kaijiang_b'><span class='left'>"+obj.date+"</span><div class='right clearfix'><a href='javascript:void(0)'  class='left' onclick='openGcdt('gcdt/xjssc')'>详情</a><span class='left'>&nbsp;&nbsp;  </span><a href='javascript:void(0)'   class='left' onclick='goZst('zst/xjssc')'>走势</a><span class='left'>&nbsp;&nbsp;  </span><<a href='javascript:void(0)' class='left' onclick='openGcdt('gcdt/xjssc')'>投注</a></div></div></li>");
+                                "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>新疆时时彩</span><span class='left'>" + obj.number + "</span></div><p class='kaijiang_num'>"+openCode+"</p><div class='clearfix kaijiang_b'><span class='left'>"+obj.date+"</span><div class='right clearfix'><a href='javascript:void(0)'  class='left' onclick='openGcdt('gcdt/xjssc')'>详情</a><span class='left'>&nbsp;&nbsp;  </span><a href='javascript:void(0)'   class='left' onclick='goZst('zst/xjssc')'>走势</a><span class='left'>&nbsp;&nbsp;  </span><<a href='javascript:void(0)' class='left' onclick='openGcdt('gcdt/xjssc')'投注</a></div></div></li>");
                         }
                         if (obj.playGroupId == 15){
                             $("#apend").append(
