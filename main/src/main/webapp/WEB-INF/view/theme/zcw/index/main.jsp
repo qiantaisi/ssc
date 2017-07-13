@@ -739,8 +739,8 @@
 </div>
 
 <c:import url="../common/bottomInfo.jsp"/>
-
 <c:import url="../common/commonJs.jsp"/>
+<c:import url="../common/jsCommonLogin.jsp"/>
 
 <div id="gonggao_container"></div>
 <script>
@@ -782,7 +782,7 @@
             success: function (json) {
                 if (json.sscHistoryList != null) {
                     var kjjglist = json.sscHistoryList;
-                    for (var i in  klist) {
+                    for (var i in klist) {
                         alert(klist.playGroupId);
                         if (klist.playGroupId == 1)
                             $("#apend").append(

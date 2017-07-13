@@ -6,64 +6,120 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+<!--弹窗-->
+<div class="bg"></div>
+<div class="login_alert">
+    <div class="login_alert_tl clearfix">
+        <span class="left">易名彩登录</span>
+        <a href="javascript:void(0);" class="cha right"></a>
+    </div>
+    <form >
+        <div class="login_alert_b">
+            <div class="login_alert_gp">
+                <img src="${resPath}images/alert2.png" class="login_alert_ico" />
+                <input type="text" id="registerLoginAccountAlert" name="registerLoginAccountAlert" placeholder="手机号/用户名" />
+            </div>
+            <div class="login_alert_gp">
+                <img src="${resPath}images/alert3.png" class="login_alert_ico" />
+                <input type="password" id="registerLoginPasswordAlert"  name="registerLoginPasswordAlert" placeholder="密码" />
+            </div>
+
+            <div class=" banner_shuru_gp">
+                <input type="text" id="registerLoginYzmAlert" class="banner_shuru_alertinput" placeholder="验证码"/>
+
+                <a href="javascript:void(0);" class="banner_alertyz">
+                    <img id="registerYzmImg2" onclick="refreshYzm(this)"
+                         src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
+                </a>
+            </div>
+
+            <input type="button" class="btn_red login_alertbtn" onclick="login()"  value="立即登录" />
+            <div class="login_alert_link">
+                <a href="${kefuUrl}">忘记密码</a>
+                <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="<%=basePath%>register.html">立即注册</a>
+            </div>
+        </div>
+    </form>
+</div>
+
 <script>
-    function openHyzx(module) {
-        if (typeof module == 'undefined') {
-            module = '';
-        }
-        if (typeof $.cookie("uid") == 'undefined' || typeof $.cookie("token") == 'undefined') {
-            alert("请先登录");
-            if ($("#loginAccount1").length > 0) {
-                $("#loginAccount1").focus();
-                return;
-            }
-            window.location.href = "<%=basePath%>main.html";
+    $(function () {
+        // 首页弹框登录按钮
+        $('.loginbtn').click(function(){
+            $(".bg").show();
+            $(".login_alert").show();
+        });
+        $('.bg').click(function(){
+            $(".bg").hide();
+            $(".login_alert").hide();
+        });
+        $('.cha').click(function(){
+            $(".bg").hide();
+            $(".login_alert").hide();
+        });
+    });
+
+    function login() {
+        var loginAccount = $.trim($("#registerLoginAccountAlert").val());
+        console.log(loginAccount);
+        var loginPassword = $.trim($("#registerLoginPasswordAlert").val());
+        var yzm = $.trim($("#registerLoginYzmAlert").val());
+
+        if (!loginAccount) {
+            alert("请输入账号");
             return;
         }
-        windowOpen('<%=basePath%>member/index.html?module=' + module, '会员中心', 1250, 834);
-    }
-
-    function openGcdt(module) {
-        <%--if (typeof module == 'undefined') {--%>
-            <%--module = '';--%>
-        <%--}--%>
-        <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
-        <%--windowOpen('<%=basePath%>ssc/index.html?module=' + module, '购彩大厅', 1285, 800);--%>
-        var subUrl = "";
-        if (module) {
-            subUrl = "#" + CONFIG.BASEURL + "ssc/" +module + ".html";
+        if (!loginPassword) {
+            alert("请输入密码");
+            return;
         }
-        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
-    }
-
-    function goZst(url) {
-        window.open('<%=basePath%>ssc/'+ url +'.html?type=1');
-    }
-
-    function openZstIndex(module) {
-        if (typeof module == 'undefined') {
-            module = '';
+        if (!yzm) {
+            alert("请输入验证码");
+            return;
         }
-        windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);
-        <%--windowOpen('<%=basePath%>ssc/index.html?module=' + module, '走势图首页', 1285, 800);--%>
+
+        ajaxRequest({
+            url: "<%=basePath%>member/ajaxLogin.json",
+            data: {
+                yzm: yzm,
+                account: loginAccount,
+                password: $.md5(loginPassword)
+            },
+            beforeSend: function () {
+                showLoading();
+            },
+            success: function (json) {
+                if (json.result == 1) {
+                    $.cookie("uid", json.userId, {path: "/"});
+                    $.cookie("token", json.token, {path: "/"});
+                    window.location.href = "<%=basePath%>main.html";
+                } else {
+                    refreshYzm(document.getElementById('registerYzmImg2'));
+                    Tools.toast("登录失败：" + json.description);
+                }
+                hideLoading();
+            }
+        });
+    }
+
+    function showLoading() {
+        layer.load(2, {
+            shade: [0.1, '#000'] //0.1透明度的白色背景
+        })
+    }
+    function hideLoading() {
+        layer.closeAll();
     }
     function refreshYzm(obj) {
         var src = $(obj).attr("src");
         var params = getRequest(src);
 
         src = "<%=basePath%>code/yzm?timestamp=" + (new Date()).getTime();
-        $.each(params, function(index, value) {
+        $.each(params, function (index, value) {
             src += '&' + value.key + '=' + value.value;
         });
+        console.log(src);
         $(obj).attr("src", src);
-    }
-
-    function showLoading() {
-        layer.load(2, {
-            shade: [0.1,'#000'] //0.1透明度的白色背景
-        })
-    }
-    function hideLoading() {
-        layer.closeAll();
     }
 </script>
