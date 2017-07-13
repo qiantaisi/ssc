@@ -151,6 +151,48 @@
                 <div class="zcw_content">
                     <div class="zcw_cus_a">
                         <div class="cus_a rekj">
+                            <a href="<%=basePath%>ssc/gcdt/ffssc.html">
+                                <img src="${resPath}img/new_zcw/index1_26.png"/>
+                                <div>
+                                    <span class="dus_a">分分时时彩</span>
+                                    <span class="dus_b">24小时在线玩</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a href="<%=basePath%>ssc/gcdt/cqssc.html">
+                                <img src="${resPath}img/new_zcw/index1_6.png"/>
+                                <div>
+                                    <span class="dus_a">重庆时时彩</span>
+                                    <span class="dus_b">百万用户的选择</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="zcw_cus_a">
+                        <div class="cus_a rekj">
+                            <a href="<%=basePath%>ssc/gcdt/pk10.html">
+                                <img src="${resPath}img/new_zcw/index1_7.png"/>
+                                <div>
+                                    <span class="dus_a">北京赛车</span>
+                                    <span class="dus_b">赚钱快10分满意</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a href="<%=basePath%>ssc/gcdt/jspk10.html">
+                                <img src="${resPath}img/new_zcw/index1_9.png"/>
+                                <div>
+                                    <span class="dus_a">极速PK10</span>
+                                    <span class="dus_b">中奖率高达99.99%</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="zcw_cus_a">
+                        <div class="cus_a rekj">
                             <c:import url="../common/mainKj.jsp">
                                 <c:param name="playGroupId" value="6" />
                             </c:import>
@@ -159,6 +201,27 @@
                                 <div>
                                     <span class="dus_a">香港六合彩</span>
                                     <span class="dus_b">全网最高48.8倍</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a href="<%=basePath%>ssc/gcdt/ahk3.html">
+                                <img src="${resPath}img/new_zcw/index1_15.png"/>
+                                <div>
+                                    <span class="dus_a">安徽快3</span>
+                                    <span class="dus_b">每10分钟一期</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="zcw_cus_a">
+                        <div class="cus_a rekj">
+                            <a href="<%=basePath%>ssc/gcdt/hbk3.html">
+                                <img src="${resPath}img/new_zcw/index1_16.png"/>
+                                <div>
+                                    <span class="dus_a">湖北快3</span>
+                                    <span class="dus_b">每10分钟一期</span>
                                 </div>
                             </a>
                         </div>
@@ -172,22 +235,49 @@
                             </a>
                         </div>
                     </div>
-                   <%-- <div class="zcw_cus_a">
 
-                        &lt;%&ndash;<c:import url="../common/mainKj.jsp">
-                            <c:param name="playGroupId" value="13" />
-                        </c:import>&ndash;%&gt;
-                       &lt;%&ndash; <div class="cus_b">
-                            <a href="<%=basePath%>ssc/gcdt/sfssc.html">
-                                <img src="${resPath}img/new_zcw/index1_12.png"/>
+                    <div class="zcw_cus_a">
+                        <div class="cus_a rekj">
+                            <a href="<%=basePath%>ssc/gcdt/xjssc.html">
+                                <img src="${resPath}img/new_zcw/index1_18.png"/>
                                 <div>
-                                    <span class="dus_a">三分时时彩</span>
-                                    <span class="dus_b">24小时在线玩</span>
+                                    <span class="dus_a">新疆时时彩</span>
+                                    <span class="dus_b">每10分钟一期</span>
                                 </div>
                             </a>
                         </div>
-                        &ndash;%&gt;
-                    </div>--%>
+                        <div class="cus_b">
+                            <a href="<%=basePath%>ssc/gcdt/tjssc.html">
+                                <img src="${resPath}img/new_zcw/index1_17.png"/>
+                                <div>
+                                    <span class="dus_a">天津时时彩</span>
+                                    <span class="dus_b">每10分钟一期</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="zcw_cus_a">
+                        <div class="cus_a">
+                            <a href="<%=basePath%>ssc/gcdt/xync.html">
+                                <img src="${resPath}img/new_zcw/index1_22.png"/>
+                                <div>
+                                    <span class="dus_a">重庆幸运农场</span>
+                                    <span class="dus_b">白天10点到凌晨2点</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cus_b">
+                            <a href="<%=basePath%>ssc/gcdt/klsf.html">
+                                <img src="${resPath}img/new_zcw/index1_23.png"/>
+                                <div>
+                                    <span class="dus_a">广东快乐十分</span>
+                                    <span class="dus_b">每10分钟一期</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
                     <div class="zcw_cus_a">
                         <div class="cus_a">
                             <a href="<%=basePath%>ssc/gcdt/xy28.html">
@@ -198,71 +288,17 @@
                                 </div>
                             </a>
                         </div>
-                        <%--<div class="cus_a rekj">
-                            <c:import url="../common/mainKj.jsp">
-                                <c:param name="playGroupId" value="17" />
-                            </c:import>
-                            <a href="<%=basePath%>ssc/gcdt/wfssc.html">
-                                <img src="${resPath}img/new_zcw/index1_13.png"/>
-                                <div>
-                                    <span class="dus_a">五分时时彩</span>
-                                    <span class="dus_b">24小时在线玩</span>
-                                </div>
-                            </a>
-                        </div>--%>
-                        <%--<c:import url="../common/mainKj.jsp">
-                            <c:param name="playGroupId" value="16" />
-                        </c:import>--%>
                         <div class="cus_b">
-                            <a href="<%=basePath%>ssc/gcdt/efssc.html">
-                                <img src="${resPath}img/new_zcw/index1_14.png"/>
+                            <a href="<%=basePath%>ssc/gcdt/kl8.html">
+                                <img src="${resPath}img/new_zcw/index1_21.png"/>
                                 <div>
-                                    <span class="dus_a">两分时时彩</span>
-                                    <span class="dus_b">全天在线可玩</span>
+                                    <span class="dus_a">北京快乐8</span>
+                                    <span class="dus_b">每5分钟一期</span>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="zcw_cus_a">
-                        <div class="cus_a">
-                            <a href="<%=basePath%>ssc/gcdt/ahk3.html">
-                                <img src="${resPath}img/new_zcw/index1_15.png"/>
-                                <div>
-                                    <span class="dus_a">安徽快3</span>
-                                    <span class="dus_b">每10分钟一期</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cus_b">
-                            <a href="<%=basePath%>ssc/gcdt/hbk3.html">
-                                <img src="${resPath}img/new_zcw/index1_16.png"/>
-                                <div>
-                                    <span class="dus_a">湖北快3</span>
-                                    <span class="dus_b">每10分钟一期</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="zcw_cus_a">
-                        <div class="cus_a">
-                            <a href="<%=basePath%>ssc/gcdt/tjssc.html">
-                                <img src="${resPath}img/new_zcw/index1_17.png"/>
-                                <div>
-                                    <span class="dus_a">天津时时彩</span>
-                                    <span class="dus_b">每10分钟一期</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cus_b">
-                            <a href="<%=basePath%>ssc/gcdt/xjssc.html">
-                                <img src="${resPath}img/new_zcw/index1_18.png"/>
-                                <div>
-                                    <span class="dus_a">新疆时时彩</span>
-                                    <span class="dus_b">每10分钟一期</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+
                     <div class="zcw_cus_a">
                         <div class="cus_a">
                             <a href="<%=basePath%>ssc/gcdt/fc3d.html">
@@ -283,33 +319,35 @@
                             </a>
                         </div>
                     </div>
+
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a href="<%=basePath%>ssc/gcdt/kl8.html">
-                                <img src="${resPath}img/new_zcw/index1_21.png"/>
+                            <a href="<%=basePath%>ssc/gcdt/efssc.html">
+                                <img src="${resPath}img/new_zcw/index1_14.png"/>
                                 <div>
-                                    <span class="dus_a">北京快乐8</span>
-                                    <span class="dus_b">每5分钟一期</span>
+                                    <span class="dus_a">两分时时彩</span>
+                                    <span class="dus_b">全天在线可玩</span>
                                 </div>
                             </a>
                         </div>
                         <div class="cus_b">
-                            <a href="<%=basePath%>ssc/gcdt/xync.html">
-                                <img src="${resPath}img/new_zcw/index1_22.png"/>
+                            <a href="<%=basePath%>ssc/gcdt/sfssc.html">
+                                <img src="${resPath}img/new_zcw/index1_12.png"/>
                                 <div>
-                                    <span class="dus_a">重庆幸运农场</span>
-                                    <span class="dus_b">白天10点到凌晨2点</span>
+                                    <span class="dus_a">三分时时彩</span>
+                                    <span class="dus_b">每3分钟一期</span>
                                 </div>
                             </a>
                         </div>
                     </div>
+
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a href="<%=basePath%>ssc/gcdt/klsf.html">
-                                <img src="${resPath}img/new_zcw/index1_23.png"/>
+                            <a href="<%=basePath%>ssc/gcdt/wfssc.html">
+                                <img src="${resPath}img/new_zcw/index1_13.png"/>
                                 <div>
-                                    <span class="dus_a">广东快乐十分</span>
-                                    <span class="dus_b">每10分钟一期</span>
+                                    <span class="dus_a">五分时时彩</span>
+                                    <span class="dus_b">每5分钟一期</span>
                                 </div>
                             </a>
                         </div>

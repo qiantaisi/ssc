@@ -5613,7 +5613,7 @@ $(function () {
         // $(".c1-101 .tab-item .icon-kj").css("background-image", "url(" + CONFIG.RESURL + "img/footer44.png)");
         // $(".c1-101 .tab-item .tab-kj").css("color", "red");
 
-        var swiper = new Swiper('.swiper-container', {
+        var swiper = new Swiper('#lunbo', {
             pagination: '.swiper-pagination',
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
