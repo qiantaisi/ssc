@@ -215,6 +215,23 @@
             return;
         }
         $.each(tmpArr, function (index, value) {
+            var arr = value.split(" ").sort();
+            var tmpPlId = null;
+            var tmpPl = null;
+            $(".main-left .table-common input").each(function () {
+                if ($(this).is(":checked")) {
+                    if ($(this).data("name") == arr[0]) {
+                        tmpPlId = $(this).data("plid");
+                        tmpPl = $(this).data("pl");
+                        return;
+                    }
+                }
+            });
+
+            if (tmpPlId != null && tmpPlId != minPlId && tmpPl == minPl) {
+                minPlId = tmpPlId;
+            }
+
             betForm.sscBetList.push({
                 playGroupName: playGroupName,
                 playGroupId: playGroupId,
@@ -222,7 +239,7 @@
                 playId: playId,
                 zhushu: 1,
                 perMoney: inputMoney,
-                content: '四尾连不中-' + value.split(" ").join(","),
+                content: '四尾连不中-' + value.split(" ").sort().join(","),
                 playPlId: minPlId,
                 playPl: minPl
             });
