@@ -669,6 +669,8 @@ a:visited {
     height: 100%;
     list-style: none;
     background: white;
+    padding-top: 6%;
+    padding-left: 6%;
 }
 
 .index_notice_ul li {
