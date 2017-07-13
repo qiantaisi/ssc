@@ -224,14 +224,29 @@ form {
     margin-top: 0em;
 }
 
+/*弹框登录*/
 .login_alert_b {
     width: 270px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .login_alert_gp {
     position: relative;
     margin-top: 20px;
+}
+
+.login_alert_ico {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+}
+
+.login_alert_gp input {
+    padding: 5px 10px 5px 30px;
+    width: 230px;
+    height: 18px;
+    border: 1px solid #c6ced6;
+    line-height: 18px;
 }
 
 .login_alertbtn {
@@ -244,6 +259,31 @@ form {
     border: none;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.banner_shuru_alertinput {
+    height: 27px;
+    width: 94%;
+    padding: 1px 3%;
+    border: 1px solid #cecece;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.banner_alertyz {
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    z-index: 10;
+    color: #333;
+    text-decoration: none;
+}
+
+.banner_alertyz img {
+    width: 45px;
+    height: 20px;
+    vertical-align: middle;
+    border: 0;
 }
 
 .btn_red {
@@ -307,6 +347,8 @@ div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input, textarea,blockquot
     border-radius: 3px;
     padding: 5px 10px;
     line-height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 .erro {

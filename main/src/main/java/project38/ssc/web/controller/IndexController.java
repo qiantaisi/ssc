@@ -1,5 +1,6 @@
 package project38.ssc.web.controller;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import project38.api.common.helper.IPHelper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -12,9 +13,11 @@ import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.LoginResult;
 import project38.api.result.WebInfoResult;
 import project38.api.utils.ApiUtils;
+import project38.api.result.SscHistoryResult3;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -33,6 +36,16 @@ public class IndexController extends BaseController {
     public WebInfoResult ajaxGetWebInfo() {
         String companyShortName = this.getCompanyShortName();
         return ApiUtils.getWebInfo(1, companyShortName);
+    }
+
+    @RequestMapping(value ="/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public SscHistoryResult3 ajaxGetSscDataMainPage(
+            @RequestParam(value = "playIds", required = false) List<Long> playIds,
+            Long playId
+    ) {
+        String companyShortName = this.getCompanyShortName();
+        return ApiUtils.getSscDataMainPage(playIds, playId, companyShortName);
     }
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
@@ -63,7 +76,8 @@ public class IndexController extends BaseController {
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webName", webInfoResult.getWebName());
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
-        modelMap.put("SscHistoryResult2", ApiUtils.getSscDataMainPage(companyShortName));
+        modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
+
 
       /*  modelMap.put("kjjg",ApiUtils.getAllDataHistory( 0,null, companyShortName));*/
 //      modelMap.put("userInboxResult", ApiUtils.getUserInboxList(uid, token, null, null, null, 0, 2));
