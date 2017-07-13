@@ -146,6 +146,7 @@
 </div>
 
 <c:import url="bottom.jsp"/>
+
 <script type="text/html" id="template_khxy">
     ${khxy.khxy}
 </script>

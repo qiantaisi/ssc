@@ -4820,7 +4820,9 @@ $(function () {
                     $(".page").find(".x_wrap").removeClass("Fixed");
                     $(".page").find(".gfwf_xz").removeClass("Fixed");
                     $(".page").find(".gfwf_mask2").removeClass("Fixed");
+
                     statusChange();
+
                 });
             }
 
@@ -4841,6 +4843,7 @@ $(function () {
 
         // $(".gfwf_xz .wx-select a").trigger("click");
         $(".wx-select2 a").click(function() {
+            clearSelected();
             $(".wx-select2 a").removeClass("selected");
             $(".wx-select2 a").find("span").removeClass("zxfs");
             $(".wx-select2 a").find("span").addClass("staer1");
