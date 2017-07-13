@@ -1287,11 +1287,11 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GAME_SET, paramsMap, companyShortName), GameSetResult.class);
     }
 
-    public static CommonResult getNeedWithDrawPasswd(String companyShortName) {
+    public static NeedWithdrawPasswdResult getNeedWithDrawPasswd(String companyShortName) {
         if (IS_DEBUG) {
-            return new CommonResult();
+            return new NeedWithdrawPasswdResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(commonRequest(ApiConstant.API_NEED_WITHDRAWPASSWD, paramsMap, companyShortName), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_NEED_WITHDRAWPASSWD, paramsMap, companyShortName), NeedWithdrawPasswdResult.class);
     }
 }

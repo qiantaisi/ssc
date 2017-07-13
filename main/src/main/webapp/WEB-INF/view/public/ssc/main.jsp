@@ -237,9 +237,7 @@
         var money = '${param.money}';
 
         if (typeof module == 'undefined' || module == 'null' || !module || module == '') {
-            //module = 'gcdt/cqssc';
-//            getPageNew(parent.urlGcdt);
-            getPage('<%=basePath%>ssc/gcdt.html');
+            getPageNew(parent.urlGcdt);
         } else if (module == 'zstIndex') {
             getPage('<%=basePath%>ssc/zst/index.html');
         } else if (module == 'xyxh') {

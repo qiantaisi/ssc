@@ -2535,11 +2535,23 @@ $(function () {
                 return;
             }
 
+            var drawPassword = '';
+            if ($("#drawPassword").length > 0) {
+                drawPassword = $.trim($("#drawPassword").val());
+                if (drawPassword == "") {
+                    Tools.toast("请填写取款密码");
+                    return;
+                }
+
+                drawPassword = $.md5(drawPassword);
+            }
+
             ajaxRequest({
                 url: config.basePath + "member/submitWithdraw.json",
                 data: {
                     money: money,
-                    id: userBankId
+                    id: userBankId,
+                    drawPassword: drawPassword
                 },
                 beforeSend: function () {
                     Tools.showLoading("请稍等...");

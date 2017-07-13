@@ -70,19 +70,18 @@
                     <label for="money" class="error"></label>
                 </li>
 
-                <%--<c:if test="${withdrawPassword.description == 'true'}">--%>
-                    <%--<li>--%>
-                        <%--<span>提款密码：</span>--%>
-                        <%--<input id="withdraw" name="withdraw" name="text" type="password" placeholder="请输入转账密码"--%>
-                               <%--style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">--%>
-                        <%--&lt;%&ndash;<label class="withdraw error"></label>&ndash;%&gt;--%>
-                    <%--</li>--%>
-                <%--</c:if>--%>
+                <c:if test="${not empty needWithdrawPassword && needWithdrawPassword == true}">
+                    <li>
+                        <span>提款密码：</span>
+                        <input id="drawPassword" name="drawPassword" name="text" type="password" placeholder="请输入去跨密码" style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
+                        <label for="drawPassword" class="withdraw error"></label>
+                    </li>
+                </c:if>
 
             </ul>
             <div class="eveb_form_submit">
                 <input type="submit" id="btnSubmit" value="提交" class="button_medium button_1">
-                <input type="reset" value="重置" class="ml_10 button_medium button_3" style="color: white;">
+                <input type="reset" value="重置" class="ml_10 button_medium button_1 button_3" style="color: white;">
             </div>
         </form>
     </div>
@@ -130,17 +129,27 @@
 
         $("form[name='withdrawForm']").validate({
             rules: {
-                money: {required: true}
-                , id: {required: true}
+                money: {required: true},
+                id: {required: true},
+                drawPassword:{required:true}
             }
             , messages: {
-                money: {required: "* 请输入金额，"},
-                id: {required: "* 请选择的银行卡"}
+                money: {required: "* 请输入金额"},
+                id: {required: "* 请选择的银行卡"},
+                drawPassword: {required: "* 请输入去跨密码"}
             }
             , submitHandler: function (form) {
-                var options = {
+                ajaxRequest({
                     url: "<%=basePath%>member/submitWithdraw.json",
-                    success: function(json) { //提交后的回调函数
+                    data: {
+                        money: $("#money").val(),
+                        id: $("input[name='id']").val(),
+                        drawPassword: $.md5($("#drawPassword").val())
+                    },
+                    beforeSend: function() {
+                        parent.showLoading();
+                    },
+                    success: function(json) {
                         if (json.result == 1) {
                             alert("提交成功");
                             refreshMoney();
@@ -148,14 +157,8 @@
                             alert("提交失败：" + json.description);
                         }
                         parent.hideLoading();
-                    },
-                    type: 'post',               //默认是form的method（get or post），如果申明，则会覆盖
-                    dataType: 'json',           //html(默认), xml, script, json...接受服务端返回的类型
-                    timeout: 3000               //限制请求的时间，当请求大于3秒后，跳出请求
-                };
-                parent.showLoading();
-                $(form).ajaxSubmit(options);
-
+                    }
+                });
             }
         });
         $("form[name='withdrawForm']").valid();

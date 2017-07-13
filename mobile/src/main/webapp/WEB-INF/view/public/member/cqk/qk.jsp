@@ -36,6 +36,18 @@
                             </div>
                         </div>
                     </li>
+
+                    <c:if test="${not empty needWithdrawPassword && needWithdrawPassword == true}">
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="password" placeholder="请输入取款金额" id="drawPassword">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </c:if>
                 </ul>
                 <div class="cl-709">
                     <span>单笔下限：</span><span style="color:red">${minMoney}</span>

@@ -44,7 +44,6 @@
                 <th>注册日期</th>
                 <th>有效投注</th>
                 <th>佣金贡献（元）</th>
-                <th>操作</th>
             </tr>
             </thead>
             <tbody>
@@ -107,13 +106,6 @@
                     str += '<td>' + Tools.formatDate(value.registerTime) + '</td>';
                     str += '<td>' + value.totalEffectiveBetMoney + '</td>';
                     str += '<td>' + value.totalFandianMoney + '</td>';
-                    str += '<td>';
-                    if (value.enable) {
-                        str += '<a href="javascript:void(0)" onclick="disableUser(' + value.id + ')" style="color:red">禁用</a>';
-                    } else {
-                        str += '<a href="javascript:void(0)" onclick="enableUser(' + value.id + ')" style="color:green">启用</a>';
-                    }
-                    str += '</td>';
                     str += '</tr>';
                 });
                 $("#dataTable tbody").html(str);
@@ -137,40 +129,6 @@
                     str += '<a href="javascript:void(0)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
                 }
                 $(".eveb_page").html(str);
-            }
-        });
-    }
-
-    function enableUser(userId) {
-        enableOrDisable(userId, true);
-    }
-
-    function disableUser(userId) {
-        enableOrDisable(userId, false);
-    }
-    function enableOrDisable(userId, isEnable) {
-        var info = isEnable ? '确认启用该会员吗？' : '确认禁用该会员吗？';
-        if (!confirm(info)) {
-            return;
-        }
-
-        ajaxRequest({
-            url: "<%=basePath%>agent/agentEnableUser.json",
-            data: {
-                userId: userId,
-                isEnable: isEnable
-            },
-            beforeSend: function() {
-                parent.showLoading();
-            },
-            success: function(json) {
-                if (json.result == 1) {
-                    Tools.toast("操作成功");
-                    getData();
-                } else {
-                    Tools.toast("操作失败：" + json.description);
-                }
-                parent.hideLoading();
             }
         });
     }
