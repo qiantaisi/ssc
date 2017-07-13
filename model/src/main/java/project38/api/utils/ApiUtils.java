@@ -1,5 +1,7 @@
 package project38.api.utils;
 
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import project38.api.common.ApiConstant;
 import project38.api.common.result.CommonResult;
@@ -889,7 +891,19 @@ public class ApiUtils{
 //        return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_GET_USER_BALANCE_LIST, paramsMap, companyShortName), AgentUserBalanceListResult.class);
 //    }
 
+    private static String arr2Str(List<?> list) {
+        if (null == list || CollectionUtils.isEmpty(list)) {
+            return null;
+        }
 
+        StringBuilder builder = new StringBuilder();
+        String seperate = "";
+        for (int i = 0; i < list.size(); ++i) {
+            builder.append(seperate).append(list.get(i).toString());
+            seperate = ",";
+        }
+        return builder.toString();
+    }
 
     private static String arr2Str(Object[] arr) {
         if (null == arr) {
@@ -1006,11 +1020,16 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_HISTORY, paramsMap, companyShortName), SscHistoryResult2.class);
     }
 
-    public static SscHistoryResult3 getSscDataMainPage(String companyShortName) {
+    public static SscHistoryResult3 getSscDataMainPage(List<Long> playIds,Long playId, String companyShortName) {
         if (IS_DEBUG) {
             return new SscHistoryResult3();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("playId",playId);
+
+        if (CollectionUtils.isNotEmpty(playIds)) {
+            paramsMap.put("playIds", arr2Str(playIds));
+        }
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult3.class);
     }
 

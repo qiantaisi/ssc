@@ -4,6 +4,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -12,7 +14,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp"/>
 <c:import url="top.jsp"/>
-<c:import url="menu.jsp" />
+<c:import url="menu.jsp"/>
 
 <div class="bannernew">
     <div class="block_home_slider">
@@ -22,7 +24,8 @@
                     <c:choose>
                         <c:when test="${empty item.url}">
                             <li>
-                                <a href="#" class="banner_main" style="background: url(<%=basePath%>images/${item.imageId}.jpg) no-repeat center;background-size: cover;"></a>
+                                <a href="#" class="banner_main"
+                                   style="background: url(<%=basePath%>images/${item.imageId}.jpg) no-repeat center;background-size: cover;"></a>
                             </li>
                         </c:when>
                     </c:choose>
@@ -33,13 +36,13 @@
         <script type="text/javascript">
             $(function () {
                 $('#home_slider').flexslider({
-                    animation : 'slide',
-                    controlNav : true,
-                    directionNav : false,
-                    animationLoop : true,
-                    slideshow : true,
-                    pauseOnHover:true,
-                    useCSS : false
+                    animation: 'slide',
+                    controlNav: true,
+                    directionNav: false,
+                    animationLoop: true,
+                    slideshow: true,
+                    pauseOnHover: true,
+                    useCSS: false
                 });
 
             });
@@ -75,19 +78,21 @@
                                 余额：<span class="color_red">${userSession.balance}</span>
                             </div>
                             <div class="login_after2">
-                                <a href="javascript:void(0)" onclick="openHyzx('member/zhcz.html?module=yhzz')">存款 </a>
+                                <a href="javascript:void(0);" onclick="openHyzx('member/zhcz.html?module=yhzz')">存款 </a>
                                 <span>&nbsp;|&nbsp;</span>
-                                <a href="javascript:void(0)" onclick="openHyzx('member/withdraw.html')">取款 </a>
+                                <a href="javascript:void(0);" onclick="openHyzx('member/withdraw.html')">取款</a>
                                 <span>&nbsp;|&nbsp;</span>
-                                <a href="javascript:void(0)" onclick="openHyzx('member/letter.html')">站内信 </a>
+                                <a href="javascript:void(0);" onclick="openHyzx('member/withdraw.html')">站内信 </a>
                                 <span>&nbsp;|&nbsp;</span>
-                                <a href="javascript:void(0)" onclick="openHyzx('member/lsjl.html?module=tzjl')">投注记录 </a>
+                                <a href="javascript:void(0);"
+                                   onclick="openHyzx('member/lsjl.html?module=tzjl')">投注记录 </a>
                                 <span>&nbsp;|&nbsp;</span>
-                                <a href="javascript:void(0)" onclick="openHyzx('member/lsjl.html?module=ckjl')">存款记录 </a>
+                                <a href="javascript:void(0);"
+                                   onclick="openHyzx('member/lsjl.html?module=ckjl')">提款记录</a>
                                 <span>&nbsp;|&nbsp;</span>
                             </div>
                             <div class="login_afterbtn">
-                                <a href="javascript:void(0)" onclick="sigout()" class="btn_red">
+                                <a href="javascript:void(0);" onclick="sigout()" class="btn_red">
                                     退出
                                 </a>
                             </div>
@@ -104,7 +109,7 @@
                             <span>欢迎登陆</span>
                         </div>
                         <form onsubmit="registerLogin();return false;">
-                            <div class="banner_shuru_gp">
+                            <div class=" banner_shuru_gp">
                                 <input type="text" id="registerLoginAccount" class="banner_shuru_input"
                                        placeholder="会员名"/>
                             </div>
@@ -116,7 +121,7 @@
                             <div class=" banner_shuru_gp">
                                 <input type="text" id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码"/>
 
-                                <a href="javascript:void(0)" class="banner_yz">
+                                <a href="javascript:void(0);" class="banner_yz">
                                     <img id="registerYzmImg2" onclick="refreshYzm(this)"
                                          src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
                                 </a>
@@ -140,105 +145,136 @@
             开奖公告
         </div>
         <div class="kaijiang_main">
-            <ul>
+            <ul id="apend">
+                <%--   <c:forEach  items="${SscHistoryResult2.sscHistoryList}" var="items">
 
-                <li>
-                    <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name"></span>
-                        <span class="left">20170626082期	</span>
-                    </div>
-                    <p class="kaijiang_num">
-                        0  1  5  0  1
-                    </p>
-                    <div class="clearfix kaijiang_b">
-                        <span class="left">2017-06-26</span>
-                        <div class="right clearfix">
-                            <a href="#" class="left">详情 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/zst/cqssc.html" class="left">走势 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/gcdt/cqssc.html" class="left">投注 </a>
-                        </div>
-                    </div>
-                </li>
 
-                <li>
-                    <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name">新疆时时彩</span>
-                        <span class="left">20170626082期	</span>
-                    </div>
-                    <p class="kaijiang_num">
-                        0  1  5  0  1
-                    </p>
-                    <div class="clearfix kaijiang_b">
-                        <span class="left">2017-06-26</span>
-                        <div class="right clearfix">
-                            <a href="#" class="left">详情 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">走势 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/gcdt/xjssc.html" class="left">投注 </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name">北京时时彩</span>
-                        <span class="left">20170626082期	</span>
-                    </div>
-                    <p class="kaijiang_num">
-                        0  1  5  0  1
-                    </p>
-                    <div class="clearfix kaijiang_b">
-                        <span class="left">2017-06-26</span>
-                        <div class="right clearfix">
-                            <a href="#" class="left">详情 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">走势 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/zst/xjssc.html" class="left">投注 </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name">天津时时彩</span>
-                        <span class="left">20170626082期	</span>
-                    </div>
-                    <p class="kaijiang_num">
-                        0  1  5  0  1
-                    </p>
-                    <div class="clearfix kaijiang_b">
-                        <span class="left">2017-06-26</span>
-                        <div class="right clearfix">
-                            <a href="#" class="left">详情 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/zst/tjssc.html" class="left">走势 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="<%=basePath%>ssc/zst/tjssc.html" class="left">投注 </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="clearfix kaijiang_li_t">
-                        <span class="left kaijiang_li_t_name">重庆时时彩</span>
-                        <span class="left">20170626082期	</span>
-                    </div>
-                    <p class="kaijiang_num">
-                        0  1  5  0  1
-                    </p>
-                    <div class="clearfix kaijiang_b">
-                        <span class="left">2017-06-26</span>
-                        <div class="right clearfix">
-                            <a href="#" class="left">详情 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">走势 </a>
-                            <span class="left">&nbsp;|&nbsp;</span>
-                            <a href="#" class="left">投注 </a>
-                        </div>
-                    </div>
-                </li>
+                   <c:if test="${items.playGroupId==1}">
+               <li>
+                   <div class="clearfix kaijiang_li_t">
+                       <span class="left kaijiang_li_t_name">重庆时时彩</span>
+                       <span class="left">${items.number}期	</span>
+                   </div>
+                   <p class="kaijiang_num">
+                       ${items.openCode}
+                   </p>
+                   <div class="clearfix kaijiang_b">
+                       <span class="left">
+                           ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
+                          &lt;%&ndash; <fmt:parseDate value="${fn:substring(items.number, 0, 8)}" var="date"/>&ndash;%&gt;
+                             &lt;%&ndash; ${date}&ndash;%&gt;
+                           &lt;%&ndash;<fmt:formatDate value="${date}" pattern="yyyy-MM-dd"/>&ndash;%&gt;
+                       </span>
+                       <div class="right clearfix">
+                           <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">详情 </a>
+                           <span class="left">&nbsp;|&nbsp;</span>
+                           <a href="javascript:void(0)" onclick="goZst('zst/cqssc')" class="left">走势 </a>
+                           <span class="left">&nbsp;|&nbsp;</span>
+                           <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">投注 </a>
+                       </div>
+                   </div>
+               </li>
+                   </c:if>
+
+
+                       <c:if test="${items.playGroupId==2}">
+
+           <li>
+               <div class="clearfix kaijiang_li_t">
+                   <span class="left kaijiang_li_t_name">天津时时彩</span>
+                   <span class="left">${items.number}期	</span>
+               </div>
+               <p class="kaijiang_num">
+                       ${items.openCode}
+               </p>
+               <div class="clearfix kaijiang_b">
+                   <span class="left">
+                        ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
+                   </span>
+                   <div class="right clearfix">
+                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')" class="left">详情 </a>
+                       <span class="left">&nbsp;|&nbsp;</span>
+                       <a href="javascript:void(0)" onclick="goZst('zst/tjssc')" class="left">走势 </a>
+                       <span class="left">&nbsp;|&nbsp;</span>
+                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')" class="left">投注 </a>
+                   </div>
+               </div>
+           </li>
+                       </c:if>
+                       <c:if test="${items.playGroupId==3}">
+                           <li>
+                               <div class="clearfix kaijiang_li_t">
+                                   <span class="left kaijiang_li_t_name">新疆时时彩</span>
+                                   <span class="left">${items.number}期	</span>
+                               </div>
+                               <p class="kaijiang_num">
+                                       ${items.openCode}
+                               </p>
+                               <div class="clearfix kaijiang_b">
+                   <span class="left">
+                        ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
+                   </span>
+                                   <div class="right clearfix">
+                                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')" class="left">详情 </a>
+                                       <span class="left">&nbsp;|&nbsp;</span>
+                                       <a href="javascript:void(0)" onclick="goZst('zst/xjssc')" class="left">走势 </a>
+                                       <span class="left">&nbsp;|&nbsp;</span>
+                                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')" class="left">投注 </a>
+                                   </div>
+                               </div>
+                           </li>
+                   </c:if>
+                       <c:if test="${items.playGroupId==15}">
+           <li>
+               <div class="clearfix kaijiang_li_t">
+                   <span class="left kaijiang_li_t_name">分分时时彩</span>
+                   <span class="left">${items.number}期	</span>
+               </div>
+               <p class="kaijiang_num">
+                       ${items.openCode}
+               </p>
+               <div class="clearfix kaijiang_b">
+                   <span class="left">
+                        ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
+                   </span>
+                   <div class="right clearfix">
+                       <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')" class="left">详情 </a>
+                       <span class="left">&nbsp;|&nbsp;</span>
+                       <a href="javascript:void(0)" onclick="goZst('zst/ffssc')" class="left">走势 </a>
+                       <span class="left">&nbsp;|&nbsp;</span>
+                       <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')" class="left">投注 </a>
+                   </div>
+               </div>
+           </li>
+                   </c:if>
+
+                       <c:if test="${items.playGroupId==16}">
+                           <li>
+                               <div class="clearfix kaijiang_li_t">
+                                   <span class="left kaijiang_li_t_name">两分时时彩</span>
+                                   <span class="left">${items.number}期	</span>
+                               </div>
+                               <p class="kaijiang_num">
+                                       ${items.openCode}
+                               </p>
+                               <div class="clearfix kaijiang_b">
+                                   <span class="left">
+                                        ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
+                                   </span>
+                                   <div class="right clearfix">
+                                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/efssc')" class="left">详情 </a>
+                                       <span class="left">&nbsp;|&nbsp;</span>
+                                       <a href="javascript:void(0)" onclick="goZst('zst/efssc')" class="left">走势 </a>
+                                       <span class="left">&nbsp;|&nbsp;</span>
+                                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/efssc')" class="left">投注 </a>
+                                   </div>
+                               </div>
+                           </li>
+                       </c:if>
+                   </c:forEach>--%>
+
             </ul>
+
         </div>
     </div>
     <div class="left index_main_midlle">
@@ -266,11 +302,12 @@
                 <div class="touzhu_b_main active" id="ssc_id_1">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第<var class="qishu">00</var>期截止：<span class="time time1"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time1"><span class="hour">00</span>时<span
+                                class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">手动选号</a>
-                            <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank"  class="sp0">走势图</a>
+                            <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank" class="sp0">走势图</a>
                         </div>
                     </div>
                     <div class="touzhu2 retouzhu2 clearfix" id="xyxhContents_1">
@@ -302,8 +339,10 @@
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
                             <button class="add left" onclick="xyxhAdd(1, 2)">+</button>
-                            <input class="text_box left" id="xyxhInput_1" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
+                            <input class="text_box left" id="xyxhInput_1" value="1" type="text"
+                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                   disabled="disabled"/>
 
                             <button class="min left" onclick="xyxhMinute(1, 2)">-</button>
                         </div>
@@ -323,7 +362,8 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_20">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第<var class="qishu">00</var>期截止：<span class="time time2"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time2"><span class="hour">00</span>时<span
+                                class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0);" onclick="openGcdt('gcdt/ahk3')">手动选号</a>
@@ -350,8 +390,10 @@
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
                             <button class="add left" onclick="xyxhAdd(20, 2)">+</button>
-                            <input class="text_box left" id="xyxhInput_20" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
+                            <input class="text_box left" id="xyxhInput_20" value="1" type="text"
+                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                   disabled="disabled"/>
 
                             <button class="min left" onclick="xyxhMinute(20, 2)">-</button>
                         </div>
@@ -371,7 +413,8 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_6">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第<var class="qishu">00</var>期截止：<span class="time time3"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time3"><span class="hour">00</span>时<span
+                                class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')">手动选号</a>
@@ -454,13 +497,15 @@
                     <div class="clearfix touzhu3">
                         <div class="clearfix sum left">
                             <button class="add left" onclick="xyxhAdd(6, 2)">+</button>
-                            <input class="text_box left" id="xyxhInput_6" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
+                            <input class="text_box left" id="xyxhInput_6" value="1" type="text"
+                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                   disabled="disabled"/>
 
                             <button class="min left" onclick="xyxhMinute(6, 2)">-</button>
                         </div>
                         <div class="left sum_text">
-                            倍，共 <span id="xyxhMoney_6" class="color_red" >2</span>元
+                            倍，共 <span id="xyxhMoney_6" class="color_red">2</span>元
                         </div>
                         <div class="right clearfix">
                             <a href="javascript:void(0);" class="shuaxin" onclick="xyxh(this,6)">
@@ -475,7 +520,8 @@
                 <div class="touzhu_b_main hideContent" id="ssc_id_4">
                     <div class="clearfix touzhu1">
                         <div class="left">
-                            第<var class="qishu">00</var>期截止：<span class="time time4"><span class="hour">00</span>时<span class="mini">00</span>分<span class="sec">00</span>秒</span>
+                            第<var class="qishu">00</var>期截止：<span class="time time4"><span class="hour">00</span>时<span
+                                class="mini">00</span>分<span class="sec">00</span>秒</span>
                         </div>
                         <div class="right touzhu1_rt">
                             <a href="javascript:void(0);" onclick="openGcdt('gcdt/lhc')">手动选号</a>
@@ -502,8 +548,10 @@
                     <div class="clearfix touzhu4">
                         <div class="clearfix sum left">
                             <button class="add left" onclick="xyxhAdd(4, 2)">+</button>
-                            <input class="text_box left" id="xyxhInput_4" value="1" type="text" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
-                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" disabled="disabled"/>
+                            <input class="text_box left" id="xyxhInput_4" value="1" type="text"
+                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')} checkValue(1, 5);"
+                                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                   disabled="disabled"/>
 
                             <button class="min left" onclick="xyxhMinute(4, 2)">-</button>
                         </div>
@@ -524,7 +572,7 @@
         </div>
         <div class="index_zixun">
             <div class="index_zixun_t">
-                <img src="${resPath}images/common/index_97.png" />
+                <img src="${resPath}images/common/index_97.png"/>
                 资讯信息
             </div>
             <ul class="index_zixun_ul">
@@ -609,26 +657,26 @@
     <div class="right index_main_rt">
         <div class="index_main_rt1">
             <div class="index_zixun_t">
-                <img src="${resPath}images/common/index_65.png" />
+                <img src="${resPath}images/common/index_65.png"/>
                 手机客户端下载
             </div>
             <div class="index_main_rt1_1 clearfix">
-                <img src="${resPath}images/common/index5.png" class="left index_main_erw" />
+                <img src="${resPath}images/common/index5.png" class="left index_main_erw"/>
                 <div class="right index_main_rt1_1_rt">
                     <p class="down_a">
-                        <a href="<%=mHostName%>">
-                            <img src="${resPath}images/common/index_72.png" />
+                        <a href="#">
+                            <img src="${resPath}images/common/index_72.png"/>
                             Iphone 版
                         </a>
                     </p>
                     <p class="down_a">
-                        <a href="<%=mHostName%>">
-                            <img src="${resPath}images/common/index_77.png" />
+                        <a href="#">
+                            <img src="${resPath}images/common/index_77.png"/>
                             Android 版
                         </a>
                     </p>
                     <p class="index_main_erw_more">
-                        <a href="javascript:void(0)">更多方式</a>
+                        <a href="#">更多方式</a>
                     </p>
                 </div>
             </div>
@@ -640,26 +688,20 @@
                     <a href="javascript:void(0);">新手指导</a>
                 </div>
                 <div class="ndex_main_rt1_2b_main">
-                    <div class="index_main_rt1_2b index-content-notice active">
-                        <div id="wrap">
-                            <ul class="index_notice_ul" id="box1">
-                                <li>
-                                    <a href="#">工行入款账号停用</a>
-                                </li>
-                                <li>
-                                    <a href="#">工行入款账号停用</a>
-                                </li>
-                                <li>
-                                    <a href="#">工行入款账号停用</a>
-                                </li>
+                    <div class="index_main_rt1_2b roll_rt1_2b active">
+                        <div id="wrap" class="rewrap">
+                            <ul class="index_notice_ul">
+                                <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
+                                    <li><a onclick="showGonggao(${status.index})" href="javascript:void(0)">${item.title}</a></li>
+                                </c:forEach>
                             </ul>
                             <ul id="box2"></ul>
                         </div>
                     </div>
                     <div class="index_main_rt1_2b index-content-help">
-                        <ul class="index_notice_ul">
+                        <ul class="index_notice_ul_new">
                             <li>
-                                <a href="#">新手指导</a>
+                                <a href="${basPath}help/index.html">新手指导</a>
                             </li>
                         </ul>
                     </div>
@@ -677,90 +719,38 @@
             </div>
 
             <div class="zhongjiang_ul">
-                <ul>
-                    <marquee direction="up" behavior="scroll" contenteditable="true" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="400">
-                        <c:forEach items="${Notices.noticeList}" var="noticelists">
+                <ul id="zj_info_marquee">
+                    <c:forEach items="${Notices.noticeList}" var="noticelists">
                         <li class="clearfix">
-                            <a href="#" class="left zhongjiang_li1">
-                                ${noticelists.type}
+                            <a href="javascript:void(0);" class="left zhongjiang_li1">
+                                    ${noticelists.type}
                             </a>
                             <span class="left zhongjiang_name">${noticelists.userName}</span>
                             <span class="left zhongjiang_jine">
 		        				${noticelists.amount}元
 		        			</span>
                         </li>
-                        </c:forEach>
-                    </marquee>
+                    </c:forEach>
                 </ul>
+
             </div>
         </div>
     </div>
 </div>
 
 <c:import url="../common/bottomInfo.jsp"/>
+
 <c:import url="../common/commonJs.jsp"/>
 
 <div id="gonggao_container"></div>
-<script type="text/html" id="template_1">
-    <li>
-        <div class="clearfix kaijiang_li_t">
-            <span class="left kaijiang_li_t_name">重庆时时彩</span>
-            <span class="left">第{{number}}期	</span>
-        </div>
-        <p class="kaijiang_num">
-            {{num1}}
-        </p>
-        <div class="clearfix kaijiang_b">
-            <span class="left">2017-06-26</span>
-            <div class="right clearfix">
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">详情 </a>
-                <span class="left">&nbsp;|&nbsp;</span>
-                <a href="javascript:void(0)" onclick="goZst('zst/cqssc')" class="left">走势 </a>
-                <span class="left">&nbsp;|&nbsp;</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">投注 </a>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="clearfix kaijiang_li_t">
-            <span class="left kaijiang_li_t_name"></span>
-
-            <var class="no"></var>
-            {{/if}}
-            <div class="text">
-                <h3>重庆时时彩<span>第{{number}}期</span></h3>
-                <p>每天120期</p>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="box_num">
-                <span>{{num1}}</span>
-                <span>{{num2}}</span>
-                <span>{{num3}}</span>
-                <span>{{num4}}</span>
-                <span>{{num5}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">详情</a>
-            </div>
-            <p>
-                <i>{{sum}}</i>
-                <i>{{ds}}</i>
-                <i>{{dx}}</i>
-                <i>{{lh}}</i>
-            </p>
-        </div>
-        <div class="box3">
-            <a  href="<%=basePath%>kjjg.html?playGroupId=1">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/cqssc')">走势图表</a>
-        </div>
-        <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">购买</a>
-        </div>
-    </li>
-</script>
 <script>
     $(function () {
 
+        var playIds = (1, 2, 15, 16);
+        getSscDataMainPage(playIds);
+
         getWebPopUpNotice();
+
 
         xyxh(null, 1);
         xyxh(null, 4);
@@ -774,13 +764,56 @@
             renderOpenTimeHtml();
         }, 1000);
 
+        $('#zj_info_marquee').liMarquee({
+            direction: 'up',
+            scrollamount: 10
+        });
+
+        newRoll(".roll_rt1_2b .rewrap ul li")
     });
 
+    var playIds = (1, 2, 15, 16);
 
-    function touzhutishi() {
-        alert("游戏暂未上线，敬请期待！");
+    function getSscDataMainPage() {
+
+        ajaxRequest({
+            url: "<%=basePath%>index/ajaxGetSscDataMainPage.json",
+            data: {playIds: playIds},
+            success: function (json) {
+                if (json.sscHistoryList != null) {
+                    var kjjglist = json.sscHistoryList;
+                    for (var i in  klist) {
+                        alert(klist.playGroupId);
+                        if (klist.playGroupId == 1)
+                            $("#apend").append(
+                                "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>+'重庆时时彩'+</span><span class='left'>'+klist[i].number+'</span></div><p class='kaijiang_num'>'+klist[i].openCode+'</p><div class='clearfix kaijiang_b'><span class='left'>'+klist[i].date+'</span><div class='right clearfix'><a href='#'>'+详情+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+走势+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+投注+'</a></div></div></li>");
+                    }
+
+                }
+            }
+
+        });
     }
 
+
+    function sigout() {
+        ajaxRequest({
+            url: "<%=basePath%>member/ajaxSigout.json",
+            beforeSend: function () {
+                showLoading();
+            },
+            success: function (json) {
+                $.cookie("uid", '', {path: "/", expires: -1});
+                $.cookie("token", '', {path: "/", expires: -1});
+                hideLoading();
+                location.reload();
+            }
+        });
+    }
+
+    function showGonggao(id) {
+        $("#gonggao_" + id).show();
+    }
 
     function goZst(url) {
         showLoading();
@@ -789,7 +822,7 @@
 
     $(function () {
 
-        $(".all_fenlei_yin").css("display","block");
+        $(".all_fenlei_yin").css("display", "block");
 
     });
 
@@ -864,71 +897,99 @@
         });
     }
 
-    function sigout() {
+
+    function getWebPopUpNotice() {
         ajaxRequest({
-            url: "<%=basePath%>member/ajaxSigout.json",
-            beforeSend: function() {
-                showLoading();
+            url: "<%=basePath%>member/ajaxGetWebPopUpNotice.json",
+            beforeSend: function () {
             },
-            success: function(json) {
-                $.cookie("uid", '', {path: "/", expires: -1});
-                $.cookie("token", '', {path: "/", expires: -1});
-                hideLoading();
-                location.reload();
+            success: function (json) {
+                if (json.result != 1) {
+                    return;
+                }
+
+                <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
+
+                </c:forEach>
+
+                var str = '';
+                var str2 = ''
+                if (json.webNoticeList.length != 0) {
+                    $.each(json.webNoticeList, function (index, value) {
+                        str2 += '<div class="alert hide" id="gonggao_' + index + '">';
+                        str2 += '<div class="alert_col">';
+                        str2 += '<h5><span>公告</span><i>×</i></h5>';
+                        str2 += '<h2>' + value.title + '</h2>';
+                        str2 += '<div>' + value.content + '</div>';
+                        str2 += '<h4>${webName}</h4>';
+                        str2 += '<h4 style="margin-top:15px">' + Tools.formatDate(value.createTime) + '</h4>';
+                        str2 += '</div>';
+                        str2 += '</div>';
+                    });
+                } else {
+                    str = '暂无公告';
+                }
+
+                $("#gonggao_container").html(str2);
+
+                $('.alert_col h5 i').click(function () {
+                    $('.alert').hide();
+                });
             }
         });
     }
+
 </script>
 
 <script>
-   $(function(){
+    $(function () {
 
-       $('.index_main_rt1_2t a').mouseover(function(){
-           var index = $(this).index();
-           $(this).addClass('ahover').siblings().removeClass('ahover');
-           $(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();
-       });
+        $('.index_main_rt1_2t a').mouseover(function () {
+            var index = $(this).index();
+            $(this).addClass('ahover').siblings().removeClass('ahover');
+            $(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();
+        });
 
-       $('.touzhu_t_qht a').mouseover(function(){
-           var index = $(this).index();
-           $(this).addClass('ahover').siblings().removeClass('ahover');
-           $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
-       });
+        $('.touzhu_t_qht a').mouseover(function () {
+            var index = $(this).index();
+            $(this).addClass('ahover').siblings().removeClass('ahover');
+            $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
+        });
 
-   $(".shuaxin").click(function(){
+        $(".shuaxin").click(function () {
 
-       var	eedd=$(this).parents(".touzhu_b_main").index();
+            var eedd = $(this).parents(".touzhu_b_main").index();
 
-       $(this).parents(".touzhu_b_main").find(".qiu").each(function(index) {
+            $(this).parents(".touzhu_b_main").find(".qiu").each(function (index) {
 
-           index=setInterval(function(){
-               $(".touzhu_b_main:eq("+eedd+") .qiu").text(parseInt(99*Math.random()))
-               setTimeout(function(){
-                   clearInterval(index);
-                   $(".touzhu_b_main:eq("+eedd+") .qiu").parents(".touzhu_b_main").find(".qiu").each(function(index) {
-                       $(this).text(parseInt(99*Math.random()));
-                   });
-               },300)
-           },10)
+                index = setInterval(function () {
+                    $(".touzhu_b_main:eq(" + eedd + ") .qiu").text(parseInt(99 * Math.random()))
+                    setTimeout(function () {
+                        clearInterval(index);
+                        $(".touzhu_b_main:eq(" + eedd + ") .qiu").parents(".touzhu_b_main").find(".qiu").each(function (index) {
+                            $(this).text(parseInt(99 * Math.random()));
+                        });
+                    }, 300)
+                }, 10)
 
-       });
-       $(this).parents(".touzhu_b_main").find(".biaoqian").each(function(index1) {
-           var arr=['鼠','虎','兔','小','双','狗','蛇','猪']
-           index1=setInterval(function(){
-               $(".touzhu_b_main:eq("+eedd+") .biaoqian span").text(arr[Math.floor(Math.random() * arr.length)])
-               setTimeout(function(){
-                   clearInterval(index1);
-                   $(".touzhu_b_main:eq("+eedd+") .biaoqian").parents(".touzhu_b_main").find(".biaoqian span").each(function(index) {
-                       $(this).text(arr[Math.floor(Math.random() * arr.length)]);
-                   });
-               },300)
-           },10)
+            });
+            $(this).parents(".touzhu_b_main").find(".biaoqian").each(function (index1) {
+                var arr = ['鼠', '虎', '兔', '小', '双', '狗', '蛇', '猪']
+                index1 = setInterval(function () {
+                    $(".touzhu_b_main:eq(" + eedd + ") .biaoqian span").text(arr[Math.floor(Math.random() * arr.length)])
+                    setTimeout(function () {
+                        clearInterval(index1);
+                        $(".touzhu_b_main:eq(" + eedd + ") .biaoqian").parents(".touzhu_b_main").find(".biaoqian span").each(function (index) {
+                            $(this).text(arr[Math.floor(Math.random() * arr.length)]);
+                        });
+                    }, 300)
+                }, 10)
 
-       });
+            });
 
 
-    })
-   });
+        })
+    });
 
 </script>
 
@@ -959,10 +1020,10 @@
                 account: loginAccount,
                 password: $.md5(loginPassword)
             },
-            beforeSend: function() {
+            beforeSend: function () {
                 showLoading();
             },
-            success: function(json) {
+            success: function (json) {
                 if (json.result == 1) {
                     $.cookie("uid", json.userId, {path: "/"});
                     $.cookie("token", json.token, {path: "/"});
@@ -985,7 +1046,6 @@
         });
         $(obj).attr("src", src);
     }
-
 
 
     function xytz(type) {
@@ -1054,7 +1114,7 @@
             navIndex = 0;
             numsArr = [];
             for (var i = 0; i < 7; ++i) {
-                var v = $("#xyxhContents_6 span").eq(i).data("num");
+                var v = $("#xyxhContents_6 .left:eq(" + i + ") span").data("num");
                 if (v == '') {
                     continue;
                 }
@@ -1122,7 +1182,7 @@
         <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
         var subUrl = "";
         if (module) {
-            subUrl = "#" + CONFIG.BASEURL + "ssc/" +module + ".html";
+            subUrl = "#" + CONFIG.BASEURL + "ssc/" + module + ".html";
         }
         windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
     }
@@ -1158,61 +1218,6 @@
             subUrl = "#" + CONFIG.BASEURL + module;
         }
         windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);
-    }
-
-    var content_G = '';
-    function getWebPopUpNotice() {
-        ajaxRequest({
-            url: "<%=basePath%>member/ajaxGetWebPopUpNotice.json",
-            beforeSend: function () {
-            },
-            success: function (json) {
-                if (json.result != 1) {
-                    return;
-                }
-
-                <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
-
-                </c:forEach>
-
-                var str = '';
-                var str2 = ''
-                if (json.webNoticeList.length != 0) {
-                    $.each(json.webNoticeList, function (index, value) {
-                        var len = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").length;
-                        if (len > 13) {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").substr(0, 13) + "...";
-                        } else {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "");
-                        }
-
-                        str += '<p onclick="showGonggao(' + index + ')" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;height:25px;margin:0;">' + value.title + "&nbsp;:&nbsp;" + content_G + '</p></br>';
-
-                        str2 += '<div class="alert hide" id="gonggao_' + index + '">';
-                        str2 += '<div class="alert_col">';
-                        str2 += '<h2>' + value.title + '</h2>';
-                        str2 += '<div>' + value.content + '</div>';
-                        str2 += '<h4>${webName}</h4>';
-                        str2 += '<h4 style="margin-top:15px">' + Tools.formatDate(value.createTime) + '</h4>';
-                        str2 += '</div>';
-                        str2 += '</div>';
-                    });
-                } else {
-                    str = '暂无公告';
-                }
-                $("#gonggao_marquee").html(str);
-                $("#gonggao_marquee p").css({margin: "-10px auto"});
-                $("#gonggao_container").html(str2);
-
-                $('#gonggao_marquee').liMarquee({
-                    direction: 'up',
-                    scrollamount: 10
-                });
-                $('.alert_col h5 i').click(function () {
-                    $('.alert').hide();
-                });
-            }
-        });
     }
 
     function xyxhAdd(id, size) {
@@ -1351,13 +1356,13 @@
                 bose7 = bose7 == 0 ? 'qiu redBg' : (bose7 == 1 ? 'qiu blueBg' : 'qiu greenBg');
 
                 clearInterval(index_6);
-                $("#xyxhContents_6 .qiu").eq(0).attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
-                $("#xyxhContents_6 .qiu").eq(1).attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
-                $("#xyxhContents_6 .qiu").eq(2).attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
-                $("#xyxhContents_6 .qiu").eq(3).attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
-                $("#xyxhContents_6 .qiu").eq(4).attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
-                $("#xyxhContents_6 .qiu").eq(5).attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
-                $("#xyxhContents_6 .qiu").eq(6).attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
+                $("#xyxhContents_6 .left:eq(0) .qiu").attr("class", bose1).data("num", "tm_b-" + num1).html(num1);
+                $("#xyxhContents_6 .left:eq(1) .qiu").attr("class", bose2).data("num", "tm_b-" + num2).html(num2);
+                $("#xyxhContents_6 .left:eq(2) .qiu").attr("class", bose3).data("num", "tm_b-" + num3).html(num3);
+                $("#xyxhContents_6 .left:eq(3) .qiu").attr("class", bose4).data("num", "tm_b-" + num4).html(num4);
+                $("#xyxhContents_6 .left:eq(4) .qiu").attr("class", bose5).data("num", "tm_b-" + num5).html(num5);
+                $("#xyxhContents_6 .left:eq(5) .qiu").attr("class", bose6).data("num", "tm_b-" + num6).html(num6);
+                $("#xyxhContents_6 .left:eq(6) .qiu").attr("class", bose7).data("num", "tm_b-" + num7).html(num7);
 
                 $("#xyxhContents_6 .biaoqian span").eq(0).html(getSxName(num1));
                 $("#xyxhContents_6 .biaoqian span").eq(1).html(getSxName(num2));
@@ -1463,7 +1468,7 @@
     function getAllOpenTime() {
         ajaxRequest({
             url: CONFIG.BASEURL + "ssc/getAllSscOpenTime2.json",
-            success: function(json) {
+            success: function (json) {
                 if (json.result != 1) {
                     return;
                 }
@@ -1482,9 +1487,9 @@
 
                 });
             },
-            error: function(a, b, c) {
+            error: function (a, b, c) {
                 // 失败重试
-                setTimeout(function() {
+                setTimeout(function () {
                     getAllOpenTime();
                 }, 2000);
             }
@@ -1545,7 +1550,7 @@
                 data: {
                     playGroupId: playGroupId
                 },
-                success: function(json) {
+                success: function (json) {
                     if (json.result != 1) {
                         return;
                     }
@@ -1560,9 +1565,9 @@
                     $(obj).data("left_time", json.leftTime);
                     $(obj).data("number", json.number);
                 },
-                error: function(a, b, c) {
+                error: function (a, b, c) {
                     // 失败重试
-                    setTimeout(function() {
+                    setTimeout(function () {
                         getSscOpenTime2();
                     }, 2000);
                 }
