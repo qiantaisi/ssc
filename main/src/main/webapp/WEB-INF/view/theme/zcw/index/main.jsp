@@ -166,7 +166,7 @@
                            &lt;%&ndash;<fmt:formatDate value="${date}" pattern="yyyy-MM-dd"/>&ndash;%&gt;
                        </span>
                        <div class="right clearfix">
-                           <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')" class="left">详情 </a>
+                           <a href="javascript:void(0)"  onclick="openGcdt('gcdt/cqssc')" class="left">详情 </a>
                            <span class="left">&nbsp;|&nbsp;</span>
                            <a href="javascript:void(0)" onclick="goZst('zst/cqssc')" class="left">走势 </a>
                            <span class="left">&nbsp;|&nbsp;</span>
@@ -192,11 +192,11 @@
                         ${fn:substring(items.number, 0, 4)}- ${fn:substring(items.number, 4, 6)}- ${fn:substring(items.number, 6, 8)}
                    </span>
                    <div class="right clearfix">
-                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')" class="left">详情 </a>
+                       <a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')" class="left">详情 </a>
                        <span class="left">&nbsp;|&nbsp;</span>
                        <a href="javascript:void(0)" onclick="goZst('zst/tjssc')" class="left">走势 </a>
                        <span class="left">&nbsp;|&nbsp;</span>
-                       <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')" class="left">投注 </a>
+                       <a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')" class="left">投注 </a>
                    </div>
                </div>
            </li>
@@ -745,10 +745,9 @@
 <div id="gonggao_container"></div>
 <script>
     $(function () {
-
-        var playIds = (1, 2, 15, 16);
+        var playIds="";
+        playIds+="1,"+"2,"+"3,"+"15,"+"16"
         getSscDataMainPage(playIds);
-
         getWebPopUpNotice();
 
 
@@ -772,21 +771,42 @@
         newRoll(".roll_rt1_2b .rewrap ul li")
     });
 
-    var playIds = (1, 2, 15, 16);
-
-    function getSscDataMainPage() {
+    function getSscDataMainPage(playIds) {
 
         ajaxRequest({
-            url: "<%=basePath%>index/ajaxGetSscDataMainPage.json",
+            url: "<%=basePath%>ajaxGetSscDataMainPage.json",
             data: {playIds: playIds},
             success: function (json) {
                 if (json.sscHistoryList != null) {
-                    var kjjglist = json.sscHistoryList;
+                    var klist = json.sscHistoryList;
                     for (var i in  klist) {
-                        alert(klist.playGroupId);
-                        if (klist.playGroupId == 1)
+                        var obj = klist[i];
+
+                        var openCode=obj.openCode;
+                        openCode=openCode.split(",").join(' ');
+
+                        if (obj.playGroupId == 1){
                             $("#apend").append(
-                                "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>+'重庆时时彩'+</span><span class='left'>'+klist[i].number+'</span></div><p class='kaijiang_num'>'+klist[i].openCode+'</p><div class='clearfix kaijiang_b'><span class='left'>'+klist[i].date+'</span><div class='right clearfix'><a href='#'>'+详情+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+走势+'</a><span class='left'>'+&nbsp+''+&nbsp+'</span><a href='#'>'+投注+'</a></div></div></li>");
+                                "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>重庆时时彩</span><span class='left'>" + obj.number + "</span></div><p class='kaijiang_num'>"+openCode+"</p><div class='clearfix kaijiang_b'><span class='left'>"+obj.date+"</span><div class='right clearfix'><a href='javascript:void(0)'class='left'  onclick='openGcdt('gcdt/cqssc')' >详情</a><span class='left'>&nbsp;&nbsp;</span><a href='javascript:void(0)'class='left' onclick='goZst('zst/cqssc')'>走势</a><span class='left'>&nbsp;&nbsp;</span><a href='javascript:void(0)' class='left' onclick='openGcdt('gcdt/cqssc') '>投注</a></div></div></li>");
+                        }
+                        if (obj.playGroupId == 2){
+                            $("#apend").append(
+                                "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>天津时时彩</span><span class='left'>" + obj.number + "</span></div><p class='kaijiang_num'>"+openCode+"</p><div class='clearfix kaijiang_b'><span class='left'>"+obj.date+"</span><div class='right clearfix'><a href='javascript:void(0)'class='left' onclick='openGcdt('gcdt/tjssc')'>详情</a><span class='left'> &nbsp;&nbsp; </span><a href='javascript:void(0)'  class='left' onclick='goZst('zst/tjssc')' >走势</a><span class='left'> &nbsp;&nbsp; </span><a href='javascript:void(0)'class='left' onclick='openGcdt('gcdt/tjssc')'>投注</a></div></div></li>");
+                        }
+                        if (obj.playGroupId == 3){
+                            $("#apend").append(
+                                "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>新疆时时彩</span><span class='left'>" + obj.number + "</span></div><p class='kaijiang_num'>"+openCode+"</p><div class='clearfix kaijiang_b'><span class='left'>"+obj.date+"</span><div class='right clearfix'><a href='javascript:void(0)'  class='left' onclick='openGcdt('gcdt/xjssc')'>详情</a><span class='left'>&nbsp;&nbsp;  </span><a href='javascript:void(0)'   class='left' onclick='goZst('zst/xjssc')'>走势</a><span class='left'>&nbsp;&nbsp;  </span><<a href='javascript:void(0)' class='left' onclick='openGcdt('gcdt/xjssc')'>投注</a></div></div></li>");
+                        }
+                        if (obj.playGroupId == 15){
+                            $("#apend").append(
+                                "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>分分时时彩</span><span class='left'>" + obj.number + "</span></div><p class='kaijiang_num'>" + openCode + "</p><div class='clearfix kaijiang_b'><span class='left'>"+obj.date+"</span><div class='right clearfix'><a href='javascript:void(0)'   class='left' onclick='openGcdt('gcdt/ffssc')' >详情</a><span class='left'>&nbsp;&nbsp;  </span><a href='javascript:void(0)'class='left' onclick='goZst('zst/ffssc')' >走势</a><span class='left'>&nbsp;&nbsp;  </span><a href='javascript:void(0)'class='left' onclick='openGcdt('gcdt/ffssc')' >投注</a></div></div></li>");
+                        }
+                        if (obj.playGroupId == 16){
+                            $("#apend").append(
+                                "<li><div class='clearfix kaijiang_li_t'><span class='left kaijiang_li_t_name'>两分时时彩</span><span class='left'>" + obj.number + "</span></div><p class='kaijiang_num'>"+openCode+"</p><div class='clearfix kaijiang_b'><span class='left'>"+obj.date+"</span><div class='right clearfix'><a href='javascript:void(0)'class='left' onclick='openGcdt('gcdt/efssc')' >详情</a><span class='left'>&nbsp;&nbsp;  </span><a href='javascript:void(0)'   class='left' onclick='goZst('zst/efssc')'>走势</a><span class='left'>&nbsp;&nbsp;  </span><a href='javascript:void(0)' class='left' onclick='openGcdt('gcdt/efssc')'>投注</a></div></div></li>");
+                        }
+//
+
                     }
 
                 }

@@ -1025,12 +1025,15 @@ public class ApiUtils{
             return new SscHistoryResult3();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        paramsMap.put("playId",playId);
 
         if (CollectionUtils.isNotEmpty(playIds)) {
-            paramsMap.put("playIds", arr2Str(playIds));
+            String str  =   arr2Str(playIds);
+            paramsMap.put("playIds", str);
+        }else {
+            paramsMap.put("playId",playId);
         }
-        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult3.class);
+        SscHistoryResult3 sscHistoryResult3=JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult3.class);
+        return sscHistoryResult3;
     }
 
     public static SscPlayPlResult getSscPlayPl(Long uid, String token, Long playId, String companyShortName) {
