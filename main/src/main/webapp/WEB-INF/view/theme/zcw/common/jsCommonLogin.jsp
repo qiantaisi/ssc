@@ -62,7 +62,6 @@
 
     function login() {
         var loginAccount = $.trim($("#registerLoginAccountAlert").val());
-        console.log(loginAccount);
         var loginPassword = $.trim($("#registerLoginPasswordAlert").val());
         var yzm = $.trim($("#registerLoginYzmAlert").val());
 
