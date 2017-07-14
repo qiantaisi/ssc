@@ -74,7 +74,7 @@ public class IndexController extends BaseController {
         modelMap.put("webName", webInfoResult.getWebName());
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
-        modelMap.put("ArticleResult", ApiUtils.getArtList(companyShortName,1,10));
+        modelMap.put("ArticleResult", ApiUtils.getArtList(companyShortName,0,10));
 
       /*  modelMap.put("kjjg",ApiUtils.getAllDataHistory( 0,null, companyShortName));*/
 //      modelMap.put("userInboxResult", ApiUtils.getUserInboxList(uid, token, null, null, null, 0, 2));
