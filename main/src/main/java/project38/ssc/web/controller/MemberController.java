@@ -433,11 +433,9 @@ public class MemberController extends BaseController {
             return this.renderPublicView("member/noaccess", modelMap);
         }
 
-        CommonResult result = ApiUtils.getNeedWithDrawPasswd(companyShortName);
-
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token, companyShortName));
-        modelMap.put("withdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName));
+        modelMap.put("needWithdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
 
         return this.renderPublicView("member/withdraw", modelMap);
     }

@@ -153,7 +153,7 @@
                 <div class="pull-to-refresh-arrow"></div>
             </div>
             <%--<div class="row cl-102-kjjg">--%>
-                <div class="row cl-scroll swiper-container swiper-container-horizontal re-vipvp-head">
+                <div class="row cl-scroll swiper-container swiper-container-horizontal re-vipvp-head" id="lunbo">
                     <div class="swiper-wrapper">
                         <div class="img-sz swiper-slide"><a href="http://zhcai01.com/zhcaicom138178_2014.apk"><img src="${resPath}img/qiuban_02.jpg" alt=""></a></div>
                         <div class="img-sz swiper-slide"><a href="http://zhcai01.com/zhcaicom138178_2014.apk"><img src="${resPath}img/qiuban_02.jpg" alt=""></a></div>

@@ -76,12 +76,11 @@
 <c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/checkOnline.jsp"/>
 <script>
-    var urlGcdt = '';
-    var subPageUrl = '';
-    $(function () {
-        subPageUrl = window.location.toString();
-        urlGcdt = Tools.getSubUrlFromSurl(subPageUrl);
-    });
+    var subPageUrl = window.location.toString();
+    var urlGcdt = Tools.getSubUrlFromSurl(subPageUrl);
+    if (typeof urlGcdt == 'undefined' || null == urlGcdt) {
+        urlGcdt = '<%=basePath%>ssc/gcdt.html';
+    }
 </script>
 </body>
 </html>

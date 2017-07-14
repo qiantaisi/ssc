@@ -14,9 +14,9 @@
 <div class="page-group">
     <div class="page page-current" id="page-gcdt">
         <header class="bar bar-nav cl-1">
-            <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
-                <font>彩种切换</font>
-                <span class="icon icon-top-gcdt"></span>
+            <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
+                <span class="icon icon-left"></span>
+                返回
             </a>
             <c:choose>
                 <c:when test="${not empty userSession}">

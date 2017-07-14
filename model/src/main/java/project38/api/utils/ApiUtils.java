@@ -1025,12 +1025,15 @@ public class ApiUtils{
             return new SscHistoryResult3();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        paramsMap.put("playId",playId);
 
         if (CollectionUtils.isNotEmpty(playIds)) {
-            paramsMap.put("playIds", arr2Str(playIds));
+            String str  =   arr2Str(playIds);
+            paramsMap.put("playIds", str);
+        }else {
+            paramsMap.put("playId",playId);
         }
-        return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult3.class);
+        SscHistoryResult3 sscHistoryResult3=JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult3.class);
+        return sscHistoryResult3;
     }
 
     public static SscPlayPlResult getSscPlayPl(Long uid, String token, Long playId, String companyShortName) {
@@ -1306,12 +1309,12 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GAME_SET, paramsMap, companyShortName), GameSetResult.class);
     }
 
-    public static CommonResult getNeedWithDrawPasswd(String companyShortName) {
+    public static NeedWithdrawPasswdResult getNeedWithDrawPasswd(String companyShortName) {
         if (IS_DEBUG) {
-            return new CommonResult();
+            return new NeedWithdrawPasswdResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        return JSONUtils.toObject(commonRequest(ApiConstant.API_NEED_WITHDRAWPASSWD, paramsMap, companyShortName), CommonResult.class);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_NEED_WITHDRAWPASSWD, paramsMap, companyShortName), NeedWithdrawPasswdResult.class);
     }
 
     public static ArticleResult getArtList(String companyShortName, Integer offset, Integer limit) {

@@ -13,8 +13,9 @@
 <div class="page-group">
     <div class="page page-current" id="page-gcdt-xync">
         <header class="bar bar-nav">
-            <a class="button button-link pull-left open-panel" data-panel='#panel-left'>
-                彩种切换
+            <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
+                <span class="icon icon-left"></span>
+                返回
             </a>
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单

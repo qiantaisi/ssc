@@ -393,17 +393,17 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
-        // 首页图片轮播
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            paginationClickable: true,
-            spaceBetween: 0,
-            centeredSlides: true,
-            autoplay: 2500,
-            autoplayDisableOnInteraction: false
-        });
+        // // 首页图片轮播
+        // var swiper = new Swiper('#lunbo', {
+        //     pagination: '.swiper-pagination',
+        //     nextButton: '.swiper-button-next',
+        //     prevButton: '.swiper-button-prev',
+        //     paginationClickable: true,
+        //     spaceBetween: 0,
+        //     centeredSlides: true,
+        //     autoplay: 2500,
+        //     autoplayDisableOnInteraction: false
+        // });
 
 
         $("#btn-shiwan").click(function () {
@@ -5613,7 +5613,7 @@ $(function () {
         // $(".c1-101 .tab-item .icon-kj").css("background-image", "url(" + CONFIG.RESURL + "img/footer44.png)");
         // $(".c1-101 .tab-item .tab-kj").css("color", "red");
 
-        var swiper = new Swiper('.swiper-container', {
+        var swiper = new Swiper('#lunbo', {
             pagination: '.swiper-pagination',
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',

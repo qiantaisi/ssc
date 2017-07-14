@@ -2535,11 +2535,23 @@ $(function () {
                 return;
             }
 
+            var drawPassword = '';
+            if ($("#drawPassword").length > 0) {
+                drawPassword = $.trim($("#drawPassword").val());
+                if (drawPassword == "") {
+                    Tools.toast("请填写取款密码");
+                    return;
+                }
+
+                drawPassword = $.md5(drawPassword);
+            }
+
             ajaxRequest({
                 url: config.basePath + "member/submitWithdraw.json",
                 data: {
                     money: money,
-                    id: userBankId
+                    id: userBankId,
+                    drawPassword: drawPassword
                 },
                 beforeSend: function () {
                     Tools.showLoading("请稍等...");
@@ -4820,7 +4832,9 @@ $(function () {
                     $(".page").find(".x_wrap").removeClass("Fixed");
                     $(".page").find(".gfwf_xz").removeClass("Fixed");
                     $(".page").find(".gfwf_mask2").removeClass("Fixed");
+
                     statusChange();
+
                 });
             }
 
@@ -4841,6 +4855,7 @@ $(function () {
 
         // $(".gfwf_xz .wx-select a").trigger("click");
         $(".wx-select2 a").click(function() {
+            clearSelected();
             $(".wx-select2 a").removeClass("selected");
             $(".wx-select2 a").find("span").removeClass("zxfs");
             $(".wx-select2 a").find("span").addClass("staer1");

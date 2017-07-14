@@ -31,7 +31,7 @@
                 <div class="right head_top_rt clearfix">
                     <a href="<%=basePath%>main.html" class="left">首页</a>
 
-                    <a href="<%=basePath%>login.html" class="loginbtn left blink" data-color="#ff4800|#333">登录</a>
+                    <a href="javascript:void(0)" class="loginbtn left blink" data-color="#ff4800|#333">登录</a>
                     <a href="<%=basePath%>register.html" class="left head_top_reg">免费注册</a>
                     <span class="left">|</span>
                     <a href="javascript:void(0)" class="left head_top_lottery">我的彩票</a>

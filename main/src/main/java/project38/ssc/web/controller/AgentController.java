@@ -56,22 +56,22 @@ public class AgentController extends BaseController{
         return result;
     }
 
-    @RequestMapping(value = "/agentEnableUser.json", method = {RequestMethod.GET, RequestMethod.POST})
-    @ResponseBody
-    public CommonResult agentEnableUser(Long userId, Boolean isEnable) {
-        CommonResult result = new CommonResult();
-        try {
-            Long uid = this.getUid(httpServletRequest);
-            String token = this.getToken(httpServletRequest);
-            String companyShortName = this.getCompanyShortName();
-            return ApiUtils.agentEnableUser(uid, token, userId, isEnable, companyShortName);
-        } catch (Exception e) {
-            log.error(this, e);
-            result.setResult(-100);
-            result.setDescription("服务器错误");
-        }
-        return result;
-    }
+//    @RequestMapping(value = "/agentEnableUser.json", method = {RequestMethod.GET, RequestMethod.POST})
+//    @ResponseBody
+//    public CommonResult agentEnableUser(Long userId, Boolean isEnable) {
+//        CommonResult result = new CommonResult();
+//        try {
+//            Long uid = this.getUid(httpServletRequest);
+//            String token = this.getToken(httpServletRequest);
+//            String companyShortName = this.getCompanyShortName();
+//            return ApiUtils.agentEnableUser(uid, token, userId, isEnable, companyShortName);
+//        } catch (Exception e) {
+//            log.error(this, e);
+//            result.setResult(-100);
+//            result.setDescription("服务器错误");
+//        }
+//        return result;
+//    }
 
     @RequestMapping(value = "/ajaxAddUser.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
