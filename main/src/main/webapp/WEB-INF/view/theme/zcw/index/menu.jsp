@@ -248,7 +248,7 @@
 </div>
 
 <script>
-
+    $(".all_fenlei_yin").css("display","none");
     $(function () {
         $('.type_top .left .left_div .log,.type_top .left .left_div .alert_log').hover(function () {
             $('.type_top .left .left_div .alert_log').show();
