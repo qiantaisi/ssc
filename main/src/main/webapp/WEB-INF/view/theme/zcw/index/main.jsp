@@ -578,18 +578,17 @@
     });
 
     function getSscDataMainPage(playIds) {
-
         ajaxRequest({
             url: "<%=basePath%>ajaxGetSscDataMainPage.json",
             data: {playIds: playIds},
             success: function (json) {
+
                 if (json.sscHistoryList != null)
                 var klist = json.sscHistoryList;
                 var strCommon = '';
 
-                for (var i in  klist) {
+                for (var i in klist) {
                     var obj = klist[i];
-
                     var openCode = obj.openCode;
                     if (typeof openCode != "undefined") {
                         openCode = openCode.split(",").join(' ');
