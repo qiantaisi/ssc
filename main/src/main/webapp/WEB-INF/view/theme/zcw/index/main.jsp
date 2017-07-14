@@ -451,63 +451,12 @@
             </div>
             <ul class="index_zixun_ul">
                 <c:forEach items="${ArticleResult.articleList}" var="items">
-                <li>
-                    <a href="<%=basePath%>contentText/1.html">
-                        <span>【 ${items.crux} 】</span>${items.title}
+                <li style="width: 469px;height: 30px;">
+                    <a href="javascript:void(0)" onclick="ziXun('${items.id}')">
+                        <span>【 ${items.crux} 】</span>${items.title} : ${items.remarks}
                     </a>
                 </li>
                 </c:forEach>
-
-                <%-- <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                                    </a>
-                                </li>--%>
             </ul>
         </div>
     </div>
@@ -865,6 +814,10 @@
 
         })
     });
+    //根据id获取资讯信息内容并跳转页面
+    function ziXun(id){
+        location.href =' <%=basePath%>zixun/' + id + '.html';
+    }
 
 </script>
 
@@ -1416,6 +1369,7 @@
                 return;
             }
         });
+
 
 
         // 获取单彩种时间

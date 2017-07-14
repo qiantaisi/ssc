@@ -1,14 +1,11 @@
 package project38.ssc.web.controller;
 
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import project38.api.common.helper.IPHelper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.LoginResult;
 import project38.api.result.WebInfoResult;
@@ -77,12 +74,22 @@ public class IndexController extends BaseController {
         modelMap.put("webName", webInfoResult.getWebName());
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
-        modelMap.put("ArticleResult", ApiUtils.getArtList(companyShortName,1,15));
+        modelMap.put("ArticleResult", ApiUtils.getArtList(companyShortName,1,10));
 
       /*  modelMap.put("kjjg",ApiUtils.getAllDataHistory( 0,null, companyShortName));*/
 //      modelMap.put("userInboxResult", ApiUtils.getUserInboxList(uid, token, null, null, null, 0, 2));
 
         return this.renderView("index/main", modelMap);
+    }
+
+    @RequestMapping(value = "/zixun/{id}.html",method =RequestMethod.GET)
+    public ModelAndView ziXun(@PathVariable Long id){
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+
+        modelMap.put("Article",ApiUtils.getArtByid(companyShortName,id));
+
+        return this.renderView("index/zxxx", modelMap);
     }
 
     @RequestMapping(value = "/register.html", method = RequestMethod.GET)
