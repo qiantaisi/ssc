@@ -1,8 +1,8 @@
 var extractFunc = null;
 var nowDataFlag = false;
+
 $(function () {
     "use strict";
-
     // 底部信息调用
     function ajaxGetDbxx() {
         ajaxRequest({
@@ -243,6 +243,7 @@ $(function () {
                             window.location.href = refer;
                         } else {
                             window.location.href = config.basePath;
+
                         }
                         // 保存登录名
                         Tools.setCookie("loginFormAccount", account, {path: "/"});
@@ -335,11 +336,11 @@ $(function () {
                             str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
                         });
                         //console.log(str);
+                        alert(flag);
                         Tools.alert(str);
                     }
                 }
             })
-
         }else{
             return
         }
