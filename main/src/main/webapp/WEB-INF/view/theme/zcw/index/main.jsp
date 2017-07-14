@@ -450,62 +450,64 @@
                 资讯信息
             </div>
             <ul class="index_zixun_ul">
+                <c:forEach items="${ArticleResult.articleList}" var="items">
                 <li>
                     <a href="<%=basePath%>contentText/1.html">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                        <span>【 ${items.crux} 】</span>${items.title}
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
-                    </a>
-                </li>
+                </c:forEach>
 
+                <%-- <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>【 技巧 】</span>快3投注技巧：五大攻略玩转二同号 中奖容易
+                                    </a>
+                                </li>--%>
             </ul>
         </div>
     </div>
@@ -645,7 +647,7 @@
                     }
 
                     if (obj.playGroupId == 1) {
-                        strCommon += '<li><div class="clearfix kaijiang_li_t"><span class="left kaijiang_li_t_name">重庆时时彩</span><span class="left">' + obj.number + '</span></div><p class="kaijiang_num">' + openCode + '</p><div class="clearfix kaijiang_b"><span class="left">' + obj.date + '</span><div class="right clearfix"><a href="javascript:void(0)" class="left"  onclick="openGcdt(\'gcdt/cqssc\')">详情</a><span class="left">&nbsp;&nbsp;</span><a class="left" href="${basPath}ssc/zst/cqssc.html">走势</a><span class="left">&nbsp;&nbsp;</span><a href="javascript:void(0)" class="left" onclick="openGcdt(\'gcdt/cqssc\')">投注</a></div></div></li>';
+                        strCommon += '<li><div class="clearfix kaijiang_li_t"><span class="left kaijiang_li_t_name">重庆时时彩</span><span class="left">' + obj.number + '</span></div><p class="kaijiang_num">' + openCode + '</p><div class="clearfix kaijiang_b"><span class="left">' + obj.date + '</span><div class="right clearfix"><a href="javascript:void(0)" class="left" onclick="openGcdt(\'gcdt/cqssc\')">详情</a><span class="left"> &nbsp;&nbsp; </span><a href="javascript:void(0)" class="left" onclick="goZst(\'zst/cqssc\')" >走势</a><span class="left"> &nbsp;&nbsp; </span><a href="javascript:void(0)" class="left" onclick="openGcdt(\'gcdt/cqssc\')">投注</a></div></div></li>';
                     }
                     if (obj.playGroupId == 2) {
                         strCommon += '<li><div class="clearfix kaijiang_li_t"><span class="left kaijiang_li_t_name">天津时时彩</span><span class="left">' + obj.number + '</span></div><p class="kaijiang_num">' + openCode + '</p><div class="clearfix kaijiang_b"><span class="left">' + obj.date + '</span><div class="right clearfix"><a href="javascript:void(0)" class="left" onclick="openGcdt(\'gcdt/tjssc\')">详情</a><span class="left"> &nbsp;&nbsp; </span><a href="javascript:void(0)" class="left" onclick="goZst(\'zst/tjssc\')" >走势</a><span class="left"> &nbsp;&nbsp; </span><a href="javascript:void(0)" class="left" onclick="openGcdt(\'gcdt/tjssc\')">投注</a></div></div></li>';
