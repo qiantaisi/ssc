@@ -571,7 +571,7 @@
 
         $('#zj_info_marquee').liMarquee({
             direction: 'up',
-            scrollamount: 10
+            scrollamount: 30
         });
 
         newRoll(".roll_rt1_2b .rewrap ul li")

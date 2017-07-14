@@ -154,7 +154,8 @@ img {
 }
 
 .login_b {
-    padding-left: 80px;
+    background: white;
+    padding: 10px 30px 10px 30px;
 }
 
 .login_b_link {
