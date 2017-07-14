@@ -25,7 +25,7 @@ public class ArticleResult extends CommonResult {
 
     public static class Article {
         /**
-         * id
+         *  id
          */
         private Long id;
         /**
