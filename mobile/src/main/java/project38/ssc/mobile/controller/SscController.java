@@ -1,6 +1,7 @@
 package project38.ssc.mobile.controller;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.web.bind.annotation.*;
 import project38.api.common.enums.PlayGroupIdEnum;
 import project38.api.common.exception.UserException;
 import project38.api.common.result.CommonResult;
@@ -10,10 +11,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.*;
 import project38.api.utils.ApiUtils;
@@ -45,6 +42,18 @@ public class SscController extends CacheController {
         String companyShortName = this.getCompanyShortName();
         modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
         return this.renderPublicView("ssc/index", modelMap);
+    }
+    @RequestMapping(value = "/ajaxGG.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public LoginResult ajaxGG(
+            String uid,
+            String token
+    ) throws UserException {
+        String companyShortName = this.getCompanyShortName();
+        LoginResult result=new LoginResult();
+        long uids=Long.parseLong(uid);
+        result.setWebNoticeList(ApiUtils.getPopupNoticeList(uids, token, companyShortName).getWebNoticeList());
+        return result;
     }
 
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)

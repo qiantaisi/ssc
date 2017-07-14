@@ -247,6 +247,7 @@ $(function () {
                         // 保存登录名
                         Tools.setCookie("loginFormAccount", account, {path: "/"});
 
+
                         return;
                     }
 
@@ -316,7 +317,36 @@ $(function () {
             autoplay: 2500,
             autoplayDisableOnInteraction: false
         });
+        var uid=Tools.getCookie("uid");
+        var token=Tools.getCookie("token");
+        alert(token);
+        if (token!=null){
+            ajaxRequest({
+                url:config.basePath +"ssc/ajaxGG.json",
+                data:{uid:uid,token:token},
+                success:function (json) {
+                    alert(json);
+                    if (json.webNoticeList.length > 0) {
+                        var hh = "\n";
+                        if (document.all) {
+                            hh = "\r\n";
+                        }
+                        var str = "尊敬的会员您好！" + hh + hh;
+                        $.each(json.webNoticeList, function (index, value) {
+                            str += value.title.replace(/<[^>]+>/g, "") + hh;
+                            str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
+                        });
+                        //console.log(str);
+                        alert(str);
+                    }
+                }
+            })
 
+        }else{
+            return
+        }
+        console.log(Tools.getCookie("uid"));
+        console.log(Tools.getCookie("token") +"_");
         // // 公告滚动
         // var mySwiper = new Swiper('.swiper-container', {
         //     pagination: '.swiper-pagination',

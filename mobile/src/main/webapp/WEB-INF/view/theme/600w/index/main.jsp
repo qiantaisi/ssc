@@ -565,3 +565,46 @@
     </li>
 </script>
 <c:import url="../common/bodyEnd.jsp"/>
+<script>
+    $(function(){
+        setUserToken();
+            var userSession="${userSession}";
+                var uid=Tools.getCookie(uid);
+             var token=Tools.getCookie(token);
+             alert(uid);
+            alert(token);
+             if(token==null){
+                    return;
+             }else{
+                 alert(token);
+             }
+            /*if (userSession!=null){
+                ajaxRequest({
+                    url:"<%=basePath%>ssc/ajaxGG.json",
+                    data:{userSession:userSession},
+                    success:function (json) {
+                        if (json.webNoticeList.length > 0) {
+                        var hh = "\n";
+                        if (document.all) {
+                        hh = "\r\n";
+                        }
+                        var str = "尊敬的会员您好！" + hh + hh;
+                        $.each(json.webNoticeList, function (index, value) {
+                        str += value.title.replace(/<[^>]+>/g, "") + hh;
+                        str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
+                        });
+                        //console.log(str);
+                        alert(str);
+                        }
+                        }
+
+
+
+                        });
+
+                        }else{
+                        return
+                        }*/
+
+    });
+</script>
