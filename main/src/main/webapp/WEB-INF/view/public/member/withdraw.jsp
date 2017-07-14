@@ -72,8 +72,8 @@
 
                 <c:if test="${not empty needWithdrawPassword && needWithdrawPassword == true}">
                     <li>
-                        <span>提款密码：</span>
-                        <input id="drawPassword" name="drawPassword" name="text" type="password" placeholder="请输入去跨密码" style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
+                        <span>取款密码：</span>
+                        <input id="drawPassword" name="drawPassword" name="text" type="password" placeholder="请输入取款密码" style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
                         <label for="drawPassword" class="withdraw error"></label>
                     </li>
                 </c:if>
@@ -136,7 +136,7 @@
             , messages: {
                 money: {required: "* 请输入金额"},
                 id: {required: "* 请选择的银行卡"},
-                drawPassword: {required: "* 请输入去跨密码"}
+                drawPassword: {required: "* 请输入取款密码"}
             }
             , submitHandler: function (form) {
                 ajaxRequest({

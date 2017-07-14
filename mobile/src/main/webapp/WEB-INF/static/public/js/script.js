@@ -2539,7 +2539,7 @@ $(function () {
             if ($("#drawPassword").length > 0) {
                 drawPassword = $.trim($("#drawPassword").val());
                 if (drawPassword == "") {
-                    Tools.toast("请填写取款密码");
+                    Tools.toast("请输入取款密码");
                     return;
                 }
 
