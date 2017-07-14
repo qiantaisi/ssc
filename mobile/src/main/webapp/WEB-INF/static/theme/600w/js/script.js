@@ -319,13 +319,11 @@ $(function () {
         });
         var uid=Tools.getCookie("uid");
         var token=Tools.getCookie("token");
-        alert(token);
         if (token!=null){
             ajaxRequest({
                 url:config.basePath +"ssc/ajaxGG.json",
                 data:{uid:uid,token:token},
                 success:function (json) {
-                    alert(json);
                     if (json.webNoticeList.length > 0) {
                         var hh = "\n";
                         if (document.all) {
