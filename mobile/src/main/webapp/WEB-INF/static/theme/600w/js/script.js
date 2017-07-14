@@ -3,6 +3,7 @@ var nowDataFlag = false;
 
 $(function () {
     "use strict";
+
     // 底部信息调用
     function ajaxGetDbxx() {
         ajaxRequest({
@@ -243,12 +244,10 @@ $(function () {
                             window.location.href = refer;
                         } else {
                             window.location.href = config.basePath;
-
                         }
                         // 保存登录名
                         Tools.setCookie("loginFormAccount", account, {path: "/"});
-
-
+                        Tools.setCookie("gongGaoShowFlag", false);
                         return;
                     }
 
@@ -320,32 +319,35 @@ $(function () {
         });
         var uid=Tools.getCookie("uid");
         var token=Tools.getCookie("token");
+
         if (token!=null){
-            ajaxRequest({
-                url:config.basePath +"ssc/ajaxGG.json",
-                data:{uid:uid,token:token},
-                success:function (json) {
-                    if (json.webNoticeList.length > 0) {
-                        var hh = "\n";
-                        if (document.all) {
-                            hh = "\r\n";
+            var showFlag = Tools.getCookie("gongGaoShowFlag");
+            if(showFlag == "true"){
+                return;
+            } else {
+                ajaxRequest({
+                    url:config.basePath +"ssc/ajaxGG.json",
+                    data:{uid:uid,token:token},
+                    success:function (json) {
+                        if (json.webNoticeList.length > 0) {
+                            var hh = "\n";
+                            if (document.all) {
+                                hh = "\r\n";
+                            }
+                            var str = "尊敬的会员您好！" + hh + hh;
+                            $.each(json.webNoticeList, function (index, value) {
+                                str += value.title.replace(/<[^>]+>/g, "") + hh;
+                                str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
+                            });
+                            //console.log(str);
+                            Tools.setCookie("gongGaoShowFlag", true);
+                            Tools.alert(str);
                         }
-                        var str = "尊敬的会员您好！" + hh + hh;
-                        $.each(json.webNoticeList, function (index, value) {
-                            str += value.title.replace(/<[^>]+>/g, "") + hh;
-                            str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
-                        });
-                        //console.log(str);
-                        alert(flag);
-                        Tools.alert(str);
                     }
-                }
-            })
-        }else{
-            return
+                })
+            }
         }
-        console.log(Tools.getCookie("uid"));
-        console.log(Tools.getCookie("token") +"_");
+
         // // 公告滚动
         // var mySwiper = new Swiper('.swiper-container', {
         //     pagination: '.swiper-pagination',
