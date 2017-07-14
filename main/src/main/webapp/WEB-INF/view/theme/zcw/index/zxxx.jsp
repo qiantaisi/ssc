@@ -13,7 +13,7 @@
 <c:import url="menu.jsp" />
 
 
-<div class="main login_main">
+<div class="main login_main re-text-content">
     <div class="container login_nr">
         <div class="login_nr_t clearfix">
             <div class="login_nr_t_lf">
