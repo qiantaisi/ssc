@@ -335,7 +335,7 @@ $(function () {
                             str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
                         });
                         //console.log(str);
-                        alert(str);
+                        Tools.alert(str);
                     }
                 }
             })
