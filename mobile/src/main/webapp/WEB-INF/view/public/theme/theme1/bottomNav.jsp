@@ -11,6 +11,22 @@
     .number_c1-101 a.active .barImg1{display:none;}
     .number_c1-101 a.active .barImg2{display:inline-block;}
 </style>
+<script>
+    var nowT = null;
+    window.onload = function() {
+        if (nowT == null) {
+            nowT = setInterval(function () {
+                if (typeof $("nav").attr("style") == "undefined") {
+                    $("nav").hide().show();
+                    if (null != nowT) {
+                        clearInterval(nowT);
+                        nowT = null;
+                    }
+                }
+            }, 200);
+        }
+    }
+</script>
 <nav class="number_bar number_bar-tab number_c1-101">
     <a class="n1 <%=request.getRequestURI().lastIndexOf("index/main.jsp") > 0 ? "active" : ""%>" href="<%=basePath%>" data-name="index">
         <img class="barImg1" src="${bottomCssResPath}${themeBottomNav}/img/Bottom/footer_001.png"/>

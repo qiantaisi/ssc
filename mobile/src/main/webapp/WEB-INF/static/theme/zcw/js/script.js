@@ -404,6 +404,13 @@ $(function () {
         //     autoplay: 2500,
         //     autoplayDisableOnInteraction: false
         // });
+        if ($(".img-sz").length > 1) {
+            var syLunboIndex = 0;
+            setInterval(function () {
+                var width = $(".img-sz").eq(0).width();
+                $("#lunbo .swiper-wrapper").animate({"margin-left": (-1 * width * (syLunboIndex++ % $(".img-sz").length)) + "px"});
+            }, 2500);
+        }
 
 
         $("#btn-shiwan").click(function () {
