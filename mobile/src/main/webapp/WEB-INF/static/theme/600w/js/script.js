@@ -322,7 +322,6 @@ $(function () {
 
         if (token!=null){
             var showFlag = Tools.getCookie("gongGaoShowFlag");
-            console.log(showFlag + typeof showFlag);
             if(showFlag == "true"){
                 return;
             } else {
