@@ -1313,4 +1313,23 @@ public class ApiUtils{
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         return JSONUtils.toObject(commonRequest(ApiConstant.API_NEED_WITHDRAWPASSWD, paramsMap, companyShortName), CommonResult.class);
     }
+
+    public static ArticleResult getArtList(String companyShortName, Integer offset, Integer limit) {
+        if (IS_DEBUG) {
+            return new ArticleResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("offset", offset);
+        paramsMap.put("limit", limit);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_ART_LIST, paramsMap, companyShortName), ArticleResult.class);
+    }
+
+    public static ArticleResult getArtByid(String companyShortName, Long id) {
+        if (IS_DEBUG) {
+            return new ArticleResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("id", id);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_ART_DETAIL, paramsMap, companyShortName), ArticleResult.class);
+    }
 }

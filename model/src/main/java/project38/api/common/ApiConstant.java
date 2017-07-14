@@ -128,4 +128,8 @@ public class ApiConstant {
 
     public static String API_GAME_SET = API_DOMAIN + "webSetting/getGameSet.json"; //获取游戏默认模式
 
+    public static String API_ART_LIST = API_DOMAIN + "webSetting/getArticleList.json"; //获取咨询列表
+
+    public static String API_ART_DETAIL = API_DOMAIN + "webSetting/getArticle.json"; //获取咨询详情
+
 }
