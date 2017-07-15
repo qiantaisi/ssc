@@ -157,9 +157,11 @@
                             alert("提交成功");
                             refreshMoney();
                         } else {
-                            if(withdrawPasswdTOrF){
-                                alert("请设置取款密码！");
-                            } else{
+                            if (withdrawPasswdTOrF) {
+                                if(confirm("密码尚设置，是否设置密码？")){
+                                    window.location.href = CONFIG.BASEURL + "member/zhsz.html?module=setqkmm";
+                                }
+                            } else {
                                 alert("提交失败：" + json.description);
                             }
                         }
