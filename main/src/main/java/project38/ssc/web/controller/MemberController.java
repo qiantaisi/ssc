@@ -754,11 +754,15 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
+        //取款密码是否开启标记
         modelMap.put("needWithdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
+        //是否初次设置密码
+        modelMap.put("FisrtWithdrawPasswd", ApiUtils.userIsFirstWithdrawPasswd(uid, companyShortName));
         try {
 
             if (StringUtils.equals(module, "grzl")) {
-
+            } else if(StringUtils.equals(module, "setqkmm")){
+            } else if(StringUtils.equals(module, "reqkmm")){
             } else if (StringUtils.equals(module, "dlmm")) {
 
                 LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
@@ -787,9 +791,6 @@ public class MemberController extends BaseController {
                 }
 
                 modelMap.put("safeInfo", ApiUtils.getSafeInfo(uid, token, companyShortName));
-            } else if(StringUtils.equals(module, "qkmm")){
-                //取款密码是否开启标记
-                modelMap.put("FisrtWithdrawPasswd", ApiUtils.userIsFirstWithdrawPasswd(uid, companyShortName));
             } else {
                 throw new UserException(-1, "404");
             }

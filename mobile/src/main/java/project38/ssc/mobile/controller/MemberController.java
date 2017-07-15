@@ -1028,18 +1028,6 @@ public class MemberController extends BaseController {
     }
 
     @Authentication
-    @RequestMapping(value = "/zhsz/ajaxResetDrawPassword.json", method = {RequestMethod.GET, RequestMethod.POST})
-    @ResponseBody
-    public String ajaxResetDrawPassword(String oldPassword, String newPassword) {
-        Long uid = this.getUid(httpServletRequest);
-        String companyShortName = this.getCompanyShortName();
-        String token = this.getToken(httpServletRequest);
-        CommonResult result = ApiUtils.resetDrawPassword(uid, token, oldPassword, newPassword, companyShortName);
-        return this.renderJson(result);
-    }
-
-
-    @Authentication
     @RequestMapping(value = "/lsjl.html", method = RequestMethod.GET)
     public ModelAndView lsjl() throws Exception {
         String companyShortName = this.getCompanyShortName();
@@ -1387,6 +1375,17 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         CommonResult result = ApiUtils.resetDrawPassword (uid, token, oldPassword, newPassword, companyShortName);
+        return this.renderJson(result);
+    }
+
+    @Authentication
+    @RequestMapping(value = "/zhsz/ajaxResetDrawPassword.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public String ajaxResetDrawPassword(String oldPassword, String newPassword) {
+        Long uid = this.getUid(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
+        String token = this.getToken(httpServletRequest);
+        CommonResult result = ApiUtils.resetDrawPassword(uid, token, oldPassword, newPassword, companyShortName);
         return this.renderJson(result);
     }
 

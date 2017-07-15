@@ -14,7 +14,7 @@
     <title>会员中心</title>
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/reset.css?v=20170715">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/hpn-common.css">
-    <link rel="stylesheet" type="text/css" href="${resPath}member/css/index.css">
+    <link rel="stylesheet" type="text/css" href="${resPath}member/css/index.css?v=20170715">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/global.css">
     <script>
         <!--

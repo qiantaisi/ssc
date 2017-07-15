@@ -54,5 +54,11 @@
 
 <c:import url="common/commonJs.jsp"/>
 <script src="${resPath}member/js/index.js?v=20170706"></script>
+<script>
+    var CONFIG = {
+        BASEURL: "<%=basePath%>",    // 根路径
+        RESURL: "${resPath}"         // 资源路径
+    };
+</script>
 <c:import url="../common/checkOnline.jsp" />
 <c:import url="common/bodyEnd.jsp"/>
