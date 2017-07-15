@@ -14,6 +14,7 @@
         <header class="bar bar-nav rekjcl-1">
             <a href="javascript:void(0)" class="button button-link button-nav pull-left fanhui">
                 <span class="icon icon-left reicon"></span>
+                返回
             </a>
             <h1 class="title reimg">
                 <%--<img src="${resPath}img/kaihead_06.png"/>--%>

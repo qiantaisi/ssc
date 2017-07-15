@@ -4,8 +4,8 @@ $(function () {
     $(".number_bar a").click(
         function () {
             var lin = $(this).attr("data-name");
-            $(".number_bar"+lin).find(".H").addClass("active");
-            $(".number_bar"+lin).find(".H").removeClass("H");
+            $(".number_bar" + lin).find(".H").addClass("active");
+            $(".number_bar" + lin).find(".H").removeClass("H");
             $().find(".W").addClass("H")
         }
     );
@@ -103,10 +103,10 @@ $(function () {
          * @param args
          * @returns {*}
          */
-        ('focusin focusout focus blur load resize scroll unload click dblclick '+
-        'mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave '+
-        'change select keydown keypress keyup error').split(' ').forEach(function(event) {
-            $.fn[event] = function(callback) {
+        ('focusin focusout focus blur load resize scroll unload click dblclick ' +
+        'mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave ' +
+        'change select keydown keypress keyup error').split(' ').forEach(function (event) {
+            $.fn[event] = function (callback) {
                 return (0 in arguments) ?
                     //有callback回调，是绑定事件，否则，触发事件  ，
                     // 不用on？on才通用啊 ,bind也是调用on
@@ -2381,15 +2381,22 @@ $(function () {
         }
 
         //所彩种按钮
-        $(".buy_fenlei .allcai-btn").click(function(){
+        $(".buy_fenlei .allcai-btn").click(function () {
             $(".buy_main").hide();
             $(".allcai").show();
             $(".buy_fenlei a.ahover").removeClass("ahover");
             $(this).addClass("ahover");
         });
 
+        //最近玩过
+        $(".zjwgcai-btn").click(function () {
+            $(".buy_main").hide();
+            $(".zjwgcai").show();
+            $(".buy_fenlei a.ahover").removeClass("ahover");
+            $(this).addClass("ahover");
+        });
         //高频彩
-        $(".gpcai-btn").click(function(){
+        $(".gpcai-btn").click(function () {
             $(".buy_main").hide();
             $(".gpcai").show();
             $(".buy_fenlei a.ahover").removeClass("ahover");
@@ -2397,7 +2404,7 @@ $(function () {
         });
 
         //低频彩
-        $(".dpcai-btn").click(function(){
+        $(".dpcai-btn").click(function () {
             $(".buy_main").hide();
             $(".dpcai").show();
             $(".buy_fenlei a.ahover").removeClass("ahover");
@@ -2405,7 +2412,7 @@ $(function () {
         });
 
         //时时彩
-        $(".ssc-btn").click(function(){
+        $(".ssc-btn").click(function () {
             $(".buy_main").hide();
             $(".ssc").show();
             $(".buy_fenlei a.ahover").removeClass("ahover");
@@ -2413,7 +2420,7 @@ $(function () {
         });
 
         //PK10
-        $(".PK10-btn").click(function(){
+        $(".PK10-btn").click(function () {
             $(".buy_main").hide();
             $(".PK10").show();
             $(".buy_fenlei a.ahover").removeClass("ahover");
@@ -2421,7 +2428,7 @@ $(function () {
         });
 
         //
-        $(".k3-btn").click(function(){
+        $(".k3-btn").click(function () {
             $(".buy_main").hide();
             $(".k3").show();
             $(".buy_fenlei a.ahover").removeClass("ahover");
@@ -4691,7 +4698,6 @@ $(function () {
     });
 
 
-
     // 开奖记录
     $(document).on("pageInit", "#page-kjjl-list", function (e, id, page) {
         $("#inputOpenDate").datetimePicker2({});
@@ -5684,7 +5690,7 @@ $(function () {
             $(".re-modal").addClass("vipcp-hide");
         });
 
-        $(".btn_xz").live("click",function () {
+        $(".btn_xz").live("click", function () {
             $(".outer").removeClass('vipcp-hide');
             $(".re-modal").removeClass('vipcp-hide');
 
