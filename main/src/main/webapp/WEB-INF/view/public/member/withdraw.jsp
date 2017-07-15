@@ -89,7 +89,15 @@
 <c:import url="common/commonJs.jsp"/>
 <c:import url="common/subCommonJs.jsp"/>
 <script>
-    var withdrawPasswdTOrF = ${FisrtWithdrawPasswd.userIsFirstWithdrawPasswd}
+    <%--var withdrawPasswdTOrF = ${FisrtWithdrawPasswd.userIsFirstWithdrawPasswd}--%>
+    // 判断是否需要取款密码并且判断用户是否设置了密码
+    <c:if test="${not empty needWithdrawPassword && needWithdrawPassword == true}">
+        <c:if test="${empty userSession.drawPassword}">
+        if(confirm("密码尚设置，是否设置密码？")){
+            window.location.href = CONFIG.BASEURL + "member/zhsz.html?module=setqkmm";
+        }
+        </c:if>
+    </c:if>
 </script>
 <script>
     $(function () {
@@ -157,13 +165,13 @@
                             alert("提交成功");
                             refreshMoney();
                         } else {
-                            if (withdrawPasswdTOrF) {
-                                if(confirm("密码尚设置，是否设置密码？")){
-                                    window.location.href = CONFIG.BASEURL + "member/zhsz.html?module=setqkmm";
-                                }
-                            } else {
+//                            if (withdrawPasswdTOrF) {
+//                                if(confirm("密码尚设置，是否设置密码？")){
+//                                    window.location.href = CONFIG.BASEURL + "member/zhsz.html?module=setqkmm";
+//                                }
+//                            } else {
                                 alert("提交失败：" + json.description);
-                            }
+//                            }
                         }
                         parent.hideLoading();
                     }

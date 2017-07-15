@@ -107,6 +107,19 @@ public class UserSessionResult extends CommonResult {
      */
     private String agentDomain;
 
+    /**
+     * 取款密码
+     */
+    private String drawPassword;
+
+    public String getDrawPassword() {
+        return drawPassword;
+    }
+
+    public void setDrawPassword(String drawPassword) {
+        this.drawPassword = drawPassword;
+    }
+
     public String getAgentDomain() {
         return agentDomain;
     }
