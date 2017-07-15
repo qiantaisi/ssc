@@ -147,7 +147,6 @@
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/gcdt/pl3.htmlkk/" class="item-content">
                     <div class="item-media"><i class="icon bg-img-pl3"></i></div>
                     <div class="item-inner">
                         <div class="item-title">体彩排列3</div>
