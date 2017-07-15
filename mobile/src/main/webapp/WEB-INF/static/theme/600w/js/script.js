@@ -253,10 +253,10 @@ $(function () {
                             var hh = "<br/>";
 
                             var str = '<div style="text-align:left;font-size: 16px;">';
-                            str += '<div style="text-align: center">' + "尊敬的会员您好！" + '</div>' + hh + hh;
+                            str += '<div style="text-align: center">' + "尊敬的会员您好！" + '</div>' + hh;
                             $.each(json.webNoticeList, function (index, value) {
                                 str += value.title.replace(/<[^>]+>/g, "") + hh;
-                                str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
+                                str += value.content.replace(/<[^>]+>/g, "") + hh;
                             });
                             str += "</div>";
 
