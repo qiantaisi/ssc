@@ -118,10 +118,14 @@ img {
 .login_main {
     background: url(../images/lgbg_02.jpg) no-repeat center;
     background-size: cover;
-    padding: 29px 0px;
+    padding: 29px 0;
     width: 100%;
     margin: 0 auto;
 
+}
+
+.re-text-content{
+    padding: 29px 0 18px 0;
 }
 
 .login_nr_t {
@@ -154,8 +158,10 @@ img {
 }
 
 .login_b {
-    padding-left: 80px;
+    background: white;
+    padding: 10px 30px 10px 30px;
 }
+
 
 .login_b_link {
     padding-left: 130px;

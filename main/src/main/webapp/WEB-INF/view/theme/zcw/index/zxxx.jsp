@@ -13,23 +13,21 @@
 <c:import url="menu.jsp" />
 
 
-<div class="main login_main">
+<div class="main login_main re-text-content">
     <div class="container login_nr">
         <div class="login_nr_t clearfix">
             <div class="login_nr_t_lf">
-                <h1>${Article.article.title}</h1>
+                <h2 style="text-align: center">${Article.article.title}</h2>
             </div>
 
         </div>
 
             <div class="login_b">
-                <p>
+                <span   style="text-align: left">
                     ${Article.article.content}
-                </p>
+                </span>
             </div>
-            <div class="login_b_link">
 
-            </div>
         </div>
     </div>
 </div>

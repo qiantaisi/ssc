@@ -571,25 +571,24 @@
 
         $('#zj_info_marquee').liMarquee({
             direction: 'up',
-            scrollamount: 10
+            scrollamount: 30
         });
 
         newRoll(".roll_rt1_2b .rewrap ul li")
     });
 
     function getSscDataMainPage(playIds) {
-
         ajaxRequest({
             url: "<%=basePath%>ajaxGetSscDataMainPage.json",
             data: {playIds: playIds},
             success: function (json) {
+
                 if (json.sscHistoryList != null)
                 var klist = json.sscHistoryList;
                 var strCommon = '';
 
-                for (var i in  klist) {
+                for (var i in klist) {
                     var obj = klist[i];
-
                     var openCode = obj.openCode;
                     if (typeof openCode != "undefined") {
                         openCode = openCode.split(",").join(' ');
