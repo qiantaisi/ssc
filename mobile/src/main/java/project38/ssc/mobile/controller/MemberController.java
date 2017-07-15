@@ -162,6 +162,7 @@ public class MemberController extends BaseController {
         modelMap.put("zfbzzList", ApiUtils.getSystemAlipay(uid, token, companyShortName).getSkInfoList());
         modelMap.put("wxzzList", ApiUtils.getSystemWeixin(uid, token, companyShortName).getSkInfoList());
         modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token, companyShortName).getSkInfoList());
+        modelMap.put("istrue", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
         //获取在线支付信息
         modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[]{2, 3}, companyShortName));
         return this.renderPublicView("member/index", modelMap);
@@ -1342,6 +1343,21 @@ public class MemberController extends BaseController {
     }
 
     @Authentication
+    @RequestMapping(value = "/xgmm/qkmm.html", method = RequestMethod.GET)
+    public ModelAndView qkmm() throws Exception {
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        // 权限检查
+        Long uid = this.getUid(httpServletRequest);
+        String token = this.getToken(httpServletRequest);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
+        if (!layerInfoResult.getCanAgent()) {
+            return this.renderPublicView("member/noaccess", modelMap);
+        }
+        return this.renderPublicView("member/xgmm/qkmm", modelMap);
+    }
+
+    @Authentication
     @RequestMapping(value = "/xgmm/ajaxResetPassword.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public String ajaxResetPassword(String oldPassword, String newPassword) {
@@ -1349,6 +1365,17 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         CommonResult result = ApiUtils.resetPassword(uid, token, oldPassword, newPassword, companyShortName);
+        return this.renderJson(result);
+    }
+
+    @Authentication
+    @RequestMapping(value = "/qkmm/ajaxResetPassword.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public String ajaxResetPasswords(String oldPassword, String newPassword) {
+        String companyShortName = this.getCompanyShortName();
+        Long uid = this.getUid(httpServletRequest);
+        String token = this.getToken(httpServletRequest);
+        CommonResult result = ApiUtils.resetDrawPassword (uid, token, oldPassword, newPassword, companyShortName);
         return this.renderJson(result);
     }
 
