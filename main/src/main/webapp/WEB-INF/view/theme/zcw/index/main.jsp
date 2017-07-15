@@ -148,7 +148,6 @@
             <ul id="apend">
                 <%--开奖内容--%>
             </ul>
-
         </div>
     </div>
     <div class="left index_main_midlle">
