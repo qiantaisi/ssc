@@ -15,18 +15,18 @@
             <ul class="eveb_form eveb_setting_form">
                 <li>
                     <span>原取款密码：</span>
-                    <input name="oldPassword" id="oldPassword" type="password" size="20" class="passwinp">
-                    <label class="error" for="oldPassword">* 请填写您的原取款密码</label>
+                    <input name="oldPassword2" id="oldPassword2" type="password" size="20" class="passwinp">
+                    <label class="error" for="oldPassword2">* 请填写您的原取款密码</label>
                 </li>
                 <li>
                     <span>新取款密码：</span>
-                    <input name="newPassword" id="newpassword" type="password" size="20" class="passwinp">
-                    <label class="error" for="newpassword">* 6~18位字母数字组合</label>
+                    <input name="newPassword2" id="newPassword2" type="password" size="20" class="passwinp">
+                    <label class="error" for="newPassword2">* 6~18位字母数字组合</label>
                 </li>
                 <li>
                     <span>确认新密码：</span>
-                    <input name="confirmPassword" id="confirmPassword" type="password" size="20" class="passwinp">
-                    <label class="error" for="confirmPassword"></label>
+                    <input name="confirmPassword2" id="confirmPassword2" type="password" size="20" class="passwinp">
+                    <label class="error" for="confirmPassword2"></label>
                 </li>
             </ul>
             <div class="eveb_form_submit">
@@ -44,24 +44,24 @@
 <script>
     $("form[name='resetPasswordForm']").validate({
         rules:{
-            oldPassword:{required:true}
-            ,newPassword:{
+            oldPassword2:{required:true}
+            ,newPassword2:{
                 required:true,
                 minlength: 5
             }
-            ,confirmPassword:{
+            ,confirmPassword2:{
                 required:true,
                 minlength: 5,
-                equalTo: "#newpassword"
+                equalTo: "#newPassword2"
             }
         }
         ,messages:{
-            oldPassword:{required:"* 请填写您的原始取款密码"}
-            ,newPassword:{
+            oldPassword2:{required:"* 请填写您的原始取款密码"}
+            ,newPassword2:{
                 required:"* 6~18位字母数字组合",
                 minlength: "密码长度不能小于 5 个字母"
             }
-            ,confirmPassword:{
+            ,confirmPassword2:{
                 required:"* 请再次填写新密码",
                 minlength: "密码长度不能小于 5 个字母",
                 equalTo: "两次密码输入不一致"
@@ -76,8 +76,8 @@
                 dataType: 'json',           //html(默认), xml, script, json...接受服务端返回的类型
                 timeout: 3000               //限制请求的时间，当请求大于3秒后，跳出请求
             };
-            $("input[name='oldPassword']").val($.md5($("#oldPassword").val()));
-            $("input[name='newPassword']").val($.md5($("#newPassword").val()));
+            $("input[name='oldPassword']").val($.md5($("input[name='oldPassword2']").val()));
+            $("input[name='newPassword']").val($.md5($("input[name='newPassword2']").val()));
             $(form).ajaxSubmit(options);
         }
     });
