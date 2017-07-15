@@ -57,12 +57,12 @@
             <div class="cl-4" onclick="window.location.href='<%=basePath%>member/gonggao/list.html'">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <marquee behavior="scroll" contenteditable="true"
+                        <marquee behavior="scroll" direction="left" scrolldelay="100" contenteditable="true"
                                  onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="5"
                                  width="100%" onmouseover="this.stop();" onmouseout="this.start();">
                             <c:forEach items="${popupNoticeList}" var="item" varStatus="status">
                                 <c:if test="${status.count != 1}"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></c:if>
-                                <span${item.title}：${item.content}</span>
+                                <span class="sp_scroll_txt">${item.title}：${item.content}</span>
                             </c:forEach>
                         </marquee>
                     </div>
