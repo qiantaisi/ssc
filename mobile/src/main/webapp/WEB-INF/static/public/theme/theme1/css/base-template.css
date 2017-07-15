@@ -132,8 +132,8 @@
     position: absolute;
     width: 119px;
     height: 34px;
-    background: url(../img/logo.png) no-repeat;
-    background-size: 119px 34px;
+    /*background: url(../img/logo.png) no-repeat;*/
+    /*background-size: 119px 34px;*/
     display: block;
     left: 50%;
     margin-left: -59px;

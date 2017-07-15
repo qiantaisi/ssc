@@ -236,40 +236,45 @@ $(function () {
                         setUserToken(json.userId, json.token);
                         // Tools.toastRedirect("登录成功，正在跳转到首页", 3000, config.basePath);
 
-                        // Tools.alertCallback("登录成功", function() {
-                        //     window.location.href = config.basePath;
-                        // });
-                        var refer = getQueryString("refer");
-                        if (refer) {
-                            window.location.href = refer;
-                        } else {
-                            window.location.href = config.basePath;
-                        }
+
+
                         // 保存登录名
                         Tools.setCookie("loginFormAccount", account, {path: "/"});
 
                         var uid=Tools.getCookie("uid");
                         var token = Tools.getCookie("token");
 
-                        ajaxRequest({
-                            url: config.basePath + "ssc/ajaxGG.json",
-                            data: {uid: uid, token: token},
-                            success: function (json) {
-                                if (json.webNoticeList.length > 0) {
-                                    var hh = "\n";
-                                    if (document.all) {
-                                        hh = "\r\n";
-                                    }
-                                    var str = "尊敬的会员您好！" + hh + hh;
-                                    $.each(json.webNoticeList, function (index, value) {
-                                        str += value.title.replace(/<[^>]+>/g, "") + hh;
-                                        str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
-                                    });
+                        var refer = getQueryString("refer");
 
-                                    Tools.alert(str);
+                        // 公告
+                        var webNoticeList = json.webNoticeList;
+
+                        if (webNoticeList.length > 0) {
+                            var hh = "<br/>";
+
+                            var str = '<div style="text-align:left;font-size: 16px;">';
+                            str += '<div style="text-align: center">' + "尊敬的会员您好！" + '</div>' + hh + hh;
+                            $.each(json.webNoticeList, function (index, value) {
+                                str += value.title.replace(/<[^>]+>/g, "") + hh;
+                                str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
+                            });
+                            str += "</div>";
+
+                            Tools.alertCallback(str, function() {
+                                if (refer) {
+                                    window.location.href = refer;
+                                } else {
+                                    window.location.href = config.basePath;
                                 }
+                            });
+                        } else {
+                            var refer = getQueryString("refer");
+                            if (refer) {
+                                window.location.href = refer;
+                            } else {
+                                window.location.href = config.basePath;
                             }
-                        });
+                        }
 
                         return;
                     }

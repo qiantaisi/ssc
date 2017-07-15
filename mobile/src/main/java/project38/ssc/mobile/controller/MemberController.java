@@ -132,6 +132,17 @@ public class MemberController extends BaseController {
 
             // 接口返回数据
             result = ApiUtils.login(account, password, IPHelper.getIpAddr(httpServletRequest), 1, companyShortName);
+
+            // 登录成功，调取公告
+            if (1 == result.getResult()) {
+                result.setWebNoticeList(
+                        ApiUtils.getPopupNoticeList(
+                                result.getUserId(),
+                                result.getToken(),
+                                companyShortName
+                        ).getWebNoticeList()
+                );
+            }
         } catch (Exception e) {
             log.error(this, e);
             result.setResult(-100);

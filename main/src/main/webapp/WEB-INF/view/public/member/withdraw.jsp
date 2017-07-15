@@ -89,6 +89,9 @@
 <c:import url="common/commonJs.jsp"/>
 <c:import url="common/subCommonJs.jsp"/>
 <script>
+    var withdrawPasswdTOrF = ${FisrtWithdrawPasswd.userIsFirstWithdrawPasswd}
+</script>
+<script>
     $(function () {
         $(".errhide").addClass('hide');
         $("#money").keyup(function () {
@@ -154,7 +157,11 @@
                             alert("提交成功");
                             refreshMoney();
                         } else {
-                            alert("提交失败：" + json.description);
+                            if(withdrawPasswdTOrF){
+                                alert("请设置取款密码！");
+                            } else{
+                                alert("提交失败：" + json.description);
+                            }
                         }
                         parent.hideLoading();
                     }

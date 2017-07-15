@@ -436,6 +436,8 @@ public class MemberController extends BaseController {
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token, companyShortName));
         modelMap.put("needWithdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
+        //取款密码是否开启标记
+        modelMap.put("FisrtWithdrawPasswd", ApiUtils.userIsFirstWithdrawPasswd(uid, companyShortName));
 
         return this.renderPublicView("member/withdraw", modelMap);
     }
@@ -756,6 +758,7 @@ public class MemberController extends BaseController {
         try {
 
             if (StringUtils.equals(module, "grzl")) {
+
             } else if (StringUtils.equals(module, "dlmm")) {
 
                 LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
@@ -785,12 +788,8 @@ public class MemberController extends BaseController {
 
                 modelMap.put("safeInfo", ApiUtils.getSafeInfo(uid, token, companyShortName));
             } else if(StringUtils.equals(module, "qkmm")){
-//                //权限检查
-//                Long uid = this.getUid(httpServletRequest);
-//                String token = this.getToken(httpServletRequest);
-//                String companyShortName = this.getCompanyShortName();
-                modelMap.put("needWithdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
-                return this.renderPublicView("member/qkmm", modelMap);
+                //取款密码是否开启标记
+                modelMap.put("FisrtWithdrawPasswd", ApiUtils.userIsFirstWithdrawPasswd(uid, companyShortName));
             } else {
                 throw new UserException(-1, "404");
             }

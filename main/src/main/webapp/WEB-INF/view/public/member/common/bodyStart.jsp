@@ -12,7 +12,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>会员中心</title>
-    <link rel="stylesheet" type="text/css" href="${resPath}member/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="${resPath}member/css/reset.css?v=20170715">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/hpn-common.css">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/index.css">
     <link rel="stylesheet" type="text/css" href="${resPath}member/css/global.css">
