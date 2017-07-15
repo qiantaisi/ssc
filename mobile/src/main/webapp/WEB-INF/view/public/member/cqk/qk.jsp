@@ -42,7 +42,7 @@
                             <div class="item-content">
                                 <div class="item-inner">
                                     <div class="item-input">
-                                        <input type="password" placeholder="请输入取款金额" id="drawPassword">
+                                        <input type="password" placeholder="请输入取款密码" id="drawPassword">
                                     </div>
                                 </div>
                             </div>
