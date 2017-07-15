@@ -29,6 +29,9 @@
                 <a href="javascript:void(0);" class="ahover allcai-btn">
                     全部分类
                 </a>
+                <a href="javascript:void(0);" class="zjwgcai-btn">
+                    最近玩过
+                </a>
                 <a href="javascript:void(0);" class="gpcai-btn">
                     高频彩
                 </a>
@@ -47,7 +50,7 @@
             </div>
 
             <c:if test="${setLogUserGames != null || fn:length(setLogUserGames) != 0}">
-                <div class="buy_main">
+                <div class="buy_main zjwgcai">
                     <div class="index_tl">
 	     		<span>
 	     			您最近玩过的

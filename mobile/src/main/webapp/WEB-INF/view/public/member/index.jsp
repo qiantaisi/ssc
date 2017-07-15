@@ -149,6 +149,21 @@
                                 </li>
                             </c:otherwise>
                         </c:choose>
+                        <c:choose>
+                            <c:when test="${istrue!=false}">
+                                <li>
+                                    <a href="<%=basePath%>member/xgmm/qkmm.html" class="item-content item-link">
+                                        <div class="item-media"><i class="icon icon-dlmm"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">取款密码</div>
+                                            <div class="item-after">修改取款密码</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </c:when>
+                            <c:otherwise>
+                            </c:otherwise>
+                        </c:choose>
                     </ul>
                 </div>
                 <c:choose>
