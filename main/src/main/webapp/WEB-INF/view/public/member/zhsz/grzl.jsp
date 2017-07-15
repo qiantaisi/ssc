@@ -10,7 +10,9 @@
 <c:import url="../common/bodyStart.jsp"/>
 <div class="help_r_main">
     <div class="eveb_content">
-        <c:import url="common/nav.jsp" />
+        <c:import url="common/nav.jsp" >
+            <c:param name="drawPasswd" value="${}"/>
+        </c:import>
         <table class="eveb_setting_table">
             <tbody>
             <tr>

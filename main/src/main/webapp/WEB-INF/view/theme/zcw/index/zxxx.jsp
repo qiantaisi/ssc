@@ -10,7 +10,9 @@
 <c:import url="../common/checkIsChildFrame.jsp"/>
 <c:import url="top.jsp"/>
 
-<c:import url="menu.jsp" />
+<c:import url="menu.jsp">
+  <c:param name="noselect" value="1"/>
+</c:import>
 
 
 <div class="main login_main re-text-content">

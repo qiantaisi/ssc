@@ -748,24 +748,25 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/zhsz.html", method = RequestMethod.GET)
     public ModelAndView zhsz(String module) throws Exception {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-
+        // 权限检查
+        Long uid = this.getUid(httpServletRequest);
+        String token = this.getToken(httpServletRequest);
+        String companyShortName = this.getCompanyShortName();
+        modelMap.put("needWithdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
         try {
 
             if (StringUtils.equals(module, "grzl")) {
             } else if (StringUtils.equals(module, "dlmm")) {
-                // 权限检查
-                Long uid = this.getUid(httpServletRequest);
-                String token = this.getToken(httpServletRequest);
-                String companyShortName = this.getCompanyShortName();
+
                 LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
                 if (!layerInfoResult.getCanEditPassword()) {
                     return this.renderPublicView("member/noaccess", modelMap);
                 }
             } else if (StringUtils.equals(module, "yhkgl")) {
-                // 权限检查
-                Long uid = this.getUid(httpServletRequest);
-                String token = this.getToken(httpServletRequest);
-                String companyShortName = this.getCompanyShortName();
+//                // 权限检查
+//                Long uid = this.getUid(httpServletRequest);
+//                String token = this.getToken(httpServletRequest);
+//                String companyShortName = this.getCompanyShortName();
                 LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
                 if (!layerInfoResult.getCanEditUserBank()) {
                     return this.renderPublicView("member/noaccess", modelMap);
@@ -773,16 +774,23 @@ public class MemberController extends BaseController {
 
                 modelMap.put("userBankCardResult", ApiUtils.getUserBankCardList(uid, token, companyShortName));
             } else if (StringUtils.equals(module, "aqxx")) {
-                // 权限检查
-                Long uid = this.getUid(httpServletRequest);
-                String token = this.getToken(httpServletRequest);
-                String companyShortName = this.getCompanyShortName();
+//                // 权限检查
+//                Long uid = this.getUid(httpServletRequest);
+//                String token = this.getToken(httpServletRequest);
+//                String companyShortName = this.getCompanyShortName();
                 LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
                 if (!layerInfoResult.getCanSafeinfo()) {
                     return this.renderPublicView("member/noaccess", modelMap);
                 }
 
                 modelMap.put("safeInfo", ApiUtils.getSafeInfo(uid, token, companyShortName));
+            } else if(StringUtils.equals(module, "qkmm")){
+//                //权限检查
+//                Long uid = this.getUid(httpServletRequest);
+//                String token = this.getToken(httpServletRequest);
+//                String companyShortName = this.getCompanyShortName();
+                modelMap.put("needWithdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
+                return this.renderPublicView("member/qkmm", modelMap);
             } else {
                 throw new UserException(-1, "404");
             }

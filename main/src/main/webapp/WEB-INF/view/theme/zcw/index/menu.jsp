@@ -223,9 +223,19 @@
             </div>
         </div>
         <div class="menu_main clearfix left">
-            <a href="<%=basePath%>main.html" class="ahover">
-                首页
-            </a>
+            <c:choose>
+                <c:when test="${param.noselect == 1}">
+                    <a href="<%=basePath%>main.html">
+                        首页
+                    </a>
+                </c:when>
+                <c:otherwise>
+                    <a href="<%=basePath%>main.html" class="ahover">
+                        首页
+                    </a>
+                </c:otherwise>
+            </c:choose>
+
             <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')" target="_blank">
                 购彩大厅
             </a>

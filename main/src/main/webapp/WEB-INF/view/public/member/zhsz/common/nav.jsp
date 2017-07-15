@@ -13,5 +13,6 @@
         <li <c:if test="${param.module == 'dlmm'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=dlmm')">登录密码</a></li>
         <li <c:if test="${param.module == 'yhkgl'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=yhkgl')">银行卡管理</a></li>
         <li <c:if test="${param.module == 'aqxx'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=aqxx')">安全信息</a></li>
+        <c:if test="${needWithdrawPassword == true}"><li <c:if test="${param.module == 'qkmm'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=qkmm')">取款密码</a></li></c:if>
     </ul>
 </div>

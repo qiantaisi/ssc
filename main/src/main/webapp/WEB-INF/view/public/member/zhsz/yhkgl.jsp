@@ -11,7 +11,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <div class="help_r_main">
     <div class="eveb_content">
-        <c:import url="common/nav.jsp" />
+        <c:import url="common/nav.jsp"/>
         <div class="mb10 color-888">银行卡列表：</div>
         <ul class="management_bank">
         <c:forEach items="${userBankCardResult.userBankCardList}" var="item">

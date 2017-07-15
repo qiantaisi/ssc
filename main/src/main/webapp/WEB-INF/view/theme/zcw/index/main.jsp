@@ -574,7 +574,9 @@
             scrollamount: 30
         });
 
-        newRoll(".roll_rt1_2b .rewrap ul li")
+        newRoll(".roll_rt1_2b .rewrap ul li");
+
+        $(".all_fenlei_yin").css("display", "block");
     });
 
     function getSscDataMainPage(playIds) {
@@ -638,18 +640,6 @@
         $("#gonggao_" + id).show();
     }
 
-    function goZst(url) {
-        showLoading();
-        window.location.href = url;
-    }
-
-    $(function () {
-
-        $(".all_fenlei_yin").css("display", "block");
-
-    });
-
-
     function showLoading() {
         layer.load(2, {
             shade: [0.1, '#000'] //0.1透明度的白色背景
@@ -658,68 +648,6 @@
     function hideLoading() {
         layer.closeAll();
     }
-    function login1() {
-        var loginAccount = $.trim($("#loginAccount1").val());
-        var loginPassword = $.trim($("#loginPassword1").val());
-        var yzm = $.trim($("#loginYzm1").val());
-
-        if (!loginAccount) {
-            alert("请输入账号");
-            return;
-        }
-        if (!loginPassword) {
-            alert("请输入密码");
-            return;
-        }
-        if (!yzm) {
-            alert("请输入验证码");
-            return;
-        }
-
-        ajaxRequest({
-            url: "<%=basePath%>member/ajaxLogin.json",
-            data: {
-                yzm: yzm,
-                account: loginAccount,
-                password: $.md5(loginPassword)
-            },
-            beforeSend: function () {
-                layer.load(2, {
-                    shade: [0.1, '#000'] //0.1透明度的白色背景
-                });
-                $.cookie("uid", '', {path: "/", expires: -1});
-                $.cookie("token", '', {path: "/", expires: -1});
-            },
-            success: function (json) {
-                setTimeout(function () {
-                    layer.closeAll();
-                    if (json.result == 1) {
-                        $.cookie("uid", json.userId, {path: "/"});
-                        $.cookie("token", json.token, {path: "/"});
-
-                        if (json.webNoticeList.length > 0) {
-                            var hh = "\n";
-                            if (document.all) {
-                                hh = "\r\n";
-                            }
-                            var str = "尊敬的会员您好！" + hh + hh;
-                            $.each(json.webNoticeList, function (index, value) {
-                                str += value.title.replace(/<[^>]+>/g, "") + hh;
-                                str += value.content.replace(/<[^>]+>/g, "") + hh + hh;
-                            });
-                            //console.log(str);
-                            alert(str);
-                        }
-                        location.reload();
-                    } else {
-                        refreshYzm(document.getElementById('yzmImg1'));
-                        alert("登录失败：" + json.description);
-                    }
-                }, 1000)
-            }
-        });
-    }
-
 
     function getWebPopUpNotice() {
         ajaxRequest({
@@ -779,39 +707,6 @@
             $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
         });
 
-        $(".shuaxin").click(function () {
-
-            var eedd = $(this).parents(".touzhu_b_main").index();
-
-            $(this).parents(".touzhu_b_main").find(".qiu").each(function (index) {
-
-                index = setInterval(function () {
-                    $(".touzhu_b_main:eq(" + eedd + ") .qiu").text(parseInt(99 * Math.random()))
-                    setTimeout(function () {
-                        clearInterval(index);
-                        $(".touzhu_b_main:eq(" + eedd + ") .qiu").parents(".touzhu_b_main").find(".qiu").each(function (index) {
-                            $(this).text(parseInt(99 * Math.random()));
-                        });
-                    }, 300)
-                }, 10)
-
-            });
-            $(this).parents(".touzhu_b_main").find(".biaoqian").each(function (index1) {
-                var arr = ['鼠', '虎', '兔', '小', '双', '狗', '蛇', '猪']
-                index1 = setInterval(function () {
-                    $(".touzhu_b_main:eq(" + eedd + ") .biaoqian span").text(arr[Math.floor(Math.random() * arr.length)])
-                    setTimeout(function () {
-                        clearInterval(index1);
-                        $(".touzhu_b_main:eq(" + eedd + ") .biaoqian").parents(".touzhu_b_main").find(".biaoqian span").each(function (index) {
-                            $(this).text(arr[Math.floor(Math.random() * arr.length)]);
-                        });
-                    }, 300)
-                }, 10)
-
-            });
-
-
-        })
     });
     //根据id获取资讯信息内容并跳转页面
     function ziXun(id){
@@ -883,50 +778,6 @@
             }
 
         }
-    }
-
-    function checkColor(num) {
-        var colorFlag;
-        var status = false;
-        var blueflag = [3, 4, 9, 10, 14, 15, 20, 25, 26, 31, 36, 37, 41, 42, 47, 48];
-        var redflag = [1, 2, 7, 8, 12, 13, 18, 19, 23, 24, 29, 30, 34, 35, 40, 45, 46];
-
-        for (var j = 0; j < blueflag.length; j++) {
-            if (num == blueflag[j]) {
-                colorFlag = 'blue';
-                status = true;//标识已找到颜色
-            }
-        }
-
-        if (status == false) {
-            for (var k = 0; j < redflag.length; k++) {
-                if (num == redflag[k]) {
-                    colorFlag = 'red';
-                    status = true;//标识已找到颜色
-                }
-            }
-
-            if (status == false) {
-                colorFlag = 'green';
-            }
-        }
-        return colorFlag;
-    }
-    $(function () {
-//        getSscOpenTime();
-    });
-
-    function layerOpen(title, url, width, height) {
-        layer.open({
-            type: 2,
-            title: title,
-            shadeClose: true,
-            shade: false,
-            maxmin: true, //开启最大化最小化按钮
-//            area: ['893px', '600px'],
-            area: [width + 'px', height + 'px'],
-            content: url
-        });
     }
 
 
@@ -1405,5 +1256,5 @@
     }
 
 </script>
-<c:import url="../common/popupDiv.jsp"/>
+<%--<c:import url="../common/popupDiv.jsp"/>--%>
 <c:import url="../common/bodyEnd.jsp"/>

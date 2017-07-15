@@ -624,7 +624,7 @@ a:visited {
 }
 
 .index_main_rt1_2t .ahover {
-    border-bottom: 4px solid #e94335;
+    border-bottom: 5px solid #e94335;
     color: #e94335;
 }
 
@@ -666,7 +666,7 @@ a:visited {
 
 .index_notice_ul_new{
     display: block;
-    width: 100%;
+    width: 80%;
     height: 100%;
     list-style: none;
     background: white;
