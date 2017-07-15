@@ -1317,6 +1317,15 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_NEED_WITHDRAWPASSWD, paramsMap, companyShortName), NeedWithdrawPasswdResult.class);
     }
 
+    public static UserIsFirstWithdrawPasswdResult userIsFirstWithdrawPasswd(Long userId, String companyShortName) {
+        if (IS_DEBUG) {
+            return new UserIsFirstWithdrawPasswdResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("userId", userId);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_USER_IS_FIRST_WITHDRAWPASSWD, paramsMap, companyShortName), UserIsFirstWithdrawPasswdResult.class);
+    }
+
     public static ArticleResult getArtList(String companyShortName, Integer offset, Integer limit) {
         if (IS_DEBUG) {
             return new ArticleResult();

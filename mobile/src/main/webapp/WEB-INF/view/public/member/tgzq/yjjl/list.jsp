@@ -104,7 +104,7 @@
                           <font style="color:green">+{{yjMoney}}元</font>
                       </font>
                       <i class="cl-804">
-                        下注金额：{{betMoney}}元
+                        金额：{{betMoney}}元
                       </i>
                     </span>
                         <span>订单号：{{orderNo}}</span>

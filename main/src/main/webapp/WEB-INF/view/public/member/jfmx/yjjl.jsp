@@ -42,10 +42,10 @@
             <thead>
             <tr>
                 <th>序号</th>
-                <th>用户账号</th>
+                <%--<th>用户账号</th>--%>
                 <%--<th>类型</th>--%>
-                <th>注单号</th>
-                <th>下注金额</th>
+                <th>单号</th>
+                <th>金额</th>
                 <th>返点比例（%）</th>
                 <th>佣金</th>
                 <th>时间</th>
@@ -105,7 +105,7 @@
                     var currentPageNum = (json.pageNum - 1) * json.pageSize + 1;
                     str += '<tr>';
                     str += '<td>' + (currentPageNum + index) + '</td>';
-                    str += '<td>' + value.userAccount + '</td>';
+//                    str += '<td>' + value.userAccount + '</td>';
 //                    str += '<td>';
 //                    if (value.type == 1) {
 //                        str += '彩票'
