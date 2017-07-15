@@ -76,8 +76,8 @@
                 dataType: 'json',           //html(默认), xml, script, json...接受服务端返回的类型
                 timeout: 3000               //限制请求的时间，当请求大于3秒后，跳出请求
             };
-            $("input[name='oldPassword']").val($.md5($("input[name='oldPassword']").val()));
-            $("input[name='newPassword']").val($.md5($("input[name='newPassword']").val()));
+            $("input[name='oldPassword']").val($.md5($("#oldPassword").val()));
+            $("input[name='newPassword']").val($.md5($("#newPassword").val()));
             $(form).ajaxSubmit(options);
         }
     });

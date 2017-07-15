@@ -13,7 +13,7 @@
         <li <c:if test="${param.module == 'dlmm'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=dlmm')">登录密码</a></li>
         <li <c:if test="${param.module == 'yhkgl'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=yhkgl')">银行卡管理</a></li>
         <li <c:if test="${param.module == 'aqxx'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=aqxx')">安全信息</a></li>
-        <c:if test="${needWithdrawPassword == true && FisrtWithdrawPasswd.userIsFirstWithdrawPasswd == true}"><li <c:if test="${param.module == 'qkmm'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=setqkmm')">设置取款密码</a></li></c:if>
-        <c:if test="${needWithdrawPassword == true && FisrtWithdrawPasswd.userIsFirstWithdrawPasswd != true}"><li <c:if test="${param.module == 'qkmm'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=reqkmm')">修改取款密码</a></li></c:if>
+        <c:if test="${needWithdrawPassword == true && FisrtWithdrawPasswd.userIsFirstWithdrawPasswd == true}"><li <c:if test="${param.module == 'setqkmm'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=setqkmm')">设置取款密码</a></li></c:if>
+        <c:if test="${needWithdrawPassword == true && FisrtWithdrawPasswd.userIsFirstWithdrawPasswd != true}"><li <c:if test="${param.module == 'reqkmm'}">class="on"</c:if>><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=reqkmm')">修改取款密码</a></li></c:if>
     </ul>
 </div>
