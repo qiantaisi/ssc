@@ -151,15 +151,30 @@
                         </c:choose>
                         <c:choose>
                             <c:when test="${istrue!=false}">
-                                <li>
-                                    <a href="<%=basePath%>member/xgmm/qkmm.html" class="item-content item-link">
-                                        <div class="item-media"><i class="icon icon-dlmm"></i></div>
-                                        <div class="item-inner">
-                                            <div class="item-title">取款密码</div>
-                                            <div class="item-after">修改取款密码</div>
-                                        </div>
-                                    </a>
-                                </li>
+                                <c:choose>
+                                    <c:when test="${empty userSession.drawPassword}">
+                                        <li>
+                                            <a href="<%=basePath%>member/xgmm/setqkmm.html" class="item-content item-link">
+                                                <div class="item-media"><i class="icon icon-dlmm"></i></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">取款密码</div>
+                                                    <div class="item-after">设置取款密码</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <li>
+                                            <a href="<%=basePath%>member/xgmm/resetqkmm.html" class="item-content item-link">
+                                                <div class="item-media"><i class="icon icon-dlmm"></i></div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">取款密码</div>
+                                                    <div class="item-after">修改取款密码</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </c:otherwise>
+                                </c:choose>
                             </c:when>
                             <c:otherwise>
                             </c:otherwise>
@@ -307,4 +322,21 @@
     </div>
 </div>
 <c:import url="../common/commonJs.jsp"/>
+<script>
+    var CONFIG = {
+        BASEURL: "<%=basePath%>"
+    }
+</script>
+<script>
+    // 判断是否需要取款密码并且判断用户是否设置了密码
+    <c:if test="${not empty istrue && istrue == true}">
+        <c:if test="${empty userSession.drawPassword}">
+            $.confirm("取款密码尚未设置，是否设置密码？", ''
+            , function(){
+                window.location.href = CONFIG.BASEURL + "member/xgmm/setqkmm.html";
+            }, function(){
+            });
+        </c:if>
+    </c:if>
+</script>
 <c:import url="../common/bodyEnd.jsp"/>

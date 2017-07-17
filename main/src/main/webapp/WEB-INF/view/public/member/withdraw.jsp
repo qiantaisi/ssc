@@ -93,7 +93,7 @@
     // 判断是否需要取款密码并且判断用户是否设置了密码
     <c:if test="${not empty needWithdrawPassword && needWithdrawPassword == true}">
         <c:if test="${empty userSession.drawPassword}">
-        if(confirm("密码尚设置，是否设置密码？")){
+        if(confirm("取款密码尚未设置，是否设置密码？")){
             window.location.href = CONFIG.BASEURL + "member/zhsz.html?module=setqkmm";
         }
         </c:if>

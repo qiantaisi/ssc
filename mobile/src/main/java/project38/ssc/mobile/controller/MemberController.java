@@ -174,6 +174,8 @@ public class MemberController extends BaseController {
         modelMap.put("wxzzList", ApiUtils.getSystemWeixin(uid, token, companyShortName).getSkInfoList());
         modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token, companyShortName).getSkInfoList());
         modelMap.put("istrue", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
+//        modelMap.put("FisrtWithdrawPasswd", ApiUtils.userIsFirstWithdrawPasswd(uid, companyShortName));
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         //获取在线支付信息
         modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[]{2, 3}, companyShortName));
         return this.renderPublicView("member/index", modelMap);
@@ -1342,8 +1344,8 @@ public class MemberController extends BaseController {
     }
 
     @Authentication
-    @RequestMapping(value = "/xgmm/qkmm.html", method = RequestMethod.GET)
-    public ModelAndView qkmm() throws Exception {
+    @RequestMapping(value = "/xgmm/setqkmm.html", method = RequestMethod.GET)
+    public ModelAndView setqkmm() throws Exception {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         // 权限检查
@@ -1353,7 +1355,22 @@ public class MemberController extends BaseController {
         if (!layerInfoResult.getCanAgent()) {
             return this.renderPublicView("member/noaccess", modelMap);
         }
-        return this.renderPublicView("member/xgmm/qkmm", modelMap);
+        return this.renderPublicView("member/xgmm/setqkmm", modelMap);
+    }
+
+    @Authentication
+    @RequestMapping(value = "/xgmm/resetqkmm.html", method = RequestMethod.GET)
+    public ModelAndView resetqkmm() throws Exception {
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        // 权限检查
+        Long uid = this.getUid(httpServletRequest);
+        String token = this.getToken(httpServletRequest);
+        LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
+        if (!layerInfoResult.getCanAgent()) {
+            return this.renderPublicView("member/noaccess", modelMap);
+        }
+        return this.renderPublicView("member/xgmm/resetqkmm", modelMap);
     }
 
     @Authentication
