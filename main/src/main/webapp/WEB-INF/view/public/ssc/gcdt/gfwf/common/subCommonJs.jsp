@@ -15,6 +15,10 @@
         $(".group ul li p span").click(function () {
             $(".group ul li p span.acti").removeClass("acti");
             $(this).addClass("acti");
+            var currentId = $(this).data('play_id');
+            if(currentId != null){
+                playId = currentId;
+            }
 
             // 初始化子页面
             initSubPage();

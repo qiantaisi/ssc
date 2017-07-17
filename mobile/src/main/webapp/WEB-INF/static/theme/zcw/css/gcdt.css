@@ -126,6 +126,10 @@
     padding: 0;
 }
 
-.gpcai,.dpcai{
+.gpcai,.dpcai,.hide{
     display: none;
+}
+
+.zjheigth{
+    margin-top: 30%;
 }

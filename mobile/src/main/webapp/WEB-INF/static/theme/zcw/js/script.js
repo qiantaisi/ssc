@@ -2376,14 +2376,11 @@ $(function () {
 
     // 购彩大厅首页
     $(document).on("pageInit", "#page-gcdt", function (e, id, page) {
-        if (typeof initBottomNavGcdt == 'function') {
-            initBottomNavGcdt();
-        }
 
         //所彩种按钮
         $(".buy_fenlei .allcai-btn").click(function () {
-            $(".buy_main").hide();
-            $(".allcai").show();
+            $(".buy_main").show();
+            $(".nullzjwgcai").hide();
             $(".buy_fenlei a.ahover").removeClass("ahover");
             $(this).addClass("ahover");
         });
@@ -2391,6 +2388,7 @@ $(function () {
         //最近玩过
         $(".zjwgcai-btn").click(function () {
             $(".buy_main").hide();
+            $(".nullzjwgcai").show();
             $(".zjwgcai").show();
             $(".buy_fenlei a.ahover").removeClass("ahover");
             $(this).addClass("ahover");
