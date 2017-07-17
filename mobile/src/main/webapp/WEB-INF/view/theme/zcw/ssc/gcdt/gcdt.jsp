@@ -29,12 +29,11 @@
                 <a href="javascript:void(0);" class="ahover allcai-btn">
                     全部分类
                 </a>
-                <%--没有投注过不显示此项--%>
-                <c:if test="${not empty setLogUserGames}">
-                    <a href="javascript:void(0);" class="zjwgcai-btn">
-                        最近玩过
-                    </a>
-                </c:if>
+
+                <a href="javascript:void(0);" class="zjwgcai-btn">
+                    最近玩过
+                </a>
+
                 <a href="javascript:void(0);" class="gpcai-btn">
                     高频彩
                 </a>
@@ -52,12 +51,23 @@
                 </a>
             </div>
 
+            <c:if test="${setLogUserGames == null || fn:length(setLogUserGames) == 0}">
+                <div class="buy_main nullzjwgcai hide">
+                    <div class="index_tl">
+                        <span>
+                            您最近玩过的
+                        </span>
+                    </div>
+                </div>
+                <div class="buy_main no-right-record nullzjwgcai zjheigth hide"></div>
+            </c:if>
+
             <c:if test="${setLogUserGames != null || fn:length(setLogUserGames) != 0}">
                 <div class="buy_main zjwgcai">
                     <div class="index_tl">
-	     		<span>
-	     			您最近玩过的
-	     		</span>
+                        <span>
+                            您最近玩过的
+                        </span>
                     </div>
 
                     <ul class="buy_ul clearfix">
