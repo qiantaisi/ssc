@@ -51,7 +51,7 @@
                 </a>
             </div>
 
-            <c:if test="${not empty userSession}">
+            <c:if test="${not empty userSession && empty setLogUserGames}">
                 <div class="buy_main nullzjwgcai hide">
                     <div class="index_tl">
                         <span>

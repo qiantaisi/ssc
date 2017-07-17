@@ -2389,6 +2389,7 @@ $(function () {
         $(".zjwgcai-btn").click(function () {
             $(".buy_main").hide();
             $(".nullzjwgcai").show();
+            $(".zjwgcai").show();
             $(".buy_fenlei a.ahover").removeClass("ahover");
             $(this).addClass("ahover");
         });
