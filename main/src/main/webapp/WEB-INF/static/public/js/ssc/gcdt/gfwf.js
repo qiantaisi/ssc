@@ -9153,7 +9153,7 @@ function renderZhuihao() {
     ajaxRequest({
         url: CONFIG.BASEURL + "ssc/ajaxGetLatestOpenTimeList.json",
         data: {
-            playGroupId: playGroupId,   // 全局变量
+            playGroupId: playGroupId   // 全局变量
         },
         success: function(json) {
             if (json.result != 1) {
