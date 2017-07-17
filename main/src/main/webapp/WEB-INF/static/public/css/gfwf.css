@@ -651,4 +651,36 @@
     text-indent: 10px;
     cursor: pointer;
 }
-.selectMode_gfwf{margin-left:10px;}
+
+.selectMode_gfwf {
+    margin-left: 10px;
+}
+
+.tzInsertTemplate td {
+    padding-top: 25px!important;
+}
+
+.tzInsertTemplate h4 {
+    position: relative;
+    font-weight: normal;
+    color: #555;
+    height: 48px;
+    line-height: 0 !important;
+}
+
+.tzInsertTemplate .txt-select {
+    padding-top: 8px;
+}
+
+.tzInsertTemplate .txt-select input{
+    float: left;
+    margin-left: 15%;
+}
+
+.tzInsertTemplate .errorTxt{
+    position: absolute;
+    left: 30%;
+    top: 90%;
+    color:red;
+    font-size: 12px;
+}

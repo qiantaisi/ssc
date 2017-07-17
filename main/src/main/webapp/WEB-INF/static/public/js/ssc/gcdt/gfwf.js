@@ -566,12 +566,28 @@ function showloadTxtTemplate1() {
         return;
     }
     var tiShi_template = '\
-    <div class="tzTishiTemplate del-Tishi">\
+    <div class="tzTishiTemplate del-Tishi tzInsertTemplate">\
         <h3>文件载入</h3>\
         <span id="block_close"></span>\
         <table style="width: 100%">\
-        <input type="file" id="file" name="file" size="30">\
-        <input type="button" name="button1" value="导入" onclick="ajaxSubmit();"><br><br>\
+             <tobody>\
+                 <tr>\
+                     <td>\
+                        <h4>\
+                              <span class="txtinfo">请选择你要载入的文件</span>\
+                        </h4>\
+                        <h4 class="txt-select">\
+                              <input type="file" id="file" name="file" size="30" value="未选择任何文件">\
+                              <span class="errorTxt"></span>\
+                        </h4>\
+                     </td>\
+                 </tr>\
+                 <tr>\
+                    <td class="btns">\
+                        <button type="button" onclick="ajaxSubmit()">导入文件</button>\
+                    </td>\
+                  </tr>\
+             </tobody>\
         </table>\
     </div>\
     ';
@@ -581,9 +597,11 @@ function showloadTxtTemplate1() {
         type: 1,
         title: false,
         closeBtn: 0,
-        area: ['615px', '300px'], //宽高
+        area: ['536px', '256px'], //宽高
         content: tiShi_template
     });
+
+    $(".tzInsertTemplate").parent().parent().css({"border":"6px solid #ccc","border-radius":"8px"});
     $("#block_close").click(function(){
         closeLayerInsert();
     });
@@ -592,7 +610,7 @@ function showloadTxtTemplate1() {
 function ajaxSubmit() {
     if(typeof(FileReader)=="undefined")
     {
-        alert("你的浏览器不支持文件读取");
+       alert("你的浏览器不支持文件读取");
        return;
     }
     var file=document.getElementById("file").files[0];
@@ -601,7 +619,7 @@ function ajaxSubmit() {
 
     var arr = ["txt","csv"];
     //取出上传文件的扩展名
-    var index = name.lastIndexOf(".")
+    var index = name.lastIndexOf(".");
     var ext = name.substr(index+1);
     //循环比较
     for(var i=0;i<arr.length;i++)
@@ -619,12 +637,16 @@ function ajaxSubmit() {
         reader.readAsText(file);
         reader.onload=function(data)
         {
-            var tt=document.getElementById("textarea1")
+            var tt=document.getElementById("textarea1");
             tt.innerHTML=this.result;
         }
     }else
     {
-        alert("文件名不合法,只能上传txt和csv格式");
+        $(".tzInsertTemplate .errorTxt").html("文件名不合法,只能上传txt格式");
+        var removeSpan = setInterval(function () {
+            $(".tzInsertTemplate .errorTxt").remove();
+            clearInterval(removeSpan);
+        },5000);
         return;
     }
     closeLayerInsert();
