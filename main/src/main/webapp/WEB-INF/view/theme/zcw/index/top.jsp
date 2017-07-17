@@ -12,10 +12,7 @@
         <div class="left head_top_lf">
             <marquee scrollamount="3" scrolldelay="100" direction="left" onmouseover="this.stop();"
                      onmouseout="this.start();" onclick="HotNewsHistory();">
-
-
-     敬请各位会员注意：公司入款账号【工商银行】【冶廷虎1001********5788】账户已经停用...
-
+                     敬请各位会员注意：公司入款账号【工商银行】【冶廷虎1001********5788】账户已经停用...
             </marquee>
         </div>
         <c:choose>
@@ -30,7 +27,6 @@
             <c:otherwise>
                 <div class="right head_top_rt clearfix">
                     <a href="<%=basePath%>main.html" class="left">首页</a>
-
                     <a href="javascript:void(0)" class="loginbtn left blink" data-color="#ff4800|#333">登录</a>
                     <a href="<%=basePath%>register.html" class="left head_top_reg">免费注册</a>
                     <span class="left">|</span>
