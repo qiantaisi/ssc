@@ -62,6 +62,12 @@ function closeClearBetTemplate(isReset) {
         layer.close(layerInfo);
         layerInfo = null;
     }
+
+    if (typeof layerInfoInsert != 'undefined' && layerInfoInsert != null) {
+        layer.close(layerInfoInsert);
+        layerInfoInsert = null;
+    }
+
     if (typeof layerTishi1 != 'undefined' && layerTishi1 != null) {
         layer.close(layerTishi1);
         layerTishi1 = null;
