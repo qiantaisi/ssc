@@ -2388,8 +2388,8 @@ $(function () {
         //最近玩过
         $(".zjwgcai-btn").click(function () {
             $(".buy_main").hide();
-            $(".zjwgcai").show();
             $(".nullzjwgcai").show();
+            $(".zjwgcai").show();
             $(".buy_fenlei a.ahover").removeClass("ahover");
             $(this).addClass("ahover");
         });
