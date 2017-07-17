@@ -300,6 +300,12 @@ function getSscSubPage(url) {
                 return;
             }
 
+            var gfwfPlayId =  $(".playPlIdBtn.acti").data("play_id");
+            //判断是否官方玩法的玩法id
+            if(gfwfPlayId != null){
+                playId = gfwfPlayId;
+            }
+
             // 读取赔率
             getSscPlayPl(playId);
 
@@ -356,7 +362,6 @@ $(function() {
         $(".Playmethod ul li p span.acti").removeClass("acti");
         $(this).parent().addClass("acti");
         getSscSubPage($(this).data("url"));
-
 
     });
 
@@ -648,6 +653,7 @@ function getBetZjDetails(){
 
 function getJjsm() {
     var container = $(".jjsm");
+    console.log("=---=" + playId);
     ajaxRequest({
         url: CONFIG.BASEURL + "ssc/ajaxGetSscPlayJjDescription.json",
         data: {
@@ -665,6 +671,7 @@ function getJjsm() {
         }
     });
 }
+
 function getKjhm(){
     var container = $(".kjhm");
     ajaxRequest({

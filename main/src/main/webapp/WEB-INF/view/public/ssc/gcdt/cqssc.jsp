@@ -130,6 +130,7 @@
 <script>
     // 全局彩种ID
     var playGroupId = 1;
+    var playId = null;
     // 全局官方玩法赔率
     <c:if test="${not empty playPlListJson}">
     var gfwfPlJson = ${playPlListJson};
