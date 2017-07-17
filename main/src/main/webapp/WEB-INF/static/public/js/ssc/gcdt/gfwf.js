@@ -493,6 +493,7 @@ function cancel() {
 var layerInfo = null;
 var layerTishi1 = null;
 var layerTishi2 = null;
+var layerInfoInsert = null;
 
 //投注信息框
 function showloadTxtTemplate() {
@@ -556,6 +557,79 @@ function showloadTxtTemplate() {
         area: ['615px', '428px'], //宽高
         content: loadTxt_template
     });
+}
+
+
+//导入文本信息框
+function showloadTxtTemplate1() {
+    if (layerInfoInsert != null) {
+        return;
+    }
+    var tiShi_template = '\
+    <div class="tzTishiTemplate del-Tishi">\
+        <h3>文件载入</h3>\
+        <span id="block_close"></span>\
+        <table style="width: 100%">\
+        <input type="file" id="file" name="file" size="30">\
+        <input type="button" name="button1" value="导入" onclick="ajaxSubmit();"><br><br>\
+        </table>\
+    </div>\
+    ';
+
+    //页面层
+    layerInfoInsert = layer.open({
+        type: 1,
+        title: false,
+        closeBtn: 0,
+        area: ['615px', '300px'], //宽高
+        content: tiShi_template
+    });
+    $("#block_close").click(function(){
+        closeLayerInsert();
+    });
+}
+
+function ajaxSubmit() {
+    if(typeof(FileReader)=="undefined")
+    {
+        alert("你的浏览器不支持文件读取");
+       return;
+    }
+    var file=document.getElementById("file").files[0];
+    var flag = false; //状态
+    var name=file.name;
+
+    var arr = ["txt","csv"];
+    //取出上传文件的扩展名
+    var index = name.lastIndexOf(".")
+    var ext = name.substr(index+1);
+    //循环比较
+    for(var i=0;i<arr.length;i++)
+    {
+        if(ext == arr[i])
+        {
+            flag = true; //一旦找到合适的，立即退出循环
+            break;
+        }
+    }
+    //条件判断
+    if(flag)
+    {
+        var reader=new FileReader();
+        reader.readAsText(file);
+        reader.onload=function(data)
+        {
+            var tt=document.getElementById("textarea1")
+            tt.innerHTML=this.result;
+        }
+    }else
+    {
+        alert("文件名不合法,只能上传txt和csv格式");
+        return;
+    }
+    closeLayerInsert();
+
+
 }
 
 //清除注单内容提示框
@@ -9320,6 +9394,13 @@ function closeLayer2(){
     if (layerTishi2 != null) {
         layer.close(layerTishi2);
         layerTishi2 = null;
+    }
+}
+
+function closeLayerInsert(){
+    if (layerInfoInsert != null) {
+        layer.close(layerInfoInsert);
+        layerInfoInsert = null;
     }
 }
 
