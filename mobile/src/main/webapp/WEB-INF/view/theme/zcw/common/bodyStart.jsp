@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170421">
     <link rel="stylesheet" href="${resPath}css/vipcp-style.css?v=20170527_1">
     <link rel="stylesheet" href="${resPath}css/test.css?v=20170706"/>
-    <link rel="stylesheet" href="${resPath}css/gcdt.css?v=20170717_1"/>
+    <link rel="stylesheet" href="${resPath}css/gcdt.css?v=20170717_0"/>
     <link rel="stylesheet" type="text/css" href="${resPath}css/login-register.css?v=20170709">
 
     <jsp:include page="../../../public/common/customTheme.jsp" />
