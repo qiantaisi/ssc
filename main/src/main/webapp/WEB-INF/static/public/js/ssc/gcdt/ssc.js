@@ -653,7 +653,7 @@ function getBetZjDetails(){
 
 function getJjsm() {
     var container = $(".jjsm");
-    console.log("=---=" + playId);
+
     ajaxRequest({
         url: CONFIG.BASEURL + "ssc/ajaxGetSscPlayJjDescription.json",
         data: {
