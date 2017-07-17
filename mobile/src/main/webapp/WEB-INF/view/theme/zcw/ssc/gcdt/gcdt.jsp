@@ -29,9 +29,12 @@
                 <a href="javascript:void(0);" class="ahover allcai-btn">
                     全部分类
                 </a>
-                <a href="javascript:void(0);" class="zjwgcai-btn">
-                    最近玩过
-                </a>
+                <%--没有投注过不显示此项--%>
+                <c:if test="${not empty setLogUserGames}">
+                    <a href="javascript:void(0);" class="zjwgcai-btn">
+                        最近玩过
+                    </a>
+                </c:if>
                 <a href="javascript:void(0);" class="gpcai-btn">
                     高频彩
                 </a>
