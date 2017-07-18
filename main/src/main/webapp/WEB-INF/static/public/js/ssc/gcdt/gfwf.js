@@ -9245,27 +9245,93 @@ function getSelectMode() {
     return;
 }
 
+$(function(){
+    //隐藏追号模板
+    $("#zhInfo").hide();
+
+    $("#zhInfo .tabs ul li").click(function() {
+        $("#zhInfo .tabs ul li.acti").removeClass("acti");
+        $(this).addClass("acti");
+        $("#zhInfo .list_wrap_zh").hide();
+        var obj = $("#zhInfo .list_wrap_zh").eq($(this).index());
+        $(obj).show();
+
+        var operType = $(this).data("opertype");
+        if (operType == 'tbzh') {
+
+        } else if (operType == 'fbzh') {
+
+        }
+
+    });
+
+});
+
 // 最近最新开奖时间（默认50期），用于追号模板渲染
 function renderZhuihao(obj) {
-    ajaxRequest({
-        url: CONFIG.BASEURL + "ssc/ajaxGetLatestOpenTimeList.json",
-        data: {
-            playGroupId: playGroupId   // 全局变量
-        },
-        success: function(json) {
-            if (json.result != 1) {
-                return;
-            }
+    var spStauts = $(obj).parent().attr("sp");
+    $("#zhInfo").show();
+    $("#zhInfo .list_wrap_zh").hide();
+    var f_Or_t = $(obj).find(".imgZh").hasClass('imgZhCancle');
 
-            $("#zhInfo").show();
-            $("#zhInfo .list_wrap_zh").eq(1).show();
-            $(obj).parent().attr("sp", "1");
-
-            // 模板逻辑处理.......
-//                var html = "";
+    if(spStauts == 1){
+        if(f_Or_t == true){
+            $(obj).children().removeClass('imgZhCancle');
         }
-    });
+        $(obj).parent().attr("sp", "0");
+        $("#zhInfo").hide();
+    } else if(spStauts == 0){
+        if(f_Or_t == false){
+            $(obj).children().addClass('imgZhCancle');
+        }
+        $(obj).parent().attr("sp", "1");
+        $("#zhInfo .list_wrap_zh").eq(0).show();
+    }
+
+
+    var container = $(".tbzh");
+    var html = template('tbzhTemplate', obj);
+    $(container).html(html);
+    selectedCheckbox(10);
+    changeBgColor();
+    $("#lt_trace_qissueno").val(10);  //默认选中第10期选项
+//     ajaxRequest({
+//         url: CONFIG.BASEURL + "ssc/ajaxGetLatestOpenTimeList.json",
+//         data: {
+//             playGroupId: playGroupId   // 全局变量
+//         },
+//         beforeSend: function(){
+//             $(container).html('<li style="width:100%;padding:15px;text-align:center;"><img src="' + CONFIG.RESURL + 'img/base_loading.gif"/>');
+//         },success: function(json) {
+//             if (json.result != 1) {
+//                 return;
+//             }
+//
+//
+//
+//             // 模板逻辑处理.......
+// //                var html = "";
+//         }
+//     });
 }
+
+//选中checkbox
+function selectedCheckbox(countLi){
+    for(var i = 0; i < countLi; i++){
+        $(".content_heigth .ulzh li:eq("+ i +") input").attr("checked","checked");
+    }
+}
+
+//改变选中checkbox 行的背景颜色
+function changeBgColor(){
+    $(".ulzh li").each(function () {
+        var flagStatus = $(this).find('input').is(':checked');
+        if(flagStatus == true){
+            $(this).addClass('checkbox_selected');
+        }
+    })
+}
+
 
 // 获取当前选中位数
 function getWeiStr(arr){

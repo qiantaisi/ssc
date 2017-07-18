@@ -778,8 +778,6 @@ function getBetDetails(){
 }
 
 $(function() {
-    //隐藏追号模板
-    $("#zhInfo").hide();
 
     $("#bottomInfo .tabs ul li").click(function() {
         $("#bottomInfo .tabs ul li.acti").removeClass("acti");
