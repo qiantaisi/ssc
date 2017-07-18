@@ -56,6 +56,10 @@ public class ArticleResult extends CommonResult {
          * 修改时间
          */
         private Date updateTime;
+        /**
+         * 类别
+         */
+        private Integer categoryId;
 
         public Long getId() {
             return id;
@@ -120,6 +124,10 @@ public class ArticleResult extends CommonResult {
         public void setUpdateTime(Date updateTime) {
             this.updateTime = updateTime;
         }
+
+        public Integer getCategoryId() { return categoryId; }
+
+        public void setCategoryId(Integer categoryId) { this.categoryId = categoryId; }
     }
 
 }
