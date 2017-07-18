@@ -130,7 +130,7 @@
             {{/if}}
         </li>
         {{/each}}
-        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.openHyzx('lsjl/tzjl')">查看更多</a></li>
+        <li style="width:100%;text-align:center;"><a  href="javascript:void(0);" onclick="openHyzx('member/lsjl.html?module=tzjl')">查看更多</a></li>
     </ul>
 </script>
 <script type="text/html" id="wdzjTemplate">
@@ -169,7 +169,7 @@
             {{/if}}
         </li>
         {{/each}}
-        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.openHyzx('lsjl/tzjl')">查看更多</a></li>
+        <li style="width:100%;text-align:center;"><a  href="javascript:void(0);" onclick="openHyzx('member/lsjl.html?module=tzjl')">查看更多</a></li>
     </ul>
 </script>
 <script type="text/html" id="kjhmTemplate">
@@ -197,6 +197,25 @@
     </ul>
 </script>
 <script>
+    function openHyzx(module) {
+        if (typeof module == 'undefined') {
+            module = '';
+        }
+        if (typeof $.cookie("uid") == 'undefined' || typeof $.cookie("token") == 'undefined') {
+            alert("请先登录");
+            if ($("#loginAccount1").length > 0) {
+                $("#loginAccount1").focus();
+                return;
+            }
+            window.location.href = "<%=basePath%>main.html";
+            return;
+        }
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + module;
+        }
+        windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);
+    }
     <%--var plInterval;--%>
     <%--var plstauts;--%>
 
