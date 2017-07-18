@@ -613,14 +613,18 @@ function ajaxSubmit() {
        alert("你的浏览器不支持文件读取");
        return;
     }
-    var file=document.getElementById("file").files[0];
+    var file = document.getElementById("file").files[0];
+    if(typeof file == "undefined"){
+        return;
+    }
     var flag = false; //状态
-    var name=file.name;
+    var name = file.name;
+    var removeSpan = null;
 
-    var arr = ["txt","csv"];
+    var arr = ["txt", "csv"];
     //取出上传文件的扩展名
     var index = name.lastIndexOf(".");
-    var ext = name.substr(index+1);
+    var ext = name.substr(index + 1);
     //循环比较
     for(var i=0;i<arr.length;i++)
     {
@@ -630,27 +634,24 @@ function ajaxSubmit() {
             break;
         }
     }
+    console.log(flag);
     //条件判断
-    if(flag)
-    {
-        var reader=new FileReader();
+    if (flag) {
+        var reader = new FileReader();
         reader.readAsText(file);
-        reader.onload=function(data)
-        {
-            var tt=document.getElementById("textarea1");
-            tt.innerHTML=this.result;
+        reader.onload = function (data) {
+            var tt = document.getElementById("textarea1");
+            tt.innerHTML = this.result;
         }
-    }else
-    {
+    } else {
         $(".tzInsertTemplate .errorTxt").html("文件名不合法,只能上传txt格式");
-        var removeSpan = setInterval(function () {
+        removeSpan = setInterval(function () {
             $(".tzInsertTemplate .errorTxt").remove();
             clearInterval(removeSpan);
-        },5000);
+        }, 5000);
         return;
     }
     closeLayerInsert();
-
 
 }
 
