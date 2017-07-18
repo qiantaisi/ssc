@@ -420,7 +420,7 @@ function getOpenCodeHistory() {
 
                 if (lastNumberOpening) {
                     if (lastNumberOpening_intervalFlag == null) {
-                        $("#lastNumber").html('第' + value.number + '期<var>开奖中</var>');
+                        $("#lastNumber").html('<a href="javascript:void(0)" onclick="gdkj('+playGroupId+')">更多</a>&nbsp;&nbsp;第 ' + value.number + '期<var>开奖中</var>');
 
                         // 随机号码
                         if (typeof randomNumber == 'function') {
@@ -440,7 +440,10 @@ function getOpenCodeHistory() {
                         lastNumberOpening_intervalFlag = null;
                     }
 
-                    $("#lastNumber").html($(".box1_name h2").html() + '第<var>' + value.number + '</var>期');
+                    $("#lastNumber").html('<a href="javascript:void(0)" onclick="gdkj('+playGroupId+')">更多</a>&nbsp;&nbsp;第<var>' + value.number + '</var>期');
+/*
+                    '<a href="javascript:void(0)" onclick="gdkj('+playGroupId+'">更多</a>'+ '第<var>' + value.number + '</var>期')
+*/
                     if (typeof renderLastOpenCode == 'function') {
                         renderLastOpenCode(openCodeArr);
                     }
@@ -490,6 +493,82 @@ $(function() {
     tabs_cg(".game_name .box2_stage p span i", ".game_name .box2_stage .number", "click", "acti", "", "", 0);
     getOpenCodeHistory();
 });
+function gdkj(playGroupId) {
+
+    var str="";
+    ajaxRequest({
+        url: CONFIG.BASEURL + "ssc/getPlanOpenDataHistory10.json",
+        data: {
+            playGroupId: playGroupId
+        },
+        beforeSend: function() {
+            parent.showLoading();
+        },
+        success: function (json) {
+            if (json.result != 1) {
+                return;
+            }
+            parent.hideLoading();
+            if (json.sscHistoryList.length > 0) {
+                var value = json.sscHistoryList[0];
+                var openCodeArr = value.openCode ? value.openCode.split(",") : [];
+                var lastNumberOpening = openCodeArr.length == 0 ? true : false;  // 是否开奖中
+                var openCode = value.openCode;
+                if (typeof openCode != "undefined"||openCode!=null) {
+                    openCode = openCode.split(",").join(' ');
+                }
+                        if(lastNumberOpening){
+                            var str = '<p style="font-weight: bold;padding-bottom: 5px;width:200px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>'+value.number+'</var>期</span><span>开奖中</span></p>';
+                        }else{
+                            var str = '<p style="font-weight: bold;padding-bottom: 5px;width:200px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>'+value.number+'</var>期</span><span class="apend">'+openCode+'</span></p>';
+                        }
+                /*var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"></p>';*/
+                var slist=json.sscHistoryList;
+                for(var i = 1;i < slist.length; i++) {
+                    var openCode=slist[i].openCode
+                    if (typeof openCode != "undefined"||openCode!=null) {
+                        openCode = openCode.split(",").join(' ');
+                    }
+                    str+=('<p>&nbsp;<span>第<var>'+slist[i].number+'</var>期</span>&nbsp;<span class="apend" >'+openCode+'</span></p>')
+                }
+
+                /*for(i in slist){
+                                str+=('<p>&nbsp;<span id="apeend">第<var>'+slist[i].number+'</var>期</span>&nbsp;<span>'+slist[i].openCode+'</span></p>')
+                       }*/
+                //询问框
+                 lid=layer.confirm(str, {
+                    btn: ['取消'], //按钮
+                    title: '历史开奖'
+                }, function(){
+                    layer.close(lid);
+                });
+
+            }
+
+
+        },
+
+       /* error: function() {
+            // 失败重试
+            setTimeout(function() {
+                gdkj()
+            }, 5000);
+        },
+        complete: function () {
+        }
+*/
+
+    });
+   /* $.each(betForm.sscBetList, function(index, value) {
+        str += '<p><span>[&nbsp;' + value.content + '&nbsp;]</span><span>&nbsp;@' + value.playPl + '&nbsp;X&nbsp;' + value.perMoney + '</span></p>';
+    });*/
+
+
+
+    $(".layui-layer-title").addClass('xzqd');
+    $(".layui-layer-close").css({'background': 'url(' + CONFIG.RESURL + 'img/ico_close.png) no-repeat'});
+}
+
 
 // 下注
 function xd() {
