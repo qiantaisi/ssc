@@ -606,7 +606,7 @@ function showloadTxtTemplate1() {
         closeLayerInsert();
     });
 }
-
+var removeSpan="";
 function ajaxSubmit() {
     if(typeof(FileReader)=="undefined")
     {
@@ -640,13 +640,13 @@ function ajaxSubmit() {
         var reader = new FileReader();
         reader.readAsText(file);
         reader.onload = function (data) {
-            var tt = document.getElementById("textarea1");
-            tt.innerHTML = this.result;
+            $(".content_tex").val(this.result);
+           /* tt.innerHTML = this.result;*/
         }
     } else {
         $(".tzInsertTemplate .errorTxt").html("文件名不合法,只能上传txt格式");
         removeSpan = setInterval(function () {
-            $(".tzInsertTemplate .errorTxt").remove();
+            $(".tzInsertTemplate .errorTxt").empty();
             clearInterval(removeSpan);
         }, 5000);
         return;
