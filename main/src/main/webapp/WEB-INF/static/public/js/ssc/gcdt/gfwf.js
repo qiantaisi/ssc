@@ -606,7 +606,7 @@ function showloadTxtTemplate1() {
         closeLayerInsert();
     });
 }
-
+var removeSpan="";
 function ajaxSubmit() {
     if(typeof(FileReader)=="undefined")
     {
@@ -646,7 +646,7 @@ function ajaxSubmit() {
     } else {
         $(".tzInsertTemplate .errorTxt").html("文件名不合法,只能上传txt格式");
         removeSpan = setInterval(function () {
-            $(".tzInsertTemplate .errorTxt").remove();
+            $(".tzInsertTemplate .errorTxt").empty();
             clearInterval(removeSpan);
         }, 5000);
         return;
