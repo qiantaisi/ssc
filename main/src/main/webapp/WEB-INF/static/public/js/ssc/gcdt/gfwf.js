@@ -640,8 +640,8 @@ function ajaxSubmit() {
         var reader = new FileReader();
         reader.readAsText(file);
         reader.onload = function (data) {
-            var tt = document.getElementById("textarea1");
-            tt.innerHTML = this.result;
+            $(".content_tex").val(this.result);
+           /* tt.innerHTML = this.result;*/
         }
     } else {
         $(".tzInsertTemplate .errorTxt").html("文件名不合法,只能上传txt格式");
