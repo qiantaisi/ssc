@@ -1209,3 +1209,53 @@
 </script>
 <c:import url="../common/popupDiv.jsp"/>
 <c:import url="../common/bodyEnd.jsp"/>
+<div class="gl_left gl">
+
+    <span class="gl_close gl_1"></span>
+
+    <a href="<%=basePath%>register.html"><img src="${resPath}img/gl_left.gif"/></a>
+
+</div>
+
+<div class="gl_right gl">
+
+    <span class="gl_close gl_2"></span>
+
+    <a href="${kefuUrl}" target="_blank" ><img src="${resPath}img/gl_right.gif"/></a>
+
+</div>
+
+<style>
+
+    .gl{ width: 115px; height: 200px; position: fixed; top: 30%;}
+
+
+    .gl a{ display: block; width: 100%; height: 100%;}
+
+    .gl_left{ left: 0;}
+
+    .gl img{ display: block; width: 100%;}
+
+    .gl_right{ right: 0;}
+
+    .gl_close{ display: block; width: 20px; height: 20px; cursor: pointer; position: absolute; top: 0;}
+
+    .gl_1{ right: 0;}
+
+    .gl_2{ left: 0;}
+
+</style>
+
+<script>
+
+    $(function(){
+
+        $(".gl_close").click(function(){
+
+            $(this).parent().hide();
+
+        })
+
+    })
+
+</script>
