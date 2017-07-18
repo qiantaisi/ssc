@@ -735,6 +735,7 @@ function getBetDetails(){
             $(container).html('<li style="width:100%;padding:15px;text-align:center;"><img src="' + CONFIG.RESURL + 'img/base_loading.gif"/>');
         },
         success: function(json) {
+
             if (json.result == -101) {
                 $(container).html('<li style="width:100%;padding:15px;text-align:center;" id="BetLogin"> 请先&nbsp;&nbsp;<span class="spanlogin">登录</span>&nbsp;&nbsp;还没有帐号？&nbsp;&nbsp;<span class="spanreg"><a href="' + CONFIG.BASEURL + '?u=' + CONFIG.BASEURL + 'register.html" target="_blank">注册</a></span>一个</li>');
 
@@ -777,6 +778,9 @@ function getBetDetails(){
 }
 
 $(function() {
+    //隐藏追号模板
+    $("#zhInfo").hide();
+
     $("#bottomInfo .tabs ul li").click(function() {
         $("#bottomInfo .tabs ul li.acti").removeClass("acti");
         $(this).addClass("acti");

@@ -9246,7 +9246,7 @@ function getSelectMode() {
 }
 
 // 最近最新开奖时间（默认50期），用于追号模板渲染
-function renderZhuihao() {
+function renderZhuihao(obj) {
     ajaxRequest({
         url: CONFIG.BASEURL + "ssc/ajaxGetLatestOpenTimeList.json",
         data: {
@@ -9257,18 +9257,9 @@ function renderZhuihao() {
                 return;
             }
 
-            var sp = $("#bottomInfo .tabs ul .hy-zh").attr('open');
-            if(sp == 0){
-                $("#bottomInfo .tabs ul li").eq(2).trigger("click");
-                $("#bottomInfo .tabs ul .hy-zh").removeClass('hide');
-                $("#bottomInfo .tabs ul .hy-zh").attr('open',1);
-                // $("#bottomInfo .tabs ul .hy-zh").addClass('acti');
-            } else if(sp == 1){
-                $("#bottomInfo .tabs ul li").eq(0).trigger("click");
-                $("#bottomInfo .tabs ul .hy-zh").addClass('hide');
-                $("#bottomInfo .tabs ul .hy-zh").attr('open',1);
-
-            }
+            $("#zhInfo").show();
+            $("#zhInfo .list_wrap_zh").eq(1).show();
+            $(obj).parent().attr("sp", "1");
 
             // 模板逻辑处理.......
 //                var html = "";

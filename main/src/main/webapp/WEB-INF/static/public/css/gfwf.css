@@ -684,3 +684,22 @@
     color:red;
     font-size: 12px;
 }
+
+/*追号按钮*/
+.wdzhli{
+    position: relative;
+    padding-left: 20px;
+}
+
+.imgZh{
+    position: absolute;
+    background: url(../img/ico51.png);
+    width: 12px;
+    height: 11px;
+    top: 31%;
+    left: 30%;
+}
+
+.imgZhCancle{
+    
+}
