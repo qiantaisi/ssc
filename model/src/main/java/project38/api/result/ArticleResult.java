@@ -33,6 +33,10 @@ public class ArticleResult extends CommonResult {
          */
         private String title;
         /**
+         * 类型
+         */
+        private String name;
+        /**
          * 关键词
          */
         private String crux;
@@ -128,6 +132,10 @@ public class ArticleResult extends CommonResult {
         public Integer getCategoryId() { return categoryId; }
 
         public void setCategoryId(Integer categoryId) { this.categoryId = categoryId; }
+
+        public String getName() { return name; }
+
+        public void setName(String name) { this.name = name; }
     }
 
 }
