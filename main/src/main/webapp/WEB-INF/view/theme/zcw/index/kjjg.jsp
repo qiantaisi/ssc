@@ -59,16 +59,16 @@
                         <a href="javascript:void(0)" data-playgroupid="16">两分时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="17">五分时时彩</a>
                         <%--<a href="javascript:void(0)" style="visibility: hidden">占位</a>--%>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="18">江苏快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="19">湖北快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="20">安徽快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="21">吉林快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="10">重庆幸运农场</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="11">广东快乐十分</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="4">体彩排列3</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="5">福彩3D</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="7">幸运28</a>
-                        <a href="javascript:void(0)" style="margin-top: 2px;" data-playgroupid="8" class="last">北京快乐8</a>
+                        <a href="javascript:void(0)" data-playgroupid="18">江苏快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="19">湖北快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="20">安徽快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="21">吉林快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="10">重庆幸运农场</a>
+                        <a href="javascript:void(0)" data-playgroupid="11">广东快乐十分</a>
+                        <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
+                        <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
+                        <a href="javascript:void(0)" data-playgroupid="7">幸运28</a>
+                        <a href="javascript:void(0)" data-playgroupid="8" class="last">北京快乐8</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_2">
@@ -85,12 +85,12 @@
                         <a href="javascript:void(0)" data-playgroupid="17">五分时时彩</a>
                         <a href="javascript:void(0)" data-playgroupid="18">江苏快3</a>
                         <a href="javascript:void(0)" data-playgroupid="19">湖北快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="20">安徽快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="21">吉林快3</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="10">重庆幸运农场</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="11">广东快乐十分</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="7">幸运28</a>
-                        <a href="javascript:void(0)" style="margin-top: 1px;" data-playgroupid="8">北京快乐8</a>
+                        <a href="javascript:void(0)" data-playgroupid="20">安徽快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="21">吉林快3</a>
+                        <a href="javascript:void(0)" data-playgroupid="10">重庆幸运农场</a>
+                        <a href="javascript:void(0)" data-playgroupid="11">广东快乐十分</a>
+                        <a href="javascript:void(0)" data-playgroupid="7">幸运28</a>
+                        <a href="javascript:void(0)" data-playgroupid="8">北京快乐8</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide" id="subNav_3">
@@ -321,8 +321,8 @@
         str += '<ul>';
 
         var date = new Date();
-        var now = date.getTime();
-        date.setDate(date.getDate() + 1);
+        var now = date.getTime();  //getTime() 返回距 1970 年 1 月 1 日之间的毫秒数
+        date.setDate(date.getDate() + 1); //setDate() 用于设置一个月的某一天，getDate()可返回月份的某一天
         var todayEnd = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " 0:0:0";
         todayEnd = (new Date(todayEnd)).getTime();
         var leftTime = Math.floor((todayEnd - now) / 1000);

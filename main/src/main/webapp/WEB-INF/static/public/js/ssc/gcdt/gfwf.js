@@ -9245,36 +9245,116 @@ function getSelectMode() {
     return;
 }
 
-// 最近最新开奖时间（默认50期），用于追号模板渲染
-function renderZhuihao() {
-    ajaxRequest({
-        url: CONFIG.BASEURL + "ssc/ajaxGetLatestOpenTimeList.json",
-        data: {
-            playGroupId: playGroupId   // 全局变量
-        },
-        success: function(json) {
-            if (json.result != 1) {
-                return;
-            }
+$(function(){
+    //隐藏追号模板
+    $("#zhInfo").hide();
 
-            var sp = $("#bottomInfo .tabs ul .hy-zh").attr('open');
-            if(sp == 0){
-                $("#bottomInfo .tabs ul li").eq(2).trigger("click");
-                $("#bottomInfo .tabs ul .hy-zh").removeClass('hide');
-                $("#bottomInfo .tabs ul .hy-zh").attr('open',1);
-                // $("#bottomInfo .tabs ul .hy-zh").addClass('acti');
-            } else if(sp == 1){
-                $("#bottomInfo .tabs ul li").eq(0).trigger("click");
-                $("#bottomInfo .tabs ul .hy-zh").addClass('hide');
-                $("#bottomInfo .tabs ul .hy-zh").attr('open',1);
+    $("#zhInfo .tabs ul li").click(function() {
+        $("#zhInfo .tabs ul li.acti").removeClass("acti");
+        $(this).addClass("acti");
+        $("#zhInfo .list_wrap_zh").hide();
+        var objLi = $("#zhInfo .list_wrap_zh").eq($(this).index());
+        $(objLi).show();
 
-            }
-
-            // 模板逻辑处理.......
-//                var html = "";
+        var operType = $(this).data("opertype");
+        if (operType == 'tbzh') {
+            var objtbzh = $("#zhbtn");
+            renderZhuihao('tbzh', objtbzh);
+        } else if (operType == 'fbzh') {
+            var objfbzh = $("#zhbtn");
+            renderZhuihao('fbzh', objfbzh);
         }
+
     });
+
+});
+
+// 最近最新开奖时间（默认10期），用于追号模板渲染
+function renderZhuihao(strZh, obj) {
+    var spStauts = $(obj).parent().attr("sp");
+
+    //是追加按钮点击执行
+    if(strZh == null){
+        $("#zhInfo").show();
+        $("#zhInfo .list_wrap_zh").hide();
+        var f_Or_t = $(obj).find(".imgZh").hasClass('imgZhCancle');
+
+        if(spStauts == 1){
+            if(f_Or_t == true){
+                $(obj).children().removeClass('imgZhCancle');
+            }
+            $(obj).parent().attr("sp", "0");
+            $("#zhInfo").hide();
+        } else if(spStauts == 0){
+            if(f_Or_t == false){
+                $(obj).children().addClass('imgZhCancle');
+            }
+            $(obj).parent().attr("sp", "1");
+            $("#zhInfo .list_wrap_zh").eq(0).show();
+        }
+    }
+
+
+    if (strZh == null || strZh == 'tbzh') {
+        var container = $(".tbzh");
+        var html = template('tbzhTemplate');
+        $(container).html(html);
+        selectedCheckbox(10);
+        changeBgColor();
+        $("#lt_trace_qissueno").val(10);  //默认选中第10期选项
+    } else {
+        var container = $(".fbzh");
+        var html = template('fbzhTemplate');
+        $(container).html(html);
+        selectedCheckboxFbzh(10);
+        changeBgColor();
+        $("#rt_trace_qissueno").val(10);  //默认选中第10期选项
+    }
+
+
+//     ajaxRequest({
+//         url: CONFIG.BASEURL + "ssc/ajaxGetLatestOpenTimeList.json",
+//         data: {
+//             playGroupId: playGroupId   // 全局变量
+//         },
+//         beforeSend: function(){
+//             $(container).html('<li style="width:100%;padding:15px;text-align:center;"><img src="' + CONFIG.RESURL + 'img/base_loading.gif"/>');
+//         },success: function(json) {
+//             if (json.result != 1) {
+//                 return;
+//             }
+//
+//
+//
+//             // 模板逻辑处理.......
+// //                var html = "";
+//         }
+//     });
 }
+
+//选中checkbox
+function selectedCheckbox(countLi){
+    for(var i = 0; i < countLi; i++){
+        $(".content_heigth .ulzh li:eq("+ i +") input").attr("checked","checked");
+    }
+}
+
+function selectedCheckboxFbzh(countLi){
+    for(var i = 0; i < countLi; i++){
+        $(".reConHei .ulzh li:eq("+ i +") input").attr("checked","checked");
+    }
+}
+
+//改变选中checkbox 行的背景颜色
+function changeBgColor(){
+    $(".ulzh li").each(function () {
+        var flagStatus = $(this).find('input').is(':checked');
+        if(flagStatus == true){
+            $(this).addClass('checkbox_selected');
+        }
+    })
+}
+
 
 // 获取当前选中位数
 function getWeiStr(arr){

@@ -246,6 +246,26 @@ public class SscController extends CacheController {
         return result;
     }
 
+    @RequestMapping(value = "/getPlanOpenDataHistory10.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public SscHistoryResult2 getPlanOpenDataHistory10(Integer size, Long playGroupId ) {
+        SscHistoryResult2 result = new SscHistoryResult2();
+        String companyShortName = this.getCompanyShortName();
+        try {
+            // 默认10条
+            if (size == null) {
+                size = 10;
+            }
+
+            result = ApiUtils.getPlanOpenDataHistory(size, playGroupId, companyShortName);
+        } catch (Exception e) {
+            log.error(this, e);
+            result.setResult(-1000);
+            result.setDescription("服务器错误");
+        }
+        return result;
+    }
+
     @RequestMapping(value = "/getSscOpenCode.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public SscOpenDataResult getSscOpenCode(Long playGroupId, String number) {
