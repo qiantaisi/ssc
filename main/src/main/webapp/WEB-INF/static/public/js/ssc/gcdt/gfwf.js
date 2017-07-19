@@ -434,9 +434,11 @@ function buyBtn() {
                 mode: $(this).data("bet_mode"),
                 fandian: $(this).data("bet_fandian")
             });
+
             betForm.totalMoney += parseFloat($(this).data("bet_total_money"));
             betForm.totalZhushu += $(this).data("bet_zhushu");
         });
+        betForm.totalMoney = (betForm.totalMoney).toFixed(3);
         betForm = JSON.stringify(betForm);
         // 解决双引号冲突
         tmpBetContent = betForm;
@@ -9272,6 +9274,14 @@ $(function(){
 
 // 最近最新开奖时间（默认10期），用于追号模板渲染
 function renderZhuihao(strZh, obj) {
+    var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
+    if(len <= 0){
+        showTishi2Template();
+        $(".del-TishiType2 .des-txt").empty();
+        $(".del-TishiType2 .des-txt").html("请先添加投注内容");
+        return;
+    }
+
     var spStauts = $(obj).parent().attr("sp");
 
     //是追加按钮点击执行
@@ -9332,12 +9342,22 @@ function renderZhuihao(strZh, obj) {
         changeContent();
     });
 
+    //输入倍数失去焦点计算
+    $("#startBeiShuZh").blur(function(){
+        var valStr = $("#startBeiShuZh").val();
+        if(typeof valStr == "undefined" || valStr == "" || valStr == null){
+            $("#startBeiShuZh").val("1");
+        }
+        changeContent();
+    });
+
     //选择选项
     $(document).on("change",'select#lt_zh_qishu',function(){
         var optionVal = parseInt($(this).val());
         selectedCheckbox(optionVal);
 
     });
+
 
 
 //     ajaxRequest({
@@ -9412,7 +9432,7 @@ function changeBgColor(){
 //改变被选中checkbox行的内容
 function changeContent(){
     $(".ulzh li").each(function () {
-        var flagStatus = $(this).find('input').is(':checked');
+        var flagStatus = $(this).find('input').prop('checked');
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
         } else {

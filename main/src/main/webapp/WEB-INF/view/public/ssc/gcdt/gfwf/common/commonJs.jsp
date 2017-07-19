@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170719_1"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170719_121"></script>
 <script type="text/html" id="template_jRange">
     <div class="add_spot">
         <div class="left releft">
@@ -81,7 +81,10 @@
         &nbsp;&nbsp;追号总金额: <span class="money zhredtxt">50</span> 元
         &nbsp;&nbsp;追号计划: 起始倍数&nbsp;
         <span class="startBeiShu zhredtxt">
-            <input name="startBeiShuZh" id="startBeiShuZh" value="1" size="3"/>
+            <input name="startBeiShuZh" id="startBeiShuZh" value="1" size="3"
+                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                   onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}"
+            />
         </span>
         追号期数
         <span class="zhqiShu zhredtxt">
@@ -323,15 +326,21 @@
         &nbsp;&nbsp;追号总金额: <span class="money zhredtxt">50</span> 元
         &nbsp;&nbsp;追号计划: 隔&nbsp;
         <span class="startBeiShu zhredtxt">
-                    <input name="rt_trace_diff" id="rt_trace_diff" value="1" size="3"/>
+                    <input name="rt_trace_diff" id="rt_trace_diff" value="1" size="3"
+                           onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}"
+                    />
         </span>期&nbsp;&nbsp;
         倍&nbsp;ⅹ
         <span class="zhqiShu zhredtxt">
-                    <input name="rt_trace_times_diff" id="rt_trace_times_diff" value="2" size="3"/>
+                    <input name="rt_trace_times_diff" id="rt_trace_times_diff" value="2" size="3"
+                           onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}"
+                    />
         </span>
         追号期数
         <span class="zhqiShu zhredtxt">
-                    <input name="lt_trace_count_input" id="rt_trace_count_input" value="10" size="3"/>
+                    <input name="lt_trace_count_input" id="rt_trace_count_input" value="10" size="3" disabled="disabled"/>
         </span>
     </div>
     <div class="content_heigth reConHei">
