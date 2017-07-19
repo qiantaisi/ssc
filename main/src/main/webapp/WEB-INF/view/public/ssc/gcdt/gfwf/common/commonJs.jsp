@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170719_1132"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170719_1"></script>
 <script type="text/html" id="template_jRange">
     <div class="add_spot">
         <div class="left releft">
@@ -67,7 +67,7 @@
 <script type="text/html" id="tbzhTemplate">
     <div class="headZh">
         <span class="headZh-zhqs">追号期数：</span>
-        <select id="lt_trace_qissueno">
+        <select id="lt_zh_qishu">
             <option value="">请选择</option>
             <option value="5">第5期</option>
             <option value="10">第10期</option>
@@ -81,18 +81,18 @@
         &nbsp;&nbsp;追号总金额: <span class="money zhredtxt">50</span> 元
         &nbsp;&nbsp;追号计划: 起始倍数&nbsp;
         <span class="startBeiShu zhredtxt">
-                    <input name="lt_trace_times_same" id="lt_trace_times_same" value="1" size="3"/>
+            <input name="startBeiShuZh" id="startBeiShuZh" value="1" size="3"/>
         </span>
         追号期数
         <span class="zhqiShu zhredtxt">
-                    <input name="lt_trace_count_input" id="lt_trace_count_input" value="10" size="3"/>
-                </span>
+            <input name="lt_trace_count_input" id="lt_trace_count_input" value="10" size="3" disabled="disabled"/>
+        </span>
     </div>
     <div class="content_heigth">
     <ul class="ulzh">
 
         <li class="list-li">
-            <input type="checkbox" class="oneCheckbox"/>
+            <input type="checkbox" class="oneCheckbox" id="testbtn"/>
             <span class="content_qs">20170102023</span>
             <span class="nosel">
                 <input type="text" name="lt_trace_times_20170718066" value="0"/>
@@ -309,7 +309,7 @@
 <script type="text/html" id="fbzhTemplate">
     <div class="headZh">
         <span class="headZh-zhqs">追号期数：</span>
-        <select id="rt_trace_qissueno">
+        <select id="rt_zh_qishu">
             <option value="">请选择</option>
             <option value="5">第5期</option>
             <option value="10">第10期</option>

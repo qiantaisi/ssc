@@ -634,7 +634,7 @@ function ajaxSubmit() {
             break;
         }
     }
-    console.log(flag);
+
     //条件判断
     if (flag) {
         var reader = new FileReader();
@@ -9267,6 +9267,7 @@ $(function(){
 
     });
 
+
 });
 
 // 最近最新开奖时间（默认10期），用于追号模板渲染
@@ -9300,16 +9301,43 @@ function renderZhuihao(strZh, obj) {
         var html = template('tbzhTemplate');
         $(container).html(html);
         selectedCheckbox(10);
-        changeBgColor();
-        $("#lt_trace_qissueno").val(10);  //默认选中第10期选项
+        $("#lt_zh_qishu").val(10);  //默认选中第10期选项
     } else {
         var container = $(".fbzh");
         var html = template('fbzhTemplate');
         $(container).html(html);
         selectedCheckboxFbzh(10);
-        changeBgColor();
-        $("#rt_trace_qissueno").val(10);  //默认选中第10期选项
+        $("#rt_zh_qishu").val(10);  //默认选中第10期选项
     }
+
+
+    //单行点击选中事件
+    $(".content_heigth .ulzh li input[type='checkbox']").click(function () {
+        var selectedbox = $(this).is(":checked");
+        var beishu = $("#startBeiShuZh").val();
+
+        if (!selectedbox) {
+            $(this).parent().removeClass('checkbox_selected');
+            $(this).parent().find('input[type="text"]').attr("disabled", "disabled");
+            $(this).parent().find('input[type="text"]').val('0');
+        } else {
+            $(this).parent().addClass('checkbox_selected');
+            $(this).parent().find('input[type="text"]').removeAttr("disabled");
+            $(this).parent().find('input[type="text"]').val(beishu);
+        }
+    });
+
+    //输入倍数时改变选中倍数input值
+    $("#startBeiShuZh").keyup(function () {
+        changeContent();
+    });
+
+    //选择选项
+    $(document).on("change",'select#lt_zh_qishu',function(){
+        var optionVal = parseInt($(this).val());
+        selectedCheckbox(optionVal);
+
+    });
 
 
 //     ajaxRequest({
@@ -9334,9 +9362,23 @@ function renderZhuihao(strZh, obj) {
 
 //选中checkbox
 function selectedCheckbox(countLi){
+    $(".ulzh li").each(function () {
+        var flagStatus = $(this).find('input').is(':checked');
+        if(flagStatus){
+            $(this).find("input[type='checkbox']").removeAttr("checked");
+        }
+    });
     for(var i = 0; i < countLi; i++){
-        $(".content_heigth .ulzh li:eq("+ i +") input").attr("checked","checked");
+        $(".content_heigth .ulzh li:eq("+ i +") input").prop("checked",true);
     }
+
+    $(".ulzh li").each(function () {
+        var flagStatus = $(this).find('input').prop('checked');
+        console.log(flagStatus);
+    });
+
+    changeBgColor();
+    changeContent();
 }
 
 function selectedCheckboxFbzh(countLi){
@@ -9348,13 +9390,37 @@ function selectedCheckboxFbzh(countLi){
 //改变选中checkbox 行的背景颜色
 function changeBgColor(){
     $(".ulzh li").each(function () {
-        var flagStatus = $(this).find('input').is(':checked');
-        if(flagStatus == true){
+        var flagStatus = $(this).find('input').prop('checked');
+        if (flagStatus == true) {
             $(this).addClass('checkbox_selected');
+        } else {
+            var hasSelect = $(this).hasClass('checkbox_selected');
+            if (hasSelect) {
+                $(this).removeClass('checkbox_selected');
+            }
         }
-    })
+
+        // 更换input背景
+        if (!flagStatus) {
+            $(this).find('input[type="text"]').attr("disabled","disabled");
+        } else {
+            $(this).find('input[type="text"]').removeAttr("disabled");
+        }
+    });
 }
 
+//改变被选中checkbox行的内容
+function changeContent(){
+    $(".ulzh li").each(function () {
+        var flagStatus = $(this).find('input').is(':checked');
+        if (!flagStatus) {
+            $(this).find('input[type="text"]').val('0');
+        } else {
+            var beishu = $("#startBeiShuZh").val();
+            $(this).find('input[type="text"]').val(beishu);
+        }
+    });
+}
 
 // 获取当前选中位数
 function getWeiStr(arr){

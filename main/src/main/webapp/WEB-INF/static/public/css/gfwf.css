@@ -747,7 +747,7 @@
     margin-left: 32px;
 }
 
-#lt_trace_qissueno, #rt_trace_qissueno{
+#lt_zh_qishu, #rt_zh_qishu{
     width: 70px;
     height: 24px;
     position: relative;
@@ -759,7 +759,7 @@
     border: 0;
 }
 
-#lt_trace_qissueno option, #rt_trace_qissueno option{
+#lt_zh_qishu option, #rt_zh_qishu option{
     font-weight: normal;
     display: block;
     white-space: pre;
@@ -771,7 +771,7 @@
     color:red;
 }
 
-#lt_trace_times_same, #rt_trace_times_same{
+#startBeiShuZh{
     height: 22px;
     width: 60px;
     border-radius: 5px;
@@ -848,4 +848,8 @@
     text-align: center;
     background: #EDEDED;
     border: 0;
+}
+
+.nosel input[type="text"]:disabled {
+    background-color: rgb(235, 235, 228)
 }
