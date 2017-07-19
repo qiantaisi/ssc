@@ -684,3 +684,168 @@
     color:red;
     font-size: 12px;
 }
+
+/*追号按钮*/
+.wdzhli{
+    position: relative;
+    padding-left: 20px;
+}
+
+.imgZh{
+    position: absolute;
+    background: url(../img/ico51.png);
+    width: 12px;
+    height: 11px;
+    top: 31%;
+    left: 30%;
+}
+
+.imgZhCancle{
+    background: url(../img/ico51-jian.png) no-repeat!important;
+    height: 3px;
+    top: 43%;
+}
+
+.Betting .list_wrap_zh{
+    width: 985px;
+    background: #fff;
+    float: left;
+    margin-left: 7px;
+    display: table;
+    margin-bottom: 15px;
+}
+.reBetting{
+    margin-bottom: 20px;
+}
+
+/*追号内容样式*/
+.content_heigth{
+    height:350px;
+    overflow-x: auto;
+}
+
+.ulzh li{
+    display: block;
+    width: 100%;
+}
+
+.ulzh li.list-li{
+    line-height: 30px;
+    border-bottom: 1px dashed #e1e1e1;
+    background: white;
+}
+
+.headZh{
+    width: 100%;
+    height: 50px!important;
+    line-height: 50px!important;
+    border-bottom: 1px solid #e1e1e1!important;
+
+}
+
+.headZh-zhqs{
+    margin-left: 32px;
+}
+
+#lt_trace_qissueno, #rt_trace_qissueno{
+    width: 70px;
+    height: 24px;
+    position: relative;
+    top: -1px;
+    margin: 0 8px;
+    color: #e84f31;
+    text-align: center;
+    background: #EDEDED;
+    border: 0;
+}
+
+#lt_trace_qissueno option, #rt_trace_qissueno option{
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0 2px 1px;
+}
+
+.zhredtxt{
+    color:red;
+}
+
+#lt_trace_times_same, #rt_trace_times_same{
+    height: 22px;
+    width: 60px;
+    border-radius: 5px;
+    margin: 0 1px;
+
+    position: relative;
+    top: -1px;
+    color: #e84f31;
+    text-align: center;
+    background: #EDEDED;
+    border: 0;
+}
+
+#lt_trace_count_input, #rt_trace_count_input{
+    height: 22px;
+    width: 36px;
+    border-radius: 5px;
+    margin: 0 1px;
+
+    position: relative;
+    top: -1px;
+    color: #e84f31;
+    text-align: center;
+    background: #EDEDED;
+    border: 0;
+}
+
+.nosel input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 50px;
+    height: 18px;
+}
+
+.oneCheckbox{
+    margin-left: 20px;
+}
+
+.content_qs{
+    margin: 0 128px;
+}
+
+.content_money{
+    margin: 0 100px;
+}
+
+.checkbox_selected{
+    background: rgba(234, 114, 26, 0.10)!important;
+    color: #e84f31!important;
+}
+
+#rt_trace_diff{
+    height: 22px;
+    width: 60px;
+    border-radius: 5px;
+    margin: 0 1px;
+
+    position: relative;
+    top: -1px;
+    color: #e84f31;
+    text-align: center;
+    background: #EDEDED;
+    border: 0;
+}
+
+#rt_trace_times_diff{
+    height: 22px;
+    width: 60px;
+    border-radius: 5px;
+    margin: 0 1px;
+    position: relative;
+    top: -1px;
+    color: #e84f31;
+    text-align: center;
+    background: #EDEDED;
+    border: 0;
+}

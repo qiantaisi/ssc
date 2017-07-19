@@ -1146,6 +1146,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .Resultt .latyout .wrap_select{margin-top: 27px;width: 96%;height: 45px;border-bottom: 1px dotted #adadad;}
 .Resultt .latyout .wrap_select a{border: 1px solid #dcdcdc;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;font-size: 12px;float: left;width: 72.5px;line-height: 20px;height: 20px;text-align: center;background:-webkit-linear-gradient(top,#FFF,#e8e8e8);color: #222222;margin-right:4px;}
 .Resultt .latyout .corl1 a{color: #666666;}
+.Resultt .latyout .at a{margin-bottom:2px;}
 .Resultt .latyout .wrap_select a.acti{background: #e93030;color: #fff;}
 .Resultt .latyout .wrap_select a.last{margin-right: 0;}
 

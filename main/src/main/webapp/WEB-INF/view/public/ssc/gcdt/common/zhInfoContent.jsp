@@ -6,16 +6,19 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<div class="Betting wid1" id="zhInfo">
+<div class="Betting wid1 reBetting" id="zhInfo">
     <div class="tabs">
         <ul>
-            <li class="hy-info" data-opertype="tbzh">同倍追号</li>
+            <li class="hy-info acti" data-opertype="tbzh">同倍追号</li>
             <li class="hy-info" data-opertype="fbzh">翻倍追号</li>
-
         </ul>
     </div>
-    <div class="list_wrap wdtz-list-rewith tbzh"></div>
-    <div class="list_wrap wdtz-list-rewith fbzh"></div>
+    <div class="list_wrap_zh wdtz-list-rewith tbzh">
+
+    </div>
+    <div class="list_wrap_zh wdtz-list-rewith fbzh">
+
+    </div>
 </div>
 
 
