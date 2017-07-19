@@ -9253,48 +9253,65 @@ $(function(){
         $("#zhInfo .tabs ul li.acti").removeClass("acti");
         $(this).addClass("acti");
         $("#zhInfo .list_wrap_zh").hide();
-        var obj = $("#zhInfo .list_wrap_zh").eq($(this).index());
-        $(obj).show();
+        var objLi = $("#zhInfo .list_wrap_zh").eq($(this).index());
+        $(objLi).show();
 
         var operType = $(this).data("opertype");
         if (operType == 'tbzh') {
-
+            var objtbzh = $("#zhbtn");
+            renderZhuihao('tbzh', objtbzh);
         } else if (operType == 'fbzh') {
-
+            var objfbzh = $("#zhbtn");
+            renderZhuihao('fbzh', objfbzh);
         }
 
     });
 
 });
 
-// 最近最新开奖时间（默认50期），用于追号模板渲染
-function renderZhuihao(obj) {
+// 最近最新开奖时间（默认10期），用于追号模板渲染
+function renderZhuihao(strZh, obj) {
     var spStauts = $(obj).parent().attr("sp");
-    $("#zhInfo").show();
-    $("#zhInfo .list_wrap_zh").hide();
-    var f_Or_t = $(obj).find(".imgZh").hasClass('imgZhCancle');
 
-    if(spStauts == 1){
-        if(f_Or_t == true){
-            $(obj).children().removeClass('imgZhCancle');
+    //是追加按钮点击执行
+    if(strZh == null){
+        $("#zhInfo").show();
+        $("#zhInfo .list_wrap_zh").hide();
+        var f_Or_t = $(obj).find(".imgZh").hasClass('imgZhCancle');
+
+        if(spStauts == 1){
+            if(f_Or_t == true){
+                $(obj).children().removeClass('imgZhCancle');
+            }
+            $(obj).parent().attr("sp", "0");
+            $("#zhInfo").hide();
+        } else if(spStauts == 0){
+            if(f_Or_t == false){
+                $(obj).children().addClass('imgZhCancle');
+            }
+            $(obj).parent().attr("sp", "1");
+            $("#zhInfo .list_wrap_zh").eq(0).show();
         }
-        $(obj).parent().attr("sp", "0");
-        $("#zhInfo").hide();
-    } else if(spStauts == 0){
-        if(f_Or_t == false){
-            $(obj).children().addClass('imgZhCancle');
-        }
-        $(obj).parent().attr("sp", "1");
-        $("#zhInfo .list_wrap_zh").eq(0).show();
     }
 
 
-    var container = $(".tbzh");
-    var html = template('tbzhTemplate', obj);
-    $(container).html(html);
-    selectedCheckbox(10);
-    changeBgColor();
-    $("#lt_trace_qissueno").val(10);  //默认选中第10期选项
+    if (strZh == null || strZh == 'tbzh') {
+        var container = $(".tbzh");
+        var html = template('tbzhTemplate');
+        $(container).html(html);
+        selectedCheckbox(10);
+        changeBgColor();
+        $("#lt_trace_qissueno").val(10);  //默认选中第10期选项
+    } else {
+        var container = $(".fbzh");
+        var html = template('fbzhTemplate');
+        $(container).html(html);
+        selectedCheckboxFbzh(10);
+        changeBgColor();
+        $("#rt_trace_qissueno").val(10);  //默认选中第10期选项
+    }
+
+
 //     ajaxRequest({
 //         url: CONFIG.BASEURL + "ssc/ajaxGetLatestOpenTimeList.json",
 //         data: {
@@ -9319,6 +9336,12 @@ function renderZhuihao(obj) {
 function selectedCheckbox(countLi){
     for(var i = 0; i < countLi; i++){
         $(".content_heigth .ulzh li:eq("+ i +") input").attr("checked","checked");
+    }
+}
+
+function selectedCheckboxFbzh(countLi){
+    for(var i = 0; i < countLi; i++){
+        $(".reConHei .ulzh li:eq("+ i +") input").attr("checked","checked");
     }
 }
 

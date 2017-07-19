@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="${resPath}jRange/jquery.range.css?v=20170402" type="text/css">
     <link rel="stylesheet" href="${resPath}css/global.css?v=1.0" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170428" type="text/css"><!--页面CSS-->
-    <link rel="stylesheet" href="${resPath}css/gfwf.css?v=20170718_12" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="${resPath}css/gfwf.css?v=20170718_1" type="text/css"><!--页面CSS-->
     <script src="${resPath}js/FancyZoom.js" language="JavaScript" type="text/javascript"></script>
     <script src="${resPath}js/FancyZoomHTML.js" language="JavaScript" type="text/javascript"></script>
     <jsp:include page="commonHeader.jsp" />

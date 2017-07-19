@@ -702,8 +702,8 @@
 
 .imgZhCancle{
     background: url(../img/ico51-jian.png) no-repeat!important;
-    height: 6px;
-    top: 41%;
+    height: 3px;
+    top: 43%;
 }
 
 .Betting .list_wrap_zh{
@@ -720,7 +720,7 @@
 
 /*追号内容样式*/
 .content_heigth{
-    height:500px;
+    height:350px;
     overflow-x: auto;
 }
 
@@ -747,7 +747,7 @@
     margin-left: 32px;
 }
 
-#lt_trace_qissueno{
+#lt_trace_qissueno, #rt_trace_qissueno{
     width: 70px;
     height: 24px;
     position: relative;
@@ -759,7 +759,7 @@
     border: 0;
 }
 
-#lt_trace_qissueno option{
+#lt_trace_qissueno option, #rt_trace_qissueno option{
     font-weight: normal;
     display: block;
     white-space: pre;
@@ -771,7 +771,7 @@
     color:red;
 }
 
-#lt_trace_times_same{
+#lt_trace_times_same, #rt_trace_times_same{
     height: 22px;
     width: 60px;
     border-radius: 5px;
@@ -785,7 +785,7 @@
     border: 0;
 }
 
-#lt_trace_count_input{
+#lt_trace_count_input, #rt_trace_count_input{
     height: 22px;
     width: 36px;
     border-radius: 5px;
@@ -821,4 +821,31 @@
 .checkbox_selected{
     background: rgba(234, 114, 26, 0.10)!important;
     color: #e84f31!important;
+}
+
+#rt_trace_diff{
+    height: 22px;
+    width: 60px;
+    border-radius: 5px;
+    margin: 0 1px;
+
+    position: relative;
+    top: -1px;
+    color: #e84f31;
+    text-align: center;
+    background: #EDEDED;
+    border: 0;
+}
+
+#rt_trace_times_diff{
+    height: 22px;
+    width: 60px;
+    border-radius: 5px;
+    margin: 0 1px;
+    position: relative;
+    top: -1px;
+    color: #e84f31;
+    text-align: center;
+    background: #EDEDED;
+    border: 0;
 }
