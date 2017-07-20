@@ -27,11 +27,11 @@ public class CouletResult extends CommonResult {
         /**
          * 左边宽度
          */
-        private String leftWidth;
+        private Double leftWidth;
         /**
          * 左边高度
          */
-        private String leftHeight;
+        private Double leftHeight;
         /**
          * 左边链接
          */
@@ -43,11 +43,11 @@ public class CouletResult extends CommonResult {
         /**
          * 右边宽度
          */
-        private String rightWidth;
+        private Double rightWidth;
         /**
          * 右边高度
          */
-        private String rightHeight;
+        private Double rightHeight;
         /**
          * 右边链接
          */
@@ -71,18 +71,18 @@ public class CouletResult extends CommonResult {
         public void setLeftImg(String leftImg) {
             this.leftImg = leftImg;
         }
-        public String getLeftWidth() {
+        public Double getLeftWidth() {
             return leftWidth;
         }
 
-        public void setLeftWidth(String leftWidth) {
+        public void setLeftWidth(Double leftWidth) {
             this.leftWidth = leftWidth;
         }
-        public String getLeftHeight() {
+        public Double getLeftHeight() {
             return leftHeight;
         }
 
-        public void setLeftHeight(String leftHeight) {
+        public void setLeftHeight(Double leftHeight) {
             this.leftHeight = leftHeight;
         }
         public String getLeftLink() {
@@ -99,18 +99,18 @@ public class CouletResult extends CommonResult {
         public void setRightImg(String rightImg) {
             this.rightImg = rightImg;
         }
-        public String getRightWidth() {
+        public Double getRightWidth() {
             return rightWidth;
         }
 
-        public void setRightWidth(String rightWidth) {
+        public void setRightWidth(Double rightWidth) {
             this.rightWidth = rightWidth;
         }
-        public String getRightHeight() {
+        public Double getRightHeight() {
             return rightHeight;
         }
 
-        public void setRightHeight(String rightHeight) {
+        public void setRightHeight(Double rightHeight) {
             this.rightHeight = rightHeight;
         }
         public String getRightLink() {
