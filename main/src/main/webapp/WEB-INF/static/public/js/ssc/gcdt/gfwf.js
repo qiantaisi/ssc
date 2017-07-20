@@ -9340,6 +9340,9 @@ function renderZhuihao(strZh, obj) {
         $(".zhqishutxt").html(num);
         $('.zhzjetxt').html(totelMoney * num);
 
+        changeContent();
+        changeContentFbzh();
+
     });
 
     //输入倍数时改变选中倍数input值
@@ -9498,6 +9501,7 @@ function changeContent(){
         var flagStatus = $(this).find('input').prop('checked');
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
+            $(this).find('.content_money').html('￥0.00');
         } else {
             var beishu = $("#startBeiShuZh").val();
             beishu = beishu == '' ? 1 : beishu;
