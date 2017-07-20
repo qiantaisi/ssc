@@ -1209,26 +1209,32 @@
 </script>
 <c:import url="../common/popupDiv.jsp"/>
 <c:import url="../common/bodyEnd.jsp"/>
+
 <div class="gl_left gl">
 
     <span class="gl_close gl_1"></span>
 
-    <a href="<%=basePath%>register.html"><img src="${resPath}img/gl_left.gif"/></a>
+    <div class="gls_1">
+
+        <p><a href="${kefuUrl}" target="_blank"><img src="${resPath}img/right_01.png"/></a></p>
+
+        <p> <a href="${kefuUrl}" target="_blank"><img src="${resPath}img/right_02.png"/></a></p>
+
+        <p><img src="${resPath}img/right_03.png"/></p>
+
+        <p class="gls_close"><img src="${resPath}img/right_04.png"/></p>
+
+    </div>
 
 </div>
 
-<div class="gl_right gl">
 
-    <span class="gl_close gl_2"></span>
-
-    <a href="${kefuUrl}" target="_blank" ><img src="${resPath}img/gl_right.gif"/></a>
-
-</div>
 
 <style>
 
-    .gl{ width: 115px; height: 200px; position: fixed; top: 30%;}
+    .gls_1 p{ margin: 0; padding: 0;}
 
+    .gl{ width: 125px; height: 200px; position: fixed; top: 30%;}
 
     .gl a{ display: block; width: 100%; height: 100%;}
 
@@ -1244,15 +1250,17 @@
 
     .gl_2{ left: 0;}
 
+    .gls_close{ cursor: pointer;}
+
 </style>
 
 <script>
 
     $(function(){
 
-        $(".gl_close").click(function(){
+        $(".gls_close").click(function(){
 
-            $(this).parent().hide();
+            $(this).parent().parent().hide();
 
         })
 
