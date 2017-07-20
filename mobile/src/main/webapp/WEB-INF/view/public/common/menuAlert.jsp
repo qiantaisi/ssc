@@ -32,14 +32,14 @@
 
     <span class="list-block">
         <ul class="ul">
-            <li>
+                <li style="height: 3rem">
                 <c:choose>
                     <c:when test="${not empty userSession}">
                         <div class="item-inner-r" style="background: #fffcef">
                     <span class="item-innerss" style="font-size: 0.7rem;font-weight: bold;">余额:</span><span style="color: red;font-size: 0.7rem;font-weight: bold; text-overflow:ellipsis;">${userSession.balance}元</span></div>
                     </c:when>
                 </c:choose>
-            </li>
+                </li>
             <li>
                 <a href="<%=basePath%>member/tzjl/list.html" class="item-content">
                     <div class="item-medias"><i class="icon bg-img-tzjl"></i></div>
@@ -747,14 +747,14 @@
                     </div>
                 </a>
             </li>
-            <li>
+
                 <div class="item-inner-r">
                     <div class="item-inner-re">
                     <span>今日输赢</span></div>
                     <div class="item-inner-re">
                     <span style="color:red ">(0.00)</span></div>
                 </div>
-            </li>
+
 
         </ul>
     </span>
