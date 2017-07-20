@@ -27,7 +27,7 @@
                 <div class="preloader"></div>
                 <div class="pull-to-refresh-arrow"></div>
             </div>
-            <div class="buttons-tab" id="buttonsTabList">
+            <div class="buttons-tab rebuttons-tab" id="buttonsTabList">
                 <c:choose>
                     <c:when test="${playGroupId == 4 || playGroupId == 5 || playGroupId == 6}">
                         <a href="#" class="tab-link button" data-id="btn-thisWeek"><span>本周</span></a>
