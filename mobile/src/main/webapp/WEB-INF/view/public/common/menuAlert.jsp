@@ -7,7 +7,25 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="bg"></div>
+<style>
+    .menu_alert{padding:0;left:initial;right:0;top:2.2rem;text-align:center;margin:0;width:9rem;}
+    .menu_alert .list-block .item-inner{font-size:0.65rem;padding:0;}
+    .menu_alert .list-block .item-inner:nth-child(1):after{border:none;}
+    .menu_alert .item-medias{display:none;}
+    .menu_alert .list-block .item-content{padding:0;}
+    .arrow-up{
+        width:0;
+        height:0;
+        border-left:0.7rem solid transparent;
+        border-right:0.7rem solid transparent;
+        border-bottom:0.7rem solid #fff;
+        margin:auto;
+        margin-left:7rem;
+        margin-right:0.6rem;
+    }
+</style>
 <div class="menu_alert">
+    <div class="arrow-up"></div>
     <span class="list-block">
         <ul>
             <li>
