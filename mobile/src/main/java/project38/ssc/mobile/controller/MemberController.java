@@ -1829,4 +1829,27 @@ public class MemberController extends BaseController {
 
         return this.renderPublicView("member/tkjl/detail", modelMap);
     }
+
+    /**
+     * 获取用户今日输赢和即时注单
+     *
+     * @return
+     */
+    @RequestMapping(value = "/ajaxGetJrsyAndJszd.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public String ajaxGetJrsyAndJszd() {
+        TodayWinOrLoseAndJszdResult result = new TodayWinOrLoseAndJszdResult();
+        try {
+            Long uid = this.getUid(httpServletRequest);
+            String token = this.getToken(httpServletRequest);
+            String companyShortName = this.getCompanyShortName();
+
+            result = ApiUtils.getJrsyAndJszd(uid, token, companyShortName);
+        } catch (Exception e) {
+            log.error(this, e);
+            result.setResult(-100);
+            result.setDescription("服务器错误");
+        }
+        return this.renderJson(result);
+    }
 }
