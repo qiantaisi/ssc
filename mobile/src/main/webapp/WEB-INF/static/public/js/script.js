@@ -4882,6 +4882,14 @@ $(function () {
         $(".cl-602 a").eq(0).trigger("click");
     });
 
+    // 官方玩法说明
+    $(document).on("pageInit","#page-wfsm-wfsm-gfwf",function(){
+        $("#ssc-parent-menu .wfsm-602 a").click(function () {
+            $(this).parent().find('.wfsm_color_select').removeClass('wfsm_color_select');
+            $(this).addClass('wfsm_color_select');
+        });
+    })
+
     //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-cqssc-gfwf", function (e, id, page) {
         initSscPage(1);
@@ -4897,7 +4905,7 @@ $(function () {
                     //执行官方玩法事件
                     gfwfEvent();
                     renderPlayName();
-                    $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+                    $(".page").find(".gfwf_xz").addClass("gfwf_wh");
                     $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
                     $(".page").find(".x_wrap").removeClass("Fixed");
                     $(".page").find(".gfwf_xz").removeClass("Fixed");

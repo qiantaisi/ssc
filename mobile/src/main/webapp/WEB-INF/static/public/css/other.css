@@ -1241,7 +1241,7 @@ input[type="number"] {
 
 .wfsm-img {
     padding: 8px 0px;
-    max-width:100%;
+    max-width: 100%;
 }
 
 .table-wfsm {
@@ -1261,12 +1261,13 @@ input[type="number"] {
     border: 1px #CCCCCC solid !important;
 }
 
-.cl-1301-gfwf{
+.cl-1301-gfwf {
     width: 100%;
     overflow: hidden;
     background-color: #fff;
 }
-.cl-1350-gfwf{
+
+.cl-1350-gfwf {
     padding: 0 15px;
 }
 
@@ -1286,16 +1287,19 @@ input[type="number"] {
     font-weight: bold;
     text-decoration: underline;
 }
-.wfsm-a a{
+
+.wfsm-a a {
     font-weight: bold;
     color: #7f2d00;
     text-decoration: underline;
 }
+
 .wfsm-top {
     height: 13px;
     clear: both;
     overflow: hidden;
 }
+
 .wfsm-tou1 {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1303,6 +1307,7 @@ input[type="number"] {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .wfsm-tou {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1311,6 +1316,7 @@ input[type="number"] {
     margin-top: 25px;
     position: relative;
 }
+
 .wfsm-tou a {
     background: url(../img/ico16.png) no-repeat;
     width: 55px;
@@ -1320,6 +1326,7 @@ input[type="number"] {
     left: 20px;
     top: -9px;
 }
+
 .wfsm-tou span {
     float: left;
     padding-left: 90px;
@@ -1328,6 +1335,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 49px;
 }
+
 .wfsm-tou1 span {
     float: left;
     padding-left: 90px;
@@ -1336,6 +1344,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 0px;
 }
+
 .wfsm-tou1 a {
     background: url(../img/cz/cz-5.png) no-repeat;
     display: block;
@@ -1348,6 +1357,7 @@ input[type="number"] {
     z-index: 1000;
     right: 320px;
 }
+
 .wfsm-tou2 span {
     float: left;
     padding-left: 90px;
@@ -1356,6 +1366,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 0px;
 }
+
 .wfsm-tou2 a {
     background: url(../img/cz/cz-9.png) no-repeat;
     display: block;
@@ -1368,6 +1379,7 @@ input[type="number"] {
     z-index: 1000;
     right: 320px;
 }
+
 .wfsm-tou2 {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1375,6 +1387,7 @@ input[type="number"] {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .wfsm-tou3 span {
     float: left;
     padding-left: 90px;
@@ -1383,6 +1396,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 0px;
 }
+
 .wfsm-tou3 a {
     background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy11.png) no-repeat;
     display: block;
@@ -1395,6 +1409,7 @@ input[type="number"] {
     z-index: 1000;
     right: 320px;
 }
+
 .wfsm-tou3 {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1402,6 +1417,7 @@ input[type="number"] {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .wfsm-tou4 span {
     float: left;
     padding-left: 90px;
@@ -1410,6 +1426,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 0px;
 }
+
 .wfsm-tou4 a {
     background: url(../img/cz/cz-13.png) no-repeat;
     display: block;
@@ -1422,6 +1439,7 @@ input[type="number"] {
     z-index: 1000;
     right: 320px;
 }
+
 .wfsm-tou4 {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1429,6 +1447,7 @@ input[type="number"] {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .wfsm-tou5 span {
     float: left;
     padding-left: 90px;
@@ -1437,6 +1456,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 0px;
 }
+
 .wfsm-tou5 a {
     background: url(../img/cz/cz-2.png) no-repeat;
     display: block;
@@ -1449,6 +1469,7 @@ input[type="number"] {
     z-index: 1000;
     right: 320px;
 }
+
 .wfsm-tou5 {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1456,6 +1477,7 @@ input[type="number"] {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .wfsm-tou6 span {
     float: left;
     padding-left: 90px;
@@ -1464,6 +1486,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 0px;
 }
+
 .wfsm-tou6 a {
     background: url(../img/cz/cz-17.png) no-repeat;
     display: block;
@@ -1476,6 +1499,7 @@ input[type="number"] {
     z-index: 1000;
     right: 320px;
 }
+
 .wfsm-tou6 {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1483,6 +1507,7 @@ input[type="number"] {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .wfsm-tou7 span {
     float: left;
     padding-left: 90px;
@@ -1491,6 +1516,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 0px;
 }
+
 .wfsm-tou7 a {
     background: url(../img/cz/cz-3.png) no-repeat;
     display: block;
@@ -1503,6 +1529,7 @@ input[type="number"] {
     z-index: 1000;
     right: 320px;
 }
+
 .wfsm-tou7 {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1510,6 +1537,7 @@ input[type="number"] {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .wfsm-tou8 span {
     float: left;
     padding-left: 90px;
@@ -1518,6 +1546,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 0px;
 }
+
 .wfsm-tou8 a {
     background: url(http://zcw.cpxitong.com:8080/mobile/static/public/img/buy_09.png) no-repeat;
     display: block;
@@ -1530,6 +1559,7 @@ input[type="number"] {
     z-index: 1000;
     right: 320px;
 }
+
 .wfsm-tou8 {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1537,6 +1567,7 @@ input[type="number"] {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .wfsm-tou9 span {
     float: left;
     padding-left: 90px;
@@ -1545,6 +1576,7 @@ input[type="number"] {
     font-weight: bold;
     line-height: 0px;
 }
+
 .wfsm-tou9 a {
     background: url(../img/cz/cz-9.png) no-repeat;
     display: block;
@@ -1557,6 +1589,7 @@ input[type="number"] {
     z-index: 1000;
     right: 320px;
 }
+
 .wfsm-tou9 {
     background: url(../img/wfsm-08.png) no-repeat;
     width: 400px;
@@ -1564,3 +1597,48 @@ input[type="number"] {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
+.wfsm_600 {
+    height: 1.7rem;
+    width: 100%;
+    background: #fff;
+    overflow-x: scroll;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+/*.wfsm_601 {*/
+    /*border-bottom: 2px solid #f42023 !important;*/
+    /*color: #f42023 !important;*/
+/*}*/
+
+.wfsm-602 a {
+    display: inline-block;
+    height: 100%;
+    padding: 0 .5rem;
+    color: #a3a3a3;
+    height: 1.8rem;
+    line-height: 1.8rem;
+}
+
+.wfsm-602 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 3.1rem
+}
+
+.wfsm_color_select{
+    border-bottom: 2px solid #f42023!important;
+    color: #f42023!important;
+}
+/*.wfsm-602 a.wfsm_601 {*/
+    /*border-bottom: 2px solid #fa6200 !important;*/
+    /*color: #fa6200;*/
+/*}*/
+
+/*#wfsm .wfsm-602 a.wfsm_601 {*/
+    /*border-bottom: 2px solid #f42023 !important;*/
+    /*color: #f42023 !important;*/
+/*}*/
+

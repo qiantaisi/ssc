@@ -14,11 +14,11 @@
 <div class="page-group re-bg-group">
     <div class="page page-current re-background" id="page-gcdt">
         <header class="bar bar-nav">
-            <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
+            <a class="button button-link button-nav pull-left gcdt_1 fanhui" href="javascript:void(0)">
                 <span class="icon icon-left"></span>
                 返回
             </a>
-            <h1 class="title" style="font-size:22px">
+            <h1 class="title gcdt_1">
                 ${webCompanyName}购彩大厅
             </h1>
         </header>
