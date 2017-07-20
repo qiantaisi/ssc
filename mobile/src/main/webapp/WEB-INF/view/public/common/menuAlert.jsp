@@ -7,13 +7,16 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="bg"></div>
+
 <div class="menu_alert">
+    <span class="arrows"></span>
     <span class="list-block">
         <ul>
             <li>
                 <c:choose>
                     <c:when test="${not empty userSession}">
-                    <span class="item-inner">余额:</span><span class="userMoney">${userSession.balance}元</span>
+                        <div class="item-inner-r" style="background: #fffcef">
+                    <span class="item-innerss">余额:</span><span style="color: red" class="userMoney">${userSession.balance}元</span></div>
                     </c:when>
                 </c:choose>
             </li>
@@ -725,16 +728,14 @@
                 </a>
             </li>
             <li>
-                <div class="item-medias"><i class="icon bg-img-zxkf3"></i></div>
-                <div class="item-inner">
-                    <div class="item-inners">今日输赢</div>
+                <div class="item-inner-r">
+                    <div class="item-inner-re">
+                    <span>今日输赢</span></div>
+                    <div class="item-inner-re">
+                    <span style="color:red ">(0.00)</span></div>
                 </div>
             </li>
-            <li>
-                <div class="item-medias"><i class="icon bg-img-zxkf3"></i></div>
-                <div class="item-inner">
-                    <div class="item-inners">今日输赢</div>
-                </div>
-            </li>
+
         </ul>
+    </span>
 </div>
