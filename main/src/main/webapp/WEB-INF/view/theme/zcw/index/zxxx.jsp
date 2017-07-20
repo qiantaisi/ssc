@@ -19,7 +19,7 @@
     <div class="container login_nr">
         <div class="login_nr_t clearfix">
             <div class="login_nr_t_lf">
-                <h2 style="text-align: center">${Article.article.title}</h2>
+                <h2 style="text-align: center">${Article.article.name}</h2>
             </div>
 
         </div>
