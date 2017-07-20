@@ -134,4 +134,6 @@ public class ApiConstant {
 
     public static String API_ART_DETAIL = API_DOMAIN + "webSetting/getArticle.json"; //获取咨询详情
 
+    public static String API_MEMBER_GET_JRSY_AND_JSZD = API_DOMAIN + "member/getJrsyAndJszd.json"; // 获取用户今日输赢和即时注单
+
 }
