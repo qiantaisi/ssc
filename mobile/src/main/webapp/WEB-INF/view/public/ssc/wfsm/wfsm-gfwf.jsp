@@ -47,25 +47,25 @@
             </h1>
         </header>
         <div class="buttons-tab cl-701" id="buttonsTabList" style="top: 2.1rem">
-            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="button"
+            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="button wfsm_cd"
                data-id="btn-bqxq"><span>传统模式</span></a>
-            <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="active button"
+            <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="active button wfsm_cd"
                data-id="btn-gdqc" style="height: 2.2rem"><span>官方模式</span></a>
             <%--<a href="<%=basePath%>ssc/wfsm/lskj.html?playGroupId=${playGroupId}" class="button"--%>
             <%--data-id="btn-gdqc"><span>官方模式</span></a>--%>
         </div>
-        <div class="page page-current" id="page-gcdt-cqssc" style="height: 3.9rem; top: 2.1rem">
+        <div class="page page-current" id="page-gcdt-cqssc-wfsm" style="height: 3.9rem; top: 2.1rem">
             <header class="bar bar-nav">
             </header>
             <div class="content">
-                <div class="cl-600">
-                    <div class="cl-602">
+                <div class="wfsm_600" id="ssc-parent-menu">
+                    <div class="wfsm-602">
                         <a href="javascript:;" data-type="page"
-                           onclick="javascript:document.getElementById('test1').scrollIntoView()" class="wfsm">定位胆</a>
+                           onclick="javascript:document.getElementById('test1').scrollIntoView()" class="wfsm_601">定位胆</a>
                         <a href="javascript:;" data-type="page"
-                           onclick="javascript:document.getElementById('test2').scrollIntoView()" class="wfsm">五星</a>
+                           onclick="javascript:document.getElementById('test2').scrollIntoView()" class="wfsm_601">五星</a>
                         <a href="javascript:;" data-type="page"
-                           onclick="javascript:document.getElementById('test3').scrollIntoView()" class="wfsm">四星</a>
+                           onclick="javascript:document.getElementById('test3').scrollIntoView()" class="wfsm_601">四星</a>
                         <a href="javascript:;" data-type="page"
                            onclick="javascript:document.getElementById('test4').scrollIntoView()">后三</a>
                         <a href="javascript:;" data-type="page"

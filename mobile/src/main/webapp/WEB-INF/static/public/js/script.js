@@ -22,7 +22,8 @@ $(function () {
     // 使用template.helper(name, callback)注册公用辅助方法
     template.helper('dateFormat', function (date, format) {
         return dateFormat(date, format);
-    });
+    })
+
 
     // 返回按钮
     $(".bar-nav .fanhui").click(function () {
@@ -4879,8 +4880,37 @@ $(function () {
     });
     $(document).on("pageInit", "#page-gcdt-cqssc", function (e, id, page) {
         initSscPage(1);
+// 首页弹框登录按钮
+        $('.menubtn').click(function(){
+            ajaxRequest({
+                url: config.basePath + "ssc/ajaxGetDataHistory.json",
+                data: {},
+                success:function (obj) {
+                    
+                }
+            });
+
+            $(".bg").show();
+            $(".menu_alert").show();
+        });
+        $('.bg').click(function(){
+            $(".bg").hide();
+            $(".menu_alert").hide();
+        });
+        $('.cha').click(function(){
+            $(".bg").hide();
+            $(".menu_alert").hide();
+        });
         $(".cl-602 a").eq(0).trigger("click");
     });
+
+    // 官方玩法说明
+    $(document).on("pageInit","#page-wfsm-wfsm-gfwf",function(){
+        $("#ssc-parent-menu .wfsm-602 a").click(function () {
+            $(this).parent().find('.wfsm_color_select').removeClass('wfsm_color_select');
+            $(this).addClass('wfsm_color_select');
+        });
+    })
 
     //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-cqssc-gfwf", function (e, id, page) {
@@ -4897,7 +4927,7 @@ $(function () {
                     //执行官方玩法事件
                     gfwfEvent();
                     renderPlayName();
-                    $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+                    $(".page").find(".gfwf_xz").addClass("gfwf_wh");
                     $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
                     $(".page").find(".x_wrap").removeClass("Fixed");
                     $(".page").find(".gfwf_xz").removeClass("Fixed");
