@@ -24,7 +24,7 @@
             <%--<a class="yxsm" href="<%=basePath%>ssc/kjjl/bqxq.html?playGroupId=1">--%>
             <%--游戏说明--%>
             <%--</a>--%>
-            <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
+            <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
             <h1 class="title">
@@ -143,7 +143,7 @@
         </div>
     </div>
     <c:import url="../../common/leftSscPanel.jsp"/>
-    <c:import url="../../common/rightPanel.jsp">
+    <c:import url="../../common/menuAlert.jsp">
         <c:param name="playGroupId" value="1"/>
     </c:import>
 </div>

@@ -22,7 +22,8 @@ $(function () {
     // 使用template.helper(name, callback)注册公用辅助方法
     template.helper('dateFormat', function (date, format) {
         return dateFormat(date, format);
-    });
+    })
+
 
     // 返回按钮
     $(".bar-nav .fanhui").click(function () {
@@ -4879,6 +4880,27 @@ $(function () {
     });
     $(document).on("pageInit", "#page-gcdt-cqssc", function (e, id, page) {
         initSscPage(1);
+// 首页弹框登录按钮
+        $('.menubtn').click(function(){
+            ajaxRequest({
+                url: config.basePath + "ssc/ajaxGetDataHistory.json",
+                data: {},
+                success:function (obj) {
+                    
+                }
+            });
+
+            $(".bg").show();
+            $(".menu_alert").show();
+        });
+        $('.bg').click(function(){
+            $(".bg").hide();
+            $(".menu_alert").hide();
+        });
+        $('.cha').click(function(){
+            $(".bg").hide();
+            $(".menu_alert").hide();
+        });
         $(".cl-602 a").eq(0).trigger("click");
     });
 
