@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170720_12"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170720_123"></script>
 <script type="text/html" id="template_jRange">
     <div class="add_spot">
         <div class="left releft">
@@ -147,7 +147,7 @@
         <ul class="ulzh">
             {{each listContent}}
             <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
+                <input type="checkbox" class="oneCheckbox oneFbzhCheckbox" />
                 <span class="content_qs">{{$value.zhqishu}}</span>
                 <span class="nosel">
                   <input type="text" name="lt_trace_times_20170718066" value="{{$value.zhbeishu}}"/>
