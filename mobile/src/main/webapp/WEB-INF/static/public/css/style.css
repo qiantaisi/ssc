@@ -11,11 +11,24 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
     _background: #000;
     display: none;
 }
-
+.arrows{
+    display:inline-block;
+    border-color: #000000 #FFFFFF #FFFFFF;
+    border-style: solid;
+    border-width: 0 6px 10px;
+    height: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 0;
+    /* 可以使用相对定位调整三角号的位置
+    position: relative;
+    top: -1px;
+    */
+}
 .menu_alert {
     position: fixed;
     width: 200px;
-    padding: 12px;
+    padding: 15px;
     left: 90%;
     margin-left: -165px;
     z-index: 3000;
@@ -26,10 +39,55 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
 }
 .item-inners{
     margin: auto;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: bold;
     color: #4A5252;
 }
+
+.list-block .ul {
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 120px;
+    margin-left: 66px;
+}
+
+.item-innerss{
+    padding-right: .75rem;
+    position: relative;
+    width: 100%;
+    padding-bottom: .35rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.item-inner-re span{
+    margin: auto;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #548ae4;
+    text-align: center;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.item-inner-r{
+    height: 3rem;
+    background: #6a6a6a;
+}
+
 .list-block .item-medias {
     display: -webkit-box;
     display: -webkit-flex;
