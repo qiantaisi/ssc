@@ -12,15 +12,15 @@
 <div class="page-group">
     <div class="page page-current" id="page-kjjl-all">
         <header class="bar bar-nav rekjcl-1">
-            <a href="javascript:void(0)" class="button button-link button-nav pull-left fanhui">
+            <a href="javascript:void(0)" class="button button-link button-nav pull-left fanhui cpkj_1">
                 <span class="icon icon-left reicon"></span>
                 返回
             </a>
-            <h1 class="title reimg">
+            <h1 class="title reimg cpkj_1">
                 <%--<img src="${resPath}img/kaihead_06.png"/>--%>
                     ${webCompanyName}彩票开奖
             </h1>
-            <a href="javascript:void(0)" class="button button-link button-nav pull-right btn_xz">
+            <a href="javascript:void(0)" class="button button-link button-nav pull-right btn_xz cpkj_1">
                 <span>选择彩种</span>
             </a>
 

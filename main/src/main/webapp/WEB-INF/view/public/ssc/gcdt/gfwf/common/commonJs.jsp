@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170720_1"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170720_12"></script>
 <script type="text/html" id="template_jRange">
     <div class="add_spot">
         <div class="left releft">
@@ -95,7 +95,7 @@
         <ul class="ulzh">
             {{each listContent}}
             <li class="list-li">
-                <input type="checkbox" class="oneCheckbox" id="testbtn"/>
+                <input type="checkbox" class="oneCheckbox"/>
                 <span class="content_qs">{{$value.zhqishu}}</span>
                 <span class="nosel">
                   <input type="text" name="lt_trace_times_20170718066" value="{{$value.zhbeishu}}"/>
@@ -122,9 +122,9 @@
             <option value="50">全部</option>
         </select>
         &nbsp;&nbsp;总期数：
-        &nbsp;<span class="qishu zhredtxt">10</span>&nbsp;&nbsp;期
-        &nbsp;&nbsp;追号总金额: <span class="money zhredtxt">50</span> 元
-        &nbsp;&nbsp;追号计划: 隔&nbsp;
+        &nbsp;<span class="qishu zhredtxt zhqishutxt">10</span>&nbsp;&nbsp;期
+        &nbsp;&nbsp;追号总金额： <span class="money zhredtxt zhzjetxt">50</span> 元
+        &nbsp;&nbsp;追号计划： 隔&nbsp;
         <span class="startBeiShu zhredtxt">
                     <input name="rt_trace_diff" id="rt_trace_diff" value="1" size="3"
                            onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
@@ -145,217 +145,19 @@
     </div>
     <div class="content_heigth reConHei">
         <ul class="ulzh">
+            {{each listContent}}
             <li class="list-li">
                 <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
+                <span class="content_qs">{{$value.zhqishu}}</span>
                 <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
+                  <input type="text" name="lt_trace_times_20170718066" value="{{$value.zhbeishu}}"/>
+                  倍
+                </span>
+                <span class="content_money">{{$value.totelMoney}}</span>
+                <span class="content_time_kj">{{$value.zhkjshijian}}</span>
             </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
+            {{/each}}
 
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
-            <li class="list-li">
-                <input type="checkbox" class="oneCheckbox"/>
-                <span class="content_qs">20170102023</span>
-                <span class="nosel">
-                <input type="text" name="lt_trace_times_20170718066" value="0"/>
-                倍
-            </span>
-                <span class="content_money">￥20</span>
-                <span class="content_time_kj">2017-07-18 17:09:30</span>
-            </li>
         </ul>
     </div>
 </script>

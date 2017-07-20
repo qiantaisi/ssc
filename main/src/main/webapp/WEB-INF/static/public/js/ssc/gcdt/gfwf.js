@@ -9280,7 +9280,10 @@ function renderZhuihao(strZh, obj) {
         return;
     }
 
-    zhTempletHideOrShow(); //追号模板显示与隐藏
+    //点击追加按钮执行
+    if(strZh == null){
+        zhTempletHideOrShow(); //追号模板显示与隐藏
+    }
 
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function(){
         var perMoney = $(this).data('bet_per_money');
@@ -9289,7 +9292,7 @@ function renderZhuihao(strZh, obj) {
 
     var dataContent = {
         listContent: []
-    }
+    };
 
     for(var i = 0; i < 25; i++){
         dataContent.listContent.push({
@@ -9306,14 +9309,13 @@ function renderZhuihao(strZh, obj) {
         var html = template('tbzhTemplate',dataContent);
         $(container).html(html);
         $("#lt_zh_qishu").val(10);  //默认选中第10期选项
-
         selectedCheckboxtbzh(10);
     } else {
         var container = $(".fbzh");
-        var html = template('fbzhTemplate');
+        var html = template('fbzhTemplate',dataContent);
         $(container).html(html);
         $("#rt_zh_qishu").val(10);  //默认选中第10期选项
-        selectedCheckboxFbzh(10);
+        selectedCheckboxfbzh(10);
     }
 
     //总金额
@@ -9338,6 +9340,9 @@ function renderZhuihao(strZh, obj) {
         $(".zhqishutxt").html(num);
         $('.zhzjetxt').html(totelMoney * num);
 
+        changeContent();
+        changeContentFbzh();
+
     });
 
     //输入倍数时改变选中倍数input值
@@ -9354,10 +9359,19 @@ function renderZhuihao(strZh, obj) {
         changeContent();
     });
 
-    //选择选项
+    //选择选项-同倍追号
     $(document).on("change",'select#lt_zh_qishu',function(){
         var optionVal = parseInt($(this).val());
         selectedCheckboxtbzh(optionVal);
+        $(".zhqishutxt").html(optionVal);
+        $('.zhzjetxt').html(totelMoney * selectedZhqishu());
+
+    });
+
+    //选择选项-翻倍追号
+    $(document).on("change",'select#rt_zh_qishu',function(){
+        var optionVal = parseInt($(this).val());
+        selectedCheckboxfbzh(optionVal);
         $(".zhqishutxt").html(optionVal);
         $('.zhzjetxt').html(totelMoney * selectedZhqishu());
 
@@ -9422,18 +9436,29 @@ function selectedCheckboxtbzh(countLi){
         $(".content_heigth .ulzh li:eq("+ i +") input").prop("checked",true);
     }
 
-    $(".ulzh li").each(function () {
-        var flagStatus = $(this).find('input').prop('checked');
-
-    });
-
     changeBgColor();
     changeContent();
 }
 
+function selectedCheckboxfbzh(countLi){
+    $(".reConHei .ulzh li").each(function () {
+        var flagStatus = $(this).find('input').prop('checked');
+        if(flagStatus){
+            $(this).find("input[type='checkbox']").removeAttr("checked");
+        }
+    });
+
+    for(var i = 0; i < countLi; i++){
+        $(".reConHei .ulzh li:eq("+ i +") input").prop("checked",true);
+    }
+
+    changeBgColor();
+    changeContentFbzh();
+}
+
 //选中的追号期数
 function selectedZhqishu(){
-    var zongQiShu = 0;
+    var zongQiShu = 0; changeBgColor();
     $(".ulzh li").each(function () {
         var flagStatus = $(this).find('input').prop('checked');
         if(flagStatus){
@@ -9441,13 +9466,6 @@ function selectedZhqishu(){
         }
     });
     return zongQiShu;
-}
-
-
-function selectedCheckboxFbzh(countLi){
-    for(var i = 0; i < countLi; i++){
-        $(".reConHei .ulzh li:eq("+ i +") input").attr("checked","checked");
-    }
 }
 
 //改变选中checkbox 行的背景颜色
@@ -9472,8 +9490,29 @@ function changeBgColor(){
     });
 }
 
-//改变被选中checkbox行的内容
+//改变被选中checkbox行的内容--同倍追号
 function changeContent(){
+    var totelMoney = 0;
+    $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
+        var perMoney = $(this).data('bet_per_money');
+        totelMoney += perMoney;
+    });
+    $(".ulzh li").each(function () {
+        var flagStatus = $(this).find('input').prop('checked');
+        if (!flagStatus) {
+            $(this).find('input[type="text"]').val('0');
+            $(this).find('.content_money').html('￥0.00');
+        } else {
+            var beishu = $("#startBeiShuZh").val();
+            beishu = beishu == '' ? 1 : beishu;
+            $(this).find('input[type="text"]').val(beishu);
+            $(this).find('.content_money').html('￥' + (beishu * totelMoney));
+        }
+    });
+}
+
+//改变被选中checkbox行的内容--同倍追号--翻倍追号
+function changeContentFbzh(){
     var totelMoney = 0;
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');
@@ -9491,6 +9530,7 @@ function changeContent(){
         }
     });
 }
+
 
 // 获取当前选中位数
 function getWeiStr(arr){
