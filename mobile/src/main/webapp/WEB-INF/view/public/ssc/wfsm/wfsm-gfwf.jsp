@@ -46,15 +46,47 @@
                 -玩法说明
             </h1>
         </header>
-        <div class="content cl-700">
-            <div class="buttons-tab cl-701" id="buttonsTabList">
-                <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="button"
-                   data-id="btn-bqxq"><span>传统模式</span></a>
-                <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="active button"
-                   data-id="btn-gdqc"><span>官方模式</span></a>
-                <%--<a href="<%=basePath%>ssc/wfsm/lskj.html?playGroupId=${playGroupId}" class="button"--%>
-                   <%--data-id="btn-gdqc"><span>官方模式</span></a>--%>
+        <div class="buttons-tab cl-701" id="buttonsTabList" style="top: 2.1rem">
+            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="button"
+               data-id="btn-bqxq"><span>传统模式</span></a>
+            <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="active button"
+               data-id="btn-gdqc" style="height: 2.2rem"><span>官方模式</span></a>
+            <%--<a href="<%=basePath%>ssc/wfsm/lskj.html?playGroupId=${playGroupId}" class="button"--%>
+            <%--data-id="btn-gdqc"><span>官方模式</span></a>--%>
+        </div>
+        <div class="page page-current" id="page-gcdt-cqssc" style="height: 3.9rem; top: 2.1rem">
+            <header class="bar bar-nav">
+            </header>
+            <div class="content">
+                <div class="cl-600">
+                    <div class="cl-602">
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test1').scrollIntoView()" class="wfsm">定位胆</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test2').scrollIntoView()" class="wfsm">五星</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test3').scrollIntoView()" class="wfsm">四星</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test4').scrollIntoView()">后三</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test5').scrollIntoView()">前三</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test6').scrollIntoView()">前二</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test7').scrollIntoView()">不定位</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test8').scrollIntoView()">大小单双</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test9').scrollIntoView()">任选二</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test10').scrollIntoView()">任选三</a>
+                        <a href="javascript:;" data-type="page"
+                           onclick="javascript:document.getElementById('test11').scrollIntoView()">任选四</a>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="content cl-700" style="top: 6.0rem!important;">
             <div class="content-block cl-8 cl-990">
                 <div class="cl-1300">
                     <div class="cl-1301-gfwf">

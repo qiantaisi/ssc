@@ -1344,4 +1344,21 @@ public class ApiUtils{
         paramsMap.put("id", id);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_ART_DETAIL, paramsMap, companyShortName), ArticleResult.class);
     }
+
+    /**
+     * 获取用户今日输赢和即时注单
+     * @param uid 用户ID
+     * @param token 用户TOKEN
+     * @param companyShortName 公司标志
+     * @return
+     */
+    public static TodayWinOrLoseAndJszdResult getJrsyAndJszd(Long uid, String token, String companyShortName) {
+        if (IS_DEBUG) {
+            return new TodayWinOrLoseAndJszdResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("uid", uid);
+        paramsMap.put("token", token);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_MEMBER_GET_JRSY_AND_JSZD, paramsMap, companyShortName), TodayWinOrLoseAndJszdResult.class);
+    }
 }
