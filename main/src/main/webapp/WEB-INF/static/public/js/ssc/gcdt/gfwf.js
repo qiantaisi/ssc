@@ -9266,14 +9266,12 @@ $(function(){
             var objfbzh = $("#zhbtn");
             renderZhuihao('fbzh', objfbzh);
         }
-
     });
-
-
 });
 
 // 最近最新开奖时间（默认10期），用于追号模板渲染
 function renderZhuihao(strZh, obj) {
+    var totelMoney = 0;
     var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
     if(len <= 0){
         showTishi2Template();
@@ -9282,48 +9280,49 @@ function renderZhuihao(strZh, obj) {
         return;
     }
 
-    var spStauts = $(obj).parent().attr("sp");
+    zhTempletHideOrShow(); //追号模板显示与隐藏
 
-    //是追加按钮点击执行
-    if(strZh == null){
-        $("#zhInfo").show();
-        $("#zhInfo .list_wrap_zh").hide();
-        var f_Or_t = $(obj).find(".imgZh").hasClass('imgZhCancle');
+    $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function(){
+        var perMoney = $(this).data('bet_per_money');
+        totelMoney += perMoney;
+    });
 
-        if(spStauts == 1){
-            if(f_Or_t == true){
-                $(obj).children().removeClass('imgZhCancle');
-            }
-            $(obj).parent().attr("sp", "0");
-            $("#zhInfo").hide();
-        } else if(spStauts == 0){
-            if(f_Or_t == false){
-                $(obj).children().addClass('imgZhCancle');
-            }
-            $(obj).parent().attr("sp", "1");
-            $("#zhInfo .list_wrap_zh").eq(0).show();
-        }
+    var dataContent = {
+        listContent: []
+    }
+
+    for(var i = 0; i < 25; i++){
+        dataContent.listContent.push({
+            zhqishu: 20170501230,
+            zhbeishu: $("#startBeiShuZh").val(),
+            totelMoney: '￥' + totelMoney,
+            zhkjshijian: '2017-07-18 17:09:30'
+        });
     }
 
 
     if (strZh == null || strZh == 'tbzh') {
         var container = $(".tbzh");
-        var html = template('tbzhTemplate');
+        var html = template('tbzhTemplate',dataContent);
         $(container).html(html);
-        selectedCheckbox(10);
         $("#lt_zh_qishu").val(10);  //默认选中第10期选项
+
+        selectedCheckboxtbzh(10);
     } else {
         var container = $(".fbzh");
         var html = template('fbzhTemplate');
         $(container).html(html);
-        selectedCheckboxFbzh(10);
         $("#rt_zh_qishu").val(10);  //默认选中第10期选项
+        selectedCheckboxFbzh(10);
     }
 
+    //总金额
+    var num = selectedZhqishu();
+    $('.zhzjetxt').html(totelMoney * num);
 
     //单行点击选中事件
     $(".content_heigth .ulzh li input[type='checkbox']").click(function () {
-        var selectedbox = $(this).is(":checked");
+        var selectedbox = $(this).prop('checked');
         var beishu = $("#startBeiShuZh").val();
 
         if (!selectedbox) {
@@ -9335,6 +9334,10 @@ function renderZhuihao(strZh, obj) {
             $(this).parent().find('input[type="text"]').removeAttr("disabled");
             $(this).parent().find('input[type="text"]').val(beishu);
         }
+        var num = selectedZhqishu();
+        $(".zhqishutxt").html(num);
+        $('.zhzjetxt').html(totelMoney * num);
+
     });
 
     //输入倍数时改变选中倍数input值
@@ -9346,7 +9349,7 @@ function renderZhuihao(strZh, obj) {
     $("#startBeiShuZh").blur(function(){
         var valStr = $("#startBeiShuZh").val();
         if(typeof valStr == "undefined" || valStr == "" || valStr == null){
-            $("#startBeiShuZh").val("1");
+            $("#startBeiShuZh").val(1);
         }
         changeContent();
     });
@@ -9354,10 +9357,11 @@ function renderZhuihao(strZh, obj) {
     //选择选项
     $(document).on("change",'select#lt_zh_qishu',function(){
         var optionVal = parseInt($(this).val());
-        selectedCheckbox(optionVal);
+        selectedCheckboxtbzh(optionVal);
+        $(".zhqishutxt").html(optionVal);
+        $('.zhzjetxt').html(totelMoney * selectedZhqishu());
 
     });
-
 
 
 //     ajaxRequest({
@@ -9380,10 +9384,36 @@ function renderZhuihao(strZh, obj) {
 //     });
 }
 
+// 清除和显示追号模板
+function zhTempletHideOrShow() {
+    var obj = $('.clearLiZhudanbtn').children();
+    var spStauts = $(obj).parent().attr("sp");
+
+    //是追加按钮点击执行
+    $("#zhInfo").show();
+    $("#zhInfo .list_wrap_zh").hide();
+    var f_Or_t = $(obj).find(".imgZh").hasClass('imgZhCancle');
+
+    if (spStauts == 1) {
+        if (f_Or_t == true) {
+            $(obj).children().removeClass('imgZhCancle');
+        }
+        $(obj).parent().attr("sp", "0");
+        $("#zhInfo").hide();
+    } else if (spStauts == 0) {
+        if (f_Or_t == false) {
+            $(obj).children().addClass('imgZhCancle');
+        }
+        $(obj).parent().attr("sp", "1");
+        $("#zhInfo .list_wrap_zh").eq(0).show();
+    }
+
+}
+
 //选中checkbox
-function selectedCheckbox(countLi){
+function selectedCheckboxtbzh(countLi){
     $(".ulzh li").each(function () {
-        var flagStatus = $(this).find('input').is(':checked');
+        var flagStatus = $(this).find('input').prop('checked');
         if(flagStatus){
             $(this).find("input[type='checkbox']").removeAttr("checked");
         }
@@ -9394,12 +9424,25 @@ function selectedCheckbox(countLi){
 
     $(".ulzh li").each(function () {
         var flagStatus = $(this).find('input').prop('checked');
-        console.log(flagStatus);
+
     });
 
     changeBgColor();
     changeContent();
 }
+
+//选中的追号期数
+function selectedZhqishu(){
+    var zongQiShu = 0;
+    $(".ulzh li").each(function () {
+        var flagStatus = $(this).find('input').prop('checked');
+        if(flagStatus){
+            zongQiShu++;
+        }
+    });
+    return zongQiShu;
+}
+
 
 function selectedCheckboxFbzh(countLi){
     for(var i = 0; i < countLi; i++){
@@ -9431,13 +9474,20 @@ function changeBgColor(){
 
 //改变被选中checkbox行的内容
 function changeContent(){
+    var totelMoney = 0;
+    $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
+        var perMoney = $(this).data('bet_per_money');
+        totelMoney += perMoney;
+    });
     $(".ulzh li").each(function () {
         var flagStatus = $(this).find('input').prop('checked');
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
         } else {
             var beishu = $("#startBeiShuZh").val();
+            beishu = beishu == '' ? 1 : beishu;
             $(this).find('input[type="text"]').val(beishu);
+            $(this).find('.content_money').html('￥' + (beishu * totelMoney));
         }
     });
 }
@@ -9534,6 +9584,13 @@ function enterType1(){
     } else{
         closeLayer();
     }
+
+    //清除追号模板
+    var flag = $(".clearLiZhudanbtn").attr('sp');
+    if(flag == 1){
+        zhTempletHideOrShow();
+    }
+
 }
 
 //清除注单提示取消按钮
