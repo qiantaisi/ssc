@@ -39,10 +39,21 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
 }
 .item-inners{
     margin: auto;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: bold;
     color: #4A5252;
 }
+
+.list-block .ul {
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 120px;
+    margin-left: 66px;
+}
+
 .item-innerss{
     padding-right: .75rem;
     position: relative;

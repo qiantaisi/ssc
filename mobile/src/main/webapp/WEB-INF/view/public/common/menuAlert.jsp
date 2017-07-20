@@ -10,7 +10,6 @@
 
 
 <div class="menu_alert">
-    <span class="arrows"></span>
 <style>
     .menu_alert{padding:0;left:initial;right:0;top:2.2rem;text-align:center;margin:0;width:9rem;}
     .menu_alert .list-block .item-inner{font-size:0.65rem;padding:0;}
@@ -32,12 +31,12 @@
     <div class="arrow-up"></div>
 
     <span class="list-block">
-        <ul>
+        <ul class="ul">
             <li>
                 <c:choose>
                     <c:when test="${not empty userSession}">
                         <div class="item-inner-r" style="background: #fffcef">
-                    <span class="item-innerss">余额:</span><span style="color: red" class="userMoney">${userSession.balance}元</span></div>
+                    <span class="item-innerss">余额:</span><span style="color: red; text-overflow:ellipsis;">${userSession.balance}元</span></div>
                     </c:when>
                 </c:choose>
             </li>
