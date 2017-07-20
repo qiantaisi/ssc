@@ -47,9 +47,9 @@
             </h1>
         </header>
         <div class="buttons-tab cl-701" id="buttonsTabList" style="top: 2.1rem">
-            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="button"
+            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="button wfsm_cd"
                data-id="btn-bqxq"><span>传统模式</span></a>
-            <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="active button"
+            <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="active button wfsm_cd"
                data-id="btn-gdqc" style="height: 2.2rem"><span>官方模式</span></a>
             <%--<a href="<%=basePath%>ssc/wfsm/lskj.html?playGroupId=${playGroupId}" class="button"--%>
             <%--data-id="btn-gdqc"><span>官方模式</span></a>--%>
