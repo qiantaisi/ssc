@@ -9311,9 +9311,9 @@ function renderZhuihao(strZh, obj) {
         $("#lt_zh_qishu").val(10);  //默认选中第10期选项
         selectedCheckboxtbzh(10);
     } else {
-        var container = $(".fbzh");
-        var html = template('fbzhTemplate',dataContent);
-        $(container).html(html);
+        var containerfbzh = $(".fbzh");
+        var htmlfbzh = template('fbzhTemplate',dataContent);
+        $(containerfbzh).html(htmlfbzh);
         $("#rt_zh_qishu").val(10);  //默认选中第10期选项
         selectedCheckboxfbzh(10);
     }
@@ -9518,10 +9518,12 @@ function changeContentFbzh(){
         var perMoney = $(this).data('bet_per_money');
         totelMoney += perMoney;
     });
-    $(".ulzh li").each(function () {
+
+    $(".reConHei .ulzh li").each(function () {
         var flagStatus = $(this).find('input').prop('checked');
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
+            $(this).find('.content_money').html('￥0.00');
         } else {
             var beishu = $("#startBeiShuZh").val();
             beishu = beishu == '' ? 1 : beishu;
