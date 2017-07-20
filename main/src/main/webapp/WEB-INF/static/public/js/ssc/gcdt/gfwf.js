@@ -9280,29 +9280,7 @@ function renderZhuihao(strZh, obj) {
         return;
     }
 
-    var spStauts = $(obj).parent().attr("sp");
-
-    //是追加按钮点击执行
-    if(strZh == null){
-        $("#zhInfo").show();
-        $("#zhInfo .list_wrap_zh").hide();
-        var f_Or_t = $(obj).find(".imgZh").hasClass('imgZhCancle');
-
-        if(spStauts == 1){
-            if(f_Or_t == true){
-                $(obj).children().removeClass('imgZhCancle');
-            }
-            $(obj).parent().attr("sp", "0");
-            $("#zhInfo").hide();
-        } else if(spStauts == 0){
-            if(f_Or_t == false){
-                $(obj).children().addClass('imgZhCancle');
-            }
-            $(obj).parent().attr("sp", "1");
-            $("#zhInfo .list_wrap_zh").eq(0).show();
-        }
-    }
-
+    zhTempletHideOrShow(); //追号模板显示与隐藏
 
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function(){
         var perMoney = $(this).data('bet_per_money');
@@ -9404,6 +9382,32 @@ function renderZhuihao(strZh, obj) {
 // //                var html = "";
 //         }
 //     });
+}
+
+// 清除和显示追号模板
+function zhTempletHideOrShow() {
+    var obj = $('.clearLiZhudanbtn').children();
+    var spStauts = $(obj).parent().attr("sp");
+
+    //是追加按钮点击执行
+    $("#zhInfo").show();
+    $("#zhInfo .list_wrap_zh").hide();
+    var f_Or_t = $(obj).find(".imgZh").hasClass('imgZhCancle');
+
+    if (spStauts == 1) {
+        if (f_Or_t == true) {
+            $(obj).children().removeClass('imgZhCancle');
+        }
+        $(obj).parent().attr("sp", "0");
+        $("#zhInfo").hide();
+    } else if (spStauts == 0) {
+        if (f_Or_t == false) {
+            $(obj).children().addClass('imgZhCancle');
+        }
+        $(obj).parent().attr("sp", "1");
+        $("#zhInfo .list_wrap_zh").eq(0).show();
+    }
+
 }
 
 //选中checkbox
@@ -9580,6 +9584,13 @@ function enterType1(){
     } else{
         closeLayer();
     }
+
+    //清除追号模板
+    var flag = $(".clearLiZhudanbtn").attr('sp');
+    if(flag == 1){
+        zhTempletHideOrShow();
+    }
+
 }
 
 //清除注单提示取消按钮

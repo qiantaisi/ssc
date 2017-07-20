@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170719_12345"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170720_1"></script>
 <script type="text/html" id="template_jRange">
     <div class="add_spot">
         <div class="left releft">
