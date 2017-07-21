@@ -133,7 +133,7 @@ public class IndexController extends BaseController {
         modelMap.put("promotionList", ApiUtils.getPromotion(companyShortName).getPromotionList());
         modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("index/yhhd", modelMap);
-    }
+}
 
 
     @RequestMapping(value = "/shiwan.json", method = {RequestMethod.GET, RequestMethod.POST})
