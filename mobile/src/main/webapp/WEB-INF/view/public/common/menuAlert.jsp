@@ -36,7 +36,7 @@
                 <c:choose>
                     <c:when test="${not empty userSession}">
                         <div class="item-inner-r" style="background: #fffcef">
-                    <span class="item-innerss" style="font-size: 0.7rem;font-weight: bold;">余额:</span><span style="color: red;font-size: 0.7rem;font-weight: bold; text-overflow:ellipsis;">${userSession.balance}元</span></div>
+                    <span style="font-size: 0.7rem;font-weight: bold;">余额:</span><span style="color: red;font-size: 0.7rem;display: block; font-weight: bold; text-overflow:ellipsis;">${userSession.balance}元</span></div>
                     </c:when>
                 </c:choose>
                 </li>
