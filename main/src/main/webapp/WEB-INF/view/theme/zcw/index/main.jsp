@@ -452,7 +452,7 @@
                 <c:forEach items="${ArticleResult.articleList}" var="items">
                     <li style="width: 469px;height: 30px;">
                         <a href="javascript:void(0)" onclick="ziXun('${items.id}')">
-                            <span>【 ${items.crux} 】</span>${items.title} : ${items.remarks}
+                            <span>【 ${items.name} 】</span>${items.title} : ${items.remarks}
                         </a>
                     </li>
                 </c:forEach>
