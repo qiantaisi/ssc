@@ -1,4 +1,4 @@
-package project38.ssc.web.controller;
+package project38.ssc.mobile.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +20,8 @@ public class ErrorController extends BaseController{
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
-        return this.renderPublicView("error/404/index", modelMap);
+        modelMap.put("logo", ApiUtils.getLogo(5, companyShortName));
+        return this.renderView("error/404/index", modelMap);
     }
 
 //    @RequestMapping(value = "/500.html", method = RequestMethod.GET)
@@ -34,12 +34,12 @@ public class ErrorController extends BaseController{
 //        return this.renderView( "error/500/index", modelMap);
 //    }
 
-    @RequestMapping(value = "/incompatible.html", method = RequestMethod.GET)
-    public ModelAndView error_incompatible() throws UserException {
-        String companyShortName = this.getCompanyShortName();
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
-        modelMap.put("webName",webInfoResult.getWebName());
-        return this.renderPublicView("error/incompatible/index", modelMap);
-    }
+//    @RequestMapping(value = "/incompatible.html", method = RequestMethod.GET)
+//    public ModelAndView error_incompatible() {
+//        String companyShortName = this.getCompanyShortName();
+//        Map<String, Object> modelMap = new HashMap<String, Object>();
+//        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
+//        modelMap.put("webName",webInfoResult.getWebName());
+//        return this.renderView("error/incompatible/index", modelMap);
+//    }
 }

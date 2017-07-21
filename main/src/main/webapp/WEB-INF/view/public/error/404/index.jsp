@@ -14,35 +14,63 @@
     String resPath = basePath + "static/public/";
     request.setAttribute("resPath", resPath);
 %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>404</title>
-    <style type="text/css">blockquote,body,button,code,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}body{font-size:14px;font-family:Simsun,sans-serif;color:#333}fieldset,img{border:0 none}input,textarea{font-size:14px}textarea{resize:none}table{border-collapse:collapse;border-spacing:0}a{color:#003d7e}a,a:hover{text-decoration:none}h1,h2,h3,h4,h5,h6{font-family:"微软雅黑",Simsun}li,ol,ul{list-style:none outside none}dfn{font-style:normal}.fl{float:left}.fr{float:right}.org{background:#fa6200}.org:hover{background:#ff7c28}.green{background:#13b5b1}.green:hover{background:#2ce3de}.blue{background:#1aabee}.blue:hover{background:#3bc1ff}.w1000{width:750pt;margin:0 auto}.bg404{background:url(${resPath}error/404/images/bg.jpg) center top no-repeat;border-top:3px solid #fa6200}.header{height:75pt;line-height:75pt;vertical-align:middle;overflow:hidden}.header .logo{margin-top:20px}.btn{width:90pt;height:40px;line-height:40px;color:#fff;text-align:center;display:block;border-radius:5px;font-family:"微软雅黑"}.home{margin-top:30px}.main404{width:556px;height:21pc;margin:30px auto}.list_btn{width:6.6in;height:75pt;margin:0 auto}.list_btn li{float:left;margin-left:30px}.footer{height:90pt;background:url(${resPath}error/404/images/foot_bg.png) center top no-repeat;font-family:"微软雅黑";text-align:center;line-height:90pt;color:#999;padding-top:50px}</style>
-    <script>
-        // 防止被frame
-        if (top.location != self.location) top.location = self.location;
-    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>维护中</title>
+    <style>
+        *{ margin:0; padding:0; border:none;}
+        html{ width:100%; height:100%;}
+        body{ width:100%; height:100%; background:#fff;}
+        .cont{ width:100%; height:100%;}
+        .cont p{ text-align:center; line-height:50px; color:#333; color:#fa6200; font-size:22px;font-family:"微软雅黑"; text-align:center; }
+
+        @media (max-width: 800px){
+            .cont{ width:100%; height:100%;}
+            .cont p{ text-align:center; line-height:50px; color:#333; color:#fa6200; font-size:18px;font-family:"微软雅黑"; text-align:center;}
+            /*.cont p img{ width:100%;}*/
+        }
+
+        .header{ width:100%; height:60px; background:#fa6200; position:fixed; left:0; top:0;}
+        .header .p-logo{ float:left;padding:10px 0 0 10px;line-height:60px;}
+        .header .p-logo img{ vertical-align:middle;}
+        .header .p-service a{ float:right; color:#fff; font-size:18px; line-height:60px; font-family:"微软雅黑"; padding:0 20px; background:#de5700; text-decoration:none;}
+        .result_box {
+            font-size: 14px;
+            color: #666666;
+            min-height: 89px;
+            position: relative;
+            z-index: 2;
+            word-wrap: break-word;
+            display:inline; line-height:25px;
+        }
+    </style>
 </head>
-<body class="bg404">
-<div class="w1000 header">
+<body>
+<div class="header">
+    <p class="p-logo"><a href="javascript:void(0)"><img src="<%=basePath%>images/${logo.imageId}.png" width="180"/></a></p>
+    <p class="p-service"><a href="${kefuUrl}" target="_blank">联系客服</a></p>
 </div>
-<div class="main404"><img class="logo" src="${resPath}error/404/images/404.png"></div>
-<ul class="list_btn">
-    <li><a href="<%=basePath%>" class="btn org">首页</a></li>
-    <c:choose>
-        <c:when test="${not empty kefuUrl}">
-            <li><a href="${kefuUrl}" class="btn blue" target="_blank">在线客服</a></li>
-        </c:when>
-        <c:otherwise>
-            <li><a href="#" class="btn blue">在线客服</a></li>
-        </c:otherwise>
-    </c:choose>
-    <li><a href="<%=basePath%>ssc/index.html" class="btn org">购彩大厅</a></li>
-    <li><a href="javascript:void(0)" onclick="history.go(-1)" class="btn org">返回上一页</a></li>
-</ul>
-<div class="footer">Copyright©<%=Calendar.getInstance().get(Calendar.YEAR)%> All Rights Reserved</div>
+<div class="cont">
+    <p class="p1" style="margin-top:80px;"><img src="${resPath}error/404/images/p1.png" /></p>
+    <p>
+        <span style="font-size: 30px; color: rgb(89, 89, 89);"><strong>该页面正维护中</strong></span>
+        <br>
+        <span style="font-size: 30px; color: rgb(89, 89, 89);"><strong>对您造成的不便请谅解</strong></span>
+    </p>
+    <p class="p3" style="margin-top:10px;">
+	<span class="result_box">
+	<span class="">Hello, we are very sorry to inform,</span>
+	<br>
+	<span>The page is being maintained!</span>
+	<br>
+	<span class="">We apologize for the inconvenience you have caused.</span>
+	<br>
+	<span class="">Please also try again later, thank you!</span>
+	</span>
+    </p>
+</div>
 </body>
 </html>

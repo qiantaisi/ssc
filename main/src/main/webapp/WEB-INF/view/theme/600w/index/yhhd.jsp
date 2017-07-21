@@ -18,41 +18,7 @@
     </div>
 </div>
 
-<div class="process">
-    <div class="wid1">
-        <div class="layout">
-            <div class="monty">
-                <ul>
-                    <li class="acti">全部</li>
-                    <script>
-                        for (var i = 0; i < 3; ++i) {
-                            var tmp = new Date();
-                            tmp.setMonth(tmp.getMonth() -1  * i);
-                            var startMonth = tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + '-1 0:0:0';
-                            tmp.setMonth(tmp.getMonth() + 1);
-                            var endMonth = tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + '-1 0:0:0';
-                            document.write('<li class="monthnum" data-starttime="'+startMonth+'" data-endtime="'+endMonth+'">' + ((startMonth.split("-")[1])) + '月</li>');
-                        }
-                        var tmp = new Date();
-                        tmp.setMonth(tmp.getMonth() - 2);
-                        var endMonth = tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + '-1 0:0:0';
-                        document.write('<li class="monthnum" data-endtime="'+endMonth+'">其他</li>');
-                    </script>
-                </ul>
-            </div>
-            <div class="monthdetail">
-            </div>
-
-        </div>
-
-        <div class="Customerservice">
-            <ul>
-                <li><div class="pict"><a href="${kefuUrl}" target="_blank"><img src="${resPath}img/ico68.png" alt=""></a></div></li>
-                <li><div class="pict"><a href="#"><img src="${resPath}img/ico69.png" alt=""></a></div></li>
-            </ul>
-        </div>
-    </div>
-</div>
+<iframe src="" frameborder="0"></iframe>
 
 <c:import url="../common/bottomInfo.jsp" />
 <c:import url="../common/copyright.jsp" />
