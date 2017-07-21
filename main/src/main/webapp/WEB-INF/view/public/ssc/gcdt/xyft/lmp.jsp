@@ -192,20 +192,20 @@
 
                 <tr>
                     <td><strong>冠亚和</strong></td>
-                    <td><strong class="color-red pl" data-plid="10160"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="冠亚和-大" data-plid="10160"/></td>
-                    <td><strong class="color-red pl" data-plid="10161"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="冠亚和-小" data-plid="10161"/></td>
-                    <td><strong class="color-red pl" data-plid="10162"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="冠亚和-单" data-plid="10162"/></td>
-                    <td><strong class="color-red pl" data-plid="10163"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="冠亚和-双" data-plid="10163"/></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                </tbody>
+            <td><strong class="color-red pl" data-plid="10160"></strong></td>
+            <td><input type="text" class="table-txt" data-name="冠亚和-大" data-plid="10160"/></td>
+            <td><strong class="color-red pl" data-plid="10161"></strong></td>
+            <td><input type="text" class="table-txt" data-name="冠亚和-小" data-plid="10161"/></td>
+            <td><strong class="color-red pl" data-plid="10162"></strong></td>
+            <td><input type="text" class="table-txt" data-name="冠亚和-单" data-plid="10162"/></td>
+            <td><strong class="color-red pl" data-plid="10163"></strong></td>
+            <td><input type="text" class="table-txt" data-name="冠亚和-双" data-plid="10163"/></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            </tr>
+            </tbody>
             </table>
         </div>
 
