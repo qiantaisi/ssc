@@ -1,6 +1,7 @@
 package project38.ssc.web.controller;
 
 import org.springframework.web.bind.annotation.*;
+import project38.api.common.exception.UserException;
 import project38.api.common.helper.IPHelper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -35,7 +36,7 @@ public class IndexController extends BaseController {
         return ApiUtils.getWebInfo(1, companyShortName);
     }
 
-    @RequestMapping(value ="/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public SscHistoryResult3 ajaxGetSscDataMainPage(
             @RequestParam(value = "playIds", required = false) List<Long> playIds,
@@ -74,18 +75,18 @@ public class IndexController extends BaseController {
         modelMap.put("webName", webInfoResult.getWebName());
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
-        modelMap.put("ArticleResult", ApiUtils.getArtList(companyShortName,0,10));
+        modelMap.put("ArticleResult", ApiUtils.getArtList(companyShortName, 0, 10));
 
 
         return this.renderView("index/main", modelMap);
     }
 
-    @RequestMapping(value = "/zixun/{id}.html",method =RequestMethod.GET)
-    public ModelAndView ziXun(@PathVariable Long id){
+    @RequestMapping(value = "/zixun/{id}.html", method = RequestMethod.GET)
+    public ModelAndView ziXun(@PathVariable Long id) {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
-        modelMap.put("Article",ApiUtils.getArtByid(companyShortName,id));
+        modelMap.put("Article", ApiUtils.getArtByid(companyShortName, id));
 
         return this.renderView("index/zxxx", modelMap);
     }
@@ -124,16 +125,24 @@ public class IndexController extends BaseController {
     }
 
     @RequestMapping(value = "/yhhd.html", method = RequestMethod.GET)
-    public ModelAndView yhhd() {
+    public ModelAndView yhhd() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        modelMap.put("promotionList", ApiUtils.getPromotion(companyShortName).getPromotionList());
         modelMap.put("webName", webInfoResult.getWebName());
         return this.renderView("index/yhhd", modelMap);
-}
+    }
+
+    @RequestMapping(value = "/publicYhhd.html", method = RequestMethod.GET)
+    public ModelAndView publicYhhd() throws UserException {
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
+        modelMap.put("promotionList", ApiUtils.getPromotion(companyShortName).getPromotionList());
+        return this.renderPublicView("index/yhhd", modelMap);
+    }
 
 
     @RequestMapping(value = "/shiwan.json", method = {RequestMethod.GET, RequestMethod.POST})

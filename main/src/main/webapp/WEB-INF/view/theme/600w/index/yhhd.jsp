@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<iframe src="" frameborder="0"></iframe>
+<iframe src="<%=basePath%>publicYhhd.html" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm"  width="100%" style="overflow-x: hidden; height: 860px; width: 1920px;"></iframe>
 
 <c:import url="../common/bottomInfo.jsp" />
 <c:import url="../common/copyright.jsp" />
@@ -98,11 +98,11 @@
                 var currentT =  dateFormat(myDate.getTime(), "yyyy-mm-dd hh:MM:ss");
 
                 for(var i = 0; i < arrsT.length; i++){
-                   var sT =  dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
-                   var eT =  dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
-                   if(sT  == currentT && eT == currentT){
-                       $('.monthdetail .list_tems:eq('+ i +') .text p').html('发布时间： 永久有效');
-                   }
+                    var sT =  dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
+                    var eT =  dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
+                    if(sT  == currentT && eT == currentT){
+                        $('.monthdetail .list_tems:eq('+ i +') .text p').html('发布时间： 永久有效');
+                    }
                 }
 
             },
@@ -124,13 +124,13 @@
 <script type="text/html" id="template">
     <div class="list_tems">
         {{if isFirst}}
-            <div class="date">
-                <span>{{year}}</span>
-                <h3>{{month}}.{{day}}</h3>
-            </div>
+        <div class="date">
+            <span>{{year}}</span>
+            <h3>{{month}}.{{day}}</h3>
+        </div>
         {{/if}}
         <h2>{{title}}<p>发布时间：{{createTime}}</p></h2>
-        <div class="pict repict">
+        <div class="pict">
             <img src="<%=basePath%>images/{{bigImageId}}" alt="">
         </div>
         <div class="text">
