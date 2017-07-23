@@ -37,8 +37,8 @@
                 <div class="i-m1 download">
                     <p class="fl sj"><img src="${resPath}images/and_icon.png" alt=""></p>
                     <div class="fr btn-grp">
-                        <p class="box">下载APP送您38元现金</p>
-                        <p><img src="${resPath}images/ewm.png" alt=""></p>
+                        <p class="box">下载APP送您28元现金</p>
+                        <p><img src="${resPath}images/ewm2.png" alt=""></p>
                         <a href="http://d.81cai3.com/81cai139275_202.apk" class="btn-down-android mt10" target="_self"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span>
                             <span class="layer-down"><i class="icon i-down"></i><span class="a-txt">3.85M</span></span></a>
 
@@ -50,7 +50,7 @@
                 <div class="fr">
                     <div class="title">
                         <p class="logo"><span class="box">iPhone在线版 极速体验</span></p>
-                        <div class="txt"><img src="${resPath}images/ewm.png" alt=""></div>
+                        <%--<div class="txt"><img src="${resPath}images/ewm.png" alt=""></div>--%>
                     </div>
                     <div class="download">
                         <div class="btn-grp">
