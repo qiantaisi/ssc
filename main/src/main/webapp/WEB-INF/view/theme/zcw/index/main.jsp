@@ -24,10 +24,16 @@
                     <c:choose>
                         <c:when test="${empty item.url}">
                             <li>
-                                <a href="#" class="banner_main"
+                                <a href="javascript:void(0)" class="banner_main"
                                    style="background: url(<%=basePath%>images/${item.imageId}.jpg) no-repeat center;background-size: cover;"></a>
                             </li>
                         </c:when>
+                        <c:otherwise>
+                            <li>
+                                <a href="${item.url}" class="banner_main"
+                                   style="background: url(<%=basePath%>images/${item.imageId}.jpg) no-repeat center;background-size: cover;"></a>
+                            </li>
+                        </c:otherwise>
                     </c:choose>
                 </c:forEach>
             </ul>
