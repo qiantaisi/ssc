@@ -95,6 +95,18 @@ public class BetListResult extends PageResult {
          * 有效投注
          */
         private BigDecimal effectiveMoney;
+        /**
+         * 开奖结果
+         */
+        private String openCode;
+
+        public String getOpenCode() {
+            return openCode;
+        }
+
+        public void setOpenCode(String openCode) {
+            this.openCode = openCode;
+        }
 
         public Long getUserId() {
             return userId;
