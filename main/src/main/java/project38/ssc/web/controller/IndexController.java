@@ -124,6 +124,18 @@ public class IndexController extends BaseController {
         return this.renderView("index/kjjg", modelMap);
     }
 
+    /**
+     * 独立开奖结果页面
+     * @return
+     * @throws UserException 异常
+     */
+    @RequestMapping(value = "/publicKjjg.html", method = RequestMethod.GET)
+    public ModelAndView publicKjjg() throws UserException {
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        return this.renderPublicView("index/kjjg", modelMap);
+    }
+
     @RequestMapping(value = "/yhhd.html", method = RequestMethod.GET)
     public ModelAndView yhhd() throws UserException {
         String companyShortName = this.getCompanyShortName();
