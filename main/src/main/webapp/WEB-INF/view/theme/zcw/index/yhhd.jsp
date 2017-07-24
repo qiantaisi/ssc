@@ -9,12 +9,11 @@
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp" />
 <c:import url="top.jsp"/>
-<div class="men_list">
+<div class="men_lists">
     <div class="wid1">
-        <div class="logo">
-            <img src="<%=basePath%>images/${logo.imageId}" alt="">
-        </div>
-        <c:import url="../common/navList.jsp" />
+        <c:import url="../index/menu.jsp" >
+            <c:param name="yhhd" value="3" />
+        </c:import>
     </div>
 </div>
 
