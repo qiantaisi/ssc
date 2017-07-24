@@ -85,6 +85,9 @@ public abstract class BaseController {
             log.error(this, e);
         }
 
+        // 公共static目录
+        httpServletRequest.setAttribute("pubStaticPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
+
         ModelAndView modelAndView = new ModelAndView("theme/" + theme + "/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
         return modelAndView;
