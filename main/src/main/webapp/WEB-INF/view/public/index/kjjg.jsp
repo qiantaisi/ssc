@@ -158,16 +158,7 @@
                         <input class="inp2" type="submit" onclick="sousuokjhm()" value="搜索" name="" />
                     </div>
                 </div>
-                <div class="Customerservice">
-                    <ul>
-                        <li>
-                            <div class="pict"><a href="${kefuUrl}" target="_blank"><img src="${resPath}img/ico68.png" alt=""></a></div>
-                        </li>
-                        <li>
-                            <div class="pict"><a href="#top"><img src="${resPath}img/ico69.png" alt=""></a></div>
-                        </li>
-                    </ul>
-                </div>
+
                 <div class="Thelottery">
                 </div>
                 <div class="Color_type"></div>
@@ -175,7 +166,6 @@
         </div>
     </div>
 </div>
-
 <c:import url="../common/jsCommonLogin.jsp"/>
 <c:import url="../common/commonJs.jsp"/>
 <script>
