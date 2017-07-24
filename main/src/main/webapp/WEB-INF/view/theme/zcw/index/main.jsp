@@ -18,6 +18,7 @@
 <style>
     .banner_shuru_main{margin:35px 0;}
     .banner_shuru{position:static;height:0;}
+    .block_home_slider,.flexslider .slides li{width:100%;}
 </style>
 <div class="bannernew" style="height:320px;overflow:hidden;">
     <div class="block_home_slider" style="height:320px;position:absolute;">
