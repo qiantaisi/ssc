@@ -39,7 +39,7 @@ public class IndexController extends BaseController {
     @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public SscHistoryResult3 ajaxGetSscDataMainPage(
-            @RequestParam(value = "playIds", required = false) List<Long> playIds,
+            @RequestParam(value = "playIds[]", required = false) List<Long> playIds,
             Long playId
     ) {
         String companyShortName = this.getCompanyShortName();
@@ -122,18 +122,6 @@ public class IndexController extends BaseController {
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         return this.renderView("index/kjjg", modelMap);
-    }
-
-    /**
-     * 独立开奖结果页面
-     * @return
-     * @throws UserException 异常
-     */
-    @RequestMapping(value = "/publicKjjg.html", method = RequestMethod.GET)
-    public ModelAndView publicKjjg() throws UserException {
-        String companyShortName = this.getCompanyShortName();
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        return this.renderPublicView("index/kjjg", modelMap);
     }
 
     @RequestMapping(value = "/yhhd.html", method = RequestMethod.GET)

@@ -35,7 +35,7 @@
             <div class="help_col show">
 
                 <p>
-                   <strong>第一步</strong>：登陆后，点击“<span style="color:#E53333;">充值</span>”进入充值页面。</br>
+                   <strong>第一步</strong>：登录后，点击“<span style="color:#E53333;">充值</span>”进入充值页面。</br>
                     或"点击“<span style="color:#E53333;">会员中心</span>”进入“会员中心”界面，点击“<span style="color:#E53333;">账号充值</span>”进入充值页面。
                 </p>
                 <p style="text-align: center">
