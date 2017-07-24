@@ -442,7 +442,7 @@
             <ul class="index_zixun_ul">
                 <c:forEach items="${ArticleResult.articleList}" var="items">
                     <li style="width: 469px;height: 30px;">
-                        <a href="javascript:void(0)" onclick="ziXun('${items.id}')">
+                        <a href="<%=basePath%>zixun/${items.id}.html">
                             <span>【 ${items.name} 】</span>${items.title} : ${items.remarks}
                         </a>
                     </li>
