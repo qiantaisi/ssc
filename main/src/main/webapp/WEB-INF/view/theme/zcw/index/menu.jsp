@@ -224,7 +224,7 @@
         </div>
         <div class="menu_main clearfix left">
             <c:choose>
-                <c:when test="${param.noselect == 1}">
+                <c:when test="${param.noselect == 1 || param.yhhd != null}">
                     <a href="<%=basePath%>main.html">
                         首页
                     </a>
@@ -236,12 +236,25 @@
                 </c:otherwise>
             </c:choose>
 
-            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')" target="_blank">
+            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')"  target="_blank">
                 购彩大厅
             </a>
-            <a href="<%=basePath%>yhhd.html">
-                优惠活动
-            </a>
+
+
+            <c:choose>
+                <c:when test="${param.yhhd == 3}">
+                    <a href="<%=basePath%>yhhd.html" class="ahover">
+                        优惠活动
+                    </a>
+                </c:when>
+                <c:otherwise>
+                    <a href="<%=basePath%>yhhd.html">
+                        优惠活动
+                    </a>
+                </c:otherwise>
+            </c:choose>
+
+
             <a href="<%=basePath%>kjjg.html">
                 开奖公告
             </a>
