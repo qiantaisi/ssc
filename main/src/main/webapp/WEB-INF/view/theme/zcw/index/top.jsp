@@ -12,7 +12,9 @@
         <div class="left head_top_lf">
             <marquee scrollamount="3" scrolldelay="100" direction="left" onmouseover="this.stop();"
                      onmouseout="this.start();" onclick="HotNewsHistory();">
-                     敬请各位会员注意：公司入款账号【工商银行】【冶廷虎1001********5788】账户已经停用...
+                <c:forEach items="${webPopUpNoticeResult.webNoticeList}" var="item" varStatus="status">
+                   ${item.title}：${item.content}&nbsp;&nbsp;&nbsp;&nbsp;
+                </c:forEach>
             </marquee>
         </div>
         <c:choose>
