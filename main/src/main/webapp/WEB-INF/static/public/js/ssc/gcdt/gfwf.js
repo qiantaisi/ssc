@@ -9359,6 +9359,30 @@ function renderZhuihao(strZh, obj) {
         changeContent();
     });
 
+    $("#rt_trace_diff").keyup(function () {
+        changeContentFbzh();
+    });
+
+    $("#rt_trace_diff").blur(function(){
+        var valStr = $("#rt_trace_diff").val();
+        if(typeof valStr == "undefined" || valStr == "" || valStr == null){
+            $("#rt_trace_diff").val(1);
+        }
+        changeContentFbzh();
+    });
+
+    $("#rt_trace_times_diff").keyup(function () {
+        changeContentFbzh();
+    });
+
+    $("#rt_trace_times_diff").blur(function(){
+        var valStr = $("#rt_trace_times_diff").val();
+        if(typeof valStr == "undefined" || valStr == "" || valStr == null){
+            $("#rt_trace_times_diff").val(1);
+        }
+        changeContentFbzh();
+    });
+
     //选择选项-同倍追号
     $(document).on("change",'select#lt_zh_qishu',function(){
         var optionVal = parseInt($(this).val());
@@ -9501,7 +9525,7 @@ function changeContent(){
         var flagStatus = $(this).find('input').prop('checked');
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
-            $(this).find('.content_money').html('￥0.00');
+            $(this).find('.content_money').html('￥0.0');
         } else {
             var beishu = $("#startBeiShuZh").val();
             beishu = beishu == '' ? 1 : beishu;
@@ -9514,21 +9538,34 @@ function changeContent(){
 //改变被选中checkbox行的内容--同倍追号--翻倍追号
 function changeContentFbzh(){
     var totelMoney = 0;
+    var bsTemp = 1;
+    var num = 0;
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');
         totelMoney += perMoney;
     });
 
-    $(".reConHei .ulzh li").each(function () {
+    $(".reConHei .ulzh li").each(function (index, value) {
         var flagStatus = $(this).find('input').prop('checked');
+
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
-            $(this).find('.content_money').html('￥0.00');
+            $(this).find('.content_money').html('￥0.0');
         } else {
-            var beishu = $("#startBeiShuZh").val();
+            var geqi = $("#rt_trace_diff").val();  //隔期数
+            var beishu = $("#rt_trace_times_diff").val();  //倍数
             beishu = beishu == '' ? 1 : beishu;
-            $(this).find('input[type="text"]').val(beishu);
-            $(this).find('.content_money').html('￥' + (beishu * totelMoney));
+            geqi = geqi == '' ? 1 : geqi;
+
+            if(geqi == num){
+                bsTemp *= beishu;
+                num = 0;
+            }
+
+            num++; //间隔计算临时数量
+            $(this).find('input[type="text"]').val(bsTemp);
+            $(this).find('.content_money').html('￥' + (bsTemp * totelMoney));
+
         }
     });
 }
