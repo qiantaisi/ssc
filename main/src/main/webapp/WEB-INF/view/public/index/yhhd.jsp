@@ -7,30 +7,50 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <c:import url="../common/bodyStart.jsp"/>
-<c:import url="../common/checkIsChildFrame.jsp" />
-<c:import url="top.jsp"/>
-<div class="men_list">
+<c:import url="../common/checkIsChildFrame.jsp"/>
+<div class="process">
     <div class="wid1">
-        <div class="logo">
-            <img src="<%=basePath%>images/${logo.imageId}" alt="">
+        <div class="layout">
+            <div class="monty">
+                <ul>
+                    <li class="acti">全部</li>
+                    <script>
+                        for (var i = 0; i < 3; ++i) {
+                            var tmp = new Date();
+                            tmp.setMonth(tmp.getMonth() - 1 * i);
+                            var startMonth = tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + '-1 0:0:0';
+                            tmp.setMonth(tmp.getMonth() + 1);
+                            var endMonth = tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + '-1 0:0:0';
+                            document.write('<li class="monthnum" data-starttime="' + startMonth + '" data-endtime="' + endMonth + '">' + ((startMonth.split("-")[1])) + '月</li>');
+                        }
+                        var tmp = new Date();
+                        tmp.setMonth(tmp.getMonth() - 2);
+                        var endMonth = tmp.getFullYear() + "-" + (tmp.getMonth() + 1) + '-1 0:0:0';
+                        document.write('<li class="monthnum" data-endtime="' + endMonth + '">其他</li>');
+                    </script>
+                </ul>
+            </div>
+            <div class="monthdetail">
+            </div>
         </div>
-        <c:import url="../common/navList.jsp" />
+    </div>
+    <div class="Customerservice" style="right: 462px;">
+        <ul>
+            <li><div class="pict"><a href="http://www.baidu.com" target="_blank"><img src="http://localhost:8080/web/static/theme/600w/img/ico68.png" alt=""></a></div></li>
+            <li><div class="pict"><a href="#"><img src="http://localhost:8080/web/static/theme/600w/img/ico69.png" alt=""></a></div></li>
+        </ul>
     </div>
 </div>
-
-<iframe src="<%=basePath%>publicYhhd.html" frameborder="0" marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" id="ifm" name="ifm"  width="100%" class="cq_yhhd"></iframe>
-
-<c:import url="../common/bottomInfo.jsp" />
-<c:import url="../common/commonJs.jsp" />
-<c:import url="../common/jsCommonLogin.jsp" />
+<c:import url="../common/commonJs.jsp"/>
+<c:import url="../common/jsCommonLogin.jsp"/>
 <script>
-    tabs_cg(".process .layout .monty ul li","","click","acti","","",1);
-    autobox(".Customerservice",1,1140,0);
+    tabs_cg(".process .layout .monty ul li", "", "click", "acti", "", "", 1);
+    autobox(".Customerservice", 1, 1140, 0);
 
-    $(function() {
+    $(function () {
         getData(null, null);
 
-        $('.monty ul li').click(function() {
+        $('.monty ul li').click(function () {
             var startTime = $(this).data("starttime");
             var endTime = $(this).data("endtime");
             getData(startTime, endTime);
@@ -45,10 +65,10 @@
                 startTime: startTime,
                 endTime: endTime
             },
-            beforeSend: function() {
+            beforeSend: function () {
                 showLoading();
             },
-            success: function(json) {
+            success: function (json) {
                 if (json.result != 1) {
                     return;
                 }
@@ -57,7 +77,7 @@
 
                 var isFirst = true;
                 var lastDate = '';
-                $.each(json.promotionList, function(index, value) {
+                $.each(json.promotionList, function (index, value) {
                     var date = dateFormat(value.createTime, "yyyy-MM-dd");
                     if (date != lastDate) {
                         isFirst = true;
@@ -85,7 +105,7 @@
 
                 $(".monthdetail").html(str);
 
-                var arrsT = [],arreT = [];
+                var arrsT = [], arreT = [];
                 $('.monthdetail .list_tems .text .startTi').each(function () {
                     arrsT.push($(this).html());
                 });
@@ -94,26 +114,26 @@
                 });
 
                 var myDate = new Date();//获取系统当前时间
-                var currentT =  dateFormat(myDate.getTime(), "yyyy-mm-dd hh:MM:ss");
+                var currentT = dateFormat(myDate.getTime(), "yyyy-mm-dd hh:MM:ss");
 
-                for(var i = 0; i < arrsT.length; i++){
-                   var sT =  dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
-                   var eT =  dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
-                   if(sT  == currentT && eT == currentT){
-                       $('.monthdetail .list_tems:eq('+ i +') .text p').html('发布时间： 永久有效');
-                   }
+                for (var i = 0; i < arrsT.length; i++) {
+                    var sT = dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
+                    var eT = dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
+                    if (sT == currentT && eT == currentT) {
+                        $('.monthdetail .list_tems:eq(' + i + ') .text p').html('发布时间： 永久有效');
+                    }
                 }
 
             },
-            complete: function() {
-                shoutext(".process .layout .list_tems .text a",".down");
+            complete: function () {
+                shoutext(".process .layout .list_tems .text a", ".down");
                 hideLoading();
             }
         });
     }
     function showLoading() {
         layer.load(2, {
-            shade: [0.1,'#000'] //0.1透明度的白色背景
+            shade: [0.1, '#000'] //0.1透明度的白色背景
         })
     }
     function hideLoading() {
@@ -123,10 +143,10 @@
 <script type="text/html" id="template">
     <div class="list_tems">
         {{if isFirst}}
-            <div class="date">
-                <span>{{year}}</span>
-                <h3>{{month}}.{{day}}</h3>
-            </div>
+        <div class="date">
+            <span>{{year}}</span>
+            <h3>{{month}}.{{day}}</h3>
+        </div>
         {{/if}}
         <h2>{{title}}<p>发布时间：{{createTime}}</p></h2>
         <div class="pict repict">
@@ -141,4 +161,4 @@
         </div>
     </div>
 </script>
-<c:import url="../common/bodyEnd.jsp" />
+<c:import url="../common/bodyEnd.jsp"/>

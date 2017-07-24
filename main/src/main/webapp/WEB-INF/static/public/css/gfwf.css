@@ -815,7 +815,7 @@
 }
 
 .content_money{
-    margin: 0 100px;
+    margin: 0 60px;
 }
 
 .checkbox_selected{
@@ -852,4 +852,16 @@
 
 .nosel input[type="text"]:disabled {
     background-color: rgb(235, 235, 228)
+}
+
+.content_heigth .ulzh li .content_money{
+    display: inline-block;
+    width: 100px!important;
+    text-align: center;
+}
+
+.content_heigth .ulzh li .content_time_kj{
+    display: inline-block;
+    width: 200px!important;
+    text-align: center;
 }
