@@ -7,7 +7,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <c:import url="../common/bodyStart.jsp"/>
-<c:import url="../common/checkIsChildFrame.jsp"/>
+<%--<c:import url="../common/checkIsChildFrame.jsp"/>--%>
 <div class="process">
     <div class="wid1">
         <div class="layout">
