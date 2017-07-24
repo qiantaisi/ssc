@@ -107,7 +107,6 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
 .list-block li {
     box-sizing: border-box;
     position: relative;
-    /*height: 40px;*/
 }
 .item-contents{
     box-sizing: border-box;
