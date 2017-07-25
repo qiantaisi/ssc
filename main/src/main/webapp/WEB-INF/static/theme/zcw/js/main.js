@@ -104,6 +104,8 @@ $(".shuaxin").click(function () {
 
 
 $('.loginbtn').click(function () {
+
+
     $(".bg").show();
     $(".login_alert").show();
 });
