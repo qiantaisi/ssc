@@ -73,6 +73,7 @@ public class IndexController extends BaseController {
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webName", webInfoResult.getWebName());
+        modelMap.put("webInfo", webInfoResult);
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
         modelMap.put("ArticleResult", ApiUtils.getArtList(companyShortName, 0, 10));

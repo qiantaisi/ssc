@@ -10,7 +10,7 @@
 <div class="bg"></div>
 <div class="login_alert">
     <div class="login_alert_tl clearfix">
-        <span class="left spans">中彩网登录</span>
+        <span class="left spans">${webInfo.companyShortName}登录</span>
         <a href="javascript:void(0);" class="cha right"></a>
     </div>
     <form >
@@ -35,7 +35,7 @@
 
             <input type="button" class="btn_red login_alertbtn" onclick="login()"  value="立即登录" />
             <div class="login_alert_link">
-                <a href="javascript:void(0)" onclick="wjmm('${kefuUrl}')">忘记密码</a>
+                <a href="${kefuUrl}" target="_blank">忘记密码</a>
                 <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                 <a href="<%=basePath%>register.html">立即注册</a>
             </div>
@@ -47,12 +47,6 @@
     $(function () {
         // 首页弹框登录按钮
         $('.loginbtn').click(function(){
-            ajaxRequest({ url:"<%=basePath%>ssc/ajaxGetGongSi.json",
-                data: {},
-                success: function(obj) {
-                    $(".spans").html(obj.getWebName+"登陆");
-                }
-            });
             $(".bg").show();
             $(".login_alert").show();
         });
