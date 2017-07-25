@@ -139,6 +139,7 @@ filter:alpha(opacity=50);
 .list_ject ul li .Result p a.acti:hover{background: #e35b03;}
 
 .wid1{width: 1000px; margin:0 auto;}
+.wid2{margin:0 auto;}
 .ico-d{width: 8px;height: 4px; background:url(../img/ico32.png);display: inline-block;margin-left: 4px;margin-top: -4px;vertical-align: middle;transition:0.3s;}
 .men_list{background: #fa6200;height: 122px;}
 .men_list .logo{float: left;margin-top:35px;}

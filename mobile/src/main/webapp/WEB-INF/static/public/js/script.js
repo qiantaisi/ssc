@@ -4903,6 +4903,34 @@ $(function () {
     });
     $(document).on("pageInit", "#page-gcdt-cqssc", function (e, id, page) {
         initSscPage(1);
+
+// 首页弹框登录按钮
+        $('.menubtn').click(function(){
+            var uid = Tools.getCookie("uid");
+            var token = Tools.getCookie("token");
+            ajaxRequest({
+                url: config.basePath + "ssc/ajaxGetShuYing.json",
+                data: {
+                    uid:uid,
+                    token:token
+                },
+                success:function (obj) {
+                    if(obj==null){
+                        $("#jieSuan").html("(0.00)");
+                    }else{
+                        $("#jieSuan").html((obj.todayWinOrLose));
+                    }
+                }
+            });
+
+            $(".bg").show();
+            $(".menu_alert").show();
+        });
+        $('.bg').click(function(){
+            $(".bg").hide();
+            $(".menu_alert").hide();
+        });
+
         $('.cha').click(function(){
             $(".bg").hide();
             $(".menu_alert").hide();

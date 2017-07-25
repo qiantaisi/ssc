@@ -8,12 +8,12 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <c:import url="../common/bodyStart.jsp"/>
-<c:import url="../common/checkIsChildFrame.jsp" />
+<%--<c:import url="../common/checkIsChildFrame.jsp" />--%>
 <c:import url="top.jsp"/>
 <div class="men_lists">
-    <div class="wid1">
+    <div class="wid2">
         <c:import url="../index/menu.jsp" >
-            <c:param name="yhhd" value="3" />
+            <c:param name="kjjg" value="4" />
         </c:import>
     </div>
 </div>
@@ -23,3 +23,4 @@
 <c:import url="../common/bottomInfo.jsp"/>
 <c:import url="../common/jsCommonLogin.jsp"/>
 <c:import url="../common/commonJs.jsp"/>
+<c:import url="../common/copyright.jsp"/>

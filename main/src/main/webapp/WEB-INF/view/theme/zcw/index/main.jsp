@@ -537,6 +537,7 @@
 <c:import url="../common/bottomInfo.jsp"/>
 <c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/jsCommonLogin.jsp"/>
+<c:import url="../common/copyright.jsp"/>
 
 <div id="gonggao_container"></div>
 <script type="text/javascript">
@@ -578,8 +579,13 @@
 
         newRoll(".roll_rt1_2b .rewrap ul li");
 
-//        $(".all_fenlei_yin").css("display", "block");
+       $(".all_fenlei_yin").css("display", "block");
     });
+
+    function goZst(url) {
+        showLoading();
+        window.location.href = url;
+    }
 
     function getSscDataMainPage(playIds) {
         ajaxRequest({
@@ -692,21 +698,21 @@
         });
     }
 
-    <%--$(function () {--%>
+    $(function () {
 
-        <%--$('.index_main_rt1_2t a').mouseover(function () {--%>
-            <%--var index = $(this).index();--%>
-            <%--$(this).addClass('ahover').siblings().removeClass('ahover');--%>
-            <%--$(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();--%>
-        <%--});--%>
+        $('.index_main_rt1_2t a').mouseover(function () {
+            var index = $(this).index();
+            $(this).addClass('ahover').siblings().removeClass('ahover');
+            $(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();
+        });
 
-        <%--$('.touzhu_t_qht a').mouseover(function () {--%>
-            <%--var index = $(this).index();--%>
-            <%--$(this).addClass('ahover').siblings().removeClass('ahover');--%>
-            <%--$(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();--%>
-        <%--});--%>
+        $('.touzhu_t_qht a').mouseover(function () {
+            var index = $(this).index();
+            $(this).addClass('ahover').siblings().removeClass('ahover');
+            $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
+        });
 
-    <%--});--%>
+    });
     <%--//根据id获取资讯信息内容并跳转页面--%>
     <%--function ziXun(id){--%>
         <%--location.href =' <%=basePath%>zixun/' + id + '.html';--%>
@@ -776,89 +782,89 @@
     <%--}--%>
 
 
-    <%--function openXyxh(type) {--%>
-        <%--var caizhong = '';--%>
-        <%--var nums = '';--%>
-        <%--var money = '';--%>
-        <%--var navIndex = '';--%>
+   function openXyxh(type) {
+        var caizhong = '';
+        var nums = '';
+        var money = '';
+        var navIndex = '';
 
-        <%--if (type == 6) {--%>
-            <%--caizhong = 'lhc';--%>
-            <%--navIndex = 0;--%>
-            <%--numsArr = [];--%>
-            <%--for (var i = 0; i < 7; ++i) {--%>
-                <%--var v = $("#xyxhContents_6 .left:eq(" + i + ") span").data("num");--%>
-                <%--if (v == '') {--%>
-                    <%--continue;--%>
-                <%--}--%>
-                <%--numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。--%>
-            <%--}--%>
-            <%--nums = numsArr.join(",");--%>
-            <%--money = $("#xyxhMoney_6").html();--%>
-        <%--} else if (type == 1) {--%>
-            <%--caizhong = 'cqssc';--%>
-            <%--navIndex = 0;--%>
-            <%--var numsArr = [];--%>
-            <%--for (var i = 0; i < 5; ++i) {--%>
-                <%--var v = $("#xyxhContents_1 span").eq(i).data("num");--%>
-                <%--if (v == '') {--%>
-                    <%--continue;--%>
-                <%--}--%>
-                <%--numsArr.push(v);--%>
-            <%--}--%>
-            <%--nums = numsArr.join(",");--%>
-            <%--money = $("#xyxhMoney_1").html();--%>
+        if (type == 6) {
+            caizhong = 'lhc';
+            navIndex = 0;
+            numsArr = [];
+            for (var i = 0; i < 7; ++i) {
+                var v = $("#xyxhContents_6 .left:eq(" + i + ") span").data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。
+            }
+            nums = numsArr.join(",");
+            money = $("#xyxhMoney_6").html();
+        } else if (type == 1) {
+            caizhong = 'cqssc';
+            navIndex = 0;
+            var numsArr = [];
+            for (var i = 0; i < 5; ++i) {
+                var v = $("#xyxhContents_1 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+            money = $("#xyxhMoney_1").html();
 
-        <%--} else if (type == 20) {--%>
-            <%--caizhong = 'ahk3';--%>
-            <%--navIndex = 7;--%>
-            <%--var numsArr = [];--%>
-            <%--for (var i = 0; i < 3; ++i) {--%>
-                <%--var v = $("#xyxhContents_20 span").eq(i).data("num");--%>
-                <%--if (v == '') {--%>
-                    <%--continue;--%>
-                <%--}--%>
-                <%--numsArr.push(v);--%>
-            <%--}--%>
-            <%--nums = numsArr.join(",");--%>
-            <%--money = $("#xyxhMoney_20").html();--%>
-        <%--} else if (type == 4) {--%>
-            <%--caizhong = 'pl3';--%>
-            <%--navIndex = 0;--%>
-            <%--var numsArr = [];--%>
-            <%--for (var i = 0; i < 3; ++i) {--%>
-                <%--var v = $("#xyxhContents_4 span").eq(i).data("num");--%>
-                <%--if (v == '') {--%>
-                    <%--continue;--%>
-                <%--}--%>
-                <%--numsArr.push(v);--%>
-            <%--}--%>
-            <%--nums = numsArr.join(",");--%>
-            <%--money = $("#xyxhMoney_4").html();--%>
-        <%--}--%>
+        } else if (type == 20) {
+            caizhong = 'ahk3';
+            navIndex = 7;
+            var numsArr = [];
+            for (var i = 0; i < 3; ++i) {
+                var v = $("#xyxhContents_20 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+            money = $("#xyxhMoney_20").html();
+        } else if (type == 4) {
+            caizhong = 'pl3';
+            navIndex = 0;
+            var numsArr = [];
+            for (var i = 0; i < 3; ++i) {
+                var v = $("#xyxhContents_4 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+            money = $("#xyxhMoney_4").html();
+        }
 
-        <%--if (numsArr.length == 0) {--%>
-            <%--return;--%>
-        <%--}--%>
-        <%--openXyxhGcdt(caizhong, nums, money, navIndex);--%>
-    <%--}--%>
+        if (numsArr.length == 0) {
+            return;
+        }
+        openXyxhGcdt(caizhong, nums, money, navIndex);
+    }
 
-    <%--function openXyxhGcdt(caizhong, nums, money, navIndex) {--%>
-        <%--windowOpenBlank('<%=basePath%>ssc/index.html?caizhong=' + caizhong + '&nums=' + nums + '&money=' + money + '&navIndex=' + navIndex);--%>
-        <%--//goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + caizhong + ".html?caizhong=" + caizhong + "&nums=" + nums + "&money=" + money + "&navIndex=" + navIndex);--%>
-    <%--}--%>
+    function openXyxhGcdt(caizhong, nums, money, navIndex) {
+        windowOpenBlank('<%=basePath%>ssc/index.html?caizhong=' + caizhong + '&nums=' + nums + '&money=' + money + '&navIndex=' + navIndex);
+        //goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + caizhong + ".html?caizhong=" + caizhong + "&nums=" + nums + "&money=" + money + "&navIndex=" + navIndex);
+    }
 
-    <%--function openGcdt(module) {--%>
-<%--//        if (typeof module == 'undefined') {--%>
-<%--//            module = '';--%>
-<%--//        }--%>
-        <%--&lt;%&ndash;windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);&ndash;%&gt;--%>
-        <%--var subUrl = "";--%>
-        <%--if (module) {--%>
-            <%--subUrl = "#" + CONFIG.BASEURL + "ssc/" + module + ".html";--%>
-        <%--}--%>
-        <%--windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);--%>
-    <%--}--%>
+    function openGcdt(module) {
+//        if (typeof module == 'undefined') {
+//            module = '';
+//        }
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + "ssc/" + module + ".html";
+        }
+        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
+    }
 
     <%--function openZstIndex(module) {--%>
         <%--if (typeof module == 'undefined') {--%>
