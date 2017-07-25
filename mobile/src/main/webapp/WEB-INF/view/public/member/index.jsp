@@ -21,7 +21,7 @@
             <h1 class="title">会员中心</h1>
         </header>
         <%--<c:import url="../common/bottomNav.jsp" />--%>
-        <c:import url="../theme/common/bottomNav.jsp" />
+        <%--<c:import url="../theme/common/bottomNav.jsp" />--%>
         <div class="content">
             <div class="row cl-200">
                 <div class="col-20 cl-201">
@@ -315,7 +315,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="cl-206">
+            <div class="cl-206 ">
                 <a href="javascript:void(0)" onclick="sigout()" class="button button-fill">退出登录</a>
             </div>
         </div>
