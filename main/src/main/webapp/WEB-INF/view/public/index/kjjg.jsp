@@ -160,6 +160,7 @@
                 </div>
 
                 <div class="Thelottery">
+
                 </div>
                 <div class="Color_type"></div>
             </div>
@@ -862,7 +863,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=9">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/pk10')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/pk10.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pk10')">购买</a>
@@ -900,7 +901,7 @@
         </div>
         <div class="box3">
             <a  href="<%=basePath%>kjjg.html?playGroupId=1">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/cqssc')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">购买</a>
@@ -938,7 +939,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=2">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/tjssc')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/tjssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')">购买</a>
@@ -976,7 +977,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=3">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/xjssc')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/xjssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')">购买</a>
@@ -1008,7 +1009,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=4">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/pl3')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/pl3.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pl3')">购买</a>
@@ -1040,7 +1041,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=5">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/fc3d')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/fc3d.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/fc3d')">购买</a>
@@ -1083,7 +1084,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=6">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/lhc')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/lhc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/lhc')">购买</a>
@@ -1115,7 +1116,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=7">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/xy28')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xy28')">购买</a>
@@ -1164,7 +1165,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=8">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/kl8')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/kl8')">购买</a>
@@ -1206,7 +1207,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=10">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/xync')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/xync.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xync')">购买</a>
@@ -1248,7 +1249,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=11">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/klsf')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/klsf')">购买</a>
@@ -1286,7 +1287,7 @@
         </div>
         <div class="box3">
             <a  href="<%=basePath%>kjjg.html?playGroupId=13">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/csfssc')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sfssc')">购买</a>
@@ -1325,7 +1326,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=14">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/xyft')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/xyft.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xyft')">购买</a>
@@ -1363,7 +1364,7 @@
         </div>
         <div class="box3">
             <a  href="<%=basePath%>kjjg.html?playGroupId=15">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/ffssc')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ffssc')">购买</a>
@@ -1401,7 +1402,7 @@
         </div>
         <div class="box3">
             <a  href="<%=basePath%>kjjg.html?playGroupId=16">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/efssc')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/efssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/efssc')">购买</a>
@@ -1439,7 +1440,7 @@
         </div>
         <div class="box3">
             <a  href="<%=basePath%>kjjg.html?playGroupId=17">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/wfssc')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/wfssc')">购买</a>
@@ -1474,7 +1475,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=18">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/jsks')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/jsk3.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jsk3')">购买</a>
@@ -1509,7 +1510,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=19">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/hbk3')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/hbk3.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/hbk3')">购买</a>
@@ -1544,7 +1545,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=20">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/ahk3')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/ahk3.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ahk3')">购买</a>
@@ -1579,7 +1580,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=21">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/jlk3')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/jlk3.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jlk3')">购买</a>
@@ -1622,7 +1623,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=22">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/sflhc')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/sflhc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sflhc')">购买</a>
@@ -1661,7 +1662,7 @@
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=23">历史开奖</a>
-            <a href="javascript:void(0)" onclick="goZst('zst/jspk10')">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/jspk10.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
             <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jspk10')">购买</a>
