@@ -17,15 +17,16 @@
                 <img src="${resPath}images/index_14.png" />
             </a>
         </div>
-       <%-- <div class="right clearfix">
-            <div class="left head_middle_tel">
-                400-690-8888
-            </div>
+     <div class="right clearfix">
+         <%--  <div class="left head_middle_tel">
+            400-690-8888
+        </div>
+        --%>
             <a href="${kefuUrl}" target="_blank" class="left head_middle_kf">
                 <img src="${resPath}images/index_20.png" />
                 联系客服
             </a>
-        </div>--%>
+        </div>
     </div>
 </div>
 <div class="menu">
