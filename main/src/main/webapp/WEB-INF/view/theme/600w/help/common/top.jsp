@@ -12,7 +12,7 @@
     </div>
     <div class="step">
         <ul>
-            <li><a href="<%=basePath%>ssc/register.html"><img src="${resPath}img/ico203.png" alt="">免费注册</a></li>
+            <li><a href="<%=basePath%>/register.html"><img src="${resPath}img/ico203.png" alt="">免费注册</a></li>
             <li><a href="javascript:void(0)" onclick="openHyzx('zhcz/yhzz')"><img src="${resPath}img/ico204.png" alt="">账户充值</a></li>
             <li><a href="javascript:void(0)" onclick="openGcdt()"><img src="${resPath}img/ico205.png" alt="">购买彩票</a></li>
             <li><img src="${resPath}img/ico206.png" alt="">中大奖</li>
