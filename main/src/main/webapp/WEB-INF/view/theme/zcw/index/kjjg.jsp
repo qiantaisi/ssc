@@ -20,7 +20,6 @@
 
 <jsp:include page="../../../public/index/kjjg.jsp" />
 
-<c:import url="../common/bottomInfo.jsp"/>
+<c:import url="bottom.jsp"/>
 <c:import url="../common/jsCommonLogin.jsp"/>
 <c:import url="../common/commonJs.jsp"/>
-<c:import url="../common/copyright.jsp"/>
