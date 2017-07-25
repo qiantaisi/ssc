@@ -1840,6 +1840,29 @@ $(function () {
     var playGrounpId = 0;
     // $(document).on("pageInit", "#page-cqssc", function(e, id, page) {initSscPage();});
     function initSscPage(playGroupId) {
+        // 右上角弹出框
+        $('.menubtn').click(function(){
+            var uid = Tools.getCookie("uid");
+            var token = Tools.getCookie("token");
+            ajaxRequest({
+                url: config.basePath + "ssc/ajaxGetShuYing.json",
+                beforeSend: function() {
+                    $("#jieSuan").html("刷新中...");
+                },
+                success:function (obj) {
+                    if (obj.result == 1) {
+                        $("#jieSuan").html(obj.todayWinOrLose);
+                    }
+                }
+            });
+            $(".bg").show();
+            $(".menu_alert").show();
+        });
+        $('.bg').click(function(){
+            $(".bg").hide();
+            $(".menu_alert").hide();
+        });
+
         querySscLeftTime(playGroupId);
 
         var flag = null;
@@ -4880,6 +4903,7 @@ $(function () {
     });
     $(document).on("pageInit", "#page-gcdt-cqssc", function (e, id, page) {
         initSscPage(1);
+
 // 首页弹框登录按钮
         $('.menubtn').click(function(){
             var uid = Tools.getCookie("uid");
@@ -4906,6 +4930,7 @@ $(function () {
             $(".bg").hide();
             $(".menu_alert").hide();
         });
+
         $('.cha').click(function(){
             $(".bg").hide();
             $(".menu_alert").hide();

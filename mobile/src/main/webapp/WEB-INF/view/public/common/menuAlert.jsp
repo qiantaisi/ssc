@@ -6,53 +6,27 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
+<style>
+    .menu_alert{padding:0;left:initial;right:0;top:2.2rem;text-align:center;margin:0;width:9rem;}
+    .menu_alert .list-block .item-innerss{font-size:0.65rem;padding:0;}
+    .menu_alert .list-block .item-innerss:nth-child(1):after{border:none;}
+    .menu_alert .item-medias{display:none;}
+    .menu_alert .list-block .item-contents{padding:0;}
+    .arrow-up{
+        width:0;
+        height:0;
+        border-left:0.7rem solid transparent;
+        border-right:0.7rem solid transparent;
+        border-bottom:0.7rem solid #fff;
+        margin:auto;
+        margin-left:7rem;
+        margin-right:0.6rem;
+    }
+</style>
 <div class="bg"></div>
-
-
 <div class="menu_alert">
-    <style>
-        .menu_alert {
-            padding: 0;
-            left: initial;
-            right: 0;
-            top: 2.2rem;
-            text-align: center;
-            margin: 0;
-            width: 9rem;
-        }
-
-        .menu_alert .list-block .item-innerss {
-            font-size: 0.65rem;
-            padding: 0;
-        }
-
-        .menu_alert .list-block .item-innerss:nth-child(1):after {
-            border: none;
-        }
-
-        .menu_alert .item-medias {
-            display: none;
-        }
-
-        .menu_alert .list-block .item-contents {
-            padding: 0;
-        }
-
-        .arrow-up {
-            width: 0;
-            height: 0;
-            border-left: 0.7rem solid transparent;
-            border-right: 0.7rem solid transparent;
-            border-bottom: 0.7rem solid #fff;
-            margin: auto;
-            margin-left: 7rem;
-            margin-right: 0.6rem;
-        }
-    </style>
-    <div class="menu_alert">
-        <div class="arrow-up"></div>
-
-        <span class="list-block">
+    <div class="arrow-up"></div>
+    <span class="list-block">
         <ul class="ul">
                 <li style="height: 3rem;">
                 <c:choose>
@@ -776,13 +750,13 @@
                 </a>
             </li>
 
-                <div class="item-inner-r">
-                    <div class="item-inner-re" style="height: 33px; line-height: 33px;">
-                    <span>今日输赢</span>
-                    </div>
-                    <div class="item-inner-re" style="height: 33px; line-height: 33px;">
-                    <span style="color:red " id="jieSuan">(0.00)</span></div>
+            <li class="item-inner-r">
+                <div class="item-inner-re" style="height: 33px; line-height: 33px;">
+                <span>今日输赢</span>
                 </div>
+                <div class="item-inner-re" style="height: 33px; line-height: 33px;">
+                <span style="color:red " id="jieSuan">刷新中...</span></div>
+            </li>
         </ul>
     </span>
     </div>

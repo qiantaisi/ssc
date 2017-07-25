@@ -392,13 +392,18 @@ public class SscController extends CacheController {
      */
     @RequestMapping(value = "/ajaxGetShuYing.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public TodayWinOrLoseAndJszdResult ajaxGetShuYing(
-            String uid,
-            String token) {
-
-            long uids=Long.parseLong(uid);
+    public TodayWinOrLoseAndJszdResult ajaxGetShuYing() {
         String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getJrsyAndJszd(uids,token,companyShortName);
+        TodayWinOrLoseAndJszdResult result = new TodayWinOrLoseAndJszdResult();
+        try {
+            Long uid = this.getUid(httpServletRequest);
+            String token = this.getToken(httpServletRequest);
+            result = ApiUtils.getJrsyAndJszd(uid, token, companyShortName);
+        } catch (Exception e) {
+            result.setResult(-100);
+            result.setDescription("服务器错误");
+        }
+        return result;
     }
 
     /**

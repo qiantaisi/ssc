@@ -30,6 +30,7 @@
     <script src="${resPath}js/FancyZoomHTML.js" language="JavaScript" type="text/javascript"></script>
     <script src="${resPath}js/flexslider/jquery-1.7.2.js" language="JavaScript" type="text/javascript"></script>
     <jsp:include page="commonHeader.jsp" />
+    <jsp:include page="../../../public/common/customTheme.jsp" />
     <style>
         a:hover{
             color: red;
