@@ -6,10 +6,6 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<div class="bg"></div>
-
-
-<div class="menu_alert">
 <style>
     .menu_alert{padding:0;left:initial;right:0;top:2.2rem;text-align:center;margin:0;width:9rem;}
     .menu_alert .list-block .item-innerss{font-size:0.65rem;padding:0;}
@@ -27,9 +23,9 @@
         margin-right:0.6rem;
     }
 </style>
+<div class="bg"></div>
 <div class="menu_alert">
     <div class="arrow-up"></div>
-
     <span class="list-block">
         <ul class="ul">
                 <li style="height: 3rem;">
@@ -752,15 +748,13 @@
                 </a>
             </li>
 
-                <div class="item-inner-r">
-                    <div class="item-inner-re" style="height: 33px; line-height: 33px;">
-                    <span>今日输赢</span>
-                    </div>
-                    <div class="item-inner-re" style="height: 33px; line-height: 33px;">
-                    <span style="color:red ">(0.00)</span></div>
+            <li class="item-inner-r">
+                <div class="item-inner-re" style="height: 33px; line-height: 33px;">
+                <span>今日输赢</span>
                 </div>
-
-
+                <div class="item-inner-re" style="height: 33px; line-height: 33px;">
+                <span style="color:red " id="todayWinOrLose">刷新中...</span></div>
+            </li>
         </ul>
     </span>
 </div>

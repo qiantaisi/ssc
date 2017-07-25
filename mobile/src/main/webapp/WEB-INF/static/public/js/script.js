@@ -4880,7 +4880,7 @@ $(function () {
     });
     $(document).on("pageInit", "#page-gcdt-cqssc", function (e, id, page) {
         initSscPage(1);
-// 首页弹框登录按钮
+        // 首页弹框登录按钮
         $('.menubtn').click(function(){
             ajaxRequest({
                 url: config.basePath + "ssc/ajaxGetDataHistory.json",
