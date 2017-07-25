@@ -16,8 +16,8 @@
     <c:param name="isShow" value="true" />
 </c:import>
 <style>
-    .banner_shuru_main{margin:35px 0;}
-    .banner_shuru{position:static;height:0;}
+    .banner_shuru_main{margin:0;}
+    .banner_shuru{position:relative;height:0;}
     .block_home_slider,.flexslider .slides li{width:100%;}
 </style>
 <div class="bannernew" style="height:320px;overflow:hidden;">
