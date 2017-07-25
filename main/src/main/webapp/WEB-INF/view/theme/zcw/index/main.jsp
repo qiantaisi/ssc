@@ -41,7 +41,6 @@
             </ul>
         </div>
     </div>
-
     <c:choose>
         <c:when test="${not empty userSession}">
             <div class="banner_shuru container" style="height: 1px;">
@@ -935,34 +934,34 @@
         <%--windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);--%>
     <%--}--%>
 
-    <%--function xyxhAdd(id, size) {--%>
-        <%--var num = $("#xyxhInput_" + id).val();--%>
-        <%--if (isNaN(num) || num <= 0) {--%>
-            <%--num = 1;--%>
-        <%--} else {--%>
-            <%--num++;--%>
-        <%--}--%>
-        <%--$("#xyxhInput_" + id).val(num);--%>
-        <%--$("#xyxhMoney_" + id).html(mul(num, size));--%>
-    <%--}--%>
-    <%--function checkValue(id, size) {--%>
-        <%--var num = $("#xyxhInput_" + id).val();--%>
-        <%--if (isNaN(num) || num <= 1) {--%>
-            <%--num = 1;--%>
-            <%--$("#xyxhInput_" + id).val(num);--%>
-        <%--}--%>
-        <%--$("#xyxhMoney_" + id).html(mul(num, size));--%>
-    <%--}--%>
-    <%--function xyxhMinute(id, size) {--%>
-        <%--var num = $("#xyxhInput_" + id).val();--%>
-        <%--if (isNaN(num) || num <= 1) {--%>
-            <%--num = 1;--%>
-        <%--} else {--%>
-            <%--num--;--%>
-        <%--}--%>
-        <%--$("#xyxhInput_" + id).val(num);--%>
-        <%--$("#xyxhMoney_" + id).html(mul(num, size));--%>
-    <%--}--%>
+    function xyxhAdd(id, size) {
+        var num = $("#xyxhInput_" + id).val();
+        if (isNaN(num) || num <= 0) {
+            num = 1;
+        } else {
+            num++;
+        }
+        $("#xyxhInput_" + id).val(num);
+        $("#xyxhMoney_" + id).html(mul(num, size));
+    }
+    function checkValue(id, size) {
+        var num = $("#xyxhInput_" + id).val();
+        if (isNaN(num) || num <= 1) {
+            num = 1;
+            $("#xyxhInput_" + id).val(num);
+        }
+        $("#xyxhMoney_" + id).html(mul(num, size));
+    }
+    function xyxhMinute(id, size) {
+        var num = $("#xyxhInput_" + id).val();
+        if (isNaN(num) || num <= 1) {
+            num = 1;
+        } else {
+            num--;
+        }
+        $("#xyxhInput_" + id).val(num);
+        $("#xyxhMoney_" + id).html(mul(num, size));
+    }
 
 
     function xyxh(obj, type) {
