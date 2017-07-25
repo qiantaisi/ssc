@@ -9265,7 +9265,7 @@ function getZhuihaoList(callback) {
         return;
     }
 
-    if (zhuihaoSscOpenTimeList[0].number == getNumber()) {
+    if (zhuihaoSscOpenTimeList != null && zhuihaoSscOpenTimeList[0].number == getNumber()) {
         if (typeof callback == 'function') {
             callback();
         }

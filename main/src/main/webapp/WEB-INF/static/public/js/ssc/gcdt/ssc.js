@@ -47,6 +47,7 @@ function showClearBetTemplate() {
 
     // 隐藏追号模板
     $("#zhInfo").hide();
+    zhuihaoSscOpenTimeList = null;
 }
 
 function closeClearBetTemplate(isReset) {

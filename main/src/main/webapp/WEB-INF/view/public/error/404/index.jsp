@@ -47,6 +47,10 @@
             display:inline; line-height:25px;
         }
     </style>
+    <script>
+        // 防止被frame
+        if (top.location != self.location) top.location = self.location;
+    </script>
 </head>
 <body>
 <div class="header">
