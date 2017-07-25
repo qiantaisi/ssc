@@ -339,6 +339,7 @@ a:visited {
 .kaijiang_main li {
     border-bottom: 1px dashed #a9a9a9;
     padding: 14px 5px;
+    width:95%;
 }
 
 .kaijiang_main li:last-child {
