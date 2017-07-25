@@ -10,37 +10,61 @@
 
 
 <div class="menu_alert">
-<style>
-    .menu_alert{padding:0;left:initial;right:0;top:2.2rem;text-align:center;margin:0;width:9rem;}
-    .menu_alert .list-block .item-innerss{font-size:0.65rem;padding:0;}
-    .menu_alert .list-block .item-innerss:nth-child(1):after{border:none;}
-    .menu_alert .item-medias{display:none;}
-    .menu_alert .list-block .item-contents{padding:0;}
-    .arrow-up{
-        width:0;
-        height:0;
-        border-left:0.7rem solid transparent;
-        border-right:0.7rem solid transparent;
-        border-bottom:0.7rem solid #fff;
-        margin:auto;
-        margin-left:7rem;
-        margin-right:0.6rem;
-    }
-</style>
-<div class="menu_alert">
-    <div class="arrow-up"></div>
+    <style>
+        .menu_alert {
+            padding: 0;
+            left: initial;
+            right: 0;
+            top: 2.2rem;
+            text-align: center;
+            margin: 0;
+            width: 9rem;
+        }
 
-    <span class="list-block">
+        .menu_alert .list-block .item-innerss {
+            font-size: 0.65rem;
+            padding: 0;
+        }
+
+        .menu_alert .list-block .item-innerss:nth-child(1):after {
+            border: none;
+        }
+
+        .menu_alert .item-medias {
+            display: none;
+        }
+
+        .menu_alert .list-block .item-contents {
+            padding: 0;
+        }
+
+        .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 0.7rem solid transparent;
+            border-right: 0.7rem solid transparent;
+            border-bottom: 0.7rem solid #fff;
+            margin: auto;
+            margin-left: 7rem;
+            margin-right: 0.6rem;
+        }
+    </style>
+    <div class="menu_alert">
+        <div class="arrow-up"></div>
+
+        <span class="list-block">
         <ul class="ul">
                 <li style="height: 3rem;">
                 <c:choose>
                     <c:when test="${not empty userSession}">
                         <div class="item-inner-r" style="background: #fffcef">
-                            <div><span style="font-size: 0.7rem;font-weight: bold;">余额:</span></div><div><span style="color: red;font-size: 0.7rem;display: block; font-weight: bold;">${userSession.balance}元</span></div></div>
+                            <div><span style="font-size: 0.7rem;font-weight: bold;">余额:</span></div><div><span
+                                style="color: red;font-size: 0.7rem;display: block; font-weight: bold;">${userSession.balance}元</span></div></div>
                     </c:when>
                     <c:otherwise>
                         <a href="<%=basePath%>login.html">
-                        <div class="item-inners-r" style="height: 70px; line-height: 70px;"> <span style="font-size: 0.7rem;font-weight: bold;">前往登录</span></div>
+                        <div class="item-inners-r" style="height: 70px; line-height: 70px;"> <span
+                                style="font-size: 0.7rem;font-weight: bold;">前往登录</span></div>
                             </a>
                     </c:otherwise>
                 </c:choose>
@@ -757,10 +781,8 @@
                     <span>今日输赢</span>
                     </div>
                     <div class="item-inner-re" style="height: 33px; line-height: 33px;">
-                    <span style="color:red ">(0.00)</span></div>
+                    <span style="color:red " id="jieSuan">(0.00)</span></div>
                 </div>
-
-
         </ul>
     </span>
-</div>
+    </div>

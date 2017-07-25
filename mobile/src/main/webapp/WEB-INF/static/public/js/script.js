@@ -4882,11 +4882,22 @@ $(function () {
         initSscPage(1);
 // 首页弹框登录按钮
         $('.menubtn').click(function(){
+            var uid = Tools.getCookie("uid");
+            var token = Tools.getCookie("token");
             ajaxRequest({
-                url: config.basePath + "ssc/ajaxGetDataHistory.json",
-                data: {},
+                url: config.basePath + "ssc/ajaxGetShuYing.json",
+                data: {
+                    uid:uid,
+                    token:token
+                },
                 success:function (obj) {
-                    
+                    alert(obj.todayWinOrLose);
+                    if(obj==null){
+                        $("#jieSuan").html("(0.00)");
+                    }else{
+
+                        $("#jieSuan").html((obj.todayWinOrLose));
+                    }
                 }
             });
 
