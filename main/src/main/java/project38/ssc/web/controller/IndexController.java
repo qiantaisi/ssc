@@ -39,7 +39,7 @@ public class IndexController extends BaseController {
     @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public SscHistoryResult3 ajaxGetSscDataMainPage(
-            @RequestParam(value = "playIds", required = false) List<Long> playIds,
+            @RequestParam(value = "playIds[]", required = false) List<Long> playIds,
             Long playId
     ) {
         String companyShortName = this.getCompanyShortName();

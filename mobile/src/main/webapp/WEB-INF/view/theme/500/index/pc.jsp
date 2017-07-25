@@ -88,7 +88,7 @@
         <div class="main">
             <div class="title" style="width:1000px; margin: 0 auto;">
                 <h2 class="txt-h2">安全有保障 服务新趋势</h2>
-                <h3 class="txt-h3">登陆密码保障，购彩实名制、中大奖全程协助领取，为您打造<br>最安全的服务平台，让您约彩无忧、领奖无忧~</h3>
+                <h3 class="txt-h3">登录密码保障，购彩实名制、中大奖全程协助领取，为您打造<br>最安全的服务平台，让您约彩无忧、领奖无忧~</h3>
             </div>
             <div class="pic">
                 <div class="stage"></div>

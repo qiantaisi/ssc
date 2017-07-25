@@ -33,7 +33,7 @@
         <div class="left all_fenlei clearfix">
             <span class="left all_fenlei_tl">全部彩种</span>
             <img src="${resPath}images/index_30.png" class="right all_fenlei_img" />
-            <div class="all_fenlei_yin">
+            <div class="all_fenlei_yin" <c:choose><c:when test="${not empty param.isShow && param.isShow == true}">style="display:block;"</c:when><c:otherwise>style="display:none"</c:otherwise></c:choose>>
                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_39.png"/>
@@ -271,7 +271,6 @@
 </div>
 
 <script>
-    $(".all_fenlei_yin").css("display","none");
     $(function () {
         $('.type_top .left .left_div .log,.type_top .left .left_div .alert_log').hover(function () {
             $('.type_top .left .left_div .alert_log').show();
