@@ -10,7 +10,7 @@
 <div class="bg"></div>
 <div class="login_alert">
     <div class="login_alert_tl clearfix">
-        <span class="left">易名彩登录</span>
+        <span class="left spans">中彩网登录</span>
         <a href="javascript:void(0);" class="cha right"></a>
     </div>
     <form >
@@ -35,7 +35,7 @@
 
             <input type="button" class="btn_red login_alertbtn" onclick="login()"  value="立即登录" />
             <div class="login_alert_link">
-                <a href="${kefuUrl}">忘记密码</a>
+                <a href="javascript:void(0)" onclick="wjmm('${kefuUrl}')">忘记密码</a>
                 <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                 <a href="<%=basePath%>register.html">立即注册</a>
             </div>
@@ -59,6 +59,11 @@
             $(".login_alert").hide();
         });
     });
+    
+    function wjmm(url) {
+        $(".spans").html("请联系在线客服");
+        $(".spans").css("color","red");
+    }
 
     function login() {
         var loginAccount = $.trim($("#registerLoginAccountAlert").val());

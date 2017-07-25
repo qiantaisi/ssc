@@ -4891,11 +4891,9 @@ $(function () {
                     token:token
                 },
                 success:function (obj) {
-                    alert(obj.todayWinOrLose);
                     if(obj==null){
                         $("#jieSuan").html("(0.00)");
                     }else{
-
                         $("#jieSuan").html((obj.todayWinOrLose));
                     }
                 }
