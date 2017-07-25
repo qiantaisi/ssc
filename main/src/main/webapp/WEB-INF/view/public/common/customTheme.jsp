@@ -25,9 +25,11 @@
 </c:if>
 <c:if test="${not empty fengge_2}">
     <style>
-        .head div h5,.Betting .tabs ul li,.top .nav h1{background:#${fengge_2}!important}
-        .jf_box .url a,.eveb_form label.error,.eveb_transfer_box .center_wallet .money,.eveb_transfer_box .wallet_list li p{color:#${fengge_2}!important}
-        .Betting .tabs ul li.acti{background:#fff!important}
-        .button_1, .button_1:link, .button_1:visited{border:1px solid #${fengge_2}!important;}
+
+
+        <%--.head div h5,.Betting .tabs ul li,.top .nav h1{background:#${fengge_2}!important}--%>
+        <%--.jf_box .url a,.eveb_form label.error,.eveb_transfer_box .center_wallet .money,.eveb_transfer_box .wallet_list li p{color:#${fengge_2}!important}--%>
+        <%--.Betting .tabs ul li.acti{background:#fff!important}--%>
+        <%--.button_1, .button_1:link, .button_1:visited{border:1px solid #${fengge_2}!important;}--%>
     </style>
 </c:if>

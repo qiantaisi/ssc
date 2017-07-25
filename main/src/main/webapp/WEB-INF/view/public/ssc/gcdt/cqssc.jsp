@@ -136,6 +136,12 @@
     <c:if test="${not empty playPlListJson}">
     var gfwfPlJson = ${playPlListJson};
     </c:if>
+
+    // 全局开奖时间列表
+    <c:if test="${not empty zhuihaoSscOpenTimeList}">
+    var zhuihaoSscOpenTimeList = ${zhuihaoSscOpenTimeList};
+    </c:if>
+
 </script>
 <script>
     function removeThisItem(obj) {

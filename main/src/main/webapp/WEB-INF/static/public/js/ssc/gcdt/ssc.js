@@ -24,8 +24,6 @@ function showClearBetTemplate() {
     </div>\
     ';
 
-
-
     layer.closeAll();
     //页面层
     layerId = layer.open({
@@ -37,7 +35,6 @@ function showClearBetTemplate() {
         content: clearBet_template
     });
 
-
     var time = 5;
     T = setInterval(function() {
         if (time == 0) {
@@ -46,7 +43,11 @@ function showClearBetTemplate() {
         }
         $(".clearBet_template .time").html('(' + time + ')');
         --time;
-    }, 1000)
+    }, 1000);
+
+    // 隐藏追号模板
+    $("#zhInfo").hide();
+    zhuihaoSscOpenTimeList = null;
 }
 
 function closeClearBetTemplate(isReset) {
@@ -135,6 +136,14 @@ function getSscOpenTime(playGroupId, callback) {
 
             if (typeof callback == 'function') {
                 callback();
+            }
+
+            // 追号处理
+            if (typeof getZhuihaoList == 'function') {
+                // 隐藏追号模板
+                $("#zhInfo").hide();
+                // 获取最新开奖时间列表
+                getZhuihaoList();
             }
         },
         complete: function() {
