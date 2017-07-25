@@ -59,6 +59,10 @@
             $(".login_alert").hide();
         });
     });
+
+    function goZst(url) {
+        window.open('<%=basePath%>ssc/'+ url +'.html?type=1');
+    }
     
     function wjmm(url) {
         $(".spans").html("请联系在线客服");

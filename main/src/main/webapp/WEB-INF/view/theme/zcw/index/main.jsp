@@ -582,11 +582,6 @@
        $(".all_fenlei_yin").css("display", "block");
     });
 
-    function goZst(url) {
-        showLoading();
-        window.location.href = url;
-    }
-
     function getSscDataMainPage(playIds) {
         ajaxRequest({
             url: "<%=basePath%>ajaxGetSscDataMainPage.json",
