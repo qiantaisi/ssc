@@ -47,6 +47,12 @@
     $(function () {
         // 首页弹框登录按钮
         $('.loginbtn').click(function(){
+            ajaxRequest({ url:"<%=basePath%>ssc/ajaxGetGongSi.json",
+                data: {},
+                success: function(obj) {
+                    $(".spans").html(obj.getWebName+"登陆");
+                }
+            });
             $(".bg").show();
             $(".login_alert").show();
         });

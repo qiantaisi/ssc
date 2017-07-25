@@ -111,6 +111,13 @@ public class SscController extends CacheController {
         return this.renderJson(result);
     }
 
+    @RequestMapping(value = "/ajaxGetGongSi.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public WebInfoResult ajaxGetGongSi() {
+        String companyShortName = this.getCompanyShortName();
+       return ApiUtils.getWebInfo(1, companyShortName);
+    }
+
 //    @RequestMapping(value = "/getSscOpenTime.json", method = {RequestMethod.GET, RequestMethod.POST})
 //    @ResponseBody
 //    public String getSscOpenTime(Boolean isData, Long playGroupId, Long playId, Boolean calcJiangchi) {

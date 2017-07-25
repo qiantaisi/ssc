@@ -39,7 +39,9 @@
                     </c:choose>
                 </c:forEach>
             </ul>
+
         </div>
+
     </div>
     <c:choose>
         <c:when test="${not empty userSession}">
@@ -126,7 +128,6 @@
             </div>
         </c:otherwise>
     </c:choose>
-
 </div>
 
 <div class="main container index_main clearfix">
