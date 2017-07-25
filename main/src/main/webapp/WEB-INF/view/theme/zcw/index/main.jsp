@@ -5,57 +5,50 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-    String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("www.", "");
 %>
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp"/>
 <c:import url="top.jsp"/>
-<c:import url="menu.jsp"/>
-
-<div class="bannernew">
-    <div class="block_home_slider">
+<c:import url="menu.jsp">
+    <c:param name="isShow" value="true" />
+</c:import>
+<style>
+    .banner_shuru_main{margin:35px 0;}
+    .banner_shuru{position:static;height:0;}
+    .block_home_slider,.flexslider .slides li{width:100%;}
+</style>
+<div class="bannernew" style="height:320px;overflow:hidden;">
+    <div class="block_home_slider" style="height:320px;position:absolute;">
         <div id="home_slider" class="flexslider">
             <ul class="slides">
                 <c:forEach items="${carouseList.carouselList}" var="item">
                     <c:choose>
                         <c:when test="${empty item.url}">
                             <li>
-                                <a href="#" class="banner_main"
-                                   style="background: url(<%=basePath%>images/${item.imageId}.jpg) no-repeat center;background-size: cover;"></a>
+                                <a href="javascript:void(0)" class="banner_main" style="background: url(<%=basePath%>images/${item.imageId}.png) no-repeat center;background-size: cover;"></a>
                             </li>
                         </c:when>
+                        <c:otherwise>
+                            <li>
+                                <a href="${item.url}" class="banner_main" style="background: url(<%=basePath%>images/${item.imageId}.png) no-repeat center;background-size: cover;"></a>
+                            </li>
+                        </c:otherwise>
                     </c:choose>
                 </c:forEach>
             </ul>
         </div>
-
-        <script type="text/javascript">
-            $(function () {
-                $('#home_slider').flexslider({
-                    animation: 'slide',
-                    controlNav: true,
-                    directionNav: false,
-                    animationLoop: true,
-                    slideshow: true,
-                    pauseOnHover: true,
-                    useCSS: false
-                });
-
-            });
-        </script>
     </div>
 
     <c:choose>
         <c:when test="${not empty userSession}">
-            <div class="banner_shuru">
+            <div class="banner_shuru container">
                 <div class="container clear">
                     <div class="banner_shuru_main right">
                         <div class="banner_shuru_main_tl">
-                            <span>欢迎登陆</span>
+                            <span>欢迎登录</span>
                         </div>
                         <div class="login_after">
                             <div class="login_after1">
@@ -102,20 +95,18 @@
             </div>
         </c:when>
         <c:otherwise>
-            <div class="banner_shuru">
+            <div class="banner_shuru container">
                 <div class="container clear">
                     <div class="banner_shuru_main right">
                         <div class="banner_shuru_main_tl">
-                            <span>欢迎登陆</span>
+                            <span>欢迎登录</span>
                         </div>
                         <form onsubmit="registerLogin();return false;">
                             <div class=" banner_shuru_gp">
-                                <input type="text" id="registerLoginAccount" class="banner_shuru_input"
-                                       placeholder="会员名"/>
+                                <input type="text" id="registerLoginAccount" class="banner_shuru_input" placeholder="会员名"/>
                             </div>
                             <div class=" banner_shuru_gp">
-                                <input type="password" id="registerLoginPassword" class="banner_shuru_input"
-                                       placeholder="密码"/>
+                                <input type="password" id="registerLoginPassword" class="banner_shuru_input" placeholder="密码"/>
                                 <a href="${kefuUrl}" class="banner_wp">忘记?</a>
                             </div>
                             <div class=" banner_shuru_gp">
@@ -157,16 +148,16 @@
 		    				快速投注
 		    			</span>
                 <div class="left touzhu_t_qht clearfix">
-                    <a href="javascript:javascript:void(0);" class="ahover">
+                    <a href="javascript:void(0);" class="ahover">
                         重庆时时彩
                     </a>
-                    <a href="javascript:javascript:void(0);">
+                    <a href="javascript:void(0);">
                         安徽快3
                     </a>
-                    <a href="javascript:javascript:void(0);">
+                    <a href="javascript:void(0);">
                         香港六合彩
                     </a>
-                    <a href="javascript:javascript:void(0);">
+                    <a href="javascript:void(0);">
                         排列三
                     </a>
                 </div>
@@ -451,7 +442,7 @@
             <ul class="index_zixun_ul">
                 <c:forEach items="${ArticleResult.articleList}" var="items">
                     <li style="width: 469px;height: 30px;">
-                        <a href="javascript:void(0)" onclick="ziXun('${items.id}')">
+                        <a href="<%=basePath%>zixun/${items.id}.html">
                             <span>【 ${items.name} 】</span>${items.title} : ${items.remarks}
                         </a>
                     </li>
@@ -548,12 +539,24 @@
 <c:import url="../common/jsCommonLogin.jsp"/>
 
 <div id="gonggao_container"></div>
+<script type="text/javascript">
+    $(function () {
+        $('#home_slider').flexslider({
+            animation: 'slide',
+            controlNav: true,
+            directionNav: false,
+            animationLoop: true,
+            slideshow: true,
+            pauseOnHover: true,
+            useCSS: false
+        });
+    });
+</script>
 <script>
     $(function () {
-        var playIds="";
-        playIds+="1,"+"2,"+"3,"+"15,"+"16";
+        var playIds = [1, 2, 3, 15, 16];
         getSscDataMainPage(playIds);
-        getWebPopUpNotice();
+        <%--getWebPopUpNotice();--%>
 
 
         xyxh(null, 1);
@@ -570,12 +573,12 @@
 
         $('#zj_info_marquee').liMarquee({
             direction: 'up',
-            scrollamount: 30
+            scrollamount: 10
         });
 
         newRoll(".roll_rt1_2b .rewrap ul li");
 
-        $(".all_fenlei_yin").css("display", "block");
+//        $(".all_fenlei_yin").css("display", "block");
     });
 
     function getSscDataMainPage(playIds) {
@@ -689,242 +692,235 @@
         });
     }
 
-</script>
+    <%--$(function () {--%>
 
-<script>
-    $(function () {
+        <%--$('.index_main_rt1_2t a').mouseover(function () {--%>
+            <%--var index = $(this).index();--%>
+            <%--$(this).addClass('ahover').siblings().removeClass('ahover');--%>
+            <%--$(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();--%>
+        <%--});--%>
 
-        $('.index_main_rt1_2t a').mouseover(function () {
-            var index = $(this).index();
-            $(this).addClass('ahover').siblings().removeClass('ahover');
-            $(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();
-        });
+        <%--$('.touzhu_t_qht a').mouseover(function () {--%>
+            <%--var index = $(this).index();--%>
+            <%--$(this).addClass('ahover').siblings().removeClass('ahover');--%>
+            <%--$(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();--%>
+        <%--});--%>
 
-        $('.touzhu_t_qht a').mouseover(function () {
-            var index = $(this).index();
-            $(this).addClass('ahover').siblings().removeClass('ahover');
-            $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
-        });
+    <%--});--%>
+    <%--//根据id获取资讯信息内容并跳转页面--%>
+    <%--function ziXun(id){--%>
+        <%--location.href =' <%=basePath%>zixun/' + id + '.html';--%>
+    <%--}--%>
 
-    });
-    //根据id获取资讯信息内容并跳转页面
-    function ziXun(id){
-        location.href =' <%=basePath%>zixun/' + id + '.html';
-    }
+    <%--function registerLogin() {--%>
+        <%--var loginAccount = $.trim($("#registerLoginAccount").val());--%>
+        <%--var loginPassword = $.trim($("#registerLoginPassword").val());--%>
+        <%--var yzm = $.trim($("#registerLoginYzm").val());--%>
 
-</script>
+        <%--if (!loginAccount) {--%>
+            <%--alert("请输入账号");--%>
+            <%--return;--%>
+        <%--}--%>
+        <%--if (!loginPassword) {--%>
+            <%--alert("请输入密码");--%>
+            <%--return;--%>
+        <%--}--%>
+        <%--if (!yzm) {--%>
+            <%--alert("请输入验证码");--%>
+            <%--return;--%>
+        <%--}--%>
 
-<script>
+        <%--ajaxRequest({--%>
+            <%--url: "<%=basePath%>member/ajaxLogin.json",--%>
+            <%--data: {--%>
+                <%--yzm: yzm,--%>
+                <%--account: loginAccount,--%>
+                <%--password: $.md5(loginPassword)--%>
+            <%--},--%>
+            <%--beforeSend: function () {--%>
+                <%--showLoading();--%>
+            <%--},--%>
+            <%--success: function (json) {--%>
+                <%--if (json.result == 1) {--%>
+                    <%--$.cookie("uid", json.userId, {path: "/"});--%>
+                    <%--$.cookie("token", json.token, {path: "/"});--%>
+                    <%--window.location.href = "<%=basePath%>main.html";--%>
+                <%--} else {--%>
+                    <%--refreshYzm(document.getElementById('registerYzmImg2'));--%>
+                    <%--Tools.toast("登录失败：" + json.description);--%>
+                <%--}--%>
+                <%--hideLoading();--%>
+            <%--}--%>
+        <%--});--%>
+    <%--}--%>
+    <%--function refreshYzm(obj) {--%>
+        <%--var src = $(obj).attr("src");--%>
+        <%--var params = getRequest(src);--%>
 
-    function registerLogin() {
-        var loginAccount = $.trim($("#registerLoginAccount").val());
-        var loginPassword = $.trim($("#registerLoginPassword").val());
-        var yzm = $.trim($("#registerLoginYzm").val());
-
-        if (!loginAccount) {
-            alert("请输入账号");
-            return;
-        }
-        if (!loginPassword) {
-            alert("请输入密码");
-            return;
-        }
-        if (!yzm) {
-            alert("请输入验证码");
-            return;
-        }
-
-        ajaxRequest({
-            url: "<%=basePath%>member/ajaxLogin.json",
-            data: {
-                yzm: yzm,
-                account: loginAccount,
-                password: $.md5(loginPassword)
-            },
-            beforeSend: function () {
-                showLoading();
-            },
-            success: function (json) {
-                if (json.result == 1) {
-                    $.cookie("uid", json.userId, {path: "/"});
-                    $.cookie("token", json.token, {path: "/"});
-                    window.location.href = "<%=basePath%>main.html";
-                } else {
-                    refreshYzm(document.getElementById('registerYzmImg2'));
-                    Tools.toast("登录失败：" + json.description);
-                }
-                hideLoading();
-            }
-        });
-    }
-    function refreshYzm(obj) {
-        var src = $(obj).attr("src");
-        var params = getRequest(src);
-
-        src = "<%=basePath%>code/yzm?timestamp=" + (new Date()).getTime();
-        $.each(params, function (index, value) {
-            src += '&' + value.key + '=' + value.value;
-        });
-        $(obj).attr("src", src);
-    }
+        <%--src = "<%=basePath%>code/yzm?timestamp=" + (new Date()).getTime();--%>
+        <%--$.each(params, function (index, value) {--%>
+            <%--src += '&' + value.key + '=' + value.value;--%>
+        <%--});--%>
+        <%--$(obj).attr("src", src);--%>
+    <%--}--%>
 
 
-    function xytz(type) {
-        if (type == 6) {
-            var arr = [];
-            for (var i = 0; i < 7; ++i) {
-                arr.push(Tools.parseInt($("#xyxhContent_6 span").eq(i).data("num")));
-            }
+    <%--function xytz(type) {--%>
+        <%--if (type == 6) {--%>
+            <%--var arr = [];--%>
+            <%--for (var i = 0; i < 7; ++i) {--%>
+                <%--arr.push(Tools.parseInt($("#xyxhContent_6 span").eq(i).data("num")));--%>
+            <%--}--%>
 
-        }
-    }
+        <%--}--%>
+    <%--}--%>
 
 
-    function openXyxh(type) {
-        var caizhong = '';
-        var nums = '';
-        var money = '';
-        var navIndex = '';
+    <%--function openXyxh(type) {--%>
+        <%--var caizhong = '';--%>
+        <%--var nums = '';--%>
+        <%--var money = '';--%>
+        <%--var navIndex = '';--%>
 
-        if (type == 6) {
-            caizhong = 'lhc';
-            navIndex = 0;
-            numsArr = [];
-            for (var i = 0; i < 7; ++i) {
-                var v = $("#xyxhContents_6 .left:eq(" + i + ") span").data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。
-            }
-            nums = numsArr.join(",");
-            money = $("#xyxhMoney_6").html();
-        } else if (type == 1) {
-            caizhong = 'cqssc';
-            navIndex = 0;
-            var numsArr = [];
-            for (var i = 0; i < 5; ++i) {
-                var v = $("#xyxhContents_1 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-            money = $("#xyxhMoney_1").html();
+        <%--if (type == 6) {--%>
+            <%--caizhong = 'lhc';--%>
+            <%--navIndex = 0;--%>
+            <%--numsArr = [];--%>
+            <%--for (var i = 0; i < 7; ++i) {--%>
+                <%--var v = $("#xyxhContents_6 .left:eq(" + i + ") span").data("num");--%>
+                <%--if (v == '') {--%>
+                    <%--continue;--%>
+                <%--}--%>
+                <%--numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。--%>
+            <%--}--%>
+            <%--nums = numsArr.join(",");--%>
+            <%--money = $("#xyxhMoney_6").html();--%>
+        <%--} else if (type == 1) {--%>
+            <%--caizhong = 'cqssc';--%>
+            <%--navIndex = 0;--%>
+            <%--var numsArr = [];--%>
+            <%--for (var i = 0; i < 5; ++i) {--%>
+                <%--var v = $("#xyxhContents_1 span").eq(i).data("num");--%>
+                <%--if (v == '') {--%>
+                    <%--continue;--%>
+                <%--}--%>
+                <%--numsArr.push(v);--%>
+            <%--}--%>
+            <%--nums = numsArr.join(",");--%>
+            <%--money = $("#xyxhMoney_1").html();--%>
 
-        } else if (type == 20) {
-            caizhong = 'ahk3';
-            navIndex = 7;
-            var numsArr = [];
-            for (var i = 0; i < 3; ++i) {
-                var v = $("#xyxhContents_20 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-            money = $("#xyxhMoney_20").html();
-        } else if (type == 4) {
-            caizhong = 'pl3';
-            navIndex = 0;
-            var numsArr = [];
-            for (var i = 0; i < 3; ++i) {
-                var v = $("#xyxhContents_4 span").eq(i).data("num");
-                if (v == '') {
-                    continue;
-                }
-                numsArr.push(v);
-            }
-            nums = numsArr.join(",");
-            money = $("#xyxhMoney_4").html();
-        }
+        <%--} else if (type == 20) {--%>
+            <%--caizhong = 'ahk3';--%>
+            <%--navIndex = 7;--%>
+            <%--var numsArr = [];--%>
+            <%--for (var i = 0; i < 3; ++i) {--%>
+                <%--var v = $("#xyxhContents_20 span").eq(i).data("num");--%>
+                <%--if (v == '') {--%>
+                    <%--continue;--%>
+                <%--}--%>
+                <%--numsArr.push(v);--%>
+            <%--}--%>
+            <%--nums = numsArr.join(",");--%>
+            <%--money = $("#xyxhMoney_20").html();--%>
+        <%--} else if (type == 4) {--%>
+            <%--caizhong = 'pl3';--%>
+            <%--navIndex = 0;--%>
+            <%--var numsArr = [];--%>
+            <%--for (var i = 0; i < 3; ++i) {--%>
+                <%--var v = $("#xyxhContents_4 span").eq(i).data("num");--%>
+                <%--if (v == '') {--%>
+                    <%--continue;--%>
+                <%--}--%>
+                <%--numsArr.push(v);--%>
+            <%--}--%>
+            <%--nums = numsArr.join(",");--%>
+            <%--money = $("#xyxhMoney_4").html();--%>
+        <%--}--%>
 
-        if (numsArr.length == 0) {
-            return;
-        }
-        openXyxhGcdt(caizhong, nums, money, navIndex);
-    }
+        <%--if (numsArr.length == 0) {--%>
+            <%--return;--%>
+        <%--}--%>
+        <%--openXyxhGcdt(caizhong, nums, money, navIndex);--%>
+    <%--}--%>
 
-    function openXyxhGcdt(caizhong, nums, money, navIndex) {
-        windowOpenBlank('<%=basePath%>ssc/index.html?caizhong=' + caizhong + '&nums=' + nums + '&money=' + money + '&navIndex=' + navIndex);
-        //goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + caizhong + ".html?caizhong=" + caizhong + "&nums=" + nums + "&money=" + money + "&navIndex=" + navIndex);
-    }
+    <%--function openXyxhGcdt(caizhong, nums, money, navIndex) {--%>
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?caizhong=' + caizhong + '&nums=' + nums + '&money=' + money + '&navIndex=' + navIndex);--%>
+        <%--//goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + caizhong + ".html?caizhong=" + caizhong + "&nums=" + nums + "&money=" + money + "&navIndex=" + navIndex);--%>
+    <%--}--%>
 
-    function openGcdt(module) {
-//        if (typeof module == 'undefined') {
-//            module = '';
-//        }
+    <%--function openGcdt(module) {--%>
+<%--//        if (typeof module == 'undefined') {--%>
+<%--//            module = '';--%>
+<%--//        }--%>
+        <%--&lt;%&ndash;windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);&ndash;%&gt;--%>
+        <%--var subUrl = "";--%>
+        <%--if (module) {--%>
+            <%--subUrl = "#" + CONFIG.BASEURL + "ssc/" + module + ".html";--%>
+        <%--}--%>
+        <%--windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);--%>
+    <%--}--%>
+
+    <%--function openZstIndex(module) {--%>
+        <%--if (typeof module == 'undefined') {--%>
+            <%--module = '';--%>
+        <%--}--%>
+        <%--&lt;%&ndash;windowOpen('<%=basePath%>ssc/index.html?module=' + module, '走势图首页', 1285, 800);&ndash;%&gt;--%>
         <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
-        var subUrl = "";
-        if (module) {
-            subUrl = "#" + CONFIG.BASEURL + "ssc/" + module + ".html";
-        }
-        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
-    }
+    <%--}--%>
 
-    function openZstIndex(module) {
-        if (typeof module == 'undefined') {
-            module = '';
-        }
-        <%--windowOpen('<%=basePath%>ssc/index.html?module=' + module, '走势图首页', 1285, 800);--%>
-        windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);
-    }
+    <%--function openZst(zst, type) {--%>
+        <%--&lt;%&ndash;windowOpen('<%=basePath%>ssc/index.html?zst=' + zst + '&type=' + type, '购彩大厅走势图', 1285, 800);&ndash;%&gt;--%>
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?zst=' + zst + '&type=' + type);--%>
+    <%--}--%>
 
-    function openZst(zst, type) {
-        <%--windowOpen('<%=basePath%>ssc/index.html?zst=' + zst + '&type=' + type, '购彩大厅走势图', 1285, 800);--%>
-        windowOpenBlank('<%=basePath%>ssc/index.html?zst=' + zst + '&type=' + type);
-    }
+    <%--function openHyzx(module) {--%>
+        <%--if (typeof module == 'undefined') {--%>
+            <%--module = '';--%>
+        <%--}--%>
+        <%--if (typeof $.cookie("uid") == 'undefined' || typeof $.cookie("token") == 'undefined') {--%>
+            <%--alert("请先登录");--%>
+            <%--if ($("#loginAccount1").length > 0) {--%>
+                <%--$("#loginAccount1").focus();--%>
+                <%--return;--%>
+            <%--}--%>
+            <%--window.location.href = "<%=basePath%>main.html";--%>
+            <%--return;--%>
+        <%--}--%>
+        <%--var subUrl = "";--%>
+        <%--if (module) {--%>
+            <%--subUrl = "#" + CONFIG.BASEURL + module;--%>
+        <%--}--%>
+        <%--windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);--%>
+    <%--}--%>
 
-    function openHyzx(module) {
-        if (typeof module == 'undefined') {
-            module = '';
-        }
-        if (typeof $.cookie("uid") == 'undefined' || typeof $.cookie("token") == 'undefined') {
-            alert("请先登录");
-            if ($("#loginAccount1").length > 0) {
-                $("#loginAccount1").focus();
-                return;
-            }
-            window.location.href = "<%=basePath%>main.html";
-            return;
-        }
-        var subUrl = "";
-        if (module) {
-            subUrl = "#" + CONFIG.BASEURL + module;
-        }
-        windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);
-    }
-
-    function xyxhAdd(id, size) {
-        var num = $("#xyxhInput_" + id).val();
-        if (isNaN(num) || num <= 0) {
-            num = 1;
-        } else {
-            num++;
-        }
-        $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html(mul(num, size));
-    }
-    function checkValue(id, size) {
-        var num = $("#xyxhInput_" + id).val();
-        if (isNaN(num) || num <= 1) {
-            num = 1;
-            $("#xyxhInput_" + id).val(num);
-        }
-        $("#xyxhMoney_" + id).html(mul(num, size));
-    }
-    function xyxhMinute(id, size) {
-        var num = $("#xyxhInput_" + id).val();
-        if (isNaN(num) || num <= 1) {
-            num = 1;
-        } else {
-            num--;
-        }
-        $("#xyxhInput_" + id).val(num);
-        $("#xyxhMoney_" + id).html(mul(num, size));
-    }
+    <%--function xyxhAdd(id, size) {--%>
+        <%--var num = $("#xyxhInput_" + id).val();--%>
+        <%--if (isNaN(num) || num <= 0) {--%>
+            <%--num = 1;--%>
+        <%--} else {--%>
+            <%--num++;--%>
+        <%--}--%>
+        <%--$("#xyxhInput_" + id).val(num);--%>
+        <%--$("#xyxhMoney_" + id).html(mul(num, size));--%>
+    <%--}--%>
+    <%--function checkValue(id, size) {--%>
+        <%--var num = $("#xyxhInput_" + id).val();--%>
+        <%--if (isNaN(num) || num <= 1) {--%>
+            <%--num = 1;--%>
+            <%--$("#xyxhInput_" + id).val(num);--%>
+        <%--}--%>
+        <%--$("#xyxhMoney_" + id).html(mul(num, size));--%>
+    <%--}--%>
+    <%--function xyxhMinute(id, size) {--%>
+        <%--var num = $("#xyxhInput_" + id).val();--%>
+        <%--if (isNaN(num) || num <= 1) {--%>
+            <%--num = 1;--%>
+        <%--} else {--%>
+            <%--num--;--%>
+        <%--}--%>
+        <%--$("#xyxhInput_" + id).val(num);--%>
+        <%--$("#xyxhMoney_" + id).html(mul(num, size));--%>
+    <%--}--%>
 
 
     function xyxh(obj, type) {

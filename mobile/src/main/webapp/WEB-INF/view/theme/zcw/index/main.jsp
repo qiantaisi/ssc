@@ -26,7 +26,16 @@
                 <div class="swiper-wrapper">
                     <c:forEach items="${carouseList.carouselList}" var="item">
                         <div class="img-sz swiper-slide">
-                            <img src="<%=basePath%>images/${item.imageId}.png" />
+                            <c:choose>
+                                <c:when test="${empty item.url}">
+                                    <img src="<%=basePath%>images/${item.imageId}.png" />
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="${item.url}">
+                                        <img src="<%=basePath%>images/${item.imageId}.png" />
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
                         </div>
                     </c:forEach>
                 </div>

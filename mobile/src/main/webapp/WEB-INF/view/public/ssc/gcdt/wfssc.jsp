@@ -20,7 +20,7 @@
             <%--<a class="yxsm" href="<%=basePath%>ssc/kjjl/bqxq.html?playGroupId=1">--%>
             <%--游戏说明--%>
             <%--</a>--%>
-            <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
+            <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
             <h1 class="title">五分时时彩</h1>

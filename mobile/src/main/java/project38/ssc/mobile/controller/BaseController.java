@@ -30,17 +30,17 @@ public abstract class BaseController {
     @Autowired
     private HttpServletRequest httpServletRequest;
 
-    /**
-     * 基于@ExceptionHandler异常处理
-     */
-    @ExceptionHandler
-    public ModelAndView exp(HttpServletRequest request, Exception ex) throws UserException {
-        log.error(this, ex);
-
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        String companyShortName = getCompanyShortName();
-        return this.renderView("error/500/index", modelMap);
-    }
+//    /**
+//     * 基于@ExceptionHandler异常处理
+//     */
+//    @ExceptionHandler
+//    public ModelAndView exp(HttpServletRequest request, Exception ex) throws UserException {
+//        log.error(this, ex);
+//
+//        Map<String, Object> modelMap = new HashMap<String, Object>();
+//        String companyShortName = getCompanyShortName();
+//        return this.renderView("error/500/index", modelMap);
+//    }
 
     /**
      * 渲染视图

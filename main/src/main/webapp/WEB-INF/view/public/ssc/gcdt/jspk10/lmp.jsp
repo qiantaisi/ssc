@@ -190,21 +190,21 @@
                     <td>&nbsp;</td>
                 </tr>
 
-                <tr>
-                    <td><strong>冠亚和</strong></td>
-                    <td><strong class="color-red pl" data-plid="14075"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="冠亚和-大" data-plid="14075"/></td>
-                    <td><strong class="color-red pl" data-plid="14088"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="冠亚和-小" data-plid="14088"/></td>
-                    <td><strong class="color-red pl" data-plid="14100"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="冠亚和-单" data-plid="14100"/></td>
-                    <td><strong class="color-red pl" data-plid="14095"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="冠亚和-双" data-plid="14095"/></td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
+                <%--<tr>--%>
+                    <%--<td><strong>冠亚和</strong></td>--%>
+                    <%--<td><strong class="color-red pl" data-plid="14075"></strong></td>--%>
+                    <%--<td><input type="text" class="table-txt" data-name="冠亚和-大" data-plid="14075"/></td>--%>
+                    <%--<td><strong class="color-red pl" data-plid="14088"></strong></td>--%>
+                    <%--<td><input type="text" class="table-txt" data-name="冠亚和-小" data-plid="14088"/></td>--%>
+                    <%--<td><strong class="color-red pl" data-plid="14100"></strong></td>--%>
+                    <%--<td><input type="text" class="table-txt" data-name="冠亚和-单" data-plid="14100"/></td>--%>
+                    <%--<td><strong class="color-red pl" data-plid="14095"></strong></td>--%>
+                    <%--<td><input type="text" class="table-txt" data-name="冠亚和-双" data-plid="14095"/></td>--%>
+                    <%--<td>&nbsp;</td>--%>
+                    <%--<td>&nbsp;</td>--%>
+                    <%--<td>&nbsp;</td>--%>
+                    <%--<td>&nbsp;</td>--%>
+                <%--</tr>--%>
                 </tbody>
             </table>
         </div>

@@ -34,7 +34,7 @@
             </div>
             <div class="help_col show">
 <p>
-                <strong>第一步</strong>：登陆后，点击“<span style="color:#E53333;">会员中心</span>”，进入“会员中心”。点击“<span style="color:#E53333;">账户设置</span>”。
+                <strong>第一步</strong>：登录后，点击“<span style="color:#E53333;">会员中心</span>”，进入“会员中心”。点击“<span style="color:#E53333;">账户设置</span>”。
 </p>
                 <p style="text-align: center">
                     <a href="${resPath}img/zc10.png"><img src="${resPath}img/zc10.png"title="点击放大图片" width="700"/></a>

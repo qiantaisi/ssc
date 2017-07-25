@@ -30,19 +30,19 @@ public abstract class BaseController {
     @Autowired
     private HttpServletRequest httpServletRequest;
 
-    /** 基于@ExceptionHandler异常处理 */
-    @ExceptionHandler
-    public ModelAndView exp(HttpServletRequest request, Exception ex) {
-        BetListResult result = new BetListResult();
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        try {
-            String companyShortName = getCompanyShortName();
-            modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
-        } catch (Exception e) {
-            log.error(this, ex);
-        }
-        return this.renderView("error/500/index", modelMap);
-    }
+//    /** 基于@ExceptionHandler异常处理 */
+//    @ExceptionHandler
+//    public ModelAndView exp(HttpServletRequest request, Exception ex) {
+//        BetListResult result = new BetListResult();
+//        Map<String, Object> modelMap = new HashMap<String, Object>();
+//        try {
+//            String companyShortName = getCompanyShortName();
+//            modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+//        } catch (Exception e) {
+//            log.error(this, ex);
+//        }
+//        return this.renderView("error/500/index", modelMap);
+//    }
 
     /**
      * 渲染视图
@@ -84,6 +84,9 @@ public abstract class BaseController {
         }catch (Exception e){
             log.error(this, e);
         }
+
+        // 公共static目录
+        httpServletRequest.setAttribute("pubStaticPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
 
         ModelAndView modelAndView = new ModelAndView("theme/" + theme + "/" + jspLocation);
         modelAndView.addAllObjects(modelMap);

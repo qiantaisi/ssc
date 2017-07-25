@@ -33,7 +33,7 @@
         <div class="left all_fenlei clearfix">
             <span class="left all_fenlei_tl">全部彩种</span>
             <img src="${resPath}images/index_30.png" class="right all_fenlei_img" />
-            <div class="all_fenlei_yin">
+            <div class="all_fenlei_yin" <c:choose><c:when test="${not empty param.isShow && param.isShow == true}">style="display:block;"</c:when><c:otherwise>style="display:none"</c:otherwise></c:choose>>
                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/ffssc')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_39.png"/>
@@ -224,7 +224,7 @@
         </div>
         <div class="menu_main clearfix left">
             <c:choose>
-                <c:when test="${param.noselect == 1}">
+                <c:when test="${param.noselect == 1 || param.yhhd != null}">
                     <a href="<%=basePath%>main.html">
                         首页
                     </a>
@@ -236,12 +236,25 @@
                 </c:otherwise>
             </c:choose>
 
-            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')" target="_blank">
+            <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')"  target="_blank">
                 购彩大厅
             </a>
-            <a href="<%=basePath%>yhhd.html">
-                优惠活动
-            </a>
+
+
+            <c:choose>
+                <c:when test="${param.yhhd == 3}">
+                    <a href="<%=basePath%>yhhd.html" class="ahover">
+                        优惠活动
+                    </a>
+                </c:when>
+                <c:otherwise>
+                    <a href="<%=basePath%>yhhd.html">
+                        优惠活动
+                    </a>
+                </c:otherwise>
+            </c:choose>
+
+
             <a href="<%=basePath%>kjjg.html">
                 开奖公告
             </a>
@@ -258,7 +271,6 @@
 </div>
 
 <script>
-    $(".all_fenlei_yin").css("display","none");
     $(function () {
         $('.type_top .left .left_div .log,.type_top .left .left_div .alert_log').hover(function () {
             $('.type_top .left .left_div .alert_log').show();

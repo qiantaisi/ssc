@@ -9,17 +9,17 @@
 <script type="text/javascript" src="${resPath}js/jquery.min.js?v=2017"></script><!--jQuery库-->
 <script type="text/javascript" src="${resPath}js/scrollanim.min.js?v=2017"></script> <!--"动画库"-->
 <script src="${resPath}js/type.js?v=2017"></script><!--自定义封装函数-->
-<script src="${resPath}js/global.js?v=20170505"></script><!--自定义封装函数-->
-<script src="${resPath}js/jquery.cookie.js?v=2017"></script><!--自定义封装函数-->
-<script src="${resPath}js/jquery.md5.js?v=2017"></script><!--自定义封装函数-->
-<script src="${resPath}layer/layer.js?v=2017"></script>
-<script src="${resPath}js/jquery.nicescroll.js?v=2017"></script>
-<script src="${resPath}js/dateFormat.js?v=2017"></script>
-<script src="${resPath}js/template.js?v=2017"></script>
-<script src="${resPath}js/swfobject/swfobject.js?v=2017"></script>
-<script src="${resPath}js/jquery.liMarquee.js?v=2017"></script>
-<script src="${resPath}js/placeholders.jquery.min.js?v=2017"></script>
-<script src="${resPath}jRange/jquery.range-min.js?v=2017"></script>
+<script src="${pubStaticPath}js/global.js?v=20170724"></script><!--自定义封装函数-->
+<script src="${pubStaticPath}js/jquery.cookie.js?v=2017"></script><!--自定义封装函数-->
+<script src="${pubStaticPath}js/jquery.md5.js?v=2017"></script><!--自定义封装函数-->
+<script src="${pubStaticPath}layer/layer.js?v=2017"></script>
+<script src="${pubStaticPath}js/jquery.nicescroll.js?v=2017"></script>
+<script src="${pubStaticPath}js/dateFormat.js?v=2017"></script>
+<script src="${pubStaticPath}js/template.js?v=2017"></script>
+<script src="${pubStaticPath}js/swfobject/swfobject.js?v=2017"></script>
+<script src="${pubStaticPath}js/jquery.liMarquee.js?v=2017"></script>
+<script src="${pubStaticPath}js/placeholders.jquery.min.js?v=2017"></script>
+<script src="${pubStaticPath}jRange/jquery.range-min.js?v=2017"></script>
 <script>
     // 闪烁
     var blinkColorArr = "#fa6200|#0f3f94".split("|");
