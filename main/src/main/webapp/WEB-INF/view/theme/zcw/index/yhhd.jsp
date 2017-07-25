@@ -9,6 +9,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp" />
 <c:import url="top.jsp"/>
+
 <div class="men_lists">
     <div class="wid2">
         <c:import url="../index/menu.jsp" >

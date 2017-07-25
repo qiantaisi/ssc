@@ -519,6 +519,26 @@
                                     <a href="<%=basePath%>help/index.html">彩种介绍</a>
                                 </p>
                                 </div>
+                                <div style="margin: 10px">
+                                    <p>
+                                        <a href="<%=basePath%>help/question/cz.html">充值介绍</a>
+                                    </p>
+                                </div>
+                                <div style="margin: 10px">
+                                    <p>
+                                        <a href="<%=basePath%>help/question/cz_1.html">网银充值</a>
+                                    </p>
+                                </div>
+                                <div style="margin: 10px">
+                                    <p>
+                                        <a href="<%=basePath%>help/question/cz_2.html">支付宝</a>
+                                    </p>
+                                </div>
+                                <div style="margin: 10px">
+                                    <p>
+                                        <a href="<%=basePath%>help/question/cz_1.html">网银充值</a>
+                                    </p>
+                                </div>
 
                         </marquee>
                         </ul>
