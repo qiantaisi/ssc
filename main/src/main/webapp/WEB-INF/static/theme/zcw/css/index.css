@@ -267,7 +267,6 @@ a:visited {
     width: 45px;
     height: 20px;
     vertical-align: middle;
-    border: 0;
 }
 
 .banner_shuru_btn {
@@ -421,16 +420,10 @@ a:visited {
     background: #ffeedc;
     border: 6px solid #fdf7f1;
     margin-bottom: 10px;
-    padding-left: 11%;
+    padding-left: 6%;
 }
 
-.retouzhu2{
-    padding-left: 23%;
-}
 
-.retouzhu3{
-    padding-left: 32%;
-}
 
 .kai_qiu_main{
     margin-top: 10px;
