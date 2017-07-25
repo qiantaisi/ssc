@@ -44,8 +44,8 @@
 
     <c:choose>
         <c:when test="${not empty userSession}">
-            <div class="banner_shuru container">
-                <div class="container clear">
+            <div class="banner_shuru container" style="height: 1px;">
+                <div class="container clear" style="height: 1px;">
                     <div class="banner_shuru_main right">
                         <div class="banner_shuru_main_tl">
                             <span>欢迎登录</span>
@@ -95,8 +95,8 @@
             </div>
         </c:when>
         <c:otherwise>
-            <div class="banner_shuru container">
-                <div class="container clear">
+            <div class="banner_shuru container" style="height: 1px;">
+                <div class="container clear" style="height: 1px;">
                     <div class="banner_shuru_main right">
                         <div class="banner_shuru_main_tl">
                             <span>欢迎登录</span>
