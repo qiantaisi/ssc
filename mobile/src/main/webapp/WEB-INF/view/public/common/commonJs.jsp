@@ -8,7 +8,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <jsp:include page="../../common/commonJs.jsp" />
-<script src="${resPath}js/script.js?v=20170720_11"></script>
+<script src="${resPath}js/script.js?v=20170720_12"></script>
 <script src="${resPath}js/gfwf.js?v=20170706"></script>
 <%--购彩按钮颜色变换-购彩走势图--%>
 <script language="javascript">

@@ -386,6 +386,22 @@ public class SscController extends CacheController {
     }
 
     /**
+     * 当日输赢结算
+     * @param uid token
+     * @return
+     */
+    @RequestMapping(value = "/ajaxGetShuYing.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public TodayWinOrLoseAndJszdResult ajaxGetShuYing(
+            String uid,
+            String token) {
+
+            long uids=Long.parseLong(uid);
+        String companyShortName = this.getCompanyShortName();
+        return ApiUtils.getJrsyAndJszd(uids,token,companyShortName);
+    }
+
+    /**
      * 开奖历史记录
      * @param type
      * @return

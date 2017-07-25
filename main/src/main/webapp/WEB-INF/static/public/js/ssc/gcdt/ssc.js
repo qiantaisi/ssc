@@ -223,7 +223,7 @@ $(function() {
                         // 显示清除投注内容提示框
                         if (typeof showClearBetTemplate == 'function') {
                             showClearBetTemplate();
-                        }
+                        }''
                     }
                 }
             } else {
