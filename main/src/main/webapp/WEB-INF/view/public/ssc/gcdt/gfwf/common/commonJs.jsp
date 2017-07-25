@@ -92,9 +92,9 @@
         </span>
     </div>
     <div class="content_heigth">
-        <ul class="ulzh">
+        <ul class="ulzh" id="tbLiList">
             {{each listContent}}
-            <li class="list-li">
+            <li class="list-li" style="display:none;">
                 <input type="checkbox" class="oneCheckbox"/>
                 <span class="content_qs">{{$value.zhqishu}}</span>
                 <span class="nosel">
@@ -144,9 +144,9 @@
         </span>
     </div>
     <div class="content_heigth reConHei">
-        <ul class="ulzh">
+        <ul class="ulzh" id="fbLiList">
             {{each listContent}}
-            <li class="list-li">
+            <li class="list-li" style="display:none;">
                 <input type="checkbox" class="oneCheckbox oneFbzhCheckbox" />
                 <span class="content_qs">{{$value.zhqishu}}</span>
                 <span class="nosel">

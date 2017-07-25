@@ -393,6 +393,7 @@ public class SscController extends CacheController {
         if (hasGuanfang) {
             // 官方玩法赔率
             modelMap.put("playPlListJson", this.getCacheGfwfPl(httpServletRequest, companyShortName, playGroupId));
+            modelMap.put("zhuihaoSscOpenTimeList", JSONUtils.toJSONStr(ApiUtils.getLatestOpenTimeList(playGroupId, companyShortName).getSscOpenTimeList()));
         }
 
         // 彩种ID

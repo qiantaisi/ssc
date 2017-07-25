@@ -27,7 +27,7 @@
         }
     }
 </script>
-<nav class="number_bar number_bar-tab number_c1-101">
+<nav class="number_bar number_bar-tab number_c1-101 bar-tab">
     <a class="n1 <%=request.getRequestURI().lastIndexOf("index/main.jsp") > 0 ? "active" : ""%>" href="<%=basePath%>" data-name="index">
         <img class="barImg1" src="${bottomCssResPath}${themeBottomNav}/img/Bottom/footer_001.png"/>
         <img class="barImg2 hide" src="${bottomCssResPath}${themeBottomNav}/img/Bottom/footer_01.png"/>

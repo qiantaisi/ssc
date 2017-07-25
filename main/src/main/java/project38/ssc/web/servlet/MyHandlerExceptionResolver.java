@@ -29,8 +29,6 @@ public class MyHandlerExceptionResolver implements HandlerExceptionResolver {
 
         Map<String, Object> paramsMap = new HashMap<String, Object>();
 
-        String kefuUrl = null;
-
         // 公司标志
         String companyShortName = null;
         try {
@@ -40,8 +38,8 @@ public class MyHandlerExceptionResolver implements HandlerExceptionResolver {
             }
 
             if (StringUtils.isNotBlank(companyShortName)) {
-                kefuUrl = ApiUtils.getKefu(companyShortName).getKefuUrl();
-                paramsMap.put("kefuUrl", kefuUrl);
+                paramsMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
+                paramsMap.put("logo", ApiUtils.getLogo(2, companyShortName));
             }
         } catch (Exception e1) {
 
