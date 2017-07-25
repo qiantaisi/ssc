@@ -14,7 +14,6 @@
 <div class="men_lists">
     <div class="wid2">
         <c:import url="../../index/menu.jsp" >
-            <c:param name="yhhd" value="3" />
         </c:import>
     </div>
 </div>
