@@ -1846,10 +1846,6 @@ $(function () {
             var token = Tools.getCookie("token");
             ajaxRequest({
                 url: config.basePath + "ssc/ajaxGetShuYing.json",
-                data: {
-                    uid:uid,
-                    token:token
-                },
                 beforeSend: function() {
                     $("#jieSuan").html("刷新中...");
                 },
