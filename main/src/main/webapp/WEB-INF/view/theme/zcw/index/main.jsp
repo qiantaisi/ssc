@@ -148,16 +148,16 @@
 		    				快速投注
 		    			</span>
                 <div class="left touzhu_t_qht clearfix">
-                    <a href="javascript:javascript:void(0);" class="ahover">
+                    <a href="javascript:void(0);" class="ahover">
                         重庆时时彩
                     </a>
-                    <a href="javascript:javascript:void(0);">
+                    <a href="javascript:void(0);">
                         安徽快3
                     </a>
-                    <a href="javascript:javascript:void(0);">
+                    <a href="javascript:void(0);">
                         香港六合彩
                     </a>
-                    <a href="javascript:javascript:void(0);">
+                    <a href="javascript:void(0);">
                         排列三
                     </a>
                 </div>
