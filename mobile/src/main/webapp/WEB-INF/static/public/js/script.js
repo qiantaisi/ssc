@@ -1842,23 +1842,19 @@ $(function () {
     function initSscPage(playGroupId) {
         // 右上角弹出框
         $('.menubtn').click(function(){
-            var uid = Tools.getCookie("uid");
-            var token = Tools.getCookie("token");
-            ajaxRequest({
-                url: config.basePath + "ssc/ajaxGetShuYing.json",
-                data: {
-                    uid:uid,
-                    token:token
-                },
-                beforeSend: function() {
-                    $("#jieSuan").html("刷新中...");
-                },
-                success:function (obj) {
-                    if (obj.result == 1) {
-                        $("#jieSuan").html(obj.todayWinOrLose);
+            if ($("#jieSuan").length > 0) {
+                ajaxRequest({
+                    url: config.basePath + "ssc/ajaxGetShuYing.json",
+                    beforeSend: function () {
+                        $("#jieSuan").html("刷新中...");
+                    },
+                    success: function (obj) {
+                        if (obj.result == 1) {
+                            $("#jieSuan").html(obj.todayWinOrLose.toFixed(3));
+                        }
                     }
-                }
-            });
+                });
+            }
             $(".bg").show();
             $(".menu_alert").show();
         });

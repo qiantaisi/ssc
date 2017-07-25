@@ -20,7 +20,7 @@
             </a>
             <c:choose>
                 <c:when test="${not empty userSession}">
-                    <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
+                    <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                         菜单
                     </a>
                     <h1 class="title">
