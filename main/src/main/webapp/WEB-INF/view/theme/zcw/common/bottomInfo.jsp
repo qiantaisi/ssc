@@ -140,12 +140,4 @@
             </div>
         </div>
     </div>
-    <div class="footer_b">
-        <div class="container">
-            <img src="${resPath}images/common/index112.png" />
-            <br />
-            2009-2017©易名彩 公司版权所有 <br />
-            易名彩 郑重提示：彩票有风险，投注需谨慎。不向未满18周岁的青少年出售彩票！
-        </div>
-    </div>
 </div>
