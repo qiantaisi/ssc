@@ -496,9 +496,31 @@
                     </div>
                     <div class="index_main_rt1_2b index-content-help">
                         <ul class="index_notice_ul_new">
-                            <li>
-                                <a href="${basPath}help/index.html">新手指导</a>
-                            </li>
+                            <marquee behavior="scroll" scrolldelay="1"  direction="up"
+                                     onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="2"
+                                     height="44"  onmouseover="this.stop();" onmouseout="this.start();">
+                                <div style="margin: 10px">
+                                <p>
+                                    <a href="<%=basePath%>help/question/zc.html">关于注册</a>
+                                </p>
+                                </div>
+                                <div style="margin: 10px">
+                                <p>
+                                    <a href="<%=basePath%>help/question/cz.html" style="">关于充值</a>
+                                </p>
+                                </div>
+                                <div style="margin: 10px">
+                                <p>
+                                    <a href="<%=basePath%>help/question/tk.html">关于提款</a>
+                                </p>
+                                </div>
+                                <div style="margin: 10px">
+                                <p>
+                                    <a href="<%=basePath%>help/index.html">彩种介绍</a>
+                                </p>
+                                </div>
+
+                        </marquee>
                         </ul>
                     </div>
                 </div>
@@ -581,11 +603,6 @@
 
        $(".all_fenlei_yin").css("display", "block");
     });
-
-    function goZst(url) {
-        showLoading();
-        window.location.href = url;
-    }
 
     function getSscDataMainPage(playIds) {
         ajaxRequest({
