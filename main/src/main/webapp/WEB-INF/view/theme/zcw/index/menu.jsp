@@ -224,7 +224,7 @@
         </div>
         <div class="menu_main clearfix left">
             <c:choose>
-                <c:when test="${param.noselect == 1 || param.yhhd != null}">
+                <c:when test="${param.noselect == 1 || param.yhhd == null || param.kjjg == null}">
                     <a href="<%=basePath%>main.html">
                         首页
                     </a>
@@ -255,9 +255,20 @@
             </c:choose>
 
 
-            <a href="<%=basePath%>kjjg.html">
-                开奖公告
-            </a>
+            <c:choose>
+                <c:when test="${param.kjjg == 4}">
+                    <a href="<%=basePath%>kjjg.html" class="ahover">
+                        开奖公告
+                    </a>
+                </c:when>
+                <c:otherwise>
+                    <a href="<%=basePath%>kjjg.html">
+                        开奖公告
+                    </a>
+                </c:otherwise>
+            </c:choose>
+
+
             <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">
                 走势图表
             </a>

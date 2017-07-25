@@ -13,7 +13,7 @@
 <div class="men_lists">
     <div class="wid1">
         <c:import url="../index/menu.jsp" >
-            <c:param name="yhhd" value="3" />
+            <c:param name="kjjg" value="4" />
         </c:import>
     </div>
 </div>
