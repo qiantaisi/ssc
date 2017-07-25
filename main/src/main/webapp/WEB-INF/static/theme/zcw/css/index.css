@@ -87,7 +87,9 @@ a:visited {
     margin-top: 3px;
     margin-right: 10px;
 }
-
+.index_main_rt1_2b{
+    border-bottom: 1px solid #dddddd;
+}
 .head_top_lottery {
     margin-right: 5px;
     background: url(../images/common/index_06.png) no-repeat left center;
@@ -663,8 +665,8 @@ a:visited {
     height: 100%;
     list-style: none;
     background: white;
-    padding-top: 6%;
     padding-left: 6%;
+
 }
 
 .index_notice_ul li {
