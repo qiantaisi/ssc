@@ -12,7 +12,7 @@
 
 <div class="process">
     <div class="wid1">
-        <div class="Resultt">
+        <div class="Resultt reResulttBg">
             <i class="it0"><img src="${resPath}img/ico46.png" alt=""></i>
             <i class="it1"><img src="${resPath}img/ico46.png" alt=""></i>
             <h1><img src="${resPath}img/ico71.png" alt=""></h1>

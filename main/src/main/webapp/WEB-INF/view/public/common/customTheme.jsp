@@ -9,13 +9,16 @@
 <%--自定义风格--%>
 <c:if test="${not empty fengge_1}">
     <style>
-        .eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.head,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#${fengge_1}!important}
-        .eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#${fengge_1}!important}
-        .eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #${fengge_1}!important;}
-        .eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}
-        .eveb_nav_sub .on a{border-top:1px #${fengge_1} solid!important;}
-        .eveb_nav_sub ul{border-bottom:1px #${fengge_1} solid!important;}
-        .alert_col div::-webkit-scrollbar-thumb {background-color: #${fengge_1}!important;}
+
+        .reResulttBg{background: #${fengge_1};} <%--开奖结果版块--%>
+
+        <%--.eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#${fengge_1}!important}--%>
+        <%--.eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#${fengge_1}!important}--%>
+        <%--.eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #${fengge_1}!important;}--%>
+        <%--.eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}--%>
+        <%--.eveb_nav_sub .on a{border-top:1px #${fengge_1} solid!important;}--%>
+        <%--.eveb_nav_sub ul{border-bottom:1px #${fengge_1} solid!important;}--%>
+        <%--.alert_col div::-webkit-scrollbar-thumb {background-color: #${fengge_1}!important;}--%>
     </style>
 </c:if>
 <c:if test="${not empty fengge_2}">

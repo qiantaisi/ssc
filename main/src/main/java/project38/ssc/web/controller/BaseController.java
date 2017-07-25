@@ -88,6 +88,15 @@ public abstract class BaseController {
         // 公共static目录
         httpServletRequest.setAttribute("pubStaticPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
 
+        // 公共模板读取风格
+        FenggeResult fenggeResult = ApiUtils.getWebFengge(
+                companyShortName,
+                1
+        );
+
+        modelMap.put("fengge_1", fenggeResult.getFengge_1());
+        modelMap.put("fengge_2", fenggeResult.getFengge_2());
+
         ModelAndView modelAndView = new ModelAndView("theme/" + theme + "/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
         return modelAndView;
