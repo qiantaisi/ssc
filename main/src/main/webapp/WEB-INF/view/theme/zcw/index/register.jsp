@@ -267,7 +267,6 @@
                 $(".xm").css("color","red")
                 return;
             }
-            alert(qq);
             ajaxRequest({
                 url: "<%=basePath%>member/ajaxRegister.json",
                 data: {
