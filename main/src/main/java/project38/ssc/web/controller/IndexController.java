@@ -95,17 +95,24 @@ public class IndexController extends BaseController {
     @RequestMapping(value = "/register.html", method = RequestMethod.GET)
     public ModelAndView register() {
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        Long uid = this.getUid(httpServletRequest);
+        String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
         modelMap.put("khxy", ApiUtils.getKhxy(companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("webName", webInfoResult.getWebName());
+        modelMap.put("webInfo", webInfoResult);
+        modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
         return this.renderView("index/register", modelMap);
     }
 
     @RequestMapping(value = "/login.html", method = RequestMethod.GET)
     public ModelAndView login() {
+
+        Long uid = this.getUid(httpServletRequest);
+        String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
@@ -113,6 +120,8 @@ public class IndexController extends BaseController {
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("webName", webInfoResult.getWebName());
+        modelMap.put("webInfo", webInfoResult);
+        modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
         return this.renderView("index/login", modelMap);
     }
 

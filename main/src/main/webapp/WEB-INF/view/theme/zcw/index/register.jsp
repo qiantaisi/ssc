@@ -137,7 +137,7 @@
                 </p>
             </div>
             <div class="login_b_link" style="padding-left: 75px;">
-                <a href="#">忘记密码?</a>
+                <a href="${kefuUrl}">忘记密码?</a>
                 <span>|</span>
                 <a href="${kefuUrl}" target="_blank">在线客服</a>
             </div>
