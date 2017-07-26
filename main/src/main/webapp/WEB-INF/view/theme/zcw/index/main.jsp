@@ -593,6 +593,26 @@
     });
 </script>
 <script>
+    function openHyzx(module) {
+        if (typeof module == 'undefined') {
+            module = '';
+        }
+        if (typeof $.cookie("uid") == 'undefined' || typeof $.cookie("token") == 'undefined') {
+            alert("请先登录");
+            if ($("#loginAccount1").length > 0) {
+                $("#loginAccount1").focus();
+                return;
+            }
+            window.location.href = "<%=basePath%>main.html";
+            return;
+        }
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + module;
+        }
+        windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);
+    }
+
     $(function () {
         var playIds = [1, 2, 3, 15, 16];
         getSscDataMainPage(playIds);
