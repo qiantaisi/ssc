@@ -70,20 +70,29 @@
     }
 
     function login() {
-        var loginAccount = $.trim($("#registerLoginAccountAlert").val());
-        var loginPassword = $.trim($("#registerLoginPasswordAlert").val());
-        var yzm = $.trim($("#registerLoginYzmAlert").val());
+        var loginAccount = $("#registerLoginAccountAlert").val();
+        var loginPassword = $("#registerLoginPasswordAlert").val();
+        var yzm = $("#registerLoginYzmAlert").val();
 
         if (!loginAccount) {
-            alert("请输入账号");
+            $(".yhm").html("请输入用户名3-15个英文、数字");
+            $(".yhm").css("color","red");
+            $("#mm").empty();
+            $(".yzm").empty();
             return;
         }
         if (!loginPassword) {
-            alert("请输入密码");
+            $("#mm").html("请输入密码");
+            $("#mm").css("color","red");
+            $("#mm").empty();
+            $(".yzm").empty();
             return;
         }
         if (!yzm) {
-            alert("请输入验证码");
+            $("#yzm").html("请输入验证码");
+            $("#yzm").css("color","red");
+            $("#mm").empty();
+            $(".yhm").empty();
             return;
         }
 
