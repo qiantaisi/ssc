@@ -34,7 +34,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="account" class="inputStr left" placeholder="请输入用户名" />
                     <div class="left erro">
-                        字母开头的6-12位字母数字组成的用户名
+                        <span class="yhm">
+                            字母开头的6-12位字母数字组成的用户名
+                        </span>
+
                     </div>
                 </div>
             </div>
@@ -48,7 +51,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="password"  name="password" class="inputStr left" placeholder="请输入密码" />
                     <div class="left erro">
-                        输入6-12位字母、数字的密码
+                        <span class="mm">
+                             输入6-12位字母、数字的密码
+                        </span>
+
                     </div>
 
                 </div>
@@ -63,7 +69,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="password"  name="confirmPassword" class="inputStr left" placeholder="确认密码" />
                     <div class="left erro">
-                        与上面输入密码必须保持一致
+                        <span class="qmm">
+                             与上面输入密码必须保持一致
+                        </span>
+
                     </div>
                 </div>
             </div>
@@ -77,7 +86,9 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="name" class="inputStr left" placeholder="请输入姓名" />
                     <div class="left erro">
+                        <span class="xm">
                         姓名必须和绑定的银行卡户名一致
+                            </span>
                     </div>
                 </div>
             </div>
@@ -91,7 +102,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="phone" class="inputStr left" placeholder="请输入手机" />
                     <div class="left erro">
-                        请输入您的手机
+                        <span class="sj">
+                            请输入您的手机
+                        </span>
+
                     </div>
                 </div>
             </div>
@@ -105,7 +119,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="email" class="inputStr left" placeholder="请输入邮箱" />
                     <div class="left erro">
-                        请输入您的邮箱
+                        <span class="yx">
+                            请输入您的邮箱
+                        </span>
+
                     </div>
                 </div>
             </div>
@@ -119,7 +136,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="qq" class="inputStr left" placeholder="请输入QQ" />
                     <div class="left erro">
-                        请输入QQ
+                        <span class="qq">
+                             请输入QQ
+                        </span>
+
                     </div>
                 </div>
             </div>
@@ -186,17 +206,20 @@
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
             var name = $("input[name='name']").val();   // 姓名
             if (!account) {
-                alert("请输入用户名");
+                $(".yhm").html("请输入用户名");
+               $(".yhm").css("color","red");
                 return;
             }
 
             if (!account.match(/^[a-zA-Z][0-9a-zA-Z]{5,11}$/)) {
-                alert("请输入以字母开头的6-12位字母、数字组成的用户名");
+                $(".yhm").html("请输入以字母开头的6-12位字母、数字组成的用户名");
+                $(".yhm").css("color","red");
                 return;
             }
 
             if (!password) {
-                alert("请输入密码");
+                $(".mm").html("请输入密码");
+                $(".mm").css("color","red");
                 return;
             }
 
@@ -216,27 +239,32 @@
             // }
 
             if (!password.match(/^[0-9a-zA-Z]{6,12}$/)) {
-                alert("请输入6-12位字母、数字的密码");
+                $(".mm").html("请输入6-12位字母、数字的密码");
+                $(".mm").css("color","red");
                 return;
             }
 
             if (!confirmPassword) {
-                alert("请输入确认密码");
+                $(".qmm").html("请输入确认密码");
+                $(".qmm").css("color","red");
                 return;
             }
 
             if (confirmPassword != password) {
-                alert("确认密码不正确");
+                $(".qmm").html("确认密码不正确");
+                $(".qmm").css("color","red");
                 return;
             }
 
             if (!name) {
-                alert("请输入姓名");
+                $(".xm").html("请输入姓名");
+                $(".xm").css("color","red")
                 return;
             }
 
             if (!name.match(/^[\u4e00-\u9fa5]+$/)) {
-                alert("姓名只能是汉字");
+                $(".xm").html("姓名只能是汉字");
+                $(".xm").css("color","red")
                 return;
             }
             alert(qq);
