@@ -18,6 +18,8 @@
         .list h3 a{background: #${fengge_1};border-bottom: 3px solid #a92309; height: 47px; line-height: 47px;}
         .help_l_menu li .t.sli{border-left: 5px solid #${fengge_1};}
         .withdraw-bg-input{border: 2px solid #${fengge_1}!important;}
+        .clearBet_template .l span i{background: #${fengge_1} url(${resPath}/img/tm-mdl-icon.png) no-repeat!important; border-radius: 50%;background-position: 0 41%!important;}
+
 
 
         .eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#${fengge_1}!important}
