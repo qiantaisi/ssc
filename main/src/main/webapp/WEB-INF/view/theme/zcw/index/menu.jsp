@@ -10,7 +10,7 @@
 <div class="head_middle">
     <div class="container clearfix">
         <a href="<%=basePath%>index.html" class="left logo">
-            <img src="${resPath}images/index_11.png" />
+            <img src="<%=basePath%>images/${logo.imageId}.png" />
         </a>
         <div class="left head_middle_yuye">
             <a href="javascript:void(0);">
