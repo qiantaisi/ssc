@@ -9376,6 +9376,7 @@ function renderZhuihao(strZh, obj) {
         //输入倍数时改变选中倍数input值
         $("#startBeiShuZh").keyup(function () {
             changeContent();
+            $('.zhzjetxt').html(getTotelMoney());
         });
 
         //输入倍数失去焦点计算
@@ -9385,10 +9386,12 @@ function renderZhuihao(strZh, obj) {
                 $("#startBeiShuZh").val(1);
             }
             changeContent();
+            $('.zhzjetxt').html(getTotelMoney());
         });
 
         $("#rt_trace_diff").keyup(function () {
             changeContentFbzh();
+            $('.zhfbzjetxt').html(getTotelMoney());
         });
 
         $("#rt_trace_diff").blur(function () {
@@ -9397,10 +9400,12 @@ function renderZhuihao(strZh, obj) {
                 $("#rt_trace_diff").val(1);
             }
             changeContentFbzh();
+            $('.zhfbzjetxt').html(getTotelMoney());
         });
 
         $("#rt_trace_times_diff").keyup(function () {
             changeContentFbzh();
+            $('.zhfbzjetxt').html(getTotelMoney());
         });
 
         $("#rt_trace_times_diff").blur(function () {
@@ -9409,6 +9414,7 @@ function renderZhuihao(strZh, obj) {
                 $("#rt_trace_times_diff").val(1);
             }
             changeContentFbzh();
+            $('.zhfbzjetxt').html(getTotelMoney());
         });
 
         //选择选项-同倍追号
@@ -9417,7 +9423,8 @@ function renderZhuihao(strZh, obj) {
 
             $(".zhqishutxt").html(optionVal);
             $('.zhzjetxt').html(totelMoney * selectedZhqishu());
-            selectedCheckboxfbzh(optionVal);
+            selectedCheckboxtbzh(optionVal);
+            $('.zhzjetxt').html(getTotelMoney());
         });
 
         //选择选项-翻倍追号
@@ -9427,6 +9434,7 @@ function renderZhuihao(strZh, obj) {
             $(".zhqishutxt").html(optionVal);
             $('.zhfbzjetxt').html(getTotelMoney());
             selectedCheckboxfbzh(optionVal);
+            $('.zhfbzjetxt').html(getTotelMoney());
         });
     });
 }
