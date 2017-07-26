@@ -78,7 +78,7 @@
 <script>
     var subPageUrl = window.location.toString();
     var urlGcdt = Tools.getSubUrlFromSurl(subPageUrl);
-    if (typeof urlGcdt == 'undefined' || null == urlGcdt) {
+    if (typeof urlGcdt == 'undefined' || null == urlGcdt || urlGcdt == 'undefined') {
         urlGcdt = '<%=basePath%>ssc/gcdt.html';
     }
 </script>
