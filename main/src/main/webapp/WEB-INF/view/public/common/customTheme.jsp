@@ -11,10 +11,14 @@
     <style>
 
         .reResulttBg{background: #${fengge_1};} <%--开奖结果版块--%>
-        .process .layout .monty ul li,.process .layout .list_tems .date:after,.list ul li .slide p.acti{background: #${fengge_1};}
-        .process .layout .list_tems .date span, .process .layout .list_tems .date h3{color: #${fengge_1};}
-        .list ul li .slide p:hover{background: #${fengge_1};color: white;}
+        .process .layout .monty ul li,.process .layout .list_tems .date:after,.list ul li .slide p.acti,.headmemberbg{background: #${fengge_1};}
+        .process .layout .list_tems .date span, .process .layout .list_tems .date h3,.eveb_amount span,.color-e77c3c,.eveb_setting_table a{color: #${fengge_1}!important;}
+        .eveb_sub_nav_type a:hover, .eveb_sub_nav_type li.on a:link, .eveb_sub_nav_type li.on a:visited{color: #${fengge_1}!important;font-weight: 700;border-bottom-color: #e1e1e1;background: #f8f8f8;}
+        .list ul li .slide p:hover,.letterbtn-bg{background: #${fengge_1}!important;color: white;}
         .list h3 a{background: #${fengge_1};border-bottom: 3px solid #a92309; height: 47px; line-height: 47px;}
+        .help_l_menu li .t.sli{border-left: 5px solid #${fengge_1};}
+        .withdraw-bg-input{border: 2px solid #${fengge_1}!important;}
+
 
         .eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#${fengge_1}!important}
         .eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#${fengge_1}!important}
