@@ -226,7 +226,7 @@
         </div>
         <div class="menu_main clearfix left">
             <c:choose>
-                <c:when test="${param.noselect == 1 || param.yhhd == null || param.kjjg == null}">
+                <c:when test="${param.noselect == 1 || param.yhhd != null || param.kjjg != null}">
                     <a href="<%=basePath%>main.html">
                         首页
                     </a>

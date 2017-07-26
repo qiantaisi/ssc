@@ -123,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="clearfix login_nr_gp">
+            <div class="clearfix login_nr_gp" style="padding-left: 40px;">
                 <span class="left login_nr_name"></span>
                 <div class="login_nr_gp_rt clearfix">
                     <input type="checkbox" class="left" checked="checked" style="width:30px;" />
@@ -136,7 +136,7 @@
                     <input type="button" class="mfkh" value="免费开户" id="btn-register"/>
                 </p>
             </div>
-            <div class="login_b_link">
+            <div class="login_b_link" style="padding-left: 75px;">
                 <a href="#">忘记密码?</a>
                 <span>|</span>
                 <a href="${kefuUrl}" target="_blank">在线客服</a>
