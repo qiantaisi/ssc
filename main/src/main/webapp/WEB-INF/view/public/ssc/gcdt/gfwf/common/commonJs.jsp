@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170724"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170726"></script>
 <script type="text/html" id="template_jRange">
     <div class="add_spot">
         <div class="left releft">
@@ -123,7 +123,7 @@
         </select>
         &nbsp;&nbsp;总期数：
         &nbsp;<span class="qishu zhredtxt zhqishutxt">10</span>&nbsp;&nbsp;期
-        &nbsp;&nbsp;追号总金额： <span class="money zhredtxt zhzjetxt">50</span> 元
+        &nbsp;&nbsp;追号总金额： <span class="money zhredtxt zhfbzjetxt">50</span> 元
         &nbsp;&nbsp;追号计划： 隔&nbsp;
         <span class="startBeiShu zhredtxt">
                     <input name="rt_trace_diff" id="rt_trace_diff" value="1" size="3"

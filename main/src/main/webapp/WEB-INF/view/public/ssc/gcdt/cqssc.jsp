@@ -122,7 +122,7 @@
         </div>
 
     </div>
-    <c:import url="common/zhInfoContent.jsp"/>
+    <c:import url="gfwf/common/zhInfoContent.jsp"/>
     <c:import url="common/bottomInfo.jsp"/>
 </div>
 <c:import url="../../common/commonJs.jsp"/>

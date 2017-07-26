@@ -9347,6 +9347,7 @@ function renderZhuihao(strZh, obj) {
         //总金额
         var num = selectedZhqishu();
         $('.zhzjetxt').html(totelMoney * num);
+        $('.zhfbzjetxt').html(getTotelMoney());
 
         //单行点击选中事件
         $(".content_heigth .ulzh li input[type='checkbox']").click(function () {
@@ -9365,6 +9366,7 @@ function renderZhuihao(strZh, obj) {
             var num = selectedZhqishu();
             $(".zhqishutxt").html(num);
             $('.zhzjetxt').html(totelMoney * num);
+            $('.zhfbzjetxt').html(getTotelMoney());
 
             changeContent();
             changeContentFbzh();
@@ -9412,7 +9414,7 @@ function renderZhuihao(strZh, obj) {
         //选择选项-同倍追号
         $(document).on("change", 'select#lt_zh_qishu', function () {
             var optionVal = parseInt($(this).val());
-            selectedCheckboxtbzh(optionVal);
+
             $(".zhqishutxt").html(optionVal);
             $('.zhzjetxt').html(totelMoney * selectedZhqishu());
             selectedCheckboxfbzh(optionVal);
@@ -9421,12 +9423,26 @@ function renderZhuihao(strZh, obj) {
         //选择选项-翻倍追号
         $(document).on("change", 'select#rt_zh_qishu', function () {
             var optionVal = parseInt($(this).val());
-            selectedCheckboxfbzh(optionVal);
+
             $(".zhqishutxt").html(optionVal);
-            $('.zhzjetxt').html(totelMoney * selectedZhqishu());
+            $('.zhfbzjetxt').html(getTotelMoney());
             selectedCheckboxfbzh(optionVal);
         });
     });
+}
+
+//计算购买追号总金额
+function getTotelMoney(){
+    var zhTotelMoney = 0;
+    $(".ulzh li span.content_money").each(function () {
+        var flagStatus = $(this).parent().find('input').prop('checked');
+        if(flagStatus){
+            var strMoney = $(this).html();
+            zhTotelMoney += parseInt(strMoney.replace('￥',''));
+        }
+    });
+
+    return zhTotelMoney;
 }
 
 // 清除和显示追号模板
