@@ -618,7 +618,7 @@
     $(function () {
         var playIds = [1, 2, 3, 15, 16];
         getSscDataMainPage(playIds);
-        <%--getWebPopUpNotice();--%>
+        getWebPopUpNotice();
 
 
         xyxh(null, 1);
