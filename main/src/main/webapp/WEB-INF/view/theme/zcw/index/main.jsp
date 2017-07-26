@@ -39,9 +39,7 @@
                     </c:choose>
                 </c:forEach>
             </ul>
-
         </div>
-
     </div>
     <c:choose>
         <c:when test="${not empty userSession}">
