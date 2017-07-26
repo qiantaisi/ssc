@@ -14,6 +14,7 @@
         .process .layout .monty ul li,.process .layout .list_tems .date:after,.list ul li .slide p.acti{background: #${fengge_1};}
         .process .layout .list_tems .date span, .process .layout .list_tems .date h3{color: #${fengge_1};}
         .list ul li .slide p:hover{background: #${fengge_1};color: white;}
+        .list h3 a{background: #${fengge_1};border-bottom: 3px solid #a92309; height: 47px; line-height: 47px;}
 
         <%--.eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#${fengge_1}!important}--%>
         <%--.eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#${fengge_1}!important}--%>

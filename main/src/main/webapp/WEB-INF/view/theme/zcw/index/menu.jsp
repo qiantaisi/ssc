@@ -10,6 +10,7 @@
 <div class="head_middle">
     <div class="container clearfix">
         <a href="<%=basePath%>index.html" class="left logo">
+
             <img src="<%=basePath%>images/${logo.imageId}" />
         </a>
         <div class="left head_middle_yuye">
@@ -226,7 +227,7 @@
         </div>
         <div class="menu_main clearfix left">
             <c:choose>
-                <c:when test="${param.noselect == 1 || param.yhhd == null || param.kjjg == null}">
+                <c:when test="${param.noselect == 1 || param.yhhd != null || param.kjjg != null}">
                     <a href="<%=basePath%>main.html">
                         首页
                     </a>
