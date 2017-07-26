@@ -283,10 +283,10 @@
                         Tools.toast("注册成功");
                         $.cookie("uid", json.userId, {path: "/"});
                         $.cookie("token", json.token, {path: "/"});
-                        window.location.href = "<%=basePath%>index.html";
+                        window.location.href = "<%=basePath%>main.html";
                     } else if (json.result == -6) {
                         Tools.toast("注册成功，请登录");
-                        window.location.href = "<%=basePath%>index.html";
+                        window.location.href = "<%=basePath%>main.html";
                     }else if (json.result == "0"){
 
                         Tools.toast("注册失败：" + json.description);
