@@ -9365,12 +9365,12 @@ function renderZhuihao(strZh, obj) {
             }
             var num = selectedZhqishu();
             $(".zhqishutxt").html(num);
-            $('.zhzjetxt').html(totelMoney * num);
-            $('.zhfbzjetxt').html(getTotelMoney());
 
             changeContent();
             changeContentFbzh();
 
+            $('.zhzjetxt').html(getTotelMoney());
+            $('.zhfbzjetxt').html(getTotelMoney());
         });
 
         //输入倍数时改变选中倍数input值
