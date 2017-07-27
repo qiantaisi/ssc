@@ -46,6 +46,8 @@
             word-wrap: break-word;
             display:inline; line-height:25px;
         }
+        .header .p-logo{padding:10px;height:100%;};
+        .p-logo a{display:inline-block;hight:100%;}
     </style>
     <script>
         // 防止被frame
@@ -54,7 +56,7 @@
 </head>
 <body>
 <div class="header">
-    <p class="p-logo"><a href="javascript:void(0)"><img src="<%=basePath%>images/${logo.imageId}.png" width="180"/></a></p>
+    <p class="p-logo"><a href="javascript:void(0)"><img src="<%=basePath%>images/${logo.imageId}.png" height="40"/></a></p>
     <p class="p-service"><a href="${kefuUrl}" target="_blank">联系客服</a></p>
 </div>
 <div class="cont">

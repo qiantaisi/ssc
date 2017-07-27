@@ -89,24 +89,24 @@
 
             $.each(kjData, function (index, value) {
                 sum += Tools.parseInt(value);
-                boseArr[getBose(value)]++;
             });
 
             // 七色波
-            for (var i = 0; i < 6; ++i) {
-                boseArr[getBose(boseArr[i])]++;
+            for (var i2 = 0; i2 < 6; ++i2) {
+                boseArr[getBose(kjData[i2])]++;
             }
-            boseArr[getBose(boseArr[6])] += 1.5;
-            var maxBose;
-            if ((beseArr[0] == 3 && boseArr[1] == 3 && beseArr[2] == 1.5) ||
-                (beseArr[0] == 3 && boseArr[1] == 3 && beseArr[2] == 1.5) ||
-                (beseArr[0] == 3 && boseArr[1] == 3 && beseArr[2] == 1.5)) {
+            boseArr[getBose(kjData[6])] += 1.5;
+            var maxBose = 0;
+            if ((boseArr[0] == 3 && boseArr[1] == 3 && boseArr[2] == 1.5) ||
+                (boseArr[0] == 3 && boseArr[2] == 3 && boseArr[1] == 1.5) ||
+                (boseArr[1] == 3 && boseArr[2] == 3 && boseArr[0] == 1.5)
+            ) {
                 maxBose = "和局";
             } else {
                 var tmpMax = 0;
                 $.each(boseArr, function(index, value) {
                     if (value > tmpMax) {
-                        tmpMax = alue;
+                        tmpMax = value;
                         maxBose = index;
                     }
                 });
