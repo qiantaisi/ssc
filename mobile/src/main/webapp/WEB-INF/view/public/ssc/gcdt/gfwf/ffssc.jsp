@@ -11,7 +11,7 @@
 %>
 <c:import url="../../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-gcdt-cqssc-gfwf">
+    <div class="page page-current" id="page-gcdt-ffssc-gfwf">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
                 <span class="icon icon-left"></span>
