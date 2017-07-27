@@ -1,8 +1,6 @@
 package project38.api.result;
 
 import project38.api.common.result.CommonResult;
-
-import javax.persistence.Id;
 import java.util.Date;
 import java.util.List;
 
