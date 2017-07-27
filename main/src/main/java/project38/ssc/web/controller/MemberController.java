@@ -321,7 +321,7 @@ public class MemberController extends BaseController {
         // 微信支付
         modelMap.put("wxzfInfo", ApiUtils.getSystemPayonline(uid, token, 3, new Integer[] {2, 3},companyShortName));
         // QQ支付
-        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {1, 3},companyShortName));
+        modelMap.put("qqzfInfo", ApiUtils.getSystemPayonline(uid, token, 4, new Integer[] {2, 3},companyShortName));
 
         //微信转账信息
         modelMap.put("wxzzInfo", ApiUtils.getSystemWeixin(uid, token, companyShortName));

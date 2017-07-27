@@ -92,12 +92,33 @@
             });
 
             // 七色波
-            for (var i = 0; i < 6; ++i) {
-                boseArr[getBose(boseArr[i])]++;
+            for (var i2 = 0; i2 < 6; ++i2) {
+                boseArr[getBose(kjData[i2])]++;
             }
-            boseArr[getBose(boseArr[6])] += 1.5;
+            boseArr[getBose(kjData[6])] += 1.5;
+            var maxBose = 0;
+            if ((boseArr[0] == 3 && boseArr[1] == 3 && boseArr[2] == 1.5) ||
+                (boseArr[0] == 3 && boseArr[2] == 3 && boseArr[1] == 1.5) ||
+                (boseArr[1] == 3 && boseArr[2] == 3 && boseArr[0] == 1.5)
+            ) {
+                maxBose = "和局";
+            } else {
+                var tmpMax = 0;
+                $.each(boseArr, function(index, value) {
+                    if (value > tmpMax) {
+                        tmpMax = value;
+                        maxBose = index;
+                    }
+                });
 
-            console.log(boseArr);
+                if (maxBose == 0) {
+                    maxBose = '<font class="color-red">红波</font>';
+                } else if (maxBose == 1) {
+                    maxBose = '<font class="color-blue">蓝波</font>';
+                } else if (maxBose == 2) {
+                    maxBose = '<font class="color-green">绿波</font>';
+                }
+            }
 
 
 
