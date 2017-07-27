@@ -36,14 +36,14 @@
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/cqssc.html">
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/ffssc.html">
                         <div class="border_one color_two">
                             官方模式
                         </div>
                     </a>
                 </div>
                 <div class="gfwf_two">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/cqssc.html">
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/ffssc.html">
                         <div class="border_two color_one">
                             传统模式
                         </div>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="content cl-601">
-            <c:import url="./cqssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
+            <c:import url="./ffssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
             <div class="cl-900" id="lastOpenInfo">
                 <%--显示第几期彩种--%>
             </div>
