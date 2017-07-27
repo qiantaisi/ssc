@@ -1744,3 +1744,39 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .Resultt .latyout .wrap_select .zx select{width: 147px;height: 28px; border:1px solid #cccccc; border-radius:3px;color:#494750;margin-right: 10px;text-align: center;}
 .Resultt .latyout .wrap_select .zx .inp1{width: 150px;height: 28px;border:1px solid #cccccc; border-radius:3px;margin-right: 6px;padding-left:6px;}
 .Resultt .latyout .wrap_select .zx .inp2{ border:none; background:#fa6200;width: 64px;height: 28px; border-radius:5px;line-height: 28px;text-align: center; color:#fff; font-size:14px;cursor: pointer;}
+
+/*幸运28*/
+.plus {
+    line-height: 28px!important;
+    font-size: 28px!important;
+    font-family: Microsoft Yahei;
+    color: #666!important;
+    margin: 5px!important;
+    background: none!important;
+    width: 20px!important;
+    margin-left: -8px!important;
+}
+
+.bluexy28{
+    background: blue!important;
+}
+.greenxy28{
+    background: green!important;
+}
+.gainsboroxy28{
+    background: gainsboro!important;
+}
+.redxy28{
+    background: red;
+}
+
+.ball-28xyicon{
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: red;
+    border-radius: 50%;
+    margin: 0 auto;
+    line-height: 23px;
+    color: white;
+}
