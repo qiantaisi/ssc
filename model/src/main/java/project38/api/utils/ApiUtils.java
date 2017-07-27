@@ -1007,6 +1007,34 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_OPEN_TIME_PER, paramsMap, companyShortName), SscOpenTimeResultPer.class);
     }
 
+    public static RegisterResult getRegisterResult(Integer type, String companyShortName) throws Exception {
+        if (IS_DEBUG) {
+            return new RegisterResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+
+        paramsMap.put("type", type);
+        RegisterResult registerResult = new RegisterResult();
+//qq
+        RegisterResult registerResult1= JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_REQUIRED_QQ_CHECK,paramsMap,companyShortName), RegisterResult.class);
+        RegisterResult registerResult4=JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_CK_QQ,paramsMap,companyShortName), RegisterResult.class);
+        registerResult.setNeedRequiredQq(registerResult1.getNeedRequiredQq());
+        registerResult.setCheckQq(registerResult4.getCheckQq());
+//邮箱
+        RegisterResult registerResult2= JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_REQUIRED_EMAIL_CHECK,paramsMap,companyShortName), RegisterResult.class);
+        RegisterResult registerResult5=JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_CK_EMAIL,paramsMap,companyShortName), RegisterResult.class);
+        registerResult.setNeedRequiredEmail(registerResult2.getNeedRequiredEmail());
+        registerResult.setCheckEmail(registerResult5.getCheckEmail());
+//phone
+        RegisterResult registerResult3= JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_REQUIRED_PHONE_CHECK,paramsMap,companyShortName), RegisterResult.class);
+        RegisterResult registerResult6=JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_CK_PHONE,paramsMap,companyShortName), RegisterResult.class);
+        registerResult.setNeedRequredPhone(registerResult3.getNeedRequredPhone());
+        registerResult.setCheckPhone(registerResult6.getCheckPhone());
+
+        return registerResult;
+    }
+
+
     public static SscHistoryResult2 getSscDataHistory(Integer offset, Integer limit, Long playGroupId, Date startTime, Date endTime, String companyShortName) {
         if (IS_DEBUG) {
             return new SscHistoryResult2();

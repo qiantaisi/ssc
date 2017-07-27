@@ -90,10 +90,10 @@
                     </div>
                 </div>
             </div>
-            <div class="clearfix login_nr_gp">
+            <div class="clearfix login_nr_gp hidphone">
 			    		<span class="left login_nr_name">
-			    			<span class="star">
-			    				*
+			    			<span class="star starphone">
+
 			    			</span>
 			    			手机:
 			    		</span>
@@ -107,10 +107,10 @@
                     </div>
                 </div>
             </div>
-            <div class="clearfix login_nr_gp">
+            <div class="clearfix login_nr_gp hidemail">
 			    		<span class="left login_nr_name">
-			    			<span class="star">
-			    				*
+			    			<span class="star staremail">
+
 			    			</span>
 			    			邮箱:
 			    		</span>
@@ -125,10 +125,10 @@
                     </div>
                 </div>
             </div>
-            <div class="clearfix login_nr_gp">
+            <div class="clearfix login_nr_gp hidqq">
 			    		<span class="left login_nr_name">
-			    			<span class="star">
-			    				*
+			    			<span class="star starqq">
+
 			    			</span>
 			    			QQ:
 			    		</span>
@@ -175,6 +175,43 @@
 
 <script>
     $(function () {
+        ajaxRequest({
+            url: "<%=basePath%>ajaxGetRegisterResult.json",
+            data: {},
+            success:function(obj){
+                //判断QQ是否必填
+                if(obj.checkQq){
+
+                    if(obj.needRequiredQq){
+
+                        $(".starqq").html("*");
+                    }
+                }else{
+                    $(".hidqq").hide();
+                }
+                if(obj.checkEmail){
+
+                    if(obj.needRequiredEmail){
+
+                        $(".staremail").html("*");
+
+                    }
+                }else{
+                    $(".hidemail").hide();
+                }
+                if(obj.checkPhone){
+
+                    if(obj.needRequredPhone){
+
+                        $(".starphone").html("*");
+                    }
+                }else{
+                        $(".hidphone").hide();
+                }
+
+            }
+
+        });
         $(".login_nr_b .login_nr_gp .login_nr_gp_rt input.inputStr").keypress(function (e) {
             if (e.which == 13) {// 判断所按是否回车键
                 var inputs = $(".login_nr_b").find(".inputStr"); // 获取表单中的所有输入框
@@ -272,10 +309,7 @@
                         $.cookie("uid", json.userId, {path: "/"});
                         $.cookie("token", json.token, {path: "/"});
                         window.location.href = "<%=basePath%>main.html";
-                    } else if (json.result == -6) {
-                        Tools.toast("注册成功，请登录");
-                        window.location.href = "<%=basePath%>main.html";
-                    } else {
+                    }else {
                         Tools.toast("注册失败：" + json.description);
                     }
                 },

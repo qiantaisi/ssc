@@ -6936,7 +6936,7 @@ $(function () {
                     }
                     var data = json.sscHistoryList;
 
-                    data.reverse();
+                    // data.reverse();
                     // 渲染数据
                     renderData(data);
                     tmpData = data;

@@ -22,19 +22,19 @@
             <b>后三组选</b>
             <p class="btn_h3_zux">
                 <span class="playPlIdBtn" data-play_id="647" data-play_pl_id="14214" data-name="h3z3fs" data-fun_zhushu="zhushu_h3z3fs" data-fun_content="content_h3z3fs" data-fun_suiji="suiji_h3z3fs"><a href="javascript:void(0)">组三复式</a></span>
-                <span class="playPlIdBtn" data-play_id="508" data-play_pl_id="14213" data-name="h3z3ds" data-fun_zhushu="zhushu_h3z3ds" data-fun_content="content_h3z3ds" data-fun_suiji="suiji_h3z3ds"><a href="javascript:void(0)">组三单式</a></span>
-                <span class="playPlIdBtn" data-play_id="509" data-play_pl_id="14212" data-name="h3z6fs" data-fun_zhushu="zhushu_h3z6fs" data-fun_content="content_h3z6fs" data-fun_suiji="suiji_h3z6fs"><a href="javascript:void(0)">组六复式</a></span>
-                <span class="playPlIdBtn" data-play_id="510" data-play_pl_id="14211" data-name="h3z6ds" data-fun_zhushu="zhushu_h3z6ds" data-fun_content="content_h3z6ds" data-fun_suiji="suiji_h3z6ds"><a href="javascript:void(0)">组六单式</a></span>
-                <span class="playPlIdBtn" data-play_id="511" data-play_pl_id="14232|14231" data-name="h3hhzx" data-fun_zhushu="zhushu_h3hhzx" data-fun_content="content_h3hhzx" data-fun_suiji="suiji_h3hhzx"><a href="javascript:void(0)">混合组选</a></span>
-                <span class="playPlIdBtn" data-play_id="512" data-play_pl_id="14230|14229" data-name="h3zuxhz" data-fun_zhushu="zhushu_h3zuxhz" data-fun_content="content_h3zuxhz" data-fun_suiji="suiji_h3zuxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <span class="playPlIdBtn" data-play_id="513" data-play_pl_id="14228|14227" data-name="h3zxbd" data-fun_zhushu="zhushu_h3zxbd" data-fun_content="content_h3zxbd" data-fun_suiji="suiji_h3zxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_id="646" data-play_pl_id="14380" data-name="h3z3ds" data-fun_zhushu="zhushu_h3z3ds" data-fun_content="content_h3z3ds" data-fun_suiji="suiji_h3z3ds"><a href="javascript:void(0)">组三单式</a></span>
+                <span class="playPlIdBtn" data-play_id="645" data-play_pl_id="14379" data-name="h3z6fs" data-fun_zhushu="zhushu_h3z6fs" data-fun_content="content_h3z6fs" data-fun_suiji="suiji_h3z6fs"><a href="javascript:void(0)">组六复式</a></span>
+                <span class="playPlIdBtn" data-play_id="644" data-play_pl_id="14378" data-name="h3z6ds" data-fun_zhushu="zhushu_h3z6ds" data-fun_content="content_h3z6ds" data-fun_suiji="suiji_h3z6ds"><a href="javascript:void(0)">组六单式</a></span>
+                <span class="playPlIdBtn" data-play_id="643" data-play_pl_id="14376|14377" data-name="h3hhzx" data-fun_zhushu="zhushu_h3hhzx" data-fun_content="content_h3hhzx" data-fun_suiji="suiji_h3hhzx"><a href="javascript:void(0)">混合组选</a></span>
+                <span class="playPlIdBtn" data-play_id="642" data-play_pl_id="14374|14375" data-name="h3zuxhz" data-fun_zhushu="zhushu_h3zuxhz" data-fun_content="content_h3zuxhz" data-fun_suiji="suiji_h3zuxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span class="playPlIdBtn" data-play_id="641" data-play_pl_id="14372|14373" data-name="h3zxbd" data-fun_zhushu="zhushu_h3zxbd" data-fun_content="content_h3zxbd" data-fun_suiji="suiji_h3zxbd"><a href="javascript:void(0)">组选包胆</a></span>
             </p>
         </li>
         <li>
             <b>后三其它</b>
             <p class="btn_h3_qt">
-                <span class="playPlIdBtn" data-play_id="514" data-play_pl_id="14226" data-name="h3hzws" data-fun_zhushu="zhushu_h3hzws" data-fun_content="content_h3hzws" data-fun_suiji="suiji_h3hzws"><a href="javascript:void(0)">和值尾数</a></span>
-                <span class="playPlIdBtn" data-play_id="515" data-play_pl_id="14225|14224|14223" data-name="h3tsh"
+                <span class="playPlIdBtn" data-play_id="640" data-play_pl_id="14371" data-name="h3hzws" data-fun_zhushu="zhushu_h3hzws" data-fun_content="content_h3hzws" data-fun_suiji="suiji_h3hzws"><a href="javascript:void(0)">和值尾数</a></span>
+                <span class="playPlIdBtn" data-play_id="639" data-play_pl_id="14370|14369|14368" data-name="h3tsh"
                       data-fun_zhushu="zhushu_h3tsh" data-fun_content="content_h3tsh" data-fun_suiji="suiji_h3tsh"><a href="javascript:void(0)">特殊号</a></span>
             </p>
         </li>
