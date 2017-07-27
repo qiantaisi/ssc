@@ -6,7 +6,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<input class="playPlIdBtn acti" data-play_id="543" data-play_pl_id="14261" data-name="dwd" data-fun_zhushu="zhushu_dwd" data-fun_content="content_dwd" data-fun_suiji="suiji_dwd" type="hidden" />
+<input class="playPlIdBtn acti" data-play_id="616" data-play_pl_id="14338" data-name="dwd" data-fun_zhushu="zhushu_dwd" data-fun_content="content_dwd" data-fun_suiji="suiji_dwd" type="hidden" />
 
 <c:import url="../common/commonMiddle.jsp" />
 <c:import url="../common/subCommonJs.jsp" />
