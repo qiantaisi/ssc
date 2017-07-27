@@ -136,12 +136,12 @@ public class ApiConstant {
 
     public static String API_MEMBER_GET_JRSY_AND_JSZD = API_DOMAIN + "member/getJrsyAndJszd.json"; // 获取用户今日输赢和即时注单
 
-    public static String API_REGISTER_REQUIRED_QQ_CHECK = API_DOMAIN + "/member/ajaxGetRequiredQqCheck.json"; //获取是否需要qq必填
-    public static String API_REGISTER_REQUIRED_EMAIL_CHECK = API_DOMAIN + "/member/ajaxGetRequiredEmailCheck.json"; //获取是否需要email必填
-    public static String API_REGISTER_REQUIRED_PHONE_CHECK = API_DOMAIN + "/member/ajaxGetRequiredPhoneCheck.json"; //获取是否需要Phone必填
-    public static String API_REGISTER_CK_QQ = API_DOMAIN + "/member/ajaxGetCheckQq.json"; //获取qq校验
-    public static String API_REGISTER_CK_EMAIL = API_DOMAIN + "/member/ajaxGetCheckEmail.json"; //获取email校验
-    public static String API_REGISTER_CK_PHONE = API_DOMAIN + "/member/ajaxGetCheckPhone.json"; //获取手机号校验
+    public static String API_REGISTER_REQUIRED_QQ_CHECK = API_DOMAIN + "member/ajaxGetRequiredQqCheck.json"; //获取是否需要qq必填
+    public static String API_REGISTER_REQUIRED_EMAIL_CHECK = API_DOMAIN + "member/ajaxGetRequiredEmailCheck.json"; //获取是否需要email必填
+    public static String API_REGISTER_REQUIRED_PHONE_CHECK = API_DOMAIN + "member/ajaxGetRequiredPhoneCheck.json"; //获取是否需要Phone必填
+    public static String API_REGISTER_CK_QQ = API_DOMAIN + "member/ajaxGetCheckQq.json"; //获取qq校验
+    public static String API_REGISTER_CK_EMAIL = API_DOMAIN + "member/ajaxGetCheckEmail.json"; //获取email校验
+    public static String API_REGISTER_CK_PHONE = API_DOMAIN + "member/ajaxGetCheckPhone.json"; //获取手机号校验
 
 
 

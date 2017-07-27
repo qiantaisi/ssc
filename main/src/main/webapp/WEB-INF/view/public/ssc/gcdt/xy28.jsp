@@ -56,23 +56,11 @@
                     <li>
                         <b>快钱玩法</b>
                         <p>
+                            <span><a href="javascript:void(0)" data-url="xy28-hh">混合</a></span>
                             <span><a href="javascript:void(0)" data-url="xy28-hz">和值</a></span>
+                            <span><a href="javascript:void(0)" data-url="xy28-tmb3">特码包三</a></span>
                         </p>
                     </li>
-                    <%--<li>--%>
-                    <%--<b class="acti">官方玩法</b>--%>
-                    <%--<p>--%>
-                    <%--<span class="acti"><a href="javascript:void(0)">五星</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">四星</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">前三</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">中三</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">后三</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">二星</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">定位胆</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">大小单双</a></span>--%>
-                    <%--<span><a href="javascript:void(0)">趣味</a></span>--%>
-                    <%--</p>--%>
-                    <%--</li>--%>
                 </ul>
             </div>
 
@@ -92,8 +80,28 @@
     function randomNumber() {
         var arr = [];
         var tmpStr = '';
+        var sum = 0;
+        var colorBg = 'redxy28';
+
         for (var i = 0; i < 3; ++i) {
-            tmpStr += '<span>' + (Math.floor(Math.random() * 10)) + '</span>';
+            var valSum = Math.floor(Math.random() * 10);
+            sum += valSum;
+            if($.inArray(sum,[0,13,14,27]) >= 0){
+                colorBg = "gainsboroxy28";
+            } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
+                colorBg = "greenxy28";
+            } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
+                colorBg = "bluexy28";
+            } else{
+                colorBg = 'redxy28';
+            }
+
+            if(i < 2){
+                tmpStr += '<span>' + valSum + '</span><span class="plus">+</span>';
+            }else{
+                tmpStr += '<span>' + valSum + '</span><span class="plus">=</span><span class="'+ colorBg +'">' + sum + '</span>';
+            }
+
         }
         $("#lastOpenCode").html(tmpStr);
     }
@@ -101,8 +109,27 @@
     // 渲染上期开奖模板
     function renderLastOpenCode(openCodeArr) {
         var tmpStr = '';
+        var sum = 0;
+        var colorBg = 'redxy28';
+
         $.each(openCodeArr, function(index, value) {
-            tmpStr += '<span>' + value + '</span>';
+            sum += parseInt(value);
+            if($.inArray(sum,[0,13,14,27]) >= 0){
+                colorBg = "gainsboroxy28";
+            } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
+                colorBg = "greenxy28";
+            } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
+                colorBg = "bluexy28";
+            } else{
+                colorBg = 'redxy28';
+            }
+
+            if(index < 2){
+                tmpStr += '<span>' + value + '</span><span class="plus">+</span>';
+            } else{
+                tmpStr += '<span>' + value + '</span><span class="plus">=</span><span class="'+ colorBg +'">' + sum + '</span>';
+            }
+
         });
         $("#lastOpenCode").html(tmpStr);
     }
