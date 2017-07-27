@@ -694,8 +694,8 @@
                data-fun_zhushu="zhushu_rx4zu6"
                data-fun_content="content_rx4zu6"
                data-url="<%=basePath%>ssc/gcdt/gfwf/ffssc/rxsi/zx6.html"
-               data-play_id="578"
-               data-play_pl_id="14298"
+               data-play_id="581"
+               data-play_pl_id="14301"
                data-name="组选6">
                 <span class="staer1">组选6</span>
             </a>
@@ -705,8 +705,8 @@
                data-fun_zhushu="zhushu_rx4zu4"
                data-fun_content="content_rx4zu4"
                data-url="<%=basePath%>ssc/gcdt/gfwf/ffssc/rxsi/zx4.html"
-               data-play_id="579"
-               data-play_pl_id="14299"
+               data-play_id="580"
+               data-play_pl_id="14300"
                data-name="组选4">
                 <span class="staer1">组选4</span>
             </a>
