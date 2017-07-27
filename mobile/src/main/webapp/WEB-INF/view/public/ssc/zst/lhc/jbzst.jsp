@@ -92,10 +92,10 @@
             });
 
             // 七色波
-            for (var i = 0; i < 6; ++i) {
-                boseArr[getBose(boseArr[i])]++;
+            for (var i2 = 0; i2 < 6; ++i2) {
+                boseArr[getBose(kjData[i2])]++;
             }
-            boseArr[getBose(boseArr[6])] += 1.5;
+            boseArr[getBose(kjData[6])] += 1.5;
             var maxBose = 0;
             if ((boseArr[0] == 3 && boseArr[1] == 3 && boseArr[2] == 1.5) ||
                 (boseArr[0] == 3 && boseArr[2] == 3 && boseArr[1] == 1.5) ||
@@ -119,7 +119,6 @@
                     maxBose = '<font class="color-green">绿波</font>';
                 }
             }
-            console.log(boseArr);
 
 
 
