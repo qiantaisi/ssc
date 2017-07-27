@@ -65,7 +65,7 @@
 .clearBet_template{margin:15px;}
 .clearBet_template .l{vertical-align:middle;float:left;width:50px;overflow:hidden;height:100%}
 .clearBet_template .l span{display:block;height:100%;position:relative;}
-.clearBet_template .l span i{text-align:center;background:url(../img/mdl-icon.png) no-repeat;background-position:0 -42px;display:inline-block;width:42px;height:42px;background-size:42px;position:absolute;bottom:10px}
+.clearBet_template .l span i{text-align:center;background:url(../img/tm-mdl-icon.png) no-repeat;background-position:0 -42px;display:inline-block;width:42px;height:42px;background-size:42px;position:absolute;bottom:10px}
 .clearBet_template .r{float:right;width:360px;overflow:hidden;height:100%}
 .clearBet_template .r p{text-align:center;height:40px;line-height:40px}
 .clearBet_template .l,.clearBet_template .r{height:80px;}

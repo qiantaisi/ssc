@@ -34,7 +34,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="account" class="inputStr left" placeholder="请输入用户名" />
                     <div class="left erro">
-                        字母开头的6-12位字母数字组成的用户名
+                        <span class="yhm">
+                            字母开头的6-12位字母数字组成的用户名
+                        </span>
+
                     </div>
                 </div>
             </div>
@@ -48,7 +51,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="password"  name="password" class="inputStr left" placeholder="请输入密码" />
                     <div class="left erro">
-                        输入6-12位字母、数字的密码
+                        <span class="mm">
+                             输入6-12位字母、数字的密码
+                        </span>
+
                     </div>
 
                 </div>
@@ -63,7 +69,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="password"  name="confirmPassword" class="inputStr left" placeholder="确认密码" />
                     <div class="left erro">
-                        与上面输入密码必须保持一致
+                        <span class="qmm">
+                             与上面输入密码必须保持一致
+                        </span>
+
                     </div>
                 </div>
             </div>
@@ -77,7 +86,9 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="name" class="inputStr left" placeholder="请输入姓名" />
                     <div class="left erro">
+                        <span class="xm">
                         姓名必须和绑定的银行卡户名一致
+                            </span>
                     </div>
                 </div>
             </div>
@@ -91,7 +102,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="phone" class="inputStr left" placeholder="请输入手机" />
                     <div class="left erro">
-                        请输入您的手机
+                        <span class="sj">
+                            请输入您的手机
+                        </span>
+
                     </div>
                 </div>
             </div>
@@ -105,7 +119,10 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="email" class="inputStr left" placeholder="请输入邮箱" />
                     <div class="left erro">
-                        请输入您的邮箱
+                        <span class="yx">
+                            请输入您的邮箱
+                        </span>
+
                     </div>
                 </div>
             </div>
@@ -119,11 +136,14 @@
                 <div class="login_nr_gp_rt clearfix">
                     <input type="text"  name="qq" class="inputStr left" placeholder="请输入QQ" />
                     <div class="left erro">
-                        请输入QQ
+                        <span class="qq">
+                             请输入QQ
+                        </span>
+
                     </div>
                 </div>
             </div>
-            <div class="clearfix login_nr_gp">
+            <div class="clearfix login_nr_gp" style="padding-left: 40px;">
                 <span class="left login_nr_name"></span>
                 <div class="login_nr_gp_rt clearfix">
                     <input type="checkbox" class="left" checked="checked" style="width:30px;" />
@@ -136,8 +156,8 @@
                     <input type="button" class="mfkh" value="免费开户" id="btn-register"/>
                 </p>
             </div>
-            <div class="login_b_link">
-                <a href="#">忘记密码?</a>
+            <div class="login_b_link" style="padding-left: 75px;">
+                <a href="${kefuUrl}">忘记密码?</a>
                 <span>|</span>
                 <a href="${kefuUrl}" target="_blank">在线客服</a>
             </div>
@@ -186,17 +206,20 @@
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
             var name = $("input[name='name']").val();   // 姓名
             if (!account) {
-                alert("请输入用户名");
+                $(".yhm").html("请输入用户名");
+               $(".yhm").css("color","red");
                 return;
             }
 
             if (!account.match(/^[a-zA-Z][0-9a-zA-Z]{5,11}$/)) {
-                alert("请输入以字母开头的6-12位字母、数字组成的用户名");
+                $(".yhm").html("请输入以字母开头的6-12位字母、数字组成的用户名");
+                $(".yhm").css("color","red");
                 return;
             }
 
             if (!password) {
-                alert("请输入密码");
+                $(".mm").html("请输入密码");
+                $(".mm").css("color","red");
                 return;
             }
 
@@ -216,30 +239,34 @@
             // }
 
             if (!password.match(/^[0-9a-zA-Z]{6,12}$/)) {
-                alert("请输入6-12位字母、数字的密码");
+                $(".mm").html("请输入6-12位字母、数字的密码");
+                $(".mm").css("color","red");
                 return;
             }
 
             if (!confirmPassword) {
-                alert("请输入确认密码");
+                $(".qmm").html("请输入确认密码");
+                $(".qmm").css("color","red");
                 return;
             }
 
             if (confirmPassword != password) {
-                alert("确认密码不正确");
+                $(".qmm").html("确认密码不正确");
+                $(".qmm").css("color","red");
                 return;
             }
 
             if (!name) {
-                alert("请输入姓名");
+                $(".xm").html("请输入姓名");
+                $(".xm").css("color","red")
                 return;
             }
 
             if (!name.match(/^[\u4e00-\u9fa5]+$/)) {
-                alert("姓名只能是汉字");
+                $(".xm").html("姓名只能是汉字");
+                $(".xm").css("color","red")
                 return;
             }
-            alert(qq);
             ajaxRequest({
                 url: "<%=basePath%>member/ajaxRegister.json",
                 data: {
@@ -256,10 +283,10 @@
                         Tools.toast("注册成功");
                         $.cookie("uid", json.userId, {path: "/"});
                         $.cookie("token", json.token, {path: "/"});
-                        window.location.href = "<%=basePath%>login.html";
+                        window.location.href = "<%=basePath%>main.html";
                     } else if (json.result == -6) {
                         Tools.toast("注册成功，请登录");
-                        window.location.href = "<%=basePath%>login.html";
+                        window.location.href = "<%=basePath%>main.html";
                     }else if (json.result == "0"){
 
                         Tools.toast("注册失败：" + json.description);

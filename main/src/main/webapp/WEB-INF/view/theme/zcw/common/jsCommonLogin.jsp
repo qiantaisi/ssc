@@ -10,7 +10,7 @@
 <div class="bg"></div>
 <div class="login_alert">
     <div class="login_alert_tl clearfix">
-        <span class="left">易名彩登录</span>
+        <span class="left spans">${webInfo.companyShortName}登录</span>
         <a href="javascript:void(0);" class="cha right"></a>
     </div>
     <form >
@@ -35,7 +35,7 @@
 
             <input type="button" class="btn_red login_alertbtn" onclick="login()"  value="立即登录" />
             <div class="login_alert_link">
-                <a href="${kefuUrl}">忘记密码</a>
+                <a href="${kefuUrl}" target="_blank">忘记密码</a>
                 <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                 <a href="<%=basePath%>register.html">立即注册</a>
             </div>
@@ -60,21 +60,39 @@
         });
     });
 
+    function goZst(url) {
+        window.open('<%=basePath%>ssc/'+ url +'.html?type=1');
+    }
+    
+    function wjmm(url) {
+        $(".spans").html("请联系在线客服");
+        $(".spans").css("color","red");
+    }
+
     function login() {
-        var loginAccount = $.trim($("#registerLoginAccountAlert").val());
-        var loginPassword = $.trim($("#registerLoginPasswordAlert").val());
-        var yzm = $.trim($("#registerLoginYzmAlert").val());
+        var loginAccount = $("#registerLoginAccountAlert").val();
+        var loginPassword = $("#registerLoginPasswordAlert").val();
+        var yzm = $("#registerLoginYzmAlert").val();
 
         if (!loginAccount) {
-            alert("请输入账号");
+            $(".yhm").html("请输入用户名3-15个英文、数字");
+            $(".yhm").css("color","red");
+            $("#mm").empty();
+            $(".yzm").empty();
             return;
         }
         if (!loginPassword) {
-            alert("请输入密码");
+            $("#mm").html("请输入密码");
+            $("#mm").css("color","red");
+            $("#mm").empty();
+            $(".yzm").empty();
             return;
         }
         if (!yzm) {
-            alert("请输入验证码");
+            $("#yzm").html("请输入验证码");
+            $("#yzm").css("color","red");
+            $("#mm").empty();
+            $(".yhm").empty();
             return;
         }
 

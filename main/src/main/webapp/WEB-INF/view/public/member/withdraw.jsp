@@ -65,7 +65,7 @@
             <ul class="eveb_form eveb_withdraw">
                 <li>
                     <span>提款金额：</span>
-                    <input id="money" name="money" name="text" type="text" placeholder="请输入转账金额"
+                    <input id="money" class="withdraw-bg-input" name="money" name="text" type="text" placeholder="请输入转账金额"
                            style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
                     <label for="money" class="error"></label>
                 </li>
@@ -73,7 +73,7 @@
                 <c:if test="${not empty needWithdrawPassword && needWithdrawPassword == true}">
                     <li>
                         <span>取款密码：</span>
-                        <input id="drawPassword" name="drawPassword" name="text" type="password" placeholder="请输入取款密码" style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
+                        <input id="drawPassword" class="withdraw-bg-input" name="drawPassword" name="text" type="password" placeholder="请输入取款密码" style="border: 2px solid #f49c42;background: #faf9f9;height: 28px; padding-left:5px">
                         <label for="drawPassword" class="withdraw error"></label>
                     </li>
                 </c:if>

@@ -10,12 +10,10 @@
 <c:import url="../../common/checkIsChildFrame.jsp" />
 <c:import url="../../index/top.jsp" />
 
-<div class="men_list">
-    <div class="wid1">
-        <div class="logo">
-            <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a>
-        </div>
-        <c:import url="../../common/navList.jsp" />
+<div class="men_lists">
+    <div class="wid2">
+        <c:import url="../../index/menu.jsp" >
+        </c:import>
     </div>
 </div>
 
@@ -68,8 +66,7 @@
     </div>
 </div>
 
-<c:import url="../../common/bottomInfo.jsp" />
-<c:import url="../../common/copyright.jsp" />
+<c:import url="../../index/bottom.jsp" />
 <c:import url="../../common/commonJs.jsp" />
 <c:import url="../../common/jsCommonLogin.jsp" />
 <c:import url="../common/bottom.jsp" />

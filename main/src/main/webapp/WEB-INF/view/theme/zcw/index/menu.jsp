@@ -10,17 +10,19 @@
 <div class="head_middle">
     <div class="container clearfix">
         <a href="<%=basePath%>index.html" class="left logo">
-            <img src="${resPath}images/index_11.png" />
+
+            <img src="<%=basePath%>images/${logo.imageId}" />
         </a>
         <div class="left head_middle_yuye">
             <a href="javascript:void(0);">
                 <img src="${resPath}images/index_14.png" />
             </a>
         </div>
-        <div class="right clearfix">
-            <div class="left head_middle_tel">
-                400-690-8888
-            </div>
+     <div class="right clearfix">
+         <%--  <div class="left head_middle_tel">
+            400-690-8888
+        </div>
+        --%>
             <a href="${kefuUrl}" target="_blank" class="left head_middle_kf">
                 <img src="${resPath}images/index_20.png" />
                 联系客服
@@ -42,20 +44,21 @@
                         分分时时彩
                     </div>
                 </a>
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')" class="all_fenlei_yin_list clearfix">
+
+                    <div class="left">
+                        <img src="${resPath}images/index1_6.png"/>
+                    </div>
+                    <div class="all_fenlei_yin_list_rt">
+                        重庆时时彩
+                    </div>
+                </a>
                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index_42.png"/>
                     </div>
                     <div class="all_fenlei_yin_list_rt">
                         极速PK拾
-                    </div>
-                </a>
-                <a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')"   class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index_45.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        三分彩
                     </div>
                 </a>
                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')" class="all_fenlei_yin_list clearfix">
@@ -66,23 +69,6 @@
                         北京PK拾
                     </div>
                 </a>
-                <a href="javascript:void(0)" onclick="openGcdt('gcdt/kl8')" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index51.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        北京快乐8
-                    </div>
-                </a>
-                <a href="javascript:void(0)" onclick="openGcdt('gcdt/tjssc')" class="all_fenlei_yin_list clearfix">
-                    <div class="left">
-                        <img src="${resPath}images/index1-16.png"/>
-                    </div>
-                    <div class="all_fenlei_yin_list_rt">
-                        天津时时彩
-                    </div>
-                </a>
-
                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/lhc')" class="all_fenlei_yin_list clearfix">
                     <div class="left">
                         <img src="${resPath}images/index51-17.png"/>
@@ -91,6 +77,23 @@
                         香港六合彩
                     </div>
                 </a>
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/xyft')"  class="all_fenlei_yin_list clearfix">
+                    <div class="left">
+                        <img src="${resPath}images/index1_11.png"/>
+                    </div>
+                    <div class="all_fenlei_yin_list_rt">
+                        幸运飞艇
+                    </div>
+                </a>
+                <a href="javascript:void(0)" onclick="openGcdt('gcdt/ahk3')" class="all_fenlei_yin_list clearfix" >
+                    <div class="left">
+                        <img src="${resPath}images/index1_15.png"/>
+                    </div>
+                    <div class="all_fenlei_yin_list_rt">
+                        安徽快3
+                    </div>
+                </a>
+
                 <div class="all_fenlei_b">
                     <div class="all_fenlei_b_gp clearfix">
                         <div class="left all_fenlei_b_name" style="background: #ffcdcd;border: 1px solid #ffcdcd;color: #ff4444;">
@@ -105,7 +108,7 @@
                                     <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')" >极速PK10</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')" >三分时时彩</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">重庆时时彩</a>
                                 </li>
                                 <li>
                                     <a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')">北京PK10</a>
@@ -183,7 +186,7 @@
                                     <a href="javascript:void(0)" onclick="openGcdt('gcdt/jspk10')">极速PK10</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/sfssc')">三分时时彩</a>
+                                    <a href="javascript:void(0)" onclick="openGcdt('gcdt/cqssc')">重庆时时彩</a>
                                 </li>
                                 <li>
                                     <a href="javascript:void(0)" onclick="openGcdt('gcdt/pk10')">北京PK10</a>
@@ -224,7 +227,7 @@
         </div>
         <div class="menu_main clearfix left">
             <c:choose>
-                <c:when test="${param.noselect == 1 || param.yhhd != null}">
+                <c:when test="${param.noselect == 1 || param.yhhd != null || param.kjjg != null}">
                     <a href="<%=basePath%>main.html">
                         首页
                     </a>
@@ -255,9 +258,20 @@
             </c:choose>
 
 
-            <a href="<%=basePath%>kjjg.html">
-                开奖公告
-            </a>
+            <c:choose>
+                <c:when test="${param.kjjg == 4}">
+                    <a href="<%=basePath%>kjjg.html" class="ahover">
+                        开奖公告
+                    </a>
+                </c:when>
+                <c:otherwise>
+                    <a href="<%=basePath%>kjjg.html">
+                        开奖公告
+                    </a>
+                </c:otherwise>
+            </c:choose>
+
+
             <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">
                 走势图表
             </a>

@@ -7,7 +7,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<script src="${resPath}js/ssc/gcdt/ssc.js?v=3.4"></script>
+<script src="${resPath}js/ssc/gcdt/ssc.js?v=3.7"></script>
 
 <div class="alert_log two2">
     <div class="alert_log_col">

@@ -5,7 +5,7 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-    String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("www.", "");
+    String hostName = request.getServerName().replace("www.", "");
 %>
 <div class="footer">
     <div class="footer_t">
@@ -142,9 +142,8 @@
     <div class="footer_b">
         <div class="container">
             <img src="${resPath}images/index112.png" />
-            <br />
-            2009-2017©易名彩 公司版权所有 <br />
-            易名彩 郑重提示：彩票有风险，投注需谨慎。不向未满18周岁的青少年出售彩票！
+            <p class="webDbxx"></p>
+            <p class="mt30"><span><%=hostName%>&nbsp;&nbsp; 郑重提示：彩票有风险，投注需谨慎</span> 不向未满18周岁的青少年出售彩票</p>
         </div>
     </div>
 </div>

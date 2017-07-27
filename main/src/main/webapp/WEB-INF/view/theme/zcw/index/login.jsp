@@ -32,11 +32,11 @@
 			    			用户名:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="registerLoginAccount" id="registerLoginAccount" class="left"
+                    <input type="text" name="registerLoginAccount" id="registerLoginAccountAlert" class="left"
                            placeholder="请输入用户名"/>
-                    <div class="left erro">
-                        请输入用户名（3-15个英文、数字）
-                    </div>
+                    <span class="left erro yhm">
+
+                        </span>
                 </div>
             </div>
             <div class="clearfix login_nr_gp">
@@ -47,8 +47,11 @@
 			    			密码:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="password" name="registerLoginPassword" id="registerLoginPassword" class="left"
+                    <input type="password" name="registerLoginPassword" id="registerLoginPasswordAlert" class="left"
                            placeholder="请输入密码"/>
+                        <span class="left erro" id="mm">
+
+                        </span>
 
                 </div>
             </div>
@@ -60,10 +63,12 @@
 			    			验证码:
 			    		</span>
                 <div class="login_nr_gp_rt clearfix">
-                    <p><input type="text" id="registerLoginYzm" placeholder="验证码"
+                    <p><input type="text" id="registerLoginYzmAlert" placeholder="验证码"
                               onfocus="refreshYzm(document.getElementById('registerYzmImg2'))"/><img
                             id="registerYzmImg2" onclick="refreshYzm(this)"
                             src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
+                    <span id="yzm">
+                    </span>
                     </p>
                 </div>
             </div>
@@ -75,7 +80,7 @@
                     <a href="<%=basePath%>register.html">免费开户</a>
                 </p>
             </div>
-            <div class="login_b_link">
+            <div class="login_b_link" style="padding-left: 75px">
                 <a href="${kefuUrl}">忘记密码?</a>
                 <span>|</span>
                 <a href="${kefuUrl}">在线客服</a>

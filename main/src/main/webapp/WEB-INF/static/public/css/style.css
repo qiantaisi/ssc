@@ -491,7 +491,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .Detailedlist .layout .boxt .left ul li span.sp1{text-indent: 30px;}
 .Detailedlist .layout .boxt .right{width: 338px;float: right;margin-right: 8px;}
 .Detailedlist .layout .boxt .right ul{display: table;width: 100%;}
-.Detailedlist .layout .boxt .right ul li{width: 163px;height: 34px;background: #f02800;color: #fff;text-align: center;font-size: 12px;line-height: 34px;border-bottom: 2px solid #a92309;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;margin-left: 6px;margin-top: 12px;}
+.Detailedlist .layout .boxt .right ul li{width: 160px;height: 34px;background: #f02800;color: #fff;text-align: center;font-size: 12px;line-height: 34px;border-bottom: 2px solid #a92309;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;margin-left: 6px;margin-top: 12px;}
 .Detailedlist .layout .boxt .right ul li a{color: #fff;display: block;}
 .Detailedlist .layout .boxt .right ul li img{vertical-align: middle;margin-right: 6px;margin-top:-3px;}
 .Detailedlist .layout .boxt .right  p{font-size: 12px;color: #767777;margin-top: 12px;text-align: center;}
@@ -1125,7 +1125,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .Detailedlist .layout .boxt .left ul li span.sp1{text-indent: 30px;}
 .Detailedlist .layout .boxt .right{width: 338px;float: right;margin-right: 8px;}
 .Detailedlist .layout .boxt .right ul{display: table;width: 100%;}
-.Detailedlist .layout .boxt .right ul li{width: 163px;height: 34px;background: #f02800;color: #fff;text-align: center;font-size: 12px;line-height: 34px;border-bottom: 2px solid #a92309;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;margin-left: 6px;margin-top: 12px;}
+.Detailedlist .layout .boxt .right ul li{width: 160px;height: 34px;background: #f02800;color: #fff;text-align: center;font-size: 12px;line-height: 34px;border-bottom: 2px solid #a92309;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;margin-left: 6px;margin-top: 12px;}
 .Detailedlist .layout .boxt .right ul li a{color: #fff;display: block;}
 .Detailedlist .layout .boxt .right ul li img{vertical-align: middle;margin-right: 6px;margin-top:-3px;}
 .Detailedlist .layout .boxt .right  p{font-size: 12px;color: #767777;margin-top: 12px;text-align: center;}

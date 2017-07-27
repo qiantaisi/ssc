@@ -16,8 +16,8 @@
     <c:param name="isShow" value="true" />
 </c:import>
 <style>
-    .banner_shuru_main{margin:35px 0;}
-    .banner_shuru{position:static;height:0;}
+    .banner_shuru_main{margin:0;}
+    .banner_shuru{position:relative;height:0;}
     .block_home_slider,.flexslider .slides li{width:100%;}
 </style>
 <div class="bannernew" style="height:320px;overflow:hidden;">
@@ -29,11 +29,13 @@
                         <c:when test="${empty item.url}">
                             <li>
                                 <a href="javascript:void(0)" class="banner_main" style="background: url(<%=basePath%>images/${item.imageId}.png) no-repeat center;background-size: cover;"></a>
+                                <%--<a href="javascript:void(0)" class="banner_main"><img src="<%=basePath%>images/${item.imageId}.png"/></a>--%>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li>
                                 <a href="${item.url}" class="banner_main" style="background: url(<%=basePath%>images/${item.imageId}.png) no-repeat center;background-size: cover;"></a>
+                                <%--<a href="${item.url}" class="banner_main"><img src="<%=basePath%>images/${item.imageId}.png"/></a>--%>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -41,11 +43,10 @@
             </ul>
         </div>
     </div>
-
     <c:choose>
         <c:when test="${not empty userSession}">
-            <div class="banner_shuru container">
-                <div class="container clear">
+            <div class="banner_shuru container" style="height: 1px;">
+                <div class="container clear" style="height: 1px;">
                     <div class="banner_shuru_main right">
                         <div class="banner_shuru_main_tl">
                             <span>欢迎登录</span>
@@ -95,8 +96,8 @@
             </div>
         </c:when>
         <c:otherwise>
-            <div class="banner_shuru container">
-                <div class="container clear">
+            <div class="banner_shuru container" style="height: 1px;">
+                <div class="container clear" style="height: 1px;">
                     <div class="banner_shuru_main right">
                         <div class="banner_shuru_main_tl">
                             <span>欢迎登录</span>
@@ -127,7 +128,6 @@
             </div>
         </c:otherwise>
     </c:choose>
-
 </div>
 
 <div class="main container index_main clearfix">
@@ -496,9 +496,51 @@
                     </div>
                     <div class="index_main_rt1_2b index-content-help">
                         <ul class="index_notice_ul_new">
-                            <li>
-                                <a href="${basPath}help/index.html">新手指导</a>
-                            </li>
+                            <marquee behavior="scroll" scrolldelay="1"  direction="up"
+                                     onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="2"
+                                     height="44"  onmouseover="this.stop();" onmouseout="this.start();">
+                                <div style="margin: 10px">
+                                <p>
+                                    <a href="<%=basePath%>help/question/zc.html">关于注册</a>
+                                </p>
+                                </div>
+                                <div style="margin: 10px">
+                                <p>
+                                    <a href="<%=basePath%>help/question/cz.html" style="">关于充值</a>
+                                </p>
+                                </div>
+                                <div style="margin: 10px">
+                                <p>
+                                    <a href="<%=basePath%>help/question/tk.html">关于提款</a>
+                                </p>
+                                </div>
+                                <div style="margin: 10px">
+                                <p>
+                                    <a href="<%=basePath%>help/index.html">彩种介绍</a>
+                                </p>
+                                </div>
+                                <div style="margin: 10px">
+                                    <p>
+                                        <a href="<%=basePath%>help/question/cz.html">充值介绍</a>
+                                    </p>
+                                </div>
+                                <div style="margin: 10px">
+                                    <p>
+                                        <a href="<%=basePath%>help/question/cz_1.html">网银充值</a>
+                                    </p>
+                                </div>
+                                <div style="margin: 10px">
+                                    <p>
+                                        <a href="<%=basePath%>help/question/cz_2.html">支付宝</a>
+                                    </p>
+                                </div>
+                                <div style="margin: 10px">
+                                    <p>
+                                        <a href="<%=basePath%>help/question/cz_1.html">网银充值</a>
+                                    </p>
+                                </div>
+
+                        </marquee>
                         </ul>
                     </div>
                 </div>
@@ -534,7 +576,7 @@
     </div>
 </div>
 
-<c:import url="../common/bottomInfo.jsp"/>
+<c:import url="bottom.jsp"/>
 <c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/jsCommonLogin.jsp"/>
 
@@ -553,10 +595,30 @@
     });
 </script>
 <script>
+    function openHyzx(module) {
+        if (typeof module == 'undefined') {
+            module = '';
+        }
+        if (typeof $.cookie("uid") == 'undefined' || typeof $.cookie("token") == 'undefined') {
+            alert("请先登录");
+            if ($("#loginAccount1").length > 0) {
+                $("#loginAccount1").focus();
+                return;
+            }
+            window.location.href = "<%=basePath%>main.html";
+            return;
+        }
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + module;
+        }
+        windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);
+    }
+
     $(function () {
         var playIds = [1, 2, 3, 15, 16];
         getSscDataMainPage(playIds);
-        <%--getWebPopUpNotice();--%>
+        getWebPopUpNotice();
 
 
         xyxh(null, 1);
@@ -578,7 +640,7 @@
 
         newRoll(".roll_rt1_2b .rewrap ul li");
 
-//        $(".all_fenlei_yin").css("display", "block");
+       $(".all_fenlei_yin").css("display", "block");
     });
 
     function getSscDataMainPage(playIds) {
@@ -692,21 +754,21 @@
         });
     }
 
-    <%--$(function () {--%>
+    $(function () {
 
-        <%--$('.index_main_rt1_2t a').mouseover(function () {--%>
-            <%--var index = $(this).index();--%>
-            <%--$(this).addClass('ahover').siblings().removeClass('ahover');--%>
-            <%--$(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();--%>
-        <%--});--%>
+        $('.index_main_rt1_2t a').mouseover(function () {
+            var index = $(this).index();
+            $(this).addClass('ahover').siblings().removeClass('ahover');
+            $(".index_main_rt1_2b").eq(index).show().addClass('active').siblings().removeClass('active').hide();
+        });
 
-        <%--$('.touzhu_t_qht a').mouseover(function () {--%>
-            <%--var index = $(this).index();--%>
-            <%--$(this).addClass('ahover').siblings().removeClass('ahover');--%>
-            <%--$(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();--%>
-        <%--});--%>
+        $('.touzhu_t_qht a').mouseover(function () {
+            var index = $(this).index();
+            $(this).addClass('ahover').siblings().removeClass('ahover');
+            $(".touzhu_b_main").eq(index).show().addClass('active').siblings().removeClass('active').hide();
+        });
 
-    <%--});--%>
+    });
     <%--//根据id获取资讯信息内容并跳转页面--%>
     <%--function ziXun(id){--%>
         <%--location.href =' <%=basePath%>zixun/' + id + '.html';--%>
@@ -776,89 +838,89 @@
     <%--}--%>
 
 
-    <%--function openXyxh(type) {--%>
-        <%--var caizhong = '';--%>
-        <%--var nums = '';--%>
-        <%--var money = '';--%>
-        <%--var navIndex = '';--%>
+   function openXyxh(type) {
+        var caizhong = '';
+        var nums = '';
+        var money = '';
+        var navIndex = '';
 
-        <%--if (type == 6) {--%>
-            <%--caizhong = 'lhc';--%>
-            <%--navIndex = 0;--%>
-            <%--numsArr = [];--%>
-            <%--for (var i = 0; i < 7; ++i) {--%>
-                <%--var v = $("#xyxhContents_6 .left:eq(" + i + ") span").data("num");--%>
-                <%--if (v == '') {--%>
-                    <%--continue;--%>
-                <%--}--%>
-                <%--numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。--%>
-            <%--}--%>
-            <%--nums = numsArr.join(",");--%>
-            <%--money = $("#xyxhMoney_6").html();--%>
-        <%--} else if (type == 1) {--%>
-            <%--caizhong = 'cqssc';--%>
-            <%--navIndex = 0;--%>
-            <%--var numsArr = [];--%>
-            <%--for (var i = 0; i < 5; ++i) {--%>
-                <%--var v = $("#xyxhContents_1 span").eq(i).data("num");--%>
-                <%--if (v == '') {--%>
-                    <%--continue;--%>
-                <%--}--%>
-                <%--numsArr.push(v);--%>
-            <%--}--%>
-            <%--nums = numsArr.join(",");--%>
-            <%--money = $("#xyxhMoney_1").html();--%>
+        if (type == 6) {
+            caizhong = 'lhc';
+            navIndex = 0;
+            numsArr = [];
+            for (var i = 0; i < 7; ++i) {
+                var v = $("#xyxhContents_6 .left:eq(" + i + ") span").data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);  //join() 方法用于把数组中的所有元素转换一个字符串。
+            }
+            nums = numsArr.join(",");
+            money = $("#xyxhMoney_6").html();
+        } else if (type == 1) {
+            caizhong = 'cqssc';
+            navIndex = 0;
+            var numsArr = [];
+            for (var i = 0; i < 5; ++i) {
+                var v = $("#xyxhContents_1 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+            money = $("#xyxhMoney_1").html();
 
-        <%--} else if (type == 20) {--%>
-            <%--caizhong = 'ahk3';--%>
-            <%--navIndex = 7;--%>
-            <%--var numsArr = [];--%>
-            <%--for (var i = 0; i < 3; ++i) {--%>
-                <%--var v = $("#xyxhContents_20 span").eq(i).data("num");--%>
-                <%--if (v == '') {--%>
-                    <%--continue;--%>
-                <%--}--%>
-                <%--numsArr.push(v);--%>
-            <%--}--%>
-            <%--nums = numsArr.join(",");--%>
-            <%--money = $("#xyxhMoney_20").html();--%>
-        <%--} else if (type == 4) {--%>
-            <%--caizhong = 'pl3';--%>
-            <%--navIndex = 0;--%>
-            <%--var numsArr = [];--%>
-            <%--for (var i = 0; i < 3; ++i) {--%>
-                <%--var v = $("#xyxhContents_4 span").eq(i).data("num");--%>
-                <%--if (v == '') {--%>
-                    <%--continue;--%>
-                <%--}--%>
-                <%--numsArr.push(v);--%>
-            <%--}--%>
-            <%--nums = numsArr.join(",");--%>
-            <%--money = $("#xyxhMoney_4").html();--%>
-        <%--}--%>
+        } else if (type == 20) {
+            caizhong = 'ahk3';
+            navIndex = 7;
+            var numsArr = [];
+            for (var i = 0; i < 3; ++i) {
+                var v = $("#xyxhContents_20 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+            money = $("#xyxhMoney_20").html();
+        } else if (type == 4) {
+            caizhong = 'pl3';
+            navIndex = 0;
+            var numsArr = [];
+            for (var i = 0; i < 3; ++i) {
+                var v = $("#xyxhContents_4 span").eq(i).data("num");
+                if (v == '') {
+                    continue;
+                }
+                numsArr.push(v);
+            }
+            nums = numsArr.join(",");
+            money = $("#xyxhMoney_4").html();
+        }
 
-        <%--if (numsArr.length == 0) {--%>
-            <%--return;--%>
-        <%--}--%>
-        <%--openXyxhGcdt(caizhong, nums, money, navIndex);--%>
-    <%--}--%>
+        if (numsArr.length == 0) {
+            return;
+        }
+        openXyxhGcdt(caizhong, nums, money, navIndex);
+    }
 
-    <%--function openXyxhGcdt(caizhong, nums, money, navIndex) {--%>
-        <%--windowOpenBlank('<%=basePath%>ssc/index.html?caizhong=' + caizhong + '&nums=' + nums + '&money=' + money + '&navIndex=' + navIndex);--%>
-        <%--//goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + caizhong + ".html?caizhong=" + caizhong + "&nums=" + nums + "&money=" + money + "&navIndex=" + navIndex);--%>
-    <%--}--%>
+    function openXyxhGcdt(caizhong, nums, money, navIndex) {
+        windowOpenBlank('<%=basePath%>ssc/index.html?caizhong=' + caizhong + '&nums=' + nums + '&money=' + money + '&navIndex=' + navIndex);
+        //goSubUrl(CONFIG.BASEURL + "ssc/gcdt/" + caizhong + ".html?caizhong=" + caizhong + "&nums=" + nums + "&money=" + money + "&navIndex=" + navIndex);
+    }
 
-    <%--function openGcdt(module) {--%>
-<%--//        if (typeof module == 'undefined') {--%>
-<%--//            module = '';--%>
-<%--//        }--%>
-        <%--&lt;%&ndash;windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);&ndash;%&gt;--%>
-        <%--var subUrl = "";--%>
-        <%--if (module) {--%>
-            <%--subUrl = "#" + CONFIG.BASEURL + "ssc/" + module + ".html";--%>
-        <%--}--%>
-        <%--windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);--%>
-    <%--}--%>
+    function openGcdt(module) {
+//        if (typeof module == 'undefined') {
+//            module = '';
+//        }
+        <%--windowOpenBlank('<%=basePath%>ssc/index.html?module=' + module);--%>
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + "ssc/" + module + ".html";
+        }
+        windowOpenBlank(CONFIG.BASEURL + 'ssc/index.html' + subUrl);
+    }
 
     <%--function openZstIndex(module) {--%>
         <%--if (typeof module == 'undefined') {--%>
@@ -893,34 +955,34 @@
         <%--windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);--%>
     <%--}--%>
 
-    <%--function xyxhAdd(id, size) {--%>
-        <%--var num = $("#xyxhInput_" + id).val();--%>
-        <%--if (isNaN(num) || num <= 0) {--%>
-            <%--num = 1;--%>
-        <%--} else {--%>
-            <%--num++;--%>
-        <%--}--%>
-        <%--$("#xyxhInput_" + id).val(num);--%>
-        <%--$("#xyxhMoney_" + id).html(mul(num, size));--%>
-    <%--}--%>
-    <%--function checkValue(id, size) {--%>
-        <%--var num = $("#xyxhInput_" + id).val();--%>
-        <%--if (isNaN(num) || num <= 1) {--%>
-            <%--num = 1;--%>
-            <%--$("#xyxhInput_" + id).val(num);--%>
-        <%--}--%>
-        <%--$("#xyxhMoney_" + id).html(mul(num, size));--%>
-    <%--}--%>
-    <%--function xyxhMinute(id, size) {--%>
-        <%--var num = $("#xyxhInput_" + id).val();--%>
-        <%--if (isNaN(num) || num <= 1) {--%>
-            <%--num = 1;--%>
-        <%--} else {--%>
-            <%--num--;--%>
-        <%--}--%>
-        <%--$("#xyxhInput_" + id).val(num);--%>
-        <%--$("#xyxhMoney_" + id).html(mul(num, size));--%>
-    <%--}--%>
+    function xyxhAdd(id, size) {
+        var num = $("#xyxhInput_" + id).val();
+        if (isNaN(num) || num <= 0) {
+            num = 1;
+        } else {
+            num++;
+        }
+        $("#xyxhInput_" + id).val(num);
+        $("#xyxhMoney_" + id).html(mul(num, size));
+    }
+    function checkValue(id, size) {
+        var num = $("#xyxhInput_" + id).val();
+        if (isNaN(num) || num <= 1) {
+            num = 1;
+            $("#xyxhInput_" + id).val(num);
+        }
+        $("#xyxhMoney_" + id).html(mul(num, size));
+    }
+    function xyxhMinute(id, size) {
+        var num = $("#xyxhInput_" + id).val();
+        if (isNaN(num) || num <= 1) {
+            num = 1;
+        } else {
+            num--;
+        }
+        $("#xyxhInput_" + id).val(num);
+        $("#xyxhMoney_" + id).html(mul(num, size));
+    }
 
 
     function xyxh(obj, type) {

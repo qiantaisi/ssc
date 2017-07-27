@@ -11,7 +11,7 @@
 <c:import url="common/bodyStart.jsp" />
 <style>body{width:100%;}</style>
 <div class="wid-1200 helpCont clearfix">
-    <div class="head">
+    <div class="head headmemberbg">
         <img src="<%=basePath%>images/${logoData.imageId}" alt="">
         <div>
             <h5><span>北京时间：<i id="bjTime" data-time="<%=(new Date()).getTime()%>"></i></span></h5>
