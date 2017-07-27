@@ -181,14 +181,16 @@
             success:function(obj){
                 //判断QQ是否必填
                 if(obj.checkQq){
+
                     if(obj.needRequiredQq){
 
                         $(".starqq").html("*");
                     }
                 }else{
-                    $("hidqq").hide();
+                    $(".hidqq").hide();
                 }
                 if(obj.checkEmail){
+
                     if(obj.needRequiredEmail){
 
                         $(".staremail").html("*");
@@ -198,10 +200,10 @@
                     $(".hidemail").hide();
                 }
                 if(obj.checkPhone){
+
                     if(obj.needRequredPhone){
 
                         $(".starphone").html("*");
-
                     }
                 }else{
                         $(".hidphone").hide();
