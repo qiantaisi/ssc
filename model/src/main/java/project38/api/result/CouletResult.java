@@ -23,7 +23,7 @@ public class CouletResult extends CommonResult {
         /**
          * 左边图片
          */
-        private String leftImg;
+        private Long leftImg;
         /**
          * 左边宽度
          */
@@ -39,7 +39,7 @@ public class CouletResult extends CommonResult {
         /**
          * 右边图片
          */
-        private String rightImg;
+        private Long rightImg;
         /**
          * 右边宽度
          */
@@ -64,11 +64,9 @@ public class CouletResult extends CommonResult {
         public void setId(Long id) {
             this.id = id;
         }
-        public String getLeftImg() {
-            return leftImg;
-        }
+        public Long getLeftImg() { return leftImg; }
 
-        public void setLeftImg(String leftImg) {
+        public void setLeftImg(Long leftImg) {
             this.leftImg = leftImg;
         }
         public Double getLeftWidth() {
@@ -92,11 +90,11 @@ public class CouletResult extends CommonResult {
         public void setLeftLink(String leftLink) {
             this.leftLink = leftLink;
         }
-        public String getRightImg() {
+        public Long getRightImg() {
             return rightImg;
         }
 
-        public void setRightImg(String rightImg) {
+        public void setRightImg(Long rightImg) {
             this.rightImg = rightImg;
         }
         public Double getRightWidth() {
