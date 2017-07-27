@@ -68,7 +68,7 @@
                                     }
                                     document.write(hour);
                                 </script>
-                                <span  onclick="openHyzx()" style="color: #247fdd; cursor: pointer;">${userSession.account}</span><br/>
+                                <span onclick="openHyzx()" style="color: #247fdd; cursor: pointer;">${userSession.account}</span><br/>
                                 余额：<span class="color_red">${userSession.balance}</span>
                             </div>
                             <div class="login_after2">
