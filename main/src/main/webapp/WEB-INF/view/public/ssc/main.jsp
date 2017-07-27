@@ -237,7 +237,13 @@
         var money = '${param.money}';
 
         if (typeof module == 'undefined' || module == 'null' || !module || module == '') {
-            getPageNew(parent.urlGcdt);
+            var u = parent.urlGcdt;
+            if (typeof u == 'undefined' || null == u || u == 'undefined') {
+                u = '<%=basePath%>ssc/gcdt.html';
+            } else {
+                u = parent.urlGcdt;
+            }
+            getPageNew(u);
         } else if (module == 'zstIndex') {
             getPage('<%=basePath%>ssc/zst/index.html');
         } else if (module == 'xyxh') {

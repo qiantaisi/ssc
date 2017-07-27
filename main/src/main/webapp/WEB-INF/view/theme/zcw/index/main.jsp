@@ -68,7 +68,7 @@
                                     }
                                     document.write(hour);
                                 </script>
-                                <span style="color: #247fdd;">${userSession.account}</span><br/>
+                                <span onclick="openHyzx()" style="color: #247fdd; cursor: pointer;">${userSession.account}</span><br/>
                                 余额：<span class="color_red">${userSession.balance}</span>
                             </div>
                             <div class="login_after2">
@@ -83,6 +83,9 @@
                                 <span>&nbsp;|&nbsp;</span>
                                 <a href="javascript:void(0);"
                                    onclick="openHyzx('member/lsjl.html?module=ckjl')">提款记录</a>
+                                <span>&nbsp;|&nbsp;</span>
+                                <a href="javascript:void(0);"
+                                   onclick="openHyzx()">会员中心</a>
                                 <span>&nbsp;|&nbsp;</span>
                             </div>
                             <div class="login_afterbtn">

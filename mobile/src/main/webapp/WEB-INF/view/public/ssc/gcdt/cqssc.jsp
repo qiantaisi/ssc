@@ -17,13 +17,6 @@
                 <span class="icon icon-left"></span>
                 返回
             </a>
-            <%--<a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>--%>
-            <%--<font>彩种切换</font>--%>
-            <%--<span class="icon icon-top-gcdt"></span>--%>
-            <%--</a>--%>
-            <%--<a class="yxsm" href="<%=basePath%>ssc/kjjl/bqxq.html?playGroupId=1">--%>
-            <%--游戏说明--%>
-            <%--</a>--%>
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>

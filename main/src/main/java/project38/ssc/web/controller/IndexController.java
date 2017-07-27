@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 import project38.api.result.LoginResult;
+import project38.api.result.RegisterResult;
 import project38.api.result.WebInfoResult;
 import project38.api.utils.ApiUtils;
 import project38.api.result.SscHistoryResult3;
@@ -34,6 +35,14 @@ public class IndexController extends BaseController {
     public WebInfoResult ajaxGetWebInfo() {
         String companyShortName = this.getCompanyShortName();
         return ApiUtils.getWebInfo(1, companyShortName);
+    }
+
+    @RequestMapping(value = "/ajaxGetRegisterResult.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public RegisterResult ajaxGetRegisterResult() throws Exception {
+        String companyShortName = this.getCompanyShortName();
+        RegisterResult registerResult= ApiUtils.getRegisterResult(1,companyShortName);
+        return registerResult;
     }
 
     @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})

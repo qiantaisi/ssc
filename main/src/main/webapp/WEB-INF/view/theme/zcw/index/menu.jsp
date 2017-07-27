@@ -9,7 +9,7 @@
 %>
 <div class="head_middle">
     <div class="container clearfix">
-        <a href="<%=basePath%>index.html" class="left logo">
+        <a href="<%=basePath%>main.html" class="left logo">
 
             <img src="<%=basePath%>images/${logo.imageId}" />
         </a>
