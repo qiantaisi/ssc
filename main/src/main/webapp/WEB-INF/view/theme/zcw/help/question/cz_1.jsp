@@ -37,10 +37,10 @@
                     或"点击“<span style="color:#E53333;">会员中心</span>”进入“会员中心”界面，点击“<span style="color:#E53333;">账号充值</span>”进入充值页面。
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/cz1.png"><img src="${resPath}img/cz1.png" width="700"/></a>
+                    <a href="${resPath}img/help/cz1.png"><img src="${resPath}img/help/cz1.png" width="700"/></a>
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/cz2.png"><img width="700" src="${resPath}img/cz2.png" /></a>
+                    <a href="${resPath}img/help/cz2.png"><img width="700" src="${resPath}img/help/cz2.png" /></a>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
@@ -50,7 +50,7 @@
                 <strong>第二步</strong>：根据提示，<span style="color:#E53333;">选择收款银行,然后转账至该账户</span>。随后填写好转出银行、转账方式、充值金额、银行账号。最后，点击“提交”。
                 </p>
                 <p style="text-align: center">
-                <a href="${resPath}img/cz3.png"> <img width="700" src="${resPath}img/cz3.png"/></a>
+                <a href="${resPath}img/help/cz3.png"> <img width="700" src="${resPath}img/help/cz3.png"/></a>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>

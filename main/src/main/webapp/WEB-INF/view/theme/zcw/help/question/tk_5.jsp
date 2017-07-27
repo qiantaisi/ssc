@@ -36,7 +36,7 @@
                     <strong>第一步</strong>：登录后，点击“<span style="color:#E53333;">提款</span>”或进入“<span style="color:#E53333;">会员中心</span>”的“<span style="color:#E53333;">快速提现</span>”。
                 </p>
                 <p style="text-align: center">
-                <a href="${resPath}img/tk.png"><img width="700" src="${resPath}img/tk.png"/></a>
+                <a href="${resPath}img/help/tk.png"><img width="700" src="${resPath}img/help/tk.png"/></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
                 <br/>
@@ -44,7 +44,7 @@
                     <strong>第二步</strong>：选择提款的银行账号，输入提款金额，点击“提交”。等待审核通过。（如果是首次提款，请先绑定银行卡）
                 </p>
                 <p style="text-align: center">
-                <a href="${resPath}img/tk2.png"><img width="700" src="${resPath}img/tk2.png"/></a>
+                <a href="${resPath}img/help/tk2.png"><img width="700" src="${resPath}img/help/tk2.png"/></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
                 <br/><br/>

@@ -36,7 +36,7 @@
                     <strong>第一步</strong>：登录后，进入会员中心的“<span style="color:#E53333;">账户充值</span>”，然后点击“<span style="color:#E53333;">支付宝支付</span>。”如图：
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/cz5.png"><img width="700" src="${resPath}img/cz5.png"/></a>
+                    <a href="${resPath}img/help/cz5.png"><img width="700" src="${resPath}img/help/cz5.png"/></a>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
@@ -46,7 +46,7 @@
                     <strong>第二步</strong>：选择“<span style="color:#E53333;">支付渠道</span>”，输入“<span style="color:#E53333;">充值金额</span>”，点击“<span style="color:#E53333;">提交</span>”
                 </p>
                 <p style="text-align: center">
-                <a href="${resPath}img/cz6.png"><img width="700" src="${resPath}img/cz6.png"/></a>
+                <a href="${resPath}img/help/cz6.png"><img width="700" src="${resPath}img/help/cz6.png"/></a>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
@@ -56,7 +56,7 @@
                     <strong>第三步</strong>：打开手机中的支付宝APP，用“<span style="color:#E53333;">扫一扫</span>”功能进行支付。
                 </p>
                 <p style="text-align: center">
-                <a href="${resPath}img/cz7.png"><img width="700" src="${resPath}img/cz7.png"/></a><br/>
+                <a href="${resPath}img/help/cz7.png"><img width="700" src="${resPath}img/help/cz7.png"/></a><br/>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
@@ -66,7 +66,7 @@
                     <strong>第四步</strong>：选择“<span style="color:#E53333;">付款方式</span>”，然后点击立即付款。 <br/>
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/cz8.png"><img width="640" src="${resPath}img/cz8.png" /></a><br/>
+                    <a href="${resPath}img/help/cz8.png"><img width="640" src="${resPath}img/help/cz8.png" /></a><br/>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>

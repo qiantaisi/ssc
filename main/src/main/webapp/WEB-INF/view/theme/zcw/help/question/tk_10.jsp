@@ -38,13 +38,13 @@
                     <strong>第一步</strong>：登录${webName}。点击“<span style="color:#E53333;">历史记录</span>”或进入“<span style="color:#E53333;">会员中心</span>”在点击“<span style="color:#E53333;">历史记录</span>”，如图所示：
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zj.png"><img width="700" src="${resPath}img/zj.png"/></a>
+                    <a href="${resPath}img/help/zj.png"><img width="700" src="${resPath}img/help/zj.png"/></a>
                 </p>
 
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3> <br/>
 
                 <p style="text-align: center">
-                <a href="${resPath}img/zj2.png"><img width="700" src="${resPath}img/zj2.png"/></a>
+                <a href="${resPath}img/help/zj2.png"><img width="700" src="${resPath}img/help/zj2.png"/></a>
                 </p>
 
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3> <br/>
@@ -52,7 +52,7 @@
                     <strong>第二步</strong>：点击“<span style="color:#E53333;">投注记录</span>”，选择状态“<span style="color:#E53333;">已结算</span>”，选好当时投注的时间，点击“<span style="color:#E53333;">筛选</span>”。如图所示：<br/>
                 </p>
                 <p style="text-align: center">
-                <a href="${resPath}img/zj3.png"><img width="700" src="${resPath}img/zj3.png"/></a>
+                <a href="${resPath}img/help/zj3.png"><img width="700" src="${resPath}img/help/zj3.png"/></a>
                 </p>
 
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3> <br/>
@@ -61,7 +61,7 @@
                    所有在当前时间范围的中奖记录都会显示出来。
                 </p>
                 <p style="text-align: center">
-                <a href="${resPath}img/zj4.png"><img width="700" src="${resPath}img/zj4.png"/></a>
+                <a href="${resPath}img/help/zj4.png"><img width="700" src="${resPath}img/help/zj4.png"/></a>
                 </p>
 
             </div>

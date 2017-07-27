@@ -35,12 +35,12 @@
                 <p>
                     <strong>第一步</strong>：登录后，点击“<span style="color:#E53333;">会员中心</span>”，进入“会员中心”。点击“<span style="color:#E53333;">账户设置</span>”。</p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc6.png"> <img  src="${resPath}img/zc6.png" title="点击放大图片" width="700"/></a>
+                    <a href="${resPath}img/help/zc6.png"> <img  src="${resPath}img/help/zc6.png" title="点击放大图片" width="700"/></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
                 <br/>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc7.png"> <img  src="${resPath}img/zc7.png" title="点击放大图片" width="700"/></a>
+                    <a href="${resPath}img/help/zc7.png"> <img  src="${resPath}img/help/zc7.png" title="点击放大图片" width="700"/></a>
                 </p>
 
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
@@ -49,7 +49,7 @@
                     <strong>第二步</strong>：根据要求，依次填写真实的资料。
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc8.png"> <img  src="${resPath}img/zc8.png"  title="点击放大图片" width="700"/></a>
+                    <a href="${resPath}img/help/zc8.png"> <img  src="${resPath}img/help/zc8.png"  title="点击放大图片" width="700"/></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
                 <br/>
@@ -57,7 +57,7 @@
                     <strong>第三步</strong>：依次输入正确的信息。确认无误后，点击“<span style="color:#E53333;">确认</span>”。手机与邮件一旦确认，便无法修改，实在有问题需要修改，请联系客服。
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc9.png"> <img  src="${resPath}img/zc9.png"  title="点击放大图片" width="700"/></a>
+                    <a href="${resPath}img/help/zc9.png"> <img  src="${resPath}img/help/zc9.png"  title="点击放大图片" width="700"/></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
             </div>

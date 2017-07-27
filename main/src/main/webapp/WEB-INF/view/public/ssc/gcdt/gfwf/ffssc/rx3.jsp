@@ -11,20 +11,20 @@
         <li>
             <b>任三直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_id="565" data-play_pl_id="14283" data-name="rx3zxfs" data-fun_zhushu="zhushu_rx3zxfs" data-fun_content="content_rx3zxfs" data-fun_suiji="suiji_rx3zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="566" data-play_pl_id="14284" data-name="rx3zxds" data-fun_zhushu="zhushu_rx3zxds" data-fun_content="content_rx3zxds" data-fun_suiji="suiji_rx3zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span class="playPlIdBtn" data-play_id="567" data-play_pl_id="14285" data-name="rx3zxhz" data-fun_zhushu="zhushu_rx3zxhz" data-fun_content="content_rx3zxhz" data-fun_suiji="suiji_rx3zxhz"><a href="javascript:void(0)">直选和值</a></span>
+                <span class="playPlIdBtn acti" data-play_id="594" data-play_pl_id="14316" data-name="rx3zxfs" data-fun_zhushu="zhushu_rx3zxfs" data-fun_content="content_rx3zxfs" data-fun_suiji="suiji_rx3zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="593" data-play_pl_id="14315" data-name="rx3zxds" data-fun_zhushu="zhushu_rx3zxds" data-fun_content="content_rx3zxds" data-fun_suiji="suiji_rx3zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="592" data-play_pl_id="14314" data-name="rx3zxhz" data-fun_zhushu="zhushu_rx3zxhz" data-fun_content="content_rx3zxhz" data-fun_suiji="suiji_rx3zxhz"><a href="javascript:void(0)">直选和值</a></span>
             </p>
         </li>
         <li>
             <b>任三组选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn" data-play_id="568" data-play_pl_id="14286" data-name="rx3z3fs" data-fun_zhushu="zhushu_rx3z3fs" data-fun_content="content_rx3z3fs" data-fun_suiji="suiji_rx3z3fs"><a href="javascript:void(0)">组三复式</a></span>
-                <span class="playPlIdBtn" data-play_id="569" data-play_pl_id="14287" data-name="rx3z3ds" data-fun_zhushu="zhushu_rx3z3ds" data-fun_content="content_rx3z3ds" data-fun_suiji="suiji_rx3z3ds"><a href="javascript:void(0)">组三单式</a></span>
-                <span class="playPlIdBtn" data-play_id="570" data-play_pl_id="14288" data-name="rx3z6fs" data-fun_zhushu="zhushu_rx3z6fs" data-fun_content="content_rx3z6fs" data-fun_suiji="suiji_rx3z6fs"><a href="javascript:void(0)">组六复式</a></span>
-                <span class="playPlIdBtn" data-play_id="571" data-play_pl_id="14289" data-name="rx3z6ds" data-fun_zhushu="zhushu_rx3z6ds" data-fun_content="content_rx3z6ds" data-fun_suiji="suiji_rx3z6ds"><a href="javascript:void(0)">组六单式</a></span>
-                <span class="playPlIdBtn" data-play_id="572" data-play_pl_id="14290|14291" data-name="rx3hhzux" data-fun_zhushu="zhushu_rx3hhzux" data-fun_content="content_rx3hhzux" data-fun_suiji="suiji_rx3hhzux"><a href="javascript:void(0)">混合组选</a></span>
-                <span class="playPlIdBtn" data-play_id="573" data-play_pl_id="14292|14293" data-name="rx3zuxhz" data-fun_zhushu="zhushu_rx3zuxhz" data-fun_content="content_rx3zuxhz" data-fun_suiji="suiji_rx3zuxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span class="playPlIdBtn" data-play_id="591" data-play_pl_id="14313" data-name="rx3z3fs" data-fun_zhushu="zhushu_rx3z3fs" data-fun_content="content_rx3z3fs" data-fun_suiji="suiji_rx3z3fs"><a href="javascript:void(0)">组三复式</a></span>
+                <span class="playPlIdBtn" data-play_id="590" data-play_pl_id="14312" data-name="rx3z3ds" data-fun_zhushu="zhushu_rx3z3ds" data-fun_content="content_rx3z3ds" data-fun_suiji="suiji_rx3z3ds"><a href="javascript:void(0)">组三单式</a></span>
+                <span class="playPlIdBtn" data-play_id="589" data-play_pl_id="14311" data-name="rx3z6fs" data-fun_zhushu="zhushu_rx3z6fs" data-fun_content="content_rx3z6fs" data-fun_suiji="suiji_rx3z6fs"><a href="javascript:void(0)">组六复式</a></span>
+                <span class="playPlIdBtn" data-play_id="588" data-play_pl_id="14310" data-name="rx3z6ds" data-fun_zhushu="zhushu_rx3z6ds" data-fun_content="content_rx3z6ds" data-fun_suiji="suiji_rx3z6ds"><a href="javascript:void(0)">组六单式</a></span>
+                <span class="playPlIdBtn" data-play_id="587" data-play_pl_id="14308|14309" data-name="rx3hhzux" data-fun_zhushu="zhushu_rx3hhzux" data-fun_content="content_rx3hhzux" data-fun_suiji="suiji_rx3hhzux"><a href="javascript:void(0)">混合组选</a></span>
+                <span class="playPlIdBtn" data-play_id="586" data-play_pl_id="14306|14307" data-name="rx3zuxhz" data-fun_zhushu="zhushu_rx3zuxhz" data-fun_content="content_rx3zuxhz" data-fun_suiji="suiji_rx3zuxhz"><a href="javascript:void(0)">组选和值</a></span>
             </p>
         </li>
     </ul>

@@ -38,7 +38,7 @@
                     如图： <br/>
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/cz9.png"><img width="700" src="${resPath}img/cz9.png" /></a>
+                    <a href="${resPath}img/help/cz9.png"><img width="700" src="${resPath}img/help/cz9.png" /></a>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
@@ -48,14 +48,14 @@
                     <strong>第三步</strong>：用微信，<span style="color:#E53333;">扫一扫“二维码”</span>”。点击“<span style="color:#E53333;">立即支付</span>””，输入密码进行支付。
                 </p>
                 <p style="text-align: center">
-                <a href="${resPath}img/cz11.png"><img width="700" src="${resPath}img/cz11.png" /></a>
+                <a href="${resPath}img/help/cz11.png"><img width="700" src="${resPath}img/help/cz11.png" /></a>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
                 </p>
                 <br/>
                 <p style="text-align: center">
-                <a href="${resPath}img/cz12.png"><img width="400" src="${resPath}img/cz12.png"/></a>
+                <a href="${resPath}img/help/cz12.png"><img width="400" src="${resPath}img/help/cz12.png"/></a>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>

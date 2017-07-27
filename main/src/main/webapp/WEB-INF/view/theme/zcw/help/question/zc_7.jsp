@@ -35,12 +35,12 @@
                 <strong>第一步</strong>：登录后，点击“<span style="color:#E53333;">会员中心</span>”，进入“会员中心”。点击“<span style="color:#E53333;">账户设置</span>”。
 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc10.png"><img src="${resPath}img/zc10.png"title="点击放大图片" width="700"/></a>
+                    <a href="${resPath}img/help/zc10.png"><img src="${resPath}img/help/zc10.png"title="点击放大图片" width="700"/></a>
                 </p>
                 <h3 style="text-align: center; color: #fa4100;">(点击图片放大) &nbsp↑</h3>
                 <br/>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc11.png"><img src="${resPath}img/zc11.png"  title="点击放大图片" width="700"/> </a>
+                    <a href="${resPath}img/help/zc11.png"><img src="${resPath}img/help/zc11.png"  title="点击放大图片" width="700"/> </a>
                 </p>
                 <p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
@@ -50,7 +50,7 @@
                     <strong>第二步</strong>：点击“<span style="color:#E53333;">登录密码</span>”：输入原密码，再输入新密码，然后点击“<span style="color:#E53333;">确认修改</span>”。
                 </p>
                 <p style="text-align: center">
-                    <a href="${resPath}img/zc12.png"><img src="${resPath}img/zc12.png"  title="点击放大图片" width="700"/> </a>
+                    <a href="${resPath}img/help/zc12.png"><img src="${resPath}img/help/zc12.png"  title="点击放大图片" width="700"/> </a>
                 </p>
                 <h3 style="color: #fa4100;text-align: center">(点击图片放大) &nbsp↑</h3>
 

@@ -11,19 +11,19 @@
         <li>
             <b>前二直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_id="535" data-play_pl_id="14253" data-name="q2zxfs" data-fun_zhushu="zhushu_q2zxfs" data-fun_content="content_q2zxfs" data-fun_suiji="suiji_q2zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="536" data-play_pl_id="14254" data-name="q2zxds" data-fun_zhushu="zhushu_q2zxds" data-fun_content="content_q2zxds" data-fun_suiji="suiji_q2zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span class="playPlIdBtn" data-play_id="537" data-play_pl_id="14255" data-name="q2zxhz" data-fun_zhushu="zhushu_q2zxhz" data-fun_content="content_q2zxhz" data-fun_suiji="suiji_q2zxhz"><a href="javascript:void(0)">直选和值</a></span>
-                <span class="playPlIdBtn" data-play_id="538" data-play_pl_id="14256" data-name="q2zxkd" data-fun_zhushu="zhushu_q2zxkd" data-fun_content="content_q2zxkd" data-fun_suiji="suiji_q2zxkd"><a href="javascript:void(0)">直选跨度</a></span>
+                <span class="playPlIdBtn acti" data-play_id="624" data-play_pl_id="14346" data-name="q2zxfs" data-fun_zhushu="zhushu_q2zxfs" data-fun_content="content_q2zxfs" data-fun_suiji="suiji_q2zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="623" data-play_pl_id="14345" data-name="q2zxds" data-fun_zhushu="zhushu_q2zxds" data-fun_content="content_q2zxds" data-fun_suiji="suiji_q2zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="622" data-play_pl_id="14344" data-name="q2zxhz" data-fun_zhushu="zhushu_q2zxhz" data-fun_content="content_q2zxhz" data-fun_suiji="suiji_q2zxhz"><a href="javascript:void(0)">直选和值</a></span>
+                <span class="playPlIdBtn" data-play_id="621" data-play_pl_id="14343" data-name="q2zxkd" data-fun_zhushu="zhushu_q2zxkd" data-fun_content="content_q2zxkd" data-fun_suiji="suiji_q2zxkd"><a href="javascript:void(0)">直选跨度</a></span>
             </p>
         </li>
         <li>
             <b>前二组选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn" data-play_id="539" data-play_pl_id="14257" data-name="q2zuxfs" data-fun_suiji="suiji_q2zuxfs" data-fun_zhushu="zhushu_q2zuxfs" data-fun_content="content_q2zuxfs"><a href="javascript:void(0)">组选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="540" data-play_pl_id="14258" data-name="q2zuxds" data-fun_suiji="suiji_q2zuxds" data-fun_zhushu="zhushu_q2zuxds" data-fun_content="content_q2zuxds"><a href="javascript:void(0)">组选单式</a></span>
-                <span class="playPlIdBtn" data-play_id="541" data-play_pl_id="14259" data-name="q2zuxhz" data-fun_suiji="suiji_q2zuxhz" data-fun_zhushu="zhushu_q2zuxhz" data-fun_content="content_q2zuxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <span class="playPlIdBtn" data-play_id="542" data-play_pl_id="14260" data-name="q2zuxbd" data-fun_suiji="suiji_q2zuxbd" data-fun_zhushu="zhushu_q2zuxbd" data-fun_content="content_q2zuxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-play_id="620" data-play_pl_id="14342" data-name="q2zuxfs" data-fun_suiji="suiji_q2zuxfs" data-fun_zhushu="zhushu_q2zuxfs" data-fun_content="content_q2zuxfs"><a href="javascript:void(0)">组选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="619" data-play_pl_id="14341" data-name="q2zuxds" data-fun_suiji="suiji_q2zuxds" data-fun_zhushu="zhushu_q2zuxds" data-fun_content="content_q2zuxds"><a href="javascript:void(0)">组选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="618" data-play_pl_id="14340" data-name="q2zuxhz" data-fun_suiji="suiji_q2zuxhz" data-fun_zhushu="zhushu_q2zuxhz" data-fun_content="content_q2zuxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span class="playPlIdBtn" data-play_id="617" data-play_pl_id="14339" data-name="q2zuxbd" data-fun_suiji="suiji_q2zuxbd" data-fun_zhushu="zhushu_q2zuxbd" data-fun_content="content_q2zuxbd"><a href="javascript:void(0)">组选包胆</a></span>
             </p>
         </li>
     </ul>
