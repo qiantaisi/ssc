@@ -109,11 +109,11 @@
                 </tr>
 
                 <tr>
-                    <td>及大</td>
+                    <td>极大</td>
                     <td><strong class="color-red pl" data-plid="9366"></strong></td>
                     <td><input type="text" class="table-txt" data-name="16" data-plid="9366"/></td>
 
-                    <td>及小</td>
+                    <td>极小</td>
                     <td><strong class="color-red pl" data-plid="9367"></strong></td>
                     <td><input type="text" class="table-txt" data-name="17" data-plid="9367"/></td>
 

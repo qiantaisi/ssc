@@ -87,7 +87,7 @@
             var valSum = Math.floor(Math.random() * 10);
             sum += valSum;
             if($.inArray(sum,[0,13,14,27]) >= 0){
-                colorBg = "gainsboroxy28";
+                colorBg = "grayxy28";
             } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
                 colorBg = "greenxy28";
             } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
@@ -115,7 +115,7 @@
         $.each(openCodeArr, function(index, value) {
             sum += parseInt(value);
             if($.inArray(sum,[0,13,14,27]) >= 0){
-                colorBg = "gainsboroxy28";
+                colorBg = "grayxy28";
             } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
                 colorBg = "greenxy28";
             } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){

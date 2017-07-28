@@ -32,7 +32,7 @@
 
                 <tbody>
                 <tr>
-                    <td><span class="ball-28xyicon gainsboroxy28">0</span></td>
+                    <td><span class="ball-28xyicon grayxy28">0</span></td>
                     <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
                     <td><input type="checkbox" data-name="1" data-plid="6725"/></td>
 
@@ -88,11 +88,11 @@
                     <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
                     <td><input type="checkbox" data-name="23" data-plid="6725"/></td>
 
-                    <td><span class="ball-28xyicon gainsboroxy28">13</span></td>
+                    <td><span class="ball-28xyicon grayxy28">13</span></td>
                     <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
                     <td><input type="checkbox" data-name="33" data-plid="6725"/></td>
 
-                    <td><span class="ball-28xyicon gainsboroxy28">14</span></td>
+                    <td><span class="ball-28xyicon grayxy28">14</span></td>
                     <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
                     <td><input type="checkbox" data-name="43" data-plid="6725"/></td>
                 </tr>
@@ -149,7 +149,7 @@
                     <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
                     <td><input type="checkbox" data-name="16" data-plid="6725"/></td>
 
-                    <td><span class="ball-28xyicon gainsboroxy28">27</span></td>
+                    <td><span class="ball-28xyicon grayxy28">27</span></td>
                     <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
                     <td><input type="checkbox" data-name="26" data-plid="6725"/></td>
 

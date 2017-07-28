@@ -234,6 +234,14 @@
     background: #f13030;
 }
 
+.ball-gray{
+    background: gray;
+}
+
+#betContainer .cl-604 table tbody tr td span.ball-gray{
+    color:white!important;
+}
+
 .txt_1 {
     display: inline-block;
 }
