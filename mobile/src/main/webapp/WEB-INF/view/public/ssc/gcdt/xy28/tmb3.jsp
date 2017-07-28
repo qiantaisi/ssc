@@ -185,8 +185,8 @@
                 zhushu: 1,
                 perMoney: inputMoney,
                 content: "特码包三-" + value.split(" ").join(","),
-                playPlId: $("#pl").data('plid'),
-                playPl: $("#pl").data("pl")
+                playPlId: $(".pl").data('plid'),
+                playPl: $(".pl").data("pl")
             });
             betForm.totalMoney = add(betForm.totalMoney, inputMoney);
             betForm.totalZhushu = add(betForm.totalZhushu, 1);
