@@ -372,7 +372,7 @@
                             <div class="tou">
                                 <h4>第 <span id="number"></span> 期 &nbsp <font id="openDate"></font>开奖</h4>
                             </div>
-                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/xync')"><img class="btnjiang" src="<%=basePath%>static/theme/default/zst/img/jiang.png" alt=""></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/xync')"><img class="btnjiang" src="${resPath}zst/img/jiang.png" alt=""></a>
                             <div class="jiezhi">
                                 <h3>
                                     <p><font id="tip"></font>
