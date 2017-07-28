@@ -10,22 +10,6 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="cl-603">
-    豹子
-</div>
-<div class="cl-604">
-    <table>
-        <tbody>
-        <tr>
-            <td data-name="豹子">
-                <span>豹子</span>
-                <span class="pl" data-plid="6812"></span>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-<div class="cl-603">
     混合
 </div>
 <div class="cl-604">
@@ -103,6 +87,21 @@
             <td data-name="绿">
                 <span>绿</span>
                 <span class="pl" data-plid="6813"></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="cl-603">
+    豹子
+</div>
+<div class="cl-604">
+    <table>
+        <tbody>
+        <tr>
+            <td data-name="豹子">
+                <span>豹子</span>
+                <span class="pl" data-plid="6812"></span>
             </td>
         </tr>
         </tbody>
