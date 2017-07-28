@@ -10,7 +10,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <div class="cl-960">
-    特码包三（@<font class="red pl" data-plid="6719"></font>）
+    特码包三（@<font class="red pl" data-plid="14407"></font>）
 </div>
 <div class="cl-604">
     <table>
@@ -18,149 +18,138 @@
         <tr>
             <td data-name="0">
                 <span class="ball-2 ball-gray">0</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="1">
                 <span class="ball-2 ball-green">1</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="2">
                 <span class="ball-2 ball-blue">2</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
+            </td>
+            <td data-name="3">
+                <span class="ball-2 ball-red">3</span>
+                <span class="pl" data-plid="14407"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="3">
-                <span class="ball-2 ball-red">3</span>
-                <span class="pl" data-plid="6719"></span>
-            </td>
             <td data-name="4">
                 <span class="ball-2 ball-green">4</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="5">
                 <span class="ball-2 ball-blue">5</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
-        </tr>
-        <tr>
             <td data-name="6">
                 <span class="ball-2 ball-red">6</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="7">
                 <span class="ball-2 ball-green">7</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
-            <td data-name="8">
-                <span class="ball-2 ball-blue">8</span>
-                <span class="pl" data-plid="6719"></span>
-            </td>
-
         </tr>
         <tr>
+
+            <td data-name="8">
+                <span class="ball-2 ball-blue">8</span>
+                <span class="pl" data-plid="14407"></span>
+            </td>
             <td data-name="9">
                 <span class="ball-2 ball-red">9</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="10">
                 <span class="ball-2 ball-green">10</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="11">
                 <span class="ball-2 ball-blue">11</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
+
+
         </tr>
         <tr>
             <td data-name="12">
                 <span class="ball-2 ball-red">12</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="13">
                 <span class="ball-2 ball-gray">13</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="14">
                 <span class="ball-2 ball-gray">14</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
+            </td>
+            <td data-name="15">
+                <span class="ball-2 ball-red">15</span>
+                <span class="pl" data-plid="14407"></span>
             </td>
 
         </tr>
         <tr>
-            <td data-name="15">
-                <span class="ball-2 ball-red">15</span>
-                <span class="pl" data-plid="6719"></span>
-            </td>
+
             <td data-name="16">
                 <span class="ball-2 ball-green">16</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="17">
                 <span class="ball-2 ball-blue">17</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
-
-        </tr>
-        <tr>
             <td data-name="18">
                 <span class="ball-2 ball-red">18</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="19">
                 <span class="ball-2 ball-green">19</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
-            <td data-name="20">
-                <span class="ball-2 ball-blue">20</span>
-                <span class="pl" data-plid="6719"></span>
-            </td>
+
 
         </tr>
         <tr>
+            <td data-name="20">
+                <span class="ball-2 ball-blue">20</span>
+                <span class="pl" data-plid="14407"></span>
+            </td>
             <td data-name="21">
                 <span class="ball-2 ball-red">21</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="22">
                 <span class="ball-2 ball-green">22</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="23">
                 <span class="ball-2 ball-blue">23</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
 
         </tr>
         <tr>
             <td data-name="24">
                 <span class="ball-2 ball-red">24</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="25">
                 <span class="ball-2 ball-green">25</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
             <td data-name="26">
                 <span class="ball-2 ball-blue">26</span>
-                <span class="pl" data-plid="6719"></span>
+                <span class="pl" data-plid="14407"></span>
             </td>
-
-        </tr>
-        <tr>
             <td data-name="27">
                 <span class="ball-2 ball-gray">27</span>
-                <span class="pl" data-plid="6719"></span>
-            </td>
-            <td data-name="28">
-
-            </td>
-            <td data-name="29">
-
+                <span class="pl" data-plid="14407"></span>
             </td>
 
         </tr>
-
         </tbody>
     </table>
 
