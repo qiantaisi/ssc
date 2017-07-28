@@ -42,12 +42,16 @@
                     <c:forEach items="${carouseList.carouselList}" var="item">
                         <c:choose>
                             <c:when test="${empty item.url}">
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
-                                                                      alt="${item.title}"></div>
+                                <div class="img-sz swiper-slide">
+                                    <a href="${item.url}">
+                                        <img src="<%=basePath%>images/${item.imageId}.png" alt="${item.title}">
+                                    </a>
+                                </div>
                             </c:when>
                             <c:otherwise>
-                                <div class="img-sz swiper-slide"><img src="<%=basePath%>images/${item.imageId}.png"
-                                                                      alt="${item.title}"></div>
+                                <div class="img-sz swiper-slide">
+                                    <img src="<%=basePath%>images/${item.imageId}.png" alt="${item.title}">
+                                </div>
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>
