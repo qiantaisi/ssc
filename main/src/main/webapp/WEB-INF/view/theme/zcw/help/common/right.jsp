@@ -39,7 +39,7 @@
             </a>
         </li>
         <li>
-            <a href="<%=basePath%>ssc/register.html" class="a0">
+            <a href="<%=basePath%>register.html" class="a0">
                 <div class="pict">
                     <i><img src="${resPath}img/ico211.png" alt=""></i>
                 </div>
