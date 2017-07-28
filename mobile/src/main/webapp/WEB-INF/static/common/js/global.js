@@ -227,7 +227,7 @@ var PatternUtils = {
             return false;
         }
 
-        if (/^[0-9a-zA-Z]{6,16}$/.test(password)) {
+        if (/^[0-9a-zA-Z]{6,12}$/.test(password)) {
             return true;
         }
         return false;
