@@ -3052,7 +3052,7 @@ function showBetTemplate() {
             fandian: $("#betContent_fanli").attr("data-value")
         });
         betForm.totalMoney += betForm.sscBetList[0].totalMoney;
-        betForm.totalZhushu += betForm.sscBetList[0].zhushu;
+        betForm.totalZhushu += parseInt(betForm.sscBetList[0].zhushu);
 
         betForm = JSON.stringify(betForm);
         ajaxRequest({

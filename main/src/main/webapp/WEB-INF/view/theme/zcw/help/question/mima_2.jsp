@@ -36,14 +36,14 @@
 </p>
 
                 <p style="text-align: center">
-                <a href="${resPath}img/4.png"  ><img width="700" src="${resPath}img/4.png"  /></a>
+                <a href="${resPath}img/help/4.png"  ><img width="700" src="${resPath}img/help/4.png"  /></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
                 <br/>
                 <p><strong>第二步</strong>：进入大厅，可以点击左侧列表彩种名称，进入该彩种投注。或者点击需要彩种的“<span style="color:#E53333;">立即投注</span>”。进行投注。以重庆时时彩为例。</p>
 
                 <p style="text-align: center">
-                <a href="${resPath}img/5.png" ><img width="700" src="${resPath}img/5.png" /></a>
+                <a href="${resPath}img/help/5.png" ><img width="700" src="${resPath}img/help/5.png" /></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
                 <br/>
@@ -52,7 +52,7 @@
                 </p>
 
                 <p>
-                <a href="${resPath}img/6.png"><img src="${resPath}img/6.png"  width="700"/></a>
+                <a href="${resPath}img/help/6.png"><img src="${resPath}img/help/6.png"  width="700"/></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
                 <br/>
@@ -61,7 +61,7 @@
                 </p>
 
                 <p>
-                <a href="${resPath}img/7.png"><img src="${resPath}img/7.png" width="700"/></a>
+                <a href="${resPath}img/help/7.png"><img src="${resPath}img/help/7.png" width="700"/></a>
                 </p>
                 <h3 style="text-align: center;color: #fa4100">(点击图片放大) &nbsp↑</h3>
 

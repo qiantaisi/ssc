@@ -26,7 +26,9 @@
         <div class="content cl-601">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xy28/hh.html">混合</a>
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xy28/hz.html">和值</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xy28/tmb3.html">特码包三</a>
                 </div>
             </div>
             <div class="cl-900" id="lastOpenInfo"></div>
@@ -54,8 +56,12 @@
         <div class="cl-982">
             <span class="openNumber">
                 {{if openCodeArr != null}}
-                    {{each openCodeArr as value index}}
-                        <i>{{value}}</i>
+                     {{each openCodeArr as value index}}
+                       {{if index < 2}}
+                          <i>{{value}}</i><i class="plus">+</i>
+                       {{else}}
+                          <i>{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
+                       {{/if}}
                     {{/each}}
                 {{else}}
                     开奖中
@@ -69,7 +75,11 @@
     <div class="left">
         <span class="cl-1201 cl-1203">
             {{each openCodeArr as value index}}
-                <i>{{value}}</i>
+               {{if index < 2}}
+                <i>{{value}}</i><i class="plus">+</i>
+               {{else}}
+                <i>{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
+               {{/if}}
             {{/each}}
         </span>
     </div>

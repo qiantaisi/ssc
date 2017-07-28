@@ -1013,7 +1013,7 @@ public class ApiUtils{
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
 
-        paramsMap.put("type", type);
+//        paramsMap.put("type", type);
         RegisterResult registerResult = new RegisterResult();
 //qq
         RegisterResult registerResult1= JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_REQUIRED_QQ_CHECK,paramsMap,companyShortName), RegisterResult.class);

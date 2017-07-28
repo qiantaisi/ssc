@@ -2292,11 +2292,34 @@ $(function () {
 
                 var lastOpenData = null;
                 var html = "";
+                var colorBg = "";
                 $.each(json.sscHistoryList, function (index, value) {
                     var obj = {
                         number: value.number,
                         openCodeArr: value.openCode ? value.openCode.split(",") : null
                     };
+
+                    if($.inArray(playGroupId, [7]) >= 0){
+                        var arr = obj.openCodeArr;
+                        var num1 = parseInt(arr[0]);
+                        var num2 = parseInt(arr[1]);
+                        var num3 = parseInt(arr[2]);
+                        var sum = num1 + num2 + num3;
+
+                        if($.inArray(sum,[0,13,14,27]) >= 0){
+                            colorBg = "grayxy28";
+                        } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
+                            colorBg = "greenxy28";
+                        } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
+                            colorBg = "bluexy28";
+                        } else{
+                            colorBg = 'redxy28';
+                        }
+
+                        obj.sum = sum;
+                        obj.colorBg = colorBg;
+
+                    }
 
 
                     html += template("template_openNumber_item", obj);
@@ -2312,6 +2335,7 @@ $(function () {
 
                 if (lastOpenData != null) {
                     var infoArr = [];
+                    var colorBg = '';
                     if ($.inArray(playGroupId, [1, 2, 3, 13, 15, 16, 17]) >= 0) {
                         var arr = lastOpenData.openCodeArr;
                         var sum = 0;
@@ -2407,6 +2431,26 @@ $(function () {
                         infoArr.push(sum % 10 >= 5 ? '尾大' : '尾小');
                         var cha = num1 - num8;
                         infoArr.push(cha == 0 ? '和' : (cha > 0 ? '龙' : '虎'));
+                    } else if($.inArray(playGroupId, [7]) >= 0){
+                        var arr = lastOpenData.openCodeArr;
+                        var num1 = parseInt(arr[0]);
+                        var num2 = parseInt(arr[1]);
+                        var num3 = parseInt(arr[2]);
+                        var sum = num1 + num2 + num3;
+
+                        if($.inArray(sum,[0,13,14,27]) >= 0){
+                            colorBg = "grayxy28";
+                        } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
+                            colorBg = "greenxy28";
+                        } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
+                            colorBg = "bluexy28";
+                        } else{
+                            colorBg = 'redxy28';
+                        }
+
+                        lastOpenData.sum = sum;
+                        lastOpenData.colorBg = colorBg;
+
                     }
                     // else if ($.inArray(playGroupId, [10]) >= 0) {
                     //     var arr = lastOpenData.openCodeArr;
