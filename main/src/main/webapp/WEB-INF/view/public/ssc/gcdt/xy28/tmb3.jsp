@@ -300,6 +300,7 @@
         }
 
         var tmpArr = getFlagArrs(arr, 3);
+            tmpArr = tmpArr.uniqueArr();
         var inputMoney = $("#inputMoney").val();
         if (typeof inputMoney == 'undefined' || !inputMoney) {
             Tools.toast("请输入正确的金额");
@@ -326,4 +327,17 @@
     function checkZhudan() {
         return true;
     }
+
+    //去掉数组重复
+    Array.prototype.uniqueArr = function () {
+        var temp = new Array();
+        this.sort();
+        for(i = 0; i < this.length; i++) {
+            if( this[i] == this[i+1]) {
+                continue;
+            }
+            temp[temp.length]=this[i];
+        }
+        return temp;
+    };
 </script>
