@@ -18,7 +18,7 @@ public enum PlayGroupIdEnum {
     SSQ(12L, "双色球", "ssq", false),
     SFSSC(13L, "三分时时彩", "sfssc", false),
     XYFT(14L, "幸运飞艇", "xyft", false),
-    FFSSC(15L, "分分时时彩", "ffssc", false),
+    FFSSC(15L, "分分时时彩", "ffssc", true),
     EFSSC(16L, "两分时时彩", "efssc", false),
     WFSSC(17L, "五分时时彩", "wfssc", false),
     JSK3(18L, "江苏快3", "jsk3", false),
