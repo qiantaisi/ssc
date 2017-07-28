@@ -157,8 +157,8 @@
 
 <script>
     var playGroupId = 7;
-    var playId = 293;
-    var playGroupName = '和值';
+    var playId = 658;
+    var playGroupName = '特码包三';
 
     function getZhudan(inputMoney, number) {
         var tmp = [];
