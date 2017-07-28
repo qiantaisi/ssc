@@ -56,8 +56,12 @@
         <div class="cl-982">
             <span class="openNumber">
                 {{if openCodeArr != null}}
-                    {{each openCodeArr as value index}}
-                        <i>{{value}}</i>
+                     {{each openCodeArr as value index}}
+                       {{if index < 2}}
+                          <i>{{value}}</i><i class="plus">+</i>
+                       {{else}}
+                          <i>{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
+                       {{/if}}
                     {{/each}}
                 {{else}}
                     开奖中
@@ -71,7 +75,11 @@
     <div class="left">
         <span class="cl-1201 cl-1203">
             {{each openCodeArr as value index}}
-                <i>{{value}}</i>
+               {{if index < 2}}
+                <i>{{value}}</i><i class="plus">+</i>
+               {{else}}
+                <i>{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
+               {{/if}}
             {{/each}}
         </span>
     </div>

@@ -122,3 +122,32 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
     align-items: center;
     line-height: 40px;
 }
+
+/*幸运28*/
+.plus{
+    font-family: Microsoft Yahei;
+    color: #666!important;
+    width: 0.6rem!important;
+    margin-right: -0.18rem;
+}
+
+#lastOpenInfo .cl-1201 i.plus{
+    background: transparent!important;
+}
+
+#openHistoryList .cl-904 .openNumber i.plus{
+    background: transparent!important;
+}
+
+#openHistoryList .cl-904 .openNumber i.bluexy28,#lastOpenInfo .cl-1201 i.bluexy28{
+    background: blue!important;
+}
+#openHistoryList .cl-904 .openNumber i.greenxy28,#lastOpenInfo .cl-1201 i.greenxy28{
+    background: green!important;
+}
+#openHistoryList .cl-904 .openNumber i.grayxy28,#lastOpenInfo .cl-1201 i.grayxy28{
+    background: gray!important;
+}
+#openHistoryList .cl-904 .openNumber i.redxy28,#lastOpenInfo .cl-1201 i.redxy28{
+    background: red;
+}
