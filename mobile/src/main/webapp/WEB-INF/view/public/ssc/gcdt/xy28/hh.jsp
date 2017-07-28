@@ -76,15 +76,15 @@
     <table class="sebo-select">
         <tbody>
         <tr>
-            <td data-name="红">
+            <td data-name="红波">
                 <span>红</span>
                 <span class="pl" data-plid="14403"></span>
             </td>
-            <td data-name="蓝">
+            <td data-name="蓝波">
                 <span>蓝</span>
                 <span class="pl" data-plid="14405"></span>
             </td>
-            <td data-name="绿">
+            <td data-name="绿波">
                 <span>绿</span>
                 <span class="pl" data-plid="14404"></span>
             </td>
