@@ -282,6 +282,7 @@
     var playGroupName = '特码包三';
 
     function getZhudan() {
+        var strArr = [];
         var betForm = {
             totalMoney: 0,
             sscBetList: [],
@@ -300,13 +301,38 @@
         }
 
         var tmpArr = getFlagArrs(arr, 3);
-            tmpArr = tmpArr.uniqueArr();
+        $.each(tmpArr, function (index, value) {
+            var arr = value.split(" ");
+            var maxSum = 0;
+            var minSum = 0;
+            var sum1 = parseInt(arr[0]);
+            var sum2 = parseInt(arr[1]);
+            var sum3 = parseInt(arr[2]);
+
+            if (sum1 != sum2 && sum1 != sum3 && sum2 != sum3) {
+                maxSum = sum1 > sum2 ? (sum1 > sum3 ? sum1 : sum3) : (sum2 > sum3 ? sum2 : sum3);
+                minSum = sum1 < sum2 ? (sum1 < sum3 ? sum1 : sum3) : (sum2 < sum3 ? sum2 : sum3);
+
+                if (sum1 > minSum && sum1 < maxSum) {
+                    strArr.push(minSum + '-' + sum1 + '-' + maxSum);
+                } else if (sum2 > minSum && sum2 < maxSum) {
+                    strArr.push(minSum + '-' + sum2 + '-' + maxSum);
+                } else if (sum3 > minSum && sum3 < maxSum) {
+                    strArr.push(minSum + '-' + sum3 + '-' + maxSum);
+                }
+            }
+
+        });
+
+        strArr = strArr.uniqueArr();
+
         var inputMoney = $("#inputMoney").val();
         if (typeof inputMoney == 'undefined' || !inputMoney) {
             Tools.toast("请输入正确的金额");
             return;
         }
-        $.each(tmpArr, function (index, value) {
+
+        $.each(strArr, function (index, value) {
             betForm.sscBetList.push({
                 playGroupName: playGroupName,
                 playGroupId: playGroupId,
@@ -314,13 +340,14 @@
                 playId: playId,
                 zhushu: 1,
                 perMoney: inputMoney,
-                content: value.split(" ").join(","),
+                content: value.split('-').join(","),
                 playPlId: $("#pl").data("plid"),
                 playPl: $("#pl").data("pl")
             });
             betForm.totalMoney = add(betForm.totalMoney, inputMoney);
             betForm.totalZhushu = add(betForm.totalZhushu, 1);
         });
+
         return betForm;
     }
 
