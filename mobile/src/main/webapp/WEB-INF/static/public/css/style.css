@@ -148,6 +148,11 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
 #openHistoryList .cl-904 .openNumber i.grayxy28,#lastOpenInfo .cl-1201 i.grayxy28{
     background: gray!important;
 }
-#openHistoryList .cl-904 .openNumber i.redxy28,#lastOpenInfo .cl-1201 i.redxy28{
-    background: red;
+
+#openHistoryList .cl-904 .openNumber i.redxy28,#lastOpenInfo .cl-1201 i.redxy28,.redxy28{
+    background: red!important;
+}
+
+#betContainer .xy28 table tbody tr td .redxy28{
+    background: red!important;
 }
