@@ -1780,3 +1780,15 @@ body::-webkit-scrollbar{}/*--------------------------------*/
     line-height: 23px;
     color: white;
 }
+
+.plusmin{
+    font-family: Microsoft Yahei;
+    color: #666!important;
+    background: none!important;
+    width: 8px!important;
+    margin-left: 2px!important;
+}
+
+.number ul li i.grayxy28,.number ul li i.greenxy28,.number ul li i.grayxy28,.number ul li i.bluexy28{
+    border-radius: 50%;
+}

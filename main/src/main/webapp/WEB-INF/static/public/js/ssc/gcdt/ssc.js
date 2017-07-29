@@ -480,9 +480,42 @@ function getOpenCodeHistory() {
                 }
                 return numStr;
             });
+
+            var colorBg = '';
+            var obj = {
+                number: '',
+                list:''
+            };
+
             $.each(json.sscHistoryList, function (index, value) {
                 var openCodeArr = value.openCode ? value.openCode.split(",") : [];
-                tmpHtml += template('template_openDataHistory', {number: value.number, list: openCodeArr});
+
+                if(playGroupId != null && playGroupId == 7){
+
+                    var sum1 = parseInt(openCodeArr[0]);
+                    var sum2 = parseInt(openCodeArr[1]);
+                    var sum3 = parseInt(openCodeArr[2]);
+
+                    var sum = sum1 + sum2 + sum3;
+
+                    if($.inArray(sum,[0,13,14,27]) >= 0){
+                        colorBg = "grayxy28";
+                    } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
+                        colorBg = "greenxy28";
+                    } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
+                        colorBg = "bluexy28";
+                    } else{
+                        colorBg = 'redxy28';
+                    }
+
+                    obj.colorBg = colorBg;
+                    obj.sum = sum;
+                }
+
+                obj.number = value;
+                obj.list = openCodeArr;
+
+                tmpHtml += template('template_openDataHistory', obj);
             });
             $("#lastOpenCodeList ul").html(tmpHtml);
         },

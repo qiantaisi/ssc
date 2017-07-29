@@ -139,11 +139,16 @@
     <li>
         <p>第{{number}}期</p>
         {{if list.length == 0}}
-        <p style="margin-left:5px">开奖中</p>
+            <p style="margin-left:5px">开奖中</p>
         {{else}}
-        {{each list as value}}
-        <i>{{value}}</i>
-        {{/each}}
+            {{each list as value index}}
+                {{if index < 2}}
+                   <i>{{value}}</i><i class="plusmin">+</i>
+                {{else}}
+                   <i>{{value}}</i><i class="plusmin">=</i><i class="{{colorBg}}">{{sum}}</i>
+                {{/if}}
+
+            {{/each}}
         {{/if}}
     </li>
 </script>
