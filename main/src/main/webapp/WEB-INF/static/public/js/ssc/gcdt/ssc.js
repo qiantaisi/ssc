@@ -512,7 +512,7 @@ function getOpenCodeHistory() {
                     obj.sum = sum;
                 }
 
-                obj.number = value;
+                obj.number = value.number;
                 obj.list = openCodeArr;
 
                 tmpHtml += template('template_openDataHistory', obj);
