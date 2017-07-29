@@ -137,8 +137,8 @@
         </div>
     </div>
     <c:import url="../../common/leftSscPanel.jsp" />
-    <c:import url="../../common/rightPanel.jsp">
-        <c:param name="playGroupId" value="22" />
+    <c:import url="../../common/menuAlert.jsp">
+        <c:param name="playGroupId" value="22"/>
     </c:import>
 </div>
 <c:import url="../../common/commonJs.jsp"/>

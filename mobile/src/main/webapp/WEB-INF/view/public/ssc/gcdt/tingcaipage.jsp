@@ -51,7 +51,8 @@
     </div>
 
     <c:import url="../../common/leftSscPanel.jsp"/>
-    <c:import url="../../common/rightPanel.jsp"/>
+    <c:import url="../../common/menuAlert.jsp">
+    </c:import>
 </div>
 <c:import url="../../common/commonJs.jsp"/>
 <c:import url="../../common/bodyEnd.jsp"/>

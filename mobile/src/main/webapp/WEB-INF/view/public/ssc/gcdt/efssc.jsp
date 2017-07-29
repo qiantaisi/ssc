@@ -18,8 +18,8 @@
                 返回
             </a>
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
-                菜单
-            </a>
+            菜单
+        </a>
             <h1 class="title">两分时时彩</h1>
         </header>
         <c:import url="common/commonBet.jsp"/>
@@ -105,7 +105,7 @@
         </div>
     </div>
     <c:import url="../../common/leftSscPanel.jsp"/>
-    <c:import url="../../common/rightPanel.jsp">
+    <c:import url="../../common/menuAlert.jsp">
         <c:param name="playGroupId" value="16"/>
     </c:import>
 </div>

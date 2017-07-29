@@ -59,7 +59,7 @@
     </div>
 
     <c:import url="../../common/leftSscPanel.jsp"/>
-    <c:import url="../../common/rightPanel.jsp">
+    <c:import url="../../common/menuAlert.jsp">
         <c:param name="playGroupId" value="20"/>
     </c:import>
 </div>
