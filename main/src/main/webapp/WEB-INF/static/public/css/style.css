@@ -328,7 +328,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .game_name .box2_stage .number ul li .i1{color: #1b99df; padding-left:10px;}
 
 
-.game_name .box3_timer{padding-top: 19px;float: left;padding-left: 30px; background:url(../img/line3.png) 0 12px no-repeat;margin-left:14px;height: 99px;width: 343px;}
+.game_name .box3_timer{padding-top: 19px;float: left;padding-left: 30px; background:url(../img/line3.png) 0 12px no-repeat;height: 99px;width: 343px;}
 .game_name .box3_timer p{font-size: 12px;}
 .game_name .box3_timer .timer_wrap{height:61px;margin-top: 6px;}
 .game_name .box3_timer .timer_wrap ol{float: left;width: 31%;margin: 0;padding: 0;position: relative;margin-left:9px;}
@@ -963,7 +963,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .game_name .box2_stage .number ul li .i1{color: #1b99df; padding-left:10px;}
 
 
-.game_name .box3_timer{padding-top: 19px;float: left;padding-left: 30px; background:url(../img/line3.png) 0 12px no-repeat;margin-left:14px;height: 99px;width: 343px;}
+.game_name .box3_timer{padding-top: 19px;float: left;padding-left: 30px; background:url(../img/line3.png) 0 12px no-repeat; height: 99px;width: 343px;}
 .game_name .box3_timer p{font-size: 12px;}
 .game_name .box3_timer .timer_wrap{height:61px;margin-top: 6px;}
 .game_name .box3_timer .timer_wrap ol{float: left;width: 31%;margin: 0;padding: 0;position: relative;margin-left:9px;}
