@@ -71,8 +71,7 @@
     </div>
 </div>
 
-<c:import url="../../common/bottomInfo.jsp"/>
-<c:import url="../../common/copyright.jsp"/>
+<c:import url="../../index/bottom.jsp"/>
 <c:import url="../../common/commonJs.jsp"/>
 <c:import url="../../common/jsCommonLogin.jsp"/>
 <c:import url="../common/bottom.jsp" />
