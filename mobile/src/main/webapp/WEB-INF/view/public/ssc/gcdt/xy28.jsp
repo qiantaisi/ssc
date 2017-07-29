@@ -58,9 +58,9 @@
                 {{if openCodeArr != null}}
                      {{each openCodeArr as value index}}
                        {{if index < 2}}
-                          <i>{{value}}</i><i class="plus">+</i>
+                          <i class="redxy28">{{value}}</i><i class="plus">+</i>
                        {{else}}
-                          <i>{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
+                          <i class="redxy28">{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
                        {{/if}}
                     {{/each}}
                 {{else}}
@@ -76,9 +76,9 @@
         <span class="cl-1201 cl-1203">
             {{each openCodeArr as value index}}
                {{if index < 2}}
-                <i>{{value}}</i><i class="plus">+</i>
+                <i class="redxy28">{{value}}</i><i class="plus">+</i>
                {{else}}
-                <i>{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
+                <i class="redxy28">{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
                {{/if}}
             {{/each}}
         </span>
