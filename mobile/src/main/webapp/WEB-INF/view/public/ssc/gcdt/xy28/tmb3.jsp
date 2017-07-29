@@ -184,7 +184,7 @@
                 playId: playId,
                 zhushu: 1,
                 perMoney: inputMoney,
-                content: "特码包三-" + value.split(" ").join(","),
+                content: value.split(" ").join(","),
                 playPlId: $(".pl").data('plid'),
                 playPl: $(".pl").data("pl")
             });
