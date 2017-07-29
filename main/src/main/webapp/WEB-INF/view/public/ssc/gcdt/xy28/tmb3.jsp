@@ -33,125 +33,125 @@
                 <tbody>
                 <tr>
                     <td><span class="ball-28xyicon grayxy28">0</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="1" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="0" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon greenxy28">1</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="11" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="1" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon bluexy28">2</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="21" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="2" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon ball-28xy3">3</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="31" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="3" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon greenxy28">4</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="41" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="4" data-plid="14407"/></td>
                 </tr>
 
                 <tr>
                     <td><span class="ball-28xyicon bluexy28">5</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="2" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="5" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon ball-28xy6">6</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="12" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="6" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon greenxy28">7</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="22" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="7" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon bluexy28">8</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="32" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="8" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon ball-28xy9">9</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="42" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="9" data-plid="14407"/></td>
                 </tr>
 
                 <tr>
                     <td><span class="ball-28xyicon greenxy28">10</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="3" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="10" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon bluexy28">11</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="13" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="11" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon ball-28xy12">12</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="23" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="12" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon grayxy28">13</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="33" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="13" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon grayxy28">14</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="43" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="14" data-plid="14407"/></td>
                 </tr>
 
                 <tr>
                     <td><span class="ball-28xyicon ball-28xy15">15</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="4" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="15" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon greenxy28">16</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="14" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="16" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon bluexy28">17</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="24" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="17" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon ball-28xy18">18</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="34" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name=18 data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon greenxy28">19</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="44" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="19" data-plid="14407"/></td>
 
                 <tr>
                     <td><span class="ball-28xyicon bluexy28">20</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="5" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="20" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon ball-28xy21">21</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="15" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="21" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon greenxy28">22</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="25" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="22" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon bluexy28">23</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="35" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="23" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon ball-28xy24">24</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="45" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="24" data-plid="14407"/></td>
                 </tr>
 
                 <tr>
                     <td><span class="ball-28xyicon greenxy28">25</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="6" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="25" data-plid="14407"/></td>
 
                     <td><span class="ball-28xyicon bluexy28">26</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="16" data-plid="6725"/></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="26" data-plid="14407"/></td>
 
-                    <td><span class="ball-28xyicon grayxy28">27</span></td>
-                    <td><strong class="color-red color-333 pl" data-plid="6725"></strong></td>
-                    <td><input type="checkbox" data-name="26" data-plid="6725"/></td>
+                    <td><span class="ball-28xyicon grayxy27">27</span></td>
+                    <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
+                    <td><input type="checkbox" data-name="26" data-plid="14407"/></td>
 
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -187,6 +187,7 @@
     <div class="fr main-right"></div>
 </div>
 
+<input type="hidden" data-plid="14407" id="pl"/>
 <c:import url="../common/subPageCommonJs.jsp"/>
 <script>
     function refreshYzm(obj) {
@@ -277,8 +278,8 @@
 </script>
 <script>
     var playGroupId = 7;
-    var playId = 293;
-    var playGroupName = '和值';
+    var playId = 658;
+    var playGroupName = '特码包三';
 
     function getZhudan() {
         var betForm = {
@@ -312,7 +313,7 @@
                 playId: playId,
                 zhushu: 1,
                 perMoney: inputMoney,
-                content: '特码包3-' + value.split(" ").join(","),
+                content: value.split(" ").join(","),
                 playPlId: $("#pl").data("plid"),
                 playPl: $("#pl").data("pl")
             });

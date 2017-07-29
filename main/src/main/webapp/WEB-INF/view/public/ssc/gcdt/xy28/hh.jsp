@@ -38,34 +38,34 @@
                 <tbody>
                 <tr>
                     <td>大</td>
-                    <td><strong class="color-red pl" data-plid="9350"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="0" data-plid="9350"/></td>
+                    <td><strong class="color-red pl" data-plid="14393"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="大" data-plid="14393"/></td>
 
                     <td>小</td>
-                    <td><strong class="color-red pl" data-plid="9351"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="1" data-plid="9351"/></td>
+                    <td><strong class="color-red pl" data-plid="14394"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="小" data-plid="14394"/></td>
 
                     <td>红波</td>
-                    <td><strong class="color-red pl" data-plid="9352"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="2" data-plid="9352"/></td>
+                    <td><strong class="color-red pl" data-plid="14403"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="红波" data-plid="14403"/></td>
 
                     <td>豹子</td>
-                    <td><strong class="color-red pl" data-plid="9353"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="3" data-plid="9353"/></td>
+                    <td><strong class="color-red pl" data-plid="14406"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="豹子" data-plid="14406"/></td>
                 </tr>
 
                 <tr>
                     <td>单</td>
-                    <td><strong class="color-red pl" data-plid="9354"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="4" data-plid="9354"/></td>
+                    <td><strong class="color-red pl" data-plid="14395"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="单" data-plid="14395"/></td>
 
                     <td>双</td>
-                    <td><strong class="color-red pl" data-plid="9355"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="5" data-plid="9355"/></td>
+                    <td><strong class="color-red pl" data-plid="14396"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="双" data-plid="14396"/></td>
 
                     <td>绿波</td>
-                    <td><strong class="color-red pl" data-plid="9356"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="6" data-plid="9356"/></td>
+                    <td><strong class="color-red pl" data-plid="14404"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="绿波" data-plid="14404"/></td>
 
                     <td></td>
                     <td></td>
@@ -74,16 +74,16 @@
 
                 <tr>
                     <td>大单</td>
-                    <td><strong class="color-red pl" data-plid="9358"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="8" data-plid="9358"/></td>
+                    <td><strong class="color-red pl" data-plid="14397"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="大单" data-plid="14397"/></td>
 
                     <td>小单</td>
-                    <td><strong class="color-red pl" data-plid="9359"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="9" data-plid="9359"/></td>
+                    <td><strong class="color-red pl" data-plid="14398"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="小单" data-plid="14398"/></td>
 
                     <td>蓝波</td>
-                    <td><strong class="color-red pl" data-plid="9360"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="10" data-plid="9360"/></td>
+                    <td><strong class="color-red pl" data-plid="14405"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="蓝波" data-plid="14405"/></td>
 
                     <td></td>
                     <td></td>
@@ -92,12 +92,12 @@
 
                 <tr>
                     <td>大双</td>
-                    <td><strong class="color-red pl" data-plid="9362"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="12" data-plid="9362"/></td>
+                    <td><strong class="color-red pl" data-plid="14399"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="大双" data-plid="14399"/></td>
 
                     <td>小双</td>
-                    <td><strong class="color-red pl" data-plid="9363"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="13" data-plid="9363"/></td>
+                    <td><strong class="color-red pl" data-plid="14400"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="小双" data-plid="14400"/></td>
 
                     <td></td>
                     <td></td>
@@ -110,12 +110,12 @@
 
                 <tr>
                     <td>极大</td>
-                    <td><strong class="color-red pl" data-plid="9366"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="16" data-plid="9366"/></td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="极大" data-plid="14401"/></td>
 
                     <td>极小</td>
-                    <td><strong class="color-red pl" data-plid="9367"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="17" data-plid="9367"/></td>
+                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="极小" data-plid="14402"/></td>
 
                     <td></td>
                     <td></td>
@@ -230,8 +230,8 @@
 </script>
 <script>
     var playGroupId = 7;
-    var playId = 293;
-    var playGroupName = '和值';
+    var playId = 657;
+    var playGroupName = '混合';
 
     function getZhudan() {
         var betForm = {
