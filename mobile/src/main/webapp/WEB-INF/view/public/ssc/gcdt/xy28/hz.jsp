@@ -25,12 +25,13 @@
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">2</font></span>
                 <span class="pl" data-plid="9352"></span>
             </td>
-        </tr>
-        <tr>
             <td data-name="3">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">3</font></span>
                 <span class="pl" data-plid="9353"></span>
             </td>
+        </tr>
+        <tr>
+
             <td data-name="4">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">4</font></span>
                 <span class="pl" data-plid="9354"></span>
@@ -39,8 +40,6 @@
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">5</font></span>
                 <span class="pl" data-plid="9355"></span>
             </td>
-        </tr>
-        <tr>
             <td data-name="6">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">6</font></span>
                 <span class="pl" data-plid="9356"></span>
@@ -49,12 +48,13 @@
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">7</font></span>
                 <span class="pl" data-plid="9357"></span>
             </td>
+        </tr>
+
+        <tr>
             <td data-name="8">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">8</font></span>
                 <span class="pl" data-plid="9358"></span>
             </td>
-        </tr>
-        <tr>
             <td data-name="9">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">9</font></span>
                 <span class="pl" data-plid="9359"></span>
@@ -81,12 +81,13 @@
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">14</font></span>
                 <span class="pl" data-plid="9364"></span>
             </td>
-        </tr>
-        <tr>
             <td data-name="15">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">15</font></span>
                 <span class="pl" data-plid="9365"></span>
             </td>
+        </tr>
+        <tr>
+
             <td data-name="16">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">16</font></span>
                 <span class="pl" data-plid="9366"></span>
@@ -95,8 +96,6 @@
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">17</font></span>
                 <span class="pl" data-plid="9367"></span>
             </td>
-        </tr>
-        <tr>
             <td data-name="18">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">18</font></span>
                 <span class="pl" data-plid="9368"></span>
@@ -105,12 +104,13 @@
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">19</font></span>
                 <span class="pl" data-plid="9369"></span>
             </td>
+        </tr>
+
+        <tr>
             <td data-name="20">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">20</font></span>
                 <span class="pl" data-plid="9370"></span>
             </td>
-        </tr>
-        <tr>
             <td data-name="21">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">21</font></span>
                 <span class="pl" data-plid="9371"></span>
@@ -137,8 +137,6 @@
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">26</font></span>
                 <span class="pl" data-plid="9376"></span>
             </td>
-        </tr>
-        <tr>
             <td data-name="27">
                 <span class="txt_1"><font class="ball-4 ball-orange redxy28">27</font></span>
                 <span class="pl" data-plid="9377"></span>
