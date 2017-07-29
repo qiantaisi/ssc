@@ -18,51 +18,51 @@
         <tr>
             <td data-name="大">
                 <span>大</span>
-                <span class="pl" data-plid="6812"></span>
+                <span class="pl" data-plid="14393"></span>
             </td>
             <td data-name="小">
                 <span>小</span>
-                <span class="pl" data-plid="6813"></span>
+                <span class="pl" data-plid="14394"></span>
             </td>
         </tr>
         <tr>
             <td data-name="单">
                 <span>单</span>
-                <span class="pl" data-plid="6814"></span>
+                <span class="pl" data-plid="14395"></span>
             </td>
             <td data-name="双">
                 <span>双</span>
-                <span class="pl" data-plid="6815"></span>
+                <span class="pl" data-plid="14396"></span>
             </td>
         </tr>
         <tr>
             <td data-name="大单">
                 <span>大单</span>
-                <span class="pl" data-plid="6816"></span>
+                <span class="pl" data-plid="14397"></span>
             </td>
             <td data-name="小单">
                 <span>小单</span>
-                <span class="pl" data-plid="6817"></span>
+                <span class="pl" data-plid="14398"></span>
             </td>
         </tr>
         <tr>
             <td data-name="大双">
                 <span>大双</span>
-                <span class="pl" data-plid="6816"></span>
+                <span class="pl" data-plid="14399"></span>
             </td>
             <td data-name="小双">
                 <span>小双</span>
-                <span class="pl" data-plid="6817"></span>
+                <span class="pl" data-plid="14400"></span>
             </td>
         </tr>
         <tr>
             <td data-name="极大">
                 <span>极大</span>
-                <span class="pl" data-plid="6816"></span>
+                <span class="pl" data-plid="14401"></span>
             </td>
             <td data-name="极小">
                 <span>极小</span>
-                <span class="pl" data-plid="6817"></span>
+                <span class="pl" data-plid="14402"></span>
             </td>
         </tr>
         </tbody>
@@ -78,15 +78,15 @@
         <tr>
             <td data-name="红">
                 <span>红</span>
-                <span class="pl" data-plid="6812"></span>
+                <span class="pl" data-plid="14403"></span>
             </td>
             <td data-name="蓝">
                 <span>蓝</span>
-                <span class="pl" data-plid="6813"></span>
+                <span class="pl" data-plid="14405"></span>
             </td>
             <td data-name="绿">
                 <span>绿</span>
-                <span class="pl" data-plid="6813"></span>
+                <span class="pl" data-plid="14404"></span>
             </td>
         </tr>
         </tbody>
@@ -101,7 +101,7 @@
         <tr>
             <td data-name="豹子">
                 <span>豹子</span>
-                <span class="pl" data-plid="6812"></span>
+                <span class="pl" data-plid="14406"></span>
             </td>
         </tr>
         </tbody>
@@ -110,8 +110,8 @@
 
 <script>
     var playGroupId = 7;
-    var playId = 293;
-    var playGroupName = '和值';
+    var playId = 657;
+    var playGroupName = '混合';
 
     function getZhudan(inputMoney, number) {
         var betForm = {
