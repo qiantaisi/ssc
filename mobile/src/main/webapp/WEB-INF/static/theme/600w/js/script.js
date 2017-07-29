@@ -256,7 +256,7 @@ $(function () {
                             str += '<div style="text-align: center">' + "尊敬的会员您好！" + '</div>' + hh;
                             $.each(json.webNoticeList, function (index, value) {
                                 str += value.title.replace(/<[^>]+>/g, "") + hh;
-                                str += value.content.replace(/<[^>]+>/g, "") + hh;
+                                str += value.content.replace(/<[^>]+>/g, "") + hh+ hh;
                             });
                             str += "</div>";
 

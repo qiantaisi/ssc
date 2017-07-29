@@ -865,13 +865,13 @@
                 if (json.webNoticeList.length != 0) {
                     $.each(json.webNoticeList, function (index, value) {
                         var len = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").length;
-                        if (len > 13) {
-                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").substr(0, 13) + "...";
-                        } else {
+//                        if (len > 13) {
+//                            content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "").substr(0, 13) + "...";
+//                        } else {
                             content_G = value.content.replace(/<p>/g, "").replace(/<\/p>/g, "");
-                        }
+//                        }
 
-                        str += '<p onclick="showGonggao(' + index + ')" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;height:25px;margin:0;">' + value.title + "&nbsp;:&nbsp;" + content_G + '</p></br>';
+                        str += '<p onclick="showGonggao(' + index + ')" style="overflow:hidden;height:auto;margin:0;">' + value.title + ":<br/>" + content_G + '</p><br/><br/>';
 
                         str2 += '<div class="alert hide" id="gonggao_' + index + '">';
                         str2 += '<div class="alert_col">';
