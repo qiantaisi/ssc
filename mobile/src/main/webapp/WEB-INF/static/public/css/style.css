@@ -140,19 +140,27 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
 }
 
 #openHistoryList .cl-904 .openNumber i.bluexy28,#lastOpenInfo .cl-1201 i.bluexy28{
-    background: blue!important;
+    background: #0074ff!important;
 }
 #openHistoryList .cl-904 .openNumber i.greenxy28,#lastOpenInfo .cl-1201 i.greenxy28{
-    background: green!important;
+    background: #5bae1c!important;
 }
 #openHistoryList .cl-904 .openNumber i.grayxy28,#lastOpenInfo .cl-1201 i.grayxy28{
     background: gray!important;
 }
 
-#openHistoryList .cl-904 .openNumber i.redxy28,#lastOpenInfo .cl-1201 i.redxy28,.redxy28{
-    background: red!important;
+#openHistoryList .cl-904 .openNumber i.redxy28,#lastOpenInfo .cl-1201 i.redxy28,#betContainer .xy28 table tbody tr td .redxy28{
+    background: #f13030!important;
 }
 
-#betContainer .xy28 table tbody tr td .redxy28{
-    background: red!important;
+#betContainer .xy28 table tbody tr td .bluexy28{
+    background: #0074ff!important;
+}
+
+#betContainer .xy28 table tbody tr td .greenxy28{
+    background: #5bae1c!important;
+}
+
+#betContainer .xy28 table tbody tr td .grayxy28{
+    background: gray!important;
 }
