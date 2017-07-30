@@ -73,10 +73,11 @@
         </div>
     </div>
     <c:import url="../../../common/leftSscPanel.jsp"/>
-    <c:import url="../../../common/rightPanel.jsp">
+    <c:import url="../../../common/menuAlert.jsp">
         <c:param name="playGroupId" value="1"/>
         <c:param name="gfwfFlag" value="2"/>
     </c:import>
+
 </div>
 <c:import url="../../../common/commonJs.jsp"/>
 <script>
