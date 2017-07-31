@@ -2005,7 +2005,7 @@ $(function () {
 
                 querySscLeftTime(playGroupId);
                 if (globalOpening) {
-                   if(time < 0){
+                   if(!isNaN(time) && time < 0){
                        if(time == -1){
                            showClearBetTemplate();
                            //定义弹框宽度大小
