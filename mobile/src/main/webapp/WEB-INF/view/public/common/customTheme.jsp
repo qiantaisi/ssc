@@ -16,7 +16,8 @@
         .cl-701 .button.active span,.cl-701 .button.active span,.gonggao_title,.cl-801,.cl-306 .list-block ul li a .item-inner .cl-307:first-child span:last-child,.cl-330 a,.edit_color,.cl-318 .info,.glxq{color:#${fengge_1}!important}
         .cl-952,.cl-102 .cl-103.yhkgl_moren{background-color:#009df7!important}
         .cl-701 .button.active{border-bottom:1px solid #${fengge_1}!important}
-        #page-yhhd .bar-nav,.rebuttons-tab .button.active span,#buttonsTabList .button.active span{ background:#${fengge_1}!important;}
+        #page-yhhd .bar-nav,.rebuttons-tab .button.active span{ background:#${fengge_1}!important;}
+        #buttonsTabList .button.active span{ background:#${fengge_1}!important; color: white!important;}
 
         /*快钱投注界面风格样式*/
         .cl-1201 i:not(.ball-ts),.ball-orange,.active_gfwf,.layui-m-layerchild h3{background-color:#${fengge_1}!important}
