@@ -6,7 +6,6 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<br>
     <h5><strong>选号玩法</strong></h5>
     <p><strong>◎一字定位</strong></br>
         于万千百十个任选一位，自0~9任选1个号进行投注，当开奖结果与所选的定位与号码相同且顺序一致时，即为中奖。</p>

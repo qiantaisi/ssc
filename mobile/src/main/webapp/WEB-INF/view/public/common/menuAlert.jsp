@@ -481,24 +481,51 @@
                 <c:choose>
                     <c:when test="${param.playGroupId == 1}">
                         <li>
-                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
-                               class="item-contents">
-                                <div class="item-medias"><i class="icon bg-img-cqssc"></i></div>
-                                <div class="item-innerss">
-                                    <div class="item-inners">玩法说明</div>
-                                </div>
-                            </a>
+                            <c:choose>
+                                <c:when test="${param.gfwfFlag == 2}">
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
                         </li>
                     </c:when>
                     <c:when test="${param.playGroupId == 2}">
                         <li>
-                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
-                               class="item-contents">
-                                <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
-                                <div class="item-innerss">
-                                    <div class="item-inners">玩法说明</div>
-                                </div>
-                            </a>
+                            <c:choose>
+                                <c:when test="${param.gfwfFlag == 2}">
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
+
                         </li>
                     </c:when>
                     <c:when test="${param.playGroupId == 3}">
@@ -624,13 +651,26 @@
                     </c:when>
                     <c:when test="${param.playGroupId == 15}">
                         <li>
-                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
-                               class="item-contents">
-                                <div class="item-medias"><i class="icon bg-img-ffssc"></i></div>
-                                <div class="item-innerss">
-                                    <div class="item-inners">玩法说明</div>
-                                </div>
-                            </a>
+                            <c:choose>
+                                <c:when test="${param.gfwfFlag == 2}">
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-ffssc"></i></div>
+                                        <div class="item-innerss">
+                                             <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                       <div class="item-medias"><i class="icon bg-img-ffssc"></i></div>
+                                       <div class="item-innerss">
+                                            <div class="item-inners">玩法说明</div>
+                                       </div>
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
                         </li>
                     </c:when>
                     <c:when test="${param.playGroupId == 16}">
