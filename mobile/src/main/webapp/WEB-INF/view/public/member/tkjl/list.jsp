@@ -27,7 +27,7 @@
                 <div class="preloader"></div>
                 <div class="pull-to-refresh-arrow"></div>
             </div>
-            <div class="buttons-tab re-buttons-tab" id="buttonsTabList">
+            <div class="buttons-tab" id="buttonsTabList">
                 <a href="#" class="tab-link active button" data-id="btn-today"><span>今日</span></a>
                 <a href="#" class="tab-link button" data-id="btn-yesterday"><span>昨日</span></a>
                 <a href="#" class="tab-link button" data-id="btn-month"><span>本月</span></a>
