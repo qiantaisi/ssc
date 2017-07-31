@@ -10,7 +10,6 @@
     $(function() {
         // 初始化子页面
         initSubPage();
-
         // 切换玩法
         $(".group ul li p span").click(function () {
             $(".group ul li p span.acti").removeClass("acti");
