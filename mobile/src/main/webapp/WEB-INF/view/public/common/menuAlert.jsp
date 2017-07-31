@@ -31,9 +31,9 @@
                 <li style="height: 3rem; height: 2rem;">
                 <c:choose>
                     <c:when test="${not empty userSession}">
-                        <div class="item-inner-r" style="background: #fffcef">
+                        <div class="item-inner-r" style="background: rgba(253, 255, 239, 0.8)">
                             <div style="height: 1rem;">
-                                <span style="font-size: 0.7rem;font-weight: bold;">余额:</span>
+                                <span style="font-size: 0.61rem;font-weight: bold;color:gray;">余额:</span>
                             </div>
                             <div  style="height: 1rem;">
                                 <span style="color: red;font-size: 0.7rem;display: block; font-weight: bold;">${userSession.balance}元</span>
@@ -798,7 +798,7 @@
 
             <li class="item-inner-r">
                 <div class="item-inner-re">
-                <span>今日输赢</span>
+                <span style="font-size: 0.61rem;">今日输赢</span>
                 </div>
 
 
@@ -808,7 +808,7 @@
                     </c:when>
                     <c:otherwise>
                         <a href="<%=basePath%>login.html">
-                            <div class="item-inner-re"><span style="color:red;line-height:0.7rem; ">前往登录</span></div>
+                            <div class="item-inner-re"><span style="color:red;line-height:0.8rem; ">前往登录</span></div>
                         </a>
                     </c:otherwise>
                 </c:choose>

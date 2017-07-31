@@ -84,12 +84,12 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
 }
 .item-inner-re{
     height: 1rem;
-    line-height: 1rem;
+    line-height: 1.2rem;
 }
 
 .item-inner-r{
     height: 2rem;
-    background: #bbb;
+    background: rgba(183, 184, 183, 0.68);
 }
 
 .list-block .item-medias {
