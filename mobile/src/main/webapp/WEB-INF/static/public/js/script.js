@@ -783,7 +783,7 @@ $(function () {
                 return;
             }
 
-            $.confirm('确认修改？',
+            $.confirm('设置密码？',
                 function () {
                     ajaxRequest({
                         url: config.basePath + "member/qkmm/ajaxResetPassword.json",
@@ -797,11 +797,11 @@ $(function () {
                         success: function (json) {
                             if (json.result == 1) {
 
-                                Tools.alertCallback("修改成功", function () {
+                                Tools.alertCallback("设置成功", function () {
                                     window.location.href = config.basePath + "member/index.html";
                                 });
                             } else {
-                                Tools.alert("修改失败：" + json.description);
+                                Tools.alert("设置失败：" + json.description);
                             }
                         },
                         error: function (a, b, c) {
@@ -1993,26 +1993,38 @@ $(function () {
 
         // 倒计时
         setInterval(function () {
+
+
             if (typeof playGroupId == 'undefined' || typeof globalLeftTime == 'undefined') {
                 return;
             }
-            if (globalLeftTime == 0) {
+
+            if (globalLeftTime <= 0) {
+                var time = $("#leftTime").attr("data-time");
+                time = parseInt(time);
+
                 querySscLeftTime(playGroupId);
                 if (globalOpening) {
-                    showClearBetTemplate();
-                    //定义弹框宽度大小
-                    $("#layui-m-layer" + layerId + " .layui-m-layerchild").css("width", "85%");
-                    $("#layui-m-layer" + layerId + " .layui-m-layerchild h3").css({
-                        "font-size": "0.68rem",
-                        "height": "1.6rem!important",
-                        "line-height": "1.6rem!important"
-                    });
-                    $("#layui-m-layer" + layerId + " .btn_close").click(function () {
-                        if (layerId != null) {
-                            layer.close(layerId);
-                            layerId = null;
-                        }
-                    });
+                   if(!isNaN(time) && time < 0){
+                       if(time == -1){
+                           showClearBetTemplate();
+                           //定义弹框宽度大小
+                           $("#layui-m-layer" + layerId + " .layui-m-layerchild").css("width", "85%");
+                           $("#layui-m-layer" + layerId + " .layui-m-layerchild h3").css({
+                               "font-size": "0.68rem",
+                               "height": "1.6rem!important",
+                               "line-height": "1.6rem!important"
+                           });
+                           $("#layui-m-layer" + layerId + " .btn_close").click(function () {
+                               if (layerId != null) {
+                                   layer.close(layerId);
+                                   layerId = null;
+                               }
+                           });
+                       }
+                   }
+
+                   $("#leftTime").attr("data-time", --time);
                 }
 
                 return;
@@ -2032,7 +2044,8 @@ $(function () {
             tmpStr += second < 10 ? '0' + second : second;
             $("#leftTime").html(tmpStr);
 
-            --globalLeftTime;
+            $("#leftTime").attr("data-time", --globalLeftTime);
+            // --globalLeftTime;
         }, 1000);
 
         // 选择
@@ -2110,7 +2123,7 @@ $(function () {
     }
 
     $(document).on("click", ".clearBet_template .btns a", function (e) {
-        var btnName = $(this).data("btn");
+        var btnName = $(this).attr("data-btn");
         closeClearBetTemplate(btnName);
     });
 
@@ -2535,13 +2548,13 @@ $(function () {
 
     // 存款页面
     $(document).on("pageInit", "#page-ck", function (e, id, page) {
-        var type_ck_init = $('.buttons-tab-type a:first-child').data("type");
+        var type_ck_init = $('.buttons-tab-type a:first-child').attr("data-type");
         $("#" + type_ck_init).show();
         $('.buttons-tab-type a:first-child').trigger("click");
         $(".buttons-tab-type a").click(function () {
             $('.buttons-tab-type a').removeClass('active');
             $(this).addClass('active');
-            var type_ck = $(this).data("type");
+            var type_ck = $(this).attr("data-type");
             $(".list-block").hide();
             $("#" + type_ck).show();
         });
@@ -5041,7 +5054,7 @@ $(function () {
             $(this).find("span").removeClass("staer1");
             $(this).find("span").addClass("zxfs");
 
-            var id = $(this).data("name");    //获取被选元素的数据
+            var id = $(this).attr("data-name");    //获取被选元素的数据
             $(".wx-select .show").removeClass("show").addClass("hide");
             $("#playGroup_" + id).removeClass("hide").addClass("show");
 
@@ -5141,7 +5154,7 @@ $(function () {
             $(this).find("span").removeClass("staer1");
             $(this).find("span").addClass("zxfs");
 
-            var id = $(this).data("name");    //获取被选元素的数据
+            var id = $(this).attr("data-name");    //获取被选元素的数据
             $(".wx-select .show").removeClass("show").addClass("hide");
             $("#playGroup_" + id).removeClass("hide").addClass("show");
 

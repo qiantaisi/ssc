@@ -79,4 +79,16 @@
 <script>
     var userBankList = ${userBankList};
 </script>
+<script>
+    // 判断是否需要取款密码并且判断用户是否设置了密码
+    <c:if test="${not empty istrue && istrue == true}">
+    <c:if test="${empty userSession.drawPassword}">
+    $.confirm("取款密码尚未设置，是否设置密码？", ''
+        , function(){
+            window.location.href = CONFIG.BASEURL + "member/xgmm/setqkmm.html";
+        }, function(){
+        });
+    </c:if>
+    </c:if>
+</script>
 <c:import url="../../common/bodyEnd.jsp"/>

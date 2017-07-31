@@ -1545,6 +1545,8 @@ public class MemberController extends BaseController {
         modelMap.put("minMoney", qkSettingResult.getMinMoney());
         modelMap.put("maxMoney", qkSettingResult.getMaxMoney());
         modelMap.put("needWithdrawPassword", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
+        modelMap.put("istrue", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
+        modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         return this.renderPublicView("member/cqk/qk", modelMap);
     }
 

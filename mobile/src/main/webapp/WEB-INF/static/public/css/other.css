@@ -1644,13 +1644,7 @@ input[type="number"] {
     height: 2.2rem!important;
     border-bottom: 1px solid transparent!important;
 }
-/*.wfsm-602 a.wfsm_601 {*/
-    /*border-bottom: 2px solid #fa6200 !important;*/
-    /*color: #fa6200;*/
-/*}*/
-
-/*#wfsm .wfsm-602 a.wfsm_601 {*/
-    /*border-bottom: 2px solid #f42023 !important;*/
-    /*color: #f42023 !important;*/
-/*}*/
-
+.dw-span{
+    display: block;
+    height: 0.3rem;
+}

@@ -55,7 +55,7 @@
                                                 <c:when test="${fn:contains(item.bankName,'农业银行')}">
                                                     <span class="banklogo bank-abchina"></span>
                                                 </c:when>
-                                                <c:when test="${fn:contains(item.bankName,'银行')}">
+                                                <c:when test="${fn:contains(item.bankName,'中国银行')}">
                                                     <span class="banklogo bank-chinabank"></span>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'建设银行')}">
@@ -76,7 +76,7 @@
                                                 <c:when test="${fn:contains(item.bankName,'华夏银行')}">
                                                     <span class="banklogo bank-hxb"></span>
                                                 </c:when>
-                                                <c:when test="${fn:contains(item.bankName,'中银行')}">
+                                                <c:when test="${fn:contains(item.bankName,'中信银行')}">
                                                     <span class="banklogo bank-ecitic"></span>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'光大银行')}">

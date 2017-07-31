@@ -31,9 +31,9 @@
                 <li style="height: 3rem; height: 2rem;">
                 <c:choose>
                     <c:when test="${not empty userSession}">
-                        <div class="item-inner-r" style="background: #fffcef">
+                        <div class="item-inner-r" style="background: rgba(253, 255, 239, 0.8)">
                             <div style="height: 1rem;">
-                                <span style="font-size: 0.7rem;font-weight: bold;">余额:</span>
+                                <span style="font-size: 0.61rem;font-weight: bold;color:gray;">余额:</span>
                             </div>
                             <div  style="height: 1rem;">
                                 <span style="color: red;font-size: 0.7rem;display: block; font-weight: bold;">${userSession.balance}元</span>
@@ -481,24 +481,51 @@
                 <c:choose>
                     <c:when test="${param.playGroupId == 1}">
                         <li>
-                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
-                               class="item-contents">
-                                <div class="item-medias"><i class="icon bg-img-cqssc"></i></div>
-                                <div class="item-innerss">
-                                    <div class="item-inners">玩法说明</div>
-                                </div>
-                            </a>
+                            <c:choose>
+                                <c:when test="${param.gfwfFlag == 2}">
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
                         </li>
                     </c:when>
                     <c:when test="${param.playGroupId == 2}">
                         <li>
-                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
-                               class="item-contents">
-                                <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
-                                <div class="item-innerss">
-                                    <div class="item-inners">玩法说明</div>
-                                </div>
-                            </a>
+                            <c:choose>
+                                <c:when test="${param.gfwfFlag == 2}">
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
+
                         </li>
                     </c:when>
                     <c:when test="${param.playGroupId == 3}">
@@ -624,13 +651,26 @@
                     </c:when>
                     <c:when test="${param.playGroupId == 15}">
                         <li>
-                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
-                               class="item-contents">
-                                <div class="item-medias"><i class="icon bg-img-ffssc"></i></div>
-                                <div class="item-innerss">
-                                    <div class="item-inners">玩法说明</div>
-                                </div>
-                            </a>
+                            <c:choose>
+                                <c:when test="${param.gfwfFlag == 2}">
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-ffssc"></i></div>
+                                        <div class="item-innerss">
+                                             <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                       <div class="item-medias"><i class="icon bg-img-ffssc"></i></div>
+                                       <div class="item-innerss">
+                                            <div class="item-inners">玩法说明</div>
+                                       </div>
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
                         </li>
                     </c:when>
                     <c:when test="${param.playGroupId == 16}">
@@ -758,7 +798,7 @@
 
             <li class="item-inner-r">
                 <div class="item-inner-re">
-                <span>今日输赢</span>
+                <span style="font-size: 0.61rem;">今日输赢</span>
                 </div>
 
 
@@ -768,7 +808,7 @@
                     </c:when>
                     <c:otherwise>
                         <a href="<%=basePath%>login.html">
-                            <div class="item-inner-re"><span style="color:red;line-height:0.7rem; ">前往登录</span></div>
+                            <div class="item-inner-re"><span style="color:red;line-height:0.8rem; ">前往登录</span></div>
                         </a>
                     </c:otherwise>
                 </c:choose>

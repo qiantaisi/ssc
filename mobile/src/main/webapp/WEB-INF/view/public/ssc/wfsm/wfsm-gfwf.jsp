@@ -62,115 +62,133 @@
                     <div class="content">
                         <div class="wfsm_600" id="ssc-parent-menu">
                             <div class="wfsm-602">
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" class="wfsm_color_select" data-type="page"
                                    onclick="javascript:document.getElementById('test1').scrollIntoView()" class="wfsm_601">定位胆</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test2').scrollIntoView()" class="wfsm_601">五星</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test3').scrollIntoView()" class="wfsm_601">四星</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test4').scrollIntoView()">后三</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test5').scrollIntoView()">前三</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test6').scrollIntoView()">前二</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test7').scrollIntoView()">不定位</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test8').scrollIntoView()">大小单双</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test9').scrollIntoView()">任选二</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test10').scrollIntoView()">任选三</a>
-                                <a href="javascript:;" data-type="page"
+                                <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test11').scrollIntoView()">任选四</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </c:when>
-        </c:choose>
 
-        <div class="content cl-700" style="top: 6.0rem!important;">
-            <div class="content-block cl-8 cl-990">
-                <div class="cl-1300">
-                    <div class="cl-1301-gfwf">
-                        <div class="cl-1350-gfwf">
-                            <div class="content-block">
-                                <c:choose>
-                                    <c:when test="${playGroupId == 1}">
-                                        <c:import url="rule/gfwf/cqssc.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 2}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 3}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 4}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 5}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 6}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 7}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 8}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 9}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 10}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 11}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 13}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 14}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 15}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 16}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 17}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 18}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 19}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 20}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 21}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 22}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                    <c:when test="${playGroupId == 23}">
-                                        <c:import url="rule/gfwf/base.jsp"/>
-                                    </c:when>
-                                </c:choose>
+                <div class="content cl-700" style="top: 6.0rem!important;">
+                    <div class="content-block cl-8 cl-990">
+                        <div class="cl-1300">
+                            <div class="cl-1301-gfwf">
+                                <div class="cl-1350-gfwf">
+                                    <div class="content-block">
+                                        <c:choose>
+                                            <c:when test="${playGroupId == 1}">
+                                                <c:import url="rule/gfwf/cqssc.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 15}">
+                                                <c:import url="rule/gfwf/ffssc.jsp"/>
+                                            </c:when>
+                                        </c:choose>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </c:when>
+            <c:otherwise>
+                <div class="content cl-700" style="top:4.3rem!important;">
+                    <div class="content-block cl-8 cl-990">
+                        <div class="cl-1300">
+                            <div class="cl-1301-gfwf">
+                                <div class="cl-1350-gfwf">
+                                    <div class="content-block">
+                                        <c:choose>
+                                            <c:when test="${playGroupId == 2}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 3}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 4}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 5}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 6}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 7}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 8}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 9}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 10}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 11}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 13}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 14}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 16}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 17}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 18}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 19}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 20}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 21}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 22}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 23}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
+                                        </c:choose>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </c:otherwise>
+        </c:choose>
+
+
     </div>
 </div>
 <c:import url="../../common/commonJs.jsp"/>
