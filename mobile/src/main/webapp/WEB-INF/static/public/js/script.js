@@ -797,11 +797,11 @@ $(function () {
                         success: function (json) {
                             if (json.result == 1) {
 
-                                Tools.alertCallback("修改成功", function () {
+                                Tools.alertCallback("设置成功", function () {
                                     window.location.href = config.basePath + "member/index.html";
                                 });
                             } else {
-                                Tools.alert("修改失败：" + json.description);
+                                Tools.alert("设置失败：" + json.description);
                             }
                         },
                         error: function (a, b, c) {
