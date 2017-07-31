@@ -12,8 +12,8 @@
         <li>
             <b>前一</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_id="499" data-play_pl_id="14209" data-name="qyzxfs" data-fun_zhushu="zhushu_qyzxfs" data-fun_content="content_qyzxfs" data-fun_suiji="suiji_qyzxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="500" data-play_pl_id="14210" data-name="qyzxds" data-fun_zhushu="zhushu_qyzxds" data-fun_content="content_qyzxds" data-fun_suiji="suiji_qyzxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="499" data-play_pl_id="14209" data-name="qyzxfs" data-fun_zhushu="zhushu_qyzxfs" data-fun_content="content_qyzxfs" data-fun_suiji="suiji_qyzxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="500" data-play_pl_id="14210" data-name="qyzxds" data-fun_zhushu="zhushu_qyzxds" data-fun_content="content_qyzxds" data-fun_suiji="suiji_qyzxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
