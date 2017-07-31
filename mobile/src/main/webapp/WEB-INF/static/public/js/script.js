@@ -783,7 +783,7 @@ $(function () {
                 return;
             }
 
-            $.confirm('确认修改？',
+            $.confirm('设置密码？',
                 function () {
                     ajaxRequest({
                         url: config.basePath + "member/qkmm/ajaxResetPassword.json",
