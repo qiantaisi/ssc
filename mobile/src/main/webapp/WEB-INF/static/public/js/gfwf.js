@@ -15,11 +15,11 @@ function jixuanClick() {
 
 function gfwfEvent(){
     $("#btn-submit-gfwf").unbind('click').click(function () {
-        showBetTemplate();
+        showBetTemplate(); //清除注单内容提示框
     });
 
     $("#btn-reset-gfwf").click(function () {
-        clearSelected();
+        clearSelected(); // 清除所有选择
     });
 
     // checkbox触发事件f
@@ -36,7 +36,7 @@ function gfwfEvent(){
             var checkSelectedFun = $("#checkSelected").attr("data-fun_checkbox");
             if (typeof checkSelectedFun != 'undefined') {
                 eval(checkSelectedFun + "()");
-                getGfwfZhushu();
+                getGfwfZhushu();  //获取注数方法
             }
         });
     }
