@@ -28,21 +28,21 @@
     <div class="arrow-up"></div>
     <span class="list-block">
         <ul class="ul">
-                <li style="height: 3rem;">
+                <li style="height: 3rem; height: 2rem;">
                 <c:choose>
                     <c:when test="${not empty userSession}">
                         <div class="item-inner-r" style="background: #fffcef">
-                            <div>
+                            <div style="height: 1rem;">
                                 <span style="font-size: 0.7rem;font-weight: bold;">余额:</span>
                             </div>
-                            <div>
+                            <div  style="height: 1rem;">
                                 <span style="color: red;font-size: 0.7rem;display: block; font-weight: bold;">${userSession.balance}元</span>
                             </div>
                         </div>
                     </c:when>
                     <c:otherwise>
                         <a href="<%=basePath%>login.html">
-                            <div class="item-inners-r" style="height: 70px; line-height: 70px;">
+                            <div class="item-inners-r"  style="height: 2rem; line-height:2rem;">
                                 <span style="font-size: 0.7rem;font-weight: bold;">前往登录</span>
                             </div>
                         </a>
@@ -757,18 +757,18 @@
             </li>
 
             <li class="item-inner-r">
-                <div class="item-inner-re" style="height: 33px; line-height: 33px;">
+                <div class="item-inner-re">
                 <span>今日输赢</span>
                 </div>
 
 
                 <c:choose>
                     <c:when test="${not empty userSession}">
-                        <div class="item-inner-re" style="height: 33px; line-height: 33px;"><span style="color:red " id="jieSuan">刷新中...</span></div>
+                        <div class="item-inner-re" style="line-height:0.7rem;"><span style="color:red " id="jieSuan">刷新中...</span></div>
                     </c:when>
                     <c:otherwise>
                         <a href="<%=basePath%>login.html">
-                            <div class="item-inner-re" style="height: 33px; line-height: 33px;"><span style="color:red ">前往登录</span></div>
+                            <div class="item-inner-re"><span style="color:red;line-height:0.7rem; ">前往登录</span></div>
                         </a>
                     </c:otherwise>
                 </c:choose>
