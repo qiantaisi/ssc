@@ -21,7 +21,7 @@
         <li>
             <b>后三组选</b>
             <p class="btn_h3_zux">
-                <span class="playPlIdBtn" data-play_id="647" data-play_pl_id="14214" data-name="h3z3fs" data-fun_zhushu="zhushu_h3z3fs" data-fun_content="content_h3z3fs" data-fun_suiji="suiji_h3z3fs"><a href="javascript:void(0)">组三复式</a></span>
+                <span class="playPlIdBtn" data-play_id="647" data-play_pl_id="14381" data-name="h3z3fs" data-fun_zhushu="zhushu_h3z3fs" data-fun_content="content_h3z3fs" data-fun_suiji="suiji_h3z3fs"><a href="javascript:void(0)">组三复式</a></span>
                 <span class="playPlIdBtn" data-play_id="646" data-play_pl_id="14380" data-name="h3z3ds" data-fun_zhushu="zhushu_h3z3ds" data-fun_content="content_h3z3ds" data-fun_suiji="suiji_h3z3ds"><a href="javascript:void(0)">组三单式</a></span>
                 <span class="playPlIdBtn" data-play_id="645" data-play_pl_id="14379" data-name="h3z6fs" data-fun_zhushu="zhushu_h3z6fs" data-fun_content="content_h3z6fs" data-fun_suiji="suiji_h3z6fs"><a href="javascript:void(0)">组六复式</a></span>
                 <span class="playPlIdBtn" data-play_id="644" data-play_pl_id="14378" data-name="h3z6ds" data-fun_zhushu="zhushu_h3z6ds" data-fun_content="content_h3z6ds" data-fun_suiji="suiji_h3z6ds"><a href="javascript:void(0)">组六单式</a></span>
@@ -143,7 +143,6 @@
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
                 <var>从百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
             </a>
-
         </span>
     </p>
     <div class="content_jiang">
