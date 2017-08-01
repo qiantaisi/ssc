@@ -5059,8 +5059,8 @@ $(function () {
             $("#playGroup_" + id).removeClass("hide").addClass("show");
 
             $(".wx-select .show a").removeClass("selected");
-            $(".wx-select .show a").find("span").removeClass("zxfs");
-            $(".wx-select .show a").find("span").eq(0).addClass("staer1");
+            $(".wx-select .show a").find("span.zxfs").addClass("staer1");
+            $(".wx-select .show a").find("span.zxfs").removeClass("zxfs");
             $(".wx-select .show a").find("span").eq(0).removeClass("staer1");
             $(".wx-select .show a").find("span").eq(0).addClass("zxfs");
             var url = $(".wx-select .show a").eq(0).attr("data-url");
@@ -5159,8 +5159,8 @@ $(function () {
             $("#playGroup_" + id).removeClass("hide").addClass("show");
 
             $(".wx-select .show a").removeClass("selected");
-            $(".wx-select .show a").find("span").removeClass("zxfs");
-            $(".wx-select .show a").find("span").eq(0).addClass("staer1");
+            $(".wx-select .show a").find("span.zxfs").addClass("staer1");
+            $(".wx-select .show a").find("span.zxfs").removeClass("zxfs");
             $(".wx-select .show a").find("span").eq(0).removeClass("staer1");
             $(".wx-select .show a").find("span").eq(0).addClass("zxfs");
             var url = $(".wx-select .show a").eq(0).attr("data-url");

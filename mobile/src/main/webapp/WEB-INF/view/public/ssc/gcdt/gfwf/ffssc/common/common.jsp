@@ -61,7 +61,7 @@
                data-play_id="616"
                data-play_pl_id="14338"
                data-name="直选复式">
-                <span>直选复式</span>
+                <span class="staer1">直选复式</span>
             </a>
         </div>
         <div class="hide" id="playGroup_5x">
@@ -550,7 +550,7 @@
                data-name="后三大小单双">
                 <span class="staer1">后三大小单双</span>
             </a>
-        </div>`
+        </div>
         <div class="hide" id="playGroup_rx2">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
