@@ -38,7 +38,7 @@
         <div class="betContent">
             <div class="slidebg">
                 <div class="slide-top slide-item">
-                    <span class="ft"><label>赔率：</label><label id="betContent_playPl" class="fandian" data-value="{{defaultPlayPl}}">{{defaultPlayPl}}</label></span>&nbsp;&nbsp;
+                    <span class="ft"><label>赔率：</label><label id="betContent_playPl" class="fandian" data-value="{{defaultPlayPl}}">{{playPlShow}}</label></span>&nbsp;&nbsp;
                     <span class="fr"><label>返利：</label><label id="betContent_fanli" class="fanli" data-value="0">0%</label></span>
                 </div>
                 <div class="playPlRangeContainer slide-item">

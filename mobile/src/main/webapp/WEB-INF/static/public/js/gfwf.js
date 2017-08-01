@@ -2869,10 +2869,24 @@ function getPlayPlId() {
     var indexStr = ($(".gfwf_xz .wx-select a.selected").attr("data-play_pl_id")).toString();
     if(indexStr.indexOf("|") > 0){
         arrTemp = (indexStr.split("|"))[0];
+        // arrTemp = indexStr;
     }else {
         arrTemp = $(".gfwf_xz .wx-select a.selected").attr("data-play_pl_id");
     }
+    return arrTemp;
+}
 
+/**
+ * 获取当前赔率ID2
+ */
+function getPlayPlId2() {
+    var arrTemp = null;
+    var indexStr = ($(".gfwf_xz .wx-select a.selected").attr("data-play_pl_id")).toString();
+    if(indexStr.indexOf("|") > 0){
+        arrTemp = indexStr;
+    }else {
+        arrTemp = $(".gfwf_xz .wx-select a.selected").attr("data-play_pl_id");
+    }
     return arrTemp;
 }
 
@@ -2895,7 +2909,7 @@ function getNumber() {
  */
 function getPlAndMaxFd() {
     // 全局赔率变量
-    var playPlId = getPlayPlId();   // 当前赔率ID
+    var playPlId = getPlayPlId2();   // 当前赔率ID
     if (playPlId.toString().indexOf('|') > 0) {    // 多赔率
         var result = [];
         var tmpArr = playPlId.split('|');
@@ -2965,8 +2979,19 @@ function showBetTemplate() {
     // 投注内容
     tmpBetContent = data;
 
+    var firstShowPl = maxPlayPl.toFixed(3);
+    // 渲染界面中赔率部分
+    if (plAndMaxFd instanceof Array) {  // 多赔率
+        var strArr = [];
+        $.each(plAndMaxFd, function(index, value) {
+            strArr.push(value.playPl.toFixed(3));
+        });
+        firstShowPl = strArr.join('|');
+    }
+
     var bet_template = template('template_betTemplate', {
         defaultPlayPl: maxPlayPl.toFixed(3),
+        playPlShow: firstShowPl,
         playGroupId: playGroupId,
         number: getNumber(),
         playId: getPlayId(),

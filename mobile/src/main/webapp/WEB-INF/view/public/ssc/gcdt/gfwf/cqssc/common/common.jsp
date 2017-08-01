@@ -131,7 +131,7 @@
                data-fun_content="content_h3zh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/hszh.html"
                data-play_id="504"
-               data-play_pl_id="14217|14218|14219"
+               data-play_pl_id="14219|14218|14217"
                data-name="后三组合">
                 <span class="staer1">后三组合</span>
             </a>
@@ -175,7 +175,7 @@
                data-fun_content="content_h3zuxbd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxbd.html"
                data-play_id="513"
-               data-play_pl_id="14227|14228"
+               data-play_pl_id="14228|14227"
                data-name="组选包胆">
                 <span class="staer1">组选包胆</span>
             </a>
@@ -197,7 +197,7 @@
                data-fun_content="content_h3tsh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/tsh.html"
                data-play_id="515"
-               data-play_pl_id="14223|14224|14225"
+               data-play_pl_id="14225|14224|14223"
                data-name="特殊号">
                 <span class="staer1">特殊号</span>
             </a>
@@ -243,7 +243,7 @@
                data-fun_content="content_q3zh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/qszh.html"
                data-play_id="518"
-               data-play_pl_id="14234|14235|14236"
+               data-play_pl_id="14236|14235|14234"
                data-name="后三组合">
                 <span class="staer1">前三组合</span>
             </a>
@@ -309,7 +309,7 @@
                data-fun_content="content_q3tsh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/tsh.html"
                data-play_id="534"
-               data-play_pl_id="14250|14251|14252"
+               data-play_pl_id="14252|14251|14250"
                data-name="特殊号">
                 <span class="staer1">特殊号</span>
             </a>
@@ -649,7 +649,7 @@
                data-fun_content="content_rx3zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zuxhz.html"
                data-play_id="573"
-               data-play_pl_id="14292|14293"
+               data-play_pl_id="14293|14292"
                data-name="组选和值">
                 <span class="staer1">组选和值</span>
             </a>
