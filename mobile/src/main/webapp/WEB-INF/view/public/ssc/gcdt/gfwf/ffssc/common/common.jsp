@@ -61,7 +61,7 @@
                data-play_id="616"
                data-play_pl_id="14338"
                data-name="直选复式">
-                <span>直选复式</span>
+                <span class="staer1">直选复式</span>
             </a>
         </div>
         <div class="hide" id="playGroup_5x">
@@ -131,7 +131,7 @@
                data-fun_content="content_h3zh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/ffssc/hs/hszh.html"
                data-play_id="650"
-               data-play_pl_id="14384|14385|14386"
+               data-play_pl_id="14386|14385|14384"
                data-name="后三组合">
                 <span class="staer1">后三组合</span>
             </a>
@@ -175,7 +175,7 @@
                data-fun_content="content_h3zuxbd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/ffssc/hs/zxbd.html"
                data-play_id="641"
-               data-play_pl_id="14372|14373"
+               data-play_pl_id="14373|14372"
                data-name="组选包胆">
                 <span class="staer1">组选包胆</span>
             </a>
@@ -197,7 +197,7 @@
                data-fun_content="content_h3tsh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/ffssc/hs/tsh.html"
                data-play_id="639"
-               data-play_pl_id="14368|14369|14370"
+               data-play_pl_id="14370|14369|14368"
                data-name="特殊号">
                 <span class="staer1">特殊号</span>
             </a>
@@ -550,7 +550,7 @@
                data-name="后三大小单双">
                 <span class="staer1">后三大小单双</span>
             </a>
-        </div>`
+        </div>
         <div class="hide" id="playGroup_rx2">
             <a href="javascript:void(0)"
                data-type="gfwf_page"

@@ -135,6 +135,8 @@
             var w=$(this).index();
             $(this).addClass('sli').siblings().removeClass('sli');
             $('.help_list .help_col').eq(w).addClass('show').siblings().removeClass('show');
+            var c = $('.rt').height();
+            $('.main .list').css('height', c - 2);
         })
     });
 

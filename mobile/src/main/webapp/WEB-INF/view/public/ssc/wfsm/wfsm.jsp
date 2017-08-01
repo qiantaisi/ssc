@@ -50,8 +50,16 @@
             <div class="buttons-tab cl-701" id="buttonsTabList">
                 <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="active button wfsm_cd"
                    data-id="btn-bqxq"><span>传统模式</span></a>
-                <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="button wfsm_cd"
-                   data-id="btn-gdqc"><span>官方模式</span></a>
+                <c:choose>
+                    <c:when test="${playGroupId == 7}">
+                        <a href="javascript:void(0)" onclick="tishi()" class="button wfsm_cd"
+                           data-id="btn-gdqc"><span>官方模式</span></a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="button wfsm_cd"
+                           data-id="btn-gdqc"><span>官方模式</span></a>
+                    </c:otherwise>
+                </c:choose>
                 <%--<a href="<%=basePath%>ssc/wfsm/lskj.html?playGroupId=${playGroupId}" class="button"--%>
                    <%--data-id="btn-gdqc"><span>官方模式</span></a>--%>
             </div>
@@ -145,6 +153,11 @@
     $(function () {
         autoGetServerTime();
     });
+
+    function tishi() {
+        Tools.toast('此彩种无该模式');
+    }
+
     function autoGetServerTime() {
         ajaxRequest({
             url: "<%=basePath%>member/ajaxGetServerTime.json",
