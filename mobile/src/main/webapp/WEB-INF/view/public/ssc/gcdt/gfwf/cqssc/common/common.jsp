@@ -244,7 +244,7 @@
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/qszh.html"
                data-play_id="518"
                data-play_pl_id="14236|14235|14234"
-               data-name="后三组合">
+               data-name="前三组合">
                 <span class="staer1">前三组合</span>
             </a>
             <a href="javascript:void(0)"
