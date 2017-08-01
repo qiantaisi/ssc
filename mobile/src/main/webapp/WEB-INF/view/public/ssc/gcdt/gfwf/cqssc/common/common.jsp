@@ -243,7 +243,7 @@
                data-fun_content="content_q3zh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/qszh.html"
                data-play_id="518"
-               data-play_pl_id="14236|14235|14234"
+               data-play_pl_id="14234|14235|14236"
                data-name="前三组合">
                 <span class="staer1">前三组合</span>
             </a>
@@ -309,7 +309,7 @@
                data-fun_content="content_q3tsh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/tsh.html"
                data-play_id="534"
-               data-play_pl_id="14252|14251|14250"
+               data-play_pl_id="14250|14251|14252"
                data-name="特殊号">
                 <span class="staer1">特殊号</span>
             </a>
