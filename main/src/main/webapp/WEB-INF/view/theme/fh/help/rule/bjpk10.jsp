@@ -65,7 +65,7 @@
                 <p><strong>◎冠亚军和单双</strong></br>
                     当开奖结果冠军号码与亚军号码的和值为单数如9、13，投注“和单”则视为中奖；为双数如12、16，投注“和双”则视为中奖；若总和为11，则视为和(不计算输赢)。</p>
             </div>
-            <div class="help_col show">
+            <div class="help_col">
                 <span id="test1"></span>
                 <h4><strong>【前一玩法】</strong></h4>
                 <p>

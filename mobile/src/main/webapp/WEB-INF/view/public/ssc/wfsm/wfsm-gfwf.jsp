@@ -63,11 +63,11 @@
                         <div class="wfsm_600" id="ssc-parent-menu">
                             <div class="wfsm-602">
                                 <a href="javascript:void(0);" class="wfsm_color_select" data-type="page"
-                                   onclick="javascript:document.getElementById('test1').scrollIntoView()" class="wfsm_601">定位胆</a>
+                                   onclick="javascript:document.getElementById('test1').scrollIntoView()">定位胆</a>
                                 <a href="javascript:void(0);" data-type="page"
-                                   onclick="javascript:document.getElementById('test2').scrollIntoView()" class="wfsm_601">五星</a>
+                                   onclick="javascript:document.getElementById('test2').scrollIntoView()">五星</a>
                                 <a href="javascript:void(0);" data-type="page"
-                                   onclick="javascript:document.getElementById('test3').scrollIntoView()" class="wfsm_601">四星</a>
+                                   onclick="javascript:document.getElementById('test3').scrollIntoView()">四星</a>
                                 <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test4').scrollIntoView()">后三</a>
                                 <a href="javascript:void(0);" data-type="page"
