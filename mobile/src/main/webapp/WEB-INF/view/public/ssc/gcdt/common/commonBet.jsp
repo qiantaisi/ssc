@@ -2,9 +2,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="project38.api.utils.RequestUtils" %>
 <%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+    String basePath = RequestUtils.getBasePath(request);
 %>
 <%--<nav class="bar bar-tab cl-10 cl-605">--%>
     <%--<a class="tab-item" href="javascript:void(0)" id="btn-reset">--%>

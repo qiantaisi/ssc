@@ -2,9 +2,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="project38.api.utils.RequestUtils" %>
 <%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+    String basePath = RequestUtils.getBasePath(request);
 %>
 <c:import url="../../common/bodyStart.jsp"/>
 <c:import url="../../common/checkIsChildFrame.jsp"/>
@@ -62,7 +62,7 @@
                     <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
-                            <span class="acti"><a href="javascript:void(0)" data-url="gfwf-bjpk10-qy">前一</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qy">前一</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qe">前二</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qs">前三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-dwd">定位胆</a></span>
@@ -106,6 +106,10 @@
                 </ul>
             </div>
             <div id="sscContent"></div>
+            <i class="it0 left_it0"><img src="${resPath}img/ico46.png" alt=""></i>
+            <i class="it1 right_it1"><img src="${resPath}img/ico46.png" alt=""></i>
+        </div>
+    </div>
 
             <div class="Detailedlist Single wid1">
 
@@ -144,6 +148,9 @@
 <c:import url="gfwf/common/commonJs.jsp" />
 <script>
     var playGroupId = 9;    // 彩种ID
+    <c:if test="${not empty playPlListJson}">
+    var gfwfPlJson = ${playPlListJson};
+    </c:if>
 </script>
 <script>
     // 随机号码
@@ -178,5 +185,9 @@
         {{/each}}
         {{/if}}
     </li>
+</script>
+<script>
+
+
 </script>
 <c:import url="../../common/bodyEnd.jsp"/>

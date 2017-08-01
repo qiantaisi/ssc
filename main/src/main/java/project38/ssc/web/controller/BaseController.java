@@ -13,6 +13,7 @@ import project38.api.result.CompanyShortNameResult;
 import project38.api.result.FenggeResult;
 import project38.api.result.UserSessionResult;
 import project38.api.utils.ApiUtils;
+import project38.api.utils.RequestUtils;
 import project38.api.utils.SessionUtils;
 
 import javax.servlet.http.Cookie;
@@ -47,7 +48,6 @@ public abstract class BaseController {
     /**
      * 渲染视图
      *
-     *
      * @param jspLocation
      * @param modelMap
      * @return
@@ -73,20 +73,20 @@ public abstract class BaseController {
             request.setAttribute("theme", theme);
         }
 
-        request.setAttribute("resPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/theme/" + theme + "/");
+        request.setAttribute("resPath", RequestUtils.getScheme(httpServletRequest) + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/theme/" + theme + "/");
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        try{
+        try {
             UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
             if (null != userSessionResult && userSessionResult.getResult() == 1) {
                 modelMap.put("userSession", userSessionResult);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error(this, e);
         }
 
         // 公共static目录
-        httpServletRequest.setAttribute("pubStaticPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
+        httpServletRequest.setAttribute("pubStaticPath", RequestUtils.getScheme(httpServletRequest) + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
 
         // 公共模板读取风格
         FenggeResult fenggeResult = ApiUtils.getWebFengge(
@@ -102,7 +102,7 @@ public abstract class BaseController {
         return modelAndView;
     }
 
-     /**
+    /**
      * 渲染视图
      *
      * @param jspLocation
@@ -127,15 +127,15 @@ public abstract class BaseController {
 
         // 公司标志
         String companyShortName = getCompanyShortName();
-        httpServletRequest.setAttribute("resPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
+        httpServletRequest.setAttribute("resPath", RequestUtils.getScheme(httpServletRequest) + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        try{
+        try {
             UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
             if (null != userSessionResult && userSessionResult.getResult() == 1) {
                 modelMap.put("userSession", userSessionResult);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error(this, e);
         }
 
@@ -219,13 +219,13 @@ public abstract class BaseController {
         if (StringUtils.isNotBlank(companyShortName)) {
             return companyShortName;
         }
-        try{
+        try {
             CompanyShortNameResult companyShortNameResult = ApiUtils.getCompanyShortName(httpServletRequest.getServerName());
             if (companyShortNameResult.getResult() == 1) {
                 companyShortName = companyShortNameResult.getCompanyShortName();
                 SessionUtils.setSessionCompanyShortName(httpServletRequest, companyShortName);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error(this, e);
         }
 

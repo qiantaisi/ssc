@@ -1,18 +1,18 @@
 package project38.ssc.mobile.controller;
 
-import project38.api.common.exception.UserException;
-import project38.api.common.utils.JSONUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
+import project38.api.common.exception.UserException;
+import project38.api.common.utils.JSONUtils;
 import project38.api.result.CompanyShortNameResult;
 import project38.api.result.FenggeResult;
 import project38.api.result.MobileFgResult;
 import project38.api.result.UserSessionResult;
 import project38.api.utils.ApiUtils;
+import project38.api.utils.RequestUtils;
 import project38.api.utils.SessionUtils;
 
 import javax.servlet.http.Cookie;
@@ -203,9 +203,9 @@ public abstract class BaseController {
 
         // 公司标志
         String companyShortName = getCompanyShortName();
-        httpServletRequest.setAttribute("resPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
-        httpServletRequest.setAttribute("commonResPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/common/");
-        httpServletRequest.setAttribute("bottomCssResPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/theme/");
+        httpServletRequest.setAttribute("resPath", RequestUtils.getScheme(httpServletRequest) + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
+        httpServletRequest.setAttribute("commonResPath", RequestUtils.getScheme(httpServletRequest) + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/common/");
+        httpServletRequest.setAttribute("bottomCssResPath", RequestUtils.getScheme(httpServletRequest) + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/theme/");
 
         MobileFgResult mobileFgResult = ApiUtils.getMobileFg(companyShortName);
         httpServletRequest.setAttribute("themeBottomNav", mobileFgResult.mobileFg.getDibu());
