@@ -1,18 +1,18 @@
 package project38.ssc.mobile.controller;
 
-import project38.api.common.exception.UserException;
-import project38.api.common.utils.JSONUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
+import project38.api.common.exception.UserException;
+import project38.api.common.utils.JSONUtils;
 import project38.api.result.CompanyShortNameResult;
 import project38.api.result.FenggeResult;
 import project38.api.result.MobileFgResult;
 import project38.api.result.UserSessionResult;
 import project38.api.utils.ApiUtils;
+import project38.api.utils.RequestUtils;
 import project38.api.utils.SessionUtils;
 
 import javax.servlet.http.Cookie;
@@ -70,9 +70,9 @@ public abstract class BaseController {
             request.setAttribute("theme", theme);
         }
 
-        request.setAttribute("resPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/theme/" + theme + "/");
-        request.setAttribute("commonResPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/common/");
-        request.setAttribute("bottomCssResPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/public/theme/");
+        request.setAttribute("resPath", RequestUtils.getBasePath(httpServletRequest) + "static/theme/" + theme + "/");
+        request.setAttribute("commonResPath", RequestUtils.getBasePath(httpServletRequest) + "static/common/");
+        request.setAttribute("bottomCssResPath", RequestUtils.getBasePath(httpServletRequest) + "static/public/theme/");
 
         MobileFgResult mobileFgResult = ApiUtils.getMobileFg(companyShortName);
         request.setAttribute("themeBottomNav", mobileFgResult.mobileFg.getDibu());
@@ -203,21 +203,21 @@ public abstract class BaseController {
 
         // 公司标志
         String companyShortName = getCompanyShortName();
-        httpServletRequest.setAttribute("resPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
-        httpServletRequest.setAttribute("commonResPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/common/");
-        httpServletRequest.setAttribute("bottomCssResPath", httpServletRequest.getScheme() + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/theme/");
+        httpServletRequest.setAttribute("resPath", RequestUtils.getBasePath(httpServletRequest) + "static/public/");
+        httpServletRequest.setAttribute("commonResPath", RequestUtils.getBasePath(httpServletRequest) + "static/common/");
+        httpServletRequest.setAttribute("bottomCssResPath", RequestUtils.getBasePath(httpServletRequest) + "static/public/theme/");
 
         MobileFgResult mobileFgResult = ApiUtils.getMobileFg(companyShortName);
         httpServletRequest.setAttribute("themeBottomNav", mobileFgResult.mobileFg.getDibu());
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        try{
+        try {
             UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
             if (null != userSessionResult && userSessionResult.getResult() == 1) {
                 modelMap.put("userSession", userSessionResult);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error(this, e);
         }
 

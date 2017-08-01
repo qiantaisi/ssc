@@ -3158,6 +3158,8 @@ function clearSelected() {
     $(".active_gfwf").removeClass("active_gfwf");
     $("#zhushu").html(0);
     $("#nowMoney").html(0);
+    // 选择按钮
+    $(".xz i.activeBtn").removeClass('activeBtn');
 
     // 机选
     $("#btn-jixuan-gfwf").show();
