@@ -4,7 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
+    String basePath = RequestUtils.getScheme(request) + "://" + request.getServerName() + ":" + request.getServerPort();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,7 +20,7 @@
     <script>
         var md = new MobileDetect(window.navigator.userAgent);
         if (md.mobile()) {
-            window.location.href = '<%=request.getScheme() + "://" + request.getServerName()%>';
+            window.location.href = '<%=RequestUtils.getScheme(request) + "://" + request.getServerName()%>';
         }
     </script>
 </head>
@@ -32,8 +32,8 @@
         </div>
         <div class="menu">
             <ul>
-                <li class="acti"><a href="<%=request.getScheme() + "://" + request.getServerName()%>">手机投注</a></li>
-                <li><a href="<%=request.getScheme() + "://" + request.getServerName().replace("m.", "")%>">电脑网页版</a>
+                <li class="acti"><a href="<%=RequestUtils.getScheme(request) + "://" + request.getServerName()%>">手机投注</a></li>
+                <li><a href="<%=RequestUtils.getScheme(request) + "://" + request.getServerName().replace("m.", "")%>">电脑网页版</a>
                 </li>
             </ul>
         </div>
