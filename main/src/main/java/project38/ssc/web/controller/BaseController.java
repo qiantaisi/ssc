@@ -86,7 +86,7 @@ public abstract class BaseController {
         }
 
         // 公共static目录
-        httpServletRequest.setAttribute("pubStaticPath", RequestUtils.getScheme(httpServletRequest) + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
+        httpServletRequest.setAttribute("pubStaticPath", RequestUtils.getBasePath(httpServletRequest) + "static/public/");
 
         // 公共模板读取风格
         FenggeResult fenggeResult = ApiUtils.getWebFengge(
@@ -127,7 +127,7 @@ public abstract class BaseController {
 
         // 公司标志
         String companyShortName = getCompanyShortName();
-        httpServletRequest.setAttribute("resPath", RequestUtils.getScheme(httpServletRequest) + "://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getServerPort() + httpServletRequest.getContextPath() + "/static/public/");
+        httpServletRequest.setAttribute("resPath", RequestUtils.getBasePath(httpServletRequest) + "static/public/");
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         try {

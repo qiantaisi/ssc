@@ -42,13 +42,13 @@ public final class RequestUtils {
         String path = httpServletRequest.getContextPath();
 
         StringBuilder builder = new StringBuilder();
-        builder.append(scheme).append("://");
-        builder.append(serverName);
+//        builder.append(scheme).append("://");
+//        builder.append(serverName);
 
-        // 如果不是默认HTTP,80或HTTPS，443
-        if (!(port.equals(HTTP_DEFORT_PORT) && StringUtils.equals(scheme, HTTP_DEFAULT_SCHEME)) && !(port.equals(HTTPS_DEFORT_PORT) && StringUtils.equals(scheme, HTTPS_DEFAULT_SCHEME))) {
-            builder.append(":").append(port);
-        }
+//        // 如果不是默认HTTP,80或HTTPS，443
+//        if (!(port.equals(HTTP_DEFORT_PORT) && StringUtils.equals(scheme, HTTP_DEFAULT_SCHEME)) && !(port.equals(HTTPS_DEFORT_PORT) && StringUtils.equals(scheme, HTTPS_DEFAULT_SCHEME))) {
+//            builder.append(":").append(port);
+//        }
 
         builder.append(path).append("/");
         return builder.toString();
