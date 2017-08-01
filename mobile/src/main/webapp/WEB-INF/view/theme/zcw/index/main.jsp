@@ -6,8 +6,8 @@
 <%@ page import="project38.api.utils.RequestUtils" %>
 <%
     String basePath = RequestUtils.getBasePath(request);
-    String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("m.", "").replace("www.", "");
-    String pcHostName = request.getScheme() + "://" + "www." + request.getServerName().replace("m.", "").replace("www.", "");
+    String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("m.", "").replace("www.", "");
+    String pcHostName = RequestUtils.getScheme(request) + "://" + "www." + request.getServerName().replace("m.", "").replace("www.", "");
 %>
 <c:import url="../common/bodyStart.jsp"/>
 <style>

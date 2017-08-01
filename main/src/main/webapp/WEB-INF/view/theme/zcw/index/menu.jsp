@@ -5,7 +5,7 @@
 <%@ page import="project38.api.utils.RequestUtils" %>
 <%
     String basePath = RequestUtils.getBasePath(request);
-    String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("www.", "");
+    String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
 %>
 <div class="head_middle">
     <div class="container clearfix">

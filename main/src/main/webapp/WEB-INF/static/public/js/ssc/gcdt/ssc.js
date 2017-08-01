@@ -388,7 +388,7 @@ $(function() {
 
     var navIndex = getQueryString("navIndex");    // 自定义导航子页面
     // 默认第一个玩法
-    if (isNaN(navIndex)) {
+    if (isNaN(navIndex) || navIndex == null) {
         navIndex = 0;
     }
 

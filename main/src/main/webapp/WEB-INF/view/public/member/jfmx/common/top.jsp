@@ -10,5 +10,5 @@
     <p class="fl">您好，${userSession.account}！您当前账户余额为：<span>${userSession.balance}</span>元  </p>
     <a href="javascript:void(0)" onclick="parent.getPage('zhcz/yhzz')" class="fl c1">充值</a>
     <a href="javascript:void(0)" onclick="parent.getPage('withdraw')" class="fl c2">提款</a>
-    <p class="fl url">推广链接：<%=RequestUtils.getUrl(request)%>?p=${userSession.id}<a href="javascript:void(0)" id="copyTglj" data-tglj="<%=request.getScheme() + "://" + request.getServerName() + path + "/"%>?p=${userSession.id}">复制链接</a></p>
+    <p class="fl url">推广链接：<%=RequestUtils.getUrl(request)%>?p=${userSession.id}<a href="javascript:void(0)" id="copyTglj" data-tglj="<%=RequestUtils.getUrl(request)%>?p=${userSession.id}">复制链接</a></p>
 </div>

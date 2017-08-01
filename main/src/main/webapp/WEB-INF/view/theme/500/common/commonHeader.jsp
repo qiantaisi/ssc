@@ -6,7 +6,7 @@
 <%@ page import="project38.api.utils.RequestUtils" %>
 <%
     String basePath = RequestUtils.getBasePath(request);
-    String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("www.", "");
+    String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
     String p = (String) request.getParameter("p");
     if (StringUtils.isNotBlank(p)) {
         mHostName += "/?p=" + p;

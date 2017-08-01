@@ -5,7 +5,7 @@
 <%@ page import="project38.api.utils.RequestUtils" %>
 <%
     String basePath = RequestUtils.getBasePath(request);
-    String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("www.", "");
+    String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,8 +20,8 @@
                 </a>
                 <div class="user_info">
                     <a class="login not-login" href="javascript:void(0)">网站首页</a>
-                    <a href="<%=request.getScheme() + "://" + request.getServerName()%>" class="back-index" target="_blank">手机投注</a>
-                    <a href="<%=request.getScheme() + "://" + request.getServerName().replace("m.", "")%>" class="back-index" target="_blank">电脑网页版</a>
+                    <a href="<%=RequestUtils.getScheme(request) + "://" + request.getServerName()%>" class="back-index" target="_blank">手机投注</a>
+                    <a href="<%=RequestUtils.getScheme(request) + "://" + request.getServerName().replace("m.", "")%>" class="back-index" target="_blank">电脑网页版</a>
                     <a href="${kefuUrl}" class="back-index" target="_blank">在线客服</a>
                 </div>
 
