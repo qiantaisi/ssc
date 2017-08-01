@@ -70,9 +70,9 @@ public abstract class BaseController {
             request.setAttribute("theme", theme);
         }
 
-        request.setAttribute("resPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/theme/" + theme + "/");
-        request.setAttribute("commonResPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/common/");
-        request.setAttribute("bottomCssResPath", request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/static/public/theme/");
+        request.setAttribute("resPath", RequestUtils.getBasePath(httpServletRequest) + "static/theme/" + theme + "/");
+        request.setAttribute("commonResPath", RequestUtils.getBasePath(httpServletRequest) + "static/common/");
+        request.setAttribute("bottomCssResPath", RequestUtils.getBasePath(httpServletRequest) + "static/public/theme/");
 
         MobileFgResult mobileFgResult = ApiUtils.getMobileFg(companyShortName);
         request.setAttribute("themeBottomNav", mobileFgResult.mobileFg.getDibu());
