@@ -5,9 +5,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ page import="project38.api.utils.RequestUtils" %>
 <%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+    String basePath = RequestUtils.getBasePath(request);
 %>
 <div class="cl-960">
     前三组选三@<font id="pl" class="pl red"></font> (请选择5个及以上号码)
