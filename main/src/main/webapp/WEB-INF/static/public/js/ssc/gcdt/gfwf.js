@@ -751,6 +751,7 @@ function showTishi2Template(infoStr) {
  */
 function initSubPage() {
     // 初始化模板
+    alert(getPlayPlTemplateName());
     $("#subPage").html(template("template_" + getPlayPlTemplateName()));
     $("#subJRange").html(template("template_jRange"));
 
