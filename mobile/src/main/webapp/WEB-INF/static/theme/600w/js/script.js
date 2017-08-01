@@ -236,8 +236,6 @@ $(function () {
                         setUserToken(json.userId, json.token);
                         // Tools.toastRedirect("登录成功，正在跳转到首页", 3000, config.basePath);
 
-
-
                         // 保存登录名
                         Tools.setCookie("loginFormAccount", account, {path: "/"});
 
@@ -252,7 +250,7 @@ $(function () {
                         if (webNoticeList.length > 0) {
                             var hh = "<br/>";
 
-                            var str = '<div style="text-align:left;font-size: 16px;">';
+                            var str = '<div style="text-align:left;font-size: 16px;height: 14rem;overflow-y: auto;">';
                             str += '<div style="text-align: center">' + "尊敬的会员您好！" + '</div>' + hh;
                             $.each(json.webNoticeList, function (index, value) {
                                 str += value.title.replace(/<[^>]+>/g, "") + hh;
