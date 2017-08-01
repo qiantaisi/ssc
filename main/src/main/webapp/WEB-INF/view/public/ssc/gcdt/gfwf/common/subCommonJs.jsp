@@ -14,7 +14,6 @@
         $(".group ul li p span").click(function () {
             $(".group ul li p span.acti").removeClass("acti");
             $(this).addClass("acti");
-            alert("321321");
             var currentId = $(this).data('play_id');
             if(currentId != null){
                 playId = currentId;

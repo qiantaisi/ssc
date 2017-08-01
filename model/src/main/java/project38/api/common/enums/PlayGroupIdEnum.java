@@ -12,7 +12,7 @@ public enum PlayGroupIdEnum {
     LHC(6L, "六合彩", "lhc", false),
     XY28(7L, "幸运28", "xy28", false),
     KL8(8L, "北京快乐8", "kl8", false),
-    PK10(9L, "北京PK10", "pk10", false),
+    PK10(9L, "北京PK10", "pk10", true),
     XYNC(10L, "重庆幸运农场", "xync", false),
     KLSF(11L, "广东快乐十分", "klsf", false),
     SSQ(12L, "双色球", "ssq", false),
