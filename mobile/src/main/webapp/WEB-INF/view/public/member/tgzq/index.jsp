@@ -100,7 +100,7 @@
                                     <div class="item-title">
                                         推广链接：
                                         <span href="javascript:void(0)" id="tglj" class="cl-801 click_ts">
-                                            <%=request.getScheme() + "://" + request.getServerName() + path + "/"%>?p=${userSession.id}
+                                            <%=RequestUtils.getUrl(request)%>?p=${userSession.id}
                                         </span>
                                     </div>
                                     <div class="item-after"></div>
