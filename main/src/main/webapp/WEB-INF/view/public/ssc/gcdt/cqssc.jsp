@@ -115,8 +115,7 @@
                         <li><a href="javascript:void(0)" onclick="clearZhudan()"><img src="${resPath}img/ico52.png" alt="">清空注单</a></li>
                     </ul>
                     <p id="zongtouInfo">总投 <span>0</span> 注，<span>0</span> 倍，共 <span>0</span> 元。</p>
-                    <a href="javascript:void(0)" class="ok" onclick="buyBtn()"><img src="${resPath}img/ico54.png"
-                                                                                    alt="">确认投注</a>
+                    <a href="javascript:void(0)" class="ok" onclick="buyBtn()"><img src="${resPath}img/ico54.png" alt="">确认投注</a>
                 </div>
             </div>
         </div>

@@ -62,7 +62,7 @@
                     <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
-                            <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qy">前一</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="gfwf-bjpk10-qy">前一</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qe">前二</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qs">前三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-dwd">定位胆</a></span>
@@ -131,14 +131,11 @@
                                 <li><a href="javascript:void(0)" onclick="clearZhudan()"><img src="${resPath}img/ico52.png" alt="">清空注单</a></li>
                             </ul>
                             <p id="zongtouInfo">总投 <span>0</span> 注，<span>0</span> 倍，共 <span>0</span> 元。</p>
-                            <a href="javascript:void(0)" class="ok" onclick="buyBtn()"><img src="${resPath}img/ico54.png"
-                                                                                            alt="">确认投注</a>
+                            <a href="javascript:void(0)" class="ok" onclick="buyBtn()"><img src="${resPath}img/ico54.png" alt="">确认投注</a>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div><!--Single-->
     <c:import url="common/bottomInfo.jsp"/>
