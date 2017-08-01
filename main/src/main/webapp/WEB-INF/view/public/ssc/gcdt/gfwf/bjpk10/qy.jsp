@@ -19,8 +19,8 @@
     </ul>
 </div>
 
-<c:import url="../common/commonMiddle.jsp" />
-<c:import url="../common/subCommonJs.jsp" />
+<c:import url="../common/commonMiddle.jsp"/>
+<c:import url="../common/subCommonJs.jsp"/>
 
 <script type="text/html" id="template_qyzxfs">
 <div class="Pick cl-1002 recl-1002" data-flag="fu">
