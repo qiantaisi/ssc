@@ -11,7 +11,7 @@
     if (StringUtils.isBlank(u)) {
         u = basePath + "main.html";
     }
-    String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("www.", "");
+    String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
 %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
