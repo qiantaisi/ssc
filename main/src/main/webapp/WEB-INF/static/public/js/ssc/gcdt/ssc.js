@@ -392,8 +392,6 @@ $(function() {
         navIndex = 0;
     }
 
-    console.log(navIndex + "----");
-
     $(".Playmethod ul li p span a").eq(navIndex).trigger("click");
 });
 
