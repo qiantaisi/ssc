@@ -140,7 +140,7 @@
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 9}">
-                                                <c:import url="rule/gfwf/base.jsp"/>
+                                                <c:import url="rule/gfwf/bjpk10.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 10}">
                                                 <c:import url="rule/gfwf/base.jsp"/>
@@ -176,7 +176,7 @@
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 23}">
-                                                <c:import url="rule/gfwf/base.jsp"/>
+                                                <c:import url="rule/gfwf/jspk10.jsp"/>
                                             </c:when>
                                         </c:choose>
                                     </div>

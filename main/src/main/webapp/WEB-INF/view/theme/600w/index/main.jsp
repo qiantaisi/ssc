@@ -740,7 +740,7 @@
             money = $("#xyxhInput_3").val();
         } else if (type == 9) {
             caizhong = 'pk10';
-            navIndex = 1;
+            navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 10; ++i) {
                 var v = $("#xyxhContent_9 span").eq(i).data("num");

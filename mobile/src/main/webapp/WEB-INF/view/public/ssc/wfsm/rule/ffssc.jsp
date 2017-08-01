@@ -261,9 +261,6 @@
     </p>
 </div>
 <div class="help_col">
-    <h5>筹备中</h5>
-</div>
-<div class="help_col">
     <h5><strong>总则</strong></h5>
     <p>
         本站分分时时彩游戏每天进行1440期，北京时间（GMT+8）每天00:00起每隔1分钟开奖一次。本公司分分时时彩具体游戏规则请参考彩种介绍。<br/>
