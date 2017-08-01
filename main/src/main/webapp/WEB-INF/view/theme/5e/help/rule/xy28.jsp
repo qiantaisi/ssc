@@ -7,7 +7,7 @@
     String basePath = RequestUtils.getBasePath(request);
 %>
 <c:import url="../../common/bodyStart.jsp"/>
-<c:import url="../../common/checkIsChildFrame.jsp" />
+<c:import url="../../common/checkIsChildFrame.jsp"/>
 <c:import url="../../index/top.jsp"/>
 
 <div class="men_list">
@@ -21,8 +21,8 @@
 
 <div class="main wi">
     <c:import url="../common/left.jsp">
-        <c:param name="navGroup" value="1" />
-        <c:param name="playGroupId" value="7" />
+        <c:param name="navGroup" value="1"/>
+        <c:param name="playGroupId" value="7"/>
     </c:import>
     <div class="rt">
         <c:import url="../common/top.jsp"/>
@@ -39,10 +39,6 @@
             </div>
             <div class="help_col show">
                 <h5><strong>【混合玩法规则】</strong></h5>
-                <p><strong>◎和值</strong></br>
-                    从0-27中选取一个以上的数字，投注号码与开奖号码和值相同，即中奖</p>
-                <p><strong>◎特码包三</strong></br>
-                    从0-27中任选3个号码组成1注，任意一个选号与开奖号码和值相同，即中奖</p>
                 <p><strong>◎大小玩法</strong></br>
                     数字14-27为大 ；</br>
                     数字0-13为小；</br>
@@ -64,10 +60,15 @@
                     当期开奖号码和值，符合投注组合，即中奖</p>
                 <p><strong>◎豹子玩法</strong></br>
                     当期开奖号码三个数字相同即中奖</p>
-
+                <h5><strong>【和值玩法规则】</strong></h5>
+                <p><strong>◎和值玩法</strong></br>
+                从0-27中选取一个以上的数字，投注号码与开奖号码和值相同，即中奖</p>
+                <h5><strong>【特码包三玩法规则】</strong></h5>
+                <p><strong>◎特码包三玩法</strong></br>
+                从0-27中任选3个号码组成1注，任意一个选号与开奖号码和值相同，即中奖</p>
             </div>
             <%--<div class="help_col">--%>
-                <%--<h5>筹备中</h5>--%>
+            <%--<h5>筹备中</h5>--%>
             <%--</div>--%>
             <div class="help_col">
                 <h5><strong>总则</strong></h5>
@@ -81,5 +82,5 @@
 <c:import url="../../common/copyright.jsp"/>
 <c:import url="../../common/commonJs.jsp"/>
 <c:import url="../../common/jsCommonLogin.jsp"/>
-<c:import url="../common/bottom.jsp" />
+<c:import url="../common/bottom.jsp"/>
 <c:import url="../../common/bodyEnd.jsp"/>
