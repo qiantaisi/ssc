@@ -7,7 +7,7 @@
 <%@ page import="project38.api.utils.RequestUtils" %>
 <%
     String basePath = RequestUtils.getBasePath(request);
-    String mHostName = request.getScheme() + "://" + "m." + request.getServerName().replace("www.", "");
+    String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
 %>
 <c:import url="../common/bodyStart.jsp"/>
 <c:import url="../common/checkIsChildFrame.jsp"/>
@@ -740,7 +740,7 @@
             money = $("#xyxhInput_3").val();
         } else if (type == 9) {
             caizhong = 'pk10';
-            navIndex = 1;
+            navIndex = 0;
             var numsArr = [];
             for (var i = 0; i < 10; ++i) {
                 var v = $("#xyxhContent_9 span").eq(i).data("num");

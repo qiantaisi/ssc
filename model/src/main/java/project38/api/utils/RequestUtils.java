@@ -38,17 +38,10 @@ public final class RequestUtils {
     public static String getBasePath(HttpServletRequest httpServletRequest) {
         Integer port = getServerPort(httpServletRequest);
         String scheme = getScheme(httpServletRequest);
-        String serverName = httpServletRequest.getServerName();
+        String serverName = getServerName(httpServletRequest);
         String path = httpServletRequest.getContextPath();
 
         StringBuilder builder = new StringBuilder();
-        builder.append(scheme).append("://");
-        builder.append(serverName);
-
-        // 如果不是默认HTTP,80或HTTPS，443
-        if (!(port.equals(HTTP_DEFORT_PORT) && StringUtils.equals(scheme, HTTP_DEFAULT_SCHEME)) && !(port.equals(HTTPS_DEFORT_PORT) && StringUtils.equals(scheme, HTTPS_DEFAULT_SCHEME))) {
-            builder.append(":").append(port);
-        }
 
         builder.append(path).append("/");
         return builder.toString();
@@ -77,5 +70,38 @@ public final class RequestUtils {
      */
     public static Integer getServerPort(HttpServletRequest httpServletRequest) {
         return httpServletRequest.getServerPort();
+    }
+
+    /**
+     * 获取请求域名
+     * @param httpServletRequest request请求
+     * @return
+     */
+    public static String getServerName(HttpServletRequest httpServletRequest) {
+        return httpServletRequest.getServerName();
+    }
+
+    /**
+     * 获取basePathUrl
+     * @param httpServletRequest request请求
+     * @return
+     */
+    public static String getUrl(HttpServletRequest httpServletRequest) {
+        Integer port = getServerPort(httpServletRequest);
+        String scheme = getScheme(httpServletRequest);
+        String serverName = getServerName(httpServletRequest);
+        String path = httpServletRequest.getContextPath();
+
+        StringBuilder builder = new StringBuilder();
+        builder.append(scheme).append("://");
+        builder.append(serverName);
+
+        // 如果不是默认HTTP,80或HTTPS，443
+        if (!(port.equals(HTTP_DEFORT_PORT) && StringUtils.equals(scheme, HTTP_DEFAULT_SCHEME)) && !(port.equals(HTTPS_DEFORT_PORT) && StringUtils.equals(scheme, HTTPS_DEFAULT_SCHEME))) {
+            builder.append(":").append(port);
+        }
+
+        builder.append(path).append("/");
+        return builder.toString();
     }
 }

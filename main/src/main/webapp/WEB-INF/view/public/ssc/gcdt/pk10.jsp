@@ -148,6 +148,7 @@
 <c:import url="gfwf/common/commonJs.jsp" />
 <script>
     var playGroupId = 9;    // 彩种ID
+    var playId = null;
     <c:if test="${not empty playPlListJson}">
     var gfwfPlJson = ${playPlListJson};
     </c:if>
