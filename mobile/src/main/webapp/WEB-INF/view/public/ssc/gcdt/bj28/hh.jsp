@@ -77,15 +77,15 @@
         <tbody>
         <tr>
             <td data-name="红波">
-                <span>红</span>
+                <span><font color="red">红</font></span>
                 <span class="pl" data-plid="14403"></span>
             </td>
             <td data-name="蓝波">
-                <span>蓝</span>
+                <span><font color="blue">蓝</font></span>
                 <span class="pl" data-plid="14405"></span>
             </td>
             <td data-name="绿波">
-                <span>绿</span>
+                <span><font color="green">绿</font></span>
                 <span class="pl" data-plid="14404"></span>
             </td>
         </tr>

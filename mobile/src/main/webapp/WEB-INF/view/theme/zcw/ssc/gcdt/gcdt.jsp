@@ -270,7 +270,7 @@
 
                                 <c:when test="${userItems == 7}">
                                     <li>
-                                        <a data-play_group_id="7" href="<%=basePath%>ssc/gcdt/xy28.html">
+                                        <a data-play_group_id="7" href="<%=basePath%>ssc/gcdt/bj28.html">
                                             <img src="${resPath}images/buy_22.png"/>
                                             <p>
                                                 PC蛋蛋
@@ -597,7 +597,7 @@
                         </li>
 
                         <li>
-                            <a data-play_group_id="7" href="<%=basePath%>ssc/gcdt/xy28.html">
+                            <a data-play_group_id="7" href="<%=basePath%>ssc/gcdt/bj28.html">
                                 <img src="${resPath}images/buy_22.png"/>
                                 <p>
                                     PC蛋蛋
@@ -857,7 +857,7 @@
                     </li>
 
                     <li>
-                        <a data-play_group_id="7" href="<%=basePath%>ssc/gcdt/xy28.html">
+                        <a data-play_group_id="7" href="<%=basePath%>ssc/gcdt/bj28.html">
                             <img src="${resPath}images/buy_22.png"/>
                             <p>
                                 PC蛋蛋

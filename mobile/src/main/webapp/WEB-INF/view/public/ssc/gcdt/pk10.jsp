@@ -32,7 +32,7 @@
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/bjpk10.html">
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/pk10.html">
                         <div class="border_one color_one">
                             官方模式
                         </div>

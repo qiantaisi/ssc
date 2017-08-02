@@ -461,7 +461,7 @@
                     <img src="${resPath}img/ico30.png" alt="">
                 </div>
                 <div class="text">
-                    <b>幸运28</b>
+                    <b>北京28</b>
                     <p>第<i data-name="number"></i>期销售中</p>
                 </div>
             </div>
@@ -486,8 +486,8 @@
             <div class="Result">
                 <p>
                     <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=7">历史开奖</a>
-                    <a onclick="getZstPage('xy28')" href="javascript:void(0)">开奖走势</a>
-                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('xy28')">立即投注</a>
+                    <a onclick="getZstPage('bj28')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('bj28')">立即投注</a>
                 </p>
             </div>
         </li>

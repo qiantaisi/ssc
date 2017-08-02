@@ -11,7 +11,7 @@
 %>
 <c:import url="../../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-gcdt-ffssc-gfwf">
+    <div class="page page-current" id="page-gcdt-pk10-gfwf">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
                 <span class="icon icon-left"></span>
@@ -32,7 +32,7 @@
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/bjpk10.html">
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/pk10.html">
                         <div class="border_one color_two">
                             官方模式
                         </div>
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="content cl-601">
-            <c:import url="./ffssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
+            <c:import url="./pk10/common/common.jsp"/> <%--玩法选择菜单标题--%>
             <div class="cl-900" id="lastOpenInfo">
                 <%--显示第几期彩种--%>
             </div>

@@ -128,7 +128,7 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
     line-height: 30px;
 }
 
-/*幸运28*/
+/*北京28*/
 .plus{
     font-family: Microsoft Yahei;
     color: #666!important;
@@ -144,28 +144,28 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
     background: transparent!important;
 }
 
-#openHistoryList .cl-904 .openNumber i.bluexy28,#lastOpenInfo .cl-1201 i.bluexy28{
+#openHistoryList .cl-904 .openNumber i.bluebj28,#lastOpenInfo .cl-1201 i.bluebj28{
     background: #0074ff!important;
 }
-#openHistoryList .cl-904 .openNumber i.greenxy28,#lastOpenInfo .cl-1201 i.greenxy28{
+#openHistoryList .cl-904 .openNumber i.greenbj28,#lastOpenInfo .cl-1201 i.greenbj28{
     background: #5bae1c!important;
 }
-#openHistoryList .cl-904 .openNumber i.grayxy28,#lastOpenInfo .cl-1201 i.grayxy28{
+#openHistoryList .cl-904 .openNumber i.graybj28,#lastOpenInfo .cl-1201 i.graybj28{
     background: gray!important;
 }
 
-#openHistoryList .cl-904 .openNumber i.redxy28,#lastOpenInfo .cl-1201 i.redxy28,#betContainer .xy28 table tbody tr td .redxy28{
+#openHistoryList .cl-904 .openNumber i.redbj28,#lastOpenInfo .cl-1201 i.redbj28,#betContainer .bj28 table tbody tr td .redbj28{
     background: #f13030!important;
 }
 
-#betContainer .xy28 table tbody tr td .bluexy28{
+#betContainer .bj28 table tbody tr td .bluebj28{
     background: #0074ff!important;
 }
 
-#betContainer .xy28 table tbody tr td .greenxy28{
+#betContainer .bj28 table tbody tr td .greenbj28{
     background: #5bae1c!important;
 }
 
-#betContainer .xy28 table tbody tr td .grayxy28{
+#betContainer .bj28 table tbody tr td .graybj28{
     background: gray!important;
 }

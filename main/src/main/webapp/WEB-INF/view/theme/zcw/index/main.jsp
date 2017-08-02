@@ -561,17 +561,17 @@
 
             <div class="zhongjiang_ul">
                 <ul id="zj_info_marquee">
-                    <c:forEach items="${Notices.noticeList}" var="noticelists">
-                        <li class="clearfix">
-                            <a href="javascript:void(0);" class="left zhongjiang_li1">
-                                    ${noticelists.type}
-                            </a>
-                            <span class="left zhongjiang_name">${noticelists.userName}</span>
-                            <span class="left zhongjiang_jine">
-		        				${noticelists.amount}元
-		        			</span>
-                        </li>
-                    </c:forEach>
+                    <%--<c:forEach items="${Notices.noticeList}" var="noticelists">--%>
+                        <%--<li class="clearfix">--%>
+                            <%--<a href="javascript:void(0);" class="left zhongjiang_li1">--%>
+                                    <%--${noticelists.type}--%>
+                            <%--</a>--%>
+                            <%--<span class="left zhongjiang_name">${noticelists.userName}</span>--%>
+                            <%--<span class="left zhongjiang_jine">--%>
+		        				<%--${noticelists.amount}元--%>
+		        			<%--</span>--%>
+                        <%--</li>--%>
+                    <%--</c:forEach>--%>
                 </ul>
 
             </div>
@@ -619,6 +619,7 @@
     }
 
     $(function () {
+
         var limit="17";
         ajaxRequest({
             url: "<%=basePath%>ajaxGetZxxx.json",
@@ -636,9 +637,37 @@
         });
 
 
+
         var playIds = [1, 2, 3, 15, 16];
         getSscDataMainPage(playIds);
         getWebPopUpNotice();
+        //获取中奖公告信息
+        getNoticeZj();
+
+
+        ajaxRequest({
+            url: "<%=basePath%>ajaxGetZJNotic.json",
+            success: function (json) {
+                console.log("12");
+                if (json.result != 1) {
+                    return;
+                }
+
+                var strHtml = '';
+                $.each(Notices.noticeList, function (index, value) {
+                    strHtml = '<li class="clearfix">';
+                    strHtml = '<a href="javascript:void(0);" class="left zhongjiang_li1">';
+                    strHtml = value.type + '</a>';
+                    strHtml = '<span class="left zhongjiang_name">' + value.userName + '</span>';
+                    strHtml = '<span class="left zhongjiang_jine">';
+                    strHtml = value.amount + '元</span>';
+                    strHtml = '</li>';
+                });
+
+                $("#zj_info_marquee").html(strHtml);
+            }
+
+        });
 
 
         xyxh(null, 1);
@@ -736,6 +765,7 @@
     function getWebPopUpNotice() {
         ajaxRequest({
             url: "<%=basePath%>member/ajaxGetWebPopUpNotice.json",
+            data: {},
             beforeSend: function () {
             },
             success: function (json) {
@@ -772,6 +802,11 @@
                 });
             }
         });
+    }
+
+    //获取中奖公告
+    function getNoticeZj() {
+
     }
 
     $(function () {

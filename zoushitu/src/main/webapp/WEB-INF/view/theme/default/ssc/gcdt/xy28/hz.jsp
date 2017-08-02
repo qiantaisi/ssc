@@ -9,7 +9,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<div class="cl-604 xy28">
+<div class="cl-604 bj28">
     <table>
         <tbody>
         <tr>

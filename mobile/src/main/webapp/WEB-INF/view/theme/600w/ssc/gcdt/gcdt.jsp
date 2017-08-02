@@ -193,7 +193,7 @@
                         <span class="img bg-img-klsf"></span>
                         <span>广东快乐十分</span>
                     </a>
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="7" href="<%=basePath%>ssc/gcdt/xy28.html">
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="7" href="<%=basePath%>ssc/gcdt/bj28.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
                           <i>00</i>
@@ -202,8 +202,8 @@
                           <font>:</font>
                           <i>00</i>
                         </span>
-                        <span class="img bg-img-xy28"></span>
-                        <span>幸运28</span>
+                        <span class="img bg-img-bj28"></span>
+                        <span>北京28</span>
                     </a>
                 </div>
                 <div class="row cl-318 gcdtList">

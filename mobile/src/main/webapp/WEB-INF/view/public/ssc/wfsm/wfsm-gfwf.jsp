@@ -26,7 +26,7 @@
                     <c:when test="${playGroupId == 4}">体彩排列3</c:when>
                     <c:when test="${playGroupId == 5}">福彩3D</c:when>
                     <c:when test="${playGroupId == 6}">六合彩</c:when>
-                    <c:when test="${playGroupId == 7}">幸运28</c:when>
+                    <c:when test="${playGroupId == 7}">北京28</c:when>
                     <c:when test="${playGroupId == 8}">北京快乐8</c:when>
                     <c:when test="${playGroupId == 9}">北京PK10</c:when>
                     <c:when test="${playGroupId == 10}">重庆幸运农场</c:when>
@@ -63,11 +63,11 @@
                         <div class="wfsm_600" id="ssc-parent-menu">
                             <div class="wfsm-602">
                                 <a href="javascript:void(0);" class="wfsm_color_select" data-type="page"
-                                   onclick="javascript:document.getElementById('test1').scrollIntoView()" class="wfsm_601">定位胆</a>
+                                   onclick="javascript:document.getElementById('test1').scrollIntoView()">定位胆</a>
                                 <a href="javascript:void(0);" data-type="page"
-                                   onclick="javascript:document.getElementById('test2').scrollIntoView()" class="wfsm_601">五星</a>
+                                   onclick="javascript:document.getElementById('test2').scrollIntoView()">五星</a>
                                 <a href="javascript:void(0);" data-type="page"
-                                   onclick="javascript:document.getElementById('test3').scrollIntoView()" class="wfsm_601">四星</a>
+                                   onclick="javascript:document.getElementById('test3').scrollIntoView()">四星</a>
                                 <a href="javascript:void(0);" data-type="page"
                                    onclick="javascript:document.getElementById('test4').scrollIntoView()">后三</a>
                                 <a href="javascript:void(0);" data-type="page"

@@ -11,7 +11,7 @@
 %>
 <c:import url="../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-gcdt-xy28">
+    <div class="page page-current" id="page-gcdt-bj28">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
                 <font>彩种列表</font>
@@ -20,13 +20,13 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">幸运28</h1>
+            <h1 class="title">北京28</h1>
         </header>
         <c:import url="common/commonBet.jsp" />
         <div class="content cl-601">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xy28/hz.html">和值</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/bj28/hz.html">和值</a>
                 </div>
             </div>
             <div class="cl-900" id="lastOpenInfo"></div>

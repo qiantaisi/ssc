@@ -98,8 +98,6 @@ public class IndexController extends BaseController {
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
 
-
-
         return this.renderView("index/main", modelMap);
     }
 

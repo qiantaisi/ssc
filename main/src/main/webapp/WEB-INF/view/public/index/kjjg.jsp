@@ -52,7 +52,7 @@
                         <a href="javascript:void(0)" data-playgroupid="11">广东快乐十分</a>
                         <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
                         <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
-                        <a href="javascript:void(0)" data-playgroupid="7">幸运28</a>
+                        <a href="javascript:void(0)" data-playgroupid="7">北京28</a>
                         <a href="javascript:void(0)" data-playgroupid="8" class="last">北京快乐8</a>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         <a href="javascript:void(0)" data-playgroupid="21">吉林快3</a>
                         <a href="javascript:void(0)" data-playgroupid="10">重庆幸运农场</a>
                         <a href="javascript:void(0)" data-playgroupid="11">广东快乐十分</a>
-                        <a href="javascript:void(0)" data-playgroupid="7">幸运28</a>
+                        <a href="javascript:void(0)" data-playgroupid="7">北京28</a>
                         <a href="javascript:void(0)" data-playgroupid="8">北京快乐8</a>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                         <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
                         <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
                         <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
-                        <a href="javascript:void(0)" data-playgroupid="7">幸运28</a>
+                        <a href="javascript:void(0)" data-playgroupid="7">北京28</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide" id="subNav_5">
@@ -151,7 +151,7 @@
                             <option value="11">广东快乐十分</option>
                             <option value="4">体育排列3</option>
                             <option value="5">福彩3D</option>
-                            <option value="7">幸运28</option>
+                            <option value="7">北京28</option>
                             <option value="8">北京快乐8</option>
                         </select>
                         <input class="inp1" type="text" name="qihao" placeholder="输入期数"/>
@@ -1100,7 +1100,7 @@
             <var class="no"></var>
             {{/if}}
             <div class="text">
-                <h3>幸运28<span>第{{number}}期</span></h3>
+                <h3>北京28<span>第{{number}}期</span></h3>
                 <p>每天120期</p>
             </div>
         </div>
@@ -1109,17 +1109,17 @@
                 <span>{{num1}}</span>
                 <span>{{num2}}</span>
                 <span>{{num3}}</span>
-                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xy28')">详情</a>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/bj28')">详情</a>
             </div>
             <p>
             </p>
         </div>
         <div class="box3">
             <a href="<%=basePath%>kjjg.html?playGroupId=7">历史开奖</a>
-            <a href="<%=basePath%>ssc/zst/xy28.html" target="_blank">走势图表</a>
+            <a href="<%=basePath%>ssc/zst/bj28.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
-            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xy28')">购买</a>
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/bj28')">购买</a>
         </div>
     </li>
 </script>
@@ -1784,7 +1784,7 @@
 </script>
 <script type="text/html" id="template_single_7">
     <li>
-        <span class="sp1">幸运28</span>
+        <span class="sp1">北京28</span>
         <span class="sp2">{{number}}</span>
         <span class="sp3">{{openTime}}</span>
         <span class="sp4">
@@ -1795,8 +1795,8 @@
         <span class="sp5">120期</span>
         <span class="sp6">5分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/xy28')"></a></span>
-        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xy28')">立即购彩</a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/bj28')"></a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/bj28')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_8">

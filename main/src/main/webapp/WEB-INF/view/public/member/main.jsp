@@ -50,7 +50,7 @@
                             <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/lhc">六合彩</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 7}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/xy28">幸运28</a>
+                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/bj28">北京28</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 8}">
                             <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/kl8">北京快乐8</a>

@@ -289,11 +289,11 @@
 
                     <div class="zcw_cus_a">
                         <div class="cus_a">
-                            <a href="<%=basePath%>ssc/gcdt/xy28.html">
+                            <a href="<%=basePath%>ssc/gcdt/bj28.html">
                                 <img src="${resPath}img/new_zcw/index1_25.png"/>
                                 <div>
                                     <span class="dus_a">PC蛋蛋</span>
-                                    <span class="dus_b">幸运28赢大奖</span>
+                                    <span class="dus_b">北京28赢大奖</span>
                                 </div>
                             </a>
                         </div>

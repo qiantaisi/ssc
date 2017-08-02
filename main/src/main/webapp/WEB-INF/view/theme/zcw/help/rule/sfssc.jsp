@@ -139,365 +139,273 @@
                     举例：开奖结果为：2,1,3,5,2 万为龙、千为龙虎时：结果 龙(2）大于虎（1），即为开龙；如万为龙，个为虎时，结果一样大，即为开和局！</br>
                     说明：龙1 VS 虎2 即为万为龙，千为虎；龙2 VS 虎4 即为千为龙，十为虎；</p>
             </div>
-            <div class="help_col gfwf-help-col">
-                <div class="gfwf-1">
-                    <div class="gfwf-2" id="top">
-                        <h1><a style=""></a></h1>
-                        <span class="gamek-7">三分时时彩玩法规则</span>
-                    </div>
-                    <br>
-                    <div class="gfwf-3">
-                        <h2><a onclick="javascript:document.getElementById('test1').scrollIntoView()"
-                               href="javascript:;">一、玩法类型及承销</a></h2>
-                        <h2><a onclick="javascript:document.getElementById('test2').scrollIntoView()"
-                               href="javascript:;">二、开奖与购买方式</a></h2>
-                        <h2><a onclick="javascript:document.getElementById('test3').scrollIntoView()"
-                               href="javascript:;">三、兑奖</a></h2>
-                        <h2><a onclick="javascript:document.getElementById('test4').scrollIntoView()"
-                               href="javascript:;">四、玩法说明</a></h2>
-                        <h2><a onclick="javascript:document.getElementById('test5').scrollIntoView()"
-                               href="javascript:;">五、设奖及中奖</a></h2>
-                        <h2><a onclick="javascript:document.getElementById('test6').scrollIntoView()"
-                               href="javascript:;">六、投注方式</a></h2>
-                        <h2><a onclick="javascript:document.getElementById('test7').scrollIntoView()"
-                               href="javascript:;">七、玩法特点</a></h2>
-                        <br>
-                        <b><p id="test1">一、玩法类型及承销</p></b>
-                        时时彩是一种在线即开型彩票玩法，属于基诺型彩票，由市福利彩票发行管理中心负责承销。
-                        <p>&nbsp;</p>
-                        <b><p id="test2">二、开奖与购买方式</p></b>
-                        1.
-                        本站重庆时时彩游戏每天进行仅120期，开奖时间为白天10:00至22:00，每隔10分钟开奖一次；夜场22:00至凌晨01:55，每5分钟开奖一次。购买者可在对其选定的投注号码进行投注，返点越高则投注赔率越低。
-                        2. 购买者可选择机选号码投注、自选号码投注。机选号码投注是指由投注机随机产生投注号码进行投注，自选号码投注是指将购买者选定的号码输入投注机进行投注。</br>
-                        3. 购买者还可进行追号投注。追号投注是指将一注或一组号码进行两期或两期以上的投注。追号可分为连续追号和间隔追号，连续追号指追号的期数是连续的，间隔追号指追号的期数不连续。</br>
-                        4. 如果用户投注成功后，若因销售终端故障、通讯线路故障和投注站信用额度受限等原因造成当期无法开奖的，应退还购买者投注金额。</p></br>
-                        <b><p id="test3">三、兑奖</p></b>
-                        1. 返奖：无论大小奖均返还至用户在本站的账户中，一旦用户中奖，系统将自动返还中奖金额。可继续投注或提款，永无弃奖。</p>
-                        <p>&nbsp;</p>
-                        <b><p id="test4">四、玩法说明</p></b>
-                        1.
-                        时时彩投注区分为万位、千位、百位、十位和个位，各位号码范围为0～9。每期从各位上开出1个号码作为中奖号码，即开奖号码为5位数。时时彩玩法即是竞猜5位开奖号码的全部号码、部分号码或部分号码特征。
-                        <div align="center">
-                            <img src="${resPath}images/wfsm/wfsm01.png" class="wfsm-img">
-                        </div>
-                        </br>
-                        2. 时时彩包括星彩玩、定位胆、不定位、大小单双、任选等玩法。星彩玩法分为二星、前后三星、四星、五星四种玩法如下：</p> </br>
-                        <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC"
-                               class="table-wfsm">
-                            <tbody>
-                            <tr align="center">
-                                <td width="50" height="25" bgcolor="#efefef" class="th-wfsm" colspan="2">玩法</td>
-                                <td width="514" height="25" bgcolor="#efefef" class="th-wfsm">规则</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">五星</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">直选</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竞猜全部5位号码，即万位、千位、百位、十位和个位，且顺序一致。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">四星</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">直选</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竞猜全部4位号码，即千位、百位、十位和个位，且顺序一致。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" rowspan="3" class="td-wfsm">前三/后三</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">直选</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竟猜前/后三码，即(万、千、百)位；或(百、十、个)位，且顺序一致。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">组选三</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竟猜前/后三码，即(万、千、百)位；或(百、十、个)位，顺序不限，且投注时三位号码有两位相同。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">组选六</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竟猜前/后三码，即(万、千、百)位；或(百、十、个)位，顺序不限，且投注时三位号码各不相同。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" rowspan="2" class="td-wfsm">前二</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">直选</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">竟猜前两码，即万位和千位，且顺序一致。</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">组选</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">竟猜前两码，即万位和千位，顺序不限。</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" colspan="2" class="td-wfsm">定位胆</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竞猜万位、千位、百位、十位、个位任意位置上任意1个或1个以上号码。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" colspan="2" class="td-wfsm">不定位</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竞猜对应三星、四星、五星玩法位置上任意1个或1个以上号码，且顺序不限。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" colspan="2" class="td-wfsm">大小单双</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竟猜万位、千位中的"大、小、单、双"中至少各选一个组成一注。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" rowspan="3" class="td-wfsm">任选</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">任选二</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竞猜万位、千位、百位、十位、个位任意位置上任意2个号码或者2个号码和值。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="t-wfsm">任选三</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竞猜万位、千位、百位、十位、个位任意位置上任意3个号码或者3个号码和值。
-                                </td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">任选四</td>
-                                <td width="514" height="25" bgcolor="#FFFFFF" class="td-wfsm">
-                                    竞猜万位、千位、百位、十位、个位任意位置上任意4个号码或者4个号码和值。
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        </br>
-                        注：</br>
-                        <1>、直选：将投注号码以惟一的排列方式进行投注。</br>
-                        <2>、组选：将投注号码的所有排列方式作为一注投注号码进行投注。示例：123，排列方式有123、132、213、231、312、321，共计6种。</br>
-                        <3>、组选三：在三星组选中，如果一注组选号码的3个数字有两个数字相同，则有3种不同的排列方式，因而就有3个中奖机会，这种组选投注方式简称组选三。示例：112，排列方式有112、121、211。</br>
-                        <4>、组选六：在三星组选中，如果一注组选号码的3个数字各不相同，则有6种不同的排列方式，因而就有6个中奖机会，这种组选投注方式简称组选六。示例：123，排列方式有123、132、213、231、312、321，共计6种。</br>
-                        <5>、大小单双：即把10个自然数按“大”“小”，或者“单”，“双”性质分为两组，0-4为小号，5-9为大号。0，2，4，6，8 为双号。1，3，5，7，9 为单号。</br>
-                        </p>
-                        <b><p id="test5">五、设奖及中奖</p></b>
-                        奖金计算说明列表请浏览本站主页“开奖公告”页面，点击重庆时时彩查阅。
-                        <table width="100%" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC"
-                               class="table-wfsm">
-                            <tbody>
-                            <tr align="center">
-                                <td height="25" bgcolor="#eFeFeF" colspan="2" class="th-wfsm">玩法</td>
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">开奖号码</td>
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">投注号码示例</td>
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm"></td>
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">中奖概率</td>
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">单注最高赔率</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" rowspan="7" class="td-wfsm">三星</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">直选(复式)</td>
-                                <td height="25" bgcolor="#FFFFFF" rowspan="2" class="td-wfsm">678</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">678</td>
-                                <td height="25" bgcolor="#FFFFFF" rowspan="3" class="td-wfsm">定位中三码</td>
-                                <td height="25" bgcolor="#FFFFFF" rowspan="3" class="td-wfsm">1/1000</td>
-                                <td height="25" bgcolor="#FFFFFF" rowspan="3" class="td-wfsm">1:950</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">直选(单式)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">678</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">直选和值</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">13</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">13</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">组选(组三)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">113</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">113</td>
-                                <td height="25" bgcolor="#FFFFFF" rowspan="4" class="td-wfsm">不定位中三码</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1/90</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1:316.666</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">组选(组六)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">123</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">123</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1/120</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1:158.333</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">组选和值(组三)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">5(113)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">5(113)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1/90</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1:316.666</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">组选和值(组六)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">6(123)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">6(123)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1/120</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1:158.333</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" rowspan="2" class="td-wfsm">二星</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">直选(前/后二)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">78</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">78</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">定位中三码</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1/100</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1:95</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">组选(前/后二)</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">78</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">78</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">不定位中三码</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1/45</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1:47.5</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#FFFFFF" colspan="2" class="td-wfsm">大小单双</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">678</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">大单</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">大小</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1/16</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">1:3.8</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        </br>
-                        注：</br>
-                        <1>、假设当期的开奖号码为45678则组选三不中奖（后三组选适用开奖号码为45668）。</br>
-                        <2>、前三码和后三码：前三码指开奖号码的前三位号码，后三码指开奖号码的后三位号码。示例：开奖号码为45678，前三码为456，后三码为678。</br>
-                        <3>、前两码和后两码：前两码指开奖号码的前两位号码，后两码指开奖号码的后两位号码。示例：开奖号码为45678，前两码为45，后两码为78。</br>
-                        <4>、定位胆：所选号码与相同位置上和开奖号码一致。示例：开奖号码为45678，万位4即中定位胆万位。</br>
-                        <5>、定位和不定位：定位指投注号码与开奖号码按位一致，不定位指投注号码与开奖号码一致，顺序不限。示例：开奖号码为45678，78则定位中后两码，78或87则为不定位中后两码。</br>
-                        <6>、任选和值：所选号码与开奖号码的和值相同。示例：开奖号码为45678，位置选万位、百位，和值号码即10。</p></br>
-                        </p>
-                        <b><p id="test6">六、投资方式</p></b>
-                        1、五星直选</br>
-                        对万位、千位、百位、十位和个位各选1个号码为一注，每位号码可从0～9全选，投注号码与开奖号码按位一致，即为中奖。</br>
-                        <div class="gfwf-wxsm">
-                            <img src="${resPath}images/wfsm/wfsm02.png" class="wfsm-img">
-                        </div>
-                        </br>
-                        2、四星直选</br>
-                        对千位、百位、十位和个位各选1个号码为一注，每位号码可从0～9全选，投注号码与开奖号码按位一致，即为中奖。</br>
-                        3、三星直选</br>
-                        对百位、十位和个位各选1个号码为一注，每位号码最多可0～9全选，投注号码与开奖号码后三位按位一致即为中奖。</br>
-                        4、三星和值</br>
-                        和值指号码各位数相加之和，如号码001，和值为1。三星和值投注指用某一个三星和值对应的所有号码进行投注，所选和值与开奖号码后三位和值一致即为中奖，单注最高奖金980元。示例：选择三星和值1投注，即用和值1所对应的号码（001、010、100）投注，如开奖号码后三位和值为1即中奖。</br>
-                        <div class="gfwf-wxsm">
-                            <img src="${resPath}images/wfsm/wfsm03.png" class="wfsm-img">
-                        </div>
-                        </br>
-                        5、组三组选</br>
-                        组三包号指用所选号码的所有组三排列方式进行组选三投注，如开奖号码为组三号且包含在所选号码中即为中奖，单注最高奖金326.666元元。示例：组三包号12，共2注（112、122），如开奖号码后三位为112、121、211、122、212、221皆为中奖。
-                        包号速算表如下：</br>
-                        <table width="100%" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC"
-                               class="table-wfsm">
-                            <tbody>
-                            <tr align="center">
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">包号个数（10选n）</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">2</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">3</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">4</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">5</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">6</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">7</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">8</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">9</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">10</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">投注金额（2元）</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">4</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">12</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">24</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">40</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">60</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">84</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">112</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">144</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">180</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">中奖奖金（元）</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">653.332</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">653.332</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">653.332</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">653.332</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">653.332</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">653.332</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">653.332</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">653.332</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">653.332</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        6、组六组选</br>
-                        组六包号指用所选号码的所有组六排列方式进行组选六投注，如开奖号码为组六号且包含在所选号码中即为中奖，单注最高奖金163.333元。示例：组六包号123，共1注，如开奖号码后三位为123、132、213、231、312、321皆为中奖。
-                        包号速算表如下：</br>
-                        <table width="100%" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC"
-                               class="table-wfsm">
-                            <tbody>
-                            <tr align="center">
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">包号个数（10选n）</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">4</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">5</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">6</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">7</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">8</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">9</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">10</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">投注金额（2元）</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">8</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">20</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">40</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">74</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">112</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">168</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">240</td>
-                            </tr>
-                            <tr align="center">
-                                <td height="25" bgcolor="#eFeFeF" class="th-wfsm">中奖奖金（元）</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">326.666</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">326.666</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">326.666</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">326.666</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">326.666</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">326.666</td>
-                                <td height="25" bgcolor="#FFFFFF" class="td-wfsm">326.666</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        7、二星直选</br>
-                        对万位和千位各选1个号码为一注，每位号码最多可0～9全选，投注号码与开奖号码后两位按位一致即为中奖。</br>
-                        8、二星和值</br>
-                        和值指号码各位数相加之和，如号码01，和值为1。二星和值投注指用某一个二星和值对应的所有号码进行投注，所选和值与开奖号码前两位和值一致即为中奖，单注最高奖金98元。示例：选择二星和值1投注，即用和值1所对应的号码（01、10）投注，如开奖号码前两位和值为1即中奖。</br>
-                        9、二星组选</br>
-                        从号码0—9中任选两个数字对万位和千位进行投注，最多可0～9全选。所选号码与开奖号码前两位一致，顺序不限，即为中奖。示例：选择12，共1注，如开奖号码前两位为12或21即中奖。</br>
-                        10、大小单双</br>
-                        对万位和千位的大小单双4种特征中各选一种特征为一注，最多可4种特征全选，所选特征与开奖号码后两位号码特征一致即中奖。示例：开奖号码后两位为78，则大大、大双、单双、单大为中奖。</br>
-                        <div class="gfwf-wxsm">
-                            <img src="${resPath}images/wfsm/wfsm-04.png" class="wfsm-img">
-                        </div>
-                        <br>
-                        <b><p id="test7">七、玩法特点</p></b>
-                        <div class="gfwf-wxsm">
-                            <img src="${resPath}images/wfsm/wfsm05.png" class="wfsm-img">
-                        </div>
-                        </br>
-                    </div>
-                </div>
-                <div class="wfsm-top">
-            <span class="wfsm-back">
-         <a onclick="javascript:document.getElementById('top').scrollIntoView()" href="javascript:;">回到顶部</a></br>
-            </span>
-                    <div class="wfsm-kong"></div>
-                </div>
+            <div class="help_col">
+                <h4><strong>【五星玩法】</strong></h4>
+                <p><strong>◎五星直选>>直选复式 </strong></br>
+                    从万位、千位、百位、十位和个位各选1个号码为一注，每位号码可从0～9全选，投注号码与开奖号码按位一致，即为中奖。</br>
+                    ※举例：投注方案：23456 开奖号码：23456，即中五星直选。</p>
+                <p><strong>◎五星直选>>直选单式 </strong></br>
+                    从万位、千位、百位、十位和个位各手动输入1个号码为一注，每位号码可从0～9全选，投注号码与开奖号码按位一致，即为中奖。</br>
+                    ※举例：投注方案：23456 开奖号码：23456，即中五星直选。</p>
+
+                <hr>
+                <h4><strong>【四星玩法】</strong></h4>
+                <p><strong>◎四星直选>>直选复式 </strong></br>
+                    从千位、百位、十位和个位各选1个号码为一注，每位号码可从0～9全选，投注号码与开奖号码按位一致，即为中奖。</br>
+                    ※举例：投注方案：3456 开奖号码：3456，即中五星直选。</p>
+                <p><strong>◎四星直选>>直选单式 </strong></br>
+                    从千位、百位、十位和个位各手动输入1个号码为一注，每位号码可从0～9全选，投注号码与开奖号码按位一致，即为中奖。</br>
+                    ※举例：投注方案：3456 开奖号码：3456，即中五星直选。</p>
+
+                <hr>
+                <h4><strong>【后三玩法】</strong></h4>
+                <p><strong>◎后三直选>>直选复式 </strong></br>
+                    从百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：345 开奖号码后三位：1345，即中后三位直选。</p>
+                <p><strong>◎后三直选>>直选单式 </strong></br>
+                    从百、十、个位中至少各手动输入1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：345 开奖号码后三位：1345，即中后三位直选。</p>
+                <p><strong>◎后三直选>>后三组合 </strong></br>
+                    从百、十、个位中至少各选择1个号码组成1-3星的组合共三注，当个位数以开奖号码相同，则中一个3等奖；如果个位和十位号码和开奖号码相同，则中一个3等奖以及一个2等奖，以次类推，最高可中3个奖。</br>
+                    ※举例：投注方案：购买：6+7+8，该票共6元，由以下三注：678(三星)、78(二星)、8(一星)构成 开奖号码：678，即可中奖 一星、二星、三星各一注。</p>
+                <p><strong>◎后三直选>>直选和值 </strong></br>
+                    所选号码数值等于开奖号码的百、十、个三个数值相加之和，即为中奖。</br>
+                    ※举例：投注方案：和值：1，开奖号码：后三位001、010、100，即中后三值选。</p>
+                <p><strong>◎后三直选>>直选跨度 </strong></br>
+                    所选数值与开奖号码后三位最大和最小数字相减之差，即为中奖。</br>
+                    ※举例：投注方案：跨度：8，开奖号码：**129，最大号码9与最小号码1相减值等于8，所选号与跨度号码相同即中奖。</p>
+                <p><strong>◎后三组选>>组三复式 </strong></br>
+                    从0-9号码中至少选择2个号码组成两注，所选号码与开奖号码的百、十、个位相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：588开奖号码：后三位588(顺序不限)，即可中后三组选三。</p>
+                <p><strong>◎后三组选>>组三单式 </strong></br>
+                    手动输入一个3位数号码组成一注，三个数字中必须有两个数字相同，输入的数字与开奖的百、十、个位相同，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：001 开奖号码：后三位010(顺序不限)，即中后三组选三。</p>
+                <p><strong>◎后三组选>>组六单式 </strong></br>
+                    从0-9号码中至少选择3个号码组成一注，所选号码与开奖号码的百、十、个位相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：258开奖号码：后三位852(顺序不限)，即可中后三组选六。</p>
+                <p><strong>◎后三组选>>组六单式 </strong></br>
+                    手动输入一个3位数号码组成一注，所选的号码与开奖的号码的百、十、个位相同，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：123 开奖号码：后三位321(顺序不限)，即中后三组选六。</p>
+                <p><strong>◎后三组选>>混合组选 </strong></br>
+                    手动输入一个3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，投注号码以开奖号码后三位相同，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：001和123 开奖号码：后三位010(顺序不限)，即中后三组选三，或后三位312(顺序不限)，即中后三组选六。</p>
+                <p><strong>◎后三组选>>组选和值 </strong></br>
+                    开奖号码后3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，所选数值等于开奖号码的百、十、个位三个数字相加之和，即为中奖。</br>
+                    ※举例：投注方案：和值：3，开奖号码：后三位003(顺序不限)，即中后三组选三，或者后三位012(顺序不限)即中后三组选六。</p>
+                <p><strong>◎后三组选>>组选包胆 </strong></br>
+                    从0-9号码中任意选择一个胆码，开奖号码后三位为组选三或组选六形态(不含豹子号，投注号码与开奖后三位中任意一位相同，即为中奖。</br>
+                    ※举例：投注方案：包胆3：开奖号码：后三位3XX或者33X，即中后三组选三，后三位3XY，即中后三组选六。</p>
+                <p><strong>◎后三其它>>和值尾数 </strong></br>
+                    所选号码等于开奖号码的百、十、个位数字相加之和的尾数，即为中奖。</br>
+                    ※举例：投注方案：和值尾数8 开奖号码：后三位936，和值尾数为8，即中和值尾数。</p>
+                <p><strong>◎后三其它>>特殊号 </strong></br>
+                    所选号码特殊属性与开奖号码后三位号码属性一致，即为中奖。其中：1.顺子号的百、十、个位不分顺序(特别号码：019、089也是顺子号)；2.对子号指的是开奖号码的后三位当中，任意两位数字相同的三位数号码。</br>
+                    ※举例：投注方案：豹子顺子对子 开奖号码：后三位888，即中豹子；后三位678，即中顺子；后三位558，即中对子。</p>
+
+                <hr>
+                <h4><strong>【前三玩法】</strong></h4>
+                <p><strong>◎前三直选>>直选复式 </strong></br>
+                    从万、千、百位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：345 开奖号码前三位：345，即中前三位直选。</p>
+                <p><strong>◎前三直选>>直选单式 </strong></br>
+                    从万、千、百位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：134 开奖号码后三位：1345，即中前三位直选。</p>
+                <p><strong>◎前三直选>>前三组合 </strong></br>
+                    从万、千、百位中至少各选择1个号码组成1-3星的组合共三注，当百位数以开奖号码相同，则中一个3等奖；如果百位和千位号码和开奖号码相同，则中一个3等奖以及一个2等奖，以次类推，最高可中3个奖。</br>
+                    ※举例：投注方案：购买：6+7+8，该票共6元，由以下三注：678(三星)、78(二星)、8(一星)构成 开奖号码：678，即可中奖 一星、二星、三星各一注。</p>
+                <p><strong>◎前三直选>>直选和值 </strong></br>
+                    所选号码数值等于开奖号码的万、百、十三个数值相加之和，即为中奖。</br>
+                    ※举例：投注方案：和值：1，开奖号码：前三位001、010、100，即中前三值选。</p>
+                <p><strong>◎前三直选>>直选跨度 </strong></br>
+                    所选数值与开奖号码后三位最大和最小数字相减之差，即为中奖。</br>
+                    ※举例：投注方案：跨度：8，开奖号码：**129，最大号码9与最小号码1相减值等于8，所选号与跨度号码相同即中奖。</p>
+                <p><strong>◎前三组选>>组三复式 </strong></br>
+                    从0-9号码中至少选择2个号码组成两注，所选号码与开奖号码的万、千、百位相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：588开奖号码：前三位588(顺序不限)，即可中前三组选三。</p>
+                <p><strong>◎前三组选>>组三单式 </strong></br>
+                    手动输入一个3位数号码组成一注，三个数字中必须有两个数字相同，输入的数字与开奖的万、千、百位相同，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：001 开奖号码：前三位010(顺序不限)，即中前三组选三。 </p>
+                <p><strong>◎前三组选>>组六单式 </strong></br>
+                    从0-9号码中至少选择3个号码组成一注，所选号码与开奖号码的万、百、十位相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：258开奖号码：前三位852(顺序不限)，即可中前三组选六。</p>
+                <p><strong>◎前三组选>>组六单式 </strong></br>
+                    手动输入一个3位数号码组成一注，所选的号码与开奖的号码的万、百、十位相同，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：123 开奖号码：前三位321(顺序不限)，即中后三组选六。</p>
+                <p><strong>◎前三组选>>混合组选 </strong></br>
+                    手动输入一个3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，投注号码以开奖号码前三位相同，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：001和123 开奖号码：前三位010(顺序不限)，即中前三组选三，或前三位312(顺序不限)，即中前三组选六。</p>
+                <p><strong>◎前三组选>>组选和值 </strong></br>
+                    开奖号码后3位数号码组成一注(不包含豹子号)，开奖号码后3位为组选三或组选六形态，所选数值等于开奖号码的万、百、十位三个数字相加之和，即为中奖。</br>
+                    ※举例：投注方案：和值：3，开奖号码：前三位003(顺序不限)，即中前三组选三，或者前三位012(顺序不限)即中前三组选六。</p>
+                <p><strong>◎前三组选>>组选包胆 </strong></br>
+                    从0-9号码中任意选择一个胆码，开奖号码前三位为组选三或组选六形态(不含豹子号，投注号码与开奖后三位中任意一位相同，即为中奖。</br>
+                    ※举例：投注方案：包胆3：开奖号码：前三位3XX或者33X，即中前三组选三，前三位3XY，即中前三组选六。</p>
+                <p><strong>◎前三其它>>和值尾数 </strong></br>
+                    所选号码等于开奖号码的万、百、十位数字相加之和的尾数，即为中奖。</br>
+                    ※举例：投注方案：和值尾数8 开奖号码：前三位936，和值尾数为8，即中和值尾数。</p>
+                <p><strong>◎前三其它>>特殊号 </strong></br>
+                    所选号码特殊属性与开奖号码后三位号码属性一致，即为中奖。其中：1.顺子号的万、百、十位不分顺序(特别号码：019、089也是顺子号)；2.对子号指的是开奖号码的前三位当中，任意两位数字相同的三位数号码。</br>
+                    ※举例：投注方案：豹子顺子对子 开奖号码：前三位888，即中豹子；前三位678，即中顺子；前三位558，即中对子。</p>
+
+                <hr>
+                <h4><strong>【前二玩法】</strong></h4>
+                <p><strong>◎前二直选>>直选复式 </strong></br>
+                    从万、千位中至少各选择1个号码组成一注，所选号码与开奖号码的前2位相同，且顺序一致，即为中奖。 </br>
+                    ※举例：投注方案：58 开奖号码前两位：58，即中前二直选。</p>
+                <p><strong>◎前二直选>>直选单式 </strong></br>
+                    手动输入2个号码组成一注，输入号码的万、千位与开奖号码相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：58 开奖号码前两位：58，即中前二直选。</p>
+                <p><strong>◎前二直选>>直选和值 </strong></br>
+                    开奖号码的万、千位中两个数字相加之和等于所选和值，即为中奖。 </br>
+                    ※举例：投注方案：和值1 开奖号码前两位：01或10，即中前二和值。</p>
+                <p><strong>◎前二直选>>直选跨度 </strong></br>
+                    所选数值等于前二位最大数与最小数相减之差，即为中奖。</br>
+                    ※举例：投注方案：跨度9 开奖号码：90***，最大值9与最小值0相减之差即为跨度值，当所选号与跨度号码相同，即为中奖。</p>
+                <p><strong>◎前二组选>>组选复式 </strong></br>
+                    从0-9号码中选取两个号码组成一注，所选号码与开奖号码的万、千位相同，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：58 开奖号码：前两位 58 或 85(顺序不限，不含对子号)，即为中奖。</p>
+                <p><strong>◎前二组选>>组选单式 </strong></br>
+                    手动输入2个号码组成一注，输入号码的万、千位与开奖号码相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：58 开奖号码：前两位 58 或 85(顺序不限，不含对子号)，即为中奖。</p>
+                <p><strong>◎前二组选>>组选和值 </strong></br>
+                    开奖号码的万、千位中两个数字相加之和等于所选号(不含对子号)，即为中奖。</br>
+                    ※举例：投注方案：和值1 开奖号码前两位：01或10(顺序不限，不含对子号)，即中前二组选。 </p>
+                <p><strong>◎前三组选>>组选包胆 </strong></br>
+                    从0-9号码中任意选取一个胆码，开奖号码前二位各不相同(不含对子号)，投注号码与开奖号码前二位中任意一位相同，即为中奖。</br>
+                    ※举例：投注方案：包胆8 开奖号码：前二位 8×，且×不等于8，即中前二组选。</p>
+
+
+                <hr>
+                <h4><strong>【定位胆玩法】</strong></h4>
+                <p><strong>◎定位胆>>直选复式 </strong></br>
+                    从万、千、百、十、个位中至少选择1个号码组成一注，每注由一个号码组成，所选号码与相同位置上的开奖号码一致，即为中奖。</br>
+                    ※举例：投注方案：万位1 开奖号码：万位1，即中定位胆万位。</p>
+
+
+                <hr>
+                <h4><strong>【不定位玩法】</strong></h4>
+                <p><strong>◎三星>>前三一码 </strong></br>
+                    从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码万、千、百位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：1 开奖号码：前三位，至少出现1个1，即中前三一码不定位。</p>
+                <p><strong>◎三星>>前三二码 </strong></br>
+                    从0-9中至少 选择2个以上号码，每组由2个号码组成，只要开奖号码万、千、百位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：12 开奖号码：前三位，至少出现1和2各一个，即中前三二码不定位。</p>
+                <p><strong>◎三星>>后三一码 </strong></br>
+                    从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码百、十、个位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖） </br>
+                    ※举例：投注方案：1 开奖号码：后三位至少出现1个1，即中后三一码不定位。</p>
+                <p><strong>◎三星>>后三二码 </strong></br>
+                    从0-9中至少 选择2个以上号码，每组由2个号码组成，只要开奖号码百、十、个位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：12 开奖号码：后三位至少出现1和2各一个，即中后三二码不定位。</p>
+                <p><strong>◎四星>>前四一码 </strong></br>
+                    从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码万、千、百、十位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：1 开奖号码：前四位至少出现1个1，即中前四不定位。</p>
+                <p><strong>◎四星>>前四二码 </strong></br>
+                    从0-9中至少选择2个以上号码，每组由2个号码组成，只要开奖号码万、千、百、十位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：12 开奖号码：前四位至少出现1和2各一个，即中前四二码不定位。</p>
+                <p><strong>◎四星>>后四一码 </strong></br>
+                    从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码千、百、十、个位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：1 开奖号码：后四位至少出现1个1，即中后四不定位。</p>
+                <p><strong>◎四星>>后四二码 </strong></br>
+                    从0-9中至少选择2个以上号码，每组由2个号码组成，只要开奖号码千、百、十、个位中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：12 开奖号码：后四位至少出现1和2各一个，即中后四二码不定位。</p>
+                <p><strong>◎五星>>五星一码 </strong></br>
+                    从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：1 开奖号码：至少出现1个1，即中五星不定位。</p>
+                <p><strong>◎五星>>五星二码 </strong></br>
+                    从0-9中至少选择2个以上号码，每组由2个号码组成，只要开奖号码中同时包含所选的2个号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：12 开奖号码：至少出现1和2各一个，即中五星二码不定位。</p>
+                <p><strong>◎五星>>五星三码 </strong></br>
+                    从0-9中至少选择3个以上号码，每组由3个号码组成，只要开奖号码中同时包含所选的3个号码，即为中奖。（同个号码出现多次只计一次中奖）</br>
+                    ※举例：投注方案：123 开奖号码：至少出现1和2及3各一个，即中五星三码不定位。</p>
+
+
+                <hr>
+                <h4><strong>【大小单双玩法】</strong></h4>
+                <p><strong>◎大小单双>>前二大小单双 </strong></br>
+                    对万、千位的“大（56789）小（01234）、单（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的位置、形态相同，即为中奖。</br>
+                    ※举例：投注方案：小双 开奖号码：万、千位“小、双”，即中前二大小单双。</p>
+                <p><strong>◎大小单双>>后二大小单双 </strong></br>
+                    对十位和个位的“大（56789）小（01234）、单（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的位置、形态相同，即为中奖。</br>
+                    ※举例：投注方案：大单 开奖号码：十、个位“大单”，即中后二大小单双。</p>
+                <p><strong>◎大小单双>>前三大小单双 </strong></br>
+                    对万、千和百位的“大（56789）小（01234）、单（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的位置、形态相同，即为中奖。</br>
+                    ※举例：投注方案：小双小 开奖号码：万、千、百位“小双小”，即中前三大小单双。</p>
+                <p><strong>◎大小单双>>后三大小单双 </strong></br>
+                    对百、十和个位的“大（56789）小（01234）、单（13579）双（02468）”形态进行购买，所选号码的位置、形态与开奖号码的位置、形态相同，即为中奖。</br>
+                    ※举例：投注方案：大单大 开奖号码：百、十、个位“大单大”，即中后三大小单双。</p>
+
+
+                <hr>
+                <h4><strong>【任选二玩法】</strong></h4>
+                <p><strong>◎任二直选>>直选复式 </strong></br>
+                    从万、千、百、十、个位中至少选择两个位置，至少各选1个号码组成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：万位5，百位8 开奖号码：51812，即中任二直选。</p>
+                <p><strong>◎任二直选>>直选单式 </strong></br>
+                    从万、千、百、十、个位中至少选择两个位置,至少手动输入一个两位数的号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、百位，输入号码58 开奖号码：51812，即中任二直选(单式)。</p>
+                <p><strong>◎任二直选>>直选和值 </strong></br>
+                    从万、千、百、十、个位中至少选择两个位置,至少选择一个和值号码构成一注，所选两个位置的开奖号码相加之和与所选和值一致，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、百位，选择和值号码13 开奖号码：51812，即中任二直选和值。</p>
+                <p><strong>◎任二组选>>组选复式 </strong></br>
+                    从万、千、百、十、个位中至少选择两个位置,至少选择两个号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、百位，选择号码85 开奖号码：51812或者81512，即中任二组选。</p>
+                <p><strong>◎任二组选>>组选单式 </strong></br>
+                    从万、千、百、十、个位中至少选择两个位置,至少手动输入一个两位数的号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、百位，输入号码85 开奖号码：51812或者81512，即中任二组选(单式)。</p>
+                <p><strong>◎任二组选>>组选和值 </strong></br>
+                    从万、千、百、十、个位中至少选择两个位置,至少选择一个和值号码构成一注，所选两个位置的开奖号码相加之和与所选和值一致(不含对子号)，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、百位，选择和值号码13 开奖号码：51812，即中任二组选和值。</p>
+
+                <hr>
+                <h4><strong>【任选三玩法】</strong></h4>
+                <p><strong>◎任三直选>>直选复式 </strong></br>
+                    从万、千、百、十、个位中至少选择三个位置，至少各选1个号码组成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：万位5，百位8,个位2 开奖号码：51812，即中任三直选。</p>
+                <p><strong>◎任三直选>>直选单式 </strong></br>
+                    从万、千、百、十、个位中至少选择三个位置,至少手动输入一个三位数的号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、百,个位，输入号码582 开奖号码：51812，即中任三直选(单式)。</p>
+                <p><strong>◎任三直选>>直选和值 </strong></br>
+                    从万、千、百、十、个位中至少选择三个位置,至少选择一个和值号码构成一注，所选三个位置的开奖号码相加之和与所选和值一致，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、百、个位，选择和值号码15 开奖号码：51812，即中任三直选和值。</p>
+                <p><strong>◎任三组选>>组三复式 </strong></br>
+                    从万、千、百、十、个位中至少选择三个位置,至少选择两个号码构成两注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、十、个位,选择号码12 开奖号码：11812，即中任三组三。</p>
+                <p><strong>◎任三组选>>组三单式 </strong></br>
+                    从万、千、百、十、个位中至少选择三个位置,至少手动输入三个号码构成一注，三个数字中必须有二个数字相同，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</br>
+                    ※举例： 投注方案：位置选择万、十、个位,输入号码112 开奖号码：11812，即中任三组三(单式)。</p>
+                <p><strong>◎任三组选>>组六复式 </strong></br>
+                    从万、千、百、十、个位中至少选择三个位置,至少选择三个号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：投注方案：位置选择万、十、个位,选择号码512 开奖号码：51812，即中任三组六。</p>
+                <p><strong>◎任三组选>>组六单式 </strong></br>
+                    从万、千、百、十、个位中至少选择三个位置,至少手动输入三个号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、十、个位,输入号码512 开奖号码：51812，即中任三组六(单式)。</p>
+                <p><strong>◎任三组选>>混合组选 </strong></br>
+                    从万、千、百、十、个位中至少选择三个位置,至少手动输入三个号码构成一注(不含豹子号)，开奖号码指定位置的号码为组三或组六形态，所选号码与开奖号码指定位置上的号码相同，且顺序不限，即为中奖。</br>
+                    ※举例：投注方案：选择位置万、十、个位，输入号码001以及512 开奖号码：03410(指定位置号码顺序不限)即中任三组三；或者51812(指定位置号码顺序不限)即中任三组六。</p>
+                <p><strong>◎任三组选>>组选和值 </strong></br>
+                    从万、千、百、十、个位中至少选择三个位置,至少选择一个和值号码构成一注，所选三个位置的开奖号码相加之和与所选和值一致(不包含豹子号)，即为中奖。</br>
+                    ※举例：投注方案：位置选择万、十、个位,选择和值号码8 开奖号码：51812，即中任三组选和值。</p>
+
+                <hr>
+                <h4><strong>【任选四玩法】</strong></h4>
+                <p><strong>◎任四直选>>直选复式 </strong></br>
+                    从万、千、百、十、个位中至少选择四个位置，至少各选1个号码组成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：万位5，千位1,百位8,十位1 开奖号码：51812，即中任四直选。</p>
+                <p><strong>◎任四直选>>直选单式 </strong></br>
+                    从万、千、百、十、个位中至少选择四个位置,至少手动输入一个四位数的号码构成一注，所选号码与开奖号码的指定位置上的号码相同，且顺序一致，即为中奖。</br>
+                    ※举例：投注方案：位置选择万位、千位、百位、十位，输入号码5181 开奖号码：51812，即中任四直选(单式)。</p>
+                <p><strong>◎任四组选>>组选24 </strong></br>
+                    从万、千、百、十、个位中至少选择四个位置,号码区至少选择四个号码构成一注，所选号码与开奖号码指定位置上的号码相同，顺序不限，且开奖号码没有重复，即为中奖。</br>
+                    ※举例：投注方案：位置选择千、百、十、个位,号码选择0568 开奖号码：10568(指定位置号码顺序不限且没有重复)，即可中任四组选24。</p>
+                <p><strong>◎任四组选>>组选12 </strong></br>
+                    从万、千、百、十、个位中至少选择四个位置,从“二重号”中至少选择一个号码，“单号”中至少选择两个号码组成一注，所选号码与开奖号码指定位置上的号码相同，且所选的二重号码在开奖号码指定位置中出现2次，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：位置选择千、百、十、个位,二重号：8；单号：06 开奖号码：10688(指定位置号码顺序不限)，即可中任四组选12。</p>
+                <p><strong>◎任四组选>>组选6 </strong></br>
+                    从万、千、百、十、个位中至少选择四个位置,从“二重号”中至少选择两个号码组成一注，所选号码与开奖号码指定位置上的号码相同，且所选的2个二重号码在开奖号码指定位置中分别出现了2次，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：位置选择千、百、十、个位,二重号：28 开奖号码：12288(指定位置号码顺序不限)，即可中任四组选6。</p>
+                <p><strong>◎任四组选>>组选4 </strong></br>
+                    从万、千、百、十、个位中至少选择四个位置,从“三重号”中至少选择一个号码，“单号”中至少选择一个号码组成一注，所选号码与开奖号码指定位置上的号码相同，且所选三重号码在在开奖号码指定位置中出现3次，顺序不限，即为中奖。</br>
+                    ※举例：投注方案：位置选择千、百、十、个位,三重号：8；单号：2 开奖号码：18828(指定位置号码顺序不限)，即可中任四组选4。</p>
             </div>
             <div class="help_col">
                 <p><strong>一、玩法类型及承销</strong></br>

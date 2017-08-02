@@ -1219,7 +1219,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
                 }
             ]
         });
@@ -1414,7 +1414,7 @@ $(function () {
                 playGroupId = 5;
             } else if (inputCaizhong == '六合彩') {
                 playGroupId = 6;
-            } else if (inputCaizhong == '幸运28') {
+            } else if (inputCaizhong == '北京28') {
                 playGroupId = 7;
             } else if (inputCaizhong == '北京快乐8') {
                 playGroupId = 8;
@@ -2946,7 +2946,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐', '北京PK10', '重庆幸运农场', '广东快乐十分', '分分时时彩', '两分时时彩', '三分时时彩', '五分时时彩']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐', '北京PK10', '重庆幸运农场', '广东快乐十分', '分分时时彩', '两分时时彩', '三分时时彩', '五分时时彩']
                 }
             ]
         });
@@ -3130,7 +3130,7 @@ $(function () {
                 playGroupId = 5;
             } else if (inputCaizhong == '六合彩') {
                 playGroupId = 6;
-            } else if (inputCaizhong == '幸运28') {
+            } else if (inputCaizhong == '北京28') {
                 playGroupId = 7;
             } else if (inputCaizhong == '北京快乐8') {
                 playGroupId = 8;
@@ -4624,7 +4624,7 @@ $(function () {
         $(".cl-602 a").eq(0).trigger("click");
         $(".cl-610 a").eq(0).trigger("click");
     });
-    $(document).on("pageInit", "#page-gcdt-xy28", function (e, id, page) {
+    $(document).on("pageInit", "#page-gcdt-bj28", function (e, id, page) {
         initSscPage(7);
         $(".cl-602 a").eq(0).trigger("click");
     });
@@ -4713,7 +4713,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
                 }
             ]
         });
@@ -4743,7 +4743,7 @@ $(function () {
             } else if (playGroupId == 6) {
                 $("#inputCaizhong").val("六合彩");
             } else if (playGroupId == 7) {
-                $("#inputCaizhong").val("幸运28");
+                $("#inputCaizhong").val("北京28");
             } else if (playGroupId == 8) {
                 $("#inputCaizhong").val("北京快乐8");
             } else if (playGroupId == 9) {
@@ -5183,7 +5183,7 @@ $(function () {
                 playGroupId = 5;
             } else if (inputCaizhong == '六合彩') {
                 playGroupId = 6;
-            } else if (inputCaizhong == '幸运28') {
+            } else if (inputCaizhong == '北京28') {
                 playGroupId = 7;
             } else if (inputCaizhong == '北京快乐8') {
                 playGroupId = 8;
@@ -5238,7 +5238,7 @@ $(function () {
         } else if (playGroupId == 6) {
             $("#inputCaizhong").val("六合彩");
         } else if (playGroupId == 7) {
-            $("#inputCaizhong").val("幸运28");
+            $("#inputCaizhong").val("北京28");
         } else if (playGroupId == 8) {
             $("#inputCaizhong").val("北京快乐8");
         } else if (playGroupId == 9) {
