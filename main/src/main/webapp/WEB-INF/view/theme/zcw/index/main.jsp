@@ -442,14 +442,14 @@
                 <img src="${resPath}images/common/index_97.png"/>
                 资讯信息
             </div>
-            <ul class="index_zixun_ul">
-                <c:forEach items="${ArticleResult.articleList}" var="items">
+            <ul class="index_zixun_ul" id="zxxx">
+                <%--<c:forEach items="${ArticleResult.articleList}" var="items">
                     <li style="width: 469px;height: 30px;">
                         <a href="<%=basePath%>zixun/${items.id}.html">
                             <span>【 ${items.name} 】</span>${items.title} : ${items.remarks}
                         </a>
                     </li>
-                </c:forEach>
+                </c:forEach>--%>
             </ul>
         </div>
     </div>
@@ -619,6 +619,23 @@
     }
 
     $(function () {
+        var limit="17";
+        ajaxRequest({
+            url: "<%=basePath%>ajaxGetZxxx.json",
+            data: {limit: limit},
+            success:function(obj){
+                    var zlist=obj.articleList
+                var strzxxx=''
+                for(var i in zlist){
+                    var items=zlist[i];
+
+                    strzxxx+='<li style="width: 469px;height: 30px;><a href="<%=basePath%>zixun/'+items.id+'.html"><span>【 '+items.name+' 】</span>'+items.title+' : '+items.remarks+'></a></li>';
+                }
+                $("#zxxx").html(strzxxx);
+            }
+        });
+
+
         var playIds = [1, 2, 3, 15, 16];
         getSscDataMainPage(playIds);
         getWebPopUpNotice();
@@ -772,74 +789,6 @@
         });
 
     });
-    <%--//根据id获取资讯信息内容并跳转页面--%>
-    <%--function ziXun(id){--%>
-        <%--location.href =' <%=basePath%>zixun/' + id + '.html';--%>
-    <%--}--%>
-
-    <%--function registerLogin() {--%>
-        <%--var loginAccount = $.trim($("#registerLoginAccount").val());--%>
-        <%--var loginPassword = $.trim($("#registerLoginPassword").val());--%>
-        <%--var yzm = $.trim($("#registerLoginYzm").val());--%>
-
-        <%--if (!loginAccount) {--%>
-            <%--alert("请输入账号");--%>
-            <%--return;--%>
-        <%--}--%>
-        <%--if (!loginPassword) {--%>
-            <%--alert("请输入密码");--%>
-            <%--return;--%>
-        <%--}--%>
-        <%--if (!yzm) {--%>
-            <%--alert("请输入验证码");--%>
-            <%--return;--%>
-        <%--}--%>
-
-        <%--ajaxRequest({--%>
-            <%--url: "<%=basePath%>member/ajaxLogin.json",--%>
-            <%--data: {--%>
-                <%--yzm: yzm,--%>
-                <%--account: loginAccount,--%>
-                <%--password: $.md5(loginPassword)--%>
-            <%--},--%>
-            <%--beforeSend: function () {--%>
-                <%--showLoading();--%>
-            <%--},--%>
-            <%--success: function (json) {--%>
-                <%--if (json.result == 1) {--%>
-                    <%--$.cookie("uid", json.userId, {path: "/"});--%>
-                    <%--$.cookie("token", json.token, {path: "/"});--%>
-                    <%--window.location.href = "<%=basePath%>main.html";--%>
-                <%--} else {--%>
-                    <%--refreshYzm(document.getElementById('registerYzmImg2'));--%>
-                    <%--Tools.toast("登录失败：" + json.description);--%>
-                <%--}--%>
-                <%--hideLoading();--%>
-            <%--}--%>
-        <%--});--%>
-    <%--}--%>
-    <%--function refreshYzm(obj) {--%>
-        <%--var src = $(obj).attr("src");--%>
-        <%--var params = getRequest(src);--%>
-
-        <%--src = "<%=basePath%>code/yzm?timestamp=" + (new Date()).getTime();--%>
-        <%--$.each(params, function (index, value) {--%>
-            <%--src += '&' + value.key + '=' + value.value;--%>
-        <%--});--%>
-        <%--$(obj).attr("src", src);--%>
-    <%--}--%>
-
-
-    <%--function xytz(type) {--%>
-        <%--if (type == 6) {--%>
-            <%--var arr = [];--%>
-            <%--for (var i = 0; i < 7; ++i) {--%>
-                <%--arr.push(Tools.parseInt($("#xyxhContent_6 span").eq(i).data("num")));--%>
-            <%--}--%>
-
-        <%--}--%>
-    <%--}--%>
-
 
    function openXyxh(type) {
         var caizhong = '';

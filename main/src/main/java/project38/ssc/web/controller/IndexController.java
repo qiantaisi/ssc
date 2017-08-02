@@ -13,6 +13,7 @@ import project38.api.result.RegisterResult;
 import project38.api.result.WebInfoResult;
 import project38.api.utils.ApiUtils;
 import project38.api.result.SscHistoryResult3;
+import project38.api.result.ArticleResult;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -43,6 +44,17 @@ public class IndexController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         RegisterResult registerResult= ApiUtils.getRegisterResult(1,companyShortName);
         return registerResult;
+    }
+
+
+    @RequestMapping(value = "/ajaxGetZxxx.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public ArticleResult ajaxGetZxxx(String limit) throws Exception {
+        String companyShortName = this.getCompanyShortName();
+        Integer numer=Integer.valueOf(limit);
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        ArticleResult articleResult= ApiUtils.getArtList(companyShortName, 0, numer);
+        return articleResult;
     }
 
     @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
@@ -85,7 +97,7 @@ public class IndexController extends BaseController {
         modelMap.put("webInfo", webInfoResult);
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
-        modelMap.put("ArticleResult", ApiUtils.getArtList(companyShortName, 0, 10));
+
 
 
         return this.renderView("index/main", modelMap);
