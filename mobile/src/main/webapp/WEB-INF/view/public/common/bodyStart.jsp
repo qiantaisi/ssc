@@ -13,7 +13,7 @@
     <jsp:include page="../../common/commonMeta.jsp" />
     <jsp:include page="../../common/commonCss.jsp" />
 
-    <link rel="stylesheet" href="${resPath}css/style.css?v=20170731">
+    <link rel="stylesheet" href="${resPath}css/style.css?v=20170803">
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170731">
     <link rel="stylesheet" href="${resPath}css/gfwf_css.css?v=2017031">
     <link rel="stylesheet" href="${resPath}theme/${themeBottomNav}/css/base-template.css?v=20170628">

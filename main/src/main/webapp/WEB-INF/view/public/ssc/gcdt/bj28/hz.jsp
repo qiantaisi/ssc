@@ -157,7 +157,7 @@
                     <td><strong class="color-red pl" data-plid="9376"></strong></td>
                     <td><input type="text" class="table-txt" data-name="26" data-plid="9376"/></td>
 
-                    <td><span class="ball-28xyicon grayxy27">27</span></td>
+                    <td><span class="ball-28xyicon grayxy28">27</span></td>
                     <td><strong class="color-red pl" data-plid="9377"></strong></td>
                     <td><input type="text" class="table-txt" data-name="27" data-plid="9377"/></td>
                 </tr>
