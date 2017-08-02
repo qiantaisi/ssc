@@ -57,26 +57,26 @@
                 <span class="staer1">前一</span>
             </a>
         </div>
-        <div class="hide" id="playGroup_qdwd">
+        <div class="hide" id="playGroup_dwd">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
                data-fun_random="random_5xzxfs"
                data-fun_zhushu="zhushu_5xzxfs"
                data-fun_content="content_5xzxfs"
-               data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html"
+               data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/dwd/dwd.html"
                data-play_id="497"
                data-play_pl_id="14207"
                data-name="定位胆">
                 <span class="zxfs">定位胆</span>
             </a>
         </div>
-        <div class="hide" id="playGroup_qer">
+        <div class="hide" id="playGroup_qe">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
                data-fun_random="random_4xzxfs"
                data-fun_zhushu="zhushu_4xzxfs"
                data-fun_content="content_4xzxfs"
-               data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html"
+               data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/qe/qe.html"
                data-play_id="499"
                data-play_pl_id="14209"
                data-name="前二">
@@ -89,7 +89,7 @@
                data-fun_random="random_4xzxfs"
                data-fun_zhushu="zhushu_4xzxfs"
                data-fun_content="content_4xzxfs"
-               data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html"
+               data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/qsan/qsan.html"
                data-play_id="499"
                data-play_pl_id="14209"
                data-name="前三">
