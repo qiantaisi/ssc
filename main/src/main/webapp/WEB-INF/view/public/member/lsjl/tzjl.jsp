@@ -205,13 +205,14 @@
                 // 数据
                 var str = '';
                 $.each(json.sscBetsList, function (index, value) {
+                    console.log(value.playId);
                     var currentPageNum = (json.pageNum - 1) * json.pageSize;
                     str += '<tr>';
                     str += '<td>' + (index + currentPageNum + 1) + '</td>';
                     str += '<td>' + value.orderNumber + '</td>';
                     str += '<td>' + Tools.formatDate(value.createTime) + '</td>';
                     str += '<td>' + getPlayGroupName(value.playGroupId) + '</td>';
-                    str += '<td>' + getPlayName(value.playId) + '</td>';
+                    str += '<td>' + value.playName + '</td>';
                     str += '<td>' + value.playPl + '</td>';
                     str += '<td>' + value.number + '</td>';
                     str += '<td class="content-tzjl">' + value.content + '</td>';
