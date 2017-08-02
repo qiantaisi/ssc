@@ -620,18 +620,19 @@
 
     $(function () {
 
-        var limit="17";
+        var limit = "17";
         ajaxRequest({
             url: "<%=basePath%>ajaxGetZxxx.json",
             data: {limit: limit},
-            success:function(obj){
-                    var zlist=obj.articleList
-                var strzxxx=''
-                for(var i in zlist){
-                    var items=zlist[i];
+            success: function (obj) {
+                var zlist = obj.articleList;
+                var strzxxx = '';
 
-                    strzxxx+='<li style="width: 469px;height: 30px;><a href="<%=basePath%>zixun/'+items.id+'.html"><span>【 '+items.name+' 】</span>'+items.title+' : '+items.remarks+'></a></li>';
-                }
+                $.each(zlist, function (index, value) {
+                    var urlStr = CONFIG.BASEURL + 'zixun/'+ value.id + '.html';
+                    strzxxx += '<li style="width: 469px;height: 30px;"><a href="'+ urlStr +'">' +
+                        '<span>【 ' + value.name + ' 】</span>' + value.title + ' : ' + value.remarks + '></a></li>';
+                });
                 $("#zxxx").html(strzxxx);
             }
         });
