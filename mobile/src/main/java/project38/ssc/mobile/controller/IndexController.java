@@ -134,13 +134,6 @@ public class IndexController extends BaseController{
         return this.renderView("index/login", modelMap);
     }
 
-    @RequestMapping(value = "/ajaxGetZJNotic.json", method = {RequestMethod.GET, RequestMethod.POST})
-    @ResponseBody
-    public SscZJNoticeResult ajaxGetZJNotic(){
-        String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getNotices(companyShortName);
-    }
-
     @RequestMapping(value = "/ajaxGetWebInfo.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public WebInfoResult ajaxGetWebInfo() {
