@@ -201,12 +201,12 @@
         <li>
             <div class="p-img fl"><img src="${resPath}img/p11.png"></div>
             <div class="p-url fl">
-                <h3>幸运28</h3>
-                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/xy28.html?type=1')">基本走势</a>
-                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/xy28.html?type=2')">K线图</a>
-                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/xy28.html?type=3')">直方图</a>
-                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/xy28.html?type=4')">统计遗漏</a>
-                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/xy28.html?type=5')">历史开奖数据</a>
+                <h3>北京28</h3>
+                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/bj28.html?type=1')">基本走势</a>
+                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/bj28.html?type=2')">K线图</a>
+                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/bj28.html?type=3')">直方图</a>
+                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/bj28.html?type=4')">统计遗漏</a>
+                <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/bj28.html?type=5')">历史开奖数据</a>
             </div>
         </li><!--
         <li>

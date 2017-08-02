@@ -12,7 +12,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>幸运28</h2>
+                <h2>北京28</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="number"></i>期</p>
                 <div class="select">
@@ -56,7 +56,7 @@
                     <li>
                         <b>快钱玩法</b>
                         <p>
-                            <span><a href="javascript:void(0)" data-url="xy28-hz">和值</a></span>
+                            <span><a href="javascript:void(0)" data-url="bj28-hz">和值</a></span>
                         </p>
                     </li>
                     <%--<li>--%>

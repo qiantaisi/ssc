@@ -31,7 +31,7 @@
 .caizhong-bg-10,.bg-img-cqxync {
     background-image:url(../img/hico19.png);
 }
-.caizhong-bg-7,.bg-img-xy28 {
+.caizhong-bg-7,.bg-img-bj28 {
     background-image:url(../img/hico20.png);
 }
 .caizhong-bg-9,.bg-img-sfssc {
@@ -159,11 +159,11 @@
     color: #FFFFFF!important;
 }
 .bili_w table tbody tr td,.hs_w table tbody tr td{width: 50%}
-.xy28 table tbody tr td span:nth-child(1){
+.bj28 table tbody tr td span:nth-child(1){
     float: left;
     margin-left: 1.2rem;
 }
-.xy28 table tbody tr td span:nth-child(2){
+.bj28 table tbody tr td span:nth-child(2){
     float: left;
     margin-left: 0.4rem;
     line-height: 1.4rem;

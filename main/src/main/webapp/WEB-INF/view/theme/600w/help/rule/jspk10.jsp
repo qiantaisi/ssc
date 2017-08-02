@@ -60,7 +60,7 @@
                     <strong>冠亚和大小</strong>：“冠亚和值”大于11时投注“大”的注单视为中奖，小于或等于11时投注“小”的注单视为中奖，其余视为不中奖。</br>
                     <strong>冠亚和指定</strong>：“冠亚和值”可能出现的结果为3～19， 投中对应“冠亚和值”数字的视为中奖，其余视为不中奖。</p>
             </div>
-            <div class="help_col show">
+            <div class="help_col">
                 <span id="test1"></span>
                 <h4><strong>【前一玩法】</strong></h4>
                 <p>

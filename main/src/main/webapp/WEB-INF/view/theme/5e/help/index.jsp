@@ -116,8 +116,8 @@
                             <a href="<%=basePath%>help/rule/bjkl8.html"><p>北京快乐8</br><span>北京快乐8</span></p></a>
                         </li>
                         <li class="li6">
-                            <h4><span><a href="<%=basePath%>help/rule/xy28.html"><img src="${resPath}img/ico30.png"/></a></span></h4>
-                            <a href="<%=basePath%>help/rule/xy28.html"><p>幸运28</br><span>幸运28</span></p></a>
+                            <h4><span><a href="<%=basePath%>help/rule/bj28.html"><img src="${resPath}img/ico30.png"/></a></span></h4>
+                            <a href="<%=basePath%>help/rule/bj28.html"><p>北京28</br><span>北京28</span></p></a>
                         </li>
                     </ul>
                 </div>

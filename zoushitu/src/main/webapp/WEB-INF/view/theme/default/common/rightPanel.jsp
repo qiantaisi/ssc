@@ -317,7 +317,7 @@
                         <li>
                             <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
                                class="item-content">
-                                <div class="item-media"><i class="icon bg-img-xy28"></i></div>
+                                <div class="item-media"><i class="icon bg-img-bj28"></i></div>
                                 <div class="item-inner">
                                     <div class="item-title">玩法说明</div>
                                 </div>

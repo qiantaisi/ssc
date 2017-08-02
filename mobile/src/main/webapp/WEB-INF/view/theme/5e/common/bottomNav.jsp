@@ -53,7 +53,7 @@
         <%--<li><a href="<%=basePath%>ssc/gcdt/kl8.html">北京快乐8</a></li>--%>
         <%--<li><a href="<%=basePath%>ssc/gcdt/pl3.html">体彩排列3</a></li>--%>
         <%--<li><a href="<%=basePath%>ssc/gcdt/xync.html">重庆幸运农场</a></li>--%>
-        <%--<li><a href="<%=basePath%>ssc/gcdt/xy28.html">幸运28</a></li>--%>
+        <%--<li><a href="<%=basePath%>ssc/gcdt/bj28.html">北京28</a></li>--%>
         <%--<li><a href="<%=basePath%>ssc/gcdt/klsf.html">广东快乐十分</a></li>--%>
         <%--</ul>--%>
     </div>

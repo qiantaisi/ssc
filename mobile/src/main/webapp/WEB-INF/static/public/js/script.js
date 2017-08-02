@@ -1339,7 +1339,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
                 }
             ]
         });
@@ -1534,7 +1534,7 @@ $(function () {
                 playGroupId = 5;
             } else if (inputCaizhong == '六合彩') {
                 playGroupId = 6;
-            } else if (inputCaizhong == '幸运28') {
+            } else if (inputCaizhong == '北京28') {
                 playGroupId = 7;
             } else if (inputCaizhong == '北京快乐8') {
                 playGroupId = 8;
@@ -2320,13 +2320,13 @@ $(function () {
                         var sum = num1 + num2 + num3;
 
                         if($.inArray(sum,[0,13,14,27]) >= 0){
-                            colorBg = "grayxy28";
+                            colorBg = "graybj28";
                         } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
-                            colorBg = "greenxy28";
+                            colorBg = "greenbj28";
                         } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
-                            colorBg = "bluexy28";
+                            colorBg = "bluebj28";
                         } else{
-                            colorBg = 'redxy28';
+                            colorBg = 'redbj28';
                         }
 
                         obj.sum = sum;
@@ -2452,13 +2452,13 @@ $(function () {
                         var sum = num1 + num2 + num3;
 
                         if($.inArray(sum,[0,13,14,27]) >= 0){
-                            colorBg = "grayxy28";
+                            colorBg = "graybj28";
                         } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
-                            colorBg = "greenxy28";
+                            colorBg = "greenbj28";
                         } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
-                            colorBg = "bluexy28";
+                            colorBg = "bluebj28";
                         } else{
-                            colorBg = 'redxy28';
+                            colorBg = 'redbj28';
                         }
 
                         lastOpenData.sum = sum;
@@ -3306,7 +3306,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐', '北京PK10', '重庆幸运农场', '广东快乐十分', '分分时时彩', '两分时时彩', '三分时时彩', '五分时时彩']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐', '北京PK10', '重庆幸运农场', '广东快乐十分', '分分时时彩', '两分时时彩', '三分时时彩', '五分时时彩']
                 }
             ]
         });
@@ -3490,7 +3490,7 @@ $(function () {
                 playGroupId = 5;
             } else if (inputCaizhong == '六合彩') {
                 playGroupId = 6;
-            } else if (inputCaizhong == '幸运28') {
+            } else if (inputCaizhong == '北京28') {
                 playGroupId = 7;
             } else if (inputCaizhong == '北京快乐8') {
                 playGroupId = 8;
@@ -5203,6 +5203,106 @@ $(function () {
         $(".wx-select2 a").eq(0).trigger("click");
     });
 
+    //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-pk10-gfwf", function (e, id, page) {
+        initSscPage(1);
+
+        //官方玩法，彩种玩法选择点击事件
+        $(".wx-select a").unbind("click");  //移除被选元素的事件处理程序
+        $(".wx-select a").click(function () {
+            var nowPageToN = $(this).hasClass("selected");
+            // 判断当前按钮是否已被触发
+            if(!nowPageToN){
+                var url = $(this).attr("data-url");
+                getSubGfwfSscPage(url, function(){
+                    //执行官方玩法事件
+                    gfwfEvent();
+                    renderPlayName();
+                    $(".page").find(".gfwf_xz").addClass("gfwf_wh");
+                    $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+                    $(".page").find(".x_wrap").removeClass("Fixed");
+                    $(".page").find(".gfwf_xz").removeClass("Fixed");
+                    $(".page").find(".gfwf_mask2").removeClass("Fixed");
+
+                    statusChange();
+
+                });
+            }
+
+            $(".wx-select a").removeClass("selected");
+            $(".wx-select a").find("span").removeClass("zxfs");
+            $(".wx-select a").find("span").addClass("staer1");
+            $(this).addClass("selected");
+            $(this).find("span").removeClass("staer1");
+            $(this).find("span").addClass("zxfs");
+
+            // 添加选中状态，方便获取相关数据
+            $(".wx-select a.selected").removeClass("selected");
+            $(this).addClass("selected");
+            //清除当前注数与金额状态
+            $("#zhushu").html("0");
+            $("#nowMoney").html("0");
+        });
+
+        // $(".gfwf_xz .wx-select a").trigger("click");
+        $(".wx-select2 a").click(function() {
+            clearSelected();
+            $(".wx-select2 a").removeClass("selected");
+            $(".wx-select2 a").find("span").removeClass("zxfs");
+            $(".wx-select2 a").find("span").addClass("staer1");
+            $(this).addClass("selected");
+            $(this).find("span").removeClass("staer1");
+            $(this).find("span").addClass("zxfs");
+
+            var id = $(this).attr("data-name");    //获取被选元素的数据
+            $(".wx-select .show").removeClass("show").addClass("hide");
+            $("#playGroup_" + id).removeClass("hide").addClass("show");
+
+            $(".wx-select .show a").removeClass("selected");
+            $(".wx-select .show a").find("span.zxfs").addClass("staer1");
+            $(".wx-select .show a").find("span.zxfs").removeClass("zxfs");
+            $(".wx-select .show a").find("span").eq(0).removeClass("staer1");
+            $(".wx-select .show a").find("span").eq(0).addClass("zxfs");
+            var url = $(".wx-select .show a").eq(0).attr("data-url");
+            getSubGfwfSscPage(url, function(){
+                //执行官方玩法事件
+                gfwfEvent();
+                renderPlayName();
+            });
+
+            // 添加选中状态，方便获取相关数据
+            $(".wx-select a.selected").removeClass("selected");
+            $(".wx-select .show a").eq(0).addClass("selected");
+            //清除当前注数与金额状态
+            $("#zhushu").html("0");
+            $("#nowMoney").html("0");
+
+            if ($(".wx-select .show a").length <= 1) {
+
+                $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+                $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+                $(".page").find(".x_wrap").removeClass("Fixed");
+                $(".page").find(".gfwf_xz").removeClass("Fixed");
+                $(".page").find(".gfwf_mask2").removeClass("Fixed");
+            }
+
+            renderPlayName();
+        });
+
+        function renderPlayName() {
+            var groupName = $(".wx-select2 a.selected span.zxfs").html();
+            var playName = $(".wx-select .show a span.zxfs").parent().attr("data-name");
+
+            $("#gfwf_playGroupName").html(groupName);
+            $("#gfwf_playName").html(playName);
+
+            $(".gfwf-title span").html(groupName);
+            $(".gfwf-playName span font").html(playName);
+        }
+
+        $(".wx-select2 a").eq(0).trigger("click");
+    });
+
     $(document).on("pageInit", "#page-gcdt-tjssc", function (e, id, page) {
         initSscPage(2);
         $(".cl-602 a").eq(0).trigger("click");
@@ -5225,7 +5325,7 @@ $(function () {
         $(".cl-602 a").eq(0).trigger("click");
         $(".cl-610 a").eq(0).trigger("click");
     });
-    $(document).on("pageInit", "#page-gcdt-xy28", function (e, id, page) {
+    $(document).on("pageInit", "#page-gcdt-bj28", function (e, id, page) {
         initSscPage(7);
         $(".cl-602 a").eq(0).trigger("click");
     });
@@ -5313,7 +5413,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '幸运28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
                 }
             ]
         });
@@ -5343,7 +5443,7 @@ $(function () {
             } else if (playGroupId == 6) {
                 $("#inputCaizhong").val("六合彩");
             } else if (playGroupId == 7) {
-                $("#inputCaizhong").val("幸运28");
+                $("#inputCaizhong").val("北京28");
             } else if (playGroupId == 8) {
                 $("#inputCaizhong").val("北京快乐8");
             } else if (playGroupId == 9) {
@@ -5783,7 +5883,7 @@ $(function () {
                 playGroupId = 5;
             } else if (inputCaizhong == '六合彩') {
                 playGroupId = 6;
-            } else if (inputCaizhong == '幸运28') {
+            } else if (inputCaizhong == '北京28') {
                 playGroupId = 7;
             } else if (inputCaizhong == '北京快乐8') {
                 playGroupId = 8;
@@ -5838,7 +5938,7 @@ $(function () {
         } else if (playGroupId == 6) {
             $("#inputCaizhong").val("六合彩");
         } else if (playGroupId == 7) {
-            $("#inputCaizhong").val("幸运28");
+            $("#inputCaizhong").val("北京28");
         } else if (playGroupId == 8) {
             $("#inputCaizhong").val("北京快乐8");
         } else if (playGroupId == 9) {

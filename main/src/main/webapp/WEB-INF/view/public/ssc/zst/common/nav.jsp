@@ -30,7 +30,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)" onclick="getZstPage('klsf')">广东快乐十分</a>
-                        <a href="javascript:void(0)" onclick="getZstPage('xy28')">幸运28</a>
+                        <a href="javascript:void(0)" onclick="getZstPage('bj28')">北京28</a>
                     </li>
                     <li>
                         <a href="javascript:void(0)" onclick="getZstPage('xyft')">幸运飞艇</a>
