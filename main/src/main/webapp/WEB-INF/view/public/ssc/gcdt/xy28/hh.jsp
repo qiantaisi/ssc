@@ -45,7 +45,7 @@
                     <td><strong class="color-red pl" data-plid="14394"></strong></td>
                     <td><input type="text" class="table-txt" data-name="小" data-plid="14394"/></td>
 
-                    <td>红波</td>
+                    <td><font color="red">红波</font></td>
                     <td><strong class="color-red pl" data-plid="14403"></strong></td>
                     <td><input type="text" class="table-txt" data-name="红波" data-plid="14403"/></td>
 
@@ -63,7 +63,7 @@
                     <td><strong class="color-red pl" data-plid="14396"></strong></td>
                     <td><input type="text" class="table-txt" data-name="双" data-plid="14396"/></td>
 
-                    <td>绿波</td>
+                    <td><font color="green">绿波</font></td>
                     <td><strong class="color-red pl" data-plid="14404"></strong></td>
                     <td><input type="text" class="table-txt" data-name="绿波" data-plid="14404"/></td>
 
@@ -81,7 +81,7 @@
                     <td><strong class="color-red pl" data-plid="14398"></strong></td>
                     <td><input type="text" class="table-txt" data-name="小单" data-plid="14398"/></td>
 
-                    <td>蓝波</td>
+                    <td><font color="blue">蓝波</font></td>
                     <td><strong class="color-red pl" data-plid="14405"></strong></td>
                     <td><input type="text" class="table-txt" data-name="蓝波" data-plid="14405"/></td>
 
