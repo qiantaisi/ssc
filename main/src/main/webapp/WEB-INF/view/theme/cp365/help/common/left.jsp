@@ -34,7 +34,7 @@
                 <p class="<c:if test="${param.playGroupId == 11}">acti</c:if>"><a href="<%=basePath%>help/rule/gd10.html">广东快乐十分</a></p>
                 <p class="<c:if test="${param.playGroupId == 4}">acti</c:if>"><a href="<%=basePath%>help/rule/pl3.html">体彩排列3</a></p>
                 <p class="<c:if test="${param.playGroupId == 5}">acti</c:if>"><a href="<%=basePath%>help/rule/fc3d.html">福彩3D</a></p>
-                <p class="<c:if test="${param.playGroupId == 7}">acti</c:if>"><a href="<%=basePath%>help/rule/xy28.html">幸运28</a></p>
+                <p class="<c:if test="${param.playGroupId == 7}">acti</c:if>"><a href="<%=basePath%>help/rule/bj28.html">北京28</a></p>
                 <p class="<c:if test="${param.playGroupId == 8}">acti</c:if>"><a href="<%=basePath%>help/rule/bjkl8.html">北京快乐8</a></p>
             </div>
         </li>

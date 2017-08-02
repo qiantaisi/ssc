@@ -84,7 +84,7 @@
                     </div>
 
                     <!--<a href="javascript:void(0)" onclick="getSscPage('pl3')"><img src="${resPath}img/ico20.png" alt=""><var>体彩排列3</var></a>-->
-                    <!--<a href="javascript:void(0)" onclick="getSscPage('xy28')"><img src="${resPath}img/ico30.png" alt=""><var>幸运28</var></a>-->
+                    <!--<a href="javascript:void(0)" onclick="getSscPage('bj28')"><img src="${resPath}img/ico30.png" alt=""><var>北京28</var></a>-->
                     <!--<a href="javascript:void(0)" onclick="getSscPage('kl8')"><img src="${resPath}img/ico25.png" alt=""><var>北京快乐8</var></a>-->
                 </div>
             </li>
@@ -114,7 +114,7 @@
                     <a href="javascript:void(0)" onclick="getSscPage('jlk3')"><img src="${resPath}img/jlk3.png" alt=""><var>吉林快3</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('xync')"><img src="${resPath}img/ico29.png" alt=""><var>重庆幸运农场</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('klsf')"><img src="${resPath}img/ico26.png" alt=""><var>广东快乐十分</var></a>
-                    <a href="javascript:void(0)" onclick="getSscPage('xy28')"><img src="${resPath}img/ico30.png" alt=""><var>幸运28</var></a>
+                    <a href="javascript:void(0)" onclick="getSscPage('bj28')"><img src="${resPath}img/ico30.png" alt=""><var>北京28</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('kl8')"><img src="${resPath}img/ico25.png" alt=""><var>北京快乐8</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('efssc')"><img src="${resPath}img/efssc.png" alt=""><var>两分时时彩</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('sfssc')"><img src="${resPath}img/sfssc.png" alt=""><var>三分时时彩</var></a>

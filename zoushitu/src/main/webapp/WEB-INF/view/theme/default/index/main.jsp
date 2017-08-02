@@ -217,9 +217,9 @@
             <%--</a>--%>
             <%--</div>--%>
             <%--<div class="row">--%>
-            <%--<a class="col-33" href="<%=basePath%>ssc/zst/xy28/jbzst.html">--%>
+            <%--<a class="col-33" href="<%=basePath%>ssc/zst/bj28/jbzst.html">--%>
             <%--<img src="${resPath}img/hico20.png" alt="">--%>
-            <%--<span>幸运28</span>--%>
+            <%--<span>北京28</span>--%>
             <%--</a>--%>
             <%--<a class="col-33" href="<%=basePath%>ssc/zst/kl8/jbzst.html">--%>
             <%--<img src="${resPath}img/hico11.png" alt="">--%>
@@ -421,7 +421,7 @@
             <div class="item-media"><img src="${resPath}img/hico20.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
                 <div class="item-title-row">
-                    <div class="item-title">幸运28</div>
+                    <div class="item-title">北京28</div>
                     <div class="item-after">{{number}}期&nbsp;{{lastOpenTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
                 </div>
                 <div class="item-subtitle">

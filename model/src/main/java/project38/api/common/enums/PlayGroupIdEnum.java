@@ -10,7 +10,7 @@ public enum PlayGroupIdEnum {
     PL3(4L, "体彩排列3", "pl3", false),
     FC3D(5L, "福彩3D", "fc3d", false),
     LHC(6L, "六合彩", "lhc", false),
-    XY28(7L, "幸运28", "xy28", false),
+    bj28(7L, "北京28", "bj28", false),
     KL8(8L, "北京快乐8", "kl8", false),
     PK10(9L, "北京PK10", "pk10", true),
     XYNC(10L, "重庆幸运农场", "xync", false),

@@ -79,7 +79,7 @@
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/xync')">重庆幸运农场</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/klsf')">广东快乐十分</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/kl8')">北京快乐8</a>
-            <a href="javascript:void(0)" onclick="openGcdt('gcdt/xy28')">幸运28</a>
+            <a href="javascript:void(0)" onclick="openGcdt('gcdt/bj28')">北京28</a>
         </strong>
     </div>
 </div>
@@ -125,7 +125,7 @@
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/kl8')">北京快乐8</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/fc3d')">福彩3D</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/pl3')">体彩排列3</a>
-            <a href="javascript:void(0)" onclick="openGcdt('gcdt/xy28')">幸运28</a>
+            <a href="javascript:void(0)" onclick="openGcdt('gcdt/bj28')">北京28</a>
         </strong>
     </div>
 </div>

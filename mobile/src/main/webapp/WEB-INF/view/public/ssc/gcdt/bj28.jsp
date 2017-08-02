@@ -11,7 +11,7 @@
 %>
 <c:import url="../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-gcdt-xy28">
+    <div class="page page-current" id="page-gcdt-bj28">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
                 <span class="icon icon-left"></span>
@@ -20,15 +20,15 @@
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
-            <h1 class="title">幸运28</h1>
+            <h1 class="title">北京28</h1>
         </header>
         <c:import url="common/commonBet.jsp"/>
         <div class="content cl-601">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xy28/hh.html">混合</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xy28/hz.html">和值</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xy28/tmb3.html">特码包三</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/bj28/hh.html">混合</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/bj28/hz.html">和值特码</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/bj28/tmb3.html">特码包三</a>
                 </div>
             </div>
             <div class="cl-900" id="lastOpenInfo"></div>
@@ -58,9 +58,9 @@
                 {{if openCodeArr != null}}
                      {{each openCodeArr as value index}}
                        {{if index < 2}}
-                          <i class="redxy28">{{value}}</i><i class="plus">+</i>
+                          <i class="redbj28">{{value}}</i><i class="plus">+</i>
                        {{else}}
-                          <i class="redxy28">{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
+                          <i class="redbj28">{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
                        {{/if}}
                     {{/each}}
                 {{else}}
@@ -76,9 +76,9 @@
         <span class="cl-1201 cl-1203">
             {{each openCodeArr as value index}}
                {{if index < 2}}
-                <i class="redxy28">{{value}}</i><i class="plus">+</i>
+                <i class="redbj28">{{value}}</i><i class="plus">+</i>
                {{else}}
-                <i class="redxy28">{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
+                <i class="redbj28">{{value}}</i><i class="plus">=</i>&nbsp;<i class="{{colorBg}}">{{sum}}</i>
                {{/if}}
             {{/each}}
         </span>

@@ -13,7 +13,7 @@
         <div class="main">
             <div class="main-box" style="width:1005px;">
                 <div class="main-nav">
-                    <div class="cplogo"><img src="${resPath}zst/img/xy28.png" alt="幸运28" /><span>幸运28</span></div>
+                    <div class="cplogo"><img src="${resPath}zst/img/bj28.png" alt="北京28" /><span>北京28</span></div>
                     <c:import url="common/nav.jsp" />
                     <ul class="btn-navs">
                         <li class="fff" data-contentid="zhexianData" data-id="shuju1">基本走势</li>
@@ -22,7 +22,7 @@
                         <%--<li data-id="shuju4">遗漏统计</li>--%>
                         <li data-id="shuju5">历史开奖数据</li>
                         <li>
-                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/xy28')">立即投注</a>
+                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/bj28')">立即投注</a>
                         </li>
                     </ul>
                 </div>
@@ -149,7 +149,7 @@
                         </div>
                         <div class="main-li-right" style="visibility: hidden;">
                             <div>
-                                <a href="javascript:void(0)" onclick="getSscPage('gcdt/xy28')">立即投注</a>
+                                <a href="javascript:void(0)" onclick="getSscPage('gcdt/bj28')">立即投注</a>
                             </div>
                         </div>
                     </div>
@@ -384,7 +384,7 @@
                             <div class="tou">
                                 <h4>第 <span id="number"></span> 期 &nbsp <font id="openDate"></font>开奖</h4>
                             </div>
-                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/xy28')"><img class="btnjiang" src="${resPath}zst/img/jiang.png" alt=""></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/bj28')"><img class="btnjiang" src="${resPath}zst/img/jiang.png" alt=""></a>
                             <div class="jiezhi">
                                 <h3>
                                     <p><font id="tip"></font>
@@ -401,7 +401,7 @@
         </div>
     </div>
     <div class="xiajiao">
-        快速购买 幸运28
+        快速购买 北京28
     </div>
     <div class="mb">
     </div>

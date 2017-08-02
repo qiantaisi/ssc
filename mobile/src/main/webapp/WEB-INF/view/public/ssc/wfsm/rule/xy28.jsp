@@ -29,8 +29,8 @@
         当期开奖号码和值，符合投注组合，即中奖</p>
     <p><strong>◎豹子玩法</strong></br>
         当期开奖号码三个数字相同即中奖</p>
-    <h5><strong>【和值玩法规则】</strong></h5>
-    <p><strong>◎和值玩法</strong></br>
+    <h5><strong>【和值特码玩法规则】</strong></h5>
+    <p><strong>◎和值特码玩法</strong></br>
         从0-27中选取一个以上的数字，投注号码与开奖号码和值相同，即中奖</p>
     <h5><strong>【特码包三玩法规则】</strong></h5>
     <p><strong>◎特码包三玩法</strong></br>

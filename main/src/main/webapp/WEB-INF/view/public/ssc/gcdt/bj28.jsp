@@ -12,7 +12,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>幸运28</h2>
+                <h2>北京28</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="number"></i>期</p>
                 <div class="select">
@@ -56,9 +56,9 @@
                     <li>
                         <b>快钱玩法</b>
                         <p>
-                            <span><a href="javascript:void(0)" data-url="xy28-hh">混合</a></span>
-                            <span><a href="javascript:void(0)" data-url="xy28-hz">和值</a></span>
-                            <span><a href="javascript:void(0)" data-url="xy28-tmb3">特码包三</a></span>
+                            <span><a href="javascript:void(0)" data-url="bj28-hh">混合</a></span>
+                            <span><a href="javascript:void(0)" data-url="bj28-hz">和值特码</a></span>
+                            <span><a href="javascript:void(0)" data-url="bj28-tmb3">特码包三</a></span>
                         </p>
                     </li>
                 </ul>
@@ -81,19 +81,19 @@
         var arr = [];
         var tmpStr = '';
         var sum = 0;
-        var colorBg = 'redxy28';
+        var colorBg = 'redbj28';
 
         for (var i = 0; i < 3; ++i) {
             var valSum = Math.floor(Math.random() * 10);
             sum += valSum;
             if($.inArray(sum,[0,13,14,27]) >= 0){
-                colorBg = "grayxy28";
+                colorBg = "graybj28";
             } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
-                colorBg = "greenxy28";
+                colorBg = "greenbj28";
             } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
-                colorBg = "bluexy28";
+                colorBg = "bluebj28";
             } else{
-                colorBg = 'redxy28';
+                colorBg = 'redbj28';
             }
 
             if(i < 2){
@@ -110,18 +110,18 @@
     function renderLastOpenCode(openCodeArr) {
         var tmpStr = '';
         var sum = 0;
-        var colorBg = 'redxy28';
+        var colorBg = 'redbj28';
 
         $.each(openCodeArr, function(index, value) {
             sum += parseInt(value);
             if($.inArray(sum,[0,13,14,27]) >= 0){
-                colorBg = "grayxy28";
+                colorBg = "graybj28";
             } else if($.inArray(sum,[1,4,7,10,16,19,22,25]) >= 0){
-                colorBg = "greenxy28";
+                colorBg = "greenbj28";
             } else if($.inArray(sum,[2,5,8,11,17,20,23,26]) >= 0){
-                colorBg = "bluexy28";
+                colorBg = "bluebj28";
             } else{
-                colorBg = 'redxy28';
+                colorBg = 'redbj28';
             }
 
             if(index < 2){

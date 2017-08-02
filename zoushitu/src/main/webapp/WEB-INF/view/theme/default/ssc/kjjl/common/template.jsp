@@ -162,7 +162,7 @@
             <div class="item-media"><img src="${resPath}img/hico20.png" style='width: 2.2rem;'></div>
             <div class="item-inner">
                 <div class="item-title-row">
-                    <div class="item-title">幸运28</div>
+                    <div class="item-title">北京28</div>
                     <div class="item-after"><font class="cl-1105">{{number}}期</font>&nbsp;{{openTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
                 </div>
                 <div class="item-subtitle">

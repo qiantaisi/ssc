@@ -26,7 +26,7 @@
                     <c:when test="${playGroupId == 4}">体彩排列3</c:when>
                     <c:when test="${playGroupId == 5}">福彩3D</c:when>
                     <c:when test="${playGroupId == 6}">六合彩</c:when>
-                    <c:when test="${playGroupId == 7}">幸运28</c:when>
+                    <c:when test="${playGroupId == 7}">北京28</c:when>
                     <c:when test="${playGroupId == 8}">北京快乐8</c:when>
                     <c:when test="${playGroupId == 9}">北京PK10</c:when>
                     <c:when test="${playGroupId == 10}">重庆幸运农场</c:when>
@@ -88,7 +88,7 @@
                                         <c:import url="rule/lhc.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 7}">
-                                        <c:import url="rule/xy28.jsp"/>
+                                        <c:import url="rule/bj28.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 8}">
                                         <c:import url="rule/bjkl8.jsp"/>

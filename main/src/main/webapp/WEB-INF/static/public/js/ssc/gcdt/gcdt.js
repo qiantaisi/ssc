@@ -404,7 +404,7 @@ function getZstPage(url) {
 //         idPl = 5;
 //     }else if(param_url == 'lhc'){
 //         idPl = 6;
-//     }else if(param_url == 'xy28'){
+//     }else if(param_url == 'bj28'){
 //         idPl = 7;
 //     }else if(param_url == 'kl8'){
 //         idPl = 8;

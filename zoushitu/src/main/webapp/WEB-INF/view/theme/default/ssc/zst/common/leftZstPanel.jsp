@@ -99,10 +99,10 @@
                 </a>
             </li>
             <li>
-                <a href="<%=basePath%>ssc/zst/xy28/jbzst.html" class="item-content">
-                    <div class="item-media"><i class="icon bg-img-xy28"></i></div>
+                <a href="<%=basePath%>ssc/zst/bj28/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-bj28"></i></div>
                     <div class="item-inner">
-                        <div class="item-title">幸运28</div>
+                        <div class="item-title">北京28</div>
                     </div>
                 </a>
             </li>
