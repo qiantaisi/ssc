@@ -48,22 +48,22 @@
             <a href="javascript:void(0)"
                data-type="gfwf_page"
                data-fun_random="random_qy"
-               data-fun_zhushu="zhushu_dwd"
-               data-fun_content="content_dwd"
+               data-fun_zhushu="zhushu_qy"
+               data-fun_content="content_qy"
                data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/qy/qy.html"
                data-play_id="543"
                data-play_pl_id="14261"
-               data-name="前一">
-                <span class="staer1">前一</span>
+               data-name="直选复式">
+                <span class="staer1">直选复式</span>
             </a>
         </div>
         <div class="hide" id="playGroup_qdwd">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
-               data-fun_random="random_5xzxfs"
-               data-fun_zhushu="zhushu_5xzxfs"
-               data-fun_content="content_5xzxfs"
-               data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html"
+               data-fun_random="random_dwd"
+               data-fun_zhushu="zhushu_dwd"
+               data-fun_content="content_dwd"
+               data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/dwd/dwd.html"
                data-play_id="497"
                data-play_pl_id="14207"
                data-name="定位胆">
@@ -73,27 +73,27 @@
         <div class="hide" id="playGroup_qer">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
-               data-fun_random="random_4xzxfs"
-               data-fun_zhushu="zhushu_4xzxfs"
-               data-fun_content="content_4xzxfs"
-               data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html"
+               data-fun_random="random_qe"
+               data-fun_zhushu="zhushu_qe"
+               data-fun_content="content_qe"
+               data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/qe/qe.html"
                data-play_id="499"
                data-play_pl_id="14209"
-               data-name="前二">
-                <span class="staer1">前二</span>
+               data-name="直选复式">
+                <span class="staer1">直选复式</span>
             </a>
         </div>
         <div class="hide" id="playGroup_qsan">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
-               data-fun_random="random_4xzxfs"
-               data-fun_zhushu="zhushu_4xzxfs"
-               data-fun_content="content_4xzxfs"
-               data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html"
+               data-fun_random="random_qsan"
+               data-fun_zhushu="zhushu_qsan"
+               data-fun_content="content_qsan"
+               data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/qsan/qsan.html"
                data-play_id="499"
                data-play_pl_id="14209"
-               data-name="前三">
-                <span class="staer1">前三</span>
+               data-name="直选复式">
+                <span class="staer1">直选复式</span>
             </a>
         </div>
     </div>
