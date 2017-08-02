@@ -88,17 +88,15 @@ public abstract class BaseController {
         // 公共static目录
         httpServletRequest.setAttribute("pubStaticPath", RequestUtils.getBasePath(httpServletRequest) + "static/public/");
 
-        // 非JSON请求，需要加载模板风格
-        if (httpServletRequest.getRequestURI().indexOf(".json") < 0) {
-            // 公共模板读取风格
-            FenggeResult fenggeResult = ApiUtils.getWebFengge(
-                    companyShortName,
-                    1
-            );
+        // 公共模板读取风格
+        FenggeResult fenggeResult = ApiUtils.getWebFengge(
+                companyShortName,
+                1
+        );
 
-            modelMap.put("fengge_1", fenggeResult.getFengge_1());
-            modelMap.put("fengge_2", fenggeResult.getFengge_2());
-        }
+        modelMap.put("fengge_1", fenggeResult.getFengge_1());
+        modelMap.put("fengge_2", fenggeResult.getFengge_2());
+
 
         ModelAndView modelAndView = new ModelAndView("theme/" + theme + "/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
@@ -142,20 +140,17 @@ public abstract class BaseController {
             log.error(this, e);
         }
 
-        // 非JSON请求，需要加载模板风格
-        if (httpServletRequest.getRequestURI().indexOf(".json") < 0) {
-            // 公共模板读取风格
-            FenggeResult fenggeResult = ApiUtils.getWebFengge(
-                    companyShortName,
-                    1
-            );
+        // 公共模板读取风格
+        FenggeResult fenggeResult = ApiUtils.getWebFengge(
+                companyShortName,
+                1
+        );
 
-            if (null == fenggeResult || fenggeResult.getResult() != 1) {
-                throw new UserException(-997, "服务器错误");
-            }
-            modelMap.put("fengge_1", fenggeResult.getFengge_1());
-            modelMap.put("fengge_2", fenggeResult.getFengge_2());
+        if (null == fenggeResult || fenggeResult.getResult() != 1) {
+            throw new UserException(-997, "服务器错误");
         }
+        modelMap.put("fengge_1", fenggeResult.getFengge_1());
+        modelMap.put("fengge_2", fenggeResult.getFengge_2());
 
         ModelAndView modelAndView = new ModelAndView("public/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
