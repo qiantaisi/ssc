@@ -20,19 +20,19 @@
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
-            <%--<h1 class="title">--%>
-                <%--<i class="title_cq">北京PK10--%>
-                    <%--<div class="gfwf_triangle_down">--%>
-                        <%--&lt;%&ndash;画出一个向下的三角形图标&ndash;%&gt;--%>
-                    <%--</div>--%>
-                <%--</i>--%>
-            <%--</h1>--%>
+            <h1 class="title">
+                <i class="title_cq">北京PK10
+                    <div class="gfwf_triangle_down">
+                        <%--画出一个向下的三角形图标--%>
+                    </div>
+                </i>
+            </h1>
         </header>
         <c:import url="common/commonBet.jsp" />
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/bjpk10.html">
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/pk10.html">
                         <div class="border_one color_one">
                             官方模式
                         </div>
