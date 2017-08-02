@@ -1756,6 +1756,12 @@ body::-webkit-scrollbar{}/*--------------------------------*/
     width: 20px!important;
     margin-left: -8px!important;
 }
+.pluss{
+    font-size: 28px!important;
+    font-family: Microsoft Yahei;
+    color: #666!important;
+    background: none!important;
+}
 
 .bluexy28{
     background: blue!important;
