@@ -560,7 +560,7 @@
             </div>
 
             <div class="zhongjiang_ul">
-                <ul id="zj_info_marquee">
+                <ul  class="zj_marquee_class" id="zj_info_marquee">
                     <%--<c:forEach items="${Notices.noticeList}" var="noticelists">--%>
                         <%--<li class="clearfix">--%>
                             <%--<a href="javascript:void(0);" class="left zhongjiang_li1">--%>
@@ -644,32 +644,6 @@
         //获取中奖公告信息
         getNoticeZj();
 
-
-        ajaxRequest({
-            url: "<%=basePath%>ajaxGetZJNotic.json",
-            success: function (json) {
-                console.log("12");
-                if (json.result != 1) {
-                    return;
-                }
-
-                var strHtml = '';
-                $.each(Notices.noticeList, function (index, value) {
-                    strHtml = '<li class="clearfix">';
-                    strHtml = '<a href="javascript:void(0);" class="left zhongjiang_li1">';
-                    strHtml = value.type + '</a>';
-                    strHtml = '<span class="left zhongjiang_name">' + value.userName + '</span>';
-                    strHtml = '<span class="left zhongjiang_jine">';
-                    strHtml = value.amount + '元</span>';
-                    strHtml = '</li>';
-                });
-
-                $("#zj_info_marquee").html(strHtml);
-            }
-
-        });
-
-
         xyxh(null, 1);
         xyxh(null, 4);
         xyxh(null, 6);
@@ -682,10 +656,10 @@
             renderOpenTimeHtml();
         }, 1000);
 
-        $('#zj_info_marquee').liMarquee({
-            direction: 'up',
-            scrollamount: 10
-        });
+//        $('#zj_info_marquee').liMarquee({
+//            direction: 'up',
+//            scrollamount: 10
+//        });
 
         newRoll(".roll_rt1_2b .rewrap ul li");
 
@@ -806,7 +780,36 @@
 
     //获取中奖公告
     function getNoticeZj() {
+        ajaxRequest({
+            url: "<%=basePath%>ajaxGetZJNotic.json",
+            success: function (json) {
 
+                if (json.result != 1) {
+                    return;
+                }
+                console.log("12---" +json.noticeList.length);
+                var strHtml = '';
+                if(json.noticeList.length != 0){
+                    $.each(json.noticeList, function (index, value) {
+                        strHtml += '<li class="clearfix">';
+                        strHtml += '<a href="javascript:void(0);" class="left zhongjiang_li1">';
+                        strHtml += value.type + '</a>';
+                        strHtml += '<span class="left zhongjiang_name">' + value.userName + '</span>';
+                        strHtml += '<span class="left zhongjiang_jine">';
+                        strHtml += value.amount + '元</span>';
+                        strHtml += '</li>';
+                    });
+                }
+
+                $(".zj_marquee_class").append(strHtml);
+
+                $('#zj_info_marquee').liMarquee({
+                    direction: 'up',
+                    scrollamount: 10
+                });
+            }
+
+        });
     }
 
     $(function () {

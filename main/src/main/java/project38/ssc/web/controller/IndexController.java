@@ -14,7 +14,7 @@ import project38.api.result.WebInfoResult;
 import project38.api.utils.ApiUtils;
 import project38.api.result.SscHistoryResult3;
 import project38.api.result.ArticleResult;
-
+import project38.api.result.SscZJNoticeResult;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
@@ -47,6 +47,7 @@ public class IndexController extends BaseController {
     }
 
 
+
     @RequestMapping(value = "/ajaxGetZxxx.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public ArticleResult ajaxGetZxxx(String limit) throws Exception {
@@ -57,6 +58,7 @@ public class IndexController extends BaseController {
         return articleResult;
     }
 
+
     @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public SscHistoryResult3 ajaxGetSscDataMainPage(
@@ -66,6 +68,14 @@ public class IndexController extends BaseController {
         String companyShortName = this.getCompanyShortName();
         return ApiUtils.getSscDataMainPage(playIds, playId, companyShortName);
     }
+
+    @RequestMapping(value = "/ajaxGetZJNotic.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public SscZJNoticeResult ajaxGetZJNotic(){
+        String companyShortName = this.getCompanyShortName();
+        return ApiUtils.getNotices(companyShortName);
+    }
+
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public ModelAndView index() {
