@@ -12,10 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import project38.api.result.LoginResult;
-import project38.api.result.PromotionResult;
-import project38.api.result.WebInfoResult;
-import project38.api.result.WebNoticeResult;
+import project38.api.result.*;
 import project38.api.utils.ApiUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -84,7 +81,7 @@ public class IndexController extends BaseController{
             //        modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token).getSkInfoList());
             //获取在线支付信息
             modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[]{2, 3}, companyShortName));
-            modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
+//            modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
 
             // 最新开奖数据
             modelMap.put("allDataHistory", ApiUtils.getAllDataHistory(0, null, companyShortName));
@@ -135,6 +132,13 @@ public class IndexController extends BaseController{
         modelMap.put("logo", ApiUtils.getLogo(5,companyShortName));
         modelMap.put("WebInfoResult", ApiUtils.getWebInfo(2,companyShortName));
         return this.renderView("index/login", modelMap);
+    }
+
+    @RequestMapping(value = "/ajaxGetZJNotic.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public SscZJNoticeResult ajaxGetZJNotic(){
+        String companyShortName = this.getCompanyShortName();
+        return ApiUtils.getNotices(companyShortName);
     }
 
     @RequestMapping(value = "/ajaxGetWebInfo.json", method = {RequestMethod.GET, RequestMethod.POST})
