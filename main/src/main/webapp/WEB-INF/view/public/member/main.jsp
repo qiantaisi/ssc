@@ -24,7 +24,7 @@
                 <td><span class="light">
                     <c:choose>
                         <c:when test="${userLastInfo.lastGameId >= 1 || userLastInfo.lastGameId <= 11}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html">彩票</a>
+                            <a class="light" target="_blank" href="<%=basePath%>ssc/index.html">彩票</a>
                         </c:when>
                     </c:choose>
                     <c:if test="${not empty userLastInfo.lastGameId}">
@@ -32,37 +32,47 @@
                     </c:if>
                     <c:choose>
                         <c:when test="${userLastInfo.lastGameId == 1}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/cqssc">重庆时时彩</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/cqssc">重庆时时彩</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 2}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/tjssc">天津时时彩</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/tjssc">天津时时彩</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 3}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/xjssc">新疆时时彩</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/xjssc">新疆时时彩</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 4}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/pl3">体彩排列3</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/pl3">体彩排列3</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 5}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/fc3d">福彩3D</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/fc3d">福彩3D</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 6}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/lhc">六合彩</a>
+                            <a class="light" target="_blank" href="<%=basePath%>ssc/index.html?module=gcdt/lhc">六合彩</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 7}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/bj28">北京28</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/bj28">北京28</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 8}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/kl8">北京快乐8</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/kl8">北京快乐8</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 9}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/pk10">北京PK10</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/pk10">北京PK10</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 10}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/xync">重庆幸运农场</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/xync">重庆幸运农场</a>
                         </c:when>
                         <c:when test="${userLastInfo.lastGameId == 11}">
-                            <a class="light" target="_blank"href="<%=basePath%>ssc/index.html?module=gcdt/klsf">广东快乐十分</a>
+                            <a class="light" target="_blank"
+                               href="<%=basePath%>ssc/index.html?module=gcdt/klsf">广东快乐十分</a>
                         </c:when>
                     </c:choose>
                 </td>

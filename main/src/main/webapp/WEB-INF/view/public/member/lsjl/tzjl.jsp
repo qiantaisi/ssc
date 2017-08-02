@@ -205,7 +205,6 @@
                 // 数据
                 var str = '';
                 $.each(json.sscBetsList, function (index, value) {
-                    console.log(value.playId);
                     var currentPageNum = (json.pageNum - 1) * json.pageSize;
                     str += '<tr>';
                     str += '<td>' + (index + currentPageNum + 1) + '</td>';
