@@ -21,7 +21,7 @@
                 菜单
             </a>
             <h1 class="title">
-                <i class="title_cq">重庆时时彩
+                <i class="title_cq">北京PK10
                     <div class="gfwf_triangle_down">
                         <%--画出一个向下的三角形图标--%>
                     </div>
@@ -32,7 +32,7 @@
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/bjpk10.html">
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/pk10.html">
                         <div class="border_one color_one">
                             官方模式
                         </div>
