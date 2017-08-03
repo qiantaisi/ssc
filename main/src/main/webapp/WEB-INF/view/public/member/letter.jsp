@@ -48,6 +48,7 @@
 <script>
     $(function() {
         getData();
+
     });
     function goPage(pageIndex) {
         $("input[name='pageIndex']").val(pageIndex);
@@ -57,6 +58,15 @@
         $("input[name='pageIndex']").val(1);
         getData();
     }
+
+    //获取地址栏参数
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+
     function changeStatus(obj, hasRead) {
         $(".eveb_sub_nav_type .on").removeClass("on");
         $(obj).parent().addClass("on");
@@ -111,7 +121,7 @@
                 var str = '';
                 $.each(json.userInboxList, function(index, value) {
                     str += '<li>';
-                    str += '<div class="eveb_letter_title">';
+                    str += '<div class="eveb_letter_title num_'+ value.id +'">';
                     str += '<span class="fl">';
                     str += '<input type="checkbox" name="ids[]" value="' + value.id + '">';
                     str += '<a href="javascript:void(0)" '+(value.hasRead ? '' : 'class="new"')+'>' + value.content.substr(0, 20) + '...</a>';
@@ -151,6 +161,14 @@
                 eveb_letter_list();
                 eveb_select_all();
                 hideLoading();
+
+                //跳转展开相对应的信件内容
+                var paramStr = GetQueryString('cs');
+                if(typeof paramStr != 'undefined'){
+                    var urlStr = ".eveb_letter_list li .num_"+ paramStr;
+                    $(urlStr).trigger('click');
+                }
+
             }
         });
     }

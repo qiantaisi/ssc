@@ -133,14 +133,14 @@
                         <c:choose>
                             <c:when test="${item.hasRead == true}">
                                 <li>
-                                    <a href="javascript:void(0)" onclick="parent.goSubUrl('letter.html')">${fn:substring(item.content, 0, 15)}</a>
+                                    <a href="javascript:void(0)" onclick="parent.goSubUrl('letter.html?cs=${item.id}')">${fn:substring(item.content, 0, 15)}</a>
                                     <span><fmt:formatDate value="${item.createTime}" pattern="MM-dd" /></span>
                                 </li>
                             </c:when>
                             <c:otherwise>
                                 <li class="new">
                                     <em>新</em>
-                                    <a href="javascript:void(0)" onclick="parent.goSubUrl('letter.html')">${fn:substring(item.content, 0, 15)}</a>
+                                    <a href="javascript:void(0)" onclick="parent.goSubUrl('letter.html?cs=${item.id}')">${fn:substring(item.content, 0, 15)}</a>
                                     <span><fmt:formatDate value="${item.createTime}" pattern="MM-dd" /></span>
                                 </li>
                             </c:otherwise>

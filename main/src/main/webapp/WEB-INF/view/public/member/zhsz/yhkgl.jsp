@@ -194,7 +194,8 @@
                 parent.hideLoading();
                 if (json.result == 1) {
                     Tools.toast("添加成功");
-                    parent.getPage('zhsz/yhkgl');
+//                    parent.getPage('zhsz/yhkgl');
+                    document.location.href = CONFIG.BASEURL + "member/zhsz.html?module=yhkgl";
                 } else {
                     Tools.toast("添加失败：" + json.description);
                 }

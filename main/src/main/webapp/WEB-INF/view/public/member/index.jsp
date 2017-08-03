@@ -53,7 +53,7 @@
 </div>
 
 <c:import url="common/commonJs.jsp"/>
-<script src="${resPath}member/js/index.js?v=20170706"></script>
+<script src="${resPath}member/js/index.js?v=20170803_1"></script>
 <script>
     var CONFIG = {
         BASEURL: "<%=basePath%>",    // 根路径

@@ -262,6 +262,7 @@ public class MemberController extends BaseController {
         modelMap.put("bindStatus", ApiUtils.getBindStatus(uid, token, companyShortName));
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("userInboxList", ApiUtils.getUserInboxList(uid, token, null, null, null, 1, 4, companyShortName).getUserInboxList());
+//        modelMap.put("userInboxResult", ApiUtils.getUserInboxList(uid, token, null, null, null, 1, 4, companyShortName));
         modelMap.put("promotionList", ApiUtils.getPromotion(companyShortName).getPromotionList());
 
         return this.renderPublicView("member/main", modelMap);
@@ -848,7 +849,7 @@ public class MemberController extends BaseController {
         } else if (StringUtils.equals(module, "zjjl")) {
             return this.lsjlZjjl();
         }
-        
+
         throw new UserException(-1, "404");
     }
 
