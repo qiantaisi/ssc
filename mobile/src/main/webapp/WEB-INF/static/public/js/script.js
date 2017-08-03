@@ -1857,7 +1857,6 @@ $(function () {
                             } else{
                                 strMoney  = "<font color='red'>" + money + "</font>";
                             }
-                            console.log(strMoney);
                             $("#jieSuan").html(strMoney);
                         }
                     }
