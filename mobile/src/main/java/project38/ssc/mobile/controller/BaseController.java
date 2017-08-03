@@ -74,11 +74,8 @@ public abstract class BaseController {
         request.setAttribute("commonResPath", RequestUtils.getBasePath(httpServletRequest) + "static/common/");
         request.setAttribute("bottomCssResPath", RequestUtils.getBasePath(httpServletRequest) + "static/public/theme/");
 
-        // 非JSON请求，需要加载模板风格
-        if (httpServletRequest.getRequestURI().indexOf(".json") < 0) {
             MobileFgResult mobileFgResult = ApiUtils.getMobileFg(companyShortName);
             request.setAttribute("themeBottomNav", mobileFgResult.mobileFg.getDibu());
-        }
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
@@ -91,8 +88,6 @@ public abstract class BaseController {
             log.error(this, e);
         }
 
-        // 非JSON请求，需要加载模板风格
-        if (httpServletRequest.getRequestURI().indexOf(".json") < 0) {
             // 公共模板读取风格
             FenggeResult fenggeResult = ApiUtils.getWebFengge(
                     companyShortName,
@@ -104,7 +99,6 @@ public abstract class BaseController {
             }
             modelMap.put("fengge_1", fenggeResult.getFengge_1());
             modelMap.put("fengge_2", fenggeResult.getFengge_2());
-        }
 
         ModelAndView modelAndView = new ModelAndView("theme/" + theme + "/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
@@ -217,12 +211,8 @@ public abstract class BaseController {
         httpServletRequest.setAttribute("commonResPath", RequestUtils.getBasePath(httpServletRequest) + "static/common/");
         httpServletRequest.setAttribute("bottomCssResPath", RequestUtils.getBasePath(httpServletRequest) + "static/public/theme/");
 
-
-        // 非JSON请求，需要加载模板风格
-        if (httpServletRequest.getRequestURI().indexOf(".json") < 0) {
             MobileFgResult mobileFgResult = ApiUtils.getMobileFg(companyShortName);
             httpServletRequest.setAttribute("themeBottomNav", mobileFgResult.mobileFg.getDibu());
-        }
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
@@ -235,9 +225,6 @@ public abstract class BaseController {
             log.error(this, e);
         }
 
-
-        // 非JSON请求，需要加载模板风格
-        if (httpServletRequest.getRequestURI().indexOf(".json") < 0) {
             // 公共模板读取风格
             FenggeResult fenggeResult = ApiUtils.getWebFengge(
                     companyShortName,
@@ -249,7 +236,6 @@ public abstract class BaseController {
             }
             modelMap.put("fengge_1", fenggeResult.getFengge_1());
             modelMap.put("fengge_2", fenggeResult.getFengge_2());
-        }
 
         ModelAndView modelAndView = new ModelAndView("public/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
