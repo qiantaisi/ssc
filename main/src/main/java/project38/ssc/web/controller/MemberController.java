@@ -934,7 +934,8 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getSscBetsList(uid, token, startTime, endTime, pageIndex, pageSize, playGroupId, playId, status, isZhongjiang, companyShortName);
+        SscBetsListResult sscBetsListResult= ApiUtils.getSscBetsList(uid, token, startTime, endTime, pageIndex, pageSize, playGroupId, playId, status, isZhongjiang, companyShortName);
+        return sscBetsListResult;
     }
 
     /**

@@ -97,6 +97,7 @@ public abstract class BaseController {
         modelMap.put("fengge_1", fenggeResult.getFengge_1());
         modelMap.put("fengge_2", fenggeResult.getFengge_2());
 
+
         ModelAndView modelAndView = new ModelAndView("theme/" + theme + "/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
         return modelAndView;

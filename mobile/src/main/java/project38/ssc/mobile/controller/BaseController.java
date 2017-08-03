@@ -79,9 +79,13 @@ public abstract class BaseController {
 
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
-        UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
-        if (null != userSessionResult && userSessionResult.getResult() == 1) {
-            modelMap.put("userSession", userSessionResult);
+        try {
+            UserSessionResult userSessionResult = ApiUtils.getUserSession(uid, token, companyShortName);
+            if (null != userSessionResult && userSessionResult.getResult() == 1) {
+                modelMap.put("userSession", userSessionResult);
+            }
+        } catch (Exception e) {
+            log.error(this, e);
         }
 
         // 公共模板读取风格
