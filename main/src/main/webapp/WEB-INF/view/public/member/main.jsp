@@ -127,20 +127,20 @@
         </div>
         <div class="eveb_box_3">
             <div class="eveb_box ml_10">
-                <h4><span><a href="#letter" onclick="parent.getPage('letter')" class="more">MORE</a></span>站内信</h4>
+                <h4><span><a href="#letter" onclick="parent.goSubUrl('letter.html')" class="more">MORE</a></span>站内信</h4>
                 <ul class="eveb_index_letter">
                     <c:forEach items="${userInboxList}" var="item">
                         <c:choose>
                             <c:when test="${item.hasRead == true}">
                                 <li>
-                                    <a href="javascript:void(0)" onclick="parent.getPage('letter')">${fn:substring(item.content, 0, 15)}</a>
+                                    <a href="javascript:void(0)" onclick="parent.goSubUrl('letter.html')">${fn:substring(item.content, 0, 15)}</a>
                                     <span><fmt:formatDate value="${item.createTime}" pattern="MM-dd" /></span>
                                 </li>
                             </c:when>
                             <c:otherwise>
                                 <li class="new">
                                     <em>新</em>
-                                    <a href="javascript:void(0)" onclick="parent.getPage('letter')">${fn:substring(item.content, 0, 15)}</a>
+                                    <a href="javascript:void(0)" onclick="parent.goSubUrl('letter.html')">${fn:substring(item.content, 0, 15)}</a>
                                     <span><fmt:formatDate value="${item.createTime}" pattern="MM-dd" /></span>
                                 </li>
                             </c:otherwise>
