@@ -613,7 +613,7 @@
         var str = '';
         str += '<p>账号：<i class="i0">' + user.account + '</i>';
         str += '<span>余额：<i class="i1">￥' + user.balance + '</i></span>';
-        str += '<span><a href="javascript:void(0)" onclick="openHyzx(\'zhcz/yhzz\')">充值提现</a>  |  <a href="<%=basePath%>member/index.html" target="_blank">会员中心</a>  |  <a href="javascript:void(0)" onclick="openHyzx(\'lsjl/tzjl\')">投注记录</a>  |  <a href="${kefuUrl}" target="_blank">在线客服</a>  |  <a href="javascript:void(0)"  onclick="openHyzx(\'letter\')">最新消息</a>  |  <a href="javascript:void(0)" onclick="sigout()" class="red">退出登录</a>  |</span></p>';
+        str += '<span><a href="javascript:void(0)" onclick="openHyzx(\'zhcz/yhzz\')">充值提现</a>  |  <a href="<%=basePath%>member/index.html" target="_blank">会员中心</a>  |  <a href="javascript:void(0)" onclick="openHyzx(\'member/lsjl.html?module=tzjl\')">投注记录</a>  |  <a href="${kefuUrl}" target="_blank">在线客服</a>  |  <a href="javascript:void(0)"  onclick="openHyzx(\'letter\')">最新消息</a>  |  <a href="javascript:void(0)" onclick="sigout()" class="red">退出登录</a>  |</span></p>';
         $(".Account").html(str);
     }
 
@@ -663,21 +663,41 @@
             }
         });
     }
+    <%--function openHyzx(module) {--%>
+        <%--if (typeof module == 'undefined') {--%>
+            <%--module = '';--%>
+        <%--}--%>
+
+        <%--if (typeof $.cookie("uid") == 'undefined' || typeof $.cookie("token") == 'undefined') {--%>
+            <%--Tools.toast("请先登录");--%>
+            <%--if ($('input[name="account"]').length > 0) {--%>
+                <%--$('input[name="account"]').focus();--%>
+                <%--return;--%>
+            <%--}--%>
+            <%--return;--%>
+        <%--}--%>
+
+        <%--windowOpen('<%=basePath%>member/index.html?module=' + module, '会员中心', 1250, 834);--%>
+    <%--}--%>
+
     function openHyzx(module) {
         if (typeof module == 'undefined') {
             module = '';
         }
-
         if (typeof $.cookie("uid") == 'undefined' || typeof $.cookie("token") == 'undefined') {
-            Tools.toast("请先登录");
-            if ($('input[name="account"]').length > 0) {
-                $('input[name="account"]').focus();
+            alert("请先登录");
+            if ($("#loginAccount1").length > 0) {
+                $("#loginAccount1").focus();
                 return;
             }
+            window.location.href = "<%=basePath%>main.html";
             return;
         }
-
-        windowOpen('<%=basePath%>member/index.html?module=' + module, '会员中心', 1250, 834);
+        var subUrl = "";
+        if (module) {
+            subUrl = "#" + CONFIG.BASEURL + module;
+        }
+        windowOpen(CONFIG.BASEURL + 'member/index.html' + subUrl, '会员中心', 1250, 834);
     }
 
 </script>

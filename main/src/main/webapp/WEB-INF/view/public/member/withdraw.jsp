@@ -163,7 +163,8 @@
                     success: function(json) {
                         if (json.result == 1) {
                             alert("提交成功");
-                            refreshMoney();
+                            //refreshMoney();
+                            parent.goSubUrl('/web/member/lsjl.html?module=tkjl')
                         } else {
 //                            if (withdrawPasswdTOrF) {
 //                                if(confirm("密码尚设置，是否设置密码？")){
@@ -240,5 +241,6 @@
             }
         });
     }
+
 </script>
 <c:import url="common/bodyEnd.jsp"/>

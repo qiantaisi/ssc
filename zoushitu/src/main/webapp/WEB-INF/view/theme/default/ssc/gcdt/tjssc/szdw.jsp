@@ -429,7 +429,6 @@
                 }
             }
         }
-        console.log(betForm);
         return betForm;
     }
     function getZhushu(obj) {
