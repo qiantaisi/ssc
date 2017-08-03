@@ -620,7 +620,7 @@
 
     $(function () {
 
-        var limit = "17";
+        var limit = "15";
         ajaxRequest({
             url: "<%=basePath%>ajaxGetZxxx.json",
             data: {limit: limit},
