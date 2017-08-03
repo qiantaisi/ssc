@@ -149,7 +149,7 @@
                     <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
                     <td><input type="checkbox" data-name="26" data-plid="14407"/></td>
 
-                    <td><span class="ball-28xyicon grayxy27">27</span></td>
+                    <td><span class="ball-28xyicon grayxy28">27</span></td>
                     <td><strong class="color-red color-333 pl" data-plid="14407"></strong></td>
                     <td><input type="checkbox" data-name="26" data-plid="14407"/></td>
 

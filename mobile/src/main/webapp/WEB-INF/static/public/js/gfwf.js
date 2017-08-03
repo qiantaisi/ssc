@@ -1288,6 +1288,167 @@ function content_rx4zu4() {
 
 
 //======================================================注数算法====================================
+/**
+ * 注数-PK10前一
+ */
+
+function zhushu_qy(){
+    var arr1 = [], newArr = [];
+    $.each($(".di1m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr1.push($.trim($(this).html()));
+    });
+
+
+    if (arr1.length <= 0) {
+        return 0;
+    }
+
+    if (arr1.length > 0) {
+        newArr = newArr.concat(wanArr);
+    }
+
+    return newArr.length;
+}
+
+
+/**
+ * 注数-PK10定位胆
+ */
+function zhushu_dwd_pk10(){
+    var arr1 = [], arr2 = [], arr3 = [], arr4 = [], arr5 = [], arr6 = [], arr7 = [], arr8 = [], arr9 = [], arr10 = [];
+    var newArr = [];
+    $.each($(".di1m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr1.push($.trim($(this).html()));
+    });
+    $.each($(".di2m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr2.push($.trim($(this).html()));
+    });
+    $.each($(".di3m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr3.push($.trim($(this).html()));
+    });
+    $.each($(".di4m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr4.push($.trim($(this).html()));
+    });
+    $.each($(".di5m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr5.push($.trim($(this).html()));
+    });
+    $.each($(".di6m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr6.push($.trim($(this).html()));
+    });
+    $.each($(".di7m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr7.push($.trim($(this).html()));
+    });
+    $.each($(".di8m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr8.push($.trim($(this).html()));
+    });
+    $.each($(".di9m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr9.push($.trim($(this).html()));
+    });
+    $.each($(".di10m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr10.push($.trim($(this).html()));
+    });
+
+
+    if (arr1.length <= 0 && arr2.length <= 0 && arr3.length <= 0 && arr4.length <= 0 && arr5.length <= 0 &&
+        arr6.length <= 0 && arr7.length <= 0 && arr8.length <= 0 && arr9.length <= 0 && arr10.length <= 0) {
+        return 0;
+    }
+
+    if (arr1.length > 0) {
+        newArr = newArr.concat(arr1);
+    }
+    if (arr2.length > 0) {
+        newArr = newArr.concat(arr2);
+    }
+    if (arr3.length > 0) {
+        newArr = newArr.concat(arr3);
+    }
+    if (arr4.length > 0) {
+        newArr = newArr.concat(arr4);
+    }
+    if (arr5.length > 0) {
+        newArr = newArr.concat(arr5);
+    }
+    if (arr6.length > 0) {
+        newArr = newArr.concat(arr6);
+    }
+    if (arr7.length > 0) {
+        newArr = newArr.concat(arr7);
+    }
+    if (arr8.length > 0) {
+        newArr = newArr.concat(arr8);
+    }
+    if (arr9.length > 0) {
+        newArr = newArr.concat(arr9);
+    }
+    if (arr10.length > 0) {
+        newArr = newArr.concat(arr10);
+    }
+    return newArr.length;
+}
+
+/**
+ * 注数-PK10前二
+ */
+function zhushu_qe(){
+    var arr1 = [], arr2 = [], newArr = [];
+    $.each($(".di1m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr1.push($.trim($(this).html()));
+    });
+    $.each($(".di2m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr2.push($.trim($(this).html()));
+    });
+
+
+    if (arr1.length <= 0 && arr2.length <= 02) {
+        return 0;
+    }
+
+    if (arr1.length > 0) {
+        newArr = newArr.concat(arr1);
+    }
+
+    if (arr2.length > 0) {
+        newArr = newArr.concat(arr2);
+    }
+
+    return newArr.length;
+}
+
+/**
+ * 注数-PK10前三
+ */
+function zhushu_qsan(){
+    var arr1 = [], arr2 = [], arr3 = [], newArr = [];
+    $.each($(".di1m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr1.push($.trim($(this).html()));
+    });
+    $.each($(".di2m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr2.push($.trim($(this).html()));
+    });
+    $.each($(".di3m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        arr3.push($.trim($(this).html()));
+    });
+
+    if (arr1.length <= 0 && arr2.length <= 0 && arr3.length <= 0) {
+        return 0;
+    }
+
+    if (arr1.length > 0) {
+        newArr = newArr.concat(arr1);
+    }
+
+    if (arr2.length > 0) {
+        newArr = newArr.concat(arr2);
+    }
+
+    if (arr3.length > 0) {
+        newArr = newArr.concat(arr3);
+    }
+
+    return newArr.length;
+}
+
 
 /**************定位胆***************/
 /**

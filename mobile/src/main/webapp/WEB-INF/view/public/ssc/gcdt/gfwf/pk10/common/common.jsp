@@ -57,12 +57,12 @@
                 <span class="staer1">直选复式</span>
             </a>
         </div>
-        <div class="hide" id="playGroup_qdwd">
+        <div class="hide" id="playGroup_dwd">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
-               data-fun_random="random_dwd"
-               data-fun_zhushu="zhushu_dwd"
-               data-fun_content="content_dwd"
+               data-fun_random="random_dwd_pk10"
+               data-fun_zhushu="zhushu_dwd_pk10"
+               data-fun_content="content_dwd_pk10"
                data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/dwd/dwd.html"
                data-play_id="497"
                data-play_pl_id="14207"
@@ -70,7 +70,7 @@
                 <span class="zxfs">定位胆</span>
             </a>
         </div>
-        <div class="hide" id="playGroup_qer">
+        <div class="hide" id="playGroup_qe">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
                data-fun_random="random_qe"
