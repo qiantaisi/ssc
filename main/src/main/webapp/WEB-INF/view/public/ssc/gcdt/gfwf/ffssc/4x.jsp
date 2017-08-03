@@ -12,7 +12,7 @@
             <b>四星直选</b>
             <p class="btn_fu_zhi">
                 <span class="playPlIdBtn acti" data-play_id="654" data-play_pl_id="14390" data-name="4xzxfs" data-fun_zhushu="zhushu_4xzxfs" data-fun_content="content_4xzxfs" data-fun_suiji="suiji_4xzxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="655" data-play_pl_id="14391" data-name="4xzxds" data-fun_zhushu="zhushu_4xzxds" data-fun_content="content_4xzxds" data-fun_suiji="suiji_4xzxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="653" data-play_pl_id="14389" data-name="4xzxds" data-fun_zhushu="zhushu_4xzxds" data-fun_content="content_4xzxds" data-fun_suiji="suiji_4xzxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
