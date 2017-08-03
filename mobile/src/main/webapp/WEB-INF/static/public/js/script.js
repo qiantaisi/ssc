@@ -1850,7 +1850,15 @@ $(function () {
                     },
                     success: function (obj) {
                         if (obj.result == 1) {
-                            $("#jieSuan").html(obj.todayWinOrLose.toFixed(3));
+                            var money = obj.todayWinOrLose.toFixed(3);
+                            var strMoney = '';
+                            if(money > 0){
+                                strMoney  = "<font color='green'>+" + money + "</font>";
+                            } else{
+                                strMoney  = "<font color='red'>" + money + "</font>";
+                            }
+                            console.log(strMoney);
+                            $("#jieSuan").html(strMoney);
                         }
                     }
                 });
