@@ -81,7 +81,7 @@ public class IndexController extends BaseController{
             //        modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token).getSkInfoList());
             //获取在线支付信息
             modelMap.put("zxzfInfo", ApiUtils.getSystemPayonline(uid, token, 1, new Integer[]{2, 3}, companyShortName));
-//            modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
+            modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
 
             // 最新开奖数据
             modelMap.put("allDataHistory", ApiUtils.getAllDataHistory(0, null, companyShortName));
