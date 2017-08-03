@@ -1765,15 +1765,19 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 
 .bluexy28{
     background: blue!important;
+    border-radius: 50%;
 }
 .greenxy28{
     background: green!important;
+    border-radius: 50%;
 }
 .grayxy28{
     background: gray!important;
+    border-radius: 50%;
 }
 .redxy28{
     background: red;
+    border-radius: 50%;
 }
 
 .ball-28xyicon{

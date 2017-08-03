@@ -938,12 +938,13 @@ function gdkj(playGroupId) {
                             var num2 = openCode[2];
                             var num3 = parseInt(num) + parseInt(num1) + parseInt(num2);
 
+
                         }
                     }
                     if (lastNumberOpening) {
                         var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend">' + num3 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend '+getBgCo(num3)+'">' +num3+ '</span></div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -961,7 +962,7 @@ function gdkj(playGroupId) {
                             }
                         }
 
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend">' + num3 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend '+getBgCo(num3)+'">' + num3  + '</span></div></p>';
 
                     }
                     //询问框
@@ -1008,6 +1009,35 @@ function getBgColorlhc(num){
         return '<span  style="background: #5bae1c;margin-left: 8px;width: 25px; height: 25px; line-height: 25px; font-size: 16px; ">' + num + '</span>';
     }
 }
+
+function getBgCo(num){
+
+    var bgnum='';
+    if( $.inArray(num, [0,13,14,27])>=0){
+       return  bgnum="grayxy28";
+    }else if($.inArray(num,[1,4,7,10,16,19,22,25]) >= 0){
+        return  bgnum = "greenxy28";
+    } else if($.inArray(num,[2,5,8,11,17,20,23,26]) >= 0){
+        return  bgnum = "bluexy28";
+    } else{
+        bgnum = 'redxy28';
+    }
+
+}
+
+
+/*function getBgCo(num){
+
+    if(num==0||num==13||num==14||num==27){
+        return '<span  style="background: gray!important: 8px;width: 25px; height: 25px; line-height: 25px; font-size: 16px; ">' + num + '</span>';
+    }else if(num==1||num==4||num==7||num==10||num==16||num==19||num==22||num==25){
+        return '<span  style="background: #0074ff;margin-left: 8px;width: 25px; height: 25px; line-height: 25px; font-size: 16px; ">' + num + '</span>';
+    }else{
+        return '<span  style="background: #5bae1c;margin-left: 8px;width: 25px; height: 25px; line-height: 25px; font-size: 16px; ">' + num + '</span>';
+    }
+}*/
+
+
 
 
 function getBgColor(num){
