@@ -373,19 +373,21 @@
                 </div>
                 <div class="gg">
                     <img src="${resPath}img/new_zcw/gg.png" class="left"/>
-                    <div    class="gg_nr">
-                        <marquee direction="up" behavior="scroll" scrollamount="2" scrolldelay="1" loop="-1" width="500" height="50" bgcolor="#fff">
-                            <c:forEach items="${Notices.noticeList}" var="noticelists">
-                                <li class="clearfix">
-                                    <span class="left gongxi">恭喜</span>
-                                    <span class="left">${noticelists.userName}</span>
-                                    <span class="left">投注</span>
-                                    <span class="left" style="color: #ff0101;">${noticelists.type}</span>
-                                    <span class="left">中奖</span>
-                                    <span class="left" style="color: #ff7e00;">${noticelists.amount}</span>
-                                </li>
-                            </c:forEach>
-                        </ul>
+                    <div class="gg_nr">
+                        <marquee direction="up" behavior="scroll" scrollamount="2" scrolldelay="1" loop="-1" width="500"
+                                 height="50" bgcolor="#fff">
+                            <ul class="zjUl">
+                                <%--<c:forEach items="${Notices.noticeList}" var="noticelists">--%>
+                                    <%--<li class="clearfix">--%>
+                                        <%--<span class="left gongxi">恭喜</span>--%>
+                                        <%--<span class="left">${noticelists.userName}</span>--%>
+                                        <%--<span class="left">投注</span>--%>
+                                        <%--<span class="left" style="color: #ff0101;">${noticelists.type}</span>--%>
+                                        <%--<span class="left">中奖</span>--%>
+                                        <%--<span class="left" style="color: #ff7e00;">${noticelists.amount}</span>--%>
+                                    <%--</li>--%>
+                                <%--</c:forEach>--%>
+                            </ul>
                         </marquee>
 
                     </div>

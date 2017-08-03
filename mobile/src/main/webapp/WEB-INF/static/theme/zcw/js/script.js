@@ -393,6 +393,29 @@ $(function () {
 
     // 首页
     $(document).on("pageInit", "#page-index", function (e, id, page) {
+        ajaxRequest({
+            url: config.basePath + "ajaxGetNotices.json",
+            success: function (json) {
+                if (json.result == 1) {
+
+                    var strHtml = '';
+                    $.each(json.noticeList, function (index, value) {
+                        strHtml += '<li class="clearfix">';
+                        strHtml += '<span class="left gongxi">恭喜</span>';
+                        strHtml += '<span class="left">' + value.userName + '</span>';
+                        strHtml += '<span class="left">投注</span>';
+                        strHtml += '<span class="left" style="color: #ff0101;">' + value.type + '</span>';
+                        strHtml += '<span class="left">中奖</span>';
+                        strHtml += '<span class="left" style="color: #ff7e00;">' + value.amount + '</span>';
+                        strHtml += ' </li>';
+
+                    });
+
+                    $(".zjUl").html(strHtml);
+                }
+            }
+        });
+
         // // 首页图片轮播
         // var swiper = new Swiper('#lunbo', {
         //     pagination: '.swiper-pagination',
@@ -572,6 +595,7 @@ $(function () {
                     Tools.hideLoading();
                 }
             });
+
         });
 
         // function ajaxSetDefault(id) {

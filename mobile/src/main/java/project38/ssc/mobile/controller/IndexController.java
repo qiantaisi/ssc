@@ -141,6 +141,13 @@ public class IndexController extends BaseController{
         return ApiUtils.getWebInfo(2,companyShortName);
     }
 
+    @RequestMapping(value = "/ajaxGetNotices.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public SscZJNoticeResult ajaxGetNotices() {
+        String companyShortName = this.getCompanyShortName();
+        return ApiUtils.getNotices(companyShortName);
+    }
+
     @RequestMapping(value = "/shiwan.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public LoginResult LoginResult() {
