@@ -8707,8 +8707,8 @@ function content_h3zxds() {
     var betContent = '';
 
     showPlayName = "后三直选-单式";
-    showContent = "号码: (" + newArr.join("") + ")";
-    betContent = newArr.join("");
+    showContent = "号码: (" + newArr.join(",") + ")";
+    betContent = newArr.join(",");
 
     return {
         showPlayName: showPlayName,
