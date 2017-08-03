@@ -140,17 +140,17 @@ public abstract class BaseController {
             log.error(this, e);
         }
 
-            // 公共模板读取风格
-            FenggeResult fenggeResult = ApiUtils.getWebFengge(
-                    companyShortName,
-                    1
-            );
+        // 公共模板读取风格
+        FenggeResult fenggeResult = ApiUtils.getWebFengge(
+                companyShortName,
+                1
+        );
 
-            if (null == fenggeResult || fenggeResult.getResult() != 1) {
-                throw new UserException(-997, "服务器错误");
-            }
-            modelMap.put("fengge_1", fenggeResult.getFengge_1());
-            modelMap.put("fengge_2", fenggeResult.getFengge_2());
+        if (null == fenggeResult || fenggeResult.getResult() != 1) {
+            throw new UserException(-997, "服务器错误");
+        }
+        modelMap.put("fengge_1", fenggeResult.getFengge_1());
+        modelMap.put("fengge_2", fenggeResult.getFengge_2());
 
         ModelAndView modelAndView = new ModelAndView("public/" + jspLocation);
         modelAndView.addAllObjects(modelMap);
