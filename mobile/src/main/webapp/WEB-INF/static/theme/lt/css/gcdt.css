@@ -1,0 +1,135 @@
+.head {
+    height: 50px;
+    background: #f42023;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.head_back {
+    display: inline-block;
+    background: url(../images/reg_03.png) no-repeat;
+    background-size: 13px 23px;
+    padding-left: 18px;
+    font-size: 14px;
+    line-height: 24px;
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    z-index: 10;
+    color: #fff;
+}
+
+.head_text {
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.buy_fenlei {
+    background: #fff;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 14px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.buy_fenlei .ahover {
+    border-bottom: 2px solid #f42023;
+    color: #000000;
+}
+
+.buy_fenlei a {
+    color: #747474;
+    line-height: 40px;
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+}
+
+.buy_main {
+    margin-top: 8px;
+}
+
+.buy_main .index_tl {
+    border-left: 3px solid #f42023;
+    color: #f42023;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.index_tl {
+    border-left: 3px solid #e4935d;
+    padding-left: 13px;
+    color: #161616;
+    font-size: 18px;
+    line-height: 36px;
+    background: #fff;
+}
+
+.buy_ul {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    list-style: none;
+}
+
+.clearfix {
+    display: block;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.buy_ul .buydate {
+    font-size: 14px;
+    color: #e73030;
+    margin-top: 5px;
+}
+
+.buy_ul li {
+    float: left;
+    width: 33.3%;
+    border-bottom: 1px solid #ebebeb;
+    padding: 5px 0;
+    list-style: none;
+    vertical-align: bottom;
+}
+
+.buy_ul li a {
+    display: block;
+    border-right: 1px solid #ebebeb;
+    text-align: center;
+    font-size: 16px;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+}
+
+.buy_ul li img {
+    width: 80%;
+    max-width: 179px;
+}
+
+.buy_ul li p {
+    line-height: 18px;
+    height: 18px;
+    overflow: hidden;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.gpcai,.dpcai,.hide{
+    display: none;
+}
+
+.zjheigth{
+    margin-top: 30%;
+}
