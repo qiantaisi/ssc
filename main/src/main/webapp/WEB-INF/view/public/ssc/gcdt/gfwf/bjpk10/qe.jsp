@@ -10,10 +10,10 @@
 <div class="group">
     <ul>
         <li>
-            <b>前二</b>
+            <b class="tit_img">前二</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_id="499" data-play_pl_id="14209" data-name="qezxfs" data-fun_zhushu="zhushu_qezxfs" data-fun_content="content_qezxfs" data-fun_suiji="suiji_qezxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="500" data-play_pl_id="14210" data-name="qezxds" data-fun_zhushu="zhushu_qezxds" data-fun_content="content_qezxds" data-fun_suiji="suiji_qezxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="660" data-play_pl_id="14409" data-name="qezxfs" data-fun_zhushu="zhushu_qezxfs" data-fun_content="content_qezxfs" data-fun_suiji="suiji_qezxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="660" data-play_pl_id="14410" data-name="qezxds" data-fun_zhushu="zhushu_qezxds" data-fun_content="content_qezxds" data-fun_suiji="suiji_qezxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -22,7 +22,7 @@
 <c:import url="../common/commonMiddle.jsp" />
 <c:import url="../common/subCommonJs.jsp" />
 
-<script type="text/html" id="template_qyzxfs">
+<script type="text/html" id="template_qezxfs">
 <div class="Pick cl-1002 recl-1002" data-flag="fu">
     <p class="p1">
         <span class="fr fl cl-1001">
@@ -87,7 +87,7 @@
 </div>
 </script>
 
-<script type="text/html" id="template_qyzxds">
+<script type="text/html" id="template_qezxds">
 <div class="Pick cl-1003 recl-1003">
     <p class="p1">
         <span class="fr fl cl-1001">
