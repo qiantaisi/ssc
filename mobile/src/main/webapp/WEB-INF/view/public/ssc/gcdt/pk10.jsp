@@ -20,13 +20,13 @@
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
-            <%--<h1 class="title">--%>
-                <%--<i class="title_cq">北京PK10--%>
-                    <%--<div class="gfwf_triangle_down">--%>
-                        <%--&lt;%&ndash;画出一个向下的三角形图标&ndash;%&gt;--%>
-                    <%--</div>--%>
-                <%--</i>--%>
-            <%--</h1>--%>
+            <h1 class="title">
+                <i class="title_cq">北京PK10
+                    <div class="gfwf_triangle_down">
+                        <%--画出一个向下的三角形图标--%>
+                    </div>
+                </i>
+            </h1>
         </header>
         <c:import url="common/commonBet.jsp" />
         <div class="BeginFind Hide_Show">
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="gfwf_mask">
-                <%--实现蒙版--%>
+                &lt;%&ndash;实现蒙版&ndash;%&gt;
             </div>
         </div>
         <div class="content cl-601">

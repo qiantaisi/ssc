@@ -5212,7 +5212,7 @@ $(function () {
 
     //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-pk10-gfwf", function (e, id, page) {
-        initSscPage(1);
+        initSscPage(9);
 
         //官方玩法，彩种玩法选择点击事件
         $(".wx-select a").unbind("click");  //移除被选元素的事件处理程序

@@ -77,7 +77,7 @@
                     </li>
                     <li class="no">
                         <h6></h6>
-                        <p><a href="<%=basePath%>?u=<%=basePath%>/help/index.html" target="_blank">更多帮助》</a></p>
+                        <p><a href="<%=basePath%>?u=<%=basePath%>help/index.html" target="_blank">更多帮助》</a></p>
                     </li>
                 </ul>
             </div>

@@ -141,8 +141,8 @@ filter:alpha(opacity=50);
 .wid1{width: 1000px; margin:0 auto;}
 .ico-d{width: 8px;height: 4px; background:url(../img/ico32.png);display: inline-block;margin-left: 4px;margin-top: -4px;vertical-align: middle;transition:0.3s;}
 .men_list{background: #f13131;height: 122px;}
-.men_list .logo{float: left;margin-top:35px;}
-.men_list .mt0{margin-top:10px;}
+.men_list .logo{float: left;margin-top:35px;width:265px; }
+.men_list .mt0{margin-top:10px; width: 265px;}
 .men_list .nav_list{float: right;height: 100%;}
 .men_list .nav_list ul{height: 100%;}
 .men_list .nav_list ul li{width: 105px;text-align: center;position: relative;height: 100%;transition:0.3s;}
@@ -1665,7 +1665,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .rt .type1 .step .bor_box p span{width: 93px;height: 5px;float: left;background: #efefef;border: 1px solid #fff;transition:0.3s;}
 .rt .type1 .step .bor_box p.acti span{background: #fa6200;}
 
-.rt .fix_ico{position: fixed;width: 60px;z-index:2;margin-left: 760px;margin-top: -80px;}
+.rt .fix_ico{position: fixed;width: 60px;z-index:2;margin-left: 760px;margin-top: -97px!important;}
 .rt .fix_ico ul{}
 .rt .fix_ico ul li{margin-top: 5px;background: #fff;position: relative;}
 .rt .fix_ico ul li .pict{width: 58px;height: 58px;border: 1px solid #eaeaea;text-align: center;display: table;}

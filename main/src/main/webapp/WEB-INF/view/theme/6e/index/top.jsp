@@ -92,13 +92,13 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="<%=basePath%>/help/index.html">帮助</a></li>
+                <li><a href="<%=basePath%>help/index.html">帮助</a></li>
                 <li class="l"><a href="javascript:void(0)"><b>网站导航</b><i class="ico-d"></i></a>
                     <div class="link">
                         <h5>
                             <a href="JavaScript:void(0)" onclick="openGcdt('gcdt')" target="_blank">购买彩票</a>
                             <a href="<%=mHostName%>" target="_blank">手机购彩</a>
-                            <a href="<%=basePath%>/help/index.html">规则说明</a>
+                            <a href="<%=basePath%>help/index.html">规则说明</a>
                         </h5>
                         <h4>
                             <strong>彩票工具</strong>
