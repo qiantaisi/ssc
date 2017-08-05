@@ -164,6 +164,10 @@ function getGfwfZhushu(){
 
 
 //======================================================内容算法====================================
+
+
+
+
 /**
  * 定位胆
  */
@@ -1304,7 +1308,7 @@ function zhushu_qy(){
     }
 
     if (arr1.length > 0) {
-        newArr = newArr.concat(wanArr);
+        newArr = newArr.concat(arr1);
     }
 
     return newArr.length;
@@ -3740,6 +3744,61 @@ Array.prototype.uniqueArr = function () {
 }
 
 //======================================================随机算法====================================
+/**
+ * 随机算法-pk10前一
+ */
+function random_qy() {
+    var random_1 = parseInt(Math.random() * 10);
+
+    $(".di1m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-定位胆
+ */
+function random_dwd_pk10() {
+    var random_1 = parseInt(Math.random() * 10);
+    var wei = parseInt(Math.random() * 5);
+
+    if(wei == 0){
+        $(".di1m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 1){
+        $(".di2m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 2){
+        $(".di3m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 3){
+        $(".di4m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 4){
+        $(".di5m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    }
+}
+
+/**
+ * 随机算法-pk10前二
+ */
+function random_qe() {
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+
+    $(".di1m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".di2m .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+/**
+ * 随机算法-pk10前三
+ */
+function random_qsan() {
+    var random_1 = parseInt(Math.random() * 10);
+    var random_2 = parseInt(Math.random() * 10);
+    var random_3 = parseInt(Math.random() * 10);
+
+    $(".di1m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".di2m .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".di3m .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+
+/*************************时时彩随机**********************/
 /**
  * 随机算法-定位胆
  */
