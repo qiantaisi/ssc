@@ -3129,6 +3129,22 @@ function zhushu_4xzxfs() {
     return newArr.length;
 }
 
+function zhushu_qy() {
+    var qyArr = [];
+    $.each($(".cl-1002 ul li[data-name = '冠军'] span.acti"), function (index, value) {
+        qyArr.push($.trim($(this).find("i").html()));
+    });
+
+
+    var qianLength = qyArr.length;
+
+    if (qianLength <= 0) {
+        return 0;
+    }
+
+    return qyArr.length;
+}
+
 /**
  * 注数-前二大小单双
  */
@@ -5730,6 +5746,30 @@ function suiji_4xzxfs() {
     showPlayName = "四星直选-复式";
     showContent = "千位: ({0}), 百位: ({1}), 十位: ({2}), 个位: ({3})".format(arr[0], arr[1], arr[2], arr[3]);
     betContent = "{0}|{1}|{2}|{3}".format(arr[0], arr[1], arr[2], arr[3]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_qy() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var tempArr = [ 01, 02, 03, 04, 05, 06, 07, 08, 09, 10];
+    var arr = [];
+    while (arr.length <= 1) {
+        arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+    }
+
+    showPlayName = "冠军";
+    showContent = "冠军: ({0}))".format(arr[0]);
+    betContent = "{0}".format(arr[0]);
 
     return {
         showPlayName: showPlayName,
@@ -8861,6 +8901,38 @@ function content_4xzxfs() {
     };
 }
 
+function content_qy() {
+    var qyArr = [];
+    $.each($(".cl-1002 ul li[data-name = '冠军'] span.acti"), function (index, value) {
+        qyArr.push($.trim($(this).find("i").html()));
+    });
+
+
+    if (qyArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "冠军";
+    showContent = "冠军：({0})".format(
+        qyArr.join(",")
+    );
+    betContent = gfwf_qyfs(
+        qyArr
+
+    );
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
 /**
  * 5星直选单式
  */
@@ -9186,6 +9258,17 @@ function gfwf_4xfs(qianArr,
         tmpStr_2,
         tmpStr_3,
         tmpStr_4
+    );
+}
+
+function gfwf_qyfs(qyArr
+                   ) {
+    var tmpStr_1 = qyArr.join(",");
+
+
+    return "{0}".format(
+        tmpStr_1
+
     );
 }
 
