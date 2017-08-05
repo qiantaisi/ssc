@@ -53,7 +53,7 @@
                data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/qy/qy.html"
                data-play_id="659"
                data-play_pl_id="14408"
-               data-name="直选复式">
+               data-name="冠军">
                 <span class="staer1">直选复式</span>
             </a>
         </div>
