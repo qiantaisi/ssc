@@ -788,7 +788,7 @@
                 if (json.result != 1) {
                     return;
                 }
-                console.log("12---" +json.noticeList.length);
+
                 var strHtml = '';
                 if(json.noticeList.length != 0){
                     $.each(json.noticeList, function (index, value) {

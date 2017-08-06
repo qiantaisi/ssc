@@ -36,7 +36,7 @@
     </div>
     <div class="Customerservice" style="right: 462px;">
         <ul>
-            <li><div class="pict"><a href="http://www.baidu.com" target="_blank"><img src="${resPath}img/ico68.png" alt=""></a></div></li>
+            <li><div class="pict"><a href="${kefuUrl}" target="_blank"><img src="${resPath}img/ico68.png" alt=""></a></div></li>
             <li><div class="pict"><a href="#"><img src="${resPath}img/ico69.png" alt=""></a></div></li>
         </ul>
     </div>
