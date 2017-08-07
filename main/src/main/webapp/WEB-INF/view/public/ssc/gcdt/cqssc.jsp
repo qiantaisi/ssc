@@ -303,8 +303,9 @@
                     showPlayPl: $(this).data("bet_play_pl"),
                     betPerMoney: $(this).data("bet_per_money"),
                     betTotalMoney: $(this).data("bet_total_money"),
-                    betZhushu: $(this).data("bet_zhushu")
-                })
+                    betZhushu: $(this).data("bet_zhushu"),
+                    bet_beishu: $(this).data("bet_beishu")
+                });
                 $("body").append(html);
             }, function() {
                 $("#moreZhudan").remove();
@@ -337,7 +338,7 @@
                 {{else if showMode == 3}}
                 分
                 {{/if}}
-                ，{{betZhushu}}倍
+                ，{{bet_beishu}}倍
                 </span>
             </div>
             <div class="line">
