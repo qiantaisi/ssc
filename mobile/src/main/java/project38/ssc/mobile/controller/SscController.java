@@ -515,4 +515,44 @@ public class SscController extends CacheController {
         }
         return result;
     }
+
+    /**
+     * PC二维码
+     * @return
+     */
+    @RequestMapping(value = "/ajaxGetQRCodePc.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public QRCodeResult ajaxGetQRCodePc() {
+        String companyShortName = this.getCompanyShortName();
+        QRCodeResult result = new QRCodeResult();
+        try {
+            Long uid = this.getUid(httpServletRequest);
+            String token = this.getToken(httpServletRequest);
+            result = ApiUtils.getQRCodePC(uid, token, companyShortName);
+        } catch (Exception e) {
+            result.setResult(-100);
+            result.setDescription("服务器错误");
+        }
+        return result;
+    }
+
+    /**
+     * mobile二维码
+     * @return
+     */
+    @RequestMapping(value = "/ajaxGetQRCodeMobile.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public QRCodeResult ajaxGetQRCodeMobile() {
+        String companyShortName = this.getCompanyShortName();
+        QRCodeResult result = new QRCodeResult();
+        try {
+            Long uid = this.getUid(httpServletRequest);
+            String token = this.getToken(httpServletRequest);
+            result = ApiUtils.getQRCodeMobile(uid, token, companyShortName);
+        } catch (Exception e) {
+            result.setResult(-100);
+            result.setDescription("服务器错误");
+        }
+        return result;
+    }
 }

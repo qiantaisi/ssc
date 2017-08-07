@@ -143,6 +143,9 @@ public class ApiConstant {
     public static String API_REGISTER_CK_EMAIL = API_DOMAIN + "member/ajaxGetCheckEmail.json"; //获取email校验
     public static String API_REGISTER_CK_PHONE = API_DOMAIN + "member/ajaxGetCheckPhone.json"; //获取手机号校验
 
+    public static String API_QR_PC = API_DOMAIN + "member/ajaxGetQRCodePC.json"; //PC 二维码
+    public static String API_QR_MOBILE = API_DOMAIN + "member/ajaxGetQRCodeMobile.json"; //mobile 二维码
+
 
 
 }
