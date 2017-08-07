@@ -6,7 +6,12 @@
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
-<div class="fix_ico">
+<c:if test="${not empty param.index5e && param.index5e == 1}">
+    <div class="fix_ico refix_ico">
+</c:if>
+<c:if test="${empty param.index5e}">
+    <div class="fix_ico">
+</c:if>
     <ul>
         <li>
             <a href="${kefuUrl}"  target="_blank">
