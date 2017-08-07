@@ -1389,4 +1389,34 @@ public class ApiUtils{
         paramsMap.put("token", token);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_MEMBER_GET_JRSY_AND_JSZD, paramsMap, companyShortName), TodayWinOrLoseAndJszdResult.class);
     }
+
+    /**
+     * 获取PC二维码
+     * @param companyShortName
+     * @return
+     */
+    public static QRCodeResult getQRCodePC(Long uid, String token, String companyShortName) {
+        if (IS_DEBUG) {
+            return new QRCodeResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("uid", uid);
+        paramsMap.put("token", token);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_QR_PC, paramsMap, companyShortName), QRCodeResult.class);
+    }
+
+    /**
+     * 获取mobile二维码
+     * @param companyShortName
+     * @return
+     */
+    public static QRCodeResult getQRCodeMobile(Long uid, String token, String companyShortName) {
+        if (IS_DEBUG) {
+            return new QRCodeResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("uid", uid);
+        paramsMap.put("token", token);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_QR_MOBILE, paramsMap, companyShortName), QRCodeResult.class);
+    }
 }
