@@ -91,7 +91,7 @@
                data-fun_content="content_qsan"
                data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/qsan/qsan.html"
                data-play_id="661"
-               data-play_pl_id="14412|14411"
+               data-play_pl_id="14412"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
