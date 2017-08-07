@@ -388,3 +388,34 @@ table.touzhuArea {
 .Single .layout .Pick ul li .re-5x-i{
     margin-right: 45px;
 }
+
+/*购彩大厅彩种开奖历史*/
+.di .blue-bg-lhc{
+    background: #0074ff;
+    margin-left: 8px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    border-radius : 50%;
+}
+
+.di .red-bg-lhc{
+    background: #f13030;
+    margin-left: 8px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    border-radius : 50%;
+}
+
+.di .green-bg-lhc {
+    background: #5bae1c;
+    margin-left: 8px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    border-radius : 50%;
+}

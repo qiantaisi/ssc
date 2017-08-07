@@ -1664,6 +1664,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .rt .type1 .step .bor_box p.acti span{background: #fa6200;}
 
 .rt .fix_ico{position: fixed;width: 60px;z-index:2;margin-left: 760px;margin-top: -97px!important;}
+.rt .refix_ico{position: fixed;width: 60px;z-index:2;margin-left: 760px;margin-top: 3.3px!important;}
 .rt .fix_ico ul{}
 .rt .fix_ico ul li{margin-top: 5px;background: #fff;position: relative;}
 .rt .fix_ico ul li .pict{width: 58px;height: 58px;border: 1px solid #eaeaea;text-align: center;display: table;}

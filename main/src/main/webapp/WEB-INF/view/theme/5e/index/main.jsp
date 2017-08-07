@@ -30,7 +30,9 @@
     </div>
 
     <div class="right_layotu rt">
-        <c:import url="../common/right.jsp"/>
+        <c:import url="../common/right.jsp">
+            <c:param name="index5e" value="1" />
+        </c:import>
         <div class="left_wrap">
             <div class="scroll_pic">
                 <ul>
