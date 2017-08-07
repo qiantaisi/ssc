@@ -109,7 +109,7 @@ function selectFun_2(obj) {
     objArr.each(function () {
         $(this).removeClass("acti");
         var num = parseInt($(this).find("i").html());
-        if ($.inArray(num, [5, 6, 7, 8, 9]) >= 0) {
+        if ($.inArray(num, [5, 6, 7, 8, 9,10]) >= 0) {
             $(this).addClass("acti");
         }
     });
