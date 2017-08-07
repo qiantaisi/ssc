@@ -1542,7 +1542,7 @@ function zhushu_dwd_pk10(){
  * 注数-PK10前二
  */
 function zhushu_qe(){
-    var arr1 = [], arr2 = [], newArr = [];
+    var arr1 = [], arr2 = [];
     $.each($(".di1m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         arr1.push($.trim($(this).html()));
     });
@@ -1555,13 +1555,13 @@ function zhushu_qe(){
         return 0;
     }
 
-    if (arr1.length > 0) {
-        newArr = newArr.concat(arr1);
+    for(var i = 0; i < arr1.length; i++){
+        for(var j = 0; j < arr1.length; j++){
+
+        }
     }
 
-    if (arr2.length > 0) {
-        newArr = newArr.concat(arr2);
-    }
+    var newArr = getZhushuQe();
 
     return newArr.length;
 }

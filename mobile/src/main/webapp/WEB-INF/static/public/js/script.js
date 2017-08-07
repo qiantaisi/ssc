@@ -4861,6 +4861,9 @@ $(function () {
             $(".cl-810").show();
         }
 
+        $("#cftts").html('最低限额：<i>' + minMoney + '</i>元，最高限额：<i>' + maxMoney + '</i>元');
+        $("#cftts").show();
+
         $.each(skInfoList, function (index, value) {
             buttons1.push({
                 text: value.username,
@@ -4878,8 +4881,8 @@ $(function () {
                     } else {
                         $(".cl-810").hide();
                     }
-                    $("#wxts").html('最低限额：<i>' + minMoney + '</i>元，最高限额：<i>' + maxMoney + '</i>元');
-                    $("#wxts").show();
+                    $("#cftts").html('最低限额：<i>' + minMoney + '</i>元，最高限额：<i>' + maxMoney + '</i>元');
+                    $("#cftts").show();
                 }
             });
         });
