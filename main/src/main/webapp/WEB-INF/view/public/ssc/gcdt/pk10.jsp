@@ -64,7 +64,7 @@
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-bjpk10-qy">前一</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qe">前二</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qs">前三</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qsan">前三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-dwd">定位胆</a></span>
                         </p>
                     </li>

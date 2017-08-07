@@ -90,7 +90,7 @@ function selectFun_1(obj) {
     objArr.each(function () {
         $(this).removeClass("acti");
         var num = parseInt($(this).find("i").html());
-        if ($.inArray(num, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) >= 0) {
+        if ($.inArray(num, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10]) >= 0) {
             $(this).addClass("acti");
         }
     });
@@ -1032,8 +1032,10 @@ function renderZhushu() {
 
     // 注数算法
     var zhushuFun = getPlayPlFun_zhushu();
-    if (typeof zhushuFun != 'undefined') {
+    if (typeof zhushuFun != 'undefined'||zhushuFun!=isNaN()) {
         var zhushu = eval(zhushuFun + "()");   // 注数
+
+
         if (typeof zhushu == "undefined" || zhushu < 0) {
 //                clearStateTouZhu();
             return;
@@ -2429,6 +2431,73 @@ function zhushu_q2zxds() {
     return newArr.length;
 }
 
+
+/**
+ * 注数-直选单式
+ */
+function zhushu_qezxds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var tempArr=[];
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^00,01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+
+            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+                console.log(arr_new[i]);
+                newArr.push(arr_new[i]);
+
+    }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 1);
+        var twoStr = temp.substr(1, 1);
+        var threeStr = temp.substr(2, 1);
+        var fourStr = temp.substr(3, 1);
+        if (twoStr !=fourStr) {
+            tempArr.push(newArr[n]);
+        }
+    }
+if(tempArr.length<=0){
+
+    return 0;
+
+}
+
+
+    return tempArr.length;
+}
+
+
+
+/*
+
+*
+ * 注数-直选单式
+function zhushu_qezxds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+    var arr_new = textStr.split(",");
+    console.log(arr_new);
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
+            newArr.push(arr_new[i]);
+            console.log(arr_new[i]);
+        }
+    }
+
+    if (newArr.length <= 0) {
+        return 0;
+    }
+    console.log(newArr.length)
+    return newArr.length;
+
+}*/
+
+
 /**
  * 注数-直选复式
  */
@@ -2452,6 +2521,35 @@ function zhushu_q2zxfs() {
     for (var i = 0; i < wanArr.length; i++) {
         for (var i1 = 0; i1 < qianArr.length; i1++) {
             tempArr.push(wanArr[i] + "" + qianArr[i1]);
+        }
+    }
+    return tempArr.length;
+}
+
+/**
+ * 注数-直选复式
+ */
+function zhushu_qezxfs() {
+    var tempArr = [];
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '冠军'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).find("i").html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '亚军'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).find("i").html()));
+    });
+
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
+
+    if (wanLength <= 0 || qianLength <= 0) {
+        return 0;
+    }
+
+    for (var i = 0; i < wanArr.length; i++) {
+        for (var i1 = 0; i1 < qianArr.length; i1++) {
+            if (wanArr[i] != qianArr[i1])
+                tempArr.push(wanArr[i] + "," + qianArr[i1]);
         }
     }
     return tempArr.length;
@@ -3144,6 +3242,8 @@ function zhushu_qy() {
 
     return qyArr.length;
 }
+
+
 
 /**
  * 注数-前二大小单双
@@ -4782,6 +4882,75 @@ function suiji_q2zxds() {
     showPlayName = "前二直选-单式";
     showContent = "号码: (" + newArr[0] + "" + newArr[1] + ")";
     betContent = newArr[0] + "" + newArr[1];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+/**
+ * 前2直选-直选单式"
+ */
+function suiji_qezxds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = [ 01, 02, 03, 04, 05, 06, 07, 08,09,10];
+
+    while (newArr.length < 2) {
+        var zhiTsh1 = parseInt(Math.random() * 10+1);
+        var zhiTsh2 = parseInt(Math.random() * 10+1);
+        if(zhiTsh1!=zhiTsh2){
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+        }
+
+    }
+
+    showPlayName = "前二直选-单式";
+    showContent = "号码: (" + newArr[0] + "","" + newArr[1] + ")";
+    betContent = newArr[0] + "" + newArr[1];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+/**
+ * 前2直选-直选复式"
+ */
+function suiji_qezxfs() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = [ 01, 02, 03, 04, 05, 06, 07, 08,09,10];
+
+    while (newArr.length < 2) {
+        var zhiTsh1 = parseInt(Math.random() * 10+1);
+        var zhiTsh2 = parseInt(Math.random() * 10+1);
+        if(zhiTsh1!=zhiTsh2){
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+        }
+
+    }
+
+    showPlayName = "前二直选-复式";
+    showContent = "冠军: (" + newArr[0] + ") 亚军: (" + newArr[1] + ")";
+    betContent = newArr[0] + "|" + newArr[1];
+    ;
 
     return {
         showPlayName: showPlayName,
@@ -7717,6 +7886,68 @@ function content_q2zxhz() {
 /**
  * 前二直选-直选单式
  */
+function content_qezxds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr=[];
+    var errorStr = '';
+    var zhushu = 0;
+    arrTsh = [ 01, 02, 03, 04, 05, 06, 07, 08,09,10];
+    textStr = $.trim(textStr.replace(/[^00,01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var towStr = temp.substr(2, 2);
+
+
+            tempArr.push(oneStr);
+        tempArr.push(towStr);
+
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "前二直选-单式";
+    showContent = "号码: (" + tempArr + ")";
+    // 转换投注格式
+    betContent = tempArr.join(",");
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+
+/**
+ * 前二直选-直选单式
+ */
 function content_q2zxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [];
@@ -9073,6 +9304,54 @@ function content_q2dxds() {
         betContent: betContent
     };
 }
+
+
+/**
+ * 前2大小单双
+ */
+function content_qezxfs() {
+    var zhushu = 0;
+    var dxdsWArr = [], dxdsQArr = [], tempArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '冠军'] span.acti"), function (index, value) {
+        dxdsWArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1002 ul li[data-name = '亚军'] span.acti"), function (index, value) {
+        dxdsQArr.push($.trim($(this).find("i").html()));
+    });
+
+    for (var n = 0; n < dxdsWArr.length; n++) {
+        for (var m = 0; m < dxdsQArr.length; m++) {
+            tempArr.push(dxdsWArr[n] + "" + dxdsQArr[m]);
+        }
+    }
+
+    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(",")
+    ];
+
+    showPlayName = "前二直选-单式";
+    showContent = "冠军: ({0}), 亚军: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
 
 /**
  * 后2大小单双
