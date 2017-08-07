@@ -4857,7 +4857,7 @@ function suiji_dwdzxfs() {
     var arr = [];
     var betStr = '';
     while (arr.length < 1) {
-        var num1 = parseInt(Math.random() * 5);
+        var num1 = parseInt(Math.random() * 10);
         var num2 = numArr[parseInt(Math.random() * 10)];
         var str = xArr[num1];
         str = str + ": (" + num2 + ")";
