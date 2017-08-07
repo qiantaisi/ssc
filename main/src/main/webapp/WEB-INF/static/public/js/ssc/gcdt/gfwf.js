@@ -4879,7 +4879,7 @@ function suiji_q2zxds() {
         newArr.push(arrTsh[parseInt(zhiTsh)]);
     }
 
-    showPlayName = "前二直选-单式";
+    showPlayName = "前二直选-直选单式";
     showContent = "号码: (" + newArr[0] + "" + newArr[1] + ")";
     betContent = newArr[0] + "" + newArr[1];
 
@@ -4901,20 +4901,20 @@ function suiji_qezxds() {
     var betContent = '';
 
     var arrTsh = [], newArr = [];
-    arrTsh = [ 01, 02, 03, 04, 05, 06, 07, 08,09,10];
+    arrTsh = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10];
 
     while (newArr.length < 2) {
-        var zhiTsh1 = parseInt(Math.random() * 10+1);
-        var zhiTsh2 = parseInt(Math.random() * 10+1);
-        if(zhiTsh1!=zhiTsh2){
+        var zhiTsh1 = parseInt(Math.random() * 10 + 1);
+        var zhiTsh2 = parseInt(Math.random() * 10 + 1);
+        if (zhiTsh1 != zhiTsh2) {
             newArr.push(zhiTsh1);
             newArr.push(zhiTsh2);
         }
 
     }
 
-    showPlayName = "前二直选-单式";
-    showContent = "号码: (" + newArr[0] + "","" + newArr[1] + ")";
+    showPlayName = "前二直选-直选单式";
+    showContent = "号码: (" + newArr[0] + "", "" + newArr[1] + ")";
     betContent = newArr[0] + "" + newArr[1];
 
     return {
@@ -7890,11 +7890,11 @@ function content_qezxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [];
     var errorArr = [];
-    var tempArr=[];
+    var tempArr = [];
     var errorStr = '';
     var zhushu = 0;
-    arrTsh = [ 01, 02, 03, 04, 05, 06, 07, 08,09,10];
-    textStr = $.trim(textStr.replace(/[^00,01,02,03,04,05,06,07,08,09,10]/g, ','));
+    arrTsh = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
@@ -7910,10 +7910,7 @@ function content_qezxds() {
         var oneStr = temp.substr(0, 2);
         var towStr = temp.substr(2, 2);
 
-
-            tempArr.push(oneStr);
-        tempArr.push(towStr);
-
+        tempArr.push(oneStr + towStr);
     }
 
     if (tempArr.length <= 0) {
@@ -7932,7 +7929,67 @@ function content_qezxds() {
     var showContent = '';
     var betContent = '';
 
-    showPlayName = "前二直选-单式";
+    showPlayName = "前二直选-直选单式";
+    showContent = "号码: (" + tempArr + ")";
+    // 转换投注格式
+    betContent = tempArr.join(",");
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+
+/**
+ * 前三直选-直选单式
+ */
+function content_qszxds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr = [];
+    var errorStr = '';
+    var zhushu = 0;
+    arrTsh = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var towStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+
+        tempArr.push(oneStr + towStr + threeStr);
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "前三直选-直选单式";
     showContent = "号码: (" + tempArr + ")";
     // 转换投注格式
     betContent = tempArr.join(",");
