@@ -9581,7 +9581,7 @@ function content_qy() {
     var showContent = '';
     var betContent = '';
 
-    showPlayName = "冠军";
+    showPlayName = "前一直选复式";
     showContent = "冠军：({0})".format(
         qyArr.join(",")
     );
