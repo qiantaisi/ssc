@@ -61,7 +61,7 @@
                 <ul>
                     <li class="gf-li">
                         <b class="acti">官方玩法</b>
-                        <p class="guanfang respan gf-cgwf" data-name="gfwf">
+                        <p class="guanfang respan gf-cgwf respanw" data-name="gfwf">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-bjpk10-qy">前一</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qe">前二</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-bjpk10-qsan">前三</a></span>

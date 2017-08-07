@@ -5126,14 +5126,11 @@ function suiji_qezxds() {
             newArr.push(zhiTsh2);
         }
 
-
-
     }
 
 
     showPlayName = "前二直选-直选单式";
     showContent = "号码: (" + newArr[0] + "" + newArr[1] + ")";
-
     betContent = newArr[0] + "" + newArr[1];
 
     return {

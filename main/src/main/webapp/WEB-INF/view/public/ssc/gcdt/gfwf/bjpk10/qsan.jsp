@@ -13,7 +13,7 @@
             <b class="tit_img">前三</b>
             <p class="btn_fu_zhi">
                 <span class="playPlIdBtn acti" data-play_id="661" data-play_pl_id="14412" data-name="qszxfs" data-fun_zhushu="zhushu_qszxfs" data-fun_content="content_qszxfs" data-fun_suiji="suiji_qszxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="661" data-play_pl_id="14411" data-name="qszxds" data-fun_zhushu="zhushu_qszxds" data-fun_content="content_qszxds" data-fun_suiji="suiji_qszxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn" data-play_id="661" data-play_pl_id="14413" data-name="qszxds" data-fun_zhushu="zhushu_qszxds" data-fun_content="content_qszxds" data-fun_suiji="suiji_qszxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
