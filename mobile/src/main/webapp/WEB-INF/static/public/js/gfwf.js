@@ -3082,6 +3082,7 @@ function selectFun_2(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
+
     var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     var Barr = [, , , , , 5, 6, 7, 8, 9];
     for (var i = 0; i <= Aarr.length; ++i) {
@@ -3097,6 +3098,7 @@ function selectFun_3(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
+
     var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     var Barr = [0, 1, 2, 3, 4, , , , ,];
     for (var i = 0; i <= Aarr.length; ++i) {
@@ -3125,7 +3127,7 @@ function selectFun_5(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
-    for (var i = 0; i < 10; ++i) {
+    for (var i = 0; i <= 10; ++i) {
         if (i%2 == 0) {   //偶数
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
@@ -3138,6 +3140,40 @@ function selectFun_6(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
+    getGfwfZhushu();
+    statusChange();
+}
+
+
+function selectFun_str2(obj) {
+    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");
+    $(obj).addClass("activeBtn");
+
+    var Aarr = [, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var Barr = [, , , , , , 6, 7, 8, 9, 10];
+    for (var i = 0; i < Aarr.length; ++i) {
+        if (Aarr[i] == Barr[i]) {
+            $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
+        }
+    }
+    getGfwfZhushu();
+    statusChange();
+}
+
+function selectFun_str3(obj) {
+    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");
+    $(obj).addClass("activeBtn");
+
+    var Aarr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ];
+    var Barr = [1, 2, 3, 4, 5, , , , ,];
+    for (var i = 0; i < Aarr.length; ++i) {
+
+        if (Aarr[i] == Barr[i]) {
+            $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + (i + 1)).addClass("active_gfwf");
+        }
+    }
     getGfwfZhushu();
     statusChange();
 }

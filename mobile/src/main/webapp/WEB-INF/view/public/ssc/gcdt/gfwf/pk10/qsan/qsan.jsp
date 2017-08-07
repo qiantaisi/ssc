@@ -15,8 +15,8 @@
             <span class="wanwei">冠军</span>
             <span class="xz">
                 <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_str2(this)">大</i>
+                <i onclick="selectFun_str3(this)">小</i>
                 <i onclick="selectFun_4(this)">奇</i>
                 <i onclick="selectFun_5(this)">偶</i>
                 <i onclick="selectFun_6(this)">清</i>
@@ -62,8 +62,8 @@
             <span class="wanwei">亚军</span>
             <span class="xz">
                 <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_str2(this)">大</i>
+                <i onclick="selectFun_str3(this)">小</i>
                 <i onclick="selectFun_4(this)">奇</i>
                 <i onclick="selectFun_5(this)">偶</i>
                 <i onclick="selectFun_6(this)">清</i>
@@ -108,8 +108,8 @@
             <span class="wanwei">季军</span>
             <span class="xz">
                 <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_str2(this)">大</i>
+                <i onclick="selectFun_str3(this)">小</i>
                 <i onclick="selectFun_4(this)">奇</i>
                 <i onclick="selectFun_5(this)">偶</i>
                 <i onclick="selectFun_6(this)">清</i>
