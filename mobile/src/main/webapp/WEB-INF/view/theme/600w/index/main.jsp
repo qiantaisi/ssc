@@ -12,7 +12,7 @@
 <c:import url="../common/bodyStart.jsp"/>
 <div class="page-group">
     <div class="page page-current" id="page-index">
-        <header class="bar bar-nav cl-1">
+        <header class="bar bar-nav cl-1 rebarafter">
             <a href="javascript:void(0)" class="cl-2" onclick="location.reload()">
                 <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
             </a>

@@ -15,8 +15,8 @@
             <span class="wanwei">冠军</span>
             <span class="xz">
                 <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_str2(this)">大</i>
+                <i onclick="selectFun_str3(this)">小</i>
                 <i onclick="selectFun_4(this)">奇</i>
                 <i onclick="selectFun_5(this)">偶</i>
                 <i onclick="selectFun_6(this)">清</i>
@@ -24,31 +24,31 @@
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">
-                <span class="xz n1" onclick="danSelect(this)">1</span>
+                <span class="xz n1" onclick="danSelect(this)">01</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n2" onclick="danSelect(this)">2</span>
+                <span class="xz n2" onclick="danSelect(this)">02</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n3" onclick="danSelect(this)">3</span>
+                <span class="xz n3" onclick="danSelect(this)">03</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n4" onclick="danSelect(this)">4</span>
+                <span class="xz n4" onclick="danSelect(this)">04</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n5" onclick="danSelect(this)">5</span>
+                <span class="xz n5" onclick="danSelect(this)">05</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n6" onclick="danSelect(this)">6</span>
+                <span class="xz n6" onclick="danSelect(this)">06</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n7" onclick="danSelect(this)">7</span>
+                <span class="xz n7" onclick="danSelect(this)">07</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n8" onclick="danSelect(this)">8</span>
+                <span class="xz n8" onclick="danSelect(this)">08</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n9" onclick="danSelect(this)">9</span>
+                <span class="xz n9" onclick="danSelect(this)">09</span>
             </div>
             <div class="cus-flex-item">
                 <span class="xz n10" onclick="danSelect(this)">10</span>

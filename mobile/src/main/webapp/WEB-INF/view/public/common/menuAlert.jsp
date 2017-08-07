@@ -596,14 +596,29 @@
                     </c:when>
                     <c:when test="${param.playGroupId == 9}">
                         <li>
-                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
-                               class="item-contents">
-                                <div class="item-medias"><i class="icon bg-img-pk10"></i></div>
-                                <div class="item-innerss">
-                                    <div class="item-inners">玩法说明</div>
-                                </div>
-                            </a>
+                            <c:choose>
+                                <c:when test="${param.gfwfFlag == 2}">
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-pk10"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                                       class="item-contents">
+                                        <div class="item-medias"><i class="icon bg-img-pk10"></i></div>
+                                        <div class="item-innerss">
+                                           <div class="item-inners">玩法说明</div>
+                                        </div>
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
+
                         </li>
+
                     </c:when>
                     <c:when test="${param.playGroupId == 10}">
                         <li>

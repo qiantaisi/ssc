@@ -34,6 +34,19 @@ public class SscPlayPlResult extends CommonResult {
          */
         private BigDecimal maxFdBl;
 
+        /**
+         * 玩法ID
+         */
+        private Long playId;
+
+        public Long getPlayId() {
+            return playId;
+        }
+
+        public void setPlayId(Long playId) {
+            this.playId = playId;
+        }
+
         public BigDecimal getMinPl() {
             return minPl;
         }

@@ -34,7 +34,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="cl-303 hide" id="wxts"></div>
+                <div class="cl-303 hide" id="cftts"></div>
                 <ul>
                     <li>
                         <div class="item-content">

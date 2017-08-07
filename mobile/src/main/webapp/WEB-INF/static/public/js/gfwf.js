@@ -163,7 +163,7 @@ function getGfwfZhushu(){
 
 
 
-//======================================================内容算法====================================
+//======================================================内容算法=====================================
 /**
  * PK10-前一
  */
@@ -288,7 +288,7 @@ function content_dwd_pk10(){
     });
 
 
-    if (arr1.length <= 0 && arr2.length <= 0) {
+    if (arr1.length <= 0 && arr2.length <= 0 && arr3.length <= 0 && arr4.length <= 0 && arr5.length <= 0 && arr6.length <= 0 && arr7.length <= 0 && arr8.length <= 0 && arr9.length <= 0 && arr10.length <= 0) {
         return 0;
     }
 
@@ -1550,17 +1550,16 @@ function zhushu_qe(){
         arr2.push($.trim($(this).html()));
     });
 
-
-    if (arr1.length <= 0 && arr2.length <= 02) {
+    if (arr1.length <= 0 || arr2.length <= 0) {
         return 0;
     }
 
-    if (arr1.length > 0) {
-        newArr = newArr.concat(arr1);
-    }
-
-    if (arr2.length > 0) {
-        newArr = newArr.concat(arr2);
+    for(var i = 0; i < arr1.length; i++){
+        for(var j = 0; j < arr2.length; j++){
+            if(arr1[i] != arr2[j]){
+                newArr.push(arr1[i] + ',' + arr2[j]);
+            }
+        }
     }
 
     return newArr.length;
@@ -1585,16 +1584,14 @@ function zhushu_qsan(){
         return 0;
     }
 
-    if (arr1.length > 0) {
-        newArr = newArr.concat(arr1);
-    }
-
-    if (arr2.length > 0) {
-        newArr = newArr.concat(arr2);
-    }
-
-    if (arr3.length > 0) {
-        newArr = newArr.concat(arr3);
+    for(var i = 0; i < arr1.length; i++){
+        for(var j = 0; j < arr2.length; j++){
+          for(var m = 0; m < arr3.length; m++) {
+              if (arr1[i] != arr2[j] && arr1[i] != arr3[m] && arr2[j] != arr3[m]) {
+                  newArr.push(arr1[i] + ',' + arr2[j] + ',' + arr3[m]);
+              }
+          }
+        }
     }
 
     return newArr.length;
@@ -3085,6 +3082,7 @@ function selectFun_2(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
+
     var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     var Barr = [, , , , , 5, 6, 7, 8, 9];
     for (var i = 0; i <= Aarr.length; ++i) {
@@ -3100,6 +3098,7 @@ function selectFun_3(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
+
     var Aarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     var Barr = [0, 1, 2, 3, 4, , , , ,];
     for (var i = 0; i <= Aarr.length; ++i) {
@@ -3128,7 +3127,7 @@ function selectFun_5(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
-    for (var i = 0; i < 10; ++i) {
+    for (var i = 0; i <= 10; ++i) {
         if (i%2 == 0) {   //偶数
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
@@ -3141,6 +3140,40 @@ function selectFun_6(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
+    getGfwfZhushu();
+    statusChange();
+}
+
+
+function selectFun_str2(obj) {
+    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");
+    $(obj).addClass("activeBtn");
+
+    var Aarr = [, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var Barr = [, , , , , , 6, 7, 8, 9, 10];
+    for (var i = 0; i < Aarr.length; ++i) {
+        if (Aarr[i] == Barr[i]) {
+            $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
+        }
+    }
+    getGfwfZhushu();
+    statusChange();
+}
+
+function selectFun_str3(obj) {
+    $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
+    $(obj).parent().find(".xz i").removeClass("activeBtn");
+    $(obj).addClass("activeBtn");
+
+    var Aarr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ];
+    var Barr = [1, 2, 3, 4, 5, , , , ,];
+    for (var i = 0; i < Aarr.length; ++i) {
+
+        if (Aarr[i] == Barr[i]) {
+            $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + (i + 1)).addClass("active_gfwf");
+        }
+    }
     getGfwfZhushu();
     statusChange();
 }
@@ -3895,7 +3928,7 @@ Array.prototype.uniqueArr = function () {
  * 随机算法-pk10前一
  */
 function random_qy() {
-    var random_1 = parseInt(Math.random() * 10);
+    var random_1 = parseInt(Math.random() * 10) + 1;
 
     $(".di1m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
 }
@@ -3904,7 +3937,7 @@ function random_qy() {
  * 随机算法-定位胆
  */
 function random_dwd_pk10() {
-    var random_1 = parseInt(Math.random() * 10);
+    var random_1 = parseInt(Math.random() * 10) + 1;
     var wei = parseInt(Math.random() * 5);
 
     if(wei == 0){
@@ -3924,8 +3957,17 @@ function random_dwd_pk10() {
  * 随机算法-pk10前二
  */
 function random_qe() {
-    var random_1 = parseInt(Math.random() * 10);
-    var random_2 = parseInt(Math.random() * 10);
+    var arrTemp = [];
+    var random_1 = 0;
+    var random_2 = 0;
+
+    while (arrTemp.length <= 1) {
+        random_1 = parseInt(Math.random() * 10) + 1;
+        random_2 = parseInt(Math.random() * 10) + 1;
+        if(random_1 != random_2){
+            arrTemp.push(random_1 + ',' + random_2);
+        }
+    }
 
     $(".di1m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
     $(".di2m .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
@@ -3935,9 +3977,20 @@ function random_qe() {
  * 随机算法-pk10前三
  */
 function random_qsan() {
-    var random_1 = parseInt(Math.random() * 10);
-    var random_2 = parseInt(Math.random() * 10);
-    var random_3 = parseInt(Math.random() * 10);
+    var arrTemp = [];
+    var random_1 = 0;
+    var random_2 = 0;
+    var random_3 = 0;
+
+    while (arrTemp.length <= 1) {
+        random_1 = parseInt(Math.random() * 10) + 1;
+        random_2 = parseInt(Math.random() * 10) + 1;
+        random_3 = parseInt(Math.random() * 10) + 1;
+
+        if(random_1 != random_2 && random_1 != random_3 && random_3 != random_2){
+            arrTemp.push(random_1 + ',' + random_2 + ',' + random_3);
+        }
+    }
 
     $(".di1m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
     $(".di2m .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
