@@ -22,7 +22,7 @@
         </header>
         <div class="content">
             <div class="row cl-100 cl-305">
-                <div class="col-100">修改密码</div>
+                <div class="col-100">修改登录密码</div>
             </div>
             <div class="cl-302 cl-304">
                 <div class="list-block">
