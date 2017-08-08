@@ -749,7 +749,7 @@ $(function () {
         });
     });
 
-    // 修改密码
+    // 修改或设置密码
     $(document).on("pageInit", "#page-xgmm", function (e, id, page) {
         // 设置取款密码
         $("#changePassword").click(function () {
@@ -822,9 +822,8 @@ $(function () {
             );
         });
 
-
-        // 修改密码
-        $("#btn-changePassword").click(function () {
+        // 修改取款密码
+        $("#btn-changePassword-qk").click(function () {
             var id = $(this).attr("data-id");
             var oldPassword = $("input[name='oldPassword']").val();   // 旧密码
             var newPassword = $("input[name='newPassword']").val();   // 新密码
@@ -868,7 +867,6 @@ $(function () {
                         },
                         success: function (json) {
                             if (json.result == 1) {
-
                                 Tools.alertCallback("修改成功", function () {
                                     window.location.href = config.basePath + "member/index.html";
                                 });
@@ -893,6 +891,80 @@ $(function () {
                 }
             );
         });
+
+        // 修改登录密码
+        $("#btn-changePassword").click(function () {
+            var id = $(this).attr("data-id");
+            var oldPassword = $("input[name='oldPassword']").val();   // 旧密码
+            var newPassword = $("input[name='newPassword']").val();   // 新密码
+            var confirmPassword = $("input[name='confirmPassword']").val();   // 确认密码
+
+            if (!oldPassword) {
+                Tools.alert("请输入原密码");
+                return;
+            }
+
+            if (!newPassword) {
+                Tools.alert("请输入新密码");
+                return;
+            }
+
+            if (!confirmPassword) {
+                Tools.alert("请输入确认密码");
+                return;
+            }
+
+            if (confirmPassword != newPassword) {
+                Tools.alert("确认密码不正确");
+                return;
+            }
+
+            if (!newPassword.match(/^[0-9a-zA-Z]{6,12}$/)) {
+                Tools.alert("请输入6-12位字母、数字的新密码");
+                return;
+            }
+
+            $.confirm('确认修改？',
+                function () {
+                    ajaxRequest({
+                        url: config.basePath + "member/xgmm/ajaxResetPassword.json",
+                        data: {
+                            oldPassword: $.md5(oldPassword),
+                            newPassword: $.md5(newPassword)
+                        },
+                        beforeSend: function () {
+                            Tools.showLoading("请稍等...");
+                        },
+                        success: function (json) {
+                            if (json.result == 1) {
+                                clearUserToken();
+                                Tools.alertCallback("修改成功，请重新登录", function () {
+                                    window.location.href = config.basePath + "login.html";
+                                });
+                            } else {
+                                Tools.alert("修改失败：" + json.description);
+                            }
+                        },
+                        error: function (a, b, c) {
+                            if (b == 'timeout') {
+                                Tools.toast("操作超时，请稍后重试");
+                                return;
+                            }
+
+                            Tools.toast("请求错误，请稍后重试");
+                        },
+                        complete: function () {
+                            Tools.hideLoading();
+                        }
+                    });
+                },
+                function () {
+                }
+            );
+        });
+
+
+
     });
 
     // 充值记录
