@@ -58,7 +58,8 @@
     <p class="p1">
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个四位数号码组成一注。
-            <a><img src="${resPath}img/ico60.png" alt="">选号规则
+            <a>
+                <img src="${resPath}img/ico60.png" alt="">选号规则
                 <var>投注方案：3456 开奖号码：3456，即中四星直选。</var>
             </a>
             <a>

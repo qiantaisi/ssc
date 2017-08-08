@@ -2551,21 +2551,21 @@ function zhushu_q2zxds() {
 
 
 /**
- * 注数-直选单式
+ * 注数 前二-直选单式
  */
 function zhushu_qezxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
-    var tempArr=[];
+    var tempArr = [];
     var newArr = [];
     textStr = $.trim(textStr.replace(/[^00,01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
 
-            if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
-                console.log(arr_new[i]);
-                newArr.push(arr_new[i]);
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+            console.log(arr_new[i]);
+            newArr.push(arr_new[i]);
 
-    }
+        }
     }
     for (var n = 0; n < newArr.length; n++) {
         var temp = newArr[n].toString();
@@ -2573,47 +2573,50 @@ function zhushu_qezxds() {
         var twoStr = temp.substr(1, 1);
         var threeStr = temp.substr(2, 1);
         var fourStr = temp.substr(3, 1);
-        if (twoStr !=fourStr) {
+        if (twoStr != fourStr) {
             tempArr.push(newArr[n]);
         }
     }
-if(tempArr.length<=0){
+    if (tempArr.length <= 0) {
 
-    return 0;
+        return 0;
 
-}
+    }
 
 
     return tempArr.length;
 }
 
 
-
-/*
-
-*
- * 注数-直选单式
-function zhushu_qezxds() {
+/**
+ * 注数 前三-直选单式
+ */
+function zhushu_qszxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
-
+    var tempArr = [];
     var newArr = [];
-    textStr = $.trim(textStr.replace(/[^0-9]/g, ','));
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
-    console.log(arr_new);
     for (var i = 0; i < arr_new.length; i++) {
-        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
-            console.log(arr_new[i]);
         }
     }
-
-    if (newArr.length <= 0) {
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
+            tempArr.push(newArr[n]);
+        }
+    }
+    if (tempArr.length <= 0) {
         return 0;
     }
-    console.log(newArr.length)
-    return newArr.length;
 
-}*/
+    return tempArr.length;
+}
 
 
 /**
@@ -2645,7 +2648,7 @@ function zhushu_q2zxfs() {
 }
 
 /**
- * 注数-直选复式
+ * 注数 前二-直选复式
  */
 function zhushu_qezxfs() {
     var tempArr = [];
@@ -2673,6 +2676,42 @@ function zhushu_qezxfs() {
     return tempArr.length;
 }
 
+/**
+ * 注数 前三-直选复式
+ */
+function zhushu_qszxfs() {
+    var tempArr = [];
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".recl-1002 ul li[data-name = '冠军'] span.acti"), function () {
+        wanArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1002 ul li[data-name = '亚军'] span.acti"), function () {
+        qianArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1002 ul li[data-name = '季军'] span.acti"), function () {
+        baiArr.push($.trim($(this).find("i").html()));
+    });
+
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
+    var baiLength = baiArr.length;
+
+    if (wanLength <= 0 || qianLength <= 0 || baiLength <= 0) {
+        return 0;
+    }
+
+    for (var i = 0; i < wanArr.length; i++) {
+        for (var m = 0; m < qianArr.length; m++) {
+            for (var n = 0; n < baiArr.length; n++) {
+                if (wanArr[i] != qianArr[m] && wanArr[i] != baiArr[n] && baiArr[n] != qianArr[m])
+                    tempArr.push(wanArr[i] + "," + qianArr[m] + "," + baiArr[n]);
+            }
+        }
+    }
+    return tempArr.length;
+}
 
 //=======================前3=======================
 /**
@@ -5089,8 +5128,6 @@ function suiji_qezxds() {
     }
 
 
-    showPlayName = "前二直选-单式";
-
     showPlayName = "前二直选-直选单式";
     showContent = "号码: (" + newArr[0] + "", "" + newArr[1] + ")";
 
@@ -5103,6 +5140,44 @@ function suiji_qezxds() {
         playGroupId: playGroupId
     };
 }
+
+/**
+ * 前3直选-直选单式
+ */
+function suiji_qszxds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'];
+
+    while (newArr.length < 3) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10)];
+        if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+        }
+    }
+
+
+    showPlayName = "前三直选-直选单式";
+    showContent = "号码: (" + newArr.join('') + ")";
+
+    betContent = newArr.join('');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
 
 /**
  * 前2直选-直选复式"
@@ -5138,6 +5213,45 @@ function suiji_qezxfs() {
         playGroupId: playGroupId
     };
 }
+
+/**
+ * 前2直选-直选复式"
+ */
+function suiji_qszxfs() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10)];
+
+        if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+        }
+
+    }
+
+    showPlayName = "前三直选-直选复式";
+    showContent = "冠军: (" + newArr[0] + ") 亚军: (" + newArr[1] + ") 季军 : (" + newArr[2] + ")";
+    betContent = newArr[0] + "|" + newArr[1] + "|" + newArr[2];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
 
 /**
  * 前2直选-直选复式"
@@ -6109,14 +6223,14 @@ function suiji_qy() {
     var showContent = '';
     var betContent = '';
 
-    var tempArr = [ 01, 02, 03, 04, 05, 06, 07, 08, 09, 10];
+    var tempArr = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'];
     var arr = [];
     while (arr.length <= 1) {
-        arr.push(tempArr[parseInt(Math.random() * tempArr.length)]);
+        arr.push(tempArr[parseInt(Math.random() * 10)]);
     }
 
-    showPlayName = "冠军";
-    showContent = "冠军: ({0}))".format(arr[0]);
+    showPlayName = "前一-直选复式";
+    showContent = "冠军: ({0})".format(arr[0]);
     betContent = "{0}".format(arr[0]);
 
     return {
@@ -8229,10 +8343,12 @@ function content_qszxds() {
     for (var n = 0; n < newArr.length; n++) {
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
-        var towStr = temp.substr(2, 2);
+        var twoStr = temp.substr(2, 2);
         var threeStr = temp.substr(4, 2);
 
-        tempArr.push(oneStr + towStr + threeStr);
+        if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
+            tempArr.push(oneStr + twoStr + threeStr);
+        }
     }
 
     if (tempArr.length <= 0) {
@@ -9626,7 +9742,7 @@ function content_q2dxds() {
 
 
 /**
- * 前2大小单双
+ * 前2直选复式-PK10
  */
 function content_qezxfs() {
     var zhushu = 0;
@@ -9671,6 +9787,58 @@ function content_qezxfs() {
     };
 }
 
+/**
+ * 前3直选复式-PK10
+ */
+function content_qszxfs() {
+    var zhushu = 0;
+    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '冠军'] span.acti"), function (index, value) {
+        dxdsWArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1002 ul li[data-name = '亚军'] span.acti"), function (index, value) {
+        dxdsQArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1002 ul li[data-name = '季军'] span.acti"), function (index, value) {
+        dxdsBArr.push($.trim($(this).find("i").html()));
+    });
+
+    for (var n = 0; n < dxdsWArr.length; n++) {
+        for (var m = 0; m < dxdsQArr.length; m++) {
+            for (var n = 0; n < dxdsQArr.length; n++) {
+                tempArr.push(dxdsWArr[n] + "" + dxdsQArr[m] + "" + dxdsBArr[n]);
+            }
+        }
+    }
+
+    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0 || dxdsBArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(","),
+        dxdsBArr.join(",")
+    ];
+
+    showPlayName = "前二直选-单式";
+    showContent = "冠军: ({0}), 亚军: ({1}), 季军: ({2})".format(arr[0], arr[1], arr[2]);
+    betContent = "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
 
 /**
  * 后2大小单双
