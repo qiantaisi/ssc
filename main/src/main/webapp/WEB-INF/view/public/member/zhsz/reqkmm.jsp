@@ -21,7 +21,7 @@
                 <li>
                     <span>新取款密码：</span>
                     <input name="newPassword2" id="newPassword2" type="password" size="20" class="passwinp">
-                    <label class="error" for="newPassword2">* 6~12位字母数字组合</label>
+                    <label class="error" for="newPassword2">* 6~12位字母或数字组成</label>
                 </li>
                 <li>
                     <span>确认新密码：</span>
