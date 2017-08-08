@@ -751,7 +751,7 @@ $(function () {
 
     // 修改密码
     $(document).on("pageInit", "#page-xgmm", function (e, id, page) {
-        // 修改取款密码
+        // 设置取款密码
         $("#changePassword").click(function () {
             var id = $(this).attr("data-id");
             var oldPassword = $("input[name='oldPassword']").val();   // 旧密码
@@ -868,10 +868,13 @@ $(function () {
                         },
                         success: function (json) {
                             if (json.result == 1) {
-                                clearUserToken();
-                                Tools.alertCallback("修改成功，请重新登录", function () {
-                                    window.location.href = config.basePath + "login.html";
+                                Tools.alertCallback("修改成功", function () {
+                                    window.location.href = config.basePath + "member/index.html";
                                 });
+                                // clearUserToken();
+                                // Tools.alertCallback("修改成功，请重新登录", function () {
+                                //     window.location.href = config.basePath + "login.html";
+                                // });
                             } else {
                                 Tools.alert("修改失败：" + json.description);
                             }

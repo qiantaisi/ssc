@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="cl-102">
-                <a href="javascript:void(0)" id="changePassword" class="cl-103">确认修改</a>
+                <a href="javascript:void(0)" id="btn-changePassword" class="cl-103">确认修改</a>
             </div>
             <c:import url="../../common/copyright.jsp" />
         </div>
