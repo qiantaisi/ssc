@@ -127,6 +127,7 @@
                 success: function(json) {
                     if (json.result == 1) {
                         alert("提交成功");
+                        document.location.href = CONFIG.BASEURL + "member/lsjl.html?module=ckjl";
                     } else {
                         alert("提交失败：" + json.description);
                     }

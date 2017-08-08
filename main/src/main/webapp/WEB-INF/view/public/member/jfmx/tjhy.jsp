@@ -94,8 +94,8 @@
                     checkAcount: "* （以字母开头的6-12位字母、数字组成的字符）"
                 }
                 , password: {
-                    required: "* （由数字和字母组成6-16个字符）",
-                    checkPassword: "* （由数字和字母组成6-16个字符）"
+                    required: "* （由数字或字母组成6-16个字符）",
+                    checkPassword: "* （由数字或字母组成6-16个字符）"
                 }
                 , qq: {
                     required: "* （请填写真实QQ号以便联系）",
