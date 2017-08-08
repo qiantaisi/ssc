@@ -28,7 +28,7 @@
         <span class="fr fl cl-1001">
             从第一名，第二名中至少选择1个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：冠军01 ,亚军02 开奖号码：01，02,03,04,05,06,07,08,09,10即可中前二直选。</var>
+                <var>投注方案：</br>冠军01 ，亚军02 开奖号码：01，02，03，04，05，06，07，08，09，10即可中前二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -53,8 +53,8 @@
             </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_str2(this)">大</i>
+                <i onclick="selectFun_str3(this)">小</i>
                 <i onclick="selectFun_4(this)">奇</i>
                 <i onclick="selectFun_5(this)">偶</i>
                 <i onclick="selectFun_6(this)">清</i>
@@ -76,8 +76,8 @@
             </var>
             <div class="clear re-5x-i">
                 <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_2(this)">大</i>
-                <i onclick="selectFun_3(this)">小</i>
+                <i onclick="selectFun_str2(this)">大</i>
+                <i onclick="selectFun_str3(this)">小</i>
                 <i onclick="selectFun_4(this)">奇</i>
                 <i onclick="selectFun_5(this)">偶</i>
                 <i onclick="selectFun_6(this)">清</i>
@@ -113,7 +113,7 @@
         </div>
     </div>
 
-    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
+    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[，] 或者 分号[;] 隔开</p>
 </div>
 </script>
 <script>

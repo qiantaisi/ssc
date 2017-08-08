@@ -116,6 +116,22 @@ function selectFun_2(obj) {
     renderZhushu();
 }
 
+// 以一开头的的数字大小
+function selectFun_str2(obj) {
+    $(obj).parent().find(".acti").removeClass("acti");
+    $(obj).addClass("acti");
+
+    var objArr = $(obj).parent().parent().find("span");
+    objArr.each(function () {
+        $(this).removeClass("acti");
+        var num = parseInt($(this).find("i").html());
+        if ($.inArray(num, [6, 7, 8, 9, 10]) >= 0) {
+            $(this).addClass("acti");
+        }
+    });
+    renderZhushu();
+}
+
 function selectFun_3(obj) {
     $(obj).parent().find(".acti").removeClass("acti");
     $(obj).addClass("acti");
@@ -125,6 +141,22 @@ function selectFun_3(obj) {
         $(this).removeClass("acti");
         var num = parseInt($(this).find("i").html());
         if ($.inArray(num, [0, 1, 2, 3, 4]) >= 0) {
+            $(this).addClass("acti");
+        }
+    });
+    renderZhushu();
+}
+
+// 以一开头的的数字大小
+function selectFun_str3(obj) {
+    $(obj).parent().find(".acti").removeClass("acti");
+    $(obj).addClass("acti");
+
+    var objArr = $(obj).parent().parent().find("span");
+    objArr.each(function () {
+        $(this).removeClass("acti");
+        var num = parseInt($(this).find("i").html());
+        if ($.inArray(num, [1, 2, 3, 4, 5]) >= 0) {
             $(this).addClass("acti");
         }
     });
@@ -8169,10 +8201,6 @@ function content_qezxds() {
     };
 }
 
-
-            tempArr.push(oneStr+","+towStr+"|");
-
-       /* tempArr.push(towStr+"|");*/
 
 
 
