@@ -26,7 +26,7 @@
                     <li>
                         <span>取款密码：</span>
                         <input name="withdrawpassword" id="withdrawpassword" type="password" size="20" class="passwinp">
-                        <label class="error" for="withdrawpassword">* 6~18位字母数字组合</label>
+                        <label class="error" for="withdrawpassword">* 6~12位字母数字组合</label>
                     </li>
                     <li>
                         <span>确认取款密码：</span>
