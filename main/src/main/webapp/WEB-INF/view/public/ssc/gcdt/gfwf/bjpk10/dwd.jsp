@@ -31,7 +31,7 @@
             <b><i>冠军</i></b>
             <var class="numLine">
                 <span><i>01</i></span>
-                <span><i>02</i></span> 
+                <span><i>02</i></span>
                 <span><i>03</i></span>
                 <span><i>04</i></span>
                 <span><i>05</i></span>

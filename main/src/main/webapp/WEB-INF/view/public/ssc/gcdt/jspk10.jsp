@@ -59,7 +59,7 @@
         <div class="layout at">
             <div class="Playmethod">
                 <ul>
-                    <li class="gf-li">
+                  <%--  <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf respanw" data-name="gfwf">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-jspk10-qy">前一</a></span>
@@ -67,7 +67,7 @@
                             <span><a href="javascript:void(0)" data-url="gfwf-jspk10-qsan">前三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-jspk10-dwd">定位胆</a></span>
                         </p>
-                    </li>
+                    </li>--%>
                     <li>
                         <b>快钱玩法</b>
                         <p class="kuaiqian">
@@ -101,7 +101,6 @@
 </div>
 <c:import url="../../common/commonJs.jsp"/>
 <c:import url="common/commonJs.jsp"/>
-<c:import url="gfwf/common/commonJs.jsp" />
 <script>
     var playGroupId = 23;    // 彩种ID
 </script>
