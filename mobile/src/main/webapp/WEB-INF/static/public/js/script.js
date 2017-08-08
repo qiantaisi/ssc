@@ -855,10 +855,10 @@ $(function () {
                 return;
             }
 
-            $.confirm('确认修改？',
+            $.confirm('修改密码？',
                 function () {
                     ajaxRequest({
-                        url: config.basePath + "member/xgmm/ajaxResetPassword.json",
+                        url: config.basePath + "member/qkmm/ajaxResetPassword.json",
                         data: {
                             oldPassword: $.md5(oldPassword),
                             newPassword: $.md5(newPassword)
@@ -868,13 +868,10 @@ $(function () {
                         },
                         success: function (json) {
                             if (json.result == 1) {
+
                                 Tools.alertCallback("修改成功", function () {
                                     window.location.href = config.basePath + "member/index.html";
                                 });
-                                // clearUserToken();
-                                // Tools.alertCallback("修改成功，请重新登录", function () {
-                                //     window.location.href = config.basePath + "login.html";
-                                // });
                             } else {
                                 Tools.alert("修改失败：" + json.description);
                             }
