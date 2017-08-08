@@ -1802,3 +1802,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .number ul li i.grayxy28,.number ul li i.greenxy28,.number ul li i.grayxy28,.number ul li i.bluexy28{
     border-radius: 50%;
 }
+
+.Single .layout  .Playmethod ul li p.respanw span{
+    width: 55px!important;
+}
