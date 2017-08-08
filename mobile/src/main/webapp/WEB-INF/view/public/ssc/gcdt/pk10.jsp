@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="gfwf_mask">
-                &lt;%&ndash;实现蒙版&ndash;%&gt;
+                <%--实现蒙版--%>
             </div>
         </div>
         <div class="content cl-601">

@@ -64,8 +64,8 @@
                data-fun_zhushu="zhushu_dwd_pk10"
                data-fun_content="content_dwd_pk10"
                data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/dwd/dwd.html"
-               data-play_id="662"
-               data-play_pl_id="14413"
+               data-play_id="665"
+               data-play_pl_id="14414"
                data-name="定位胆">
                 <span class="zxfs">定位胆</span>
             </a>
@@ -77,8 +77,8 @@
                data-fun_zhushu="zhushu_qe"
                data-fun_content="content_qe"
                data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/qe/qe.html"
-               data-play_id="660"
-               data-play_pl_id="14410|14409"
+               data-play_id="661"
+               data-play_pl_id="14410"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
@@ -90,7 +90,7 @@
                data-fun_zhushu="zhushu_qsan"
                data-fun_content="content_qsan"
                data-url="<%=basePath%>ssc/gcdt/gfwf/pk10/qsan/qsan.html"
-               data-play_id="661"
+               data-play_id="663"
                data-play_pl_id="14412"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
