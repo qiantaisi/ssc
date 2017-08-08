@@ -151,7 +151,7 @@
                         <h2><a href="${kefuUrl}" target="_blank">在线客服</a></h2>
                         <p>
                             <a href="<%=basePath%>?u=<%=basePath%>register.html" target="_blank" class="a0">免费注册</a>
-                            <a href="javascript:void(0)" onclick="openHyzx('zhcz/yhzz')" target="_blank">账户充值</a>
+                            <a href="javascript:void(0)" onclick="openHyzx('member/zhcz.html?module=yhzz')" target="_blank">账户充值</a>
                             <a href="javascript:void(0)" onclick="getPage('<%=basePath%>ssc/gcdt.html')">彩票购买</a>
                         </p>
                     </li>
@@ -172,11 +172,11 @@
                     <li>
                         <h2><a href="javascript:void(0)" onclick="openHyzx('main')" target="_blank">会员中心</a></h2>
                         <p>
-                            <a href="javascript:void(0)" onclick="openHyzx('zhcz/yhzz')" target="_blank">账户充值</a>
-                            <a href="javascript:void(0)" onclick="openHyzx('withdraw')" target="_blank">快速提款</a>
-                            <a href="javascript:void(0)" onclick="openHyzx('lsjl/ckjl')" target="_blank">记录查询</a>
-                            <a href="javascript:void(0)" onclick="openHyzx('zhsz/grzl')" target="_blank">账户设置</a>
-                            <a href="javascript:void(0)" onclick="openHyzx('jfmx/hylb')" target="_blank">我的推广</a>
+                            <a href="javascript:void(0)" onclick="openHyzx('member/zhcz.html?module=yhzz')" target="_blank">账户充值</a>
+                            <a href="javascript:void(0)" onclick="openHyzx('member/withdraw.html')" target="_blank">快速提款</a>
+                            <a href="javascript:void(0)" onclick="openHyzx('member/lsjl.html?module=ckjl')" target="_blank">记录查询</a>
+                            <a href="javascript:void(0)" onclick="openHyzx('member/zhsz.html?module=grzl')" target="_blank">账户设置</a>
+                            <a href="javascript:void(0)" onclick="openHyzx('member/jfmx.html?module=hylb')" target="_blank">我的推广</a>
                         </p>
                     </li>
                     <li>
@@ -613,7 +613,7 @@
         var str = '';
         str += '<p>账号：<i class="i0">' + user.account + '</i>';
         str += '<span>余额：<i class="i1">￥' + user.balance + '</i></span>';
-        str += '<span><a href="javascript:void(0)" onclick="openHyzx(\'zhcz/yhzz\')">充值提现</a>  |  <a href="<%=basePath%>member/index.html" target="_blank">会员中心</a>  |  <a href="javascript:void(0)" onclick="openHyzx(\'member/lsjl.html?module=tzjl\')">投注记录</a>  |  <a href="${kefuUrl}" target="_blank">在线客服</a>  |  <a href="javascript:void(0)"  onclick="openHyzx(\'letter\')">最新消息</a>  |  <a href="javascript:void(0)" onclick="sigout()" class="red">退出登录</a>  |</span></p>';
+        str += '<span><a href="javascript:void(0)" onclick="openHyzx(\'member/zhcz.html?module=yhzz\')">充值提现</a>  |  <a href="javascript:void(0)" onclick="openHyzx(\'member/main.html\')" target="_blank">会员中心</a>  |  <a href="javascript:void(0)" onclick="openHyzx(\'member/lsjl.html?module=tzjl\')">投注记录</a>  |  <a href="${kefuUrl}" target="_blank">在线客服</a>  |  <a href="javascript:void(0)"  onclick="openHyzx(\'member/letter.html\')">最新消息</a>  |  <a href="javascript:void(0)" onclick="sigout()" class="red">退出登录</a>  |</span></p>';
         $(".Account").html(str);
     }
 
