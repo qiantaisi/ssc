@@ -4851,37 +4851,37 @@ function suiji_dwdzxfs() {
     var showContent = '';
     var betContent = '';
 
-    var numArr = [ 01, 02, 03, 04, 05, 06, 07, 80, 09,10];
+    var numArr = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'];
     var xArr = ["冠军", "亚军", "季军", "第四名", "第五名","第六名","第七名","第八名","第九名","第十名"];
 
     var arr = [];
     var betStr = '';
     while (arr.length < 1) {
         var num1 = parseInt(Math.random() * 5);
-        var num2 = parseInt(Math.random() * numArr.length);
+        var num2 = numArr[parseInt(Math.random() * 10)];
         var str = xArr[num1];
-        str = str + ": (" + numArr[num2] + ")";
+        str = str + ": (" + num2 + ")";
         arr.push(str);
         if (num1 == 0) {
-            betStr = numArr[num2] + "|" + "|" + "|" + "|" + "|" + "|" + "|" + "|" + "|";
+            betStr = num2 + "|" + "|" + "|" + "|" + "|" + "|" + "|" + "|" + "|";
         } else if (num1 == 1) {
-            betStr ="|" + numArr[num2] + "|" + "|" + "|" + "|" + "|" + "|" + "|" + "|";
+            betStr ="|" + num2 + "|" + "|" + "|" + "|" + "|" + "|" + "|" + "|";
         } else if (num1 == 2) {
-            betStr ="|" + "|" + numArr[num2]  + "|" + "|" + "|" + "|" + "|" + "|" + "|";
+            betStr ="|" + "|" + num2  + "|" + "|" + "|" + "|" + "|" + "|" + "|";
         } else if (num1 == 3) {
-            betStr ="|" + "|" + "|" + numArr[num2] + "|" + "|" + "|" + "|" + "|" + "|";
+            betStr ="|" + "|" + "|" + num2 + "|" + "|" + "|" + "|" + "|" + "|";
         } else if (num1 == 4) {
-            betStr ="|" + "|" + "|" +"|"+ numArr[num2] + + "|" + "|" + "|" + "|" + "|";
+            betStr ="|" + "|" + "|" +"|"+ num2 + "|" + "|" + "|" + "|" + "|";
         }else if (num1 == 5) {
-            betStr ="|" + "|"+ "|" + "|" + "|" + numArr[num2]  + "|" + "|" + "|" + "|";
+            betStr ="|" + "|"+ "|" + "|" + "|" + num2  + "|" + "|" + "|" + "|";
         }else if (num1 == 6) {
-            betStr ="|" + "|"+ "|" + "|" + "|"  + "|" + numArr[num2] + "|" + "|" + "|";
+            betStr ="|" + "|"+ "|" + "|" + "|"  + "|" + num2 + "|" + "|" + "|";
         }else if (num1 == 7) {
-            betStr ="|" + "|"+ "|" + "|" + "|"  + "|"  + "|"+ numArr[num2] + "|" + "|";
+            betStr ="|" + "|"+ "|" + "|" + "|"  + "|"  + "|"+ num2 + "|" + "|";
         }else if (num1 == 8) {
-            betStr ="|" + "|"+ "|" + "|" + "|"  + "|"  + "|" + "|"+ numArr[num2] + "|";
+            betStr ="|" + "|"+ "|" + "|" + "|"  + "|"  + "|" + "|"+ num2 + "|";
         }else if (num1 == 9) {
-            betStr ="|" + "|"+ "|" + "|" + "|"  + "|"  + "|" + "|"+ numArr[num2] + "|"+ numArr[num2];
+            betStr ="|" + "|"+ "|" + "|" + "|"  + "|"  + "|" + "|" + "|"+  num2
         }
 
     }
