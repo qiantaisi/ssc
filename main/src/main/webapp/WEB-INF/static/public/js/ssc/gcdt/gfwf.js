@@ -5115,21 +5115,24 @@ function suiji_qezxds() {
     var betContent = '';
 
     var arrTsh = [], newArr = [];
-    arrTsh = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'];
 
     while (newArr.length < 2) {
-        var zhiTsh1 = parseInt(Math.random() * 10 + 1);
-        var zhiTsh2 = parseInt(Math.random() * 10 + 1);
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10)];
+
         if (zhiTsh1 != zhiTsh2) {
             newArr.push(zhiTsh1);
             newArr.push(zhiTsh2);
         }
 
+
+
     }
 
 
     showPlayName = "前二直选-直选单式";
-    showContent = "号码: (" + newArr[0] + "", "" + newArr[1] + ")";
+    showContent = "号码: (" + newArr[0] + "" + newArr[1] + ")";
 
     betContent = newArr[0] + "" + newArr[1];
 
@@ -5189,15 +5192,18 @@ function suiji_qezxfs() {
     var betContent = '';
 
     var arrTsh = [], newArr = [];
-    arrTsh = [ 01, 02, 03, 04, 05, 06, 07, 08,09,10];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'];
 
     while (newArr.length < 2) {
-        var zhiTsh1 = parseInt(Math.random() * 10+1);
-        var zhiTsh2 = parseInt(Math.random() * 10+1);
-        if(zhiTsh1!=zhiTsh2){
-            newArr.push(zhiTsh1);
-            newArr.push(zhiTsh2);
-        }
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10)];
+
+            if (zhiTsh1 != zhiTsh2) {
+                newArr.push(zhiTsh1);
+                newArr.push(zhiTsh2);
+            }
+
+
 
     }
 
