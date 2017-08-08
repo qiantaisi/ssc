@@ -5167,7 +5167,6 @@ function suiji_qszxds() {
 
     showPlayName = "前三直选-直选单式";
     showContent = "号码: (" + newArr.join('') + ")";
-
     betContent = newArr.join('');
 
     return {
@@ -5194,20 +5193,15 @@ function suiji_qezxfs() {
     while (newArr.length < 2) {
         var zhiTsh1 = arrTsh[parseInt(Math.random() * 10)];
         var zhiTsh2 = arrTsh[parseInt(Math.random() * 10)];
-
             if (zhiTsh1 != zhiTsh2) {
                 newArr.push(zhiTsh1);
                 newArr.push(zhiTsh2);
             }
-
-
-
     }
 
     showPlayName = "前二直选-复式";
     showContent = "冠军: (" + newArr[0] + ") 亚军: (" + newArr[1] + ")";
     betContent = newArr[0] + "|" + newArr[1];
-    ;
 
     return {
         showPlayName: showPlayName,
@@ -8331,7 +8325,7 @@ function content_qszxds() {
     var tempArr = [];
     var errorStr = '';
     var zhushu = 0;
-    arrTsh = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10];
+
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
@@ -8344,6 +8338,7 @@ function content_qszxds() {
         }
     }
     for (var n = 0; n < newArr.length; n++) {
+        console.log(newArr[n]);
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
@@ -8371,9 +8366,9 @@ function content_qszxds() {
     var betContent = '';
 
     showPlayName = "前三直选-直选单式";
-    showContent = "号码: (" + tempArr + ")";
+    showContent = "号码: (" + tempArr.join(',') + ")";
     // 转换投注格式
-    betContent = tempArr;
+    betContent = tempArr.join(',');
 
     return {
         showPlayName: showPlayName,
@@ -9586,7 +9581,7 @@ function content_qy() {
     var showContent = '';
     var betContent = '';
 
-    showPlayName = "冠军";
+    showPlayName = "前一直选复式";
     showContent = "冠军：({0})".format(
         qyArr.join(",")
     );
@@ -9832,7 +9827,7 @@ function content_qszxfs() {
         dxdsBArr.join(",")
     ];
 
-    showPlayName = "前二直选-单式";
+    showPlayName = "前三直选-直选单式";
     showContent = "冠军: ({0}), 亚军: ({1}), 季军: ({2})".format(arr[0], arr[1], arr[2]);
     betContent = "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
 
