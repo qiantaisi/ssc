@@ -146,6 +146,19 @@ public class UserSessionResult extends CommonResult {
      */
     private Boolean canSafeinfo;
 
+    /**
+     * 是否设置了取款密码
+     */
+    private Boolean hasSetDrawPassword;
+
+    public Boolean getHasSetDrawPassword() {
+        return hasSetDrawPassword;
+    }
+
+    public void setHasSetDrawPassword(Boolean hasSetDrawPassword) {
+        this.hasSetDrawPassword = hasSetDrawPassword;
+    }
+
     public Boolean getCanDeposit() {
         return canDeposit;
     }
