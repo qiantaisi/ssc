@@ -173,7 +173,8 @@ public class MemberController extends BaseController {
         modelMap.put("zfbzzList", ApiUtils.getSystemAlipay(uid, token, companyShortName).getSkInfoList());
         modelMap.put("wxzzList", ApiUtils.getSystemWeixin(uid, token, companyShortName).getSkInfoList());
         modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token, companyShortName).getSkInfoList());
-        modelMap.put("istrue", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
+//        modelMap.put("istrue", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
+        modelMap.put("istrue", !layerInfoResult.getCanEditPassword() ? Boolean.FALSE : ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
 //        modelMap.put("FisrtWithdrawPasswd", ApiUtils.userIsFirstWithdrawPasswd(uid, companyShortName));
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         //获取在线支付信息
@@ -1337,7 +1338,7 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
-        if (!layerInfoResult.getCanAgent()) {
+        if (!layerInfoResult.getCanEditPassword()) {
             return this.renderPublicView("member/noaccess", modelMap);
         }
         return this.renderPublicView("member/xgmm/index", modelMap);
@@ -1352,7 +1353,7 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
-        if (!layerInfoResult.getCanAgent()) {
+        if (!layerInfoResult.getCanEditPassword()) {
             return this.renderPublicView("member/noaccess", modelMap);
         }
         return this.renderPublicView("member/xgmm/setqkmm", modelMap);
@@ -1367,7 +1368,7 @@ public class MemberController extends BaseController {
         Long uid = this.getUid(httpServletRequest);
         String token = this.getToken(httpServletRequest);
         LayerInfoResult layerInfoResult = ApiUtils.getLayer(uid, token, companyShortName);
-        if (!layerInfoResult.getCanAgent()) {
+        if (!layerInfoResult.getCanEditPassword()) {
             return this.renderPublicView("member/noaccess", modelMap);
         }
         return this.renderPublicView("member/xgmm/resetqkmm", modelMap);
