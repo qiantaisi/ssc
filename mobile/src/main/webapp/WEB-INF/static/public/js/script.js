@@ -5385,6 +5385,110 @@ $(function () {
         $(".wx-select2 a").eq(0).trigger("click");
     });
 
+    //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-jspk10-gfwf", function (e, id, page) {
+        initSscPage(23);
+
+        gfwfCommonClickEvent();
+    });
+
+    function gfwfCommonClickEvent() {
+        //官方玩法，彩种玩法选择点击事件
+        $(".wx-select a").unbind("click");  //移除被选元素的事件处理程序
+        $(".wx-select a").click(function () {
+            var nowPageToN = $(this).hasClass("selected");
+            // 判断当前按钮是否已被触发
+            if(!nowPageToN){
+                var url = $(this).attr("data-url");
+                getSubGfwfSscPage(url, function(){
+                    //执行官方玩法事件
+                    gfwfEvent();
+                    renderPlayName();
+                    $(".page").find(".gfwf_xz").addClass("gfwf_wh");
+                    $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+                    $(".page").find(".x_wrap").removeClass("Fixed");
+                    $(".page").find(".gfwf_xz").removeClass("Fixed");
+                    $(".page").find(".gfwf_mask2").removeClass("Fixed");
+
+                    statusChange();
+
+                });
+            }
+
+            $(".wx-select a").removeClass("selected");
+            $(".wx-select a").find("span").removeClass("zxfs");
+            $(".wx-select a").find("span").addClass("staer1");
+            $(this).addClass("selected");
+            $(this).find("span").removeClass("staer1");
+            $(this).find("span").addClass("zxfs");
+
+            // 添加选中状态，方便获取相关数据
+            $(".wx-select a.selected").removeClass("selected");
+            $(this).addClass("selected");
+            //清除当前注数与金额状态
+            $("#zhushu").html("0");
+            $("#nowMoney").html("0");
+        });
+
+        // $(".gfwf_xz .wx-select a").trigger("click");
+        $(".wx-select2 a").click(function() {
+            clearSelected();
+            $(".wx-select2 a").removeClass("selected");
+            $(".wx-select2 a").find("span").removeClass("zxfs");
+            $(".wx-select2 a").find("span").addClass("staer1");
+            $(this).addClass("selected");
+            $(this).find("span").removeClass("staer1");
+            $(this).find("span").addClass("zxfs");
+
+            var id = $(this).attr("data-name");    //获取被选元素的数据
+            $(".wx-select .show").removeClass("show").addClass("hide");
+            $("#playGroup_" + id).removeClass("hide").addClass("show");
+
+            $(".wx-select .show a").removeClass("selected");
+            $(".wx-select .show a").find("span.zxfs").addClass("staer1");
+            $(".wx-select .show a").find("span.zxfs").removeClass("zxfs");
+            $(".wx-select .show a").find("span").eq(0).removeClass("staer1");
+            $(".wx-select .show a").find("span").eq(0).addClass("zxfs");
+            var url = $(".wx-select .show a").eq(0).attr("data-url");
+            getSubGfwfSscPage(url, function(){
+                //执行官方玩法事件
+                gfwfEvent();
+                renderPlayName();
+            });
+
+            // 添加选中状态，方便获取相关数据
+            $(".wx-select a.selected").removeClass("selected");
+            $(".wx-select .show a").eq(0).addClass("selected");
+            //清除当前注数与金额状态
+            $("#zhushu").html("0");
+            $("#nowMoney").html("0");
+
+            if ($(".wx-select .show a").length <= 1) {
+
+                $(".page").find(".gfwf_xz").addClass("gfwf_wh");    //隐藏
+                $(".page").find(".gfwf_mask2").addClass("Hide_Show2");
+                $(".page").find(".x_wrap").removeClass("Fixed");
+                $(".page").find(".gfwf_xz").removeClass("Fixed");
+                $(".page").find(".gfwf_mask2").removeClass("Fixed");
+            }
+
+            renderPlayName();
+        });
+
+        function renderPlayName() {
+            var groupName = $(".wx-select2 a.selected span.zxfs").html();
+            var playName = $(".wx-select .show a span.zxfs").parent().attr("data-name");
+
+            $("#gfwf_playGroupName").html(groupName);
+            $("#gfwf_playName").html(playName);
+
+            $(".gfwf-title span").html(groupName);
+            $(".gfwf-playName span font").html(playName);
+        }
+
+        $(".wx-select2 a").eq(0).trigger("click");
+    }
+
     $(document).on("pageInit", "#page-gcdt-tjssc", function (e, id, page) {
         initSscPage(2);
         $(".cl-602 a").eq(0).trigger("click");
