@@ -33,6 +33,19 @@ public class AppConfigResult extends CommonResult {
      */
     private List<LhcSxResult.LhcSx> lhcSxList;
 
+    /**
+     * 热门开奖彩种ID
+     */
+    private List<Long> hotSscPlayGroupIdList;
+
+    public List<Long> getHotSscPlayGroupIdList() {
+        return hotSscPlayGroupIdList;
+    }
+
+    public void setHotSscPlayGroupIdList(List<Long> hotSscPlayGroupIdList) {
+        this.hotSscPlayGroupIdList = hotSscPlayGroupIdList;
+    }
+
     public Boolean getNeedWithdrawPasswd() {
         return needWithdrawPasswd;
     }
