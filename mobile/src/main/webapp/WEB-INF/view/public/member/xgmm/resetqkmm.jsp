@@ -22,7 +22,7 @@
         </header>
         <div class="content">
             <div class="row cl-100 cl-305">
-                <div class="col-100">修改密码</div>
+                <div class="col-100">修改取款密码</div>
             </div>
             <div class="cl-302 cl-304">
                 <div class="list-block">
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="cl-102">
-                <a href="javascript:void(0)" id="changePassword" class="cl-103">确认修改</a>
+                <a href="javascript:void(0)" id="btn-changePassword-qk" class="cl-103">确认修改</a>
             </div>
             <c:import url="../../common/copyright.jsp" />
         </div>

@@ -3,24 +3,20 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page import="project38.api.utils.RequestUtils" %>
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
-<c:import url="../../common/bodyStart.jsp"/>
+<c:import url="../../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-gcdt-jspk10">
+    <div class="page page-current" id="page-gcdt-jspk10-gfwf">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
-            <span class="icon icon-left"></span>
-            返回
+                <span class="icon icon-left"></span>
+                返回
             </a>
-            <%--<a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>--%>
-                <%--<font>彩种切换</font>--%>
-                <%--<span class="icon icon-top-gcdt"></span>--%>
-            <%--</a>--%>
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
@@ -31,21 +27,20 @@
                     </div>
                 </i>
             </h1>
-            <%--<h1 class="title">极速PK10</h1>--%>
         </header>
-        <c:import url="common/commonBet.jsp" />
+        <c:import url="./common/commonBet.jsp"/>
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/jspk10.html">
-                        <div class="border_one color_one">
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/jspk10.html">
+                        <div class="border_one color_two">
                             官方模式
                         </div>
                     </a>
                 </div>
                 <div class="gfwf_two">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/jspk10.html">
-                        <div class="border_two color_two">
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/jspk10.html">
+                        <div class="border_two color_one">
                             传统模式
                         </div>
                     </a>
@@ -56,14 +51,10 @@
             </div>
         </div>
         <div class="content cl-601">
-            <div class="cl-600" id="ssc-parent-menu">
-                <div class="cl-602">
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/jspk10/lmp.html">两面盘</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/jspk10/szp.html">排列1~10</a>
-                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/jspk10/gyjh.html">冠亚和</a>
-                </div>
+            <c:import url="./jspk10/common/common.jsp"/> <%--玩法选择菜单标题--%>
+            <div class="cl-900" id="lastOpenInfo">
+                <%--显示第几期彩种--%>
             </div>
-            <div class="cl-900" id="lastOpenInfo"></div>
             <div class="cl-901">
                 <div class="cl-902">
                     <span class="left" data-number="" id="number">第<font>..数据读取中..</font>期</span>
@@ -72,18 +63,18 @@
                 <div class="cl-903" id="openHistoryList">
                 </div>
             </div>
-            <div id="sub-menu-list">
-            </div>
-            <div class="bg-white cl-951" id="betContainer">
+            <div id="betContainer_gfwf">
+                <%--彩种主体内容--%>
             </div>
         </div>
     </div>
-    <c:import url="../../common/leftSscPanel.jsp" />
-    <c:import url="../../common/menuAlert.jsp">
+    <c:import url="../../../common/leftSscPanel.jsp"/>
+    <c:import url="../../../common/menuAlert.jsp">
         <c:param name="playGroupId" value="23"/>
+        <c:param name="gfwfFlag" value="2"/>
     </c:import>
 </div>
-<c:import url="../../common/commonJs.jsp"/>
+<c:import url="../../../common/commonJs.jsp"/>
 <script>
     // var playName = null;
     var playGroupId = 23;
@@ -109,7 +100,7 @@
     </div>
 </script>
 <script type="text/html" id="template_lastOpenInfo">
-    <span class="left cl-1200 qita_1200_qi" id="lastNumber">上期开奖&nbsp;</span>
+    <span class="left cl-1200 qita_1200_qi" id="lastNumber"><!--第<span class="style_blue">{{number}}</span>期-->上期开奖&nbsp;</span>
     <div class="left">
         <span class="cl-1201 cl-1207">
             {{each openCodeArr as value index}}
@@ -123,4 +114,4 @@
         </span>
     </div>
 </script>
-<c:import url="../../common/bodyEnd.jsp"/>
+<c:import url="../../../common/bodyEnd.jsp"/>

@@ -3255,6 +3255,7 @@ function getNumber() {
 function getPlAndMaxFd() {
     // 全局赔率变量
     var playPlId = getPlayPlId2();   // 当前赔率ID
+
     if (playPlId.toString().indexOf('|') > 0) {    // 多赔率
         var result = [];
         var tmpArr = playPlId.split('|');

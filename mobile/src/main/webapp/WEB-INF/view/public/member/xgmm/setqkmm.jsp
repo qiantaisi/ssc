@@ -22,7 +22,7 @@
         </header>
         <div class="content">
             <div class="row cl-100 cl-305">
-                <div class="col-100">设置密码</div>
+                <div class="col-100">设置取款密码</div>
             </div>
             <div class="cl-302 cl-304">
                 <div class="list-block">
