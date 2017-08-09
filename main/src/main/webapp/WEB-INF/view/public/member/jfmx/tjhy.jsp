@@ -59,7 +59,7 @@
         },"");
         //自定义正则表达示验证方法
         $.validator.addMethod("checkPassword",function(value,element,params){
-            var checkPassword = /^[0-9a-zA-Z]{6,16}$/;
+            var checkPassword = /^[0-9a-zA-Z]{6,12}$/;
             return this.optional(element)||(checkPassword.test(value));
         },"");
         //自定义正则表达示验证方法
@@ -94,8 +94,8 @@
                     checkAcount: "* （以字母开头的6-12位字母、数字组成的字符）"
                 }
                 , password: {
-                    required: "* （由数字和字母组成6-16个字符）",
-                    checkPassword: "* （由数字和字母组成6-16个字符）"
+                    required: "* （由数字或字母组成6-12个字符）",
+                    checkPassword: "* （由数字或字母组成6-12个字符）"
                 }
                 , qq: {
                     required: "* （请填写真实QQ号以便联系）",
