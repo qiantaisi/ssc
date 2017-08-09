@@ -173,7 +173,7 @@ public class MemberController extends BaseController {
         modelMap.put("zfbzzList", ApiUtils.getSystemAlipay(uid, token, companyShortName).getSkInfoList());
         modelMap.put("wxzzList", ApiUtils.getSystemWeixin(uid, token, companyShortName).getSkInfoList());
         modelMap.put("cftzzList", ApiUtils.getSystemTenpay(uid, token, companyShortName).getSkInfoList());
-        modelMap.put("istrue", ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
+        modelMap.put("istrue", !layerInfoResult.getCanEditPassword() ? Boolean.FALSE : ApiUtils.getNeedWithDrawPasswd(companyShortName).getNeedWithdrawPasswd());
 //        modelMap.put("FisrtWithdrawPasswd", ApiUtils.userIsFirstWithdrawPasswd(uid, companyShortName));
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         //获取在线支付信息
