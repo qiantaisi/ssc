@@ -26,7 +26,7 @@ public enum PlayGroupIdEnum {
     AHK3(20L, "安徽快3", "ahk3", false),
     JLK3(21L, "吉林快3", "jlk3", false),
     SFLHC(22L, "10分六合彩", "sflhc", false),
-    JSPK10(23L, "极速PK10", "jspk10", false);
+    JSPK10(23L, "极速PK10", "jspk10", true);
 
 
     /**

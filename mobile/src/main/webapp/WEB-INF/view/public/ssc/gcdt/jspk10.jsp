@@ -24,25 +24,43 @@
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
-            <h1 class="title">极速PK10</h1>
+            <h1 class="title">
+                <i class="title_cq">急速PK10
+                    <div class="gfwf_triangle_down">
+                        <%--画出一个向下的三角形图标--%>
+                    </div>
+                </i>
+            </h1>
+            <%--<h1 class="title">极速PK10</h1>--%>
         </header>
         <c:import url="common/commonBet.jsp" />
+        <div class="BeginFind Hide_Show">
+            <div class="gfwf_consele">
+                <div class="gfwf_one">
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/jspk10.html">
+                        <div class="border_one color_one">
+                            官方模式
+                        </div>
+                    </a>
+                </div>
+                <div class="gfwf_two">
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/jspk10.html">
+                        <div class="border_two color_two">
+                            传统模式
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="gfwf_mask">
+                <%--实现蒙版--%>
+            </div>
+        </div>
         <div class="content cl-601">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/jspk10/lmp.html">两面盘</a>
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/jspk10/szp.html">排列1~10</a>
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/jspk10/gyjh.html">冠亚和</a>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/gj.html">冠军</a>--%>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/yj.html">亚军</a>--%>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/d3m.html">第三名</a>--%>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/d4m.html">第四名</a>--%>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/d5m.html">第五名</a>--%>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/d6m.html">第六名</a>--%>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/d7m.html">第七名</a>--%>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/d8m.html">第八名</a>--%>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/d9m.html">第九名</a>--%>
-                    <%--<a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xyft/d10m.html">第十名</a>--%>
                 </div>
             </div>
             <div class="cl-900" id="lastOpenInfo"></div>
@@ -66,6 +84,14 @@
     </c:import>
 </div>
 <c:import url="../../common/commonJs.jsp"/>
+<script>
+    // var playName = null;
+    var playGroupId = 23;
+    // 全局官方玩法赔率
+    <c:if test="${not empty playPlListJson}">
+    var gfwfPlJson = ${playPlListJson};
+    </c:if>
+</script>
 <script type="text/html" id="template_openNumber_item">
     <div class="cl-904">
         <div class="cl-981 cl-990"><span class="number"><font class="style_blue">{{number}}</font>&nbsp;|&nbsp;</span></div>

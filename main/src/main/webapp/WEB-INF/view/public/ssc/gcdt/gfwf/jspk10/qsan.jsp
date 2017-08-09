@@ -12,8 +12,8 @@
         <li>
             <b class="tit_img">前三</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_id="663" data-play_pl_id="14412" data-name="qszxfs" data-fun_zhushu="zhushu_qszxfs" data-fun_content="content_qszxfs" data-fun_suiji="suiji_qszxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="664" data-play_pl_id="14413" data-name="qszxds" data-fun_zhushu="zhushu_qszxds" data-fun_content="content_qszxds" data-fun_suiji="suiji_qszxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="670" data-play_pl_id="14419" data-name="qszxfs" data-fun_zhushu="zhushu_qszxfs" data-fun_content="content_qszxfs" data-fun_suiji="suiji_qszxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="671" data-play_pl_id="14420" data-name="qszxds" data-fun_zhushu="zhushu_qszxds" data-fun_content="content_qszxds" data-fun_suiji="suiji_qszxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -25,10 +25,10 @@
 <script type="text/html" id="template_qszxfs">
 <div class="Pick cl-1002 recl-1002" data-flag="fu">
     <p class="p1">
-        <span class="fr fl cl-1001">
-            从第一名、第二名、第三名中至少选择1个号码组成一注。
+         <span class="fr fl cl-1001">
+            从第一名，第二名，第三名中至少选择1个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：冠军01 ,亚军02 ，季军03开奖号码：01，02,03,04,05,06,07,08,09,10即可中前三直选。</var>
+                <var>投注方案：冠军01 ，亚军02 ，季军03开奖号码：01，02，03，04，05，06，07，08，09，10即可中前三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -113,14 +113,14 @@
 <script type="text/html" id="template_qszxds">
 <div class="Pick cl-1003 recl-1003">
     <p class="p1">
-        <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个四位数号码组成一注。
+         <span class="fr fl cl-1001">
+           手动输入号码，至少选择1个三位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：3456 开奖号码：3456，即中四星直选。</var>
+                <var>投注方案：010203 开奖号码：01 02 03 04 05 06 07 08 09 10，即可中前三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>手动输入一个4位数号码组成一注，所选择的千、百、十、个位与开奖号码相同，且顺序一致，即为中奖。</var>
+                <var>手动输入3个号码组成一注，所选号码与开奖号码中第一，第二 ，第三位与所选号相同，且顺序一致即为中。</var>
             </a>
 
         </span>

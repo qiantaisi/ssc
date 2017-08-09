@@ -12,8 +12,8 @@
         <li>
             <b class="tit_img">前二</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_id="661" data-play_pl_id="14410" data-name="qezxfs" data-fun_zhushu="zhushu_qezxfs" data-fun_content="content_qezxfs" data-fun_suiji="suiji_qezxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="662" data-play_pl_id="14411" data-name="qezxds" data-fun_zhushu="zhushu_qezxds" data-fun_content="content_qezxds" data-fun_suiji="suiji_qezxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="668" data-play_pl_id="14417" data-name="qezxfs" data-fun_zhushu="zhushu_qezxfs" data-fun_content="content_qezxfs" data-fun_suiji="suiji_qezxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="669" data-play_pl_id="14418" data-name="qezxds" data-fun_zhushu="zhushu_qezxds" data-fun_content="content_qezxds" data-fun_suiji="suiji_qezxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -90,14 +90,14 @@
 <script type="text/html" id="template_qezxds">
 <div class="Pick cl-1003 recl-1003">
     <p class="p1">
-        <span class="fr fl cl-1001">
+       <span class="fr fl cl-1001">
            手动输入号码，至少选择1个二位数号码组成一注
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
                 <var>投注方案：0102 开奖号码：01 02 03 04 05 06 07 08 09 10，即可中前二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>从01到10中至少选择1个号码组成一注，所选号码与开奖号码第一位相同即为中奖.</var>
+                <var>手动输入两个号码组成一注，所选号码与开奖号码中第一，第二位与所选号相同，且顺序一致即为中。</var>
             </a>
 
         </span>
