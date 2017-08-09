@@ -112,6 +112,96 @@ public class UserSessionResult extends CommonResult {
      */
     private String drawPassword;
 
+    /**
+     * 是否允许存款
+     */
+    private Boolean canDeposit;
+
+    /**
+     * 是否允许提款
+     */
+    private Boolean canWithdraw;
+    /**
+     * 是否可以修改资料
+     */
+    private Boolean canEditInfo;
+
+    /**
+     * 是否允许修改银行卡
+     */
+    private Boolean canEditUserBank;
+
+    /**
+     * 是否允许修密码
+     */
+    private Boolean canEditPassword;
+
+    /**
+     * 是否允许代理
+     */
+    private Boolean canAgent;
+
+    /**
+     * 是否允许修改安全信息
+     */
+    private Boolean canSafeinfo;
+
+    public Boolean getCanDeposit() {
+        return canDeposit;
+    }
+
+    public void setCanDeposit(Boolean canDeposit) {
+        this.canDeposit = canDeposit;
+    }
+
+    public Boolean getCanWithdraw() {
+        return canWithdraw;
+    }
+
+    public void setCanWithdraw(Boolean canWithdraw) {
+        this.canWithdraw = canWithdraw;
+    }
+
+    public Boolean getCanEditInfo() {
+        return canEditInfo;
+    }
+
+    public void setCanEditInfo(Boolean canEditInfo) {
+        this.canEditInfo = canEditInfo;
+    }
+
+    public Boolean getCanEditUserBank() {
+        return canEditUserBank;
+    }
+
+    public void setCanEditUserBank(Boolean canEditUserBank) {
+        this.canEditUserBank = canEditUserBank;
+    }
+
+    public Boolean getCanEditPassword() {
+        return canEditPassword;
+    }
+
+    public void setCanEditPassword(Boolean canEditPassword) {
+        this.canEditPassword = canEditPassword;
+    }
+
+    public Boolean getCanAgent() {
+        return canAgent;
+    }
+
+    public void setCanAgent(Boolean canAgent) {
+        this.canAgent = canAgent;
+    }
+
+    public Boolean getCanSafeinfo() {
+        return canSafeinfo;
+    }
+
+    public void setCanSafeinfo(Boolean canSafeinfo) {
+        this.canSafeinfo = canSafeinfo;
+    }
+
     public String getDrawPassword() {
         return drawPassword;
     }

@@ -6,35 +6,74 @@ import project38.api.common.result.CommonResult;
  * Created by Administrator on 2016/11/18.
  */
 public class PageResult extends CommonResult {
-    //当前页
+    /**
+     * 当前页码
+     */
     private Integer pageNum;
-    //每页的数量
+
+    /**
+     * 每页数量
+     */
     private Integer pageSize;
-    //当前页的数量
+
+    /**
+     * 当前页的数量
+     */
     private Integer size;
-    //总数量
+
+    /**
+     * 总数量
+     */
     private Long total;
 
-    //第一页
+    /**
+     * 第一页
+     */
     private Integer firstPage;
-    //前一页
+
+    /**
+     * 前一页
+     */
     private Integer prePage;
-    //下一页
+
+    /**
+     * 下一页
+     */
     private Integer nextPage;
-    //最后一页
+
+    /**
+     * 最后一页
+     */
     private Integer lastPage;
 
-    //是否为第一页
+    /**
+     * 是否为第一页
+     */
     private Boolean isFirstPage;
-    //是否为最后一页
+
+    /**
+     * 是否为最后一页
+     */
     private Boolean isLastPage;
-    //是否有前一页
+
+    /**
+     * 是否有前一页
+     */
     private Boolean hasPreviousPage;
-    //是否有下一页
+
+    /**
+     * 是否有下一页
+     */
     private Boolean hasNextPage;
-    //导航页码数
+
+    /**
+     * 导航页码数
+     */
     private Integer navigatePages;
-    //所有导航页号
+
+    /**
+     * 所有导航页号
+     */
     private int[] navigatepageNums;
 
     public Integer getPageNum() {
