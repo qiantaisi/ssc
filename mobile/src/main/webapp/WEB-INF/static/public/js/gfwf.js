@@ -3121,7 +3121,7 @@ function selectFun_4(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 12; i++) {
         if (i%2 != 0) {   //奇数
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
