@@ -23,7 +23,14 @@
                     <label for="money" class="error" id="moneyError"> </label>
                 </li>
                 <li>
-                    <span>订单后四位：</span>
+                    <c:choose>
+                        <c:when test="${companyShortName == '600w'}">
+                            <span>会员账号：</span>
+                        </c:when>
+                        <c:otherwise>
+                            <span>订单后四位：</span>
+                        </c:otherwise>
+                    </c:choose>
                     <input type="text" size="5" name="userAlipayName" class="suminp wxName" id="name">
                     <label for="name" class="error" id="nameError"></label>
                 </li>

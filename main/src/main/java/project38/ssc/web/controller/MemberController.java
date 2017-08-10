@@ -298,6 +298,7 @@ public class MemberController extends BaseController {
         } else if (StringUtils.equals(module, "qqzz")) {
         } else if (StringUtils.equals(module, "cftzz")) {
         } else if (StringUtils.equals(module, "zfbzz")) {
+
         } else {
             throw new UserException(-1, "404");
         }
@@ -312,6 +313,7 @@ public class MemberController extends BaseController {
         if (!layerInfoResult.getCanDeposit()) {
             return this.renderPublicView("member/noaccess", modelMap);
         }
+
 
         modelMap.put("userSession", ApiUtils.getUserSession(uid, token, companyShortName));
         modelMap.put("bankCardListResult", ApiUtils.getSystemBankCard(uid, token, companyShortName));
@@ -334,6 +336,8 @@ public class MemberController extends BaseController {
         modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
         modelMap.put("depositChannel", ApiUtils.getDepositChannel(companyShortName));
+        modelMap.put("companyShortName", companyShortName);
+
         return this.renderPublicView("member/zhcz/" + module, modelMap);
     }
 
