@@ -94,6 +94,7 @@ function getSubGfwfSscPage(url, callback) {
  *数字单选算法
  */
 function danSelect(obj) {
+    var countFor = 0;
     var flag = $(obj).parent().parent().attr("data-name");
     if(typeof flag != "undefined" && flag == "bd"){
         var tOrF = $(obj).hasClass("active_gfwf");
@@ -113,6 +114,25 @@ function danSelect(obj) {
 
     getGfwfZhushu();
     statusChange();
+
+    $(obj).parent().parent().parent().find(".wan_top .xz i.activeBtn").each(function () {
+         var strName = $(this).html();
+         if(strName == '偶'){
+             for(var i = 1; i < 11; i++){
+                 if (i % 2 == 0) {
+                     var flagTF = $(this).parent().parent().parent().find('.wan_bottom .cus-flex-item span.n' + i + '').hasClass('active_gfwf');
+                     if (flagTF == false) {
+                         console.log("9090");
+                         $(this).removeClass("activeBtn");
+                         break;
+                     }
+                 }
+             }
+
+         }
+
+    });
+
 }
 
 /**
@@ -3142,6 +3162,7 @@ function selectFun_6(obj) {
     $(obj).addClass("activeBtn");
     getGfwfZhushu();
     statusChange();
+
 }
 
 
