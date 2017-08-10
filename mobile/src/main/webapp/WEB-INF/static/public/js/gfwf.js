@@ -116,20 +116,7 @@ function danSelect(obj) {
     statusChange();
 
     $(obj).parent().parent().parent().find(".wan_top .xz i.activeBtn").each(function () {
-         var strName = $(this).html();
-         if(strName == '偶'){
-             for(var i = 1; i < 11; i++){
-                 if (i % 2 == 0) {
-                     var flagTF = $(this).parent().parent().parent().find('.wan_bottom .cus-flex-item span.n' + i + '').hasClass('active_gfwf');
-                     if (flagTF == false) {
-                         console.log("9090");
-                         $(this).removeClass("activeBtn");
-                         break;
-                     }
-                 }
-             }
-
-         }
+        $(this).removeClass("activeBtn");
 
     });
 
