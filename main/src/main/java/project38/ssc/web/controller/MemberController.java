@@ -336,7 +336,6 @@ public class MemberController extends BaseController {
         modelMap.put("qqzzList", ApiUtils.getSystemQq(uid, token, companyShortName));
 
         modelMap.put("depositChannel", ApiUtils.getDepositChannel(companyShortName));
-        modelMap.put("companyShortName", companyShortName);
 
         return this.renderPublicView("member/zhcz/" + module, modelMap);
     }

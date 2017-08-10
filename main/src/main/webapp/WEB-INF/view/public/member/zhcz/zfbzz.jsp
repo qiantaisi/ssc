@@ -24,7 +24,7 @@
                 </li>
                 <li>
                     <c:choose>
-                        <c:when test="${companyShortName == '600w'}">
+                        <c:when test="${userSession.companyShortName == '600w'}">
                             <span class="sp-name" data-name="hyzh">会员账号：</span>
                         </c:when>
                         <c:otherwise>
