@@ -25,7 +25,7 @@
                 <li>
                     <c:choose>
                         <c:when test="${companyShortName == '600w'}">
-                            <span>会员账号：</span>
+                            <span class="sp-name" data-name="hyzh">会员账号：</span>
                         </c:when>
                         <c:otherwise>
                             <span>订单后四位：</span>
@@ -173,7 +173,13 @@
         }
 
         if ($("#name").val() == '') {
-            $("#nameError").html(" * 请输入支付宝转账订单号的后四位。");
+            var flagName = $(".eveb_form .sp-name").data('name');
+            if(typeof flagName != 'undefined' && flagName == 'hyzh'){
+                $("#nameError").html(" * 请输入会员账号。");
+            } else {
+                $("#nameError").html(" * 请输入支付宝转账订单号的后四位。");
+            }
+
             hasError = true;
         } else {
             $("#nameError").html('');
