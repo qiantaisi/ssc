@@ -8,6 +8,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page import="project38.api.utils.RequestUtils" %>
+<%@ page import="org.apache.commons.lang3.StringUtils" %>
+<%@ page import="project38.api.utils.SessionUtils" %>
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
@@ -23,14 +25,16 @@
                     <label for="money" class="error" id="moneyError"> </label>
                 </li>
                 <li>
-                    <c:choose>
-                        <c:when test="${userSession.companyShortName == '600w'}">
-                            <span class="sp-name" data-name="hyzh">会员账号：</span>
-                        </c:when>
-                        <c:otherwise>
-                            <span>订单后四位：</span>
-                        </c:otherwise>
-                    </c:choose>
+                    <%
+                        if (StringUtils.equals("600w", SessionUtils.getSessionCompanyShortName(request))) {
+                   %>
+                        <span class="sp-name" data-name="hyzh">会员账号：</span>
+                    <%
+                    }else {
+                    %>
+                       <span>订单后四位：</span>
+
+                    <% }%>
                     <input type="text" size="5" name="userAlipayName" class="suminp wxName" id="name">
                     <label for="name" class="error" id="nameError"></label>
                 </li>
