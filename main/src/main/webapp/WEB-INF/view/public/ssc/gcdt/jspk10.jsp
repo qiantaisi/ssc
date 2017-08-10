@@ -130,6 +130,7 @@
 <c:import url="gfwf/common/commonJs.jsp" />
 <script>
     var playGroupId = 23;    // 彩种ID
+    var playId = null;
     // 全局官方玩法赔率
     <c:if test="${not empty playPlListJson}">
 
