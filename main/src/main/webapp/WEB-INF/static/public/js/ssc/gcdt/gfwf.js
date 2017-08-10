@@ -789,6 +789,10 @@ function initSubPage() {
 
     // 内容点击，触发统计注数函数
     $(".Pick ul li span i").click(function () {
+        var nowFlag= $(".re-5x-i i").hasClass('acti');
+        if (nowFlag == true) {
+            $(".re-5x-i i").removeClass('acti');
+        }
         var nameNow = $(this).parent().parent().attr('data-flag');
         if (typeof nameNow != 'undefined' || nameNow == "bdDanXuan") {
             var nowFlag = $(this).parent().hasClass('acti');
@@ -6446,6 +6450,7 @@ function tjzd() {
     if (typeof contentFun == 'undefined' || typeof zhushuFun == 'undefined') {
         return;
     }
+    console.log(zhushuFun);
 
     var data = eval(contentFun + "()");
     var zhushu = eval(zhushuFun + "()");
@@ -9876,8 +9881,8 @@ function content_qszxfs() {
 
     for (var n = 0; n < dxdsWArr.length; n++) {
         for (var m = 0; m < dxdsQArr.length; m++) {
-            for (var n = 0; n < dxdsQArr.length; n++) {
-                tempArr.push(dxdsWArr[n] + "" + dxdsQArr[m] + "" + dxdsBArr[n]);
+            for (var j = 0; j < dxdsBArr.length; j++) {
+                tempArr.push(dxdsWArr[n] + "" + dxdsQArr[m] + "" + dxdsBArr[j]);
             }
         }
     }
