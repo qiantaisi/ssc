@@ -789,6 +789,10 @@ function initSubPage() {
 
     // 内容点击，触发统计注数函数
     $(".Pick ul li span i").click(function () {
+        var nowFlag= $(".re-5x-i i").hasClass('acti');
+        if (nowFlag == true) {
+            $(".re-5x-i i").removeClass('acti');
+        }
         var nameNow = $(this).parent().parent().attr('data-flag');
         if (typeof nameNow != 'undefined' || nameNow == "bdDanXuan") {
             var nowFlag = $(this).parent().hasClass('acti');

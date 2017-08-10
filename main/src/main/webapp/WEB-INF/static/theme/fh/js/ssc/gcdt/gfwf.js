@@ -93,6 +93,8 @@ function selectFun_6(obj) {
     $(obj).parent().parent().find(".acti").removeClass("acti");
     $(obj).addClass("acti");
     clearStateTouZhu();//清除投注状态栏
+
+    setInet
 }
 
 function stateTouZhu(flag_str) {

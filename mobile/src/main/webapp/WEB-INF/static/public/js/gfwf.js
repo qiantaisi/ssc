@@ -94,6 +94,7 @@ function getSubGfwfSscPage(url, callback) {
  *数字单选算法
  */
 function danSelect(obj) {
+    var countFor = 0;
     var flag = $(obj).parent().parent().attr("data-name");
     if(typeof flag != "undefined" && flag == "bd"){
         var tOrF = $(obj).hasClass("active_gfwf");
@@ -113,6 +114,12 @@ function danSelect(obj) {
 
     getGfwfZhushu();
     statusChange();
+
+    $(obj).parent().parent().parent().find(".wan_top .xz i.activeBtn").each(function () {
+        $(this).removeClass("activeBtn");
+
+    });
+
 }
 
 /**
@@ -3142,6 +3149,7 @@ function selectFun_6(obj) {
     $(obj).addClass("activeBtn");
     getGfwfZhushu();
     statusChange();
+
 }
 
 
