@@ -6446,6 +6446,7 @@ function tjzd() {
     if (typeof contentFun == 'undefined' || typeof zhushuFun == 'undefined') {
         return;
     }
+    console.log(zhushuFun);
 
     var data = eval(contentFun + "()");
     var zhushu = eval(zhushuFun + "()");
@@ -9876,8 +9877,8 @@ function content_qszxfs() {
 
     for (var n = 0; n < dxdsWArr.length; n++) {
         for (var m = 0; m < dxdsQArr.length; m++) {
-            for (var n = 0; n < dxdsQArr.length; n++) {
-                tempArr.push(dxdsWArr[n] + "" + dxdsQArr[m] + "" + dxdsBArr[n]);
+            for (var j = 0; j < dxdsBArr.length; j++) {
+                tempArr.push(dxdsWArr[n] + "" + dxdsQArr[m] + "" + dxdsBArr[j]);
             }
         }
     }
