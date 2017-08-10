@@ -25,7 +25,7 @@
                 菜单
             </a>
             <h1 class="title">
-                <i class="title_cq">急速PK10
+                <i class="title_cq">极速PK10
                     <div class="gfwf_triangle_down">
                         <%--画出一个向下的三角形图标--%>
                     </div>
