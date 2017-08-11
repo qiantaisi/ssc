@@ -35,7 +35,10 @@
         <div class="main">
             <div class="pic">
                 <div class="i-m1 download">
-                    <p class="fl sj"><img src="${resPath}images/and_icon.png" alt=""></p>
+                    <p class="fl sj">
+                        <%--<img src="${resPath}images/and_icon.png" alt="">--%>
+                            <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
+                    </p>
                     <div class="fr btn-grp">
                         <p class="box">下载APP送您38元现金</p>
                         <p><img src="${resPath}images/ewm.png" alt=""></p>

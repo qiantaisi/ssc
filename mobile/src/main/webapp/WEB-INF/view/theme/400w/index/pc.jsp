@@ -6,7 +6,7 @@
 
 <%
     String path = request.getContextPath();
-    String basePath = RequestUtils.getScheme(request) + "://" + request.getServerName() + ":" + request.getServerPort();
+    String basePath = RequestUtils.getBasePath(request);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -46,7 +46,8 @@
 
     <div class="wid">
         <div class="text" ani="fadeInLeft">
-            <img src="${resPath}pc/img/img0.png" alt="">
+            <%--<img src="${resPath}pc/img/img0.png" alt="">--%>
+            <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
             <p>随时随地轻松存取款<br>Android / iPhone移动装置访问 </p>
             <div class="boxsea">
                 <input type="text" value="<%=request.getServerName()%>" id="inputUrl">

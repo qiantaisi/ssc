@@ -2,9 +2,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="project38.api.utils.RequestUtils" %>
 <%
     String path = request.getContextPath();
-    String basePath = RequestUtils.getScheme(request) + "://" + request.getServerName() + ":" + request.getServerPort();
+    String basePath = RequestUtils.getBasePath(request);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,7 +29,8 @@
 <div class="top">
     <div class="wid">
         <div class="logo" ani="bounce">
-            <img src="${resPath}pc/img/logo.png" alt="">
+            <%--<img src="${resPath}pc/img/logo.png" alt="">--%>
+            <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
         </div>
         <div class="menu">
             <ul>
