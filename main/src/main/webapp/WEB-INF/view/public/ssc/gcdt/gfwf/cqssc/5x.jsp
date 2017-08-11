@@ -172,7 +172,7 @@
         </span>
     </p>
     <div class="content_jiang">
-        <textarea  id="textarea1" class="content_tex" autofocus></textarea>
+        <textarea   class="content_tex" autofocus></textarea>
         <div class="right con_j_end">
             <ul>
                 <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>

@@ -361,6 +361,12 @@
     box-shadow: 0 3px 5px #d4bead inset;
 }
 .numLine{border-radius: 25px;transition: all .3s linear;overflow:hidden;display:inline-block;margin:0 15px;padding:8px 15px}
+.numLines {    border-radius: 25px;
+    transition: all .3s linear;
+    overflow: hidden;
+    display: inline-block;
+    padding: 5px 5px;}
+
 .Single .layout .Pick.cl-1002 ul li span:first-child{margin-left:0}
 .Single .layout .Pick ul li span{margin:0 5px}
 .Single .layout .Pick ul li span i{
