@@ -56,6 +56,14 @@ public class IndexController extends BaseController{
         return this.renderView("index/index", modelMap);
     }
 
+
+    @RequestMapping(value = "/app.html")
+    public ModelAndView app() throws UserException{
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+
+        return this.renderPublicView("index/app", modelMap);
+    }
+
     @RequestMapping(value = "/main.html", method = RequestMethod.GET)
     public ModelAndView main() throws UserException {
         Long uid = this.getUid(httpServletRequest);

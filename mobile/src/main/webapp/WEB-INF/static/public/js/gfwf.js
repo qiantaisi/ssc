@@ -1446,6 +1446,105 @@ function content_rx4zu4() {
 
 
 //======================================================注数算法====================================
+
+
+/********************************************11选5**********************************************/
+/**
+ * 注数-前3直选复式-11选5
+ */
+function zhushu_q3zxfs_11x5() {
+    return getCommonZhushu11x5();
+}
+
+/**
+ * 注数-中3直选复式-11选5
+ */
+function zhushu_z3zxfs_11x5() {
+    return getCommonZhushu11x5();
+}
+
+/**
+ * 注数-后3直选复式-11选5
+ */
+function zhushu_h3zxfs_11x5() {
+    return getCommonZhushu11x5();
+}
+
+/**
+ * 注数-前3组选复式-11选5
+ */
+function zhushu_q3zuxfs() {
+    return get3MFs115();
+}
+
+/**
+ * 注数-中3组选复式-11选5
+ */
+function zhushu_z3zuxfs() {
+    return get3MFs115();
+}
+
+/**
+ * 注数-后3组选复式-11选5
+ */
+function zhushu_h3zuxfs() {
+    return get3MFs115();
+}
+
+function getCommonZhushu11x5(){
+    var newArr = [];
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        baiArr.push($.trim($(this).html()));
+    });
+
+    var wanLength = wanArr.length;
+    var qianLength = qianArr.length;
+    var baiLength = baiArr.length;
+    if (wanLength <= 0 || qianLength <= 0 || baiLength <= 0) {
+        return 0;
+    }
+    newArr = getThreeNewArrs11x5(wanArr, qianArr, baiArr);
+    return newArr.length;
+}
+
+
+// 11选5-三码复式
+function get3MFs115() {
+    var newArr = [];
+    var wanArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push(parseInt($.trim($(this).html())));
+    });
+
+    var tempArr = [], zxArr = [];
+    zxArr = wanArr;
+    for (var i = 0; i < zxArr.length; i++) {
+        for (var i1 = 0; i1 < zxArr.length; i1++) {
+            for (var i2 = 0; i2 < zxArr.length; i2++) {
+                if (zxArr[i] != zxArr[i1] && zxArr[i1] != zxArr[i2] && zxArr[i] != zxArr[i2]) {
+                    var sortArr = [];
+                    sortArr.push(zxArr[i]);
+                    sortArr.push(zxArr[i1]);
+                    sortArr.push(zxArr[i2]);
+                    sortArr.sort();
+                    tempArr.push(sortArr.join(""));
+                }
+            }
+        }
+    }
+    tempArr = tempArr.uniqueArr();
+    return tempArr.length;
+}
+
+/********************************************PK10**********************************************/
+
 /**
  * 注数-PK10前一
  */
@@ -3121,7 +3220,7 @@ function selectFun_4(obj) {
     $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item .xz").removeClass("active_gfwf");
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 12; i++) {
         if (i%2 != 0) {   //奇数
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
         }
@@ -3640,6 +3739,26 @@ function getThreeNewArrs(baiA, shiA, geA) {
     }
     return tempArr;
 }
+
+// 获取百、十、个固定位数的个数所组成3位所有组合-11选5
+function getThreeNewArrs11x5(arr1, arr2, arr3) {
+    var index1arr = [], index2arr = [], index3arr = [];
+    index1arr = arr1;
+    index2arr = arr2;
+    index3arr = arr3;
+    var tempArr = [];
+    for (var b = 0; b < index1arr.length; b++) {
+        for (var s = 0; s < index2arr.length; s++) {
+            for (var g = 0; g < index3arr.length; g++) {
+                if(index1arr[b] != index2arr[s] && index1arr[b] != index3arr[g] && index2arr[s] != index3arr[g]){
+                    tempArr.push(index1arr[b] + "" + index2arr[s] + "" + index3arr[g]);
+                }
+            }
+        }
+    }
+    return tempArr;
+}
+
 
 // 后三直选--获取所选号码分散为三位所有组合的和值
 function getHezNewArrs(hZArr) {

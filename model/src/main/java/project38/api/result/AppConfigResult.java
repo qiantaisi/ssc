@@ -2,6 +2,7 @@ package project38.api.result;
 
 import project38.api.common.result.CommonResult;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -37,6 +38,32 @@ public class AppConfigResult extends CommonResult {
      * 热门开奖彩种ID
      */
     private List<Long> hotSscPlayGroupIdList;
+
+    /**
+     * 取款下限金额
+     */
+    private BigDecimal qkMinMoney;
+
+    /**
+     * 取款上限金额
+     */
+    private BigDecimal qkMaxMoney;
+
+    public BigDecimal getQkMinMoney() {
+        return qkMinMoney;
+    }
+
+    public void setQkMinMoney(BigDecimal qkMinMoney) {
+        this.qkMinMoney = qkMinMoney;
+    }
+
+    public BigDecimal getQkMaxMoney() {
+        return qkMaxMoney;
+    }
+
+    public void setQkMaxMoney(BigDecimal qkMaxMoney) {
+        this.qkMaxMoney = qkMaxMoney;
+    }
 
     public List<Long> getHotSscPlayGroupIdList() {
         return hotSscPlayGroupIdList;
