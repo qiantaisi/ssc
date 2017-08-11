@@ -30,7 +30,8 @@
 <div class="top">
     <div class="wid">
         <div class="logo" ani="bounce">
-            <img src="${resPath}pc/img/logo.png" alt="">
+            <%--<img src="${resPath}pc/img/logo.png" alt="">--%>
+                <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
         </div>
         <div class="menu">
             <ul>
