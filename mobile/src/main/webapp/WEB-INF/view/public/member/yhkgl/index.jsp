@@ -50,49 +50,64 @@
                                             <c:choose>
                                                 <c:when test="${fn:contains(item.bankName,'工商银行')}">
                                                     <span class="banklogo bank_icbc"></span>
+                                                    <div class="bank_w"><strong>中国工商银行</strong></div>
                                                     <%--<img src="${resPath}img/ico54.png" alt="工商银行">--%>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'农业银行')}">
                                                     <span class="banklogo bank-abchina"></span>
+                                                    <div class="bank_w"><strong>中国农业银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'中国银行')}">
                                                     <span class="banklogo bank-chinabank"></span>
+                                                    <div class="bank_w"><strong>中国银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'建设银行')}">
                                                     <span class="banklogo bank-ccb"></span>
+                                                    <div class="bank_w"><strong>中国建设银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'交通银行')}">
                                                     <span class="banklogo bank-comm"></span>
+                                                    <div class="bank_w"><strong>交通银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'招商银行')}">
                                                     <span class="banklogo bank-cmb"></span>
+                                                    <div class="bank_w"><strong>招商银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'兴业银行')}">
                                                     <span class="banklogo bank-cib"></span>
+                                                    <div class="bank_w"><strong>兴业银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'浦发银行')}">
                                                     <span class="banklogo bank-spdb"></span>
+                                                    <div class="bank_w"><strong>浦发银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'华夏银行')}">
                                                     <span class="banklogo bank-hxb"></span>
+                                                    <div class="bank_w"><strong>华夏银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'中信银行')}">
                                                     <span class="banklogo bank-ecitic"></span>
+                                                    <div class="bank_w"><strong>中信银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'光大银行')}">
                                                     <span class="banklogo bank-cebbank"></span>
+                                                    <div class="bank_w"><strong>中国光大银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'广发银行')}">
                                                     <span class="banklogo bank-cgbchina"></span>
+                                                    <div class="bank_w"><strong>广发银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'邮政储蓄银行')}">
                                                     <span class="banklogo bank-psbc"></span>
+                                                    <div class="bank_w"><strong>中国邮政储蓄银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'平安银行')}">
                                                     <span class="banklogo bank-pingan"></span>
+                                                    <div class="bank_w"><strong>平安银行</strong></div>
                                                 </c:when>
                                                 <c:when test="${fn:contains(item.bankName,'上海银行')}">
                                                     <span class="banklogo bank-bankofshanghai"></span>
+                                                    <div class="bank_w"><strong>上海银行</strong></div>
                                                 </c:when>
                                                 <c:otherwise>
                                                     ${item.bankName}
