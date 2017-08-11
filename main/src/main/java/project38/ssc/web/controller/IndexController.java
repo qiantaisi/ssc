@@ -174,6 +174,14 @@ public class IndexController extends BaseController {
         return this.renderView("index/yhhd", modelMap);
     }
 
+    @RequestMapping(value = "/app.html", method = RequestMethod.GET)
+    public ModelAndView app() throws UserException {
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        return this.renderPublicView("index/app", modelMap);
+
+    }
+
     @RequestMapping(value = "/publicYhhd.html", method = RequestMethod.GET)
     public ModelAndView publicYhhd() throws UserException {
         String companyShortName = this.getCompanyShortName();

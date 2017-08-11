@@ -360,6 +360,8 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .Single .layout .group ul li p{}
 .Single .layout .group ul li p span{width: 72px;float: left;border: 1px solid #dcdcdc;height: 22px;text-align: center;line-height: 23px;color: #3e3e3e;margin-left: 10px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;font-size: 12px;}
 .Single .layout .group ul li p span.acti{color: #fff;border: none;border-bottom: 2px solid #a92309;background: #f02800;padding: 0 1px;}
+.Single .layout .group ul li p .spans{width: 100px;float: left;border: 1px solid #dcdcdc;height: 22px;text-align: center;line-height: 23px;color: #3e3e3e;margin-left: 10px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;font-size: 12px;}
+
 .Single .layout .group ul li p span a{color: #3e3e3e;}
 .Single .layout .group ul li p span:hover a{color: #fff;}
 .Single .layout .group ul li p span:hover{border: none;border-bottom: 2px solid #a92309;background: #f02800;padding: 0 1px;}
