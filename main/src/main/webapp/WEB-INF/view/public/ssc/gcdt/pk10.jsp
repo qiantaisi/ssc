@@ -245,9 +245,18 @@
     function randomNumber() {
         var arr = [];
         var tmpStr = '';
+        var newValue = '';
+        var flagStr = false;
+        var arrTemp = ['01','02','03','04','05','06','07','08','09','10'];
+        var TF_flag = $('.Playmethod ul li:eq(0) b').hasClass('acti');
+        if(TF_flag){
+            flagStr = true;
+        }
         for (var i = 1; i <= 10; ++i) {
             var value = Math.floor(Math.random() * 10) + 1;
-            tmpStr += '<span class="fang bg-' + parseInt(value) + '">' + parseInt(value) + '</span>';
+            var m = Math.floor(Math.random() * 10);
+            newValue = flagStr == true ? arrTemp[m] : value;
+            tmpStr += '<span class="fang bg-' + parseInt(value) + '">' + newValue + '</span>';
         }
         $("#lastOpenCode").html(tmpStr);
     }
@@ -255,8 +264,15 @@
     // 渲染上期开奖模板
     function renderLastOpenCode(openCodeArr) {
         var tmpStr = '';
+        var newValue = '';
+        var flagStr = false;
+        var TF_flag = $('.Playmethod ul li:eq(0) b').hasClass('acti');
+        if(TF_flag){
+            flagStr = true;
+        }
         $.each(openCodeArr, function(index, value) {
-            tmpStr += '<span class="fang bg-' + parseInt(value) + '">' + parseInt(value) + '</span>';
+            newValue = flagStr == true ? value : parseInt(value);
+            tmpStr += '<span class="fang bg-' + parseInt(value) + '">' + newValue + '</span>';
         });
         $("#lastOpenCode").html(tmpStr);
     }

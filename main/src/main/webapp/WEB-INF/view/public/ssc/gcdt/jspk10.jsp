@@ -133,9 +133,7 @@
     var playId = null;
     // 全局官方玩法赔率
     <c:if test="${not empty playPlListJson}">
-
     var gfwfPlJson = ${playPlListJson};
-
     </c:if>
     // 全局开奖时间列表
     <c:if test="${not empty zhuihaoSscOpenTimeList}">
