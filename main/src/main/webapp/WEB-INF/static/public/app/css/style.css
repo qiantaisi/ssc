@@ -22,7 +22,8 @@ textarea{resize:none;overflow-y:auto;}
 
 
 .tops{height: 100px;}
-.tops .logo{float: left;margin-top:22px;}
+.tops .logo{float: left;margin-top:22px; width: 266px;
+    height: 55px;}
 
 .tops .notice{width: 350px;height: 24px;line-height: 24px;text-indent: 24px;float: left;border-left: 1px solid #d5d5d5;padding-left: 15px;margin-top:30px;margin-left: 20px;background-image: url(../img/ico0.png);font-size: 12px;color: #fff;}
 .tops .customer{float: right;margin-top:25px;}
