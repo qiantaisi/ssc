@@ -9,7 +9,7 @@
 %>
 <jsp:include page="../../common/commonJs.jsp" />
 <script src="${resPath}js/script.js?v=20170809"></script>
-<script src="${resPath}js/gfwf.js?v=201708011_012"></script>
+<script src="${resPath}js/gfwf.js?v=201708012_1"></script>
 <%--购彩按钮颜色变换-购彩走势图--%>
 <script language="javascript">
     var colorStr = "#${fengge_1}";

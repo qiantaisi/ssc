@@ -510,6 +510,26 @@ function getOpenCodeHistory() {
                     obj.sum = sum;
                 }
 
+                if(playGroupId != null && playGroupId == 23 || playGroupId == 9){
+                    var arrSum = [];
+                    var flagStr = false;
+                    var TF_flag = $('.Playmethod ul li:eq(0) b').hasClass('acti');
+                    if(TF_flag){
+                        flagStr = true;
+                    }
+
+                    $.each(openCodeArr, function (index, value) {
+                        if(flagStr){
+                            arrSum.push(openCodeArr[index]);
+                        } else{
+                            arrSum.push(parseInt(openCodeArr[index]));
+                        }
+
+                    });
+
+                    obj.arrSum = arrSum;
+                }
+
                 obj.number = value.number;
                 obj.list = openCodeArr;
 
