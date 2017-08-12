@@ -55,7 +55,7 @@
     </div>
 
 
-    <div class="cus_common qianweiStr">
+    <div class="cus_common tuodan_selected">
         <div class="wan_top">
             <span class="wanwei">拖胆</span>
             <span class="xz">
