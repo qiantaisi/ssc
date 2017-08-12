@@ -28,6 +28,7 @@
         .eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}
         .eveb_nav_sub .on a{border-top:1px #${fengge_1} solid!important;}
         .eveb_nav_sub ul{border-bottom:1px #${fengge_1} solid!important;}
+        .tops{background: #${fengge_1}}
         .alert_col div::-webkit-scrollbar-thumb {background-color: #${fengge_1}!important;}
     </style>
 </c:if>
