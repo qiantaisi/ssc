@@ -38,11 +38,6 @@
                                            <c:if test="${item['default'] == 'true'}">checked</c:if> value="${item.id}"/>
                                     <div class="item-media">
                                         <span><i class="icon icon-form-checkbox"></i></span>&nbsp;
-                                        <font class="cl-1400">
-                                            <c:if test="${item['default'] == 'true'}">
-                                                默认
-                                            </c:if>
-                                        </font>
                                     </div>
                                     <a href="<%=basePath%>member/yhkgl/detail.html?userBankCardId=${item.id}"
                                        class="item-inner">
@@ -109,14 +104,36 @@
                                                     <span class="banklogo bank-bankofshanghai"></span>
                                                     <div class="bank_w"><strong>上海银行</strong></div>
                                                 </c:when>
+                                                <c:when test="${fn:contains(item.bankName,'民生银行')}">
+                                                    <span class="banklogo bank-cmsb"></span>
+                                                    <div class="bank_w"><strong>民生银行</strong></div>
+                                                </c:when>
+                                                <c:when test="${fn:contains(item.bankName,'北京银行')}">
+                                                    <span class="banklogo bank-bjbank"></span>
+                                                    <div class="bank_w"><strong>北京银行</strong></div>
+                                                </c:when>
+                                                <c:when test="${fn:contains(item.bankName,'深圳发展银行')}">
+                                                    <span class="banklogo bank-sdbbank"></span>
+                                                    <div class="bank_w"><strong>深圳发展银行</strong></div>
+                                                </c:when>
+                                                <c:when test="${fn:contains(item.bankName,'宁波银行')}">
+                                                    <span class="banklogo bank-nbbank"></span>
+                                                    <div class="bank_w"><strong>宁波银行</strong></div>
+                                                </c:when>
                                                 <c:otherwise>
-                                                    ${item.bankName}
+                                                    <span class="banklogo bank-qtbank"></span>
+                                                    <div class="bank_w"><strong>${item.bankName}</strong></div>
                                                 </c:otherwise>
                                             </c:choose>
                                                 <%--<c:set property="tmpBankAccountLength" value="${fn:length(item.bankAccount)}" />--%>
                                             <i class="bank_text">
                                                 &nbsp;****&nbsp;${fn:substring(item.bankAccount, fn:length(item.bankAccount) - 7, fn:length(item.bankAccount) - 3)}&nbsp;${fn:substring(item.bankAccount, fn:length(item.bankAccount) - 3, fn:length(item.bankAccount))}</i>
                                         </div>
+                                        <font class="cl-1400">
+                                            <c:if test="${item['default'] == 'true'}">
+                                                默认
+                                            </c:if>
+                                        </font>
                                     </a>
                                 </label>
                             </li>
@@ -183,10 +200,10 @@
                                     <div class="item-title label">开户人：</div>
                                     <div class="item-input">
                                         <%--<input id="one" type="text" placeholder="请填写开户人" value="${userSession.name}"--%>
-                                               <%--readonly/>--%>
-                                            <font style="font-size: 0.66rem ;padding-left: 15px;">
-                                            <c:out value="${userSession.name}" />
-                                            </font>
+                                        <%--readonly/>--%>
+                                        <font style="font-size: 0.66rem ;padding-left: 15px;">
+                                            <c:out value="${userSession.name}"/>
+                                        </font>
 
                                     </div>
                                 </div>

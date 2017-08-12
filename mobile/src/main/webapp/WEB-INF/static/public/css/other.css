@@ -360,12 +360,42 @@
 
 .bank_w {
     margin-left: 60px;
-    width: 100px;
+    width: 150px;
 }
 
 /*工商银行*/
 .item-link .item-subtitle .bank_icbc {
     background: url("../img/bank_01.png") left top no-repeat;
+    background-size: 100%;
+}
+
+/*民生银行*/
+.bank-cmsb {
+    background: url("../img/bank_08.png") left top no-repeat;
+    background-size: 100%;
+}
+
+/*北京银行*/
+.bank-bjbank {
+    background: url("../img/bank_02.png") left top no-repeat;
+    background-size: 100%;
+}
+
+/*深圳发展银行*/
+.bank-sdbbank {
+    background: url("../img/bank_014.png") left top no-repeat;
+    background-size: 100%;
+}
+
+/*宁波银行*/
+.bank-nbbank {
+    background: url("../img/bank_09.png") left top no-repeat;
+    background-size: 100%;
+}
+
+/*其它银行*/
+.bank-qtbank {
+    background: url("../img/bank_020.png") left top no-repeat;
     background-size: 100%;
 }
 
