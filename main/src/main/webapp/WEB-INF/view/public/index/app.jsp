@@ -9,6 +9,7 @@
     String basePath = RequestUtils.getBasePath(request);
     String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
 %>
+<c:import url="../common/bodyStart.jsp"/>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
