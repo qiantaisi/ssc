@@ -31,7 +31,7 @@
     <div class="wid">
         <div class="logo" ani="bounce">
             <%--<img src="${resPath}pc/img/logo.png" alt="">--%>
-                <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
+                <img style="max-height:50px;" src="<%=basePath%>images/${logo.imageId}.png" alt="">
         </div>
         <div class="menu">
             <ul>
