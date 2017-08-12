@@ -533,7 +533,11 @@ $(function() {
     getOpenCodeHistory();
 });
 function gdkj(playGroupId) {
-
+    var flagStr = false;
+    var TF_flag = $('.Playmethod ul li:eq(0) b').hasClass('acti');
+    if(TF_flag){
+        flagStr = true;
+    }
     var str="";
     var num="";var num1="";var num2="";var num3="";var num4=""; var num5="";var num6="";var num7="";var num8="";var num9="";var num10=""; var num11="";var num12=""; var num13="";var num14="";var num15="";var num16="";var num17="";var num18="";var num19="";
     ajaxRequest({
@@ -561,17 +565,31 @@ function gdkj(playGroupId) {
                         openCode = openCode.split(",");
 
                         for (var i in openCode) {
+                            if (flagStr) {
+                                var num = openCode[0];
+                                var num1 = openCode[1];
+                                var num2 = openCode[2];
+                                var num3 = openCode[3];
+                                var num4 = openCode[4];
+                                var num5 = openCode[5];
+                                var num6 = openCode[6];
+                                var num7 = openCode[7];
+                                var num8 = openCode[8];
+                                var num9 = openCode[9];
+                            } else {
+                                var num = "0" + openCode[0];
+                                var num1 = "0" + openCode[1];
+                                var num2 = "0" + openCode[2];
+                                var num3 = "0" + openCode[3];
+                                var num4 = "0" + openCode[4];
+                                var num5 = "0" + openCode[5];
+                                var num6 = "0" + openCode[6];
+                                var num7 = "0" + openCode[7];
+                                var num8 = "0" + openCode[8];
+                                var num9 = "0" + openCode[9];
+                            }
 
-                            var num = openCode[0];
-                            var num1 = openCode[1];
-                            var num2 = openCode[2];
-                            var num3 = openCode[3];
-                            var num4 = openCode[4];
-                            var num5 = openCode[5];
-                            var num6 = openCode[6];
-                            var num7 = openCode[7];
-                            var num8 = openCode[8];
-                            var num9 = openCode[9];
+
 
 
                         }
@@ -588,16 +606,29 @@ function gdkj(playGroupId) {
                         if (typeof openCode != "undefined" || openCode != null) {
                             openCode = openCode.split(",");
                             for (var j = 0; j < openCode.length; ++j) {
-                                num = openCode[0];
-                                num1 = openCode[1];
-                                num2 = openCode[2];
-                                num3 = openCode[3];
-                                num4 = openCode[4];
-                                num5 = openCode[5];
-                                num6 = openCode[6];
-                                num7 = openCode[7];
-                                num8 = openCode[8];
-                                num9 = openCode[9];
+                                if (flagStr) {
+                                    var num = openCode[0];
+                                    var num1 = openCode[1];
+                                    var num2 = openCode[2];
+                                    var num3 = openCode[3];
+                                    var num4 = openCode[4];
+                                    var num5 = openCode[5];
+                                    var num6 = openCode[6];
+                                    var num7 = openCode[7];
+                                    var num8 = openCode[8];
+                                    var num9 = openCode[9];
+                                } else {
+                                    var num = "0" + openCode[0];
+                                    var num1 = "0" + openCode[1];
+                                    var num2 = "0" + openCode[2];
+                                    var num3 = "0" + openCode[3];
+                                    var num4 = "0" + openCode[4];
+                                    var num5 = "0" + openCode[5];
+                                    var num6 = "0" + openCode[6];
+                                    var num7 = "0" + openCode[7];
+                                    var num8 = "0" + openCode[8];
+                                    var num9 = "0" + openCode[9];
+                                }
 
                             }
                         }
@@ -1034,6 +1065,37 @@ function getBgCo(num){
 
 
 function getBgColor(num){
+    if(num==01){
+
+        return '<span  style="background: #dbd507!important;margin-left: 8px;">' + num + '</span>';
+    }else if(num==02){
+
+        return '<span  style="background: #01b7ff!important;margin-left: 8px;">' +num+ '</span>';
+    }else if(num==03){
+
+        return '<span  style="background: #636862!important;margin-left: 8px;">' + num + '</span>';
+    }
+    else if(num==04){
+
+        return '<span  style="background: #e4670d!important;margin-left: 8px; ">' + parseInt(num) + '</span>';
+    }else if(num==05){
+
+        return '<span  style="background: #7bf8fc!important;margin-left: 8px;">' + num + '</span>';
+    }else if(num==06){
+
+        return '<span  style="background: #2600f7!important;margin-left: 8px;">' + num + '</span>';
+    }else if(num==07){
+
+        return '<span style="background: #ceced6!important;margin-left: 8px;">' +num + '</span>';
+    }else if(num==08){
+
+        return '<span  style="background: #f80509!important; margin-left: 8px; ">' + num + '</span>';
+    }else if(num==09){
+
+        return '<span style=" background: #690000!important;margin-left: 8px; ">' + num+ '</span>';
+    }else if(num==010){
+        return '<span style="background: #090!important;margin-left: 8px; ">' + parseInt(num) + '</span>';
+    }
     if(num==1){
 
         return '<span  style="background: #dbd507!important;margin-left: 8px;">' + parseInt(num) + '</span>';

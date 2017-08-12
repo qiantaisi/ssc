@@ -178,6 +178,7 @@ public class IndexController extends BaseController {
     public ModelAndView app() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("data", ApiUtils.getDownloadManagementResult(companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderPublicView("index/app", modelMap);

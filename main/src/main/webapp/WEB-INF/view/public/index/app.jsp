@@ -27,7 +27,7 @@
 <div class="tops">
     <div class="wids">
         <div class="logo">
-            <img src="${basePath}images/${data.logoImageId}.png" alt="${data.webTitle}">
+            <img src="${basePath}images/${logo.imageId}.png" alt="${data.webTitle}">
         </div>
         <div class="notice">${data.webMessage}</div>
         <div class="customer">

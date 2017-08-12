@@ -31,7 +31,7 @@ textarea{resize:none;overflow-y:auto;}
 .banner .wids{position: relative;height: 100%;}
 .banner .pict{left: 0;bottom:-79px;position: absolute;position: relative;float: left;}
 .banner .pict .iphone-pic{position: absolute;left:155px;top:55px;width: 223px;height: 394px;}
-.banner .text{float: right;margin-top: 80px;margin-right: 67px;}
+.banner .text{float: right;margin-top: -457px;margin-right: 67px;}
 .banner .text h2{color: #fff;font-size: 36px;font-weight: normal;padding-left:98px;}
 .banner .text h2 i{color: #fffc00;}
 .banner .text h2 span{background: #ff8a00;font-size:24px;padding:5px 15px;display: inline-block;margin-left: 15px;position: relative;vertical-align: middle;margin-top: -8px;}
