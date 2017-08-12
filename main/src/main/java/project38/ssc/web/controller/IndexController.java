@@ -117,7 +117,7 @@ public class IndexController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         modelMap.put("Article", ApiUtils.getArtByid(companyShortName, id));
-
+        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         return this.renderView("index/zxxx", modelMap);
     }
 

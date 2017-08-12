@@ -541,7 +541,7 @@ function gdkj(playGroupId) {
         data: {
             playGroupId: playGroupId
         },
-        beforeSend: function() {
+        beforeSend: function () {
             parent.showLoading();
         },
         success: function (json) {
@@ -550,76 +550,7 @@ function gdkj(playGroupId) {
             }
             parent.hideLoading();
 
-            //1 15 3 2 16 13 17        5
-            //9 14 23                 10
-            // 19 20 21  5  4            3
-            //6                        7
-            //8     10                  8
-            if(playGroupId==9||playGroupId==14||playGroupId==23){
-
-            if (json.sscHistoryList.length > 0) {
-                var value = json.sscHistoryList[0];
-                var openCodeArr = value.openCode ? value.openCode.split(",") : [];
-                var lastNumberOpening = openCodeArr.length == 0 ? true : false;  // 是否开奖中
-                var openCode = value.openCode;
-                if (typeof openCode != "undefined" || openCode != null) {
-                    openCode = openCode.split(",");
-
-                    for (var i in openCode) {
-
-                                var num=openCode[0];
-                                var num1=openCode[1];
-                                var num2=openCode[2];
-                                var num3=openCode[3];
-                                var num4=openCode[4];
-                                var num5=openCode[5];
-                                var num6=openCode[6];
-                                var num7=openCode[7];
-                                var num8=openCode[8];
-                                var num9=openCode[9];
-
-
-                    }
-                }
-                if (lastNumberOpening) {
-                     str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
-                } else {
-                     str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di">' + getBgColor(num) +' ' +  getBgColor(num1) + '' +getBgColor(num2) + ' ' + getBgColor(num3) + '' + getBgColor(num4)+ ' ' + getBgColor(num5) + ' ' + getBgColor(num6) + ' ' + getBgColor(num7) + ' ' + getBgColor(num8) + ' ' + getBgColor(num9) + '</div></p>';
-                }
-
-                var slist = json.sscHistoryList;
-                for (var i = 1; i < slist.length; i++) {
-                    var openCode = slist[i].openCode
-                    if (typeof openCode != "undefined" || openCode != null) {
-                        openCode = openCode.split(",");
-                        for(var j=0; j<openCode.length; ++j){
-                             num=openCode[0];
-                            num1=openCode[1];
-                            num2=openCode[2];
-                            num3=openCode[3];
-                            num4=openCode[4];
-                            num5=openCode[5];
-                            num6=openCode[6];
-                            num7=openCode[7];
-                            num8=openCode[8];
-                            num9=openCode[9];
-
-                        }
-                    }
-                     str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px; color: white"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di">' + getBgColor(num) +' ' +  getBgColor(num1) + '' +getBgColor(num2) + ' ' + getBgColor(num3) + '' + getBgColor(num4)+ ' ' + getBgColor(num5) + ' ' + getBgColor(num6) + ' ' + getBgColor(num7) + ' ' + getBgColor(num8) + ' ' + getBgColor(num9) + '</div></p>';
-
-                }
-                //询问框
-                lid = layer.confirm(str, {
-                    btn: ['取消'], //按钮
-                    title: '历史开奖',
-                }, function () {
-                    layer.close(lid);
-                });
-
-            }
-
-            }else if( playGroupId==1||playGroupId==15||playGroupId==3||playGroupId==2||playGroupId==16||playGroupId==13||playGroupId==17){
+            if (playGroupId == 9 || playGroupId == 14 || playGroupId == 23) {
 
                 if (json.sscHistoryList.length > 0) {
                     var value = json.sscHistoryList[0];
@@ -631,11 +562,75 @@ function gdkj(playGroupId) {
 
                         for (var i in openCode) {
 
-                            var num=openCode[0];
-                            var num1=openCode[1];
-                            var num2=openCode[2];
-                            var num3=openCode[3];
-                            var num4=openCode[4];
+                            var num = openCode[0];
+                            var num1 = openCode[1];
+                            var num2 = openCode[2];
+                            var num3 = openCode[3];
+                            var num4 = openCode[4];
+                            var num5 = openCode[5];
+                            var num6 = openCode[6];
+                            var num7 = openCode[7];
+                            var num8 = openCode[8];
+                            var num9 = openCode[9];
+
+
+                        }
+                    }
+                    if (lastNumberOpening) {
+                        str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                    } else {
+                        str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di">' + getBgColor(num) + ' ' + getBgColor(num1) + '' + getBgColor(num2) + ' ' + getBgColor(num3) + '' + getBgColor(num4) + ' ' + getBgColor(num5) + ' ' + getBgColor(num6) + ' ' + getBgColor(num7) + ' ' + getBgColor(num8) + ' ' + getBgColor(num9) + '</div></p>';
+                    }
+
+                    var slist = json.sscHistoryList;
+                    for (var i = 1; i < slist.length; i++) {
+                        var openCode = slist[i].openCode
+                        if (typeof openCode != "undefined" || openCode != null) {
+                            openCode = openCode.split(",");
+                            for (var j = 0; j < openCode.length; ++j) {
+                                num = openCode[0];
+                                num1 = openCode[1];
+                                num2 = openCode[2];
+                                num3 = openCode[3];
+                                num4 = openCode[4];
+                                num5 = openCode[5];
+                                num6 = openCode[6];
+                                num7 = openCode[7];
+                                num8 = openCode[8];
+                                num9 = openCode[9];
+
+                            }
+                        }
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px; color: white"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di">' + getBgColor(num) + ' ' + getBgColor(num1) + '' + getBgColor(num2) + ' ' + getBgColor(num3) + '' + getBgColor(num4) + ' ' + getBgColor(num5) + ' ' + getBgColor(num6) + ' ' + getBgColor(num7) + ' ' + getBgColor(num8) + ' ' + getBgColor(num9) + '</div></p>';
+
+                    }
+                    //询问框
+                    lid = layer.confirm(str, {
+                        btn: ['取消'], //按钮
+                        title: '历史开奖',
+                    }, function () {
+                        layer.close(lid);
+                    });
+
+                }
+
+            } else if (playGroupId == 1 || playGroupId == 15 || playGroupId == 3 || playGroupId == 2 || playGroupId == 16 || playGroupId == 13 || playGroupId == 17) {
+
+                if (json.sscHistoryList.length > 0) {
+                    var value = json.sscHistoryList[0];
+                    var openCodeArr = value.openCode ? value.openCode.split(",") : [];
+                    var lastNumberOpening = openCodeArr.length == 0 ? true : false;  // 是否开奖中
+                    var openCode = value.openCode;
+                    if (typeof openCode != "undefined" || openCode != null) {
+                        openCode = openCode.split(",");
+
+                        for (var i in openCode) {
+
+                            var num = openCode[0];
+                            var num1 = openCode[1];
+                            var num2 = openCode[2];
+                            var num3 = openCode[3];
+                            var num4 = openCode[4];
 
 
                         }
@@ -651,12 +646,12 @@ function gdkj(playGroupId) {
                         var openCode = slist[i].openCode
                         if (typeof openCode != "undefined" || openCode != null) {
                             openCode = openCode.split(",");
-                            for(var j=0; j<openCode.length; ++j){
-                                num=openCode[0];
-                                num1=openCode[1];
-                                num2=openCode[2];
-                                num3=openCode[3];
-                                num4=openCode[4];
+                            for (var j = 0; j < openCode.length; ++j) {
+                                num = openCode[0];
+                                num1 = openCode[1];
+                                num2 = openCode[2];
+                                num3 = openCode[3];
+                                num4 = openCode[4];
 
                             }
                         }
@@ -671,7 +666,7 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
                 }
-            }else if( playGroupId==19||playGroupId==20||playGroupId==21||playGroupId==5||playGroupId==4){
+            } else if (playGroupId == 19 || playGroupId == 20 || playGroupId == 21 || playGroupId == 5 || playGroupId == 4) {
 
                 if (json.sscHistoryList.length > 0) {
                     var value = json.sscHistoryList[0];
@@ -683,10 +678,9 @@ function gdkj(playGroupId) {
 
                         for (var i in openCode) {
 
-                            var num=openCode[0];
-                            var num1=openCode[1];
-                            var num2=openCode[2];
-
+                            var num = openCode[0];
+                            var num1 = openCode[1];
+                            var num2 = openCode[2];
 
 
                         }
@@ -702,12 +696,12 @@ function gdkj(playGroupId) {
                         var openCode = slist[i].openCode
                         if (typeof openCode != "undefined" || openCode != null) {
                             openCode = openCode.split(",");
-                            for(var j=0; j<openCode.length; ++j){
-                                num=openCode[0];
-                                num1=openCode[1];
-                                num2=openCode[2];
-                                num3=openCode[3];
-                                num4=openCode[4];
+                            for (var j = 0; j < openCode.length; ++j) {
+                                num = openCode[0];
+                                num1 = openCode[1];
+                                num2 = openCode[2];
+                                num3 = openCode[3];
+                                num4 = openCode[4];
 
                             }
                         }
@@ -723,7 +717,7 @@ function gdkj(playGroupId) {
                     });
 
                 }
-            }else if( playGroupId==10){
+            } else if (playGroupId == 10) {
 
                 if (json.sscHistoryList.length > 0) {
                     var value = json.sscHistoryList[0];
@@ -735,14 +729,14 @@ function gdkj(playGroupId) {
 
                         for (var i in openCode) {
 
-                            var num=openCode[0];
-                            var num1=openCode[1];
-                            var num2=openCode[2];
-                            var num3=openCode[3];
-                            var num4=openCode[4];
-                            var num5=openCode[5];
-                            var num6=openCode[6];
-                            var num7=openCode[7];
+                            var num = openCode[0];
+                            var num1 = openCode[1];
+                            var num2 = openCode[2];
+                            var num3 = openCode[3];
+                            var num4 = openCode[4];
+                            var num5 = openCode[5];
+                            var num6 = openCode[6];
+                            var num7 = openCode[7];
 
 
                         }
@@ -750,7 +744,7 @@ function gdkj(playGroupId) {
                     if (lastNumberOpening) {
                         var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6+ '</span><span class="apend">' + num7 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span></div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -758,19 +752,19 @@ function gdkj(playGroupId) {
                         var openCode = slist[i].openCode
                         if (typeof openCode != "undefined" || openCode != null) {
                             openCode = openCode.split(",");
-                            for(var j=0; j<openCode.length; ++j){
-                                num=openCode[0];
-                                num1=openCode[1];
-                                num2=openCode[2];
-                                num3=openCode[3];
-                                num4=openCode[4];
-                                num5=openCode[5];
-                                num6=openCode[6];
-                                num7=openCode[7];
+                            for (var j = 0; j < openCode.length; ++j) {
+                                num = openCode[0];
+                                num1 = openCode[1];
+                                num2 = openCode[2];
+                                num3 = openCode[3];
+                                num4 = openCode[4];
+                                num5 = openCode[5];
+                                num6 = openCode[6];
+                                num7 = openCode[7];
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6+ '</span><span class="apend">' + num7 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span></div></p>';
 
                     }
                     //询问框
@@ -839,7 +833,7 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
                 }
-            }else if( playGroupId==8){
+            } else if (playGroupId == 8) {
 
                 if (json.sscHistoryList.length > 0) {
                     var value = json.sscHistoryList[0];
@@ -851,27 +845,26 @@ function gdkj(playGroupId) {
 
                         for (var i in openCode) {
 
-                            var num=openCode[0];
-                            var num1=openCode[1];
-                            var num2=openCode[2];
-                            var num3=openCode[3];
-                            var num4=openCode[4];
-                            var num5=openCode[5];
-                            var num6=openCode[6];
-                            var num7=openCode[7];
-                            var num8=openCode[8];
-                            var num9=openCode[9];
-                            var num10=openCode[10];
-                            var num11=openCode[11];
-                            var num12=openCode[12];
-                            var num13=openCode[13];
-                            var num14=openCode[14];
-                            var num15=openCode[15];
-                            var num16=openCode[16];
-                            var num17=openCode[17];
-                            var num18=openCode[18];
-                            var num19=openCode[19];
-
+                            var num = openCode[0];
+                            var num1 = openCode[1];
+                            var num2 = openCode[2];
+                            var num3 = openCode[3];
+                            var num4 = openCode[4];
+                            var num5 = openCode[5];
+                            var num6 = openCode[6];
+                            var num7 = openCode[7];
+                            var num8 = openCode[8];
+                            var num9 = openCode[9];
+                            var num10 = openCode[10];
+                            var num11 = openCode[11];
+                            var num12 = openCode[12];
+                            var num13 = openCode[13];
+                            var num14 = openCode[14];
+                            var num15 = openCode[15];
+                            var num16 = openCode[16];
+                            var num17 = openCode[17];
+                            var num18 = openCode[18];
+                            var num19 = openCode[19];
 
 
                         }
@@ -879,7 +872,7 @@ function gdkj(playGroupId) {
                     if (lastNumberOpening) {
                         var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6+ '</span><span class="apend">' + num7 + '</span><span class="apend">' + num8 + '</span><span class="apend">' + num9 + '</span><span class="apend">' + num10+ '</span><span class="apend">' + num11 + '</span><span class="apend">' + num12 + '</span><span class="apend">' + num13 + '</span><span class="apend">' + num14 + '</span><span class="apend">' + num15 + '</span><span class="apend">' + num16 + '</span><span class="apend">' + num17 + '</span><span class="apend">' + num18 + '</span><span class="apend">' + num19 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span><span class="apend">' + num8 + '</span><span class="apend">' + num9 + '</span><span class="apend">' + num10 + '</span><span class="apend">' + num11 + '</span><span class="apend">' + num12 + '</span><span class="apend">' + num13 + '</span><span class="apend">' + num14 + '</span><span class="apend">' + num15 + '</span><span class="apend">' + num16 + '</span><span class="apend">' + num17 + '</span><span class="apend">' + num18 + '</span><span class="apend">' + num19 + '</span></div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -887,31 +880,31 @@ function gdkj(playGroupId) {
                         var openCode = slist[i].openCode
                         if (typeof openCode != "undefined" || openCode != null) {
                             openCode = openCode.split(",");
-                            for(var j=0; j<openCode.length; ++j){
-                                num=openCode[0];
-                                num1=openCode[1];
-                                num2=openCode[2];
-                                num3=openCode[3];
-                                num4=openCode[4];
-                                num5=openCode[5];
-                                num6=openCode[6];
-                                num7=openCode[7];
-                                num8=openCode[8];
-                                num9=openCode[9];
-                                num10=openCode[10];
-                                num11=openCode[11];
-                                num12=openCode[12];
-                                num13=openCode[13];
-                                num14=openCode[14];
-                                num15=openCode[15];
-                                num16=openCode[16];
-                                num17=openCode[17];
-                                num18=openCode[18];
-                                num19=openCode[19];
+                            for (var j = 0; j < openCode.length; ++j) {
+                                num = openCode[0];
+                                num1 = openCode[1];
+                                num2 = openCode[2];
+                                num3 = openCode[3];
+                                num4 = openCode[4];
+                                num5 = openCode[5];
+                                num6 = openCode[6];
+                                num7 = openCode[7];
+                                num8 = openCode[8];
+                                num9 = openCode[9];
+                                num10 = openCode[10];
+                                num11 = openCode[11];
+                                num12 = openCode[12];
+                                num13 = openCode[13];
+                                num14 = openCode[14];
+                                num15 = openCode[15];
+                                num16 = openCode[16];
+                                num17 = openCode[17];
+                                num18 = openCode[18];
+                                num19 = openCode[19];
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6+ '</span><span class="apend">' + num7 + '</span><span class="apend">' + num8 + '</span><span class="apend">' + num9 + '</span><span class="apend">' + num10+ '</span><span class="apend">' + num11 + '</span><span class="apend">' + num12 + '</span><span class="apend">' + num13 + '</span><span class="apend">' + num14 + '</span><span class="apend">' + num15 + '</span><span class="apend">' + num16 + '</span><span class="apend">' + num17 + '</span><span class="apend">' + num18 + '</span><span class="apend">' + num19 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span><span class="apend">' + num8 + '</span><span class="apend">' + num9 + '</span><span class="apend">' + num10 + '</span><span class="apend">' + num11 + '</span><span class="apend">' + num12 + '</span><span class="apend">' + num13 + '</span><span class="apend">' + num14 + '</span><span class="apend">' + num15 + '</span><span class="apend">' + num16 + '</span><span class="apend">' + num17 + '</span><span class="apend">' + num18 + '</span><span class="apend">' + num19 + '</span></div></p>';
 
                     }
                     //询问框
@@ -922,7 +915,7 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
                 }
-            }else if( playGroupId==7){
+            } else if (playGroupId == 7) {
 
                 if (json.sscHistoryList.length > 0) {
                     var value = json.sscHistoryList[0];
@@ -945,7 +938,7 @@ function gdkj(playGroupId) {
                     if (lastNumberOpening) {
                         var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend '+getBgCo(num3)+'">' +num3+ '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend ' + getBgCo(num3) + '">' + num3 + '</span></div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -953,7 +946,7 @@ function gdkj(playGroupId) {
                         var openCode = slist[i].openCode
                         if (typeof openCode != "undefined" || openCode != null) {
                             openCode = openCode.split(",");
-                            for(var j=0; j<openCode.length; ++j){
+                            for (var j = 0; j < openCode.length; ++j) {
                                 var num = openCode[0];
                                 var num1 = openCode[1];
                                 var num2 = openCode[2];
@@ -963,7 +956,7 @@ function gdkj(playGroupId) {
                             }
                         }
 
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend '+getBgCo(num3)+'">' + num3  + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend ' + getBgCo(num3) + '">' + num3 + '</span></div></p>';
 
                     }
                     //询问框
@@ -978,17 +971,17 @@ function gdkj(playGroupId) {
 
         },
 
-       /* error: function() {
-            // 失败重试
-            setTimeout(function() {
-                gdkj()
+        /* error: function() {
+             // 失败重试
+             setTimeout(function() {
+                 gdkj()
 
 
-            }, 5000);
-        },
-        complete: function () {
-        }
-*/
+             }, 5000);
+         },
+         complete: function () {
+         }
+ */
     });
    /* $.each(betForm.sscBetList, function(index, value) {
         str += '<p><span>[&nbsp;' + value.content + '&nbsp;]</span><span>&nbsp;@' + value.playPl + '&nbsp;X&nbsp;' + value.perMoney + '</span></p>';
