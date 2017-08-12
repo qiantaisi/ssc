@@ -93,9 +93,9 @@ function getSubGfwfSscPage(url, callback) {
 /**
  *数字单选算法
  */
+var arrSum = []; //获取胆码点击个数 11选5
 function danSelect(obj) {
     var countFor = 0;
-    var arrSum = []; //获取
     var flag = $(obj).parent().parent().attr("data-name");
     if(typeof flag != "undefined" && flag == "bd"){
         var tOrF = $(obj).hasClass("active_gfwf");
@@ -111,12 +111,15 @@ function danSelect(obj) {
     } else {
         var flagDanMa = $(obj).parent().parent().hasClass("danma_selected");
         if(flagDanMa){
-            var sumSelected = $(obj).parent().find(".cus-flex-item .xz.active_gfwf").length;
-            if(sumSelected > 3){
-
+            var sumSelected = $(obj).parent().parent().find(".cus-flex-item .xz.active_gfwf").length;
+            if(sumSelected >= 2){
+                $(obj).parent().parent().find(".cus-flex-item span.n"+ arrSum[0] +".active_gfwf").removeClass('active_gfwf');
+                arrSum.splice(0,1);
             }
 
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+            arrSum.push(parseInt($(obj).html()));
+            console.log(typeof sumSelected + "------||" + arrSum[0] + '--' + arrSum[1] + '--' + arrSum[2]);
         } else {
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
         }

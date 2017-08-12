@@ -251,11 +251,14 @@
         <p>第{{number}}期</p>
         {{if list.length == 0}}
         <p style="margin-left:5px">开奖中</p>
-        {{else}}
-        {{each list as value}}
-        <i class="fang bg-{{value|parseInt}}">{{value|parseInt}}</i>
+        {{/if}}
+
+        {{if arrSum.length > 0}}
+        {{each arrSum as value}}
+        <i class="fang bg-{{value|parseInt}}">{{value}}</i>
         {{/each}}
         {{/if}}
+
     </li>
 </script>
 <script>
