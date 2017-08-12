@@ -24,12 +24,12 @@
     <title>${data.webTitle}</title>
 </head>
 <body>
-<div class="top">
+<div class="top" id="apptop">
     <div class="wid">
         <div class="logo">
             <img src="${basePath}images/${data.logoImageId}.png" alt="${data.webTitle}">
         </div>
-        <div class="notice">${data.webMessage}</div>
+        <div class="notice">${data.webSlogan}</div>
         <div class="customer">
             <a href="${kefuUrl}" target="_blank"><img src="${resPath}app/img/ico1.png" alt=""></a>
         </div>
