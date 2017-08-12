@@ -15,7 +15,7 @@
 <div class="men_list">
     <div class="wid1">
         <div class="logo mt0">
-            <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a>
+            <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" style="max-height: 60px" alt=""></a>
         </div>
         <c:import url="../common/navList.jsp"/>
     </div>
