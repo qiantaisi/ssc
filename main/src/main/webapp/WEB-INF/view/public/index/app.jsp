@@ -25,8 +25,8 @@
     <title>${data.webTitle}</title>
 </head>
 <body>
-<div class="top" >
-    <div class="wid">n
+<div class="top" id="apptop" >
+    <div class="wid">
         <div class="logo">
             <img src="${basePath}images/${data.logoImageId}.png" alt="${data.webTitle}">
         </div>
