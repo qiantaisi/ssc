@@ -112,10 +112,6 @@ public class PageResult extends CommonResult {
         return firstPage;
     }
 
-    public void setFirstPage(boolean firstPage) {
-        isFirstPage = firstPage;
-    }
-
     public void setFirstPage(int firstPage) {
         this.firstPage = firstPage;
     }
@@ -140,11 +136,27 @@ public class PageResult extends CommonResult {
         return lastPage;
     }
 
+    public void setLastPage(int lastPage) {
+        this.lastPage = lastPage;
+    }
+
+    public boolean isFirstPage() {
+        return isFirstPage;
+    }
+
+    public void setFirstPage(boolean firstPage) {
+        isFirstPage = firstPage;
+    }
+
+    public boolean isLastPage() {
+        return isLastPage;
+    }
+
     public void setLastPage(boolean lastPage) {
         isLastPage = lastPage;
     }
 
-    public boolean getHasPreviousPage() {
+    public boolean isHasPreviousPage() {
         return hasPreviousPage;
     }
 
@@ -152,7 +164,7 @@ public class PageResult extends CommonResult {
         this.hasPreviousPage = hasPreviousPage;
     }
 
-    public boolean getHasNextPage() {
+    public boolean isHasNextPage() {
         return hasNextPage;
     }
 
@@ -174,9 +186,5 @@ public class PageResult extends CommonResult {
 
     public void setNavigatepageNums(int[] navigatepageNums) {
         this.navigatepageNums = navigatepageNums;
-    }
-
-    public void setLastPage(int lastPage) {
-        this.lastPage = lastPage;
     }
 }
