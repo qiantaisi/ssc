@@ -25,7 +25,7 @@
 </head>
 <body>
 <div class="top" >
-    <div class="wid">
+    <div class="wid">n
         <div class="logo">
             <img src="${basePath}images/${data.logoImageId}.png" alt="${data.webTitle}">
         </div>
