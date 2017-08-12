@@ -577,17 +577,16 @@ function gdkj(playGroupId) {
                                 var num8 = openCode[8];
                                 var num9 = openCode[9];
                             } else {
-
-                                var num =  openCode[0];
-                                var num1 = openCode[1];
-                                var num2 = + "0" +openCode[2];
-                                var num3 = +"0" + openCode[3];
-                                var num4 = + "0" +openCode[4];
-                                var num5 = +"0" + openCode[5];
-                                var num6 =  + "0" +openCode[6];
-                                var num7 = +"0" + openCode[7];
-                                var num8 =+"0" + openCode[8];
-                                var num9 =+"0" + openCode[9];
+                                var num =  parseInt(openCode[0]);
+                                var num1 =parseInt(openCode[1]);
+                                var num2 = parseInt(openCode[2]);
+                                var num3 = parseInt(openCode[3]);
+                                var num4 =parseInt(openCode[4]);
+                                var num5 =parseInt(openCode[5]);
+                                var num6 = parseInt(openCode[6]);
+                                var num7 =parseInt(openCode[7]);
+                                var num8 =parseInt(openCode[8]);
+                                var num9 =parseInt(openCode[9]);
                             }
 
 
@@ -1078,7 +1077,7 @@ function getBgColor(num){
     }
     else if(num==04){
 
-        return '<span  style="background: #e4670d!important;margin-left: 8px; ">' + parseInt(num) + '</span>';
+        return '<span  style="background: #e4670d!important;margin-left: 8px; ">' +num + '</span>';
     }else if(num==05){
 
         return '<span  style="background: #7bf8fc!important;margin-left: 8px;">' + num + '</span>';
