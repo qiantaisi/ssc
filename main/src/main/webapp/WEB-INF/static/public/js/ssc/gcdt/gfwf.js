@@ -17,6 +17,7 @@ $(function () {
             $(".left_it0").show();
             $(".right_it1").show();
             $(".Detailedlist").show();
+
         } else {
             var flag_acti = $(this).parent().parent().prev().find("b").hasClass('acti');
             if (flag_acti == true) {
@@ -26,6 +27,10 @@ $(function () {
             $(".left_it0").hide();
             $(".right_it1").hide();
             $(".Detailedlist").hide();
+        }
+
+        if(playGroupId == 23 || playGroupId == 9){
+            getOpenCodeHistory();
         }
 
     });
