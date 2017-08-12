@@ -95,6 +95,7 @@ function getSubGfwfSscPage(url, callback) {
  */
 function danSelect(obj) {
     var countFor = 0;
+    var arrSum = []; //获取
     var flag = $(obj).parent().parent().attr("data-name");
     if(typeof flag != "undefined" && flag == "bd"){
         var tOrF = $(obj).hasClass("active_gfwf");
@@ -106,9 +107,19 @@ function danSelect(obj) {
     }
 
     if ($(obj).parent().find(".wan_bottom .cus-flex-item .xz").hasClass("active_gfwf")) {
-        $(obj).parent().find(".cus-flex-item .xz").removeClass("active_gfwf");
+        $(obj).parent().find(".cus-flex-item .xz.active_gfwf").removeClass("active_gfwf");
     } else {
-        $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+        var flagDanMa = $(obj).parent().parent().hasClass("danma_selected");
+        if(flagDanMa){
+            var sumSelected = $(obj).parent().find(".cus-flex-item .xz.active_gfwf").length;
+            if(sumSelected > 3){
+
+            }
+
+            $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+        } else {
+            $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+        }
     }
     $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
 
@@ -121,6 +132,7 @@ function danSelect(obj) {
     });
 
 }
+
 
 /**
  *  随机按钮状态
@@ -1489,6 +1501,13 @@ function zhushu_z3zuxfs() {
  */
 function zhushu_h3zuxfs() {
     return get3MFs115();
+}
+
+/**
+ * 注数-前3组选拖胆-11选5
+ */
+function zhushu_q3zuxtd() {
+    return;
 }
 
 function getCommonZhushu11x5(){

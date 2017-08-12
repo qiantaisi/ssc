@@ -45,7 +45,10 @@
                 </div>
             </div>
             <div class="con fr">
-                <p class="fl sj"><img src="${resPath}images/and_icon.png" alt=""></p>
+                <p class="fl sj">
+                    <%--<img src="${resPath}images/and_icon.png" alt="">--%>
+                    <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
+                </p>
                 <div class="fr">
                     <div class="title">
                         <p class="logo"><span class="box">下载APP送您38元现金</span></p>

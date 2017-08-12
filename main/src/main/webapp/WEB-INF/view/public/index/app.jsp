@@ -4,25 +4,34 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="project38.api.utils.RequestUtils" %>
+<%@ page import="project38.api.utils.ApiUtils" %>
 <%
     String basePath = RequestUtils.getBasePath(request);
     String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
 %>
-<c:import url="../common/bodyStart.jsp"/>
-<link rel="stylesheet" href="${resPath}app/css/style.css" type="text/css"><!--页面CSS-->
-<link rel="stylesheet" href="${resPath}app/css/animate.min.css" type="text/css"><!--CSS3动画-->
-<script type="text/javascript" src="${resPath}app/js/jquery.min.js"></script><!--jQuery库-->
-<script src="${resPath}app/js/library-8.5.js"></script><!--自定义封装函数-->
-<script src="${resPath}app/js/scrollanim.min.js"></script><!--动画效果库-->
-
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="${data.webKeyword}" />
+    <meta name="description" content="${data.webDscp}" />
+    <link rel="stylesheet" href="${resPath}app/css/style.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="${resPath}app/css/animate.min.css" type="text/css"><!--CSS3动画-->
+    <script type="text/javascript" src="${resPath}app/js/jquery.min.js"></script><!--jQuery库-->
+    <script src="${resPath}app/js/library-8.5.js"></script><!--自定义封装函数-->
+    <script src="${resPath}app/js/scrollanim.min.js"></script><!--动画效果库-->
+    <title>${data.webTitle}</title>
+</head>
+<body>
 <div class="tops">
     <div class="wids">
         <div class="logo">
-            <img src="${resPath}app/img/logo.png" alt="">
+            <img src="${basePath}images/${data.logoImageId}.png" alt="${data.webTitle}">
         </div>
-        <div class="notice">中国福利彩票发行管理中心</div>
+        <div class="notice">${data.webMessage}</div>
         <div class="customer">
-            <a href="#"><img src="${resPath}app/img/ico1.png" alt=""></a>
+            <a href="${kefuUrl}" target="_blank"><img src="${resPath}app/img/ico1.png" alt=""></a>
         </div>
     </div>
 </div>
@@ -30,33 +39,34 @@
 <div class="banner">
     <div class="wids">
         <div class="pict">
-            <img src="${resPath}app/img/ico2-1.png" alt="" class="iphone-pic">
+            <img src="<%=basePath%>images/${data.startIconId}.png" alt="" class="iphone-pic">
             <img src="${resPath}app/img/ico2.png" alt="">
         </div>
         <div class="text">
-            <h2>欢迎下载 <i>APP</i> <span>送38元现金</span></h2>
+            <h2></h2>
+            <h2>欢迎下载 <i>${data.appName}</i> <span>${data.webMessage}</span></h2>
             <ul>
                 <li>
                     <div class="code">
-                        <img src="${resPath}app/img/ico20.png" alt="">
+                        <img src="<%=basePath%>images/${data.iosQRCodeImageId}.png" alt="">
                     </div>
-                    <a class="ios" href="<%=mHostName%>">
+                    <a class="ios" href="${data.iosURL}" target="_blank">
                         <img src="${resPath}app/img/ico16.png" alt="">
                         <p>
                             Iphone版下载
-                            <span>版本：2.0.8</span>
+                            <span>版本：${data.iosVersion}</span>
                         </p>
                     </a>
                 </li>
                 <li>
                     <div class="code">
-                        <img src="${resPath}app/img/ico20.png" alt="">
+                        <img src="<%=basePath%>images/${data.androidQRCodeImageId}.png" alt="">
                     </div>
-                    <a class="android" href="<%=mHostName%>">
+                    <a class="android" href="${data.androidURL}" target="_blank">
                         <img src="${resPath}app/img/ico17.png" alt="">
                         <p>
                             Android版下载
-                            <span>版本：2.0.8</span>
+                            <span>版本：${data.androidVersion}</span>
                         </p>
                     </a>
                 </li>
@@ -172,9 +182,10 @@
 
 <div class="footer">
     <div class="wids">
-        <p>Copyright © 2009-2017 600万彩票网 版权所有</p>
-        <p>600w0.org   郑重提示：彩票有风险，投注需谨慎 不向未满18周岁的青少年出售彩票</p>
+        <p>${data.webBottom}</p>
+        <p><%=RequestUtils.getServerName(request)%>   郑重提示：彩票有风险，投注需谨慎 不向未满18周岁的青少年出售彩票</p>
         <img src="${resPath}app/img/ico15.png" alt="">
     </div>
 </div>
-<c:import url="../common/bodyEnd.jsp"/>
+</body>
+</html>

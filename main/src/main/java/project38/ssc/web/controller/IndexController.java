@@ -117,7 +117,7 @@ public class IndexController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
 
         modelMap.put("Article", ApiUtils.getArtByid(companyShortName, id));
-
+        modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         return this.renderView("index/zxxx", modelMap);
     }
 
@@ -178,6 +178,8 @@ public class IndexController extends BaseController {
     public ModelAndView app() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        modelMap.put("data", ApiUtils.getDownloadManagementResult(companyShortName));
+        modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         return this.renderPublicView("index/app", modelMap);
 
     }
