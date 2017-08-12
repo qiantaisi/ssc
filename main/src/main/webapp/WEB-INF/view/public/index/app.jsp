@@ -37,7 +37,6 @@
 </div>
 
 <div class="banner">
-    <div class="wids">
         <div class="pict">
             <img src="<%=basePath%>images/${data.startIconId}.png" alt="" class="iphone-pic">
             <img src="${resPath}app/img/ico2.png" alt="">
@@ -73,7 +72,6 @@
             </ul>
         </div>
     </div>
-</div>
 <div class="hot-games dt">
     <div class="wids">
         <h2>
