@@ -1419,4 +1419,17 @@ public class ApiUtils{
         paramsMap.put("token", token);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_QR_MOBILE, paramsMap, companyShortName), QRCodeResult.class);
     }
+
+    /**
+     * 获取下载页面管理
+     * @param companyShortName
+     * @return
+     */
+    public static DownloadManagementResult getDownloadManagementResult(String companyShortName) {
+        if (IS_DEBUG) {
+            return new DownloadManagementResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_DOWNLOADMANAGEMENT, paramsMap, companyShortName), DownloadManagementResult.class);
+    }
 }

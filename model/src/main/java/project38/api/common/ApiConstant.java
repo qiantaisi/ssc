@@ -146,6 +146,8 @@ public class ApiConstant {
     public static String API_QR_PC = API_DOMAIN + "member/ajaxGetQRCodePC.json"; //PC 二维码
     public static String API_QR_MOBILE = API_DOMAIN + "member/ajaxGetQRCodeMobile.json"; //mobile 二维码
 
+    public static String API_DOWNLOADMANAGEMENT = API_DOMAIN + "webSetting/ajaxSaveDownlaodManage.json"; //下载页面管理
+
 
 
 }
