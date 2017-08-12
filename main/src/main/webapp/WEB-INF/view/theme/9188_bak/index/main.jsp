@@ -15,7 +15,7 @@
         <div class="top_bar">
             <div class="wrap_in" style="margin-top:22px;" >
                 <a href="/mdownload"target="_self">
-                    <img src="<%=basePath%>images/${logo.imageId}" alt="">
+                    <img src="<%=basePath%>images/${logo.imageId}" alt="" style="max-height: 60px">
                 </a>
                 <div class="user_info">
                     <a class="login not-login" href="javascript:void(0)">网站首页</a>

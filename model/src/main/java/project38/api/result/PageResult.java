@@ -9,162 +9,162 @@ public class PageResult extends CommonResult {
     /**
      * 当前页码
      */
-    private Integer pageNum;
+    private int pageNum;
 
     /**
      * 每页数量
      */
-    private Integer pageSize;
+    private int pageSize;
 
     /**
      * 当前页的数量
      */
-    private Integer size;
+    private int size;
 
     /**
      * 总数量
      */
-    private Long total;
+    private long total;
 
     /**
      * 第一页
      */
-    private Integer firstPage;
+    private int firstPage;
 
     /**
      * 前一页
      */
-    private Integer prePage;
+    private int prePage;
 
     /**
      * 下一页
      */
-    private Integer nextPage;
+    private int nextPage;
 
     /**
      * 最后一页
      */
-    private Integer lastPage;
+    private int lastPage;
 
     /**
      * 是否为第一页
      */
-    private Boolean isFirstPage;
+    private boolean isFirstPage;
 
     /**
      * 是否为最后一页
      */
-    private Boolean isLastPage;
+    private boolean isLastPage;
 
     /**
      * 是否有前一页
      */
-    private Boolean hasPreviousPage;
+    private boolean hasPreviousPage;
 
     /**
      * 是否有下一页
      */
-    private Boolean hasNextPage;
+    private boolean hasNextPage;
 
     /**
      * 导航页码数
      */
-    private Integer navigatePages;
+    private int navigatePages;
 
     /**
      * 所有导航页号
      */
     private int[] navigatepageNums;
 
-    public Integer getPageNum() {
+    public int getPageNum() {
         return pageNum;
     }
 
-    public void setPageNum(Integer pageNum) {
+    public void setPageNum(int pageNum) {
         this.pageNum = pageNum;
     }
 
-    public Integer getPageSize() {
+    public int getPageSize() {
         return pageSize;
     }
 
-    public void setPageSize(Integer pageSize) {
+    public void setPageSize(int pageSize) {
         this.pageSize = pageSize;
     }
 
-    public Integer getSize() {
+    public int getSize() {
         return size;
     }
 
-    public void setSize(Integer size) {
+    public void setSize(int size) {
         this.size = size;
     }
 
-    public Long getTotal() {
+    public long getTotal() {
         return total;
     }
 
-    public void setTotal(Long total) {
+    public void setTotal(long total) {
         this.total = total;
     }
 
-    public Integer getFirstPage() {
+    public int getFirstPage() {
         return firstPage;
     }
 
-    public void setFirstPage(Boolean firstPage) {
+    public void setFirstPage(boolean firstPage) {
         isFirstPage = firstPage;
     }
 
-    public void setFirstPage(Integer firstPage) {
+    public void setFirstPage(int firstPage) {
         this.firstPage = firstPage;
     }
 
-    public Integer getPrePage() {
+    public int getPrePage() {
         return prePage;
     }
 
-    public void setPrePage(Integer prePage) {
+    public void setPrePage(int prePage) {
         this.prePage = prePage;
     }
 
-    public Integer getNextPage() {
+    public int getNextPage() {
         return nextPage;
     }
 
-    public void setNextPage(Integer nextPage) {
+    public void setNextPage(int nextPage) {
         this.nextPage = nextPage;
     }
 
-    public Integer getLastPage() {
+    public int getLastPage() {
         return lastPage;
     }
 
-    public void setLastPage(Boolean lastPage) {
+    public void setLastPage(boolean lastPage) {
         isLastPage = lastPage;
     }
 
-    public Boolean getHasPreviousPage() {
+    public boolean getHasPreviousPage() {
         return hasPreviousPage;
     }
 
-    public void setHasPreviousPage(Boolean hasPreviousPage) {
+    public void setHasPreviousPage(boolean hasPreviousPage) {
         this.hasPreviousPage = hasPreviousPage;
     }
 
-    public Boolean getHasNextPage() {
+    public boolean getHasNextPage() {
         return hasNextPage;
     }
 
-    public void setHasNextPage(Boolean hasNextPage) {
+    public void setHasNextPage(boolean hasNextPage) {
         this.hasNextPage = hasNextPage;
     }
 
-    public Integer getNavigatePages() {
+    public int getNavigatePages() {
         return navigatePages;
     }
 
-    public void setNavigatePages(Integer navigatePages) {
+    public void setNavigatePages(int navigatePages) {
         this.navigatePages = navigatePages;
     }
 
@@ -176,7 +176,7 @@ public class PageResult extends CommonResult {
         this.navigatepageNums = navigatepageNums;
     }
 
-    public void setLastPage(Integer lastPage) {
+    public void setLastPage(int lastPage) {
         this.lastPage = lastPage;
     }
 }

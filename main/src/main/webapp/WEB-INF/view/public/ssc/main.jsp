@@ -13,7 +13,7 @@
 <style>body {overflow: hidden;}</style>
 <div class="menu_left">
     <div class="logo">
-        <img src="<%=basePath%>images/${logo.imageId}" alt="" onclick="window.location.href='<%=basePath%>'" style="cursor:pointer">
+        <img src="<%=basePath%>images/${logo.imageId}" alt="" onclick="window.location.href='<%=basePath%>'"  class="gcdt_img" style="cursor:pointer">
         <a href="javascript:void(0)"></a>
     </div>
     <div class="list_menu">

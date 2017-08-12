@@ -106,7 +106,7 @@
                 if (json.result != 1) {
                     return;
                 }
-                if (json.agentTdlsList.length == 0) {
+                if (json.agentTdlsList==null||json.agentTdlsList.length == 0) {
                     $("#dataTable tbody").html('<tr><td colspan="8" styl="text-align:center;">暂无数据</td></tr>');
                     return;
                 }

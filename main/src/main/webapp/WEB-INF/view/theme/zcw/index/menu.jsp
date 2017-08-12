@@ -11,11 +11,11 @@
     <div class="container clearfix">
         <a href="<%=basePath%>main.html" class="left logo">
 
-            <img src="<%=basePath%>images/${logo.imageId}" />
+            <img src="<%=basePath%>images/${logo.imageId}" class="top_img"/>
         </a>
         <div class="left head_middle_yuye">
             <a href="javascript:void(0);">
-                <img src="${resPath}images/index_14.png" />
+                <img src="${resPath}images/index_14.png" class="top_img"/>
             </a>
         </div>
      <div class="right clearfix">

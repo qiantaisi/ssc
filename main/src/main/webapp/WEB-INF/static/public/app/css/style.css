@@ -18,24 +18,20 @@ textarea{resize:none;overflow-y:auto;}
 .fl-w{float: left;width: 100%;}
 .hide{display: none;}
 
-.wids{width:1000px;margin:0 auto;}
+.wid{width:1000px;margin:0 auto;}
 
 
-.tops{height: 100px;}
-.tops .logo{float: left;margin-top:22px; width: 266px;
-    height: 55px;}
+.top{height: 100px;}
+.top .logo{float: left;margin-top:22px;}
 
-.tops .logo img{width: 266px;
-    height: 55px;}
-
-.tops .notice{width: 350px;height: 24px;line-height: 24px;text-indent: 24px;float: left;border-left: 1px solid #d5d5d5;padding-left: 15px;margin-top:30px;margin-left: 20px;background-image: url(../img/ico0.png);font-size: 12px;color: #fff;}
-.tops .customer{float: right;margin-top:25px;}
+.top .notice{width: 350px;height: 24px;line-height: 24px;text-indent: 24px;float: left;border-left: 1px solid #d5d5d5;padding-left: 15px;margin-top:30px;margin-left: 20px;background-image: url(../img/ico0.png);font-size: 12px;color: #fff;}
+.top .customer{float: right;margin-top:25px;}
 
 .banner{height: 517px;background: url(../img/img1.jpg) center;}
-.banner .wids{position: relative;height: 100%;}
+.banner .wid{position: relative;height: 100%;}
 .banner .pict{left: 0;bottom:-79px;position: absolute;position: relative;float: left;}
 .banner .pict .iphone-pic{position: absolute;left:155px;top:55px;width: 223px;height: 394px;}
-.banner .text{float: right;margin-top: -457px;margin-right: 67px;}
+.banner .text{float: right;margin-top: 80px;margin-right: 42px;}
 .banner .text h2{color: #fff;font-size: 36px;font-weight: normal;padding-left:98px;}
 .banner .text h2 i{color: #fffc00;}
 .banner .text h2 span{background: #ff8a00;font-size:24px;padding:5px 15px;display: inline-block;margin-left: 15px;position: relative;vertical-align: middle;margin-top: -8px;}

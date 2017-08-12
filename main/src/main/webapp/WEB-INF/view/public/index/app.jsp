@@ -9,6 +9,7 @@
     String basePath = RequestUtils.getBasePath(request);
     String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
 %>
+<c:import url="../common/bodyStart.jsp"/>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -24,12 +25,12 @@
     <title>${data.webTitle}</title>
 </head>
 <body>
-<div class="tops">
-    <div class="wids">
+<div class="top" id="apptop" >
+    <div class="wid">
         <div class="logo">
             <img src="${basePath}images/${data.logoImageId}.png" alt="${data.webTitle}">
         </div>
-        <div class="notice">${data.webMessage}</div>
+        <div class="notice">${data.webSlogan}</div>
         <div class="customer">
             <a href="${kefuUrl}" target="_blank"><img src="${resPath}app/img/ico1.png" alt=""></a>
         </div>
@@ -37,7 +38,7 @@
 </div>
 
 <div class="banner">
-    <div class="wids">
+    <div class="wid">
         <div class="pict">
             <img src="<%=basePath%>images/${data.startIconId}.png" alt="" class="iphone-pic">
             <img src="${resPath}app/img/ico2.png" alt="">
@@ -75,7 +76,7 @@
     </div>
 </div>
 <div class="hot-games dt">
-    <div class="wids">
+    <div class="wid">
         <h2>
             <span>热门彩种<var>HOT games</var></span>
         </h2>
@@ -181,7 +182,7 @@
 </div>
 
 <div class="footer">
-    <div class="wids">
+    <div class="wid">
         <p>${data.webBottom}</p>
         <p><%=RequestUtils.getServerName(request)%>   郑重提示：彩票有风险，投注需谨慎 不向未满18周岁的青少年出售彩票</p>
         <img src="${resPath}app/img/ico15.png" alt="">
