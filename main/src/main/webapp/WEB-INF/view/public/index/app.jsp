@@ -24,8 +24,8 @@
     <title>${data.webTitle}</title>
 </head>
 <body>
-<div class="tops">
-    <div class="wids">
+<div class="top">
+    <div class="wid">
         <div class="logo">
             <img src="${basePath}images/${data.logoImageId}.png" alt="${data.webTitle}">
         </div>
@@ -37,6 +37,7 @@
 </div>
 
 <div class="banner">
+    <div class="wid">
         <div class="pict">
             <img src="<%=basePath%>images/${data.startIconId}.png" alt="" class="iphone-pic">
             <img src="${resPath}app/img/ico2.png" alt="">
@@ -72,8 +73,9 @@
             </ul>
         </div>
     </div>
+</div>
 <div class="hot-games dt">
-    <div class="wids">
+    <div class="wid">
         <h2>
             <span>热门彩种<var>HOT games</var></span>
         </h2>
@@ -179,7 +181,7 @@
 </div>
 
 <div class="footer">
-    <div class="wids">
+    <div class="wid">
         <p>${data.webBottom}</p>
         <p><%=RequestUtils.getServerName(request)%>   郑重提示：彩票有风险，投注需谨慎 不向未满18周岁的青少年出售彩票</p>
         <img src="${resPath}app/img/ico15.png" alt="">
