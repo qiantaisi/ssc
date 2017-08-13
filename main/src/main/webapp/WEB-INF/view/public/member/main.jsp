@@ -92,10 +92,10 @@
                     <li><a href="javascript:void(0)" data-url="<%=basePath%>member/withdraw.html" title="快速提现"><i class="icon_cunqu icon_validation_phone"></i><p>快速提现</p></a></li>
                     <c:choose>
                         <c:when test="${bindStatus.isBindBankcard == true}">
-                            <li><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=yhkgl')"></i><p>银行卡管理</p></a></li>
+                            <li><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=yhkgl')"><i class="icon_big icon_validation_card"></i><p>银行卡管理</p></a></li>
                         </c:when>
                         <c:otherwise>
-                            <li><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=yhkgl')"></i><p>绑定银行卡</p></a></li>
+                            <li><a href="javascript:void(0)" onclick="parent.goSubUrl('<%=basePath%>member/zhsz.html?module=yhkgl')"><i class="icon_big icon_validation_card_no"></i><p>绑定银行卡</p></a></li>
                         </c:otherwise>
                     </c:choose>
                 </ul>
