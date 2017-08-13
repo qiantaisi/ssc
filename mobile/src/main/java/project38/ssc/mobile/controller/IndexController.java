@@ -57,6 +57,14 @@ public class IndexController extends BaseController{
     }
 
 
+    @RequestMapping(value = "/ewm.html")
+    public ModelAndView ewm() throws UserException{
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        return this.renderPublicView("index/ewm", modelMap);
+    }
+
+
     @RequestMapping(value = "/app.html")
     public ModelAndView app() throws UserException{
         String companyShortName = this.getCompanyShortName();
