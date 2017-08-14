@@ -49,6 +49,19 @@ public class AppConfigResult extends CommonResult {
      */
     private BigDecimal qkMaxMoney;
 
+    /**
+     * 客服URL
+     */
+    private String kefuUrl;
+
+    public String getKefuUrl() {
+        return kefuUrl;
+    }
+
+    public void setKefuUrl(String kefuUrl) {
+        this.kefuUrl = kefuUrl;
+    }
+
     public BigDecimal getQkMinMoney() {
         return qkMinMoney;
     }
