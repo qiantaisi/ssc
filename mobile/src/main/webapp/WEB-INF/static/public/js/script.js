@@ -22,7 +22,7 @@ $(function () {
     // 使用template.helper(name, callback)注册公用辅助方法
     template.helper('dateFormat', function (date, format) {
         return dateFormat(date, format);
-    })
+    });
 
 
     // 返回按钮
