@@ -243,15 +243,14 @@
             }
         });
         function showResponse(json, statusText) {
-            parent.hideLoading();
             if (json.result == 1) {
                 alert("您已成功提交申请,请耐心等待审核!");
 //                parent.etPage('lsjl/ckjl');
                 document.location.href = CONFIG.BASEURL + "member/lsjl.html?module=ckjl";
             } else {
                 alert("提交失败：" + json.description);
-                document.location.href = CONFIG.BASEURL + "member/zhcz.html?module=yhzz";
             }
+            parent.hideLoading();
         }
     });
 </script>
