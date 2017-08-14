@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import project38.api.common.utils.JSONUtils;
+import project38.api.result.QRCodeResult;
 import project38.api.utils.ApiUtils;
 import project38.api.utils.SessionUtils;
 
@@ -40,4 +41,22 @@ public abstract class CacheController extends BaseController {
         return gfwfPl;
     }
 
+    /**
+     * 获取PC二维码
+     * @param httpServletRequest
+     * @param companyShortName
+     * @return
+     */
+    protected QRCodeResult getCachePcEwm(
+            HttpServletRequest httpServletRequest,
+            String companyShortName
+    ) {
+        // PC二维码
+        QRCodeResult qrCodeResult = SessionUtils.getPcEwm(httpServletRequest);
+        if (qrCodeResult == null || qrCodeResult.getResult() != 1) {
+            qrCodeResult = ApiUtils.getQRCodePC(companyShortName);
+            SessionUtils.setPcEwm(httpServletRequest, qrCodeResult);
+        }
+        return qrCodeResult;
+    }
 }

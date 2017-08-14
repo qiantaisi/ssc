@@ -94,6 +94,8 @@ function getSubGfwfSscPage(url, callback) {
  *数字单选算法
  */
 var arrSum = []; //获取胆码点击个数-11选5
+var arrSumQ2 = []; //获取胆码点击个数-前2胆码-11选5
+
 function danSelect(obj) {
     var countFor = 0;
     var flag = $(obj).parent().parent().attr("data-name");
@@ -113,10 +115,19 @@ function danSelect(obj) {
         var flagTuoDan = $(obj).parent().parent().hasClass("tuodan_selected");
         //胆码判断-11选5
         var flagDanMa = $(obj).parent().parent().hasClass("danma_selected");
+        //胆码判断-前二组选拖胆-11选5
+        var flagDanMaEm = $(obj).parent().parent().hasClass("em_danma_selected");
 
         if (flagTuoDan) {
             $(obj).parent().parent().parent().parent().find(".danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+            $(obj).parent().parent().parent().parent().find(".em_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+            var sumSelectedTuodan = $(obj).parent().parent().find(".cus-flex-item .xz.active_gfwf").length;
+            console.log("tuodan" + sumSelectedTuodan);
+            if(sumSelectedTuodan.length <= 0){
+                arrSum.splice(0, arrSum.length);
+                arrSumQ2.splice(0, arrSumQ2.length);
+            }
 
         }
 
@@ -126,11 +137,21 @@ function danSelect(obj) {
                 $(obj).parent().parent().find(".cus-flex-item span.n" + arrSum[0] + ".active_gfwf").removeClass('active_gfwf');
                 arrSum.splice(0, 1);
             }
-
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
             $(obj).parent().parent().parent().parent().find(".tuodan_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
             arrSum.push(parseInt($(obj).html()));
 
+        } else if (flagDanMaEm) {
+            var sumSelectedem = $(obj).parent().parent().find(".cus-flex-item .xz.active_gfwf").length;
+            console.log(sumSelectedem);
+            console.log(arrSumQ2[0] + "--" + arrSumQ2[1] + "--" + arrSumQ2[2]);
+            if (sumSelectedem >= 1) {
+                $(obj).parent().parent().find(".cus-flex-item span.n" + arrSumQ2[0] + ".active_gfwf").removeClass('active_gfwf');
+                arrSumQ2.splice(0, 1);
+            }
+            $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+            $(obj).parent().parent().parent().parent().find(".tuodan_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+            arrSumQ2.push(parseInt($(obj).html()));
         } else {
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
         }
@@ -1475,18 +1496,40 @@ function content_rx4zu4() {
 
 
 /********************************************11选5**********************************************/
+
+/**
+ * 注数-前2组选复式-11x5
+ */
+function zhushu_q2zuxtd() {
+   return;
+}
+
+/**
+ * 注数-前2组选复式-11x5
+ */
+function zhushu_q2zuxfs11x5() {
+    return getCommonQ2zuxfs11x5();
+}
+
+/**
+ * 注数-后2组选复式-11x5
+ */
+function zhushu_h2zuxfs11x5() {
+    return getCommonQ2zuxfs11x5();
+}
+
 /**
  * 注数-前2直选复式-11选5
  */
 function zhushu_q2zxfs11x5() {
-    return getCommonErMa11x5();
+    return getCommonErMaZxfs11x5();
 }
 
 /**
  * 注数-后2直选复式-11选5
  */
 function zhushu_h2zxfs11x5() {
-    return getCommonErMa11x5();
+    return getCommonErMaZxfs11x5();
 }
 
 /**
@@ -1552,7 +1595,27 @@ function zhushu_h3zuxfs() {
     return get3MFs115();
 }
 
-function getCommonErMa11x5() {
+function getCommonQ2zuxfs11x5(){
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    for (var i = 0; i < wanArr.length; i++) {
+        for (var n = i; n < wanArr.length; n++) {
+            if (parseInt(wanArr[i]) != parseInt(wanArr[n])) {
+                newArr.push(wanArr[i] + '' + wanArr[n]);
+            }
+
+        }
+    }
+
+    return newArr.length;
+}
+
+function getCommonErMaZxfs11x5() {
     var newArr = [];
     var tempStr = '';
     var wanArr = [], qianArr = [], baiArr = [];
@@ -1611,7 +1674,7 @@ function getCommonTuodan11X5() {
     return newArr.length;
 }
 
-function getCommonZhushu11x5() {
+function getCommonZhushu11x5(){
     var newArr = [];
     var wanArr = [], qianArr = [], baiArr = [];
     $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {

@@ -460,7 +460,8 @@
                 手机客户端下载
             </div>
             <div class="index_main_rt1_1 clearfix">
-                <img src="${resPath}images/common/index5.png" class="left index_main_erw"/>
+                <%--<img src="${resPath}images/common/index5.png" class="left index_main_erw"/>--%>
+                <img src="${basePath}images/ewm.png" class="left index_main_erw" alt="${data.webTitle}">
                 <div class="right index_main_rt1_1_rt">
                     <p class="down_a">
                         <a href="${hostName}">

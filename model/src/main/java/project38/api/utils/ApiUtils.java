@@ -1395,13 +1395,11 @@ public class ApiUtils{
      * @param companyShortName
      * @return
      */
-    public static QRCodeResult getQRCodePC(Long uid, String token, String companyShortName) {
+    public static QRCodeResult getQRCodePC(String companyShortName) {
         if (IS_DEBUG) {
             return new QRCodeResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        paramsMap.put("uid", uid);
-        paramsMap.put("token", token);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_QR_PC, paramsMap, companyShortName), QRCodeResult.class);
     }
 
@@ -1410,13 +1408,11 @@ public class ApiUtils{
      * @param companyShortName
      * @return
      */
-    public static QRCodeResult getQRCodeMobile(Long uid, String token, String companyShortName) {
+    public static QRCodeResult getQRCodeMobile(String companyShortName) {
         if (IS_DEBUG) {
             return new QRCodeResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
-        paramsMap.put("uid", uid);
-        paramsMap.put("token", token);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_QR_MOBILE, paramsMap, companyShortName), QRCodeResult.class);
     }
 

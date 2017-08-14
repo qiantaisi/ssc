@@ -195,9 +195,9 @@
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
-               data-fun_random="random_h2zuxfs"
-               data-fun_zhushu="zhushu_h2zuxfs"
-               data-fun_content="content_h2zuxfs"
+               data-fun_random="random_h2zuxfs11x5"
+               data-fun_zhushu="zhushu_h2zuxfs11x5"
+               data-fun_content="content_h2zuxfs11x5"
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/ema/h2zuxfs.html"
                data-play_id="499"
                data-play_pl_id="14209"

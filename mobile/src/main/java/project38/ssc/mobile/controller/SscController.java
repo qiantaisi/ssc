@@ -528,7 +528,7 @@ public class SscController extends CacheController {
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
-            result = ApiUtils.getQRCodePC(uid, token, companyShortName);
+            result = ApiUtils.getQRCodePC(companyShortName);
         } catch (Exception e) {
             result.setResult(-100);
             result.setDescription("服务器错误");
@@ -548,7 +548,7 @@ public class SscController extends CacheController {
         try {
             Long uid = this.getUid(httpServletRequest);
             String token = this.getToken(httpServletRequest);
-            result = ApiUtils.getQRCodeMobile(uid, token, companyShortName);
+            result = ApiUtils.getQRCodeMobile(companyShortName);
         } catch (Exception e) {
             result.setResult(-100);
             result.setDescription("服务器错误");

@@ -1,6 +1,8 @@
 package project38.api.utils;
 
 import org.apache.commons.lang3.StringUtils;
+import project38.api.common.utils.JSONUtils;
+import project38.api.result.QRCodeResult;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -62,5 +64,39 @@ public class SessionUtils {
         HttpSession session = httpServletRequest.getSession();
         session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
         session.setAttribute("GFWF_PL_" + playGroupId, jsonData);
+    }
+
+    /**
+     * 获取PC二维码
+     * @param httpServletRequest
+     * @param playGroupId
+     * @return
+     */
+    public static QRCodeResult getPcEwm(HttpServletRequest httpServletRequest) {
+        if (null == httpServletRequest) {
+            return null;
+        }
+
+        String data = (String) httpServletRequest.getSession().getAttribute("PC_EWM");
+        if (StringUtils.isNotBlank(data)) {
+            return JSONUtils.toObject(data, QRCodeResult.class);
+        }
+
+        return null;
+    }
+
+    /**
+     * 设置PC二维码
+     * @param httpServletRequest
+     * @param qrCodeResult
+     */
+    public static void setPcEwm(HttpServletRequest httpServletRequest, QRCodeResult qrCodeResult) {
+        if (null == qrCodeResult) {
+            return;
+        }
+
+        HttpSession session = httpServletRequest.getSession();
+        session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
+        session.setAttribute("PC_EWM", JSONUtils.toJSONStr(qrCodeResult));
     }
 }
