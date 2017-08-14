@@ -24,7 +24,7 @@ textarea{resize:none;overflow-y:auto;}
 .top{height: 100px;}
 .top .logo{float: left;margin-top:22px;}
 
-.top .notice{width: 350px;height: 24px;line-height: 24px;text-indent: 24px;float: left;border-left: 1px solid #d5d5d5;padding-left: 15px;margin-top:30px;margin-left: 20px;background-image: url(../img/ico0.png);font-size: 12px;color: #fff;}
+.top .notice{width: 350px;height: 24px;line-height: 24px;text-indent: 24px;float: left;border-left: 0px solid #d5d5d5;padding-left: 15px;margin-top:30px;margin-left: 20px;background-image: url(../img/ico0.png);font-size: 12px;color: #fff;}
 .top .customer{float: right;margin-top:25px;}
 
 .banner{height: 517px;background: url(../img/img1.jpg) center;}

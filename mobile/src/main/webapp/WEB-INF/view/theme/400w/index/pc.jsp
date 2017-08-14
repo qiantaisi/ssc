@@ -30,8 +30,8 @@
 <div class="top">
     <div class="wid">
         <div class="logo" ani="bounce">
-            <%--<img src="${resPath}pc/img/logo.png" alt="">--%>
-                <img style="max-height:50px;" src="<%=basePath%>images/${logo.imageId}.png" alt="">
+            <img style="max-height:50px;" src="${resPath}pc/img/pclogo.png" alt="">
+              <%--  <img style="max-height:50px;" src="<%=basePath%>images/${logo.imageId}.png" alt="">--%>
         </div>
         <div class="menu">
             <ul>
@@ -47,8 +47,7 @@
 
     <div class="wid">
         <div class="text" ani="fadeInLeft">
-            <%--<img src="${resPath}pc/img/img0.png" alt="">--%>
-            <img src="<%=basePath%>images/${logo.imageId}.png" alt="">
+            <%--<img src="<%=basePath%>images/${logo.imageId}.png" alt="">--%>
             <p>随时随地轻松存取款<br>Android / iPhone移动装置访问 </p>
             <div class="boxsea">
                 <input type="text" value="<%=request.getServerName()%>" id="inputUrl">
