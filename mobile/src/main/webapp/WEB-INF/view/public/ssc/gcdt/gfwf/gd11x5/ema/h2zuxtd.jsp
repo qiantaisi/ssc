@@ -14,13 +14,10 @@
         <div class="wan_top">
             <span class="wanwei">胆码</span>
             <span class="xz">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
                 <i onclick="selectFun_6(this)">清</i>
             </span>
         </div>
-        <div class="wan_bottom">
+        <div class="wan_bottom em_danma_selected">
             <div class="cus-flex-item">
                 <span class="xz n1" onclick="danSelect(this)">01</span>
             </div>
@@ -55,17 +52,17 @@
                 <span class="xz n11" onclick="danSelect(this)">11</span>
             </div>
         </div>
+    </div>
 
+
+    <div class="cus_common qianweiStr">
         <div class="wan_top">
-            <span class="wanwei">拖码</span>
+            <span class="wanwei">拖胆</span>
             <span class="xz">
-                <i onclick="selectFun_1(this)">全</i>
-                <i onclick="selectFun_4(this)">奇</i>
-                <i onclick="selectFun_5(this)">偶</i>
                 <i onclick="selectFun_6(this)">清</i>
             </span>
         </div>
-        <div class="wan_bottom">
+        <div class="wan_bottom tuodan_selected">
             <div class="cus-flex-item">
                 <span class="xz n1" onclick="danSelect(this)">01</span>
             </div>
