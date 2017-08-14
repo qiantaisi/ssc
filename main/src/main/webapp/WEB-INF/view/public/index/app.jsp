@@ -9,7 +9,6 @@
     String basePath = RequestUtils.getBasePath(request);
     String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
 %>
-<c:import url="../common/bodyStart.jsp"/>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,9 +22,33 @@
     <script src="${resPath}app/js/library-8.5.js"></script><!--自定义封装函数-->
     <script src="${resPath}app/js/scrollanim.min.js"></script><!--动画效果库-->
     <title>${data.webTitle}</title>
+    <c:import url="../common/commonHeader.jsp" />
+    <script type="text/javascript">
+        <c:if test="${empty param.z || param.z != 1}">
+        // 检查浏览器
+        var md = new MobileDetect(window.navigator.userAgent);
+        if (md.mobile()) {
+            window.location.href = "<%=mHostName%>/app.html" + "<c:if test="${not empty param.p}">/?p=${param.p}</c:if>";
+        }
+
+        // 检查兼容
+        var browser=navigator.appName
+        var b_version=navigator.appVersion
+        var version=b_version.split(";");
+        var trim_Version=version[1].replace(/[ ]/g,"");
+        if(browser == "Microsoft Internet Explorer" && trim_Version == "MSIE6.0") {
+            window.location.href = "<%=basePath%>error/incompatible.html"
+        } else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") {
+            window.location.href = "<%=basePath%>error/incompatible.html"
+        } else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") {
+            window.location.href = "<%=basePath%>error/incompatible.html"
+        } else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0") {
+        }
+        </c:if>
+    </script>
 </head>
 <body>
-<div class="top" id="apptop" >
+<div class="top" >
     <div class="wid">
         <div class="logo">
             <img src="${basePath}images/${data.logoImageId}.png" alt="${data.webTitle}">

@@ -6,7 +6,7 @@
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
-<script type="text/javascript" src="${commonResPath}js/zepto.min.js?v=2017"></script>
+<script type="text/javascript" src="${commonResPath}js/zepto.min.js?v=20170812"></script>
 <script type="text/javascript" src="${commonResPath}js/zepto.fx.js?v=2017"></script>
 <script>
     //打开自动初始化页面的功能
@@ -27,16 +27,16 @@
 //        }
     }
 </script>
-<script type="text/javascript" src="${commonResPath}sui/js/sm.js?v=20170220"></script>
+<script type="text/javascript" src="${commonResPath}sui/js/sm.js?v=20170812"></script>
 <script type="text/javascript" src="${commonResPath}sui/js/sm-city-picker.js?v=20170227" charset="utf-8"></script>
-<script src="${commonResPath}swiper/js/swiper.min.js?v=2017"></script>
-<script src="${commonResPath}js/zepto.md5.js?v=2017"></script>
-<script src="${commonResPath}js/zepto.cookie.min.js?v=2017"></script>
-<script src="${commonResPath}js/template.js?v=2017"></script>
-<script src="${commonResPath}layer/mobile/layer.js?v=2017"></script>
-<script src="${commonResPath}js/dateFormat.js?v=2017"></script>
-<script src="${commonResPath}js/global.js?v=20170728"></script>
-<script src="${commonResPath}js/public.js?v=2"></script>
+<script type="text/javascript" src="${commonResPath}swiper/js/swiper.min.js?v=2017"></script>
+<script type="text/javascript" src="${commonResPath}js/zepto.md5.js?v=2017"></script>
+<script type="text/javascript" src="${commonResPath}js/zepto.cookie.min.js?v=20170812"></script>
+<script type="text/javascript" src="${commonResPath}js/template.js?v=2017"></script>
+<script type="text/javascript" src="${commonResPath}layer/mobile/layer.js?v=2017"></script>
+<script type="text/javascript" src="${commonResPath}js/dateFormat.js?v=2017"></script>
+<script type="text/javascript" src="${commonResPath}js/global.js?v=20170728"></script>
+<script type="text/javascript" src="${commonResPath}js/public.js?v=2"></script>
 <script>
     config.basePath = '<%=basePath%>';
 </script>

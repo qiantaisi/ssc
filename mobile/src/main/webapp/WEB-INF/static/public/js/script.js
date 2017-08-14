@@ -2677,7 +2677,7 @@ $(function () {
                                 return;
                             }
 
-                            var url = "http://" + payUrl + "/pay/payOnlineRequest.html?uid=" + Tools.getCookie("uid") + "&refer=" + config.basePath + "&payOnlineId=" + payOnlineId + "&money=" + money;
+                            var url = "http://" + payUrl + "/pay/payOnlineRequest.html?uid=" + Tools.getCookie("uid") + "&refer=" + location.protocol + "//" + location.host + "&payOnlineId=" + payOnlineId + "&money=" + money;
                             window.open(url);
                             $.closeModal();
                         }

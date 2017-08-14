@@ -109,20 +109,32 @@ function danSelect(obj) {
     if ($(obj).parent().find(".wan_bottom .cus-flex-item .xz").hasClass("active_gfwf")) {
         $(obj).parent().find(".cus-flex-item .xz.active_gfwf").removeClass("active_gfwf");
     } else {
+        var flagTuoDan = $(obj).parent().parent().hasClass("danma_selected");
         var flagDanMa = $(obj).parent().parent().hasClass("danma_selected");
-        if(flagDanMa){
+
+        console.log(flagDanMa + '---2' + flagTuoDan);
+        if (flagTuoDan) {
+            $(obj).parent().parent().parent().parent().find(".danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+            $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+
+            console.log(parseInt($(obj).html()) + "||--||");
+        }
+
+        if (flagDanMa) {
             var sumSelected = $(obj).parent().parent().find(".cus-flex-item .xz.active_gfwf").length;
-            if(sumSelected >= 2){
-                $(obj).parent().parent().find(".cus-flex-item span.n"+ arrSum[0] +".active_gfwf").removeClass('active_gfwf');
-                arrSum.splice(0,1);
+            if (sumSelected >= 2) {
+                $(obj).parent().parent().find(".cus-flex-item span.n" + arrSum[0] + ".active_gfwf").removeClass('active_gfwf');
+                arrSum.splice(0, 1);
             }
 
+            $(obj).parent().parent().parent().parent().find(".tuodan_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
             arrSum.push(parseInt($(obj).html()));
-            console.log(typeof sumSelected + "------||" + arrSum[0] + '--' + arrSum[1] + '--' + arrSum[2]);
+
         } else {
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
         }
+
     }
     $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
 
@@ -194,7 +206,6 @@ function content_qy(){
     $.each($(".di1m .wan_bottom .cus-flex-item span.active_gfwf"), function () {
         arr1.push($.trim($(this).html()));
     });
-
 
     if (arr1.length <= 0) {
         return 0;
