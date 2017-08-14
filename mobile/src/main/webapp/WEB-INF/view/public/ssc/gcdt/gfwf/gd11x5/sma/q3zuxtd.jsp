@@ -55,14 +55,14 @@
     </div>
 
 
-    <div class="cus_common tuodan_selected">
+    <div class="cus_common qianweiStr">
         <div class="wan_top">
             <span class="wanwei">拖胆</span>
             <span class="xz">
                 <i onclick="selectFun_6(this)">清</i>
             </span>
         </div>
-        <div class="wan_bottom">
+        <div class="wan_bottom tuodan_selected">
             <div class="cus-flex-item">
                 <span class="xz n1" onclick="danSelect(this)">01</span>
             </div>

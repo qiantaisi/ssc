@@ -22,7 +22,7 @@ $(function () {
     // 使用template.helper(name, callback)注册公用辅助方法
     template.helper('dateFormat', function (date, format) {
         return dateFormat(date, format);
-    })
+    });
 
 
     // 返回按钮
@@ -2677,7 +2677,7 @@ $(function () {
                                 return;
                             }
 
-                            var url = "http://" + payUrl + "/pay/payOnlineRequest.html?uid=" + Tools.getCookie("uid") + "&refer=" + config.basePath + "&payOnlineId=" + payOnlineId + "&money=" + money;
+                            var url = "http://" + payUrl + "/pay/payOnlineRequest.html?uid=" + Tools.getCookie("uid") + "&refer=" + location.protocol + "//" + location.host + "&payOnlineId=" + payOnlineId + "&money=" + money;
                             window.open(url);
                             $.closeModal();
                         }

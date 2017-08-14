@@ -243,7 +243,6 @@
             }
         });
         function showResponse(json, statusText) {
-            parent.hideLoading();
             if (json.result == 1) {
                 alert("您已成功提交申请,请耐心等待审核!");
 //                parent.etPage('lsjl/ckjl');
@@ -251,6 +250,7 @@
             } else {
                 alert("提交失败：" + json.description);
             }
+            parent.hideLoading();
         }
     });
 </script>
