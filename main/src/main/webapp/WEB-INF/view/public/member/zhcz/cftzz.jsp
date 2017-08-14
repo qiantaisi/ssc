@@ -130,6 +130,7 @@
                         document.location.href = CONFIG.BASEURL + "member/lsjl.html?module=ckjl";
                     } else {
                         alert("提交失败：" + json.description);
+                        document.location.href = CONFIG.BASEURL + "member/zhcz.html?module=cftzz";
                     }
                     parent.hideLoading();
                 }
