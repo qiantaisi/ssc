@@ -11,9 +11,9 @@
     <ul>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti spans" data-play_id="502" data-play_pl_id="14221" data-name="gd11x5_qsw" data-fun_zhushu="gd11x5_zhushu_qsw" data-fun_content="content_gd11x5_qsw" data-fun_suiji="suiji_gd11x5_qsw"><a href="javascript:void(0)">前三位</a></span>
-                <span class="playPlIdBtn spans" data-play_id="503" data-play_pl_id="14220" data-name="gd11x5_zsw" data-fun_zhushu="zhushu_gd11x5_zsw" data-fun_content="content_gd11x5_zsw" data-fun_suiji="suiji_gd11x5_zsw"><a href="javascript:void(0)">中三位</a></span>
-                <span class="playPlIdBtn spans" data-play_id="504" data-play_pl_id="14219|14218|14217" data-name="gd11x5_hsw" data-fun_zhushu="zhushu_gd11x5_hsw" data-fun_content="content_suiji_gd11x5_hsw" data-fun_suiji="suiji_gd11x5_hsw"><a href="javascript:void(0)">后三位</a></span>
+                <span class="playPlIdBtn acti spans" data-play_id="698" data-play_pl_id="14447" data-name="gd11x5_qsw" data-fun_zhushu="gd11x5_zhushu_qsw" data-fun_content="content_gd11x5_qsw" data-fun_suiji="suiji_gd11x5_qsw"><a href="javascript:void(0)">前三位</a></span>
+                <span class="playPlIdBtn spans" data-play_id="699" data-play_pl_id="14448" data-name="gd11x5_zsw" data-fun_zhushu="zhushu_gd11x5_zsw" data-fun_content="content_gd11x5_zsw" data-fun_suiji="suiji_gd11x5_zsw"><a href="javascript:void(0)">中三位</a></span>
+                <span class="playPlIdBtn spans" data-play_id="700" data-play_pl_id="14449" data-name="gd11x5_hsw" data-fun_zhushu="zhushu_gd11x5_hsw" data-fun_content="content_suiji_gd11x5_hsw" data-fun_suiji="suiji_gd11x5_hsw"><a href="javascript:void(0)">后三位</a></span>
             </p>
         </li>
     </ul>
@@ -40,7 +40,7 @@
         <ul>
             <li data-name="前三位">
                 <b><i>前三位</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -85,7 +85,7 @@
         <ul>
             <li data-name="中三位">
                 <b><i>中三位</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -129,7 +129,7 @@
         <ul>
             <li data-name="后三位">
                 <b><i>后三位</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
