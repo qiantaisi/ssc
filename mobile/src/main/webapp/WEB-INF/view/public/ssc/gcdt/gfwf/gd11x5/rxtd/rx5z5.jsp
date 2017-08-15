@@ -17,7 +17,7 @@
                 <i onclick="selectFun_6(this)">清</i>
             </span>
         </div>
-        <div class="wan_bottom sim_danma_selected">
+        <div class="wan_bottom wm_danma_selected">
             <div class="cus-flex-item">
                 <span class="xz n1" onclick="danSelect(this)">01</span>
             </div>

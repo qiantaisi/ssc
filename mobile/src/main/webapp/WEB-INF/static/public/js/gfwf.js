@@ -146,11 +146,11 @@ function danSelect(obj) {
             var sumSelectedTuodan = $(obj).parent().parent().parent().parent().find(".wanweiStr .cus-flex-item .xz.active_gfwf").length;
 
             if(sumSelectedTuodan <= 0){
-                arrSum8mDt.splice(0, arrSum3mDt.length);
-                arrSum7mDt.splice(0, arrSum3mDt.length);
-                arrSum6mDt.splice(0, arrSum3mDt.length);
-                arrSum5mDt.splice(0, arrSum3mDt.length);
-                arrSum4mDt.splice(0, arrSum3mDt.length);
+                arrSum8mDt.splice(0, arrSum8mDt.length);
+                arrSum7mDt.splice(0, arrSum7mDt.length);
+                arrSum6mDt.splice(0, arrSum6mDt.length);
+                arrSum5mDt.splice(0, arrSum5mDt.length);
+                arrSum4mDt.splice(0, arrSum4mDt.length);
                 arrSum3mDt.splice(0, arrSum3mDt.length);
                 arrSum2mDt.splice(0, arrSum2mDt.length);//清空数组
             }
@@ -158,19 +158,19 @@ function danSelect(obj) {
         }
 
         if (flagDanMaSm) {
-            getDanMaCommon(obj, arrSum3mDt);
+            getDanMaCommon(obj, arrSum3mDt, 2);
         } else if (flagDanMaEm) {
-            getDanMaCommon(obj, arrSum2mDt);
+            getDanMaCommon(obj, arrSum2mDt, 1);
         } else if (flagDanMaSim) {
-            getDanMaCommon(obj, arrSum4mDt);
+            getDanMaCommon(obj, arrSum4mDt, 3);
         } else if (flagDanMaWm) {
-            getDanMaCommon(obj, arrSum5mDt);
+            getDanMaCommon(obj, arrSum5mDt, 4);
         } else if (flagDanMaLm) {
-            getDanMaCommon(obj, arrSum6mDt);
+            getDanMaCommon(obj, arrSum6mDt, 5);
         } else if (flagDanMaQm) {
-            getDanMaCommon(obj, arrSum7mDt);
+            getDanMaCommon(obj, arrSum7mDt, 6);
         } else if (flagDanMaBm) {
-            getDanMaCommon(obj, arrSum8mDt);
+            getDanMaCommon(obj, arrSum8mDt, 7);
         } else {
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
         }
@@ -188,10 +188,10 @@ function danSelect(obj) {
 
 }
 
-
-function getDanMaCommon(obj, numArr){
+//胆码通用选择筛选器
+function getDanMaCommon(obj, numArr, x){
     var sumSelected = $(obj).parent().parent().find(".cus-flex-item .xz.active_gfwf").length;
-    if (sumSelected >= 2) {
+    if (sumSelected >= x) {
         $(obj).parent().parent().find(".cus-flex-item span.n" + numArr[0] + ".active_gfwf").removeClass('active_gfwf');
         numArr.splice(0, 1);
     }
@@ -1526,39 +1526,65 @@ function content_rx4zu4() {
 
 
 /********************************************11选5**********************************************/
+
 /**
  * 注数-任选八中五胆拖
  */
 function zhushu_rx8z5dt(){
-    return;
+    return getRxDtCommonMethod(8);
 }
 
 /**
  * 注数-任选七中五胆拖
  */
 function zhushu_rx7z5dt(){
-    return;
+    return getRxDtCommonMethod(7);
 }
 
 /**
  * 注数-任选六中五胆拖
  */
 function zhushu_rx6z5dt(){
-    return;
+    return getRxDtCommonMethod(6);
 }
 
 /**
  * 注数-任选五中五胆拖
  */
 function zhushu_rx5z5dt(){
-    return;
+    return getRxDtCommonMethod(5);
 }
 
 /**
  * 注数-任选四中四胆拖
  */
 function zhushu_rx4z4dt(){
-    return;
+    return getRxDtCommonMethod(4);
+}
+
+//获取任选中胆码通用选取注数
+function getRxDtCommonMethod(arrLength){
+    var tempLength = 0;
+    var wanArr = [], qianArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    for(var i = 0; i < arrLength; i++){
+        if(wanArr.length == i) {
+            tempLength = getFlagArrs(qianArr, arrLength - i);
+        }
+    }
+
+    return tempLength.length;
 }
 
 /**
