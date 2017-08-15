@@ -27,7 +27,7 @@
         // 幸运选号
         var tmpXyxhNums = getQueryString("nums");
         var tmpXyxhMoney = getQueryString("money");
-
+/*
         if (typeof tmpXyxhNums != 'undefined' && typeof tmpXyxhMoney != 'undefined' && tmpXyxhNums != '' && tmpXyxhMoney != '' && tmpXyxhNums != null && tmpXyxhMoney != null) {
             var oArr = [
                 ['wan', '万位'],['qian', '千位'],['bai', '百位'],['shi', '十位'],['ge', '个位']
@@ -54,7 +54,7 @@
             $("#inputMoney").data("inputMoney",tmpXyxhMoney);
 
             renderZhushu();
-        }
+        }*/
 
     });
 </script>
