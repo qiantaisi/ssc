@@ -4522,11 +4522,417 @@ Array.prototype.uniqueArr = function () {
 }
 
 //======================================================随机算法====================================
+
+/********************************************11选5***********************************************/
+/**
+ * 随机算法-任选8中8胆拖
+ */
+function random_rx8z5dt() {
+    getRandomErWeiNums(8);
+}
+
+/**
+ * 随机算法-任选7中7胆拖
+ */
+function random_rx7z5dt() {
+    getRandomErWeiNums(7);
+}
+
+/**
+ * 随机算法-任选6中6胆拖
+ */
+function random_rx6z5dt() {
+    getRandomErWeiNums(6);
+}
+
+/**
+ * 随机算法-任选5中5胆拖
+ */
+function random_rx5z5dt() {
+    getRandomErWeiNums(5);
+}
+
+/**
+ * 随机算法-任选4中4胆拖
+ */
+function random_rx4z4dt() {
+    getRandomErWeiNums(4);
+}
+
+/**
+ * 随机算法-任选3中3胆拖
+ */
+function random_rx3z3dt() {
+    getRandomErWeiNums(3);
+}
+
+/**
+ * 随机算法-任选2中2胆拖
+ */
+function random_rx2z2dt() {
+    getRandomErWeiNums(2);
+}
+
+/**
+ * 随机算法-任选七中五
+ */
+function random_rx8z5() {
+    getRandomTongWeiNums(8);
+}
+
+/**
+ * 随机算法-任选七中五
+ */
+function random_rx7z5() {
+    getRandomTongWeiNums(7);
+}
+
+/**
+ * 随机算法-任选六中五
+ */
+function random_rx6z5() {
+    getRandomTongWeiNums(6);
+}
+
+/**
+ * 随机算法-任选五中五
+ */
+function random_rx5z5() {
+    getRandomTongWeiNums(5);
+}
+
+/**
+ * 随机算法-任选四中四
+ */
+function random_rx4z4() {
+    getRandomTongWeiNums(4);
+}
+
+/**
+ * 随机算法-任选三中三
+ */
+function random_rx3z3() {
+    getRandomSwZxCommon();
+}
+
+/**
+ * 随机算法-任选二中二
+ */
+function random_rx2z2() {
+    getRandomQ2ZuxCommon();
+}
+
+/**
+ * 随机算法-任选一中一
+ */
+function random_rx1z1() {
+    var random_1 = parseInt(Math.random() * 11);
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf")
+}
+
+/**
+ * 随机算法-定位胆
+ */
+function random_dwd_11x5() {
+    var random_1 = parseInt(Math.random() * 11);
+    var wei = parseInt(Math.random() * 5);
+
+    if(wei == 0){
+        $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 1){
+        $(".qianweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 2){
+        $(".baiweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 3){
+        $(".shiweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    } else if(wei == 4){
+        $(".geweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    }
+}
+
+/**
+ * 随机算法-11选5-后三位
+ */
+function random_h3w () {
+    getRandom3weiCommon();
+}
+
+/**
+ * 随机算法-11选5-中三位
+ */
+function random_z3w () {
+    getRandom3weiCommon();
+}
+
+/**
+ * 随机算法-11选5-前三位
+ */
+function random_q3w () {
+    getRandom3weiCommon();
+}
+
+/**
+ * 随机算法-11选5-前二组选复式
+ */
+function random_q2zuxtd () {
+    getRandomQ2ZuxTdCommon();
+}
+
+/**
+ * 随机算法-11选5-后二组选复式
+ */
+function random_h2zuxtd () {
+    getRandomQ2ZuxTdCommon();
+}
+
+/**
+ * 随机算法-11选5-后二组选复式
+ */
+function random_h2zuxfs11x5() {
+    getRandomQ2ZuxCommon();
+}
+
+/**
+ * 随机算法-11选5-前二组选复式
+ */
+function random_q2zuxfs11x5() {
+    getRandomQ2ZuxCommon();
+}
+
+/**
+ * 随机算法-11选5-后二直选复式
+ */
+function random_h2zxfs11x5() {
+    getRandomQ2ZxCommon();
+}
+
+/**
+ * 随机算法-11选5-前二直选复式
+ */
+function random_q2zxfs11x5() {
+    getRandomQ2ZxCommon();
+}
+
+/**
+ * 随机算法-11选5-后三组选拖胆
+ */
+function random_h3zuxtd() {
+    getRandomSwZxTdCommon();
+}
+
+/**
+ * 随机算法-11选5-中三组选拖胆
+ */
+function random_z3zuxtd() {
+    getRandomSwZxTdCommon();
+}
+
+/**
+ * 随机算法-11选5-前三组选拖胆
+ */
+function random_q3zuxtd() {
+    getRandomSwZxTdCommon();
+}
+
+/**
+ * 随机算法-11选5-后三组选随机
+ */
+function random_h3zuxfs() {
+    getRandomSwZxCommon();
+}
+
+/**
+ * 随机算法-11选5-中三组选随机
+ */
+function random_z3zuxfs() {
+    getRandomSwZxCommon();
+}
+
+/**
+ * 随机算法-11选5-前三组选随机
+ */
+function random_q3zuxfs() {
+    getRandomSwZxCommon();
+}
+
+/**
+ * 随机算法-11选5-后三直选复式
+ */
+function random_h3zxfs_11x5() {
+    getRandomSwCommon();
+}
+
+/**
+ * 随机算法-11选5-中三直选复式
+ */
+function random_z3zxfs_11x5() {
+    getRandomSwCommon();
+}
+
+/**
+ * 随机算法-11选5-前三直选复式
+ */
+function random_q3zxfs_11x5() {
+    getRandomSwCommon();
+}
+
+function getRandom3weiCommon(){
+    var random_1 = parseInt(Math.random() * 11);
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+function getRandomQ2ZuxTdCommon(){
+    var arrTemp = [];
+    while (arrTemp.length < 2){
+        var random_1 = parseInt(Math.random() * 11);
+        var random_2 = parseInt(Math.random() * 11);
+
+        if(random_1 != random_2){
+            arrTemp.push(random_1);
+            arrTemp.push(random_2);
+        }
+    }
+
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+function getRandomQ2ZuxCommon(){
+    var arrTemp = [];
+    while (arrTemp.length < 2){
+        var random_1 = parseInt(Math.random() * 11);
+        var random_2 = parseInt(Math.random() * 11);
+
+        if(random_1 != random_2){
+            arrTemp.push(random_1);
+            arrTemp.push(random_2);
+        }
+    }
+
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".wanweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+function getRandomQ2ZxCommon(){
+    var arrTemp = [];
+    while (arrTemp.length < 2){
+        var random_1 = parseInt(Math.random() * 11);
+        var random_2 = parseInt(Math.random() * 11);
+
+        if(random_1 != random_2){
+            arrTemp.push(random_1);
+            arrTemp.push(random_2);
+        }
+    }
+
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+function getRandomSwZxTdCommon(){
+    var arrTemp = [];
+    while (arrTemp.length < 3){
+        var random_1 = parseInt(Math.random() * 11);
+        var random_2 = parseInt(Math.random() * 11);
+        var random_3 = parseInt(Math.random() * 11);
+
+        if(random_1 != random_2 && random_1 != random_3 && random_2 != random_3 ){
+            arrTemp.push(random_1);
+            arrTemp.push(random_2);
+            arrTemp.push(random_3);
+        }
+    }
+
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+function getRandomSwZxCommon(){
+    var arrTemp = [];
+    while (arrTemp.length < 3){
+        var random_1 = parseInt(Math.random() * 11);
+        var random_2 = parseInt(Math.random() * 11);
+        var random_3 = parseInt(Math.random() * 11);
+
+        if(random_1 != random_2 && random_1 != random_3 && random_2 != random_3 ){
+            arrTemp.push(random_1);
+            arrTemp.push(random_2);
+            arrTemp.push(random_3);
+        }
+    }
+
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".wanweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".wanweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+//获取同位N个随机数
+function getRandomTongWeiNums(num){
+    var weiArr = [];
+    while(weiArr.length != num){
+        var random_x = parseInt(Math.random() * 11);
+        weiArr.push(random_x);
+        weiArr = weiArr.uniqueArr(); //去除重复
+    }
+
+    $.each(weiArr, function (index, value) {
+        $(".wanweiStr .wan_bottom .xz").eq(value).removeClass("active_gfwf").addClass("active_gfwf");
+    });
+}
+
+//获取胆码位和拖胆位N个随机数
+function getRandomErWeiNums(num){
+    var weiArr = [];
+    var noHasArr = [];
+
+    while(weiArr.length != num - 1){
+        var random_x = parseInt(Math.random() * 11);
+        weiArr.push(random_x);
+        weiArr = weiArr.uniqueArr(); //去除重复
+    }
+
+    for(var i = 0; i < 11; i++){
+        if($.inArray(i, weiArr) < 0){
+            noHasArr.push(i);
+        }
+    }
+
+
+    var x = parseInt(Math.random() * (11 - num - 1)); //随机获取剩余的几个数中的某个数值
+    $(".wanweiStr .wan_bottom .xz").eq(noHasArr[x]).removeClass("active_gfwf").addClass("active_gfwf");
+
+    $.each(weiArr, function (index, value) {
+        $(".qianweiStr .wan_bottom .xz").eq(value).removeClass("active_gfwf").addClass("active_gfwf");
+    });
+}
+
+
+function getRandomSwCommon(){
+    var arrTemp = [];
+    while (arrTemp.length < 3){
+        var random_1 = parseInt(Math.random() * 11);
+        var random_2 = parseInt(Math.random() * 11);
+        var random_3 = parseInt(Math.random() * 11);
+
+        if(random_1 != random_2 && random_1 != random_3 && random_2 != random_3 ){
+            arrTemp.push(random_1);
+            arrTemp.push(random_2);
+            arrTemp.push(random_3);
+        }
+    }
+
+    $(".wanweiStr .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".qianweiStr .wan_bottom .xz").eq(random_2).removeClass("active_gfwf").addClass("active_gfwf");
+    $(".baiweiStr .wan_bottom .xz").eq(random_3).removeClass("active_gfwf").addClass("active_gfwf");
+}
+
+/********************************************PK10***********************************************/
 /**
  * 随机算法-pk10前一
  */
 function random_qy() {
-    var random_1 = parseInt(Math.random() * 10) + 1;
+    var random_1 = parseInt(Math.random() * 11);
 
     $(".di1m .wan_bottom .xz").eq(random_1).removeClass("active_gfwf").addClass("active_gfwf");
 }
@@ -4535,7 +4941,7 @@ function random_qy() {
  * 随机算法-定位胆
  */
 function random_dwd_pk10() {
-    var random_1 = parseInt(Math.random() * 10) + 1;
+    var random_1 = parseInt(Math.random() * 11);
     var wei = parseInt(Math.random() * 5);
 
     if(wei == 0){
@@ -4560,8 +4966,8 @@ function random_qe() {
     var random_2 = 0;
 
     while (arrTemp.length <= 1) {
-        random_1 = parseInt(Math.random() * 10) + 1;
-        random_2 = parseInt(Math.random() * 10) + 1;
+        random_1 = parseInt(Math.random() * 11);
+        random_2 = parseInt(Math.random() * 11);
         if(random_1 != random_2){
             arrTemp.push(random_1 + ',' + random_2);
         }
@@ -4581,9 +4987,9 @@ function random_qsan() {
     var random_3 = 0;
 
     while (arrTemp.length <= 1) {
-        random_1 = parseInt(Math.random() * 10) + 1;
-        random_2 = parseInt(Math.random() * 10) + 1;
-        random_3 = parseInt(Math.random() * 10) + 1;
+        random_1 = parseInt(Math.random() * 11);
+        random_2 = parseInt(Math.random() * 11);
+        random_3 = parseInt(Math.random() * 11);
 
         if(random_1 != random_2 && random_1 != random_3 && random_3 != random_2){
             arrTemp.push(random_1 + ',' + random_2 + ',' + random_3);
