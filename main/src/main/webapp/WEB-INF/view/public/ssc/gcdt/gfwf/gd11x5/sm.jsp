@@ -11,29 +11,30 @@
     <ul>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti spans" data-play_id="502" data-play_pl_id="14221" data-name="gd11x5_qszxfs" data-fun_zhushu="gd11x5_zhushu_qszxfs" data-fun_content="content_gd11x5_qszxfs" data-fun_suiji="suiji_gd11x5_qszxfs"><a href="javascript:void(0)">前三直选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="503" data-play_pl_id="14220" data-name="gd11x5_qszxds" data-fun_zhushu="zhushu_gd11x5_qszxds" data-fun_content="content_gd11x5_qszxds" data-fun_suiji="suiji_gd11x5_qszxds"><a href="javascript:void(0)">前三直选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="504" data-play_pl_id="14219|14218|14217" data-name="gd11x5_qszuxfs" data-fun_zhushu="zhushu_gd11x5_qszuxfs" data-fun_content="content_suiji_gd11x5_qszuxfs" data-fun_suiji="suiji_gd11x5_qszuxfs"><a href="javascript:void(0)">前三组选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="505" data-play_pl_id="14216"  data-name="gd11x5_qszuxds" data-fun_zhushu="zhushu_gd11x5_qszuxds" data-fun_content="content_gd11x5_qszuxds" data-fun_suiji="suiji_gd11x5_qszuxds"><a href="javascript:void(0)">前三组选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="506" data-play_pl_id="14215"  data-name="gd11x5_qszuxdt" data-fun_zhushu="zhushu_gd11x5_qszuxdt" data-fun_content="content_gd11x5_qszuxdt" data-fun_suiji="suiji_gd11x5_qszuxdt"><a href="javascript:void(0)">前三组选胆拖</a></span>
+                <span class="playPlIdBtn acti spans" data-play_id="673" data-play_pl_id="14422" data-name="gd11x5_qszxfs" data-fun_zhushu="gd11x5_zhushu_qszxfs" data-fun_content="content_gd11x5_qszxfs" data-fun_suiji="suiji_gd11x5_qszxfs"><a href="javascript:void(0)">前三直选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="674" data-play_pl_id="14423" data-name="gd11x5_qszxds" data-fun_zhushu="zhushu_gd11x5_qszxds" data-fun_content="content_gd11x5_qszxds" data-fun_suiji="suiji_gd11x5_qszxds"><a href="javascript:void(0)">前三直选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="675" data-play_pl_id="14424" data-name="gd11x5_qszuxfs" data-fun_zhushu="zhushu_gd11x5_qszuxfs" data-fun_content="content_suiji_gd11x5_qszuxfs" data-fun_suiji="suiji_gd11x5_qszuxfs"><a href="javascript:void(0)">前三组选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="676" data-play_pl_id="14425"  data-name="gd11x5_qszuxds" data-fun_zhushu="zhushu_gd11x5_qszuxds" data-fun_content="content_gd11x5_qszuxds" data-fun_suiji="suiji_gd11x5_qszuxds"><a href="javascript:void(0)">前三组选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="677" data-play_pl_id="14426"  data-name="gd11x5_qszuxdt" data-fun_zhushu="zhushu_gd11x5_qszuxdt" data-fun_content="content_gd11x5_qszuxdt" data-fun_suiji="suiji_gd11x5_qszuxdt"><a href="javascript:void(0)">前三组选胆拖</a></span>
+            </p>
+        </li>
+        <li>
+
+            <p class="btn_fu_zhi">
+                <span class="playPlIdBtn spans" data-play_id="678" data-play_pl_id="14427" data-name="gd11x5_zszxfs" data-fun_zhushu="zhushu_gd11x5_zszxfs" data-fun_content="content_gd11x5_zszxfs" data-fun_suiji="suiji_gd11x5_zszxfs"><a href="javascript:void(0)">中三直选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="679" data-play_pl_id="14428" data-name="gd11x5_zszxds" data-fun_zhushu="zhushu_gd11x5_zszxds" data-fun_content="content_gd11x5_zszxds" data-fun_suiji="suiji_gd11x5_zszxds"><a href="javascript:void(0)">中三直选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="680" data-play_pl_id="14429" data-name="gd11x5_zszuxfs" data-fun_zhushu="zhushu_gd11x5_zszuxfs" data-fun_content="content_gd11x5_zszuxfs" data-fun_suiji="suiji_gd11x5_zszuxfs"><a href="javascript:void(0)">中三组选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="681" data-play_pl_id="14430" data-name="gd11x5_zszuxds" data-fun_zhushu="zhushu_gd11x5_zszuxds" data-fun_content="content_gd11x5_zszuxds" data-fun_suiji="suiji_gd11x5_zszuxds"><a href="javascript:void(0)">中三组选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="682" data-play_pl_id="14431" data-name="gd11x5_zszuxdt" data-fun_zhushu="zhushu_gd11x5_zszuxdt" data-fun_content="content_gd11x5_zszuxdt" data-fun_suiji="suiji_gd11x5_zszuxdt"><a href="javascript:void(0)">中三组选胆拖</a></span>
             </p>
         </li>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn spans" data-play_id="507" data-play_pl_id="14214" data-name="gd11x5_zszxfs" data-fun_zhushu="zhushu_gd11x5_zszxfs" data-fun_content="content_gd11x5_zszxfs" data-fun_suiji="suiji_gd11x5_zszxfs"><a href="javascript:void(0)">中三直选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="508" data-play_pl_id="14213" data-name="gd11x5_zszxds" data-fun_zhushu="zhushu_gd11x5_zszxds" data-fun_content="content_gd11x5_zszxds" data-fun_suiji="suiji_gd11x5_zszxds"><a href="javascript:void(0)">中三直选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="509" data-play_pl_id="14212" data-name="gd11x5_zszuxfs" data-fun_zhushu="zhushu_gd11x5_zszuxfs" data-fun_content="content_gd11x5_zszuxfs" data-fun_suiji="suiji_gd11x5_zszuxfs"><a href="javascript:void(0)">中三组选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="510" data-play_pl_id="14211" data-name="gd11x5_zszuxds" data-fun_zhushu="zhushu_gd11x5_zszuxds" data-fun_content="content_gd11x5_zszuxds" data-fun_suiji="suiji_gd11x5_zszuxds"><a href="javascript:void(0)">中三组选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="511" data-play_pl_id="14232|14231" data-name="gd11x5_zszuxdt" data-fun_zhushu="zhushu_gd11x5_zszuxdt" data-fun_content="content_gd11x5_zszuxdt" data-fun_suiji="suiji_gd11x5_zszuxdt"><a href="javascript:void(0)">中三组选胆拖</a></span>
-            </p>
-        </li>
-        <li>
-            <p class="btn_fu_zhi">
-                <span class="playPlIdBtn spans" data-play_id="512" data-play_pl_id="14230|14229" data-name="gd11x5_hszxfs" data-fun_zhushu="zhushu_gd11x5_hszxfs" data-fun_content="content_gd11x5_hszxfs" data-fun_suiji="suiji_gd11x5_hszxfs"><a href="javascript:void(0)">后三直选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="513" data-play_pl_id="14228|14227" data-name="gd11x5_hszxds" data-fun_zhushu="zhushu_gd11x5_hszxds" data-fun_content="content_gd11x5_hszxds" data-fun_suiji="suiji_gd11x5_hszxds"><a href="javascript:void(0)">后三直选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="511" data-play_pl_id="14232|14231" data-name="gd11x5_hszxfs" data-fun_zhushu="zhushu_gd11x5_hszxfs" data-fun_content="content_gd11x5_hszxfs" data-fun_suiji="suiji_gd11x5_hszxfs"><a href="javascript:void(0)">后三组选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="511" data-play_pl_id="14232|14231" data-name="gd11x5_hszuxds" data-fun_zhushu="zhushu_gd11x5_hszuxds" data-fun_content="content_gd11x5_hszuxds" data-fun_suiji="suiji_gd11x5_hszuxds"><a href="javascript:void(0)">后三组选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="511" data-play_pl_id="14232|14231" data-name="gd11x5_hszuxdt" data-fun_zhushu="zhushu_gd11x5_hszuxdt" data-fun_content="content_gd11x5_hszuxdt" data-fun_suiji="suiji_gd11x5_hszuxdt"><a href="javascript:void(0)">后三组选胆拖</a></span>
+                <span class="playPlIdBtn spans" data-play_id="683" data-play_pl_id="14432" data-name="gd11x5_hszxfs" data-fun_zhushu="zhushu_gd11x5_hszxfs" data-fun_content="content_gd11x5_hszxfs" data-fun_suiji="suiji_gd11x5_hszxfs"><a href="javascript:void(0)">后三直选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="684" data-play_pl_id="14433" data-name="gd11x5_hszxds" data-fun_zhushu="zhushu_gd11x5_hszxds" data-fun_content="content_gd11x5_hszxds" data-fun_suiji="suiji_gd11x5_hszxds"><a href="javascript:void(0)">后三直选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="685" data-play_pl_id="14434" data-name="gd11x5_hszuxfs" data-fun_zhushu="zhushu_gd11x5_hszuxfs" data-fun_content="content_gd11x5_hszuxfs" data-fun_suiji="suiji_gd11x5_hszuxfs"><a href="javascript:void(0)">后三组选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="686" data-play_pl_id="14435" data-name="gd11x5_hszuxds" data-fun_zhushu="zhushu_gd11x5_hszuxds" data-fun_content="content_gd11x5_hszuxds" data-fun_suiji="suiji_gd11x5_hszuxds"><a href="javascript:void(0)">后三组选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="687" data-play_pl_id="14436" data-name="gd11x5_hszuxdt" data-fun_zhushu="zhushu_gd11x5_hszuxdt" data-fun_content="content_gd11x5_hszuxdt" data-fun_suiji="suiji_gd11x5_hszuxdt"><a href="javascript:void(0)">后三组选胆拖</a></span>
             </p>
         </li>
     </ul>
@@ -56,7 +57,7 @@
         </span>
     </p>
     <ul>
-        <li data-name="">
+        <li data-name="第一位">
             <b><i>第一位</i></b>
             <var class="numLines">
                 <span><i>01</i></span>
@@ -150,7 +151,7 @@
         <ul>
             <li data-name="组选">
                 <b><i>组选</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -251,7 +252,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -275,7 +276,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -318,7 +319,7 @@
         <ul>
             <li data-name="第二位">
                 <b><i>第二位</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -342,7 +343,7 @@
             </li>
             <li data-name="第三位">
                 <b><i>第三位</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -366,7 +367,7 @@
             </li>
             <li data-name="第四位">
                 <b><i>第四位</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -438,7 +439,7 @@
         <ul>
             <li data-name="组选">
                 <b><i>组选</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -510,7 +511,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -534,7 +535,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -577,7 +578,7 @@
         <ul>
             <li data-name="第三位">
                 <b><i>第三位</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -601,7 +602,7 @@
             </li>
             <li data-name="第四位">
                 <b><i>第四位</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -625,7 +626,7 @@
             </li>
             <li data-name="第五位">
                 <b><i>第五位</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -699,7 +700,7 @@
         <ul>
             <li data-name="组选">
                 <b><i>组选</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -772,7 +773,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -796,7 +797,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>

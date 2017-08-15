@@ -13,7 +13,7 @@
 <div class="men_list">
     <div class="wid1">
         <div class="logo">
-            <a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a>
+            <a href="<%=basePath%>"><img style="max-height: 50px;" src="<%=basePath%>static/theme/400w/images/pclogo.png?v=0.001" alt=""></a>
         </div>
         <c:import url="../../common/navList.jsp" />
     </div>
