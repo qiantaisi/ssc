@@ -93,11 +93,15 @@ function getSubGfwfSscPage(url, callback) {
 /**
  *数字单选算法
  */
-var arrSum = []; //获取胆码点击个数-11选5
-var arrSumQ2zxtd = []; //获取胆码点击个数-前2胆码-11选5
+var arrSum8mDt = []; //获取胆码点击个数-8码胆码-11选5
+var arrSum7mDt = []; //获取胆码点击个数-7码胆码-11选5
+var arrSum6mDt = []; //获取胆码点击个数-6码胆码-11选5
+var arrSum5mDt = []; //获取胆码点击个数-5码胆码-11选5
+var arrSum4mDt = []; //获取胆码点击个数-4码胆码-11选5
+var arrSum3mDt = []; //获取胆码点击个数-3码胆码-11选5
+var arrSum2mDt = []; //获取胆码点击个数-2码胆码-11选5
 
 function danSelect(obj) {
-    var countFor = 0;
     var flag = $(obj).parent().parent().attr("data-name");
     if(typeof flag != "undefined" && flag == "bd"){
         var tOrF = $(obj).hasClass("active_gfwf");
@@ -114,42 +118,59 @@ function danSelect(obj) {
         //拖码判断-11选5
         var flagTuoDan = $(obj).parent().parent().hasClass("tuodan_selected");
         //胆码判断-11选5
-        var flagDanMa = $(obj).parent().parent().hasClass("danma_selected");
+        var flagDanMaSm = $(obj).parent().parent().hasClass("danma_selected");
         //胆码判断-前二组选拖胆-11选5
         var flagDanMaEm = $(obj).parent().parent().hasClass("em_danma_selected");
+        //胆码判断-任选四胆拖-11选5
+        var flagDanMaSim = $(obj).parent().parent().hasClass("sim_danma_selected");
+        //胆码判断-任选五胆拖-11选5
+        var flagDanMaWm = $(obj).parent().parent().hasClass("wm_danma_selected");
+        //胆码判断-任选六胆拖-11选5
+        var flagDanMaLm = $(obj).parent().parent().hasClass("lm_danma_selected");
+        //胆码判断-任选七胆拖-11选5
+        var flagDanMaQm = $(obj).parent().parent().hasClass("qm_danma_selected");
+        //胆码判断-任选八胆拖-11选5
+        var flagDanMaBm = $(obj).parent().parent().hasClass("bm_danma_selected");
 
         if (flagTuoDan) {
             $(obj).parent().parent().parent().parent().find(".danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
             $(obj).parent().parent().parent().parent().find(".em_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+            $(obj).parent().parent().parent().parent().find(".sm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+            $(obj).parent().parent().parent().parent().find(".sim_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+            $(obj).parent().parent().parent().parent().find(".wm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+            $(obj).parent().parent().parent().parent().find(".lm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+            $(obj).parent().parent().parent().parent().find(".qm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+            $(obj).parent().parent().parent().parent().find(".bm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
             var sumSelectedTuodan = $(obj).parent().parent().parent().parent().find(".wanweiStr .cus-flex-item .xz.active_gfwf").length;
 
             if(sumSelectedTuodan <= 0){
-                arrSum.splice(0, arrSum.length);  //清空数组
-                arrSumQ2zxtd.splice(0, arrSumQ2zxtd.length);
+                arrSum8mDt.splice(0, arrSum3mDt.length);
+                arrSum7mDt.splice(0, arrSum3mDt.length);
+                arrSum6mDt.splice(0, arrSum3mDt.length);
+                arrSum5mDt.splice(0, arrSum3mDt.length);
+                arrSum4mDt.splice(0, arrSum3mDt.length);
+                arrSum3mDt.splice(0, arrSum3mDt.length);
+                arrSum2mDt.splice(0, arrSum2mDt.length);//清空数组
             }
 
         }
 
-        if (flagDanMa) {
-            var sumSelected = $(obj).parent().parent().find(".cus-flex-item .xz.active_gfwf").length;
-            if (sumSelected >= 2) {
-                $(obj).parent().parent().find(".cus-flex-item span.n" + arrSum[0] + ".active_gfwf").removeClass('active_gfwf');
-                arrSum.splice(0, 1);
-            }
-            $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
-            $(obj).parent().parent().parent().parent().find(".tuodan_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-            arrSum.push(parseInt($(obj).html()));
-
+        if (flagDanMaSm) {
+            getDanMaCommon(obj, arrSum3mDt);
         } else if (flagDanMaEm) {
-            var sumSelectedem = $(obj).parent().parent().find(".cus-flex-item .xz.active_gfwf").length;
-            if (sumSelectedem >= 1) {
-                $(obj).parent().parent().find(".cus-flex-item span.n" + arrSumQ2zxtd[0] + ".active_gfwf").removeClass('active_gfwf');
-                arrSumQ2zxtd.splice(0, 1);
-            }
-            $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
-            $(obj).parent().parent().parent().parent().find(".tuodan_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-            arrSumQ2zxtd.push(parseInt($(obj).html()));
+            getDanMaCommon(obj, arrSum2mDt);
+        } else if (flagDanMaSim) {
+            getDanMaCommon(obj, arrSum4mDt);
+        } else if (flagDanMaWm) {
+            getDanMaCommon(obj, arrSum5mDt);
+        } else if (flagDanMaLm) {
+            getDanMaCommon(obj, arrSum6mDt);
+        } else if (flagDanMaQm) {
+            getDanMaCommon(obj, arrSum7mDt);
+        } else if (flagDanMaBm) {
+            getDanMaCommon(obj, arrSum8mDt);
         } else {
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
         }
@@ -167,6 +188,17 @@ function danSelect(obj) {
 
 }
 
+
+function getDanMaCommon(obj, numArr){
+    var sumSelected = $(obj).parent().parent().find(".cus-flex-item .xz.active_gfwf").length;
+    if (sumSelected >= 2) {
+        $(obj).parent().parent().find(".cus-flex-item span.n" + numArr[0] + ".active_gfwf").removeClass('active_gfwf');
+        numArr.splice(0, 1);
+    }
+    $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+    $(obj).parent().parent().parent().parent().find(".tuodan_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+    numArr.push(parseInt($(obj).html()));
+}
 
 /**
  *  随机按钮状态
@@ -1494,6 +1526,131 @@ function content_rx4zu4() {
 
 
 /********************************************11选5**********************************************/
+/**
+ * 注数-任选八中五胆拖
+ */
+function zhushu_rx8z5dt(){
+    return;
+}
+
+/**
+ * 注数-任选七中五胆拖
+ */
+function zhushu_rx7z5dt(){
+    return;
+}
+
+/**
+ * 注数-任选六中五胆拖
+ */
+function zhushu_rx6z5dt(){
+    return;
+}
+
+/**
+ * 注数-任选五中五胆拖
+ */
+function zhushu_rx5z5dt(){
+    return;
+}
+
+/**
+ * 注数-任选四中四胆拖
+ */
+function zhushu_rx4z4dt(){
+    return;
+}
+
+/**
+ * 注数-任选三中三胆拖
+ */
+function zhushu_rx3z3dt(){
+    return getCommonTuodan11X5();
+}
+
+/**
+ * 注数-任选二中二胆拖
+ */
+function zhushu_rx2z2dt(){
+    return getCommonErMaZxfs11x5();
+}
+
+/**
+ * 注数-任选八中五-11x5
+ */
+function zhushu_rx8z5() {
+    var wanArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    var tmpArr = getFlagArrs(wanArr, 8);
+    return tmpArr.length;
+}
+
+/**
+ * 注数-任选七中五-11x5
+ */
+function zhushu_rx7z5() {
+    var wanArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    var tmpArr = getFlagArrs(wanArr, 7);
+    return tmpArr.length;
+}
+
+/**
+ * 注数-任选六中五-11x5
+ */
+function zhushu_rx6z5() {
+    var wanArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    var tmpArr = getFlagArrs(wanArr, 6);
+    return tmpArr.length;
+}
+
+/**
+ * 注数-任选五中五-11x5
+ */
+function zhushu_rx5z5() {
+    var wanArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    var tmpArr = getFlagArrs(wanArr, 5);
+    return tmpArr.length;
+}
+
+
+/**
+ * 注数-任选四中四-11x5
+ */
+function zhushu_rx4z4() {
+    var newArr = [];
+    var wanArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    for (var i = 0; i < wanArr.length; i++) {
+        for (var n = i; n < wanArr.length; n++) {
+            for (var j = n; j < wanArr.length; j++) {
+                for (var m = j; m < wanArr.length; m++) {
+                    if (parseInt(wanArr[i]) != parseInt(wanArr[n]) && parseInt(wanArr[i]) != parseInt(wanArr[j])
+                        && parseInt(wanArr[i]) != parseInt(wanArr[m]) && parseInt(wanArr[n]) != parseInt(wanArr[j])
+                        && parseInt(wanArr[n]) != parseInt(wanArr[m]) && parseInt(wanArr[j]) != parseInt(wanArr[m])) {
+                        newArr.push(wanArr[i] + '' + wanArr[n] + '' + wanArr[j] + '' + wanArr[m]);
+                    }
+                }
+            }
+        }
+    }
+
+    return newArr.length;
+}
+
 /**
  * 注数-任选三中三-11x5
  */
