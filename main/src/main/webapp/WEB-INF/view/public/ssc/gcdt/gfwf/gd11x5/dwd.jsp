@@ -7,7 +7,7 @@
     String basePath = RequestUtils.getBasePath(request);
 %>
 
-<input class="playPlIdBtn acti" data-play_id="659" data-play_pl_id="14408" data-name="gd11x5_dwd" data-fun_zhushu="zhushu_gd11x5_dwd" data-fun_content="content_gd11x5_dwd" data-fun_suiji="suiji_gd11x5_dwd" type="hidden" />
+<input class="playPlIdBtn acti" data-play_id="701" data-play_pl_id="14450" data-name="gd11x5_dwd" data-fun_zhushu="zhushu_gd11x5_dwd" data-fun_content="content_gd11x5_dwd" data-fun_suiji="suiji_gd11x5_dwd" type="hidden" />
 
 <c:import url="../common/commonMiddle.jsp"/>
 <c:import url="../common/subCommonJs.jsp"/>

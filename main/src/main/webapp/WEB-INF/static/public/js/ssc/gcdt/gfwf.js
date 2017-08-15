@@ -5864,6 +5864,59 @@ function suiji_gd11x5_qezuxds() {
         playGroupId: playGroupId
     };
 }
+function gd11x5_zhushu_qsw(){
+    var newArr = [];
+    var wanArr = [];
+    $.each($(".recl-1002 ul li[data-name = '前三位'] span.acti"), function () {
+        wanArr.push($.trim($(this).find("i").html()));
+    });
+    if (wanArr.length <= 0) {
+        return 0;
+    }
+
+    for (var i = 0; i < wanArr.length; i++) {
+        newArr.push(wanArr[i]);
+    }
+
+    return newArr.length;
+}
+
+function zhushu_gd11x5_zsw(){
+    var newArr = [];
+    var wanArr = [];
+    $.each($(".recl-1002 ul li[data-name = '中三位'] span.acti"), function () {
+        wanArr.push($.trim($(this).find("i").html()));
+    });
+    if (wanArr.length <= 0) {
+        return 0;
+    }
+
+    for (var i = 0; i < wanArr.length; i++) {
+        newArr.push(wanArr[i]);
+    }
+
+    return newArr.length;
+}
+
+function zhushu_gd11x5_hsw(){
+    var newArr = [];
+    var wanArr = [];
+    $.each($(".recl-1002 ul li[data-name = '后三位'] span.acti"), function () {
+        wanArr.push($.trim($(this).find("i").html()));
+    });
+    if (wanArr.length <= 0) {
+        return 0;
+    }
+
+    for (var i = 0; i < wanArr.length; i++) {
+        newArr.push(wanArr[i]);
+    }
+
+    return newArr.length;
+}
+
+
+
 function suiji_gd11x5_hezuxds() {
     // 初始化变量
     var showPlayName = '';
@@ -6245,6 +6298,83 @@ function suiji_gd11x5_qszxfs() {
     };
 }
 
+function suiji_gd11x5_qsw() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+            newArr.push(zhiTsh1);
+    }
+
+    showPlayName = "不定位-前3";
+    showContent = "前三位: (" + newArr[0] + ")";
+    betContent = newArr[0] ;
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_zsw() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        newArr.push(zhiTsh1);
+    }
+
+    showPlayName = "不定位-中3";
+    showContent = "中三位: (" + newArr[0] + ")";
+    betContent = newArr[0] ;
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_hsw() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        newArr.push(zhiTsh1);
+    }
+
+    showPlayName = "不定位-后3";
+    showContent = "后三位: (" + newArr[0] + ")";
+    betContent = newArr[0] ;
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
 
 
 function suiji_gd11x5_hezxfs() {
@@ -12027,6 +12157,131 @@ function content_gd11x5_qezxfs() {
     showPlayName = "前二直选复式";
     showContent = "第一位: ({0}), 第二位: ({1})".format(arr[0], arr[1]);
     betContent = "{0}|{1}|{2}".format(arr[0], arr[1]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+
+/**
+ * 前三位
+ */
+function content_gd11x5_qsw() {
+    var zhushu = 0;
+    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '前三位'] span.acti"), function (index, value) {
+        dxdsWArr.push($.trim($(this).find("i").html()));
+    });
+
+    for (var n = 0; n < dxdsWArr.length; n++) {
+            tempArr.push(dxdsWArr[n]);
+
+    }
+
+    if (dxdsWArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(","),
+    ];
+
+    showPlayName = "不定位-前3";
+    showContent = "前三位: ({0})".format(arr[0]);
+    betContent = "{0}".format(arr[0]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+/**
+ * 中三位
+ */
+function content_gd11x5_zsw() {
+    var zhushu = 0;
+    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '中三位'] span.acti"), function (index, value) {
+        dxdsWArr.push($.trim($(this).find("i").html()));
+    });
+
+    for (var n = 0; n < dxdsWArr.length; n++) {
+        tempArr.push(dxdsWArr[n]);
+
+    }
+
+    if (dxdsWArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(","),
+    ];
+
+    showPlayName = "不定位-中3";
+    showContent = "中三位: ({0})".format(arr[0]);
+    betContent = "{0}".format(arr[0]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+
+/**
+ * 后三位
+ */
+function content_suiji_gd11x5_hsw() {
+    var zhushu = 0;
+    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '后三位'] span.acti"), function (index, value) {
+        dxdsWArr.push($.trim($(this).find("i").html()));
+    });
+
+    for (var n = 0; n < dxdsWArr.length; n++) {
+        tempArr.push(dxdsWArr[n]);
+
+    }
+
+    if (dxdsWArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(","),
+    ];
+
+    showPlayName = "不定位-后3";
+    showContent = "后三位: ({0})".format(arr[0]);
+    betContent = "{0}".format(arr[0]);
 
     return {
         showPlayName: showPlayName,
