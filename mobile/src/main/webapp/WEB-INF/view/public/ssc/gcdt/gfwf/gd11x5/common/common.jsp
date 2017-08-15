@@ -254,7 +254,7 @@
         <div class="hide" id="playGroup_dwd">
             <a href="javascript:void(0)"
                data-type="gfwf_page"
-               data-fun_random="random_dwd"
+               data-fun_random="random_dwd_11x5"
                data-fun_zhushu="zhushu_dwd"
                data-fun_content="content_dwd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/dwd/dwd.html"
