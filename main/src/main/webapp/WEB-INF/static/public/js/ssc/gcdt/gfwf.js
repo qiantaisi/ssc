@@ -2707,10 +2707,258 @@ function zhushu_gd11x5_qszxds() {
     return tempArr.length;
 }
 
+
+function zhushu_gd11x5_rxszsds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var tempArr = [];
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
+            newArr.push(arr_new[i]);
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
+
+                tempArr.push(newArr[n]);
+            }
+        }
+    }
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    return tempArr.length;
+}
+
+function zhushu_gd11x5_rxsizsds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var tempArr = [];
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 8) {
+            newArr.push(arr_new[i]);
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var foureStr = temp.substr(6, 2);
+        if (threeStr != foureStr && twoStr != foureStr && oneStr != foureStr && oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12 && parseInt(foureStr) < 12) {
+
+                tempArr.push(newArr[n]);
+            }
+        }
+    }
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    return tempArr.length;
+}
+function zhushu_gd11x5_rxwzwds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var tempArr = [];
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 10) {
+            newArr.push(arr_new[i]);
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var foureStr = temp.substr(6, 2);
+        var fiveStr = temp.substr(8, 2);
+        if (oneStr != fiveStr &&twoStr != fiveStr &&foureStr != fiveStr &&threeStr != fiveStr &&threeStr != foureStr &&twoStr != foureStr &&oneStr != foureStr &&oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12 && parseInt(foureStr) < 12 && parseInt(fiveStr) < 12) {
+
+                tempArr.push(newArr[n]);
+            }
+        }
+    }
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    return tempArr.length;
+}
+
+function zhushu_gd11x5_rxlzwds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var tempArr = [];
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 12) {
+            newArr.push(arr_new[i]);
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var foureStr = temp.substr(6, 2);
+        var fiveStr = temp.substr(8, 2);
+        var sixStr = temp.substr(10, 2);
+        if (fiveStr != sixStr &&foureStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&oneStr != fiveStr &&twoStr != fiveStr &&foureStr != fiveStr &&threeStr != fiveStr &&threeStr != foureStr &&twoStr != foureStr &&oneStr != foureStr &&oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12 && parseInt(foureStr) < 12 && parseInt(fiveStr) < 12 && parseInt(sixStr) < 12) {
+
+                tempArr.push(newArr[n]);
+            }
+        }
+    }
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    return tempArr.length;
+}
+
+function zhushu_gd11x5_rxqzwds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var tempArr = [];
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 14) {
+            newArr.push(arr_new[i]);
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var foureStr = temp.substr(6, 2);
+        var fiveStr = temp.substr(8, 2);
+        var sixStr = temp.substr(10, 2);
+        var sevenStr = temp.substr(12, 2);
+        if (oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&foureStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&foureStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&oneStr != fiveStr &&twoStr != fiveStr &&foureStr != fiveStr &&threeStr != fiveStr &&threeStr != foureStr &&twoStr != foureStr &&oneStr != foureStr &&oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
+            if(parseInt(oneStr)<12&&parseInt(twoStr)<12&& parseInt(threeStr)<12&&parseInt(foureStr)<12&&parseInt(fiveStr)<12&&parseInt(sixStr)<12&&parseInt(sevenStr)<12) {
+
+                tempArr.push(newArr[n]);
+            }
+        }
+    }
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    return tempArr.length;
+}
+
+function zhushu_gd11x5_rxbzwds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var tempArr = [];
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 16) {
+
+                newArr.push(arr_new[i]);
+
+
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var foureStr = temp.substr(6, 2);
+        var fiveStr = temp.substr(8, 2);
+        var sixStr = temp.substr(10, 2);
+        var sevenStr = temp.substr(12, 2);
+        var eitStr = temp.substr(14, 2);
+        if (sevenStr != eitStr &&sixStr != eitStr &&fiveStr != eitStr &&foureStr != eitStr &&threeStr != eitStr &&twoStr != eitStr &&oneStr != eitStr &&oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&foureStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&foureStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&oneStr != fiveStr &&twoStr != fiveStr &&foureStr != fiveStr &&threeStr != fiveStr &&threeStr != foureStr &&twoStr != foureStr &&oneStr != foureStr &&oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
+            if(parseInt(oneStr)<12&&parseInt(twoStr)<12&& parseInt(threeStr)<12&&parseInt(foureStr)<12&&parseInt(fiveStr)<12&&parseInt(sixStr)<12&&parseInt(sevenStr)<12&&parseInt(eitStr)<12) {
+
+                tempArr.push(newArr[n]);
+            }
+        }
+    }
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    return tempArr.length;
+}
+
+
 /**
  * 注数 前二-直选单式
  */
 function zhushu_gd11x5_qezxds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var tempArr = [];
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
+            newArr.push(arr_new[i]);
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+
+        if (oneStr != twoStr ) {
+            tempArr.push(newArr[n]);
+        }
+    }
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    return tempArr.length;
+}
+
+
+function gd11x5_zhushu_rxyzyds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var tempArr = [];
+    var newArr = [];
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
+            newArr.push(arr_new[i]);
+        }
+    }
+
+
+    if (newArr.length <= 0) {
+        return 0;
+    }
+
+    return newArr.length;
+}
+
+
+function zhushu_gd11x5_rxezeds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var tempArr = [];
     var newArr = [];
@@ -6423,6 +6671,236 @@ function suiji_gd11x5_qszxds() {
     };
 }
 
+
+function suiji_gd11x5_rxszsds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 3) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+        }
+    }
+
+
+    showPlayName = "任选单式-3中3";
+    showContent = "号码: (" + newArr.join('') + ")";
+    betContent = newArr.join('');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_rxsizsds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 3) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+        if (zhiTsh3 != zhiTsh4 &&zhiTsh2 != zhiTsh4 &&zhiTsh1 != zhiTsh4 &&zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+        }
+    }
+
+
+    showPlayName = "任选单式-4中4";
+    showContent = "号码: (" + newArr.join('') + ")";
+    betContent = newArr.join('');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_rxwzwds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 3) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh5 = arrTsh[parseInt(Math.random() * 10+1)];
+        if (zhiTsh4 != zhiTsh5 &&zhiTsh2 != zhiTsh5 &&zhiTsh1 != zhiTsh5 &&zhiTsh3 != zhiTsh5 &&zhiTsh3 != zhiTsh4 &&zhiTsh2 != zhiTsh4 &&zhiTsh1 != zhiTsh4 &&zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+            newArr.push(zhiTsh5);
+        }
+    }
+
+
+    showPlayName = "任选单式-5中5";
+    showContent = "号码: (" + newArr.join('') + ")";
+    betContent = newArr.join('');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+function suiji_gd11x5_rxlzwds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 3) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh5 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh6 = arrTsh[parseInt(Math.random() * 10+1)];
+        if (zhiTsh1 != zhiTsh6 &&zhiTsh2 != zhiTsh6 &&zhiTsh3 != zhiTsh6 &&zhiTsh5 != zhiTsh6 &&zhiTsh4 != zhiTsh6 &&zhiTsh4 != zhiTsh5 &&zhiTsh2 != zhiTsh5 &&zhiTsh1 != zhiTsh5 &&zhiTsh3 != zhiTsh5 &&zhiTsh3 != zhiTsh4 &&zhiTsh2 != zhiTsh4 &&zhiTsh1 != zhiTsh4 &&zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+            newArr.push(zhiTsh5);
+            newArr.push(zhiTsh6);
+        }
+    }
+
+
+    showPlayName = "任选单式-6中5";
+    showContent = "号码: (" + newArr.join('') + ")";
+    betContent = newArr.join('');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_rxqzwds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 3) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh5 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh6 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh7 = arrTsh[parseInt(Math.random() * 10+1)];
+        if (zhiTsh6 != zhiTsh7 &&zhiTsh5 != zhiTsh7 &&zhiTsh4 != zhiTsh7 &&zhiTsh3 != zhiTsh7 &&zhiTsh2 != zhiTsh7 &&zhiTsh1 != zhiTsh7 &&zhiTsh1 != zhiTsh6 &&zhiTsh2 != zhiTsh6 &&zhiTsh3 != zhiTsh6 &&zhiTsh5 != zhiTsh6 &&zhiTsh4 != zhiTsh6 &&zhiTsh4 != zhiTsh5 &&zhiTsh2 != zhiTsh5 &&zhiTsh1 != zhiTsh5 &&zhiTsh3 != zhiTsh5 &&zhiTsh3 != zhiTsh4 &&zhiTsh2 != zhiTsh4 &&zhiTsh1 != zhiTsh4 &&zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+            newArr.push(zhiTsh5);
+            newArr.push(zhiTsh6);
+            newArr.push(zhiTsh7);
+        }
+    }
+
+
+    showPlayName = "任选单式-7中5";
+    showContent = "号码: (" + newArr.join('') + ")";
+    betContent = newArr.join('');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_rxbzwds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 3) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh5 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh6 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh7 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh8 = arrTsh[parseInt(Math.random() * 10+1)];
+        if (zhiTsh1 != zhiTsh8 &&zhiTsh2 != zhiTsh8 &&zhiTsh3 != zhiTsh8 &&zhiTsh4 != zhiTsh8 &&zhiTsh5 != zhiTsh8 &&zhiTsh7 != zhiTsh8 &&zhiTsh6 != zhiTsh8 &&zhiTsh6 != zhiTsh7 &&zhiTsh5 != zhiTsh7 &&zhiTsh4 != zhiTsh7 &&zhiTsh3 != zhiTsh7 &&zhiTsh2 != zhiTsh7 &&zhiTsh1 != zhiTsh7 &&zhiTsh1 != zhiTsh6 &&zhiTsh2 != zhiTsh6 &&zhiTsh3 != zhiTsh6 &&zhiTsh5 != zhiTsh6 &&zhiTsh4 != zhiTsh6 &&zhiTsh4 != zhiTsh5 &&zhiTsh2 != zhiTsh5 &&zhiTsh1 != zhiTsh5 &&zhiTsh3 != zhiTsh5 &&zhiTsh3 != zhiTsh4 &&zhiTsh2 != zhiTsh4 &&zhiTsh1 != zhiTsh4 &&zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+            newArr.push(zhiTsh5);
+            newArr.push(zhiTsh6);
+            newArr.push(zhiTsh7);
+            newArr.push(zhiTsh8);
+        }
+    }
+
+
+    showPlayName = "任选单式-8中5";
+    showContent = "号码: (" + newArr.join('') + ")";
+    betContent = newArr.join('');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
 /**
  * 前2直选-直选单式
  */
@@ -6447,6 +6925,38 @@ function suiji_gd11x5_qezxds() {
 
 
     showPlayName = "前二直选-直选单式";
+    showContent = "号码: (" + newArr.join('') + ")";
+    betContent = newArr.join('');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_rxezeds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 2) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+        }
+    }
+
+
+    showPlayName = "任选单式-2中2";
     showContent = "号码: (" + newArr.join('') + ")";
     betContent = newArr.join('');
 
@@ -6659,6 +7169,37 @@ function suiji_gd11x5_qszxfs() {
     showPlayName = "前三直选-直选复式";
     showContent = "第一位: (" + newArr[0] + ") 第二位: (" + newArr[1] + ") 第三位 : (" + newArr[2] + ")";
     betContent = newArr[0] + "|" + newArr[1] + "|" + newArr[2];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+
+
+
+function suiji_gd11x5_rxyzydsds() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+            newArr.push(zhiTsh1);
+
+    }
+
+    showPlayName = "任选单式-1中1";
+    showContent = "选1中1: (" + newArr[0] + ")";
+    betContent = newArr[0];
 
     return {
         showPlayName: showPlayName,
@@ -10778,6 +11319,483 @@ function content_gd11x5_qszxds() {
     var betContent = '';
 
     showPlayName = "前三直选-直选单式";
+    showContent = "号码: (" + tempArr.join(',') + ")";
+    // 转换投注格式
+    betContent = tempArr.join(',');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+function content_suiji_gd11x5_rxszsds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr = [];
+    var errorStr = '';
+    var zhushu = 0;
+
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+
+        if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
+            tempArr.push(oneStr + twoStr + threeStr);
+        }
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任选单式-3中3";
+    showContent = "号码: (" + tempArr.join(',') + ")";
+    // 转换投注格式
+    betContent = tempArr.join(',');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+function content_gd11x5_rxsizsds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr = [];
+    var errorStr = '';
+    var zhushu = 0;
+
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 8) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var fourStr = temp.substr(6, 2);
+
+        if(threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
+            tempArr.push(oneStr + twoStr + threeStr+fourStr);
+        }
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任选单式-4中4";
+    showContent = "号码: (" + tempArr.join(',') + ")";
+    // 转换投注格式
+    betContent = tempArr.join(',');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+function content_gd11x5_rxwzwds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr = [];
+    var errorStr = '';
+    var zhushu = 0;
+
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 10) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var fourStr = temp.substr(6, 2);
+        var fiveStr = temp.substr(8, 2);
+        if(fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
+            tempArr.push(oneStr + twoStr + threeStr+fourStr+fiveStr);
+        }
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任选单式-5中5";
+    showContent = "号码: (" + tempArr.join(',') + ")";
+    // 转换投注格式
+    betContent = tempArr.join(',');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+function content_gd11x5_rxlzwds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr = [];
+    var errorStr = '';
+    var zhushu = 0;
+
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length ==12) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var fourStr = temp.substr(6, 2);
+        var fiveStr = temp.substr(8, 2);
+        var sixStr = temp.substr(10, 2);
+        if(fiveStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&fourStr != sixStr &&fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
+            tempArr.push(oneStr + twoStr + threeStr+fourStr+fiveStr+sixStr);
+        }
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任选单式-6中5";
+    showContent = "号码: (" + tempArr.join(',') + ")";
+    // 转换投注格式
+    betContent = tempArr.join(',');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+function content_gd11x5_rxqzwds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr = [];
+    var errorStr = '';
+    var zhushu = 0;
+
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length ==14) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var fourStr = temp.substr(6, 2);
+        var fiveStr = temp.substr(8, 2);
+        var sixStr = temp.substr(10, 2);
+        var sevenStr = temp.substr(12, 2);
+        if(oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&fourStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&fourStr != sixStr &&fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
+            tempArr.push(oneStr + twoStr + threeStr+fourStr+fiveStr+sixStr+sevenStr);
+        }
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任选单式-7中5";
+    showContent = "号码: (" + tempArr.join(',') + ")";
+    // 转换投注格式
+    betContent = tempArr.join(',');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+function content_gd11x5_rxbzwds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr = [];
+    var errorStr = '';
+    var zhushu = 0;
+
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length ==16) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        var threeStr = temp.substr(4, 2);
+        var fourStr = temp.substr(6, 2);
+        var fiveStr = temp.substr(8, 2);
+        var sixStr = temp.substr(10, 2);
+        var sevenStr = temp.substr(12, 2);
+        var eitStr = temp.substr(14, 2);
+        if(sevenStr != eitStr &&sixStr != eitStr &&fiveStr != eitStr &&fourStr != eitStr &&threeStr != eitStr &&twoStr != eitStr &&oneStr != eitStr &&oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&fourStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&fourStr != sixStr &&fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
+            tempArr.push(oneStr + twoStr + threeStr+fourStr+fiveStr+sixStr+sevenStr+eitStr);
+        }
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任选单式-8中5";
+    showContent = "号码: (" + tempArr.join(',') + ")";
+    // 转换投注格式
+    betContent = tempArr.join(',');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+function content_gd11x5_rxezeds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr = [];
+    var errorStr = '';
+    var zhushu = 0;
+
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length ==4) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+
+        if(oneStr != twoStr ){
+            tempArr.push(oneStr + twoStr );
+        }
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任选单式-2中2";
+    showContent = "号码: (" + tempArr.join(',') + ")";
+    // 转换投注格式
+    betContent = tempArr.join(',');
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+function content_gd11x5_rxyzyds() {
+    var textStr = $(".recl-1003 .content_jiang .content_tex").val();
+    var newArr = [];
+    var errorArr = [];
+    var tempArr = [];
+    var errorStr = '';
+    var zhushu = 0;
+
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    var arr_new = textStr.split(",");
+    for (var i = 0; i < arr_new.length; i++) {
+        if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 2) {
+            newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
+        }
+    }
+    for (var n = 0; n < newArr.length; n++) {
+
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
+            tempArr.push(oneStr);
+
+    }
+
+    if (tempArr.length <= 0) {
+        return 0;
+    }
+
+    if (errorArr.length > 0) {
+        for (var e = 0; e < errorArr.length; e++) {
+            errorStr += errorArr[e] + "";
+        }
+        alert("被过滤掉的错误号码" + errorStr);
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "任选单式-1中1";
     showContent = "号码: (" + tempArr.join(',') + ")";
     // 转换投注格式
     betContent = tempArr.join(',');
