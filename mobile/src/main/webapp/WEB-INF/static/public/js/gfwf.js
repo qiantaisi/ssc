@@ -250,6 +250,174 @@ function getGfwfZhushu(){
 
 //======================================================内容算法=====================================
 /**
+ * 任选8中5胆拖-11选5
+ */
+function  content_rx8z5dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选7中5胆拖-11选5
+ */
+function  content_rx7z5dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选6中5胆拖-11选5
+ */
+function  content_rx6z5dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选5中5胆拖-11选5
+ */
+function  content_rx5z5dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选4中4胆拖-11选5
+ */
+function  content_rx4z4dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选3中3胆拖-11选5
+ */
+function  content_rx3z3dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选2中2胆拖-11选5
+ */
+function  content_rx2z2dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选8中5-11选5
+ */
+function content_rx8z5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选7中5-11选5
+ */
+function content_rx7z5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选6中5-11选5
+ */
+function content_rx6z5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选5中5-11选5
+ */
+function content_rx5z5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选4中4-11选5
+ */
+function content_rx4z4(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选3中3-11选5
+ */
+function content_rx3z3(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选2中2-11选5
+ */
+function content_rx2z2(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选1中1-11选5
+ */
+function content_rx1z1(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 后三位-11选5
+ */
+function content_h3w(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 中三位-11选5
+ */
+function content_z3w(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 前三位-11选5
+ */
+function content_q3w(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 后二组选拖胆-11选5
+ */
+function content_h2zuxtd(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 前二组选拖胆-11选5
+ */
+function content_q2zuxtd(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 后二组选复式-11选5
+ */
+function content_h2zuxfs11x5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 前二组选复式-11选5
+ */
+function content_q2zuxfs11x5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 前二直选复式-11选5
+ */
+function content_h2zxfs11x5(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 前二直选复式-11选5
+ */
+function content_q2zxfs11x5(){
+    return getContentCommonDanma();
+}
+
+/**
  * 后三组选胆拖-11选5
  */
 function content_h3zuxtd(){
