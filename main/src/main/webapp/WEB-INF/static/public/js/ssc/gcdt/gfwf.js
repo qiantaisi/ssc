@@ -2628,12 +2628,12 @@ function zhushu_qezxds() {
     }
     for (var n = 0; n < newArr.length; n++) {
         var temp = newArr[n].toString();
-        var oneStr = temp.substr(0, 1);
-        var twoStr = temp.substr(1, 1);
-        var threeStr = temp.substr(2, 1);
-        var fourStr = temp.substr(3, 1);
-        if (twoStr != fourStr) {
-            tempArr.push(newArr[n]);
+        var oneStr = temp.substr(0, 2);
+        var twoStr = temp.substr(2, 2);
+        if (oneStr != twoStr) {
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -2667,7 +2667,9 @@ function zhushu_qszxds() {
         var twoStr = temp.substr(2, 2);
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -2697,7 +2699,9 @@ function zhushu_gd11x5_qszxds() {
         var twoStr = temp.substr(2, 2);
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -2926,7 +2930,9 @@ function zhushu_gd11x5_qezxds() {
         var twoStr = temp.substr(2, 2);
 
         if (oneStr != twoStr ) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -2948,7 +2954,15 @@ function gd11x5_zhushu_rxyzyds() {
             newArr.push(arr_new[i]);
         }
     }
+    for (var n = 0; n < newArr.length; n++) {
+        var temp = newArr[n].toString();
+        var oneStr = temp.substr(0, 2);
 
+
+        if (parseInt(oneStr) < 12 ) {
+            tempArr.push(newArr[n]);
+        }
+    }
 
     if (newArr.length <= 0) {
         return 0;
@@ -2975,7 +2989,9 @@ function zhushu_gd11x5_rxezeds() {
         var twoStr = temp.substr(2, 2);
 
         if (oneStr != twoStr ) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -3006,7 +3022,9 @@ function zhushu_gd11x5_hezxds() {
         var twoStr = temp.substr(2, 2);
 
         if (oneStr != twoStr ) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 ) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -3039,7 +3057,9 @@ function zhushu_gd11x5_hszxds() {
         var twoStr = temp.substr(2, 2);
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -3069,7 +3089,9 @@ function zhushu_gd11x5_zszxds() {
         var twoStr = temp.substr(2, 2);
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -3486,7 +3508,9 @@ function zhushu_gd11x5_qszuxds() {
         var twoStr = temp.substr(2, 2);
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -3515,8 +3539,10 @@ function zhushu_gd11x5_qezuxds() {
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
 
-        if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
-            tempArr.push(newArr[n]);
+        if (oneStr != twoStr ) {
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -3545,7 +3571,9 @@ function zhushu_gd11x5_hezuxds() {
         var twoStr = temp.substr(2, 2);
 
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 ) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -3575,7 +3603,9 @@ function zhushu_gd11x5_hszuxds() {
         var twoStr = temp.substr(2, 2);
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
@@ -3605,7 +3635,9 @@ function zhushu_gd11x5_zszuxds() {
         var twoStr = temp.substr(2, 2);
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
-            tempArr.push(newArr[n]);
+            if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
+                tempArr.push(newArr[n]);
+            }
         }
     }
     if (tempArr.length <= 0) {
