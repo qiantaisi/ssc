@@ -8,7 +8,7 @@
     String basePath = RequestUtils.getBasePath(request);
 %>
 <c:import url="../common/bodyStart.jsp"/>
-<c:import url="../common/checkIsChildFrame.jsp" />
+<%--<c:import url="../common/checkIsChildFrame.jsp" />--%>
 <c:import url="top.jsp"/>
 
 <div class="men_list">
@@ -29,5 +29,5 @@
 
 <c:import url="../common/bottomInfo.jsp"/>
 <c:import url="../common/copyright.jsp"/>
-<c:import url="../common/jsCommonLogin.jsp"/>
-<c:import url="../common/commonJs.jsp"/>
+<%--<c:import url="../common/jsCommonLogin.jsp"/>--%>
+<%--<c:import url="../common/commonJs.jsp"/>--%>
