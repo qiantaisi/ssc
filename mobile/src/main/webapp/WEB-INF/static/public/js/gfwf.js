@@ -250,6 +250,122 @@ function getGfwfZhushu(){
 
 //======================================================内容算法=====================================
 /**
+ * 后三组选胆拖-11选5
+ */
+function content_h3zuxtd(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 中三组选胆拖-11选5
+ */
+function content_z3zuxtd(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 前三组选胆拖-11选5
+ */
+function content_q3zuxtd(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 后三组选复式-11选5
+ */
+function content_h3zuxfs(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 中三组选复式-11选5
+ */
+function content_z3zuxfs(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 前三组选复式-11选5
+ */
+function  content_q3zuxfs(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 后三直选复式-11选5
+ */
+function content_h3zxfs_11x5(){
+    return getContentCommonZxfs();
+}
+
+/**
+ * 中三直选复式-11选5
+ */
+function content_z3zxfs_11x5(){
+    return getContentCommonZxfs();
+}
+
+/**
+ * 前三直选复式-11选5
+ */
+function content_q3zxfs_11x5(){
+    return getContentCommonZxfs();
+}
+
+function getContentCommonDanma(){
+    var wanArr = [], qianArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+function getContentCommonZuxfs(){
+    var wanArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",");
+}
+
+function getContentCommonZxfs(){
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        qianArr.push($.trim($(this).html()));
+    });
+    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        baiArr.push($.trim($(this).html()));
+    });
+
+    var wanStr = wanArr.length > 0 ? (wanArr.join(",") + "|") : ' ';
+    var qianStr = qianArr.length > 0 ? (qianArr.join(",") + "|") : ' ';
+    var baiStr = baiArr.length > 0 ? baiArr.join(",") : ' ';
+
+    return $.trim(
+        (wanStr == ' ' ? ' ' : wanStr)+
+        (qianStr == ' ' ? ' ' : qianStr) +
+        (baiStr == ' ' ? ' ' : baiStr)
+    );
+}
+
+/************************************************PK10**********************************************/
+/**
  * PK10-前一
  */
 function content_qy(){
@@ -3877,6 +3993,7 @@ function showBetTemplate() {
     if(data == -1){
         return;
     }
+
 
     if (typeof data == 'undefined' || typeof zhushu == 'undefined' || zhushu <= 0) {
         Tools.toast("号码选择不完整，请重新选择");

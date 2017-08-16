@@ -11,14 +11,14 @@
     <ul>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti spans" data-play_id="502" data-play_pl_id="14221" data-name="gd11x5_rxyzy" data-fun_zhushu="gd11x5_zhushu_rxyzy" data-fun_content="content_gd11x5_rxyzy" data-fun_suiji="suiji_gd11x5_rxyzy"><a href="javascript:void(0)">任选一中一</a></span>
-                <span class="playPlIdBtn spans" data-play_id="503" data-play_pl_id="14220" data-name="gd11x5_rxeze" data-fun_zhushu="zhushu_gd11x5_rxeze" data-fun_content="content_gd11x5_rxeze" data-fun_suiji="suiji_gd11x5_rxeze"><a href="javascript:void(0)">任选二中二</a></span>
-                <span class="playPlIdBtn spans" data-play_id="504" data-play_pl_id="14219|14218|14217" data-name="gd11x5_rxszs" data-fun_zhushu="zhushu_gd11x5_rxszs" data-fun_content="content_suiji_gd11x5_rxszs" data-fun_suiji="suiji_gd11x5_rxszs"><a href="javascript:void(0)">任选三中三</a></span>
-                <span class="playPlIdBtn spans" data-play_id="505" data-play_pl_id="14216"  data-name="gd11x5_rxsizs" data-fun_zhushu="zhushu_gd11x5_rxsizs" data-fun_content="content_gd11x5_rxsizs" data-fun_suiji="suiji_gd11x5_rxsizs"><a href="javascript:void(0)">任选四中四</a></span>
-                <span class="playPlIdBtn spans" data-play_id="506" data-play_pl_id="14215"  data-name="gd11x5_rxwzw" data-fun_zhushu="zhushu_gd11x5_rxwzw" data-fun_content="content_gd11x5_rxwzw" data-fun_suiji="suiji_gd11x5_rxwzw"><a href="javascript:void(0)">任选五中五</a></span>
-                <span class="playPlIdBtn spans" data-play_id="507" data-play_pl_id="14214" data-name="gd11x5_rxlzw" data-fun_zhushu="zhushu_gd11x5_rxlzw" data-fun_content="content_gd11x5_rxlzw" data-fun_suiji="suiji_gd11x5_rxlzw"><a href="javascript:void(0)">任选六中五</a></span>
-                <span class="playPlIdBtn spans" data-play_id="508" data-play_pl_id="14213" data-name="gd11x5_rxqzw" data-fun_zhushu="zhushu_gd11x5_rxqzw" data-fun_content="content_gd11x5_rxqzw" data-fun_suiji="suiji_gd11x5_rxqzw"><a href="javascript:void(0)">任选七中五</a></span>
-                <span class="playPlIdBtn spans" data-play_id="508" data-play_pl_id="14213" data-name="gd11x5_rxbzw" data-fun_zhushu="zhushu_gd11x5_rxbzw" data-fun_content="content_gd11x5_rxbzw" data-fun_suiji="suiji_gd11x5_rxbzw"><a href="javascript:void(0)">任选八中五</a></span>
+                <span class="playPlIdBtn acti spans" data-play_id="702" data-play_pl_id="14451" data-name="gd11x5_rxyzy" data-fun_zhushu="gd11x5_zhushu_rxyzy" data-fun_content="content_gd11x5_rxyzy" data-fun_suiji="suiji_gd11x5_rxyzy"><a href="javascript:void(0)">任选一中一</a></span>
+                <span class="playPlIdBtn spans" data-play_id="703" data-play_pl_id="14452" data-name="gd11x5_rxeze" data-fun_zhushu="zhushu_gd11x5_rxeze" data-fun_content="content_gd11x5_rxeze" data-fun_suiji="suiji_gd11x5_rxeze"><a href="javascript:void(0)">任选二中二</a></span>
+                <span class="playPlIdBtn spans" data-play_id="704" data-play_pl_id="14453" data-name="gd11x5_rxszs" data-fun_zhushu="zhushu_gd11x5_rxszs" data-fun_content="content_suiji_gd11x5_rxszs" data-fun_suiji="suiji_gd11x5_rxszs"><a href="javascript:void(0)">任选三中三</a></span>
+                <span class="playPlIdBtn spans" data-play_id="705" data-play_pl_id="14454"  data-name="gd11x5_rxsizs" data-fun_zhushu="zhushu_gd11x5_rxsizs" data-fun_content="content_gd11x5_rxsizs" data-fun_suiji="suiji_gd11x5_rxsizs"><a href="javascript:void(0)">任选四中四</a></span>
+                <span class="playPlIdBtn spans" data-play_id="706" data-play_pl_id="14455"  data-name="gd11x5_rxwzw" data-fun_zhushu="zhushu_gd11x5_rxwzw" data-fun_content="content_gd11x5_rxwzw" data-fun_suiji="suiji_gd11x5_rxwzw"><a href="javascript:void(0)">任选五中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="707" data-play_pl_id="14456" data-name="gd11x5_rxlzw" data-fun_zhushu="zhushu_gd11x5_rxlzw" data-fun_content="content_gd11x5_rxlzw" data-fun_suiji="suiji_gd11x5_rxlzw"><a href="javascript:void(0)">任选六中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="708" data-play_pl_id="14457" data-name="gd11x5_rxqzw" data-fun_zhushu="zhushu_gd11x5_rxqzw" data-fun_content="content_gd11x5_rxqzw" data-fun_suiji="suiji_gd11x5_rxqzw"><a href="javascript:void(0)">任选七中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="709" data-play_pl_id="14458" data-name="gd11x5_rxbzw" data-fun_zhushu="zhushu_gd11x5_rxbzw" data-fun_content="content_gd11x5_rxbzw" data-fun_suiji="suiji_gd11x5_rxbzw"><a href="javascript:void(0)">任选八中五</a></span>
             </p>
         </li>
     </ul>
@@ -41,9 +41,9 @@
         </span>
         </p>
         <ul>
-            <li data-name="选一中一">
-                <b><i>选一中一</i></b>
-                <var class="numLine">
+            <li data-name="选1中1">
+                <b><i>选1中1</i></b>
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -87,7 +87,7 @@
         <ul>
             <li data-name="选2中2">
                 <b><i>选2中2</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -132,7 +132,7 @@
         <ul>
             <li data-name="选3中3">
                 <b><i>选3中3</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -176,7 +176,7 @@
         <ul>
             <li data-name="选4中4">
                 <b><i>选4中4</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -203,7 +203,7 @@
 </script>
 
 <%--任选五中五--%>
-<script type="text/html" id="template_gd11x5_rxwizw">
+<script type="text/html" id="template_gd11x5_rxwzw">
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -220,7 +220,7 @@
         <ul>
             <li data-name="选5中5">
                 <b><i>选5中5</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -264,7 +264,7 @@
         <ul>
             <li data-name="选6中5">
                 <b><i>选6中5</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -309,7 +309,7 @@
         <ul>
             <li data-name="选7中5">
                 <b><i>选7中5</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -354,7 +354,7 @@
         <ul>
             <li data-name="选8中5">
                 <b><i>选8中5</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
