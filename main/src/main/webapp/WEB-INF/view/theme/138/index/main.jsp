@@ -1301,8 +1301,31 @@
                 }
             });
         }
-
     }
+
+    function shiwan() {
+        ajaxRequest({
+            url: "<%=basePath%>shiwan.json",
+            beforeSend: function() {
+                showLoading();
+                $.cookie("uid", '', {path: "/", expires: -1});
+                $.cookie("token", '', {path: "/", expires: -1});
+            },
+            success: function(json) {
+                if (json.result == 1) {
+                    $.cookie("uid", json.userId, {path: "/"});
+                    $.cookie("token", json.token, {path: "/"});
+                    hideLoading();
+                    alert("游客盘口只供试玩，与正式会员盘口无关");
+                    location.reload();
+                } else {
+                    refreshYzm(document.getElementById('yzmImg2'));
+                    alert("登录失败：" + json.description);
+                    hideLoading();
+                }
+            }
+        });
+    };
 
 </script>
 <%--<c:import url="../common/popupDiv.jsp"/>--%>

@@ -58,6 +58,7 @@
 <script>
 //    var playName = null;
     var playGroupId = ${playGroupId};
+
     // 全局官方玩法赔率
     <c:if test="${not empty playPlListJson}">
     var gfwfPlJson = ${playPlListJson};

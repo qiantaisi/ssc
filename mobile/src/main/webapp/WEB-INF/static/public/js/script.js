@@ -5115,7 +5115,7 @@ $(function () {
 
     //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-gd11x5-gfwf", function (e, id, page) {
-        initSscPage(1);
+        initSscPage(24);
 
         gfwfCommonClickEvent();
     });

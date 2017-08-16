@@ -34,6 +34,7 @@
                     <span class="left">|</span>
                     <a href="javascript:void(0)" class="left head_top_lottery">我的彩票</a>
                     <span class="left">|</span>
+                    <a href="javascript:void(0)" onclick="shiwan()" class="left head_top_reg">免费试玩</a>
                 </div>
             </c:otherwise>
         </c:choose>
