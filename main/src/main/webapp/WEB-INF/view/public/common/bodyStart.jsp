@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="${resPath}css/lottery.css?v=20170206" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/liMarquee.css?v=20170206" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}jRange/jquery.range.css?v=20170402" type="text/css">
-    <link rel="stylesheet" href="${resPath}css/global.css?v=1.0" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="${resPath}css/global.css?v=2.0" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/other.css?v=20170806" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/gfwf.css?v=20170724_12" type="text/css"><!--页面CSS-->
 
