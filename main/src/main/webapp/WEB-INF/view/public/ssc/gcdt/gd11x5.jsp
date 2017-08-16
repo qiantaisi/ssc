@@ -18,7 +18,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>北京PK10</h2>
+                <h2>广东11选5</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="number"></i>期</p>
                 <div class="select">
@@ -213,9 +213,10 @@
     function randomNumber() {
         var arr = [];
         var tmpStr = '';
-        for (var i = 1; i <= 10; ++i) {
-            var value = Math.floor(Math.random() * 10) + 1;
-            tmpStr += '<span class="fang bg-' + parseInt(value) + '">' + parseInt(value) + '</span>';
+        var arrTemp = ['01','02','03','04','05'];
+        for (var i = 1; i <= 5; ++i) {
+            var value = Math.floor(Math.random() * 5);
+            tmpStr += '<span class="fang bg-' + arrTemp[value] + '">' +arrTemp[value] + '</span>';
         }
         $("#lastOpenCode").html(tmpStr);
     }
@@ -224,7 +225,7 @@
     function renderLastOpenCode(openCodeArr) {
         var tmpStr = '';
         $.each(openCodeArr, function(index, value) {
-            tmpStr += '<span class="fang bg-' + parseInt(value) + '">' + parseInt(value) + '</span>';
+            tmpStr += '<span class="fang bg-">' + value + '</span>';
         });
         $("#lastOpenCode").html(tmpStr);
     }
@@ -237,7 +238,7 @@
         <p style="margin-left:5px">开奖中</p>
         {{else}}
         {{each list as value}}
-        <i class="fang bg-{{value|parseInt}}">{{value|parseInt}}</i>
+        <i class="fang bg-">{{value}}</i>
         {{/each}}
         {{/if}}
     </li>
