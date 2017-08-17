@@ -11,6 +11,7 @@
     <ul>
         <li>
             <p class="btn_fu_zhi">
+            <b class="tit_img">前三</b>
                 <span class="playPlIdBtn acti spans" data-play_id="776" data-play_pl_id="14448" data-name="gd11x5_qszxfs" data-fun_zhushu="gd11x5_zhushu_qszxfs" data-fun_content="content_gd11x5_qszxfs" data-fun_suiji="suiji_gd11x5_qszxfs"><a href="javascript:void(0)">前三直选复式</a></span>
                 <span class="playPlIdBtn spans" data-play_id="801" data-play_pl_id="14473" data-name="gd11x5_qszxds" data-fun_zhushu="zhushu_gd11x5_qszxds" data-fun_content="content_gd11x5_qszxds" data-fun_suiji="suiji_gd11x5_qszxds"><a href="javascript:void(0)">前三直选单式</a></span>
                 <span class="playPlIdBtn spans" data-play_id="772" data-play_pl_id="14444" data-name="gd11x5_qszuxfs" data-fun_zhushu="zhushu_gd11x5_qszuxfs" data-fun_content="content_suiji_gd11x5_qszuxfs" data-fun_suiji="suiji_gd11x5_qszuxfs"><a href="javascript:void(0)">前三组选复式</a></span>
@@ -21,6 +22,7 @@
         <li>
 
             <p class="btn_fu_zhi">
+                <b class="tit_img">中三</b>
                 <span class="playPlIdBtn spans" data-play_id="762" data-play_pl_id="14434" data-name="gd11x5_zszxfs" data-fun_zhushu="zhushu_gd11x5_zszxfs" data-fun_content="content_gd11x5_zszxfs" data-fun_suiji="suiji_gd11x5_zszxfs"><a href="javascript:void(0)">中三直选复式</a></span>
                 <span class="playPlIdBtn spans" data-play_id="788" data-play_pl_id="14460" data-name="gd11x5_zszxds" data-fun_zhushu="zhushu_gd11x5_zszxds" data-fun_content="content_gd11x5_zszxds" data-fun_suiji="suiji_gd11x5_zszxds"><a href="javascript:void(0)">中三直选单式</a></span>
                 <span class="playPlIdBtn spans" data-play_id="750" data-play_pl_id="14422" data-name="gd11x5_zszuxfs" data-fun_zhushu="zhushu_gd11x5_zszuxfs" data-fun_content="content_gd11x5_zszuxfs" data-fun_suiji="suiji_gd11x5_zszuxfs"><a href="javascript:void(0)">中三组选复式</a></span>
@@ -30,6 +32,7 @@
         </li>
         <li>
             <p class="btn_fu_zhi">
+                <b class="tit_img">后三</b>
                 <span class="playPlIdBtn spans" data-play_id="759" data-play_pl_id="14431" data-name="gd11x5_hszxfs" data-fun_zhushu="zhushu_gd11x5_hszxfs" data-fun_content="content_gd11x5_hszxfs" data-fun_suiji="suiji_gd11x5_hszxfs"><a href="javascript:void(0)">后三直选复式</a></span>
                 <span class="playPlIdBtn spans" data-play_id="790" data-play_pl_id="14462" data-name="gd11x5_hszxds" data-fun_zhushu="zhushu_gd11x5_hszxds" data-fun_content="content_gd11x5_hszxds" data-fun_suiji="suiji_gd11x5_hszxds"><a href="javascript:void(0)">后三直选单式</a></span>
                 <span class="playPlIdBtn spans" data-play_id="757" data-play_pl_id="14429" data-name="gd11x5_hszuxfs" data-fun_zhushu="zhushu_gd11x5_hszuxfs" data-fun_content="content_gd11x5_hszuxfs" data-fun_suiji="suiji_gd11x5_hszuxfs"><a href="javascript:void(0)">后三组选复式</a></span>
