@@ -289,6 +289,16 @@
                             </a>
                         </li>
                     </c:when>
+                    <c:when test="${param.playGroupId == 24}">
+                        <li>
+                            <a href="<%=basePath%>ssc/zst/gd11x5/jbzst.html" class="item-contents">
+                                <div class="item-medias"><i class="icon bg-img-zst"></i></div>
+                                <div class="item-innerss">
+                                    <div class="item-inners">走势图表</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
                 </c:choose>
             </c:if>
 
@@ -467,6 +477,16 @@
                     <c:when test="${param.playGroupId == 17}">
                         <li>
                             <a href="<%=basePath%>ssc/kjjl/list.html?playGroupId=17" class="item-contents">
+                                <div class="item-medias"><i class="icon bg-img-allssc"></i></div>
+                                <div class="item-innerss">
+                                    <div class="item-inners">开奖记录</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:when test="${param.playGroupId == 24}">
+                        <li>
+                            <a href="<%=basePath%>ssc/kjjl/list.html?playGroupId=24" class="item-contents">
                                 <div class="item-medias"><i class="icon bg-img-allssc"></i></div>
                                 <div class="item-innerss">
                                     <div class="item-inners">开奖记录</div>
@@ -765,6 +785,17 @@
                             </a>
                         </li>
                     </c:when>
+                    <c:when test="${param.playGroupId == 24}">
+                        <li>
+                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                               class="item-contents">
+                                <div class="item-medias"><i class="icon bg-img-sflhc"></i></div>
+                                <div class="item-innerss">
+                                    <div class="item-inners">玩法说明</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
                     <c:when test="${param.playGroupId == 23}">
                         <li>
                             <c:choose>
@@ -777,6 +808,7 @@
                                         </div>
                                     </a>
                                 </c:when>
+
                                 <c:otherwise>
                                     <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
                                        class="item-contents">

@@ -108,7 +108,7 @@
                         <a href="javascript:void(0)" data-playgroupid="10">重庆幸运农场</a>
                         <a href="javascript:void(0)" data-playgroupid="11">广东快乐十分</a>
                         <a href="javascript:void(0)" data-playgroupid="8">北京快乐8</a>
-                        <a href="javascript:void(0)" data-playgroupid="24 class="last"">广东11选5</a>
+                        <a href="javascript:void(0)" data-playgroupid="24" class="last">广东11选5</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_6">
