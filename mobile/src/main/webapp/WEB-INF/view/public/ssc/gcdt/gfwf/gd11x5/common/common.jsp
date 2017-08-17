@@ -38,7 +38,7 @@
         <a href="javascript:void(0)" data-name="bdw"><span>不定位</span></a>
         <a href="javascript:void(0)" data-name="dwd"><span>定位胆</span></a>
         <a href="javascript:void(0)" data-name="rxfs"><span>任选复式</span></a>
-        <a href="javascript:void(0)" data-name="rxtd"><span>任选拖胆</span></a>
+        <a href="javascript:void(0)" data-name="rxtd"><span>任选胆拖</span></a>
     </div>
     <div class="xuan">
         <div class="xuan1"></div>
@@ -121,8 +121,8 @@
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/sma/q3zuxtd.html"
                data-play_id="777"
                data-play_pl_id="14449"
-               data-name="前三组选拖胆">
-                <span class="staer1">前三组选拖胆</span>
+               data-name="前三组选胆拖">
+                <span class="staer1">前三组选胆拖</span>
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
@@ -132,8 +132,8 @@
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/sma/z3zuxtd.html"
                data-play_id="763"
                data-play_pl_id="14435"
-               data-name="中三组选拖胆">
-                <span class="zxfs">中三组选拖胆</span>
+               data-name="中三组选胆拖">
+                <span class="zxfs">中三组选胆拖</span>
             </a>
             <a href="javascript:void(0)"
                data-type="gfwf_page"
@@ -143,8 +143,8 @@
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/sma/h3zuxtd.html"
                data-play_id="760"
                data-play_pl_id="14432"
-               data-name="后三组选拖胆">
-                <span class="staer1">后三组选拖胆</span>
+               data-name="后三组选胆拖">
+                <span class="staer1">后三组选胆拖</span>
             </a>
         </div>
         <div class="hide" id="playGroup_ema">
@@ -178,8 +178,8 @@
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/ema/q2zuxtd.html"
                data-play_id="766"
                data-play_pl_id="14438"
-               data-name="前二组选拖胆">
-                <span class="staer1">前二组选拖胆</span>
+               data-name="前二组选胆拖">
+                <span class="staer1">前二组选胆拖</span>
             </a>
 
             <a href="javascript:void(0)"
@@ -212,8 +212,8 @@
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/ema/h2zuxtd.html"
                data-play_id="770"
                data-play_pl_id="14442"
-               data-name="后二组选拖胆">
-                <span class="staer1">后二组选拖胆</span>
+               data-name="后二组选胆拖">
+                <span class="staer1">后二组选胆拖</span>
             </a>
         </div>
         <div class="hide" id="playGroup_bdw">

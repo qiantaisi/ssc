@@ -119,7 +119,7 @@ function danSelect(obj) {
         var flagTuoDan = $(obj).parent().parent().hasClass("tuodan_selected");
         //胆码判断-11选5
         var flagDanMaSm = $(obj).parent().parent().hasClass("danma_selected");
-        //胆码判断-前二组选拖胆-11选5
+        //胆码判断-前二组选胆拖-11选5
         var flagDanMaEm = $(obj).parent().parent().hasClass("em_danma_selected");
         //胆码判断-任选四胆拖-11选5
         var flagDanMaSim = $(obj).parent().parent().hasClass("sim_danma_selected");
@@ -249,6 +249,174 @@ function getGfwfZhushu(){
 
 
 //======================================================内容算法=====================================
+/**
+ * 任选8中5胆拖-11选5
+ */
+function  content_rx8z5dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选7中5胆拖-11选5
+ */
+function  content_rx7z5dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选6中5胆拖-11选5
+ */
+function  content_rx6z5dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选5中5胆拖-11选5
+ */
+function  content_rx5z5dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选4中4胆拖-11选5
+ */
+function  content_rx4z4dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选3中3胆拖-11选5
+ */
+function  content_rx3z3dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选2中2胆拖-11选5
+ */
+function  content_rx2z2dt(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 任选8中5-11选5
+ */
+function content_rx8z5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选7中5-11选5
+ */
+function content_rx7z5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选6中5-11选5
+ */
+function content_rx6z5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选5中5-11选5
+ */
+function content_rx5z5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选4中4-11选5
+ */
+function content_rx4z4(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选3中3-11选5
+ */
+function content_rx3z3(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选2中2-11选5
+ */
+function content_rx2z2(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 任选1中1-11选5
+ */
+function content_rx1z1(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 后三位-11选5
+ */
+function content_h3w(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 中三位-11选5
+ */
+function content_z3w(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 前三位-11选5
+ */
+function content_q3w(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 后二组选胆拖-11选5
+ */
+function content_h2zuxtd(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 前二组选胆拖-11选5
+ */
+function content_q2zuxtd(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 后二组选复式-11选5
+ */
+function content_h2zuxfs11x5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 前二组选复式-11选5
+ */
+function content_q2zuxfs11x5(){
+    return getContentCommonZuxfs();
+}
+
+/**
+ * 前二直选复式-11选5
+ */
+function content_h2zxfs11x5(){
+    return getContentCommonDanma();
+}
+
+/**
+ * 前二直选复式-11选5
+ */
+function content_q2zxfs11x5(){
+    return getContentCommonDanma();
+}
+
 /**
  * 后三组选胆拖-11选5
  */
@@ -1878,21 +2046,21 @@ function zhushu_h2zxfs11x5() {
 }
 
 /**
- * 注数-前3组选拖胆-11选5
+ * 注数-前3组选胆拖-11选5
  */
 function zhushu_q3zuxtd() {
     return getCommonTuodan11X5();
 }
 
 /**
- * 注数-中3组选拖胆-11选5
+ * 注数-中3组选胆拖-11选5
  */
 function zhushu_z3zuxtd() {
     return getCommonTuodan11X5();
 }
 
 /**
- * 注数-后3组选拖胆-11选5
+ * 注数-后3组选胆拖-11选5
  */
 function zhushu_h3zuxtd() {
     return getCommonTuodan11X5();
@@ -4831,21 +4999,21 @@ function random_q2zxfs11x5() {
 }
 
 /**
- * 随机算法-11选5-后三组选拖胆
+ * 随机算法-11选5-后三组选胆拖
  */
 function random_h3zuxtd() {
     getRandomSwZxTdCommon();
 }
 
 /**
- * 随机算法-11选5-中三组选拖胆
+ * 随机算法-11选5-中三组选胆拖
  */
 function random_z3zuxtd() {
     getRandomSwZxTdCommon();
 }
 
 /**
- * 随机算法-11选5-前三组选拖胆
+ * 随机算法-11选5-前三组选胆拖
  */
 function random_q3zuxtd() {
     getRandomSwZxTdCommon();
@@ -4998,7 +5166,7 @@ function getRandomTongWeiNums(num){
     });
 }
 
-//获取胆码位和拖胆位N个随机数
+//获取胆码位和胆拖位N个随机数
 function getRandomErWeiNums(num){
     var weiArr = [];
     var noHasArr = [];

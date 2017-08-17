@@ -11,13 +11,13 @@
     <ul>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn spans" data-play_id="503" data-play_pl_id="14220" data-name="gd11x5_rxezwdt" data-fun_zhushu="zhushu_gd11x5_rxezwdt" data-fun_content="content_gd11x5_rxezwdt" data-fun_suiji="suiji_gd11x5_rxezwdt"><a href="javascript:void(0)">任选二中二</a></span>
-                <span class="playPlIdBtn spans" data-play_id="504" data-play_pl_id="14219|14218|14217" data-name="gd11x5_rxszsdt" data-fun_zhushu="zhushu_gd11x5_rxszsdt" data-fun_content="content_suiji_gd11x5_rxszsdt" data-fun_suiji="suiji_gd11x5_rxszsdt"><a href="javascript:void(0)">任选三中三</a></span>
-                <span class="playPlIdBtn spans" data-play_id="505" data-play_pl_id="14216"  data-name="gd11x5_rxsizsdt" data-fun_zhushu="zhushu_gd11x5_rxsizsdt" data-fun_content="content_gd11x5_rxsizsdt" data-fun_suiji="suiji_gd11x5_rxsizsdt"><a href="javascript:void(0)">任选四中四</a></span>
-                <span class="playPlIdBtn spans" data-play_id="506" data-play_pl_id="14215"  data-name="gd11x5_rxwzwdt" data-fun_zhushu="zhushu_gd11x5_rxwzwdt" data-fun_content="content_gd11x5_rxwzwdt" data-fun_suiji="suiji_gd11x5_rxwzwdt"><a href="javascript:void(0)">任选五中五</a></span>
-                <span class="playPlIdBtn spans" data-play_id="507" data-play_pl_id="14214" data-name="gd11x5_rxlzwdt" data-fun_zhushu="zhushu_gd11x5_rxlzwdt" data-fun_content="content_gd11x5_rxlzwdt" data-fun_suiji="suiji_gd11x5_rxlzwdt"><a href="javascript:void(0)">任选六中五</a></span>
-                <span class="playPlIdBtn spans" data-play_id="508" data-play_pl_id="14213" data-name="gd11x5_rxqzwdt" data-fun_zhushu="zhushu_gd11x5_rxqzwdt" data-fun_content="content_gd11x5_rxqzwdt" data-fun_suiji="suiji_gd11x5_rxqzwdt"><a href="javascript:void(0)">任选七中五</a></span>
-                <span class="playPlIdBtn spans" data-play_id="508" data-play_pl_id="14213" data-name="gd11x5_rxbzwdt" data-fun_zhushu="zhushu_gd11x5_rxbzwdt" data-fun_content="content_gd11x5_rxbzwdt" data-fun_suiji="suiji_gd11x5_rxbzwdt"><a href="javascript:void(0)">任选八中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="775" data-play_pl_id="14447" data-name="gd11x5_rxezwdt" data-fun_zhushu="zhushu_gd11x5_rxezwdt" data-fun_content="content_gd11x5_rxezwdt" data-fun_suiji="suiji_gd11x5_rxezwdt"><a href="javascript:void(0)">任选二中二</a></span>
+                <span class="playPlIdBtn spans" data-play_id="799" data-play_pl_id="14471" data-name="gd11x5_rxszsdt" data-fun_zhushu="zhushu_gd11x5_rxszsdt" data-fun_content="content_suiji_gd11x5_rxszsdt" data-fun_suiji="suiji_gd11x5_rxszsdt"><a href="javascript:void(0)">任选三中三</a></span>
+                <span class="playPlIdBtn spans" data-play_id="773" data-play_pl_id="14445"  data-name="gd11x5_rxsizsdt" data-fun_zhushu="zhushu_gd11x5_rxsizsdt" data-fun_content="content_gd11x5_rxsizsdt" data-fun_suiji="suiji_gd11x5_rxsizsdt"><a href="javascript:void(0)">任选四中四</a></span>
+                <span class="playPlIdBtn spans" data-play_id="796" data-play_pl_id="14468"  data-name="gd11x5_rxwzwdt" data-fun_zhushu="zhushu_gd11x5_rxwzwdt" data-fun_content="content_gd11x5_rxwzwdt" data-fun_suiji="suiji_gd11x5_rxwzwdt"><a href="javascript:void(0)">任选五中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="771" data-play_pl_id="14443" data-name="gd11x5_rxlzwdt" data-fun_zhushu="zhushu_gd11x5_rxlzwdt" data-fun_content="content_gd11x5_rxlzwdt" data-fun_suiji="suiji_gd11x5_rxlzwdt"><a href="javascript:void(0)">任选六中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="795" data-play_pl_id="14467" data-name="gd11x5_rxqzwdt" data-fun_zhushu="zhushu_gd11x5_rxqzwdt" data-fun_content="content_gd11x5_rxqzwdt" data-fun_suiji="suiji_gd11x5_rxqzwdt"><a href="javascript:void(0)">任选七中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="768" data-play_pl_id="14440" data-name="gd11x5_rxbzwdt" data-fun_zhushu="zhushu_gd11x5_rxbzwdt" data-fun_content="content_gd11x5_rxbzwdt" data-fun_suiji="suiji_gd11x5_rxbzwdt"><a href="javascript:void(0)">任选八中五</a></span>
             </p>
         </li>
     </ul>

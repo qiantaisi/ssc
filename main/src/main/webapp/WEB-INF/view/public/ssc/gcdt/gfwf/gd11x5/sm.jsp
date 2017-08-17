@@ -11,30 +11,30 @@
     <ul>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti spans" data-play_id="673" data-play_pl_id="14422" data-name="gd11x5_qszxfs" data-fun_zhushu="gd11x5_zhushu_qszxfs" data-fun_content="content_gd11x5_qszxfs" data-fun_suiji="suiji_gd11x5_qszxfs"><a href="javascript:void(0)">前三直选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="674" data-play_pl_id="14423" data-name="gd11x5_qszxds" data-fun_zhushu="zhushu_gd11x5_qszxds" data-fun_content="content_gd11x5_qszxds" data-fun_suiji="suiji_gd11x5_qszxds"><a href="javascript:void(0)">前三直选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="675" data-play_pl_id="14424" data-name="gd11x5_qszuxfs" data-fun_zhushu="zhushu_gd11x5_qszuxfs" data-fun_content="content_suiji_gd11x5_qszuxfs" data-fun_suiji="suiji_gd11x5_qszuxfs"><a href="javascript:void(0)">前三组选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="676" data-play_pl_id="14425"  data-name="gd11x5_qszuxds" data-fun_zhushu="zhushu_gd11x5_qszuxds" data-fun_content="content_gd11x5_qszuxds" data-fun_suiji="suiji_gd11x5_qszuxds"><a href="javascript:void(0)">前三组选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="677" data-play_pl_id="14426"  data-name="gd11x5_qszuxdt" data-fun_zhushu="zhushu_gd11x5_qszuxdt" data-fun_content="content_gd11x5_qszuxdt" data-fun_suiji="suiji_gd11x5_qszuxdt"><a href="javascript:void(0)">前三组选胆拖</a></span>
+                <span class="playPlIdBtn acti spans" data-play_id="776" data-play_pl_id="14448" data-name="gd11x5_qszxfs" data-fun_zhushu="gd11x5_zhushu_qszxfs" data-fun_content="content_gd11x5_qszxfs" data-fun_suiji="suiji_gd11x5_qszxfs"><a href="javascript:void(0)">前三直选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="801" data-play_pl_id="14473" data-name="gd11x5_qszxds" data-fun_zhushu="zhushu_gd11x5_qszxds" data-fun_content="content_gd11x5_qszxds" data-fun_suiji="suiji_gd11x5_qszxds"><a href="javascript:void(0)">前三直选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="772" data-play_pl_id="14444" data-name="gd11x5_qszuxfs" data-fun_zhushu="zhushu_gd11x5_qszuxfs" data-fun_content="content_suiji_gd11x5_qszuxfs" data-fun_suiji="suiji_gd11x5_qszuxfs"><a href="javascript:void(0)">前三组选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="798" data-play_pl_id="14470"  data-name="gd11x5_qszuxds" data-fun_zhushu="zhushu_gd11x5_qszuxds" data-fun_content="content_gd11x5_qszuxds" data-fun_suiji="suiji_gd11x5_qszuxds"><a href="javascript:void(0)">前三组选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="777" data-play_pl_id="14449"  data-name="gd11x5_qszuxdt" data-fun_zhushu="zhushu_gd11x5_qszuxdt" data-fun_content="content_gd11x5_qszuxdt" data-fun_suiji="suiji_gd11x5_qszuxdt"><a href="javascript:void(0)">前三组选胆拖</a></span>
             </p>
         </li>
         <li>
 
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn spans" data-play_id="678" data-play_pl_id="14427" data-name="gd11x5_zszxfs" data-fun_zhushu="zhushu_gd11x5_zszxfs" data-fun_content="content_gd11x5_zszxfs" data-fun_suiji="suiji_gd11x5_zszxfs"><a href="javascript:void(0)">中三直选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="679" data-play_pl_id="14428" data-name="gd11x5_zszxds" data-fun_zhushu="zhushu_gd11x5_zszxds" data-fun_content="content_gd11x5_zszxds" data-fun_suiji="suiji_gd11x5_zszxds"><a href="javascript:void(0)">中三直选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="680" data-play_pl_id="14429" data-name="gd11x5_zszuxfs" data-fun_zhushu="zhushu_gd11x5_zszuxfs" data-fun_content="content_gd11x5_zszuxfs" data-fun_suiji="suiji_gd11x5_zszuxfs"><a href="javascript:void(0)">中三组选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="681" data-play_pl_id="14430" data-name="gd11x5_zszuxds" data-fun_zhushu="zhushu_gd11x5_zszuxds" data-fun_content="content_gd11x5_zszuxds" data-fun_suiji="suiji_gd11x5_zszuxds"><a href="javascript:void(0)">中三组选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="682" data-play_pl_id="14431" data-name="gd11x5_zszuxdt" data-fun_zhushu="zhushu_gd11x5_zszuxdt" data-fun_content="content_gd11x5_zszuxdt" data-fun_suiji="suiji_gd11x5_zszuxdt"><a href="javascript:void(0)">中三组选胆拖</a></span>
+                <span class="playPlIdBtn spans" data-play_id="762" data-play_pl_id="14434" data-name="gd11x5_zszxfs" data-fun_zhushu="zhushu_gd11x5_zszxfs" data-fun_content="content_gd11x5_zszxfs" data-fun_suiji="suiji_gd11x5_zszxfs"><a href="javascript:void(0)">中三直选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="788" data-play_pl_id="14460" data-name="gd11x5_zszxds" data-fun_zhushu="zhushu_gd11x5_zszxds" data-fun_content="content_gd11x5_zszxds" data-fun_suiji="suiji_gd11x5_zszxds"><a href="javascript:void(0)">中三直选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="750" data-play_pl_id="14422" data-name="gd11x5_zszuxfs" data-fun_zhushu="zhushu_gd11x5_zszuxfs" data-fun_content="content_gd11x5_zszuxfs" data-fun_suiji="suiji_gd11x5_zszuxfs"><a href="javascript:void(0)">中三组选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="780" data-play_pl_id="14452" data-name="gd11x5_zszuxds" data-fun_zhushu="zhushu_gd11x5_zszuxds" data-fun_content="content_gd11x5_zszuxds" data-fun_suiji="suiji_gd11x5_zszuxds"><a href="javascript:void(0)">中三组选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="763" data-play_pl_id="14435" data-name="gd11x5_zszuxdt" data-fun_zhushu="zhushu_gd11x5_zszuxdt" data-fun_content="content_gd11x5_zszuxdt" data-fun_suiji="suiji_gd11x5_zszuxdt"><a href="javascript:void(0)">中三组选胆拖</a></span>
             </p>
         </li>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn spans" data-play_id="683" data-play_pl_id="14432" data-name="gd11x5_hszxfs" data-fun_zhushu="zhushu_gd11x5_hszxfs" data-fun_content="content_gd11x5_hszxfs" data-fun_suiji="suiji_gd11x5_hszxfs"><a href="javascript:void(0)">后三直选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="684" data-play_pl_id="14433" data-name="gd11x5_hszxds" data-fun_zhushu="zhushu_gd11x5_hszxds" data-fun_content="content_gd11x5_hszxds" data-fun_suiji="suiji_gd11x5_hszxds"><a href="javascript:void(0)">后三直选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="685" data-play_pl_id="14434" data-name="gd11x5_hszuxfs" data-fun_zhushu="zhushu_gd11x5_hszuxfs" data-fun_content="content_gd11x5_hszuxfs" data-fun_suiji="suiji_gd11x5_hszuxfs"><a href="javascript:void(0)">后三组选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="686" data-play_pl_id="14435" data-name="gd11x5_hszuxds" data-fun_zhushu="zhushu_gd11x5_hszuxds" data-fun_content="content_gd11x5_hszuxds" data-fun_suiji="suiji_gd11x5_hszuxds"><a href="javascript:void(0)">后三组选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="687" data-play_pl_id="14436" data-name="gd11x5_hszuxdt" data-fun_zhushu="zhushu_gd11x5_hszuxdt" data-fun_content="content_gd11x5_hszuxdt" data-fun_suiji="suiji_gd11x5_hszuxdt"><a href="javascript:void(0)">后三组选胆拖</a></span>
+                <span class="playPlIdBtn spans" data-play_id="759" data-play_pl_id="14431" data-name="gd11x5_hszxfs" data-fun_zhushu="zhushu_gd11x5_hszxfs" data-fun_content="content_gd11x5_hszxfs" data-fun_suiji="suiji_gd11x5_hszxfs"><a href="javascript:void(0)">后三直选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="790" data-play_pl_id="14462" data-name="gd11x5_hszxds" data-fun_zhushu="zhushu_gd11x5_hszxds" data-fun_content="content_gd11x5_hszxds" data-fun_suiji="suiji_gd11x5_hszxds"><a href="javascript:void(0)">后三直选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="757" data-play_pl_id="14429" data-name="gd11x5_hszuxfs" data-fun_zhushu="zhushu_gd11x5_hszuxfs" data-fun_content="content_gd11x5_hszuxfs" data-fun_suiji="suiji_gd11x5_hszuxfs"><a href="javascript:void(0)">后三组选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="761" data-play_pl_id="14433" data-name="gd11x5_hszuxds" data-fun_zhushu="zhushu_gd11x5_hszuxds" data-fun_content="content_gd11x5_hszuxds" data-fun_suiji="suiji_gd11x5_hszuxds"><a href="javascript:void(0)">后三组选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="760" data-play_pl_id="14432" data-name="gd11x5_hszuxdt" data-fun_zhushu="zhushu_gd11x5_hszuxdt" data-fun_content="content_gd11x5_hszuxdt" data-fun_suiji="suiji_gd11x5_hszuxdt"><a href="javascript:void(0)">后三组选胆拖</a></span>
             </p>
         </li>
     </ul>
@@ -252,27 +252,19 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLines">
-                    <span><i>01</i></span>
-                    <span><i>02</i></span>
-                    <span><i>03</i></span>
-                    <span><i>04</i></span>
-                    <span><i>05</i></span>
-                    <span><i>06</i></span>
-                    <span><i>07</i></span>
-                    <span><i>08</i></span>
-                    <span><i>09</i></span>
-                    <span><i>10</i></span>
-                    <span><i>11</i></span>
+                <var class="numLines danma_selected">
+                    <span class="n1"><i>01</i></span>
+                    <span class="n2"><i>02</i></span>
+                    <span class="n3"><i>03</i></span>
+                    <span class="n4"><i>04</i></span>
+                    <span class="n5"><i>05</i></span>
+                    <span class="n6"><i>06</i></span>
+                    <span class="n7"><i>07</i></span>
+                    <span class="n8"><i>08</i></span>
+                    <span class="n9"><i>09</i></span>
+                    <span class="n10"><i>10</i></span>
+                    <span class="n11"><i>11</i></span>
                 </var>
-                <div class="clear re-5x-i">
-                    <i onclick="selectFun_1(this)">全</i>
-                    <i onclick="selectFun_str2(this)">大</i>
-                    <i onclick="selectFun_str3(this)">小</i>
-                    <i onclick="selectFun_4(this)">奇</i>
-                    <i onclick="selectFun_5(this)">偶</i>
-                    <i onclick="selectFun_6(this)">清</i>
-                </div>
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>

@@ -1018,25 +1018,64 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
                 }
+            }else if (playGroupId == 24) {
+                if (json.sscHistoryList.length > 0) {
+                    var value = json.sscHistoryList[0];
+                    var openCodeArr = value.openCode ? value.openCode.split(",") : [];
+                    var lastNumberOpening = openCodeArr.length == 0 ? true : false;  // 是否开奖中
+                    var openCode = value.openCode;
+                    if (typeof openCode != "undefined" || openCode != null) {
+                        openCode = openCode.split(",");
+
+                        for (var i in openCode) {
+                                var num = openCode[0];
+                                var num1 = openCode[1];
+                                var num2 = openCode[2];
+                                var num3 = openCode[3];
+                                var num4 = openCode[4];
+
+                        }
+                    }
+                    if (lastNumberOpening) {
+                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                    } else {
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
+
+                    }
+
+                    var slist = json.sscHistoryList;
+                    for (var i = 1; i < slist.length; i++) {
+                        var openCode = slist[i].openCode
+                        if (typeof openCode != "undefined" || openCode != null) {
+                            openCode = openCode.split(",");
+                            for (var j = 0; j < openCode.length; ++j) {
+                                    var num = openCode[0];
+                                    var num1 = openCode[1];
+                                    var num2 = openCode[2];
+                                    var num3 = openCode[3];
+                                    var num4 = openCode[4];
+
+
+                            }
+                        }
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
+
+                    }
+                    //询问框
+                    lid = layer.confirm(str, {
+                        btn: ['取消'], //按钮
+                        title: '历史开奖',
+                    }, function () {
+                        layer.close(lid);
+                    });
+
+                }
             }
 
-        },
+        }
 
-        /* error: function() {
-             // 失败重试
-             setTimeout(function() {
-                 gdkj()
-
-
-             }, 5000);
-         },
-         complete: function () {
-         }
- */
     });
-   /* $.each(betForm.sscBetList, function(index, value) {
-        str += '<p><span>[&nbsp;' + value.content + '&nbsp;]</span><span>&nbsp;@' + value.playPl + '&nbsp;X&nbsp;' + value.perMoney + '</span></p>';
-    });*/
+
 
 
 
