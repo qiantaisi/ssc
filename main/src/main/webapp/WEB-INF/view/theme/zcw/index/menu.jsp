@@ -139,6 +139,7 @@
                                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/fc3d')">福彩3D</a>
                                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/pl3')">体彩排列3</a>
                                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/bj28')">北京28</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/gd11x5')">广东11选5</a>
 
                             </div>
                         </div>
@@ -218,6 +219,7 @@
                                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/fc3d')">福彩3D</a>
                                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/pl3')">体彩排列3</a>
                                 <a href="javascript:void(0)" onclick="openGcdt('gcdt/bj28')">北京28</a>
+                                <a href="javascript:void(0)" onclick="openGcdt('gcdt/gd11x5')">广东11选5</a>
 
                             </div>
                         </div>

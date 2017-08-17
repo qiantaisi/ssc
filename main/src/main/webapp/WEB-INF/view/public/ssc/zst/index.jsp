@@ -209,7 +209,7 @@
                 <a href="javascript:void(0)" onclick="goZst('<%=basePath%>ssc/zst/jspk10.html?type=5')">历史开奖数据</a>
             </div>
         </li>
-        
+
         <li>
             <div class="p-img fl"><img src="${resPath}img/gd11x5.png"></div>
             <div class="p-url fl">
