@@ -216,7 +216,7 @@
         var arrTemp = ['01','02','03','04','05'];
         for (var i = 1; i <= 5; ++i) {
             var value = Math.floor(Math.random() * 5);
-            tmpStr += '<span class="fang bg-' + arrTemp[value] + '">' +arrTemp[value] + '</span>';
+            tmpStr += '<span class="fang fangs bg-' + arrTemp[value] + '">' +arrTemp[value] + '</span>';
         }
         $("#lastOpenCode").html(tmpStr);
     }
@@ -225,7 +225,7 @@
     function renderLastOpenCode(openCodeArr) {
         var tmpStr = '';
         $.each(openCodeArr, function(index, value) {
-            tmpStr += '<span class="fang bg-">' + value + '</span>';
+            tmpStr += '<span class="fang fangs bg-">' + value + '</span>';
         });
         $("#lastOpenCode").html(tmpStr);
     }
@@ -238,7 +238,7 @@
         <p style="margin-left:5px">开奖中</p>
         {{else}}
         {{each list as value}}
-        <i class="fang bg-">{{value}}</i>
+        <i class="fang fangs bg-">{{value}}</i>
         {{/each}}
         {{/if}}
     </li>
