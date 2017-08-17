@@ -107,7 +107,7 @@
 
             $("#submitForm input[name='money']").val($("#money").val());
             $("#submitForm input[name='payOnlineId']").val($("#payOnlineId").val());
-            window.open("http://" + payurl + "/pay/payOnlineRequest.html?refer=<%=basePath%>&uid=${userSession.id}&money=" + money + "&payOnlineId=" + $("form[name='qqzfForm'] input[name='payOnlineId']:checked").val());
+            window.open("http://" + payurl + "/pay/payOnlineRequest.html?refer=" + location.protocol + "//" + location.host + "&uid=${userSession.id}&money=" + money + "&payOnlineId=" + $("form[name='qqzfForm'] input[name='payOnlineId']:checked").val());
         });
         $("#moneyError").html("* 请输入金额").show();
     });

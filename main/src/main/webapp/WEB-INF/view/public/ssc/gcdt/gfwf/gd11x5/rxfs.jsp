@@ -11,14 +11,14 @@
     <ul>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti spans" data-play_id="702" data-play_pl_id="14451" data-name="gd11x5_rxyzy" data-fun_zhushu="gd11x5_zhushu_rxyzy" data-fun_content="content_gd11x5_rxyzy" data-fun_suiji="suiji_gd11x5_rxyzy"><a href="javascript:void(0)">任选一中一</a></span>
-                <span class="playPlIdBtn spans" data-play_id="703" data-play_pl_id="14452" data-name="gd11x5_rxeze" data-fun_zhushu="zhushu_gd11x5_rxeze" data-fun_content="content_gd11x5_rxeze" data-fun_suiji="suiji_gd11x5_rxeze"><a href="javascript:void(0)">任选二中二</a></span>
-                <span class="playPlIdBtn spans" data-play_id="704" data-play_pl_id="14453" data-name="gd11x5_rxszs" data-fun_zhushu="zhushu_gd11x5_rxszs" data-fun_content="content_suiji_gd11x5_rxszs" data-fun_suiji="suiji_gd11x5_rxszs"><a href="javascript:void(0)">任选三中三</a></span>
-                <span class="playPlIdBtn spans" data-play_id="705" data-play_pl_id="14454"  data-name="gd11x5_rxsizs" data-fun_zhushu="zhushu_gd11x5_rxsizs" data-fun_content="content_gd11x5_rxsizs" data-fun_suiji="suiji_gd11x5_rxsizs"><a href="javascript:void(0)">任选四中四</a></span>
-                <span class="playPlIdBtn spans" data-play_id="706" data-play_pl_id="14455"  data-name="gd11x5_rxwzw" data-fun_zhushu="zhushu_gd11x5_rxwzw" data-fun_content="content_gd11x5_rxwzw" data-fun_suiji="suiji_gd11x5_rxwzw"><a href="javascript:void(0)">任选五中五</a></span>
-                <span class="playPlIdBtn spans" data-play_id="707" data-play_pl_id="14456" data-name="gd11x5_rxlzw" data-fun_zhushu="zhushu_gd11x5_rxlzw" data-fun_content="content_gd11x5_rxlzw" data-fun_suiji="suiji_gd11x5_rxlzw"><a href="javascript:void(0)">任选六中五</a></span>
-                <span class="playPlIdBtn spans" data-play_id="708" data-play_pl_id="14457" data-name="gd11x5_rxqzw" data-fun_zhushu="zhushu_gd11x5_rxqzw" data-fun_content="content_gd11x5_rxqzw" data-fun_suiji="suiji_gd11x5_rxqzw"><a href="javascript:void(0)">任选七中五</a></span>
-                <span class="playPlIdBtn spans" data-play_id="709" data-play_pl_id="14458" data-name="gd11x5_rxbzw" data-fun_zhushu="zhushu_gd11x5_rxbzw" data-fun_content="content_gd11x5_rxbzw" data-fun_suiji="suiji_gd11x5_rxbzw"><a href="javascript:void(0)">任选八中五</a></span>
+                <span class="playPlIdBtn acti spans" data-play_id="778" data-play_pl_id="14450" data-name="gd11x5_rxyzy" data-fun_zhushu="gd11x5_zhushu_rxyzy" data-fun_content="content_gd11x5_rxyzy" data-fun_suiji="suiji_gd11x5_rxyzy"><a href="javascript:void(0)">任选一中一</a></span>
+                <span class="playPlIdBtn spans" data-play_id="797" data-play_pl_id="14469" data-name="gd11x5_rxeze" data-fun_zhushu="zhushu_gd11x5_rxeze" data-fun_content="content_gd11x5_rxeze" data-fun_suiji="suiji_gd11x5_rxeze"><a href="javascript:void(0)">任选二中二</a></span>
+                <span class="playPlIdBtn spans" data-play_id="767" data-play_pl_id="14439" data-name="gd11x5_rxszs" data-fun_zhushu="zhushu_gd11x5_rxszs" data-fun_content="content_suiji_gd11x5_rxszs" data-fun_suiji="suiji_gd11x5_rxszs"><a href="javascript:void(0)">任选三中三</a></span>
+                <span class="playPlIdBtn spans" data-play_id="800" data-play_pl_id="14472"  data-name="gd11x5_rxsizs" data-fun_zhushu="zhushu_gd11x5_rxsizs" data-fun_content="content_gd11x5_rxsizs" data-fun_suiji="suiji_gd11x5_rxsizs"><a href="javascript:void(0)">任选四中四</a></span>
+                <span class="playPlIdBtn spans" data-play_id="774" data-play_pl_id="14446"  data-name="gd11x5_rxwzw" data-fun_zhushu="zhushu_gd11x5_rxwzw" data-fun_content="content_gd11x5_rxwzw" data-fun_suiji="suiji_gd11x5_rxwzw"><a href="javascript:void(0)">任选五中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="782" data-play_pl_id="14454" data-name="gd11x5_rxlzw" data-fun_zhushu="zhushu_gd11x5_rxlzw" data-fun_content="content_gd11x5_rxlzw" data-fun_suiji="suiji_gd11x5_rxlzw"><a href="javascript:void(0)">任选六中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="751" data-play_pl_id="14423" data-name="gd11x5_rxqzw" data-fun_zhushu="zhushu_gd11x5_rxqzw" data-fun_content="content_gd11x5_rxqzw" data-fun_suiji="suiji_gd11x5_rxqzw"><a href="javascript:void(0)">任选七中五</a></span>
+                <span class="playPlIdBtn spans" data-play_id="781" data-play_pl_id="14453" data-name="gd11x5_rxbzw" data-fun_zhushu="zhushu_gd11x5_rxbzw" data-fun_content="content_gd11x5_rxbzw" data-fun_suiji="suiji_gd11x5_rxbzw"><a href="javascript:void(0)">任选八中五</a></span>
             </p>
         </li>
     </ul>

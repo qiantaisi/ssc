@@ -114,7 +114,7 @@
                 $("#moneyError").html("* 最小充值金额" + minMoney + "元，最大充值金额" + maxMoney + "元").show();
                 return;
             }
-            window.open("http://" + payurl + "/pay/payOnlineRequest.html?refer=<%=basePath%>&uid=${userSession.id}&money=" + money + "&payOnlineId=" + $("form[name='zxzfForm'] input[name='payOnlineId']:checked").val());
+            window.open("http://" + payurl + "/pay/payOnlineRequest.html?refer=" + location.protocol + "//" + location.host + "&uid=${userSession.id}&money=" + money + "&payOnlineId=" + $("form[name='zxzfForm'] input[name='payOnlineId']:checked").val());
         });
         $("#moneyError").html("* 请输入金额").show();
     });

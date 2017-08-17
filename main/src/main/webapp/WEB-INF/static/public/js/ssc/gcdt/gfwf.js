@@ -3764,26 +3764,9 @@ function zhushu_gd11x5_rxsizs() {
     if (zlLength < 4) {
         return 0;
     }
-    for (var n1 = 0; n1 < fuShiArr.length; n1++) {
-        for (var n2 = 0; n2 < fuShiArr.length; n2++) {
-            for (var n3 = 0; n3 < fuShiArr.length; n3++) {
-                for (var n4 = 0; n4 < fuShiArr.length; n4++) {
-                    if (fuShiArr[n1] != fuShiArr[n2] && fuShiArr[n1] != fuShiArr[n3] && fuShiArr[n1] != fuShiArr[n4] && fuShiArr[n2] != fuShiArr[n3] && fuShiArr[n2] != fuShiArr[n4] && fuShiArr[n3] != fuShiArr[n4]) {
-                        var arr = [];
-                        arr.push(fuShiArr[n1]);
-                        arr.push(fuShiArr[n2]);
-                        arr.push(fuShiArr[n3]);
-                        arr.push(fuShiArr[n4]);
-                        arr.sort();
-                        newArr.push(arr.join(""));
-                    }
-                }
-            }
-        }
-    }
-    newArr = newArr.uniqueArr();
-    var zhushu = newArr.length;
-    return zhushu;
+    var tim = getFlagArrs(fuShiArr, 4);
+
+    return tim.length;
 }
 
 function zhushu_gd11x5_rxwzw() {
@@ -3797,29 +3780,9 @@ function zhushu_gd11x5_rxwzw() {
     if (zlLength < 4) {
         return 0;
     }
-    for (var n1 = 0; n1 < fuShiArr.length; n1++) {
-        for (var n2 = 0; n2 < fuShiArr.length; n2++) {
-            for (var n3 = 0; n3 < fuShiArr.length; n3++) {
-                for (var n4 = 0; n4 < fuShiArr.length; n4++) {
-                    for (var n5 = 0; n5 < fuShiArr.length; n5++) {
-                    if (fuShiArr[n2] != fuShiArr[n5] &&fuShiArr[n3] != fuShiArr[n5] &&fuShiArr[n4] != fuShiArr[n5] &&fuShiArr[n1] != fuShiArr[n5] &&fuShiArr[n1] != fuShiArr[n2] && fuShiArr[n1] != fuShiArr[n3] && fuShiArr[n1] != fuShiArr[n4] && fuShiArr[n2] != fuShiArr[n3] && fuShiArr[n2] != fuShiArr[n4] && fuShiArr[n3] != fuShiArr[n4]) {
-                            var arr = [];
-                            arr.push(fuShiArr[n1]);
-                            arr.push(fuShiArr[n2]);
-                            arr.push(fuShiArr[n3]);
-                            arr.push(fuShiArr[n4]);
-                            arr.push(fuShiArr[n5]);
-                            arr.sort();
-                            newArr.push(arr.join(""));
-                         }
-                    }
-                }
-            }
-        }
-    }
-    newArr = newArr.uniqueArr();
-    var zhushu = newArr.length;
-    return zhushu;
+    var tim = getFlagArrs(fuShiArr, 5);
+
+    return tim.length;
 }
 
 function zhushu_gd11x5_rxqzw() {
@@ -3833,7 +3796,8 @@ function zhushu_gd11x5_rxqzw() {
     if (zlLength < 6) {
         return 0;
     }
-    for (var n1 = 0; n1 < fuShiArr.length; n1++) {
+    var tim = getFlagArrs(fuShiArr, 7);
+   /* for (var n1 = 0; n1 < fuShiArr.length; n1++) {
         for (var n2 = 0; n2 < fuShiArr.length; n2++) {
             for (var n3 = 0; n3 < fuShiArr.length; n3++) {
                 for (var n4 = 0; n4 < fuShiArr.length; n4++) {
@@ -3858,10 +3822,9 @@ function zhushu_gd11x5_rxqzw() {
                 }
             }
         }
-    }
-    newArr = newArr.uniqueArr();
-    var zhushu = newArr.length;
-    return zhushu;
+    }*/
+
+    return tim.length;
 }
 
 function zhushu_gd11x5_rxbzw() {
@@ -3875,38 +3838,9 @@ function zhushu_gd11x5_rxbzw() {
     if (zlLength < 7) {
         return 0;
     }
-    for (var n1 = 0; n1 < fuShiArr.length; n1++) {
-        for (var n2 = 0; n2 < fuShiArr.length; n2++) {
-            for (var n3 = 0; n3 < fuShiArr.length; n3++) {
-                for (var n4 = 0; n4 < fuShiArr.length; n4++) {
-                    for (var n5 = 0; n5 < fuShiArr.length; n5++) {
-                        for (var n6 = 0; n6 < fuShiArr.length; n6++) {
-                            for (var n7 = 0; n7 < fuShiArr.length; n7++) {
-                                for (var n8 = 0; n8 < fuShiArr.length; n8++) {
-                                    if (fuShiArr[n1] != fuShiArr[n8] &&fuShiArr[n2] != fuShiArr[n8] &&fuShiArr[n3] != fuShiArr[n8] &&fuShiArr[n4] != fuShiArr[n8] &&fuShiArr[n5] != fuShiArr[n8] &&fuShiArr[n6] != fuShiArr[n8] &&fuShiArr[n7] != fuShiArr[n8] &&fuShiArr[n6] != fuShiArr[n7] &&fuShiArr[n5] != fuShiArr[n7] &&fuShiArr[n4] != fuShiArr[n7] &&fuShiArr[n3] != fuShiArr[n7] &&fuShiArr[n2] != fuShiArr[n7] &&fuShiArr[n1] != fuShiArr[n7] &&fuShiArr[n1] != fuShiArr[n6] &&fuShiArr[n5] != fuShiArr[n6] &&fuShiArr[n4] != fuShiArr[n6] &&fuShiArr[n3] != fuShiArr[n6] &&fuShiArr[n2] != fuShiArr[n6] &&fuShiArr[n2] != fuShiArr[n5] &&fuShiArr[n3] != fuShiArr[n5] &&fuShiArr[n4] != fuShiArr[n5] &&fuShiArr[n1] != fuShiArr[n5] &&fuShiArr[n1] != fuShiArr[n2] && fuShiArr[n1] != fuShiArr[n3] && fuShiArr[n1] != fuShiArr[n4] && fuShiArr[n2] != fuShiArr[n3] && fuShiArr[n2] != fuShiArr[n4] && fuShiArr[n3] != fuShiArr[n4]) {
-                                    var arr = [];
-                                    arr.push(fuShiArr[n1]);
-                                    arr.push(fuShiArr[n2]);
-                                    arr.push(fuShiArr[n3]);
-                                    arr.push(fuShiArr[n4]);
-                                    arr.push(fuShiArr[n5]);
-                                    arr.push(fuShiArr[n6]);
-                                    arr.push(fuShiArr[n7]);
-                                    arr.push(fuShiArr[n8]);
-                                    arr.sort();
-                                    newArr.push(arr.join(""));
-                                }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    newArr = newArr.uniqueArr();
-    var zhushu = newArr.length;
-    return zhushu;
+    var tim = getFlagArrs(fuShiArr, 8);
+
+    return tim.length;
 }
 
 
@@ -3926,33 +3860,9 @@ function zhushu_gd11x5_rxlzw() {
     if (zlLength < 5) {
         return 0;
     }
-    for (var n1 = 0; n1 < fuShiArr.length; n1++) {
-        for (var n2 = 0; n2 < fuShiArr.length; n2++) {
-            for (var n3 = 0; n3 < fuShiArr.length; n3++) {
-                for (var n4 = 0; n4 < fuShiArr.length; n4++) {
-                    for (var n5 = 0; n5 < fuShiArr.length; n5++) {
-                        for (var n6 = 0; n6 < fuShiArr.length; n6++) {
-                            if (fuShiArr[n1] != fuShiArr[n6] &&fuShiArr[n5] != fuShiArr[n6] &&fuShiArr[n4] != fuShiArr[n6] &&fuShiArr[n3] != fuShiArr[n6] &&fuShiArr[n2] != fuShiArr[n6] &&fuShiArr[n2] != fuShiArr[n5] &&fuShiArr[n3] != fuShiArr[n5] &&fuShiArr[n4] != fuShiArr[n5] &&fuShiArr[n1] != fuShiArr[n5] &&fuShiArr[n1] != fuShiArr[n2] && fuShiArr[n1] != fuShiArr[n3] && fuShiArr[n1] != fuShiArr[n4] && fuShiArr[n2] != fuShiArr[n3] && fuShiArr[n2] != fuShiArr[n4] && fuShiArr[n3] != fuShiArr[n4]) {
-                                var arr = [];
-                                arr.push(fuShiArr[n1]);
-                                arr.push(fuShiArr[n2]);
-                                arr.push(fuShiArr[n3]);
-                                arr.push(fuShiArr[n4]);
-                                arr.push(fuShiArr[n5]);
-                                arr.push(fuShiArr[n6]);
-                                arr.sort();
-                                newArr.push(arr.join(""));
+    var tim = getFlagArrs(fuShiArr, 6);
 
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    newArr = newArr.uniqueArr();
-    var zhushu = newArr.length;
-    return zhushu;
+    return tim.length;
 }
 
 
