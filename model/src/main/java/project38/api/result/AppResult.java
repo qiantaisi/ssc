@@ -1,7 +1,6 @@
 package project38.api.result;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import project38.api.common.result.CommonResult;
 
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/3/21.
  */
-@JsonInclude(JsonSerialize.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AppResult extends CommonResult {
     /**
      * 热门彩种/走势切换（0-不显示，1-热门彩种，2-走势图（原生），3-走势图链接）

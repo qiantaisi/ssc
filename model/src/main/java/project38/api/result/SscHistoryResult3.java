@@ -1,14 +1,13 @@
 package project38.api.result;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.util.Date;
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/12/6.
  */
-@JsonInclude(JsonSerialize.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SscHistoryResult3 extends PageResult {
     private List<SscHistory> sscHistoryList;
 

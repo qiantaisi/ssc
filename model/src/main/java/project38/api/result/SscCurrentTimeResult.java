@@ -1,7 +1,6 @@
 package project38.api.result;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import project38.api.common.result.CommonResult;
 
 import java.util.Date;
@@ -9,7 +8,7 @@ import java.util.Date;
 /**
  * Created by Administrator on 2017/3/24.
  */
-@JsonInclude(JsonSerialize.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SscCurrentTimeResult extends CommonResult{
     private Boolean enable; //彩种是否有效
     private Long leftOpenTime;  //剩余开奖时间（秒）
