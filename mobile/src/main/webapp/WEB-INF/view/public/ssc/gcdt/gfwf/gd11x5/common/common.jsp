@@ -273,7 +273,7 @@
                data-fun_zhushu="zhushu_rx1z1"
                data-fun_content="content_rx1z1"
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/rxfs/rx1z1.html"
-               data-play_id="7758"
+               data-play_id="778"
                data-play_pl_id="14450"
                data-name="任选一中一">
                 <span class="staer1">任选一中一</span>
@@ -296,7 +296,7 @@
                data-fun_zhushu="zhushu_rx3z3"
                data-fun_content="content_rx3z3"
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/rxfs/rx3z3.html"
-               data-play_id="766"
+               data-play_id="767"
                data-play_pl_id="14439"
                data-name="任选三中三">
                 <span class="staer1">任选三中三</span>
@@ -377,7 +377,7 @@
                data-fun_zhushu="zhushu_rx3z3dt"
                data-fun_content="content_rx3z3dt"
                data-url="<%=basePath%>ssc/gcdt/gfwf/gd11x5/rxtd/rx3z3.html"
-               data-play_id="779"
+               data-play_id="799"
                data-play_pl_id="14471"
                data-name="任选三中三">
                 <span class="staer1">任选三中三</span>
