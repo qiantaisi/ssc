@@ -100,7 +100,9 @@ function selectFun_1(obj) {
         }
     });
 
-    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
+    var maName = objName.split(' ')[1];
+    var objBtn = getCommonObj(obj, maName);
     var btnFlag = "quan";
     renderZhushu();
     changeActi(btnFlag, objBtn);
@@ -141,7 +143,9 @@ function selectFun_str2(obj) {
         }
     });
 
-    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
+    var maName = objName.split(' ')[1];
+    var objBtn = getCommonObj(obj, maName);
     var btnFlag = "da";
     renderZhushu();
     changeActi(btnFlag, objBtn);
@@ -178,7 +182,9 @@ function selectFun_str3(obj) {
             $(this).addClass("acti");
         }
     });
-    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
+    var maName = objName.split(' ')[1];
+    var objBtn = getCommonObj(obj, maName);
     var btnFlag = "xiao";
     renderZhushu();
     changeActi(btnFlag, objBtn);
@@ -196,7 +202,9 @@ function selectFun_4(obj) {
             $(this).addClass("acti");
         }
     });
-    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
+    var maName = objName.split(' ')[1];
+    var objBtn = getCommonObj(obj, maName);
     var btnFlag = "qi";
     renderZhushu();
     changeActi(btnFlag, objBtn);
@@ -215,7 +223,9 @@ function selectFun_5(obj) {
         }
     });
 
-    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
+    var maName = objName.split(' ')[1];
+    var objBtn = getCommonObj(obj, maName);
     var btnFlag = "ou";
     renderZhushu();
     changeActi(btnFlag, objBtn);
@@ -228,46 +238,113 @@ function selectFun_6(obj) {
     clearStateTouZhu();//清除投注状态栏
 }
 
+// 获取当前胆码的对象
+function getCommonObj(obj, maName){
+    console.log(maName);
+    var objBtn = $(obj).parent().parent().parent().find("."+ maName +" span").eq(0);
+    return objBtn;
+}
+
 //去掉被选中号数
 function changeActi(btnFlag, obj){
-    var flagNameDantuo = $(obj).parent().parent().parent().find('li .numLines').hasClass('danma_selected');
 
-    if(flagNameDantuo){
-        if(btnFlag == "quan"){
-            var numTuo = parseInt($(obj).html());
-            for(var i = 1; i < 12; i++){
-                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + i + ".acti").removeClass('acti');
-            }
-        } else if(btnFlag == "da"){
-            var daArr = [6, 7, 8, 9, 10, 11];
-            for(var n = 0; n < daArr.length; n++){
-                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + daArr[n] + ".acti").removeClass('acti');
-            }
-        } else if(btnFlag == "xiao"){
-            var xiaoArr = [1, 2, 3, 4, 5];
-            for(var m = 0; m < xiaoArr.length; m++){
-                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + xiaoArr[m] + ".acti").removeClass('acti');
-            }
-        }  else if(btnFlag == "ou"){
-            var ouArr = [2, 4, 6, 8, 10];
-            for(var y = 0; y < ouArr.length; y++){
-                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + ouArr[y] + ".acti").removeClass('acti');
-            }
-        }  else if(btnFlag == "qi"){
-            var qiArr = [1, 3, 5, 7, 9, 11];
-            for(var x = 0; x < qiArr.length; x++){
-                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + qiArr[x] + ".acti").removeClass('acti');
-            }
-        }
+    var flagNameDtsm = $(obj).parent().parent().parent().find('li .numLines').hasClass('danma_selected');
+    var flagNameDtem = $(obj).parent().parent().parent().find('li .numLines').hasClass('em_danma_selected');
+    var flagNameDtsim = $(obj).parent().parent().parent().find('li .numLines').hasClass('sim_danma_selected');
+    var flagNameDtwm = $(obj).parent().parent().parent().find('li .numLines').hasClass('wm_danma_selected');
+    var flagNameDtlm = $(obj).parent().parent().parent().find('li .numLines').hasClass('lm_danma_selected');
+    var flagNameDtqm = $(obj).parent().parent().parent().find('li .numLines').hasClass('qm_danma_selected');
+    var flagNameDtbm = $(obj).parent().parent().parent().find('li .numLines').hasClass('bm_danma_selected');
 
 
-        var sumSelectedTuodan = $(obj).parent().find("span.acti").length;
-        if(sumSelectedTuodan <= 0){
-            arrNum.splice(0, arrNum.length);
-        }
+    if(flagNameDtsm){
+        delActi(btnFlag, obj);
+    } else if(flagNameDtem){
+        delActi(btnFlag, obj);
+    } else if(flagNameDtsim){
+        delActi(btnFlag, obj);
+    } else if(flagNameDtwm){
+        delActi(btnFlag, obj);
+    } else if(flagNameDtlm){
+        delActi(btnFlag, obj);
+    } else if(flagNameDtqm){
+        delActi(btnFlag, obj);
+    } else if(flagNameDtbm){
+        delActi(btnFlag, obj);
     }
 }
 
+
+function delActi(btnFlag, obj){
+    if(btnFlag == "quan"){
+        var numTuo = parseInt($(obj).html());
+        for(var i = 1; i < 12; i++){
+            $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".sim_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".wm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".lm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".qm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".bm_danma_selected span.n" + i + ".acti").removeClass('acti');
+        }
+    } else if(btnFlag == "da"){
+        var daArr = [6, 7, 8, 9, 10, 11];
+        for(var n = 0; n < daArr.length; n++){
+            $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + daArr[n] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + daArr[n] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".sim_danma_selected span.n" + daArr[n] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".wm_danma_selected span.n" + daArr[n] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".lm_danma_selected span.n" + daArr[n] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".qm_danma_selected span.n" + daArr[n] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".bm_danma_selected span.n" + daArr[n] + ".acti").removeClass('acti');
+        }
+    } else if(btnFlag == "xiao"){
+        var xiaoArr = [1, 2, 3, 4, 5];
+        for(var m = 0; m < xiaoArr.length; m++){
+            $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + xiaoArr[m] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + xiaoArr[m] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".sim_danma_selected span.n" + xiaoArr[m] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".wm_danma_selected span.n" + xiaoArr[m] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".lm_danma_selected span.n" + xiaoArr[m] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".qm_danma_selected span.n" + xiaoArr[m] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".bm_danma_selected span.n" + xiaoArr[m] + ".acti").removeClass('acti');
+        }
+    }  else if(btnFlag == "ou"){
+        var ouArr = [2, 4, 6, 8, 10];
+        for(var y = 0; y < ouArr.length; y++){
+            $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".sim_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".wm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".lm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".qm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".bm_danma_selected span.n" + i + ".acti").removeClass('acti');
+        }
+    }  else if(btnFlag == "qi"){
+        var qiArr = [1, 3, 5, 7, 9, 11];
+        for(var x = 0; x < qiArr.length; x++){
+            $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".sim_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".wm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".lm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".qm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".bm_danma_selected span.n" + i + ".acti").removeClass('acti');
+        }
+    }
+
+
+    var sumSelectedTuodan = $(obj).parent().find("span.acti").length;
+    if(sumSelectedTuodan <= 0){
+        arrNum2.splice(0, arrNum2.length);
+        arrNum3.splice(0, arrNum3.length);
+        arrNum4.splice(0, arrNum4.length);
+        arrNum5.splice(0, arrNum5.length);
+        arrNum6.splice(0, arrNum6.length);
+        arrNum7.splice(0, arrNum7.length);
+        arrNum8.splice(0, arrNum8.length);
+    }
+}
 
 //删除重复号码
 function delRrepet(obj) {
@@ -849,8 +926,14 @@ function showTishi2Template(infoStr) {
 /**
  * 初始化子页面，刷新滚动条，赔率，倍数等等
  */
+var arrNum2 = []; //获取点击数的数组
+var arrNum3 = [];
+var arrNum4 = [];
+var arrNum5 = [];
+var arrNum6 = [];
+var arrNum7 = [];
+var arrNum8 = [];
 
-var arrNum = [];
 function initSubPage() {
     // 初始化模板
 
@@ -858,7 +941,6 @@ function initSubPage() {
     $("#subJRange").html(template("template_jRange"));
 
     // 内容点击，触发统计注数函数
-    var arrNum = [];
     $(".Pick ul li span i").click(function () {
         var nowFlag= $(".re-5x-i i").hasClass('acti');
 
@@ -876,32 +958,43 @@ function initSubPage() {
             }
         } else {
             var flagNameDanma = $(this).parent().parent().hasClass('danma_selected');
+            var flagDanMaEm = $(this).parent().parent().hasClass('em_danma_selected');
+            var flagDanMaSim = $(this).parent().parent().hasClass('sim_danma_selected');
+            var flagDanMaWm = $(this).parent().parent().hasClass('wm_danma_selected');
+            var flagDanMaLm = $(this).parent().parent().hasClass('lm_danma_selected');
+            var flagDanMaQm = $(this).parent().parent().hasClass('qm_danma_selected');
+            var flagDanMaBm = $(this).parent().parent().hasClass('bm_danma_selected');
+
             var flagNameDantuo = $(this).parent().parent().hasClass('dantuo_selected');
 
-            var flagActi = $(this).parent().hasClass('acti');
+            var flagActi = $(this).parent().hasClass('acti'); //判断是否再次点击选中的号数
 
-            if(flagNameDanma){
-                var numDan = parseInt($(this).html());
-                if (arrNum.length >= 2 && !flagActi) {
-                    $(this).parent().parent().find("span.n" + arrNum[arrNum.length - 1] + ".acti").removeClass('acti');
-                    arrNum.splice(arrNum.length -1, 1);
-                }
-
-                arrNum.push(parseInt($(this).html()));
-                $(this).parent().toggleClass('acti');
-                $(this).parent().parent().parent().parent().find(".dantuo_selected span.n" + numDan + ".acti").removeClass('acti');
-
-                var sumSelectedTuodan = $(this).parent().parent().find("span.acti").length;
-                if(sumSelectedTuodan <= 0){
-                    arrNum.splice(0, arrNum.length);
-                }
-
-            } else if(flagNameDantuo){
+            if (flagNameDanma) {
+                getDanmaCommon(this, arrNum3, 2, flagActi);
+            } else if (flagDanMaEm) {
+                getDanmaCommon(this, arrNum2, 1, flagActi);
+            } else if (flagDanMaSim) {
+                getDanmaCommon(this, arrNum4, 3, flagActi);
+            } else if (flagDanMaWm) {
+                getDanmaCommon(this, arrNum5, 4, flagActi);
+            } else if (flagDanMaLm) {
+                getDanmaCommon(this, arrNum6, 5, flagActi);
+            } else if (flagDanMaQm) {
+                getDanmaCommon(this, arrNum7, 6, flagActi);
+            } else if (flagDanMaBm) {
+                getDanmaCommon(this, arrNum8, 7, flagActi);
+            } else if (flagNameDantuo) {
                 var numTuo = parseInt($(this).html());
                 $(this).parent().parent().parent().parent().find(".danma_selected span.n" + numTuo + ".acti").removeClass('acti');
+                $(this).parent().parent().parent().parent().find(".em_danma_selected span.n" + numTuo + ".acti").removeClass('acti');
+                $(this).parent().parent().parent().parent().find(".sim_danma_selected span.n" + numTuo + ".acti").removeClass('acti');
+                $(this).parent().parent().parent().parent().find(".wm_danma_selected span.n" + numTuo + ".acti").removeClass('acti');
+                $(this).parent().parent().parent().parent().find(".lm_danma_selected span.n" + numTuo + ".acti").removeClass('acti');
+                $(this).parent().parent().parent().parent().find(".qm_danma_selected span.n" + numTuo + ".acti").removeClass('acti');
+                $(this).parent().parent().parent().parent().find(".bm_danma_selected span.n" + numTuo + ".acti").removeClass('acti');
 
                 $(this).parent().toggleClass('acti');
-            } else{
+            } else {
                 $(this).parent().toggleClass('acti'); // 变色
             }
 
@@ -1028,6 +1121,23 @@ function initSubPage() {
 //        $(".my-slide-theme .back-bar .pointer").focus(function() {
 //            $(this).addClass("my-slide-theme-focus");
 //        });
+}
+
+function getDanmaCommon(obj, numArr, x, flagActi){
+    var numDan = parseInt($(obj).html());
+    if (numArr.length >= x && !flagActi) {
+        $(obj).parent().parent().find("span.n" + numArr[numArr.length - 1] + ".acti").removeClass('acti');
+        numArr.splice(numArr.length -1, 1);
+    }
+
+    numArr.push(parseInt($(obj).html()));
+    $(obj).parent().toggleClass('acti');
+    $(obj).parent().parent().parent().parent().find(".dantuo_selected span.n" + numDan + ".acti").removeClass('acti');
+
+    var sumSelectedTuodan = $(obj).parent().parent().find("span.acti").length;
+    if(sumSelectedTuodan <= 0){
+        numArr.splice(0, numArr.length);
+    }
 }
 
 //任选2 组成方案获取函数
