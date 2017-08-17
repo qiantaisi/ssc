@@ -139,6 +139,11 @@
                             <em></em>
                         </a>
                     </li>
+                    <li data-id="24">
+                        <a href="javascript:void(0);">广东11选5
+                            <em></em>
+                        </a>
+                    </li>
                 </ul>
                 <div class="alert_xuan clearfix">
                     <a href="javascript:void(0);" class="quanxuan left">全选</a>
@@ -790,6 +795,28 @@
                     <span class="ballpk bg-{{num10}}">{{num10}}</span>
                 </div>
                 <div class="item-text item-text_res">
+                </div>
+            </div>
+        </a>
+    </li>
+</script>
+<script type="text/html" id="template_24">
+    <li data-id="24">
+        <a class="item-link item-content" href="<%=basePath%>ssc/kjjl/list.html?playGroupId=24">
+            <div class="item-media"><img src="${resPath}img/cz/cz-24.png" style='width: 2.2rem;'></div>
+            <div class="item-inner">
+                <div class="item-title-row">
+                    <div class="item-title">广东11选5</div>
+                    <div class="item-after"><font class="cl-1105">{{number}}期</font>&nbsp;{{openTime |
+                        dateFormat:'yy-mm-dd HH:MM'}}
+                    </div>
+                </div>
+                <div class="item-subtitle">
+                    <span class="ball">{{num1}}</span>
+                    <span class="ball">{{num2}}</span>
+                    <span class="ball">{{num3}}</span>
+                    <span class="ball">{{num4}}</span>
+                    <span class="ball">{{num5}}</span>
                 </div>
             </div>
         </a>

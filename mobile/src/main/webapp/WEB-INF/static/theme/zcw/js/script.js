@@ -4830,7 +4830,7 @@ $(function () {
                     $.each(json.sscHistoryList, function (index, value) {
                         var tmpPlayGroupId = Tools.parseInt(value.playGroupId);
 
-                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17]) >= 0) {
+                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17,24]) >= 0) {
                             var obj = {};
 
                             obj.openTime = value.openTime;
@@ -4843,6 +4843,14 @@ $(function () {
                             var num3 = Tools.parseInt(numArr[2]);
                             var num4 = Tools.parseInt(numArr[3]);
                             var num5 = Tools.parseInt(numArr[4]);
+
+                            if (tmpPlayGroupId == 24) {
+                                num1 = parseInt(num1) >= 10 ? num1 : ('0' + num1);
+                                num2 = parseInt(num2) >= 10 ? num2 : ('0' + num2);
+                                num3 = parseInt(num3) >= 10 ? num3 : ('0' + num3);
+                                num4 = parseInt(num4) >= 10 ? num4 : ('0' + num4);
+                                num5 = parseInt(num5) >= 10 ? num5 : ('0' + num5);
+                            }
 
                             obj.num1 = num1;
                             obj.num2 = num2;
@@ -5340,7 +5348,7 @@ $(function () {
                     $.each(json.sscHistoryList, function (index, value) {
                         var tmpPlayGroupId = Tools.parseInt(value.playGroupId);
 
-                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17]) >= 0) {
+                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17,24]) >= 0) {
                             var obj = {};
 
                             obj.openTime = value.openTime;
@@ -5353,6 +5361,14 @@ $(function () {
                             var num3 = Tools.parseInt(numArr[2]);
                             var num4 = Tools.parseInt(numArr[3]);
                             var num5 = Tools.parseInt(numArr[4]);
+
+                            if (tmpPlayGroupId == 24) {
+                                num1 = parseInt(num1) >= 10 ? num1 : ('0' + num1);
+                                num2 = parseInt(num2) >= 10 ? num2 : ('0' + num2);
+                                num3 = parseInt(num3) >= 10 ? num3 : ('0' + num3);
+                                num4 = parseInt(num4) >= 10 ? num4 : ('0' + num4);
+                                num5 = parseInt(num5) >= 10 ? num5 : ('0' + num5);
+                            }
 
                             obj.num1 = num1;
                             obj.num2 = num2;
@@ -5777,7 +5793,7 @@ $(function () {
 
                     $.each(json.sscHistoryList, function (index, value) {
                         var tmpPlayGroupId = Tools.parseInt(value.playGroupId);
-                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17]) >= 0) {
+                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17,24]) >= 0) {
                             var obj = {};
 
                             obj.openTime = value.openTime;
@@ -5790,6 +5806,14 @@ $(function () {
                             var num3 = Tools.parseInt(numArr[2]);
                             var num4 = Tools.parseInt(numArr[3]);
                             var num5 = Tools.parseInt(numArr[4]);
+
+                            if (tmpPlayGroupId == 24) {
+                                num1 = parseInt(num1) >= 10 ? num1 : ('0' + num1);
+                                num2 = parseInt(num2) >= 10 ? num2 : ('0' + num2);
+                                num3 = parseInt(num3) >= 10 ? num3 : ('0' + num3);
+                                num4 = parseInt(num4) >= 10 ? num4 : ('0' + num4);
+                                num5 = parseInt(num5) >= 10 ? num5 : ('0' + num5);
+                            }
 
                             obj.num1 = num1;
                             obj.num2 = num2;
