@@ -36,6 +36,7 @@
                 <p class="<c:if test="${param.playGroupId == 5}">acti</c:if>"><a href="<%=basePath%>help/rule/fc3d.html">福彩3D</a></p>
                 <p class="<c:if test="${param.playGroupId == 7}">acti</c:if>"><a href="<%=basePath%>help/rule/bj28.html">北京28</a></p>
                 <p class="<c:if test="${param.playGroupId == 8}">acti</c:if>"><a href="<%=basePath%>help/rule/bjkl8.html">北京快乐8</a></p>
+                <p class="<c:if test="${param.playGroupId == 24}">acti</c:if>"><a href="<%=basePath%>help/rule/gd11x5.html">广东11选5</a></p>
             </div>
         </li>
         <li class="li1 <c:if test="${param.navGroup == 2}">sli</c:if> zhinan" <c:if test="${not empty param.zcplayGroupId || not empty param.czplayGroupId || not empty param.tkplayGroupId}">sl="0"</c:if>>
