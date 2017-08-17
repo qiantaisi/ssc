@@ -1,12 +1,13 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import project38.api.common.result.CommonResult;
 
 /**
  * Created by java1 on 2017/7/3.
  */
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
+@JsonInclude(JsonSerialize.Include.NON_NULL)
 public class MobileFgResult extends CommonResult {
 
     //手机模板风格

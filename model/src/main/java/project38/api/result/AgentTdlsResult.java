@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import project38.api.common.result.CommonResult;
 
@@ -10,7 +11,7 @@ import java.util.List;
 /**
  * 团队流水
  */
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
+@JsonInclude(JsonSerialize.Include.NON_NULL)
 public class AgentTdlsResult extends PageResult {
     private List<AgentTdls> agentTdlsList;
 

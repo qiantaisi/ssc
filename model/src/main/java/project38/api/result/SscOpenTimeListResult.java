@@ -1,12 +1,13 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import project38.api.common.result.CommonResult;
 
 import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.List;
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
+@JsonInclude(JsonSerialize.Include.NON_NULL)
 public class SscOpenTimeListResult extends CommonResult {
     private List<SscOpenTime> sscOpenTimeList;
 

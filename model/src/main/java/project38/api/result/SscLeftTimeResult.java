@@ -1,12 +1,13 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import project38.api.common.result.CommonResult;
 
 /**
  * Created by Administrator on 2017/1/17.
  */
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
+@JsonInclude(JsonSerialize.Include.NON_NULL)
 public class SscLeftTimeResult extends CommonResult {
     /**
      * 当前期数
