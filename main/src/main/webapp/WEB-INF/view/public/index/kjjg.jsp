@@ -7,7 +7,7 @@
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
-<c:import url="../common/bodyStart.jsp"/>
+<%--<c:import url="../common/bodyStart.jsp"/>--%>
 <%--<c:import url="../common/checkIsChildFrame.jsp" />--%>
 
 <div class="process">
@@ -80,14 +80,14 @@
                         <a href="javascript:void(0)" data-playgroupid="24">广东11选5</a>
                     </div>
                 </div>
-                <div class="wrap_select at corl1 hide" id="subNav_3">
+                <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_3">
                     <div>
                         <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
                         <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
                         <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
                     </div>
                 </div>
-                <div class="wrap_select at corl1 hide" id="subNav_4">
+                <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_4">
                     <div>
                         <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
                         <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
@@ -95,7 +95,7 @@
                         <a href="javascript:void(0)" data-playgroupid="7">北京28</a>
                     </div>
                 </div>
-                <div class="wrap_select at corl1 hide" id="subNav_5">
+                <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_5">
                     <div>
                         <a href="javascript:void(0)" data-playgroupid="9">北京PK10</a>
                         <a href="javascript:void(0)" data-playgroupid="1">重庆时时彩</a>
@@ -111,13 +111,13 @@
                         <a href="javascript:void(0)" data-playgroupid="24 class="last"">广东11选5</a>
                     </div>
                 </div>
-                <div class="wrap_select at corl1 hide" id="subNav_6">
+                <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_6">
                     <div>
                         <a href="javascript:void(0)" data-playgroupid="14">幸运飞艇</a>
                         <a href="javascript:void(0)" data-playgroupid="6">香港六合彩</a>
                     </div>
                 </div>
-                <div class="wrap_select at corl1 hide" id="subNav_7">
+                <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_7">
                     <div>
                         <a href="javascript:void(0)" data-playgroupid="23">极速PK10</a>
                         <a href="javascript:void(0)" data-playgroupid="15">分分时时彩</a>
@@ -2186,4 +2186,4 @@
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/gd11x5')">立即购彩</a></span>
     </li>
 </script>
-<c:import url="../common/bodyEnd.jsp"/>
+<%--<c:import url="../common/bodyEnd.jsp"/>--%>

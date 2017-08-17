@@ -14,13 +14,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <link rel="stylesheet" href="${resPath}css/cabel-v1.css?v=20170206" type="text/css">
-    <link rel="stylesheet" href="${resPath}css/style.css?v=20170805" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="${resPath}css/style.css?v=20170816" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/animate.min.css?v=20170206" type="text/css"><!--CSS3动画-->
     <link rel="stylesheet" href="${resPath}css/lottery.css?v=20170206" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/liMarquee.css?v=20170206" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}jRange/jquery.range.css?v=20170402" type="text/css">
     <link rel="stylesheet" href="${resPath}css/global.css?v=20170706" type="text/css"><!--页面CSS-->
-    <link rel="stylesheet" href="${resPath}css/other.css?v=20170428" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="${resPath}css/other.css?v=20170816" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/gfwf.css?v=20170502" type="text/css"><!--页面CSS-->
     <script src="${resPath}js/FancyZoom.js" language="JavaScript" type="text/javascript"></script>
     <script src="${resPath}js/FancyZoomHTML.js" language="JavaScript" type="text/javascript"></script>

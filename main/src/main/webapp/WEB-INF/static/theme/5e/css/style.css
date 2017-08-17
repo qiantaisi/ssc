@@ -1141,7 +1141,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .Resultt .latyout .tabs_ce ul li.acti:after{display: none;}
 .Resultt .latyout .tabs_ce ul li.nob:after{display: none;}
 
-.Resultt .latyout .wrap_select{margin-top: 27px;width: 96%;height: 45px;border-bottom: 1px dotted #adadad;}
+.Resultt .latyout .wrap_select{margin-top: 18px;width: 96%;height: 45px;border-bottom: 1px dotted #adadad;}
 .Resultt .latyout .wrap_select a{border: 1px solid #dcdcdc;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;font-size: 12px;float: left;width: 72.5px;line-height: 20px;height: 20px;text-align: center;background:-webkit-linear-gradient(top,#FFF,#e8e8e8);color: #222222;margin-right:4px;}
 .Resultt .latyout .corl1 a{color: #666666;}
 .Resultt .latyout .wrap_select a.acti{background: #e93030;color: #fff;}
@@ -1704,3 +1704,6 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .Resultt .latyout .wrap_select .zx select{width: 147px;height: 28px; border:1px solid #cccccc; border-radius:3px;color:#494750;margin-right: 10px;text-align: center;}
 .Resultt .latyout .wrap_select .zx .inp1{width: 150px;height: 28px;border:1px solid #cccccc; border-radius:3px;margin-right: 6px;padding-left:6px;}
 .Resultt .latyout .wrap_select .zx .inp2{ border:none; background:#fa6200;width: 64px;height: 28px; border-radius:5px;line-height: 28px;text-align: center; color:#fff; font-size:14px;cursor: pointer;}
+
+/*开奖结果样式*/
+.Resultt .latyout .at a{margin-bottom:2px;}
