@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 
 import java.math.BigDecimal;
@@ -7,6 +8,7 @@ import java.math.BigDecimal;
 /**
  * 今日输赢+即时注单金额
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class TodayWinOrLoseAndJszdResult extends CommonResult {
     /**
      * 今日输赢

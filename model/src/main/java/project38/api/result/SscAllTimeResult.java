@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 
 import java.util.Date;
@@ -8,6 +9,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/3/24.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SscAllTimeResult extends CommonResult
 {
     private List<SscTime> SscTimeList;

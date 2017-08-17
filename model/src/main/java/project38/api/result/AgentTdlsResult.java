@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 
 import java.math.BigDecimal;
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * 团队流水
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AgentTdlsResult extends PageResult {
     private List<AgentTdls> agentTdlsList;
 

@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 
 import java.math.BigDecimal;
@@ -8,6 +9,7 @@ import java.util.Date;
 /**
  * Created by Administrator on 2017/3/18.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserSessionResult2 extends CommonResult {
     /**
      * 编码

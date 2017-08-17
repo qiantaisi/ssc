@@ -1,10 +1,12 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 
 /**
  * Created by Administrator on 2016/11/15.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserBindStatusResult extends CommonResult {
     /**
      * 是否绑定邮箱
