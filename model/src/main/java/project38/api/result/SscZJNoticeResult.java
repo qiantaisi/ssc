@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.common.collect.Lists;
 import project38.api.common.result.CommonResult;
 
