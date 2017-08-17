@@ -11,9 +11,9 @@
 <div id="box" class="qc">
     <div class="qc" id="Right">
         <div class="main">
-            <div class="main-box remain-box">
+            <div class="main-box remain-box-11x5">
                 <div class="main-nav">
-                    <div class="cplogo"><img src="${resPath}zst/img/cqssc.png" alt="重庆时时彩" /><span>重庆时时彩</span></div>
+                    <div class="cplogo"><img src="${resPath}zst/img/gd11x5.png" alt="广东11选5" /><span>广东11选5</span></div>
                     <c:import url="common/nav.jsp" />
                     <ul class="btn-navs">
                         <li data-contentid="zhexianData" data-id="shuju1">基本走势</li>
@@ -21,7 +21,7 @@
                         <li data-contentid="shuju3" data-id="shuju3">直方图</li>
                         <li data-id="shuju5">历史开奖数据</li>
                         <li>
-                            <a href="javascript:void(0)" onclick="parent.getSscPage('gcdt/cqssc')">立即投注</a>
+                            <a href="javascript:void(0)" onclick="parent.getSscPage('gcdt/gd11x5')">立即投注</a>
                         </li>
                     </ul>
                 </div>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="main-li-right" style="visibility: hidden;">
                             <div>
-                                <a href="javascript:void(0)" onclick="parent.getSscPage('gcdt/cqssc')">立即投注</a>
+                                <a href="javascript:void(0)" onclick="parent.getSscPage('gcdt/gd11x5')">立即投注</a>
                             </div>
                         </div>
                     </div>
@@ -87,42 +87,7 @@
                                     <a href="javascript:void(0)" class="on200qi">近200期</a>
                                 </div>
                             </li>
-                            <%--<li>--%>
-                                <%--<div class="qi">--%>
-                                    <%--<a href="javascript:void(0)" class="oncurrentqi">今天</a>--%>
-                                <%--</div>--%>
-                            <%--</li>--%>
-                            <%--<li>--%>
-                                <%--<div class="qi">--%>
-                                    <%--<a href="javascript:void(0)" class="onlatelyqi">近三天</a>--%>
-                                <%--</div>--%>
-                            <%--</li>--%>
-                            <%--<li><div class="qi jian"><a href="javascript:void(0)">自定义查询</a><span></span></div></li>--%>
-                            <%--<li><div class="qi jian zdy"><a href="#" class="zdy-btn zdy-btn-cur">自定义查询<em></em></a>--%>
-                            <%--<div class="zdy-pop" style="width: 264px; height: 123px; left: -177px;">--%>
-                            <%--<div class="zdy-tag"><a href="#" class="cur">按期数</a>--%>
-                            <%--<a href="#">按期号</a>--%>
-                            <%--<a class="close">关闭</a>--%>
-                            <%--</div>--%>
-                            <%--<div class="zdy-cnt">--%>
-                            <%--<div class="byIssueNum"><p>我要查询最近&nbsp;--%>
-                            <%--<input type="text" class="ipt-sc issueNum">&nbsp;期</p>--%>
-                            <%--</div>--%>
-                            <%--<div class="byIssue" style="display:none;">--%>
-                            <%--<p>第&nbsp;<input type="text" class="ipt-sc issueFrom" title="">&nbsp;至&nbsp;--%>
-                            <%--<input type="text" class="ipt-sc issueTo" title="">&nbsp;期</p>--%>
-                            <%--<p class="issueTip">注：输入期号格式为 2013061</p>--%>
-                            <%--</div>--%>
-                            <%--<div class="byDay" style="display:none;"><p>从<span class="byDate">--%>
-                            <%--<input type="text" class="ipt-sc hasDatepicker" id="dateFrom" readonly="">--%>
-                            <%--<img class="ui-datepicker-trigger" src="/static/v2/images/date.png" alt="" title=""></span>&nbsp;至&nbsp;--%>
-                            <%--<span class="byDate"><input type="text" class="ipt-sc hasDatepicker" id="dateTo" readonly="">--%>
-                            <%--<img class="ui-datepicker-trigger" src="/static/v2/images/date.png" alt="" title=""></span></p></div><p>--%>
-                            <%--<button class="btn-star">开始查询</button> <button class="btn-rst">重 置</button> </p>--%>
-                            <%--</div>--%>
-                            <%--</div>--%>
-                            <%--</div>--%>
-                            <%--</li>--%>
+
                             <li class="kuang1">
                                 <div class="div">
                                     <a href="javascript:void(0)">绘图工具</a>
@@ -158,7 +123,7 @@
                                             <div class="cl-35 cl-36 clean">
                                                 <script>
                                                     for(var i = 0; i < 5; ++i) {
-                                                        for(var j = 0; j < 10; ++j) {
+                                                        for(var j = 1; j < 12; ++j) {
                                                             var s = '';
                                                             if(i % 2 == 0) {
                                                                 s = 'bg-1';
@@ -239,56 +204,6 @@
                     <div id="shuju3" class="shuju hide">
                         <div id="main2" style="width: 800px;height:400px;"></div>
                     </div>
-                    <div id="shuju6" class="shuju hide">
-                        <div class="chu-box">
-                            <%--双面长龙--%>
-                            <div class="chu" id="canvasHeiht">
-                                <div class="cl-40">
-                                    <div class="cl-30">
-                                        <div class="left cl-31 sm-qh">期号</div>
-                                        <div class="left cl-32 sm-jh">奖号</div>
-                                        <div class="left cl-33">
-                                            <div class="cl-35">
-                                                <div class="left cl-jb cl-28 ">万位</div>
-                                                <div class="left cl-jb cl-28 ">千位</div>
-                                                <div class="left cl-jb cl-28 ">百位</div>
-                                                <div class="left cl-jb cl-28 ">十位</div>
-                                                <div class="left cl-jb cl-28 ">个位</div>
-                                                <div class="left cl-jb cl-29">总和、龙虎和</div>
-                                            </div>
-                                            <div class="cl-35 cl-36 clean sm-w">
-                                                <script>
-                                                    for (var i = 0; i < 5; ++i) {
-                                                        for (var j = 0; j < 6; ++j) {
-                                                            document.write('<var class="sm-head"><i>' + (j == 0 ? '大' : (j == 2 ? '单' : (j == 3 ? '双' : (j == 4 ? '质' : (j == 5 ? '合' : '小'))))) + '</i></var>');
-                                                        }
-                                                    }
-
-                                                    for (var j = 0; j < 7; ++j) {
-                                                        document.write('<var class="zh"><i>' + (j == 0 ? '龙' : (j == 2 ? '总大' : (j == 3 ? '总小' : (j == 4 ? '总单' : (j == 5 ? '总双' : (j == 6 ? '和' : '虎')))))) + '</i></var>');
-                                                    }
-                                                </script>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="dxdshezhi"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <%--长龙走势--%>
-                    <div id="shuju7" class="shuju hide">
-                        <div class="chu-box rechu-box">
-                            <div class="chu">
-                                        <div class="sm_clong">
-                                            <c:import url="common/bottom_zs.jsp">
-                                                <c:param name="playGroupId" value="1"/>
-                                            </c:import>
-                                        </div>
-                            </div>
-                        </div>
-                    </div>
 
 
                     <div id="shuju4" class="shuju hide">
@@ -343,7 +258,7 @@
                             <div class="tou">
                                 <h4>第 <span id="number"></span> 期 &nbsp <font id="openDate"></font>开奖</h4>
                             </div>
-                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/cqssc')"><img class="btnjiang" src="${resPath}zst/img/jiang.png" alt=""></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/gd11x5')"><img class="btnjiang" src="${resPath}zst/img/jiang.png" alt=""></a>
                             <div class="jiezhi">
                                 <h3>
                                     <p><font id="tip"></font>
@@ -375,7 +290,7 @@
 
 <c:import url="common/commonJs.jsp" />
 <script>
-    var playGroupId = 1;
+    var playGroupId = 24;
     $(function () {
         $(".btn-navs li").click(function () {
             if($(this).data("id") == 'shuju2'){   //显示shuju2，隐藏shuju1
@@ -494,8 +409,6 @@
                 data.reverse();
                 // 折线
                 zhexian(data);
-                //折线下-双面走势
-                zhexianSm(data);
                 // k线
                 kxian(data);
                 // 直方图
@@ -540,7 +453,7 @@
     });
 </script>
 <script>
-    var playGroupId = 1;
+    var playGroupId = 24;
 
     function lssj(data) {
         var str = '';
@@ -564,13 +477,13 @@
         // 基于准备好的dom，初始化echarts实例
         var myChart2 = echarts.init(document.getElementById('main2'));
         // 指定图表的配置项和数据
-        var subtext = "重庆时时彩";
+        var subtext = "广东11选5";
         if(data.length > 0) {
             subtext += " 第" + data[0].number + '期 ~ 第' + data[data.length - 1].number + '期';
         }
         var option = {
             title: {
-                text: '重庆时时彩直方图',    //主标题文本
+                text: '广东11选5直方图',    //主标题文本
                 subtext: subtext,     //副标题文本
                 x: 'center'
             },
@@ -671,13 +584,13 @@
         var myChart1 = echarts.init(document.getElementById('main1'));
 
         // 指定图表的配置项和数据
-        var subtext = "重庆时时彩";
+        var subtext = "广东11选5";
         if(data.length > 0) {
             subtext += " 第" + data[0].number + '期 ~ ' + "第" + data[data.length - 1].number + '期';
         }
         var option = {
             title: {
-                text: '重庆时时彩K线图',
+                text: '广东11选5K线图',
                 subtext: subtext,
                 x: 'center'
             },
@@ -793,33 +706,33 @@
         }
         $("#zhexianData").html(str); //html() 方法返回或设置被选元素的内容  //如果该方法未设置参数，则返回被选元素的当前内容
 
-        for(var i = 0; i < data.length - 1; ++i) {
-            for(var j = 0; j < 5; ++j) {
-                bc1 = Tools.parseInt(data[i].openCode.split(',')[j]) - Tools.parseInt(data[i + 1].openCode.split(',')[j]);
-                var Left = 0;
-                if(bc1 < 0) {
-                    bc1 = -bc1;
-                    Left = (bc1) * (-20);
-                }
-                var canvas = document.getElementById("canvas" + i + j);
-                var context = canvas.getContext("2d");
-                var bc1 = (data[i].openCode.split(',')[j]) - data[i + 1].openCode.split(',')[j];
-                if(bc1 < 0) {
-                    context.moveTo(17, 13);
-                    context.lineTo(canvas.width - 13, canvas.height - 8);
-                } else if(bc1 > 0) {
-                    context.moveTo(canvas.width - 13, 13);
-                    context.lineTo(8, canvas.height - 5);
-                } else {
-                    context.moveTo(10, 12);
-                    context.lineTo(10, 30);
-                }
-                if(j % 2 != 0) {
-                    context.strokeStyle = "#cc0000";
-                }
-                context.stroke();
-            }
-        }
+//        for(var i = 0; i < data.length - 1; ++i) {
+//            for(var j = 0; j < 5; ++j) {
+//                bc1 = Tools.parseInt(data[i].openCode.split(',')[j]) - Tools.parseInt(data[i + 1].openCode.split(',')[j]);
+//                var Left = 0;
+//                if(bc1 < 0) {
+//                    bc1 = -bc1;
+//                    Left = (bc1) * (-20);
+//                }
+//                var canvas = document.getElementById("canvas" + i + j);
+//                var context = canvas.getContext("2d");
+//                var bc1 = (data[i].openCode.split(',')[j]) - data[i + 1].openCode.split(',')[j];
+//                if(bc1 < 0) {
+//                    context.moveTo(17, 13);
+//                    context.lineTo(canvas.width - 13, canvas.height - 8);
+//                } else if(bc1 > 0) {
+//                    context.moveTo(canvas.width - 13, 13);
+//                    context.lineTo(8, canvas.height - 5);
+//                } else {
+//                    context.moveTo(10, 12);
+//                    context.lineTo(10, 30);
+//                }
+//                if(j % 2 != 0) {
+//                    context.strokeStyle = "#cc0000";
+//                }
+//                context.stroke();
+//            }
+//        }
         if($("#checkboxZhexian").is(":checked")) {
             $(".zhexian").show();
         } else {
@@ -836,340 +749,6 @@
         }
     }
 
-    function zhexianSm(data) {  //折线--双面走势
-        var str = '';
-        var i_w = $(".sm-head").outerWidth(); //表头单元格元素宽度
-        var i_h = $(".sm-head i:eq(1)").outerHeight();
-
-
-        for(var i = 0; i < data.length; i++) {
-            // qihao
-            str += '<div class="cl-30 clean">';
-            str += '<div class="left cl-31 sm-qh number">' + data[i].number.substr(2) + '</div>';
-            str += '<div class="left cl-32 sm-jh openCode">' + data[i].openCode + '</div>';
-            var kjData = data[i].openCode.split(",");
-
-            for(var j = 0; j < kjData.length; ++j) {
-                var next_daXiaoStr = '';
-                var next_danSStr = '';
-                var next_zhiHeStr = '';
-                var daXiaoStr = getDaXaioStr(kjData[j]);
-                var danSStr = getDanSStr(kjData[j]);
-                var zhiHeStr = getZhiHeStr(kjData[j]);
-
-                    //画板高度
-                var canves_h = i_h / 2;
-                var Left_sm = 0;
-                var top_sm = 0;
-                var canves_w = 0;
-                var nextNum = 0;
-
-                str += '<div class="cl-35 cl-36 sm-w">';
-                if(i < data.length - 1) {
-                    nextNum = data[i + 1].openCode.split(",")[j];
-                    //备用于画板定位号码（判断下一个号码位置）
-                    next_daXiaoStr = getDaXaioStr(nextNum); //计算总和的大小
-                    next_danSStr = getDanSStr(nextNum);
-                    next_zhiHeStr = getZhiHeStr(nextNum);
-                }
-
-
-                for(var k = 0; k < 6; ++k) {
-                    str += '<var class="' + (j % 2 == 0 ? 'sm-bg-a' : 'sm-bg-b') + ' i_' + j + "_" + k + '">';
-
-                    var commonStr = '';
-                    var dxStr = '',dsStr = '',zhStr = '';
-
-                    //画板宽度
-                    canves_w = i_w;
-                    //画面距离上边距离
-                    top_sm = i_h / 4 * 3;
-
-                    commonStr += '<canvas class="zhexian" id="smcanvas' + i + j + '" width="' + canves_w + '" height="' + canves_h + '" style="z-index: 10; left:' + Left_sm + 'px; top:' + top_sm + 'px; display: none;"></canvas>';
-                    commonStr += '</i>';
-
-                    if(k == 0 || k == 1){
-
-                        if(daXiaoStr == '大' && k == 0){
-                            if(daXiaoStr != next_daXiaoStr){
-                                Left_sm = i_w * 0.4;
-                            }else{
-                                Left_sm = -(i_w * 0.1);
-                            }
-                            str += '<i data-num="' + daXiaoStr + '" class="sm-bg-1-ds">';
-                            str += daXiaoStr;
-                            str += '<canvas class="zhexian" id="smcanvas_dx' + i + j + '" width="' + canves_w + '" height="' + canves_h + '" style="z-index: 10; left:' + Left_sm + 'px; top:' + top_sm + 'px; display: none;"></canvas>';
-                            str += '</i>';
-                        }else if(daXiaoStr == '小' && k == 1){
-                            if(daXiaoStr != next_daXiaoStr){
-                                Left_sm = -(i_w / 4 * 2.6 + i_w * 0.1);
-                            }else{
-                                Left_sm = -(i_w * 0.1);
-                            }
-                            str += '<i data-num="' + daXiaoStr + '" class="sm-bg-1-xd">';
-                            str += daXiaoStr;
-                            str += '<canvas class="zhexian" id="smcanvas_dx' + i + j + '" width="' + canves_w + '" height="' + canves_h + '" style="z-index: 10; left:' + Left_sm + 'px; top:' + top_sm + 'px; display: none;"></canvas>';
-                            str += '</i>';
-                        }else {
-                            str += '<i></i>';
-                        }
-                    } else if(k == 2 || k  == 3){
-
-                        if(danSStr == '单' && k == 2){
-                            if(danSStr != next_danSStr){
-                                Left_sm = i_w * 0.4;
-                            }else{
-                                Left_sm = -(i_w * 0.1);
-                            }
-                            str += '<i data-num="' + danSStr + '" class="sm-bg-1-xd">';
-                            str += danSStr;
-                            str += '<canvas class="zhexian" id="smcanvas_ds' + i + j + '" width="' + canves_w + '" height="' + canves_h + '" style="z-index: 10; left:' + Left_sm + 'px; top:' + top_sm + 'px; display: none;"></canvas>';
-                            str += '</i>';
-                        }else if(danSStr == '双' && k == 3){
-                            if(danSStr != next_danSStr){
-                                Left_sm = -(i_w / 4 * 2.6 + i_w * 0.1);
-                            }else{
-                                Left_sm = -(i_w * 0.1);
-                            }
-                            str += '<i data-num="' + danSStr + '" class="sm-bg-1-ds">';
-                            str += danSStr;
-                            str += '<canvas class="zhexian" id="smcanvas_ds' + i + j + '" width="' + canves_w + '" height="' + canves_h + '" style="z-index: 10; left:' + Left_sm + 'px; top:' + top_sm + 'px; display: none;"></canvas>';
-                            str += '</i>';
-                        }else {
-                            str += '<i></i>';
-                        }
-                    } else if(k == 4 || k  == 5){
-
-                        if(zhiHeStr == '质' && k == 4){
-                            if(zhiHeStr != next_zhiHeStr){
-                                Left_sm = i_w * 0.4;
-                            }else{
-                                Left_sm = -(i_w * 0.1);
-                            }
-                            str += '<i data-num="' + zhiHeStr + '" class="sm-bg-3-zhi">';
-                            str += zhiHeStr;
-                            str += '<canvas class="zhexian" id="smcanvas_hz' + i + j + '" width="' + canves_w + '" height="' + canves_h + '" style="z-index: 10; left:' + Left_sm + 'px; top:' + top_sm + 'px; display: none;"></canvas>';
-                            str += '</i>';
-                        }else if(zhiHeStr == '合' && k == 5){
-                            if(zhiHeStr != next_zhiHeStr){
-                                Left_sm = -(i_w / 4 * 2.6 + i_w * 0.1);
-                            }else{
-                                Left_sm = -(i_w * 0.1);
-                            }
-                            str += '<i data-num="' + zhiHeStr + '" class="sm-bg-3-he">';
-                            str += zhiHeStr;
-                            str += '<canvas class="zhexian" id="smcanvas_hz' + i + j + '" width="' + canves_w + '" height="' + canves_h + '" style="z-index: 10; left:' + Left_sm + 'px; top:' + top_sm + 'px; display: none;"></canvas>';
-                            str += '</i>';
-                        }else {
-                            str += '<i></i>';
-                        }
-                    }
-
-
-                    str += '</var>';
-                }
-
-                str += '</div>';
-            }
-
-
-                var lhHeStr = '',zdxStr = '',zdsStr = '';
-                var num1 =  parseInt(kjData[0]);
-                var num2 =  parseInt(kjData[1]);
-                var num3 =  parseInt(kjData[2]);
-                var num4 =  parseInt(kjData[3]);
-                var num5 =  parseInt(kjData[4]);
-
-                var znum = num1 + num2 + num3 + num4 + num5;
-
-
-                str += '<div class="cl-35 cl-36 sm-w sm-lh-w">';
-                if(i < data.length - 1) {
-                    bc1 = (data[i].openCode.split(",")[j]) - (data[i + 1].openCode.split(",")[j]);
-                }
-
-                for(var k = 0; k < 7; ++k) {
-                    str += '<var class="sm-lh-bg i_' + j + "_" + k + ' zh">';
-                    if(k == 0 || k == 1 || k == 6){
-                        var tempStr = '';
-                        if(num1 > num5){
-                            lhHeStr = '龙';
-                        }else if( num1 < num5){
-                            lhHeStr = '虎';
-                        }else if( num1 == num5){
-                            lhHeStr = '和';
-                        }
-
-
-                        if(lhHeStr == '龙' && k == 0){
-                            str += '<i class="long" data-num="' + lhHeStr + '">';
-                            str += lhHeStr;
-                            str += '</i>';
-                        }else if(lhHeStr == '虎' && k == 1){
-                            str += '<i class="hu" data-num="' + lhHeStr + '">';
-                            str += lhHeStr;
-                            str += '</i>';
-                        }else if(lhHeStr == '和' && k == 6){
-                            str += '<i class="he" data-num="' + lhHeStr + '">';
-                            str += lhHeStr;
-                            str += '</i>';
-                        }else {
-                            str += '<i></i>';
-                        }
-                    } else if(k == 2 || k  == 3) {
-                        var tempStr = '';
-                        if(znum > 22){
-                            zdxStr = '总大';
-                        }else{
-                            zdxStr = '总小';
-                        }
-                        if (zdxStr == '总大' && k == 2) {
-                            str += '<i class="zongda" data-num="' + zdxStr + '">';
-                            str += zdxStr;
-                            str += '</i>';
-                        } else if (zdxStr == '总小' && k == 3) {
-                            str += '<i class="zongxiao" data-num="' + zdxStr + '">';
-                            str += zdxStr;
-                            str += '</i>';
-                        } else {
-                            str += '<i></i>';
-                        }
-                    } else if(k == 4 || k  == 5) {
-                        var tempStr = '';
-                        if(znum % 2 == 0){
-                            zdsStr = '总双';
-                        }else{
-                            zdsStr = '总单';
-                        }
-                        if (zdsStr == '总单' && k == 4) {
-                            str += '<i class="zongdan" data-num="' + zdsStr + '">';
-                            str += zdsStr;
-                            str += '</i>';
-                        } else if (zdsStr == '总双' && k == 5) {
-                            str += '<i class="zongshuang" data-num="' + zdsStr + '">';
-                            str += zdsStr;
-                            str += '</i>';
-                        } else {
-                            str += '<i></i>';
-                        }
-                    }
-                    str += '</var>';
-                }
-                str += '</div>';
-            str += '</div>';
-        }
-
-        $("#dxdshezhi").html(str); //html() 方法返回或设置被选元素的内容  //如果该方法未设置参数，则返回被选元素的当前内容
-
-
-        for(var i = 0; i < data.length - 1; ++i) {
-            for(var j = 0; j < 5; ++j) {
-
-                var canvas_dx = document.getElementById("smcanvas_dx" + i + j);
-                var canvas_ds = document.getElementById("smcanvas_ds" + i + j);
-                var canvas_hz = document.getElementById("smcanvas_hz" + i + j);
-
-                var context_dx = canvas_dx.getContext("2d");
-                var context_ds = canvas_ds.getContext("2d");
-                var context_hz = canvas_hz.getContext("2d");
-
-                var kjData = data[i].openCode.split(",");
-
-                var next_daXiaoStr = '';
-                var next_danSStr = '';
-                var next_zhiHeStr = '';
-                var daXiaoStr = getDaXaioStr(kjData[j]);
-                var danSStr = getDanSStr(kjData[j]);
-                var zhiHeStr = getZhiHeStr(kjData[j]);
-
-                nextNum = data[i + 1].openCode.split(",")[j];
-                //备用于画板定位号码（判断下一个号码位置）
-                next_daXiaoStr = getDaXaioStr(nextNum); //计算总和的大小
-                next_danSStr = getDanSStr(nextNum);
-                next_zhiHeStr = getZhiHeStr(nextNum);
-
-                if(daXiaoStr == '大'){
-                    if(daXiaoStr != next_daXiaoStr) {
-                        context_dx.moveTo(0, 0);
-                        context_dx.lineTo(canvas_dx.width, canvas_dx.height);
-                    } else {
-                        context_dx.moveTo(canvas_dx.width / 2, 0);
-                        context_dx.lineTo(canvas_dx.width / 2, canvas_dx.height);
-                    }
-                }else{
-                    if(daXiaoStr != next_daXiaoStr) {
-                        context_dx.moveTo(canvas_dx.width, 0);
-                        context_dx.lineTo(0, canvas_dx.height);
-                    } else {
-                        context_dx.moveTo(canvas_dx.width / 2, 0);
-                        context_dx.lineTo(canvas_dx.width / 2, canvas_dx.height);
-                    }
-                }
-
-                context_dx.strokeStyle = "#e70f0f";
-                context_dx.stroke();
-
-                if(danSStr == '单'){
-                    if(danSStr != next_danSStr) {
-                        context_ds.moveTo(0, 0);
-                        context_ds.lineTo(canvas_ds.width, canvas_ds.height);
-                    } else {
-                        context_ds.moveTo(canvas_ds.width / 2, 0);
-                        context_ds.lineTo(canvas_ds.width / 2, canvas_ds.height);
-                    }
-                }else{
-                    if(danSStr != next_danSStr) {
-                        context_ds.moveTo(canvas_ds.width, 0);
-                        context_ds.lineTo(0, canvas_ds.height);
-                    } else {
-                        context_ds.moveTo(canvas_ds.width / 2, 0);
-                        context_ds.lineTo(canvas_ds.width / 2, canvas_ds.height);
-                    }
-                }
-
-                context_ds.strokeStyle = "#e70f0f";
-                context_ds.stroke();
-
-
-                if(zhiHeStr == '质'){
-                    if(zhiHeStr != next_zhiHeStr) {
-                        context_hz.moveTo(0, 0);
-                        context_hz.lineTo(canvas_hz.width, canvas_hz.height);
-                    } else {
-                        context_hz.moveTo(canvas_hz.width / 2, 0);
-                        context_hz.lineTo(canvas_hz.width / 2, canvas_hz.height);
-                    }
-                }else{
-                    if(zhiHeStr != next_zhiHeStr) {
-                        context_hz.moveTo(canvas_hz.width, 0);
-                        context_hz.lineTo(0, canvas_hz.height);
-                    } else {
-                        context_hz.moveTo(canvas_hz.width / 2, 0);
-                        context_hz.lineTo(canvas_hz.width / 2, canvas_hz.height);
-                    }
-                }
-
-                context_hz.strokeStyle = "#683535";
-                context_hz.stroke();
-            }
-        }
-
-
-        if($("#checkboxZhexian").is(":checked")) {
-            $(".zhexian").show();
-        } else {
-            $(".zhexian").hide();
-        }
-
-        // 遗漏
-        renderYilou(data);
-
-//        if($("#checkboxYlsj").is(":checked")) {
-//            $(".transparent").addClass("not-transparent");
-//        } else {
-//            $(".transparent").removeClass("not-transparent");
-//        }
-    }
 
 
     function getDaXaioStr(num) {
