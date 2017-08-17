@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 
 import java.util.Date;
@@ -7,6 +8,7 @@ import java.util.Date;
 /**
  * Created by java1 on 2017/7/20.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CouletResult extends CommonResult {
 
     private Coulet coulet;

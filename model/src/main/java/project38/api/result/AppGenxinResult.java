@@ -1,10 +1,12 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 
 /**
  * APP更新数据
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AppGenxinResult extends CommonResult {
     /**
      * 版本号

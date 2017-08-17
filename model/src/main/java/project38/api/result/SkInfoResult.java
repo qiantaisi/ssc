@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 
 import java.math.BigDecimal;
@@ -8,6 +9,7 @@ import java.util.List;
 /**
  * 收款信息
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SkInfoResult extends CommonResult {
 
     private List<SkInfo> skInfoList;

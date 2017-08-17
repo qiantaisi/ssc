@@ -1,11 +1,13 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import java.util.Date;
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/15.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserInboxResult extends PageResult {
 
     private List<UserInbox> userInboxList;

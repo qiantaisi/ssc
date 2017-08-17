@@ -298,6 +298,7 @@
                     name: name,
                     phone: phone,
                     email: email,
+                    agentId: $.cookie("agentId"),
                     qq: qq
                 },
                 beforeSend: function() {

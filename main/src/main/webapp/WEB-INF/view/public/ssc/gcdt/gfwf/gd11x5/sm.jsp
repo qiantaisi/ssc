@@ -268,18 +268,18 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLines">
-                    <span><i>01</i></span>
-                    <span><i>02</i></span>
-                    <span><i>03</i></span>
-                    <span><i>04</i></span>
-                    <span><i>05</i></span>
-                    <span><i>06</i></span>
-                    <span><i>07</i></span>
-                    <span><i>08</i></span>
-                    <span><i>09</i></span>
-                    <span><i>10</i></span>
-                    <span><i>11</i></span>
+                <var class="numLines dantuo_selected">
+                    <span class="n1"><i>01</i></span>
+                    <span class="n2"><i>02</i></span>
+                    <span class="n3"><i>03</i></span>
+                    <span class="n4"><i>04</i></span>
+                    <span class="n5"><i>05</i></span>
+                    <span class="n6"><i>06</i></span>
+                    <span class="n7"><i>07</i></span>
+                    <span class="n8"><i>08</i></span>
+                    <span class="n9"><i>09</i></span>
+                    <span class="n10"><i>10</i></span>
+                    <span class="n11"><i>11</i></span>
                 </var>
                 <div class="clear re-5x-i">
                     <i onclick="selectFun_1(this)">全</i>

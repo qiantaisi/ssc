@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 import java.util.Date;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/12/4.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class WebNoticeResult extends CommonResult {
     private List<WebNotice> webNoticeList;
 

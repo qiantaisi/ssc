@@ -99,12 +99,18 @@ function selectFun_1(obj) {
             $(this).addClass("acti");
         }
     });
+
+    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var btnFlag = "quan";
     renderZhushu();
+    changeActi(btnFlag, objBtn);
     // var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
     // if(typeof stateTouZhu == "function"){
     //     stateTouZhu(flag_name);
     // }
+
 }
+
 
 function selectFun_2(obj) {
     $(obj).parent().find(".acti").removeClass("acti");
@@ -134,8 +140,15 @@ function selectFun_str2(obj) {
             $(this).addClass("acti");
         }
     });
+
+    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var btnFlag = "da";
     renderZhushu();
+    changeActi(btnFlag, objBtn);
 }
+
+
+
 
 function selectFun_3(obj) {
     $(obj).parent().find(".acti").removeClass("acti");
@@ -165,7 +178,10 @@ function selectFun_str3(obj) {
             $(this).addClass("acti");
         }
     });
+    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var btnFlag = "xiao";
     renderZhushu();
+    changeActi(btnFlag, objBtn);
 }
 
 function selectFun_4(obj) {
@@ -180,7 +196,10 @@ function selectFun_4(obj) {
             $(this).addClass("acti");
         }
     });
+    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var btnFlag = "qi";
     renderZhushu();
+    changeActi(btnFlag, objBtn);
 }
 
 function selectFun_5(obj) {
@@ -195,13 +214,58 @@ function selectFun_5(obj) {
             $(this).addClass("acti");
         }
     });
+
+    var objBtn = $(obj).parent().parent().parent().find(".danma_selected span").eq(0);
+    var btnFlag = "ou";
     renderZhushu();
+    changeActi(btnFlag, objBtn);
 }
+
 
 function selectFun_6(obj) {
     $(obj).parent().parent().find(".acti").removeClass("acti");
     $(obj).addClass("acti");
     clearStateTouZhu();//清除投注状态栏
+}
+
+//去掉被选中号数
+function changeActi(btnFlag, obj){
+    var flagNameDantuo = $(obj).parent().parent().parent().find('li .numLines').hasClass('danma_selected');
+
+    if(flagNameDantuo){
+        if(btnFlag == "quan"){
+            var numTuo = parseInt($(obj).html());
+            for(var i = 1; i < 12; i++){
+                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + i + ".acti").removeClass('acti');
+            }
+        } else if(btnFlag == "da"){
+            var daArr = [6, 7, 8, 9, 10, 11];
+            for(var n = 0; n < daArr.length; n++){
+                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + daArr[n] + ".acti").removeClass('acti');
+            }
+        } else if(btnFlag == "xiao"){
+            var xiaoArr = [1, 2, 3, 4, 5];
+            for(var m = 0; m < xiaoArr.length; m++){
+                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + xiaoArr[m] + ".acti").removeClass('acti');
+            }
+        }  else if(btnFlag == "ou"){
+            var ouArr = [2, 4, 6, 8, 10];
+            for(var y = 0; y < ouArr.length; y++){
+                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + ouArr[y] + ".acti").removeClass('acti');
+            }
+        }  else if(btnFlag == "qi"){
+            var qiArr = [1, 3, 5, 7, 9, 11];
+            for(var x = 0; x < qiArr.length; x++){
+                $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + qiArr[x] + ".acti").removeClass('acti');
+            }
+        }
+
+
+        var sumSelectedTuodan = $(obj).parent().find("span.acti").length;
+        if(sumSelectedTuodan <= 0){
+            arrNum.splice(0, arrNum.length);
+        }
+    }
 }
 
 
@@ -785,6 +849,8 @@ function showTishi2Template(infoStr) {
 /**
  * 初始化子页面，刷新滚动条，赔率，倍数等等
  */
+
+var arrNum = [];
 function initSubPage() {
     // 初始化模板
 
@@ -809,9 +875,13 @@ function initSubPage() {
                 $(this).parent().toggleClass('acti');
             }
         } else {
-            var flagName = $(this).parent().parent().hasClass('danma_selected');
+            var flagNameDanma = $(this).parent().parent().hasClass('danma_selected');
+            var flagNameDantuo = $(this).parent().parent().hasClass('dantuo_selected');
+
             var flagActi = $(this).parent().hasClass('acti');
-            if(flagName){
+
+            if(flagNameDanma){
+                var numDan = parseInt($(this).html());
                 if (arrNum.length >= 2 && !flagActi) {
                     $(this).parent().parent().find("span.n" + arrNum[arrNum.length - 1] + ".acti").removeClass('acti');
                     arrNum.splice(arrNum.length -1, 1);
@@ -819,12 +889,18 @@ function initSubPage() {
 
                 arrNum.push(parseInt($(this).html()));
                 $(this).parent().toggleClass('acti');
+                $(this).parent().parent().parent().parent().find(".dantuo_selected span.n" + numDan + ".acti").removeClass('acti');
 
                 var sumSelectedTuodan = $(this).parent().parent().find("span.acti").length;
                 if(sumSelectedTuodan <= 0){
-                    arrNum.splice(0, arrNum.length)
+                    arrNum.splice(0, arrNum.length);
                 }
 
+            } else if(flagNameDantuo){
+                var numTuo = parseInt($(this).html());
+                $(this).parent().parent().parent().parent().find(".danma_selected span.n" + numTuo + ".acti").removeClass('acti');
+
+                $(this).parent().toggleClass('acti');
             } else{
                 $(this).parent().toggleClass('acti'); // 变色
             }
@@ -2730,8 +2806,543 @@ function zhushu_gd11x5_qszxds() {
     return tempArr.length;
 }
 
+
+function zhushu_gd11x5_qezuxdt(){
+    var newArr = [];
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if (wanArr.length <= 0) {
+        return 0;
+    }
+
+    for (var i = 0; i < qianArr.length; i++) {
+        newArr.push(wanArr[0] + '' + qianArr[i]);
+    }
+
+    return newArr.length;
+}
+
+
+function zhushu_gd11x5_hezuxdt(){
+    var newArr = [];
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if (wanArr.length <= 0) {
+        return 0;
+    }
+
+    for (var i = 0; i < qianArr.length; i++) {
+        newArr.push(wanArr[0] + '' + qianArr[i]);
+    }
+
+    return newArr.length;
+}
+function zhushu_gd11x5_rxsizsdt(){
+    var arrLength=4;
+    var tempLength = 0;
+    var wanArr = [], qianArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    for(var i = 0; i < arrLength; i++){
+        if(wanArr.length == i) {
+            tempLength = getFlagArrs(qianArr, arrLength - i);
+        }
+    }
+
+    return tempLength.length;
+}
+
+function zhushu_gd11x5_rxwzwdt(){
+    var arrLength=5;
+    var tempLength = 0;
+    var wanArr = [], qianArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    for(var i = 0; i < arrLength; i++){
+        if(wanArr.length == i) {
+            tempLength = getFlagArrs(qianArr, arrLength - i);
+        }
+    }
+
+    return tempLength.length;
+}
+
+
+
+function zhushu_gd11x5_rxlzwdt(){
+    var arrLength=6;
+    var tempLength = 0;
+    var wanArr = [], qianArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    for(var i = 0; i < arrLength; i++){
+        if(wanArr.length == i) {
+            tempLength = getFlagArrs(qianArr, arrLength - i);
+        }
+    }
+
+    return tempLength.length;
+}
+
+function zhushu_gd11x5_rxqzwdt(){
+    var tempLength = 0;
+    var arrLength=7;
+    var wanArr = [], qianArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    for(var i = 0; i < arrLength; i++){
+        if(wanArr.length == i) {
+            tempLength = getFlagArrs(qianArr, arrLength - i);
+        }
+    }
+
+    return tempLength.length;
+}
+function zhushu_gd11x5_rxbzwdt(){
+    var arrLength=8;
+    var tempLength = 0;
+    var wanArr = [], qianArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    for(var i = 0; i < arrLength; i++){
+        if(wanArr.length == i) {
+            tempLength = getFlagArrs(qianArr, arrLength - i);
+        }
+    }
+
+    return tempLength.length;
+}
+
+
+
+function zhushu_gd11x5_rxezwdt() {
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if (wanArr.length <= 0 || qianArr.length <= 0) {
+        return 0;
+    }
+    for (var i = 0; i < wanArr.length; i++) {
+        for (var n = 0; n < qianArr.length; n++) {
+            if (parseInt(wanArr[i]) != parseInt(qianArr[n])) {
+                newArr.push(wanArr[i] + '' + qianArr[n]);
+            }
+        }
+    }
+
+    return newArr.length;
+}
+
+function zhushu_gd11x5_rxszsdt() {
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    if (wanArr.length <= 0 || qianArr.length <= 0) {
+        return 0;
+    }
+
+    if (wanArr.length == 2) {
+        for (var m = 0; m < qianArr.length; m++) {
+            newArr.push(wanArr[0] + '' + wanArr[1] + '' + qianArr[m]);
+        }
+    } else {
+        for (var x = 0; x < qianArr.length; x++) {
+            for (var y = x; y < qianArr.length; y++) {
+                if (qianArr[x] != qianArr[y]) {
+                    if (parseInt(qianArr[x]) > parseInt(qianArr[y])) {
+                        tempStr = qianArr[x];
+                        qianArr[x] = qianArr[y];
+                        qianArr[y] = tempStr;
+                    }
+                    newArr.push(wanArr[0] + '' + qianArr[x] + '' + qianArr[y]);
+                }
+            }
+        }
+    }
+
+    return newArr.length;
+}
+
+
 function zhushu_gd11x5_qszuxdt(){
-   return;
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if (wanArr.length <= 0 || qianArr.length <= 0) {
+        return 0;
+    }
+
+    if (wanArr.length == 2) {
+        for (var m = 0; m < qianArr.length; m++) {
+            newArr.push(wanArr[0] + '' + wanArr[1] + '' + qianArr[m]);
+        }
+    } else {
+        for (var x = 0; x < qianArr.length; x++) {
+            for (var y = x; y < qianArr.length; y++) {
+                if (qianArr[x] != qianArr[y]) {
+                    if (parseInt(qianArr[x]) > parseInt(qianArr[y])) {
+                        tempStr = qianArr[x];
+                        qianArr[x] = qianArr[y];
+                        qianArr[y] = tempStr;
+                    }
+                    newArr.push(wanArr[0] + '' + qianArr[x] + '' + qianArr[y]);
+                }
+            }
+        }
+    }
+    return newArr.length;
+}
+
+function zhushu_gd11x5_zszuxdt(){
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if (wanArr.length <= 0 || qianArr.length <= 0) {
+        return 0;
+    }
+
+    if (wanArr.length == 2) {
+        for (var m = 0; m < qianArr.length; m++) {
+            newArr.push(wanArr[0] + '' + wanArr[1] + '' + qianArr[m]);
+        }
+    } else {
+        for (var x = 0; x < qianArr.length; x++) {
+            for (var y = x; y < qianArr.length; y++) {
+                if (qianArr[x] != qianArr[y]) {
+                    if (parseInt(qianArr[x]) > parseInt(qianArr[y])) {
+                        tempStr = qianArr[x];
+                        qianArr[x] = qianArr[y];
+                        qianArr[y] = tempStr;
+                    }
+                    newArr.push(wanArr[0] + '' + qianArr[x] + '' + qianArr[y]);
+                }
+            }
+        }
+    }
+    return newArr.length;
+}
+
+function content_gd11x5_qszuxdt(){
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+
+function content_gd11x5_rxezwdt(){
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+function content_suiji_gd11x5_rxszsdt(){
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+function content_gd11x5_rxsizsdt(){
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+function content_gd11x5_rxwzwdt(){
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+function content_gd11x5_rxlzwdt(){
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+function content_gd11x5_rxqzwdt(){
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+function content_gd11x5_rxbzwdt(){
+    var wanArr = [], qianArr = [];
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+
+function content_gd11x5_qezuxdt(){
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+function content_gd11x5_hezuxdt(){
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+function content_gd11x5_zszuxdt(){
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+function content_gd11x5_hszuxdt(){
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    return wanArr.join(",") + "|" + qianArr.join(",");
+}
+
+
+function zhushu_gd11x5_hszuxdt(){
+    var newArr = [];
+    var tempStr = '';
+    var wanArr = [], qianArr = [], baiArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+    if (wanArr.length <= 0 || qianArr.length <= 0) {
+        return 0;
+    }
+
+    if (wanArr.length == 2) {
+        for (var m = 0; m < qianArr.length; m++) {
+            newArr.push(wanArr[0] + '' + wanArr[1] + '' + qianArr[m]);
+        }
+    } else {
+        for (var x = 0; x < qianArr.length; x++) {
+            for (var y = x; y < qianArr.length; y++) {
+                if (qianArr[x] != qianArr[y]) {
+                    if (parseInt(qianArr[x]) > parseInt(qianArr[y])) {
+                        tempStr = qianArr[x];
+                        qianArr[x] = qianArr[y];
+                        qianArr[y] = tempStr;
+                    }
+                    newArr.push(wanArr[0] + '' + qianArr[x] + '' + qianArr[y]);
+                }
+            }
+        }
+    }
+    return newArr.length;
 }
 
 function zhushu_gd11x5_rxszsds() {
@@ -7368,6 +7979,456 @@ function suiji_gd11x5_zszxfs() {
     showPlayName = "中三直选-直选复式";
     showContent = "第二位: (" + newArr[0] + ") 第三位: (" + newArr[1] + ") 第四位 : (" + newArr[2] + ")";
     betContent = newArr[0] + "|" + newArr[1] + "|" + newArr[2];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+function suiji_gd11x5_qszuxdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+        }
+
+    }
+
+    showPlayName = "前二组选-胆拖";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + "," + newArr[2] + ") ";
+    betContent = newArr[0] + "|" + newArr[1] + "," + newArr[2];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+function suiji_gd11x5_rxszsdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+        }
+
+    }
+
+    showPlayName = "任选胆拖-3中3";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + "," + newArr[2] + ") ";
+    betContent = newArr[0] + "|" + newArr[1] + "," + newArr[2];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_qezuxdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+
+        }
+
+    }
+
+    showPlayName = "前二组选-胆拖";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ") ";
+    betContent = newArr[0] + " " + newArr[1] ;
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_rxezwdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+
+        }
+
+    }
+
+    showPlayName = "后二组选-胆拖";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ") ";
+    betContent = newArr[0] + " " + newArr[1] ;
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+
+function suiji_gd11x5_rxsizsdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh3 != zhiTsh4&&zhiTsh2 != zhiTsh4&&zhiTsh1 != zhiTsh4&&zhiTsh4 != zhiTsh3&&zhiTsh2 != zhiTsh3&&zhiTsh1 != zhiTsh3&&zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+
+        }
+
+    }
+
+    showPlayName = "任选胆拖-4中4";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ","+ newArr[2] +","+ newArr[3] +") ";
+    betContent = newArr[0] + "|" + newArr[1]+","+newArr[2]+","+newArr[3] ;
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_rxwzwdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh5 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh5&&zhiTsh4 != zhiTsh5&&zhiTsh2 != zhiTsh5&&zhiTsh3 != zhiTsh5&&zhiTsh3 != zhiTsh4&&zhiTsh2 != zhiTsh4&&zhiTsh1 != zhiTsh4&&zhiTsh4 != zhiTsh3&&zhiTsh2 != zhiTsh3&&zhiTsh1 != zhiTsh3&&zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+            newArr.push(zhiTsh5);
+
+        }
+
+    }
+
+    showPlayName = "任选胆拖-5中5";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ","+ newArr[2] +","+ newArr[3] +","+ newArr[4] +") ";
+    betContent = newArr[0] + "|" + newArr[1]+","+newArr[2]+","+newArr[3]+ ","+newArr[4];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_rxlzwdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh5 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh6 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh5 != zhiTsh6&&zhiTsh4 != zhiTsh6&&zhiTsh3 != zhiTsh6&&zhiTsh2 != zhiTsh6&&zhiTsh1 != zhiTsh6&&zhiTsh1 != zhiTsh5&&zhiTsh4 != zhiTsh5&&zhiTsh2 != zhiTsh5&&zhiTsh3 != zhiTsh5&&zhiTsh3 != zhiTsh4&&zhiTsh2 != zhiTsh4&&zhiTsh1 != zhiTsh4&&zhiTsh4 != zhiTsh3&&zhiTsh2 != zhiTsh3&&zhiTsh1 != zhiTsh3&&zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+            newArr.push(zhiTsh5);
+            newArr.push(zhiTsh6);
+
+        }
+
+    }
+
+    showPlayName = "任选胆拖-6中5";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ","+ newArr[2] +","+ newArr[3] +","+ newArr[4] +","+ newArr[5] +") ";
+    betContent = newArr[0] + "|" + newArr[1]+","+newArr[2]+","+newArr[3]+ ","+newArr[4]+ ","+newArr[5];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+function suiji_gd11x5_rxqzwdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh5 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh6 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh7 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh7&&zhiTsh2 != zhiTsh7&&zhiTsh3 != zhiTsh7&&zhiTsh4 != zhiTsh7&&zhiTsh6 != zhiTsh7&&zhiTsh5 != zhiTsh7&&zhiTsh5 != zhiTsh6&&zhiTsh4 != zhiTsh6&&zhiTsh3 != zhiTsh6&&zhiTsh2 != zhiTsh6&&zhiTsh1 != zhiTsh6&&zhiTsh1 != zhiTsh5&&zhiTsh4 != zhiTsh5&&zhiTsh2 != zhiTsh5&&zhiTsh3 != zhiTsh5&&zhiTsh3 != zhiTsh4&&zhiTsh2 != zhiTsh4&&zhiTsh1 != zhiTsh4&&zhiTsh4 != zhiTsh3&&zhiTsh2 != zhiTsh3&&zhiTsh1 != zhiTsh3&&zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+            newArr.push(zhiTsh5);
+            newArr.push(zhiTsh6);
+            newArr.push(zhiTsh7);
+
+        }
+
+    }
+
+    showPlayName = "任选胆拖-7中5";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ","+ newArr[2] +","+ newArr[3] +","+ newArr[4] +","+ newArr[5] +","+ newArr[6] +") ";
+    betContent = newArr[0] + "|" + newArr[1]+","+newArr[2]+","+newArr[3]+ ","+newArr[4]+ ","+newArr[5]+ ","+newArr[6];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+function suiji_gd11x5_rxbzwdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh4 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh5 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh6 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh7 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh8 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh7 != zhiTsh8&&zhiTsh6 != zhiTsh8&&zhiTsh5 != zhiTsh8&&zhiTsh4 != zhiTsh8&&zhiTsh3 != zhiTsh8&&zhiTsh2 != zhiTsh8&&zhiTsh1 != zhiTsh8&&zhiTsh1 != zhiTsh7&&zhiTsh2 != zhiTsh7&&zhiTsh3 != zhiTsh7&&zhiTsh4 != zhiTsh7&&zhiTsh6 != zhiTsh7&&zhiTsh5 != zhiTsh7&&zhiTsh5 != zhiTsh6&&zhiTsh4 != zhiTsh6&&zhiTsh3 != zhiTsh6&&zhiTsh2 != zhiTsh6&&zhiTsh1 != zhiTsh6&&zhiTsh1 != zhiTsh5&&zhiTsh4 != zhiTsh5&&zhiTsh2 != zhiTsh5&&zhiTsh3 != zhiTsh5&&zhiTsh3 != zhiTsh4&&zhiTsh2 != zhiTsh4&&zhiTsh1 != zhiTsh4&&zhiTsh4 != zhiTsh3&&zhiTsh2 != zhiTsh3&&zhiTsh1 != zhiTsh3&&zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh4);
+            newArr.push(zhiTsh5);
+            newArr.push(zhiTsh6);
+            newArr.push(zhiTsh7);
+            newArr.push(zhiTsh8);
+
+        }
+
+    }
+
+    showPlayName = "任选胆拖-8中5";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ","+ newArr[2] +","+ newArr[3] +","+ newArr[4] +","+ newArr[5] +","+ newArr[6] +","+ newArr[7] +") ";
+    betContent = newArr[0] + "|" + newArr[1]+","+newArr[2]+","+newArr[3]+ ","+newArr[4]+ ","+newArr[5]+ ","+newArr[6]+ ","+newArr[7];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+
+function suiji_gd11x5_hezuxdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+
+        }
+
+    }
+
+    showPlayName = "后二组选-胆拖";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ") ";
+    betContent = newArr[0] + " " + newArr[1] ;
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+function suiji_gd11x5_zszuxdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+        }
+
+    }
+
+    showPlayName = "中三组选-胆拖";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + "," + newArr[2] + ") ";
+    betContent = newArr[0] + "|" + newArr[1] + "," + newArr[2];
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+
+function suiji_gd11x5_hszuxdt() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arrTsh = [], newArr = [];
+    arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+
+    while (newArr.length < 1) {
+        var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
+        var zhiTsh3 = arrTsh[parseInt(Math.random() * 10+1)];
+
+        if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
+            newArr.push(zhiTsh1);
+            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh3);
+        }
+
+    }
+
+    showPlayName = "后三组选-胆拖";
+    showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + "," + newArr[2] + ") ";
+    betContent = newArr[0] + "|" + newArr[1] + "," + newArr[2];
 
     return {
         showPlayName: showPlayName,
