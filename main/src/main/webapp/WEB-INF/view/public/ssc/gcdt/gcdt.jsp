@@ -789,6 +789,43 @@
             </div>
         </li>
 
+        <li id="ssc_24" class="ss_xclass">
+            <div class="pro_name">
+                <div class="pict">
+                    <img src="${resPath}img/gd11x5.png" alt="">
+                </div>
+                <div class="text">
+                    <b>广东11选5</b>
+                    <p>第<i data-name="number"></i>期销售中</p>
+                </div>
+            </div>
+            <div class="Time at">
+                <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
+                <div class="timer_wrap" data-name="time">
+                    <ol class="s">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="f">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                    <ol class="m">
+                        <span class="sp1">0</span>
+                        <span class="sp2">0</span>
+                    </ol>
+                </div>
+                <p class="p1 bj28" data-name="lastOpenData">上期开奖</p>
+            </div>
+            <div class="Result">
+                <p>
+                    <a target="_blank" href="<%=basePath%>?u=<%=basePath%>kjjg.html?playGroupId=24">历史开奖</a>
+                    <a onclick="getZstPage('gd11x5')" href="javascript:void(0)">开奖走势</a>
+                    <a href="javascript:void(0)" class="acti" onclick="getSscPage('gd11x5')">立即投注</a>
+                </p>
+            </div>
+        </li>
+
         <!--<li id="ssc_22">
             <div class="pro_name">
                 <div class="pict">

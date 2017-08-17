@@ -119,6 +119,10 @@
                             <h4><span><a href="<%=basePath%>help/rule/bj28.html"><img src="${resPath}img/ico30.png"/></a></span></h4>
                             <a href="<%=basePath%>help/rule/bj28.html"><p>北京28</br><span>北京28</span></p></a>
                         </li>
+                        <li>
+                            <h4><span><a href="<%=basePath%>help/rule/gd11x5.html"><img src="${resPath}img/gd11x5.png"/></a></span></h4>
+                            <a href="<%=basePath%>help/rule/gd11x5.html"><p>广东11选5</br><span>广东11选5</span></p></a>
+                        </li>
                     </ul>
                 </div>
                 <h5 id="flip">功能指引</h5>

@@ -42,6 +42,7 @@
                     <c:when test="${playGroupId == 21}">吉林快3</c:when>
                     <c:when test="${playGroupId == 22}">10分六合彩</c:when>
                     <c:when test="${playGroupId == 23}">极速PK10</c:when>
+                    <c:when test="${playGroupId == 24}">广东11选5</c:when>
                 </c:choose>
                 -玩法说明
             </h1>
@@ -51,7 +52,7 @@
                 <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="active button wfsm_cd"
                    data-id="btn-bqxq"><span>传统模式</span></a>
                 <c:choose>
-                    <c:when test="${playGroupId == 7}">
+                    <c:when test="${playGroupId == 7 || playGroupId == 24}">
                         <a href="javascript:void(0)" onclick="tishi()" class="button wfsm_cd"
                            data-id="btn-gdqc"><span>官方模式</span></a>
                     </c:when>
@@ -134,6 +135,9 @@
                                     </c:when>
                                     <c:when test="${playGroupId == 23}">
                                         <c:import url="rule/jspk10.jsp"/>
+                                    </c:when>
+                                    <c:when test="${playGroupId == 24}">
+                                        <c:import url="rule/gd11x5.jsp"/>
                                     </c:when>
                                 </c:choose>
                             </div>
