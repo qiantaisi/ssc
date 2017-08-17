@@ -782,7 +782,6 @@ function showTishi2Template(infoStr) {
 }
 
 //=========================================GFWF================================
-// 通用JS，开发完后转移到gfwf.js里面
 /**
  * 初始化子页面，刷新滚动条，赔率，倍数等等
  */
@@ -793,8 +792,10 @@ function initSubPage() {
     $("#subJRange").html(template("template_jRange"));
 
     // 内容点击，触发统计注数函数
+    var arrNum = [];
     $(".Pick ul li span i").click(function () {
         var nowFlag= $(".re-5x-i i").hasClass('acti');
+
         if (nowFlag == true) {
             $(".re-5x-i i").removeClass('acti');
         }
@@ -808,7 +809,25 @@ function initSubPage() {
                 $(this).parent().toggleClass('acti');
             }
         } else {
-            $(this).parent().toggleClass('acti');   // 变色
+            var flagName = $(this).parent().parent().hasClass('danma_selected');
+            var flagActi = $(this).parent().hasClass('acti');
+            if(flagName){
+                if (arrNum.length >= 2 && !flagActi) {
+                    $(this).parent().parent().find("span.n" + arrNum[arrNum.length - 1] + ".acti").removeClass('acti');
+                    arrNum.splice(arrNum.length -1, 1);
+                }
+
+                arrNum.push(parseInt($(this).html()));
+                $(this).parent().toggleClass('acti');
+
+                var sumSelectedTuodan = $(this).parent().parent().find("span.acti").length;
+                if(sumSelectedTuodan <= 0){
+                    arrNum.splice(0, arrNum.length)
+                }
+
+            } else{
+                $(this).parent().toggleClass('acti'); // 变色
+            }
 
         }
 
@@ -2711,6 +2730,9 @@ function zhushu_gd11x5_qszxds() {
     return tempArr.length;
 }
 
+function zhushu_gd11x5_qszuxdt(){
+   return;
+}
 
 function zhushu_gd11x5_rxszsds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
@@ -3489,7 +3511,7 @@ function zhushu_q3z6ds() {
 }
 
 /**
- * 注数-组sa单式
+ * 注数-组san单式
  */
 function zhushu_gd11x5_qszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();

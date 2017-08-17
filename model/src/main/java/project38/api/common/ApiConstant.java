@@ -59,7 +59,7 @@ public class ApiConstant {
     public static String API_ADD_USER_BANK = API_DOMAIN + "member/addUserBank.json";//添加用户银行卡
     public static String API_UPDATE_USER_INFO = API_DOMAIN + "member/updateUserInfo.json";//更新用户信息
     public static String API_GET_KEFU = API_DOMAIN + "webSetting/getKefu.json";//更新用户信息
-    public static String API_BET = API_DOMAIN + "ssc/bet.json";//下注
+    public static String API_BET = API_DOMAIN2 + "ssc/bet.json";//下注
     public static String API_GET_SSC_OPEN_TIME = API_DOMAIN + "ssc/getSscOpenTime.json";//获取彩种开奖时间和玩法赔率
     public static String API_CHEDAN = API_DOMAIN + "ssc/chedan.json";//撤单
     public static String API_SIGOUT = API_DOMAIN + "member/sigout.json";//退出
