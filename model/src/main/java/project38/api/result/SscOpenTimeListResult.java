@@ -1,11 +1,12 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import project38.api.common.result.CommonResult;
 
 import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.List;
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SscOpenTimeListResult extends CommonResult {
     private List<SscOpenTime> sscOpenTimeList;
 

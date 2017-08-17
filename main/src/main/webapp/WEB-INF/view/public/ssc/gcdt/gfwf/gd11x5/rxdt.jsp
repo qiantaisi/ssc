@@ -11,7 +11,7 @@
     <ul>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn spans" data-play_id="775" data-play_pl_id="14447" data-name="gd11x5_rxezwdt" data-fun_zhushu="zhushu_gd11x5_rxezwdt" data-fun_content="content_gd11x5_rxezwdt" data-fun_suiji="suiji_gd11x5_rxezwdt"><a href="javascript:void(0)">任选二中二</a></span>
+                <span class="playPlIdBtn spans acti" data-play_id="775" data-play_pl_id="14447" data-name="gd11x5_rxezwdt" data-fun_zhushu="zhushu_gd11x5_rxezwdt" data-fun_content="content_gd11x5_rxezwdt" data-fun_suiji="suiji_gd11x5_rxezwdt"><a href="javascript:void(0)">任选二中二</a></span>
                 <span class="playPlIdBtn spans" data-play_id="799" data-play_pl_id="14471" data-name="gd11x5_rxszsdt" data-fun_zhushu="zhushu_gd11x5_rxszsdt" data-fun_content="content_suiji_gd11x5_rxszsdt" data-fun_suiji="suiji_gd11x5_rxszsdt"><a href="javascript:void(0)">任选三中三</a></span>
                 <span class="playPlIdBtn spans" data-play_id="773" data-play_pl_id="14445"  data-name="gd11x5_rxsizsdt" data-fun_zhushu="zhushu_gd11x5_rxsizsdt" data-fun_content="content_gd11x5_rxsizsdt" data-fun_suiji="suiji_gd11x5_rxsizsdt"><a href="javascript:void(0)">任选四中四</a></span>
                 <span class="playPlIdBtn spans" data-play_id="796" data-play_pl_id="14468"  data-name="gd11x5_rxwzwdt" data-fun_zhushu="zhushu_gd11x5_rxwzwdt" data-fun_content="content_gd11x5_rxwzwdt" data-fun_suiji="suiji_gd11x5_rxwzwdt"><a href="javascript:void(0)">任选五中五</a></span>
@@ -28,7 +28,7 @@
 <script type="text/html" id="template_gd11x5_rxezwdt">
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
-        <span class="fr fl cl-1001">
+       <span class="fr fl cl-1001">
             从01-11中，选取2个及以上的号码进行投注，2个号码一注,每注需至少包括1个胆码及1个拖码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
                 <var>投注方案：胆码08,拖码06 开奖号码：06 08 11 09 02，即中任选二中二。</var>
@@ -42,7 +42,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -66,7 +66,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -91,8 +91,6 @@
         </ul>
     </div>
 </script>
-
-
 <%--任选三中三--%>
 <script type="text/html" id="template_gd11x5_rxszsdt">
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
@@ -111,7 +109,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -135,7 +133,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -179,7 +177,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -203,7 +201,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -247,7 +245,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -271,7 +269,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -315,7 +313,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -339,7 +337,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -384,7 +382,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -408,7 +406,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -453,7 +451,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
@@ -477,7 +475,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLine">
+                <var class="numLines">
                     <span><i>01</i></span>
                     <span><i>02</i></span>
                     <span><i>03</i></span>
