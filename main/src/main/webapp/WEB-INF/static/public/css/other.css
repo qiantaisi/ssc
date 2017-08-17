@@ -419,3 +419,9 @@ table.touzhuArea {
     font-size: 16px;
     border-radius : 50%;
 }
+
+/*走势图首页*/
+.zs_list ul li .p-img img{
+    width: 75px;
+    height: 75px;
+}
