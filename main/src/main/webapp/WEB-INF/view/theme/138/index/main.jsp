@@ -116,8 +116,8 @@
                             <div class=" banner_shuru_gp">
                                 <input type="text" id="registerLoginYzm" class="banner_shuru_input" placeholder="验证码"/>
 
-                                <a href="javascript:void(0);" class="banner_yz">
-                                    <img id="registerYzmImg2" onclick="refreshYzm(this)"
+                                <a href="javascript:void(0);" style="top: 5px;" class="banner_yz">
+                                    <img id="registerYzmImg2" style="width: 60px;height: 30px;" onclick="refreshYzm(this)"
                                          src="<%=basePath%>code/yzm?imgWidth=113&imgHeight=43&imgFontHeight=40&imgCodeY=35&imgCodeX=2"/>
                                 </a>
                             </div>

@@ -17,7 +17,7 @@
 
 <div class="main login_main re-text-content">
     <div class="container login_nr">
-        <div class="login_nr_t clearfix">
+        <div style="background: #fff;" class="login_nr_t clearfix">
             <div class="login_nr_t_lf">
                 <h2 style="text-align: center">${Article.article.title}</h2>
             </div>
