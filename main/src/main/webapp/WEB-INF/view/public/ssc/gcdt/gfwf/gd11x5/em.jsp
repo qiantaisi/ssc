@@ -13,6 +13,7 @@
     <ul>
             <li>
                 <p class="btn_fu_zhi">
+                    <b class="tit_img">前二</b>
                     <span class="playPlIdBtn acti spans" data-play_id="765" data-play_pl_id="14437" data-name="gd11x5_qezxfs" data-fun_zhushu="gd11x5_zhushu_qezxfs" data-fun_content="content_gd11x5_qezxfs" data-fun_suiji="suiji_gd11x5_qezxfs"><a href="javascript:void(0)">前二直选复式</a></span>
                     <span class="playPlIdBtn spans" data-play_id="791" data-play_pl_id="14463" data-name="gd11x5_qezxds" data-fun_zhushu="zhushu_gd11x5_qezxds" data-fun_content="content_gd11x5_qezxds" data-fun_suiji="suiji_gd11x5_qezxds"><a href="javascript:void(0)">前二直选单式</a></span>
                     <span class="playPlIdBtn spans" data-play_id="792" data-play_pl_id="14464" data-name="gd11x5_qezuxfs" data-fun_zhushu="zhushu_gd11x5_qezuxfs" data-fun_content="content_suiji_gd11x5_qezuxfs" data-fun_suiji="suiji_gd11x5_qezuxfs"><a href="javascript:void(0)">前二组选复式</a></span>
@@ -22,6 +23,7 @@
             </li>
         <li>
             <p class="btn_fu_zhi">
+                <b class="tit_img">后二</b>
                 <span class="playPlIdBtn spans" data-play_id="769" data-play_pl_id="14441" data-name="gd11x5_hezxfs" data-fun_zhushu="zhushu_gd11x5_hezxfs" data-fun_content="content_gd11x5_hezxfs" data-fun_suiji="suiji_gd11x5_hezxfs"><a href="javascript:void(0)">后二直选复式</a></span>
                 <span class="playPlIdBtn spans" data-play_id="794" data-play_pl_id="14466" data-name="gd11x5_hezxds" data-fun_zhushu="zhushu_gd11x5_hezxds" data-fun_content="content_gd11x5_hezxds" data-fun_suiji="suiji_gd11x5_hezxds"><a href="javascript:void(0)">后二直选单式</a></span>
                 <span class="playPlIdBtn spans" data-play_id="783" data-play_pl_id="14455" data-name="gd11x5_hezxfs" data-fun_zhushu="zhushu_gd11x5_hezxfs" data-fun_content="content_gd11x5_hezxfs" data-fun_suiji="suiji_gd11x5_hezxfs"><a href="javascript:void(0)">后二组选复式</a></span>
