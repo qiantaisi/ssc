@@ -13,20 +13,20 @@
     <ul>
             <li>
                 <p class="btn_fu_zhi">
-                    <span class="playPlIdBtn acti spans" data-play_id="688" data-play_pl_id="14437" data-name="gd11x5_qezxfs" data-fun_zhushu="gd11x5_zhushu_qezxfs" data-fun_content="content_gd11x5_qezxfs" data-fun_suiji="suiji_gd11x5_qezxfs"><a href="javascript:void(0)">前二直选复式</a></span>
-                    <span class="playPlIdBtn spans" data-play_id="689" data-play_pl_id="14438" data-name="gd11x5_qezxds" data-fun_zhushu="zhushu_gd11x5_qezxds" data-fun_content="content_gd11x5_qezxds" data-fun_suiji="suiji_gd11x5_qezxds"><a href="javascript:void(0)">前二直选单式</a></span>
-                    <span class="playPlIdBtn spans" data-play_id="690" data-play_pl_id="14439" data-name="gd11x5_qezuxfs" data-fun_zhushu="zhushu_gd11x5_qezuxfs" data-fun_content="content_suiji_gd11x5_qezuxfs" data-fun_suiji="suiji_gd11x5_qezuxfs"><a href="javascript:void(0)">前二组选复式</a></span>
-                    <span class="playPlIdBtn spans" data-play_id="691" data-play_pl_id="14440"  data-name="gd11x5_qezuxds" data-fun_zhushu="zhushu_gd11x5_qezuxds" data-fun_content="content_gd11x5_qezuxds" data-fun_suiji="suiji_gd11x5_qezuxds"><a href="javascript:void(0)">前二组选单式</a></span>
-                    <span class="playPlIdBtn spans" data-play_id="692" data-play_pl_id="14441"  data-name="gd11x5_qezuxdt" data-fun_zhushu="zhushu_gd11x5_qezuxdt" data-fun_content="content_gd11x5_qezuxdt" data-fun_suiji="suiji_gd11x5_qezuxdt"><a href="javascript:void(0)">前二组选胆拖</a></span>
+                    <span class="playPlIdBtn acti spans" data-play_id="765" data-play_pl_id="14437" data-name="gd11x5_qezxfs" data-fun_zhushu="gd11x5_zhushu_qezxfs" data-fun_content="content_gd11x5_qezxfs" data-fun_suiji="suiji_gd11x5_qezxfs"><a href="javascript:void(0)">前二直选复式</a></span>
+                    <span class="playPlIdBtn spans" data-play_id="791" data-play_pl_id="14463" data-name="gd11x5_qezxds" data-fun_zhushu="zhushu_gd11x5_qezxds" data-fun_content="content_gd11x5_qezxds" data-fun_suiji="suiji_gd11x5_qezxds"><a href="javascript:void(0)">前二直选单式</a></span>
+                    <span class="playPlIdBtn spans" data-play_id="792" data-play_pl_id="14464" data-name="gd11x5_qezuxfs" data-fun_zhushu="zhushu_gd11x5_qezuxfs" data-fun_content="content_suiji_gd11x5_qezuxfs" data-fun_suiji="suiji_gd11x5_qezuxfs"><a href="javascript:void(0)">前二组选复式</a></span>
+                    <span class="playPlIdBtn spans" data-play_id="764" data-play_pl_id="14436"  data-name="gd11x5_qezuxds" data-fun_zhushu="zhushu_gd11x5_qezuxds" data-fun_content="content_gd11x5_qezuxds" data-fun_suiji="suiji_gd11x5_qezuxds"><a href="javascript:void(0)">前二组选单式</a></span>
+                    <span class="playPlIdBtn spans" data-play_id="766" data-play_pl_id="14438"  data-name="gd11x5_qezuxdt" data-fun_zhushu="zhushu_gd11x5_qezuxdt" data-fun_content="content_gd11x5_qezuxdt" data-fun_suiji="suiji_gd11x5_qezuxdt"><a href="javascript:void(0)">前二组选胆拖</a></span>
                 </p>
             </li>
         <li>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn spans" data-play_id="693" data-play_pl_id="14442" data-name="gd11x5_hezxfs" data-fun_zhushu="zhushu_gd11x5_hezxfs" data-fun_content="content_gd11x5_hezxfs" data-fun_suiji="suiji_gd11x5_hezxfs"><a href="javascript:void(0)">后二直选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="694" data-play_pl_id="14443" data-name="gd11x5_hezxds" data-fun_zhushu="zhushu_gd11x5_hezxds" data-fun_content="content_gd11x5_hezxds" data-fun_suiji="suiji_gd11x5_hezxds"><a href="javascript:void(0)">后二直选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="695" data-play_pl_id="14444" data-name="gd11x5_hezxfs" data-fun_zhushu="zhushu_gd11x5_hezxfs" data-fun_content="content_gd11x5_hezxfs" data-fun_suiji="suiji_gd11x5_hezxfs"><a href="javascript:void(0)">后二组选复式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="696" data-play_pl_id="14445" data-name="gd11x5_hezuxds" data-fun_zhushu="zhushu_gd11x5_hezuxds" data-fun_content="content_gd11x5_hezuxds" data-fun_suiji="suiji_gd11x5_hezuxds"><a href="javascript:void(0)">后二组选单式</a></span>
-                <span class="playPlIdBtn spans" data-play_id="697" data-play_pl_id="14446" data-name="gd11x5_hezuxdt" data-fun_zhushu="zhushu_gd11x5_hezuxdt" data-fun_content="content_gd11x5_hezuxdt" data-fun_suiji="suiji_gd11x5_hezuxdt"><a href="javascript:void(0)">后二组选胆拖</a></span>
+                <span class="playPlIdBtn spans" data-play_id="769" data-play_pl_id="14441" data-name="gd11x5_hezxfs" data-fun_zhushu="zhushu_gd11x5_hezxfs" data-fun_content="content_gd11x5_hezxfs" data-fun_suiji="suiji_gd11x5_hezxfs"><a href="javascript:void(0)">后二直选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="794" data-play_pl_id="14466" data-name="gd11x5_hezxds" data-fun_zhushu="zhushu_gd11x5_hezxds" data-fun_content="content_gd11x5_hezxds" data-fun_suiji="suiji_gd11x5_hezxds"><a href="javascript:void(0)">后二直选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="783" data-play_pl_id="14455" data-name="gd11x5_hezxfs" data-fun_zhushu="zhushu_gd11x5_hezxfs" data-fun_content="content_gd11x5_hezxfs" data-fun_suiji="suiji_gd11x5_hezxfs"><a href="javascript:void(0)">后二组选复式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="752" data-play_pl_id="14424" data-name="gd11x5_hezuxds" data-fun_zhushu="zhushu_gd11x5_hezuxds" data-fun_content="content_gd11x5_hezuxds" data-fun_suiji="suiji_gd11x5_hezuxds"><a href="javascript:void(0)">后二组选单式</a></span>
+                <span class="playPlIdBtn spans" data-play_id="770" data-play_pl_id="14442" data-name="gd11x5_hezuxdt" data-fun_zhushu="zhushu_gd11x5_hezuxdt" data-fun_content="content_gd11x5_hezuxdt" data-fun_suiji="suiji_gd11x5_hezuxdt"><a href="javascript:void(0)">后二组选胆拖</a></span>
             </p>
         </li>
     </ul>
