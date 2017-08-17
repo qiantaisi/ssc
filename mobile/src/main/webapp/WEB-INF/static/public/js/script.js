@@ -1459,7 +1459,6 @@ $(function () {
                     }
 
                     $.each(json.sscBetsList, function (index, value) {
-                        console.log(value.playGroupId + "---");
                         var obj = {
                             createTime: value.createTime,
                             effectiveMoney: value.effectiveMoney,
