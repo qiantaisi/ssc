@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/11/19.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserDepositListResult extends PageResult {
 
     private BigDecimal pageMoney;

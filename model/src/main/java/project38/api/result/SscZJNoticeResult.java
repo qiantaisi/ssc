@@ -1,5 +1,6 @@
 package project38.api.result;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.google.common.collect.Lists;
 import project38.api.common.result.CommonResult;
 
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * Created by java1 on 2017/7/4. 中奖公告
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SscZJNoticeResult extends CommonResult {
 
     public List<Notice> noticeList;

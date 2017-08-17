@@ -1411,7 +1411,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10', '广东11选5']
                 }
             ]
         });
@@ -1459,6 +1459,7 @@ $(function () {
                     }
 
                     $.each(json.sscBetsList, function (index, value) {
+                        console.log(value.playGroupId + "---");
                         var obj = {
                             createTime: value.createTime,
                             effectiveMoney: value.effectiveMoney,
@@ -1638,6 +1639,8 @@ $(function () {
                 playGroupId = 22;
             } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
+            } else if (inputCaizhong == '广东11选5') {
+                playGroupId = 24;
             }
 
             pageIndex = 1;

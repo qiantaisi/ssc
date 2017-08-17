@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="rig_pic" ani="fadeInDown">
-            <img src="${resPath}pc/img/img1.png" alt="">
+            <img src="${resPath}pc/img/img1.png?v=0.001" alt="">
         </div>
         <div class="list_ico at" ani="fadeInUp">
             <ul>
