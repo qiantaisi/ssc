@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * 取款密码模型
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class NeedWithdrawPasswdResult extends CommonResult {
     /**
      * 是否需要取款密码

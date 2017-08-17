@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/4/27 0027.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class CzListResult extends CommonResult {
     private List<Cz> czList;
 

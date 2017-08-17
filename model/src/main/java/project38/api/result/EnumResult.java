@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/3/18.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class EnumResult extends CommonResult {
 
     private List<Entity> entityList;

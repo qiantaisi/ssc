@@ -6,6 +6,7 @@ import java.util.Date;
 /**
  * Created by Administrator on 2016/11/19.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class SafeInfoResult extends CommonResult {
     /**
      * 最后登录时间

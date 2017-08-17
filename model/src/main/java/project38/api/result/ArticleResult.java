@@ -9,6 +9,7 @@ import java.util.List;
 /**
  * Created by java1 on 2017/7/14.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class ArticleResult extends CommonResult {
 
     private List<Article> articleList;

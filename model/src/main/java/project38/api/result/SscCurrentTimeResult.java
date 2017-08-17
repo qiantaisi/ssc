@@ -7,6 +7,7 @@ import java.util.Date;
 /**
  * Created by Administrator on 2017/3/24.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscCurrentTimeResult extends CommonResult{
     private Boolean enable; //彩种是否有效
     private Long leftOpenTime;  //剩余开奖时间（秒）

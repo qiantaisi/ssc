@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/12/6.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscHistoryResult extends CommonResult {
     private List<SscHistory> sscHistoryList;
 

@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * 团队报表
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class AgentUserReportResult extends PageResult {
     private List<AgentUserReport> agentUserReportList;
 

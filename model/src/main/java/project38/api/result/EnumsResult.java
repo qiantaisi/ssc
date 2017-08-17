@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/4/14.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class EnumsResult extends CommonResult {
     /**
      * 充值类型

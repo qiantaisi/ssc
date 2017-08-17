@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * Created by Administrator on 2016/12/31.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class LayerInfoResult extends CommonResult {
     /**
      *

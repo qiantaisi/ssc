@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/5/7.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class ZstAllResult extends CommonResult {
     private List<ZstUrl> zstList;
 

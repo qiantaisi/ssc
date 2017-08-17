@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * Created by Administrator on 2016/11/18.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class PageResult extends CommonResult {
     /**
      * 当前页码

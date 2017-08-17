@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * Created by Administrator on 2016/11/15.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class UserBindStatusResult extends CommonResult {
     /**
      * 是否绑定邮箱

@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/11/18.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class SystemPayOnlineResult extends CommonResult {
     private List<SystemPayOnline> systemPayOnlineList;
 

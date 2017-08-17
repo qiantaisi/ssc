@@ -9,6 +9,7 @@ import java.util.List;
 /**
  * Created by java1 on 2017/7/3.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class LatelyGameResult extends CommonResult {
 
     public  List<LogUserGame> logUserGames;

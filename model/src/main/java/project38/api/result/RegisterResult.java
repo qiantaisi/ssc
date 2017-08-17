@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * Created by Administrator on 2017/7/27.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class RegisterResult extends CommonResult {
     /**
      * 是否需要qq必填

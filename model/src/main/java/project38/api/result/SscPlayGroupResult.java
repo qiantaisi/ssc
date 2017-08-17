@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * Created by Administrator on 2017/3/29.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscPlayGroupResult extends CommonResult {
     /**
      * 彩种编码

@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 /**
  * 今日输赢+即时注单金额
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class TodayWinOrLoseAndJszdResult extends CommonResult {
     /**
      * 今日输赢

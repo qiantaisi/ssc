@@ -9,6 +9,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/12/24.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class LogUserCoinResult extends PageResult {
     private List<LogUserCoin> logUserCoinList;
 

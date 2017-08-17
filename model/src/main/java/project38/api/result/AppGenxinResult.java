@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * APP更新数据
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class AppGenxinResult extends CommonResult {
     /**
      * 版本号

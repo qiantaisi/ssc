@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/11/25.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscOpenTimeResult2 extends CommonResult {
     /**
      * 彩种编码

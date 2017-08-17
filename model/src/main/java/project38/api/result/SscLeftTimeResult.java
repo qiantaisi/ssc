@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * Created by Administrator on 2017/1/17.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscLeftTimeResult extends CommonResult {
     /**
      * 当前期数

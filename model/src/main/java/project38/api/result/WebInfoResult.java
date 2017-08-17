@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * Created by Administrator on 2016/12/4.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class WebInfoResult extends CommonResult {
     /**
      * 网站标题

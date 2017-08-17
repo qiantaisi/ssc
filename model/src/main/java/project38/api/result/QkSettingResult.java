@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 /**
  * Created by Administrator on 2017/1/15.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class QkSettingResult extends CommonResult {
     private BigDecimal minMoney;
 

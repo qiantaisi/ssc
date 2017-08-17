@@ -5,6 +5,7 @@ import project38.api.common.result.CommonResult;
 /**
  * Created by Administrator on 2016/12/19.
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class ImageResult extends CommonResult {
     private String imageData;
 
