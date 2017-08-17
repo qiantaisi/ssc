@@ -6,7 +6,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/3/21.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class AppResult extends CommonResult {
     /**
      * 热门彩种/走势切换（0-不显示，1-热门彩种，2-走势图（原生），3-走势图链接）

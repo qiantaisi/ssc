@@ -4,7 +4,8 @@ import project38.api.common.result.CommonResult;
 
 /**
  * Created by Administrator on 2016/11/25.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class KhxyResult extends CommonResult {
     private String khxy;
 

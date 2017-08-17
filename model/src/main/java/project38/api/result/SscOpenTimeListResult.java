@@ -5,7 +5,7 @@ import project38.api.common.result.CommonResult;
 import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.List;
-
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscOpenTimeListResult extends CommonResult {
     private List<SscOpenTime> sscOpenTimeList;
 

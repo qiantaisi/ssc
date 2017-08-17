@@ -8,7 +8,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/25.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscOpenTimeResult extends CommonResult {
     /**
      * 彩种编码

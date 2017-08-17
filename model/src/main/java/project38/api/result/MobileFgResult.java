@@ -4,7 +4,8 @@ import project38.api.common.result.CommonResult;
 
 /**
  * Created by java1 on 2017/7/3.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class MobileFgResult extends CommonResult {
 
     //手机模板风格

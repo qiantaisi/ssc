@@ -4,7 +4,8 @@ import project38.api.common.result.CommonResult;
 
 /**
  * Created by Administrator on 2017/8/7.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class QRCodeResult extends CommonResult {
     private String codeId;
     private String codeData;

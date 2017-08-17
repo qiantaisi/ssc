@@ -3,7 +3,8 @@ package project38.api.result;
 import project38.api.common.result.CommonResult;
 /**
  * Created by Administrator on 2016/11/16.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class LogoResult extends CommonResult {
     /**
      * LOGO的编码

@@ -4,7 +4,8 @@ import project38.api.common.result.CommonResult;
 
 /**
  * Created by Administrator on 2017/1/15.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscOpenTimeResultPer extends CommonResult {
     private Long leftTime;
     private Boolean isOpening;

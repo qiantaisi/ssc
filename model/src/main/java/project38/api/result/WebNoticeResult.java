@@ -6,7 +6,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2016/12/4.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class WebNoticeResult extends CommonResult {
     private List<WebNotice> webNoticeList;
 

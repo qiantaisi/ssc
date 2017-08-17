@@ -4,7 +4,8 @@ import project38.api.common.result.CommonResult;
 
 /**
  * Created by Administrator on 2017/2/9.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class RedPacketResult extends CommonResult {
     private Integer type;
 

@@ -7,7 +7,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/16.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscTimeResult extends CommonResult {
     /**
      * APP头部菜单是否显示

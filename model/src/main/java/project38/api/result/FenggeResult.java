@@ -1,7 +1,7 @@
 package project38.api.result;
 
 import project38.api.common.result.CommonResult;
-
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class FenggeResult extends CommonResult {
     private String fengge_1;
 

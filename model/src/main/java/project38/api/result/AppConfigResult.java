@@ -7,7 +7,8 @@ import java.util.List;
 
 /**
  * APP配置，用于启动时加载
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class AppConfigResult extends CommonResult {
     /**
      * 公司是否需要取款密码

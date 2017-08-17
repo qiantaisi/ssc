@@ -8,7 +8,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/2/9.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class RedPacketListResult extends CommonResult {
     private List<RedPacket> redPacketList;
 

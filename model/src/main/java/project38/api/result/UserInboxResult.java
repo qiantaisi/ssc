@@ -5,7 +5,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/15.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class UserInboxResult extends PageResult {
 
     private List<UserInbox> userInboxList;

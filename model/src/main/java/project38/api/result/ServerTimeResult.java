@@ -5,7 +5,8 @@ import java.util.Date;
 
 /**
  * Created by Administrator on 2016/11/15.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class ServerTimeResult extends CommonResult {
     private Date serverTime;
 

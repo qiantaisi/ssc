@@ -6,7 +6,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/13.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class LoginResult extends CommonResult {
     /**
      * 用户ID

@@ -7,7 +7,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2016/12/2.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class CarouselResult extends CommonResult {
     private List<Carousel> carouselList;
 

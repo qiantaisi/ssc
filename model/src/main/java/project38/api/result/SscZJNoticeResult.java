@@ -8,7 +8,8 @@ import java.util.List;
 
 /**
  * Created by java1 on 2017/7/4. 中奖公告
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscZJNoticeResult extends CommonResult {
 
     public List<Notice> noticeList;

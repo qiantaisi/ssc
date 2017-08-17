@@ -7,7 +7,8 @@ import java.util.List;
 
 /**
  * 收款信息
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class SkInfoResult extends CommonResult {
 
     private List<SkInfo> skInfoList;

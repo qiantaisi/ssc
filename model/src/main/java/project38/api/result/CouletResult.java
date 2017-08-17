@@ -6,7 +6,8 @@ import java.util.Date;
 
 /**
  * Created by java1 on 2017/7/20.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class CouletResult extends CommonResult {
 
     private Coulet coulet;

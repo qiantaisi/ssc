@@ -5,7 +5,8 @@ import project38.api.common.result.CommonResult;
 
 /**
  * Created by Administrator on 2017/8/11.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class DownloadManagementResult extends CommonResult {
 
     /**

@@ -8,7 +8,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/19.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscBetsListResult extends PageResult {
     private BigDecimal totalMoney;
 

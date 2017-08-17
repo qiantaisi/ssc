@@ -5,7 +5,6 @@ import project38.api.common.result.CommonResult;
 import java.util.Date;
 
 import java.math.BigDecimal;
-
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class UserSessionResult extends CommonResult {
     /**

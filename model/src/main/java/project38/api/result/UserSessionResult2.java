@@ -7,7 +7,8 @@ import java.util.Date;
 
 /**
  * Created by Administrator on 2017/3/18.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class UserSessionResult2 extends CommonResult {
     /**
      * 编码

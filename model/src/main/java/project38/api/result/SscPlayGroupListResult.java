@@ -6,7 +6,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/20.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscPlayGroupListResult extends CommonResult {
     private List<SscPlayGroup> sscPlayGroupList;
     private List<SscPlay> sscPlayList;

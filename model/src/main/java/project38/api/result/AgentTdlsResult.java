@@ -8,7 +8,8 @@ import java.util.List;
 
 /**
  * 团队流水
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class AgentTdlsResult extends PageResult {
     private List<AgentTdls> agentTdlsList;
 

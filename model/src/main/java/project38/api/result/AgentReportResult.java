@@ -6,7 +6,8 @@ import java.math.BigDecimal;
 
 /**
  * Created by Administrator on 2016/12/18.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class AgentReportResult extends CommonResult {
     @Deprecated
     private Integer registerUserCount;

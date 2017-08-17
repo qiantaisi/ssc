@@ -7,7 +7,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/3/24.
- */
+ */@JsonSeriali
+ ze(include = JsonSerialize.Inclusion.NON_NULL)
 public class SscAllTimeResult extends CommonResult
 {
     private List<SscTime> SscTimeList;
