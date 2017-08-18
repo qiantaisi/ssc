@@ -375,39 +375,6 @@ function content_q3w(){
     return getContentCommonZuxfs();
 }
 
-function content_dwd_11x5() {
-    var wanArr = [], qianArr = [], baiArr = [], shiArr = [], geArr = [];
-    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        wanArr.push($.trim($(this).html()));
-    });
-    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        qianArr.push($.trim($(this).html()));
-    });
-    $.each($(".baiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        baiArr.push($.trim($(this).html()));
-    });
-    $.each($(".shiweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        shiArr.push($.trim($(this).html()));
-    });
-    $.each($(".geweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
-        geArr.push($.trim($(this).html()));
-    });
-
-    var wanStr = wanArr.length > 0 ? (wanArr.join(",") + "|") : " ";
-    var qianStr = qianArr.length > 0 ? (qianArr.join(",") + "|") : " ";
-    var baiStr = baiArr.length > 0 ? ( baiArr.join(",") + "|") : " ";
-    var shiStr = shiArr.length > 0 ? ( shiArr.join(",") + "|") : " ";
-    var geStr = geArr.length > 0 ? geArr.join(",") : " ";
-
-    return $.trim(
-        (wanStr == ' ' ? ' ' : wanStr) +
-        (qianStr == ' ' ? ' ' : qianStr) +
-        (baiStr == ' ' ? ' ' : baiStr) +
-        (shiStr == ' ' ? ' ' : shiStr) +
-        (geStr == ' ' ? ' ' : geStr)
-    );
-}
-
 /**
  * 后二组选胆拖-11选5
  */
@@ -735,17 +702,17 @@ function content_dwd(){
         geArr.push($.trim($(this).html()));
     });
 
-    var wanStr = wanArr.length > 0 ? (wanArr.join(",") + "|") : " ";
-    var qianStr = qianArr.length > 0 ? (qianArr.join(",") + "|") : " ";
-    var baiStr = baiArr.length > 0 ? ( baiArr.join(",") + "|") : " ";
-    var shiStr = shiArr.length > 0 ? ( shiArr.join(",") + "|") : " ";
-    var geStr = geArr.length > 0 ? geArr.join(",") : " ";
+    var wanStr = wanArr.length > 0 ? wanArr.join(",") : "";
+    var qianStr = qianArr.length > 0 ? qianArr.join(",") : "";
+    var baiStr = baiArr.length > 0 ? baiArr.join(",") : "";
+    var shiStr = shiArr.length > 0 ? shiArr.join(",") : "";
+    var geStr = geArr.length > 0 ? geArr.join(",") : "";
 
     return $.trim(
-        (wanStr == ' ' ? ' ' : wanStr) +
-        (qianStr == ' ' ? ' ' : qianStr) +
-        (baiStr == ' ' ? ' ' : baiStr) +
-        (shiStr == ' ' ? ' ' : shiStr) +
+        (wanStr == ' ' ? ' ' : wanStr ) + "|" +
+        (qianStr == ' ' ? ' ' : qianStr) + "|" +
+        (baiStr == ' ' ? ' ' : baiStr) + "|" +
+        (shiStr == ' ' ? ' ' : shiStr) + "|" +
         (geStr == ' ' ? ' ' : geStr)
     );
 }
