@@ -39,7 +39,7 @@
                     <div class="fr btn-grp">
                         <p class="box">下载APP送您38元现金</p>
                         <p><img src="${resPath}images/ewm.png" alt=""></p>
-                        <a href="http://d.zhcai8899.com/zhcaicom138178_2014.apk" class="btn-down-android mt10" target="_self"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span>
+                        <a href="http://1001398.com/LianTong.apk" class="btn-down-android mt10" target="_self"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span>
                             <span class="layer-down"><i class="icon i-down"></i><span class="a-txt">3.76M</span></span></a>
                     </div>
                 </div>
