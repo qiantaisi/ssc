@@ -153,7 +153,7 @@
 
     </div>
 
-    <div class="cus_common baiweiStr">
+    <div class="cus_common shiweiStr">
         <div class="wan_top">
             <span class="wanwei">第四位</span>
             <span class="xz">
@@ -201,7 +201,7 @@
 
     </div>
 
-    <div class="cus_common baiweiStr">
+    <div class="cus_common geweiStr">
         <div class="wan_top">
             <span class="wanwei">第五位</span>
             <span class="xz">
