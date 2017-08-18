@@ -52,7 +52,7 @@
                 <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="active button wfsm_cd"
                    data-id="btn-bqxq"><span>传统模式</span></a>
                 <c:choose>
-                    <c:when test="${playGroupId == 7 || playGroupId == 24}">
+                    <c:when test="${playGroupId == 7}">
                         <a href="javascript:void(0)" onclick="tishi()" class="button wfsm_cd"
                            data-id="btn-gdqc"><span>官方模式</span></a>
                     </c:when>
