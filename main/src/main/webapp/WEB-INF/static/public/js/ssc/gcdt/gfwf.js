@@ -277,7 +277,6 @@ function changeActi(btnFlag, obj){
 
 function delActi(btnFlag, obj){
     if(btnFlag == "quan"){
-        var numTuo = parseInt($(obj).html());
         for(var i = 1; i < 12; i++){
             $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + i + ".acti").removeClass('acti');
             $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + i + ".acti").removeClass('acti');

@@ -36,12 +36,6 @@
                                         <li>
                                             <a class="active" href="javascript:void(0)" data-contentid="zhexianData" data-id="hmzs">号码走势</a>
                                         </li>
-                                        <li>
-                                            <a href="javascript:void(0)" data-contentid="dxdshezhi" data-id="smzs">双面走势</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" data-contentid="clzoushi" data-id="clzs">长龙走势</a>
-                                        </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -114,11 +108,11 @@
                                         <div class="left cl-32">奖号</div>
                                         <div class="left cl-33">
                                             <div class="cl-35">
-                                                <div class="left cl-34">万位</div>
-                                                <div class="left cl-34">千位</div>
-                                                <div class="left cl-34">百位</div>
-                                                <div class="left cl-34">十位</div>
-                                                <div class="left cl-34">个位</div>
+                                                <div class="left recl-34">万位</div>
+                                                <div class="left recl-34">千位</div>
+                                                <div class="left recl-34">百位</div>
+                                                <div class="left recl-34">十位</div>
+                                                <div class="left recl-34">个位</div>
                                             </div>
                                             <div class="cl-35 cl-36 clean">
                                                 <script>
@@ -158,16 +152,16 @@
                                     <div class="left cl-32">奖号</div>
                                     <div class="left cl-33">
                                         <div class="cl-35">
-                                            <div class="left cl-34">万位</div>
-                                            <div class="left cl-34">千位</div>
-                                            <div class="left cl-34">百位</div>
-                                            <div class="left cl-34">十位</div>
-                                            <div class="left cl-34">个位</div>
+                                            <div class="left recl-34">万位</div>
+                                            <div class="left recl-34">千位</div>
+                                            <div class="left recl-34">百位</div>
+                                            <div class="left recl-34">十位</div>
+                                            <div class="left recl-34">个位</div>
                                         </div>
                                         <div class="cl-35 cl-36 clean">
                                             <script>
                                                 for(var i = 0; i < 5; ++i) {
-                                                    for(var j = 0; j < 10; ++j) {
+                                                    for(var j = 1; j < 12; ++j) {
                                                         document.write('<var class=""><i>' + j + '</i></var>');
                                                     }
                                                 }
@@ -265,7 +259,7 @@
                                     <span id="leftTime"></span></p>
                                 </h3>
                             </div>
-                            <div class="zhushi">每天销售120期&nbsp&nbsp每5分钟-10分钟一期</div>
+                            <div class="zhushi">每天销售79期&nbsp&nbsp每10分钟一期</div>
                             <div class="tongzhi">
                             </div>
                         </div>

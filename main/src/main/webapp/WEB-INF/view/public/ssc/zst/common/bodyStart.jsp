@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="${resPath}zst/css/app.css">
     <link rel="stylesheet" href="${resPath}css/global.css">
     <link rel="stylesheet" href="${resPath}css/lottery.css">
-    <link rel="stylesheet" href="${resPath}zst/css/other.css?v=20170817" type="text/css"><!--走势图页面CSS-->
+    <link rel="stylesheet" href="${resPath}zst/css/other.css?v=20170818" type="text/css"><!--走势图页面CSS-->
 </head>
 
 <body>
