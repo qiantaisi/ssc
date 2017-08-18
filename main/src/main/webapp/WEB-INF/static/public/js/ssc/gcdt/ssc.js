@@ -362,6 +362,11 @@ function getSscSubPage(url) {
                 $('#toptouzhu input').val(num);
             });
 
+            //判断加载11选5页面是需重新初始化全局变量
+            var flag11x5 = $(".Playmethod ul li.gf-li").attr("data-name");
+            if(typeof flag11x5 && flag11x5 == '11x5menu'){
+                initArrNum();
+            }
 
         },
         complete: function() {
