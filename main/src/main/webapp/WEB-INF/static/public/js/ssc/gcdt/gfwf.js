@@ -240,7 +240,6 @@ function selectFun_6(obj) {
 
 // 获取当前胆码的对象
 function getCommonObj(obj, maName){
-    console.log(maName);
     var objBtn = $(obj).parent().parent().parent().find("."+ maName +" span").eq(0);
     return objBtn;
 }
@@ -2826,7 +2825,6 @@ function zhushu_qezxds() {
     for (var i = 0; i < arr_new.length; i++) {
 
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
-            console.log(arr_new[i]);
             newArr.push(arr_new[i]);
 
         }
@@ -3864,7 +3862,6 @@ function gd11x5_zhushu_qezxfs() {
                     tempArr.push(wanArr[i] + "," + qianArr[m]);
         }
     }
-    console.log(tempArr.length);
     return tempArr.length;
 }
 
@@ -4171,7 +4168,7 @@ function zhushu_gd11x5_hezuxds() {
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
 
-        if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
+        if (oneStr != twoStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 ) {
                 tempArr.push(newArr[n]);
             }
@@ -4493,10 +4490,9 @@ function zhushu_gd11x5_qezuxfs() {
     return tempArr.length;
 }
 
-
-function zhushu_gd11x5_rxeze() {
+function zhushu_gd11x5_hezuxfs() {
     var tempArr = [], zuxArr = [];
-    $.each($(".recl-1002 ul li[data-name = '选2中2'] span.acti"), function () {
+    $.each($(".recl-1002 ul li[data-name = '组选'] span.acti"), function () {
         zuxArr.push($.trim($(this).find("i").html()));
     });
 
@@ -4520,9 +4516,10 @@ function zhushu_gd11x5_rxeze() {
     return tempArr.length;
 }
 
-function zhushu_gd11x5_hezxfs() {
+
+function zhushu_gd11x5_rxeze() {
     var tempArr = [], zuxArr = [];
-    $.each($(".recl-1002 ul li[data-name = '组选'] span.acti"), function () {
+    $.each($(".recl-1002 ul li[data-name = '选2中2'] span.acti"), function () {
         zuxArr.push($.trim($(this).find("i").html()));
     });
 
@@ -6985,7 +6982,7 @@ function suiji_gd11x5_qezuxds() {
     var arrTsh = [], newArr = [];
     arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
 
-    while (newArr.length < 3) {
+    while (newArr.length < 1) {
         var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
         var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
         if (zhiTsh1 != zhiTsh2 ) {
@@ -7087,7 +7084,7 @@ function suiji_gd11x5_hezuxds() {
     var arrTsh = [], newArr = [];
     arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
 
-    while (newArr.length < 3) {
+    while (newArr.length < 1) {
         var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
         var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
         if (zhiTsh1 != zhiTsh2 ) {
@@ -7099,7 +7096,7 @@ function suiji_gd11x5_hezuxds() {
 
     showPlayName = "后二组选单式";
     showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    betContent = newArr.join('，');
 
     return {
         showPlayName: showPlayName,
@@ -7456,7 +7453,7 @@ function suiji_gd11x5_qezxds() {
     var arrTsh = [], newArr = [];
     arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
 
-    while (newArr.length < 3) {
+    while (newArr.length < 1) {
         var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
         var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
 
@@ -7522,7 +7519,7 @@ function suiji_gd11x5_hezxds() {
     var arrTsh = [], newArr = [];
     arrTsh = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
 
-    while (newArr.length < 3) {
+    while (newArr.length < 1) {
         var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
         var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
 
@@ -7979,7 +7976,7 @@ function suiji_gd11x5_qszuxdt() {
 
     }
 
-    showPlayName = "前二组选-胆拖";
+    showPlayName = "前三组选-胆拖";
     showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + "," + newArr[2] + ") ";
     betContent = newArr[0] + "|" + newArr[1] + "," + newArr[2];
 
@@ -8049,7 +8046,7 @@ function suiji_gd11x5_qezuxdt() {
 
     showPlayName = "前二组选-胆拖";
     showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ") ";
-    betContent = newArr[0] + " " + newArr[1] ;
+    betContent = newArr[0] + "|" + newArr[1] ;
 
     return {
         showPlayName: showPlayName,
@@ -8326,7 +8323,7 @@ function suiji_gd11x5_hezuxdt() {
 
     showPlayName = "后二组选-胆拖";
     showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ") ";
-    betContent = newArr[0] + " " + newArr[1] ;
+    betContent = newArr[0] + "|" + newArr[1] ;
 
     return {
         showPlayName: showPlayName,
@@ -8933,7 +8930,7 @@ function suiji_gd11x5_qezuxfs() {
 
     var tempArr = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
     var arr = [];
-    while (arr.length < 3) {
+    while (arr.length < 1) {
         var xZlfs = tempArr[parseInt(Math.random()* 10+1)];
         var yZlfs = tempArr[parseInt(Math.random()* 10+1)];
 
@@ -8946,7 +8943,39 @@ function suiji_gd11x5_qezuxfs() {
     }
 
     showPlayName = "前二组选复式";
-    showContent = "前二组选复式: ({0},{1})".format(arr[0], arr[1]);
+    showContent = "号码: ({0},{1})".format(arr[0], arr[1]);
+    betContent = "{0},{1}".format(arr[0], arr[1]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent,
+        playGroupId: playGroupId
+    };
+}
+
+function suiji_gd11x5_hezuxfs() {
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var tempArr = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
+    var arr = [];
+    while (arr.length < 1) {
+        var xZlfs = tempArr[parseInt(Math.random()* 10+1)];
+        var yZlfs = tempArr[parseInt(Math.random()* 10+1)];
+
+
+        if (xZlfs != yZlfs) {
+            arr.push(xZlfs);
+            arr.push(yZlfs);
+
+        }
+    }
+
+    showPlayName = "后二组选复式";
+    showContent = "号码: ({0},{1})".format(arr[0], arr[1]);
     betContent = "{0},{1}".format(arr[0], arr[1]);
 
     return {
@@ -8993,40 +9022,7 @@ function suiji_gd11x5_rxeze() {
     };
 }
 
-/**
- * 后二组选复式
- */
-function suiji_gd11x5_hezxfs() {
-    // 初始化变量
-    var showPlayName = '';
-    var showContent = '';
-    var betContent = '';
 
-    var tempArr = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10','11'];
-    var arr = [];
-    while (arr.length < 3) {
-        var xZlfs = tempArr[parseInt(Math.random()* 10+1)];
-        var yZlfs = tempArr[parseInt(Math.random()* 10+1)];
-
-
-        if (xZlfs != yZlfs) {
-            arr.push(xZlfs);
-            arr.push(yZlfs);
-
-        }
-    }
-
-    showPlayName = "后二组选-复式";
-    showContent = "后二组选-复式: ({0},{1})".format(arr[0], arr[1]);
-    betContent = "{0},{1}".format(arr[0], arr[1]);
-
-    return {
-        showPlayName: showPlayName,
-        showContent: showContent,
-        betContent: betContent,
-        playGroupId: playGroupId
-    };
-}
 
 /**
  * 后三组选复式
@@ -10091,7 +10087,6 @@ function suiji_h3dxds() {
 //===============================获取内容算法===================================
 function tjzd() {
     var contentFun = getPlayPlFun_content();    // 内容算法
-    console.log(getPlayPlFun_zhushu());
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
     if (typeof contentFun == 'undefined' || typeof zhushuFun == 'undefined') {
         return;
@@ -11818,11 +11813,11 @@ function content_gd11x5_dwd() {
         geArr.push($.trim($(this).find("i").html()));
     });
 
-    var wanStr = wanArr.length > 0 ? (" 第一位: (" + wanArr.join(",") + ")") : "";
-    var qianStr = qianArr.length > 0 ? (" 第二位: (" + qianArr.join(",") + ")") : "";
-    var baiStr = baiArr.length > 0 ? (" 第三位: (" + baiArr.join(",") + ")") : "";
-    var shiStr = shiArr.length > 0 ? (" 第四位: (" + shiArr.join(",") + ")") : "";
-    var geStr = geArr.length > 0 ? (" 第五位: (" + geArr.join(",") + ")") : "";
+    var wanStr = wanArr.length > 0 ? ("(" + wanArr.join(",") + ")") : "";
+    var qianStr = qianArr.length > 0 ? ("(" + qianArr.join(",") + ")") : "";
+    var baiStr = baiArr.length > 0 ? ("(" + baiArr.join(",") + ")") : "";
+    var shiStr = shiArr.length > 0 ? ("(" + shiArr.join(",") + ")") : "";
+    var geStr = geArr.length > 0 ? ("(" + geArr.join(",") + ")") : "";
 
     var nowArr = [];
     var strTemp = $.trim(
@@ -12223,7 +12218,6 @@ function content_qszxds() {
         }
     }
     for (var n = 0; n < newArr.length; n++) {
-        console.log(newArr[n]);
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
@@ -12946,7 +12940,6 @@ function content_gd11x5_hszxds() {
         }
     }
     for (var n = 0; n < newArr.length; n++) {
-        console.log(newArr[n]);
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
@@ -13009,7 +13002,6 @@ function content_gd11x5_zszxds() {
         }
     }
     for (var n = 0; n < newArr.length; n++) {
-        console.log(newArr[n]);
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
@@ -13695,7 +13687,30 @@ function content_suiji_gd11x5_qezuxfs() {
     var betContent = '';
 
     showPlayName = "前二组选-复式";
-    showContent = "前二组选-复式: (" + zuLiuArr.join(",") + ")";
+    showContent = "号码: (" + zuLiuArr.join(",") + ")";
+    betContent = zuLiuArr.join(",");
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+function content_gd11x5_hezuxfs() {
+    var zuLiuArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '组选'] span.acti"), function (index, value) {
+        zuLiuArr.push($.trim($(this).find("i").html()));
+    });
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    showPlayName = "后二组选-复式";
+    showContent = "号码: (" + zuLiuArr.join(",") + ")";
     betContent = zuLiuArr.join(",");
 
     return {
@@ -13735,7 +13750,7 @@ function content_gd11x5_rxeze() {
 /**
  * 后二组选-复式
  */
-function content_gd11x5_hezxfs() {
+function gd11x5_hezuxfs() {
     var zuLiuArr = [];
 
     $.each($(".recl-1002 ul li[data-name = '组选'] span.acti"), function (index, value) {
@@ -13747,8 +13762,8 @@ function content_gd11x5_hezxfs() {
     var showContent = '';
     var betContent = '';
 
-    showPlayName = "前二组选-复式";
-    showContent = "前二组选-复式: (" + zuLiuArr.join(",") + ")";
+    showPlayName = "后二组选-复式";
+    showContent = "号码: (" + zuLiuArr.join(",") + ")";
     betContent = zuLiuArr.join(",");
 
     return {
@@ -15475,7 +15490,7 @@ function content_gd11x5_hezxfs() {
 
     showPlayName = "后二直选复式";
     showContent = "第四位: ({0}), 第五位: ({1})".format(arr[0], arr[1]);
-    betContent = "{0}|{1}|{2}".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
 
     return {
         showPlayName: showPlayName,
@@ -15523,7 +15538,7 @@ function content_gd11x5_qezxfs() {
 
     showPlayName = "前二直选复式";
     showContent = "第一位: ({0}), 第二位: ({1})".format(arr[0], arr[1]);
-    betContent = "{0}|{1}|{2}".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
 
     return {
         showPlayName: showPlayName,
