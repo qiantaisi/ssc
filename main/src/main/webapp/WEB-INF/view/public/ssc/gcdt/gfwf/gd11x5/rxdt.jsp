@@ -101,7 +101,7 @@
         <ul>
             <li data-name="胆码">
                 <b><i>胆码</i></b>
-                <var class="numLines sm_danma_selected">
+                <var class="numLines danma_selected">
                     <span class="n1"><i>01</i></span>
                     <span class="n2"><i>02</i></span>
                     <span class="n3"><i>03</i></span>
