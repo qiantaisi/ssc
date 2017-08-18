@@ -146,13 +146,7 @@ function danSelect(obj) {
             var sumSelectedTuodan = $(obj).parent().parent().parent().parent().find(".wanweiStr .cus-flex-item .xz.active_gfwf").length;
 
             if(sumSelectedTuodan <= 0){
-                arrSum8mDt.splice(0, arrSum8mDt.length);
-                arrSum7mDt.splice(0, arrSum7mDt.length);
-                arrSum6mDt.splice(0, arrSum6mDt.length);
-                arrSum5mDt.splice(0, arrSum5mDt.length);
-                arrSum4mDt.splice(0, arrSum4mDt.length);
-                arrSum3mDt.splice(0, arrSum3mDt.length);
-                arrSum2mDt.splice(0, arrSum2mDt.length);//清空数组
+                initArrSum();
             }
 
         }
@@ -186,6 +180,17 @@ function danSelect(obj) {
 
     });
 
+}
+
+//清除胆码计数器
+function initArrSum(){
+    arrSum8mDt.splice(0, arrSum8mDt.length);//清空数组
+    arrSum7mDt.splice(0, arrSum7mDt.length);
+    arrSum6mDt.splice(0, arrSum6mDt.length);
+    arrSum5mDt.splice(0, arrSum5mDt.length);
+    arrSum4mDt.splice(0, arrSum4mDt.length);
+    arrSum3mDt.splice(0, arrSum3mDt.length);
+    arrSum2mDt.splice(0, arrSum2mDt.length);
 }
 
 //胆码通用选择筛选器
@@ -4396,6 +4401,8 @@ function clearSelected() {
     // 机选
     $("#btn-jixuan-gfwf").show();
     $("#btn-reset-gfwf").hide();
+
+    initArrSum();
 }
 
 // //*****************mobile注数算法******************
