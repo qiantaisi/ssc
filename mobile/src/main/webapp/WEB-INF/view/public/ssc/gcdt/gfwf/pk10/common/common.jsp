@@ -34,9 +34,9 @@
     </div>
     <div class="staer wx-select2">
         <a href="javascript:void(0)" data-name="qy"><span>前一</span></a>
-        <a href="javascript:void(0)" data-name="dwd"><span>定位胆</span></a>
         <a href="javascript:void(0)" data-name="qe"><span>前二</span></a>
         <a href="javascript:void(0)" data-name="qsan"><span>前三</span></a>
+        <a href="javascript:void(0)" data-name="dwd"><span>定位胆</span></a>
     </div>
     <div class="xuan">
         <div class="xuan1"></div>

@@ -101,7 +101,10 @@ function selectFun_1(obj) {
     });
 
     var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
-    var maName = objName.split(' ')[1];
+    var maName = '';
+    if(typeof objName != 'undefined'){
+        maName = objName.split(' ')[1];
+    }
     var objBtn = getCommonObj(obj, maName);
     var btnFlag = "quan";
     renderZhushu();
@@ -144,7 +147,10 @@ function selectFun_str2(obj) {
     });
 
     var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
-    var maName = objName.split(' ')[1];
+    var maName = '';
+    if(typeof objName != 'undefined'){
+        maName = objName.split(' ')[1];
+    }
     var objBtn = getCommonObj(obj, maName);
     var btnFlag = "da";
     renderZhushu();
@@ -183,7 +189,10 @@ function selectFun_str3(obj) {
         }
     });
     var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
-    var maName = objName.split(' ')[1];
+    var maName = '';
+    if(typeof objName != 'undefined'){
+        maName = objName.split(' ')[1];
+    }
     var objBtn = getCommonObj(obj, maName);
     var btnFlag = "xiao";
     renderZhushu();
@@ -203,7 +212,10 @@ function selectFun_4(obj) {
         }
     });
     var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
-    var maName = objName.split(' ')[1];
+    var maName = '';
+    if(typeof objName != 'undefined'){
+        maName = objName.split(' ')[1];
+    }
     var objBtn = getCommonObj(obj, maName);
     var btnFlag = "qi";
     renderZhushu();
@@ -224,7 +236,10 @@ function selectFun_5(obj) {
     });
 
     var objName = $(obj).parent().parent().parent().find("li").eq(0).find(".numLines").attr('class');
-    var maName = objName.split(' ')[1];
+    var maName = '';
+    if(typeof objName != 'undefined'){
+        maName = objName.split(' ')[1];
+    }
     var objBtn = getCommonObj(obj, maName);
     var btnFlag = "ou";
     renderZhushu();

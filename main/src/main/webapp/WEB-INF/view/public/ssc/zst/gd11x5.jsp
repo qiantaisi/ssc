@@ -667,7 +667,7 @@
             var kjData = data[i].openCode.split(",");
 
             for(var j = 0; j < kjData.length; ++j) {
-                var haoma = kjData[j];
+                var haoma = parseInt(kjData[j]);
                 var bc1 = 0;
                 var Left = 0;
 
@@ -681,7 +681,7 @@
                 } else if(bc1 < 0) {
                     bc1 = -bc1;
                 }
-                for(var k = 0; k < 10; ++k) {
+                for(var k = 1; k < 12; ++k) {
                     str += '<var class="' + (j % 2 == 0 ? 'bg-1' : 'bg-2') + ' i_' + j + "_" + k + '">';
                     if(k == haoma) {
                         str += '<i data-num="' + k + '" class="' + (j % 2 == 0 ? 'bg-4' : 'bg-5') + '">';
@@ -842,7 +842,7 @@
                 str3 = '',
                 str4 = '';
         for(var i = 0; i < 5; ++i) {
-            for(var j = 0; j < 10; ++j) {
+            for(var j = 1; j < 12; ++j) {
                 var obj = yilou[i][j];
                 // 出现次数
                 str1 += '<var><i>' + obj.cxCs + '</i></var>';
@@ -920,7 +920,7 @@
 
         // 遗漏数据
         for(var i = 0; i < 5; ++i) {
-            for(var j = 0; j < 10; ++j) {
+            for(var j = 1; j < 12; ++j) {
                 var tmpCount = 0;
                 var obj = $(".i_" + i + "_" + j + " i");
                 $(obj).each(function() {
@@ -936,7 +936,7 @@
 
         // 遗漏分层
         for(var i = 0; i < 5; ++i) {
-            for(var j = 0; j < 10; ++j) {
+            for(var j = 1; j < 12; ++j) {
                 var tmpCount = 0;
                 var obj = $(".i_" + i + "_" + j + " i");
                 for(var k = obj.length - 1; k >= 0; --k) {
