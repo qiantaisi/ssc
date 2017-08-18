@@ -335,13 +335,7 @@ function delActi(btnFlag, obj){
 
     var sumSelectedTuodan = $(obj).parent().find("span.acti").length;
     if(sumSelectedTuodan <= 0){
-        arrNum2.splice(0, arrNum2.length);
-        arrNum3.splice(0, arrNum3.length);
-        arrNum4.splice(0, arrNum4.length);
-        arrNum5.splice(0, arrNum5.length);
-        arrNum6.splice(0, arrNum6.length);
-        arrNum7.splice(0, arrNum7.length);
-        arrNum8.splice(0, arrNum8.length);
+        initArrNum();
     }
 }
 
@@ -934,8 +928,9 @@ var arrNum7 = [];
 var arrNum8 = [];
 
 function initSubPage() {
+    // 初始化11选5计数器变量
+    initArrNum();
     // 初始化模板
-
     $("#subPage").html(template("template_" + getPlayPlTemplateName()));
     $("#subJRange").html(template("template_jRange"));
 
@@ -1120,6 +1115,17 @@ function initSubPage() {
 //        $(".my-slide-theme .back-bar .pointer").focus(function() {
 //            $(this).addClass("my-slide-theme-focus");
 //        });
+}
+
+//初始化11选5胆码计数器全局变量
+function initArrNum(){
+    arrNum2.splice(0, arrNum2.length);
+    arrNum3.splice(0, arrNum3.length);
+    arrNum4.splice(0, arrNum4.length);
+    arrNum5.splice(0, arrNum5.length);
+    arrNum6.splice(0, arrNum6.length);
+    arrNum7.splice(0, arrNum7.length);
+    arrNum8.splice(0, arrNum8.length);
 }
 
 function getDanmaCommon(obj, numArr, x, flagActi){
@@ -16626,6 +16632,8 @@ function clearSelected() {
     if (typeof clearStateTouZhu == 'function') {
         clearStateTouZhu();
     }
+
+    initArrNum();
 }
 
 function closeLayer() {

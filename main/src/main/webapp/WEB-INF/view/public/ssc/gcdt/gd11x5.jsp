@@ -59,7 +59,7 @@
         <div class="layout at">
             <div class="Playmethod">
                 <ul>
-                    <li class="gf-li">
+                    <li class="gf-li" data-name="11x5menu">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-gd11x5-sm">三码</a></span>
