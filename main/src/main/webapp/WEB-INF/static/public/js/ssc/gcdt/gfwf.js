@@ -3215,23 +3215,6 @@ function zhushu_gd11x5_zszuxdt(){
     return newArr.length;
 }
 
-function content_gd11x5_qszuxdt(){
-    var newArr = [];
-    var tempStr = '';
-    var wanArr = [], qianArr = [], baiArr = [];
-
-    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
-        wanArr.push($.trim($(this).html()));
-    });
-    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
-        qianArr.push($.trim($(this).html()));
-    });
-    if(wanArr.length <= 0 || qianArr.length <= 0){
-        return 0;
-    }
-
-    return wanArr.join(",") + "|" + qianArr.join(",");
-}
 function content_gd11x5_qezuxdt() {
     var zhushu = 0;
     var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
@@ -3276,25 +3259,6 @@ function content_gd11x5_qezuxdt() {
 }
 
 function content_gd11x5_hezuxdt(){
-    var newArr = [];
-    var tempStr = '';
-    var wanArr = [], qianArr = [], baiArr = [];
-
-    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
-        wanArr.push($.trim($(this).html()));
-    });
-    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
-        qianArr.push($.trim($(this).html()));
-    });
-    if(wanArr.length <= 0 || qianArr.length <= 0){
-        return 0;
-    }
-
-    return wanArr.join(",") + "|" + qianArr.join(",");
-}
-
-
-function content_gd11x5_hszuxdt(){
     var newArr = [];
     var tempStr = '';
     var wanArr = [], qianArr = [], baiArr = [];
@@ -15020,120 +14984,6 @@ function content_gd11x5_qszxfs() {
 }
 
 
-function content_gd11x5_qszuxdt() {
-    var zhushu = 0;
-    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
-
-    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
-        dxdsWArr.push($.trim($(this).find("i").html()));
-    });
-
-    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
-        dxdsQArr.push($.trim($(this).find("i").html()));
-    });
-
-    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0) {
-        return;
-    }
-
-    // 初始化变量
-    var showPlayName = '';
-    var showContent = '';
-    var betContent = '';
-
-    var arr = [
-        dxdsWArr.join(","),
-        dxdsQArr.join(","),
-        dxdsBArr.join(",")
-    ];
-
-    showPlayName = "前三组选胆拖-3前3";
-    showContent = "胆码: ({0}), 拖码: ({1}，{2})".format(arr[0], arr[1], arr[2]);
-    betContent = "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
-
-    return {
-        showPlayName: showPlayName,
-        showContent: showContent,
-        betContent: betContent
-    };
-}
-
-function content_gd11x5_zszuxdt() {
-    var zhushu = 0;
-    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
-
-    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
-        dxdsWArr.push($.trim($(this).find("i").html()));
-    });
-
-    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
-        dxdsQArr.push($.trim($(this).find("i").html()));
-    });
-
-    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0) {
-        return;
-    }
-
-    // 初始化变量
-    var showPlayName = '';
-    var showContent = '';
-    var betContent = '';
-
-    var arr = [
-        dxdsWArr.join(","),
-        dxdsQArr.join(","),
-        dxdsBArr.join(",")
-    ];
-
-    showPlayName = "中三组选胆拖-3前3";
-    showContent = "胆码: ({0}), 拖码: ({1}，{2})".format(arr[0], arr[1], arr[2]);
-    betContent = "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
-
-    return {
-        showPlayName: showPlayName,
-        showContent: showContent,
-        betContent: betContent
-    };
-}
-
-function content_gd11x5_hszuxdt() {
-    var zhushu = 0;
-    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
-
-    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
-        dxdsWArr.push($.trim($(this).find("i").html()));
-    });
-
-    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
-        dxdsQArr.push($.trim($(this).find("i").html()));
-    });
-
-    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0) {
-        return;
-    }
-
-    // 初始化变量
-    var showPlayName = '';
-    var showContent = '';
-    var betContent = '';
-
-    var arr = [
-        dxdsWArr.join(","),
-        dxdsQArr.join(","),
-        dxdsBArr.join(",")
-    ];
-
-    showPlayName = "后三组选胆拖-3后3";
-    showContent = "胆码: ({0}), 拖码: ({1}，{2})".format(arr[0], arr[1], arr[2]);
-    betContent = "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
-
-    return {
-        showPlayName: showPlayName,
-        showContent: showContent,
-        betContent: betContent
-    };
-}
-
 function content_gd11x5_qezuxdt() {
     var zhushu = 0;
     var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
@@ -15248,6 +15098,125 @@ function content_gd11x5_rxezwdt() {
         betContent: betContent
     };
 }
+
+
+function content_gd11x5_qszuxdt() {
+    var zhushu = 0;
+    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        dxdsWArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        dxdsQArr.push($.trim($(this).find("i").html()));
+    });
+
+    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(","),
+        dxdsBArr.join(",")
+    ];
+
+    showPlayName = "前三组选胆拖";
+    showContent = "胆码: ({0}), 拖码: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+
+function content_gd11x5_zszuxdt() {
+    var zhushu = 0;
+    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        dxdsWArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        dxdsQArr.push($.trim($(this).find("i").html()));
+    });
+
+    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(","),
+        dxdsBArr.join(",")
+    ];
+
+    showPlayName = "中三组选胆拖";
+    showContent = "胆码: ({0}), 拖码: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+
+function content_gd11x5_hszuxdt() {
+    var zhushu = 0;
+    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        dxdsWArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        dxdsQArr.push($.trim($(this).find("i").html()));
+    });
+
+    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(","),
+        dxdsBArr.join(",")
+    ];
+
+    showPlayName = "后三组选胆拖";
+    showContent = "胆码: ({0}), 拖码: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+
 
 function content_suiji_gd11x5_rxszsdt() {
     var zhushu = 0;
