@@ -702,19 +702,18 @@ function content_dwd(){
         geArr.push($.trim($(this).html()));
     });
 
-    var wanStr = wanArr.length > 0 ? ("万位: (" + wanArr.join(",") + ")") : "";
-    var qianStr = qianArr.length > 0 ? (" 千位: (" + qianArr.join(",") + ")") : "";
-    var baiStr = baiArr.length > 0 ? (" 百位: (" + baiArr.join(",") + ")") : "";
-    var shiStr = shiArr.length > 0 ?  (" 十位: (" + shiArr.join(",") + ")") : "";
-    var geStr = geArr.length > 0 ? (" 个位: (" + geArr.join(",") + ")") : "";
+    var wanStr = wanArr.length > 0 ? wanArr.join(",") : "";
+    var qianStr = qianArr.length > 0 ? qianArr.join(",") : "";
+    var baiStr = baiArr.length > 0 ? baiArr.join(",") : "";
+    var shiStr = shiArr.length > 0 ? shiArr.join(",") : "";
+    var geStr = geArr.length > 0 ? geArr.join(",") : "";
 
-    var nowArr = [];
     return $.trim(
-        (wanStr == ' ' ? ' ' : wanArr.join(",") + "|") +
-        (qianStr == ' ' ? ' ': qianArr.join(",") + "|") +
-        (baiStr == ' ' ? ' ': baiArr.join(",") + "|") +
-        (shiStr == ' ' ? ' ' : shiArr.join(",") + "|") +
-        (geStr == ' ' ? ' ': geArr.join(","))
+        (wanStr == ' ' ? ' ' : wanStr ) + "|" +
+        (qianStr == ' ' ? ' ' : qianStr) + "|" +
+        (baiStr == ' ' ? ' ' : baiStr) + "|" +
+        (shiStr == ' ' ? ' ' : shiStr) + "|" +
+        (geStr == ' ' ? ' ' : geStr)
     );
 }
 
