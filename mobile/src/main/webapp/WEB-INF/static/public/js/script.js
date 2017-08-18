@@ -5144,7 +5144,7 @@ $(function () {
                     $(".page").find(".gfwf_mask2").removeClass("Fixed");
 
                     statusChange();
-
+                    initArrSum();
                 });
             }
 
@@ -5187,6 +5187,7 @@ $(function () {
                 //执行官方玩法事件
                 gfwfEvent();
                 renderPlayName();
+                initArrSum();
             });
 
             // 添加选中状态，方便获取相关数据

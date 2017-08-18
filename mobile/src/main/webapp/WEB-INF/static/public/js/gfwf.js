@@ -118,12 +118,12 @@ function danSelect(obj) {
         if (sumSelectedTuodan <= 0) {
             initArrSum();
         }
-        var flagDanmaName = getCheckedDanma(obj);
-        minusDanmaNum(flagDanmaName, obj);
+        var flagName = getCheckedDanma(obj);
+        minusDanmaNum(flagName, obj);
     } else {
+        var flagDanmaName = getCheckedDanma(obj);
         //拖胆识别器
         danTuoShiBieQi(obj);
-        var flagDanmaName = getCheckedDanma(obj);
         if (flagDanmaName == 'danma3') {
             getDanMaCommon(obj, arrSum3mDt, 2);
         } else if (flagDanmaName == 'danma2') {
@@ -142,6 +142,7 @@ function danSelect(obj) {
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
         }
 
+
     }
 
     $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
@@ -156,23 +157,23 @@ function danSelect(obj) {
 }
 
 //清除拖码计数相应胆码计数器
-function danTuoShiBieQi(obj){
-//拖码判断-11选5
-    var flagTuoDan = $(obj).parent().parent().hasClass("tuodan_selected");
+function danTuoShiBieQi(objBtn){
+    //拖码判断-11选5
+    var flagTuoDan = $(objBtn).parent().parent().hasClass("tuodan_selected");
     if (flagTuoDan) {
-        $(obj).parent().parent().parent().parent().find(".danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-        $(obj).parent().parent().parent().parent().find(".em_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-        $(obj).parent().parent().parent().parent().find(".sm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-        $(obj).parent().parent().parent().parent().find(".sim_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-        $(obj).parent().parent().parent().parent().find(".wm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-        $(obj).parent().parent().parent().parent().find(".lm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-        $(obj).parent().parent().parent().parent().find(".qm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-        $(obj).parent().parent().parent().parent().find(".bm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(objBtn).parent().parent().parent().parent().find(".danma_selected .cus-flex-item span.n" + parseInt($(objBtn).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(objBtn).parent().parent().parent().parent().find(".em_danma_selected .cus-flex-item span.n" + parseInt($(objBtn).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(objBtn).parent().parent().parent().parent().find(".sm_danma_selected .cus-flex-item span.n" + parseInt($(objBtn).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(objBtn).parent().parent().parent().parent().find(".sim_danma_selected .cus-flex-item span.n" + parseInt($(objBtn).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(objBtn).parent().parent().parent().parent().find(".wm_danma_selected .cus-flex-item span.n" + parseInt($(objBtn).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(objBtn).parent().parent().parent().parent().find(".lm_danma_selected .cus-flex-item span.n" + parseInt($(objBtn).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(objBtn).parent().parent().parent().parent().find(".qm_danma_selected .cus-flex-item span.n" + parseInt($(objBtn).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(objBtn).parent().parent().parent().parent().find(".bm_danma_selected .cus-flex-item span.n" + parseInt($(objBtn).html()) + ".active_gfwf").removeClass('active_gfwf');
 
-        $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
-        var flagDanmaName = getCheckedDanma(obj);
-        minusDanmaNum(flagDanmaName, obj);
-        var sumSelectedTuodan = $(obj).parent().parent().parent().parent().find(".wanweiStr .cus-flex-item .xz.active_gfwf").length;
+        $(objBtn).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+        var flagDanmaName = tuoDanShibieDm(objBtn);
+        minusDanmaNum(flagDanmaName, objBtn);
+        var sumSelectedTuodan = $(objBtn).parent().parent().parent().parent().find(".wanweiStr .cus-flex-item .xz.active_gfwf").length;
 
         if(sumSelectedTuodan <= 0){
             initArrSum();
@@ -229,6 +230,7 @@ function minusDanmaNum(flagDanmaName, obj){
             arrSum8mDt.splice(indexVal, 1);
         }
     }
+
 }
 
 //胆码通用选择筛选器
@@ -245,6 +247,7 @@ function getDanMaCommon(obj, numArr, x){
 
 //识别是几位胆码标记
 function getCheckedDanma(obj){
+    var strReturn = '';
     //胆码判断-11选5
     var flagDanMaSm = $(obj).parent().parent().hasClass("danma_selected");
     //胆码判断-前二组选胆拖-11选5
@@ -261,20 +264,27 @@ function getCheckedDanma(obj){
     var flagDanMaBm = $(obj).parent().parent().hasClass("bm_danma_selected");
 
     if (flagDanMaSm) {
-        return "danma3"
+        strReturn = "danma3"
     } else if (flagDanMaEm) {
-        return "danma2"
+        strReturn =  "danma2"
     } else if (flagDanMaSim) {
-        return "danma4"
+        strReturn =  "danma4"
     } else if (flagDanMaWm) {
-        return "danma5"
+        strReturn =  "danma5"
     } else if (flagDanMaLm) {
-        return "danma6"
+        strReturn =  "danma6"
     } else if (flagDanMaQm) {
-        return "danma7"
+        strReturn =  "danma7"
     } else if (flagDanMaBm) {
-        return "danma8"
+        strReturn =  "danma8"
     }
+    return strReturn;
+}
+
+//拖胆点击是识别当前胆码
+function tuoDanShibieDm(obj) {
+    var flagDanMaSm = $(obj).parent().parent().attr("data-name");
+    return flagDanMaSm;
 }
 
 /**
@@ -3441,7 +3451,7 @@ function zhushu_q2dxds() {
     return tempArr.length;
 }
 
-//注数-后二大小单爽
+//注数-后二大小单双
 function zhushu_h2dxds(){
     var dxdsSArr = [], dxdsGArr = [];
     $.each($(".shiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
@@ -3568,7 +3578,7 @@ function zhushu_rx2zxhz(){
     return zhushu * shu;
 }
 
-//注数-组选复式`
+//注数-组选复式
 function zhushu_rx2zuxfs(){
     var zuArr = [];
     var tempArr = [];
@@ -4073,7 +4083,6 @@ function selectFun_6(obj) {
     $(obj).addClass("activeBtn");
     getGfwfZhushu();
     statusChange();
-
 }
 
 

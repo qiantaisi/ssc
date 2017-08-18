@@ -13,9 +13,6 @@
     <div class="cus_common wanweiStr">
         <div class="wan_top">
             <span class="wanwei">胆码</span>
-            <span class="xz">
-                <i onclick="selectFun_6(this)">清</i>
-            </span>
         </div>
         <div class="wan_bottom qm_danma_selected">
             <div class="cus-flex-item">
@@ -58,11 +55,8 @@
     <div class="cus_common qianweiStr">
         <div class="wan_top">
             <span class="wanwei">拖胆</span>
-            <span class="xz">
-                <i onclick="selectFun_6(this)">清</i>
-            </span>
         </div>
-        <div class="wan_bottom tuodan_selected">
+        <div class="wan_bottom tuodan_selected" data-name="danma7">
             <div class="cus-flex-item">
                 <span class="xz n1" onclick="danSelect(this)">01</span>
             </div>
