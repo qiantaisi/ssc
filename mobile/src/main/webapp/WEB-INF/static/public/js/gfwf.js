@@ -121,6 +121,7 @@ function danSelect(obj) {
         var flagDanmaName = getCheckedDanma(obj);
         minusDanmaNum(flagDanmaName, obj);
     } else {
+        //拖胆识别器
         danTuoShiBieQi(obj);
         var flagDanmaName = getCheckedDanma(obj);
         if (flagDanmaName == 'danma3') {
@@ -169,6 +170,8 @@ function danTuoShiBieQi(obj){
         $(obj).parent().parent().parent().parent().find(".bm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
 
         $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+        var flagDanmaName = getCheckedDanma(obj);
+        minusDanmaNum(flagDanmaName, obj);
         var sumSelectedTuodan = $(obj).parent().parent().parent().parent().find(".wanweiStr .cus-flex-item .xz.active_gfwf").length;
 
         if(sumSelectedTuodan <= 0){
