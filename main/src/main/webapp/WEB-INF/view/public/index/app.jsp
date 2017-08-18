@@ -74,7 +74,8 @@
                     <div class="code">
                         <img src="<%=basePath%>images/${data.iosQRCodeImageId}.png" alt="">
                     </div>
-                    <a class="ios" href="${data.iosURL}" target="_blank">
+                    <%--<a class="ios" href="${data.iosURL}" target="_blank">--%>
+                    <a class="ios" href="#" onclick="alert(' 请用iPhone手机扫描二维码  \n 或用Safari打开网址:\n http://<%=RequestUtils.getServerName(request)%>/app.html \n 进行下载。');">
                         <img src="${resPath}app/img/ico16.png" alt="">
                         <p>
                             Iphone版下载

@@ -2,11 +2,13 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="project38.api.utils.RequestUtils" %>
+<%@ page import="project38.api.utils.ApiUtils" %>
 <%
     String basePath = RequestUtils.getBasePath(request);
-    String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
+    String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("m.", "").replace("www.", "");
+    String pcHostName = RequestUtils.getScheme(request) + "://" + "www." + request.getServerName().replace("m.", "").replace("www.", "");
 %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,6 +18,19 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="${resPath}app/css/init.css?v=20170811"/>
     <link rel="stylesheet" href="${resPath}app/css/main.css?v=20170811"/>
+    <title>${data.webTitle}</title>
+    <script>if (window.top !== window.self) {top.location.href = "<%=basePath%>";}</script>
+    <script src="${commonResPath}js/mobile-detect.min.js"></script>
+    <script>
+        var md = new MobileDetect(window.navigator.userAgent);
+        if (!md.mobile()) {
+            window.location.href = "<%=pcHostName%>/app.html" + "<c:if test="${not empty param.p}">/?p=${param.p}</c:if>";
+        }
+
+        if (!window.navigator.cookieEnabled) {
+            alert("请检查您的浏览器是否禁用了COOKIE");
+        }
+    </script>
 </head>
 <body>
 <div class="yd_head clearfix">
