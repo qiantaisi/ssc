@@ -1915,7 +1915,7 @@ $(function () {
     // $(document).on("pageInit", "#page-cqssc", function(e, id, page) {initSscPage();});
     function initSscPage(playGroupId) {
         // 右上角弹出框
-        $('.menubtn').click(function(){
+        $('.menubtn').click(function () {
             if ($("#jieSuan").length > 0) {
                 ajaxRequest({
                     url: config.basePath + "ssc/ajaxGetShuYing.json",
@@ -1926,13 +1926,37 @@ $(function () {
                         if (obj.result == 1) {
                             var money = obj.todayWinOrLose.toFixed(3);
                             var strMoney = '';
-                            if(money > 0){
-                                strMoney  = "<font color='green'>+" + money + "</font>";
-                            } else{
-                                strMoney  = "<font color='red'>" + money + "</font>";
+                            if (money > 0) {
+                                strMoney = "<font color='green'>+" + money + "</font>";
+                            } else {
+                                strMoney = "<font color='red'>" + money + "</font>";
                             }
                             $("#jieSuan").html(strMoney);
                         }
+
+
+                        // 投注界面右悬浮菜单按钮
+                        $('.menubtn').click(function () {
+                            var uid = Tools.getCookie("uid");
+                            var token = Tools.getCookie("token");
+                            ajaxRequest({
+                                url: config.basePath + "ssc/ajaxGetShuYing.json",
+                                data: {
+                                    uid: uid,
+                                    token: token
+                                },
+                                success: function (obj) {
+                                    if (obj == null) {
+                                        $("#jieSuan").html("(0.00)");
+                                    } else {
+                                        $("#jieSuan").html((obj.todayWinOrLose));
+                                    }
+                                }
+                            });
+
+                            $(".bg").show();
+                            $(".menu_alert").show();
+                        });
                     }
                 });
             }
@@ -5045,28 +5069,6 @@ $(function () {
     $(document).on("pageInit", "#page-gcdt-cqssc", function (e, id, page) {
         initSscPage(1);
 
-// 首页弹框登录按钮
-        $('.menubtn').click(function(){
-            var uid = Tools.getCookie("uid");
-            var token = Tools.getCookie("token");
-            ajaxRequest({
-                url: config.basePath + "ssc/ajaxGetShuYing.json",
-                data: {
-                    uid:uid,
-                    token:token
-                },
-                success:function (obj) {
-                    if(obj==null){
-                        $("#jieSuan").html("(0.00)");
-                    }else{
-                        $("#jieSuan").html((obj.todayWinOrLose));
-                    }
-                }
-            });
-
-            $(".bg").show();
-            $(".menu_alert").show();
-        });
         $('.bg').click(function(){
             $(".bg").hide();
             $(".menu_alert").hide();
@@ -5078,6 +5080,7 @@ $(function () {
         });
         $(".cl-602 a").eq(0).trigger("click");
     });
+
 
     // 官方玩法说明
     $(document).on("pageInit","#page-wfsm-wfsm-gfwf",function(){
