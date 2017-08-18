@@ -38,7 +38,7 @@
                     <p class="fl sj"><img src="${resPath}images/and_icon.png" alt=""></p>
                     <div class="fr btn-grp">
                         <p class="box">下载APP送您38元现金</p>
-                        <p><img src="${resPath}images/ewm.png" alt=""></p>
+                        <p><img style="width:168px; height:168px;" src="${resPath}images/ewm.png?v=0.002" alt=""></p>
                         <a href="http://d.zhcai8899.com/zhcaicom138178_2014.apk" class="btn-down-android mt10" target="_self"><i class="icon i-android" target="_self"></i><span class="a-txt" >Android版下载</span>
                             <span class="layer-down"><i class="icon i-down"></i><span class="a-txt">3.76M</span></span></a>
                     </div>
@@ -49,7 +49,7 @@
                 <div class="fr">
                     <div class="title">
                         <p class="logo"><span class="box">iPhone在线版 极速体验<span></p>
-                        <div class="txt"><img src="${resPath}images/ewm.png" alt=""></div>
+                        <div class="txt"><img style="width:168px; height:168px;" src="${resPath}images/ewm.png?v=0.002" alt=""></div>
                     </div>
                     <div class="download">
                         <div class="btn-grp">
