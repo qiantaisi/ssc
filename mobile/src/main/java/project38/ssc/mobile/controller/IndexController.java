@@ -64,6 +64,15 @@ public class IndexController extends BaseController{
         return this.renderPublicView("index/ewm", modelMap);
     }
 
+    @RequestMapping(value = "/ios.html")
+    public ModelAndView ios() throws UserException{
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        modelMap.put("data", ApiUtils.getDownloadManagementResult(companyShortName));
+        modelMap.put("logo", ApiUtils.getLogo(1, companyShortName));
+        return this.renderPublicView("index/ios", modelMap);
+    }
+
 
     @RequestMapping(value = "/app.html")
     public ModelAndView app() throws UserException{
