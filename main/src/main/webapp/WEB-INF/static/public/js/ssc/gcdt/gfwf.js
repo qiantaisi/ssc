@@ -7239,8 +7239,8 @@ function suiji_gd11x5_rxszsds() {
 
 
     showPlayName = "任选单式-3中3";
-    showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    showContent = "号码: (" + newArr.join(',') + ")";
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
@@ -7274,8 +7274,8 @@ function suiji_gd11x5_rxsizsds() {
 
 
     showPlayName = "任选单式-4中4";
-    showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    showContent = "号码: (" + newArr.join(',') + ")";
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
@@ -7311,8 +7311,8 @@ function suiji_gd11x5_rxwzwds() {
 
 
     showPlayName = "任选单式-5中5";
-    showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    showContent = "号码: (" + newArr.join(',') + ")";
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
@@ -7351,8 +7351,8 @@ function suiji_gd11x5_rxlzwds() {
 
 
     showPlayName = "任选单式-6中5";
-    showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    showContent = "号码: (" + newArr.join(',') + ")";
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
@@ -7392,8 +7392,8 @@ function suiji_gd11x5_rxqzwds() {
 
 
     showPlayName = "任选单式-7中5";
-    showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    showContent = "号码: (" + newArr.join(',') + ")";
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
@@ -7435,8 +7435,8 @@ function suiji_gd11x5_rxbzwds() {
 
 
     showPlayName = "任选单式-8中5";
-    showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    showContent = "号码: (" + newArr.join(',') + ")";
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
@@ -7502,8 +7502,8 @@ function suiji_gd11x5_rxezeds() {
 
 
     showPlayName = "任选单式-2中2";
-    showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    showContent = "号码: (" + newArr.join(',') + ")";
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
@@ -8084,7 +8084,7 @@ function suiji_gd11x5_rxezwdt() {
 
     showPlayName = "后二组选-胆拖";
     showContent = "胆拖: (" + newArr[0] + ") 拖码: (" + newArr[1] + ") ";
-    betContent = newArr[0] + " " + newArr[1] ;
+    betContent = newArr[0] + "|" + newArr[1] ;
 
     return {
         showPlayName: showPlayName,
@@ -12348,7 +12348,7 @@ function content_suiji_gd11x5_rxszsds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr);
+            tempArr.push(oneStr + ","+twoStr+"," + threeStr);
         }
     }
 
@@ -12408,7 +12408,7 @@ function content_gd11x5_rxsizsds() {
         var fourStr = temp.substr(6, 2);
 
         if(threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr+fourStr);
+            tempArr.push(oneStr+"," + twoStr+"," + threeStr+","+fourStr);
         }
     }
 
@@ -12468,7 +12468,7 @@ function content_gd11x5_rxwzwds() {
         var fourStr = temp.substr(6, 2);
         var fiveStr = temp.substr(8, 2);
         if(fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr+fourStr+fiveStr);
+            tempArr.push(oneStr +","+ twoStr+"," + threeStr+","+fourStr+","+fiveStr);
         }
     }
 
@@ -12529,7 +12529,7 @@ function content_gd11x5_rxlzwds() {
         var fiveStr = temp.substr(8, 2);
         var sixStr = temp.substr(10, 2);
         if(fiveStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&fourStr != sixStr &&fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr+fourStr+fiveStr+sixStr);
+            tempArr.push(oneStr+"," + twoStr+"," + threeStr+","+fourStr+","+fiveStr+","+sixStr);
         }
     }
 
@@ -12591,7 +12591,7 @@ function content_gd11x5_rxqzwds() {
         var sixStr = temp.substr(10, 2);
         var sevenStr = temp.substr(12, 2);
         if(oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&fourStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&fourStr != sixStr &&fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr+fourStr+fiveStr+sixStr+sevenStr);
+            tempArr.push(oneStr+"," + twoStr+"," + threeStr+","+fourStr+","+fiveStr+","+sixStr+","+sevenStr);
         }
     }
 
@@ -12654,7 +12654,7 @@ function content_gd11x5_rxbzwds() {
         var sevenStr = temp.substr(12, 2);
         var eitStr = temp.substr(14, 2);
         if(sevenStr != eitStr &&sixStr != eitStr &&fiveStr != eitStr &&fourStr != eitStr &&threeStr != eitStr &&twoStr != eitStr &&oneStr != eitStr &&oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&fourStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&fourStr != sixStr &&fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr+fourStr+fiveStr+sixStr+sevenStr+eitStr);
+            tempArr.push(oneStr+"," + twoStr+"," + threeStr+","+fourStr+","+fiveStr+","+sixStr+","+sevenStr+","+eitStr);
         }
     }
 
@@ -12712,7 +12712,7 @@ function content_gd11x5_rxezeds() {
         var twoStr = temp.substr(2, 2);
 
         if(oneStr != twoStr ){
-            tempArr.push(oneStr + twoStr );
+            tempArr.push(oneStr +"," +twoStr );
         }
     }
 
@@ -15159,6 +15159,45 @@ function content_gd11x5_qszuxdt() {
 }
 
 
+function content_suiji_gd11x5_rxszsdt() {
+    var zhushu = 0;
+    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
+
+    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
+        dxdsWArr.push($.trim($(this).find("i").html()));
+    });
+
+    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
+        dxdsQArr.push($.trim($(this).find("i").html()));
+    });
+
+    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0) {
+        return;
+    }
+
+    // 初始化变量
+    var showPlayName = '';
+    var showContent = '';
+    var betContent = '';
+
+    var arr = [
+        dxdsWArr.join(","),
+        dxdsQArr.join(","),
+        dxdsBArr.join(",")
+    ];
+
+    showPlayName = "前三组选胆拖";
+    showContent = "胆码: ({0}), 拖码: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
+
+    return {
+        showPlayName: showPlayName,
+        showContent: showContent,
+        betContent: betContent
+    };
+}
+
+
 function content_gd11x5_zszuxdt() {
     var zhushu = 0;
     var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
@@ -15236,45 +15275,6 @@ function content_gd11x5_hszuxdt() {
     };
 }
 
-
-
-function content_suiji_gd11x5_rxszsdt() {
-    var zhushu = 0;
-    var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
-
-    $.each($(".recl-1002 ul li[data-name = '胆码'] span.acti"), function (index, value) {
-        dxdsWArr.push($.trim($(this).find("i").html()));
-    });
-
-    $.each($(".recl-1002 ul li[data-name = '拖码'] span.acti"), function (index, value) {
-        dxdsQArr.push($.trim($(this).find("i").html()));
-    });
-
-    if (dxdsWArr.length <= 0 || dxdsQArr.length <= 0) {
-        return;
-    }
-
-    // 初始化变量
-    var showPlayName = '';
-    var showContent = '';
-    var betContent = '';
-
-    var arr = [
-        dxdsWArr.join(","),
-        dxdsQArr.join(","),
-        dxdsBArr.join(",")
-    ];
-
-    showPlayName = "任选胆拖-3中3";
-    showContent = "胆码: ({0}), 拖码: ({1}，{2})".format(arr[0], arr[1], arr[2]);
-    betContent = "{0}|{1}|{2}".format(arr[0], arr[1], arr[2]);
-
-    return {
-        showPlayName: showPlayName,
-        showContent: showContent,
-        betContent: betContent
-    };
-}
 function content_gd11x5_rxsizsdt() {
     var zhushu = 0;
     var dxdsWArr = [], dxdsQArr = [], dxdsBArr = [], tempArr = [];
@@ -15302,8 +15302,8 @@ function content_gd11x5_rxsizsdt() {
     ];
 
     showPlayName = "任选胆拖-4中4";
-    showContent = "胆码: ({0}), 拖码: ({1},{2},{3})".format(arr[0], arr[1], arr[2], arr[3]);
-    betContent = "{0}|{1},{2},{3}".format(arr[0], arr[1], arr[2], arr[3]);
+    showContent = "胆码: ({0}), 拖码: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
 
     return {
         showPlayName: showPlayName,
@@ -15338,8 +15338,8 @@ function content_gd11x5_rxwzwdt() {
     ];
 
     showPlayName = "任选胆拖-5中5";
-    showContent = "胆码: ({0}), 拖码: ({1},{2},{3},{4})".format(arr[0], arr[1], arr[2], arr[3],arr[4]);
-    betContent = "{0}|{1},{2},{3},{4}".format(arr[0], arr[1], arr[2], arr[3], arr[4]);
+    showContent = "胆码: ({0}), 拖码: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
 
     return {
         showPlayName: showPlayName,
@@ -15375,8 +15375,8 @@ function content_gd11x5_rxlzwdt() {
     ];
 
     showPlayName = "任选胆拖-6中5";
-    showContent = "胆码: ({0}), 拖码: ({1},{2},{3},{4},{5})".format(arr[0], arr[1], arr[2], arr[3],arr[4],arr[5]);
-    betContent = "{0}|{1},{2},{3},{4},{5}".format(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]);
+    showContent = "胆码: ({0}), 拖码: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
 
     return {
         showPlayName: showPlayName,
@@ -15411,8 +15411,8 @@ function content_gd11x5_rxqzwdt() {
     ];
 
     showPlayName = "任选胆拖-7中5";
-    showContent = "胆码: ({0}), 拖码: ({1},{2},{3},{4},{5},{6})".format(arr[0], arr[1], arr[2], arr[3],arr[4],arr[5],arr[6]);
-    betContent = "{0}|{1},{2},{3},{4},{5},{6}".format(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6]);
+    showContent = "胆码: ({0}), 拖码: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
 
     return {
         showPlayName: showPlayName,
@@ -15448,8 +15448,8 @@ function content_gd11x5_rxbzwdt() {
     ];
 
     showPlayName = "任选胆拖-8中5";
-    showContent = "胆码: ({0}), 拖码: ({1},{2},{3},{4},{5},{6},{7})".format(arr[0], arr[1], arr[2], arr[3],arr[4],arr[5],arr[6],arr[7]);
-    betContent = "{0}|{1},{2},{3},{4},{5},{6},{7}".format(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7]);
+    showContent = "胆码: ({0}), 拖码: ({1})".format(arr[0], arr[1]);
+    betContent = "{0}|{1}".format(arr[0], arr[1]);
 
     return {
         showPlayName: showPlayName,
