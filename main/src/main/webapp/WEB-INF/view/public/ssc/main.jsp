@@ -57,10 +57,11 @@
                             <a href="javascript:void(0)" onclick="getSscPage('jlk3')"><img src="${resPath}img/jlk3.png"
                                                                                            alt=""><var>吉林快3</var></a>
                         </div>
-
-                        <!--<h3 class="head-lhc"><img src="${resPath}img/lhcxl.png" alt=""><var>六合彩系列</var><i></i></h3>
+                        <h3 class="head-k3"><img src="${resPath}img/k3xl.png" alt=""><var>11选5</var><i></i></h3>
                         <div class="xl-down xHide">
-                        </div> -->
+                            <a href="javascript:void(0)" onclick="getSscPage('gd11x5')"> <img src="${resPath}img/gd11x5.png" alt="">
+                                                                                          <var>广东11选5</var></a>
+                        </div>
                         <h3 class="head-qita"><img src="${resPath}img/qitaxl.png" alt=""><var>其他系列</var><i></i></h3>
                         <div class="xl-down xHide">
                             <a href="javascript:void(0)" onclick="getSscPage('lhc')"><img src="${resPath}img/ico17.png" alt=""><var>香港六合彩</var></a>
