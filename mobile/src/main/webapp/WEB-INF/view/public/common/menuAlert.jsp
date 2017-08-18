@@ -787,7 +787,7 @@
                     </c:when>
                     <c:when test="${param.playGroupId == 24}">
                         <li>
-                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                            <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${param.playGroupId}"
                                class="item-contents">
                                 <div class="item-medias"><i class="icon bg-img-sflhc"></i></div>
                                 <div class="item-innerss">

@@ -32,7 +32,7 @@
             <div class="lis">
                 <h5>广东11选5</h5>
                 <ul>
-                    <li class="sli">常规玩法</li>
+                    <li class="sli">官方玩法</li>
                     <%-- <li>官方玩法</li>--%>
                     <li>游戏说明</li>
                 </ul>

@@ -42,13 +42,22 @@
                     <c:when test="${playGroupId == 21}">吉林快3</c:when>
                     <c:when test="${playGroupId == 22}">10分六合彩</c:when>
                     <c:when test="${playGroupId == 23}">极速PK10</c:when>
+                    <c:when test="${playGroupId == 24}">广东11选5</c:when>
                 </c:choose>
                 -玩法说明
             </h1>
         </header>
         <div class="buttons-tab cl-701" id="buttonsTabList" style="top: 2.1rem">
-            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="button wfsm_cd"
-               data-id="btn-bqxq"><span>传统模式</span></a>
+            <c:choose>
+                <c:when test="${playGroupId == 24}">
+                    <a href="javascript:void(0)" onclick="tishi()" class="button wfsm_cd"
+                       data-id="btn-bqxq"><span>传统模式</span></a>
+                </c:when>
+                <c:otherwise>
+                    <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${playGroupId}" class="button wfsm_cd"
+                       data-id="btn-bqxq"><span>传统模式</span></a>
+                </c:otherwise>
+            </c:choose>
             <a href="<%=basePath%>ssc/wfsm/wfsm-gfwf.html?playGroupId=${playGroupId}" class="active button wfsm_cd"
                data-id="btn-gdqc" style="height: 2.2rem"><span>官方模式</span></a>
             <%--<a href="<%=basePath%>ssc/wfsm/lskj.html?playGroupId=${playGroupId}" class="button"--%>
@@ -178,6 +187,9 @@
                                             <c:when test="${playGroupId == 23}">
                                                 <c:import url="rule/gfwf/jspk10.jsp"/>
                                             </c:when>
+                                            <c:when test="${playGroupId == 24}">
+                                                <c:import url="rule/gfwf/gd11x5.jsp"/>
+                                            </c:when>
                                         </c:choose>
                                     </div>
                                 </div>
@@ -220,6 +232,10 @@
                 $(".sxn").html(sx);
             }
         });
+    }
+
+    function tishi() {
+        Tools.toast('此彩种无该模式');
     }
 
     function strsx(sx) {
