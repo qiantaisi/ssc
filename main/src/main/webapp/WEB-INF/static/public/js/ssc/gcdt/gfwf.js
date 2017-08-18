@@ -312,24 +312,24 @@ function delActi(btnFlag, obj){
     }  else if(btnFlag == "ou"){
         var ouArr = [2, 4, 6, 8, 10];
         for(var y = 0; y < ouArr.length; y++){
-            $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".sim_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".wm_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".lm_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".qm_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".bm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + ouArr[y] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + ouArr[y] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".sim_danma_selected span.n" + ouArr[y] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".wm_danma_selected span.n" + ouArr[y] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".lm_danma_selected span.n" + ouArr[y] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".qm_danma_selected span.n" + ouArr[y] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".bm_danma_selected span.n" + ouArr[y] + ".acti").removeClass('acti');
         }
     }  else if(btnFlag == "qi"){
         var qiArr = [1, 3, 5, 7, 9, 11];
         for(var x = 0; x < qiArr.length; x++){
-            $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".sim_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".wm_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".lm_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".qm_danma_selected span.n" + i + ".acti").removeClass('acti');
-            $(obj).parent().parent().parent().parent().find(".bm_danma_selected span.n" + i + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".danma_selected span.n" + qiArr[x] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".em_danma_selected span.n" + qiArr[x] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".sim_danma_selected span.n" + qiArr[x] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".wm_danma_selected span.n" + qiArr[x] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".lm_danma_selected span.n" + qiArr[x] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".qm_danma_selected span.n" + qiArr[x] + ".acti").removeClass('acti');
+            $(obj).parent().parent().parent().parent().find(".bm_danma_selected span.n" + qiArr[x] + ".acti").removeClass('acti');
         }
     }
 
