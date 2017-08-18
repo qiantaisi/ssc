@@ -114,62 +114,35 @@ function danSelect(obj) {
 
     if ($(obj).parent().find(".wan_bottom .cus-flex-item .xz").hasClass("active_gfwf")) {
         $(obj).parent().find(".cus-flex-item .xz.active_gfwf").removeClass("active_gfwf");
-    } else {
-        //拖码判断-11选5
-        var flagTuoDan = $(obj).parent().parent().hasClass("tuodan_selected");
-        //胆码判断-11选5
-        var flagDanMaSm = $(obj).parent().parent().hasClass("danma_selected");
-        //胆码判断-前二组选胆拖-11选5
-        var flagDanMaEm = $(obj).parent().parent().hasClass("em_danma_selected");
-        //胆码判断-任选四胆拖-11选5
-        var flagDanMaSim = $(obj).parent().parent().hasClass("sim_danma_selected");
-        //胆码判断-任选五胆拖-11选5
-        var flagDanMaWm = $(obj).parent().parent().hasClass("wm_danma_selected");
-        //胆码判断-任选六胆拖-11选5
-        var flagDanMaLm = $(obj).parent().parent().hasClass("lm_danma_selected");
-        //胆码判断-任选七胆拖-11选5
-        var flagDanMaQm = $(obj).parent().parent().hasClass("qm_danma_selected");
-        //胆码判断-任选八胆拖-11选5
-        var flagDanMaBm = $(obj).parent().parent().hasClass("bm_danma_selected");
-
-        if (flagTuoDan) {
-            $(obj).parent().parent().parent().parent().find(".danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-            $(obj).parent().parent().parent().parent().find(".em_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-            $(obj).parent().parent().parent().parent().find(".sm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-            $(obj).parent().parent().parent().parent().find(".sim_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-            $(obj).parent().parent().parent().parent().find(".wm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-            $(obj).parent().parent().parent().parent().find(".lm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-            $(obj).parent().parent().parent().parent().find(".qm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-            $(obj).parent().parent().parent().parent().find(".bm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
-
-            $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
-            var sumSelectedTuodan = $(obj).parent().parent().parent().parent().find(".wanweiStr .cus-flex-item .xz.active_gfwf").length;
-
-            if(sumSelectedTuodan <= 0){
-                initArrSum();
-            }
-
+        var sumSelectedTuodan = $(obj).parent().parent().parent().parent().find(".wanweiStr .cus-flex-item .xz.active_gfwf").length;
+        if (sumSelectedTuodan <= 0) {
+            initArrSum();
         }
-
-        if (flagDanMaSm) {
+        var flagDanmaName = getCheckedDanma(obj);
+        minusDanmaNum(flagDanmaName, obj);
+    } else {
+        danTuoShiBieQi(obj);
+        var flagDanmaName = getCheckedDanma(obj);
+        if (flagDanmaName == 'danma3') {
             getDanMaCommon(obj, arrSum3mDt, 2);
-        } else if (flagDanMaEm) {
+        } else if (flagDanmaName == 'danma2') {
             getDanMaCommon(obj, arrSum2mDt, 1);
-        } else if (flagDanMaSim) {
+        } else if (flagDanmaName == 'danma4') {
             getDanMaCommon(obj, arrSum4mDt, 3);
-        } else if (flagDanMaWm) {
+        } else if (flagDanmaName == 'danma5') {
             getDanMaCommon(obj, arrSum5mDt, 4);
-        } else if (flagDanMaLm) {
+        } else if (flagDanmaName == 'danma6') {
             getDanMaCommon(obj, arrSum6mDt, 5);
-        } else if (flagDanMaQm) {
+        } else if (flagDanmaName == 'danma7') {
             getDanMaCommon(obj, arrSum7mDt, 6);
-        } else if (flagDanMaBm) {
+        } else if (flagDanmaName == 'danma8') {
             getDanMaCommon(obj, arrSum8mDt, 7);
         } else {
             $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
         }
 
     }
+
     $(obj).parent().parent().parent().find(".xz i").removeClass("active_gfwf");
 
     getGfwfZhushu();
@@ -179,7 +152,29 @@ function danSelect(obj) {
         $(this).removeClass("activeBtn");
 
     });
+}
 
+//清除拖码计数相应胆码计数器
+function danTuoShiBieQi(obj){
+//拖码判断-11选5
+    var flagTuoDan = $(obj).parent().parent().hasClass("tuodan_selected");
+    if (flagTuoDan) {
+        $(obj).parent().parent().parent().parent().find(".danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(obj).parent().parent().parent().parent().find(".em_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(obj).parent().parent().parent().parent().find(".sm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(obj).parent().parent().parent().parent().find(".sim_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(obj).parent().parent().parent().parent().find(".wm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(obj).parent().parent().parent().parent().find(".lm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(obj).parent().parent().parent().parent().find(".qm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+        $(obj).parent().parent().parent().parent().find(".bm_danma_selected .cus-flex-item span.n" + parseInt($(obj).html()) + ".active_gfwf").removeClass('active_gfwf');
+
+        $(obj).parent().find(".cus-flex-item .xz").addClass("active_gfwf");
+        var sumSelectedTuodan = $(obj).parent().parent().parent().parent().find(".wanweiStr .cus-flex-item .xz.active_gfwf").length;
+
+        if(sumSelectedTuodan <= 0){
+            initArrSum();
+        }
+    }
 }
 
 //清除胆码计数器
@@ -191,6 +186,46 @@ function initArrSum(){
     arrSum4mDt.splice(0, arrSum4mDt.length);
     arrSum3mDt.splice(0, arrSum3mDt.length);
     arrSum2mDt.splice(0, arrSum2mDt.length);
+}
+
+//11选胆码减除计数器
+function minusDanmaNum(flagDanmaName, obj){
+    if (flagDanmaName == 'danma3') {
+        var indexVal = arrSum3mDt.indexOf(parseInt($(obj).html()));
+        if(indexVal > -1){
+            arrSum3mDt.splice(indexVal, 1);
+        }
+    } else if (flagDanmaName == 'danma2') {
+        var indexVal = arrSum2mDt.indexOf(parseInt($(obj).html()));
+        if(indexVal > -1){
+            arrSum2mDt.splice(indexVal, 1);
+        }
+    } else if (flagDanmaName == 'danma4') {
+        var indexVal = arrSum4mDt.indexOf(parseInt($(obj).html()));
+        if(indexVal > -1){
+            arrSum4mDt.splice(indexVal, 1);
+        }
+    } else if (flagDanmaName == 'danma5') {
+        var indexVal = arrSum5mDt.indexOf(parseInt($(obj).html()));
+        if(indexVal > -1){
+            arrSum5mDt.splice(indexVal, 1);
+        }
+    } else if (flagDanmaName == 'danma6') {
+        var indexVal = arrSum6mDt.indexOf(parseInt($(obj).html()));
+        if(indexVal > -1){
+            arrSum6mDt.splice(indexVal, 1);
+        }
+    } else if (flagDanmaName == 'danma7') {
+        var indexVal = arrSum7mDt.indexOf(parseInt($(obj).html()));
+        if(indexVal > -1){
+            arrSum7mDt.splice(indexVal, 1);
+        }
+    } else if (flagDanmaName == 'danma8') {
+        var indexVal = arrSum8mDt.indexOf(parseInt($(obj).html()));
+        if(indexVal > -1){
+            arrSum8mDt.splice(indexVal, 1);
+        }
+    }
 }
 
 //胆码通用选择筛选器
@@ -205,10 +240,43 @@ function getDanMaCommon(obj, numArr, x){
     numArr.push(parseInt($(obj).html()));
 }
 
+//识别是几位胆码标记
+function getCheckedDanma(obj){
+    //胆码判断-11选5
+    var flagDanMaSm = $(obj).parent().parent().hasClass("danma_selected");
+    //胆码判断-前二组选胆拖-11选5
+    var flagDanMaEm = $(obj).parent().parent().hasClass("em_danma_selected");
+    //胆码判断-任选四胆拖-11选5
+    var flagDanMaSim = $(obj).parent().parent().hasClass("sim_danma_selected");
+    //胆码判断-任选五胆拖-11选5
+    var flagDanMaWm = $(obj).parent().parent().hasClass("wm_danma_selected");
+    //胆码判断-任选六胆拖-11选5
+    var flagDanMaLm = $(obj).parent().parent().hasClass("lm_danma_selected");
+    //胆码判断-任选七胆拖-11选5
+    var flagDanMaQm = $(obj).parent().parent().hasClass("qm_danma_selected");
+    //胆码判断-任选八胆拖-11选5
+    var flagDanMaBm = $(obj).parent().parent().hasClass("bm_danma_selected");
+
+    if (flagDanMaSm) {
+        return "danma3"
+    } else if (flagDanMaEm) {
+        return "danma2"
+    } else if (flagDanMaSim) {
+        return "danma4"
+    } else if (flagDanMaWm) {
+        return "danma5"
+    } else if (flagDanMaLm) {
+        return "danma6"
+    } else if (flagDanMaQm) {
+        return "danma7"
+    } else if (flagDanMaBm) {
+        return "danma8"
+    }
+}
+
 /**
  *  随机按钮状态
  */
-
 function statusChange() {
     // 显示机选
     var randomFun = getPlayPlFun_random();
@@ -226,13 +294,10 @@ function statusChange() {
  * 获取注数方法
  */
 function getGfwfZhushu(){
-
     var zhushuFun = getPlayPlFun_zhushu();  // 注数算法
-
     //执行注数方法
     if (typeof zhushuFun != 'undefined') {
         var zhushu = eval(zhushuFun + "()");   // 注数
-
         if(zhushu == 0){
             $("#zhushu").html(zhushu);
             $("#nowMoney").html(0);
@@ -242,7 +307,6 @@ function getGfwfZhushu(){
             $("#nowMoney").html(0);
             return;
         }
-
         $("#zhushu").html(zhushu);
     }
 

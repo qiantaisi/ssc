@@ -700,33 +700,33 @@
         }
         $("#zhexianData").html(str); //html() 方法返回或设置被选元素的内容  //如果该方法未设置参数，则返回被选元素的当前内容
 
-//        for(var i = 0; i < data.length - 1; ++i) {
-//            for(var j = 0; j < 5; ++j) {
-//                bc1 = Tools.parseInt(data[i].openCode.split(',')[j]) - Tools.parseInt(data[i + 1].openCode.split(',')[j]);
-//                var Left = 0;
-//                if(bc1 < 0) {
-//                    bc1 = -bc1;
-//                    Left = (bc1) * (-20);
-//                }
-//                var canvas = document.getElementById("canvas" + i + j);
-//                var context = canvas.getContext("2d");
-//                var bc1 = (data[i].openCode.split(',')[j]) - data[i + 1].openCode.split(',')[j];
-//                if(bc1 < 0) {
-//                    context.moveTo(17, 13);
-//                    context.lineTo(canvas.width - 13, canvas.height - 8);
-//                } else if(bc1 > 0) {
-//                    context.moveTo(canvas.width - 13, 13);
-//                    context.lineTo(8, canvas.height - 5);
-//                } else {
-//                    context.moveTo(10, 12);
-//                    context.lineTo(10, 30);
-//                }
-//                if(j % 2 != 0) {
-//                    context.strokeStyle = "#cc0000";
-//                }
-//                context.stroke();
-//            }
-//        }
+        for(var i = 0; i < data.length - 1; ++i) {
+            for(var j = 0; j < 5; ++j) {
+                bc1 = Tools.parseInt(data[i].openCode.split(',')[j]) - Tools.parseInt(data[i + 1].openCode.split(',')[j]);
+                var Left = 0;
+                if(bc1 < 0) {
+                    bc1 = -bc1;
+                    Left = (bc1) * (-20);
+                }
+                var canvas = document.getElementById("canvas" + i + j);
+                var context = canvas.getContext("2d");
+                var bc1 = (data[i].openCode.split(',')[j]) - data[i + 1].openCode.split(',')[j];
+                if(bc1 < 0) {
+                    context.moveTo(17, 13);
+                    context.lineTo(canvas.width - 13, canvas.height - 8);
+                } else if(bc1 > 0) {
+                    context.moveTo(canvas.width - 13, 13);
+                    context.lineTo(8, canvas.height - 5);
+                } else {
+                    context.moveTo(10, 12);
+                    context.lineTo(10, 30);
+                }
+                if(j % 2 != 0) {
+                    context.strokeStyle = "#cc0000";
+                }
+                context.stroke();
+            }
+        }
         if($("#checkboxZhexian").is(":checked")) {
             $(".zhexian").show();
         } else {
@@ -802,7 +802,7 @@
         var yilou = [];
         for(var i = 0; i < 5; ++i) {
             yilou[i] = [];
-            for(var j = 0; j < 10; ++j) {
+            for(var j = 1; j < 12; ++j) {
                 yilou[i][j] = {
                     cxCs: 0, // 出现次数
                     maxLcCs: 0, // 最大连出次数
@@ -812,7 +812,7 @@
         }
 
         for(var i = 0; i < 5; ++i) {
-            for(var j = 0; j < 10; ++j) {
+            for(var j = 1; j < 12; ++j) {
                 var obj = yilou[i][j];
 
                 var tmpYlCs = 0; // 连续遗漏次数
@@ -874,7 +874,7 @@
 
         var str5 = '';
         for(var i = 0; i < 5; ++i) {
-            for(var j = 0; j < 10; ++j) {
+            for(var j = 1; j < 12; ++j) {
                 str5 += '<tr>';
                 if(j == 0) {
                     if(i == 0) {
