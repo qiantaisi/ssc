@@ -54,7 +54,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)" onclick="getZstPage('jspk10')">极速PK10</a>
-
+                        <a href="javascript:void(0)" onclick="getZstPage('gd11x5')">广东11选5</a>
                     </li>
                 </ul>
             </dd>
