@@ -1756,7 +1756,7 @@
             <i>{{num4}}</i>
             <i>{{num5}}</i>
         </span>
-        <span class="sp5">120期</span>
+        <span class="sp5">84期</span>
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/tjssc')"></a></span>
@@ -1775,7 +1775,7 @@
             <i>{{num4}}</i>
             <i>{{num5}}</i>
         </span>
-        <span class="sp5">120期</span>
+        <span class="sp5">96期</span>
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/xjssc')"></a></span>
