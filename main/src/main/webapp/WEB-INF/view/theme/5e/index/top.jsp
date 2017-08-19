@@ -79,6 +79,7 @@
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/klsf')">快乐十分</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/xync')">幸运农场</a></span>
                                 <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/bj28')">北京28</a></span>
+                                <span><a href="javascript:void(0)" onclick="openGcdt('gcdt/gd11x5')">广东11选5</a></span>
                                 <!--  <span><a href="javascript:void(0)" onclick="openGcdt('sflhc')">十分六合彩</a></span> -->
                             </p>
                         </div>

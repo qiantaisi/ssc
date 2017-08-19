@@ -80,6 +80,7 @@
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/klsf')">广东快乐十分</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/kl8')">北京快乐8</a>
             <a href="javascript:void(0)" onclick="openGcdt('gcdt/bj28')">北京28</a>
+            <a href="javascript:void(0)" onclick="openGcdt('gcdt/gd11x5')">广东11选5</a>
         </strong>
     </div>
 </div>

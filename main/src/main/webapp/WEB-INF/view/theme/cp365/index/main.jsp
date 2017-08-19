@@ -401,6 +401,7 @@
                         <a href="<%=basePath%>ssc/zst/klsf.html" target="_blank">快乐十分</a>
                         <a href="<%=basePath%>ssc/zst/kl8.html" target="_blank">北京快乐8</a>
                         <a href="<%=basePath%>ssc/zst/bj28.html" target="_blank">北京28</a>
+                        <a href="<%=basePath%>ssc/zst/gd11x5.html" target="_blank">广东11选5</a>
                     </p>
                     <p>
                         <span>低频彩</span>
