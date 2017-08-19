@@ -124,7 +124,7 @@
                                                             } else {
                                                                 s = 'bg-2'
                                                             }
-                                                            document.write('<var class="' + s + '"><i>' + j + '</i></var>');
+                                                            document.write('<var class="' + s + '"><i>' + (j = j >= 10 ? j : ('0' + j)) + '</i></var>');
                                                         }
                                                     }
                                                 </script>
@@ -162,7 +162,7 @@
                                             <script>
                                                 for(var i = 0; i < 5; ++i) {
                                                     for(var j = 1; j < 12; ++j) {
-                                                        document.write('<var class=""><i>' + j + '</i></var>');
+                                                        document.write('<var class=""><i>' + (j = j >= 10 ? j : ('0' + j)) + '</i></var>');
                                                     }
                                                 }
                                             </script>
@@ -519,7 +519,7 @@
             },
             yAxis: [{
                 type: 'value',
-                splitNumber: 10,
+                splitNumber: 11,
                 triggerEvent: true,
                 name: '出现次数'
             }],
@@ -557,15 +557,15 @@
             }]
         };
         var yData = [];
-        for(var i = 0; i < 10; ++i) {
+        for(var i = 0; i < 11; ++i) {
             yData[i] = 0;
-            option.xAxis.data.push(i);
+            option.xAxis.data.push(i+1);
         }
         $.each(data, function(index, value) {
             var openCode = value.openCode;
             var arr = openCode.split(",");
             for(var i = 0; i < arr.length; ++i) {
-                yData[Tools.parseInt(arr[i])]++;
+                yData[Tools.parseInt(arr[i]-1)]++;
             }
         });
         option.series[0].data = yData;
@@ -685,7 +685,7 @@
                     str += '<var class="' + (j % 2 == 0 ? 'bg-1' : 'bg-2') + ' i_' + j + "_" + k + '">';
                     if(k == haoma) {
                         str += '<i data-num="' + k + '" class="' + (j % 2 == 0 ? 'bg-4' : 'bg-5') + '">';
-                        str += k;
+                        str += (k = k >= 10 ? k : ('0' + k));
                         str += '<canvas class="zhexian" id="canvas' + i + j + '" width="' + (bc1 + 1) * 20 + '" height="32px" style="z-index: 10; left:' + Left + 'px; display: none;"></canvas>';
                         str += '</i>';
                     } else {

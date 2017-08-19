@@ -50,10 +50,10 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)" onclick="getZstPage('jlk3')">吉林快3</a>
-                        <a href="javascript:void(0)" onclick="getZstPage('sflhc')">10分六合彩</a>
+                        <a href="javascript:void(0)" onclick="getZstPage('jspk10')">极速PK10</a>
+                        <%--<a href="javascript:void(0)" onclick="getZstPage('sflhc')">10分六合彩</a>--%>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" onclick="getZstPage('jspk10')">极速PK10</a>
                         <a href="javascript:void(0)" onclick="getZstPage('gd11x5')">广东11选5</a>
                     </li>
                 </ul>
