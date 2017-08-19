@@ -460,22 +460,22 @@
                 手机客户端下载
             </div>
             <div class="index_main_rt1_1 clearfix">
-                <img src="${resPath}images/common/index5.png" class="left index_main_erw"/>
+                <img src="<%=basePath%>images/${qrcode.pcQRCodeImageId}.png" class="left index_main_erw"/>
                 <div class="right index_main_rt1_1_rt">
                     <p class="down_a">
-                        <a href="${hostName}">
+                        <a href="/app.html" target="_blank">
                             <img src="${resPath}images/common/index_72.png"/>
-                            Iphone 版
+                            iPhone 版
                         </a>
                     </p>
                     <p class="down_a">
-                        <a href="${hostName}">
+                        <a href="/app.html" target="_blank">
                             <img src="${resPath}images/common/index_77.png"/>
                             Android 版
                         </a>
                     </p>
                     <p class="index_main_erw_more">
-                        <a href="javascript:void(0);">更多方式</a>
+                        <a href="/app.html" target="_blank">更多方式</a>
                     </p>
                 </div>
             </div>

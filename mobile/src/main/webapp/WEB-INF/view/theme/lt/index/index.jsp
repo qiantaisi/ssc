@@ -10,6 +10,7 @@
     if (StringUtils.isBlank(u)) {
         u = basePath + "main.html";
     }
+    String pcHostName = RequestUtils.getScheme(request) + "://" + "www." + request.getServerName().replace("m.", "").replace("www.", "");
 %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,7 +20,7 @@
     <script>
         var md = new MobileDetect(window.navigator.userAgent);
         if (!md.mobile()) {
-            window.location.href = "<%=basePath%>pc.html"
+            window.location.href = "<%=pcHostName%>/app.html" + "<c:if test="${not empty param.p}">/?p=${param.p}</c:if>";
         }
 
         if (!window.navigator.cookieEnabled) {

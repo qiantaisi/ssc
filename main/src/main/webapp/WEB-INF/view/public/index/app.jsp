@@ -8,6 +8,7 @@
 <%
     String basePath = RequestUtils.getBasePath(request);
     String mHostName = RequestUtils.getScheme(request) + "://" + "m." + request.getServerName().replace("www.", "");
+    String pcHostName = RequestUtils.getScheme(request) + "://" + "www." + request.getServerName().replace("m.", "").replace("www.", "");
 %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -55,6 +56,7 @@
         </div>
         <div class="notice">${data.webSlogan}</div>
         <div class="customer">
+            <a href="<%=pcHostName%>" target="_blank"><img src="${resPath}app/img/ico1-1.png" alt=""></a>
             <a href="${kefuUrl}" target="_blank"><img src="${resPath}app/img/ico1.png" alt=""></a>
         </div>
     </div>
@@ -74,10 +76,11 @@
                     <div class="code">
                         <img src="<%=basePath%>images/${data.iosQRCodeImageId}.png" alt="">
                     </div>
-                    <a class="ios" href="${data.iosURL}" target="_blank">
+                    <%--<a class="ios" href="${data.iosURL}" target="_blank">--%>
+                    <a class="ios" href="#" onclick="alert(' 请用iPhone手机扫描二维码  \n 或用Safari打开网址:\n <%=pcHostName%>/app.html \n 进行下载。');">
                         <img src="${resPath}app/img/ico16.png" alt="">
                         <p>
-                            Iphone版下载
+                            iPhone版下载
                             <span>版本：${data.iosVersion}</span>
                         </p>
                     </a>
