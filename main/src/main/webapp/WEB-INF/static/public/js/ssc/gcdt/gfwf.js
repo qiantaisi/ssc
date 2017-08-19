@@ -7116,7 +7116,7 @@ function suiji_gd11x5_hezuxds() {
 
     showPlayName = "后二组选单式";
     showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('，');
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
