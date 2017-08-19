@@ -90,6 +90,10 @@
     background-image: url(../img/cz/cz-23.png);
 }
 
+.bg-img-gd11x5 {
+    background-image: url(../img/cz/cz-24.png);
+}
+
 .bg-img-gd {
     background-image: url(../img/cz/gengduo.png);
 }
@@ -1702,3 +1706,4 @@ input[type="number"] {
     display: block;
     height: 0.3rem;
 }
+
