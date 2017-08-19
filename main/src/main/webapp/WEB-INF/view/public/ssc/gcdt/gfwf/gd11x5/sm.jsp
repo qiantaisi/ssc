@@ -271,7 +271,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLines dantuo_selected">
+                <var class="numLines dantuo_selected" data-name="danma3">
                     <span class="n1"><i>01</i></span>
                     <span class="n2"><i>02</i></span>
                     <span class="n3"><i>03</i></span>
@@ -522,7 +522,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLines dantuo_selected">
+                <var class="numLines dantuo_selected" data-name="danma3">
                     <span class="n1"><i>01</i></span>
                     <span class="n2"><i>02</i></span>
                     <span class="n3"><i>03</i></span>
@@ -776,7 +776,7 @@
             </li>
             <li data-name="拖码">
                 <b><i>拖码</i></b>
-                <var class="numLines dantuo_selected">
+                <var class="numLines dantuo_selected" data-name="danma3">
                     <span class="n1"><i>01</i></span>
                     <span class="n2"><i>02</i></span>
                     <span class="n3"><i>03</i></span>
