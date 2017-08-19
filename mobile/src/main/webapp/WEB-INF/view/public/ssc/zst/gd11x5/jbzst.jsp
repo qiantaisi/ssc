@@ -239,7 +239,7 @@
             var tmpArr = [];
             for (var i = 1; i <= 11; i++) {
                 tmpArr.push({     //push() 向数组的末尾添加一个或多个元素，并返回新的长度
-                    num: i,
+                    num: (i >= 10 ? i : ("0" + i)),
                     flag: num == i ? true : false
                 });
 
