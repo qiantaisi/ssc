@@ -107,7 +107,7 @@ public class IndexController extends BaseController {
         modelMap.put("webInfo", webInfoResult);
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
-//        modelMap.put("data", ApiUtils.getQRCodePC(uid, token, companyShortName));
+        modelMap.put("qrcode", ApiUtils.getQRCodePC(companyShortName));
 
         return this.renderView("index/main", modelMap);
     }
