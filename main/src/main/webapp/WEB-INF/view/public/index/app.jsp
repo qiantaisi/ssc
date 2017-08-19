@@ -56,8 +56,9 @@
         </div>
         <div class="notice">${data.webSlogan}</div>
         <div class="customer">
-            <a href="<%=pcHostName%>" target="_blank"><img src="${resPath}app/img/ico1-1.png" alt=""></a>
-            <a href="${kefuUrl}" target="_blank"><img src="${resPath}app/img/ico1.png" alt=""></a>
+            <%--<a href="<%=pcHostName%>" target="_blank"><img src="${resPath}app/img/ico1-1.png" alt=""></a>--%>
+                <a href="/" target="_blank"><img src="${resPath}app/img/ico1-1.png" alt=""></a>
+                <a href="${kefuUrl}" target="_blank"><img src="${resPath}app/img/ico1.png" alt=""></a>
         </div>
     </div>
 </div>
