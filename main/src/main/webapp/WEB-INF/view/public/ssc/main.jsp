@@ -57,7 +57,7 @@
                             <a href="javascript:void(0)" onclick="getSscPage('jlk3')"><img src="${resPath}img/jlk3.png"
                                                                                            alt=""><var>吉林快3</var></a>
                         </div>
-                        <h3 class="head-k3"><img src="${resPath}img/k3xl.png" alt=""><var>11选5</var><i></i></h3>
+                        <h3 class="head-k3"><img src="${resPath}img/gd11x51.png" alt=""><var>11选5</var><i></i></h3>
                         <div class="xl-down xHide">
                             <a href="javascript:void(0)" onclick="getSscPage('gd11x5')"> <img src="${resPath}img/gd11x5.png" alt="">
                                                                                           <var>广东11选5</var></a>
@@ -68,7 +68,6 @@
                             <a href="javascript:void(0)" onclick="getSscPage('klsf')"><img src="${resPath}img/ico26.png" alt=""><var>广东快乐十分</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('xync')"><img src="${resPath}img/ico29.png" alt=""><var>重庆幸运农场</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('fc3d')"><img src="${resPath}img/ico24.png" alt=""><var>福彩3D</var></a>
-                            <a href="javascript:void(0)" onclick="getSscPage('gd11x5')"><img src="${resPath}img/gd11x5.png" alt=""><var>广东11选5</var></a>
                         </div>
                     </div>
 
