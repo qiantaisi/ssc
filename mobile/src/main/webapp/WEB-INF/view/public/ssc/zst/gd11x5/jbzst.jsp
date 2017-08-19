@@ -45,7 +45,7 @@
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="re-cl-602">
                     <a data-name="jb" href="javascript:void(0)" class="choose">基本走势</a>
-                    <span class="goucai"><a id="blink" href="<%=basePath%>ssc/gcdt/gd11x5.html">立即购彩</a></span>
+                    <span class="goucai"><a id="blink" href="<%=basePath%>ssc/gcdt/gfwf/gd11x5.html">立即购彩</a></span>
                     <span class="gengduo">更多期数</span>
                 </div>
             </div>
