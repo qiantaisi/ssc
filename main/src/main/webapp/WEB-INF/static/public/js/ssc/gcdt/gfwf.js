@@ -7248,7 +7248,7 @@ function suiji_gd11x5_rxszsds() {
         if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
             newArr.push(zhiTsh1);
             newArr.push(zhiTsh2);
-            newArr.push(zhiTsh3);
+            newArr.push(zhiTsh3+"|");
         }
     }
 
@@ -7283,14 +7283,14 @@ function suiji_gd11x5_rxsizsds() {
             newArr.push(zhiTsh1);
             newArr.push(zhiTsh2);
             newArr.push(zhiTsh3);
-            newArr.push(zhiTsh4);
+            newArr.push(zhiTsh4+"|");
         }
     }
 
 
     showPlayName = "任选单式-4中4";
-    showContent = "号码: (" + newArr.join(',') + ")";
-    betContent = newArr.join(',');
+    showContent = "号码: (" + newArr.join('') + ")";
+    betContent = newArr.join('');
 
     return {
         showPlayName: showPlayName,
@@ -7320,14 +7320,14 @@ function suiji_gd11x5_rxwzwds() {
             newArr.push(zhiTsh2);
             newArr.push(zhiTsh3);
             newArr.push(zhiTsh4);
-            newArr.push(zhiTsh5);
+            newArr.push(zhiTsh5+"|");
         }
     }
 
 
     showPlayName = "任选单式-5中5";
-    showContent = "号码: (" + newArr.join(',') + ")";
-    betContent = newArr.join(',');
+    showContent = "号码: (" + newArr.join('') + ")";
+    betContent = newArr.join('');
 
     return {
         showPlayName: showPlayName,
@@ -7360,7 +7360,7 @@ function suiji_gd11x5_rxlzwds() {
             newArr.push(zhiTsh3);
             newArr.push(zhiTsh4);
             newArr.push(zhiTsh5);
-            newArr.push(zhiTsh6);
+            newArr.push(zhiTsh6+"|");
         }
     }
 
@@ -7401,7 +7401,7 @@ function suiji_gd11x5_rxqzwds() {
             newArr.push(zhiTsh4);
             newArr.push(zhiTsh5);
             newArr.push(zhiTsh6);
-            newArr.push(zhiTsh7);
+            newArr.push(zhiTsh7+"|");
         }
     }
 
@@ -7444,7 +7444,7 @@ function suiji_gd11x5_rxbzwds() {
             newArr.push(zhiTsh5);
             newArr.push(zhiTsh6);
             newArr.push(zhiTsh7);
-            newArr.push(zhiTsh8);
+            newArr.push(zhiTsh8+"|");
         }
     }
 
@@ -7511,7 +7511,7 @@ function suiji_gd11x5_rxezeds() {
 
         if (zhiTsh1 != zhiTsh2) {
             newArr.push(zhiTsh1);
-            newArr.push(zhiTsh2);
+            newArr.push(zhiTsh2+"|");
         }
     }
 
@@ -12363,7 +12363,7 @@ function content_suiji_gd11x5_rxszsds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + ","+twoStr+"," + threeStr);
+            tempArr.push(oneStr +","+twoStr+"," + threeStr);
         }
     }
 
@@ -12384,9 +12384,9 @@ function content_suiji_gd11x5_rxszsds() {
     var betContent = '';
 
     showPlayName = "任选单式-3中3";
-    showContent = "号码: (" + tempArr.join(',') + ")";
+    showContent = "号码: (" + tempArr.join('|') + ")";
     // 转换投注格式
-    betContent = tempArr.join(',');
+    betContent = tempArr.join('|');
 
     return {
         showPlayName: showPlayName,
@@ -12444,9 +12444,9 @@ function content_gd11x5_rxsizsds() {
     var betContent = '';
 
     showPlayName = "任选单式-4中4";
-    showContent = "号码: (" + tempArr.join(',') + ")";
+    showContent = "号码: (" + tempArr.join('|') + ")";
     // 转换投注格式
-    betContent = tempArr.join(',');
+    betContent = tempArr.join('|');
 
     return {
         showPlayName: showPlayName,
@@ -12483,7 +12483,7 @@ function content_gd11x5_rxwzwds() {
         var fourStr = temp.substr(6, 2);
         var fiveStr = temp.substr(8, 2);
         if(fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr +","+ twoStr+"," + threeStr+","+fourStr+","+fiveStr);
+            tempArr.push(oneStr+","+ twoStr+"," + threeStr+","+fourStr+","+fiveStr);
         }
     }
 
@@ -12504,9 +12504,9 @@ function content_gd11x5_rxwzwds() {
     var betContent = '';
 
     showPlayName = "任选单式-5中5";
-    showContent = "号码: (" + tempArr.join(',') + ")";
+    showContent = "号码: (" + tempArr.join('|') + ")";
     // 转换投注格式
-    betContent = tempArr.join(',');
+    betContent = tempArr.join('|');
 
     return {
         showPlayName: showPlayName,
@@ -12565,9 +12565,9 @@ function content_gd11x5_rxlzwds() {
     var betContent = '';
 
     showPlayName = "任选单式-6中5";
-    showContent = "号码: (" + tempArr.join(',') + ")";
+    showContent = "号码: (" + tempArr.join('|') + ")";
     // 转换投注格式
-    betContent = tempArr.join(',');
+    betContent = tempArr.join('|');
 
     return {
         showPlayName: showPlayName,
@@ -12627,9 +12627,9 @@ function content_gd11x5_rxqzwds() {
     var betContent = '';
 
     showPlayName = "任选单式-7中5";
-    showContent = "号码: (" + tempArr.join(',') + ")";
+    showContent = "号码: (" + tempArr.join('|') + ")";
     // 转换投注格式
-    betContent = tempArr.join(',');
+    betContent = tempArr.join('|');
 
     return {
         showPlayName: showPlayName,
@@ -12690,9 +12690,9 @@ function content_gd11x5_rxbzwds() {
     var betContent = '';
 
     showPlayName = "任选单式-8中5";
-    showContent = "号码: (" + tempArr.join(',') + ")";
+    showContent = "号码: (" + tempArr.join('|') + ")";
     // 转换投注格式
-    betContent = tempArr.join(',');
+    betContent = tempArr.join('|');
 
     return {
         showPlayName: showPlayName,
@@ -12727,7 +12727,7 @@ function content_gd11x5_rxezeds() {
         var twoStr = temp.substr(2, 2);
 
         if(oneStr != twoStr ){
-            tempArr.push(oneStr +"," +twoStr );
+            tempArr.push(oneStr+"," +twoStr );
         }
     }
 
@@ -12748,9 +12748,9 @@ function content_gd11x5_rxezeds() {
     var betContent = '';
 
     showPlayName = "任选单式-2中2";
-    showContent = "号码: (" + tempArr.join(',') + ")";
+    showContent = "号码: (" + tempArr.join('|') + ")";
     // 转换投注格式
-    betContent = tempArr.join(',');
+    betContent = tempArr.join('|');
 
     return {
         showPlayName: showPlayName,

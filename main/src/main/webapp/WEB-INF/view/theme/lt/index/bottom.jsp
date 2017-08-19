@@ -13,7 +13,7 @@
             <div class="left footer_t1">
                 <img src="${resPath}images/index_78.png?v=0.0.1" class="footer_t1_1" />
                 <p>
-                    <img src="${resPath}images/common/index5.png"  class="footer_t1_2" />
+                    <img  src="<%=basePath%>images/${qrcode.codeId}.png" class="footer_t1_2" />
                 </p>
                 <p>
                     扫一扫 手机购彩更方便
