@@ -1699,7 +1699,7 @@
             {{/if}}
             <div class="text">
                 <h3>广东11选5<span>第{{number}}期</span></h3>
-                <p>每天84期</p>
+                <p>每天79期</p>
             </div>
         </div>
         <div class="box2">
@@ -2179,7 +2179,7 @@
             <i>{{num4}}</i>
             <i>{{num5}}</i>
         </span>
-        <span class="sp5">84期</span>
+        <span class="sp5">79期</span>
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
         <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/gd11x5')"></a></span>
