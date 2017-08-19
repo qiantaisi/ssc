@@ -170,6 +170,7 @@
                     </div>
                 </a>
             </li>
+
             <li>
                 <a href="<%=basePath%>ssc/zst/wfssc/jbzst.html" class="item-content">
                     <div class="item-media"><i class="icon bg-img-wfssc"></i></div>
@@ -179,8 +180,14 @@
                 </a>
             </li>
 
-
-
+            <li>
+                <a href="<%=basePath%>ssc/zst/gd11x5/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-gd11x5"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">广东11选5</div>
+                    </div>
+                </a>
+            </li>
             <%--
             <li>
                 <a href="<%=basePath%>ssc/zst/sflhc/jbzst.html" class="item-content">
