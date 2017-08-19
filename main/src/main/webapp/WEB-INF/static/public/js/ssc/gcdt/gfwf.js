@@ -7248,14 +7248,14 @@ function suiji_gd11x5_rxszsds() {
         if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
             newArr.push(zhiTsh1);
             newArr.push(zhiTsh2);
-            newArr.push(zhiTsh3+"|");
+            newArr.push(zhiTsh3);
         }
     }
 
 
     showPlayName = "任选单式-3中3";
     showContent = "号码: (" + newArr.join(',') + ")";
-    betContent = newArr.join(',');
+    betContent =newArr[0]+","+newArr[1]+","+newArr[2]+"|";
 
     return {
         showPlayName: showPlayName,
@@ -7283,14 +7283,14 @@ function suiji_gd11x5_rxsizsds() {
             newArr.push(zhiTsh1);
             newArr.push(zhiTsh2);
             newArr.push(zhiTsh3);
-            newArr.push(zhiTsh4+"|");
+            newArr.push(zhiTsh4);
         }
     }
 
 
     showPlayName = "任选单式-4中4";
     showContent = "号码: (" + newArr.join(',') + ")";
-    betContent = newArr.join(',');
+    betContent =newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+"|";
 
     return {
         showPlayName: showPlayName,
@@ -7320,14 +7320,14 @@ function suiji_gd11x5_rxwzwds() {
             newArr.push(zhiTsh2);
             newArr.push(zhiTsh3);
             newArr.push(zhiTsh4);
-            newArr.push(zhiTsh5+"|");
+            newArr.push(zhiTsh5);
         }
     }
 
 
     showPlayName = "任选单式-5中5";
     showContent = "号码: (" + newArr.join(',') + ")";
-    betContent = newArr.join(',');
+    betContent =newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+","+newArr[4]+"|";
 
     return {
         showPlayName: showPlayName,
@@ -7360,14 +7360,14 @@ function suiji_gd11x5_rxlzwds() {
             newArr.push(zhiTsh3);
             newArr.push(zhiTsh4);
             newArr.push(zhiTsh5);
-            newArr.push(zhiTsh6+"|");
+            newArr.push(zhiTsh6);
         }
     }
 
 
     showPlayName = "任选单式-6中5";
     showContent = "号码: (" + newArr.join(',') + ")";
-    betContent = newArr.join(',');
+    betContent = newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+","+newArr[4]+","+newArr[5]+"|";
 
     return {
         showPlayName: showPlayName,
@@ -7401,14 +7401,14 @@ function suiji_gd11x5_rxqzwds() {
             newArr.push(zhiTsh4);
             newArr.push(zhiTsh5);
             newArr.push(zhiTsh6);
-            newArr.push(zhiTsh7+"|");
+            newArr.push(zhiTsh7);
         }
     }
 
 
     showPlayName = "任选单式-7中5";
     showContent = "号码: (" + newArr.join(',') + ")";
-    betContent = newArr.join(',');
+    betContent = newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+","+newArr[4]+","+newArr[5]+","+newArr[6]+"|";
 
     return {
         showPlayName: showPlayName,
@@ -7444,14 +7444,14 @@ function suiji_gd11x5_rxbzwds() {
             newArr.push(zhiTsh5);
             newArr.push(zhiTsh6);
             newArr.push(zhiTsh7);
-            newArr.push(zhiTsh8+"|");
+            newArr.push(zhiTsh8);
         }
     }
 
 
     showPlayName = "任选单式-8中5";
     showContent = "号码: (" + newArr.join(',') + ")";
-    betContent = newArr.join(',');
+    betContent = newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+","+newArr[4]+","+newArr[5]+","+","+newArr[6]+newArr[7]+"|";
 
     return {
         showPlayName: showPlayName,
@@ -7511,14 +7511,14 @@ function suiji_gd11x5_rxezeds() {
 
         if (zhiTsh1 != zhiTsh2) {
             newArr.push(zhiTsh1);
-            newArr.push(zhiTsh2+"|");
+            newArr.push(zhiTsh2);
         }
     }
 
 
     showPlayName = "任选单式-2中2";
     showContent = "号码: (" + newArr.join(',') + ")";
-    betContent = newArr.join(',');
+    betContent = newArr[0]+","+newArr[1]+"|";
 
     return {
         showPlayName: showPlayName,
