@@ -7289,8 +7289,8 @@ function suiji_gd11x5_rxsizsds() {
 
 
     showPlayName = "任选单式-4中4";
-    showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    showContent = "号码: (" + newArr.join(',') + ")";
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
@@ -7326,8 +7326,8 @@ function suiji_gd11x5_rxwzwds() {
 
 
     showPlayName = "任选单式-5中5";
-    showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join('');
+    showContent = "号码: (" + newArr.join(',') + ")";
+    betContent = newArr.join(',');
 
     return {
         showPlayName: showPlayName,
