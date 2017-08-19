@@ -72,15 +72,15 @@
                 <div class="zst-cl-1 zst_style">
                     <div class="item">
                         <span class="qih11x5">期号</span>
-                        <span>1</span>
-                        <span>2</span>
-                        <span>3</span>
-                        <span>4</span>
-                        <span>5</span>
-                        <span>6</span>
-                        <span>7</span>
-                        <span>8</span>
-                        <span>9</span>
+                        <span>01</span>
+                        <span>02</span>
+                        <span>03</span>
+                        <span>04</span>
+                        <span>05</span>
+                        <span>06</span>
+                        <span>07</span>
+                        <span>08</span>
+                        <span>09</span>
                         <span>10</span>
                         <span>11</span>
                     </div>
@@ -239,7 +239,7 @@
             var tmpArr = [];
             for (var i = 1; i <= 11; i++) {
                 tmpArr.push({     //push() 向数组的末尾添加一个或多个元素，并返回新的长度
-                    num: i,
+                    num: (i >= 10 ? i : ("0" + i)),
                     flag: num == i ? true : false
                 });
 
