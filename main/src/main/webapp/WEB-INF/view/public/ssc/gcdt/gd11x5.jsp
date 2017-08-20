@@ -8,12 +8,7 @@
 %>
 <c:import url="../../common/bodyStart.jsp"/>
 <c:import url="../../common/checkIsChildFrame.jsp"/>
-<style>.game_name .box2_stage .number span {
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 16px;
-}</style>
+
 <div id="gameContent">
     <div class="game_name">
         <div class="wid1">

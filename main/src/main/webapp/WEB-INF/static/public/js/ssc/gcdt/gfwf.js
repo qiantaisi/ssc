@@ -269,27 +269,34 @@ function changeActi(btnFlag, obj){
     var flagNameDtlm = $(obj).parent().parent().parent().find('li .numLines').hasClass('lm_danma_selected');
     var flagNameDtqm = $(obj).parent().parent().parent().find('li .numLines').hasClass('qm_danma_selected');
     var flagNameDtbm = $(obj).parent().parent().parent().find('li .numLines').hasClass('bm_danma_selected');
-
+    var danMaStr = '';
 
     if(flagNameDtsm){
-        delActi(btnFlag, obj);
+        danMaStr = 'danma3';
+        delActi(btnFlag, obj, danMaStr);
     } else if(flagNameDtem){
-        delActi(btnFlag, obj);
+        danMaStr = 'danma2';
+        delActi(btnFlag, obj, danMaStr);
     } else if(flagNameDtsim){
-        delActi(btnFlag, obj);
+        danMaStr = 'danma4';
+        delActi(btnFlag, obj, danMaStr);
     } else if(flagNameDtwm){
-        delActi(btnFlag, obj);
+        danMaStr = 'danma5';
+        delActi(btnFlag, obj, danMaStr);
     } else if(flagNameDtlm){
-        delActi(btnFlag, obj);
+        danMaStr = 'danma6';
+        delActi(btnFlag, obj, danMaStr);
     } else if(flagNameDtqm){
-        delActi(btnFlag, obj);
+        danMaStr = 'danma7';
+        delActi(btnFlag, obj, danMaStr);
     } else if(flagNameDtbm){
-        delActi(btnFlag, obj);
+        danMaStr = 'danma8';
+        delActi(btnFlag, obj, danMaStr);
     }
 }
 
 
-function delActi(btnFlag, obj){
+function delActi(btnFlag, obj, danMaStr){
     if(btnFlag == "quan"){
         for(var i = 1; i < 12; i++){
             delDanmActiClass(i, obj);
@@ -298,21 +305,25 @@ function delActi(btnFlag, obj){
         var daArr = [6, 7, 8, 9, 10, 11];
         for(var n = 0; n < daArr.length; n++){
             delDanmActiClass(daArr[n], obj);
+            minusDanmaNum(getDanMaArr(danMaStr), daArr[n]);
         }
     } else if(btnFlag == "xiao"){
         var xiaoArr = [1, 2, 3, 4, 5];
         for(var m = 0; m < xiaoArr.length; m++){
             delDanmActiClass(xiaoArr[m], obj);
+            minusDanmaNum(getDanMaArr(danMaStr), xiaoArr[m]);
         }
     }  else if(btnFlag == "ou"){
         var ouArr = [2, 4, 6, 8, 10];
         for(var y = 0; y < ouArr.length; y++){
             delDanmActiClass(ouArr[y], obj);
+            minusDanmaNum(getDanMaArr(danMaStr), ouArr[y]);
         }
     }  else if(btnFlag == "qi"){
         var qiArr = [1, 3, 5, 7, 9, 11];
         for(var x = 0; x < qiArr.length; x++){
             delDanmActiClass(qiArr[x], obj);
+            minusDanmaNum(getDanMaArr(danMaStr), qiArr[x]);
         }
     }
 
@@ -321,6 +332,26 @@ function delActi(btnFlag, obj){
     if(sumSelectedTuodan <= 0){
         initArrNum();
     }
+}
+
+function getDanMaArr(danMaStr){
+    var objArr = null;
+    if(danMaStr == 'danma3'){
+        objArr = arrNum3;
+    } else if(danMaStr == 'danma2'){
+        objArr = arrNum2;
+    } else if(danMaStr == 'danma4'){
+        objArr = arrNum4;
+    } else if(danMaStr == 'danma5'){
+        objArr = arrNum5;
+    } else if(danMaStr == 'danma6'){
+        objArr = arrNum6;
+    } else if(danMaStr == 'danma7'){
+        objArr = arrNum7;
+    } else if(danMaStr == 'danma8'){
+        objArr = arrNum8;
+    }
+    return objArr;
 }
 
 //去掉胆码选中样式
@@ -1171,6 +1202,14 @@ function getDanmaCommon(obj, numArr, x, flagActi){
 //胆码减少计数器
 function minusDanmaNum(numArr, obj){
     var indexVal = numArr.indexOf(parseInt($(obj).html()));
+    if(indexVal > -1){
+        numArr.splice(indexVal, 1);
+    }
+}
+
+//胆码减少计数器
+function minusDanmaNum(numArr, num){
+    var indexVal = numArr.indexOf(num);
     if(indexVal > -1){
         numArr.splice(indexVal, 1);
     }
