@@ -232,7 +232,7 @@ $(function () {
                         if (refer) {
                             window.location.href = refer;
                         } else {
-                            window.location.href = config.basePath;
+                            window.location.href = config.basePath + "main.html";
                         }
 
                         // 保存登录名
