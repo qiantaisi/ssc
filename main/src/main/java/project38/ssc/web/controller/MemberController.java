@@ -868,18 +868,23 @@ public class MemberController extends BaseController {
     @Authentication
     @RequestMapping(value = "/lsjl/tzjl.html", method = RequestMethod.GET)
     public ModelAndView lsjlTzjl() throws Exception {
+        String type1="1";
+        String type2="2";
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList(companyShortName);
+        SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList(companyShortName,type1);
+        SscPlayGroupListResult gfplaylist = ApiUtils.getSscPlayGroupList(companyShortName,type2);
         modelMap.put("sscplaylist", sscplaylist);
+        modelMap.put("gfplaylist", gfplaylist);
         return this.renderPublicView("member/lsjl/tzjl", modelMap);
     }
 
     @RequestMapping(value = "/getSscPlayGroup.json")
     @ResponseBody
-    public String getPlayGroup( ) {
+    public String getPlayGroup() {
+        String type="";
         String companyShortName = this.getCompanyShortName();
-        return this.renderJson(ApiUtils.getSscPlayGroupList(companyShortName));
+        return this.renderJson(ApiUtils.getSscPlayGroupList(companyShortName,type));
     }
 
     @Authentication

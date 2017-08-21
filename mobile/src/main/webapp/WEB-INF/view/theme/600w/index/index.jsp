@@ -14,11 +14,18 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <script>if (window.top !== window.self) {top.location.href = "<%=basePath%>";}</script>
+    <%--<script>if (window.top !== window.self) {top.location.href = "<%=basePath%>";}</script>--%>
     <script src="${commonResPath}js/mobile-detect.min.js"></script>
     <script>
+        var winWidth = null;
+        if (window.innerWidth) {
+            winWidth = window.innerWidth;
+        } else if ((document.body) && (document.body.clientWidth)) {
+            winWidth = document.body.clientWidth;
+        }
+
         var md = new MobileDetect(window.navigator.userAgent);
-        if (!md.mobile()) {
+        if (!md.mobile() && (null == winWidth || winWidth > 700)) {
             window.location.href = "<%=basePath%>pc.html"
         }
 
