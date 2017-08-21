@@ -154,7 +154,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个2位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02, 开奖号码：01，02, * *即中前二直选。</var>
+                <var>投注方案：0102 开奖号码：01，02* * *即中前二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -184,7 +184,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个2位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02, 开奖号码：01，02, * *(前二顺序不限)，即中前二组选。</var>
+                <var>投注方案：0102 开奖号码：01，02 * * *(前二顺序不限)，即中前二组选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -340,7 +340,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个二位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02 开奖号码：*，* 01，02, 顺序不限，即中后二直选。</var>
+                <var>投注方案：0102 开奖号码： * * * 01，02， 顺序不限，即中后二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -413,7 +413,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个二位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02 开奖号码：*，* 01，02,，顺序不限，即中后二直选。</var>
+                <var>投注方案：0102 开奖号码： * * * 01，02，顺序不限，即中后二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
