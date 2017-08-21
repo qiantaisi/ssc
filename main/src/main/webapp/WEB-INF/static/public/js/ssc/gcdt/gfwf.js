@@ -1183,7 +1183,7 @@ function getDanmaCommon(obj, numArr, x, flagActi){
 
     //当点击选中号码时相应减去
     if(flagActi){
-        minusDanmaNum(numArr, obj);
+        minusDanmaNum(numArr, numDan);
     } else{
         numArr.push(parseInt($(obj).html()));
     }
