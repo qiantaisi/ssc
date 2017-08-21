@@ -547,7 +547,7 @@
         $.each(data, function(index, value) {   //each() 方法为每个匹配元素规定要运行的函数
             str += '<tr>';
             str += '<td>' + value.number + '</td>';
-            str += '<td>' + dateFormat(value.openTime, 'yyyy-mm-dd hh:MM:ss') + '</td>';
+            str += '<td>' + Tools.formatDate(value.openTime) + '</td>';
             str += '<td>';
             var arr = value.openCode.split(",");
             for(var i = 0; i < arr.length; ++i) {
