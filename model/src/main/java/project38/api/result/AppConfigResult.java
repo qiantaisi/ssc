@@ -56,6 +56,19 @@ public class AppConfigResult extends CommonResult {
      */
     private String kefuUrl;
 
+    /**
+     * IOS是否审核中
+     */
+    private Boolean iosIsShenheZhong;
+
+    public Boolean getIosIsShenheZhong() {
+        return iosIsShenheZhong;
+    }
+
+    public void setIosIsShenheZhong(Boolean iosIsShenheZhong) {
+        this.iosIsShenheZhong = iosIsShenheZhong;
+    }
+
     public String getKefuUrl() {
         return kefuUrl;
     }
