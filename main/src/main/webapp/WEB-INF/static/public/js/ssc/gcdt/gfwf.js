@@ -13532,6 +13532,10 @@ function content_gd11x5_qezuxds() {
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -13589,6 +13593,10 @@ function content_gd11x5_hezuxds() {
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
