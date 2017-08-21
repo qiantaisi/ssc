@@ -231,7 +231,8 @@
                 playGroupId: playGroupId,
                 pageIndex: 1,
                 number: qiHao,
-                startT:startT
+                startT:startT,
+                pageSize: 120
             },
             beforeSend: function() {
                 showLoading();
