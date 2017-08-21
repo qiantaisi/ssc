@@ -18,6 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="${resPath}app/css/init.css?v=20170811"/>
     <link rel="stylesheet" href="${resPath}app/css/main.css?v=20170811"/>
+    <script type="text/javascript" src="${resPath}app/js/view.js"></script>
     <title>${data.webTitle}</title>
     <script>if (window.top !== window.self) {top.location.href = "<%=basePath%>";}</script>
     <script src="${commonResPath}js/mobile-detect.min.js"></script>
