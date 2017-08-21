@@ -7,7 +7,7 @@
     String basePath = RequestUtils.getBasePath(request);
 %>
 <c:import url="common/bodyStart.jsp" />
-
+<c:import url="../../common/commonJs.jsp" />
 <div id="box" class="qc">
     <div class="qc" id="Right">
         <div class="main">
@@ -264,7 +264,6 @@
 <canvas id="canvas" width="1660px" height="570px" style="position:absolute;top:265px;left:243px;z-index: -10"></canvas>
 <canvas id="canvas2" width="1660px" height="570px" style="position:absolute;top:265px;left:243px;z-index: -10"></canvas>
 
-<c:import url="../../common/commonJs.jsp" />
 <c:import url="common/commonJs.jsp" />
 <script>
     $(function() {
@@ -372,7 +371,7 @@
         $.each(data, function(index, value) {
             str += '<tr>';
             str += '<td>' + value.number + '</td>';
-            str += '<td>' + dateFormat(value.openTime, 'yyyy-mm-dd hh:MM:ss') + '</td>';
+            str += '<td>' + Tools.formatDate(value.openTime) + '</td>';
             str += '<td>';
             var arr = value.openCode.split(",");
             for(var i = 0; i < arr.length; ++i) {
