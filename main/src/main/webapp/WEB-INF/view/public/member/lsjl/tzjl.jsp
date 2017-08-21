@@ -118,6 +118,50 @@
     }
 
     $(function () {
+
+        var typeid=$("#typeId").find("option:selected").val();
+        if(typeid=="2"){
+            $.each(selectOptionData1.sscPlayGroupList, function (index, value) {
+                sscPlayGroupList[value.id] = {
+                    id: value.id,
+                    name: value.name,
+                    sscPlayList: []
+                };
+            });
+
+            $.each(selectOptionData1.sscPlayList, function (index, value) {
+                sscPlayGroupList[value.playGroupId].sscPlayList.push({
+                    id: value.id,
+                    name: value.name
+                });
+            });
+
+            var str = '<option value="">所有</option>';
+            $.each(sscPlayGroupList, function (index, value) {
+                if (typeof value != 'undefined') {
+                    str += '<option value="' + value.id + '">' + value.name + '</option>';
+                }
+            });
+            $("#playGroupId").html(str);
+            $("#playId").html('<option value="">所有</option>');
+
+            //选中下拉框时触发事件
+            $("#playGroupId").change(function () {
+                var value = $(this).val();
+                if (value == '') {
+                    $("#playId").html('<option value="">所有</option>');
+                    return;
+                }
+
+                var str = '<option value="">所有</option>';
+                $.each(sscPlayGroupList[value].sscPlayList, function (index, value) {
+                    str += '<option value="' + value.id + '">' + value.name + '</option>';
+                });
+                $("#playId").html(str);
+            });
+//        generateLabel($("#status").val());
+            getTzjlData(typeid);
+        }
         $("#typeId").change(function(){
             var typeid = $("#typeId").val();
             if (typeid == "1") {
