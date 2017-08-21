@@ -22,6 +22,11 @@
                 <select name="playGroupId" id="playGroupId">
                     <option value="">所有</option>
                 </select>
+                模式：
+                <select  id="typeId">
+                    <option   value="2" selected="selected">官方玩法</option>
+                    <option value="1">传统玩法</option>
+                </select>
                 玩法：
                 <select name="playId" id="playId">
                 </select>
@@ -43,9 +48,9 @@
                        class="suminp"
                        onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})">
                 <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+               <%-- <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
                 <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>--%>
             </div>
         </h2>
         <table class="eveb_box eveb_table" id="dataTable">
@@ -80,14 +85,28 @@
     var sscPlayGroupList = [];
     var selectOptionData = <%=JSONUtils.toJSONStr(request.getAttribute("sscplaylist"))%>;
 
-    function getPlayGroupName(playGroupId) {
-        for (var i = 0; i < selectOptionData.sscPlayGroupList.length; ++i) {
-            if (playGroupId == selectOptionData.sscPlayGroupList[i].id) {
-                return selectOptionData.sscPlayGroupList[i].name;
+    var selectOptionData1 = <%=JSONUtils.toJSONStr(request.getAttribute("gfplaylist"))%>;
+
+
+    function getPlayGroupName(playGroupId,type) {
+        if(type=="1"){
+            for (var i = 0; i < selectOptionData.sscPlayGroupList.length; ++i) {
+                if (playGroupId == selectOptionData.sscPlayGroupList[i].id) {
+                    return selectOptionData.sscPlayGroupList[i].name;
+                }
+            }
+
+        }else{
+            for (var i = 0; i < selectOptionData1.sscPlayGroupList.length; ++i) {
+                if (playGroupId == selectOptionData1.sscPlayGroupList[i].id) {
+                    return selectOptionData1.sscPlayGroupList[i].name;
+                }
             }
         }
+
         return '';
     }
+
 
     function getPlayName(playId) {
         for (var i = 0; i < selectOptionData.sscPlayList.length; ++i) {
@@ -99,46 +118,96 @@
     }
 
     $(function () {
-        $.each(selectOptionData.sscPlayGroupList, function (index, value) {
-            sscPlayGroupList[value.id] = {
-                id: value.id,
-                name: value.name,
-                sscPlayList: []
-            };
-        });
+        $("#typeId").change(function(){
+            var typeid = $("#typeId").val();
+            if (typeid == "1") {
 
-        $.each(selectOptionData.sscPlayList, function (index, value) {
-            sscPlayGroupList[value.playGroupId].sscPlayList.push({
-                id: value.id,
-                name: value.name
-            });
-        });
+                $.each(selectOptionData.sscPlayGroupList, function (index, value) {
+                    sscPlayGroupList[value.id] = {
+                        id: value.id,
+                        name: value.name,
+                        sscPlayList: []
+                    };
+                });
 
-        var str = '<option value="">所有</option>';
-        $.each(sscPlayGroupList, function (index, value) {
-            if (typeof value != 'undefined') {
-                str += '<option value="' + value.id + '">' + value.name + '</option>';
-            }
-        });
-        $("#playGroupId").html(str);
-        $("#playId").html('<option value="">所有</option>');
+                $.each(selectOptionData.sscPlayList, function (index, value) {
+                    sscPlayGroupList[value.playGroupId].sscPlayList.push({
+                        id: value.id,
+                        name: value.name
+                    });
+                });
 
-        //选中下拉框时触发事件
-        $("#playGroupId").change(function () {
-            var value = $(this).val();
-            if (value == '') {
+                var str = '<option value="">所有</option>';
+                $.each(sscPlayGroupList, function (index, value) {
+                    if (typeof value != 'undefined') {
+                        str += '<option value="' + value.id + '">' + value.name + '</option>';
+                    }
+                });
+                $("#playGroupId").html(str);
                 $("#playId").html('<option value="">所有</option>');
-                return;
-            }
 
-            var str = '<option value="">所有</option>';
-            $.each(sscPlayGroupList[value].sscPlayList, function (index, value) {
-                str += '<option value="' + value.id + '">' + value.name + '</option>';
-            });
-            $("#playId").html(str);
-        });
+                //选中下拉框时触发事件
+                $("#playGroupId").change(function () {
+                    var value = $(this).val();
+                    if (value == '') {
+                        $("#playId").html('<option value="">所有</option>');
+                        return;
+                    }
+
+                    var str = '<option value="">所有</option>';
+                    $.each(sscPlayGroupList[value].sscPlayList, function (index, value) {
+                        str += '<option value="' + value.id + '">' + value.name + '</option>';
+                    });
+                    $("#playId").html(str);
+                });
 //        generateLabel($("#status").val());
-        getTzjlData();
+                getTzjlData(typeid);
+            }else{
+
+                $.each(selectOptionData1.sscPlayGroupList, function (index, value) {
+                    sscPlayGroupList[value.id] = {
+                        id: value.id,
+                        name: value.name,
+                        sscPlayList: []
+                    };
+                });
+
+                $.each(selectOptionData1.sscPlayList, function (index, value) {
+                    sscPlayGroupList[value.playGroupId].sscPlayList.push({
+                        id: value.id,
+                        name: value.name
+                    });
+                });
+
+                var str = '<option value="">所有</option>';
+                $.each(sscPlayGroupList, function (index, value) {
+                    if (typeof value != 'undefined') {
+                        str += '<option value="' + value.id + '">' + value.name + '</option>';
+                    }
+                });
+                $("#playGroupId").html(str);
+                $("#playId").html('<option value="">所有</option>');
+
+                //选中下拉框时触发事件
+                $("#playGroupId").change(function () {
+                    var value = $(this).val();
+                    if (value == '') {
+                        $("#playId").html('<option value="">所有</option>');
+                        return;
+                    }
+
+                    var str = '<option value="">所有</option>';
+                    $.each(sscPlayGroupList[value].sscPlayList, function (index, value) {
+                        str += '<option value="' + value.id + '">' + value.name + '</option>';
+                    });
+                    $("#playId").html(str);
+                });
+//        generateLabel($("#status").val());
+                getTzjlData(typeid);
+            }
+        });
+
+
     });
 
     function goPage(pageIndex) {
@@ -169,7 +238,8 @@
     }
 
 
-    function getTzjlData() {
+    function getTzjlData(typeid) {
+        console.log(typeid);
         ajaxRequest({
             url: "<%=basePath%>member/ajaxGetTzjl.json",
             data: {
@@ -210,7 +280,7 @@
                     str += '<td>' + (index + currentPageNum + 1) + '</td>';
                     str += '<td>' + value.orderNumber + '</td>';
                     str += '<td>' + Tools.formatDate(value.createTime) + '</td>';
-                    str += '<td>' + getPlayGroupName(value.playGroupId) + '</td>';
+                    str += '<td>' + getPlayGroupName(value.playGroupId,typeid) + '</td>';
                     str += '<td>' + value.playName + '</td>';
                     str += '<td>' + value.playPl + '</td>';
                     str += '<td>' + value.number + '</td>';
