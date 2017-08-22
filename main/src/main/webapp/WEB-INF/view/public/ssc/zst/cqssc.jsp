@@ -237,7 +237,7 @@
                         </div>
                     </div>
                     <div id="shuju3" class="shuju hide">
-                        <div id="main2" style="width: 800px;height:400px;"></div>
+                        <div id="main2" style="width: 1162px;height:500px;"></div>
                     </div>
                     <div id="shuju6" class="shuju hide">
                         <div class="chu-box">
@@ -307,7 +307,7 @@
                         </table>
                     </div>
                     <div id="shuju5" class="shuju">
-                        <table style="width:600px;">
+                        <table>
                             <thead>
                             <tr class="bghui">
                                 <th>期号</th>
@@ -640,7 +640,7 @@
                 barGap: '10px',
                 //            barCategoryGap:'30%',
                 markArea: {
-                    //              silent:true
+                //            silent:true
                 },
                 itemStyle: {
                     normal: {
