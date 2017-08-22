@@ -1217,19 +1217,17 @@
 
     <div class="gls_1">
 
-        <p><a href="${kefuUrl}" target="_blank"><img src="${resPath}img/right_01.png"/></a></p>
+        <p><a href="${kefuUrl}" target="_blank"><img src="${resPath}img/left_01.png"/></a></p>
 
-        <p> <a href="${kefuUrl}" target="_blank"><img src="${resPath}img/right_02.png"/></a></p>
+        <p> <a href="${kefuUrl}" target="_blank"><img src="${resPath}img/left_02.png"/></a></p>
 
-        <p><img src="${resPath}img/right_03.png"/></p>
+        <p><img src="<%=basePath%>images/${qrcode.codeId}.png"/></p>
 
-        <p class="gls_close"><img src="${resPath}img/right_04.png"/></p>
+        <p class="gls_close"><img src="${resPath}img/left_04.png"/></p>
 
     </div>
 
 </div>
-
-
 
 <style>
 
