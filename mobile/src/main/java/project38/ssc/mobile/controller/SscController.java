@@ -41,6 +41,7 @@ public class SscController extends CacheController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         String companyShortName = this.getCompanyShortName();
         modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
+        modelMap.put("desk", ApiUtils.getLogo(6, companyShortName));
         return this.renderPublicView("ssc/index", modelMap);
     }
     @RequestMapping(value = "/ajaxGG.json", method = {RequestMethod.GET, RequestMethod.POST})
@@ -65,7 +66,8 @@ public class SscController extends CacheController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token,companyShortName));
         
-        modelMap.put("logo", ApiUtils.getLogo(3,companyShortName));
+        modelMap.put("logo", ApiUtils.getLogo(3, companyShortName));
+        modelMap.put("desk", ApiUtils.getLogo(6, companyShortName));
         return this.renderPublicView("ssc/main", modelMap);
     }
 

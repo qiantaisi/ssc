@@ -49,6 +49,7 @@ public class SscController extends BaseController {
     public ModelAndView index() {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("icoData", ApiUtils.getLogo(4));
+        modelMap.put("icoData", ApiUtils.getLogo(4));
         return this.renderView("ssc/index", modelMap);
     }
 
