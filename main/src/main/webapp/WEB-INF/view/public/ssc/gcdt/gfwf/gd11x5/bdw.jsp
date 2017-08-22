@@ -1,4 +1,4 @@
-<%@ page trimDirectiveWhitespaces="true" %>
+    <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -29,7 +29,7 @@
         <span class="fr fl cl-1001">
            从01-11中任意选择1个或1个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，开奖号码：01,* * * *,* 01 * * *,* * 01,即中前三位。</var>
+                <var>投注方案：01<br>开奖号码：01,* * * *,* 01 * * *,* * 01,即中前三位。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
