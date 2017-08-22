@@ -4202,7 +4202,6 @@ function zhushu_gd11x5_qszuxds() {
         return 0;
     }
     chongfuArr = tempArr.uniqueArr();
-    console.log(chongfuArr.length);
 
     return chongfuArr.length;
 }
@@ -4243,7 +4242,8 @@ function zhushu_gd11x5_qezuxds() {
         return 0;
     }
 
-    return tempArr.length;
+    var chongfuArr = tempArr.uniqueArr();
+    return chongfuArr.length;
 }
 /**
  * 注数-组二单式
@@ -4281,7 +4281,8 @@ function zhushu_gd11x5_hezuxds() {
         return 0;
     }
 
-    return tempArr.length;
+    var chongfuArr = tempArr.uniqueArr();
+    return chongfuArr.length;
 }
 
 /**
@@ -4322,7 +4323,8 @@ function zhushu_gd11x5_hszuxds() {
         return 0;
     }
 
-    return tempArr.length;
+    var chongfuArr = tempArr.uniqueArr();
+    return chongfuArr.length;
 }
 
 /**
@@ -4363,7 +4365,8 @@ function zhushu_gd11x5_zszuxds() {
         return 0;
     }
 
-    return tempArr.length;
+    var chongfuArr = tempArr.uniqueArr();
+    return chongfuArr.length;
 }
 
 /**
