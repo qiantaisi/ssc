@@ -12585,7 +12585,7 @@ function content_suiji_gd11x5_rxszsds() {
             var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
             var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
             var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
-            tempArr.push(oneStr1 + twoStr2 + threeStr3);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3);
         }
     }
 
@@ -12665,7 +12665,7 @@ function content_gd11x5_rxsizsds() {
             var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
             var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
             var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
-            tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4);
         }
     }
 
@@ -12748,7 +12748,7 @@ function content_gd11x5_rxwzwds() {
             var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
             var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
             var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
-            tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4+threeStr5);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5);
         }
     }
 
@@ -12833,7 +12833,7 @@ function content_gd11x5_rxlzwds() {
             var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
             var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
             var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
-            tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4+threeStr5+threeStr6);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5+","+threeStr6);
         }
     }
 
@@ -12921,7 +12921,7 @@ function content_gd11x5_rxqzwds() {
             var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
             var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
             var threeStr7 = sotrArr[6] >= 10 ? sotrArr[6] : ('0' + sotrArr[6]);
-            tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4+threeStr5+threeStr6+threeStr7);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5+","+threeStr6+","+threeStr7);
         }
     }
 
@@ -13012,7 +13012,7 @@ function content_gd11x5_rxbzwds() {
             var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
             var threeStr7 = sotrArr[6] >= 10 ? sotrArr[6] : ('0' + sotrArr[6]);
             var threeStr8 = sotrArr[7] >= 10 ? sotrArr[7] : ('0' + sotrArr[7]);
-            tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4+threeStr5+threeStr6+threeStr7+threeStr8);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5+","+threeStr6+","+threeStr7+","+threeStr8);
         }
     }
 
@@ -13086,7 +13086,7 @@ function content_gd11x5_rxezeds() {
 
             var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
             var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
-            tempArr.push(oneStr1 + twoStr2);
+            tempArr.push(oneStr1+"," + twoStr2);
         }
     }
 
