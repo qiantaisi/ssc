@@ -104,16 +104,12 @@ function selectFun_1(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "quan";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "quan";
-    renderZhushu();
-    changeActi(btnFlag, objBtn);
-    // var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    // if(typeof stateTouZhu == "function"){
-    //     stateTouZhu(flag_name);
-    // }
 
+    renderZhushu();
 }
 
 
@@ -150,11 +146,12 @@ function selectFun_str2(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "da";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "da";
+
     renderZhushu();
-    changeActi(btnFlag, objBtn);
 }
 
 
@@ -192,11 +189,13 @@ function selectFun_str3(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "xiao";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "xiao";
+
     renderZhushu();
-    changeActi(btnFlag, objBtn);
+
 }
 
 function selectFun_4(obj) {
@@ -215,11 +214,12 @@ function selectFun_4(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "qi";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "qi";
+
     renderZhushu();
-    changeActi(btnFlag, objBtn);
 }
 
 function selectFun_5(obj) {
@@ -239,11 +239,12 @@ function selectFun_5(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "ou";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "ou";
+
     renderZhushu();
-    changeActi(btnFlag, objBtn);
 }
 
 
