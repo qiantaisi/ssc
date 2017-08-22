@@ -872,8 +872,8 @@ public class MemberController extends BaseController {
         String type2="2";
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        SscPlayGroupListResult sscplaylist = ApiUtils.getSscPlayGroupList(companyShortName,type1);
-        SscPlayGroupListResult gfplaylist = ApiUtils.getSscPlayGroupList(companyShortName,type2);
+        SscPlayGroupListResult sscplaylist = ApiUtils.getAllSscPlayGroupList(companyShortName,type1);
+        SscPlayGroupListResult gfplaylist = ApiUtils.getAllSscPlayGroupList(companyShortName,type2);
         modelMap.put("sscplaylist", sscplaylist);
         modelMap.put("gfplaylist", gfplaylist);
         return this.renderPublicView("member/lsjl/tzjl", modelMap);
@@ -882,9 +882,8 @@ public class MemberController extends BaseController {
     @RequestMapping(value = "/getSscPlayGroup.json")
     @ResponseBody
     public String getPlayGroup() {
-        String type="";
         String companyShortName = this.getCompanyShortName();
-        return this.renderJson(ApiUtils.getSscPlayGroupList(companyShortName,type));
+        return this.renderJson(ApiUtils.getSscPlayGroupList(companyShortName));
     }
 
     @Authentication
