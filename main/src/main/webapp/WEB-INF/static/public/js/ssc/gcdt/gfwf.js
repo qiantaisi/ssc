@@ -13482,7 +13482,16 @@ function content_gd11x5_qszuxds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            tempArr.push(oneStr1 + twoStr2 + threeStr3);
         }
     }
 
@@ -13494,6 +13503,7 @@ function content_gd11x5_qszuxds() {
     tempArr = tempArr.uniqueArr();
 
     if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
         allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
     }
 
@@ -13544,7 +13554,14 @@ function content_gd11x5_qezuxds() {
         var twoStr = temp.substr(2, 2);
 
         if(oneStr != twoStr){
-            tempArr.push(oneStr + twoStr );
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            tempArr.push(oneStr1 + twoStr2);
         }
     }
 
@@ -13556,6 +13573,7 @@ function content_gd11x5_qezuxds() {
     tempArr = tempArr.uniqueArr();
 
     if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
         allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
     }
 
@@ -13604,9 +13622,15 @@ function content_gd11x5_hezuxds() {
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
 
-
         if(oneStr != twoStr){
-            tempArr.push(oneStr + twoStr );
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            tempArr.push(oneStr1 + twoStr2);
         }
     }
 
@@ -13618,6 +13642,7 @@ function content_gd11x5_hezuxds() {
     tempArr = tempArr.uniqueArr();
 
     if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
         allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
     }
 
@@ -13669,7 +13694,16 @@ function content_gd11x5_zszuxds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            tempArr.push(oneStr1 + twoStr2 + threeStr3);
         }
     }
 
@@ -13681,6 +13715,7 @@ function content_gd11x5_zszuxds() {
     tempArr = tempArr.uniqueArr();
 
     if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
         allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
     }
 
@@ -13733,7 +13768,16 @@ function content_gd11x5_hszuxds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            tempArr.push(oneStr1 + twoStr2 + threeStr3);
         }
     }
 
@@ -13745,6 +13789,7 @@ function content_gd11x5_hszuxds() {
     tempArr = tempArr.uniqueArr();
 
     if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
         allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
     }
 
