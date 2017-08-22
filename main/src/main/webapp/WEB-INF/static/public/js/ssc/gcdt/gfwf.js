@@ -4167,7 +4167,7 @@ function zhushu_q3z6ds() {
  */
 function zhushu_gd11x5_qszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
-    var newArr = [], tempArr = [];
+    var newArr = [], tempArr = [] ,chongfuArr = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
 
     var arr_new = textStr.split(",");
@@ -4176,6 +4176,7 @@ function zhushu_gd11x5_qszuxds() {
             newArr.push(arr_new[i]);
         }
     }
+
     for (var n = 0; n < newArr.length; n++) {
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
@@ -4183,15 +4184,27 @@ function zhushu_gd11x5_qszuxds() {
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3);
             }
         }
+
     }
     if (tempArr.length <= 0) {
         return 0;
     }
+    chongfuArr = tempArr.uniqueArr();
+    console.log(chongfuArr.length);
 
-    return tempArr.length;
+    return chongfuArr.length;
 }
 
 /**
@@ -4215,7 +4228,14 @@ function zhushu_gd11x5_qezuxds() {
 
         if (oneStr != twoStr ) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                tempArr.push(oneStr1 + twoStr2);
             }
         }
     }
@@ -4246,7 +4266,14 @@ function zhushu_gd11x5_hezuxds() {
 
         if (oneStr != twoStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 ) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                tempArr.push(oneStr1 + twoStr2);
             }
         }
     }
@@ -4278,7 +4305,16 @@ function zhushu_gd11x5_hszuxds() {
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3);
             }
         }
     }
@@ -4310,7 +4346,16 @@ function zhushu_gd11x5_zszuxds() {
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3);
             }
         }
     }
