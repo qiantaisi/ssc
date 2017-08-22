@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="${resPath}css/cabel-v1.css?v=20170206" type="text/css">
     <link rel="stylesheet" href="${resPath}css/style.css?v=20170816" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/animate.min.css?v=20170206" type="text/css"><!--CSS3动画-->
-    <link rel="stylesheet" href="${resPath}css/lottery.css?v=20170206" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="${resPath}css/lottery.css?v=20170822" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}css/liMarquee.css?v=20170206" type="text/css"><!--页面CSS-->
     <link rel="stylesheet" href="${resPath}jRange/jquery.range.css?v=20170402" type="text/css">
     <link rel="stylesheet" href="${resPath}css/global.css?v=2.0" type="text/css"><!--页面CSS-->
