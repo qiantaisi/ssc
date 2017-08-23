@@ -111,6 +111,59 @@
                                             <c:when test="${playGroupId == 15}">
                                                 <c:import url="rule/gfwf/ffssc.jsp"/>
                                             </c:when>
+                                            <c:when test="${playGroupId == 24}">
+                                                <c:import url="rule/gfwf/gd11x5.jsp"/>
+                                            </c:when>
+                                        </c:choose>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </c:when>
+            <c:when test="${playGroupId == 24}">
+                <div class="page page-current" id="page-gcdt-cqssc-wfsm" style="height: 3.9rem; top: 2.1rem">
+                    <header class="bar bar-nav">
+                    </header>
+                    <div class="content">
+                        <div class="wfsm_600" id="ssc-parent-menu">
+                            <div class="wfsm-602">
+                                <a href="javascript:void(0);" class="wfsm_color_select" data-type="page"
+                                   onclick="javascript:document.getElementById('test1').scrollIntoView()">三码</a>
+                                <a href="javascript:void(0);" data-type="page"
+                                   onclick="javascript:document.getElementById('test2').scrollIntoView()">二码</a>
+                                <a href="javascript:void(0);" data-type="page"
+                                   onclick="javascript:document.getElementById('test3').scrollIntoView()">不定位</a>
+                                <a href="javascript:void(0);" data-type="page"
+                                   onclick="javascript:document.getElementById('test4').scrollIntoView()">定位胆</a>
+                                <a href="javascript:void(0);" data-type="page"
+                                   onclick="javascript:document.getElementById('test5').scrollIntoView()">任选复式</a>
+                                <a href="javascript:void(0);" data-type="page"
+                                   onclick="javascript:document.getElementById('test6').scrollIntoView()">任选单式</a>
+                                <a href="javascript:void(0);" data-type="page"
+                                   onclick="javascript:document.getElementById('test7').scrollIntoView()">任选胆拖</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content cl-700" style="top: 6.0rem!important;">
+                    <div class="content-block cl-8 cl-990">
+                        <div class="cl-1300">
+                            <div class="cl-1301-gfwf">
+                                <div class="cl-1350-gfwf">
+                                    <div class="content-block">
+                                        <c:choose>
+                                            <c:when test="${playGroupId == 1}">
+                                                <c:import url="rule/gfwf/cqssc.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 15}">
+                                                <c:import url="rule/gfwf/ffssc.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 24}">
+                                                <c:import url="rule/gfwf/gd11x5.jsp"/>
+                                            </c:when>
                                         </c:choose>
                                     </div>
                                 </div>
@@ -186,9 +239,6 @@
                                             </c:when>
                                             <c:when test="${playGroupId == 23}">
                                                 <c:import url="rule/gfwf/jspk10.jsp"/>
-                                            </c:when>
-                                            <c:when test="${playGroupId == 24}">
-                                                <c:import url="rule/gfwf/gd11x5.jsp"/>
                                             </c:when>
                                         </c:choose>
                                     </div>
