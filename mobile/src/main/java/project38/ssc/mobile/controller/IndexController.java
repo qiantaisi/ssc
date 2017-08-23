@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/*")
-public class IndexController extends BaseController{
+public class IndexController extends BaseController {
     private static final Log log = LogFactory.getLog(IndexController.class);
 
     @Autowired
@@ -47,26 +47,26 @@ public class IndexController extends BaseController{
     public ModelAndView index() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2,companyShortName);
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2, companyShortName);
         modelMap.put("webTitle", webInfoResult.getWebTitle());
         modelMap.put("webKeywords", webInfoResult.getWebKeywords());
         modelMap.put("webDescription", webInfoResult.getWebDescription());
         modelMap.put("webTjjs", webInfoResult.getWebTjjs());
-        modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
+        modelMap.put("icoData", ApiUtils.getLogo(4, companyShortName));
         modelMap.put("desk", ApiUtils.getLogo(6, companyShortName));
         return this.renderView("index/index", modelMap);
     }
 
 
     @RequestMapping(value = "/ewm.html")
-    public ModelAndView ewm() throws UserException{
+    public ModelAndView ewm() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         return this.renderPublicView("index/ewm", modelMap);
     }
 
     @RequestMapping(value = "/ios.html")
-    public ModelAndView ios() throws UserException{
+    public ModelAndView ios() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("data", ApiUtils.getDownloadManagementResult(companyShortName));
@@ -75,7 +75,7 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/ipaxinren.html")
-    public ModelAndView ipaxinren() throws UserException{
+    public ModelAndView ipaxinren() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("data", ApiUtils.getDownloadManagementResult(companyShortName));
@@ -85,7 +85,7 @@ public class IndexController extends BaseController{
 
 
     @RequestMapping(value = "/app.html")
-    public ModelAndView app() throws UserException{
+    public ModelAndView app() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("data", ApiUtils.getDownloadManagementResult(companyShortName));
@@ -140,8 +140,11 @@ public class IndexController extends BaseController{
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
         modelMap.put("khxy", ApiUtils.getKhxy(companyShortName));
-        modelMap.put("logo", ApiUtils.getLogo(5,companyShortName));
-        modelMap.put("WebInfoResult", ApiUtils.getWebInfo(2,companyShortName));
+        modelMap.put("WebInfoResult", ApiUtils.getWebInfo(2, companyShortName));
+
+        // 注册限制
+        RegisterResult registerResult = ApiUtils.getRegisterResult(companyShortName);
+        modelMap.put("registerResult", registerResult);
         return this.renderView("index/register", modelMap);
     }
 
@@ -157,7 +160,7 @@ public class IndexController extends BaseController{
     public ModelAndView yhhdDetail(@PathVariable Long id) throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("promotion", ApiUtils.promotionGetById(id,companyShortName));
+        modelMap.put("promotion", ApiUtils.promotionGetById(id, companyShortName));
         return this.renderView("index/yhhdDetail", modelMap);
     }
 
@@ -168,8 +171,8 @@ public class IndexController extends BaseController{
         String token = this.getToken(httpServletRequest);
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        modelMap.put("logo", ApiUtils.getLogo(5,companyShortName));
-        modelMap.put("WebInfoResult", ApiUtils.getWebInfo(2,companyShortName));
+        modelMap.put("logo", ApiUtils.getLogo(5, companyShortName));
+        modelMap.put("WebInfoResult", ApiUtils.getWebInfo(2, companyShortName));
         return this.renderView("index/login", modelMap);
     }
 
@@ -177,7 +180,7 @@ public class IndexController extends BaseController{
     @ResponseBody
     public WebInfoResult ajaxGetWebInfo() {
         String companyShortName = this.getCompanyShortName();
-        return ApiUtils.getWebInfo(2,companyShortName);
+        return ApiUtils.getWebInfo(2, companyShortName);
     }
 
     @RequestMapping(value = "/ajaxGetNotices.json", method = {RequestMethod.GET, RequestMethod.POST})
@@ -193,7 +196,7 @@ public class IndexController extends BaseController{
         String companyShortName = this.getCompanyShortName();
         LoginResult loginResult = new LoginResult();
         try {
-            return ApiUtils.memberShiwanLogin(IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), 1,companyShortName);
+            return ApiUtils.memberShiwanLogin(IPHelper.getIpAddr(httpServletRequest), httpServletRequest.getServerName(), 1, companyShortName);
         } catch (Exception e) {
             log.error(this, e);
             loginResult.setResult(-100);
@@ -203,10 +206,10 @@ public class IndexController extends BaseController{
     }
 
     @RequestMapping(value = "/pc.html", method = RequestMethod.GET)
-    public ModelAndView pc(HttpServletResponse response,HttpServletRequest request) throws UserException {
+    public ModelAndView pc(HttpServletResponse response, HttpServletRequest request) throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1,companyShortName);
+        WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webTitle", webInfoResult.getWebTitle());

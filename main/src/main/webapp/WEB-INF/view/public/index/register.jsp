@@ -293,7 +293,7 @@
                 return;
             }
 
-            <c:if test="${registerResult.checkPhone}">
+            <c:if test="${registerResult.checkPhone && registerResult.needRequredPhone}">
             if (!phone) {
                 $(".sj").find(".info").hide();
                 $(".sj").find(".error").html("请输入手机").show();
@@ -301,7 +301,7 @@
             }
             </c:if>
 
-            <c:if test="${registerResult.checkQq}">
+            <c:if test="${registerResult.checkQq && registerResult.needRequiredQq}">
             if (!qq) {
                 $(".qq").find(".info").hide();
                 $(".qq").find(".error").html("请输入验QQ").show();
@@ -309,7 +309,7 @@
             }
             </c:if>
 
-            <c:if test="${registerResult.checkEmail}">
+            <c:if test="${registerResult.checkEmail && registerResult.needRequiredEmail}">
             if (!email) {
                 $(".yx").find(".info").hide();
                 $(".yx").find(".error").html("请输入邮箱").show();
