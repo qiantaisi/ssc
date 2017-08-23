@@ -49,4 +49,23 @@ public abstract class CacheController extends BaseController {
         return logoResult;
     }
 
+    /**
+     * 获取Mobile登录LOGO
+     * @param httpServletRequest
+     * @param companyShortName
+     * @return
+     */
+    protected LogoResult getCacheMobileLoginLogo(
+            HttpServletRequest httpServletRequest,
+            String companyShortName
+    ) {
+        // PC首页LOGO
+        LogoResult logoResult = SessionUtils.getMobileLoginLogo(httpServletRequest);
+        if (logoResult == null || logoResult.getResult() != 1) {
+            logoResult = ApiUtils.getLogo(5, companyShortName);
+            SessionUtils.setMobileLoginLogo(httpServletRequest, logoResult);
+        }
+        return logoResult;
+    }
+
 }

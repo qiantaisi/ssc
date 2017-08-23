@@ -12,7 +12,7 @@
 <div class="content bg-white bottom2">
     <div class="main">
         <div class="ny_logo">
-            <img src="<%=basePath%>images/logo.png"/>
+            <img src="<%=basePath%>images/logo2.png"/>
         </div>
 
         <div class="form_main">

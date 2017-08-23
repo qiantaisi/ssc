@@ -144,7 +144,7 @@ public class SessionUtils {
             return null;
         }
 
-        String data = (String) httpServletRequest.getSession().getAttribute("PC_INDEX_LOGO");
+        String data = (String) httpServletRequest.getSession().getAttribute("MOBILE_INDEX_LOGO");
         if (StringUtils.isNotBlank(data)) {
             return JSONUtils.toObject(data, LogoResult.class);
         }
@@ -164,6 +164,39 @@ public class SessionUtils {
 
         HttpSession session = httpServletRequest.getSession();
         session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
-        session.setAttribute("PC_INDEX_LOGO", JSONUtils.toJSONStr(logoResult));
+        session.setAttribute("MOBILE_INDEX_LOGO", JSONUtils.toJSONStr(logoResult));
+    }
+
+    /**
+     * 获取Mobile登录LOGO
+     * @param httpServletRequest
+     * @return
+     */
+    public static LogoResult getMobileLoginLogo(HttpServletRequest httpServletRequest) {
+        if (null == httpServletRequest) {
+            return null;
+        }
+
+        String data = (String) httpServletRequest.getSession().getAttribute("MOBILE_LOGIN_LOGO");
+        if (StringUtils.isNotBlank(data)) {
+            return JSONUtils.toObject(data, LogoResult.class);
+        }
+
+        return null;
+    }
+
+    /**
+     * 设置Mobile登录LOGO
+     * @param httpServletRequest
+     * @param logoResult
+     */
+    public static void setMobileLoginLogo(HttpServletRequest httpServletRequest, LogoResult logoResult) {
+        if (null == logoResult) {
+            return;
+        }
+
+        HttpSession session = httpServletRequest.getSession();
+        session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
+        session.setAttribute("MOBILE_LOGIN_LOGO", JSONUtils.toJSONStr(logoResult));
     }
 }

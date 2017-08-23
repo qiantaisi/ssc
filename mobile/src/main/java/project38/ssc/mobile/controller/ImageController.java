@@ -78,11 +78,36 @@ public class ImageController extends CacheController {
         this.id(id, httpServletRequest, httpServletResponse);
     }
 
+    /**
+     * 首页Logo
+     * @param httpServletRequest
+     * @param httpServletResponse
+     */
     @RequestMapping(value = "/logo.png", method = RequestMethod.GET)
     public void logo(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
         String companyShortName = this.getCompanyShortName();
         try {
             LogoResult logoResult = this.getCacheMobileIndexLogo(httpServletRequest, companyShortName);
+            if (logoResult == null || logoResult.getResult() != 1) {
+                return;
+            }
+
+            this.id(logoResult.getImageId(), httpServletRequest, httpServletResponse);
+        } catch (Exception e) {
+            log.error(getClass(), e);
+        }
+    }
+
+    /**
+     * 登录logo
+     * @param httpServletRequest
+     * @param httpServletResponse
+     */
+    @RequestMapping(value = "/logo2.png", method = RequestMethod.GET)
+    public void logo2(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        String companyShortName = this.getCompanyShortName();
+        try {
+            LogoResult logoResult = this.getCacheMobileLoginLogo(httpServletRequest, companyShortName);
             if (logoResult == null || logoResult.getResult() != 1) {
                 return;
             }
