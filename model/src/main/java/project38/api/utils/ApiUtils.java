@@ -1041,6 +1041,9 @@ public class ApiUtils{
         RegisterResult registerResult6=JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_CK_PHONE,paramsMap,companyShortName), RegisterResult.class);
         registerResult.setNeedRequredPhone(registerResult3.getNeedRequredPhone());
         registerResult.setCheckPhone(registerResult6.getCheckPhone());
+        //验证码
+        RegisterResult registerResulta= JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_VCSWITCH,paramsMap,companyShortName), RegisterResult.class);
+        registerResult.setVcSwtich(registerResulta.getVcSwtich());
 
         return registerResult;
     }
