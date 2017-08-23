@@ -100,14 +100,14 @@ public class IndexController extends BaseController {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         WebInfoResult webInfoResult = ApiUtils.getWebInfo(1, companyShortName);
         modelMap.put("carouseList", ApiUtils.getCarouselList(true, 2, companyShortName));
-        modelMap.put("serverTime", ApiUtils.getServerTime(companyShortName).getServerTime());
+//        modelMap.put("serverTime", ApiUtils.getServerTime(companyShortName).getServerTime());
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("kefuUrl", ApiUtils.getKefu(companyShortName).getKefuUrl());
         modelMap.put("webName", webInfoResult.getWebName());
         modelMap.put("webInfo", webInfoResult);
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
-        modelMap.put("qrcode", ApiUtils.getQRCodePC(companyShortName));
+//        modelMap.put("qrcode", ApiUtils.getQRCodePC(companyShortName));
 
         return this.renderView("index/main", modelMap);
     }
