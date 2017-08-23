@@ -148,6 +148,7 @@ public class ApiConstant {
 
     public static String API_DOWNLOADMANAGEMENT = API_DOMAIN + "webSetting/ajaxSaveDownlaodManage.json"; //下载页面管理
 
+    public static String API_REGISTER_VCSWITCH = API_DOMAIN + "member/ajaxGetVcSwitch.json"; //获取验证码
 
 
 }
