@@ -10,8 +10,8 @@
 <c:import url="../common/checkIsChildFrame.jsp"/>
 <c:import url="top.jsp"/>
 <c:import url="menu.jsp"/>
-
-<div class="main login_main">
+<jsp:include page="../../../public/index/register.jsp" />
+<%--<div class="main login_main">
     <div class="container login_nr">
         <div class="login_nr_t clearfix">
             <div class="left login_nr_t_lf">
@@ -162,7 +162,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>--%>
 
 <c:import url="bottom.jsp"/>
 
