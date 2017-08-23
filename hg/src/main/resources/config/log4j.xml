@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<!DOCTYPE log4j:configuration SYSTEM
+        "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration debug="true">
+    <!-- 输出到控制台 -->
+    <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MMM-dd HH:mm:ss,SSS}-[TS] %p %t %c - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- 配置出现重量级的异常时的日志输出，输出到文件，并且文件按天存放 -->
+    <appender name="DEBUG" class="project38.api.log4j.DatedFileAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <!-- 错误日志文件存放在log/error目录下 -->
+        <param name="File" value="${catalina.home}/logs/hg/%yyyy/%mm/debug_%yyyy%mm%dd.log"/>
+        <!-- 重启后追加到旧文件 -->
+        <param name="Append" value="true"/>
+        <!-- 按天分割文件 -->
+        <!--  param name="DatePattern" value=".yyyy-MM-dd" /-->
+        <!-- 配置日志格式 -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MMM-dd HH:mm:ss,SSS}-[TS] %p %t %c - %m%n"/>
+        </layout>
+        <!-- 配置过滤器，此文件只输出错误信息 -->
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="DEBUG"/>
+            <param name="LevelMax" value="DEBUG"/>
+        </filter>
+    </appender>
+
+    <!-- 配置程序运行时的日志输出，输出到文件，并且文件按天存放 -->
+    <appender name="INFO" class="project38.api.log4j.DatedFileAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <!-- 事件日志文件存放在log/info目录下 -->
+        <param name="File" value="${catalina.home}/logs/hg/%yyyy/%mm/info_%yyyy%mm%dd.log"/>
+        <!-- 重启后追加到旧文件 -->
+        <param name="Append" value="true"/>
+        <!-- 按天分割文件 -->
+        <!--  param name="DatePattern" value=".yyyy-MM-dd" /-->
+        <!-- 配置日志格式 -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MMM-dd HH:mm:ss,SSS}-[TS] %p %t %c - %m%n"/>
+        </layout>
+        <!-- 配置过滤器，此文件只输出INFO信息 -->
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="INFO"/>
+            <param name="LevelMax" value="INFO"/>
+        </filter>
+    </appender>
+
+    <!-- 配置程序运行时的日志输出，输出到文件，并且文件按天存放 -->
+    <appender name="WARN" class="project38.api.log4j.DatedFileAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <!-- 事件日志文件存放在log/info目录下 -->
+        <param name="File" value="${catalina.home}/logs/hg/%yyyy/%mm/warn_%yyyy%mm%dd.log"/>
+        <!-- 重启后追加到旧文件 -->
+        <param name="Append" value="true"/>
+        <!-- 按天分割文件 -->
+        <!--  param name="DatePattern" value=".yyyy-MM-dd" /-->
+        <!-- 配置日志格式 -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MMM-dd HH:mm:ss,SSS}-[TS] %p %t %c - %m%n"/>
+        </layout>
+        <!-- 配置过滤器，此文件只输出INFO信息 -->
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="WARN"/>
+            <param name="LevelMax" value="WARN"/>
+        </filter>
+    </appender>
+
+    <!-- 配置出现重量级的异常时的日志输出，输出到文件，并且文件按天存放 -->
+    <appender name="ERROR" class="project38.api.log4j.DatedFileAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <!-- 错误日志文件存放在log/error目录下 -->
+        <param name="File" value="${catalina.home}/logs/hg/%yyyy/%mm/error_%yyyy%mm%dd.log"/>
+        <!-- 重启后追加到旧文件 -->
+        <param name="Append" value="true"/>
+        <!-- 按天分割文件 -->
+        <!--  param name="DatePattern" value=".yyyy-MM-dd" /-->
+        <!-- 配置日志格式 -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MMM-dd HH:mm:ss,SSS}-[TS] %p %t %c - %m%n"/>
+        </layout>
+        <!-- 配置过滤器，此文件只输出错误信息 -->
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="ERROR"/>
+            <param name="LevelMax" value="ERROR"/>
+        </filter>
+    </appender>
+
+    <!-- 配置出现灾难性的异常时的日志输出，输出到文件，并且文件按天存放 -->
+    <appender name="FATAL" class="project38.api.log4j.DatedFileAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <!-- 错误日志文件存放在log/fatal目录下 -->
+        <param name="File" value="${catalina.home}/logs/hg/%yyyy/%mm/fatal_%yyyy%mm%dd.log"/>
+        <!-- 重启后追加到旧文件 -->
+        <param name="Append" value="true"/>
+        <!-- 按天分割文件 -->
+        <!--  param name="DatePattern" value=".yyyy-MM-dd" /-->
+        <!-- 配置日志格式 -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MMM-dd HH:mm:ss,SSS}-[TS] %p %t %c - %m%n"/>
+        </layout>
+        <!-- 配置过滤器，此文件只输出灾难信息 -->
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="FATAL"/>
+            <param name="LevelMax" value="FATAL"/>
+        </filter>
+    </appender>
+    <!-- 配置程序运行时的日志输出，输出到文件，并且文件按天存放 -->
+    <appender name="TRACE" class="project38.api.log4j.DatedFileAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <!-- 事件日志文件存放在log/info目录下 -->
+        <param name="File" value="${catalina.home}/logs/hg/%yyyy/%mm/trace_%yyyy%mm%dd.log"/>
+        <!-- 重启后追加到旧文件 -->
+        <param name="Append" value="true"/>
+        <!-- 按天分割文件 -->
+        <!--  param name="DatePattern" value=".yyyy-MM-dd" /-->
+        <!-- 配置日志格式 -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MMM-dd HH:mm:ss,SSS}-[TS] %p %t %c - %m%n"/>
+        </layout>
+        <!-- 配置过滤器，此文件只输出INFO信息 -->
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="TRACE"/>
+            <param name="LevelMax" value="TRACE"/>
+        </filter>
+    </appender>
+
+
+    <root><!-- 设置接收所有输出的通道 -->
+        <level value="INFO"/>
+        <!-- 对应上面的appender -->
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="DEBUG"/>
+        <appender-ref ref="ERROR"/>
+        <appender-ref ref="INFO"/>
+        <appender-ref ref="WARN"/>
+        <appender-ref ref="FATAL"/>
+    </root>
+
+</log4j:configuration>
