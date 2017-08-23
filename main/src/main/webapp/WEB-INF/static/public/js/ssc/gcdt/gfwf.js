@@ -2897,13 +2897,13 @@ function zhushu_qezxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var tempArr = [];
     var newArr = [];
-    textStr = $.trim(textStr.replace(/[^00,01,02,03,04,05,06,07,08,09,10]/g, ','));
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
-
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
-
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -2934,8 +2934,10 @@ function zhushu_qszxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var tempArr = [];
     var newArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -12368,8 +12370,13 @@ function content_qezxds() {
     var errorStr = '';
     var zhushu = 0;
     arrTsh = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
-    var arr_new = textStr.split(",");
+   /* textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+
+    var arr_new = textStr.split(",");*/
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
@@ -12429,8 +12436,10 @@ function content_qszxds() {
     var errorStr = '';
     var zhushu = 0;
 
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
