@@ -645,5 +645,6 @@
     <module>main</module>
     <module>mobile</module>
     <module>zst</module>
+    <module>hg</module>
   </modules>
 </project>
