@@ -5105,6 +5105,13 @@ $(function () {
     });
 
     //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-tjssc-gfwf", function (e, id, page) {
+        initSscPage(2);
+
+        gfwfCommonClickEvent();
+    });
+
+    //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-pk10-gfwf", function (e, id, page) {
         initSscPage(9);
 
