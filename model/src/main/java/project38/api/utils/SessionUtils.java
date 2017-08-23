@@ -2,6 +2,7 @@ package project38.api.utils;
 
 import org.apache.commons.lang3.StringUtils;
 import project38.api.common.utils.JSONUtils;
+import project38.api.result.LogoResult;
 import project38.api.result.QRCodeResult;
 
 import javax.servlet.http.HttpServletRequest;
@@ -98,5 +99,39 @@ public class SessionUtils {
         HttpSession session = httpServletRequest.getSession();
         session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
         session.setAttribute("PC_EWM", JSONUtils.toJSONStr(qrCodeResult));
+    }
+
+    /**
+     * 获取PC首页LOGO
+     * @param httpServletRequest
+     * @param playGroupId
+     * @return
+     */
+    public static LogoResult getPcIndexLogo(HttpServletRequest httpServletRequest) {
+        if (null == httpServletRequest) {
+            return null;
+        }
+
+        String data = (String) httpServletRequest.getSession().getAttribute("PC_INDEX_LOGO");
+        if (StringUtils.isNotBlank(data)) {
+            return JSONUtils.toObject(data, LogoResult.class);
+        }
+
+        return null;
+    }
+
+    /**
+     * 设置PC首页LOGO
+     * @param httpServletRequest
+     * @param qrCodeResult
+     */
+    public static void setPcIndexLogo(HttpServletRequest httpServletRequest, LogoResult logoResult) {
+        if (null == logoResult) {
+            return;
+        }
+
+        HttpSession session = httpServletRequest.getSession();
+        session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
+        session.setAttribute("PC_INDEX_LOGO", JSONUtils.toJSONStr(logoResult));
     }
 }

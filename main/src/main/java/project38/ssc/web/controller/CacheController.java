@@ -1,23 +1,13 @@
 package project38.ssc.web.controller;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import project38.api.common.utils.JSONUtils;
+import project38.api.result.LogoResult;
 import project38.api.result.QRCodeResult;
 import project38.api.utils.ApiUtils;
 import project38.api.utils.SessionUtils;
 
-import javax.imageio.ImageIO;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.Random;
 
 public abstract class CacheController extends BaseController {
     /**
@@ -58,5 +48,24 @@ public abstract class CacheController extends BaseController {
             SessionUtils.setPcEwm(httpServletRequest, qrCodeResult);
         }
         return qrCodeResult;
+    }
+
+    /**
+     * 获取PC首页LOGO
+     * @param httpServletRequest
+     * @param companyShortName
+     * @return
+     */
+    protected LogoResult getCachePcIndexLogo(
+            HttpServletRequest httpServletRequest,
+            String companyShortName
+    ) {
+        // PC首页LOGO
+        LogoResult logoResult = SessionUtils.getPcIndexLogo(httpServletRequest);
+        if (logoResult == null || logoResult.getResult() != 1) {
+            logoResult = ApiUtils.getLogo(2, companyShortName);
+            SessionUtils.setPcIndexLogo(httpServletRequest, logoResult);
+        }
+        return logoResult;
     }
 }

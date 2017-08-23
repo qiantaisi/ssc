@@ -42,7 +42,7 @@ public class IndexController extends BaseController {
     @ResponseBody
     public RegisterResult ajaxGetRegisterResult() throws Exception {
         String companyShortName = this.getCompanyShortName();
-        RegisterResult registerResult= ApiUtils.getRegisterResult(1,companyShortName);
+        RegisterResult registerResult= ApiUtils.getRegisterResult(companyShortName);
         return registerResult;
     }
 
@@ -134,7 +134,11 @@ public class IndexController extends BaseController {
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
         modelMap.put("webName", webInfoResult.getWebName());
         modelMap.put("webInfo", webInfoResult);
-        modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
+//        modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
+
+        // 注册限制
+        RegisterResult registerResult = ApiUtils.getRegisterResult(companyShortName);
+        modelMap.put("registerResult", registerResult);
         return this.renderView("index/register", modelMap);
     }
 

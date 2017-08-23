@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import project38.api.result.LogoResult;
 import project38.api.result.QRCodeResult;
 import project38.api.utils.ApiUtils;
 import project38.api.utils.SessionUtils;
@@ -27,20 +28,20 @@ import java.util.Date;
 public class ImageController extends CacheController {
     private Log log = LogFactory.getLog(getClass());
 
-//    @RequestMapping(value = "/logo.png", method = RequestMethod.GET)
-//    public void logo(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
-//        String companyShortName = this.getCompanyShortName();
-//        try {
-//            QRCodeResult qrCodeResult = this.getCachePcEwm(httpServletRequest, companyShortName);
-//            if (qrCodeResult == null || qrCodeResult.getResult() != 1) {
-//                return;
-//            }
-//
-//            this.id(Long.parseLong(qrCodeResult.getCodeId()), httpServletRequest, httpServletResponse);
-//        } catch (Exception e) {
-//            log.error(getClass(), e);
-//        }
-//    }
+    @RequestMapping(value = "/logo.png", method = RequestMethod.GET)
+    public void logo(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        String companyShortName = this.getCompanyShortName();
+        try {
+            LogoResult logoResult = this.getCachePcIndexLogo(httpServletRequest, companyShortName);
+            if (logoResult == null || logoResult.getResult() != 1) {
+                return;
+            }
+
+            this.id(logoResult.getImageId(), httpServletRequest, httpServletResponse);
+        } catch (Exception e) {
+            log.error(getClass(), e);
+        }
+    }
 
     @RequestMapping(value = "/ewm.png", method = RequestMethod.GET)
     public void ewm(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {

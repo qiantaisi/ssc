@@ -88,27 +88,30 @@
                         </div>
                     </div>
                 </div>
+                <c:if test="${registerResult.checkPhone}">
                 <div class="clearfix login_nr_gp iphoneTd hideRegInput">
-			    		<span class="left login_nr_name">
-			    			<span class="star starphone">
-
-			    			</span>
-			    			手机:
-			    		</span>
+                            <span class="left login_nr_name">
+                                <span class="star starphone">
+                                    <c:if test="${registerResult.needRequredPhone}">*</c:if>
+                                </span>
+                                手机:
+                            </span>
                     <div class="login_nr_gp_rt clearfix">
                         <input type="text" name="phoneName" class="inputStr left" placeholder="请输入手机"/>
                         <div class="left erro">
-                        <span class="sj">
-                            <span class="info">请输入您的手机</span>
-                            <span class="error red hide"></span>
-                        </span>
+                            <span class="sj">
+                                <span class="info">请输入您的手机</span>
+                                <span class="error red hide"></span>
+                            </span>
                         </div>
                     </div>
                 </div>
+                </c:if>
+                <c:if test="${registerResult.checkEmail}">
                 <div class="clearfix login_nr_gp eamilTd hideRegInput">
 			    		<span class="left login_nr_name">
 			    			<span class="star staremail">
-
+                                <c:if test="${registerResult.needRequiredEmail}">*</c:if>
 			    			</span>
 			    			邮箱:
 			    		</span>
@@ -123,10 +126,12 @@
                         </div>
                     </div>
                 </div>
+                </c:if>
+                <c:if test="${registerResult.checkQq}">
                 <div class="clearfix login_nr_gp qqTd hideRegInput">
 			    		<span class="left login_nr_name">
 			    			<span class="star starqq">
-
+                                <c:if test="${registerResult.needRequiredQq}">*</c:if>
 			    			</span>
 			    			QQ:
 			    		</span>
@@ -141,18 +146,21 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="clearfix login_nr_gp yzmTd hideRegInput" >
+                </c:if>
+                <c:if test="${registerResult.vcSwtich}">
+                <div class="clearfix login_nr_gp yzmTd hideRegInput">
 			    		<span class="left login_nr_name">
 			    			<span class="star staryzm">
-
+                                *
 			    			</span>
 			    			验证码:
 			    		</span>
                     <div class="login_nr_gp_rt clearfix">
                         <div>
-                            <input type="text" id="registerLoginYzm" style="width: 125px;" placeholder="验证码" onfocus="refreshYzm(document.getElementById('registerYzmImg2'))" />
-                            <img id="registerYzmImg2" onclick="refreshYzm(this)" style="margin-right: 15px;" src="<%=basePath%>code/yzm?imgWidth=100&imgHeight=30&imgFontHeight=30&imgCodeY=25&imgCodeX=2" />
+                            <input type="text" id="registerLoginYzm" style="width: 125px;" placeholder="验证码"
+                                   onfocus="refreshYzm(document.getElementById('registerYzmImg2'))"/>
+                            <img id="registerYzmImg2" onclick="refreshYzm(this)" style="margin-right: 15px;"
+                                 src="<%=basePath%>code/yzm?imgWidth=100&imgHeight=30&imgFontHeight=30&imgCodeY=25&imgCodeX=2"/>
 
                             <span class="yzm">
                                    <span class="info">请输入验证码</span>
@@ -162,18 +170,19 @@
 
                     </div>
                 </div>
-
+                </c:if>
                 <div class="clearfix login_nr_gp" style="padding-left: 40px;">
                     <span class="left login_nr_name"></span>
                     <div class="login_nr_gp_rt clearfix">
                         <input type="checkbox" class="left" checked="checked" style="width:30px;"/><span>注册即表示同意<a
-                            href="javascript:void(0)" onclick="showKhxy()" class="xieyiCss">《${webName}服务使用协议》</a></span></h3>
+                            href="javascript:void(0)" onclick="showKhxy()"
+                            class="xieyiCss">《${webName}服务使用协议》</a></span></h3>
                     </div>
                 </div>
                 <div class="login_b">
                     <p>
                         <input type="button" class="mfkh" value="免费开户" id="btn-register"/>
-                        <input type="button" class="mfkh" value="重置" onclick="rest()"/>
+                        <input type="reset" class="mfkh" value="重置" onclick="rest()"/>
                     </p>
                 </div>
         </form>
@@ -194,10 +203,6 @@
 <c:import url="../common/jsCommonLogin.jsp"/>
 
 <script>
-
-    function rest(){
-        document.getElementById("myform").reset()
-    }
     function showKhxy() {
         //自定页
         layer.open({
@@ -215,41 +220,6 @@
     var iphoneCheck = false;
     var emailCheck = false;
     $(function () {
-        ajaxRequest({
-            url: "<%=basePath%>ajaxGetRegisterResult.json",
-            data: {},
-            success:function(obj){
-                //判断QQ是否必填
-                if(obj.checkQq){
-                    $('.qqTd').removeClass('hideRegInput');
-                    if(obj.needRequiredQq){
-                        qqCheck = true;
-                        $(".starqq").html("*");
-                    }
-                }
-
-                if(obj.checkEmail){
-                    $('.eamilTd').removeClass('hideRegInput');
-                    if(obj.needRequiredEmail){
-                        emailCheck = true;
-                        $(".staremail").html("*");
-                    }
-                }
-                if(obj.checkPhone){
-                    $('.iphoneTd').removeClass('hideRegInput');
-                    if(obj.needRequredPhone){
-                        iphoneCheck = true;
-                        $(".starphone").html("*");
-                    }
-                }
-
-                if(obj.vcSwtich){
-                    $(".yzmTd").removeClass('hideRegInput');
-                }
-
-            }
-
-        });
         $(".login_nr_b .login_nr_gp .login_nr_gp_rt input.inputStr").keypress(function (e) {
             if (e.which == 13) {// 判断所按是否回车键
                 var inputs = $(".login_nr_b").find(".inputStr"); // 获取表单中的所有输入框
@@ -265,8 +235,6 @@
             }
         });
 
-
-        $(".all_fenlei_yin").css("display", "none");
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
@@ -313,7 +281,6 @@
                 return;
             }
 
-
             if (!name) {
                 $(".name").find(".info").hide();
                 $(".name").find(".error").html("请输入姓名").show();
@@ -326,29 +293,37 @@
                 return;
             }
 
-            if(iphoneCheck && !phone){
+            <c:if test="${registerResult.checkPhone}">
+            if (!phone) {
                 $(".sj").find(".info").hide();
                 $(".sj").find(".error").html("请输入手机").show();
                 return;
             }
+            </c:if>
 
-            if(qqCheck && qq == ''){
+            <c:if test="${registerResult.checkQq}">
+            if (!qq) {
                 $(".qq").find(".info").hide();
                 $(".qq").find(".error").html("请输入验QQ").show();
                 return;
             }
+            </c:if>
 
-            if(emailCheck && email == ''){
+            <c:if test="${registerResult.checkEmail}">
+            if (!email) {
                 $(".yx").find(".info").hide();
                 $(".yx").find(".error").html("请输入邮箱").show();
                 return;
             }
+            </c:if>
 
+            <c:if test="${registerResult.vcSwtich}">
             if (!yzm) {
                 $(".yzm").find(".info").hide();
                 $(".yzm").find(".error").html("请输入验证码").show();
                 return;
             }
+            </c:if>
 
             $(".erro .info").hide();
             $(".erro .error").hide();
@@ -365,7 +340,7 @@
                     agentId: $.cookie("agentId"),
                     qq: qq
                 },
-                beforeSend: function() {
+                beforeSend: function () {
                     showLoading();
                 },
                 success: function (json) {
@@ -374,11 +349,11 @@
                         $.cookie("uid", json.userId, {path: "/"});
                         $.cookie("token", json.token, {path: "/"});
                         window.location.href = "<%=basePath%>main.html";
-                    }else {
+                    } else {
                         Tools.toast("注册失败：" + json.description);
                     }
                 },
-                complete: function() {
+                complete: function () {
                     hideLoading();
                 }
             });

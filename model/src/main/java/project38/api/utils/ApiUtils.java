@@ -14,7 +14,7 @@ import java.util.*;
 /**
  * Created by Administrator on 2016/11/15.
  */
-public class ApiUtils{
+public class ApiUtils {
     private static final boolean IS_DEBUG = false;
 
 
@@ -44,7 +44,7 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_RESET_PASSWORD, paramsMap, companyShortName), CommonResult.class);
     }
 
-    public static CommonResult submitWeixinzz(Long uid, String token, Double money, String userWeixinName, Integer weixinId, Date time,String companyShortName) {
+    public static CommonResult submitWeixinzz(Long uid, String token, Double money, String userWeixinName, Integer weixinId, Date time, String companyShortName) {
         if (IS_DEBUG) {
             return new CommonResult();
         }
@@ -132,13 +132,14 @@ public class ApiUtils{
 
     /**
      * 注册接口
-     * @param account 账号
-     * @param password 密码
-     * @param name 姓名
-     * @param ip IP
-     * @param url 注册网址
-     * @param qq QQ号
-     * @param agentId 代理ID
+     *
+     * @param account          账号
+     * @param password         密码
+     * @param name             姓名
+     * @param ip               IP
+     * @param url              注册网址
+     * @param qq               QQ号
+     * @param agentId          代理ID
      * @param companyShortName 公司标志
      * @return
      */
@@ -198,7 +199,7 @@ public class ApiUtils{
 
     public static CommonResult editUserInfo(Long uid, String token, String nickname, Date birthday, String qq, String telephone, String email, Integer sex, String companyShortName) {
         if (IS_DEBUG) {
-            CommonResult result=new CommonResult();
+            CommonResult result = new CommonResult();
             result.setResult(1);
             return result;
         }
@@ -243,7 +244,6 @@ public class ApiUtils{
     }
 
 
-
     public static UserDepositListResult getDepositList(Long uid, String token, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Integer status, Integer type, String companyShortName) {
         if (IS_DEBUG) {
             return JSONUtils.toObject("{\"result\":1,\"description\":null,\"pageNum\":1,\"pageSize\":25,\"size\":1,\"total\":1,\"firstPage\":1,\"prePage\":0,\"nextPage\":0,\"lastPage\":1,\"hasPreviousPage\":false,\"hasNextPage\":false,\"navigatePages\":8,\"navigatepageNums\":[1],\"pageMoney\":111.000,\"totalMoney\":111.000,\"userDepositList\":[{\"orderNo\":\"2\",\"time\":1479982169000,\"type\":1,\"money\":111.000,\"remarks\":\"1\",\"status\":1}]}", UserDepositListResult.class);
@@ -273,8 +273,8 @@ public class ApiUtils{
 
     public static SscBetsListResult getSscBetsList(Long uid, String token, Date startTime, Date endTime, Integer pageIndex, Integer pageSize, Long playGroupId, Long playId, Integer status, Boolean isZhongjiang, String companyShortName) {
         if (IS_DEBUG) {
-            String str="{\"result\": 1,\"description\": null,\"pageNum\": 1,\"pageSize\": 25,\"size\": 25,\n\"total\": 27,\n   \"firstPage\": 1,\n    \"prePage\": 0,\n    \"nextPage\": 2,\n   \"lastPage\": 2,\n\"hasPreviousPage\": false,\n    \"hasNextPage\": true,\n    \"navigatePages\": 8,\n  \"navigatepageNums\": [\n1,\n   2\n],\n   \"sscBetsList\": [\n    {\n\"playId\": 216,\n  \"createTime\": 1478864112000,\n\"playPl\": 6826,\n\"totalMoney\": 12,\n \"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 12,\n\"winOrLose\": null,\n\"content\": \"百位-单\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119351222308591\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 216,\n\"createTime\": 1478864112000,\n\"playPl\": 6830,\n\"totalMoney\": 12,\n\"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 12,\n\"winOrLose\": null,\n\"content\": \"十位-大\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119351222908592\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 216,\n\"createTime\": 1478864112000,\n\"playPl\": 6832,\n\"totalMoney\": 12,\n\"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 12,\n\"winOrLose\": null,\n\"content\": \"十位-单\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119351237508593\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 216,\n\"createTime\": 1478864072000,\n\"playPl\": 6824,\n\"totalMoney\": 21,\n\"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 21,\n\"winOrLose\": null,\n\"content\": \"百位-大\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119343228208589\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 216,\n\"createTime\": 1478864072000,\n\"playPl\": 6830,\n\"totalMoney\": 21,\n\"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 21,\n\"winOrLose\": null,\n\"content\": \"十位-大\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119343248208590\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8889,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": 8888,\n\"content\": \"第一球-1\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190606808569\",\n\"zjMoney\": 8889\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8890,\n \"totalMoney\": 1,\n\"status\": 1,\n \"zhushu\": 1,\n \"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-2\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190613008570\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8891,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n \"content\": \"第一球-3\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190616808571\",\n\"zjMoney\": 0\n},\n {\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8892,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-4\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190617108572\",\n\"zjMoney\": 0\n},\n{\n \"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8893,\n\"totalMoney\": 1,\n\"status\": 1,\n \"zhushu\": 1,\n \"perMoney\": 1,\n\"winOrLose\": -1,\n \"content\": \"第一球-5\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190620108573\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8894,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-6\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190620508574\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n \"playPl\": 8895,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-7\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190620808575\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8896,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-8\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190621008576\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8897,\n\"totalMoney\": 1,\n \"status\": 1,\n\"zhushu\": 1,\n \"perMoney\": 1,\n \"winOrLose\": -1,\n\"content\": \"第一球-9\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190621608577\",\n\"zjMoney\": 0\n },\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8898,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-10\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n \"orderNumber\": \"2016111112190621908578\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8899,\n \"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-11\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190622208579\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8900,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-12\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190622508580\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8901,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-13\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190622808581\",\n\"zjMoney\": 0\n },\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8902,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-14\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190623108582\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8903,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-15\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190623408583\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8904,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-16\",\n\"number\": \"20161111020\",\n \"playGroupId\": 11,\n\"orderNumber\": \"2016111112190623608584\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8905,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-17\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190624308585\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8906,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-18\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190624608586\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8907,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-19\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190624808587\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8908,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-20\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190625108588\",\n\"zjMoney\": 0\n}\n]\n}";
-            return JSONUtils.toObject(str,SscBetsListResult.class);
+            String str = "{\"result\": 1,\"description\": null,\"pageNum\": 1,\"pageSize\": 25,\"size\": 25,\n\"total\": 27,\n   \"firstPage\": 1,\n    \"prePage\": 0,\n    \"nextPage\": 2,\n   \"lastPage\": 2,\n\"hasPreviousPage\": false,\n    \"hasNextPage\": true,\n    \"navigatePages\": 8,\n  \"navigatepageNums\": [\n1,\n   2\n],\n   \"sscBetsList\": [\n    {\n\"playId\": 216,\n  \"createTime\": 1478864112000,\n\"playPl\": 6826,\n\"totalMoney\": 12,\n \"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 12,\n\"winOrLose\": null,\n\"content\": \"百位-单\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119351222308591\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 216,\n\"createTime\": 1478864112000,\n\"playPl\": 6830,\n\"totalMoney\": 12,\n\"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 12,\n\"winOrLose\": null,\n\"content\": \"十位-大\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119351222908592\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 216,\n\"createTime\": 1478864112000,\n\"playPl\": 6832,\n\"totalMoney\": 12,\n\"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 12,\n\"winOrLose\": null,\n\"content\": \"十位-单\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119351237508593\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 216,\n\"createTime\": 1478864072000,\n\"playPl\": 6824,\n\"totalMoney\": 21,\n\"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 21,\n\"winOrLose\": null,\n\"content\": \"百位-大\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119343228208589\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 216,\n\"createTime\": 1478864072000,\n\"playPl\": 6830,\n\"totalMoney\": 21,\n\"status\": 0,\n\"zhushu\": 1,\n\"perMoney\": 21,\n\"winOrLose\": null,\n\"content\": \"十位-大\",\n\"number\": \"20161111082\",\n\"playGroupId\": 1,\n\"orderNumber\": \"2016111119343248208590\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8889,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": 8888,\n\"content\": \"第一球-1\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190606808569\",\n\"zjMoney\": 8889\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8890,\n \"totalMoney\": 1,\n\"status\": 1,\n \"zhushu\": 1,\n \"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-2\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190613008570\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8891,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n \"content\": \"第一球-3\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190616808571\",\n\"zjMoney\": 0\n},\n {\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8892,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-4\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190617108572\",\n\"zjMoney\": 0\n},\n{\n \"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8893,\n\"totalMoney\": 1,\n\"status\": 1,\n \"zhushu\": 1,\n \"perMoney\": 1,\n\"winOrLose\": -1,\n \"content\": \"第一球-5\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190620108573\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8894,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-6\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190620508574\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n \"playPl\": 8895,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-7\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190620808575\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8896,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-8\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190621008576\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8897,\n\"totalMoney\": 1,\n \"status\": 1,\n\"zhushu\": 1,\n \"perMoney\": 1,\n \"winOrLose\": -1,\n\"content\": \"第一球-9\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190621608577\",\n\"zjMoney\": 0\n },\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8898,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-10\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n \"orderNumber\": \"2016111112190621908578\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8899,\n \"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-11\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190622208579\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8900,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-12\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190622508580\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8901,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-13\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190622808581\",\n\"zjMoney\": 0\n },\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8902,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-14\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190623108582\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8903,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-15\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190623408583\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8904,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-16\",\n\"number\": \"20161111020\",\n \"playGroupId\": 11,\n\"orderNumber\": \"2016111112190623608584\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8905,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-17\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190624308585\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8906,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-18\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190624608586\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8907,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-19\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190624808587\",\n\"zjMoney\": 0\n},\n{\n\"playId\": 278,\n\"createTime\": 1478837946000,\n\"playPl\": 8908,\n\"totalMoney\": 1,\n\"status\": 1,\n\"zhushu\": 1,\n\"perMoney\": 1,\n\"winOrLose\": -1,\n\"content\": \"第一球-20\",\n\"number\": \"20161111020\",\n\"playGroupId\": 11,\n\"orderNumber\": \"2016111112190625108588\",\n\"zjMoney\": 0\n}\n]\n}";
+            return JSONUtils.toObject(str, SscBetsListResult.class);
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
@@ -469,7 +469,7 @@ public class ApiUtils{
 
     public static ServerTimeResult getServerTime(String companyShortName) {
         if (IS_DEBUG) {
-            ServerTimeResult result=new ServerTimeResult();
+            ServerTimeResult result = new ServerTimeResult();
             result.setServerTime(new Date());
             return result;
         }
@@ -477,16 +477,17 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SERVER_TIME, paramsMap, companyShortName), ServerTimeResult.class);
     }
 
-    public static SscPlayGroupListResult getAllSscPlayGroupList(String companyShortName,String type) {
+    public static SscPlayGroupListResult getAllSscPlayGroupList(String companyShortName, String type) {
         if (IS_DEBUG) {
             return JSONUtils.toObject("{\"result\":1,\"description\":null,\"sscPlayGroupList\":[{\"id\":1,\"name\":\"重庆时时彩\"},{\"id\":2,\"name\":\"天津时时彩\"},{\"id\":3,\"name\":\"新疆时时彩\"},{\"id\":4,\"name\":\"体彩排列3\"},{\"id\":5,\"name\":\"福彩3D\"},{\"id\":6,\"name\":\"六合彩\"},{\"id\":7,\"name\":\"北京28\"},{\"id\":8,\"name\":\"北京快乐8\"},{\"id\":9,\"name\":\"北京PK10\"},{\"id\":10,\"name\":\"重庆幸运农场\"},{\"id\":11,\"name\":\"广东快乐十分\"}],\"sscPlayList\":[{\"id\":204,\"name\":\"特码\",\"playGroupId\":6},{\"id\":205,\"name\":\"正码\",\"playGroupId\":6},{\"id\":206,\"name\":\"正特码\",\"playGroupId\":6},{\"id\":207,\"name\":\"正码1-6\",\"playGroupId\":6},{\"id\":208,\"name\":\"连码\",\"playGroupId\":6},{\"id\":209,\"name\":\"半波\",\"playGroupId\":6},{\"id\":210,\"name\":\"一肖/尾数\",\"playGroupId\":6},{\"id\":211,\"name\":\"特肖\",\"playGroupId\":6},{\"id\":212,\"name\":\"合肖\",\"playGroupId\":6},{\"id\":213,\"name\":\"连肖\",\"playGroupId\":6},{\"id\":214,\"name\":\"尾数连\",\"playGroupId\":6},{\"id\":215,\"name\":\"全不中\",\"playGroupId\":6},{\"id\":216,\"name\":\"双面\",\"playGroupId\":1},{\"id\":217,\"name\":\"数字盘\",\"playGroupId\":1},{\"id\":218,\"name\":\"一字定位\",\"playGroupId\":1},{\"id\":219,\"name\":\"二字定位\",\"playGroupId\":1},{\"id\":220,\"name\":\"三字定位\",\"playGroupId\":1},{\"id\":221,\"name\":\"一字组合\",\"playGroupId\":1},{\"id\":222,\"name\":\"二字组合\",\"playGroupId\":1},{\"id\":223,\"name\":\"二字和数\",\"playGroupId\":1},{\"id\":224,\"name\":\"组选三\",\"playGroupId\":1},{\"id\":225,\"name\":\"组选六\",\"playGroupId\":1},{\"id\":226,\"name\":\"跨度\",\"playGroupId\":1},{\"id\":227,\"name\":\"龙虎\",\"playGroupId\":1},{\"id\":228,\"name\":\"双面\",\"playGroupId\":2},{\"id\":229,\"name\":\"数字盘\",\"playGroupId\":2},{\"id\":230,\"name\":\"一字定位\",\"playGroupId\":2},{\"id\":231,\"name\":\"二字定位\",\"playGroupId\":2},{\"id\":232,\"name\":\"三字定位\",\"playGroupId\":2},{\"id\":233,\"name\":\"一字组合\",\"playGroupId\":2},{\"id\":234,\"name\":\"二字组合\",\"playGroupId\":2},{\"id\":235,\"name\":\"二字和数\",\"playGroupId\":2},{\"id\":236,\"name\":\"组选三\",\"playGroupId\":2},{\"id\":237,\"name\":\"组选六\",\"playGroupId\":2},{\"id\":238,\"name\":\"跨度\",\"playGroupId\":2},{\"id\":239,\"name\":\"龙虎\",\"playGroupId\":2},{\"id\":240,\"name\":\"双面\",\"playGroupId\":3},{\"id\":241,\"name\":\"数字盘\",\"playGroupId\":3},{\"id\":242,\"name\":\"一字定位\",\"playGroupId\":3},{\"id\":243,\"name\":\"二字定位\",\"playGroupId\":3},{\"id\":244,\"name\":\"三字定位\",\"playGroupId\":3},{\"id\":245,\"name\":\"一字组合\",\"playGroupId\":3},{\"id\":246,\"name\":\"二字组合\",\"playGroupId\":3},{\"id\":247,\"name\":\"二字和数\",\"playGroupId\":3},{\"id\":248,\"name\":\"组选三\",\"playGroupId\":3},{\"id\":249,\"name\":\"组选六\",\"playGroupId\":3},{\"id\":250,\"name\":\"跨度\",\"playGroupId\":3},{\"id\":251,\"name\":\"龙虎\",\"playGroupId\":3},{\"id\":252,\"name\":\"定位\",\"playGroupId\":5},{\"id\":253,\"name\":\"组合\",\"playGroupId\":5},{\"id\":254,\"name\":\"和数\",\"playGroupId\":5},{\"id\":255,\"name\":\"组选三\",\"playGroupId\":5},{\"id\":256,\"name\":\"组选六\",\"playGroupId\":5},{\"id\":257,\"name\":\"跨度\",\"playGroupId\":5},{\"id\":258,\"name\":\"双面\",\"playGroupId\":9},{\"id\":259,\"name\":\"数字盘\",\"playGroupId\":9},{\"id\":260,\"name\":\"冠军\",\"playGroupId\":9},{\"id\":261,\"name\":\"亚军\",\"playGroupId\":9},{\"id\":262,\"name\":\"季军\",\"playGroupId\":9},{\"id\":263,\"name\":\"第四名\",\"playGroupId\":9},{\"id\":264,\"name\":\"第五名\",\"playGroupId\":9},{\"id\":265,\"name\":\"第六名\",\"playGroupId\":9},{\"id\":266,\"name\":\"第七名\",\"playGroupId\":9},{\"id\":267,\"name\":\"第八名\",\"playGroupId\":9},{\"id\":268,\"name\":\"第九名\",\"playGroupId\":9},{\"id\":269,\"name\":\"第十名\",\"playGroupId\":9},{\"id\":270,\"name\":\"冠亚和\",\"playGroupId\":9},{\"id\":271,\"name\":\"选5\",\"playGroupId\":8},{\"id\":272,\"name\":\"选4\",\"playGroupId\":8},{\"id\":273,\"name\":\"选3\",\"playGroupId\":8},{\"id\":274,\"name\":\"选2\",\"playGroupId\":8},{\"id\":275,\"name\":\"选1\",\"playGroupId\":8},{\"id\":276,\"name\":\"其他\",\"playGroupId\":8},{\"id\":277,\"name\":\"双面\",\"playGroupId\":11},{\"id\":278,\"name\":\"第一球\",\"playGroupId\":11},{\"id\":279,\"name\":\"第二球\",\"playGroupId\":11},{\"id\":280,\"name\":\"第三球\",\"playGroupId\":11},{\"id\":281,\"name\":\"第四球\",\"playGroupId\":11},{\"id\":282,\"name\":\"第五球\",\"playGroupId\":11},{\"id\":283,\"name\":\"第六球\",\"playGroupId\":11},{\"id\":284,\"name\":\"第七球\",\"playGroupId\":11},{\"id\":285,\"name\":\"第八球\",\"playGroupId\":11},{\"id\":286,\"name\":\"龙虎\",\"playGroupId\":11},{\"id\":287,\"name\":\"定位\",\"playGroupId\":4},{\"id\":288,\"name\":\"组合\",\"playGroupId\":4},{\"id\":289,\"name\":\"和数\",\"playGroupId\":4},{\"id\":290,\"name\":\"组选三\",\"playGroupId\":4},{\"id\":291,\"name\":\"组选六\",\"playGroupId\":4},{\"id\":292,\"name\":\"跨度\",\"playGroupId\":4},{\"id\":293,\"name\":\"和值\",\"playGroupId\":7},{\"id\":294,\"name\":\"双面\",\"playGroupId\":10},{\"id\":295,\"name\":\"第一球\",\"playGroupId\":10},{\"id\":296,\"name\":\"第二球\",\"playGroupId\":10},{\"id\":297,\"name\":\"第三球\",\"playGroupId\":10},{\"id\":298,\"name\":\"第四球\",\"playGroupId\":10},{\"id\":299,\"name\":\"第五球\",\"playGroupId\":10},{\"id\":300,\"name\":\"第六球\",\"playGroupId\":10},{\"id\":301,\"name\":\"第七球\",\"playGroupId\":10},{\"id\":302,\"name\":\"第八球\",\"playGroupId\":10},{\"id\":303,\"name\":\"龙虎\",\"playGroupId\":10}]}", SscPlayGroupListResult.class);
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
 
-        paramsMap.put("type",type);
+        paramsMap.put("type", type);
 
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SSC_PLAY_GROUP, paramsMap, companyShortName), SscPlayGroupListResult.class);
     }
+
     public static SscPlayGroupListResult getSscPlayGroupList(String companyShortName) {
         if (IS_DEBUG) {
             return JSONUtils.toObject("{\"result\":1,\"description\":null,\"sscPlayGroupList\":[{\"id\":1,\"name\":\"重庆时时彩\"},{\"id\":2,\"name\":\"天津时时彩\"},{\"id\":3,\"name\":\"新疆时时彩\"},{\"id\":4,\"name\":\"体彩排列3\"},{\"id\":5,\"name\":\"福彩3D\"},{\"id\":6,\"name\":\"六合彩\"},{\"id\":7,\"name\":\"北京28\"},{\"id\":8,\"name\":\"北京快乐8\"},{\"id\":9,\"name\":\"北京PK10\"},{\"id\":10,\"name\":\"重庆幸运农场\"},{\"id\":11,\"name\":\"广东快乐十分\"}],\"sscPlayList\":[{\"id\":204,\"name\":\"特码\",\"playGroupId\":6},{\"id\":205,\"name\":\"正码\",\"playGroupId\":6},{\"id\":206,\"name\":\"正特码\",\"playGroupId\":6},{\"id\":207,\"name\":\"正码1-6\",\"playGroupId\":6},{\"id\":208,\"name\":\"连码\",\"playGroupId\":6},{\"id\":209,\"name\":\"半波\",\"playGroupId\":6},{\"id\":210,\"name\":\"一肖/尾数\",\"playGroupId\":6},{\"id\":211,\"name\":\"特肖\",\"playGroupId\":6},{\"id\":212,\"name\":\"合肖\",\"playGroupId\":6},{\"id\":213,\"name\":\"连肖\",\"playGroupId\":6},{\"id\":214,\"name\":\"尾数连\",\"playGroupId\":6},{\"id\":215,\"name\":\"全不中\",\"playGroupId\":6},{\"id\":216,\"name\":\"双面\",\"playGroupId\":1},{\"id\":217,\"name\":\"数字盘\",\"playGroupId\":1},{\"id\":218,\"name\":\"一字定位\",\"playGroupId\":1},{\"id\":219,\"name\":\"二字定位\",\"playGroupId\":1},{\"id\":220,\"name\":\"三字定位\",\"playGroupId\":1},{\"id\":221,\"name\":\"一字组合\",\"playGroupId\":1},{\"id\":222,\"name\":\"二字组合\",\"playGroupId\":1},{\"id\":223,\"name\":\"二字和数\",\"playGroupId\":1},{\"id\":224,\"name\":\"组选三\",\"playGroupId\":1},{\"id\":225,\"name\":\"组选六\",\"playGroupId\":1},{\"id\":226,\"name\":\"跨度\",\"playGroupId\":1},{\"id\":227,\"name\":\"龙虎\",\"playGroupId\":1},{\"id\":228,\"name\":\"双面\",\"playGroupId\":2},{\"id\":229,\"name\":\"数字盘\",\"playGroupId\":2},{\"id\":230,\"name\":\"一字定位\",\"playGroupId\":2},{\"id\":231,\"name\":\"二字定位\",\"playGroupId\":2},{\"id\":232,\"name\":\"三字定位\",\"playGroupId\":2},{\"id\":233,\"name\":\"一字组合\",\"playGroupId\":2},{\"id\":234,\"name\":\"二字组合\",\"playGroupId\":2},{\"id\":235,\"name\":\"二字和数\",\"playGroupId\":2},{\"id\":236,\"name\":\"组选三\",\"playGroupId\":2},{\"id\":237,\"name\":\"组选六\",\"playGroupId\":2},{\"id\":238,\"name\":\"跨度\",\"playGroupId\":2},{\"id\":239,\"name\":\"龙虎\",\"playGroupId\":2},{\"id\":240,\"name\":\"双面\",\"playGroupId\":3},{\"id\":241,\"name\":\"数字盘\",\"playGroupId\":3},{\"id\":242,\"name\":\"一字定位\",\"playGroupId\":3},{\"id\":243,\"name\":\"二字定位\",\"playGroupId\":3},{\"id\":244,\"name\":\"三字定位\",\"playGroupId\":3},{\"id\":245,\"name\":\"一字组合\",\"playGroupId\":3},{\"id\":246,\"name\":\"二字组合\",\"playGroupId\":3},{\"id\":247,\"name\":\"二字和数\",\"playGroupId\":3},{\"id\":248,\"name\":\"组选三\",\"playGroupId\":3},{\"id\":249,\"name\":\"组选六\",\"playGroupId\":3},{\"id\":250,\"name\":\"跨度\",\"playGroupId\":3},{\"id\":251,\"name\":\"龙虎\",\"playGroupId\":3},{\"id\":252,\"name\":\"定位\",\"playGroupId\":5},{\"id\":253,\"name\":\"组合\",\"playGroupId\":5},{\"id\":254,\"name\":\"和数\",\"playGroupId\":5},{\"id\":255,\"name\":\"组选三\",\"playGroupId\":5},{\"id\":256,\"name\":\"组选六\",\"playGroupId\":5},{\"id\":257,\"name\":\"跨度\",\"playGroupId\":5},{\"id\":258,\"name\":\"双面\",\"playGroupId\":9},{\"id\":259,\"name\":\"数字盘\",\"playGroupId\":9},{\"id\":260,\"name\":\"冠军\",\"playGroupId\":9},{\"id\":261,\"name\":\"亚军\",\"playGroupId\":9},{\"id\":262,\"name\":\"季军\",\"playGroupId\":9},{\"id\":263,\"name\":\"第四名\",\"playGroupId\":9},{\"id\":264,\"name\":\"第五名\",\"playGroupId\":9},{\"id\":265,\"name\":\"第六名\",\"playGroupId\":9},{\"id\":266,\"name\":\"第七名\",\"playGroupId\":9},{\"id\":267,\"name\":\"第八名\",\"playGroupId\":9},{\"id\":268,\"name\":\"第九名\",\"playGroupId\":9},{\"id\":269,\"name\":\"第十名\",\"playGroupId\":9},{\"id\":270,\"name\":\"冠亚和\",\"playGroupId\":9},{\"id\":271,\"name\":\"选5\",\"playGroupId\":8},{\"id\":272,\"name\":\"选4\",\"playGroupId\":8},{\"id\":273,\"name\":\"选3\",\"playGroupId\":8},{\"id\":274,\"name\":\"选2\",\"playGroupId\":8},{\"id\":275,\"name\":\"选1\",\"playGroupId\":8},{\"id\":276,\"name\":\"其他\",\"playGroupId\":8},{\"id\":277,\"name\":\"双面\",\"playGroupId\":11},{\"id\":278,\"name\":\"第一球\",\"playGroupId\":11},{\"id\":279,\"name\":\"第二球\",\"playGroupId\":11},{\"id\":280,\"name\":\"第三球\",\"playGroupId\":11},{\"id\":281,\"name\":\"第四球\",\"playGroupId\":11},{\"id\":282,\"name\":\"第五球\",\"playGroupId\":11},{\"id\":283,\"name\":\"第六球\",\"playGroupId\":11},{\"id\":284,\"name\":\"第七球\",\"playGroupId\":11},{\"id\":285,\"name\":\"第八球\",\"playGroupId\":11},{\"id\":286,\"name\":\"龙虎\",\"playGroupId\":11},{\"id\":287,\"name\":\"定位\",\"playGroupId\":4},{\"id\":288,\"name\":\"组合\",\"playGroupId\":4},{\"id\":289,\"name\":\"和数\",\"playGroupId\":4},{\"id\":290,\"name\":\"组选三\",\"playGroupId\":4},{\"id\":291,\"name\":\"组选六\",\"playGroupId\":4},{\"id\":292,\"name\":\"跨度\",\"playGroupId\":4},{\"id\":293,\"name\":\"和值\",\"playGroupId\":7},{\"id\":294,\"name\":\"双面\",\"playGroupId\":10},{\"id\":295,\"name\":\"第一球\",\"playGroupId\":10},{\"id\":296,\"name\":\"第二球\",\"playGroupId\":10},{\"id\":297,\"name\":\"第三球\",\"playGroupId\":10},{\"id\":298,\"name\":\"第四球\",\"playGroupId\":10},{\"id\":299,\"name\":\"第五球\",\"playGroupId\":10},{\"id\":300,\"name\":\"第六球\",\"playGroupId\":10},{\"id\":301,\"name\":\"第七球\",\"playGroupId\":10},{\"id\":302,\"name\":\"第八球\",\"playGroupId\":10},{\"id\":303,\"name\":\"龙虎\",\"playGroupId\":10}]}", SscPlayGroupListResult.class);
@@ -507,18 +508,20 @@ public class ApiUtils{
 
     /**
      * 获取所有彩种开奖时间（无封盘）
+     *
      * @return
      */
-    public static SscAllTimeResult getAllSscOpenTimeTwo(String companyShortName){
+    public static SscAllTimeResult getAllSscOpenTimeTwo(String companyShortName) {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_ALL_SSC_OPEN_TIME_TWO, paramsMap, companyShortName), SscAllTimeResult.class);
     }
 
     /**
      * 获取彩种当前开奖时间
+     *
      * @return
      */
-    public static SscCurrentTimeResult getCurrentTimeResult(String companyShortName){
+    public static SscCurrentTimeResult getCurrentTimeResult(String companyShortName) {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SSC_CURRENT_OPEN_TIME, paramsMap, companyShortName), SscCurrentTimeResult.class);
     }
@@ -550,6 +553,7 @@ public class ApiUtils{
         paramsMap.put("idList", arr2Str(idList));
         return JSONUtils.toObject(commonRequest(ApiConstant.API_READ_USER_INBOX_NOTICE, paramsMap, companyShortName), CommonResult.class);
     }
+
     public static CommonResult delUserInboxNotice(Long uid, String token, Long[] idList, String companyShortName) {
         if (IS_DEBUG) {
             return new CommonResult();
@@ -560,6 +564,7 @@ public class ApiUtils{
         paramsMap.put("idList", arr2Str(idList));
         return JSONUtils.toObject(commonRequest(ApiConstant.API_DEL_USER_INBOX_NOTICE, paramsMap, companyShortName), CommonResult.class);
     }
+
     @Deprecated
     public static CommonResult addUserBank(Long uid, String token, String bankName, String subBankName, String bankAccount, String companyShortName) {
         if (IS_DEBUG) {
@@ -573,6 +578,7 @@ public class ApiUtils{
         paramsMap.put("bankAccount", bankAccount);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_ADD_USER_BANK, paramsMap, companyShortName), CommonResult.class);
     }
+
     public static CommonResult addUserBank(Long uid, String token, String bankName, String subBankName, String bankAccount, String location, String companyShortName) {
         if (IS_DEBUG) {
             return new CommonResult();
@@ -586,6 +592,7 @@ public class ApiUtils{
         paramsMap.put("location", location);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_ADD_USER_BANK, paramsMap, companyShortName), CommonResult.class);
     }
+
     public static CommonResult updateUserInfo(Long uid, String token, String companyShortName) {
         if (IS_DEBUG) {
             return new CommonResult();
@@ -595,6 +602,7 @@ public class ApiUtils{
         paramsMap.put("token", token);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_UPDATE_USER_INFO, paramsMap, companyShortName), CommonResult.class);
     }
+
     public static KefuResult getKefu(String companyShortName) {
         if (IS_DEBUG) {
             return new KefuResult();
@@ -602,6 +610,7 @@ public class ApiUtils{
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_KEFU, paramsMap, companyShortName), KefuResult.class);
     }
+
     public static KhxyResult getKhxy(String companyShortName) {
         if (IS_DEBUG) {
             return new KhxyResult();
@@ -609,6 +618,7 @@ public class ApiUtils{
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_KHXY, paramsMap, companyShortName), KhxyResult.class);
     }
+
     public static CommonResult bet(Long uid, String token, String betForm, String companyShortName) {
         if (IS_DEBUG) {
             return new CommonResult();
@@ -619,6 +629,7 @@ public class ApiUtils{
         paramsMap.put("betForm", betForm);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_BET, paramsMap, companyShortName), CommonResult.class);
     }
+
     public static CarouselResult getCarouselList(Boolean isEnable, Integer type, String companyShortName) {
         if (IS_DEBUG) {
             return new CarouselResult();
@@ -628,6 +639,7 @@ public class ApiUtils{
         paramsMap.put("type", type);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_CAROUSEL_LIST, paramsMap, companyShortName), CarouselResult.class);
     }
+
     public static CommonResult chedan(Long uid, String token, Long id, String companyShortName) {
         if (IS_DEBUG) {
             return new CommonResult();
@@ -638,6 +650,7 @@ public class ApiUtils{
         paramsMap.put("id", id);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_CHEDAN, paramsMap, companyShortName), CommonResult.class);
     }
+
     public static SscOpenTimeResult getSscOpenTime(Boolean isData, Long playGroupId, Long playId, Integer lastDataOffset, Integer lastDataSize, Boolean calcJiangchi, String companyShortName) {
         if (IS_DEBUG) {
             return new SscOpenTimeResult();
@@ -651,6 +664,7 @@ public class ApiUtils{
         paramsMap.put("calcJiangchi", calcJiangchi);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_SSC_OPEN_TIME, paramsMap, companyShortName), SscOpenTimeResult.class);
     }
+
     public static ImageResult getImageData(Long id, String companyShortName) {
         if (IS_DEBUG) {
             return new ImageResult();
@@ -659,6 +673,7 @@ public class ApiUtils{
         paramsMap.put("id", id);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_GET_IMAGE_DATA, paramsMap, companyShortName), ImageResult.class);
     }
+
     public static CommonResult sigout(Long uid, String token, String companyShortName) {
         if (IS_DEBUG) {
             return new CommonResult();
@@ -693,7 +708,7 @@ public class ApiUtils{
 
     public static BetListResult getBetDetails(Long uid, String token, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, Integer status, Long playGroupId, String number, String orderNumber, Boolean isZhongjiang, String companyShortName) {
         if (IS_DEBUG) {
-             return JSONUtils.toObject("{\"result\":1,\"description\":null,\"pageNum\":1,\"pageSize\":25,\"size\":25,\"total\":160,\"firstPage\":1,\"prePage\":0,\"nextPage\":2,\"lastPage\":7,\"hasPreviousPage\":false,\"hasNextPage\":true,\"navigatePages\":8,\"navigatepageNums\":[1,2,3,4,5,6,7],\"betList\":[{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"个位-双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521369204185\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"千位-合\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521363004169\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"个位-单\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521368904184\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"千位-质\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521362704168\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"个位-小\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521368604183\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"千位-双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521362304167\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"个位-大\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521368304182\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"千位-单\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521362004166\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"十位-合\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521368004181\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"千位-小\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521361704165\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"十位-质\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521367704180\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"千位-大\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521361404164\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"十位-双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521367404179\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"万位-合\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521361104163\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":9.4,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"总和、龙虎和-和\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521372104194\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"十位-单\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521367104178\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"万位-质\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521360804162\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"总和、龙虎和-虎\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521371704193\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"十位-小\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521366604177\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"万位-双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521359904161\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"总和、龙虎和-龙\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521371404192\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"十位-大\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521366304176\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"万位-单\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521359504160\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"总和、龙虎和-总双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521371104191\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"百位-合\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521366004175\",\"zjMoney\":0}]}",BetListResult.class);
+            return JSONUtils.toObject("{\"result\":1,\"description\":null,\"pageNum\":1,\"pageSize\":25,\"size\":25,\"total\":160,\"firstPage\":1,\"prePage\":0,\"nextPage\":2,\"lastPage\":7,\"hasPreviousPage\":false,\"hasNextPage\":true,\"navigatePages\":8,\"navigatepageNums\":[1,2,3,4,5,6,7],\"betList\":[{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"个位-双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521369204185\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"千位-合\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521363004169\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"个位-单\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521368904184\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"千位-质\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521362704168\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"个位-小\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521368604183\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"千位-双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521362304167\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"个位-大\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521368304182\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"千位-单\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521362004166\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"十位-合\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521368004181\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"千位-小\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521361704165\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"十位-质\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521367704180\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"千位-大\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521361404164\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"十位-双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521367404179\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"万位-合\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521361104163\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":9.4,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"总和、龙虎和-和\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521372104194\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"十位-单\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521367104178\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"万位-质\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521360804162\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"总和、龙虎和-虎\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521371704193\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"十位-小\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521366604177\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"万位-双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521359904161\",\"zjMoney\":0},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"总和、龙虎和-龙\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521371404192\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"十位-大\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521366304176\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"万位-单\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521359504160\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":0.985,\"content\":\"总和、龙虎和-总双\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521371104191\",\"zjMoney\":1.985},{\"time\":1480431133000,\"playPl\":1.985,\"playName\":\"双面\",\"totalMoney\":1,\"status\":1,\"zhushu\":1,\"perMoney\":1,\"winOrLose\":-1,\"content\":\"百位-合\",\"number\":\"20161129107\",\"orderNumber\":\"2016112922521366004175\",\"zjMoney\":0}]}", BetListResult.class);
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("uid", uid);
@@ -753,12 +768,13 @@ public class ApiUtils{
 
     /**
      * 获得开奖记录
+     *
      * @param playGroupId 彩种编码
-     * @param pageIndex 页码（可为空）
-     * @param pageSize 每页数量（可为空）
-     * @param startTime 开始时间（可为空）
-     * @param endTime 结束时间（可为空）
-     * @param date 开奖日期（可为空）
+     * @param pageIndex   页码（可为空）
+     * @param pageSize    每页数量（可为空）
+     * @param startTime   开始时间（可为空）
+     * @param endTime     结束时间（可为空）
+     * @param date        开奖日期（可为空）
      * @return
      */
     public static SscHistoryResult getHistory(Long playGroupId, Integer pageIndex, Integer pageSize, Date startTime, Date endTime, String date, String number, String companyShortName) {
@@ -843,6 +859,7 @@ public class ApiUtils{
         paramsMap.put("qq", qq);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_AGENT_ADD_USER, paramsMap, companyShortName), CommonResult.class);
     }
+
     public static CommonResult updateOnlineInfo(Long uid, String token, String url, String companyShortName) {
         if (IS_DEBUG) {
             return new CommonResult();
@@ -853,6 +870,7 @@ public class ApiUtils{
         paramsMap.put("url", url);
         return JSONUtils.toObject(commonRequest(ApiConstant.API_UPDATE_ONLINE_INFO, paramsMap, companyShortName), CommonResult.class);
     }
+
     public static CommonResult agentEnableUser(Long uid, String token, Long userId, Boolean isEnable, String companyShortName) {
         if (IS_DEBUG) {
             return new CommonResult();
@@ -1001,7 +1019,7 @@ public class ApiUtils{
         return Integer.parseInt(commonRequest(ApiConstant.API_MEMBER_COUNT_USER_INBOX_UN_READ, paramsMap, companyShortName));
     }
 
-    public static QkSettingResult getQkSetting( String companyShortName) {
+    public static QkSettingResult getQkSetting(String companyShortName) {
         if (IS_DEBUG) {
             return new QkSettingResult();
         }
@@ -1018,32 +1036,13 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_OPEN_TIME_PER, paramsMap, companyShortName), SscOpenTimeResultPer.class);
     }
 
-    public static RegisterResult getRegisterResult(Integer type, String companyShortName) throws Exception {
+    public static RegisterResult getRegisterResult(String companyShortName) {
         if (IS_DEBUG) {
             return new RegisterResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
 
-//        paramsMap.put("type", type);
-        RegisterResult registerResult = new RegisterResult();
-//qq
-        RegisterResult registerResult1= JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_REQUIRED_QQ_CHECK,paramsMap,companyShortName), RegisterResult.class);
-        RegisterResult registerResult4=JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_CK_QQ,paramsMap,companyShortName), RegisterResult.class);
-        registerResult.setNeedRequiredQq(registerResult1.getNeedRequiredQq());
-        registerResult.setCheckQq(registerResult4.getCheckQq());
-//邮箱
-        RegisterResult registerResult2= JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_REQUIRED_EMAIL_CHECK,paramsMap,companyShortName), RegisterResult.class);
-        RegisterResult registerResult5=JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_CK_EMAIL,paramsMap,companyShortName), RegisterResult.class);
-        registerResult.setNeedRequiredEmail(registerResult2.getNeedRequiredEmail());
-        registerResult.setCheckEmail(registerResult5.getCheckEmail());
-//phone
-        RegisterResult registerResult3= JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_REQUIRED_PHONE_CHECK,paramsMap,companyShortName), RegisterResult.class);
-        RegisterResult registerResult6=JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_CK_PHONE,paramsMap,companyShortName), RegisterResult.class);
-        registerResult.setNeedRequredPhone(registerResult3.getNeedRequredPhone());
-        registerResult.setCheckPhone(registerResult6.getCheckPhone());
-        //验证码
-        RegisterResult registerResulta= JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_VCSWITCH,paramsMap,companyShortName), RegisterResult.class);
-        registerResult.setVcSwtich(registerResulta.getVcSwtich());
+        RegisterResult registerResult = JSONUtils.toObject(commonRequest(ApiConstant.API_MEMBER_GET_REGISTER_CONFIG, paramsMap, companyShortName), RegisterResult.class);
 
         return registerResult;
     }
@@ -1062,19 +1061,19 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_HISTORY, paramsMap, companyShortName), SscHistoryResult2.class);
     }
 
-    public static SscHistoryResult3 getSscDataMainPage(List<Long> playIds,Long playId, String companyShortName) {
+    public static SscHistoryResult3 getSscDataMainPage(List<Long> playIds, Long playId, String companyShortName) {
         if (IS_DEBUG) {
             return new SscHistoryResult3();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
 
         if (CollectionUtils.isNotEmpty(playIds)) {
-            String str  =   arr2Str(playIds);
+            String str = arr2Str(playIds);
             paramsMap.put("playIds", str);
-        }else {
-            paramsMap.put("playId",playId);
+        } else {
+            paramsMap.put("playId", playId);
         }
-        SscHistoryResult3 sscHistoryResult3=JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult3.class);
+        SscHistoryResult3 sscHistoryResult3 = JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_GET_SSC_DATA_MAIN_PAGE, paramsMap, companyShortName), SscHistoryResult3.class);
         return sscHistoryResult3;
     }
 
@@ -1228,6 +1227,7 @@ public class ApiUtils{
 
     /**
      * 获取QQ收款账号
+     *
      * @param uid
      * @param token
      * @param companyShortName
@@ -1245,6 +1245,7 @@ public class ApiUtils{
 
     /**
      * 获取公司标志
+     *
      * @param domain 域名
      * @return
      */
@@ -1256,8 +1257,9 @@ public class ApiUtils{
 
     /**
      * 普通请求
-     * @param apiUrl API地址
-     * @param paramsMap 参数
+     *
+     * @param apiUrl           API地址
+     * @param paramsMap        参数
      * @param companyShortName 公司标识
      * @return
      */
@@ -1270,14 +1272,15 @@ public class ApiUtils{
             paramsMap = new HashMap<String, Object>();
         }
         paramsMap.put("companyShortName", companyShortName);
-        
+
         return HttpUtils.post(apiUrl, paramsMap);
     }
 
     /**
      * 获取WEB风格
+     *
      * @param companyShortName 公司标志
-     * @param type 类型（1-PC，2-手机）
+     * @param type             类型（1-PC，2-手机）
      * @return
      */
     public static FenggeResult getWebFengge(
@@ -1325,8 +1328,8 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_SSC_LATElYGAMES, paramsMap, companyShortName), LatelyGameResult.class);
     }
 
-    public static SscZJNoticeResult getNotices(String companyShortName){
-        if(IS_DEBUG){
+    public static SscZJNoticeResult getNotices(String companyShortName) {
+        if (IS_DEBUG) {
             return new SscZJNoticeResult();
         }
 
@@ -1334,8 +1337,8 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_INDEX_GETZJNOTICE, paramsMap, companyShortName), SscZJNoticeResult.class);
     }
 
-    public static CommonResult getTodayIsOpen(Long playGroupId,String companyShortName){
-        if(IS_DEBUG){
+    public static CommonResult getTodayIsOpen(Long playGroupId, String companyShortName) {
+        if (IS_DEBUG) {
             return new CommonResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
@@ -1343,8 +1346,8 @@ public class ApiUtils{
         return JSONUtils.toObject(commonRequest(ApiConstant.API_INDEX_GETZJNOTICE, paramsMap, companyShortName), CommonResult.class);
     }
 
-    public static GameSetResult getGameSet(String companyShortName){
-        if(IS_DEBUG){
+    public static GameSetResult getGameSet(String companyShortName) {
+        if (IS_DEBUG) {
             return new GameSetResult();
         }
         Map<String, Object> paramsMap = new HashMap<String, Object>();
@@ -1389,8 +1392,9 @@ public class ApiUtils{
 
     /**
      * 获取用户今日输赢和即时注单
-     * @param uid 用户ID
-     * @param token 用户TOKEN
+     *
+     * @param uid              用户ID
+     * @param token            用户TOKEN
      * @param companyShortName 公司标志
      * @return
      */
@@ -1406,6 +1410,7 @@ public class ApiUtils{
 
     /**
      * 获取PC二维码
+     *
      * @param companyShortName
      * @return
      */
@@ -1419,6 +1424,7 @@ public class ApiUtils{
 
     /**
      * 获取mobile二维码
+     *
      * @param companyShortName
      * @return
      */
@@ -1432,6 +1438,7 @@ public class ApiUtils{
 
     /**
      * 获取下载页面管理
+     *
      * @param companyShortName
      * @return
      */
