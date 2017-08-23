@@ -1707,3 +1707,25 @@ input[type="number"] {
     height: 0.3rem;
 }
 
+#sub-menu-list1 .cl-610 .re-cl-602 {
+    padding-right: 0.4rem !important;
+}
+
+#ssc-parent-menu1 .re-cl-602 {
+    line-height: 1.8rem;
+    padding-left: 0.25rem;
+}
+
+#ssc-parent-menu1 .re-cl-602 a {
+    border-right: 1px solid #E5E5E5;
+    padding-right: 0.2rem;
+    color: gray;
+}
+
+#ssc-parent-menu1 .re-cl-602 .sm {
+    border-right: 0;
+}
+
+#sub-menu-list1 .re-cl-610 .index-btns .wanW {
+    margin-left: 0.25rem !important;
+}
