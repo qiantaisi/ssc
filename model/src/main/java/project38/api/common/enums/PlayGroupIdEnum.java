@@ -5,7 +5,7 @@ package project38.api.common.enums;
  */
 public enum PlayGroupIdEnum {
     CQSSC(1L, "重庆时时彩", "cqssc", true),
-    TJSSC(2L, "天津时时彩", "tjssc", false),
+    TJSSC(2L, "天津时时彩", "tjssc", true),
     XJSSC(3L, "新疆时时彩", "xjssc", false),
     PL3(4L, "体彩排列3", "pl3", false),
     FC3D(5L, "福彩3D", "fc3d", false),

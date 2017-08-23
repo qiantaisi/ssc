@@ -7,7 +7,9 @@
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170823"></script>
+
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170823_23"></script>
+
 <script type="text/html" id="template_jRange">
     <div class="add_spot">
         <div class="left releft">
