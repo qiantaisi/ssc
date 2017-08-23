@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <c:if test="${registerResult.checkPhone}">
-                <div class="clearfix login_nr_gp iphoneTd hideRegInput">
+                <div class="clearfix login_nr_gp iphoneTd">
                             <span class="left login_nr_name">
                                 <span class="star starphone">
                                     <c:if test="${registerResult.needRequredPhone}">*</c:if>
@@ -108,7 +108,7 @@
                 </div>
                 </c:if>
                 <c:if test="${registerResult.checkEmail}">
-                <div class="clearfix login_nr_gp eamilTd hideRegInput">
+                <div class="clearfix login_nr_gp eamilTd">
 			    		<span class="left login_nr_name">
 			    			<span class="star staremail">
                                 <c:if test="${registerResult.needRequiredEmail}">*</c:if>
@@ -128,7 +128,7 @@
                 </div>
                 </c:if>
                 <c:if test="${registerResult.checkQq}">
-                <div class="clearfix login_nr_gp qqTd hideRegInput">
+                <div class="clearfix login_nr_gp qqTd">
 			    		<span class="left login_nr_name">
 			    			<span class="star starqq">
                                 <c:if test="${registerResult.needRequiredQq}">*</c:if>
@@ -148,7 +148,7 @@
                 </div>
                 </c:if>
                 <c:if test="${registerResult.vcSwtich}">
-                <div class="clearfix login_nr_gp yzmTd hideRegInput">
+                <div class="clearfix login_nr_gp yzmTd">
 			    		<span class="left login_nr_name">
 			    			<span class="star staryzm">
                                 *
@@ -157,7 +157,7 @@
 			    		</span>
                     <div class="login_nr_gp_rt clearfix">
                         <div>
-                            <input type="text" id="registerLoginYzm" style="width: 125px;" placeholder="验证码"
+                            <input name="yzm" type="text" id="registerLoginYzm" style="width: 125px;" placeholder="验证码"
                                    onfocus="refreshYzm(document.getElementById('registerYzmImg2'))"/>
                             <img id="registerYzmImg2" onclick="refreshYzm(this)" style="margin-right: 15px;"
                                  src="<%=basePath%>code/yzm?imgWidth=100&imgHeight=30&imgFontHeight=30&imgCodeY=25&imgCodeX=2"/>
