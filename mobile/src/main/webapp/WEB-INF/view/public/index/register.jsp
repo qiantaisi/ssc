@@ -7,10 +7,11 @@
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
+<style>#page-login{background:#FFF}.head{height:50px;background:#f42023;position:relative;text-align:center}.head_text{text-align:center;line-height:50px;color:#fff;font-size:22px}.head_back{display:inline-block;background:url(../images/reg_03.png) no-repeat;background-size:13px 23px;padding-left:18px;font-size:14px;line-height:24px;position:absolute;left:20px;top:13px;z-index:10;color:#fff}.ny_logo img{width:118px;vertical-align:middle;Vertical-aliagn:top;border:0}.ny_logo{padding:20px 0 10px 0;text-align:center}.form_main{padding:0 18px;margin:0}.form_main input{-webkit-appearance:none;border:1px solid #e2e3e9;border-radius:5px;padding:5px 3%;width:100%;height:52px;line-height:52px;color:#ccc;font-size:18px;margin:0}.login_pass{position:relative;padding:0;margin:0}.login_pass em{display:block;background:url(../images/yan_03.png) no-repeat;width:30px;height:19px;background-size:30px 19px;position:absolute;top:15.5px;right:20px;cursor:pointer;z-index:10}.form_main .login_btn{-webkit-appearance:none;width:100%;margin-top:20px;padding:0;border:none;background:#e73030;color:#fff;height:50px;line-height:50px;cursor:pointer;-webkit-box-shadow:0 2px 8px rgba(253,9,9,.5);-moz-box-shadow:0 2px 8px rgba(253,9,9,.5);box-shadow:0 2px 8px rgba(253,9,9,.5)}.agree .agree_wt a{color:#666;text-decoration:none;font-size:16px;line-height:30px}.agree_rt{color:#c40d0d;line-height:18px}.share{margin:30px 7px 20px 7px;border:1px solid #97c13c;position:relative}.number_bar-tab .active{border-bottom:5px solid #ed9142;color:#ed9142}.share span{display:block;width:142px;position:absolute;left:50%;margin-left:-71px;top:-12px;background:#fff;color:#7e7e7e;font-size:16px;text-align:center}.agree{font-size:14px;color:#666;padding-top:20px}.clearfix{display:block;list-style:none;padding-left:0}.share_main li{float:left;width:25%;text-align:center}.share_main img{width:62px;height:62px;border-radius:50%;Vertical-aliagn:top;border:0;margin:0}#page-register{background:#fff}.zcw-reg-main{height:81.6%;overflow-y:scroll}.form_text{color:#999;margin-bottom:5px!important;margin-top:10px!important;padding:0;font-size:12px!important}.form_main .btn-register{-webkit-appearance:none;width:100%;margin-top:20px;padding:0;border:none;background:#e73030;color:#fff;height:50px;line-height:50px;cursor:pointer;-webkit-box-shadow:0 2px 8px rgba(253,9,9,.5);-moz-box-shadow:0 2px 8px rgba(253,9,9,.5);box-shadow:0 2px 8px rgba(253,9,9,.5)}.agree .agree_lf{font-size:13px}.agree_lf a{color:#1a83d4;text-decoration:underline}.left{float:left}.right{float:right}</style>
 <div class="content bg-white bottom2">
     <div class="main">
         <div class="ny_logo">
-            <img src="<%=basePath%>images/${logo.imageId}.png"/>
+            <img src="<%=basePath%>images/logo.png"/>
         </div>
 
         <div class="form_main">
@@ -55,11 +56,13 @@
                 <p class="form_text">
                     请输入验证码
                 </p>
-                <input type="text" placeholder="验证码" name="yzm"/>
-                <img src="<%=basePath%>code/yzm?imgWidth=88&imgHeight=40&imgFontHeight=35&imgCodeY=33" alt="验证码" onclick="javascript:this.src=this.src+'&timestamp='+Math.random()">
+                <div style="overflow:hidden;">
+                    <input type="text" placeholder="验证码" name="yzm" class="left" style="width:calc(100% - 100px)" />
+                    <img src="<%=basePath%>code/yzm?imgWidth=88&imgHeight=52&imgFontHeight=40&imgCodeY=40" alt="验证码" onclick="javascript:this.src=this.src+'&timestamp='+Math.random()" class="right">
+                </div>
             </c:if>
-            <input type="button" value="注册" onclick="ajaxRegister()"/>
-            <div class="agree clearfix">
+            <input type="button" value="注册" onclick="ajaxRegister()" class="btn-register"/>
+            <div class="agree clearfix" style="margin-bottom:15px;">
                 <div class="left agree_lf">
                     我已阅读并同意<a href="javascript:void(0)" onclick="showKhxy()">${webName}《开户协议》</a>
                 </div>
