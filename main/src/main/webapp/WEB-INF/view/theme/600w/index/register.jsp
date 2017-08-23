@@ -11,8 +11,12 @@
 <c:import url="top.jsp" />
 
 <div class="img"><a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a></div>
-<img src="${resPath}img/bj.jpg" class="back" alt="" width="100%">
-<div class="regedit">
+<img src="${resPath}img/bj.jpg" class="back" alt="" width="100%";   style="height: 855px;">
+<jsp:include page="../../../public/index/register.jsp" />
+<div class="copy">
+    <c:import url="../common/copyright_time.jsp"/>&nbsp;&nbsp;
+</div>
+<%--<div class="regedit">
 
     <div class="reg_col">
         <div class="reg_list">
@@ -85,6 +89,8 @@
     </div>
 </div>
 
+
+
 <div class="alert_log two2">
     <div class="alert_log_col">
         <h5>欢迎您登录<i>×</i></h5>
@@ -105,11 +111,10 @@
             <h6><input type="submit" class="sub"  value="登录"/></h6>
         </form>
     </div>
-</div>
+</div>--%>
 
-<div class="copy">
-    <c:import url="../common/copyright_time.jsp"/>&nbsp;&nbsp;
-</div>
+
+
 
 <script type="text/html" id="template_khxy">
 ${khxy.khxy}
@@ -118,7 +123,7 @@ ${khxy.khxy}
 <c:import url="../common/commonJs.jsp" />
 <c:import url="../common/jsCommonLogin.jsp" />
 <script>
-    function showKhxy() {
+   /* function showKhxy() {
         //自定页
         layer.open({
             type: 1,
@@ -332,6 +337,6 @@ ${khxy.khxy}
                 }
             }
         });
-    }
+    }*/
 </script>
 <c:import url="../common/bodyEnd.jsp" />

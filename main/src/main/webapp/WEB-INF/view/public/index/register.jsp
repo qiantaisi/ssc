@@ -17,6 +17,7 @@
                 已有账号?<a href="<%=basePath%>login.html">立即登录</a>
             </div>
         </div>
+        <form id="myform">
         <div class="login_nr_b">
             <div class="clearfix login_nr_gp">
 			    		<span class="left login_nr_name">
@@ -139,18 +140,20 @@
                     </div>
                 </div>
             </div>
+
             <div class="clearfix login_nr_gp" style="padding-left: 40px;">
                 <span class="left login_nr_name"></span>
                 <div class="login_nr_gp_rt clearfix">
-                    <input type="checkbox" class="left" checked="checked" style="width:30px;"/>
-                    同意本站规则与条款
+                    <input type="checkbox" class="left" checked="checked" style="width:30px;"/><span>注册即表示同意<a href="javascript:void(0)" onclick="showKhxy()">《${webName}服务使用协议》</a></span></h3>
                 </div>
             </div>
             <div class="login_b">
                 <p>
                     <input type="button" class="mfkh" value="免费开户" id="btn-register"/>
+                    <input type="button" class="mfkh" value="重置" onclick="rest()"/>
                 </p>
             </div>
+        </form>
             <div class="login_b_link" style="padding-left: 75px;">
                 <a href="${kefuUrl}">忘记密码?</a>
                 <span>|</span>
@@ -168,6 +171,23 @@
 <c:import url="../common/jsCommonLogin.jsp"/>
 
 <script>
+
+    function rest(){
+        document.getElementById("myform").reset()
+    }
+    function showKhxy() {
+        //自定页
+        layer.open({
+            type: 1,
+            skin: 'layui-layer-popup', //样式类名
+            closeBtn: 2, //显示关闭按钮
+            anim: 2,
+            title: '开户协议',
+            shadeClose: true, //开启遮罩关闭
+            content: $("#template_khxy").html()
+        });
+    }
+
     $(function () {
         ajaxRequest({
             url: "<%=basePath%>ajaxGetRegisterResult.json",

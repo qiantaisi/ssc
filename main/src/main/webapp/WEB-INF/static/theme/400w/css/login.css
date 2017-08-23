@@ -2,9 +2,9 @@
     width: 1000px;margin: 0px auto;
 }
 /*.logo img {*/
-    /*width: 186px;*/
-    /*height: 57px;*/
-    /*vertical-align: middle;*/
+/*width: 186px;*/
+/*height: 57px;*/
+/*vertical-align: middle;*/
 /*}*/
 
 .head_middle_yuye {
@@ -165,6 +165,7 @@ img {
 
 .login_b_link {
     padding-left: 130px;
+    padding-top: 40px;
 }
 
 .footer_t {
@@ -444,9 +445,10 @@ body {
 .login_b .mfkh{
     display: block;
     line-height: 44px;
-    width: 204px;
+    width: 150px;
     text-align: center;
     background: #f13131;
     color: #fff;
     font-size: 16px;
+    float: left;
 }

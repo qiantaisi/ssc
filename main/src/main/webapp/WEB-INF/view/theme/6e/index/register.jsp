@@ -12,7 +12,8 @@
 
 <div class="img"><a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a></div>
 <img src="${resPath}img/bj.jpg" class="back" alt="" width="100%">
-<div class="regedit">
+<jsp:include page="../../../public/index/register.jsp" />
+<%--<div class="regedit">
 
     <div class="reg_col">
         <div class="reg_list">
@@ -105,7 +106,7 @@
             <h6><input type="submit" class="sub"  value="登录"/></h6>
         </form>
     </div>
-</div>
+</div>--%>
 
 <div class="copy">
     <c:import url="../common/copyright_time.jsp"/>&nbsp;&nbsp;
@@ -118,7 +119,7 @@ ${khxy.khxy}
 <c:import url="../common/commonJs.jsp" />
 <c:import url="../common/jsCommonLogin.jsp" />
 <script>
-    function showKhxy() {
+    /*function showKhxy() {
         //自定页
         layer.open({
             type: 1,
@@ -332,6 +333,6 @@ ${khxy.khxy}
                 }
             }
         });
-    }
+    }*/
 </script>
 <c:import url="../common/bodyEnd.jsp" />
