@@ -58,8 +58,8 @@
                data-fun_zhushu="zhushu_dwd"
                data-fun_content="content_dwd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dwd/zxfs.html"
-               data-play_id="543"
-               data-play_pl_id="14261"
+               data-play_id="749"
+               data-play_pl_id="14566"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
@@ -71,8 +71,8 @@
                data-fun_zhushu="zhushu_5xzxfs"
                data-fun_content="content_5xzxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/wx/wx.html"
-               data-play_id="497"
-               data-play_pl_id="14207"
+               data-play_id="685"
+               data-play_pl_id="14486"
                data-name="直选复式">
                 <span class="zxfs">直选复式</span>
             </a>
@@ -84,8 +84,8 @@
                data-fun_zhushu="zhushu_4xzxfs"
                data-fun_content="content_4xzxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/sx/sx.html"
-               data-play_id="499"
-               data-play_pl_id="14209"
+               data-play_id="744"
+               data-play_pl_id="14561"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
@@ -97,8 +97,8 @@
                data-fun_zhushu="zhushu_h3zxfs"
                data-fun_content="content_h3zxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxfs.html"
-               data-play_id="502"
-               data-play_pl_id="14221"
+               data-play_id="733"
+               data-play_pl_id="14545"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
@@ -108,8 +108,8 @@
                data-fun_zhushu="zhushu_h3zxhz"
                data-fun_content="content_h3zxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxhz.html"
-               data-play_id="505"
-               data-play_pl_id="14216"
+               data-play_id="732"
+               data-play_pl_id="14545"
                data-name="直选和值">
                 <span class="staer1">直选和值</span>
             </a>
@@ -119,8 +119,8 @@
                data-fun_zhushu="zhushu_h3zxkd"
                data-fun_content="content_h3zxkd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxkd.html"
-               data-play_id="506"
-               data-play_pl_id="14215"
+               data-play_id="735"
+               data-play_pl_id="14549"
                data-name="直选跨度">
                 <span class="staer1">直选跨度</span>
             </a>
@@ -130,8 +130,8 @@
                data-fun_zhushu="zhushu_h3zh"
                data-fun_content="content_h3zh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/hszh.html"
-               data-play_id="504"
-               data-play_pl_id="14219|14218|14217"
+               data-play_id="734"
+               data-play_pl_id="14548|14547|1456"
                data-name="后三组合">
                 <span class="staer1">后三组合</span>
             </a>
@@ -141,8 +141,8 @@
                data-fun_zhushu="zhushu_h3z3fs"
                data-fun_content="content_h3z3fs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zsfs.html"
-               data-play_id="507"
-               data-play_pl_id="14214"
+               data-play_id="738"
+               data-play_pl_id="14553"
                data-name="组三复式">
                 <span class="staer1">组三复式</span>
             </a>
@@ -152,8 +152,8 @@
                data-fun_zhushu="zhushu_h3z6fs"
                data-fun_content="content_h3z6fs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zlfs.html"
-               data-play_id="509"
-               data-play_pl_id="14212"
+               data-play_id="740"
+               data-play_pl_id="14555"
                data-name="组六复式">
                 <span class="staer1">组六复式</span>
             </a>
@@ -163,8 +163,8 @@
                data-fun_zhushu="zhushu_h3zuxhz"
                data-fun_content="content_h3zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zuxhz.html"
-               data-play_id="512"
-               data-play_pl_id="14229|14230"
+               data-play_id="742"
+               data-play_pl_id="14559|14558"
                data-name="组选和值">
                 <span class="staer1">组选和值</span>
             </a>
@@ -174,8 +174,8 @@
                data-fun_zhushu="zhushu_h3zuxbd"
                data-fun_content="content_h3zuxbd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxbd.html"
-               data-play_id="513"
-               data-play_pl_id="14228|14227"
+               data-play_id="741"
+               data-play_pl_id="14557|14556"
                data-name="组选包胆">
                 <span class="staer1">组选包胆</span>
             </a>
@@ -185,8 +185,8 @@
                data-fun_zhushu="zhushu_h3hzws"
                data-fun_content="content_h3hzws"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/hzws.html"
-               data-play_id="514"
-               data-play_pl_id="14226"
+               data-play_id="729"
+               data-play_pl_id="14539"
                data-name="和值尾数">
                 <span class="staer1">和值尾数</span>
             </a>
@@ -196,8 +196,8 @@
                data-fun_zhushu="zhushu_h3tsh"
                data-fun_content="content_h3tsh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/tsh.html"
-               data-play_id="515"
-               data-play_pl_id="14225|14224|14223"
+               data-play_id="730"
+               data-play_pl_id="14542|14541|14540"
                data-name="特殊号">
                 <span class="staer1">特殊号</span>
             </a>
@@ -209,8 +209,8 @@
                data-fun_zhushu="zhushu_q3zxfs"
                data-fun_content="content_q3zxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxfs.html"
-               data-play_id="516"
-               data-play_pl_id="14222"
+               data-play_id="711"
+               data-play_pl_id="14516"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
@@ -220,8 +220,8 @@
                data-fun_zhushu="zhushu_q3zxhz"
                data-fun_content="content_q3zxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxhz.html"
-               data-play_id="519"
-               data-play_pl_id="14237"
+               data-play_id="710"
+               data-play_pl_id="14515"
                data-name="直选和值">
                 <span class="staer1">直选和值</span>
             </a>
@@ -231,8 +231,8 @@
                data-fun_zhushu="zhushu_q3zxkd"
                data-fun_content="content_q3zxkd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxkd.html"
-               data-play_id="520"
-               data-play_pl_id="14238"
+               data-play_id="713"
+               data-play_pl_id="14520"
                data-name="直选跨度">
                 <span class="staer1">直选跨度</span>
             </a>
@@ -242,8 +242,8 @@
                data-fun_zhushu="zhushu_q3zh"
                data-fun_content="content_q3zh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/qszh.html"
-               data-play_id="518"
-               data-play_pl_id="14234|14235|14236"
+               data-play_id="712"
+               data-play_pl_id="14517|14518|14519"
                data-name="前三组合">
                 <span class="staer1">前三组合</span>
             </a>
@@ -253,8 +253,8 @@
                data-fun_zhushu="zhushu_q3z3fs"
                data-fun_content="content_q3z3fs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zsfs.html"
-               data-play_id="521"
-               data-play_pl_id="14239"
+               data-play_id="716"
+               data-play_pl_id="14524"
                data-name="组三复式">
                 <span class="staer1">组三复式</span>
             </a>
@@ -264,8 +264,8 @@
                data-fun_zhushu="zhushu_q3z6fs"
                data-fun_content="content_q3z6fs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zlfs.html"
-               data-play_id="523"
-               data-play_pl_id="14241"
+               data-play_id="718"
+               data-play_pl_id="14526"
                data-name="组六复式">
                 <span class="staer1">组六复式</span>
             </a>
@@ -275,8 +275,8 @@
                data-fun_zhushu="zhushu_q3zuxhz"
                data-fun_content="content_q3zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zuxhz.html"
-               data-play_id="528"
-               data-play_pl_id="14246"
+               data-play_id="720"
+               data-play_pl_id="14530"
                data-name="组选和值">
                 <span class="staer1">组选和值</span>
             </a>
@@ -286,8 +286,8 @@
                data-fun_zhushu="zhushu_q3zuxbd"
                data-fun_content="content_q3zuxbd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxbd.html"
-               data-play_id="529"
-               data-play_pl_id="14247"
+               data-play_id="719"
+               data-play_pl_id="14528"
                data-name="组选包胆">
                 <span class="staer1">组选包胆</span>
             </a>
@@ -297,8 +297,8 @@
                data-fun_zhushu="zhushu_q3hzws"
                data-fun_content="content_q3hzws"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/hzws.html"
-               data-play_id="531"
-               data-play_pl_id="14249"
+               data-play_id="707"
+               data-play_pl_id="14510"
                data-name="和值尾数">
                 <span class="staer1">和值尾数</span>
             </a>
@@ -308,8 +308,8 @@
                data-fun_zhushu="zhushu_q3tsh"
                data-fun_content="content_q3tsh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/tsh.html"
-               data-play_id="534"
-               data-play_pl_id="14250|14251|14252"
+               data-play_id="708"
+               data-play_pl_id="14511|14512|14513"
                data-name="特殊号">
                 <span class="staer1">特殊号</span>
             </a>
@@ -321,8 +321,8 @@
                data-fun_zhushu="zhushu_q2zxfs"
                data-fun_content="content_q2zxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zxfs.html"
-               data-play_id="535"
-               data-play_pl_id="14253"
+               data-play_id="723"
+               data-play_pl_id="14533"
                data-name="前二-直选复式">
                 <span class="staer1">直选复式</span>
             </a>
@@ -332,8 +332,8 @@
                data-fun_zhushu="zhushu_q2zxhz"
                data-fun_content="content_q2zxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zxhz.html"
-               data-play_id="537"
-               data-play_pl_id="14255"
+               data-play_id="722"
+               data-play_pl_id="14532"
                data-name="前二-直选和值">
                 <span class="staer1">直选和值</span>
             </a>
@@ -343,8 +343,8 @@
                data-fun_zhushu="zhushu_q2zxkd"
                data-fun_content="content_q2zxkd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zxkd.html"
-               data-play_id="538"
-               data-play_pl_id="14256"
+               data-play_id="724"
+               data-play_pl_id="14534"
                data-name="前二-直选跨度">
                 <span class="staer1">直选跨度</span>
             </a>
@@ -354,8 +354,8 @@
                data-fun_zhushu="zhushu_q2zuxfs"
                data-fun_content="content_q2zuxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zuxfs.html"
-               data-play_id="539"
-               data-play_pl_id="14257"
+               data-play_id="728"
+               data-play_pl_id="14538"
                data-name="前二-组选复式">
                 <span class="staer1">组选复式</span>
             </a>
@@ -365,8 +365,8 @@
                data-fun_zhushu="zhushu_q2zuxhz"
                data-fun_content="content_q2zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zuxhz.html"
-               data-play_id="541"
-               data-play_pl_id="14259"
+               data-play_id="725"
+               data-play_pl_id="14535"
                data-name="前二-组选和值">
                 <span class="staer1">组选和值</span>
             </a>
@@ -376,8 +376,8 @@
                data-fun_zhushu="zhushu_q2zuxbd"
                data-fun_content="content_q2zuxbd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qe/zuxbd.html"
-               data-play_id="542"
-               data-play_pl_id="14260"
+               data-play_id="726"
+               data-play_pl_id="14536"
                data-name="前二-组选包胆">
                 <span class="staer1">组选包胆</span>
             </a>
@@ -389,8 +389,8 @@
                data-fun_zhushu="zhushu_q3ym"
                data-fun_content="content_q3ym"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/qsym.html"
-               data-play_id="544"
-               data-play_pl_id="14262"
+               data-play_id="676"
+               data-play_pl_id="14477"
                data-name="前三一码">
                 <span class="staer1">前三一码</span>
             </a>
@@ -400,8 +400,8 @@
                data-fun_zhushu="zhushu_q3em"
                data-fun_content="content_q3em"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/qsem.html"
-               data-play_id="545"
-               data-play_pl_id="14263"
+               data-play_id="677"
+               data-play_pl_id="14478"
                data-name="前三二码">
                 <span class="staer1">前三二码</span>
             </a>
@@ -411,8 +411,8 @@
                data-fun_zhushu="zhushu_h3ym"
                data-fun_content="content_h3ym"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/hsym.html"
-               data-play_id="546"
-               data-play_pl_id="14264"
+               data-play_id="680"
+               data-play_pl_id="14481"
                data-name="后三一码">
                 <span class="staer1">后三一码</span>
             </a>
@@ -422,8 +422,8 @@
                data-fun_zhushu="zhushu_h3em"
                data-fun_content="content_h3em"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/hsem.html"
-               data-play_id="547"
-               data-play_pl_id="14265"
+               data-play_id="681"
+               data-play_pl_id="14482"
                data-name="后三二码">
                 <span class="staer1">后三二码</span>
             </a>
@@ -433,8 +433,8 @@
                data-fun_zhushu="zhushu_q4ym"
                data-fun_content="content_q4ym"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/qsiym.html"
-               data-play_id="548"
-               data-play_pl_id="14266"
+               data-play_id="678"
+               data-play_pl_id="14479"
                data-name="前四一码">
                 <span class="staer1">前四一码</span>
             </a>
@@ -444,8 +444,8 @@
                data-fun_zhushu="zhushu_q4em"
                data-fun_content="content_q4em"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/qsiem.html"
-               data-play_id="549"
-               data-play_pl_id="14267"
+               data-play_id="679"
+               data-play_pl_id="14480"
                data-name="前四二码">
                 <span class="staer1">前四二码</span>
             </a>
@@ -455,8 +455,8 @@
                data-fun_zhushu="zhushu_h4ym"
                data-fun_content="content_h4ym"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/hsiym.html"
-               data-play_id="550"
-               data-play_pl_id="14268"
+               data-play_id="682"
+               data-play_pl_id="14483"
                data-name="后四一码">
                 <span class="staer1">后四一码</span>
             </a>
@@ -466,8 +466,8 @@
                data-fun_zhushu="zhushu_h4em"
                data-fun_content="content_h4em"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/hsiem.html"
-               data-play_id="551"
-               data-play_pl_id="14269"
+               data-play_id="683"
+               data-play_pl_id="14484"
                data-name="后四二码">
                 <span class="staer1">后四二码</span>
             </a>
@@ -477,8 +477,8 @@
                data-fun_zhushu="zhushu_wxym"
                data-fun_content="content_wxym"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/wxym.html"
-               data-play_id="552"
-               data-play_pl_id="14270"
+               data-play_id="673"
+               data-play_pl_id="14474"
                data-name="五星一码">
                 <span class="staer1">五星一码</span>
             </a>
@@ -488,8 +488,8 @@
                data-fun_zhushu="zhushu_wxem"
                data-fun_content="content_wxem"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/wxem.html"
-               data-play_id="553"
-               data-play_pl_id="14271"
+               data-play_id="675"
+               data-play_pl_id="14476"
                data-name="五星二码">
                 <span class="staer1">五星二码</span>
             </a>
@@ -499,8 +499,8 @@
                data-fun_zhushu="zhushu_wx3m"
                data-fun_content="content_wx3m"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/bdw/wxsm.html"
-               data-play_id="554"
-               data-play_pl_id="14272"
+               data-play_id="674"
+               data-play_pl_id="14475"
                data-name="五星三码">
                 <span class="staer1">五星三码</span>
             </a>
@@ -512,8 +512,8 @@
                data-fun_zhushu="zhushu_q2dxds"
                data-fun_content="content_q2dxds"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/qedxds.html"
-               data-play_id="555"
-               data-play_pl_id="14273"
+               data-play_id="745"
+               data-play_pl_id="14562"
                data-name="前二大小单双">
                 <span class="staer1">前二大小单双</span>
             </a>
@@ -523,8 +523,8 @@
                data-fun_zhushu="zhushu_h2dxds"
                data-fun_content="content_h2dxds"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/hedxds.html"
-               data-play_id="556"
-               data-play_pl_id="14274"
+               data-play_id="747"
+               data-play_pl_id="14564"
                data-name="后二大小单双">
                 <span class="staer1">后二大小单双</span>
             </a>
@@ -534,8 +534,8 @@
                data-fun_zhushu="zhushu_q3dxds"
                data-fun_content="content_q3dxds"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/qsdxds.html"
-               data-play_id="557"
-               data-play_pl_id="14275"
+               data-play_id="746"
+               data-play_pl_id="14563"
                data-name="前三大小单双">
                 <span class="staer1">前三大小单双</span>
             </a>
@@ -545,8 +545,8 @@
                data-fun_zhushu="zhushu_h3dxds"
                data-fun_content="content_h3dxds"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/dxds/hsdxds.html"
-               data-play_id="558"
-               data-play_pl_id="14276"
+               data-play_id="748"
+               data-play_pl_id="14565"
                data-name="后三大小单双">
                 <span class="staer1">后三大小单双</span>
             </a>
@@ -558,8 +558,8 @@
                data-fun_zhushu="zhushu_rx2zxfs"
                data-fun_content="content_rx2zxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zxfs.html"
-               data-play_id="559"
-               data-play_pl_id="14277"
+               data-play_id="688"
+               data-play_pl_id="14489"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
@@ -569,8 +569,8 @@
                data-fun_zhushu="zhushu_rx2zxhz"
                data-fun_content="content_rx2zxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zxhz.html"
-               data-play_id="561"
-               data-play_pl_id="14279"
+               data-play_id="687"
+               data-play_pl_id="14488"
                data-name="直选和值">
                 <span class="staer1">直选和值</span>
             </a>
@@ -580,8 +580,8 @@
                data-fun_zhushu="zhushu_rx2zuxfs"
                data-fun_content="content_rx2zuxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zuxfs.html"
-               data-play_id="562"
-               data-play_pl_id="14280"
+               data-play_id="691"
+               data-play_pl_id="14492"
                data-name="组选复式">
                 <span class="staer1">组选复式</span>
             </a>
@@ -591,8 +591,8 @@
                data-fun_zhushu="zhushu_rx2zuxhz"
                data-fun_content="content_rx2zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zuxhz.html"
-               data-play_id="564"
-               data-play_pl_id="14282"
+               data-play_id="690"
+               data-play_pl_id="14491"
                data-name="组选和值 ">
                 <span class="staer1">组选和值</span>
             </a>
@@ -604,8 +604,8 @@
                data-fun_zhushu="zhushu_rx3zxfs"
                data-fun_content="content_rx3zxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zxfs.html"
-               data-play_id="565"
-               data-play_pl_id="14283"
+               data-play_id="695"
+               data-play_pl_id="14497"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
@@ -615,8 +615,8 @@
                data-fun_zhushu="zhushu_rx3zxhz"
                data-fun_content="content_rx3zxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zxhz.html"
-               data-play_id="567"
-               data-play_pl_id="14285"
+               data-play_id="694"
+               data-play_pl_id="14496"
                data-name="直选和值">
                 <span class="staer1">直选和值</span>
             </a>
@@ -626,8 +626,8 @@
                data-fun_zhushu="zhushu_rx3z3fs"
                data-fun_content="content_rx3z3fs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zusfs.html"
-               data-play_id="568"
-               data-play_pl_id="14286"
+               data-play_id="697"
+               data-play_pl_id="14499"
                data-name="组三复式">
                 <span class="staer1">组三复式</span>
             </a>
@@ -637,8 +637,8 @@
                data-fun_zhushu="zhushu_rx3z6fs"
                data-fun_content="content_rx3z6fs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zulfs.html"
-               data-play_id="570"
-               data-play_pl_id="14288"
+               data-play_id="699"
+               data-play_pl_id="14501"
                data-name="组六复式">
                 <span class="staer1">组六复式</span>
             </a>
@@ -648,8 +648,8 @@
                data-fun_zhushu="zhushu_rx3zuxhz"
                data-fun_content="content_rx3zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxs/zuxhz.html"
-               data-play_id="573"
-               data-play_pl_id="14292|14293"
+               data-play_id="700"
+               data-play_pl_id="14502|14503"
                data-name="组选和值">
                 <span class="staer1">组选和值</span>
             </a>
@@ -661,8 +661,8 @@
                data-fun_zhushu="zhushu_rx4zxfs"
                data-fun_content="content_rx4zxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zxfs.html"
-               data-play_id="574"
-               data-play_pl_id="14294"
+               data-play_id="702"
+               data-play_pl_id="14505"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
@@ -672,8 +672,8 @@
                data-fun_zhushu="zhushu_rx4zu24"
                data-fun_content="content_rx4zu24"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx24.html"
-               data-play_id="576"
-               data-play_pl_id="14296"
+               data-play_id="704"
+               data-play_pl_id="14507"
                data-name="组选24">
                 <span class="staer1">组选24</span>
             </a>
@@ -683,8 +683,8 @@
                data-fun_zhushu="zhushu_rx4zu12"
                data-fun_content="content_rx4zu12"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx12.html"
-               data-play_id="577"
-               data-play_pl_id="14297"
+               data-play_id="703"
+               data-play_pl_id="14506"
                data-name="组选12">
                 <span class="staer1">组选12</span>
             </a>
@@ -694,8 +694,8 @@
                data-fun_zhushu="zhushu_rx4zu6"
                data-fun_content="content_rx4zu6"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx6.html"
-               data-play_id="578"
-               data-play_pl_id="14298"
+               data-play_id="706"
+               data-play_pl_id="14509"
                data-name="组选6">
                 <span class="staer1">组选6</span>
             </a>
@@ -705,8 +705,8 @@
                data-fun_zhushu="zhushu_rx4zu4"
                data-fun_content="content_rx4zu4"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxsi/zx4.html"
-               data-play_id="579"
-               data-play_pl_id="14299"
+               data-play_id="705"
+               data-play_pl_id="14508"
                data-name="组选4">
                 <span class="staer1">组选4</span>
             </a>

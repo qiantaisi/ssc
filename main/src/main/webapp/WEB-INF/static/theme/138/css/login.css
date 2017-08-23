@@ -165,6 +165,7 @@ img {
 
 .login_b_link {
     padding-left: 130px;
+    margin-top: 40px;
 }
 
 .footer_t {
@@ -444,9 +445,10 @@ body {
 .login_b .mfkh{
     display: block;
     line-height: 44px;
-    width: 204px;
+    width: 150px;
     text-align: center;
     background: #D63852;
     color: #fff;
     font-size: 16px;
+    float: left;
 }
