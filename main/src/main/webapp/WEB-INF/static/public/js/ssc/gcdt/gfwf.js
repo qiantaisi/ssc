@@ -2968,8 +2968,10 @@ function zhushu_gd11x5_qszxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var tempArr = [];
     var newArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -3684,8 +3686,12 @@ function zhushu_gd11x5_qezxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var tempArr = [];
     var newArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
@@ -3785,8 +3791,12 @@ function zhushu_gd11x5_hezxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var tempArr = [];
     var newArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
@@ -3820,8 +3830,12 @@ function zhushu_gd11x5_hszxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var tempArr = [];
     var newArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
+
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -3852,8 +3866,12 @@ function zhushu_gd11x5_zszxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var tempArr = [];
     var newArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -4269,9 +4287,10 @@ function zhushu_q3z6ds() {
 function zhushu_gd11x5_qszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [] ,chongfuArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -4313,9 +4332,12 @@ function zhushu_gd11x5_qszuxds() {
 function zhushu_gd11x5_qezuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
@@ -4352,9 +4374,12 @@ function zhushu_gd11x5_qezuxds() {
 function zhushu_gd11x5_hezuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
@@ -4392,9 +4417,10 @@ function zhushu_gd11x5_hezuxds() {
 function zhushu_gd11x5_hszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -4434,9 +4460,10 @@ function zhushu_gd11x5_hszuxds() {
 function zhushu_gd11x5_zszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -12499,8 +12526,11 @@ function content_gd11x5_qszxds() {
     var allStrError = [];
     var zhushu = 0;
 
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
+
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -12518,7 +12548,7 @@ function content_gd11x5_qszxds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr);
+            tempArr.push(oneStr + ' ' + twoStr + ' ' + threeStr);
         }
     }
 
@@ -13205,8 +13235,12 @@ function content_gd11x5_qezxds() {
     var allStrError = [];
     var zhushu = 0;
 
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
@@ -13274,8 +13308,12 @@ function content_gd11x5_hezxds() {
     var allStrError = [];
     var zhushu = 0;
 
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
@@ -13345,8 +13383,11 @@ function content_gd11x5_hszxds() {
     var allStrError = [];
     var zhushu = 0;
 
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
+
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -13416,8 +13457,10 @@ function content_gd11x5_zszxds() {
     var allStrError = [];
     var zhushu = 0;
 
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -13776,8 +13819,10 @@ function content_q3z6ds() {
 function content_gd11x5_qszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -13849,8 +13894,12 @@ function content_gd11x5_qszuxds() {
 function content_gd11x5_qezuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
@@ -13918,8 +13967,12 @@ function content_gd11x5_qezuxds() {
 function content_gd11x5_hezuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
@@ -13988,8 +14041,12 @@ function content_gd11x5_hezuxds() {
 function content_gd11x5_zszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
@@ -14062,8 +14119,12 @@ function content_gd11x5_zszuxds() {
 function content_gd11x5_hszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
     var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
-    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
-    var arr_new = textStr.split(",");
+    // textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
+    // var arr_new = textStr.split(",");
+    textStr = textStr.replace(/(^\s+)|(\s+$)/g, "");//去掉前后空格
+    textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11,' ']/g, ','));
+    textStr = $.trim(textStr.replace(/\s/g,""));
+    var arr_new = textStr.split(',');
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
