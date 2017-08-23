@@ -304,7 +304,7 @@
             <c:if test="${registerResult.checkQq && registerResult.needRequiredQq}">
             if (!qq) {
                 $(".qq").find(".info").hide();
-                $(".qq").find(".error").html("请输入验QQ").show();
+                $(".qq").find(".error").html("请输入QQ").show();
                 return;
             }
             </c:if>
