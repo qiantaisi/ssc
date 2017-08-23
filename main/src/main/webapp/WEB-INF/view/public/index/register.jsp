@@ -233,7 +233,6 @@
                     if(obj.needRequiredEmail){
                         emailCheck = true;
                         $(".staremail").html("*");
-
                     }
                 }
                 if(obj.checkPhone){
@@ -277,6 +276,7 @@
             var yzm = $("input[name='yzm']").val();   // 验证码
 
 
+            console.log( phone +"==" + iphoneCheck);
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
             var name = $("input[name='name']").val();   // 姓名
             if (!account) {
@@ -333,19 +333,19 @@
                 return;
             }
 
-            if(qqCheck && qq){
+            if(qqCheck && !qq){
                 $(".qq").find(".info").hide();
                 $(".qq").find(".error").html("请输入验QQ").show();
                 return;
             }
 
-            if(iphoneCheck && phone){
+            if(iphoneCheck && !phone){
                 $(".sj").find(".info").hide();
                 $(".sj").find(".error").html("请输入手机").show();
                 return;
             }
 
-            if(emailCheck && email){
+            if(emailCheck && !email){
                 $(".yx").find(".info").hide();
                 $(".yx").find(".error").html("请输入邮箱").show();
                 return;
