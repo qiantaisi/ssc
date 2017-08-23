@@ -18,7 +18,7 @@
         <span class="fr fl cl-1001">
            从任意位置上任意选择1个或1个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：第一位 01， 开奖号码：01，* * * *，即中定位胆。</var>
+                <var>投注方案：第一位 01<br> 开奖号码：01 * * * *，即中定位胆。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明

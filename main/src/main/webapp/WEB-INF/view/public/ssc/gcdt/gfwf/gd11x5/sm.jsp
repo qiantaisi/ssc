@@ -51,7 +51,7 @@
         <span class="fr fl cl-1001">
             从第一位、第二位、第三位中至少各选择1个号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02,03 开奖号码：01，02，03，* *，即中前三直选。</var>
+                <var>投注方案：01，02，03<br> 开奖号码：01，02，03，* * 即中前三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -143,7 +143,7 @@
         <span class="fr fl cl-1001">
             从01-11中任意选择3个或3个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02,03 开奖号码：01，02，03，* *(前三顺序不限)即中前三组选。</var>
+                <var>投注方案：01，02，03<br> 开奖号码：01，02，03，* * (前三顺序不限)即中前三组选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -186,7 +186,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个三位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02,03 开奖号码：01，02,03 * *即中前三直选。</var>
+                <var>投注方案：010203<br> 开奖号码：01，02，03 * * 即中前三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -214,9 +214,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个三位数号码组成一注。
+            手动输入号码,至少输入1个三位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02,03 开奖号码：01，02,03 * *(前三顺序不限)，即中前三组选。</var>
+                <var>投注方案：010203 <br>开奖号码：01，02，03 * * (前三顺序不限)，即中前三组选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -242,9 +242,9 @@
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从01-11中，选取3个及以上的号码进行投注，每注需至少包括1个胆码及一个拖码。
+            从01-11中，选取3个及以上的号码进行投注,每注需至少包括1个胆码及一个拖码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：胆码02,拖码01，0,6 开奖号码：02，01，06，* *，（前三顺序不限）即中前三组选胆拖。</var>
+                <var>投注方案：胆码02 拖码01，02，06 开奖号码：02，01，06 * *（前三顺序不限）即中前三组选胆拖。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -301,9 +301,9 @@
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从第二位、第三位，第四位中至少各选择1个号码。
+            从第二位、第三位,第四位中至少各选择1个号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02,03 开奖号码：*，01，02，03，**，即中中三直选。</var>
+                <var>投注方案：01，02，03<br> 开奖号码：* 01，02，03 * 即中中三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -393,9 +393,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个三位数号码组成一注。
+            手动输入号码,至少输入1个三位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02,03 开奖号码：01，02,03 * *，即中中三直选。</var>
+                <var>投注方案：010203<br> 开奖号码：01，02，03 * * 即中中三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -423,7 +423,7 @@
         <span class="fr fl cl-1001">
             从01-11中任意选择3个或3个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02,03 开奖号码：*03， 01，02， *(中三顺序不限)即中中三组选。</var>
+                <var>投注方案：01，02，03 <br>开奖号码： * 03，01，02 * (中三顺序不限)即中中三组选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -467,7 +467,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个三位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02,03 开奖号码：* 03 ,01，02, *，顺序不限，即中中三直选。</var>
+                <var>投注方案：010203<br> 开奖号码：* 03，01，02 * 顺序不限，即中中三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -493,9 +493,9 @@
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从01-11中，选取3个及以上的号码进行投注，每注需至少包括1个胆码及一个拖码。
+            从01-11中,选取3个及以上的号码进行投注,每注需至少包括1个胆码及一个拖码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：胆码02,拖码01，0,6 开奖号码：* 02，01，06，*，（前三顺序不限）即中前三组选胆拖。</var>
+                <var>投注方案：胆码02 拖码01，06 开奖号码：* 02，01，06 *（前三顺序不限）即中前三组选胆拖。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -554,7 +554,7 @@
         <span class="fr fl cl-1001">
             从第三位、第四位、第五位中至少各选择1个号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02,03 开奖号码：*，01，02，03，即中后三直选。</var>
+                <var>投注方案：01，02，03<br> 开奖号码：* 01，02，03 * 即中后三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -645,9 +645,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个三位数号码组成一注。
+            手动输入号码,至少输入1个三位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02,03 开奖号码：*，* 03 ,01，02, 顺序不限，即中后三直选。</var>
+                <var>投注方案：010203<br> 开奖号码： * * 03，01，02 顺序不限，即中后三直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -676,7 +676,7 @@
         <span class="fr fl cl-1001">
             从01-11中任意选择3个或3个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02,03 开奖号码： *，*03， 01，02(后三顺序不限)即中后三组选。</var>
+                <var>投注方案：01，02，03<br> 开奖号码： * * 03，01，02 (后三顺序不限)即中后三组选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -718,9 +718,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个三位数号码组成一注。
+            手动输入号码,至少输入1个三位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02,03 开奖号码：*，* 03 ,01，02,，顺序不限，即中后三组选。</var>
+                <var>投注方案：010203<br> 开奖号码： * * 03，01，02 顺序不限，即中后三组选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -747,9 +747,9 @@
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从01-11中，选取3个及以上的号码进行投注，每注需至少包括1个胆码及一个拖码。
+            从01-11中,选取3个及以上的号码进行投注,每注需至少包括1个胆码及一个拖码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：胆码02,拖码01，0,6 开奖号码：*，* 02，01，06，（后三顺序不限）即中后三组选胆拖。</var>
+                <var>投注方案：胆码02 拖码01，06 开奖号码： * * 02，01，06（后三顺序不限）即中后三组选胆拖。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明

@@ -425,6 +425,7 @@ function getOpenCodeHistory() {
                 return;
             }
             var tmpHtml = '';
+
             if (json.sscHistoryList.length > 0) {
                 var value = json.sscHistoryList[0];
                 var openCodeArr = value.openCode ? value.openCode.split(",") : [];
@@ -773,7 +774,7 @@ function gdkj(playGroupId) {
                     });
 
                 }
-            } else if (playGroupId == 10) {
+            } else if (playGroupId == 10 || playGroupId == 11) {
 
                 if (json.sscHistoryList.length > 0) {
                     var value = json.sscHistoryList[0];

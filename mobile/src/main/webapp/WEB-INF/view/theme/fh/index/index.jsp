@@ -19,7 +19,7 @@
     <script>
         var md = new MobileDetect(window.navigator.userAgent);
         if (!md.mobile()) {
-            window.location.href = "<%=basePath%>pc.html"
+            window.location.href = "<%=basePath%>app.html"
         }
 
         if (!window.navigator.cookieEnabled) {

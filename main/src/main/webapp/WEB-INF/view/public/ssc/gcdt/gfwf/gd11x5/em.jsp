@@ -44,7 +44,7 @@
         <span class="fr fl cl-1001">
             从第一位、第二位、中至少各选择1个号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02, 开奖号码：01，02，* *，即中前二直选。</var>
+                <var>投注方案：01，02<br> 开奖号码：01，02 * * * 即中前二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -111,7 +111,7 @@
         <span class="fr fl cl-1001">
             从01-11中任意选择2个或2个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02, 开奖号码：01，02，* *(前二顺序不限)即中前二组选。</var>
+                <var>投注方案：01，02<br> 开奖号码：01，02 * * *(前二顺序不限)即中前二组选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -154,7 +154,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个2位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02, 开奖号码：01，02, * *即中前二直选。</var>
+                <var>投注方案：0102<br> 开奖号码：01，02 * * *即中前二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -164,7 +164,7 @@
         </span>
         </p>
         <div class="content_jiang">
-            <textarea   class="content_tex" autofocus></textarea>
+            <textarea class="content_tex" autofocus></textarea>
             <div class="right con_j_end">
                 <ul>
                     <li onclick="delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
@@ -184,7 +184,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个2位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02, 开奖号码：01，02, * *(前二顺序不限)，即中前二组选。</var>
+                <var>投注方案：0102<br> 开奖号码：01，02 * * *(前二顺序不限)，即中前二组选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -210,9 +210,9 @@
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从01-11中，选取2个及以上的号码进行投注，每注需至少包括1个胆码及一个拖码。
+            从01-11中,选取2个及以上的号码进行投注,每注需至少包括1个胆码及一个拖码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：胆码02,拖码01， 开奖号码：02，01，* *，（前二顺序不限）即中前二组选胆拖。</var>
+                <var>投注方案：胆码02，拖码01， 开奖号码：02，01 * * *（前二顺序不限）即中前二组选胆拖。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -271,7 +271,7 @@
         <span class="fr fl cl-1001">
             从第四位、第五位中至少各选择1个号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02开奖号码：*，*，01，02，即中后二直选。</var>
+                <var>投注方案：01，02<br>开奖号码：* * * 01，02即中后二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -340,7 +340,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个二位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02 开奖号码：*，* 01，02, 顺序不限，即中后二直选。</var>
+                <var>投注方案：0102<br> 开奖号码： * * * 01，02 顺序不限，即中后二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -369,7 +369,7 @@
         <span class="fr fl cl-1001">
             从01-11中任意选择2个或2个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01，02 开奖号码： *，*， 01，02(后二顺序不限)即中后二组选。</var>
+                <var>投注方案：01，02<br> 开奖号码： * * * 01，02(后二顺序不限)即中后二组选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -413,7 +413,7 @@
         <span class="fr fl cl-1001">
             手动输入号码，至少输入1个二位数号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01,02 开奖号码：*，* 01，02,，顺序不限，即中后二直选。</var>
+                <var>投注方案：0102 <br>开奖号码： * * * 01，02顺序不限,即中后二直选。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -440,9 +440,9 @@
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从01-11中，选取2个及以上的号码进行投注，每注需至少包括1个胆码及一个拖码。
+            从01-11中,选取2个及以上的号码进行投注,每注需至少包括1个胆码及一个拖码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：胆码02,拖码01， 开奖号码：*，* 02，01，（后二顺序不限）即中后二组选胆拖。</var>
+                <var>投注方案：胆码02 拖码01<br> 开奖号码：* * * 02，01（后二顺序不限）即中后二组选胆拖。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明

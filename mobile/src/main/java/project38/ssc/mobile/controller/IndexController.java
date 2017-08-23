@@ -53,6 +53,7 @@ public class IndexController extends BaseController{
         modelMap.put("webDescription", webInfoResult.getWebDescription());
         modelMap.put("webTjjs", webInfoResult.getWebTjjs());
         modelMap.put("icoData", ApiUtils.getLogo(4,companyShortName));
+        modelMap.put("desk", ApiUtils.getLogo(6, companyShortName));
         return this.renderView("index/index", modelMap);
     }
 
@@ -71,6 +72,15 @@ public class IndexController extends BaseController{
         modelMap.put("data", ApiUtils.getDownloadManagementResult(companyShortName));
         modelMap.put("logo", ApiUtils.getLogo(1, companyShortName));
         return this.renderPublicView("index/ios", modelMap);
+    }
+
+    @RequestMapping(value = "/ipaxinren.html")
+    public ModelAndView ipaxinren() throws UserException{
+        String companyShortName = this.getCompanyShortName();
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        modelMap.put("data", ApiUtils.getDownloadManagementResult(companyShortName));
+        modelMap.put("logo", ApiUtils.getLogo(1, companyShortName));
+        return this.renderPublicView("index/ipaxinren", modelMap);
     }
 
 
@@ -93,6 +103,7 @@ public class IndexController extends BaseController{
         Map<String, Object> modelMap = new HashMap<String, Object>();
         try {
             modelMap.put("logo", ApiUtils.getLogo(1, companyShortName));
+            modelMap.put("desk", ApiUtils.getLogo(6, companyShortName));
 
             WebNoticeResult webNoticeResult = ApiUtils.getPopupNoticeList(uid, token, companyShortName);
             if (null != webNoticeResult) {

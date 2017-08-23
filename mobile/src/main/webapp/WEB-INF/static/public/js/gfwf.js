@@ -4091,8 +4091,8 @@ function selectFun_str2(obj) {
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
 
-    var Aarr = [, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    var Barr = [, , , , , , 6, 7, 8, 9, 10];
+    var Aarr = [, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    var Barr = [, , , , , , 6, 7, 8, 9, 10, 11];
     for (var i = 0; i < Aarr.length; ++i) {
         if (Aarr[i] == Barr[i]) {
             $(obj).parent().parent().parent().find(".cus_common .wan_bottom .cus-flex-item").find(".n" + i).addClass("active_gfwf");
@@ -4107,7 +4107,7 @@ function selectFun_str3(obj) {
     $(obj).parent().find(".xz i").removeClass("activeBtn");
     $(obj).addClass("activeBtn");
 
-    var Aarr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ];
+    var Aarr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     var Barr = [1, 2, 3, 4, 5, , , , ,];
     for (var i = 0; i < Aarr.length; ++i) {
 

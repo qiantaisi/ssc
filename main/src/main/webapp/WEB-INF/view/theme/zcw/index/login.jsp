@@ -11,8 +11,6 @@
 <c:import url="top.jsp"/>
 
 <c:import url="menu.jsp"/>
-
-
 <div class="main login_main">
     <div class="container login_nr">
         <div class="login_nr_t clearfix">

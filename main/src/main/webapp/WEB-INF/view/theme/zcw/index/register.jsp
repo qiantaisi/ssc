@@ -11,159 +11,7 @@
 <c:import url="top.jsp"/>
 <c:import url="menu.jsp"/>
 
-<div class="main login_main">
-    <div class="container login_nr">
-        <div class="login_nr_t clearfix">
-            <div class="left login_nr_t_lf">
-                账号登录
-            </div>
-            <div class="right">
-                已有账号?<a href="<%=basePath%>login.html">立即登录</a>
-            </div>
-        </div>
-        <div class="login_nr_b">
-            <div class="clearfix login_nr_gp">
-			    		<span class="left login_nr_name">
-			    			<span class="star">
-			    				*
-			    			</span>
-			    			账号:
-			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="account" class="inputStr left" placeholder="请输入用户名"/>
-                    <div class="left erro">
-                        <span class="yhm">
-                            <span class="info">字母开头的6-12位字母数字组成的用户名</span>
-                            <span class="error red hide"></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix login_nr_gp">
-			    		<span class="left login_nr_name">
-			    			<span class="star">
-			    				*
-			    			</span>
-			    			密码:
-			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="password" name="password" class="inputStr left" placeholder="请输入密码"/>
-                    <div class="left erro">
-                        <span class="mm">
-                            <span class="info">输入6-12位字母、数字的密码</span>
-                            <span class="error red hide"></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix login_nr_gp">
-			    		<span class="left login_nr_name">
-			    			<span class="star">
-			    				*
-			    			</span>
-			    			确认密码:
-			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="password" name="confirmPassword" class="inputStr left" placeholder="确认密码"/>
-                    <div class="left erro">
-                        <span class="qmm">
-                            <span class="info">与上面输入密码必须保持一致</span>
-                            <span class="error red hide"></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix login_nr_gp">
-			    		<span class="left login_nr_name">
-			    			<span class="star">
-			    				*
-			    			</span>
-			    			姓名:
-			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="name" class="inputStr left" placeholder="请输入姓名"/>
-                    <div class="left erro">
-                        <span class="name">
-                            <span class="info">姓名必须和绑定的银行卡户名一致</span>
-                            <span class="error red hide"></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix login_nr_gp hidphone">
-			    		<span class="left login_nr_name">
-			    			<span class="star starphone">
-
-			    			</span>
-			    			手机:
-			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="phone" class="inputStr left" placeholder="请输入手机"/>
-                    <div class="left erro">
-                        <span class="sj">
-                            <span class="info">请输入您的手机</span>
-                            <span class="error red hide"></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix login_nr_gp hidemail">
-			    		<span class="left login_nr_name">
-			    			<span class="star staremail">
-
-			    			</span>
-			    			邮箱:
-			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="email" class="inputStr left" placeholder="请输入邮箱"/>
-                    <div class="left erro">
-                        <span class="yx">
-                            <span class="info">请输入您的邮箱</span>
-                            <span class="error red hide"></span>
-                        </span>
-
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix login_nr_gp hidqq">
-			    		<span class="left login_nr_name">
-			    			<span class="star starqq">
-
-			    			</span>
-			    			QQ:
-			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="qq" class="inputStr left" placeholder="请输入QQ"/>
-                    <div class="left erro">
-                        <span class="qq">
-                            <span class="info">请输入QQ</span>
-                            <span class="error r    ed hide"></span>
-                        </span>
-
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix login_nr_gp" style="padding-left: 40px;">
-                <span class="left login_nr_name"></span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="checkbox" class="left" checked="checked" style="width:30px;"/>
-                    同意本站规则与条款
-                </div>
-            </div>
-            <div class="login_b">
-                <p>
-                    <input type="button" class="mfkh" value="免费开户" id="btn-register"/>
-                </p>
-            </div>
-            <div class="login_b_link" style="padding-left: 75px;">
-                <a href="${kefuUrl}">忘记密码?</a>
-                <span>|</span>
-                <a href="${kefuUrl}" target="_blank">在线客服</a>
-            </div>
-        </div>
-    </div>
-</div>
-
+<jsp:include page="../../../public/index/register.jsp" />
 <c:import url="bottom.jsp"/>
 
 <script type="text/html" id="template_khxy">
@@ -173,7 +21,7 @@
 <c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/jsCommonLogin.jsp"/>
 
-<script>
+<%--<script>
     $(function () {
         ajaxRequest({
             url: "<%=basePath%>ajaxGetRegisterResult.json",
@@ -328,7 +176,7 @@
     function hideLoading() {
         layer.closeAll();
     }
-</script>
+</script>--%>
 <c:import url="../common/bodyEnd.jsp"/>
 
 

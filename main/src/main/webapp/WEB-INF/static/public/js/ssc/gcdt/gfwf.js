@@ -104,16 +104,12 @@ function selectFun_1(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "quan";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "quan";
-    renderZhushu();
-    changeActi(btnFlag, objBtn);
-    // var flag_name = $(obj).parent().parent().parent().parent().attr("data-flag");
-    // if(typeof stateTouZhu == "function"){
-    //     stateTouZhu(flag_name);
-    // }
 
+    renderZhushu();
 }
 
 
@@ -150,11 +146,12 @@ function selectFun_str2(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "da";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "da";
+
     renderZhushu();
-    changeActi(btnFlag, objBtn);
 }
 
 
@@ -192,11 +189,13 @@ function selectFun_str3(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "xiao";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "xiao";
+
     renderZhushu();
-    changeActi(btnFlag, objBtn);
+
 }
 
 function selectFun_4(obj) {
@@ -215,11 +214,12 @@ function selectFun_4(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "qi";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "qi";
+
     renderZhushu();
-    changeActi(btnFlag, objBtn);
 }
 
 function selectFun_5(obj) {
@@ -239,11 +239,12 @@ function selectFun_5(obj) {
     var maName = '';
     if(typeof objName != 'undefined'){
         maName = objName.split(' ')[1];
+        var objBtn = getCommonObj(obj, maName);
+        var btnFlag = "ou";
+        changeActi(btnFlag, objBtn);
     }
-    var objBtn = getCommonObj(obj, maName);
-    var btnFlag = "ou";
+
     renderZhushu();
-    changeActi(btnFlag, objBtn);
 }
 
 
@@ -3405,16 +3406,26 @@ function zhushu_gd11x5_rxszsds() {
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.sort();
 
-                tempArr.push(newArr[n]);
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3);
             }
         }
+
     }
     if (tempArr.length <= 0) {
         return 0;
     }
+    chongfuArr = tempArr.uniqueArr();
 
-    return tempArr.length;
+    return chongfuArr.length;
 }
 
 function zhushu_gd11x5_rxsizsds() {
@@ -3436,16 +3447,28 @@ function zhushu_gd11x5_rxsizsds() {
         var foureStr = temp.substr(6, 2);
         if (threeStr != foureStr && twoStr != foureStr && oneStr != foureStr && oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12 && parseInt(foureStr) < 12) {
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.push(parseInt(foureStr));
+                sotrArr.sort();
 
-                tempArr.push(newArr[n]);
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4);
+
             }
         }
     }
     if (tempArr.length <= 0) {
         return 0;
     }
+    var chongfuArr = tempArr.uniqueArr();
 
-    return tempArr.length;
+    return chongfuArr.length;
 }
 function zhushu_gd11x5_rxwzwds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
@@ -3468,15 +3491,29 @@ function zhushu_gd11x5_rxwzwds() {
         if (oneStr != fiveStr &&twoStr != fiveStr &&foureStr != fiveStr &&threeStr != fiveStr &&threeStr != foureStr &&twoStr != foureStr &&oneStr != foureStr &&oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12 && parseInt(foureStr) < 12 && parseInt(fiveStr) < 12) {
 
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.push(parseInt(foureStr));
+                sotrArr.push(parseInt(fiveStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+                var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4+threeStr5);
             }
         }
     }
     if (tempArr.length <= 0) {
         return 0;
     }
+    var chongfuArr = tempArr.uniqueArr();
 
-    return tempArr.length;
+    return chongfuArr.length;
 }
 
 function zhushu_gd11x5_rxlzwds() {
@@ -3501,15 +3538,31 @@ function zhushu_gd11x5_rxlzwds() {
         if (fiveStr != sixStr &&foureStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&oneStr != fiveStr &&twoStr != fiveStr &&foureStr != fiveStr &&threeStr != fiveStr &&threeStr != foureStr &&twoStr != foureStr &&oneStr != foureStr &&oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12 && parseInt(foureStr) < 12 && parseInt(fiveStr) < 12 && parseInt(sixStr) < 12) {
 
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.push(parseInt(foureStr));
+                sotrArr.push(parseInt(fiveStr));
+                sotrArr.push(parseInt(sixStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+                var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
+                var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4+threeStr5+threeStr6);
             }
         }
     }
     if (tempArr.length <= 0) {
         return 0;
     }
+    var chongfuArr = tempArr.uniqueArr();
 
-    return tempArr.length;
+    return chongfuArr.length;
 }
 
 function zhushu_gd11x5_rxqzwds() {
@@ -3535,15 +3588,33 @@ function zhushu_gd11x5_rxqzwds() {
         if (oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&foureStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&foureStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&oneStr != fiveStr &&twoStr != fiveStr &&foureStr != fiveStr &&threeStr != fiveStr &&threeStr != foureStr &&twoStr != foureStr &&oneStr != foureStr &&oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if(parseInt(oneStr)<12&&parseInt(twoStr)<12&& parseInt(threeStr)<12&&parseInt(foureStr)<12&&parseInt(fiveStr)<12&&parseInt(sixStr)<12&&parseInt(sevenStr)<12) {
 
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.push(parseInt(foureStr));
+                sotrArr.push(parseInt(fiveStr));
+                sotrArr.push(parseInt(sixStr));
+                sotrArr.push(parseInt(sevenStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+                var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
+                var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
+                var threeStr7 = sotrArr[6] >= 10 ? sotrArr[6] : ('0' + sotrArr[6]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4+threeStr5+threeStr6+threeStr7);
             }
         }
     }
     if (tempArr.length <= 0) {
         return 0;
     }
+    var chongfuArr = tempArr.uniqueArr();
 
-    return tempArr.length;
+    return chongfuArr.length;
 }
 
 function zhushu_gd11x5_rxbzwds() {
@@ -3572,16 +3643,35 @@ function zhushu_gd11x5_rxbzwds() {
         var eitStr = temp.substr(14, 2);
         if (sevenStr != eitStr &&sixStr != eitStr &&fiveStr != eitStr &&foureStr != eitStr &&threeStr != eitStr &&twoStr != eitStr &&oneStr != eitStr &&oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&foureStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&foureStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&oneStr != fiveStr &&twoStr != fiveStr &&foureStr != fiveStr &&threeStr != fiveStr &&threeStr != foureStr &&twoStr != foureStr &&oneStr != foureStr &&oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if(parseInt(oneStr)<12&&parseInt(twoStr)<12&& parseInt(threeStr)<12&&parseInt(foureStr)<12&&parseInt(fiveStr)<12&&parseInt(sixStr)<12&&parseInt(sevenStr)<12&&parseInt(eitStr)<12) {
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.push(parseInt(foureStr));
+                sotrArr.push(parseInt(fiveStr));
+                sotrArr.push(parseInt(sixStr));
+                sotrArr.push(parseInt(sevenStr));
+                sotrArr.push(parseInt(eitStr));
+                sotrArr.sort();
 
-                tempArr.push(newArr[n]);
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+                var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
+                var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
+                var threeStr7 = sotrArr[6] >= 10 ? sotrArr[6] : ('0' + sotrArr[6]);
+                var threeStr8 = sotrArr[7] >= 10 ? sotrArr[7] : ('0' + sotrArr[7]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3+threeStr4+threeStr5+threeStr6+threeStr7+threeStr8);
             }
         }
     }
     if (tempArr.length <= 0) {
         return 0;
     }
+    var chongfuArr = tempArr.uniqueArr();
 
-    return tempArr.length;
+    return chongfuArr.length;
 }
 
 
@@ -3658,6 +3748,7 @@ function zhushu_gd11x5_rxezeds() {
             newArr.push(arr_new[i]);
         }
     }
+
     for (var n = 0; n < newArr.length; n++) {
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
@@ -3665,7 +3756,14 @@ function zhushu_gd11x5_rxezeds() {
 
         if (oneStr != twoStr ) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                tempArr.push(oneStr1 + twoStr2);
             }
         }
     }
@@ -3673,7 +3771,8 @@ function zhushu_gd11x5_rxezeds() {
         return 0;
     }
 
-    return tempArr.length;
+    var chongfuArr = tempArr.uniqueArr();
+    return chongfuArr.length;
 }
 
 
@@ -4167,7 +4266,7 @@ function zhushu_q3z6ds() {
  */
 function zhushu_gd11x5_qszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
-    var newArr = [], tempArr = [];
+    var newArr = [], tempArr = [] ,chongfuArr = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
 
     var arr_new = textStr.split(",");
@@ -4176,6 +4275,7 @@ function zhushu_gd11x5_qszuxds() {
             newArr.push(arr_new[i]);
         }
     }
+
     for (var n = 0; n < newArr.length; n++) {
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
@@ -4183,15 +4283,26 @@ function zhushu_gd11x5_qszuxds() {
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3);
             }
         }
+
     }
     if (tempArr.length <= 0) {
         return 0;
     }
+    chongfuArr = tempArr.uniqueArr();
 
-    return tempArr.length;
+    return chongfuArr.length;
 }
 
 /**
@@ -4215,7 +4326,14 @@ function zhushu_gd11x5_qezuxds() {
 
         if (oneStr != twoStr ) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                tempArr.push(oneStr1 + twoStr2);
             }
         }
     }
@@ -4223,7 +4341,8 @@ function zhushu_gd11x5_qezuxds() {
         return 0;
     }
 
-    return tempArr.length;
+    var chongfuArr = tempArr.uniqueArr();
+    return chongfuArr.length;
 }
 /**
  * 注数-组二单式
@@ -4246,7 +4365,14 @@ function zhushu_gd11x5_hezuxds() {
 
         if (oneStr != twoStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 ) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                tempArr.push(oneStr1 + twoStr2);
             }
         }
     }
@@ -4254,7 +4380,8 @@ function zhushu_gd11x5_hezuxds() {
         return 0;
     }
 
-    return tempArr.length;
+    var chongfuArr = tempArr.uniqueArr();
+    return chongfuArr.length;
 }
 
 /**
@@ -4278,7 +4405,16 @@ function zhushu_gd11x5_hszuxds() {
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3);
             }
         }
     }
@@ -4286,7 +4422,8 @@ function zhushu_gd11x5_hszuxds() {
         return 0;
     }
 
-    return tempArr.length;
+    var chongfuArr = tempArr.uniqueArr();
+    return chongfuArr.length;
 }
 
 /**
@@ -4310,7 +4447,16 @@ function zhushu_gd11x5_zszuxds() {
         var threeStr = temp.substr(4, 2);
         if (oneStr != twoStr && twoStr != threeStr && oneStr != threeStr) {
             if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
-                tempArr.push(newArr[n]);
+                var sotrArr = [];
+                sotrArr.push(parseInt(oneStr));
+                sotrArr.push(parseInt(twoStr));
+                sotrArr.push(parseInt(threeStr));
+                sotrArr.sort();
+
+                var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+                var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+                var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+                tempArr.push(oneStr1 + twoStr2 + threeStr3);
             }
         }
     }
@@ -4318,7 +4464,8 @@ function zhushu_gd11x5_zszuxds() {
         return 0;
     }
 
-    return tempArr.length;
+    var chongfuArr = tempArr.uniqueArr();
+    return chongfuArr.length;
 }
 
 /**
@@ -12339,7 +12486,8 @@ function content_gd11x5_qszxds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
-    var errorStr = '';
+    var chongfuArr = [];
+    var allStrError = [];
     var zhushu = 0;
 
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
@@ -12353,8 +12501,8 @@ function content_gd11x5_qszxds() {
             }
         }
     }
-    for (var n = 0; n < newArr.length; n++) {
 
+    for (var n = 0; n < newArr.length; n++) {
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
@@ -12369,12 +12517,21 @@ function content_gd11x5_qszxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
     }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
+    }
+
 
     // 初始化变量
     var showPlayName = '';
@@ -12399,7 +12556,7 @@ function content_suiji_gd11x5_rxszsds() {
     var tempArr = [];
     var errorStr = '';
     var zhushu = 0;
-
+    var  chongfuArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
@@ -12419,7 +12576,16 @@ function content_suiji_gd11x5_rxszsds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr +","+twoStr+"," + threeStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3);
         }
     }
 
@@ -12427,11 +12593,20 @@ function content_suiji_gd11x5_rxszsds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -12458,7 +12633,7 @@ function content_gd11x5_rxsizsds() {
     var tempArr = [];
     var errorStr = '';
     var zhushu = 0;
-
+    var  chongfuArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
@@ -12479,7 +12654,18 @@ function content_gd11x5_rxsizsds() {
         var fourStr = temp.substr(6, 2);
 
         if(threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr+"," + twoStr+"," + threeStr+","+fourStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.push(parseInt(fourStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4);
         }
     }
 
@@ -12487,11 +12673,20 @@ function content_gd11x5_rxsizsds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -12519,6 +12714,7 @@ function content_gd11x5_rxwzwds() {
     var errorStr = '';
     var zhushu = 0;
 
+    var  chongfuArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
@@ -12539,7 +12735,20 @@ function content_gd11x5_rxwzwds() {
         var fourStr = temp.substr(6, 2);
         var fiveStr = temp.substr(8, 2);
         if(fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr+","+ twoStr+"," + threeStr+","+fourStr+","+fiveStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.push(parseInt(fourStr));
+            sotrArr.push(parseInt(fiveStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+            var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5);
         }
     }
 
@@ -12547,11 +12756,20 @@ function content_gd11x5_rxwzwds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -12578,7 +12796,7 @@ function content_gd11x5_rxlzwds() {
     var tempArr = [];
     var errorStr = '';
     var zhushu = 0;
-
+    var  chongfuArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
@@ -12600,7 +12818,22 @@ function content_gd11x5_rxlzwds() {
         var fiveStr = temp.substr(8, 2);
         var sixStr = temp.substr(10, 2);
         if(fiveStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&fourStr != sixStr &&fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr+"," + twoStr+"," + threeStr+","+fourStr+","+fiveStr+","+sixStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.push(parseInt(fourStr));
+            sotrArr.push(parseInt(fiveStr));
+            sotrArr.push(parseInt(sixStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+            var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
+            var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5+","+threeStr6);
         }
     }
 
@@ -12608,11 +12841,20 @@ function content_gd11x5_rxlzwds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -12639,7 +12881,7 @@ function content_gd11x5_rxqzwds() {
     var tempArr = [];
     var errorStr = '';
     var zhushu = 0;
-
+    var  chongfuArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
@@ -12662,7 +12904,24 @@ function content_gd11x5_rxqzwds() {
         var sixStr = temp.substr(10, 2);
         var sevenStr = temp.substr(12, 2);
         if(oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&fourStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&fourStr != sixStr &&fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr+"," + twoStr+"," + threeStr+","+fourStr+","+fiveStr+","+sixStr+","+sevenStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.push(parseInt(fourStr));
+            sotrArr.push(parseInt(fiveStr));
+            sotrArr.push(parseInt(sixStr));
+            sotrArr.push(parseInt(sevenStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+            var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
+            var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
+            var threeStr7 = sotrArr[6] >= 10 ? sotrArr[6] : ('0' + sotrArr[6]);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5+","+threeStr6+","+threeStr7);
         }
     }
 
@@ -12670,11 +12929,20 @@ function content_gd11x5_rxqzwds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -12701,7 +12969,7 @@ function content_gd11x5_rxbzwds() {
     var tempArr = [];
     var errorStr = '';
     var zhushu = 0;
-
+    var  chongfuArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
@@ -12725,7 +12993,26 @@ function content_gd11x5_rxbzwds() {
         var sevenStr = temp.substr(12, 2);
         var eitStr = temp.substr(14, 2);
         if(sevenStr != eitStr &&sixStr != eitStr &&fiveStr != eitStr &&fourStr != eitStr &&threeStr != eitStr &&twoStr != eitStr &&oneStr != eitStr &&oneStr != sevenStr &&twoStr != sevenStr &&threeStr != sevenStr &&fourStr != sevenStr &&sixStr != sevenStr &&fiveStr != sevenStr &&fiveStr != sixStr &&threeStr != sixStr &&twoStr != sixStr &&oneStr != sixStr &&fourStr != sixStr &&fourStr != fiveStr &&threeStr != fiveStr &&twoStr != fiveStr &&oneStr != fiveStr &&threeStr != fiveStr &&threeStr != fourStr &&twoStr != fourStr &&oneStr != fourStr &&oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr+"," + twoStr+"," + threeStr+","+fourStr+","+fiveStr+","+sixStr+","+sevenStr+","+eitStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.push(parseInt(fourStr));
+            sotrArr.push(parseInt(fiveStr));
+            sotrArr.push(parseInt(sixStr));
+            sotrArr.push(parseInt(sevenStr));
+            sotrArr.push(parseInt(eitStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
+            var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
+            var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
+            var threeStr7 = sotrArr[6] >= 10 ? sotrArr[6] : ('0' + sotrArr[6]);
+            var threeStr8 = sotrArr[7] >= 10 ? sotrArr[7] : ('0' + sotrArr[7]);
+            tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5+","+threeStr6+","+threeStr7+","+threeStr8);
         }
     }
 
@@ -12733,11 +13020,20 @@ function content_gd11x5_rxbzwds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -12763,6 +13059,7 @@ function content_gd11x5_rxezeds() {
     var errorArr = [];
     var tempArr = [];
     var errorStr = '';
+   var  chongfuArr = [], errorArr = [], allStrError = [];
     var zhushu = 0;
 
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
@@ -12777,13 +13074,19 @@ function content_gd11x5_rxezeds() {
         }
     }
     for (var n = 0; n < newArr.length; n++) {
-
         var temp = newArr[n].toString();
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
 
-        if(oneStr != twoStr ){
-            tempArr.push(oneStr+"," +twoStr );
+        if(oneStr != twoStr){
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            tempArr.push(oneStr1+"," + twoStr2);
         }
     }
 
@@ -12791,12 +13094,22 @@ function content_gd11x5_rxezeds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
     }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
+    }
+
 
     // 初始化变量
     var showPlayName = '';
@@ -12879,7 +13192,8 @@ function content_gd11x5_qezxds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
-    var errorStr = '';
+    var chongfuArr = [];
+    var allStrError = [];
     var zhushu = 0;
 
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
@@ -12908,11 +13222,19 @@ function content_gd11x5_qezxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -12939,7 +13261,8 @@ function content_gd11x5_hezxds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
-    var errorStr = '';
+    var chongfuArr = [];
+    var allStrError = [];
     var zhushu = 0;
 
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
@@ -12968,11 +13291,19 @@ function content_gd11x5_hezxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -13001,7 +13332,8 @@ function content_gd11x5_hszxds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
-    var errorStr = '';
+    var chongfuArr = [];
+    var allStrError = [];
     var zhushu = 0;
 
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
@@ -13030,11 +13362,19 @@ function content_gd11x5_hszxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -13063,7 +13403,8 @@ function content_gd11x5_zszxds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
-    var errorStr = '';
+    var chongfuArr = [];
+    var allStrError = [];
     var zhushu = 0;
 
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10]/g, ','));
@@ -13092,11 +13433,19 @@ function content_gd11x5_zszxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + "";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -13417,12 +13766,16 @@ function content_q3z6ds() {
  */
 function content_gd11x5_qszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
-    var newArr = [], tempArr = [], errorStr = '', errorArr = [];
+    var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -13432,7 +13785,16 @@ function content_gd11x5_qszuxds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            tempArr.push(oneStr1 + twoStr2 + threeStr3);
         }
     }
 
@@ -13440,11 +13802,20 @@ function content_gd11x5_qszuxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + ",";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -13468,12 +13839,16 @@ function content_gd11x5_qszuxds() {
  */
 function content_gd11x5_qezuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
-    var newArr = [], tempArr = [], errorStr = '', errorArr = [];
+    var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -13481,9 +13856,15 @@ function content_gd11x5_qezuxds() {
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
 
-
         if(oneStr != twoStr){
-            tempArr.push(oneStr + twoStr );
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            tempArr.push(oneStr1 + twoStr2);
         }
     }
 
@@ -13491,11 +13872,20 @@ function content_gd11x5_qezuxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + ",";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -13518,12 +13908,16 @@ function content_gd11x5_qezuxds() {
  */
 function content_gd11x5_hezuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
-    var newArr = [], tempArr = [], errorStr = '', errorArr = [];
+    var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 4) {
             newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -13531,9 +13925,15 @@ function content_gd11x5_hezuxds() {
         var oneStr = temp.substr(0, 2);
         var twoStr = temp.substr(2, 2);
 
-
         if(oneStr != twoStr){
-            tempArr.push(oneStr + twoStr );
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            tempArr.push(oneStr1 + twoStr2);
         }
     }
 
@@ -13541,11 +13941,20 @@ function content_gd11x5_hezuxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + ",";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -13569,12 +13978,16 @@ function content_gd11x5_hezuxds() {
  */
 function content_gd11x5_zszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
-    var newArr = [], tempArr = [], errorStr = '', errorArr = [];
+    var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -13584,7 +13997,16 @@ function content_gd11x5_zszuxds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            tempArr.push(oneStr1 + twoStr2 + threeStr3);
         }
     }
 
@@ -13592,11 +14014,20 @@ function content_gd11x5_zszuxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + ",";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量
@@ -13621,12 +14052,16 @@ function content_gd11x5_zszuxds() {
  */
 function content_gd11x5_hszuxds() {
     var textStr = $(".recl-1003 .content_jiang .content_tex").val();
-    var newArr = [], tempArr = [], errorStr = '', errorArr = [];
+    var newArr = [], tempArr = [], chongfuArr = [], errorArr = [], allStrError = [];
     textStr = $.trim(textStr.replace(/[^01,02,03,04,05,06,07,08,09,10,11]/g, ','));
     var arr_new = textStr.split(",");
     for (var i = 0; i < arr_new.length; i++) {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 6) {
             newArr.push(arr_new[i]);
+        } else {
+            if (arr_new[i] != '') {
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -13636,7 +14071,16 @@ function content_gd11x5_hszuxds() {
         var threeStr = temp.substr(4, 2);
 
         if(oneStr != twoStr && oneStr != threeStr && threeStr != twoStr){
-            tempArr.push(oneStr + twoStr + threeStr);
+            var sotrArr = [];
+            sotrArr.push(parseInt(oneStr));
+            sotrArr.push(parseInt(twoStr));
+            sotrArr.push(parseInt(threeStr));
+            sotrArr.sort();
+
+            var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
+            var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
+            var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
+            tempArr.push(oneStr1 + twoStr2 + threeStr3);
         }
     }
 
@@ -13644,11 +14088,20 @@ function content_gd11x5_hszuxds() {
         return 0;
     }
 
-    if (errorArr.length > 0) {
-        for (var e = 0; e < errorArr.length; e++) {
-            errorStr += errorArr[e] + ",";
-        }
-        alert("被过滤掉的错误号码" + errorStr);
+    chongfuArr = tempArr.duplicateNew();
+    tempArr = tempArr.uniqueArr();
+
+    if (chongfuArr.length > 0) {
+        chongfuArr = chongfuArr.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    }
+
+    if (errorArr.length > 0){
+        allStrError.push(" 被过滤掉的错误号码 " + errorArr.join(' '));
+    }
+
+    if (allStrError.length > 0) {
+        alert(allStrError.join(""));
     }
 
     // 初始化变量

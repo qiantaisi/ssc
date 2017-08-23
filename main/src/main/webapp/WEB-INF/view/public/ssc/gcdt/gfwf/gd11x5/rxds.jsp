@@ -30,9 +30,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-           手动输入号码，从01-11中任意输入1个号码组成一注。
+           手动输入号码,从01-11中任意输入1个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05开奖号码：08，04，11，05即中任一选一。</var>
+                <var>投注方案：05<br>开奖号码：08，04，11，05即中任一选一。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -61,9 +61,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-           手动输入号码，从01-11中任意输入2个号码组成一注。
+           手动输入号码,从01-11中任意输入2个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05 04开奖号码：08，04，11，05即中任二中二。</var>
+                <var>投注方案：0504<br> 开奖号码：08，04，11，05，03即中任二中二。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -93,9 +93,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-           手动输入号码，从01-11中任意输入3个号码组成一注。
+           手动输入号码,从01-11中任意输入3个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05 04 11开奖号码：08，04，11，05即中任选三中三。</var>
+                <var>投注方案: 050411<br>开奖号码：08，04，11，05即中任选三中三。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -124,9 +124,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-           手动输入号码，从01-11中任意输入4个号码组成一注。
+           手动输入号码,从01-11中任意输入4个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05 04 08 03开奖号码：08，04，11，05，03即中任选四中四。</var>
+                <var>投注方案：05040803<br> 开奖号码：08，04，11，05，03即中任选四中四。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -155,9 +155,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-           手动输入号码，从01-11中任意输入5个号码组成一注。
+           手动输入号码,从01-11中任意输入5个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05 04 11 08 03开奖号码：08，04，11，05，03即中任五中五。</var>
+                <var>投注方案：0504110803<br> 开奖号码：08，04，11，05，03即中任五中五。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -186,9 +186,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-           手动输入号码，从01-11中任意输入6个号码组成一注。
+           手动输入号码,从01-11中任意输入6个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05 10 04 11 08 03开奖号码：08，04，11，05，03即中任六中五。</var>
+                <var>投注方案：051004110803<br> 开奖号码：08，04，11，05，03即中任六中五。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -218,9 +218,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-           手动输入号码，从01-11中任意输入7个号码组成一注。
+           手动输入号码,从01-11中任意输入7个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05 10 04 11 08 03 09开奖号码：08，04，11，05，03即中任七中五。</var>
+                <var>投注方案：05100411080309<br> 开奖号码：08，04，11，05，03即中任七中五。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -250,9 +250,9 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-           手动输入号码，从01-11中任意输入8个号码组成一注。
+           手动输入号码,从01-11中任意输入8个号码组成一注。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05 10 04 11 08 03 09 01开奖号码：08，04，11，05，03即中任八中五。</var>
+                <var>投注方案：0510041108030901<br> 开奖号码：08，04，11，05，03即中任八中五。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明

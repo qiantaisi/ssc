@@ -32,7 +32,7 @@
         <span class="fr fl cl-1001">
            从01-11中任意选择1个或1个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05开奖号码：08，04，11，05即中任一选一。</var>
+                <var>投注方案：05<br>开奖号码：08，04，11，05即中任一选一。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -76,7 +76,7 @@
         <span class="fr fl cl-1001">
            从01-11中任意选择2个或2个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05,04开奖号码：08，04，11，05,03即中任二选二。</var>
+                <var>投注方案：05，04<br>开奖号码：08，04，11，05，03即中任二选二。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -121,7 +121,7 @@
         <span class="fr fl cl-1001">
            从01-11中任意选择三个或三个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05,04，11开奖号码：08，04，11，05,03即中任三选三。</var>
+                <var>投注方案：05，04，11<br>开奖号码：08，04，11，05，03即中任三选三。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -158,14 +158,14 @@
     </div>
 </script>
 
-<%--任选三中三--%>
+<%--任选四中四--%>
 <script type="text/html" id="template_gd11x5_rxsizs">
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
         <span class="fr fl cl-1001">
            从01-11中任意选择4个或4个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05,04，08,03开奖号码：08，04，11，05,03即中任四选四。</var>
+                <var>投注方案：05，04，08，03<br>开奖号码：08，04，11，05，03即中任四选四。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -209,7 +209,7 @@
         <span class="fr fl cl-1001">
            从01-11中任意选择5个或5个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05,04，11,08,03开奖号码：08，04，11，05,03即中任五中五。</var>
+                <var>投注方案：05，04，11，08，03开奖号码：08，04，11，05，03即中任五中五。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -253,7 +253,7 @@
         <span class="fr fl cl-1001">
            从01-11中任意选择6个或6个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05,04，10,11,08,03开奖号码：08，04，11，05,03即中任六中五。</var>
+                <var>投注方案：05，04，10，11，08，03开奖号码：08，04，11，05，03即中任六中五。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -298,7 +298,7 @@
         <span class="fr fl cl-1001">
            从01-11中任意选择7个或7个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05,04，10,11,08,03,09开奖号码：08，04，11，05,03即中任七中五。</var>
+                <var>投注方案：05，04，10，11，08，03，09开奖号码：08，04，11，05，03即中任七中五。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
@@ -343,7 +343,7 @@
         <span class="fr fl cl-1001">
            从01-11中任意选择8个或8个以上号码。
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：05,04，10,11,08,03,09,01开奖号码：08，04，11，05,03即中任八中五。</var>
+                <var>投注方案：05，04，10，11，08，03，09，01开奖号码：08，04，11，05，03即中任八中五。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
