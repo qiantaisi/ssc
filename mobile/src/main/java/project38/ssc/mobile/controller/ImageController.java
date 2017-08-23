@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import project38.api.result.LogoResult;
 import project38.api.utils.ApiUtils;
 import sun.misc.BASE64Decoder;
 
@@ -22,7 +23,7 @@ import java.util.Date;
  */
 @Controller
 @RequestMapping(value = "/images")
-public class ImageController extends BaseController {
+public class ImageController extends CacheController {
     private Log log = LogFactory.getLog(getClass());
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
@@ -34,7 +35,7 @@ public class ImageController extends BaseController {
                 return;
             }
 
-            String data = ApiUtils.getImageData(id,companyShortName).getImageData();
+            String data = ApiUtils.getImageData(id, companyShortName).getImageData();
 
             if (StringUtils.isBlank(data)) {
                 return;
@@ -75,5 +76,20 @@ public class ImageController extends BaseController {
     @RequestMapping(value = "/{id}.png", method = RequestMethod.GET)
     public void idPng(@PathVariable Long id, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
         this.id(id, httpServletRequest, httpServletResponse);
+    }
+
+    @RequestMapping(value = "/logo.png", method = RequestMethod.GET)
+    public void logo(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        String companyShortName = this.getCompanyShortName();
+        try {
+            LogoResult logoResult = this.getCacheMobileIndexLogo(httpServletRequest, companyShortName);
+            if (logoResult == null || logoResult.getResult() != 1) {
+                return;
+            }
+
+            this.id(logoResult.getImageId(), httpServletRequest, httpServletResponse);
+        } catch (Exception e) {
+            log.error(getClass(), e);
+        }
     }
 }

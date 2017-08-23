@@ -45,6 +45,9 @@ public class MemberController extends BaseController {
      * @param name 姓名
      * @param agentId 代理ID
      * @param deviceNo 设备号
+     * @param phone phone
+     * @param email email
+     * @param qq qq
      * @return
      */
     @RequestMapping(value = "/ajaxRegister.json", method = {RequestMethod.GET, RequestMethod.POST})
@@ -77,32 +80,49 @@ public class MemberController extends BaseController {
                 return result;
             }
 
-            /*if (StringUtils.isBlank(yzm)) {
-                result.setResult(-2);
-                result.setDescription("验证码不能为空");
-                return result;
-            }*/
+            // 注册限制
+            RegisterResult registerResult = ApiUtils.getRegisterResult(companyShortName);
 
-           /* HttpSession session = httpServletRequest.getSession();
-            String yzmCode = (String) session.getAttribute("yzmCode");
-            session.removeAttribute("yzmCode");
-            if (StringUtils.isBlank(yzmCode)) {
-                result.setResult(-4);
-                result.setDescription("验证码已过期，请重新获取");
-                return result;
+            if (registerResult.getCheckEmail() && registerResult.getNeedRequiredEmail()) {
+                if (StringUtils.isBlank(email)) {
+                    result.setResult(-3);
+                    result.setDescription("邮箱不能为空");
+                    return result;
+                }
             }
 
-//            if (!StringUtils.isNumeric(yzm)) {
-//                result.setResult(-51);
-//                result.setDescription("请输入纯数字的验证码");
-//                return result;
-//            }
+            if (registerResult.getCheckPhone() && registerResult.getNeedRequredPhone()) {
+                if (StringUtils.isBlank(phone)) {
+                    result.setResult(-4);
+                    result.setDescription("手机不能为空");
+                    return result;
+                }
+            }
 
-            if (!StringUtils.equalsIgnoreCase(yzmCode, yzm)) {
-                result.setResult(-5);
-                result.setDescription("验证码不正确");
-                return result;
-            }*/
+            if (registerResult.getCheckQq() && registerResult.getNeedRequiredQq()) {
+                if (StringUtils.isBlank(qq)) {
+                    result.setResult(-5);
+                    result.setDescription("QQ不能为空");
+                    return result;
+                }
+            }
+
+            if (registerResult.getVcSwtich()) {
+                if (StringUtils.isBlank(yzm)) {
+                    result.setResult(-6);
+                    result.setDescription("验证码不能为空");
+                    return result;
+                }
+                HttpSession session = httpServletRequest.getSession();
+                String yzmCode = (String) session.getAttribute("yzmCode");
+                session.removeAttribute("yzmCode");
+
+                if (!StringUtils.equalsIgnoreCase(yzmCode, yzm)) {
+                    result.setResult(-7);
+                    result.setDescription("验证码不正确");
+                    return result;
+                }
+            }
 
             // 注册
             String ip = IPHelper.getIpAddr(httpServletRequest);

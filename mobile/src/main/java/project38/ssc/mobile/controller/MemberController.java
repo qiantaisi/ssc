@@ -38,14 +38,34 @@ public class MemberController extends BaseController {
 
     /**
      * ajax注册请求
-     *
+     * @param account 账号
+     * @param password 密码
+     * @param yzm 验证码
+     * @param name 姓名
+     * @param agentId 代理ID
+     * @param deviceNo 设备号
+     * @param phone phone
+     * @param email email
+     * @param qq qq
      * @return
      */
     @RequestMapping(value = "/ajaxRegister.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public LoginResult ajaxRegister(String yzm, String account, String password, String name, Long agentId, String deviceNo, String phone, String email, String qq) {
+    public LoginResult ajaxRegister(
+            String account,
+            String password,
+            String yzm,
+            String name,
+            Long agentId,
+            String deviceNo,
+            String phone,
+            String email,
+            String qq
+    ) {
         LoginResult result = new LoginResult();
         try {
+            String companyShortName = this.getCompanyShortName();
+
             if (StringUtils.isBlank(account)) {
                 result.setResult(-1);
                 result.setDescription("账号不能为空");
@@ -58,38 +78,72 @@ public class MemberController extends BaseController {
                 return result;
             }
 
-            String companyShortName = this.getCompanyShortName();
+            // 注册限制
+            RegisterResult registerResult = ApiUtils.getRegisterResult(companyShortName);
 
-            if (StringUtils.equals(companyShortName, "fh")) {
+            if (registerResult.getCheckEmail() && registerResult.getNeedRequiredEmail()) {
+                if (StringUtils.isBlank(email)) {
+                    result.setResult(-3);
+                    result.setDescription("邮箱不能为空");
+                    return result;
+                }
+            }
+
+            if (registerResult.getCheckPhone() && registerResult.getNeedRequredPhone()) {
+                if (StringUtils.isBlank(phone)) {
+                    result.setResult(-4);
+                    result.setDescription("手机不能为空");
+                    return result;
+                }
+            }
+
+            if (registerResult.getCheckQq() && registerResult.getNeedRequiredQq()) {
+                if (StringUtils.isBlank(qq)) {
+                    result.setResult(-5);
+                    result.setDescription("QQ不能为空");
+                    return result;
+                }
+            }
+
+            if (registerResult.getVcSwtich()) {
+                if (StringUtils.isBlank(yzm)) {
+                    result.setResult(-6);
+                    result.setDescription("验证码不能为空");
+                    return result;
+                }
                 HttpSession session = httpServletRequest.getSession();
                 String yzmCode = (String) session.getAttribute("yzmCode");
                 session.removeAttribute("yzmCode");
 
-//                if (!StringUtils.isNumeric(yzm)) {
-//                    result.setResult(-51);
-//                    result.setDescription("请输入纯数字的验证码");
-//                    return result;
-//                }
-
                 if (!StringUtils.equalsIgnoreCase(yzmCode, yzm)) {
-                    result.setResult(-5);
+                    result.setResult(-7);
                     result.setDescription("验证码不正确");
                     return result;
                 }
             }
 
-            // 接口返回数据
+            // 注册
             String ip = IPHelper.getIpAddr(httpServletRequest);
-            CommonResult responseResult = ApiUtils.register(account, password, name, ip, httpServletRequest.getServerName(), qq, agentId, companyShortName, deviceNo, phone, email);
+            CommonResult responseResult = ApiUtils.register(
+                    account,
+                    password,
+                    name,
+                    ip,
+                    httpServletRequest.getServerName(),
+                    qq,
+                    agentId,
+                    companyShortName,
+                    deviceNo,
+                    phone,
+                    email
+            );
+
+            // 注册成功则登录
             if (responseResult.getResult() == 1) {
-                // 登录
-                result = ApiUtils.login(account, password, ip, 1, companyShortName);
-                if (result.getResult() != 1) {
+                result = ApiUtils.login(account, password, ip,1, companyShortName);
+                if (result.getResult() != 1) {  // 自动登录失败，提示前往登录
                     result.setResult(-6);
-                    result.setDescription("注册成功，请登录！");
-                } else {
-                    result.setUserId(result.getUserId());
-                    result.setToken(result.getToken());
+                    result.setDescription("注册成功，请登录");
                 }
             }
 
