@@ -96,7 +96,7 @@
 			    			手机:
 			    		</span>
                     <div class="login_nr_gp_rt clearfix">
-                        <input type="text" name="phone" class="inputStr left" placeholder="请输入手机"/>
+                        <input type="text" name="phoneName" class="inputStr left" placeholder="请输入手机"/>
                         <div class="left erro">
                         <span class="sj">
                             <span class="info">请输入您的手机</span>
@@ -270,13 +270,11 @@
         $("#btn-register").click(function () {
             var account = $("input[name='account']").val(); // 账号
             var password = $("input[name='password']").val();   // 密码
-            var phone = $("input[name='phone']").val();   // 手机号码
+            var phone = $("input[name='phoneName']").val();  // 手机号码
             var email = $("input[name='email']").val();   // 邮箱号码
             var qq = $("input[name='qq']").val();   // QQ
             var yzm = $("input[name='yzm']").val();   // 验证码
 
-
-            console.log( phone +"==" + iphoneCheck);
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
             var name = $("input[name='name']").val();   // 姓名
             if (!account) {
@@ -315,6 +313,7 @@
                 return;
             }
 
+
             if (!name) {
                 $(".name").find(".info").hide();
                 $(".name").find(".error").html("请输入姓名").show();
@@ -327,27 +326,27 @@
                 return;
             }
 
-            if (!yzm) {
-                $(".yzm").find(".info").hide();
-                $(".yzm").find(".error").html("请输入验证码").show();
-                return;
-            }
-
-            if(qqCheck && !qq){
-                $(".qq").find(".info").hide();
-                $(".qq").find(".error").html("请输入验QQ").show();
-                return;
-            }
-
             if(iphoneCheck && !phone){
                 $(".sj").find(".info").hide();
                 $(".sj").find(".error").html("请输入手机").show();
                 return;
             }
 
-            if(emailCheck && !email){
+            if(qqCheck && qq == ''){
+                $(".qq").find(".info").hide();
+                $(".qq").find(".error").html("请输入验QQ").show();
+                return;
+            }
+
+            if(emailCheck && email == ''){
                 $(".yx").find(".info").hide();
                 $(".yx").find(".error").html("请输入邮箱").show();
+                return;
+            }
+
+            if (!yzm) {
+                $(".yzm").find(".info").hide();
+                $(".yzm").find(".error").html("请输入验证码").show();
                 return;
             }
 
