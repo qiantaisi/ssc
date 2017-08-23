@@ -340,14 +340,14 @@
             }
 
             if(iphoneCheck && phone){
-                $(".phone").find(".info").hide();
-                $(".phone").find(".error").html("请输入手机").show();
+                $(".sj").find(".info").hide();
+                $(".sj").find(".error").html("请输入手机").show();
                 return;
             }
 
             if(emailCheck && email){
-                $(".email").find(".info").hide();
-                $(".email").find(".error").html("请输入邮箱").show();
+                $(".yx").find(".info").hide();
+                $(".yx").find(".error").html("请输入邮箱").show();
                 return;
             }
 
