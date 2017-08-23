@@ -14,7 +14,7 @@
     <style>
         .cl-102 .cl-103,.page .bar-nav{background:#${fengge_1}!important}
         .cl-701 .button.active span,.cl-701 .button.active span,.gonggao_title,.cl-801,.cl-306 .list-block ul li a .item-inner .cl-307:first-child span:last-child,.cl-330 a,.edit_color,.cl-318 .info,.glxq{color:#${fengge_1}!important}
-        .cl-952,.cl-102 .cl-103.yhkgl_moren{background-color:#009df7!important}
+        .cl-952,.cl-102 .cl-103.yhkgl_moren,.btn-register{background-color:#${fengge_1}!important}
         .cl-701 .button.active{border-bottom:1px solid #${fengge_1}!important}
         #page-yhhd .bar-nav,.rebuttons-tab .button.active span,.re-buttons-tab .button.active span{ background:#${fengge_1}!important;}
         .activeBtn{background:#${fengge_1}!important; color:white;} <%--官方玩法选择按钮--%>
