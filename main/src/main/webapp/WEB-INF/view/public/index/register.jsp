@@ -18,149 +18,172 @@
             </div>
         </div>
         <form id="myform">
-        <div class="login_nr_b">
-            <div class="clearfix login_nr_gp">
+            <div class="login_nr_b">
+                <div class="clearfix login_nr_gp">
 			    		<span class="left login_nr_name">
 			    			<span class="star">
 			    				*
 			    			</span>
 			    			账号:
 			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="account" class="inputStr left" placeholder="请输入用户名"/>
-                    <div class="left erro">
+                    <div class="login_nr_gp_rt clearfix">
+                        <input type="text" name="account" class="inputStr left" placeholder="请输入用户名"/>
+                        <div class="left erro">
                         <span class="yhm">
                             <span class="info">字母开头的6-12位字母数字组成的用户名</span>
                             <span class="error red hide"></span>
                         </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="clearfix login_nr_gp">
+                <div class="clearfix login_nr_gp">
 			    		<span class="left login_nr_name">
 			    			<span class="star">
 			    				*
 			    			</span>
 			    			密码:
 			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="password" name="password" class="inputStr left" placeholder="请输入密码"/>
-                    <div class="left erro">
+                    <div class="login_nr_gp_rt clearfix">
+                        <input type="password" name="password" class="inputStr left" placeholder="请输入密码"/>
+                        <div class="left erro">
                         <span class="mm">
                             <span class="info">输入6-12位字母、数字的密码</span>
                             <span class="error red hide"></span>
                         </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="clearfix login_nr_gp">
+                <div class="clearfix login_nr_gp">
 			    		<span class="left login_nr_name">
 			    			<span class="star">
 			    				*
 			    			</span>
 			    			确认密码:
 			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="password" name="confirmPassword" class="inputStr left" placeholder="确认密码"/>
-                    <div class="left erro">
+                    <div class="login_nr_gp_rt clearfix">
+                        <input type="password" name="confirmPassword" class="inputStr left" placeholder="确认密码"/>
+                        <div class="left erro">
                         <span class="qmm">
                             <span class="info">与上面输入密码必须保持一致</span>
                             <span class="error red hide"></span>
                         </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="clearfix login_nr_gp">
+
+                <div class="clearfix login_nr_gp">
 			    		<span class="left login_nr_name">
 			    			<span class="star">
 			    				*
 			    			</span>
 			    			姓名:
 			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="name" class="inputStr left" placeholder="请输入姓名"/>
-                    <div class="left erro">
+                    <div class="login_nr_gp_rt clearfix">
+                        <input type="text" name="name" class="inputStr left" placeholder="请输入姓名"/>
+                        <div class="left erro">
                         <span class="name">
                             <span class="info">姓名必须和绑定的银行卡户名一致</span>
                             <span class="error red hide"></span>
                         </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="clearfix login_nr_gp hidphone">
+                <div class="clearfix login_nr_gp iphoneTd hideRegInput">
 			    		<span class="left login_nr_name">
 			    			<span class="star starphone">
 
 			    			</span>
 			    			手机:
 			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="phone" class="inputStr left" placeholder="请输入手机"/>
-                    <div class="left erro">
+                    <div class="login_nr_gp_rt clearfix">
+                        <input type="text" name="phone" class="inputStr left" placeholder="请输入手机"/>
+                        <div class="left erro">
                         <span class="sj">
                             <span class="info">请输入您的手机</span>
                             <span class="error red hide"></span>
                         </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="clearfix login_nr_gp hidemail">
+                <div class="clearfix login_nr_gp eamilTd hideRegInput">
 			    		<span class="left login_nr_name">
 			    			<span class="star staremail">
 
 			    			</span>
 			    			邮箱:
 			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="email" class="inputStr left" placeholder="请输入邮箱"/>
-                    <div class="left erro">
+                    <div class="login_nr_gp_rt clearfix">
+                        <input type="text" name="email" class="inputStr left" placeholder="请输入邮箱"/>
+                        <div class="left erro">
                         <span class="yx">
                             <span class="info">请输入您的邮箱</span>
                             <span class="error red hide"></span>
                         </span>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="clearfix login_nr_gp hidqq">
+                <div class="clearfix login_nr_gp qqTd hideRegInput">
 			    		<span class="left login_nr_name">
 			    			<span class="star starqq">
 
 			    			</span>
 			    			QQ:
 			    		</span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="text" name="qq" class="inputStr left" placeholder="请输入QQ"/>
-                    <div class="left erro">
+                    <div class="login_nr_gp_rt clearfix">
+                        <input type="text" name="qq" class="inputStr left" placeholder="请输入QQ"/>
+                        <div class="left erro">
                         <span class="qq">
                             <span class="info">请输入QQ</span>
-                            <span class="error r    ed hide"></span>
+                            <span class="error red hide"></span>
                         </span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix login_nr_gp yzmTd hideRegInput" >
+			    		<span class="left login_nr_name">
+			    			<span class="star staryzm">
+
+			    			</span>
+			    			验证码:
+			    		</span>
+                    <div class="login_nr_gp_rt clearfix">
+                        <div>
+                            <input type="text" id="registerLoginYzm" style="width: 125px;" placeholder="验证码" onfocus="refreshYzm(document.getElementById('registerYzmImg2'))" />
+                            <img id="registerYzmImg2" onclick="refreshYzm(this)" style="margin-right: 15px;" src="<%=basePath%>code/yzm?imgWidth=100&imgHeight=30&imgFontHeight=30&imgCodeY=25&imgCodeX=2" />
+
+                            <span class="yzm">
+                                   <span class="info">请输入验证码</span>
+                                   <span class="error red hide"></span>
+                               </span>
+                        </div>
 
                     </div>
                 </div>
-            </div>
 
-            <div class="clearfix login_nr_gp" style="padding-left: 40px;">
-                <span class="left login_nr_name"></span>
-                <div class="login_nr_gp_rt clearfix">
-                    <input type="checkbox" class="left" checked="checked" style="width:30px;"/><span>注册即表示同意<a href="javascript:void(0)" onclick="showKhxy()">《${webName}服务使用协议》</a></span></h3>
+                <div class="clearfix login_nr_gp" style="padding-left: 40px;">
+                    <span class="left login_nr_name"></span>
+                    <div class="login_nr_gp_rt clearfix">
+                        <input type="checkbox" class="left" checked="checked" style="width:30px;"/><span>注册即表示同意<a
+                            href="javascript:void(0)" onclick="showKhxy()" class="xieyiCss">《${webName}服务使用协议》</a></span></h3>
+                    </div>
                 </div>
-            </div>
-            <div class="login_b">
-                <p>
-                    <input type="button" class="mfkh" value="免费开户" id="btn-register"/>
-                    <input type="button" class="mfkh" value="重置" onclick="rest()"/>
-                </p>
-            </div>
+                <div class="login_b">
+                    <p>
+                        <input type="button" class="mfkh" value="免费开户" id="btn-register"/>
+                        <input type="button" class="mfkh" value="重置" onclick="rest()"/>
+                    </p>
+                </div>
         </form>
-            <div class="login_b_link" style="padding-left: 75px;">
-                <a href="${kefuUrl}">忘记密码?</a>
-                <span>|</span>
-                <a href="${kefuUrl}" target="_blank">在线客服</a>
-            </div>
+        <div class="login_b_link" style="padding-left: 75px;">
+            <a href="${kefuUrl}">忘记密码?</a>
+            <span>|</span>
+            <a href="${kefuUrl}" target="_blank">在线客服</a>
         </div>
     </div>
+</div>
 </div>
 
 <script type="text/html" id="template_khxy">
@@ -195,7 +218,7 @@
             success:function(obj){
                 //判断QQ是否必填
                 if(obj.checkQq){
-
+                    $('.qqTd').removeClass('hideRegInput');
                     if(obj.needRequiredQq){
 
                         $(".starqq").html("*");
@@ -204,7 +227,7 @@
                     $(".hidqq").hide();
                 }
                 if(obj.checkEmail){
-
+                    $('.eamilTd').removeClass('hideRegInput');
                     if(obj.needRequiredEmail){
 
                         $(".staremail").html("*");
@@ -214,13 +237,17 @@
                     $(".hidemail").hide();
                 }
                 if(obj.checkPhone){
-
+                    $('.iphoneTd').removeClass('hideRegInput');
                     if(obj.needRequredPhone){
 
                         $(".starphone").html("*");
                     }
                 }else{
                         $(".hidphone").hide();
+                }
+
+                if(obj.vcSwtich){
+                    $(".yzmTd").removeClass('hideRegInput');
                 }
 
             }
@@ -249,6 +276,7 @@
             var phone = $("input[name='phone']").val();   // 手机号码
             var email = $("input[name='email']").val();   // 邮箱号码
             var qq = $("input[name='qq']").val();   // QQ
+            var yzm = $("input[name='yzm']").val();   // 验证码
 
 
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
@@ -289,6 +317,12 @@
                 return;
             }
 
+            if (!yzm) {
+                $(".yzm").find(".info").hide();
+                $(".yzm").find(".error").html("请输入验证码").show();
+                return;
+            }
+
             if (!name) {
                 $(".name").find(".info").hide();
                 $(".name").find(".error").html("请输入姓名").show();
@@ -309,6 +343,7 @@
                 data: {
                     account: account,
                     password: $.md5(password),
+                    yzm: yzm,
                     name: name,
                     phone: phone,
                     email: email,
