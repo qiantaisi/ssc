@@ -211,6 +211,9 @@
         });
     }
 
+    var qqCheck = false;
+    var iphoneCheck = false;
+    var emailCheck = false;
     $(function () {
         ajaxRequest({
             url: "<%=basePath%>ajaxGetRegisterResult.json",
@@ -220,30 +223,25 @@
                 if(obj.checkQq){
                     $('.qqTd').removeClass('hideRegInput');
                     if(obj.needRequiredQq){
-
+                        qqCheck = true;
                         $(".starqq").html("*");
                     }
-                }else{
-                    $(".hidqq").hide();
                 }
+
                 if(obj.checkEmail){
                     $('.eamilTd').removeClass('hideRegInput');
                     if(obj.needRequiredEmail){
-
+                        emailCheck = true;
                         $(".staremail").html("*");
 
                     }
-                }else{
-                    $(".hidemail").hide();
                 }
                 if(obj.checkPhone){
                     $('.iphoneTd').removeClass('hideRegInput');
                     if(obj.needRequredPhone){
-
+                        iphoneCheck = true;
                         $(".starphone").html("*");
                     }
-                }else{
-                        $(".hidphone").hide();
                 }
 
                 if(obj.vcSwtich){
@@ -317,12 +315,6 @@
                 return;
             }
 
-            if (!yzm) {
-                $(".yzm").find(".info").hide();
-                $(".yzm").find(".error").html("请输入验证码").show();
-                return;
-            }
-
             if (!name) {
                 $(".name").find(".info").hide();
                 $(".name").find(".error").html("请输入姓名").show();
@@ -332,6 +324,30 @@
             if (!name.match(/^[\u4e00-\u9fa5]+$/)) {
                 $(".name").find(".info").hide();
                 $(".name").find(".error").html("姓名只能是汉字").show();
+                return;
+            }
+
+            if (!yzm) {
+                $(".yzm").find(".info").hide();
+                $(".yzm").find(".error").html("请输入验证码").show();
+                return;
+            }
+
+            if(qqCheck && qq){
+                $(".qq").find(".info").hide();
+                $(".qq").find(".error").html("请输入验QQ").show();
+                return;
+            }
+
+            if(iphoneCheck && phone){
+                $(".phone").find(".info").hide();
+                $(".phone").find(".error").html("请输入手机").show();
+                return;
+            }
+
+            if(emailCheck && email){
+                $(".email").find(".info").hide();
+                $(".email").find(".error").html("请输入邮箱").show();
                 return;
             }
 
