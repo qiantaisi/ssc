@@ -36,6 +36,19 @@ public class RegisterResult extends CommonResult {
      */
     private Boolean checkPhone;
 
+    /**
+     * 验证码开关
+     */
+    private Boolean vcSwtich;
+
+    public Boolean getVcSwtich() {
+        return vcSwtich;
+    }
+
+    public void setVcSwtich(Boolean vcSwtich) {
+        this.vcSwtich = vcSwtich;
+    }
+
     public Boolean getCheckQq() {
         return checkQq;
     }
