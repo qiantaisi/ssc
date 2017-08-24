@@ -11,7 +11,7 @@
 <c:import url="top.jsp" />
 
 <div class="img"><a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a></div>
-<img src="${resPath}img/bj.jpg" class="back" alt="" width="100%";   style="height: 855px;">
+<img src="${resPath}img/bj.jpg" class="back" alt="" width="100%";   style="height: 1000px;">
 <jsp:include page="../../../public/index/register.jsp" />
 <div class="copy">
     <c:import url="../common/copyright_time.jsp"/>&nbsp;&nbsp;
