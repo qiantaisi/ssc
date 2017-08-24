@@ -1217,13 +1217,17 @@
 
     <div class="gls_1">
 
-        <p><a href="${kefuUrl}" target="_blank"><img src="${resPath}img/left_01.png"/></a></p>
+        <p><img src="${resPath}img/left_01.png"/></p>
 
         <p> <a href="${kefuUrl}" target="_blank"><img src="${resPath}img/left_02.png"/></a></p>
 
+        <p> <a href="${kefuUrl}" target="_blank"><img src="${resPath}img/left_03.png"/></a></p>
+
         <p><img src="<%=basePath%>images/${qrcode.codeId}.png"/></p>
 
-        <p class="gls_close"><img src="${resPath}img/left_04.png"/></p>
+        <p> <a href="<%=basePath%>register.html"><img src="${resPath}img/left_05.png"/></a></p>
+
+        <p class="gls_close"><img src="${resPath}img/left_06.png"/></p>
 
     </div>
 
@@ -1235,14 +1239,17 @@
 
     <div class="gls_2">
 
-        <p><a href="javascript:void(0)" onclick="shiwan()"><img src="${resPath}img/right_01.png"/></a></p>
+        <p><img src="${resPath}img/right_01.png"/></p>
 
-        <p> <a href="<%=basePath%>help/index.html"><img src="${resPath}img/right_02.png"/></a></p>
-        <p><a href="/app.html" target="_blank"><img src="${resPath}img/right_03.png"/></a></p>
+        <p> <a href="javascript:void(0)" onclick="shiwan()"><img src="${resPath}img/right_02.png"/></a></p>
+
+        <p><a href="<%=basePath%>help/index.html"><img src="${resPath}img/right_03.png"/></a></p>
+
+        <p><a href="<%=basePath%>app.html" target="_blank"><img src="${resPath}img/right_04.png"/></a></p>
 
         <p><img src="<%=basePath%>images/${qrcode.codeId}.png"/></p>
 
-        <p class="gls_close"><img src="${resPath}img/right_04.png"/></p>
+        <p class="gls_close"><img src="${resPath}img/right_06.png"/></p>
 
     </div>
 
