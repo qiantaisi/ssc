@@ -31,6 +31,7 @@
                         <div class="left erro">
                         <span class="yhm">
                             <span class="info">字母开头的6-12位字母数字组成的用户名</span>
+                            <span style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
                         </span>
                         </div>
@@ -48,6 +49,7 @@
                         <div class="left erro">
                         <span class="mm">
                             <span class="info">输入6-12位字母、数字的密码</span>
+                            <span style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
                         </span>
                         </div>
@@ -65,6 +67,7 @@
                         <div class="left erro">
                         <span class="qmm">
                             <span class="info">与上面输入密码必须保持一致</span>
+                            <span style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
                         </span>
                         </div>
@@ -83,6 +86,7 @@
                         <div class="left erro">
                         <span class="name">
                             <span class="info">姓名必须和绑定的银行卡户名一致</span>
+                            <span style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
                         </span>
                         </div>
@@ -101,6 +105,9 @@
                         <div class="left erro">
                             <span class="sj">
                                 <span class="info">请输入您的手机</span>
+
+                                <span class="bitianIphone" style="color: red"></span>
+
                                 <span class="error red hide"></span>
                             </span>
                         </div>
@@ -120,6 +127,7 @@
                         <div class="left erro">
                         <span class="yx">
                             <span class="info">请输入您的邮箱</span>
+                             <span class="bitianemail" style="color: red"></span>
                             <span class="error red hide"></span>
                         </span>
 
@@ -140,6 +148,7 @@
                         <div class="left erro">
                         <span class="qq">
                             <span class="info">请输入QQ</span>
+                             <span class="bitianqq" style="color: red"></span>
                             <span class="error red hide"></span>
                         </span>
 
@@ -158,12 +167,13 @@
                     <div class="login_nr_gp_rt clearfix">
                         <div>
                             <input name="yzm" type="text" id="registerLoginYzm" style="width: 125px;" placeholder="验证码"
-                                   onfocus="refreshYzm(document.getElementById('registerYzmImg2'))"/>
+                                  />
                             <img id="registerYzmImg2" onclick="refreshYzm(this)" style="margin-right: 15px;"
                                  src="<%=basePath%>code/yzm?imgWidth=100&imgHeight=30&imgFontHeight=30&imgCodeY=25&imgCodeX=2"/>
 
                             <span class="yzm">
                                    <span class="info">请输入验证码</span>
+                                 <span class="bitian" style="color: red">&nbsp;&nbsp;&nbsp;</span>
                                    <span class="error red hide"></span>
                                </span>
                         </div>
@@ -220,6 +230,46 @@
     var iphoneCheck = false;
     var emailCheck = false;
     $(function () {
+       var flagiphone= ${registerResult.needRequredPhone}
+       var flageamil= ${registerResult.needRequiredEmail}
+       var flagqq= ${registerResult.needRequiredQq}
+       var isiphone= ${registerResult.checkPhone}
+        var isqq=${registerResult.checkQq}
+       var isemail= ${registerResult.checkEmail}
+        var isyzm=${registerResult.vcSwtich}
+        if(isiphone){
+           if(!flagiphone){
+               console.log(flagiphone);
+               $(".bitianIphone").html("选填").css("color","#AAAAAA");
+
+           }else{
+               $(".bitianIphone").html("   必填");
+           }
+        }
+        if(isqq){
+            if(!flagqq){
+                console.log(flagqq);
+                $(".bitianqq").html("选填").css("color","#AAAAAA");
+
+            }else if(flagqq){
+
+                $(".bitianqq").html("必填");
+            }
+        }
+
+        if(isemail){
+            if(flageamil){
+                console.log(flageamil);
+                $(".bitianemail").html("必填");
+            }else {
+                $(".bitianemail").html("选填").css("color","#AAAAAA");
+            }
+        }
+
+        if(isyzm){
+            $(".bitian").html("必填");
+        }
+
         $(".login_nr_b .login_nr_gp .login_nr_gp_rt input.inputStr").keypress(function (e) {
             if (e.which == 13) {// 判断所按是否回车键
                 var inputs = $(".login_nr_b").find(".inputStr"); // 获取表单中的所有输入框
@@ -301,21 +351,23 @@
             }
             </c:if>
 
-            <c:if test="${registerResult.checkQq && registerResult.needRequiredQq}">
-            if (!qq) {
-                $(".qq").find(".info").hide();
-                $(".qq").find(".error").html("请输入QQ").show();
+            <c:if test="${registerResult.checkEmail && registerResult.needRequiredEmail}">
+            if (!email.match(/^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/ )) {
+                $(".yx").find(".info").hide();
+                $(".yx").find(".error").html("请输入您正确的邮箱").show();
                 return;
             }
             </c:if>
 
-            <c:if test="${registerResult.checkEmail && registerResult.needRequiredEmail}">
-            if (!email) {
-                $(".yx").find(".info").hide();
-                $(".yx").find(".error").html("请输入邮箱").show();
+            <c:if test="${registerResult.checkQq && registerResult.needRequiredQq}">
+            if (!qq.match(/^\d{5,10}$/)) {
+                $(".qq").find(".info").hide();
+                $(".qq").find(".error").html("请输入您正确的QQ").show();
                 return;
             }
             </c:if>
+
+
 
             <c:if test="${registerResult.vcSwtich}">
             if (!yzm) {
