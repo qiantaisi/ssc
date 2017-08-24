@@ -46,16 +46,14 @@ public class IndexController extends BaseController {
         return registerResult;
     }
 
-
-
-    @RequestMapping(value = "/ajaxGetZxxx.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/ajaxChekeAcount.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public ArticleResult ajaxGetZxxx(String limit) throws Exception {
+    public RegisterResult ajaxChekeAcount(String acount) throws Exception {
         String companyShortName = this.getCompanyShortName();
-        Integer numer=Integer.valueOf(limit);
+        companyShortName=null;
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        ArticleResult articleResult= ApiUtils.getArtList(companyShortName, 0, numer);
-        return articleResult;
+        RegisterResult registerResult= ApiUtils.getAccountUniqueFlag(acount,companyShortName);
+        return registerResult;
     }
 
 
