@@ -1260,3 +1260,22 @@ input[type="number"] {
     border: 1px solid #a3a3a3;
 }
 .cl-101 .list-block ul li input{font-size:0.8rem!important}
+.cl-101 .list-block ul li input {
+    font-size: 0.8rem !important
+}
+
+.bg-img-gd11x5 {
+    background-image: url(../img/cz/cz-11x5.png)
+}
+
+.bottom_gcdt_boder {
+    border-bottom: 1px solid #ddd !important;
+}
+
+.del_boder_top {
+    border-top: none !important;
+}
+
+.cl-7 .gcdtList .boder_right {
+    border-right: 1px solid #ddd !important;
+}
