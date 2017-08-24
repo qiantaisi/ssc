@@ -62,7 +62,9 @@
     color: #fff;
 }
 
-
+.hideRegImage{
+    display: none;
+}
 
 .menu_main .ahover {
     background: #da1b25;

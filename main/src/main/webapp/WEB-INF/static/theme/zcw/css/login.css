@@ -452,6 +452,9 @@ body {
     font-size: 16px;
     float: left;
 }
+.hideRegImage{
+    display: none;
+}
 
 
 /*.sl-error-verifycode {
