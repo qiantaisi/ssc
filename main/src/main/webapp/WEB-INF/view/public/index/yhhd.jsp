@@ -7,6 +7,9 @@
     String basePath = RequestUtils.getBasePath(request);
 %>
 <c:import url="../common/bodyStart.jsp"/>
+<style>
+    td, th{border: 1px solid #DDD;}
+</style>
 <%--<c:import url="../common/checkIsChildFrame.jsp"/>--%>
 <div class="process">
     <div class="wid1">
