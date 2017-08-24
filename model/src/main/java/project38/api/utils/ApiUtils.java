@@ -1449,4 +1449,13 @@ public class ApiUtils {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         return JSONUtils.toObject(commonRequest(ApiConstant.API_DOWNLOADMANAGEMENT, paramsMap, companyShortName), DownloadManagementResult.class);
     }
+
+    public static RegisterResult getAccountUniqueFlag(String account, String companyShortName) {
+        if (IS_DEBUG) {
+            return new RegisterResult();
+        }
+        Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("account", account);
+        return JSONUtils.toObject(commonRequest(ApiConstant.API_REGISTER_ACCOUNTUNIQUE, paramsMap, companyShortName), RegisterResult.class);
+    }
 }

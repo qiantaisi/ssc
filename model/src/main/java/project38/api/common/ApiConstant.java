@@ -150,6 +150,7 @@ public class ApiConstant {
 
     public static String API_REGISTER_VCSWITCH = API_DOMAIN + "member/ajaxGetVcSwitch.json"; //获取验证码
     public static String API_MEMBER_GET_REGISTER_CONFIG = API_DOMAIN + "member/getRegisterConfig.json"; //获取是否需要Phone必填
+    public static String API_REGISTER_ACCOUNTUNIQUE = API_DOMAIN + "member/getAccountUniqueFlag.json";//用户名是否唯一
 
 
 }
