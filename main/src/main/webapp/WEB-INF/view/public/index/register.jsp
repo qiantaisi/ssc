@@ -30,7 +30,7 @@
                         <input type="text" name="account" id="inputyhm" class="inputStr left" placeholder="请输入用户名"/>
                         <div class="left erro">
                         <span class="yhm">
-                             <span id="yesyhm" class="sl-correct-verifycode">对号</span><span id="noyhm" class="sl-error-verifycode">错号</span>
+                             <span id="yesyhm" class="sl-correct-verifycode"> <img src="${resPath}images/lvgou.png" style="width: 20px;"/> </span> <span id="noyhm" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">字母开头的6-12位字母数字组成的用户名</span>
                             <span class="bitianyhm" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
@@ -49,7 +49,7 @@
                         <input type="password" name="password" id="inputPassword" class="inputStr left" placeholder="请输入密码"/>
                         <div class="left erro">
                         <span class="mm">
-                            <span id="yes" class="sl-correct-verifycode">对号</span><span id="no" class="sl-error-verifycode">错号</span>
+                             <span id="yes" class="sl-correct-verifycode"> <img src="${resPath}images/lvgou.png" style="width: 20px;"/> </span> <span id="no" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">输入6-12位字母、数字的密码</span>
                             <span class="bitianmm" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
@@ -68,7 +68,7 @@
                         <input type="password" name="confirmPassword" id="inputconfirmPassword" class="inputStr left" placeholder="确认密码"/>
                         <div class="left erro">
                         <span class="qmm">
-                            <span id="yesqmm" class="sl-correct-verifycode">对号</span><span id="noqmm" class="sl-error-verifycode">错号</span>
+                            <span id="yesqmm" class="sl-correct-verifycode"> <img src="${resPath}images/lvgou.png" style="width: 20px;"/> </span><span id="noqmm" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">与上面输入密码必须保持一致</span>
                             <span class="bitianqmm" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
@@ -88,7 +88,7 @@
                         <input type="text" name="name" id="inputxm" class="inputStr left" placeholder="请输入姓名"/>
                         <div class="left erro">
                         <span class="name">
-                             <span id="yesxm" class="sl-correct-verifycode">对号</span><span id="noxm" class="sl-error-verifycode">错号</span>
+                             <span id="yesxm" class="sl-correct-verifycode"> <img src="${resPath}images/lvgou.png" style="width: 20px;"/></span><span id="noxm" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">姓名必须和绑定的银行卡户名一致</span>
                             <span class="bitianxm" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
@@ -108,7 +108,7 @@
                         <input type="text" name="phoneName" id="inputsj" class="inputStr left" placeholder="请输入手机"/>
                         <div class="left erro">
                             <span class="sj">
-                                <span id="yessj" class="sl-correct-verifycode">对号</span><span id="nosj" class="sl-error-verifycode">错号</span>
+                                <span id="yessj" class="sl-correct-verifycode"><img src="${resPath}images/lvgou.png" style="width: 20px;"/></span><span id="nosj" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
                                 <span class="info">请输入您的手机</span>
 
                                 <span class="bitianIphone" style="color: red"></span>
@@ -131,7 +131,7 @@
                         <input type="text" name="email" id="inputyx" class="inputStr left" placeholder="请输入邮箱"/>
                         <div class="left erro">
                         <span class="yx">
-                            <span id="yesyx" class="sl-correct-verifycode">对号</span><span id="noyx" class="sl-error-verifycode">错号</span>
+                            <span id="yesyx" class="sl-correct-verifycode"><img src="${resPath}images/lvgou.png" style="width: 20px;"/></span><span id="noyx" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">请输入您的邮箱</span>
                              <span class="bitianemail" style="color: red"></span>
                             <span class="error red hide"></span>
@@ -153,7 +153,7 @@
                         <input type="text" name="qq" id="inputqq" class="inputStr left" placeholder="请输入QQ"/>
                         <div class="left erro">
                         <span class="qq">
-                             <span id="yesqq" class="sl-correct-verifycode">对号</span><span id="noqq" class="sl-error-verifycode">错号</span>
+                             <span id="yesqq" class="sl-correct-verifycode"><img src="${resPath}images/lvgou.png" style="width: 20px;"/></span><span id="noqq" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">请输入QQ</span>
                              <span class="bitianqq" style="color: red"></span>
                             <span class="error red hide"></span>
@@ -286,7 +286,7 @@
                         account: account
                     },
                     success:function (obj) {
-                        if(obj){
+                        if(obj.accountUnique){
                             $('#yesyhm').show();
                             $('#noyhm').hide();
                             $(".yhm").find(".info").hide();
