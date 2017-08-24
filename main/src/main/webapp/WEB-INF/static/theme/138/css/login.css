@@ -92,7 +92,9 @@
     right: 0px;
     top: 0px;
 }
-
+.hideRegImage{
+    display: none;
+}
 .menu_a_img {
     display: inline-block;
     vertical-align: -5px;

@@ -18,7 +18,9 @@
     height: 24px;
     vertical-align: middle;
 }
-
+.hideRegImage{
+    display: none;
+}
 .right {
     float: right;
 }

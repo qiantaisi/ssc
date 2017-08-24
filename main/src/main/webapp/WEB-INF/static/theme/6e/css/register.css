@@ -36,7 +36,9 @@
     line-height: 26px;
     margin-top: 28px;
 }
-
+.hideRegImage{
+    display: none;
+}
 
 .head_middle_kf {
     display: inline-block;

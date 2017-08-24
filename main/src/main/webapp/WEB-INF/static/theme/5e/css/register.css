@@ -27,7 +27,9 @@
 .clearfix {
     display: block;
 }
-
+.hideRegImage{
+    display: none;
+}
 .head_middle_tel {
     font-size: 16px;
     color: #f42023;
