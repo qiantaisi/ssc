@@ -109,7 +109,7 @@
                data-fun_content="content_h3zxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/hs/zxhz.html"
                data-play_id="732"
-               data-play_pl_id="14545"
+               data-play_pl_id="14544"
                data-name="直选和值">
                 <span class="staer1">直选和值</span>
             </a>
