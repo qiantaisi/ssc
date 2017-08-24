@@ -30,7 +30,7 @@
                         <input type="text" name="account" id="inputyhm" class="inputStr left" placeholder="请输入用户名"/>
                         <div class="left erro">
                         <span class="yhm">
-                             <span id="yesyhm" class="sl-correct-verifycode"> <img src="${resPath}images/lvgou.png" style="width: 20px;"/> </span> <span id="noyhm" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
+                             <span id="yesyhm" class="sl-correct-verifycode"> <img src="${pubStaticPath}images/lvgou.png" style="width: 20px;"/> </span> <span id="noyhm" class="sl-error-verifycode"><img src="${pubStaticPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">字母开头的6-12位字母数字组成的用户名</span>
                             <span class="bitianyhm" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
@@ -49,7 +49,7 @@
                         <input type="password" name="password" id="inputPassword" class="inputStr left" placeholder="请输入密码"/>
                         <div class="left erro">
                         <span class="mm">
-                             <span id="yes" class="sl-correct-verifycode"> <img src="${resPath}images/lvgou.png" style="width: 20px;"/> </span> <span id="no" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
+                             <span id="yes" class="sl-correct-verifycode"> <img src="${pubStaticPath}images/lvgou.png" style="width: 20px;"/> </span> <span id="no" class="sl-error-verifycode"><img src="${pubStaticPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">输入6-12位字母、数字的密码</span>
                             <span class="bitianmm" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
@@ -68,7 +68,7 @@
                         <input type="password" name="confirmPassword" id="inputconfirmPassword" class="inputStr left" placeholder="确认密码"/>
                         <div class="left erro">
                         <span class="qmm">
-                            <span id="yesqmm" class="sl-correct-verifycode"> <img src="${resPath}images/lvgou.png" style="width: 20px;"/> </span><span id="noqmm" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
+                            <span id="yesqmm" class="sl-correct-verifycode"> <img src="${pubStaticPath}images/lvgou.png" style="width: 20px;"/> </span><span id="noqmm" class="sl-error-verifycode"><img src="${pubStaticPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">与上面输入密码必须保持一致</span>
                             <span class="bitianqmm" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
@@ -88,7 +88,7 @@
                         <input type="text" name="name" id="inputxm" class="inputStr left" placeholder="请输入姓名"/>
                         <div class="left erro">
                         <span class="name">
-                             <span id="yesxm" class="sl-correct-verifycode"> <img src="${resPath}images/lvgou.png" style="width: 20px;"/></span><span id="noxm" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
+                             <span id="yesxm" class="sl-correct-verifycode"> <img src="${pubStaticPath}images/lvgou.png" style="width: 20px;"/></span><span id="noxm" class="sl-error-verifycode"><img src="${pubStaticPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">姓名必须和绑定的银行卡户名一致</span>
                             <span class="bitianxm" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                             <span class="error red hide"></span>
@@ -108,7 +108,7 @@
                         <input type="text" name="phoneName" id="inputsj" class="inputStr left" placeholder="请输入手机"/>
                         <div class="left erro">
                             <span class="sj">
-                                <span id="yessj" class="sl-correct-verifycode"><img src="${resPath}images/lvgou.png" style="width: 20px;"/></span><span id="nosj" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
+                                <span id="yessj" class="sl-correct-verifycode"><img src="${pubStaticPath}images/lvgou.png" style="width: 20px;"/></span><span id="nosj" class="sl-error-verifycode"><img src="${pubStaticPath}images/hongcha.png" style="width: 20px;"/></span>
                                 <span class="info">请输入您的手机</span>
 
                                 <span class="bitianIphone" style="color: red"></span>
@@ -131,7 +131,7 @@
                         <input type="text" name="email" id="inputyx" class="inputStr left" placeholder="请输入邮箱"/>
                         <div class="left erro">
                         <span class="yx">
-                            <span id="yesyx" class="sl-correct-verifycode"><img src="${resPath}images/lvgou.png" style="width: 20px;"/></span><span id="noyx" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
+                            <span id="yesyx" class="sl-correct-verifycode"><img src="${pubStaticPath}images/lvgou.png" style="width: 20px;"/></span><span id="noyx" class="sl-error-verifycode"><img src="${pubStaticPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">请输入您的邮箱</span>
                              <span class="bitianemail" style="color: red"></span>
                             <span class="error red hide"></span>
@@ -153,7 +153,7 @@
                         <input type="text" name="qq" id="inputqq" class="inputStr left" placeholder="请输入QQ"/>
                         <div class="left erro">
                         <span class="qq">
-                             <span id="yesqq" class="sl-correct-verifycode"><img src="${resPath}images/lvgou.png" style="width: 20px;"/></span><span id="noqq" class="sl-error-verifycode"><img src="${resPath}images/hongcha.png" style="width: 20px;"/></span>
+                             <span id="yesqq" class="sl-correct-verifycode"><img src="${pubStaticPath}images/lvgou.png" style="width: 20px;"/></span><span id="noqq" class="sl-error-verifycode"><img src="${pubStaticPath}images/hongcha.png" style="width: 20px;"/></span>
                             <span class="info">请输入QQ</span>
                              <span class="bitianqq" style="color: red"></span>
                             <span class="error red hide"></span>
@@ -381,6 +381,22 @@
         if(isiphone){
            if(!flagiphone){
                $(".bitianIphone").html("选填").css("color","#AAAAAA");
+               $("#inputsj").blur(function(){
+                   var phone = $("input[name='phoneName']").val();
+                   if (!phone.match(/^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/) && phone) {
+                       $(".sj").find(".info").hide();
+                       $('#yessj').hide();
+                       $('#nosj').show();
+                       $(".sj").find(".error").html("请输入正确手机号").show();
+                   }else{
+                       $('#yessj').show();
+                       $('#nosj').hide();
+                       $(".sj").find(".info").hide();
+                       $(".sj").find(".error").html("请输入正确手机号").hide();
+                       $(".bitianIphone").hide();
+                   }
+
+               });
            }else{
                $(".bitianIphone").html("   必填");
                $("#inputsj").blur(function(){
@@ -410,14 +426,28 @@
         }
         if(isqq){
             if(!flagqq){
-
                 $(".bitianqq").html("选填").css("color","#AAAAAA");
-
+                $("#inputqq").blur(function(){
+                    var qq = $("input[name='qq']").val();
+                     if (!qq.match(/^\d{5,10}$/) && qq) {
+                        $(".qq").find(".info").hide();
+                        $('#yesqq').hide();
+                        $('#noqq').show();
+                        $(".qq").find(".error").html("请输入正确的QQ").show();
+                    }else{
+                        $('#yesqq').show();
+                        $('#noqq').hide();
+                        $(".qq").find(".info").hide();
+                        $(".qq").find(".error").html("请输入正确的QQ").hide();
+                        $(".qq").find(".error").html("请输入QQ").hide();
+                        $(".bitianqq").hide();
+                    }
+                });
             }else {
 
                 $(".bitianqq").html("必填");
                 $("#inputqq").blur(function(){
-                    var qq = $("input[name='qq']").val();   // 姓名
+                    var qq = $("input[name='qq']").val();
                     if (!qq) {
                         $(".qq").find(".info").hide();
                         $('#yesqq').hide();
@@ -469,6 +499,22 @@
                 });
             }else {
                 $(".bitianemail").html("选填").css("color","#AAAAAA");
+                $("#inputyx").blur(function(){
+                    var email = $("input[name='email']").val();
+                    if (!email.match(/^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/ )&& email) {
+                        $(".yx").find(".info").hide();
+                        $('#yesyx').hide();
+                        $('#noyx').show();
+                        $(".yx").find(".error").html("请输入正确的邮箱").show();
+                    }else{
+                        $('#yesyx').show();
+                        $('#noyx').hide();
+                        $(".yx").find(".info").hide();
+                        $(".yx").find(".error").html("请输入正确的邮箱").hide();
+                        $(".yx").find(".error").html("请输入邮箱").hide();
+                        $(".bitianemail").hide();
+                    }
+                });
             }
         }
 
