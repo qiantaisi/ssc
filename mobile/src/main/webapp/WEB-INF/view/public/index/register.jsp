@@ -17,45 +17,79 @@
 
         <div class="form_main">
             <p class="form_text">
-                字母开头的6-12位字母数字组成的用户名
+                字母开头的6-12位字母数字组成的用户名 <span style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
             </p>
             <input type="text" placeholder="用户名" class="inputStr" name="account" style="ime-mode: disabled"/>
             <p class="form_text">
-                请输入6-12位字母、数字的密码
+                请输入6-12位字母、数字的密码<span style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
             </p>
             <input type="password" placeholder="密码" class="inputStr" name="password"/>
             <p class="form_text">
-                与上面输入密码必须保持一致
+                与上面输入密码必须保持一致<span style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
             </p>
             <input type="password" placeholder="确认密码" class="inputStr" name="confirmPassword"/>
             <p class="form_text">
-                姓名必须和绑定的银行卡户名一致
+                姓名必须和绑定的银行卡户名一致<span style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
             </p>
             <input type="text" placeholder="姓名" class="inputStr" name="name"/>
 
             <c:if test="${registerResult.checkPhone}">
+                <c:if test="${registerResult.needRequredPhone}">
                 <p class="form_text">
-                    请输入您的手机
+                    请输入您的手机  <span class="bitianIphone" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                 </p>
                 <input type="number" placeholder="手机" class="inputStr"
                        onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
                        name="phone"/>
             </c:if>
+            </c:if>
+            <c:if test="${registerResult.checkPhone}">
+                <c:if test="${registerResult.needRequredPhone==false}">
+                    <p class="form_text">
+                        请输入您的手机  <span class="bitianIphone" style="color: #AAAAAA">&nbsp;&nbsp;&nbsp;选填</span>
+                    </p>
+                    <input type="number" placeholder="手机" class="inputStr"
+                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                           name="phone"/>
+                </c:if>
+            </c:if>
             <c:if test="${registerResult.checkEmail}">
+                <c:if test="${registerResult.needRequiredEmail}">
+
+
                 <p class="form_text">
-                    请输入您的邮箱
+                    请输入您的邮箱  <span class="bitianemail" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                 </p>
                 <input type="text" placeholder="邮箱" class="inputStr" name="email"/>
             </c:if>
+            </c:if>
+            <c:if test="${registerResult.checkEmail}">
+                <c:if test="${registerResult.needRequiredEmail==false}">
+                    <p class="form_text">
+                        请输入您的邮箱  <span class="bitianemail" style="color: #AAAAAA">&nbsp;&nbsp;&nbsp;选填</span>
+                    </p>
+                    <input type="text" placeholder="邮箱" class="inputStr" name="email"/>
+                </c:if>
+            </c:if>
             <c:if test="${registerResult.checkQq}">
+                <c:if test="${registerResult.needRequiredQq}">
                 <p class="form_text">
-                    请输入您的QQ
+                    请输入您的QQ <span class="bitianqq" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                 </p>
                 <input type="text" placeholder="QQ" name="qq"/>
             </c:if>
+            </c:if>
+            <c:if test="${registerResult.checkQq}">
+                <c:if test="${registerResult.needRequiredQq==false}">
+                    <p class="form_text">
+                        请输入您的QQ <span class="bitianqq" style="color: #AAAAAA">&nbsp;&nbsp;&nbsp;选填</span>
+                    </p>
+                    <input type="text" placeholder="QQ" name="qq"/>
+                </c:if>
+            </c:if>
             <c:if test="${registerResult.vcSwtich}">
                 <p class="form_text">
-                    请输入验证码
+                    请输入验证码  <span class="bitian" style="color: red">&nbsp;&nbsp;&nbsp;必填</span>
                 </p>
                 <div style="overflow:hidden;">
                     <input type="text" placeholder="验证码" name="yzm" class="left" style="width:calc(100% - 100px)" />
@@ -118,6 +152,9 @@
     ${khxy.khxy}
 </script>
 <script>
+
+
+
     function ajaxRegister() {
         var account = $("input[name='account']").val(); // 账号
         var password = $("input[name='password']").val();   // 密码
@@ -175,19 +212,21 @@
         }
         </c:if>
 
-        <c:if test="${registerResult.checkQq && registerResult.needRequiredQq}">
-        if (!qq) {
-            Tools.alert("请输入验QQ");
+
+        <c:if test="${registerResult.checkEmail && registerResult.needRequiredEmail}">
+        if (!email.match(/^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/ )) {
+            Tools.alert("请输入您正确的邮箱");
             return;
         }
         </c:if>
 
-        <c:if test="${registerResult.checkEmail && registerResult.needRequiredEmail}">
-        if (!email) {
-            Tools.alert("请输入邮箱");
+        <c:if test="${registerResult.checkQq && registerResult.needRequiredQq}">
+        if (!qq.match(/^\d{5,10}$/)) {
+            Tools.alert("请输入您正确的QQ");
             return;
         }
         </c:if>
+
 
         <c:if test="${registerResult.vcSwtich}">
         if (!yzm) {
