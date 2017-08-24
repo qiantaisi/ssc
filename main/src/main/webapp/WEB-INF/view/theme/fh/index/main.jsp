@@ -1229,6 +1229,25 @@
 
 </div>
 
+<div class="gl_right gl">
+
+    <span class="gl_close gl_2"></span>
+
+    <div class="gls_2">
+
+        <p><a href="javascript:void(0)" onclick="shiwan()"><img src="${resPath}img/right_01.png"/></a></p>
+
+        <p> <a href="<%=basePath%>help/index.html"><img src="${resPath}img/right_02.png"/></a></p>
+        <p><a href="/app.html" target="_blank"><img src="${resPath}img/right_03.png"/></a></p>
+
+        <p><img src="<%=basePath%>images/${qrcode.codeId}.png"/></p>
+
+        <p class="gls_close"><img src="${resPath}img/right_04.png"/></p>
+
+    </div>
+
+</div>
+
 <style>
 
     .gls_1 p{ margin: 0; padding: 0;}
