@@ -1513,7 +1513,7 @@ body::-webkit-scrollbar{}/*--------------------------------*/
 .men_list .logo h1{line-height: 50px;height: 50px;background: #ff741b;font-size: 18px;font-weight: normal;color: #fff;text-indent: 24px;position: absolute;width:238px;top:72px;}
 .men_list .logo h1:after{content: '';position: absolute;width:6px;height: 50px; background:url(../img/ico83.png);right:-6px;opacity: 0.5;}
 .regedit{width:100%;}
-.img{position: absolute;left: 50%;margin-left: -130px;top:10%}
+.img{position: absolute;left: 46%;margin-left: -130px;top:8%}
 
 .reg_col{width:900px; height:500px; background:#fff; position:fixed; left:50%;  border-radius:10px; margin-left:-450px;box-shadow:0px 0px 15px rgba(134,44,0,.76);margin-top:-237px;top: 50%;}
 .reg_list ul{ width:100%; text-align:center;}
