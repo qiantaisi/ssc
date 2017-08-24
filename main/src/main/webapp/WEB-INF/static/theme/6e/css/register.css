@@ -2,9 +2,9 @@
     width: 1000px;margin: 0px auto;
 }
 /*.logo img {*/
-    /*width: 186px;*/
-    /*height: 57px;*/
-    /*vertical-align: middle;*/
+/*width: 186px;*/
+/*height: 57px;*/
+/*vertical-align: middle;*/
 /*}*/
 
 .head_middle_yuye {
@@ -18,7 +18,9 @@
     height: 24px;
     vertical-align: middle;
 }
-
+.hideRegImage{
+    display: none;
+}
 .right {
     float: right;
 }
@@ -36,9 +38,7 @@
     line-height: 26px;
     margin-top: 28px;
 }
-.hideRegImage{
-    display: none;
-}
+
 
 .head_middle_kf {
     display: inline-block;
@@ -117,11 +117,11 @@ img {
 .login_main {
     background-size: cover;
     margin: 0 auto;
-    position: fixed;
+    position: absolute;
     margin-top: -237px;
-    top: 50%;
-    margin-left: 20%;
-
+    top: 40%;
+    margin-left: 25%;
+    z-index: 100;
 }
 
 .re-text-content{
@@ -165,7 +165,7 @@ img {
 
 .login_b_link {
     padding-left: 130px;
-     padding-top: 40px;
+    padding-top: 40px;
 }
 
 .footer_t {
@@ -451,4 +451,7 @@ body {
     color: #fff;
     font-size: 16px;
     float: left;
+}
+.hideRegInput{
+    display: none;
 }

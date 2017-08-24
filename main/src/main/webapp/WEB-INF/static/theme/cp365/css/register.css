@@ -18,7 +18,9 @@
     height: 24px;
     vertical-align: middle;
 }
-
+.hideRegImage{
+    display: none;
+}
 .right {
     float: right;
 }
@@ -62,9 +64,7 @@
     color: #fff;
 }
 
-.hideRegImage{
-    display: none;
-}
+
 
 .menu_main .ahover {
     background: #da1b25;
@@ -117,11 +117,11 @@ img {
 .login_main {
     background-size: cover;
     margin: 0 auto;
-    position: fixed;
+    position: absolute;
     margin-top: -237px;
-    top: 30%;
-    margin-left: 25%;
-
+    top: 50%;
+    margin-left: 13%;
+    z-index: 100;
 }
 
 .re-text-content{
@@ -451,4 +451,7 @@ body {
     color: #fff;
     font-size: 16px;
     float: left;
+}
+.hideRegInput{
+    display: none;
 }
