@@ -526,7 +526,7 @@
                     <c:when test="${param.playGroupId == 2}">
                         <li>
                             <c:choose>
-                                <c:when test="${param.gfwfFlag == 2}">
+                                <c:when test="${param.gfwfFlag == 1}">
                                     <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
                                        class="item-contents">
                                         <div class="item-medias"><i class="icon bg-img-tjssc"></i></div>
@@ -548,17 +548,17 @@
 
                         </li>
                     </c:when>
-                    <%--<c:when test="${param.playGroupId == 3}">--%>
-                        <%--<li>--%>
-                            <%--<a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"--%>
-                               <%--class="item-contents">--%>
-                                <%--<div class="item-medias"><i class="icon bg-img-xjssc"></i></div>--%>
-                                <%--<div class="item-innerss">--%>
-                                    <%--<div class="item-inners">玩法说明</div>--%>
-                                <%--</div>--%>
-                            <%--</a>--%>
-                        <%--</li>--%>
-                    <%--</c:when>--%>
+                    <c:when test="${param.playGroupId == 3}">
+                        <li>
+                            <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"
+                               class="item-contents">
+                                <div class="item-medias"><i class="icon bg-img-xjssc"></i></div>
+                                <div class="item-innerss">
+                                    <div class="item-inners">玩法说明</div>
+                                </div>
+                            </a>
+                        </li>
+                    </c:when>
                     <c:when test="${param.playGroupId == 4}">
                         <li>
                             <a href="<%=basePath%>ssc/wfsm/wfsm.html?playGroupId=${param.playGroupId}"

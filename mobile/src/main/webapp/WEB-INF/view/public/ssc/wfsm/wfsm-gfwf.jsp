@@ -180,6 +180,9 @@
                                 <div class="cl-1350-gfwf">
                                     <div class="content-block">
                                         <c:choose>
+                                            <c:when test="${playGroupId == 3}">
+                                                <c:import url="rule/gfwf/base.jsp"/>
+                                            </c:when>
                                             <c:when test="${playGroupId == 4}">
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>
