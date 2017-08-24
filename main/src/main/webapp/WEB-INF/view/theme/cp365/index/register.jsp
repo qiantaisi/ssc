@@ -12,6 +12,8 @@
 
 <div class="img"><a href="<%=basePath%>"><img src="<%=basePath%>images/${logo.imageId}" alt=""></a></div>
 <img src="${resPath}img/bj.jpg" class="back" alt="" width="100%">
+<jsp:include page="../../../public/index/register.jsp" />
+<%--
 <div class="regedit">
 
     <div class="reg_col">
@@ -106,6 +108,7 @@
         </form>
     </div>
 </div>
+--%>
 
 <div class="copy">
     <c:import url="../common/copyright_time.jsp"/>&nbsp;&nbsp;
@@ -117,7 +120,7 @@ ${khxy.khxy}
 
 <c:import url="../common/commonJs.jsp" />
 <c:import url="../common/jsCommonLogin.jsp" />
-<script>
+<%--<script>
     function showKhxy() {
         //自定页
         layer.open({
@@ -333,5 +336,5 @@ ${khxy.khxy}
             }
         });
     }
-</script>
+</script>--%>
 <c:import url="../common/bodyEnd.jsp" />

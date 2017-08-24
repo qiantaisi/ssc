@@ -398,7 +398,7 @@
 
                });
            }else{
-               $(".bitianIphone").html("   必填");
+               $(".bitianIphone").html("&nbsp;&nbsp;&nbsp;必填");
                $("#inputsj").blur(function(){
                    var phone = $("input[name='phoneName']").val();   // 姓名
                    if (!phone) {
@@ -445,7 +445,7 @@
                 });
             }else {
 
-                $(".bitianqq").html("必填");
+                $(".bitianqq").html("&nbsp;&nbsp;&nbsp;必填");
                 $("#inputqq").blur(function(){
                     var qq = $("input[name='qq']").val();
                     if (!qq) {
@@ -474,9 +474,9 @@
 
         if(isemail){
             if(flageamil){
-                $(".bitianemail").html("必填");
+                $(".bitianemail").html("&nbsp;&nbsp;&nbsp;必填");
                 $("#inputyx").blur(function(){
-                    var email = $("input[name='email']").val();   // 姓名
+                    var email = $("input[name='email']").val();
                     if (!email) {
                         $(".yx").find(".info").hide();
                         $('#yesyx').hide();
