@@ -41,6 +41,19 @@ public class RegisterResult extends CommonResult {
      */
     private Boolean vcSwtich;
 
+    /**
+     * account是否唯一，true唯一
+     */
+    private Boolean accountUnique;
+
+    public Boolean getAccountUnique() {
+        return accountUnique;
+    }
+
+    public void setAccountUnique(Boolean accountUnique) {
+        this.accountUnique = accountUnique;
+    }
+
     public Boolean getVcSwtich() {
         return vcSwtich;
     }
