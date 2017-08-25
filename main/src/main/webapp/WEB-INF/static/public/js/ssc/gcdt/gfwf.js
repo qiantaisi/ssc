@@ -14023,7 +14023,7 @@ function content_gd11x5_hezuxds() {
 
             var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
             var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
-            tempArr.push(oneStr1 + twoStr2);
+            tempArr.push(oneStr1+" " + twoStr2);
         }
     }
 
