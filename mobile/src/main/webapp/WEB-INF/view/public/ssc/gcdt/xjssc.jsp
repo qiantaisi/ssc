@@ -20,37 +20,37 @@
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
-            <%--<h1 class="title">天津时时彩</h1>--%>
-            <h1 class="title">
-                <i class="title_cq">新疆时时彩
-                    <div class="gfwf_triangle_down">
-                        <%--画出一个向下的三角形图标--%>
-                    </div>
-                </i>
-            </h1>
+            <h1 class="title">天津时时彩</h1>
+            <%--<h1 class="title">--%>
+                <%--<i class="title_cq">新疆时时彩--%>
+                    <%--<div class="gfwf_triangle_down">--%>
+                        <%--&lt;%&ndash;画出一个向下的三角形图标&ndash;%&gt;--%>
+                    <%--</div>--%>
+                <%--</i>--%>
+            <%--</h1>--%>
         </header>
         <c:import url="common/commonBet.jsp" />
-        <div class="BeginFind Hide_Show">
-            <div class="gfwf_consele">
-                <div class="gfwf_one">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/xjssc.html">
-                        <div class="border_one color_one">
-                            官方模式
-                        </div>
-                    </a>
-                </div>
-                <div class="gfwf_two">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/xjssc.html">
-                        <div class="border_two color_two">
-                            传统模式
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="gfwf_mask">
-                <%--实现蒙版--%>
-            </div>
-        </div>
+        <%--<div class="BeginFind Hide_Show">--%>
+            <%--<div class="gfwf_consele">--%>
+                <%--<div class="gfwf_one">--%>
+                    <%--<a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/xjssc.html">--%>
+                        <%--<div class="border_one color_one">--%>
+                            <%--官方模式--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+                <%--<div class="gfwf_two">--%>
+                    <%--<a class="F2_color" href="<%=basePath%>ssc/gcdt/xjssc.html">--%>
+                        <%--<div class="border_two color_two">--%>
+                            <%--传统模式--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<div class="gfwf_mask">--%>
+                <%--&lt;%&ndash;实现蒙版&ndash;%&gt;--%>
+            <%--</div>--%>
+        <%--</div>--%>
         <div class="content cl-601">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
