@@ -7353,8 +7353,8 @@ function suiji_gd11x5_hezuxds() {
     while (newArr.length < 1) {
         var zhiTsh1 = arrTsh[parseInt(Math.random() * 10+1)];
         var zhiTsh2 = arrTsh[parseInt(Math.random() * 10+1)];
-        if (zhiTsh1 != zhiTsh2 ) {
-            newArr.push(zhiTsh1);
+        if (zhiTsh1 != zhiTsh2) {
+            newArr.push(zhiTsh1+" ");
             newArr.push(zhiTsh2);
         }
     }
@@ -7362,7 +7362,7 @@ function suiji_gd11x5_hezuxds() {
 
     showPlayName = "后二组选单式";
     showContent = "号码: (" + newArr.join('') + ")";
-    betContent = newArr.join(',');
+    betContent = newArr.join('');
 
     return {
         showPlayName: showPlayName,
@@ -7826,7 +7826,7 @@ function suiji_gd11x5_hszxds() {
         if (zhiTsh1 != zhiTsh2 && zhiTsh1 != zhiTsh3 && zhiTsh3 != zhiTsh2) {
             newArr.push(zhiTsh1+" ");
             newArr.push(zhiTsh2+" ");
-            newArr.push(zhiTsh3+" ");
+            newArr.push(zhiTsh3);
         }
     }
 
