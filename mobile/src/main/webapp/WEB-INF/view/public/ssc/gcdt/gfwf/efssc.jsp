@@ -11,7 +11,7 @@
 %>
 <c:import url="../../../common/bodyStart.jsp"/>
 <div class="page-group">
-    <div class="page page-current" id="page-gcdt-tjssc-gfwf">
+    <div class="page page-current" id="page-gcdt-efssc-gfwf">
         <header class="bar bar-nav">
             <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
                 <span class="icon icon-left"></span>
@@ -25,7 +25,7 @@
                 菜单
             </a>
             <h1 class="title">
-                <i class="title_cq">天津时时彩
+                <i class="title_cq">两分时时彩
                     <div class="gfwf_triangle_down">
                         <%--画出一个向下的三角形图标--%>
                     </div>
@@ -36,14 +36,14 @@
         <div class="BeginFind Hide_Show">
             <div class="gfwf_consele">
                 <div class="gfwf_one">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/tjssc.html">
+                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/efssc.html">
                         <div class="border_one color_two">
                             官方模式
                         </div>
                     </a>
                 </div>
                 <div class="gfwf_two">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/tjssc.html">
+                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/efssc.html">
                         <div class="border_two color_one">
                             传统模式
                         </div>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="content cl-601">
-            <c:import url="./tjssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
+            <c:import url="./efssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
             <div class="cl-900" id="lastOpenInfo">
                 <%--显示第几期彩种--%>
             </div>

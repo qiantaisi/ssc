@@ -11,10 +11,10 @@
         <li>
             <b>大小单双</b>
             <p class="btn_fu_zhi dsdx-menu">
-                <span class="playPlIdBtn acti" data-play_id="874" data-play_pl_id="14655" data-name="q2dxds" data-suiji_fun="suiji_q2dxds" data-fun_zhushu="zhushu_q2dxds" data-fun_content="content_q2dxds" data-fun_suiji="suiji_q2dxds"><a href="javascript:void(0)">前二大小单双</a></span>
-                <span class="playPlIdBtn" data-play_id="876" data-play_pl_id="14657" data-name="h2dxds" data-suiji_fun="suiji_h2dxds" data-fun_zhushu="zhushu_h2dxds" data-fun_content="content_h2dxds" data-fun_suiji="suiji_h2dxds"><a href="javascript:void(0)">后二大小单双</a></span>
-                <span class="playPlIdBtn" data-play_id="875" data-play_pl_id="14656" data-name="q3dxds" data-suiji_fun="suiji_q3dxds" data-fun_zhushu="zhushu_q3dxds" data-fun_content="content_q3dxds" data-fun_suiji="suiji_q3dxds"><a href="javascript:void(0)">前三大小单双</a></span>
-                <span class="playPlIdBtn" data-play_id="877" data-play_pl_id="14658" data-name="h3dxds" data-suiji_fun="suiji_h3dxds" data-fun_zhushu="zhushu_h3dxds" data-fun_content="content_h3dxds" data-fun_suiji="suiji_h3dxds"><a href="javascript:void(0)">后三大小单双</a></span>
+                <span class="playPlIdBtn acti" data-play_id="951" data-play_pl_id="14748" data-name="q2dxds" data-suiji_fun="suiji_q2dxds" data-fun_zhushu="zhushu_q2dxds" data-fun_content="content_q2dxds" data-fun_suiji="suiji_q2dxds"><a href="javascript:void(0)">前二大小单双</a></span>
+                <span class="playPlIdBtn" data-play_id="953" data-play_pl_id="14750" data-name="h2dxds" data-suiji_fun="suiji_h2dxds" data-fun_zhushu="zhushu_h2dxds" data-fun_content="content_h2dxds" data-fun_suiji="suiji_h2dxds"><a href="javascript:void(0)">后二大小单双</a></span>
+                <span class="playPlIdBtn" data-play_id="952" data-play_pl_id="14749" data-name="q3dxds" data-suiji_fun="suiji_q3dxds" data-fun_zhushu="zhushu_q3dxds" data-fun_content="content_q3dxds" data-fun_suiji="suiji_q3dxds"><a href="javascript:void(0)">前三大小单双</a></span>
+                <span class="playPlIdBtn" data-play_id="954" data-play_pl_id="14751" data-name="h3dxds" data-suiji_fun="suiji_h3dxds" data-fun_zhushu="zhushu_h3dxds" data-fun_content="content_h3dxds" data-fun_suiji="suiji_h3dxds"><a href="javascript:void(0)">后三大小单双</a></span>
             </p>
         </li>
     </ul>

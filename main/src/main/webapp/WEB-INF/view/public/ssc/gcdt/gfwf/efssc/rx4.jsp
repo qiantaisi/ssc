@@ -11,17 +11,17 @@
         <li>
             <b>任四直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-play_id="831" data-play_pl_id="14598" data-name="rx4zxfs" data-fun_zhushu="zhushu_rx4zxfs" data-fun_content="content_rx4zxfs" data-fun_suiji="suiji_rx4zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="830" data-play_pl_id="14597" data-name="rx4zxds" data-fun_zhushu="zhushu_rx4zxds" data-fun_content="content_rx4zxds" data-fun_suiji="suiji_rx4zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="908" data-play_pl_id="14691" data-name="rx4zxfs" data-fun_zhushu="zhushu_rx4zxfs" data-fun_content="content_rx4zxfs" data-fun_suiji="suiji_rx4zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="907" data-play_pl_id="14690" data-name="rx4zxds" data-fun_zhushu="zhushu_rx4zxds" data-fun_content="content_rx4zxds" data-fun_suiji="suiji_rx4zxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
         <li>
             <b>任四组选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn" data-play_id="833" data-play_pl_id="14600" data-name="rx4zu24" data-fun_zhushu="zhushu_rx4zu24" data-fun_content="content_rx4zu24" data-fun_suiji="suiji_rx4zu24"><a href="javascript:void(0)">组选24</a></span>
-                <span class="playPlIdBtn" data-play_id="832" data-play_pl_id="14599" data-name="rx4zu12" data-fun_zhushu="zhushu_rx4zu12" data-fun_content="content_rx4zu12" data-fun_suiji="suiji_rx4zu12"><a href="javascript:void(0)">组选12</a></span>
-                <span class="playPlIdBtn" data-play_id="835" data-play_pl_id="14602" data-name="rx4zu6" data-fun_zhushu="zhushu_rx4zu6" data-fun_content="content_rx4zu6" data-fun_suiji="suiji_rx4zu6"><a href="javascript:void(0)">组选6</a></span>
-                <span class="playPlIdBtn" data-play_id="834" data-play_pl_id="14601" data-name="rx4zu4" data-fun_zhushu="zhushu_rx4zu4" data-fun_content="content_rx4zu4" data-fun_suiji="suiji_rx4zu4"><a href="javascript:void(0)">组选4</a></span>
+                <span class="playPlIdBtn" data-play_id="910" data-play_pl_id="14693" data-name="rx4zu24" data-fun_zhushu="zhushu_rx4zu24" data-fun_content="content_rx4zu24" data-fun_suiji="suiji_rx4zu24"><a href="javascript:void(0)">组选24</a></span>
+                <span class="playPlIdBtn" data-play_id="909" data-play_pl_id="14692" data-name="rx4zu12" data-fun_zhushu="zhushu_rx4zu12" data-fun_content="content_rx4zu12" data-fun_suiji="suiji_rx4zu12"><a href="javascript:void(0)">组选12</a></span>
+                <span class="playPlIdBtn" data-play_id="912" data-play_pl_id="14695" data-name="rx4zu6" data-fun_zhushu="zhushu_rx4zu6" data-fun_content="content_rx4zu6" data-fun_suiji="suiji_rx4zu6"><a href="javascript:void(0)">组选6</a></span>
+                <span class="playPlIdBtn" data-play_id="911" data-play_pl_id="14694" data-name="rx4zu4" data-fun_zhushu="zhushu_rx4zu4" data-fun_content="content_rx4zu4" data-fun_suiji="suiji_rx4zu4"><a href="javascript:void(0)">组选4</a></span>
             </p>
         </li>
     </ul>

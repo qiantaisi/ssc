@@ -684,7 +684,7 @@
                data-fun_content="content_rx4zu12"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/rxsi/zx12.html"
                data-play_id="832"
-               data-play_pl_id="599"
+               data-play_pl_id="14599"
                data-name="组选12">
                 <span class="staer1">组选12</span>
             </a>
