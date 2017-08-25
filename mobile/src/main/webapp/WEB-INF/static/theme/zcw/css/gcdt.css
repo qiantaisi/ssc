@@ -133,3 +133,7 @@
 .zjheigth{
     margin-top: 30%;
 }
+
+.hide_li_gc{
+    display: none;
+}

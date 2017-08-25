@@ -248,6 +248,11 @@
                         <span class="img bg-img-kl8"></span>
                         <span>北京快乐8</span>
                     </a>
+                    <a class="col-25 col-33 vipcp_bottem" data-play_group_id="24" href="<%=basePath%>ssc/gcdt/gfwf/gd11x5.html">
+                        <span class="jc"></span>
+                        <span class="img bg-img-gd11x5"></span>
+                        <span>广东11选5</span>
+                    </a>
                 </div>
             </div>
             <a class="list-block relb relb-k3xl btn-xl-dp">

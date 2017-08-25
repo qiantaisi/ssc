@@ -934,6 +934,38 @@
                     </li>
 
                     <li>
+                        <a data-play_group_id="18"
+                           href="<%=basePath%>ssc/gcdt/jsk3.html">
+                            <img src="${resPath}/images/buy_29.png"/>
+                            <p>
+                                江苏快3
+                            </p>
+                            <p class="buydate buy_date11">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-play_group_id="21"
+                           href="<%=basePath%>ssc/gcdt/jlk3.html">
+                            <img src="${resPath}/images/buy_29.png"/>
+                            <p>
+                                吉林快3
+                            </p>
+                            <p class="buydate buy_date11">
+
+                                <span class="hour">00</span>&nbsp;:&nbsp;
+                                <span class="mini">00</span>&nbsp;:&nbsp;
+                                <span class="sec">00</span>
+                            </p>
+                        </a>
+                    </li>
+
+                    <li>
                         <a data-play_group_id="17"
                            href="<%=basePath%>ssc/gcdt/gfwf/gd11x5.html">
                             <img src="${resPath}/images/buy_11x5.png"/>

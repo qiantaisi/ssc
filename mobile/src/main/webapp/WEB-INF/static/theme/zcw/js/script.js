@@ -2498,7 +2498,8 @@ $(function () {
 
                                 if (json.opening == false) {
                                     flagArr[playGroupId] = false;
-                                    $(obj).find(".buydate").html("<span class='goucai_biaoqian'>停售</span>");
+                                    var objLi = $('a[data-play_group_id="'+ playGroupId +'"]').parent();
+                                    objLi.addClass('hide_li_gc');
                                     return;
                                 }
 
