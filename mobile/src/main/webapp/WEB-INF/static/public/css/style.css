@@ -169,3 +169,11 @@ body{font-size:.65rem}.left{float:left}.right{float:right}.page .bar-nav{backgro
 #betContainer .bj28 table tbody tr td .graybj28{
     background: gray!important;
 }
+
+.redColor{
+    color:red;
+}
+
+.greenColor{
+    color:red!important;
+}

@@ -1925,15 +1925,18 @@ $(function () {
                     success: function (obj) {
                         if (obj.result == 1) {
                             var money = obj.todayWinOrLose.toFixed(3);
-                            var strMoney = '';
+                            var strMoney = money;
                             if (money > 0) {
-                                strMoney = "<font color='green'>+" + money + "</font>";
+                                if($("#jieSuan").hasClass('greenColor')){
+                                   $("#jieSuan").addClass('greenColor');
+                                }
                             } else {
-                                strMoney = "<font color='red'>" + money + "</font>";
+                                if($("#jieSuan").hasClass('greenColor')){
+                                    $("#jieSuan").removeClass('greenColor');
+                                }
                             }
                             $("#jieSuan").html(strMoney);
                         }
-
 
                         // 投注界面右悬浮菜单按钮
                         $('.menubtn').click(function () {
@@ -5093,6 +5096,13 @@ $(function () {
     //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-ffssc-gfwf", function (e, id, page) {
         initSscPage(15);
+
+        gfwfCommonClickEvent();
+    });
+
+    //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-sfssc-gfwf", function (e, id, page) {
+        initSscPage(13);
 
         gfwfCommonClickEvent();
     });
