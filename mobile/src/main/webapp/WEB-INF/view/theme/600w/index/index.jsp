@@ -14,7 +14,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <%--<script>if (window.top !== window.self) {top.location.href = "<%=basePath%>";}</script>--%>
+    <script>
+        if (window.top !== window.self) {
+//            特殊需求，600w直播网页嵌套手机版
+            if (parent.location.href.indexOf("k600w.com") < 0) {
+                top.location.href = "<%=basePath%>";
+            }
+        }
+    </script>
     <script src="${commonResPath}js/mobile-detect.min.js"></script>
     <script>
         var winWidth = null;
