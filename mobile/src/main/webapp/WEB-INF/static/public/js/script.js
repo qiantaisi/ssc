@@ -1925,9 +1925,8 @@ $(function () {
                     success: function (obj) {
                         if (obj.result == 1) {
                             var money = obj.todayWinOrLose.toFixed(3);
-                            var strMoney = money;
                             if (money > 0) {
-                                strMoney = '+' + money;
+                                $("#jieSuan").html("+" + money);
                                 if (!($("#jieSuan").hasClass('greenColor'))) {
                                     $("#jieSuan").addClass('greenColor');
                                 }
@@ -1935,32 +1934,9 @@ $(function () {
                                 if ($("#jieSuan").hasClass('greenColor')) {
                                     $("#jieSuan").removeClass('greenColor');
                                 }
+                                $("#jieSuan").html(money);
                             }
-                            $("#jieSuan").html(strMoney);
                         }
-
-                        // 投注界面右悬浮菜单按钮
-                        $('.menubtn').click(function () {
-                            var uid = Tools.getCookie("uid");
-                            var token = Tools.getCookie("token");
-                            ajaxRequest({
-                                url: config.basePath + "ssc/ajaxGetShuYing.json",
-                                data: {
-                                    uid: uid,
-                                    token: token
-                                },
-                                success: function (obj) {
-                                    if (obj == null) {
-                                        $("#jieSuan").html("(0.00)");
-                                    } else {
-                                        $("#jieSuan").html((obj.todayWinOrLose));
-                                    }
-                                }
-                            });
-
-                            $(".bg").show();
-                            $(".menu_alert").show();
-                        });
                     }
                 });
             }
