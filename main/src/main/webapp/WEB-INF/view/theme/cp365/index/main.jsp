@@ -355,7 +355,7 @@
             </div>
             <div class="code_layout">
                 <div class="code_wrap">
-                    <img src="${resPath}img/ico89.png" alt="" width="102" height="102">
+                    <img src="<%=basePath%>images/ewm.png" alt="" width="102" height="102">
                     <div class="text">
                         <a href="<%=mHostName%>" target="_blank"><img src="${resPath}img/ico87.png" alt="">iOS下载</a>
                         <a href="<%=mHostName%>" target="_blank"><img src="${resPath}img/ico88.png" alt="">Android下载</a>
