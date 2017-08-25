@@ -1927,11 +1927,12 @@ $(function () {
                             var money = obj.todayWinOrLose.toFixed(3);
                             var strMoney = money;
                             if (money > 0) {
-                                if($("#jieSuan").hasClass('greenColor')){
-                                   $("#jieSuan").addClass('greenColor');
+                                strMoney = '+' + money;
+                                if (!($("#jieSuan").hasClass('greenColor'))) {
+                                    $("#jieSuan").addClass('greenColor');
                                 }
                             } else {
-                                if($("#jieSuan").hasClass('greenColor')){
+                                if ($("#jieSuan").hasClass('greenColor')) {
                                     $("#jieSuan").removeClass('greenColor');
                                 }
                             }
