@@ -1925,38 +1925,18 @@ $(function () {
                     success: function (obj) {
                         if (obj.result == 1) {
                             var money = obj.todayWinOrLose.toFixed(3);
-                            var strMoney = '';
                             if (money > 0) {
-                                strMoney = "<font color='green'>+" + money + "</font>";
-                            } else {
-                                strMoney = "<font color='red'>" + money + "</font>";
-                            }
-                            $("#jieSuan").html(strMoney);
-                        }
-
-
-                        // 投注界面右悬浮菜单按钮
-                        $('.menubtn').click(function () {
-                            var uid = Tools.getCookie("uid");
-                            var token = Tools.getCookie("token");
-                            ajaxRequest({
-                                url: config.basePath + "ssc/ajaxGetShuYing.json",
-                                data: {
-                                    uid: uid,
-                                    token: token
-                                },
-                                success: function (obj) {
-                                    if (obj == null) {
-                                        $("#jieSuan").html("(0.00)");
-                                    } else {
-                                        $("#jieSuan").html((obj.todayWinOrLose));
-                                    }
+                                $("#jieSuan").html("+" + money);
+                                if (!($("#jieSuan").hasClass('greenColor'))) {
+                                    $("#jieSuan").addClass('greenColor');
                                 }
-                            });
-
-                            $(".bg").show();
-                            $(".menu_alert").show();
-                        });
+                            } else {
+                                if ($("#jieSuan").hasClass('greenColor')) {
+                                    $("#jieSuan").removeClass('greenColor');
+                                }
+                                $("#jieSuan").html(money);
+                            }
+                        }
                     }
                 });
             }
@@ -5093,6 +5073,13 @@ $(function () {
     //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-ffssc-gfwf", function (e, id, page) {
         initSscPage(15);
+
+        gfwfCommonClickEvent();
+    });
+
+    //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-sfssc-gfwf", function (e, id, page) {
+        initSscPage(13);
 
         gfwfCommonClickEvent();
     });

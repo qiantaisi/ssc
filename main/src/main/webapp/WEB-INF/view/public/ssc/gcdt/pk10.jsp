@@ -246,16 +246,11 @@
         var arr = [];
         var tmpStr = '';
         var newValue = '';
-        var flagStr = false;
         var arrTemp = ['01','02','03','04','05','06','07','08','09','10'];
-        var TF_flag = $('.Playmethod ul li:eq(0) b').hasClass('acti');
-        if(TF_flag){
-            flagStr = true;
-        }
         for (var i = 1; i <= 10; ++i) {
             var value = Math.floor(Math.random() * 10) + 1;
             var m = Math.floor(Math.random() * 10);
-            newValue = flagStr == true ? arrTemp[m] : value;
+            newValue = arrTemp[m];
             tmpStr += '<span class="fang bg-' + parseInt(value) + '">' + newValue + '</span>';
         }
         $("#lastOpenCode").html(tmpStr);
@@ -264,15 +259,8 @@
     // 渲染上期开奖模板
     function renderLastOpenCode(openCodeArr) {
         var tmpStr = '';
-        var newValue = '';
-        var flagStr = false;
-        var TF_flag = $('.Playmethod ul li:eq(0) b').hasClass('acti');
-        if(TF_flag){
-            flagStr = true;
-        }
         $.each(openCodeArr, function(index, value) {
-            newValue = flagStr == true ? value : parseInt(value);
-            tmpStr += '<span class="fang bg-' + parseInt(value) + '">' + newValue + '</span>';
+            tmpStr += '<span class="fang bg-' + parseInt(value) + '">' + value + '</span>';
         });
         $("#lastOpenCode").html(tmpStr);
     }
@@ -285,8 +273,8 @@
         <p style="margin-left:5px">开奖中</p>
         {{/if}}
 
-        {{if arrSum.length > 0}}
-        {{each arrSum as value}}
+        {{if list.length > 0}}
+        {{each list as value}}
         <i class="fang bg-{{value|parseInt}}">{{value}}</i>
         {{/each}}
         {{/if}}

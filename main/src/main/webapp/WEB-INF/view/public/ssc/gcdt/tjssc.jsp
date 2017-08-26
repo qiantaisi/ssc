@@ -54,22 +54,22 @@
         <div class="layout at">
             <div class="Playmethod cl-801">
                 <ul>
-                    <%--<li class="gf-li">--%>
-                        <%--<b class="acti">官方玩法</b>--%>
-                        <%--<p class="guanfang respan gf-cgwf" data-name="gfwf">--%>
-                            <%--<span class="acti"><a href="javascript:void(0)" data-url="gfwf-tjssc-5x">五星</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-4x">四星</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-h3">后三</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-q3">前三</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-q2">前二</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-dwd">定位胆</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-budw">不定位</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-dxds">大小单双</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-rx2">任选二</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-rx3">任选三</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="gfwf-tjssc-rx4">任选四</a></span>--%>
-                        <%--</p>--%>
-                    <%--</li>--%>
+                   <%-- <li class="gf-li">
+                        <b class="acti">官方玩法</b>
+                        <p class="guanfang respan gf-cgwf" data-name="gfwf">
+                            <span class="acti"><a href="javascript:void(0)" data-url="gfwf-tjssc-5x">五星</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-4x">四星</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-h3">后三</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-q3">前三</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-q2">前二</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-dwd">定位胆</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-budw">不定位</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-dxds">大小单双</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-rx2">任选二</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-rx3">任选三</a></span>
+                            <span><a href="javascript:void(0)" data-url="gfwf-tjssc-rx4">任选四</a></span>
+                        </p>
+                    </li>--%>
                     <li>
                         <b>快钱玩法</b>
                         <p class="kuaiqian" data-name="kqwf">

@@ -99,7 +99,7 @@
             <span class="openNumber cl-1207">
                 {{if openCodeArr != null}}
                     {{each openCodeArr as value index}}
-                        <i class="ball-ts pk10-bg-{{value}}">{{value|parseInt}}</i>
+                        <i class="ball-ts pk10-bg-{{value}}">{{value}}</i>
                     {{/each}}
                 {{else}}
                     开奖中
@@ -113,7 +113,7 @@
     <div class="left">
         <span class="cl-1201 cl-1207">
             {{each openCodeArr as value index}}
-                <i class="ball-ts pk10-bg-{{value}}">{{value|parseInt}}</i>
+                <i class="ball-ts pk10-bg-{{value}}">{{value}}</i>
             {{/each}}
         </span>
         <span class="cl-1202">

@@ -20,14 +20,14 @@
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
-            <%--<h1 class="title">天津时时彩</h1>--%>
-            <h1 class="title">
-                <i class="title_cq">新疆时时彩
+            <h1 class="title">新疆时时彩</h1>
+            <%--<h1 class="title">--%>
+                <%--<i class="title_cq">新疆时时彩--%>
                     <%--<div class="gfwf_triangle_down">--%>
                         <%--&lt;%&ndash;画出一个向下的三角形图标&ndash;%&gt;--%>
                     <%--</div>--%>
-                </i>
-            </h1>
+                <%--</i>--%>
+            <%--</h1>--%>
         </header>
         <c:import url="common/commonBet.jsp" />
         <%--<div class="BeginFind Hide_Show">--%>
