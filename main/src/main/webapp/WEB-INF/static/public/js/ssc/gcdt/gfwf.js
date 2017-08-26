@@ -7500,7 +7500,7 @@ function suiji_gd11x5_rxszsds() {
 
 
     showPlayName = "任选单式-3中3";
-    showContent = "号码: (" + newArr.join(',') + ")";
+    showContent = "号码: (" + newArr.join(' ') + ")";
     betContent =newArr[0]+","+newArr[1]+","+newArr[2]+"|";
 
     return {
@@ -7535,7 +7535,7 @@ function suiji_gd11x5_rxsizsds() {
 
 
     showPlayName = "任选单式-4中4";
-    showContent = "号码: (" + newArr.join(',') + ")";
+    showContent = "号码: (" + newArr.join(' ') + ")";
     betContent =newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+"|";
 
     return {
@@ -7572,7 +7572,7 @@ function suiji_gd11x5_rxwzwds() {
 
 
     showPlayName = "任选单式-5中5";
-    showContent = "号码: (" + newArr.join(',') + ")";
+    showContent = "号码: (" + newArr.join(' ') + ")";
     betContent =newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+","+newArr[4]+"|";
 
     return {
@@ -7612,7 +7612,7 @@ function suiji_gd11x5_rxlzwds() {
 
 
     showPlayName = "任选单式-6中5";
-    showContent = "号码: (" + newArr.join(',') + ")";
+    showContent = "号码: (" + newArr.join(' ') + ")";
     betContent = newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+","+newArr[4]+","+newArr[5]+"|";
 
     return {
@@ -7653,7 +7653,7 @@ function suiji_gd11x5_rxqzwds() {
 
 
     showPlayName = "任选单式-7中5";
-    showContent = "号码: (" + newArr.join(',') + ")";
+    showContent = "号码: (" + newArr.join(' ') + ")";
     betContent = newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+","+newArr[4]+","+newArr[5]+","+newArr[6]+"|";
 
     return {
@@ -7696,7 +7696,7 @@ function suiji_gd11x5_rxbzwds() {
 
 
     showPlayName = "任选单式-8中5";
-    showContent = "号码: (" + newArr.join(',') + ")";
+    showContent = "号码: (" + newArr.join(' ') + ")";
     betContent = newArr[0]+","+newArr[1]+","+newArr[2]+","+newArr[3]+","+newArr[4]+","+newArr[5]+","+","+newArr[6]+newArr[7]+"|";
 
     return {
@@ -7763,7 +7763,7 @@ function suiji_gd11x5_rxezeds() {
 
 
     showPlayName = "任选单式-2中2";
-    showContent = "号码: (" + newArr.join(',') + ")";
+    showContent = "号码: (" + newArr.join(' ') + ")";
     betContent = newArr[0]+","+newArr[1]+"|";
 
     return {
@@ -12607,6 +12607,8 @@ function content_suiji_gd11x5_rxszsds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
+    var tempArr1 = [];
+    var chongfuArr1 = [];
     var errorStr = '';
     var zhushu = 0;
     var  chongfuArr = [], allStrError = [];
@@ -12641,6 +12643,7 @@ function content_suiji_gd11x5_rxszsds() {
             var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
             var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
             tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3);
+            tempArr1.push(oneStr1+" " + twoStr2+" " + threeStr3);
         }
     }
 
@@ -12651,9 +12654,12 @@ function content_suiji_gd11x5_rxszsds() {
     chongfuArr = tempArr.duplicateNew();
     tempArr = tempArr.uniqueArr();
 
-    if (chongfuArr.length > 0) {
-        chongfuArr = chongfuArr.uniqueArr();
-        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    chongfuArr1 = tempArr1.duplicateNew();
+    tempArr1 = tempArr1.uniqueArr();
+
+    if (chongfuArr1.length > 0) {
+        chongfuArr1 = tempArr1.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr1.join(' '));
     }
 
     if (errorArr.length > 0){
@@ -12670,7 +12676,7 @@ function content_suiji_gd11x5_rxszsds() {
     var betContent = '';
 
     showPlayName = "任选单式-3中3";
-    showContent = "号码: (" + tempArr.join('|') + ")";
+    showContent = "号码: (" + tempArr1.join(',') + ")";
     // 转换投注格式
     betContent = tempArr.join('|');
 
@@ -12686,6 +12692,10 @@ function content_gd11x5_rxsizsds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
+    var tempArr1 = [];
+    var chongfuArr1 = [];
+    var tempArr1 = [];
+    var chongfuArr1 = [];
     var errorStr = '';
     var zhushu = 0;
     var  chongfuArr = [], allStrError = [];
@@ -12723,6 +12733,7 @@ function content_gd11x5_rxsizsds() {
             var threeStr3 = sotrArr[2] >= 10 ? sotrArr[2] : ('0' + sotrArr[2]);
             var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
             tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4);
+            tempArr1.push(oneStr1+" " + twoStr2+" " + threeStr3+" "+threeStr4);
         }
     }
 
@@ -12733,9 +12744,12 @@ function content_gd11x5_rxsizsds() {
     chongfuArr = tempArr.duplicateNew();
     tempArr = tempArr.uniqueArr();
 
-    if (chongfuArr.length > 0) {
-        chongfuArr = chongfuArr.uniqueArr();
-        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    chongfuArr1 = tempArr1.duplicateNew();
+    tempArr1 = tempArr1.uniqueArr();
+
+    if (chongfuArr1.length > 0) {
+        chongfuArr1 = chongfuArr1.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr1.join(' '));
     }
 
     if (errorArr.length > 0){
@@ -12752,7 +12766,7 @@ function content_gd11x5_rxsizsds() {
     var betContent = '';
 
     showPlayName = "任选单式-4中4";
-    showContent = "号码: (" + tempArr.join('|') + ")";
+    showContent = "号码: (" + tempArr1.join(',') + ")";
     // 转换投注格式
     betContent = tempArr.join('|');
 
@@ -12769,6 +12783,8 @@ function content_gd11x5_rxwzwds() {
     var errorArr = [];
     var tempArr = [];
     var errorStr = '';
+    var tempArr1 = [];
+    var chongfuArr1 = [];
     var zhushu = 0;
 
     var  chongfuArr = [], allStrError = [];
@@ -12808,6 +12824,7 @@ function content_gd11x5_rxwzwds() {
             var threeStr4 = sotrArr[3] >= 10 ? sotrArr[3] : ('0' + sotrArr[3]);
             var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
             tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5);
+            tempArr1.push(oneStr1+" " + twoStr2+" " + threeStr3+" "+threeStr4+" "+threeStr5);
         }
     }
 
@@ -12818,9 +12835,12 @@ function content_gd11x5_rxwzwds() {
     chongfuArr = tempArr.duplicateNew();
     tempArr = tempArr.uniqueArr();
 
+    chongfuArr1 = tempArr1.duplicateNew();
+    tempArr1 = tempArr1.uniqueArr();
+
     if (chongfuArr.length > 0) {
-        chongfuArr = chongfuArr.uniqueArr();
-        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+        chongfuArr1 = chongfuArr1.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr1.join(' '));
     }
 
     if (errorArr.length > 0){
@@ -12837,7 +12857,7 @@ function content_gd11x5_rxwzwds() {
     var betContent = '';
 
     showPlayName = "任选单式-5中5";
-    showContent = "号码: (" + tempArr.join('|') + ")";
+    showContent = "号码: (" + tempArr1.join(',') + ")";
     // 转换投注格式
     betContent = tempArr.join('|');
 
@@ -12853,6 +12873,8 @@ function content_gd11x5_rxlzwds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
+    var tempArr1 = [];
+    var chongfuArr1 = [];
     var errorStr = '';
     var zhushu = 0;
     var  chongfuArr = [], allStrError = [];
@@ -12895,6 +12917,7 @@ function content_gd11x5_rxlzwds() {
             var threeStr5 = sotrArr[4] >= 10 ? sotrArr[4] : ('0' + sotrArr[4]);
             var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
             tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5+","+threeStr6);
+            tempArr1.push(oneStr1+" " + twoStr2+" " + threeStr3+" "+threeStr4+" "+threeStr5+" "+threeStr6);
         }
     }
 
@@ -12905,9 +12928,12 @@ function content_gd11x5_rxlzwds() {
     chongfuArr = tempArr.duplicateNew();
     tempArr = tempArr.uniqueArr();
 
-    if (chongfuArr.length > 0) {
-        chongfuArr = chongfuArr.uniqueArr();
-        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    chongfuArr1 = tempArr1.duplicateNew();
+    tempArr1 = tempArr1.uniqueArr();
+
+    if (chongfuArr1.length > 0) {
+        chongfuArr1 = chongfuArr1.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr1.join(' '));
     }
 
     if (errorArr.length > 0){
@@ -12924,7 +12950,7 @@ function content_gd11x5_rxlzwds() {
     var betContent = '';
 
     showPlayName = "任选单式-6中5";
-    showContent = "号码: (" + tempArr.join('|') + ")";
+    showContent = "号码: (" + tempArr1.join(',') + ")";
     // 转换投注格式
     betContent = tempArr.join('|');
 
@@ -12940,6 +12966,8 @@ function content_gd11x5_rxqzwds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
+    var tempArr1 = [];
+    var chongfuArr1 = [];
     var errorStr = '';
     var zhushu = 0;
     var  chongfuArr = [], allStrError = [];
@@ -12985,6 +13013,7 @@ function content_gd11x5_rxqzwds() {
             var threeStr6 = sotrArr[5] >= 10 ? sotrArr[5] : ('0' + sotrArr[5]);
             var threeStr7 = sotrArr[6] >= 10 ? sotrArr[6] : ('0' + sotrArr[6]);
             tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5+","+threeStr6+","+threeStr7);
+            tempArr1.push(oneStr1+" " + twoStr2+" " + threeStr3+" "+threeStr4+" "+threeStr5+" "+threeStr6+" "+threeStr7);
         }
     }
 
@@ -12994,10 +13023,12 @@ function content_gd11x5_rxqzwds() {
 
     chongfuArr = tempArr.duplicateNew();
     tempArr = tempArr.uniqueArr();
+    chongfuArr1 = tempArr1.duplicateNew();
+    tempArr1 = tempArr1.uniqueArr();
 
     if (chongfuArr.length > 0) {
-        chongfuArr = chongfuArr.uniqueArr();
-        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+        chongfuArr1 = chongfuArr1.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr1.join(' '));
     }
 
     if (errorArr.length > 0){
@@ -13014,7 +13045,7 @@ function content_gd11x5_rxqzwds() {
     var betContent = '';
 
     showPlayName = "任选单式-7中5";
-    showContent = "号码: (" + tempArr.join('|') + ")";
+    showContent = "号码: (" + tempArr1.join(',') + ")";
     // 转换投注格式
     betContent = tempArr.join('|');
 
@@ -13030,6 +13061,8 @@ function content_gd11x5_rxbzwds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
+    var tempArr1 = [];
+    var chongfuArr1 = [];
     var errorStr = '';
     var zhushu = 0;
     var  chongfuArr = [], allStrError = [];
@@ -13078,6 +13111,7 @@ function content_gd11x5_rxbzwds() {
             var threeStr7 = sotrArr[6] >= 10 ? sotrArr[6] : ('0' + sotrArr[6]);
             var threeStr8 = sotrArr[7] >= 10 ? sotrArr[7] : ('0' + sotrArr[7]);
             tempArr.push(oneStr1+"," + twoStr2+"," + threeStr3+","+threeStr4+","+threeStr5+","+threeStr6+","+threeStr7+","+threeStr8);
+            tempArr1.push(oneStr1+" " + twoStr2+" " + threeStr3+" "+threeStr4+" "+threeStr5+" "+threeStr6+" "+threeStr7+" "+threeStr8);
         }
     }
 
@@ -13085,12 +13119,14 @@ function content_gd11x5_rxbzwds() {
         return 0;
     }
 
+    chongfuArr1 = tempArr1.duplicateNew();
     chongfuArr = tempArr.duplicateNew();
     tempArr = tempArr.uniqueArr();
+    tempArr1 = tempArr1.uniqueArr();
 
     if (chongfuArr.length > 0) {
-        chongfuArr = chongfuArr.uniqueArr();
-        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+        chongfuArr1 = chongfuArr1.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr1.join(' '));
     }
 
     if (errorArr.length > 0){
@@ -13107,7 +13143,7 @@ function content_gd11x5_rxbzwds() {
     var betContent = '';
 
     showPlayName = "任选单式-8中5";
-    showContent = "号码: (" + tempArr.join('|') + ")";
+    showContent = "号码: (" + tempArr1.join(',') + ")";
     // 转换投注格式
     betContent = tempArr.join('|');
 
@@ -13123,6 +13159,8 @@ function content_gd11x5_rxezeds() {
     var newArr = [];
     var errorArr = [];
     var tempArr = [];
+    var tempArr1 = [];
+    var chongfuArr1 = [];
     var errorStr = '';
    var  chongfuArr = [], errorArr = [], allStrError = [];
     var zhushu = 0;
@@ -13154,6 +13192,7 @@ function content_gd11x5_rxezeds() {
             var oneStr1 = sotrArr[0] >= 10 ? sotrArr[0] : ('0' + sotrArr[0]);
             var twoStr2 = sotrArr[1] >= 10 ? sotrArr[1] : ('0' + sotrArr[1]);
             tempArr.push(oneStr1+"," + twoStr2);
+            tempArr1.push(oneStr1+" " + twoStr2);
         }
     }
 
@@ -13164,9 +13203,12 @@ function content_gd11x5_rxezeds() {
     chongfuArr = tempArr.duplicateNew();
     tempArr = tempArr.uniqueArr();
 
-    if (chongfuArr.length > 0) {
-        chongfuArr = chongfuArr.uniqueArr();
-        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr.join(' '));
+    chongfuArr1 = tempArr1.duplicateNew();
+    tempArr1 = tempArr1.uniqueArr();
+
+    if (chongfuArr1.length > 0) {
+        chongfuArr1 = chongfuArr1.uniqueArr();
+        allStrError.push(" 被过滤掉的重复号码 " + chongfuArr1.join(' '));
     }
 
     if (errorArr.length > 0){
@@ -13184,7 +13226,7 @@ function content_gd11x5_rxezeds() {
     var betContent = '';
 
     showPlayName = "任选单式-2中2";
-    showContent = "号码: (" + tempArr.join('|') + ")";
+    showContent = "号码: (" + tempArr1.join(',') + ")";
     // 转换投注格式
     betContent = tempArr.join('|');
 
