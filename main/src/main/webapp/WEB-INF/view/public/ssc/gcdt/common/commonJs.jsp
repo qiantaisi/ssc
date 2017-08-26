@@ -7,7 +7,7 @@
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
-<script src="${resPath}js/ssc/gcdt/ssc.js?v=20170823"></script>
+<script src="${resPath}js/ssc/gcdt/ssc.js?v=20170826"></script>
 
 <div class="alert_log two2">
     <div class="alert_log_col">

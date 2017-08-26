@@ -516,26 +516,6 @@ function getOpenCodeHistory() {
                     obj.sum = sum;
                 }
 
-                if(playGroupId != null && playGroupId == 23 || playGroupId == 9){
-                    var arrSum = [];
-                    var flagStr = false;
-                    var TF_flag = $('.Playmethod ul li:eq(0) b').hasClass('acti');
-                    if(TF_flag){
-                        flagStr = true;
-                    }
-
-                    $.each(openCodeArr, function (index, value) {
-                        if(flagStr){
-                            arrSum.push(openCodeArr[index]);
-                        } else{
-                            arrSum.push(parseInt(openCodeArr[index]));
-                        }
-
-                    });
-
-                    obj.arrSum = arrSum;
-                }
-
                 obj.number = value.number;
                 obj.list = openCodeArr;
 
@@ -559,11 +539,6 @@ $(function() {
     getOpenCodeHistory();
 });
 function gdkj(playGroupId) {
-    var flagStr = false;
-    var TF_flag = $('.Playmethod ul li:eq(0) b').hasClass('acti');
-    if(TF_flag){
-        flagStr = true;
-    }
     var str="";
     var num="";var num1="";var num2="";var num3="";var num4=""; var num5="";var num6="";var num7="";var num8="";var num9="";var num10=""; var num11="";var num12=""; var num13="";var num14="";var num15="";var num16="";var num17="";var num18="";var num19="";
     ajaxRequest({
@@ -591,7 +566,6 @@ function gdkj(playGroupId) {
                         openCode = openCode.split(",");
 
                         for (var i in openCode) {
-                            if (flagStr) {
                                 var num = openCode[0];
                                 var num1 = openCode[1];
                                 var num2 = openCode[2];
@@ -602,22 +576,6 @@ function gdkj(playGroupId) {
                                 var num7 = openCode[7];
                                 var num8 = openCode[8];
                                 var num9 = openCode[9];
-                            } else {
-                                var num =  parseInt(openCode[0]);
-                                var num1 =parseInt(openCode[1]);
-                                var num2 = parseInt(openCode[2]);
-                                var num3 = parseInt(openCode[3]);
-                                var num4 =parseInt(openCode[4]);
-                                var num5 =parseInt(openCode[5]);
-                                var num6 = parseInt(openCode[6]);
-                                var num7 =parseInt(openCode[7]);
-                                var num8 =parseInt(openCode[8]);
-                                var num9 =parseInt(openCode[9]);
-                            }
-
-
-
-
                         }
                     }
                     if (lastNumberOpening) {
@@ -632,7 +590,6 @@ function gdkj(playGroupId) {
                         if (typeof openCode != "undefined" || openCode != null) {
                             openCode = openCode.split(",");
                             for (var j = 0; j < openCode.length; ++j) {
-                                if (flagStr) {
                                     var num = openCode[0];
                                     var num1 = openCode[1];
                                     var num2 = openCode[2];
@@ -643,19 +600,6 @@ function gdkj(playGroupId) {
                                     var num7 = openCode[7];
                                     var num8 = openCode[8];
                                     var num9 = openCode[9];
-                                } else {
-                                    var num =  parseInt(openCode[0]);
-                                    var num1 =parseInt(openCode[1]);
-                                    var num2 = parseInt(openCode[2]);
-                                    var num3 = parseInt(openCode[3]);
-                                    var num4 =parseInt(openCode[4]);
-                                    var num5 =parseInt(openCode[5]);
-                                    var num6 = parseInt(openCode[6]);
-                                    var num7 =parseInt(openCode[7]);
-                                    var num8 =parseInt(openCode[8]);
-                                    var num9 =parseInt(openCode[9]);
-                                }
-
                             }
                         }
                         str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px; color: white"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di">' + getBgColor(num) + ' ' + getBgColor(num1) + '' + getBgColor(num2) + ' ' + getBgColor(num3) + '' + getBgColor(num4) + ' ' + getBgColor(num5) + ' ' + getBgColor(num6) + ' ' + getBgColor(num7) + ' ' + getBgColor(num8) + ' ' + getBgColor(num9) + '</div></p>';
