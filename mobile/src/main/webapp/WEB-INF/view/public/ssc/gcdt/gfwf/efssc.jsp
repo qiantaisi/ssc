@@ -74,7 +74,7 @@
     </div>
     <c:import url="../../../common/leftSscPanel.jsp"/>
     <c:import url="../../../common/menuAlert.jsp">
-        <c:param name="playGroupId" value="2"/>
+        <c:param name="playGroupId" value="16"/>
         <c:param name="gfwfFlag" value="2"/>
     </c:import>
 
@@ -82,7 +82,7 @@
 <c:import url="../../../common/commonJs.jsp"/>
 <script>
 //    var playName = null;
-    var playGroupId = ${playGroupId};
+    var playGroupId = 16;
     // 全局官方玩法赔率
     <c:if test="${not empty playPlListJson}">
     var gfwfPlJson = ${playPlListJson};
