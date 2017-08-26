@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import project38.api.common.utils.JSONUtils;
 import project38.api.result.LogoResult;
 import project38.api.result.QRCodeResult;
 import project38.api.utils.ApiUtils;
