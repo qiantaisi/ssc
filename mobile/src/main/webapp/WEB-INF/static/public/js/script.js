@@ -5106,6 +5106,20 @@ $(function () {
     });
 
     //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-xjssc-gfwf", function (e, id, page) {
+        initSscPage(13);
+
+        gfwfCommonClickEvent();
+    });
+
+    //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-efssc-gfwf", function (e, id, page) {
+        initSscPage(16);
+
+        gfwfCommonClickEvent();
+    });
+
+    //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-pk10-gfwf", function (e, id, page) {
         initSscPage(9);
 

@@ -152,7 +152,7 @@
                data-fun_zhushu="zhushu_h3z6fs"
                data-fun_content="content_h3z6fs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/hs/zlfs.html"
-               data-play_id="741"
+               data-play_id="946"
                data-play_pl_id="14741"
                data-name="组六复式">
                 <span class="staer1">组六复式</span>
@@ -174,8 +174,8 @@
                data-fun_zhushu="zhushu_h3zuxbd"
                data-fun_content="content_h3zuxbd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/hs/zxbd.html"
-               data-play_id="870"
-               data-play_pl_id="14650|14649"
+               data-play_id="947"
+               data-play_pl_id="14743|14742"
                data-name="组选包胆">
                 <span class="staer1">组选包胆</span>
             </a>
@@ -287,7 +287,7 @@
                data-fun_content="content_q3zuxbd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/qs/zxbd.html"
                data-play_id="925"
-               data-play_pl_id="14714"
+               data-play_pl_id="14713||14714"
                data-name="组选包胆">
                 <span class="staer1">组选包胆</span>
             </a>
