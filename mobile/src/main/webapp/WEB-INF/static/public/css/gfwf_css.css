@@ -528,7 +528,9 @@ ding {
     padding: 0.02rem 1rem;
     margin: 0;
     color: #005ddc;
+    /*
     border-right: 1px solid #ddd;
+    */
 }
 .betTemplate .betFoot .no-btn span{
     display: block;
