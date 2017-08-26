@@ -54,7 +54,7 @@
         <div class="layout at">
             <div class="Playmethod">
                 <ul>
-                   <%-- <li class="gf-li">
+                   <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-sfssc-5x">五星</a></span>
@@ -69,7 +69,7 @@
                             <span><a href="javascript:void(0)" data-url="gfwf-sfssc-rx3">任选三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-sfssc-rx4">任选四</a></span>
                         </p>
-                    </li>--%>
+                    </li>
                     <li>
                         <b>快钱玩法</b>
                         <p class="kuaiqian">

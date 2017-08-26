@@ -558,8 +558,8 @@
                data-fun_zhushu="zhushu_rx2zxfs"
                data-fun_content="content_rx2zxfs"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/rxe/zxfs.html"
-               data-play_id="559"
-               data-play_pl_id="14277"
+               data-play_id="971"
+               data-play_pl_id="14768"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>

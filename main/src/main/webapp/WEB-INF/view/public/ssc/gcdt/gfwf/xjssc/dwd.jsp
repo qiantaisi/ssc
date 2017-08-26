@@ -10,7 +10,6 @@
 
 <c:import url="../common/commonMiddle.jsp" />
 <c:import url="../common/subCommonJs.jsp" />
-if (parseInt(oneStr) < 12 && parseInt(twoStr) < 12 && parseInt(threeStr) < 12) {
 
 <%-- 定位胆 --%>
 <script type="text/html" id="template_dwd">

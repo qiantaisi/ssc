@@ -21,7 +21,8 @@
                 注册
             </h1>
         </header>
-        <c:import url="../../../public/theme/common/bottomNav.jsp"/>
+        <c:import url="../common/bottomNav.jsp"/>
+
         <jsp:include page="../../../public/index/register.jsp" />
     </div>
 </div>
