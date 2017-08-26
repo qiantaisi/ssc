@@ -1869,7 +1869,7 @@ $(function () {
                 perMoney: value.perMoney,
                 content: value.content,
                 playPlId: value.playPlId,
-                playPl: value.playPl,
+                playPl: value.playPl
             });
         });
 
@@ -5073,6 +5073,13 @@ $(function () {
     //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-ffssc-gfwf", function (e, id, page) {
         initSscPage(15);
+
+        gfwfCommonClickEvent();
+    });
+
+    //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-efssc-gfwf", function (e, id, page) {
+        initSscPage(16);
 
         gfwfCommonClickEvent();
     });
