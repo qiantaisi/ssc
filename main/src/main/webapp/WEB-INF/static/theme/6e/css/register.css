@@ -2,9 +2,9 @@
     width: 1000px;margin: 0px auto;
 }
 /*.logo img {*/
-    /*width: 186px;*/
-    /*height: 57px;*/
-    /*vertical-align: middle;*/
+/*width: 186px;*/
+/*height: 57px;*/
+/*vertical-align: middle;*/
 /*}*/
 
 .head_middle_yuye {
@@ -18,7 +18,9 @@
     height: 24px;
     vertical-align: middle;
 }
-
+.hideRegImage{
+    display: none;
+}
 .right {
     float: right;
 }
@@ -115,11 +117,11 @@ img {
 .login_main {
     background-size: cover;
     margin: 0 auto;
-    position: fixed;
+    position: absolute;
     margin-top: -237px;
-    top: 50%;
-    margin-left: 20%;
-
+    top: 40%;
+    margin-left: 25%;
+    z-index: 100;
 }
 
 .re-text-content{
@@ -163,7 +165,7 @@ img {
 
 .login_b_link {
     padding-left: 130px;
-     padding-top: 40px;
+    padding-top: 40px;
 }
 
 .footer_t {
@@ -301,7 +303,7 @@ form {
     margin-top: 10px;
 }
 
-div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input, textarea,blockquote,p{padding:0;margin:0;}
+div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,pre,form,fieldset,input, textarea,blockquote,p{padding:0;margin:0;}
 
 .footer_menu {
     width: 182px;
@@ -449,4 +451,7 @@ body {
     color: #fff;
     font-size: 16px;
     float: left;
+}
+.hideRegInput{
+    display: none;
 }

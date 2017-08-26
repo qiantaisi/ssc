@@ -3,7 +3,7 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page import="project38.api.utils.RequestUtils" %>
 <%
@@ -21,23 +21,47 @@
                 菜单
             </a>
             <h1 class="title">新疆时时彩</h1>
+            <%--<h1 class="title">--%>
+                <%--<i class="title_cq">新疆时时彩--%>
+                    <%--<div class="gfwf_triangle_down">--%>
+                        <%--&lt;%&ndash;画出一个向下的三角形图标&ndash;%&gt;--%>
+                    <%--</div>--%>
+                <%--</i>--%>
+            <%--</h1>--%>
         </header>
-        <c:import url="common/commonBet.jsp"/>
+        <c:import url="common/commonBet.jsp" />
+        <%--<div class="BeginFind Hide_Show">--%>
+            <%--<div class="gfwf_consele">--%>
+                <%--<div class="gfwf_one">--%>
+                    <%--<a class="F1_color" href="<%=basePath%>ssc/gcdt/gfwf/xjssc.html">--%>
+                        <%--<div class="border_one color_one">--%>
+                            <%--官方模式--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+                <%--<div class="gfwf_two">--%>
+                    <%--<a class="F2_color" href="<%=basePath%>ssc/gcdt/xjssc.html">--%>
+                        <%--<div class="border_two color_two">--%>
+                            <%--传统模式--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<div class="gfwf_mask">--%>
+                <%--&lt;%&ndash;实现蒙版&ndash;%&gt;--%>
+            <%--</div>--%>
+        <%--</div>--%>
         <div class="content cl-601">
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xjssc/sm.html">双面</a>
-                    <a href="javascript:void(0)" data-type="page"
-                       data-url="<%=basePath%>ssc/gcdt/xjssc/szp.html">数字盘</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xjssc/szp.html">数字盘</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-yzdw">一字定</a>
-                    <a href="javascript:void(0)" data-type="page"
-                       data-url="<%=basePath%>ssc/gcdt/xjssc/ezdw.html">二字定</a>
-                    <a href="javascript:void(0)" data-type="page"
-                       data-url="<%=basePath%>ssc/gcdt/xjssc/szdw.html">三字定</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xjssc/ezdw.html">二字定</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xjssc/szdw.html">三字定</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-yzzh">一字组</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-ezzh">二字组</a>
-                    <a href="javascript:void(0)" data-type="page"
-                       data-url="<%=basePath%>ssc/gcdt/xjssc/ezhs.html">二字和</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xjssc/ezhs.html">二字和</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-zxs">组选三</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-zxl">组选六</a>
                     <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-kd">跨度</a>
@@ -104,7 +128,7 @@
             </div>
         </div>
     </div>
-    <c:import url="../../common/leftSscPanel.jsp"/>
+    <c:import url="../../common/leftSscPanel.jsp" />
     <c:import url="../../common/menuAlert.jsp">
         <c:param name="playGroupId" value="3"/>
     </c:import>
@@ -127,15 +151,14 @@
     </div>
 </script>
 <script type="text/html" id="template_lastOpenInfo">
-    <span class="left cl-1200 ssc_1200_qi" id="lastNumber">第<span
-            class="style_blue">{{number}}</span>期&nbsp;&nbsp;</span>
+    <span class="left cl-1200 ssc_1200_qi" id="lastNumber">第<span class="style_blue">{{number}}</span>期&nbsp;&nbsp;</span>
     <div class="left">
         <span class="cl-1201 ssc_1201_num">
             {{each openCodeArr as value index}}
                 <i>{{value}}</i>
             {{/each}}
         </span>
-        <span class="cl-1202 ssc_1202_sx">
+        <span class="cl-1202 ssc_1202_sx">&nbsp;
             {{each infoArr as value index}}
                 <i>{{value}}</i>
             {{/each}}

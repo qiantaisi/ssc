@@ -62,7 +62,9 @@
     color: #fff;
 }
 
-
+.hideRegImage{
+    display: none;
+}
 
 .menu_main .ahover {
     background: #da1b25;
@@ -117,8 +119,8 @@ img {
     margin: 0 auto;
     position: fixed;
     margin-top: -237px;
-    top: 50%;
-    margin-left: 20%;
+    top: 30%;
+    margin-left: 25%;
 
 }
 
@@ -301,7 +303,7 @@ form {
     margin-top: 10px;
 }
 
-div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input, textarea,blockquote,p{padding:0;margin:0;}
+div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,pre,form,fieldset,input, textarea,blockquote,p{padding:0;margin:0;}
 
 .footer_menu {
     width: 182px;

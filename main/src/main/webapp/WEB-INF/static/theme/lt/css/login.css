@@ -303,7 +303,7 @@ form {
     margin-top: 10px;
 }
 
-div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input, textarea,blockquote,p{padding:0;margin:0;}
+div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,pre,form,fieldset,input, textarea,blockquote,p{padding:0;margin:0;}
 
 .footer_menu {
     width: 182px;
@@ -327,7 +327,9 @@ div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input, textarea,blockquot
     height: 117px;
     margin: 15px 0px;
 }
-
+.hideRegImage{
+    display: none;
+}
 .menu a {
     color: #fff;
 }

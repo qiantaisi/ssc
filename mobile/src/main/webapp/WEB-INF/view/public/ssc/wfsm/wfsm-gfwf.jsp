@@ -64,7 +64,7 @@
             <%--data-id="btn-gdqc"><span>官方模式</span></a>--%>
         </div>
         <c:choose>
-            <c:when test="${playGroupId == 1 || playGroupId == 15}">
+            <c:when test="${playGroupId == 1 || playGroupId == 15 || playGroupId == 3 || playGroupId == 2}">
                 <div class="page page-current" id="page-gcdt-cqssc-wfsm" style="height: 3.9rem; top: 2.1rem">
                     <header class="bar bar-nav">
                     </header>
@@ -114,6 +114,12 @@
                                             <c:when test="${playGroupId == 24}">
                                                 <c:import url="rule/gfwf/gd11x5.jsp"/>
                                             </c:when>
+                                            <c:when test="${playGroupId == 2}">
+                                                <c:import url="rule/gfwf/tjssc.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 3}">
+                                                <c:import url="rule/gfwf/xjssc.jsp"/>
+                                            </c:when>
                                         </c:choose>
                                     </div>
                                 </div>
@@ -155,12 +161,6 @@
                                 <div class="cl-1350-gfwf">
                                     <div class="content-block">
                                         <c:choose>
-                                            <c:when test="${playGroupId == 1}">
-                                                <c:import url="rule/gfwf/cqssc.jsp"/>
-                                            </c:when>
-                                            <c:when test="${playGroupId == 15}">
-                                                <c:import url="rule/gfwf/ffssc.jsp"/>
-                                            </c:when>
                                             <c:when test="${playGroupId == 24}">
                                                 <c:import url="rule/gfwf/gd11x5.jsp"/>
                                             </c:when>
@@ -180,9 +180,6 @@
                                 <div class="cl-1350-gfwf">
                                     <div class="content-block">
                                         <c:choose>
-                                            <c:when test="${playGroupId == 2}">
-                                                <c:import url="rule/gfwf/base.jsp"/>
-                                            </c:when>
                                             <c:when test="${playGroupId == 3}">
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>

@@ -260,22 +260,10 @@
                         <span class="img bg-img-wfssc"></span>
                         <span>五分时时彩</span>
                     </a>
-                </div><%--
+                </div>
+
                 <div class="row cl-318 gcdtList">
-                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="21"
-                       href="<%=basePath%>ssc/gcdt/jlk3.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-jlk3"></span>
-                        <span>吉林快3</span>
-                    </a>
-                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="18"
+                    <a class="col-25 col-33 a_bottom del_boder_top" data-play_group_id="18"
                        href="<%=basePath%>ssc/gcdt/jsk3.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
@@ -288,8 +276,33 @@
                         <span class="img bg-img-jsk3"></span>
                         <span>江苏快3</span>
                     </a>
-                    <a class="col-25 col-33 re_a_bottom"></a>
-                </div>--%>
+                    <a class="col-25 col-33 a_bottom del_boder_top" data-play_group_id="21"
+                       href="<%=basePath%>ssc/gcdt/jlk3.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-jlk3"></span>
+                        <span>吉林快3</span>
+                    </a>
+                    <a class="col-25 col-33 a_bottom del_boder_top boder_right" data-play_group_id="17"
+                       href="<%=basePath%>ssc/gcdt/gfwf/gd11x5.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-gd11x5"></span>
+                        <span>广东11选5</span>
+                    </a>
+                </div>
                 <div class="row cl-318 gcdtList">
 
                 </div>

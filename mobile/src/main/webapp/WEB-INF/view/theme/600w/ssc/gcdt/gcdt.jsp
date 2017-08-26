@@ -206,7 +206,7 @@
                         <span>北京28</span>
                     </a>
                 </div>
-                <div class="row cl-318 gcdtList">
+                <div class="row cl-318 gcdtList bottom_gcdt_boder">
                     <a class="col-25 col-33 a_bottom" data-play_group_id="8" href="<%=basePath%>ssc/gcdt/kl8.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
@@ -219,7 +219,7 @@
                         <span class="img bg-img-kl8"></span>
                         <span>北京快乐8</span>
                     </a>
-                    <a class="col-25 col-33 re_a_bottom" data-play_group_id="16"
+                    <a class="col-25 col-33 re_a_bottom bottom_gcdt_boder" data-play_group_id="16"
                        href="<%=basePath%>ssc/gcdt/efssc.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
@@ -232,7 +232,7 @@
                         <span class="img bg-img-efssc"></span>
                         <span>两分时时彩</span>
                     </a>
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="13" href="<%=basePath%>ssc/gcdt/sfssc.html">
+                    <a class="col-25 col-33 a_bottom bottom_gcdt_boder" data-play_group_id="13" href="<%=basePath%>ssc/gcdt/sfssc.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
                           <i>00</i>
@@ -244,7 +244,7 @@
                         <span class="img bg-img-sfssc"></span>
                         <span>三分时时彩</span>
                     </a>
-                    <a class="col-25 col-33 a_bottom" data-play_group_id="17"
+                    <a class="col-25 col-33 a_bottom bottom_gcdt_boder" data-play_group_id="17"
                        href="<%=basePath%>ssc/gcdt/wfssc.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
@@ -259,7 +259,45 @@
                     </a>
                 </div>
                 <div class="row cl-318 gcdtList">
-
+                    <a class="col-25 col-33 a_bottom del_boder_top" data-play_group_id="18"
+                       href="<%=basePath%>ssc/gcdt/jsk3.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-jsk3"></span>
+                        <span>江苏快3</span>
+                    </a>
+                    <a class="col-25 col-33 a_bottom del_boder_top" data-play_group_id="21"
+                       href="<%=basePath%>ssc/gcdt/jlk3.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-jlk3"></span>
+                        <span>吉林快3</span>
+                    </a>
+                    <a class="col-25 col-33 a_bottom del_boder_top boder_right" data-play_group_id="17"
+                       href="<%=basePath%>ssc/gcdt/gfwf/gd11x5.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-gd11x5"></span>
+                        <span>广东11选5</span>
+                    </a>
                 </div>
             </div>
             <div class="row cl-6 cl-317">

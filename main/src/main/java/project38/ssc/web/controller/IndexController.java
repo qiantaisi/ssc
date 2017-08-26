@@ -48,11 +48,10 @@ public class IndexController extends BaseController {
 
     @RequestMapping(value = "/ajaxChekeAcount.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public RegisterResult ajaxChekeAcount(String acount) throws Exception {
+    public RegisterResult ajaxChekeAcount(String account) throws Exception {
         String companyShortName = this.getCompanyShortName();
-        companyShortName=null;
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        RegisterResult registerResult= ApiUtils.getAccountUniqueFlag(acount,companyShortName);
+        RegisterResult registerResult= ApiUtils.getAccountUniqueFlag(account,companyShortName);
         return registerResult;
     }
 
