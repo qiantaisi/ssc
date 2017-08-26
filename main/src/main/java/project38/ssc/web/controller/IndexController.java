@@ -211,4 +211,14 @@ public class IndexController extends BaseController {
         }
         return loginResult;
     }
+
+	@RequestMapping(value = "/ajaxGetZxxx.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public ArticleResult ajaxGetZxxx(String limit) throws Exception {
+        String companyShortName = this.getCompanyShortName();
+        Integer numer=Integer.valueOf(limit);
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        ArticleResult articleResult= ApiUtils.getArtList(companyShortName, 0, numer);
+        return articleResult;
+    }
 }
