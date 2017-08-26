@@ -243,7 +243,7 @@
                data-fun_content="content_q3zh"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/qszh.html"
                data-play_id="995"
-               data-play_pl_id="14796|14797|14798"
+               data-play_pl_id="14796"
                data-name="前三组合">
                 <span class="staer1">前三组合</span>
             </a>
