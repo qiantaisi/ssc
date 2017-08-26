@@ -1018,19 +1018,19 @@ function initSubPage() {
                 $(this).parent().toggleClass('acti');
                 var nameStr = $(this).parent().parent().attr('data-name');
                 if (nameStr == 'danma2') {
-                    minusDanmaNum(arrNum2, this);
+                    minusDanmaNumObj(arrNum2, this);
                 } else if (nameStr == 'danma3') {
-                    minusDanmaNum(arrNum3, this);
+                    minusDanmaNumObj(arrNum3, this);
                 } else if (nameStr == 'danma4') {
-                    minusDanmaNum(arrNum4, this);
+                    minusDanmaNumObj(arrNum4, this);
                 } else if (nameStr == 'danma5') {
-                    minusDanmaNum(arrNum5, this);
+                    minusDanmaNumObj(arrNum5, this);
                 } else if (nameStr == 'danma6') {
-                    minusDanmaNum(arrNum6, this);
+                    minusDanmaNumObj(arrNum6, this);
                 } else if (nameStr == 'danma7') {
-                    minusDanmaNum(arrNum7, this);
+                    minusDanmaNumObj(arrNum7, this);
                 } else if (nameStr == 'danma8') {
-                    minusDanmaNum(arrNum8, this);
+                    minusDanmaNumObj(arrNum8, this);
                 }
 
             } else {
@@ -1201,7 +1201,7 @@ function getDanmaCommon(obj, numArr, x, flagActi){
 }
 
 //胆码减少计数器
-function minusDanmaNum(numArr, obj){
+function minusDanmaNumObj(numArr, obj){
     var indexVal = numArr.indexOf(parseInt($(obj).html()));
     if(indexVal > -1){
         numArr.splice(indexVal, 1);
