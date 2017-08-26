@@ -23,9 +23,9 @@
             <%--<h1 class="title">两分时时彩</h1>--%>
             <h1 class="title">
                 <i class="title_cq">两分时时彩
-                    <div class="gfwf_triangle_down">
-                        <%--画出一个向下的三角形图标--%>
-                    </div>
+                    <%--<div class="gfwf_triangle_down">--%>
+                        <%--&lt;%&ndash;画出一个向下的三角形图标&ndash;%&gt;--%>
+                    <%--</div>--%>
                 </i>
             </h1>
         </header>
