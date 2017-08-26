@@ -1225,6 +1225,8 @@
 
         <p><img src="<%=basePath%>images/${qrcode.codeId}.png"/></p>
 
+        <p><img src="${resPath}img/left_4.png"/></p>
+
         <p> <a href="<%=basePath%>register.html"><img src="${resPath}img/left_05.png"/></a></p>
 
         <p class="gls_close"><img src="${resPath}img/left_06.png"/></p>
@@ -1248,6 +1250,8 @@
         <p><a href="<%=basePath%>app.html" target="_blank"><img src="${resPath}img/right_04.png"/></a></p>
 
         <p><img src="<%=basePath%>images/${qrcode.codeId}.png"/></p>
+
+        <p><img src="${resPath}img/right_05.png"/></p>
 
         <p class="gls_close"><img src="${resPath}img/right_06.png"/></p>
 
