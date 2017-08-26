@@ -15,7 +15,7 @@
                 <span class="playPlIdBtn" data-play_id="949" data-play_pl_id="14746" data-name="4xzxds" data-fun_zhushu="zhushu_4xzxds" data-fun_content="content_4xzxds" data-fun_suiji="suiji_4xzxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
-    </ul>d
+    </ul>
 </div>
 
 <c:import url="../common/commonMiddle.jsp" />
