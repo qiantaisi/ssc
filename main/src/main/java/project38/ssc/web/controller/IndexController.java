@@ -56,14 +56,6 @@ public class IndexController extends BaseController {
     }
 
 
-    @RequestMapping(value = "/ajaxGetZxxx.json", method = {RequestMethod.GET, RequestMethod.POST})
-    @ResponseBody
-    public ArticleResult ajaxGetZxxx(String limit) throws Exception {
-        String companyShortName = this.getCompanyShortName();
-        Integer number=Integer.valueOf(limit);
-        ArticleResult articleResult= ApiUtils.getArtList(companyShortName,0,number);
-        return articleResult;
-    }
 
 
     @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
