@@ -36,7 +36,7 @@
         <li>
             <b>前三其它</b>
             <p class="btn_h3_qt">
-                <span class="playPlIdBtn" data-play_id="916" data-play_pl_id="14696" data-name="q3hzws" data-fun_zhushu="zhushu_q3hzws" data-fun_content="content_q3hzws" data-fun_suiji="suiji_q3hzws"><a href="javascript:void(0)">和值尾数</a></span>
+                <span class="playPlIdBtn" data-play_id="913" data-play_pl_id="14696" data-name="q3hzws" data-fun_zhushu="zhushu_q3hzws" data-fun_content="content_q3hzws" data-fun_suiji="suiji_q3hzws"><a href="javascript:void(0)">和值尾数</a></span>
                 <span class="playPlIdBtn" data-play_id="914" data-play_pl_id="14697|14698|14699" data-name="q3tsh"
                       data-fun_zhushu="zhushu_q3tsh" data-fun_content="content_q3tsh" data-fun_suiji="suiji_q3tsh"><a href="javascript:void(0)">特殊号</a></span>
             </p>
