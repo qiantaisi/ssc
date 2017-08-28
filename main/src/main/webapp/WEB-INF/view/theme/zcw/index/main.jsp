@@ -628,7 +628,6 @@
             success: function (obj) {
                 var zlist = obj.articleList;
                 var strzxxx = '';
-
                 $.each(zlist, function (index, value) {
                     var urlStr = CONFIG.BASEURL + 'zixun/'+ value.id + '.html';
                     strzxxx += '<li style="width: 469px;height: 30px;"><a href="'+ urlStr +'">' +
