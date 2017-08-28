@@ -8,6 +8,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import project38.api.result.CompanyShortNameResult;
+import project38.api.utils.RequestUtils;
 import project38.api.utils.SessionUtils;
 import project38.api.utils.ApiUtils;
 import project38.ssc.mobile.auth.Authentication;
@@ -78,7 +79,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
                         }
                     } else if (uri.indexOf(".html") > 0) {
                         String path = request.getContextPath();
-                        String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/login.html";
+                        String basePath = RequestUtils.getBasePath(request) + "login.html";
 
                         response.sendRedirect(basePath);
                     }
@@ -92,8 +93,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
         if (uri.indexOf(".html") > 0) {
             if (StringUtils.isNotBlank(uidStr) && StringUtils.isNotBlank(token) && StringUtils.isNotBlank(companyShortName)) {
-                String path = request.getContextPath();
-                String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
+                String basePath = RequestUtils.getBasePath(request);
                 ApiUtils.updateOnlineInfo(Long.parseLong(uidStr), token, basePath + uri,companyShortName);
             }
         }

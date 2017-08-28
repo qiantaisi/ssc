@@ -38,7 +38,7 @@ $(function () {
     // 首页
     $(".bar-nav .shouye").click(function () {
         // $.router.back()
-        window.location.href = config.basePath + "/main.html";
+        window.location.href = config.basePath + "main.html";
     });
 
     function back() {

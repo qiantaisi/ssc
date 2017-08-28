@@ -114,7 +114,7 @@ public class IndexController extends BaseController {
         modelMap.put("webInfo", webInfoResult);
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
-//        modelMap.put("qrcode", ApiUtils.getQRCodePC(companyShortName));
+        modelMap.put("qrcode", ApiUtils.getQRCodePC(companyShortName));
 
         return this.renderView("index/main", modelMap);
     }
@@ -126,6 +126,8 @@ public class IndexController extends BaseController {
 
         modelMap.put("Article", ApiUtils.getArtByid(companyShortName, id));
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
+        modelMap.put("qrcode", ApiUtils.getQRCodePC(companyShortName));
+
         return this.renderView("index/zxxx", modelMap);
     }
 
@@ -220,5 +222,15 @@ public class IndexController extends BaseController {
             loginResult.setDescription("服务器错误");
         }
         return loginResult;
+    }
+
+	@RequestMapping(value = "/ajaxGetZxxx.json", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
+    public ArticleResult ajaxGetZxxx(String limit) throws Exception {
+        String companyShortName = this.getCompanyShortName();
+        Integer numer=Integer.valueOf(limit);
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        ArticleResult articleResult= ApiUtils.getArtList(companyShortName, 0, numer);
+        return articleResult;
     }
 }
