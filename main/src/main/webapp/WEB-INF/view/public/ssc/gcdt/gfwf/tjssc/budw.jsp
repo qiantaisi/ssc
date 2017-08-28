@@ -30,8 +30,8 @@
             <b class="tit_img">五星</b>
             <p>
                 <span class="playPlIdBtn" data-play_id="673" data-play_pl_id="14474" data-name="wxym" data-fun_zhushu="zhushu_wxym" data-fun_content="content_wxym" data-fun_suiji="suiji_wxym"><a href="javascript:void(0)">五星一码</a></span>
-                <span class="playPlIdBtn" data-play_id="674" data-play_pl_id="14475" data-name="wxem" data-fun_zhushu="zhushu_wxem" data-fun_content="content_wxem" data-fun_suiji="suiji_wxem"><a href="javascript:void(0)">五星二码</a></span>
-                <span class="playPlIdBtn" data-play_id="675" data-play_pl_id="14476" data-name="wx3m" data-fun_zhushu="zhushu_wx3m" data-fun_content="content_wx3m" data-fun_suiji="suiji_wx3m"><a href="javascript:void(0)">五星三码</a></span>
+                <span class="playPlIdBtn" data-play_id="675" data-play_pl_id="14476" data-name="wxem" data-fun_zhushu="zhushu_wxem" data-fun_content="content_wxem" data-fun_suiji="suiji_wxem"><a href="javascript:void(0)">五星二码</a></span>
+                <span class="playPlIdBtn" data-play_id="674" data-play_pl_id="14475" data-name="wx3m" data-fun_zhushu="zhushu_wx3m" data-fun_content="content_wx3m" data-fun_suiji="suiji_wx3m"><a href="javascript:void(0)">五星三码</a></span>
             </p>
         </li>
     </ul>
