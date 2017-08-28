@@ -57,7 +57,7 @@
                     <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
-                            span class="acti"><a href="javascript:void(0)" data-url="gfwf-efssc-5x">五星</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="gfwf-efssc-5x">五星</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-efssc-4x">四星</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-efssc-h3">后三</a></span>
                             <span><a href="javascript:void(0)" data-url="gfwf-efssc-q3">前三</a></span>

@@ -123,7 +123,7 @@
                     var sT = dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
                     var eT = dateFormat(arrsT[i], "yyyy-mm-dd hh:MM:ss");
                     if (sT == currentT && eT == currentT) {
-                        $('.monthdetail .list_tems:eq(' + i + ') .text p').html('发布时间： 永久有效');
+                        $('.monthdetail .list_tems:eq(' + i + ') .text .hdsj').html('活动时间： 永久有效');
                     }
                 }
 
@@ -156,7 +156,7 @@
             <img src="<%=basePath%>images/{{bigImageId}}" alt="">
         </div>
         <div class="text">
-            <p>活动时间：<span class="startTi">{{startTime}}</span> 至 <span class="endTi">{{endTime}}</span></p>
+            <p class="hdsj">活动时间：<span class="startTi">{{startTime}}</span> 至 <span class="endTi">{{endTime}}</span></p>
             <div class="down" style="display: none;">
                 {{#content}}
             </div>
