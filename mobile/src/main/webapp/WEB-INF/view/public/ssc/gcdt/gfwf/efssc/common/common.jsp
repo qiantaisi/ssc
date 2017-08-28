@@ -119,8 +119,8 @@
                data-fun_zhushu="zhushu_h3zxkd"
                data-fun_content="content_h3zxkd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/hs/zxkd.html"
-               data-play_id="864"
-               data-play_pl_id="14642"
+               data-play_id="941"
+               data-play_pl_id="14735"
                data-name="直选跨度">
                 <span class="staer1">直选跨度</span>
             </a>
@@ -423,7 +423,7 @@
                data-fun_content="content_h3em"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/bdw/hsem.html"
                data-play_id="887"
-               data-play_pl_id="4668"
+               data-play_pl_id="14668"
                data-name="后三二码">
                 <span class="staer1">后三二码</span>
             </a>
