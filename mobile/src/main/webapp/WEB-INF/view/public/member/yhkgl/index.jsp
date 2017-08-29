@@ -126,8 +126,11 @@
                                                 </c:otherwise>
                                             </c:choose>
                                                 <%--<c:set property="tmpBankAccountLength" value="${fn:length(item.bankAccount)}" />--%>
-                                            <i class="bank_text">
-                                                &nbsp;****&nbsp;${fn:substring(item.bankAccount, fn:length(item.bankAccount) - 7, fn:length(item.bankAccount) - 3)}&nbsp;${fn:substring(item.bankAccount, fn:length(item.bankAccount) - 3, fn:length(item.bankAccount))}</i>
+                                            <%--<i class="bank_text" data-bank="${item.bankAccount}">--%>
+                                                <%--&nbsp;****&nbsp;${fn:substring(item.bankAccount, fn:length(item.bankAccount) - 7, fn:length(item.bankAccount) - 3)}&nbsp;${fn:substring(item.bankAccount, fn:length(item.bankAccount) - 3, fn:length(item.bankAccount))}</i>--%>
+                                            <i class="bank_text accountSubStr" data-bank="${item.bankAccount}">
+
+                                            </i>
                                         </div>
                                         <font class="cl-1400">
                                             <c:if test="${item['default'] == 'true'}">
