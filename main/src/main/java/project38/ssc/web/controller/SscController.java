@@ -390,12 +390,12 @@ public class SscController extends CacheController {
         }
 
         Long playGroupId = playGroupIdEnum.getId(); // 彩种ID
-        // 彩种禁用
+      /*  // 彩种禁用
         SscPlayGroupResult sscPlayGroupResult = ApiUtils.getSscPlayGroup(playGroupId, companyShortName);
         if (null != sscPlayGroupResult && null != sscPlayGroupResult.getEnable() && !sscPlayGroupResult.getEnable()) {
             return this.renderPublicView("ssc/gcdt/tingcaipage", modelMap);
         }
-
+*/
         Boolean hasGuanfang = playGroupIdEnum.getHasGuanfang(); // 该彩种是否含有官方玩法
         if (hasGuanfang) {
             // 官方玩法赔率
