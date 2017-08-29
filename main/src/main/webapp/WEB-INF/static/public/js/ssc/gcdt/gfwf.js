@@ -252,6 +252,7 @@ function selectFun_6(obj) {
     $(obj).parent().parent().find(".acti").removeClass("acti");
     $(obj).addClass("acti");
     clearStateTouZhu();//清除投注状态栏
+
 }
 
 // 获取当前胆码的对象
@@ -1464,11 +1465,12 @@ function getPlAndMaxFd() {
  * 清除状态
  */
 function clearStateTouZhu() {
-    $('.p1 .i0').html('0');
+    renderZhushu();
+    /*$('.p1 .i0').html('0');
     $('.p1 .i_beishu').html('1');
     $('.p1 .i_fanD').html('0');
     $('.p1 .i_money').html('0');
-    $('.slider-input').jRange("setValue", '0');
+    $('.slider-input').jRange("setValue", '0');*/
 }
 
 //=======================遍历进行统计注数=================================
