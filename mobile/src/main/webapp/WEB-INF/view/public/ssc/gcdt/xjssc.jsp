@@ -68,7 +68,9 @@
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/xjssc/lh.html">龙虎</a>
                 </div>
             </div>
-            <div class="cl-900" id="lastOpenInfo"></div>
+            <div class="cl-900" id="lastOpenInfo">
+
+            </div>
             <div class="cl-901">
                 <div class="cl-902">
                     <span class="left" data-number="" id="number">第<font>..数据读取中..</font>期</span>

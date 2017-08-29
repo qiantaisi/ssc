@@ -64,7 +64,7 @@
             <%--data-id="btn-gdqc"><span>官方模式</span></a>--%>
         </div>
         <c:choose>
-            <c:when test="${playGroupId == 1 || playGroupId == 15 || playGroupId == 3 || playGroupId == 2}">
+            <c:when test="${playGroupId == 1 || playGroupId == 15 || playGroupId == 3 || playGroupId == 2 || playGroupId == 16 || playGroupId == 13}">
                 <div class="page page-current" id="page-gcdt-cqssc-wfsm" style="height: 3.9rem; top: 2.1rem">
                     <header class="bar bar-nav">
                     </header>
@@ -118,6 +118,12 @@
                                                 <c:import url="rule/gfwf/tjssc.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 3}">
+                                                <c:import url="rule/gfwf/xjssc.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 16}">
+                                                <c:import url="rule/gfwf/tjssc.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 13}">
                                                 <c:import url="rule/gfwf/xjssc.jsp"/>
                                             </c:when>
                                         </c:choose>
@@ -207,13 +213,7 @@
                                             <c:when test="${playGroupId == 11}">
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>
-                                            <c:when test="${playGroupId == 13}">
-                                                <c:import url="rule/gfwf/base.jsp"/>
-                                            </c:when>
                                             <c:when test="${playGroupId == 14}">
-                                                <c:import url="rule/gfwf/base.jsp"/>
-                                            </c:when>
-                                            <c:when test="${playGroupId == 16}">
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 17}">

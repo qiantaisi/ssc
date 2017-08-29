@@ -328,6 +328,7 @@
 
         });
 
+
         $("#inputconfirmPassword").blur(function(){
             var confirmPassword = $("input[name='confirmPassword']").val(); // 确认密码
             var password = $("input[name='password']").val();   // 密码
