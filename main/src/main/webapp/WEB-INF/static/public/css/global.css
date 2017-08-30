@@ -17,8 +17,9 @@
 .game_name .box3_timer p.cl-2000{text-align: center;font-size: 32px;line-height: 80px;}
 .list_ject ul li .Time p.cl-2001{text-align: center;font-size: 32px;line-height: 80px;}
 .cl-200,.cl-201{}
-.cl-200{float:left;width:610px}
-.cl-201{float:right;width:350px}
+.cl-200{float:left;width:710px;padding-top: 20px}
+.numssq{padding-left: 75px}
+.cl-201{width:710px}
 .cl-202 i{background:none!important;}
 .cl-200 ul li span,.cl-201 ul li span{margin-left:10px!important}
 .cl-204{text-align:center;padding:10px 0;padding-left:85px;position:relative}

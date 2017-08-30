@@ -15,7 +15,7 @@ public enum PlayGroupIdEnum {
     PK10(9L, "北京PK10", "pk10", true),
     XYNC(10L, "重庆幸运农场", "xync", false),
     KLSF(11L, "广东快乐十分", "klsf", false),
-    SSQ(12L, "双色球", "ssq", false),
+    SSQ(12L, "双色球", "ssq", true),
     SFSSC(13L, "三分时时彩", "sfssc", true),
     XYFT(14L, "幸运飞艇", "xyft", false),
     FFSSC(15L, "分分时时彩", "ffssc", true),
