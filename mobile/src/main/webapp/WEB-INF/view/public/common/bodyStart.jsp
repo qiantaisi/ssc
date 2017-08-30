@@ -14,7 +14,7 @@
     <jsp:include page="../../common/commonCss.jsp" />
 
     <link rel="stylesheet" href="${resPath}css/style.css?v=20170825">
-    <link rel="stylesheet" href="${resPath}css/other.css?v=20170819">
+    <link rel="stylesheet" href="${resPath}css/other.css?v=20170830">
     <link rel="stylesheet" href="${resPath}css/gfwf_css.css?v=20170826">
     <link rel="stylesheet" href="${resPath}theme/${themeBottomNav}/css/base-template.css?v=20170628">
     <jsp:include page="customTheme.jsp" />
