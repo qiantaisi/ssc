@@ -21,6 +21,7 @@ public class CzInfoResult extends CommonResult {
         this.czTypeList = czTypeList;
     }
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public static class Cz {
         /**
          * 1-转账，2-在线支付
