@@ -157,7 +157,7 @@
         </div>
         <div class="text">
             <p class="hdsj">活动时间：
-                {{if startTime == null && endTime == null}}
+                {{if (startTime == null && endTime == null) || (startTime == endTime)}}
                 永久有效
                 {{else}}
                 <span class="startTi">{{startTime}}</span> 至 <span class="endTi">{{endTime}}</span>
