@@ -607,3 +607,27 @@
         </a>
     </li>
 </script>
+<script type="text/html" id="template_12">
+    <li>
+        <a class="item-content">
+            <div class="item-media"><img src="${resPath}img/cz/cz-12.png" style='width: 2.2rem;'></div>
+            <div class="item-inner">
+                <div class="item-title-row">
+                    <div class="item-title">双色球</div>
+                    <div class="item-after"><font class="cl-1105">{{number}}期</font>&nbsp;{{openTime | dateFormat:'yy-mm-dd HH:MM'}}</div>
+                </div>
+                <div class="item-subtitle lhc_item-subtitle">
+                    <span class="ball {{if bose1 == 1}}col0{{else if bose1 == 2}}col1{{/if}}">{{num1}}</span>
+                    <span class="ball {{if bose2 == 1}}col0{{else if bose2 == 2}}col1{{/if}}">{{num2}}</span>
+                    <span class="ball {{if bose3 == 1}}col0{{else if bose3 == 2}}col1{{/if}}">{{num3}}</span>
+                    <span class="ball {{if bose4 == 1}}col0{{else if bose4 == 2}}col1{{/if}}">{{num4}}</span>
+                    <span class="ball {{if bose5 == 1}}col0{{else if bose5 == 2}}col1{{/if}}">{{num5}}</span>
+                    <span class="ball {{if bose6 == 1}}col0{{else if bose6 == 2}}col1{{/if}}">{{num6}}</span>
+                    <span class="ball {{if bose7 == 1}}col0{{else if bose7 == 2}}col1{{/if}}">{{num7}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+</script>
+
+
