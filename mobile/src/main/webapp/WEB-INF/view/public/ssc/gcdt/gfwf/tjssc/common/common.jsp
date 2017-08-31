@@ -287,7 +287,7 @@
                data-fun_content="content_q3zuxbd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/cqssc/qs/zxbd.html"
                data-play_id="719"
-               data-play_pl_id="14528"
+               data-play_pl_id="14527|14528"
                data-name="组选包胆">
                 <span class="staer1">组选包胆</span>
             </a>
