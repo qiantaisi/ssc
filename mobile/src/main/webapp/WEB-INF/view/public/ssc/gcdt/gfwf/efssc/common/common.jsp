@@ -276,7 +276,7 @@
                data-fun_content="content_q3zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/qs/zuxhz.html"
                data-play_id="926"
-               data-play_pl_id="14716"
+               data-play_pl_id="14715|14716"
                data-name="组选和值">
                 <span class="staer1">组选和值</span>
             </a>
