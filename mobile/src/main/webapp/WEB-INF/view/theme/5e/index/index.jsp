@@ -31,7 +31,7 @@
     <jsp:include page="../../../common/commonCss.jsp" />
     <meta name="keywords" content="${webKeywords}"/>
     <meta name="description" content="${webDescription}"/>
-    <link href="${resPath}img/apple_touch_icon.jpg" rel="apple-touch-icon">
+    <link href="<%=basePath%>images/${desk.imageId}.png" rel="apple-touch-icon">
     <link rel="icon" href="<%=basePath%>images/${icoData.imageId}.png" type="image/x-icon">
     <link rel="shortcut icon" href="<%=basePath%>images/${icoData.imageId}.png" mce_href="<%=basePath%>images/${icoData.imageId}.png" type="image/x-icon">
 
