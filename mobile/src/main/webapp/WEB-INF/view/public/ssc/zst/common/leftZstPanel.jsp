@@ -188,6 +188,15 @@
                     </div>
                 </a>
             </li>
+
+            <li>
+                <a href="<%=basePath%>ssc/zst/ssq/jbzst.html" class="item-content">
+                    <div class="item-media"><i class="icon bg-img-ssq"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">双色球</div>
+                    </div>
+                </a>
+            </li>
             <%--
             <li>
                 <a href="<%=basePath%>ssc/zst/sflhc/jbzst.html" class="item-content">
