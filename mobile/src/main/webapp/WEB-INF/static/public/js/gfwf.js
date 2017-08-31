@@ -331,6 +331,28 @@ function getGfwfZhushu(){
 
 
 //======================================================内容算法=====================================
+
+/*******************************************  双色球  ******z***********************************/
+function content_hlzx(){
+    var wanArr = [], qianArr = [], baiArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        wanArr.push($.trim($(this).html()));
+    });
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function () {
+        qianArr.push($.trim($(this).html()));
+    });
+
+
+    var wanStr = wanArr.length > 0 ? (wanArr.join(",") + "|") : ' ';
+    var qianStr = qianArr.length > 0 ? (qianArr.join(",") + "|") : ' ';
+
+    return $.trim(
+        (wanStr == ' ' ? ' ' : wanStr)+
+        (qianStr == ' ' ? ' ' : qianStr)
+    );
+}
+
+/*******************************************广东11选5******************************************/
 /**
  * 任选8中5胆拖-11选5
  */
@@ -1889,6 +1911,28 @@ function content_rx4zu4() {
 
 //======================================================注数算法====================================
 
+/********************************************双色球**********************************************/
+function zhushu_hlzx(){
+    var wanLength = 0, qianLength = 0, totalLength = 0;
+    var wanArr = [], qianArr = [];
+    $.each($(".wanweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        wanArr.push($.trim($(this).html()));
+    });
+
+    $.each($(".qianweiStr .wan_bottom .cus-flex-item span.active_gfwf"), function (index, value) {
+        qianArr.push($.trim($(this).html()));
+    });
+
+    if(wanArr.length <= 0 || qianArr.length <= 0){
+        return 0;
+    }
+
+    wanLength = getFlagArrs(wanArr, 5);
+    qianLength = getFlagArrs(qianArr, 1);
+
+    totalLength = wanLength.length * qianLength.length;
+    return totalLength;
+}
 
 /********************************************11选5**********************************************/
 
@@ -4889,6 +4933,26 @@ Array.prototype.uniqueArr = function () {
 }
 
 //======================================================随机算法====================================
+
+/********************************************双色球***********************************************/
+function random_hlzx(){
+    var weiArr = [];
+    var noHasArr = [];
+
+    while(weiArr.length < 6){
+        var random_x = parseInt(Math.random() * 34) + 1;
+        weiArr.push(random_x);
+        weiArr = weiArr.uniqueArr(); //去除重复
+    }
+
+    $.each(weiArr, function (index, value) {
+        $(".wanweiStr .wan_bottom .xz").eq(value).removeClass("active_gfwf").addClass("active_gfwf");
+    });
+
+    var x = parseInt(Math.random() * 16) + 1;  //蓝码
+    $(".qianweiStr .wan_bottom .xz").eq(x).removeClass("active_gfwf").addClass("active_gfwf");
+
+}
 
 /********************************************11选5***********************************************/
 /**

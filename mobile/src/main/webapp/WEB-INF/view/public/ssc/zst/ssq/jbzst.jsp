@@ -451,7 +451,7 @@
         var strHtmlbg = '';
         var strHtml_inner = "";
         if (num == wei) {
-            strHtml_inner = '<span class="jbspan ' + strHtmlbg + '" style="width:40px!important"><i class="cus-on-red i_style_mar">' + wei + '</i></span>';
+            strHtml_inner = '<span class="jbspan ' + strHtmlbg + '" style="width:40px!important"><i class="cus-on-blue i_style_mar">' + wei + '</i></span>';
         } else {
             strHtml_inner = '<span class="jbspan ' + strHtmlbg + '" style="width:40px!important;">' + wei + '</span>';
         }
