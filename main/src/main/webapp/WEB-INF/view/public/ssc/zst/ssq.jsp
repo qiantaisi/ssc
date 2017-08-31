@@ -260,8 +260,8 @@
                             </div>
                             <div class="cl-40 clean">
                                 <div class="cl-30">
-                                    <div class="left cl-31" style="width: 100px!important;">开奖日期</div>
-                                    <div class="left cl-31">期号</div>
+                                    <div class="left cl-31" style="width: 110px!important;">开奖日期</div>
+                                    <div class="left cl-31" style="width: 112px">期号</div>
                                     <div class="left cl-33" style="width: 693px;">
                                         <div class="cl-35">
                                             <div class="left cl-34" style="width: 693px;">红球区</div>
@@ -296,7 +296,7 @@
                                 </div>
                                 <div id="yiLouData">
                                     <div class="clean bg-gray">
-                                        <div class="left cl-31 cl-51" style="width:200px;">出现总次数</div>
+                                        <div class="left cl-31 cl-51" style="width:222px;">出现总次数</div>
                                         <div id="hm_cxzcs"></div>
                                         <div id="cxzcs"></div>
                                         <%--<script>--%>
@@ -307,17 +307,17 @@
                                         <%--</script>--%>
                                     </div>
                                     <div class="clean bg-white">
-                                        <div class="left cl-31 cl-51" style="width:200px;">平均遗漏值</div>
+                                        <div class="left cl-31 cl-51" style="width:222px;">平均遗漏值</div>
                                         <div id="hm_pjylz"> </div>
                                         <div id="pjylz"> </div>
                                     </div>
                                     <div class="clean bg-gray">
-                                        <div class="left cl-31 cl-51" style="width:200px;">最大遗漏值</div>
+                                        <div class="left cl-31 cl-51" style="width:222px;">最大遗漏值</div>
                                         <div id="hm_zdylz"></div>
                                         <div id="zdylz"></div>
                                     </div>
                                     <div class="clean bg-white">
-                                        <div class="left cl-31 cl-51" style="width:200px;">最大连出值</div>
+                                        <div class="left cl-31 cl-51" style="width:222px;">最大连出值</div>
                                         <div id="hm_zdlcz"></div>
                                         <div id="zdlcz"></div>
                                     </div>
@@ -730,9 +730,13 @@
             var num3 = parseInt(kjData[2]);
 
             var tmpArr = [];
+            var lanArr = [];
             $.each(kjData, function(index, value) {
-                tmpArr[parseInt(value)] = 1;
+                if(index < kjData.length - 1){
+                    tmpArr[parseInt(value)] = 1;
+                }
             });
+
             for(var j = 1; j < 34; ++j) {
                 if(tmpArr[j] == 1) {
                     str += '<var><i class="bg-red">'+(j = j >= 10 ? j : ('0' + j))+ '</i></var>';
@@ -741,33 +745,15 @@
                 }
             }
 
-            var sum = num1 + num2 + num3;
-            for(var j = 1; j < 17; ++j) {
+            lanArr.push(parseInt(kjData[kjData.length - 1]));
+            for (var j = 1; j < 17; ++j) {
                 str += '<var class="i_' + j + '">';
-                if(j == sum) {
-                    str += '<i data-num="' +(j = j >= 10 ? j : ('0' + j)) + '" class="bg-blue">';
-                    str += j;
-
-                    var bc1 = 0;
-                    var Left = 0;
-                    if(i < data.length - 1) {
-                        var nextOpenCode = data[i + 1].openCode.split(",");
-                        var nextSum = parseInt(nextOpenCode[0]) + parseInt(nextOpenCode[1]) + parseInt(nextOpenCode[2]);
-
-                        bc1 = sum - nextSum;
-                        if(bc1 > 0) {
-                            Left = (bc1) * (-20);
-                        } else if(bc1 < 0) {
-                            bc1 = -bc1;
-                        }
-                        str += '<canvas class="zhexian" id="canvas' + i + '0" width="' + (bc1 + 1) * 20 + '" height="32px" style="z-index: 10; left:' + Left + 'px; display: none;"></canvas>';
-                    }
-
-                    str += '</i>';
-                } else {
-                    str += '<i></i>';
+                if(j == parseInt(lanArr[0])){
+                    str += '<i data-num="' + (j = j >= 10 ? j : ('0' + j)) + '" class="bg-blue">'+ j + '</i></var>' ;
+                } else{
+                    str += '<i data-num="' + (j = j >= 10 ? j : ('0' + j)) + '" class="b">'+ j + '</i></var>' ;
                 }
-                str += '</var>';
+
             }
         }
         $("#zhexianData").html(str);
@@ -827,7 +813,7 @@
         var tmpZdlcz = [];  // 临时计算最大连出值
 
 
-        for (var jj = 0; jj < 28; ++jj) {
+        for (var jj = 0; jj < 17; ++jj) {
             cxzcs[jj] = 0;
 
             zdylz[jj] = 0;
@@ -864,7 +850,7 @@
         var hm_zdlcz = [];     // 最大连出值
         var hm_tmpZdlcz = [];  // 临时计算最大连出值
 
-        for (var j = 0; j < 28; ++j) {
+        for (var j = 0; j < 34; ++j) {
             hm_cxzcs[j] = 0;
 
             hm_zdylz[j] = 0;
@@ -900,36 +886,35 @@
             var arr = [], hm_arr = [];
             var openCode = data[idata].openCode.split(",");
 
-            for(var n = 0; n < 28; n++){
+            for(var n = 1; n < 17; n++){
                 arr[n] = 0;
             }
 
-            for(var n = 0; n < 10; n++){
+            for(var n = 1; n < 34; n++){
                 hm_arr[n] = 0;
             }
 
-            for(var jYl = 0; jYl < openCode.length; jYl++){
-                num += parseInt(openCode[jYl]);
+            for(var jYl = 0; jYl < openCode.length - 1; jYl++){
                 hm_num = parseInt(openCode[jYl]);
                 //出现号码计数
                 hm_cxzcs[hm_num]++;
                 hm_arr[hm_num] = 1;
             }
 
+            num = parseInt(openCode[openCode.length - 1]);
             //出现号码标记为1
             arr[num] = 1;
             cxzcs[num]++;
+
             //每期出现或遗漏的数据
             numberArr.push(arr);
-
             hm_numberArr.push(hm_arr);
-
         }
 
 
         //计算遗漏平均值
         for(var ii = 0; ii < numberArr.length; ii++){
-            for (var jj = 0; jj <= 27; jj++) {
+            for (var jj = 1; jj < 17; jj++) {
                 //判断是遗漏号
                 if (numberArr[ii][jj] == 0) {
                     //遗漏累加
@@ -990,7 +975,7 @@
         //计算平均遗漏--号码位
         //计算遗漏平均值
         for(var ii = 0; ii < hm_numberArr.length; ii++){
-            for (var jj = 0; jj < 10; jj++) {
+            for (var jj = 1; jj < 34; jj++) {
                 //判断是遗漏号
                 if ( hm_numberArr[ii][jj] == 0) {
                     //遗漏累加
@@ -1052,7 +1037,7 @@
             str2 = '',
             str3 = '',
             str4 = '';
-        for(var i = 0; i < 28; ++i) {
+        for(var i = 1; i < 17; ++i) {
             // 出现次数
             str1 += '<var><i>' + cxzcs[i] + '</i></var>';
             str2 += '<var><i>' + pjylz[i] + '</i></var>';
@@ -1072,7 +1057,7 @@
         str2 = '';
         str3 = '';
         str4 = '';
-        for (var i = 0; i < 10; ++i) {
+        for (var i = 1; i <34; ++i) {
             // 出现次数
             str1 += '<var><i>' + hm_cxzcs[i] + '</i></var>';
             str2 += '<var><i>' + hm_pjylz[i] + '</i></var>';
