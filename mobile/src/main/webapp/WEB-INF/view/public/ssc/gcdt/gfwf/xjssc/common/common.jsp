@@ -276,7 +276,7 @@
                data-fun_content="content_q3zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/qs/zuxhz.html"
                data-play_id="849"
-               data-play_pl_id="14623"
+               data-play_pl_id="14622|14623"
                data-name="组选和值">
                 <span class="staer1">组选和值</span>
             </a>
@@ -287,7 +287,7 @@
                data-fun_content="content_q3zuxbd"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/qs/zxbd.html"
                data-play_id="848"
-               data-play_pl_id="14621"
+               data-play_pl_id="14620|14621"
                data-name="组选包胆">
                 <span class="staer1">组选包胆</span>
             </a>

@@ -63,7 +63,11 @@
 .Single .layout .add_spot .left .sopt_wrap .slide_sp i var{width:auto;}
 .Single .layout .add_spot .left .sopt_wrap .slide_sp p span{width:0;}
 .Single .layout .add_spot .left .sopt_wrap .slide_sp p var{left:0}
-
+.cl-40 var i.bg-blue {
+    background: blue!important;
+    border-radius: 25px;
+    color: #fff;
+}
 .clearBet_template{margin:15px;}
 .clearBet_template .l{vertical-align:middle;float:left;width:50px;overflow:hidden;height:100%}
 .clearBet_template .l span{display:block;height:100%;position:relative;}

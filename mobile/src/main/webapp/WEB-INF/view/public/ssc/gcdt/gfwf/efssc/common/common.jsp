@@ -276,7 +276,7 @@
                data-fun_content="content_q3zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/qs/zuxhz.html"
                data-play_id="926"
-               data-play_pl_id="14716"
+               data-play_pl_id="14715|14716"
                data-name="组选和值">
                 <span class="staer1">组选和值</span>
             </a>
@@ -648,8 +648,8 @@
                data-fun_zhushu="zhushu_rx3zuxhz"
                data-fun_content="content_rx3zuxhz"
                data-url="<%=basePath%>ssc/gcdt/gfwf/xjssc/rxs/zuxhz.html"
-               data-play_id="829"
-               data-play_pl_id="14595|14596"
+               data-play_id="906"
+               data-play_pl_id="14688|14689"
                data-name="组选和值">
                 <span class="staer1">组选和值</span>
             </a>

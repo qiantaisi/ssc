@@ -24,7 +24,7 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">北京28</h1>
+            <h1 class="title">双色球</h1>
         </header>
         <div class="content cl-601 zst-cl-10">
             <div id="sub-menu-list">
@@ -40,21 +40,12 @@
                         <span class="" style="width:80px!important">期号</span>
                         <div class="zst-cl-50">
                             <var style="display:block;width:100%;height:20px;line-height:20px;text-align:center;">号码分布</var>
-                            <div class="zst-cl-51 zst-cl-101" style="width:1484px!important">
-                                <span style="width:400px;">
-                                    <script>
-                                        for (var i = 0; i <= 9; ++i) {
-                                            document.write('<i style="width:40px!important;height: 1.3rem!important;line-height: 1.3rem!important;">' + i + '</i>');
-                                        }
-                                    </script>
+                            <div class="zst-cl-51 zst-cl-101" style="width:1964px!important">
+                                <span style="width:1320px;">
+                                    <var style="display:block;width:100%;">红球区</var>
                                 </span>
-                                <span style="width:1082px;">
-                                    <var style="display:block;width:100%;">和值分布</var>
-                                    <script>
-                                        for (var i = 1; i <= 27; ++i) {
-                                            document.write('<i style="width:40px!important">' + i + '</i>');
-                                        }
-                                    </script>
+                                <span style="width:644px;">
+                                    <var style="display:block;width:100%;">蓝球区</var>
                                 </span>
                             </div>
                         </div>
@@ -98,7 +89,7 @@
     </div>
 </script>
 <script>
-    var playGroupId = 7;
+    var playGroupId = 12;
     function renderData(data) {
         var left_w = 0; //球离左边的距离
         var spanW = 0, firstSpanW = 0;
@@ -108,7 +99,7 @@
         firstSpanW = spanW * 10; //宽度
 
 
-        var haomahz = []; //号码和值
+        var lanma = []; // 号码和值
         var cxzcs = []; // 出现总次数
 
         var zdylz = []; // 最大遗漏值
@@ -121,20 +112,20 @@
         var tmpZdlcz = [];  // 临时计算最大连出值
 
 
-        for (var jj = 0; jj < 28; ++jj) {
+        for (var jj = 0; jj < 17; jj++) {
             cxzcs[jj] = 0;
 
             zdylz[jj] = 0;
             tmpZdylz[jj] = {
                 total: 0,   // 当前数
-                maxTotal: 0,    // 最大数
+                maxTotal: 0,   // 最大数
                 count: 0    // 计算次数
             };
 
             pjylz[jj] = 0;
             tmpPjylz[jj] = {
                 totalYl: 0, // 遗漏总计
-                count: 0,    // 遗漏次数
+                count: 0,  // 遗漏次数
                 cx0Flag: 0 //出现标签
 
             };
@@ -158,7 +149,7 @@
         var hm_zdlcz = [];     // 最大连出值
         var hm_tmpZdlcz = [];  // 临时计算最大连出值
 
-        for (var j = 0; j < 28; ++j) {
+        for (var j = 0; j < 34; j++) {
             hm_cxzcs[j] = 0;
 
             hm_zdylz[j] = 0;
@@ -189,47 +180,48 @@
         var hm_numberArr = [];
 
         for (var idata = 0; idata < data.length; idata++) {
-            var num = 0, hm_num = 0;
+            var num = 0, hm_num = 0, count=0;
             var arr = [], hm_arr = [];
             var openCode = data[idata].openCode.split(",");
 
-            for (var n = 0; n < 28; n++) {
+            for (var n = 1; n < 17; n++) {
                 arr[n] = 0;
             }
 
-            for (var n = 0; n < 10; n++) {
+            for (var n = 1; n < 34; n++) {
                 hm_arr[n] = 0;
             }
 
-            for (var jYl = 0; jYl < openCode.length; jYl++) {
-                num += parseInt(openCode[jYl]);
+
+            //计算前面六个号码出现次数
+            for (var jYl = 0; jYl < openCode.length - 1; jYl++) {
                 hm_num = parseInt(openCode[jYl]);
                 //出现号码计数
                 hm_cxzcs[hm_num]++;
                 hm_arr[hm_num] = 1;
             }
 
+            num = parseInt(openCode[openCode.length - 1]);
             //出现号码标记为1
             arr[num] = 1;
             cxzcs[num]++;
+
             //每期出现或遗漏的数据
             numberArr.push(arr);
-
             hm_numberArr.push(hm_arr);
-
         }
-
 
         var strHtml = "";
         var bc1 = 0;
 
-        //计算号码和值号码存于数组
+        //篮球号码存于数组
         for (var ii = 0; ii < data.length; ii++) {
             var kjData = data[ii].openCode.split(",");
-            haomahz[ii] = 0; //号码和值
 
             $.each(kjData, function (index, value) {
-                haomahz[ii] += parseInt(value);
+                if(index == kjData.length - 1){
+                    lanma.push(value);
+                }
             });
         }
 
@@ -239,33 +231,17 @@
             strHtml += '<div class="item zst-cl-102 zst-cl-102_resetH">';
             strHtml += '<span class="" style="width:80px!important">' + data[i].number + '</span>';
             strHtml += '<div class="zst-cl-50">';
-            strHtml += '<div class="zst-cl-51 zst-cl-101" style="width:1482px!important">';
+            strHtml += '<div class="zst-cl-51 zst-cl-101" style="width:1962px!important">';
 
-            var htmlCanvas = "";
             if (i < data.length - 1) {
-                bc1 = haomahz[i] - haomahz[i + 1];
+                bc1 = lanma[i] - lanma[i + 1];
             }
 
-            left_w = haomahz[i - 1] * spanW + firstSpanW;
-
-            if (bc1 > 0) {
-                bc1 = (bc1 + 1) * spanW; //获取两个球之间的宽度
-                left_w = (haomahz[i]) * spanW + firstSpanW - bc1; //获取画板距左边的位置
-            } else if (bc1 < 0) {
-                bc1 = (-bc1 + 1) * spanW;
-                left_w = haomahz[i] * spanW - spanW + firstSpanW;
-            } else if (bc1 == 0) {
-                bc1 = spanW;
-                left_w = haomahz[i] * spanW - spanW + firstSpanW;
-            }
-
-            htmlCanvas = '<canvas class="mobile_zx" id="canvas' + i + 'xy" width="' + bc1 + 'px" height="' + spanH + 'px" style="z-index: 10; left:' + left_w + 'px; display: inline;"></canvas>';
-
-            for (var n = 0; n < 10; n++) {
+            for (var n = 1; n < 34; n++) {
                 strHtml += getBj(kjData, n);
             }
-            for (var m = 1; m <= 28; m++) {
-                strHtml += getHzBj(haomahz[i], m, htmlCanvas);
+            for (var m = 1; m < 17; m++) {
+                strHtml += getHzBj(lanma[i], m);
             }
             strHtml += '</div></div></div>';
         }
@@ -273,7 +249,7 @@
 
         //计算遗漏平均值
         for (var ii = 0; ii < numberArr.length; ii++) {
-            for (var jj = 0; jj <= 27; jj++) {
+            for (var jj = 1; jj < 17; jj++) {
                 //判断是遗漏号
                 if (numberArr[ii][jj] == 0) {
                     //遗漏累加
@@ -336,10 +312,11 @@
         }
 
 
+
         //计算平均遗漏--号码位
         //计算遗漏平均值
         for (var ii = 0; ii < hm_numberArr.length; ii++) {
-            for (var jj = 0; jj < 10; jj++) {
+            for (var jj = 1; jj < 34; jj++) {
                 //判断是遗漏号
                 if (hm_numberArr[ii][jj] == 0) {
                     //遗漏累加
@@ -429,12 +406,12 @@
             strHtml += '<div class="item zst-cl-102 zst-cl-102_resetH">';
             strHtml += '<span class="" style="width:80px!important">' + tempStr + '</span>';
             strHtml += '<div class="zst-cl-50">';
-            strHtml += '<div class="zst-cl-51 zst-cl-101" style="width:1482px!important">';
-            for (var x = 0; x < 10; x++) {
+            strHtml += '<div class="zst-cl-51 zst-cl-101" style="width:1962px!important">';
+            for (var x = 1; x < 34; x++) {
                 strHtml += '<span class="jbspan" style="width:40px!important">' + hm_tempArr[x] + '</span>';
             }
-            for (var x_hz = 1; x_hz < 28; x_hz++) {
-                strHtml += '<span class="jbspan" style="width:40px!important">' + tempArr[x_hz] + '</span>';
+            for (var x_lm = 1; x_lm < 17; x_lm++) {
+                strHtml += '<span class="jbspan" style="width:40px!important">' + tempArr[x_lm] + '</span>';
             }
 
             strHtml += '</div></div></div>';
@@ -451,34 +428,14 @@
             $(".zst-content-all").css('height', 'calc(110vh - 1.8rem - 3.2rem - 23px - 2.0rem - 2.2rem)!important');
         }
 
-//        //画出相对应的折线
-//        for (var m = 0; m < data.length - 1; m++) {
-//            //设置canvas定位
-//            var canvas = document.getElementById("canvas" + m + "xy");
-//            var context = canvas.getContext("2d");
-//            var bc1 = haomahz[m] - haomahz[m + 1];
-//            if (bc1 < 0) {
-//                context.moveTo(17, 13);
-//                context.lineTo(canvas.width - 18, canvas.height - 12);
-//            } else if (bc1 > 0) {
-//                context.moveTo(canvas.width - 16, 13);
-//                context.lineTo(18, canvas.height - 15);
-//            } else {
-//                context.moveTo(canvas.width / 2, canvas.height / 3);
-//                context.lineTo(canvas.width / 2, canvas.height / 2);
-//            }
-//            context.strokeStyle = "#F63F3F";
-//            context.lineWidth = 2;
-//            context.stroke();
-//        }
-
     }
 
     //获取号码分布
     function getBj(num, wei) {
+
         var strHtmlbg = '';
         var strHtml_inner = "";
-        for (var m = 0; m < 3; m++) {
+        for (var m = 0; m < 6; m++) {
             if (num[m] == wei) {
                 strHtml_inner = '<span class="jbspan ' + strHtmlbg + '" style="width:40px!important"><i class="cus-on-red i_style_mar">' + wei + '</i></span>';
                 break;
@@ -490,11 +447,11 @@
     }
 
     //获取和值号码分布背景
-    function getHzBj(num, wei, strHtml) {
+    function getHzBj(num, wei) {
         var strHtmlbg = '';
         var strHtml_inner = "";
         if (num == wei) {
-            strHtml_inner = '<span class="jbspan ' + strHtmlbg + '" style="width:40px!important"><i class="cus-on-red i_style_mar">' + wei + strHtml + '</i></span>';
+            strHtml_inner = '<span class="jbspan ' + strHtmlbg + '" style="width:40px!important"><i class="cus-on-red i_style_mar">' + wei + '</i></span>';
         } else {
             strHtml_inner = '<span class="jbspan ' + strHtmlbg + '" style="width:40px!important;">' + wei + '</span>';
         }
