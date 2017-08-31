@@ -13,7 +13,7 @@
         <div class="main">
             <div class="main-box" style="width:1300px;">
                 <div class="main-nav">
-                    <div class="cplogo"><img src="${resPath}zst/img/bj28.png" alt="北京28" /><span>北京28</span></div>
+                    <div class="cplogo"><img src="${resPath}zst/img/bj28.png" alt="北京28" /><span>双色球</span></div>
                     <c:import url="common/nav.jsp" />
                     <ul class="btn-navs">
                         <li class="fff" data-contentid="zhexianData" data-id="shuju1">基本走势</li>
@@ -222,11 +222,11 @@
                                 <div class="cl-40">
                                     <div class="cl-30">
                                         <div class="left cl-31">期号</div>
-                                        <div class="left cl-32">奖号</div>
+                                        <div class="left cl-32" style="width: 120px">奖号</div>
                                         <div class="left cl-33">
                                             <div class="cl-35">
                                                 <div class="left cl-34" style="width:693px;">红球区</div>
-                                                <div class="left cl-34" style="width: 335px">蓝球区</div>
+                                                <div class="left cl-34" style="width: 336px">蓝球区</div>
                                                 <%--<div class="left cl-34" style="width:43px;">单双</div>--%>
                                                 <%--<div class="left cl-34" style="width:43px;">中边</div>--%>
                                                 <%--<div class="left cl-34" style="width:43px;">大小</div>--%>
@@ -512,7 +512,7 @@
     });
 </script>
 <script>
-    var playGroupId = 7;
+    var playGroupId = 12;
 
     function lssj(data) {
         var str = '';
@@ -723,7 +723,7 @@
             // qihao
             str += '<div class="cl-30 clean">';
             str += '<div class="left cl-31 number">' + data[i].number + '</div>';
-            str += '<div class="left cl-32 openCode">' + data[i].openCode + '</div>';
+            str += '<div class="left cl-32 openCode" style="width: 120px">' + data[i].openCode + '</div>';
             var kjData = data[i].openCode.split(",");
             var num1 = parseInt(kjData[0]);
             var num2 = parseInt(kjData[1]);
@@ -745,7 +745,7 @@
             for(var j = 1; j < 17; ++j) {
                 str += '<var class="i_' + j + '">';
                 if(j == sum) {
-                    str += '<i data-num="' +(j = j >= 10 ? j : ('0' + j)) + '" class="bg-red">';
+                    str += '<i data-num="' +(j = j >= 10 ? j : ('0' + j)) + '" class="bg-blue">';
                     str += j;
 
                     var bc1 = 0;
@@ -1088,7 +1088,7 @@
 
 
         // 遗漏数据
-        for(var i = 0; i < 33; ++i) {
+        for(var i = 1; i < 34; ++i) {
             var tmpCount = 0;
             var obj = $(".i_" + i + " i");
             for(var j = 0; j < obj.length; ++j) {
@@ -1103,7 +1103,7 @@
         }
 
         // 遗漏分层
-        for(var i = 0; i < 28; ++i) {
+        for(var i = 1; i < 34; ++i) {
             var obj = $(".i_" + i + " i");
             for(var j = obj.length - 1; j >= 0; --j) {
                 var o = obj[j];
