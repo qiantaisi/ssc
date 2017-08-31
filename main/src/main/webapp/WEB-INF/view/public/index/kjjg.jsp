@@ -1378,7 +1378,7 @@
                 <span>{{num4}}</span>
                 <span>{{num5}}</span>
                 <span>{{num6}}</span>
-                <span>{{num7}}</span>
+                <span class="col0">{{num7}}</span>
                 <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ssq')">详情</a>
             </div>
         </div>
@@ -2094,7 +2094,7 @@
             <i>{{num4}}</i>
             <i>{{num5}}</i>
             <i>{{num6}}</i>
-            <i>{{num7}}</i>
+            <i class="lan">{{num7}}</i>
         </span>
         <span class="sp5">一周三期</span>
         <span class="sp6">一周三次</span>
