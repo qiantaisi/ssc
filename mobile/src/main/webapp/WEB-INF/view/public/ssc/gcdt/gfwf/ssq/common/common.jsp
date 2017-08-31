@@ -48,8 +48,8 @@
                data-fun_zhushu="zhushu_hlzx"
                data-fun_content="content_hlzx"
                data-url="<%=basePath%>ssc/gcdt/gfwf/ssq/hlzx/hlzx.html"
-               data-play_id="543"
-               data-play_pl_id="14261"
+               data-play_id="1033"
+               data-play_pl_id="14846|14847|14848|14849"
                data-name="直选复式">
                 <span class="staer1">直选复式</span>
             </a>
