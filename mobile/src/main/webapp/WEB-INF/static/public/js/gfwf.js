@@ -4937,10 +4937,9 @@ Array.prototype.uniqueArr = function () {
 /********************************************双色球***********************************************/
 function random_hlzx(){
     var weiArr = [];
-    var noHasArr = [];
 
-    while(weiArr.length < 6){
-        var random_x = parseInt(Math.random() * 34) + 1;
+    while(weiArr.length < 5){
+        var random_x = parseInt(Math.random() * 33);
         weiArr.push(random_x);
         weiArr = weiArr.uniqueArr(); //去除重复
     }
@@ -4949,7 +4948,7 @@ function random_hlzx(){
         $(".wanweiStr .wan_bottom .xz").eq(value).removeClass("active_gfwf").addClass("active_gfwf");
     });
 
-    var x = parseInt(Math.random() * 16) + 1;  //蓝码
+    var x = parseInt(Math.random() * 16);  //蓝码
     $(".qianweiStr .wan_bottom .xz").eq(x).removeClass("active_gfwf").addClass("active_gfwf");
 
 }

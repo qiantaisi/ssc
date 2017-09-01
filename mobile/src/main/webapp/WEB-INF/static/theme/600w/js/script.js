@@ -1304,7 +1304,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10', '广东11选5', '双色球']
                 }
             ]
         });
@@ -1531,6 +1531,8 @@ $(function () {
                 playGroupId = 22;
             } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
+            } else if (inputCaizhong == '双色球') {
+                playGroupId = 12;
             }
 
             pageIndex = 1;
@@ -3033,7 +3035,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐', '北京PK10', '重庆幸运农场', '广东快乐十分', '分分时时彩', '两分时时彩', '三分时时彩', '五分时时彩']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10', '广东11选5', '双色球']
                 }
             ]
         });
@@ -3249,6 +3251,8 @@ $(function () {
                 playGroupId = 22;
             } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
+            } else if (inputCaizhong == '双色球') {
+                playGroupId = 12;
             }
 
             pageIndex = 1;
@@ -4801,7 +4805,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10', '双色球']
                 }
             ]
         });
@@ -4862,6 +4866,10 @@ $(function () {
                 $("#inputCaizhong").val("10分六合彩")
             } else if (playGroupId == 23) {
                 $("#inputCaizhong").val("极速PK10")
+            } else if (playGroupId == 24) {
+                $("#inputCaizhong").val("广东11选5")
+            } else if (playGroupId == 12) {
+                $("#inputCaizhong").val("双色球")
             }
         }
 
@@ -4930,6 +4938,25 @@ $(function () {
                             obj.dx = 0 <= sum && sum <= 22 ? '小' : '大';
                             var cha = num1 - num5;
                             obj.lh = cha == 0 ? '和' : (cha > 0 ? '龙' : '虎');
+                            var html = template("template_" + tmpPlayGroupId, obj);
+                            str += html;
+                        }if ($.inArray(tmpPlayGroupId, [12]) >= 0) {
+                            var obj = {};
+                            obj.openTime = value.openTime;
+                            obj.playGroupId = tmpPlayGroupId;
+                            obj.number = value.number;
+
+                            var numArr = value.openCode.split(",");
+
+                            obj.num1 = numArr[0];
+                            obj.num2 = numArr[1];
+                            obj.num3 = numArr[2];
+                            obj.num4 = numArr[3];
+                            obj.num5 = numArr[4];
+                            obj.num6 = numArr[5];
+                            obj.num7 = numArr[6];
+
+                            var sum = num1 + num2 + num3 + num4 + num5;
                             var html = template("template_" + tmpPlayGroupId, obj);
                             str += html;
                         } else if ($.inArray(tmpPlayGroupId, [4, 5, 18, 19, 20, 21]) >= 0) {
@@ -5337,6 +5364,8 @@ $(function () {
                 playGroupId = 22;
             } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
+            } else if (inputCaizhong == '双色球') {
+                playGroupId = 12;
             }
 
             pageIndex = 1;
@@ -5809,6 +5838,25 @@ $(function () {
                             obj.dx = 0 <= sum && sum <= 22 ? '小' : '大';
                             var cha = num1 - num5;
                             obj.lh = cha == 0 ? '和' : (cha > 0 ? '龙' : '虎');
+                            var html = template("template_" + tmpPlayGroupId, obj);
+                            str += html;
+                        } else if ($.inArray(tmpPlayGroupId, [12]) >= 0) {
+                            var obj = {};
+
+                            obj.openTime = value.openTime;
+                            obj.playGroupId = tmpPlayGroupId;
+                            obj.number = value.number;
+
+                            var numArr = value.openCode.split(",");
+
+                            obj.num1 = numArr[0];
+                            obj.num2 = numArr[1];
+                            obj.num3 = numArr[2];
+                            obj.num4 = numArr[3];
+                            obj.num5 = numArr[4];
+                            obj.num6 = numArr[5];
+                            obj.num7 = numArr[6];
+
                             var html = template("template_" + tmpPlayGroupId, obj);
                             str += html;
                         } else if ($.inArray(tmpPlayGroupId, [4, 5, 18, 19, 20, 21]) >= 0) {
