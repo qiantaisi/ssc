@@ -916,7 +916,64 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
                 }
-            } else if (playGroupId == 7) {
+            } else if (playGroupId == 12) {
+
+                if (json.sscHistoryList.length > 0) {
+                    var value = json.sscHistoryList[0];
+                    var openCodeArr = value.openCode ? value.openCode.split(",") : [];
+                    var lastNumberOpening = openCodeArr.length == 0 ? true : false;  // 是否开奖中
+                    var openCode = value.openCode;
+                    if (typeof openCode != "undefined" || openCode != null) {
+                        openCode = openCode.split(",");
+
+                        for (var i in openCode) {
+                            num = openCode[0];
+                            num1 =openCode[1];
+                            num2 = openCode[2];
+                            num3 = openCode[3];
+                            num4 = openCode[4];
+                            num5 = openCode[5];
+                            num6 = openCode[6];
+
+
+
+                        }
+                    }
+                    if (lastNumberOpening) {
+                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                    } else {
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span></div></p>';
+
+                    }
+
+                    var slist = json.sscHistoryList;
+                    for (var i = 1; i < slist.length; i++) {
+                        var openCode = slist[i].openCode
+                        if (typeof openCode != "undefined" || openCode != null) {
+                            openCode = openCode.split(",");
+                            for (var j = 0; j < openCode.length; ++j) {
+                                num = openCode[0];
+                                num1 =openCode[1];
+                                num2 = openCode[2];
+                                num3 = openCode[3];
+                                num4 = openCode[4];
+                                num5 = openCode[5];
+                                num6 = openCode[6];
+
+                            }
+                        }
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span></div></p>';
+
+                    }
+                    //询问框
+                    lid = layer.confirm(str, {
+                        btn: ['取消'], //按钮
+                        title: '历史开奖'
+                    }, function () {
+                        layer.close(lid);
+                    });
+                }
+            }else if (playGroupId == 7) {
 
                 if (json.sscHistoryList.length > 0) {
                     var value = json.sscHistoryList[0];
