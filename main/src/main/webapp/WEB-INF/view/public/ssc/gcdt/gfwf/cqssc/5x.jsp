@@ -182,7 +182,7 @@
         </div>
     </div>
 
-    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
+    <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、 或者 分号[;] 隔开</p>
 </div>
 </script>
 <script>
