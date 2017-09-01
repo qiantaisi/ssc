@@ -8,4 +8,4 @@
     String basePath = RequestUtils.getBasePath(request);
 %>
 <jsp:include page="../../../common/commonJs.jsp" />
-<script src="${resPath}js/script.js?v=20170817_1"></script>
+<script src="${resPath}js/script.js?v=20170901"></script>

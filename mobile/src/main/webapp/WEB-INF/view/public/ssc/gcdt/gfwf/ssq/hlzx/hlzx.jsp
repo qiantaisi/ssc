@@ -16,31 +16,31 @@
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">
-                <span class="xz n1" onclick="danSelect(this)">1</span>
+                <span class="xz n1" onclick="danSelect(this)">01</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n2" onclick="danSelect(this)">2</span>
+                <span class="xz n2" onclick="danSelect(this)">02</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n3" onclick="danSelect(this)">3</span>
+                <span class="xz n3" onclick="danSelect(this)">03</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n4" onclick="danSelect(this)">4</span>
+                <span class="xz n4" onclick="danSelect(this)">04</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n5" onclick="danSelect(this)">5</span>
+                <span class="xz n5" onclick="danSelect(this)">05</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n6" onclick="danSelect(this)">6</span>
+                <span class="xz n6" onclick="danSelect(this)">06</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n7" onclick="danSelect(this)">7</span>
+                <span class="xz n7" onclick="danSelect(this)">07</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n8" onclick="danSelect(this)">8</span>
+                <span class="xz n8" onclick="danSelect(this)">08</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n9" onclick="danSelect(this)">9</span>
+                <span class="xz n9" onclick="danSelect(this)">09</span>
             </div>
             <div class="cus-flex-item">
                 <span class="xz n10" onclick="danSelect(this)">10</span>
@@ -124,31 +124,31 @@
         </div>
         <div class="wan_bottom">
             <div class="cus-flex-item">
-                <span class="xz n1" onclick="danSelect(this)">1</span>
+                <span class="xz n1" onclick="danSelect(this)">01</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n2" onclick="danSelect(this)">2</span>
+                <span class="xz n2" onclick="danSelect(this)">02</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n3" onclick="danSelect(this)">3</span>
+                <span class="xz n3" onclick="danSelect(this)">03</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n4" onclick="danSelect(this)">4</span>
+                <span class="xz n4" onclick="danSelect(this)">04</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n5" onclick="danSelect(this)">5</span>
+                <span class="xz n5" onclick="danSelect(this)">05</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n6" onclick="danSelect(this)">6</span>
+                <span class="xz n6" onclick="danSelect(this)">06</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n7" onclick="danSelect(this)">7</span>
+                <span class="xz n7" onclick="danSelect(this)">07</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n8" onclick="danSelect(this)">8</span>
+                <span class="xz n8" onclick="danSelect(this)">08</span>
             </div>
             <div class="cus-flex-item">
-                <span class="xz n9" onclick="danSelect(this)">9</span>
+                <span class="xz n9" onclick="danSelect(this)">09</span>
             </div>
             <div class="cus-flex-item">
                 <span class="xz n10" onclick="danSelect(this)">10</span>

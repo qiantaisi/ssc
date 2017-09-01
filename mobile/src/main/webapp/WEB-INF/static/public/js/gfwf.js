@@ -343,8 +343,8 @@ function content_hlzx(){
     });
 
 
-    var wanStr = wanArr.length > 0 ? (wanArr.join(",") + "|") : ' ';
-    var qianStr = qianArr.length > 0 ? (qianArr.join(",") + "|") : ' ';
+    var wanStr = wanArr.length > 0 ? (wanArr.join(" ") + ",") : ' ';
+    var qianStr = qianArr.length > 0 ? qianArr.join(" ") : ' ';
 
     return $.trim(
         (wanStr == ' ' ? ' ' : wanStr)+
