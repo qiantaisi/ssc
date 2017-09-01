@@ -72,7 +72,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)" onclick="getZstPage('lhc')">香港六合彩</a>
-                        <a href="javascript:void(0)"></a>
+                        <a href="javascript:void(0)" onclick="getZstPage('ssq')">双色球</a>
                     </li>
                 </ul>
             </dd>

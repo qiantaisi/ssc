@@ -13,7 +13,7 @@
         <div class="main">
             <div class="main-box" style="width:1300px;">
                 <div class="main-nav">
-                    <div class="cplogo"><img src="${resPath}zst/img/bj28.png" alt="北京28" /><span>双色球</span></div>
+                    <div class="cplogo"><img src="${resPath}zst/img/ssq.png" alt="双色球" /><span>双色球</span></div>
                     <c:import url="common/nav.jsp" />
                     <ul class="btn-navs">
                         <li class="fff" data-contentid="zhexianData" data-id="shuju1">基本走势</li>
