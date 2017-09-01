@@ -35,7 +35,7 @@
             <b>后三其它</b>
             <p class="btn_h3_qt">
                 <span class="playPlIdBtn" data-play_id="1012" data-play_pl_id="14818" data-name="h3hzws" data-fun_zhushu="zhushu_h3hzws" data-fun_content="content_h3hzws" data-fun_suiji="suiji_h3hzws"><a href="javascript:void(0)">和值尾数</a></span>
-                <span class="playPlIdBtn" data-play_id="1013" data-play_pl_id="14819|14821|14820" data-name="h3tsh"
+                <span class="playPlIdBtn" data-play_id="1013" data-play_pl_id="14821|14820|14819" data-name="h3tsh"
                       data-fun_zhushu="zhushu_h3tsh" data-fun_content="content_h3tsh" data-fun_suiji="suiji_h3tsh"><a href="javascript:void(0)">特殊号</a></span>
             </p>
         </li>

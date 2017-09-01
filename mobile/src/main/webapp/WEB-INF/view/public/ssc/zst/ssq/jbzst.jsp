@@ -27,6 +27,17 @@
             <h1 class="title">双色球</h1>
         </header>
         <div class="content cl-601 zst-cl-10">
+            <div class="cl-600" id="ssc-parent-menu">
+                <div class="re-cl-602">
+                    <a data-name="jb" href="javascript:void(0)" class="choose">基本走势</a>
+                    <span class="goucai"><a id="blink" href="<%=basePath%>ssc/gcdt/gfwf/ssq.html">立即购彩</a></span>
+                    <span class="gengduo">更多期数</span>
+                </div>
+            </div>
+            <div class="click-qishu-btns">
+                <a href="javascript:void(0)" data-qishu="50">50期</a>
+                <a href="javascript:void(0)" data-qishu="100">100期</a>
+            </div>
             <div id="sub-menu-list">
                 <div class="cl-600 cl-610">
                     <div class="cl-602 qishu-btns">
