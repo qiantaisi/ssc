@@ -13,7 +13,7 @@
         <div class="main">
             <div class="main-box" style="width:1300px;">
                 <div class="main-nav">
-                    <div class="cplogo"><img src="${resPath}zst/img/bj28.png" alt="北京28" /><span>双色球</span></div>
+                    <div class="cplogo"><img src="${resPath}zst/img/ssq.png" alt="双色球" /><span>双色球</span></div>
                     <c:import url="common/nav.jsp" />
                     <ul class="btn-navs">
                         <li class="fff" data-contentid="zhexianData" data-id="shuju1">基本走势</li>
@@ -234,10 +234,10 @@
                                             <div class="cl-35 cl-36 clean">
                                                 <script>
                                                     for(var i = 1; i < 34; ++i) {
-                                                        document.write('<var class="bg-1"><i>' + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
+                                                        document.write('<var class="bg-2"><i>' + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
                                                     }
                                                     for(var i = 1; i <=16; ++i) {
-                                                        document.write('<var class="bg-2"><i>'  + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
+                                                        document.write('<var class="bg-1"><i>'  + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
                                                     }
                                                 </script>
                                                 <%--<var class=""><i>单</i></var>--%>
