@@ -1448,6 +1448,8 @@ $(function () {
                 playGroupId = 10;
             } else if (inputCaizhong == '广东快乐十分') {
                 playGroupId = 11;
+            } else if (inputCaizhong == '双色球') {
+                playGroupId = 12;
             } else if (inputCaizhong == '三分时时彩') {
                 playGroupId = 13;
             } else if (inputCaizhong == '幸运飞艇') {
@@ -1470,6 +1472,8 @@ $(function () {
                 playGroupId = 22;
             } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
+            } else if (inputCaizhong == '广东11选5') {
+                playGroupId = 24;
             }
 
             pageIndex = 1;
@@ -4742,7 +4746,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10', '广东11选5', '双色球']
                 }
             ]
         });
@@ -4781,6 +4785,8 @@ $(function () {
                 $("#inputCaizhong").val("重庆幸运农场");
             } else if (playGroupId == 11) {
                 $("#inputCaizhong").val("广东快乐十分");
+            } else if (playGroupId == 12) {
+                $("#inputCaizhong").val("双色球");
             } else if (playGroupId == 13) {
                 $("#inputCaizhong").val("三分时时彩");
             } else if (playGroupId == 14) {
@@ -4803,6 +4809,8 @@ $(function () {
                 $("#inputCaizhong").val("10分六合彩")
             } else if (playGroupId == 23) {
                 $("#inputCaizhong").val("极速PK10")
+            } else if (playGroupId == 24) {
+                $("#inputCaizhong").val("广东11选5");
             }
         }
 
@@ -5266,6 +5274,8 @@ $(function () {
                 playGroupId = 10;
             } else if (inputCaizhong == '广东快乐十分') {
                 playGroupId = 11;
+            } else if (inputCaizhong == '双色球') {
+                playGroupId = 12;
             } else if (inputCaizhong == '三分时时彩') {
                 playGroupId = 13;
             } else if (inputCaizhong == '幸运飞艇') {
@@ -5288,6 +5298,8 @@ $(function () {
                 playGroupId = 22;
             } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
+            } else if (inputCaizhong == '广东11选5') {
+                playGroupId = 24;
             }
 
             pageIndex = 1;
@@ -5320,6 +5332,8 @@ $(function () {
             $("#inputCaizhong").val("重庆幸运农场");
         } else if (playGroupId == 11) {
             $("#inputCaizhong").val("广东快乐十分");
+        } else if (playGroupId == 12) {
+            $("#inputCaizhong").val("双色球");
         } else if (playGroupId == 13) {
             $("#inputCaizhong").val("三分时时彩");
         } else if (playGroupId == 14) {
@@ -5342,6 +5356,8 @@ $(function () {
             $("#inputCaizhong").val("10分六合彩");
         } else if (playGroupId == 23) {
             $("#inputCaizhong").val("极速PK10");
+        } else if (playGroupId == 24) {
+            $("#inputCaizhong").val("广东11选5");
         }
 
 
