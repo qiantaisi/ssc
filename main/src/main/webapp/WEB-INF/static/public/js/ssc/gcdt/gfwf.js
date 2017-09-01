@@ -1105,7 +1105,7 @@ function initSubPage() {
     if (plAndMaxFd instanceof Array) {  // 多赔率
         maxPlayPl = plAndMaxFd[0].playPl;  // 最高赔率
         maxFandian = plAndMaxFd[0].maxFdBl;    // 最大返点
-        maxFandian = (maxFandian == 0 ? 13 : maxFandian);
+
 
 
         minPl = plAndMaxFd[0].minPl;   // 最低赔率
@@ -1146,8 +1146,13 @@ function initSubPage() {
                 $.each(plAndMaxFd, function (index, value) {
                     var valTemp = value.maxFdBl;
                     var tmpConvertBlMoney = (value.playPl - value.minPl) / (valTemp == 0 ? 1 : valTemp);
-                    console.log(value.maxFdBl);
-                    strArr.push((value.playPl - fandianBili * tmpConvertBlMoney).toFixed(3));
+
+                    if(playGroupId == 12){
+                        strArr.push((value.playPl - fandianBili * tmpConvertBlMoney).toFixed(1));
+                    } else {
+                        strArr.push((value.playPl - fandianBili * tmpConvertBlMoney).toFixed(3));
+                    }
+
                 });
                 $("#jiangjin-change").html(strArr.join('|'));
             } else {
