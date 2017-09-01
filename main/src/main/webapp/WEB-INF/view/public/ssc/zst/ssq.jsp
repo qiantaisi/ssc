@@ -234,10 +234,10 @@
                                             <div class="cl-35 cl-36 clean">
                                                 <script>
                                                     for(var i = 1; i < 34; ++i) {
-                                                        document.write('<var class="bg-1"><i>' + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
+                                                        document.write('<var class="bg-2"><i>' + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
                                                     }
                                                     for(var i = 1; i <=16; ++i) {
-                                                        document.write('<var class="bg-2"><i>'  + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
+                                                        document.write('<var class="bg-1"><i>'  + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
                                                     }
                                                 </script>
                                                 <%--<var class=""><i>单</i></var>--%>

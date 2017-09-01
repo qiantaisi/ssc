@@ -11,8 +11,8 @@
         <li>
             <b class="tit_img">模式</b>
             <p>
-                <span class="playPlIdBtn acti" data-play_id="814" data-play_pl_id="14579" data-name="ssqfs" data-fun_zhushu="zhushu_ssqfs" data-fun_content="content_ssqfs" data-fun_suiji="suiji_ssqfs"><a href="javascript:void(0)">红蓝直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="813" data-play_pl_id="14578" data-name="ssqds" data-fun_zhushu="zhushu_ssqds" data-fun_content="content_ssqds" data-fun_suiji="suiji_ssqds"><a href="javascript:void(0)">红蓝直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="1033" data-play_pl_id="14846|14847|14848|14849" data-name="ssqfs" data-fun_zhushu="zhushu_ssqfs" data-fun_content="content_ssqfs" data-fun_suiji="suiji_ssqfs"><a href="javascript:void(0)">红蓝直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="1034" data-play_pl_id="14850|14851|14852|14853" data-name="ssqds" data-fun_zhushu="zhushu_ssqds" data-fun_content="content_ssqds" data-fun_suiji="suiji_ssqds"><a href="javascript:void(0)">红蓝直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -119,15 +119,14 @@
     <div class="Pick cl-1003 recl-1003" data-flag="dan">
         <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个五位数号码组成一注。
+            手动输入号码，红球5个篮球1个组成一注，每注有五个红球和一个蓝球，每个球必须是两位数字，红球和蓝球之间以一个":"（冒号）分隔，每注之间用逗号分隔， 例如：01 02 03 04 05:01；
             <a><img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：23456 开奖号码：23456，即中五星直选。</var>
+                <var>投注方案：01 03 04 05 06 07<br> 开奖号码：07 03 04 05 01 06顺序不限即中双色球。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>手动输入一个五位数号码组成一注，所选的号码万、千、百、十、个位与号码相同，且顺序一致即为中奖。</var>
+                <var>一等奖：中5个红球和1个蓝球，顺序不限；如开奖号：红球01 02 03 04 05 06蓝球01，投注号码红球01 02 03 04 05蓝球01。<br>二等奖：中4个红球1个蓝球或者5个红球，顺序不限。<br>三等奖：中3个红球1个蓝球或4个红球，顺序不限。<br>四等奖：中2个红球1个蓝球或1个红球1个蓝球或者1个蓝球，即中奖，顺序不限。</var>
             </a>
-
         </span>
         </p>
         <div class="content_jiang">
@@ -141,7 +140,7 @@
             </div>
         </div>
 
-        <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
+       <%-- <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>--%>
     </div>
 </script>
 <script>
@@ -149,6 +148,7 @@
         showloadTxtTemplate1();
     }
 </script>
+<%--
 <script>
     var playGroupId = 12;
 /*    var playId = 304;
@@ -372,4 +372,4 @@
     $(function () {
         getYilou();
     });
-</script>
+</script>--%>
