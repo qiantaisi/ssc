@@ -1274,7 +1274,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3','极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '三分时时彩', '幸运飞艇', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10', '广东11选5', '双色球']
                 }
             ]
         });
@@ -1479,7 +1479,9 @@ $(function () {
                 playGroupId = 10;
             } else if (inputCaizhong == '广东快乐十分') {
                 playGroupId = 11;
-            } else if (inputCaizhong == '三分时时彩') {
+            } else if (inputCaizhong == '双色球') {
+                playGroupId = 12;
+            }else if (inputCaizhong == '三分时时彩') {
                 playGroupId = 13;
             } else if (inputCaizhong == '幸运飞艇') {
                 playGroupId = 14;
@@ -1501,6 +1503,8 @@ $(function () {
                 playGroupId = 22;
             } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
+            }else if (inputCaizhong == '广东11选5') {
+                playGroupId = 24;
             }
 
             pageIndex = 1;
@@ -3197,6 +3201,8 @@ $(function () {
                 playGroupId = 10;
             } else if (inputCaizhong == '广东快乐十分') {
                 playGroupId = 11;
+            } else if (inputCaizhong == '双色球') {
+                playGroupId = 12;
             } else if (inputCaizhong == '三分时时彩') {
                 playGroupId = 13;
             } else if (inputCaizhong == '幸运飞艇') {
@@ -3219,6 +3225,8 @@ $(function () {
                 playGroupId = 22;
             } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
+            } else if (inputCaizhong == '广东11选5') {
+                playGroupId = 24;
             }
 
             pageIndex = 1;
@@ -4769,7 +4777,7 @@ $(function () {
             cols: [
                 {
                     textAlign: 'center',
-                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3','极速PK10']
+                    values: ['任意', '重庆时时彩', '天津时时彩', '新疆时时彩', '体彩排列3', '福彩3D', '六合彩', '北京28', '北京快乐8', '北京PK10', '重庆幸运农场', '广东快乐十分', '幸运飞艇', '三分时时彩', '两分时时彩', '分分时时彩', '五分时时彩', '江苏快3', '湖北快3', '安徽快3', '吉林快3', '极速PK10', '广东11选5', '双色球']
                 }
             ]
         });
@@ -4862,7 +4870,7 @@ $(function () {
                     $.each(json.sscHistoryList, function (index, value) {
                         var tmpPlayGroupId = Tools.parseInt(value.playGroupId);
 
-                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17,24]) >= 0) {
+                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17, 24]) >= 0) {
                             var obj = {};
 
                             obj.openTime = value.openTime;
@@ -4897,6 +4905,42 @@ $(function () {
                             obj.dx = 0 <= sum && sum <= 22 ? '小' : '大';
                             var cha = num1 - num5;
                             obj.lh = cha == 0 ? '和' : (cha > 0 ? '龙' : '虎');
+                            var html = template("template_" + tmpPlayGroupId, obj);
+                            str += html;
+                        } else if ($.inArray(tmpPlayGroupId, [12]) >= 0) {
+                            var obj = {};
+
+                            obj.openTime = value.openTime;
+                            obj.playGroupId = tmpPlayGroupId;
+                            obj.number = value.number;
+
+                            var numArr = value.openCode.split(",");
+                            var num1 = Tools.parseInt(numArr[0]);
+                            var num2 = Tools.parseInt(numArr[1]);
+                            var num3 = Tools.parseInt(numArr[2]);
+                            var num4 = Tools.parseInt(numArr[3]);
+                            var num5 = Tools.parseInt(numArr[4]);
+                            var num6 = Tools.parseInt(numArr[5]);
+                            var num7 = Tools.parseInt(numArr[6]);
+
+
+                            num1 = parseInt(num1) >= 10 ? num1 : ('0' + num1);
+                            num2 = parseInt(num2) >= 10 ? num2 : ('0' + num2);
+                            num3 = parseInt(num3) >= 10 ? num3 : ('0' + num3);
+                            num4 = parseInt(num4) >= 10 ? num4 : ('0' + num4);
+                            num5 = parseInt(num5) >= 10 ? num5 : ('0' + num5);
+                            num6 = parseInt(num6) >= 10 ? num6 : ('0' + num6);
+                            num7 = parseInt(num7) >= 10 ? num7 : ('0' + num7);
+
+
+                            obj.num1 = num1;
+                            obj.num2 = num2;
+                            obj.num3 = num3;
+                            obj.num4 = num4;
+                            obj.num5 = num5;
+                            obj.num6 = num6;
+                            obj.num7 = num7;
+
                             var html = template("template_" + tmpPlayGroupId, obj);
                             str += html;
                         } else if ($.inArray(tmpPlayGroupId, [4, 5, 18, 19, 20, 21]) >= 0) {
@@ -5110,9 +5154,9 @@ $(function () {
                             str += html;
                         }
                     });
-                    if(nowDataFlag == true){
+                    if (nowDataFlag == true) {
                         $("#dataList .list-container").append(str);
-                    }else{
+                    } else {
                         $("#dataList .list-container").html(str);
                     }
 
@@ -5137,7 +5181,7 @@ $(function () {
                     }
 
                     //当不是最新数据选项时无限制加载数据
-                    if(nowDataFlag == true){
+                    if (nowDataFlag == true) {
                         pageIndex = json.nextPage;
                     }
                 },
@@ -5155,7 +5199,7 @@ $(function () {
                     $.refreshScroller();
                     // 下拉刷新重置
                     $.pullToRefreshDone('.pull-to-refresh-content');
-                    if(nowDataFlag == false){
+                    if (nowDataFlag == false) {
                         $('.infinite-scroll-preloader').hide();
                     }
                 }
@@ -5282,7 +5326,9 @@ $(function () {
                 playGroupId = 10;
             } else if (inputCaizhong == '广东快乐十分') {
                 playGroupId = 11;
-            } else if (inputCaizhong == '三分时时彩') {
+            } else if (inputCaizhong == '双色球') {
+                playGroupId = 12;
+            }else if (inputCaizhong == '三分时时彩') {
                 playGroupId = 13;
             } else if (inputCaizhong == '幸运飞艇') {
                 playGroupId = 14;
@@ -5304,6 +5350,8 @@ $(function () {
                 playGroupId = 22;
             } else if (inputCaizhong == '极速PK10') {
                 playGroupId = 23;
+            }else if (inputCaizhong == '广东11选5') {
+                playGroupId = 24;
             }
 
             pageIndex = 1;
@@ -5405,7 +5453,7 @@ $(function () {
                     $.each(json.sscHistoryList, function (index, value) {
                         var tmpPlayGroupId = Tools.parseInt(value.playGroupId);
 
-                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17,24]) >= 0) {
+                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17, 24]) >= 0) {
                             var obj = {};
 
                             obj.openTime = value.openTime;
@@ -5440,6 +5488,42 @@ $(function () {
                             obj.dx = 0 <= sum && sum <= 22 ? '小' : '大';
                             var cha = num1 - num5;
                             obj.lh = cha == 0 ? '和' : (cha > 0 ? '龙' : '虎');
+                            var html = template("template_" + tmpPlayGroupId, obj);
+                            str += html;
+                        } else if ($.inArray(tmpPlayGroupId, [12]) >= 0) {
+                            var obj = {};
+
+                            obj.openTime = value.openTime;
+                            obj.playGroupId = tmpPlayGroupId;
+                            obj.number = value.number;
+
+                            var numArr = value.openCode.split(",");
+                            var num1 = Tools.parseInt(numArr[0]);
+                            var num2 = Tools.parseInt(numArr[1]);
+                            var num3 = Tools.parseInt(numArr[2]);
+                            var num4 = Tools.parseInt(numArr[3]);
+                            var num5 = Tools.parseInt(numArr[4]);
+                            var num6 = Tools.parseInt(numArr[5]);
+                            var num7 = Tools.parseInt(numArr[6]);
+
+
+                            num1 = parseInt(num1) >= 10 ? num1 : ('0' + num1);
+                            num2 = parseInt(num2) >= 10 ? num2 : ('0' + num2);
+                            num3 = parseInt(num3) >= 10 ? num3 : ('0' + num3);
+                            num4 = parseInt(num4) >= 10 ? num4 : ('0' + num4);
+                            num5 = parseInt(num5) >= 10 ? num5 : ('0' + num5);
+                            num6 = parseInt(num6) >= 10 ? num6 : ('0' + num6);
+                            num7 = parseInt(num7) >= 10 ? num7 : ('0' + num7);
+
+
+                            obj.num1 = num1;
+                            obj.num2 = num2;
+                            obj.num3 = num3;
+                            obj.num4 = num4;
+                            obj.num5 = num5;
+                            obj.num6 = num6;
+                            obj.num7 = num7;
+
                             var html = template("template_" + tmpPlayGroupId, obj);
                             str += html;
                         } else if ($.inArray(tmpPlayGroupId, [4, 5, 18, 19, 20, 21]) >= 0) {
@@ -5741,7 +5825,7 @@ $(function () {
                     var str = "";
                     $.each(json.sscHistoryList, function (index, value) {
                         var tmpPlayGroupId = Tools.parseInt(value.playGroupId);
-                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17,24]) >= 0) {
+                        if ($.inArray(tmpPlayGroupId, [1, 2, 3, 13, 15, 16, 17, 24]) >= 0) {
                             var obj = {};
 
                             obj.openTime = value.openTime;
@@ -5776,6 +5860,42 @@ $(function () {
                             obj.dx = 0 <= sum && sum <= 22 ? '小' : '大';
                             var cha = num1 - num5;
                             obj.lh = cha == 0 ? '和' : (cha > 0 ? '龙' : '虎');
+                            var html = template("template_" + tmpPlayGroupId, obj);
+                            str += html;
+                        } else if ($.inArray(tmpPlayGroupId, [12]) >= 0) {
+                            var obj = {};
+
+                            obj.openTime = value.openTime;
+                            obj.playGroupId = tmpPlayGroupId;
+                            obj.number = value.number;
+
+                            var numArr = value.openCode.split(",");
+                            var num1 = Tools.parseInt(numArr[0]);
+                            var num2 = Tools.parseInt(numArr[1]);
+                            var num3 = Tools.parseInt(numArr[2]);
+                            var num4 = Tools.parseInt(numArr[3]);
+                            var num5 = Tools.parseInt(numArr[4]);
+                            var num6 = Tools.parseInt(numArr[5]);
+                            var num7 = Tools.parseInt(numArr[6]);
+
+
+                            num1 = parseInt(num1) >= 10 ? num1 : ('0' + num1);
+                            num2 = parseInt(num2) >= 10 ? num2 : ('0' + num2);
+                            num3 = parseInt(num3) >= 10 ? num3 : ('0' + num3);
+                            num4 = parseInt(num4) >= 10 ? num4 : ('0' + num4);
+                            num5 = parseInt(num5) >= 10 ? num5 : ('0' + num5);
+                            num6 = parseInt(num6) >= 10 ? num6 : ('0' + num6);
+                            num7 = parseInt(num7) >= 10 ? num7 : ('0' + num7);
+
+
+                            obj.num1 = num1;
+                            obj.num2 = num2;
+                            obj.num3 = num3;
+                            obj.num4 = num4;
+                            obj.num5 = num5;
+                            obj.num6 = num6;
+                            obj.num7 = num7;
+
                             var html = template("template_" + tmpPlayGroupId, obj);
                             str += html;
                         } else if ($.inArray(tmpPlayGroupId, [4, 5, 18, 19, 20, 21]) >= 0) {
@@ -6663,7 +6783,7 @@ function getThisMonthEnd() {
 function getQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
-    if (r != null)return unescape(r[2]);
+    if (r != null) return unescape(r[2]);
     return null;
 }
 
@@ -6678,6 +6798,7 @@ function showSubMenu(obj) {
 
     // $(".panel-overlay").css({margin-})
 }
+
 function kfz() {
     Tools.toast("开发中，敬请期待！");
 }
@@ -6687,6 +6808,7 @@ function noaccessToast(layerName) {
 }
 
 var lhcLastDataFlag = null;
+
 function showLhcLastDataSx() {
     $("#sxInfo").show();
     $("#numInfo").hide();
@@ -6699,6 +6821,7 @@ function showLhcLastDataSx() {
         showLhcLastDataNum();
     }, 3000);
 }
+
 function showLhcLastDataNum() {
     if (null != lhcLastDataFlag) {
         clearTimeout(lhcLastDataFlag);
