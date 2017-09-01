@@ -13,7 +13,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>重庆时时彩</h2>
+                <h2>双色球</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="number"></i>期</p>
                 <div class="select">
