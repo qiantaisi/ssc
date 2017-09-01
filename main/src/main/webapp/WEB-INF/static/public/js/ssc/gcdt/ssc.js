@@ -927,13 +927,16 @@ function gdkj(playGroupId) {
                         openCode = openCode.split(",");
 
                         for (var i in openCode) {
-                            num = parseInt((openCode)[0]);
-                            num1 = parseInt((openCode)[1]);
-                            num2 = parseInt((openCode)[2]);
-                            num3 = parseInt((openCode)[3]);
-                            num4 = parseInt((openCode)[4]);
-                            num5 = parseInt((openCode)[5]);
-                            num6 = parseInt((openCode)[6]);
+                            num = openCode[0];
+                            num1 =openCode[1];
+                            num2 = openCode[2];
+                            num3 = openCode[3];
+                            num4 = openCode[4];
+                            num5 = openCode[5];
+                            num6 = openCode[6];
+
+
+
                         }
                     }
                     if (lastNumberOpening) {
@@ -949,13 +952,13 @@ function gdkj(playGroupId) {
                         if (typeof openCode != "undefined" || openCode != null) {
                             openCode = openCode.split(",");
                             for (var j = 0; j < openCode.length; ++j) {
-                                num = parseInt((openCode)[0]);
-                                num1 = parseInt((openCode)[1]);
-                                num2 = parseInt((openCode)[2]);
-                                num3 = parseInt((openCode)[3]);
-                                num4 = parseInt((openCode)[4]);
-                                num5 = parseInt((openCode)[5]);
-                                num6 = parseInt((openCode)[6]);
+                                num = openCode[0];
+                                num1 =openCode[1];
+                                num2 = openCode[2];
+                                num3 = openCode[3];
+                                num4 = openCode[4];
+                                num5 = openCode[5];
+                                num6 = openCode[6];
 
                             }
                         }
