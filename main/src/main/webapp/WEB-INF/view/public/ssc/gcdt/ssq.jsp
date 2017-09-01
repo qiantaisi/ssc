@@ -1,3 +1,4 @@
+<%@ page import="project38.ssc.web.interceptors.BasePathInterceptor" %>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -8,7 +9,6 @@
 %>
 <c:import url="../../common/bodyStart.jsp"/>
 <c:import url="../../common/checkIsChildFrame.jsp"/>
-
 <div id="gameContent">
     <div class="game_name">
         <div class="wid1">
@@ -23,7 +23,7 @@
             </div>
             <div class="box2_stage">
                 <p><span><i class="acti">近一期</i><i>近五期</i></span><font id="lastNumber"></font></p>
-                <div class="number pt10 pk10" id="lastOpenCode">
+                <div class="number pt10" id="lastOpenCode">
                 </div>
                 <div class="number" id="lastOpenCodeList">
                     <ul>
@@ -52,22 +52,24 @@
 
     <div class="Single wid1">
         <div class="layout at">
-            <div class="Playmethod">
+            <div class="Playmethod cl-801">
                 <ul>
-                    <li class="gf-li" data-name="11x5menu">
+                    <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
                             <span class="acti"><a href="javascript:void(0)" data-url="gfwf-ssq-gjtz">高级投注</a></span>
+
                         </p>
                     </li>
+
                 </ul>
             </div>
+
             <div id="sscContent"></div>
             <i class="it0 left_it0"><img src="${resPath}img/ico46.png" alt=""></i>
             <i class="it1 right_it1"><img src="${resPath}img/ico46.png" alt=""></i>
         </div>
-    </div>
-
+    </div><!--Single-->
     <div class="Detailedlist Single wid1">
 
         <div class="layout at">
@@ -92,16 +94,17 @@
                 </div>
             </div>
         </div>
+
     </div>
-</div>
-</div><!--Single-->
-<c:import url="common/bottomInfo.jsp"/>
+    <c:import url="gfwf/common/zhInfoContent.jsp"/>
+    <c:import url="common/bottomInfo.jsp"/>
 </div>
 <c:import url="../../common/commonJs.jsp"/>
 <c:import url="common/commonJs.jsp"/>
 <c:import url="gfwf/common/commonJs.jsp" />
 <script>
-    var playGroupId = 12;    // 彩种ID
+    // 全局彩种ID
+    var playGroupId = 12;
     var playId = null;
     // 全局官方玩法赔率
     <c:if test="${not empty playPlListJson}">
@@ -112,7 +115,61 @@
     <c:if test="${not empty zhuihaoSscOpenTimeList}">
     var zhuihaoSscOpenTimeList = ${zhuihaoSscOpenTimeList};
     </c:if>
+
 </script>
+<script>
+    function removeThisItem(obj) {
+        $(obj).parent().parent().trigger("mouseout");
+        $(obj).parent().parent().remove();
+        calcAll();
+        bindYuxuan();
+        if ($("#zhudanList .re_touzhu_tem").length <= 0) {
+            $("#zhudanList").html('<tr class="noRecord"><td>暂无投注项</td></tr>');
+            //清除追号模板
+            var flag = $(".clearLiZhudanbtn").attr('sp');
+            if(flag == 1){
+                zhTempletHideOrShow();
+            }
+        } else{
+            var optionVal = parseInt($('#lt_zh_qishu').val());
+            selectedCheckboxtbzh(optionVal);
+        }
+
+
+    }
+    // 随机号码
+    function randomNumber() {
+        var arr = [];
+        var tmpStr = '';
+        for (var i = 0; i < 5; ++i) {
+            tmpStr += '<span>' + (Math.floor(Math.random() * 10)) + '</span>';
+        }
+        $("#lastOpenCode").html(tmpStr);
+    }
+
+    // 渲染上期开奖模板
+    function renderLastOpenCode(openCodeArr) {
+        var tmpStr = '';
+        $.each(openCodeArr, function(index, value) {
+            tmpStr += '<span>' + value + '</span>';
+        });
+        $("#lastOpenCode").html(tmpStr);
+    }
+</script>
+<!-- 开奖历史模板 -->
+<script type="text/html" id="template_openDataHistory">
+    <li>
+        <p>第{{number}}期</p>
+        {{if list.length == 0}}
+        <p style="margin-left:5px">开奖中</p>
+        {{else}}
+        {{each list as value}}
+        <i>{{value}}</i>
+        {{/each}}
+        {{/if}}
+    </li>
+</script>
+
 <script type="text/html" id="template_touzhu">
     <tr
             data-show_content="{{showContent}}"
@@ -159,78 +216,6 @@
     </tr>
 </script>
 <script>
-    function removeThisItem(obj) {
-        $(obj).parent().parent().trigger("mouseout");
-        $(obj).parent().parent().remove();
-        calcAll();
-        bindYuxuan();
-        if ($("#zhudanList .re_touzhu_tem").length <= 0) {
-            $("#zhudanList").html('<tr class="noRecord"><td>暂无投注项</td></tr>');
-            //清除追号模板
-            var flag = $(".clearLiZhudanbtn").attr('sp');
-            if(flag == 1){
-                zhTempletHideOrShow();
-            }
-        } else{
-            var optionVal = parseInt($('#lt_zh_qishu').val());
-            selectedCheckboxtbzh(optionVal);
-        }
-
-
-    }
-    /* // 随机号码
-     function randomNumber() {
-         var arr = [];
-         var tmpStr = '';
-         for (var i = 0; i < 5; ++i) {
-             tmpStr += '<span>' + (Math.floor(Math.random() * 10)) + '</span>';
-         }
-         $("#lastOpenCode").html(tmpStr);
-     }
-
-     // 渲染上期开奖模板
-     function renderLastOpenCode(openCodeArr) {
-         var tmpStr = '';
-         $.each(openCodeArr, function(index, value) {
-             tmpStr += '<span>' + value + '</span>';
-         });
-         $("#lastOpenCode").html(tmpStr);
-     }*/
-</script>
-<script>
-    // 随机号码
-    function randomNumber() {
-        var arr = [];
-        var tmpStr = '';
-        var arrTemp = ['01','02','03','04','05','06','07','08','09','10','11'];
-        for (var i = 1; i <= 5; ++i) {
-            var value = Math.floor(Math.random() *10+1);
-            tmpStr += '<span class="fang fangs bg-">' +arrTemp[value] + '</span>';
-        }
-        $("#lastOpenCode").html(tmpStr);
-    }
-
-    // 渲染上期开奖模板
-    function renderLastOpenCode(openCodeArr) {
-        var tmpStr = '';
-        $.each(openCodeArr, function(index, value) {
-            tmpStr += '<span class="fang fangs bg-">' + value + '</span>';
-        });
-        $("#lastOpenCode").html(tmpStr);
-    }
-</script>
-<!-- 开奖历史模板 -->
-<script type="text/html" id="template_openDataHistory">
-    <li>
-        <p>第{{number}}期</p>
-        {{if list.length == 0}}
-        <p style="margin-left:5px">开奖中</p>
-        {{else}}
-        {{each list as value}}
-        <i class="fang fangs bg-">{{value}}</i>
-        {{/each}}
-        {{/if}}
-    </li>
 </script>
 <script>
     function addYuxuan(betForm) {
@@ -274,6 +259,7 @@
         });
         return strHtml;
     }
+
     function bindYuxuan() {
         unbindYuxuan();
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").hover(
@@ -293,8 +279,8 @@
                     betPerMoney: $(this).data("bet_per_money"),
                     betTotalMoney: $(this).data("bet_total_money"),
                     betZhushu: $(this).data("bet_zhushu"),
-                    bet_beishu:$(this).data("bet_beishu")
-                })
+                    bet_beishu: $(this).data("bet_beishu")
+                });
                 $("body").append(html);
             }, function() {
                 $("#moreZhudan").remove();
@@ -305,8 +291,6 @@
     function unbindYuxuan() {
         $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").unbind('mouseenter').unbind('mouseleave');
     }
-
-
 </script>
 <script type="text/html" id="template_moreZhudan">
     <div id="moreZhudan" class="moreZhudan" style="top:{{top}}px;left:{{left}}px">
@@ -338,5 +322,4 @@
         </div>
     </div>
 </script>
-
 <c:import url="../../common/bodyEnd.jsp"/>
