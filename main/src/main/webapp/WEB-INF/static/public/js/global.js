@@ -114,7 +114,7 @@ var Tools = {
         var minute = now.getMinutes();
         var second = now.getSeconds();
 
-        money = month < 10 ? '0' + month : month;
+        month = month < 10 ? '0' + month : month;
         date = date < 10 ? '0' + date : date;
         hour = hour < 10 ? '0' + hour : hour;
         minute = minute < 10 ? '0' + minute : minute;

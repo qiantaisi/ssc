@@ -30,7 +30,7 @@
             <div id="sub-menu-list">
                 <div class="cl-600 cl-610">
                     <div class="cl-602 qishu-btns">
-                        <a data-qishu="30" href="javascript:void(0)">30期</a>
+                        <a data-qishu="30" href="javascript:void(0)" class="active">30期</a>
                         <a data-qishu="50" href="javascript:void(0)">50期</a>
                         <a data-qishu="80" href="javascript:void(0)">80期</a>
                     </div>

@@ -670,6 +670,27 @@ $(function () {
                 }
             });
         });
+
+        $('.list-block ul li .label-checkbox a i.accountSubStr').each(function () {
+            var dataVal = $(this).attr('data-bank');
+            var tempStr = '';
+            var strVal = dataVal.toString();
+            var startStr = strVal.substr(0, 4);
+            var endStr = strVal.substr(strVal.length - 4, strVal.length);
+            var middleStr = strVal.substr(4, strVal.length - 4);
+
+            tempStr += startStr + " ";
+            for(var i = 0; i < middleStr.length; i++){
+                if(i == 3 && i != 0 || i == 7 && i != 0|| i == 11 && i != 0){
+                    tempStr += '* ';
+                }else {
+                    tempStr += '*';
+                }
+            }
+            tempStr += " " + endStr;
+
+            $(this).html(tempStr);
+        });
     });
 
     // 银行卡详情
@@ -5113,20 +5134,6 @@ $(function () {
     });
 
     //官放初始化界面
-    $(document).on("pageInit", "#page-gcdt-xjssc-gfwf", function (e, id, page) {
-        initSscPage(13);
-
-        gfwfCommonClickEvent();
-    });
-
-    //官放初始化界面
-    $(document).on("pageInit", "#page-gcdt-efssc-gfwf", function (e, id, page) {
-        initSscPage(16);
-
-        gfwfCommonClickEvent();
-    });
-
-    //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-pk10-gfwf", function (e, id, page) {
         initSscPage(9);
 
@@ -5143,6 +5150,13 @@ $(function () {
     //官放初始化界面
     $(document).on("pageInit", "#page-gcdt-gd11x5-gfwf", function (e, id, page) {
         initSscPage(24);
+
+        gfwfCommonClickEvent();
+    });
+
+    //官放初始化界面
+    $(document).on("pageInit", "#page-gcdt-ssq-gfwf", function (e, id, page) {
+        initSscPage(12);
 
         gfwfCommonClickEvent();
     });

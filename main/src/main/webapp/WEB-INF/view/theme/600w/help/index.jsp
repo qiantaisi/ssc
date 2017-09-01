@@ -123,6 +123,10 @@
                             <h4><span><a href="<%=basePath%>help/rule/gd11x5.html"><img src="${resPath}img/gd11x5.png"/></a></span></h4>
                             <a href="<%=basePath%>help/rule/gd11x5.html"><p>广东11选5</br><span>广东11选5</span></p></a>
                         </li>
+                        <li>
+                            <h4><span><a href="<%=basePath%>help/rule/ssq.html"><img src="${resPath}img/ssq.png" style="width: 80px;height: 80px"/></a></span></h4>
+                            <a href="<%=basePath%>help/rule/ssq.html"><p>双色球</br><span>双色球</span></p></a>
+                        </li>
                     </ul>
                 </div>
                 <h5 id="flip">功能指引</h5>

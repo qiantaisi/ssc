@@ -56,6 +56,8 @@ public class IndexController extends BaseController {
     }
 
 
+
+
     @RequestMapping(value = "/ajaxGetSscDataMainPage.json", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public SscHistoryResult3 ajaxGetSscDataMainPage(
@@ -104,7 +106,7 @@ public class IndexController extends BaseController {
         modelMap.put("webInfo", webInfoResult);
         modelMap.put("Notices", ApiUtils.getNotices(companyShortName));
         modelMap.put("webPopUpNoticeResult", ApiUtils.getPopupNoticeList(uid, token, companyShortName));
-//        modelMap.put("qrcode", ApiUtils.getQRCodePC(companyShortName));
+        modelMap.put("qrcode", ApiUtils.getQRCodePC(companyShortName));
 
         return this.renderView("index/main", modelMap);
     }
@@ -116,6 +118,8 @@ public class IndexController extends BaseController {
 
         modelMap.put("Article", ApiUtils.getArtByid(companyShortName, id));
         modelMap.put("logo", ApiUtils.getLogo(2, companyShortName));
+        modelMap.put("qrcode", ApiUtils.getQRCodePC(companyShortName));
+
         return this.renderView("index/zxxx", modelMap);
     }
 

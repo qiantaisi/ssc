@@ -54,7 +54,8 @@
                         <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
                         <a href="javascript:void(0)" data-playgroupid="7">北京28</a>
                         <a href="javascript:void(0)" data-playgroupid="8">北京快乐8</a>
-                        <a href="javascript:void(0)" data-playgroupid="24" class="last">广东11选5</a>
+                        <a href="javascript:void(0)" data-playgroupid="24">广东11选5</a>
+                        <a href="javascript:void(0)" data-playgroupid="12" class="last">双色球</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_2">
@@ -85,6 +86,7 @@
                         <a href="javascript:void(0)" data-playgroupid="6">六合彩</a>
                         <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
                         <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
+                        <a href="javascript:void(0)" data-playgroupid="12">双色球</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_4">
@@ -93,6 +95,7 @@
                         <a href="javascript:void(0)" data-playgroupid="4">体彩排列3</a>
                         <a href="javascript:void(0)" data-playgroupid="5">福彩3D</a>
                         <a href="javascript:void(0)" data-playgroupid="7">北京28</a>
+                        <a href="javascript:void(0)" data-playgroupid="12">双色球</a>
                     </div>
                 </div>
                 <div class="wrap_select at corl1 hide kjjg_hz_style" id="subNav_5">
@@ -157,9 +160,10 @@
                             <option value="7">北京28</option>
                             <option value="8">北京快乐8</option>
                             <option value="24">广东11选5</option>
+                            <option value="12">双色球</option>
                         </select>
                         <input class="inp1" type="text" name="qihao" placeholder="输入期数"/>
-                        <input class="inp2" type="submit" onclick="sousuokjhm()" value="搜索" name="" />
+                        <input class="inp2" type="submit" onclick="sousuokjhm()" value="搜索" name=""/>
                     </div>
                 </div>
 
@@ -174,16 +178,16 @@
 <c:import url="../common/jsCommonLogin.jsp"/>
 <c:import url="../common/commonJs.jsp"/>
 <script>
-    $(function() {
+    $(function () {
         var caiZhong;
         var date = new Date();
-        var year=date.getFullYear();   //返回一个表示年份的 4 位数字
-        var month=date.getMonth()+1;   //返回表示月份的数字。返回值是 0（一月） 到 11（十二月） 之间的一个整数
-        var pageSize=30;
-        var startTime=null;
-        var endTime=null;
+        var year = date.getFullYear();   //返回一个表示年份的 4 位数字
+        var month = date.getMonth() + 1;   //返回表示月份的数字。返回值是 0（一月） 到 11（十二月） 之间的一个整数
+        var pageSize = 30;
+        var startTime = null;
+        var endTime = null;
 
-        $(".tabs_ce ul li").click(function() {
+        $(".tabs_ce ul li").click(function () {
             $(".Resultt .latyout .wrap_select").hide();
             var id = $(this).data("subnav");
             $(this).parent().find(".acti").removeClass("acti");
@@ -192,7 +196,7 @@
             $("#subNav_" + id).show();
         });
 
-        $(".Resultt .latyout .wrap_select a").click(function() {
+        $(".Resultt .latyout .wrap_select a").click(function () {
             $(".Resultt .latyout .wrap_select a.acti").removeClass("acti");
             $(this).addClass("acti");
             var playGroupId = $(this).data("playgroupid");
@@ -202,9 +206,9 @@
 
         if (typeof caiZhong == 'undefined' || !caiZhong) {
             getData();
-        }else{
+        } else {
             getData(Tools.parseInt(caiZhong));
-            $("#subNav_1 div a[data-playgroupid='"+Tools.parseInt(caiZhong)+"']").trigger("click");
+            $("#subNav_1 div a[data-playgroupid='" + Tools.parseInt(caiZhong) + "']").trigger("click");
         }
     });
 
@@ -212,42 +216,45 @@
         var strTi = $(".zx .kjTime").find("option:selected").val();
         var strCz = $(".zx .kjCz").find("option:selected").val();
         var strQihao = $("input[name='qihao']").val();
-        getSouData(strCz,strTi,strQihao);
+        getSouData(strCz, strTi, strQihao);
     }
 
     function showLoading() {
         layer.load(2, {
-            shade: [0.1,'#000'] //0.1透明度的白色背景
+            shade: [0.1, '#000'] //0.1透明度的白色背景
         });
-        $(".layui-layer-loading").css({"width": "auto", "left" : "50%"});
+        $(".layui-layer-loading").css({"width": "auto", "left": "50%"});
     }
+
     function hideLoading() {
         layer.closeAll();
     }
-    function getSouData(playGroupId,startT,qiHao) {
+
+    function getSouData(playGroupId, startT, qiHao) {
         ajaxRequest({
             url: "<%=basePath%>ssc/ajaxGetHistory.json",
             data: {
                 playGroupId: playGroupId,
                 pageIndex: 1,
                 number: qiHao,
-                startT:startT,
+                startT: startT,
                 pageSize: 120
             },
-            beforeSend: function() {
+            beforeSend: function () {
                 showLoading();
             },
-            success: function(json) {
+            success: function (json) {
                 if (json.result != 1) {
                     return;
                 }
                 renderData(json.sscHistoryList);
             },
-            complete: function() {
+            complete: function () {
                 hideLoading();
             }
         });
     }
+
     function getData(playGroupId) {
         if (typeof playGroupId == 'undefined' || playGroupId == null) {
             var type = 0;
@@ -255,18 +262,18 @@
                 <%--url: "<%=basePath%>ssc/getAllOpenTime.json",--%>
                 url: "<%=basePath%>ssc/getAllDataHistory.json",
                 data: {
-                    type:type
+                    type: type
                 },
-                beforeSend: function() {
+                beforeSend: function () {
                     showLoading();
                 },
-                success: function(json) {
+                success: function (json) {
                     if (json.result != 1) {
                         return;
                     }
                     renderAllData(json.sscHistoryList);
                 },
-                complete: function() {
+                complete: function () {
                     hideLoading();
                 }
             });
@@ -278,16 +285,16 @@
                     pageIndex: 1,
                     pageSize: 30
                 },
-                beforeSend: function() {
+                beforeSend: function () {
                     showLoading();
                 },
-                success: function(json) {
+                success: function (json) {
                     if (json.result != 1) {
                         return;
                     }
                     renderData(json.sscHistoryList);
                 },
-                complete: function() {
+                complete: function () {
                     hideLoading();
                 }
             });
@@ -295,6 +302,7 @@
     }
 
     var html_sflhc = '';
+
     function renderAllData(data) {
         var str = '';
         str += '<ul>';
@@ -306,7 +314,7 @@
         todayEnd = (new Date(todayEnd)).getTime();
         var leftTime = Math.floor((todayEnd - now) / 1000);
 
-        $.each(data, function(index, value) {
+        $.each(data, function (index, value) {
             var playGroupId = Tools.parseInt(value.playGroupId);
             if ($.inArray(playGroupId, [1, 2, 3, 13, 15, 16, 17, 24]) >= 0) {
                 var obj = {};
@@ -338,7 +346,7 @@
                 obj.num3 = num3;
                 obj.num4 = num4;
                 obj.num5 = num5;
-                var sum =  num1 + num2 + num3 + num4 + num5;
+                var sum = num1 + num2 + num3 + num4 + num5;
 
                 obj.sum = sum;
 
@@ -346,6 +354,42 @@
                 obj.dx = 0 <= sum && sum <= 22 ? '小' : '大';
                 var cha = num1 - num5;
                 obj.lh = cha == 0 ? '和' : (cha > 0 ? '龙' : '虎');
+                var html = template("template_" + playGroupId, obj);
+                str += html;
+            } else if ($.inArray(playGroupId, [12]) >= 0) {
+                var obj = {};
+
+                obj.openTime = value.openTime;
+                obj.playGroupId = playGroupId;
+                obj.number = value.number;
+
+                var numArr = value.openCode.split(",");
+                var num1 = Tools.parseInt(numArr[0]);
+                var num2 = Tools.parseInt(numArr[1]);
+                var num3 = Tools.parseInt(numArr[2]);
+                var num4 = Tools.parseInt(numArr[3]);
+                var num5 = Tools.parseInt(numArr[4]);
+                var num6 = Tools.parseInt(numArr[5]);
+                var num7 = Tools.parseInt(numArr[6]);
+
+
+                num1 = parseInt(num1) >= 10 ? num1 : ('0' + num1);
+                num2 = parseInt(num2) >= 10 ? num2 : ('0' + num2);
+                num3 = parseInt(num3) >= 10 ? num3 : ('0' + num3);
+                num4 = parseInt(num4) >= 10 ? num4 : ('0' + num4);
+                num5 = parseInt(num5) >= 10 ? num5 : ('0' + num5);
+                num6 = parseInt(num6) >= 10 ? num6 : ('0' + num6);
+                num7 = parseInt(num7) >= 10 ? num7 : ('0' + num7);
+
+
+                obj.num1 = num1;
+                obj.num2 = num2;
+                obj.num3 = num3;
+                obj.num4 = num4;
+                obj.num5 = num5;
+                obj.num6 = num6;
+                obj.num7 = num7;
+
                 var html = template("template_" + playGroupId, obj);
                 str += html;
             } else if ($.inArray(playGroupId, [4, 5, 18, 19, 20, 21]) >= 0) {
@@ -362,7 +406,7 @@
                 var num2 = Tools.parseInt(numArr[1]);
                 var num3 = Tools.parseInt(numArr[2]);
 
-                if(playGroupId == 18 || playGroupId == 19 || playGroupId ==20 || playGroupId == 21) {
+                if (playGroupId == 18 || playGroupId == 19 || playGroupId == 20 || playGroupId == 21) {
                     var hezhi = num1 + num2 + num3;
                     obj.danS = hezhi % 2 == 0 ? '双' : '单';
                     obj.daX = hezhi <= 10 ? '小' : '大';
@@ -375,10 +419,10 @@
 
                 var html = template("template_" + playGroupId, obj);
 
-                if(playGroupId == 5){
+                if (playGroupId == 5) {
                     str += html;
                     str += '<span class="sflhc_str"></span>';
-                }else{
+                } else {
                     str += html;
                 }
             } else if ($.inArray(playGroupId, [6, 22]) >= 0) {
@@ -424,9 +468,9 @@
                 obj.bose7 = getBose(num7);
 
                 var html = template("template_" + playGroupId, obj)
-                if(playGroupId == 22){
+                if (playGroupId == 22) {
                     html_sflhc = html;
-                }else{
+                } else {
                     str += html;
                 }
             } else if ($.inArray(playGroupId, [7]) >= 0) {
@@ -503,7 +547,7 @@
 
                 var html = template("template_" + playGroupId, obj);
                 str += html;
-            } else if ($.inArray(playGroupId, [9,14,23]) >= 0) {
+            } else if ($.inArray(playGroupId, [9, 14, 23]) >= 0) {
                 var obj = {};
 
                 obj.playGroupId = playGroupId;
@@ -590,7 +634,7 @@
         var str = '';
         str += '<ul>';
         str += '<li class="head"><span class="sp1">彩种</span><span class="sp2">期号</span><span class="sp3">开奖时间</span><span class="sp4">开奖号码</span><span class="sp5">期数（每天）</span><span class="sp6">开奖频率</span><span class="sp8">走势</span><span class="sp9">购彩</span></li>';
-        $.each(data, function(index, value) {
+        $.each(data, function (index, value) {
             var playGroupId = Tools.parseInt(value.playGroupId);
 
             if ($.inArray(playGroupId, [1, 2, 3, 13, 15, 16, 17, 24]) >= 0) {
@@ -627,6 +671,42 @@
                 obj.dx = 0 <= sum && sum <= 22 ? '小' : '大';
                 var cha = num1 - num2;
                 obj.lh = cha == 0 ? '和' : (cha > 0 ? '龙' : '虎');
+                var html = template("template_single_" + playGroupId, obj);
+                str += html;
+            } else if ($.inArray(playGroupId, [12]) >= 0) {
+                var obj = {};
+
+                obj.openTime = value.openTime;
+                obj.playGroupId = playGroupId;
+                obj.number = value.number;
+
+                var numArr = value.openCode.split(",");
+                var num1 = Tools.parseInt(numArr[0]);
+                var num2 = Tools.parseInt(numArr[1]);
+                var num3 = Tools.parseInt(numArr[2]);
+                var num4 = Tools.parseInt(numArr[3]);
+                var num5 = Tools.parseInt(numArr[4]);
+                var num6 = Tools.parseInt(numArr[5]);
+                var num7 = Tools.parseInt(numArr[6]);
+
+
+                num1 = parseInt(num1) >= 10 ? num1 : ('0' + num1);
+                num2 = parseInt(num2) >= 10 ? num2 : ('0' + num2);
+                num3 = parseInt(num3) >= 10 ? num3 : ('0' + num3);
+                num4 = parseInt(num4) >= 10 ? num4 : ('0' + num4);
+                num5 = parseInt(num5) >= 10 ? num5 : ('0' + num5);
+                num6 = parseInt(num6) >= 10 ? num6 : ('0' + num6);
+                num7 = parseInt(num7) >= 10 ? num7 : ('0' + num7);
+
+
+                obj.num1 = num1;
+                obj.num2 = num2;
+                obj.num3 = num3;
+                obj.num4 = num4;
+                obj.num5 = num5;
+                obj.num6 = num6;
+                obj.num7 = num7;
+
                 var html = template("template_single_" + playGroupId, obj);
                 str += html;
             } else if ($.inArray(playGroupId, [4, 5, 18, 19, 20, 21]) >= 0) {
@@ -757,7 +837,7 @@
 
                 var html = template("template_single_" + playGroupId, obj);
                 str += html;
-            } else if ($.inArray(playGroupId, [9,14,23]) >= 0) {
+            } else if ($.inArray(playGroupId, [9, 14, 23]) >= 0) {
                 var obj = {};
 
                 obj.playGroupId = playGroupId;
@@ -835,12 +915,12 @@
 
     }
 
-    function clickxuan(){
+    function clickxuan() {
         var show = $('.men_list .left_layout').css('display');
-        if(show == 'none'){
+        if (show == 'none') {
             $('.men_list .left_layout').slideDown(300);
             $(".men_list .logo a h1 i").removeClass("acti1");
-        }else{
+        } else {
             $('.men_list .left_layout').slideUp(300);
             $(".men_list .logo a h1 i").addClass("acti1");
         }
@@ -921,7 +1001,7 @@
             </p>
         </div>
         <div class="box3">
-            <a  href="<%=basePath%>kjjg.html?playGroupId=1">历史开奖</a>
+            <a href="<%=basePath%>kjjg.html?playGroupId=1">历史开奖</a>
             <a href="<%=basePath%>ssc/zst/cqssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
@@ -1277,6 +1357,40 @@
         </div>
     </li>
 </script>
+<script type="text/html" id="template_12">
+    <li>
+        <div class="box1">
+            {{if isToday}}
+            <var>今日开奖</var>
+            {{else}}
+            <var class="no"></var>
+            {{/if}}
+            <div class="text">
+                <h3>双色球<span>第{{number}}期</span></h3>
+                <p>每周二、四、日 21:20开奖</p>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box_num">
+                <span>{{num1}}</span>
+                <span>{{num2}}</span>
+                <span>{{num3}}</span>
+                <span>{{num4}}</span>
+                <span>{{num5}}</span>
+                <span>{{num6}}</span>
+                <span class="col0">{{num7}}</span>
+                <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ssq')">详情</a>
+            </div>
+        </div>
+        <div class="box3">
+            <a href="<%=basePath%>kjjg.html?playGroupId=12">历史开奖</a>
+            <a href="<%=basePath%>ssc/zst/ssq.html" target="_blank">走势图表</a>
+        </div>
+        <div class="box4">
+            <a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ssq')">购买</a>
+        </div>
+    </li>
+</script>
 <script type="text/html" id="template_13">
     <li>
         <div class="box1">
@@ -1307,7 +1421,7 @@
             </p>
         </div>
         <div class="box3">
-            <a  href="<%=basePath%>kjjg.html?playGroupId=13">历史开奖</a>
+            <a href="<%=basePath%>kjjg.html?playGroupId=13">历史开奖</a>
             <a href="<%=basePath%>ssc/zst/sfssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
@@ -1384,7 +1498,7 @@
             </p>
         </div>
         <div class="box3">
-            <a  href="<%=basePath%>kjjg.html?playGroupId=15">历史开奖</a>
+            <a href="<%=basePath%>kjjg.html?playGroupId=15">历史开奖</a>
             <a href="<%=basePath%>ssc/zst/ffssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
@@ -1422,7 +1536,7 @@
             </p>
         </div>
         <div class="box3">
-            <a  href="<%=basePath%>kjjg.html?playGroupId=16">历史开奖</a>
+            <a href="<%=basePath%>kjjg.html?playGroupId=16">历史开奖</a>
             <a href="<%=basePath%>ssc/zst/efssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
@@ -1460,7 +1574,7 @@
             </p>
         </div>
         <div class="box3">
-            <a  href="<%=basePath%>kjjg.html?playGroupId=17">历史开奖</a>
+            <a href="<%=basePath%>kjjg.html?playGroupId=17">历史开奖</a>
             <a href="<%=basePath%>ssc/zst/wfssc.html" target="_blank">走势图表</a>
         </div>
         <div class="box4">
@@ -1740,7 +1854,8 @@
         <span class="sp5">120期</span>
         <span class="sp6">5分钟-10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/cqssc')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/cqssc')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/cqssc')">立即购彩</a></span>
     </li>
 </script>
@@ -1760,7 +1875,8 @@
         <span class="sp5">84期</span>
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/tjssc')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/tjssc')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/tjssc')">立即购彩</a></span>
     </li>
 </script>
@@ -1779,7 +1895,8 @@
         <span class="sp5">96期</span>
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/xjssc')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/xjssc')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xjssc')">立即购彩</a></span>
     </li>
 </script>
@@ -1796,7 +1913,8 @@
         <span class="sp5">1期</span>
         <span class="sp6">每天一次</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/pl3')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/pl3')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pl3')">立即购彩</a></span>
     </li>
 </script>
@@ -1813,7 +1931,8 @@
         <span class="sp5">1期</span>
         <span class="sp6">每天一次 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/fc3d')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/fc3d')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/fc3d')">立即购彩</a></span>
     </li>
 </script>
@@ -1834,7 +1953,8 @@
         <span class="sp5">两天一期</span>
         <span class="sp6">两天一次</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/lhc')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/lhc')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/lhc')">立即购彩</a></span>
     </li>
 </script>
@@ -1851,7 +1971,8 @@
         <span class="sp5">120期</span>
         <span class="sp6">5分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/bj28')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/bj28')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/bj28')">立即购彩</a></span>
     </li>
 </script>
@@ -1885,7 +2006,8 @@
         <span class="sp5">178期</span>
         <span class="sp6">5分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/kl8')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/kl8')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/kl8')">立即购彩</a></span>
     </li>
 </script>
@@ -1909,7 +2031,8 @@
         <span class="sp5">180期</span>
         <span class="sp6">5分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/pk10')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/pk10')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/pk10')">立即购彩</a></span>
     </li>
 </script>
@@ -1931,7 +2054,8 @@
         <span class="sp5">96期</span>
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/xync')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/xync')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xync')">立即购彩</a></span>
     </li>
 </script>
@@ -1953,8 +2077,31 @@
         <span class="sp5">84期</span>
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/klsf')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/klsf')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/klsf')">立即购彩</a></span>
+    </li>
+</script>
+<script type="text/html" id="template_single_12">
+    <li>
+        <span class="sp1">双色球</span>
+        <span class="sp2">{{number}}</span>
+        <span class="sp3">{{openTime}}</span>
+        <span class="sp4">
+            <i>{{num1}}</i>
+            <i>{{num2}}</i>
+            <i>{{num3}}</i>
+            <i>{{num4}}</i>
+            <i>{{num5}}</i>
+            <i>{{num6}}</i>
+            <i class="lan">{{num7}}</i>
+        </span>
+        <span class="sp5">一周三期</span>
+        <span class="sp6">一周三次</span>
+        <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/ssq')"></a></span>
+        <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ssq')">立即购彩</a></span>
     </li>
 </script>
 <script type="text/html" id="template_single_13">
@@ -1972,7 +2119,8 @@
         <span class="sp5">480期</span>
         <span class="sp6">3分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/sfssc')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/sfssc')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sfssc')">立即购彩</a></span>
     </li>
 </script>
@@ -1995,7 +2143,8 @@
         </span>
         <span class="sp5">180期</span>
         <span class="sp6">5分钟</span>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/xyft')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/xyft')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/xyft')">立即购彩</a></span>
     </li>
 </script>
@@ -2014,7 +2163,8 @@
         <span class="sp5">1440期</span>
         <span class="sp6">1分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/ffssc')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/ffssc')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ffssc')">立即购彩</a></span>
     </li>
 </script>
@@ -2033,7 +2183,8 @@
         <span class="sp5">720期</span>
         <span class="sp6">2分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/efssc')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/efssc')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/efssc')">立即购彩</a></span>
     </li>
 </script>
@@ -2052,7 +2203,8 @@
         <span class="sp5">288期</span>
         <span class="sp6">5分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/wfssc')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/wfssc')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/wfssc')">立即购彩</a></span>
     </li>
 </script>
@@ -2069,7 +2221,8 @@
         <span class="sp5">82期</span>
         <span class="sp6">每10分钟一期 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/jsk3')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/jsk3')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jsk3')">立即购彩</a></span>
     </li>
 </script>
@@ -2086,7 +2239,8 @@
         <span class="sp5">82期</span>
         <span class="sp6">每10分钟一期 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/hbk3')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/hbk3')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/hbk3')">立即购彩</a></span>
     </li>
 </script>
@@ -2103,7 +2257,8 @@
         <span class="sp5">82期</span>
         <span class="sp6">每10分钟一期 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/ahk3')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/ahk3')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/ahk3')">立即购彩</a></span>
     </li>
 </script>
@@ -2120,7 +2275,8 @@
         <span class="sp5">82期</span>
         <span class="sp6">每10分钟一期 </span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/jlk3')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/jlk3')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jlk3')">立即购彩</a></span>
     </li>
 </script>
@@ -2141,7 +2297,8 @@
         <span class="sp5">每天144期</span>
         <span class="sp6">10分钟一期</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/sflhc')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/sflhc')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/sflhc')">立即购彩</a></span>
     </li>
 </script>
@@ -2164,7 +2321,8 @@
         </span>
         <span class="sp5">1440期</span>
         <span class="sp6">1分钟</span>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/jspk10')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/jspk10')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/jspk10')">立即购彩</a></span>
     </li>
 </script>
@@ -2183,7 +2341,8 @@
         <span class="sp5">79期</span>
         <span class="sp6">10分钟</span>
         <%--<span class="sp7"><a href="javascript:void(0)"><img src="${resPath}img/ico72.png" alt=""></a></span>--%>
-        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt="" onclick="goZst('zst/gd11x5')"></a></span>
+        <span class="sp8"><a href="javascript:void(0)"><img src="${resPath}img/ico73.png" alt=""
+                                                            onclick="goZst('zst/gd11x5')"></a></span>
         <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="openGcdt('gcdt/gd11x5')">立即购彩</a></span>
     </li>
 </script>

@@ -102,6 +102,10 @@
     background-image: url(../img/cz/gengduo.png);
 }
 
+.bg-img-ssq {
+    background-image: url(../img/cz/cz-12.png);
+}
+
 .row a {
     border-bottom: 1Px solid #dddddd;
 }
@@ -368,7 +372,7 @@
 
 .bank_w {
     margin-left: 60px;
-    width: 150px;
+    width: 200px;
 }
 
 /*工商银行*/

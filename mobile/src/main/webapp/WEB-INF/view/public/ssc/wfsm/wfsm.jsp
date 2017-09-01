@@ -31,6 +31,7 @@
                     <c:when test="${playGroupId == 9}">北京PK10</c:when>
                     <c:when test="${playGroupId == 10}">重庆幸运农场</c:when>
                     <c:when test="${playGroupId == 11}">广东快乐十分</c:when>
+                    <c:when test="${playGroupId == 12}">双色球</c:when>
                     <c:when test="${playGroupId == 13}">三分时时彩</c:when>
                     <c:when test="${playGroupId == 14}">幸运飞艇</c:when>
                     <c:when test="${playGroupId == 15}">分分时时彩</c:when>
@@ -102,6 +103,9 @@
                                     </c:when>
                                     <c:when test="${playGroupId == 11}">
                                         <c:import url="rule/gd10.jsp"/>
+                                    </c:when>
+                                    <c:when test="${playGroupId == 12}">
+                                        <c:import url="rule/ssq.jsp"/>
                                     </c:when>
                                     <c:when test="${playGroupId == 13}">
                                         <c:import url="rule/sfssc.jsp"/>

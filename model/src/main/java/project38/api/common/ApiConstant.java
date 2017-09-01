@@ -6,11 +6,11 @@ package project38.api.common;
  */
 public class ApiConstant {
     public static String API_DOMAIN = "http://api.bb.nf:8080/api/";
-    //public static String API_DOMAIN2 = "http://103.211.124.82:8080/api/";
+//    public static String API_DOMAIN2 = "http://103.211.124.82:8080/api/";
     //public static String API_DOMAIN = "http://127.0.0.1:8071/";
     //public static String API_DOMAIN = "http://apptest.bb.nf:8080/api/";
     // 正式
-    public static String API_DOMAIN = "http://api.bb.nf/";
+    //public static String API_DOMAIN = "http://api.bb.nf/";
     public static String API_REGISTER = API_DOMAIN + "member/register.json";    // 用户注册接口
     public static String API_LOGIN = API_DOMAIN + "member/login.json";   // 用户登录接口
     public static String API_GET_USER_SESSION = API_DOMAIN + "member/getUserSession.json";   // 获取用户SESSION信息

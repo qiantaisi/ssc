@@ -31,6 +31,7 @@
                     <c:when test="${playGroupId == 9}">北京PK10</c:when>
                     <c:when test="${playGroupId == 10}">重庆幸运农场</c:when>
                     <c:when test="${playGroupId == 11}">广东快乐十分</c:when>
+                    <c:when test="${playGroupId == 12}">双色球</c:when>
                     <c:when test="${playGroupId == 13}">三分时时彩</c:when>
                     <c:when test="${playGroupId == 14}">幸运飞艇</c:when>
                     <c:when test="${playGroupId == 15}">分分时时彩</c:when>
@@ -49,7 +50,7 @@
         </header>
         <div class="buttons-tab cl-701" id="buttonsTabList" style="top: 2.1rem">
             <c:choose>
-                <c:when test="${playGroupId == 24}">
+                <c:when test="${playGroupId == 24 || playGroupId == 24}">
                     <a href="javascript:void(0)" onclick="tishi()" class="button wfsm_cd"
                        data-id="btn-bqxq"><span>传统模式</span></a>
                 </c:when>
@@ -64,7 +65,7 @@
             <%--data-id="btn-gdqc"><span>官方模式</span></a>--%>
         </div>
         <c:choose>
-            <c:when test="${playGroupId == 1 || playGroupId == 15 || playGroupId == 3 || playGroupId == 2}">
+            <c:when test="${playGroupId == 1 || playGroupId == 15 || playGroupId == 3 || playGroupId == 2 || playGroupId == 16 || playGroupId == 13}">
                 <div class="page page-current" id="page-gcdt-cqssc-wfsm" style="height: 3.9rem; top: 2.1rem">
                     <header class="bar bar-nav">
                     </header>
@@ -118,6 +119,12 @@
                                                 <c:import url="rule/gfwf/tjssc.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 3}">
+                                                <c:import url="rule/gfwf/xjssc.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 16}">
+                                                <c:import url="rule/gfwf/tjssc.jsp"/>
+                                            </c:when>
+                                            <c:when test="${playGroupId == 13}">
                                                 <c:import url="rule/gfwf/xjssc.jsp"/>
                                             </c:when>
                                         </c:choose>
@@ -207,13 +214,10 @@
                                             <c:when test="${playGroupId == 11}">
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>
-                                            <c:when test="${playGroupId == 13}">
+                                            <c:when test="${playGroupId == 12}">
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 14}">
-                                                <c:import url="rule/gfwf/base.jsp"/>
-                                            </c:when>
-                                            <c:when test="${playGroupId == 16}">
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 17}">

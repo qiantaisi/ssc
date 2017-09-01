@@ -37,7 +37,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="Cache" content="no-cache">
-    <link href="${resPath}img/apple_touch_icon.jpg" rel="apple-touch-icon">
+    <link href="<%=basePath%>images/${desk.imageId}.png" rel="apple-touch-icon">
     <link rel="icon" href="<%=basePath%>images/${icoData.imageId}.png" type="image/x-icon">
     <link rel="shortcut icon" href="<%=basePath%>images/${icoData.imageId}.png" mce_href="<%=basePath%>images/${icoData.imageId}.png" type="image/x-icon">
 

@@ -1,0 +1,9 @@
+diff a/main/src/main/webapp/WEB-INF/static/theme/default/css/style.css b/main/src/main/webapp/WEB-INF/static/theme/default/css/style.css	(rejected hunks)
+@@ -1675,6 +1675,7 @@
+ .zs_list li a:hover{ color:#fa6200; }
+ 
+ 
++/*投注界面用户登录按钮样式式*/
+ #bottomInfo #BetLogin .spanlogin{
+      color: red;
+      cursor: pointer;

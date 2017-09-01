@@ -11,114 +11,99 @@
         <li>
             <b>模式</b>
             <p>
-                <span class="acti"><a href="javascript:void(0)">单式</a></span>
-                <%--<span><a href="#">拖胆</a></span>--%>
-                <%--<span><a href="#">定胆杀号</a></span>--%>
+                <span class="playPlIdBtn acti" data-play_id="814" data-play_pl_id="14579" data-name="5xzxfs" data-fun_zhushu="zhushu_5xzxfs" data-fun_content="content_5xzxfs" data-fun_suiji="suiji_5xzxfs"><a href="javascript:void(0)">红蓝直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="813" data-play_pl_id="14578" data-name="5xzxds" data-fun_zhushu="zhushu_5xzxds" data-fun_content="content_5xzxds" data-fun_suiji="suiji_5xzxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
 </div>
+
 <div class="Pick">
     <div class="cl-200">
-        <div class="cl-204">
-            <span class="fl">
-                <a href="javascript:void(0)" class="a0" onclick="toggleYilou()"><img src="${resPath}img/ico58.png"
-                                                                                     alt="">遗漏</a>
-                <%--<a href="#"><img src="${resPath}img/ico59.png" alt="">冷热</a>--%>
-            </span>
-            <strong>红球区</strong>
-            <span>至少选择6个红球</span>
-        </div>
+        <p class="p1">
+        <span class="fr fl cl-1001">
+            本平台双色球每期从33个红球中选5个号码，从16个蓝球中选1个号码作为一注。
+            <a>
+                <img src="${resPath}img/ico60.png" alt="">选号规则
+                <var>投注方案：13456 开奖号码：13456，即中五星直选。</var>
+            </a>
+            <a>
+                <img src="${resPath}img/ico61.png" alt="">中奖说明
+                <var>从万、千、百、十、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
+            </a>
+        </span>
+        </p>
         <ul>
-            <li>
-                <b class="cl-202">
-                    <i>&nbsp;</i>
-                    <var class="yilou">
-                        遗漏
-                        <i></i>
-                    </var>
-                </b>
-                <span><i>01</i><var class="yilou">0</var></span>
-                <span><i>02</i><var class="yilou">0</var></span>
-                <span><i>03</i><var class="yilou">0</var></span>
-                <span><i>04</i><var class="yilou">0</var></span>
-                <span><i>05</i><var class="yilou">0</var></span>
-                <span><i>06</i><var class="yilou">0</var></span>
-                <span><i>07</i><var class="yilou">0</var></span>
-                <span><i>08</i><var class="yilou">0</var></span>
-                <span><i>09</i><var class="yilou">0</var></span>
-                <span><i>10</i><var class="yilou">0</var></span>
-                <span><i>11</i><var class="yilou">0</var></span>
+            <li data-name="红球" >
+                <b><i>红球</i></b>
+                <p>
+                <span><i>01</i> </span>
+                <span><i>02</i> </span>
+                <span><i>03</i> </span>
+                <span><i>04</i> </span>
+                <span><i>05</i> </span>
+                <span><i>06</i> </span>
+                <span><i>07</i> </span>
+                <span><i>08</i> </span>
+                <span><i>09</i> </span>
+                <span><i>10</i> </span>
+                <span><i>11</i> </span>
+                </p>
+                <p class="numssq">
+                <span><i>12</i> </span>
+                <span><i>13</i> </span>
+                <span><i>14</i> </span>
+                <span><i>15</i> </span>
+                <span><i>16</i> </span>
+                <span><i>17</i> </span>
+                <span><i>18</i> </span>
+                <span><i>19</i> </span>
+                <span><i>20</i> </span>
+                <span><i>21</i> </span>
+                <span><i>22</i> </span>
+            </p>
+                <p class="numssq">
+                    <span><i>23</i> </span>
+                    <span><i>24</i> </span>
+                    <span><i>25</i> </span>
+                    <span><i>26</i> </span>
+                    <span><i>27</i> </span>
+                    <span><i>28</i> </span>
+                    <span><i>29</i> </span>
+                    <span><i>30</i> </span>
+                    <span><i>31</i> </span>
+                    <span><i>32</i> </span>
+                    <span><i>33</i> </span>
+
+                </p>
             </li>
-            <li>
-                <b class="cl-202">
-                    <i>&nbsp;</i>
-                    <var class="yilou">
-                        遗漏
-                        <i></i>
-                    </var>
-                </b>
-                <span><i>12</i><var class="yilou">0</var></span>
-                <span><i>13</i><var class="yilou">0</var></span>
-                <span><i>14</i><var class="yilou">0</var></span>
-                <span><i>15</i><var class="yilou">0</var></span>
-                <span><i>16</i><var class="yilou">0</var></span>
-                <span><i>17</i><var class="yilou">0</var></span>
-                <span><i>18</i><var class="yilou">0</var></span>
-                <span><i>19</i><var class="yilou">0</var></span>
-                <span><i>20</i><var class="yilou">0</var></span>
-                <span><i>21</i><var class="yilou">0</var></span>
-                <span><i>22</i><var class="yilou">0</var></span>
-            </li>
-            <li>
-                <b class="cl-202">
-                    <i>&nbsp;</i>
-                    <var class="yilou">
-                        遗漏
-                        <i></i>
-                    </var>
-                </b>
-                <span><i>23</i><var class="yilou">0</var></span>
-                <span><i>24</i><var class="yilou">0</var></span>
-                <span><i>25</i><var class="yilou">0</var></span>
-                <span><i>26</i><var class="yilou">0</var></span>
-                <span><i>27</i><var class="yilou">0</var></span>
-                <span><i>28</i><var class="yilou">0</var></span>
-                <span><i>29</i><var class="yilou">0</var></span>
-                <span><i>30</i><var class="yilou">0</var></span>
-                <span><i>31</i><var class="yilou">0</var></span>
-                <span><i>32</i><var class="yilou">0</var></span>
-                <span><i>33</i><var class="yilou">0</var></span>
-            </li>
+
         </ul>
     </div>
     <div class="cl-201">
-        <div class="cl-204 cl-205">
-            <strong>蓝球区</strong>
-            <span>至少选择1个蓝球</span>
-        </div>
         <ul>
-            <li>
-                <span><i>01</i><var class="yilou">0</var></span>
-                <span><i>02</i><var class="yilou">0</var></span>
-                <span><i>03</i><var class="yilou">0</var></span>
-                <span><i>04</i><var class="yilou">0</var></span>
-                <span><i>05</i><var class="yilou">0</var></span>
-                <span><i>06</i><var class="yilou">0</var></span>
-            </li>
-            <li>
-                <span><i>07</i><var class="yilou">0</var></span>
-                <span><i>08</i><var class="yilou">0</var></span>
-                <span><i>09</i><var class="yilou">0</var></span>
-                <span><i>10</i><var class="yilou">0</var></span>
-                <span><i>11</i><var class="yilou">0</var></span>
-                <span><i>12</i><var class="yilou">0</var></span>
-            </li>
-            <li>
-                <span><i>13</i><var class="yilou">0</var></span>
-                <span><i>14</i><var class="yilou">0</var></span>
-                <span><i>15</i><var class="yilou">0</var></span>
-                <span><i>16</i><var class="yilou">0</var></span>
+            <li data-name="蓝球">
+            <b><i>蓝球</i></b>
+                <p>
+                <span><i>01</i> </span>
+                <span><i>02</i> </span>
+                <span><i>03</i> </span>
+                <span><i>04</i> </span>
+                <span><i>05</i> </span>
+                <span><i>06</i> </span>
+                <span><i>07</i> </span>
+                <span><i>08</i> </span>
+                <span><i>09</i> </span>
+                <span><i>10</i> </span>
+                <span><i>11</i> </span>
+                </p>
+            <p class="numssq">
+                <span><i>12</i> </span>
+                <span><i>13</i> </span>
+                <span><i>14</i> </span>
+                <span><i>15</i> </span>
+                <span><i>16</i> </span>
+            </p>
             </li>
         </ul>
     </div>
@@ -126,8 +111,8 @@
 </div>
 <script>
     var playGroupId = 12;
-    var playId = 304;
-    var playName = '单式';
+/*    var playId = 304;
+    var playName = '单式';*/
 
     $(function () {
 //        alert('t');

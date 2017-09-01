@@ -39,7 +39,7 @@
                         <div class="mb10 color-888">转到银行卡：<label for="id" class="error"></label></div>
                         <c:forEach items="${userBankCardResult.userBankCardList}" var="item">
                             <li>
-                                <div class="item w105"><input type="radio" name="id" <c:if test="${item['default'] == true}">checked="checked"</c:if> value="${item.id}"></div>
+                                <div class="item w106"><input type="radio" name="id" <c:if test="${item['default'] == true}">checked="checked"</c:if> value="${item.id}"></div>
                                 <c:choose>
                                     <c:when test="${item['default'] == 'true'}">
                                         <div class="item w125 color-e77c3c" style="width:30px">默认</div>
@@ -50,7 +50,7 @@
                                 </c:choose>
                                 <div class="item w105">${item.bankName}</div>
                                 <div class="item w105">${item.userName}</div>
-                                <div class="item w205">${fn:substring(item.bankAccount, 0, 4)} **** **** **** ${fn:substring(item.bankAccount, fn:length(item.bankAccount) - 4, fn:length(item.bankAccount))}</div>
+                                <div class="item w205 accountSubStr" data-bank="${item.bankAccount}"></div>
                                 <div class="item w230">${item.subBankName}</div>
                                 <div class="item">
                                     <a href="javascript:void(0)" class="mr10 color-c4463c" onclick="setDefault(${item.id})">设为默认</a>
@@ -180,6 +180,28 @@
             }
         });
         $("form[name='withdrawForm']").valid();
+
+        $(".management_bank li div.accountSubStr").each(function (index, value) {
+            var dataVal = $(this).attr('data-bank');
+            var tempStr = '';
+            var strVal = dataVal.toString();
+            var startStr = strVal.substr(0, 4);
+            var endStr = strVal.substr(strVal.length - 4, strVal.length);
+            var middleStr = strVal.substr(4, strVal.length - 4);
+
+            tempStr += startStr + " ";
+            for(var i = 0; i < middleStr.length; i++){
+                if(i == 3 && i != 0 || i == 7 && i != 0|| i == 11 && i != 0){
+                    tempStr += '* ';
+                }else {
+                    tempStr += '*';
+                }
+            }
+            tempStr += " " + endStr;
+
+            $(this).html(tempStr);
+        });
+
     });
 
 
