@@ -6,13 +6,17 @@
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
+<style>
+    .Single .layout .add_spot{margin-top: 0!important;}
+    .ssq_shuom{padding-top:0!important;}
+</style>
 <div class="group">
     <ul>
         <li>
             <b class="tit_img">模式</b>
             <p>
-                <span class="playPlIdBtn acti" data-play_id="1033" data-play_pl_id="14846|14847|14848|14849" data-name="ssqfs" data-fun_zhushu="zhushu_ssqfs" data-fun_content="content_ssqfs" data-fun_suiji="suiji_ssqfs"><a href="javascript:void(0)">红蓝直选复式</a></span>
-                <span class="playPlIdBtn" data-play_id="1034" data-play_pl_id="14850|14851|14852|14853" data-name="ssqds" data-fun_zhushu="zhushu_ssqds" data-fun_content="content_ssqds" data-fun_suiji="suiji_ssqds"><a href="javascript:void(0)">红蓝直选单式</a></span>
+                <span class="playPlIdBtn acti" data-play_id="1033" data-play_pl_id="14846|14847|14848|14849" data-name="ssqfs" data-fun_zhushu="zhushu_ssqfs" data-fun_content="content_ssqfs" data-fun_suiji="suiji_ssqfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-play_id="1034" data-play_pl_id="14850|14851|14852|14853" data-name="ssqds" data-fun_zhushu="zhushu_ssqds" data-fun_content="content_ssqds" data-fun_suiji="suiji_ssqds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
     </ul>
@@ -23,17 +27,17 @@
 
 <script type="text/html" id="template_ssqfs">
 <div class="Pick">
-    <div class="cl-200">
+    <div class="cl-200 ssq_shuom">
         <p class="p1">
         <span class="fr fl cl-1001">
             本平台双色球每期从33个红球中选5个号码，从16个蓝球中选1个号码作为一注。
             <a>
                 <img src="${resPath}img/ico60.png" alt="">选号规则
-                <var>投注方案：01 03 04 05 06 07<br> 开奖号码：07 03 04 05 01 06顺序不限即中双色球。</var>
+                <var>投注方案：红球 01 03 04 05 06 篮球 07 开奖号码：红球 03 04 05 01 06 (顺序不限)&nbsp;篮球 07 即中双色球。</var>
             </a>
             <a>
                 <img src="${resPath}img/ico61.png" alt="">中奖说明
-                <var>一等奖：中5个红球和1个蓝球，顺序不限；如开奖号：红球01 02 03 04 05 06蓝球01，投注号码红球01 02 03 04 05蓝球01。<br>二等奖：中4个红球1个蓝球或者5个红球，顺序不限。<br>三等奖：中3个红球1个蓝球或4个红球，顺序不限。<br>四等奖：中2个红球1个蓝球或1个红球1个蓝球或者1个蓝球，即中奖，顺序不限。</var>
+                <var>从33个红色球中和16个蓝色球中分别选择至少选择5个红球和1个篮球组成一注，所选号码与开奖号码包含的红球相同(顺序不限)及蓝色球，即为中奖。</var>
             </a>
         </span>
         </p>

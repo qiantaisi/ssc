@@ -57,7 +57,7 @@
                     <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
-                            <span class="acti"><a href="javascript:void(0)" data-url="gfwf-ssq-gjtz">高级投注</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="gfwf-ssq-gjtz">红蓝直选</a></span>
 
                         </p>
                     </li>
