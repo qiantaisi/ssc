@@ -68,6 +68,7 @@
                             <a href="javascript:void(0)" onclick="getSscPage('klsf')"><img src="${resPath}img/ico26.png" alt=""><var>广东快乐十分</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('xync')"><img src="${resPath}img/ico29.png" alt=""><var>重庆幸运农场</var></a>
                             <a href="javascript:void(0)" onclick="getSscPage('fc3d')"><img src="${resPath}img/ico24.png" alt=""><var>福彩3D</var></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('ssq')"><img src="${resPath}img/ico01.png" alt=""><var>双色球</var></a>
                         </div>
                     </div>
 
@@ -108,7 +109,8 @@
                     <a href="javascript:void(0)" onclick="getSscPage('lhc')"><img src="${resPath}img/ico17.png" alt=""><var>香港六合彩</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('fc3d')"><img src="${resPath}img/ico24.png" alt=""><var>福彩3D</var></a>
                     <a href="javascript:void(0)" onclick="getSscPage('pl3')"><img src="${resPath}img/ico20.png" alt=""><var>体彩排列3</var></a>
-                    <%--<a href="javascript:void(0)" onclick="getSscPage('ssq')"><img src="${resPath}img/ico19.png" alt=""><var>双色球</var></a>--%>
+                    <a href="javascript:void(0)" onclick="getSscPage('ssq')"><img src="${resPath}img/ico01.png" alt=""><var>双色球</var></a>
+                <%--<a href="javascript:void(0)" onclick="getSscPage('ssq')"><img src="${resPath}img/ico19.png" alt=""><var>双色球</var></a>--%>
                 </div>
             </li>
             <li>
