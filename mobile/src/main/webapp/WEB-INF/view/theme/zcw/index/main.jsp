@@ -11,9 +11,18 @@
 %>
 <c:import url="../common/bodyStart.jsp"/>
 <style>
-    .kj{display:block;position:relative;}
-    .wrap .kj img{right:0;}
-    .wrap .zcw_main .zcw_cus_a .cus_a,.wrap .zcw_main .zcw_cus_a .cus_b{position:relative;}
+    .kj {
+        display: block;
+        position: relative;
+    }
+
+    .wrap .kj img {
+        right: 0;
+    }
+
+    .wrap .zcw_main .zcw_cus_a .cus_a, .wrap .zcw_main .zcw_cus_a .cus_b {
+        position: relative;
+    }
 </style>
 <div class="page-group">
     <div class="page page-current re-bg" id="page-index">
@@ -28,11 +37,11 @@
                         <div class="img-sz swiper-slide">
                             <c:choose>
                                 <c:when test="${empty item.url}">
-                                    <img src="<%=basePath%>images/${item.imageId}.png" />
+                                    <img src="<%=basePath%>images/${item.imageId}.png"/>
                                 </c:when>
                                 <c:otherwise>
                                     <a href="${item.url}">
-                                        <img src="<%=basePath%>images/${item.imageId}.png" />
+                                        <img src="<%=basePath%>images/${item.imageId}.png"/>
                                     </a>
                                 </c:otherwise>
                             </c:choose>
@@ -203,7 +212,7 @@
                     <div class="zcw_cus_a">
                         <div class="cus_a rekj">
                             <c:import url="../common/mainKj.jsp">
-                                <c:param name="playGroupId" value="6" />
+                                <c:param name="playGroupId" value="6"/>
                             </c:import>
                             <a href="<%=basePath%>ssc/gcdt/lhc.html">
                                 <img src="${resPath}img/new_zcw/index1_10.png"/>
@@ -378,18 +387,17 @@
                                  height="50" bgcolor="#fff">
                             <ul class="zjUl">
                                 <%--<c:forEach items="${Notices.noticeList}" var="noticelists">--%>
-                                    <%--<li class="clearfix">--%>
-                                        <%--<span class="left gongxi">恭喜</span>--%>
-                                        <%--<span class="left">${noticelists.userName}</span>--%>
-                                        <%--<span class="left">投注</span>--%>
-                                        <%--<span class="left" style="color: #ff0101;">${noticelists.type}</span>--%>
-                                        <%--<span class="left">中奖</span>--%>
-                                        <%--<span class="left" style="color: #ff7e00;">${noticelists.amount}</span>--%>
-                                    <%--</li>--%>
+                                <%--<li class="clearfix">--%>
+                                <%--<span class="left gongxi">恭喜</span>--%>
+                                <%--<span class="left">${noticelists.userName}</span>--%>
+                                <%--<span class="left">投注</span>--%>
+                                <%--<span class="left" style="color: #ff0101;">${noticelists.type}</span>--%>
+                                <%--<span class="left">中奖</span>--%>
+                                <%--<span class="left" style="color: #ff7e00;">${noticelists.amount}</span>--%>
+                                <%--</li>--%>
                                 <%--</c:forEach>--%>
                             </ul>
                         </marquee>
-
                     </div>
                 </div>
             </div>
