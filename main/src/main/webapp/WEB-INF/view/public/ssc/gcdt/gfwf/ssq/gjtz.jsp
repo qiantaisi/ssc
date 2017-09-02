@@ -9,6 +9,8 @@
 <style>
     .Single .layout .add_spot{margin-top: 0!important;}
     .ssq_shuom{padding-top:0!important;}
+    .recl-200,.recl-201{width: 800px;}
+    .hz-dir{height: 130px;}
 </style>
 <div class="group">
     <ul>
@@ -27,7 +29,7 @@
 
 <script type="text/html" id="template_ssqfs">
 <div class="Pick">
-    <div class="cl-200 ssq_shuom">
+    <div class="cl-200 recl-200 ssq_shuom">
         <p class="p1">
         <span class="fr fl cl-1001">
             本平台双色球每期从33个红球中选5个号码，从16个蓝球中选1个号码作为一注。
@@ -42,35 +44,35 @@
         </span>
         </p>
         <ul>
-            <li data-name="红球" >
-                <b><i>红球</i></b>
-                <p>
-                <span><i>01</i> </span>
-                <span><i>02</i> </span>
-                <span><i>03</i> </span>
-                <span><i>04</i> </span>
-                <span><i>05</i> </span>
-                <span><i>06</i> </span>
-                <span><i>07</i> </span>
-                <span><i>08</i> </span>
-                <span><i>09</i> </span>
-                <span><i>10</i> </span>
-                <span><i>11</i> </span>
+            <li data-name="红球">
+                <b class="hz-dir"><i>红球</i></b>
+                <p class="numLine renumHeigth">
+                    <span><i>01</i> </span>
+                    <span><i>02</i> </span>
+                    <span><i>03</i> </span>
+                    <span><i>04</i> </span>
+                    <span><i>05</i> </span>
+                    <span><i>06</i> </span>
+                    <span><i>07</i> </span>
+                    <span><i>08</i> </span>
+                    <span><i>09</i> </span>
+                    <span><i>10</i> </span>
+                    <span><i>11</i> </span>
                 </p>
-                <p class="numssq">
-                <span><i>12</i> </span>
-                <span><i>13</i> </span>
-                <span><i>14</i> </span>
-                <span><i>15</i> </span>
-                <span><i>16</i> </span>
-                <span><i>17</i> </span>
-                <span><i>18</i> </span>
-                <span><i>19</i> </span>
-                <span><i>20</i> </span>
-                <span><i>21</i> </span>
-                <span><i>22</i> </span>
-            </p>
-                <p class="numssq">
+                <p class="numLine renumHeigth numssq">
+                    <span><i>12</i> </span>
+                    <span><i>13</i> </span>
+                    <span><i>14</i> </span>
+                    <span><i>15</i> </span>
+                    <span><i>16</i> </span>
+                    <span><i>17</i> </span>
+                    <span><i>18</i> </span>
+                    <span><i>19</i> </span>
+                    <span><i>20</i> </span>
+                    <span><i>21</i> </span>
+                    <span><i>22</i> </span>
+                </p>
+                <p class="numLine renumHeigth numssq">
                     <span><i>23</i> </span>
                     <span><i>24</i> </span>
                     <span><i>25</i> </span>
@@ -82,36 +84,35 @@
                     <span><i>31</i> </span>
                     <span><i>32</i> </span>
                     <span><i>33</i> </span>
-
                 </p>
             </li>
 
         </ul>
     </div>
-    <div class="cl-201">
+    <div class="cl-201 recl-201">
         <ul class="lanqiu">
             <li data-name="蓝球">
-            <b><i>蓝球</i></b>
-                <p>
-                <span><i>01</i> </span>
-                <span><i>02</i> </span>
-                <span><i>03</i> </span>
-                <span><i>04</i> </span>
-                <span><i>05</i> </span>
-                <span><i>06</i> </span>
-                <span><i>07</i> </span>
-                <span><i>08</i> </span>
-                <span><i>09</i> </span>
-                <span><i>10</i> </span>
-                <span><i>11</i> </span>
+                <b class="hz-dir"><i>蓝球</i></b>
+                <p class="numLine renumHeigth numssq">
+                    <span><i>01</i> </span>
+                    <span><i>02</i> </span>
+                    <span><i>03</i> </span>
+                    <span><i>04</i> </span>
+                    <span><i>05</i> </span>
+                    <span><i>06</i> </span>
+                    <span><i>07</i> </span>
+                    <span><i>08</i> </span>
+                    <span><i>09</i> </span>
+                    <span><i>10</i> </span>
+                    <span><i>11</i> </span>
                 </p>
-            <p class="numssq">
-                <span><i>12</i> </span>
-                <span><i>13</i> </span>
-                <span><i>14</i> </span>
-                <span><i>15</i> </span>
-                <span><i>16</i> </span>
-            </p>
+                <p class="numLine renumHeigth numssq">
+                    <span><i>12</i> </span>
+                    <span><i>13</i> </span>
+                    <span><i>14</i> </span>
+                    <span><i>15</i> </span>
+                    <span><i>16</i> </span>
+                </p>
             </li>
         </ul>
     </div>
