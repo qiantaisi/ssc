@@ -1215,6 +1215,17 @@ input[type="number"] {
     margin-left: 5px;
     color: #007aff;
 }
-.ion-close-round:before {
-    content: "";
+.jticon{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 30px;
+    background: url(../img/jt.jpg) no-repeat;
+    background-size: 100%;
+    top: 6px;
+    right: 63px;
+}
+
+.hideAddhome{
+    display: none;
 }
