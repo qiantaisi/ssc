@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import project38.api.common.utils.JSONUtils;
 import project38.api.result.LogoResult;
 import project38.api.result.QRCodeResult;
+import project38.api.result.WebInfoResult;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -264,5 +265,38 @@ public class SessionUtils {
         HttpSession session = httpServletRequest.getSession();
         session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
         session.setAttribute("MOBILE_ICO", JSONUtils.toJSONStr(logoResult));
+    }
+
+    /**
+     * 获取Mobile网站信息
+     * @param httpServletRequest
+     * @return
+     */
+    public static WebInfoResult getMobileWebInfo(HttpServletRequest httpServletRequest) {
+        if (null == httpServletRequest) {
+            return null;
+        }
+
+        String data = (String) httpServletRequest.getSession().getAttribute("MOBILE_WEB_INFO");
+        if (StringUtils.isNotBlank(data)) {
+            return JSONUtils.toObject(data, WebInfoResult.class);
+        }
+
+        return null;
+    }
+
+    /**
+     * 设置Mobile网站信息
+     * @param httpServletRequest
+     * @param webInfoResult
+     */
+    public static void setMobileWebInfo(HttpServletRequest httpServletRequest, WebInfoResult webInfoResult) {
+        if (null == webInfoResult) {
+            return;
+        }
+
+        HttpSession session = httpServletRequest.getSession();
+        session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
+        session.setAttribute("MOBILE_WEB_INFO", JSONUtils.toJSONStr(webInfoResult));
     }
 }

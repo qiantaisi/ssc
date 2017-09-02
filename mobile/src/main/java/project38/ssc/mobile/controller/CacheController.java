@@ -3,6 +3,7 @@ package project38.ssc.mobile.controller;
 import org.apache.commons.lang3.StringUtils;
 import project38.api.common.utils.JSONUtils;
 import project38.api.result.LogoResult;
+import project38.api.result.WebInfoResult;
 import project38.api.utils.ApiUtils;
 import project38.api.utils.SessionUtils;
 
@@ -40,7 +41,6 @@ public abstract class CacheController extends BaseController {
             HttpServletRequest httpServletRequest,
             String companyShortName
     ) {
-        // PC首页LOGO
         LogoResult logoResult = SessionUtils.getMobileIndexLogo(httpServletRequest);
         if (logoResult == null || logoResult.getResult() != 1) {
             logoResult = ApiUtils.getLogo(1, companyShortName);
@@ -59,7 +59,6 @@ public abstract class CacheController extends BaseController {
             HttpServletRequest httpServletRequest,
             String companyShortName
     ) {
-        // PC首页LOGO
         LogoResult logoResult = SessionUtils.getMobileLoginLogo(httpServletRequest);
         if (logoResult == null || logoResult.getResult() != 1) {
             logoResult = ApiUtils.getLogo(5, companyShortName);
@@ -78,7 +77,6 @@ public abstract class CacheController extends BaseController {
             HttpServletRequest httpServletRequest,
             String companyShortName
     ) {
-        // PC首页LOGO
         LogoResult logoResult = SessionUtils.getMobileDesktopLogo(httpServletRequest);
         if (logoResult == null || logoResult.getResult() != 1) {
             logoResult = ApiUtils.getLogo(6, companyShortName);
@@ -97,13 +95,30 @@ public abstract class CacheController extends BaseController {
             HttpServletRequest httpServletRequest,
             String companyShortName
     ) {
-        // PC首页LOGO
         LogoResult logoResult = SessionUtils.getMobileIco(httpServletRequest);
         if (logoResult == null || logoResult.getResult() != 1) {
             logoResult = ApiUtils.getLogo(4, companyShortName);
             SessionUtils.setMobileIco(httpServletRequest, logoResult);
         }
         return logoResult;
+    }
+
+    /**
+     * 获取Mobile网站信息
+     * @param httpServletRequest
+     * @param companyShortName
+     * @return
+     */
+    protected WebInfoResult getCacheWebInfo(
+            HttpServletRequest httpServletRequest,
+            String companyShortName
+    ) {
+        WebInfoResult webInfoResult = SessionUtils.getMobileWebInfo(httpServletRequest);
+        if (webInfoResult == null || webInfoResult.getResult() != 1) {
+            webInfoResult = ApiUtils.getWebInfo(2, companyShortName);
+            SessionUtils.setMobileWebInfo(httpServletRequest, logoResult);
+        }
+        return webInfoResult;
     }
 
 }

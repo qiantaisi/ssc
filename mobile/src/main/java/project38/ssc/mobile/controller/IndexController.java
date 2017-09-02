@@ -47,7 +47,7 @@ public class IndexController extends CacheController {
     public ModelAndView index() throws UserException {
         String companyShortName = this.getCompanyShortName();
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        WebInfoResult webInfoResult = ApiUtils.getWebInfo(2, companyShortName);
+        WebInfoResult webInfoResult = this.getCacheWebInfo(httpServletRequest, companyShortName);
         modelMap.put("webTitle", webInfoResult.getWebTitle());
         modelMap.put("webKeywords", webInfoResult.getWebKeywords());
         modelMap.put("webDescription", webInfoResult.getWebDescription());
