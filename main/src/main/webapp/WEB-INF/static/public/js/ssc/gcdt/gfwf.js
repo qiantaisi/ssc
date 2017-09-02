@@ -10570,7 +10570,7 @@ function tjzd() {
     }
 
     if (typeof data == 'undefined' || typeof zhushu == 'undefined' || zhushu <= 0) {
-        alert("号码选择不完整，请重新选择");
+        alert("号码选择不完整或金额有误，请重新选择");
         return;
     }
 
@@ -11101,7 +11101,9 @@ function content_rx3hhzux() {
         if (arr_new[i].toString().length > 0 && arr_new[i].toString().length == 3) {
             newArr.push(arr_new[i]);
         } else {
-            errorArr.push(arr_new[i]);
+            if(arr_new[i] != ''){
+                errorArr.push(arr_new[i]);
+            }
         }
     }
     for (var n = 0; n < newArr.length; n++) {
@@ -11134,6 +11136,7 @@ function content_rx3hhzux() {
             allErrorArr.push(repeatArr[r]);
         }
     }
+
     if (errorArr.length > 0) {
         allErrorArr.push(" 被过滤掉的错误号码:");
         for (var l = 0; l < errorArr.length; l++) {
@@ -15063,8 +15066,7 @@ function content_h3tsh() {
     });
 
     if (thArr.length <= 0) {
-        alert("至少选择1注号码才能投注");
-        return false;
+        return 0;
     }
 
     // 初始化变量
