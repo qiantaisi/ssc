@@ -10601,7 +10601,7 @@ function tjzd() {
     }
 
     if (typeof data == 'undefined' || typeof zhushu == 'undefined' || zhushu <= 0) {
-        alert("号码选择不完整或金额有误，请重新选择");
+        alert("号码选择不完整，请重新选择");
         return;
     }
 
