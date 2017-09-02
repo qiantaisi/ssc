@@ -395,9 +395,7 @@
             </div>
         </div>
         <div ng-if="addedHome" class="add-home hideAddhome">
-            <div class="add-home-content" style="position: relative"><img
-                    ng-src="//img86.3000ms.com/MSiteOfficial/DesktopIcon/2016/07/07/114593018.png"
-                    src="//img86.3000ms.com/MSiteOfficial/DesktopIcon/2016/07/07/114593018.png">
+            <div class="add-home-content" style="position: relative"><img src="${resPath}img/ico888.png">
                 <p class="ng-binding">先点击<i class="icon jticon"></i></p>
                 <p ng-bind="'Common.Tips.AddToHomeScreen'|translate" class="ng-binding">再“添加到主屏幕”</p><i class="closeAddHome icon" style="position: absolute; top:0;right: 12px; font-size: 15px;">×</i>
                 <em></em></div>
