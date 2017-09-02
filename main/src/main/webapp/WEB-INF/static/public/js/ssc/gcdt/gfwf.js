@@ -1148,7 +1148,7 @@ function initSubPage() {
                     var tmpConvertBlMoney = (value.playPl - value.minPl) / (valTemp == 0 ? 1 : valTemp);
 
                     if(playGroupId == 12){
-                        strArr.push((value.playPl - fandianBili * tmpConvertBlMoney).toFixed(0));
+                        strArr.push((value.playPl - fandianBili * tmpConvertBlMoney).toFixed());
                     } else {
                         strArr.push((value.playPl - fandianBili * tmpConvertBlMoney).toFixed(3));
                     }
