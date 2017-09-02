@@ -87,4 +87,23 @@ public abstract class CacheController extends BaseController {
         return logoResult;
     }
 
+    /**
+     * 获取Mobile网站ICO
+     * @param httpServletRequest
+     * @param companyShortName
+     * @return
+     */
+    protected LogoResult getCacheMobileIco(
+            HttpServletRequest httpServletRequest,
+            String companyShortName
+    ) {
+        // PC首页LOGO
+        LogoResult logoResult = SessionUtils.getMobileIco(httpServletRequest);
+        if (logoResult == null || logoResult.getResult() != 1) {
+            logoResult = ApiUtils.getLogo(4, companyShortName);
+            SessionUtils.setMobileIco(httpServletRequest, logoResult);
+        }
+        return logoResult;
+    }
+
 }

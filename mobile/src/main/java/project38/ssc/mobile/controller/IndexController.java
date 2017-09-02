@@ -52,8 +52,8 @@ public class IndexController extends CacheController {
         modelMap.put("webKeywords", webInfoResult.getWebKeywords());
         modelMap.put("webDescription", webInfoResult.getWebDescription());
         modelMap.put("webTjjs", webInfoResult.getWebTjjs());
-        modelMap.put("icoData", ApiUtils.getLogo(4, companyShortName));
-        modelMap.put("desk", ApiUtils.getLogo(6, companyShortName));
+//        modelMap.put("icoData", ApiUtils.getLogo(4, companyShortName));
+//        modelMap.put("desk", ApiUtils.getLogo(6, companyShortName));
         return this.renderView("index/index", modelMap);
     }
 

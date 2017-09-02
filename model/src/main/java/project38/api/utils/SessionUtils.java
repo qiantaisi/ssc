@@ -232,4 +232,37 @@ public class SessionUtils {
         session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
         session.setAttribute("MOBILE_DESKTOP_LOGO", JSONUtils.toJSONStr(logoResult));
     }
+
+    /**
+     * 获取Mobile网站ICO
+     * @param httpServletRequest
+     * @return
+     */
+    public static LogoResult getMobileIco(HttpServletRequest httpServletRequest) {
+        if (null == httpServletRequest) {
+            return null;
+        }
+
+        String data = (String) httpServletRequest.getSession().getAttribute("MOBILE_ICO");
+        if (StringUtils.isNotBlank(data)) {
+            return JSONUtils.toObject(data, LogoResult.class);
+        }
+
+        return null;
+    }
+
+    /**
+     * 设置Mobile网站ICO
+     * @param httpServletRequest
+     * @param logoResult
+     */
+    public static void setMobileIco(HttpServletRequest httpServletRequest, LogoResult logoResult) {
+        if (null == logoResult) {
+            return;
+        }
+
+        HttpSession session = httpServletRequest.getSession();
+        session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
+        session.setAttribute("MOBILE_ICO", JSONUtils.toJSONStr(logoResult));
+    }
 }
