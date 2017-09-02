@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/*")
-public class IndexController extends BaseController {
+public class IndexController extends CacheController {
     private static final Log log = LogFactory.getLog(IndexController.class);
 
     @Autowired

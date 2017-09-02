@@ -199,4 +199,37 @@ public class SessionUtils {
         session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
         session.setAttribute("MOBILE_LOGIN_LOGO", JSONUtils.toJSONStr(logoResult));
     }
+
+    /**
+     * 获取Mobile桌面LOGO
+     * @param httpServletRequest
+     * @return
+     */
+    public static LogoResult getMobileDesktopLogo(HttpServletRequest httpServletRequest) {
+        if (null == httpServletRequest) {
+            return null;
+        }
+
+        String data = (String) httpServletRequest.getSession().getAttribute("MOBILE_DESKTOP_LOGO");
+        if (StringUtils.isNotBlank(data)) {
+            return JSONUtils.toObject(data, LogoResult.class);
+        }
+
+        return null;
+    }
+
+    /**
+     * 设置Mobile桌面LOGO
+     * @param httpServletRequest
+     * @param logoResult
+     */
+    public static void setMobileDesktopLogo(HttpServletRequest httpServletRequest, LogoResult logoResult) {
+        if (null == logoResult) {
+            return;
+        }
+
+        HttpSession session = httpServletRequest.getSession();
+        session.setMaxInactiveInterval(15 * 60);    // 15分钟超时
+        session.setAttribute("MOBILE_DESKTOP_LOGO", JSONUtils.toJSONStr(logoResult));
+    }
 }
