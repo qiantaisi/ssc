@@ -14,7 +14,7 @@
     <jsp:include page="../../../common/commonCss.jsp" />
 
     <link rel="stylesheet" href="${resPath}css/style.css?v=201703222201">
-    <link rel="stylesheet" href="${resPath}css/other.css?v=20170824">
+    <link rel="stylesheet" href="${resPath}css/other.css?v=2017092">
     <title></title>
 </head>
 <body>

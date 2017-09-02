@@ -394,6 +394,14 @@
                 </div>
             </div>
         </div>
+        <div ng-if="addedHome" class="add-home" style="">
+            <div class="add-home-content"><img
+                    ng-src="//img86.3000ms.com/MSiteOfficial/DesktopIcon/2016/07/07/114593018.png"
+                    src="//img86.3000ms.com/MSiteOfficial/DesktopIcon/2016/07/07/114593018.png">
+                <p class="ng-binding">先点击<i class="icon ion-ios-upload-outline"></i></p>
+                <p ng-bind="'Common.Tips.AddToHomeScreen'|translate" class="ng-binding">再“添加到主屏幕”</p><i
+                        ng-click="closeAddHome()" class="icon ion-close-round"></i> <em></em></div>
+        </div>
     </div>
     <c:import url="../common/rightPanel.jsp"/>
 </div>
