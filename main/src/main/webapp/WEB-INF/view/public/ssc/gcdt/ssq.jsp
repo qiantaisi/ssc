@@ -141,7 +141,7 @@
     function randomNumber() {
         var arr = [];
         var tmpStr = '';
-        for (var i = 0; i < 5; ++i) {
+        for (var i = 0; i < 7; ++i) {
             tmpStr += '<span>' + (Math.floor(Math.random() * 10)) + '</span>';
         }
         $("#lastOpenCode").html(tmpStr);
@@ -151,7 +151,12 @@
     function renderLastOpenCode(openCodeArr) {
         var tmpStr = '';
         $.each(openCodeArr, function(index, value) {
-            tmpStr += '<span>' + value + '</span>';
+            if(index == 6){
+                tmpStr += '<span class="ball-blue">' + value + '</span>';
+            } else {
+                tmpStr += '<span>' + value + '</span>';
+            }
+
         });
         $("#lastOpenCode").html(tmpStr);
     }
@@ -163,8 +168,12 @@
         {{if list.length == 0}}
         <p style="margin-left:5px">开奖中</p>
         {{else}}
-        {{each list as value}}
-        <i>{{value}}</i>
+        {{each list as value index}}
+          {{if index == 6}}
+            <i class="round ball-blue">{{value}}</i>
+          {{else}}
+            <i>{{value}}</i>
+          {{/if}}
         {{/each}}
         {{/if}}
     </li>
