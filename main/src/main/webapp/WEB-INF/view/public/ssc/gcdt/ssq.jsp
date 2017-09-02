@@ -133,6 +133,9 @@
         } else{
             var optionVal = parseInt($('#lt_zh_qishu').val());
             selectedCheckboxtbzh(optionVal);
+            //点击随机数时计算追号总额
+            $('.zhfbzjetxt').html(getFbTotelMoney());
+            $('.zhzjetxt').html(getTbTotelMoney());
         }
 
 

@@ -588,6 +588,30 @@ function buyBtn() {
     if (len > 0) {
         showloadTxtTemplate();
 
+        var flagsp = $('.clearLiZhudanbtn').attr('sp');
+        if (flagsp == 1) {
+            var nameF = '';
+            var num = $('.zhqishutxt').html();
+            var moneyValTb = $('.zhzjetxt').html(); //同倍追号总金额值
+            var moneyValFb = $('.zhqishutxt').html(); //翻倍追号总金额值
+            $('.reBetting .tabs ul li').each(function () {
+                var ft = $(this).hasClass('acti');
+                if (ft) {
+                    nameF = $(this).attr('data-opertype');
+                }
+            });
+
+            $('.tzTishiTemplate').find('.qiTishi').html("确定要追号" + num + "期？");
+            if (nameF == 'tbzh') {
+                $('.tzTishiTemplate').find('.total-money').html(moneyValTb);
+            } else {
+                $('.tzTishiTemplate').find('.total-money').html(moneyValFb);
+            }
+        } else {
+            var totalM = $("#zongtouInfo .totalM").html();
+            $(".total-money").html(totalM);
+        }
+
         $(".tzTishiTemplate").parent().parent().css({
             "border": "6px solid #ccc",
             "border-radius": "8px",
@@ -609,8 +633,7 @@ function buyBtn() {
         //投注内容模板
         var htmlStr = addContent();
         $(".tzTishiTemplate .content-table .head-tr").after(htmlStr);
-        var totalM = $("#zongtouInfo .totalM").html();
-        $(".total-money").html(totalM);
+
         $(".qihao").html(getNumber());
 
         // 注单内容
@@ -5703,6 +5726,14 @@ function getSuiji(total) {
 
     // 统计右侧注数，金额
     calcAll();
+
+    //改变追号模板内每期总额值
+    var optionVal = parseInt($('#lt_zh_qishu').val());
+    selectedCheckboxtbzh(optionVal);
+
+    //点击随机数时计算追号总额
+    $('.zhfbzjetxt').html(getFbTotelMoney());
+    $('.zhzjetxt').html(getTbTotelMoney());
 }
 
 //**********************任选4***********************
@@ -17199,7 +17230,7 @@ function renderZhuihao(strZh, obj) {
         //总金额
         var num = selectedZhqishu();
         $('.zhzjetxt').html(totelMoney * num);
-        $('.zhfbzjetxt').html(getTotelMoney());
+        $('.zhfbzjetxt').html(getFbTotelMoney());
 
         //单行点击选中事件
         $(".content_heigth .ulzh li input[type='checkbox']").click(function () {
@@ -17221,14 +17252,14 @@ function renderZhuihao(strZh, obj) {
             changeContent();
             changeContentFbzh();
 
-            $('.zhzjetxt').html(getTotelMoney());
-            $('.zhfbzjetxt').html(getTotelMoney());
+            $('.zhzjetxt').html(getFbTotelMoney());
+            $('.zhfbzjetxt').html(getFbTotelMoney());
         });
 
         //输入倍数时改变选中倍数input值
         $("#startBeiShuZh").keyup(function () {
             changeContent();
-            $('.zhzjetxt').html(getTotelMoney());
+            $('.zhzjetxt').html(getFbTotelMoney());
         });
 
         //输入倍数失去焦点计算
@@ -17238,12 +17269,12 @@ function renderZhuihao(strZh, obj) {
                 $("#startBeiShuZh").val(1);
             }
             changeContent();
-            $('.zhzjetxt').html(getTotelMoney());
+            $('.zhzjetxt').html(getFbTotelMoney());
         });
 
         $("#rt_trace_diff").keyup(function () {
             changeContentFbzh();
-            $('.zhfbzjetxt').html(getTotelMoney());
+            $('.zhfbzjetxt').html(getFbTotelMoney());
         });
 
         $("#rt_trace_diff").blur(function () {
@@ -17252,12 +17283,12 @@ function renderZhuihao(strZh, obj) {
                 $("#rt_trace_diff").val(1);
             }
             changeContentFbzh();
-            $('.zhfbzjetxt').html(getTotelMoney());
+            $('.zhfbzjetxt').html(getFbTotelMoney());
         });
 
         $("#rt_trace_times_diff").keyup(function () {
             changeContentFbzh();
-            $('.zhfbzjetxt').html(getTotelMoney());
+            $('.zhfbzjetxt').html(getFbTotelMoney());
         });
 
         $("#rt_trace_times_diff").blur(function () {
@@ -17266,7 +17297,7 @@ function renderZhuihao(strZh, obj) {
                 $("#rt_trace_times_diff").val(1);
             }
             changeContentFbzh();
-            $('.zhfbzjetxt').html(getTotelMoney());
+            $('.zhfbzjetxt').html(getFbTotelMoney());
         });
 
         //选择选项-同倍追号
@@ -17276,7 +17307,7 @@ function renderZhuihao(strZh, obj) {
             $(".zhqishutxt").html(optionVal);
             $('.zhzjetxt').html(totelMoney * selectedZhqishu());
             selectedCheckboxtbzh(optionVal);
-            $('.zhzjetxt').html(getTotelMoney());
+            $('.zhzjetxt').html(getFbTotelMoney());
         });
 
         //选择选项-翻倍追号
@@ -17284,15 +17315,15 @@ function renderZhuihao(strZh, obj) {
             var optionVal = parseInt($(this).val());
 
             $(".zhqishutxt").html(optionVal);
-            $('.zhfbzjetxt').html(getTotelMoney());
+            $('.zhfbzjetxt').html(getFbTotelMoney());
             selectedCheckboxfbzh(optionVal);
-            $('.zhfbzjetxt').html(getTotelMoney());
+            $('.zhfbzjetxt').html(getFbTotelMoney());
         });
     });
 }
 
-//计算购买追号总金额
-function getTotelMoney(){
+//计算购买追号翻倍总金额
+function getFbTotelMoney(){
     var zhTotelMoney = 0;
     $(".ulzh li span.content_money").each(function () {
         var flagStatus = $(this).parent().find('input').prop('checked');
@@ -17303,6 +17334,18 @@ function getTotelMoney(){
     });
 
     return zhTotelMoney;
+}
+
+//计算购买追号同倍总金额
+function getTbTotelMoney(){
+    var totelMoney = 0;
+    $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
+        var perMoney = $(this).data('bet_per_money');
+        totelMoney += perMoney;
+    });
+
+    var num = selectedZhqishu();
+    return totelMoney * num;
 }
 
 // 清除和显示追号模板
