@@ -17,7 +17,7 @@
 <script src="${resPath}js/dateFormat.js?v=2017"></script>
 <script src="${pubStaticPath}js/template.js?v=2017"></script>
 <script src="${pubStaticPath}js/swfobject/swfobject.js?v=2017"></script>
-<script src="${pubStaticPath}js/jquery.liMarquee.js?v=2017"></script> 
+<script src="${pubStaticPath}js/jquery.liMarquee.js?v=2017"></script>
 <script src="${pubStaticPath}js/placeholders.jquery.min.js?v=2017"></script>
 <script src="${pubStaticPath}jRange/jquery.range-min.js?v=2017"></script>
 <script>
