@@ -942,7 +942,7 @@ function gdkj(playGroupId) {
                     if (lastNumberOpening) {
                         var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend round ball-blue">' + num6 + '</span></div></p>';
 
                     }
 
@@ -962,7 +962,7 @@ function gdkj(playGroupId) {
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend round ball-blue">' + num6 + '</span></div></p>';
 
                     }
                     //询问框
