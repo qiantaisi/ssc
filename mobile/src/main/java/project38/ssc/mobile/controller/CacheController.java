@@ -116,7 +116,7 @@ public abstract class CacheController extends BaseController {
         WebInfoResult webInfoResult = SessionUtils.getMobileWebInfo(httpServletRequest);
         if (webInfoResult == null || webInfoResult.getResult() != 1) {
             webInfoResult = ApiUtils.getWebInfo(2, companyShortName);
-            SessionUtils.setMobileWebInfo(httpServletRequest, logoResult);
+            SessionUtils.setMobileWebInfo(httpServletRequest, webInfoResult);
         }
         return webInfoResult;
     }
