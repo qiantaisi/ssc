@@ -14,10 +14,10 @@
 <script src="${pubStaticPath}js/jquery.md5.js?v=2017"></script><!--自定义封装函数-->
 <script src="${pubStaticPath}layer/layer.js?v=2017"></script>
 <script src="${pubStaticPath}js/jquery.nicescroll.js?v=2017"></script>
-<script src="${pubStaticPath}js/dateFormat.js?v=2017"></script>
+<script src="${resPath}js/dateFormat.js?v=2017"></script>
 <script src="${pubStaticPath}js/template.js?v=2017"></script>
 <script src="${pubStaticPath}js/swfobject/swfobject.js?v=2017"></script>
-<script src="${pubStaticPath}js/jquery.liMarquee.js?v=2017"></script>
+<script src="${pubStaticPath}js/jquery.liMarquee.js?v=2017"></script> 
 <script src="${pubStaticPath}js/placeholders.jquery.min.js?v=2017"></script>
 <script src="${pubStaticPath}jRange/jquery.range-min.js?v=2017"></script>
 <script>
