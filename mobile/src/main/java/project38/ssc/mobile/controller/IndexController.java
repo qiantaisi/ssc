@@ -102,7 +102,7 @@ public class IndexController extends CacheController {
 
         Map<String, Object> modelMap = new HashMap<String, Object>();
         try {
-            modelMap.put("logo", ApiUtils.getLogo(1, companyShortName));
+//            modelMap.put("logo", ApiUtils.getLogo(1, companyShortName));
             modelMap.put("desk", ApiUtils.getLogo(6, companyShortName));
 
             WebNoticeResult webNoticeResult = ApiUtils.getPopupNoticeList(uid, token, companyShortName);
