@@ -17220,7 +17220,6 @@ function renderZhuihao(strZh, obj) {
         totelMoney += tempMoney;
     });
 
-    console.log(totelMoney +"---"+ tempMoney);
     getZhuihaoList(function() {
         // 模板逻辑处理.......
         var dataContent = {
@@ -17231,7 +17230,7 @@ function renderZhuihao(strZh, obj) {
             dataContent.listContent.push({
                 zhqishu: value.number,
                 zhbeishu: $("#startBeiShu.Zh").val(),
-                totelMoney: '￥' + totelMoney,
+                totelMoney: '￥',
                 zhkjshijian: Tools.formatDate(value.openTime)
             });
         });
@@ -17387,9 +17386,12 @@ function getFbTotelMoney(){
 //计算购买追号同倍总金额
 function getTbTotelMoney(){
     var totelMoney = 0;
+    var tempMoney = 0;
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-        var perMoney = $(this).data('bet_per_money');
-        totelMoney += perMoney;
+        var perMoney = $(this).data('bet_per_money');   //每注金额
+        var zhushu = $(this).data('bet_zhushu');  //注数
+        tempMoney = perMoney * zhushu;
+        totelMoney += tempMoney;
     });
 
     var num = selectedZhqishu();
@@ -17521,11 +17523,15 @@ function changeBgColor() {
 //改变被选中checkbox行的内容--同倍追号
 function changeContent() {
     var totelMoney = 0;
-    var zhushu = 0;
+    var tempMoney = 0;
+
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-        var perMoney = $(this).data('bet_per_money');
-        totelMoney += perMoney;
+        var perMoney = $(this).data('bet_per_money');   //每注金额
+        var zhushu = $(this).data('bet_zhushu');  //注数
+        tempMoney = perMoney * zhushu;
+        totelMoney += tempMoney;
     });
+
     $(".ulzh li").each(function () {
         var flagStatus = $(this).find('input').prop('checked');
         if (!flagStatus) {
@@ -17545,9 +17551,12 @@ function changeContentFbzh() {
     var totelMoney = 0;
     var bsTemp = 1;
     var num = 0;
+    var tempMoney = 0;
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-        var perMoney = $(this).data('bet_per_money');
-        totelMoney += perMoney;
+        var perMoney = $(this).data('bet_per_money');   //每注金额
+        var zhushu = $(this).data('bet_zhushu');  //注数
+        tempMoney = perMoney * zhushu;
+        totelMoney += tempMoney;
     });
 
     $(".reConHei .ulzh li").each(function (index, value) {
