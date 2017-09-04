@@ -173,7 +173,7 @@
 <c:import url="../common/commonJs.jsp"/>
 <c:import url="../common/jsCommonLogin.jsp"/>
 
-<script>
+<%-- <script>
     $(function () {
         ajaxRequest({
             url: "<%=basePath%>ajaxGetRegisterResult.json",
@@ -328,7 +328,7 @@
     function hideLoading() {
         layer.closeAll();
     }
-</script>
+</script> --%>
 <c:import url="../common/bodyEnd.jsp"/>
 
 

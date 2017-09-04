@@ -25,7 +25,7 @@
                     <label for="money" class="error" id="moneyError"> </label>
                 </li>
                 <li>
-                    <%
+                    <%--<%
                         if (StringUtils.equals("600w", SessionUtils.getSessionCompanyShortName(request))) {
                    %>
                         <span class="sp-name" data-name="hyzh">会员账号：</span>
@@ -34,7 +34,8 @@
                     %>
                        <span>订单后四位：</span>
 
-                    <% }%>
+                    <% }%>--%>
+                    <span>订单后四位：</span>
                     <input type="text" size="5" name="userAlipayName" class="suminp wxName" id="name">
                     <label for="name" class="error" id="nameError"></label>
                 </li>
