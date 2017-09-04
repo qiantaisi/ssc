@@ -215,7 +215,7 @@
                                                 <c:import url="rule/gfwf/base.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 12}">
-                                                <c:import url="rule/gfwf/base.jsp"/>
+                                                <c:import url="rule/gfwf/ssq.jsp"/>
                                             </c:when>
                                             <c:when test="${playGroupId == 14}">
                                                 <c:import url="rule/gfwf/base.jsp"/>

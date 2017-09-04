@@ -8,17 +8,25 @@
 %>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <c:import url="../common/toptouzhu.jsp">
-            <c:param name="flagGroup" value="11"/>
-            <c:param name="navGroup" value="1"/>
-        </c:import>
+        <div class="hd clearfix rehd" id="toptouzhu">
+            <c:import url="../common/toptouzhu.jsp">
+                <c:param name="flagGroup" value="22"/>
+            </c:import>
+            <div class="fr">
+                <div class="T-tab clearfix" style="margin-top: 4.4px;">
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d1q')">第一球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d2q')">第二球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d3q')">第三球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d4q')">第四球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d5q')" class="active">第五球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d6q')">第六球</a>
+                </div>
+            </div>
+        </div>
 
         <div class="table-common">
             <table width="100%" border="1">
                 <thead>
-                <tr>
-                    <th colspan="12">蓝码</th>
-                </tr>
                 <tr>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
@@ -109,6 +117,82 @@
                 </tr>
 
                 <tr>
+                    <td>17</td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="17" data-plid="14401"/></td>
+
+                    <td>18</td>
+                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="18" data-plid="14402"/></td>
+
+                    <td>19</td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="19" data-plid="14401"/></td>
+
+                    <td>20</td>
+                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="20" data-plid="14402"/></td>
+                </tr>
+
+                <tr>
+                    <td>21</td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="21" data-plid="14401"/></td>
+
+                    <td>22</td>
+                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="22" data-plid="14402"/></td>
+
+                    <td>23</td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="23" data-plid="14401"/></td>
+
+                    <td>24</td>
+                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="24" data-plid="14402"/></td>
+                </tr>
+
+                <tr>
+                    <td>25</td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="25" data-plid="14401"/></td>
+
+                    <td>26</td>
+                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="26" data-plid="14402"/></td>
+
+                    <td>27</td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="27" data-plid="14401"/></td>
+
+                    <td>28</td>
+                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="28" data-plid="14402"/></td>
+                </tr>
+
+                <tr>
+                    <td>29</td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="21" data-plid="14401"/></td>
+
+                    <td>30</td>
+                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="22" data-plid="14402"/></td>
+
+                    <td>31</td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="23" data-plid="14401"/></td>
+
+                    <td>32</td>
+                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="24" data-plid="14402"/></td>
+                </tr>
+
+                <tr>
+                    <td>33</td>
+                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="33" data-plid="14401"/></td>
+
                     <td>大</td>
                     <td><strong class="color-red pl" data-plid="14401"></strong></td>
                     <td><input type="text" class="table-txt" data-name="大" data-plid="14401"/></td>
@@ -120,12 +204,25 @@
                     <td>单</td>
                     <td><strong class="color-red pl" data-plid="14401"></strong></td>
                     <td><input type="text" class="table-txt" data-name="单" data-plid="14401"/></td>
+                </tr>
 
+                <tr>
                     <td>双</td>
                     <td><strong class="color-red pl" data-plid="14402"></strong></td>
                     <td><input type="text" class="table-txt" data-name="双" data-plid="14402"/></td>
-                </tr>
 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
                 </tbody>
             </table>
         </div>
