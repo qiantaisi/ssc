@@ -93,8 +93,9 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
         if (uri.indexOf(".html") > 0) {
             if (StringUtils.isNotBlank(uidStr) && StringUtils.isNotBlank(token) && StringUtils.isNotBlank(companyShortName)) {
-                String basePath = RequestUtils.getBasePath(request);
-                ApiUtils.updateOnlineInfo(Long.parseLong(uidStr), token, basePath + uri,companyShortName);
+                String path = request.getContextPath();
+                String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
+                ApiUtils.updateOnlineInfo(Long.parseLong(uidStr), token, basePath + uri, companyShortName);
             }
         }
         return flag;

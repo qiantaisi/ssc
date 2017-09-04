@@ -61,6 +61,17 @@
 
                         </p>
                     </li>
+                    <li class="gf-li">
+                        <b class="acti">快钱玩法</b>
+                        <p class="kuaiqian" data-name="kqwf">
+                            <span class="acti"><a href="javascript:void(0)" data-url="ssq-lm">蓝码</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="ssq-hm">红码</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="ssq-hmdw">红码定位</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="ssq-sm">双面</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="ssq-hlp">红蓝配</a></span>
+
+                        </p>
+                    </li>
 
                 </ul>
             </div>

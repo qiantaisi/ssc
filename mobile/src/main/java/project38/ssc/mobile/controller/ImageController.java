@@ -117,4 +117,44 @@ public class ImageController extends CacheController {
             log.error(getClass(), e);
         }
     }
+
+    /**
+     * 桌面Logo
+     * @param httpServletRequest
+     * @param httpServletResponse
+     */
+    @RequestMapping(value = "/logo3.png", method = RequestMethod.GET)
+    public void logo3(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        String companyShortName = this.getCompanyShortName();
+        try {
+            LogoResult logoResult = this.getCacheMobileDesktopLogo(httpServletRequest, companyShortName);
+            if (logoResult == null || logoResult.getResult() != 1) {
+                return;
+            }
+
+            this.id(logoResult.getImageId(), httpServletRequest, httpServletResponse);
+        } catch (Exception e) {
+            log.error(getClass(), e);
+        }
+    }
+
+    /**
+     * 网站ICO
+     * @param httpServletRequest
+     * @param httpServletResponse
+     */
+    @RequestMapping(value = "/ico.png", method = RequestMethod.GET)
+    public void ico(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
+        String companyShortName = this.getCompanyShortName();
+        try {
+            LogoResult logoResult = this.getCacheMobileIco(httpServletRequest, companyShortName);
+            if (logoResult == null || logoResult.getResult() != 1) {
+                return;
+            }
+
+            this.id(logoResult.getImageId(), httpServletRequest, httpServletResponse);
+        } catch (Exception e) {
+            log.error(getClass(), e);
+        }
+    }
 }
