@@ -17216,7 +17216,8 @@ function renderZhuihao(strZh, obj) {
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        tempMoney = perMoney * zhushu;
+        var beishu = $(this).data('bet_beishu');  //倍数
+        tempMoney = perMoney * zhushu * beishu;
         totelMoney += tempMoney;
     });
 
@@ -17230,7 +17231,7 @@ function renderZhuihao(strZh, obj) {
             dataContent.listContent.push({
                 zhqishu: value.number,
                 zhbeishu: $("#startBeiShu.Zh").val(),
-                totelMoney: '￥',
+                totelMoney: '￥' + totelMoney,
                 zhkjshijian: Tools.formatDate(value.openTime)
             });
         });
@@ -17390,7 +17391,8 @@ function getTbTotelMoney(){
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        tempMoney = perMoney * zhushu;
+        var beishu = $(this).data('bet_beishu');  //倍数
+        tempMoney = perMoney * zhushu * beishu;
         totelMoney += tempMoney;
     });
 
@@ -17528,7 +17530,8 @@ function changeContent() {
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        tempMoney = perMoney * zhushu;
+        var beishu = $(this).data('bet_beishu');  //倍数
+        tempMoney = perMoney * zhushu * beishu;
         totelMoney += tempMoney;
     });
 
@@ -17555,7 +17558,8 @@ function changeContentFbzh() {
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        tempMoney = perMoney * zhushu;
+        var beishu = $(this).data('bet_beishu');  //倍数
+        tempMoney = perMoney * zhushu * beishu;
         totelMoney += tempMoney;
     });
 
