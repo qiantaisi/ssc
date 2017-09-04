@@ -277,7 +277,7 @@
             <a href="<%=basePath%>ssc/index.html?module=zstIndex" target="_blank">
                 走势图表
             </a>
-            <a href="<%=mHostName%>" target="_blank">
+            <a href="<%=basePath%>app.html" target="_blank">
                 <em class="hot"></em>
                 <img src="${resPath}images/index30.png" class="menu_a_img" />
                 手机购买
