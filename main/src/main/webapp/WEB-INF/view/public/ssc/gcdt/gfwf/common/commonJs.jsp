@@ -8,7 +8,7 @@
     String basePath = RequestUtils.getBasePath(request);
 %>
 
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170902_1"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=2017090461"></script>
 
 <script type="text/html" id="template_jRange">
     <div class="add_spot">
@@ -124,7 +124,7 @@
             <option value="50">全部</option>
         </select>
         &nbsp;&nbsp;总期数：
-        &nbsp;<span class="qishu zhredtxt zhqishutxt">10</span>&nbsp;&nbsp;期
+        &nbsp;<span class="qishu zhredtxt zhfbqishutxt">10</span>&nbsp;&nbsp;期
         &nbsp;&nbsp;追号总金额： <span class="money zhredtxt zhfbzjetxt">50</span> 元
         &nbsp;&nbsp;追号计划： 隔&nbsp;
         <span class="startBeiShu zhredtxt">
@@ -146,7 +146,7 @@
         </span>
     </div>
     <div class="content_heigth reConHei">
-        <ul class="ulzh" id="fbLiList">
+        <ul class="ulzh fbulzh" id="fbLiList">
             {{each listContent}}
             <li class="list-li" style="display:none;">
                 <input type="checkbox" class="oneCheckbox oneFbzhCheckbox" />

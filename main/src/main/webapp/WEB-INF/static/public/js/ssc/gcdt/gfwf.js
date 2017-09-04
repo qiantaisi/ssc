@@ -591,10 +591,11 @@ function buyBtn() {
         var flagsp = $('.clearLiZhudanbtn').attr('sp');
         if (flagsp == 1) {
             var nameF = '';
-            var num = $('.zhqishutxt').html();
+            var num = selectedZhqishu();
             var moneyValTb = $('.zhzjetxt').html(); //同倍追号总金额值
-            var moneyValFb = $('.zhqishutxt').html(); //翻倍追号总金额值
-            $('.reBetting .tabs ul li').each(function () {
+            var moneyValFb = $('.zhfbzjetxt').html(); //翻倍追号总金额值
+
+                $('.reBetting .tabs ul li').each(function () {
                 var ft = $(this).hasClass('acti');
                 if (ft) {
                     nameF = $(this).attr('data-opertype');
@@ -604,7 +605,7 @@ function buyBtn() {
             $('.tzTishiTemplate').find('.qiTishi').html("确定要追号" + num + "期？");
             if (nameF == 'tbzh') {
                 $('.tzTishiTemplate').find('.total-money').html(moneyValTb);
-            } else {
+            } else if(nameF == 'fbzh') {
                 $('.tzTishiTemplate').find('.total-money').html(moneyValFb);
             }
         } else {
@@ -17198,6 +17199,7 @@ function getZhuihaoList(callback) {
 // 最近最新开奖时间（默认10期），用于追号模板渲染
 function renderZhuihao(strZh, obj) {
     var totelMoney = 0;
+    var tempMoney = 0;
     var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
     if (len <= 0) {
         showTishi2Template();
@@ -17212,10 +17214,13 @@ function renderZhuihao(strZh, obj) {
     }
 
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
-        var perMoney = $(this).data('bet_per_money');
-        totelMoney += perMoney;
+        var perMoney = $(this).data('bet_per_money');   //每注金额
+        var zhushu = $(this).data('bet_zhushu');  //注数
+        tempMoney = perMoney * zhushu;
+        totelMoney += tempMoney;
     });
 
+    console.log(totelMoney +"---"+ tempMoney);
     getZhuihaoList(function() {
         // 模板逻辑处理.......
         var dataContent = {
@@ -17265,8 +17270,8 @@ function renderZhuihao(strZh, obj) {
                 $(this).parent().find('input[type="text"]').removeAttr("disabled");
                 $(this).parent().find('input[type="text"]').val(beishu);
             }
-            var num = selectedZhqishu();
-            $(".zhqishutxt").html(num);
+
+            selectedZhqishu(); //改变及获取当前选中期数
 
             changeContent();
             changeContentFbzh();
@@ -17324,21 +17329,45 @@ function renderZhuihao(strZh, obj) {
             var optionVal = parseInt($(this).val());
 
             $(".zhqishutxt").html(optionVal);
-            $('.zhzjetxt').html(totelMoney * selectedZhqishu());
             selectedCheckboxtbzh(optionVal);
             $('.zhzjetxt').html(getFbTotelMoney());
+
         });
 
         //选择选项-翻倍追号
         $(document).on("change", 'select#rt_zh_qishu', function () {
             var optionVal = parseInt($(this).val());
 
-            $(".zhqishutxt").html(optionVal);
+            $(".zhfbqishutxt").html(optionVal);
+            selectedCheckboxfbzh(optionVal); //改变前选中选行数
             $('.zhfbzjetxt').html(getFbTotelMoney());
-            selectedCheckboxfbzh(optionVal);
-            $('.zhfbzjetxt').html(getFbTotelMoney());
+
         });
     });
+}
+
+//获取当前选中的期数
+function getFbTotelQishu() {
+    var zhTotelZQshu = 0;
+    $("#fbLiList li").each(function () {
+        var flagStatus = $(this).find('input').prop('checked');
+        if (flagStatus) {
+            zhTotelZQshu++;
+        }
+    });
+    return zhTotelZQshu;
+}
+
+//获取当前倍同倍与翻倍标签
+function getTbFbFlag(){
+    var strTFb = '';
+    $('#zhInfo .tabs li').each(function(){
+        var f = $(this).hasClass('acti');
+        if(f){
+            strTFb = $(this).attr('data-opertype');
+        }
+    });
+    return strTFb;
 }
 
 //计算购买追号翻倍总金额
@@ -17444,13 +17473,26 @@ function selectedCheckboxfbzh(countLi) {
 //选中的追号期数
 function selectedZhqishu() {
     var zongQiShu = 0;
+    var f = getTbFbFlag();
     changeBgColor();
-    $(".ulzh li").each(function () {
-        var flagStatus = $(this).find('input').prop('checked');
-        if (flagStatus) {
-            zongQiShu++;
-        }
-    });
+    if(f == 'tbzh'){
+        $(".ulzh li").each(function () {
+            var flagStatus = $(this).find('input').prop('checked');
+            if (flagStatus) {
+                zongQiShu++;
+            }
+        });
+
+        $(".zhqishutxt").html(zongQiShu);
+    } else if(f == 'fbzh'){
+        $(".fbulzh li").each(function () {
+            var flagStatus = $(this).find('input').prop('checked');
+            if (flagStatus) {
+                zongQiShu++;
+            }
+        });
+        $(".zhfbqishutxt").html(zongQiShu);
+    }
     return zongQiShu;
 }
 
@@ -17479,6 +17521,7 @@ function changeBgColor() {
 //改变被选中checkbox行的内容--同倍追号
 function changeContent() {
     var totelMoney = 0;
+    var zhushu = 0;
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');
         totelMoney += perMoney;
@@ -17509,13 +17552,14 @@ function changeContentFbzh() {
 
     $(".reConHei .ulzh li").each(function (index, value) {
         var flagStatus = $(this).find('input').prop('checked');
-
+        console.log(flagStatus);
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
             $(this).find('.content_money').html('￥0.0');
         } else {
             var geqi = $("#rt_trace_diff").val();  //隔期数
             var beishu = $("#rt_trace_times_diff").val();  //倍数
+
             beishu = beishu == '' ? 1 : beishu;
             geqi = geqi == '' ? 1 : geqi;
 

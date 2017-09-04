@@ -299,7 +299,6 @@ $(function() {
 });
 
 function getSscSubPage(url) {
-    console.log("---9");
     ajaxRequest({
         url: CONFIG.BASEURL + "ssc/gcdt/" + url.split("-").join("/") + ".html",
         type: 'GET',
