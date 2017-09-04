@@ -640,8 +640,11 @@ function buyBtn() {
         var betForm = {
             totalMoney: 0,
             totalZhushu: 0,
-            sscBetList: []
+            isZhuihao : flagsp,
+            sscBetList: [],
+            sscBetZhList: []
         };
+
         $("#zhudanList .re_touzhu_tem").each(function () {
             betForm.sscBetList.push({
                 playGroupId: $(this).data("bet_play_group_id"),
@@ -662,6 +665,22 @@ function buyBtn() {
             betForm.totalMoney += parseFloat($(this).data("bet_total_money"));
             betForm.totalZhushu += $(this).data("bet_zhushu");
         });
+        //追号
+        var money = 0;
+        var zs = 0;
+        if (betForm.isZhuihao == 1) {
+            $(".list_wrap_zh .ulzh .checkbox_selected").each(function () {
+                betForm.sscBetZhList.push({
+                    number: $(this).children(".content_qs").text(),
+                    beishu: $(this).children(".nosel").children('input[type="text"]').val()
+                });
+                money += betForm.totalMoney;
+                zs += betForm.totalZhushu;
+            });
+            betForm.totalMoney = parseFloat(money);
+            betForm.totalZhushu = zs;
+        }
+
         betForm.totalMoney = (betForm.totalMoney).toFixed(3);
         betForm = JSON.stringify(betForm);
         // 解决双引号冲突
