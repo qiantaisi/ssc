@@ -14,12 +14,12 @@
             </c:import>
             <div class="fr">
                 <div class="T-tab clearfix" style="margin-top: 4.4px;">
-                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-d1q')">第一球</a>
-                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-d2q')" class="active">第二球</a>
-                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-d3q')">第三球</a>
-                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-d4q')">第四球</a>
-                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-d5q')">第五球</a>
-                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-d6q')">第六球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d1q')">第一球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d2q')" class="active">第二球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d3q')">第三球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d4q')">第四球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d5q')">第五球</a>
+                    <a href="javascript:void(0)" onclick="getSscSubPage('ssq-hmdw_d6q')">第六球</a>
                 </div>
             </div>
         </div>
