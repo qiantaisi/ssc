@@ -20,9 +20,12 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="9">第一位</th>
+                    <th colspan="12">第一位</th>
                 </tr>
                 <tr>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
                     <th>金额</th>
@@ -41,27 +44,17 @@
                     <td><strong class="color-red pl" data-plid="6849"></strong></td>
                     <td><input type="text" class="table-txt" data-name="万位-大" data-plid="6849"/></td>
 
-                    <td><strong>单</strong></td>
-                    <td><strong class="color-red pl" data-plid="6851"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="6851"/></td>
-
-                    <td><strong>质</strong></td>
-                    <td><strong class="color-red pl" data-plid="6853"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-质" data-plid="6853"/></td>
-                </tr>
-
-                <tr>
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="6850"></strong></td>
                     <td><input type="text" class="table-txt" data-name="万位-小" data-plid="6850"/></td>
 
+                    <td><strong>单</strong></td>
+                    <td><strong class="color-red pl" data-plid="6851"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="6851"/></td>
+
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="6852"></strong></td>
                     <td><input type="text" class="table-txt" data-name="万位-双" data-plid="6852"/></td>
-
-                    <td><strong>合</strong></td>
-                    <td><strong class="color-red pl" data-plid="6854"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-合" data-plid="6854"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -69,9 +62,12 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="9">千位</th>
+                    <th colspan="12">第二位</th>
                 </tr>
                 <tr>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
                     <th>金额</th>
@@ -87,30 +83,20 @@
                 <tbody>
                 <tr>
                     <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="6855"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="千位-大" data-plid="6855"/></td>
+                    <td><strong class="color-red pl" data-plid="6849"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="6849"/></td>
+
+                    <td><strong>小</strong></td>
+                    <td><strong class="color-red pl" data-plid="6850"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="6850"/></td>
 
                     <td><strong>单</strong></td>
-                    <td><strong class="color-red pl" data-plid="6857"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="千位-单" data-plid="6857"/></td>
-
-                    <td><strong>质</strong></td>
-                    <td><strong class="color-red pl" data-plid="6859"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="千位-质" data-plid="6859"/></td>
-                </tr>
-
-                <tr>
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="6856"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="千位-小" data-plid="6856"/></td>
+                    <td><strong class="color-red pl" data-plid="6851"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="6851"/></td>
 
                     <td><strong>双</strong></td>
-                    <td><strong class="color-red pl" data-plid="6858"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="千位-双" data-plid="6858"/></td>
-
-                    <td><strong>合</strong></td>
-                    <td><strong class="color-red pl" data-plid="6860"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="千位-合" data-plid="6860"/></td>
+                    <td><strong class="color-red pl" data-plid="6852"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="6852"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -118,9 +104,12 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="9">百位</th>
+                    <th colspan="12">第三位</th>
                 </tr>
                 <tr>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
                     <th>金额</th>
@@ -136,30 +125,20 @@
                 <tbody>
                 <tr>
                     <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="6861"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="百位-大" data-plid="6861"/></td>
+                    <td><strong class="color-red pl" data-plid="6849"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="6849"/></td>
+
+                    <td><strong>小</strong></td>
+                    <td><strong class="color-red pl" data-plid="6850"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="6850"/></td>
 
                     <td><strong>单</strong></td>
-                    <td><strong class="color-red pl" data-plid="6863"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="百位-单" data-plid="6863"/></td>
-
-                    <td><strong>质</strong></td>
-                    <td><strong class="color-red pl" data-plid="6865"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="百位-质" data-plid="6865"/></td>
-                </tr>
-
-                <tr>
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="6862"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="百位-小" data-plid="6862"/></td>
+                    <td><strong class="color-red pl" data-plid="6851"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="6851"/></td>
 
                     <td><strong>双</strong></td>
-                    <td><strong class="color-red pl" data-plid="6864"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="百位-双" data-plid="6864"/></td>
-
-                    <td><strong>合</strong></td>
-                    <td><strong class="color-red pl" data-plid="6866"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="百位-合" data-plid="6866"/></td>
+                    <td><strong class="color-red pl" data-plid="6852"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="6852"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -167,9 +146,12 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="9">十位</th>
+                    <th colspan="12">第四位</th>
                 </tr>
                 <tr>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
                     <th>金额</th>
@@ -185,30 +167,20 @@
                 <tbody>
                 <tr>
                     <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="6867"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="十位-大" data-plid="6867"/></td>
+                    <td><strong class="color-red pl" data-plid="6849"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="6849"/></td>
+
+                    <td><strong>小</strong></td>
+                    <td><strong class="color-red pl" data-plid="6850"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="6850"/></td>
 
                     <td><strong>单</strong></td>
-                    <td><strong class="color-red pl" data-plid="6869"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="十位-单" data-plid="6869"/></td>
-
-                    <td><strong>质</strong></td>
-                    <td><strong class="color-red pl" data-plid="6871"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="十位-质" data-plid="6871"/></td>
-                </tr>
-
-                <tr>
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="6868"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="十位-小" data-plid="6868"/></td>
+                    <td><strong class="color-red pl" data-plid="6851"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="6851"/></td>
 
                     <td><strong>双</strong></td>
-                    <td><strong class="color-red pl" data-plid="6870"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="十位-双" data-plid="6870"/></td>
-
-                    <td><strong>合</strong></td>
-                    <td><strong class="color-red pl" data-plid="6872"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="十位-合" data-plid="6872"/></td>
+                    <td><strong class="color-red pl" data-plid="6852"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="6852"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -216,9 +188,12 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="9">个位</th>
+                    <th colspan="12">第五位</th>
                 </tr>
                 <tr>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
                     <th>金额</th>
@@ -234,30 +209,20 @@
                 <tbody>
                 <tr>
                     <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="6873"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="个位-大" data-plid="6873"/></td>
+                    <td><strong class="color-red pl" data-plid="6849"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="6849"/></td>
+
+                    <td><strong>小</strong></td>
+                    <td><strong class="color-red pl" data-plid="6850"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="6850"/></td>
 
                     <td><strong>单</strong></td>
-                    <td><strong class="color-red pl" data-plid="6875"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="个位-单" data-plid="6875"/></td>
-
-                    <td><strong>质</strong></td>
-                    <td><strong class="color-red pl" data-plid="6877"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="个位-质" data-plid="6877"/></td>
-                </tr>
-
-                <tr>
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="6874"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="个位-小" data-plid="6874"/></td>
+                    <td><strong class="color-red pl" data-plid="6851"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="6851"/></td>
 
                     <td><strong>双</strong></td>
-                    <td><strong class="color-red pl" data-plid="6876"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="个位-双" data-plid="6876"/></td>
-
-                    <td><strong>合</strong></td>
-                    <td><strong class="color-red pl" data-plid="6878"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="个位-合" data-plid="6878"/></td>
+                    <td><strong class="color-red pl" data-plid="6852"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="6852"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -265,9 +230,12 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="9">总和、龙虎和</th>
+                    <th colspan="12">第六位</th>
                 </tr>
                 <tr>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
                     <th>金额</th>
@@ -282,47 +250,25 @@
 
                 <tbody>
                 <tr>
-                    <td><strong>龙</strong></td>
-                    <td><strong class="color-red pl" data-plid="6883"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和、龙虎和-龙" data-plid="6883"/></td>
+                    <td><strong>大</strong></td>
+                    <td><strong class="color-red pl" data-plid="6849"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="6849"/></td>
 
-                    <td><strong>总大</strong></td>
-                    <td><strong class="color-red pl" data-plid="6879"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和、龙虎和-总大" data-plid="6879"/></td>
+                    <td><strong>小</strong></td>
+                    <td><strong class="color-red pl" data-plid="6850"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="6850"/></td>
 
-                    <td><strong>总单</strong></td>
-                    <td><strong class="color-red pl" data-plid="6881"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和、龙虎和-总单" data-plid="6881"/></td>
-                </tr>
+                    <td><strong>单</strong></td>
+                    <td><strong class="color-red pl" data-plid="6851"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="6851"/></td>
 
-                <tr>
-                    <td><strong>虎</strong></td>
-                    <td><strong class="color-red pl" data-plid="6884"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和、龙虎和-虎" data-plid="6884"/></td>
-
-                    <td><strong>总小</strong></td>
-                    <td><strong class="color-red pl" data-plid="6880"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和、龙虎和-总小" data-plid="6880"/></td>
-
-                    <td><strong>总双</strong></td>
-                    <td><strong class="color-red pl" data-plid="6882"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和、龙虎和-总双" data-plid="6882"/></td>
-                </tr>
-                <tr>
-                    <td><strong>和</strong></td>
-                    <td><strong class="color-red pl" data-plid="6885"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和、龙虎和-和" data-plid="6885"/></td>
-
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td><strong>双</strong></td>
+                    <td><strong class="color-red pl" data-plid="6852"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="6852"/></td>
                 </tr>
                 </tbody>
             </table>
+
         </div>
 
         <div class="btns">

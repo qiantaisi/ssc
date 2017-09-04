@@ -15,6 +15,7 @@
             <th class="game_result" data-position="2">第三球</th>
             <th class="game_result" data-position="3">第四球</th>
             <th class="game_result" data-position="4">第五球</th>
+            <th class="game_result" data-position="5">第六球</th>
             <th class="game_result" data-position="zh">总和</th>
         </tr>
         </tbody>
@@ -24,6 +25,7 @@
         <tr>
             <th class="game_result choose" data-type="dx">大小</th>
             <th class="game_result" data-type="ds">单双</th>
+            <th></th>
             <th></th>
             <th></th>
             <th></th>
@@ -107,7 +109,12 @@
                 dan: {name: '第五球-单', num: 0},
                 shuang: {name: '第五球-双', num: 0}
             },
-            lhh: {long: {name: '龙', num: 0}, hu: {name: '虎', num: 0}, he: {name: '和', num: 0}}
+            shiwan:{
+                da: {name: '第六球-大', num: 0},
+                xiao: {name: '第六球-小', num: 0},
+                dan: {name: '第六球-单', num: 0},
+                shuang: {name: '第六球-双', num: 0}
+            }
         };
 
         for (var i = 0; i < json.length; ++i) {
@@ -118,8 +125,9 @@
             var num3 = Tools.parseInt(openCode[2]);
             var num4 = Tools.parseInt(openCode[3]);
             var num5 = Tools.parseInt(openCode[4]);
+            var num6 = Tools.parseInt(openCode[5]);
 
-            if (num1 >= 5) {
+            if (num1 >= 18) {
                 result.wan.da.num++;
                 result.wan.xiao.num = 0;
             } else {
@@ -134,7 +142,7 @@
                 result.wan.dan.num++;
             }
 
-            if (num2 >= 5) {
+            if (num2 >= 18) {
                 result.qian.da.num++;
                 result.qian.xiao.num = 0;
             } else {
@@ -149,7 +157,7 @@
                 result.qian.dan.num++;
             }
 
-            if (num3 >= 5) {
+            if (num3 >= 18) {
                 result.bai.da.num++;
                 result.bai.xiao.num = 0;
             } else {
@@ -164,7 +172,7 @@
                 result.bai.dan.num++;
             }
 
-            if (num4 >= 5) {
+            if (num4 >= 18) {
                 result.shi.da.num++;
                 result.shi.xiao.num = 0;
             } else {
@@ -179,7 +187,7 @@
                 result.shi.dan.num++;
             }
 
-            if (num5 >= 5) {
+            if (num5 >= 18) {
                 result.ge.da.num++;
                 result.ge.xiao.num = 0;
             } else {
@@ -194,19 +202,21 @@
                 result.ge.dan.num++;
             }
 
-            if (num1 > num5) {
-                result.lhh.long.num++;
-                result.lhh.he.num = 0;
-                result.lhh.hu.num = 0;
-            } else if (num1 == num5) {
-                result.lhh.long.num = 0;
-                result.lhh.he.num++;
-                result.lhh.hu.num = 0;
+            if (num6 >= 18) {
+                result.shiwan.da.num++;
+                result.shiwan.xiao.num = 0;
             } else {
-                result.lhh.long.num = 0;
-                result.lhh.he.num = 0;
-                result.lhh.hu.num++;
+                result.shiwan.da.num = 0;
+                result.shiwan.xiao.num++;
             }
+            if (num6 % 2 == 0) {
+                result.shiwan.shuang.num++;
+                result.shiwan.dan.num = 0;
+            } else {
+                result.shiwan.shuang.num = 0;
+                result.shiwan.dan.num++;
+            }
+
         }
 
         var arr = [];
@@ -230,9 +240,11 @@
         arr.push(result.ge.xiao);
         arr.push(result.ge.dan);
         arr.push(result.ge.shuang);
-        arr.push(result.lhh.long);
-        arr.push(result.lhh.hu);
-        arr.push(result.lhh.he);
+        arr.push(result.shiwan.da);
+        arr.push(result.shiwan.xiao);
+        arr.push(result.shiwan.dan);
+        arr.push(result.shiwan.shuang);
+
         arr.sort(function (a, b) {
             var val1 = a.num;
             var val2 = b.num;
@@ -270,7 +282,7 @@
 
     function renderView(json) {
         var result = [];
-        for (var i = 0; i < 6; ++i) {
+        for (var i = 0; i < 7; ++i) {
             result[i] = {ds: [], dx: []};
         }
         var str = '';
@@ -330,7 +342,7 @@
                 str += '<tbody>';
                 for (var i = 0; i < json.length; ++i) {
                     var value = json[i].openCode.split(",")[Tools.parseInt(position)];
-                    var name = value >= 5 ? '<font style="color:#e70f0f;">大</font>' : '<font style="color:#58adff;">小</font>';
+                    var name = value >= 18 ? '<font style="color:#e70f0f;">大</font>' : '<font style="color:#58adff;">小</font>';
                     var x = 0, y = 0;
 
                     if (result[Tools.parseInt(position)].dx.length != 0) {
@@ -383,8 +395,8 @@
                     var name = value % 2 == 0 ? '<font style="color:#e70f0f;">双</font>' : '<font style="color:#58adff;">单</font>';
                     var x = 0, y = 0;
 
-                    if (result[5].ds.length != 0) {
-                        var preObj = result[5].ds[i - 1];
+                    if (result[6].ds.length != 0) {
+                        var preObj = result[6].ds[i - 1];
                         if (preObj.name == name) {
                             x = preObj.x;
                             y = preObj.y + 1;
@@ -393,7 +405,7 @@
                             y = 0;
                         }
                     }
-                    result[5].ds.push({
+                    result[6].ds.push({
                         name: name,
                         x: x,
                         y: y
@@ -402,7 +414,7 @@
 
                 var maxX = 30;
                 var maxY = 0;
-                $.each(result[5].ds, function (index, value) {
+                $.each(result[6].ds, function (index, value) {
                     if (value.x > maxX) {
                         maxX = value.x;
                     }
@@ -430,11 +442,11 @@
                     for (var j = 0, tmpArr = json[i].openCode.split(","); j < tmpArr.length; ++j) {
                         value += Tools.parseInt(tmpArr[j]);
                     }
-                    var name = value >= 23 ? '<font style="color:#e70f0f;">大</font>' : '<font style="color:#58adff;">小</font>';
+                    var name = value >= 108 ? '<font style="color:#e70f0f;">大</font>' : '<font style="color:#58adff;">小</font>';
                     var x = 0, y = 0;
 
-                    if (result[5].dx.length != 0) {
-                        var preObj = result[5].dx[i - 1];
+                    if (result[6].dx.length != 0) {
+                        var preObj = result[6].dx[i - 1];
                         if (preObj.name == name) {
                             x = preObj.x;
                             y = preObj.y + 1;
@@ -443,7 +455,7 @@
                             y = 0;
                         }
                     }
-                    result[5].dx.push({
+                    result[6].dx.push({
                         name: name,
                         x: x,
                         y: y
@@ -452,7 +464,7 @@
 
                 var maxX = 30;
                 var maxY = 0;
-                $.each(result[5].dx, function (index, value) {
+                $.each(result[6].dx, function (index, value) {
                     if (value.x > maxX) {
                         maxX = value.x;
                     }

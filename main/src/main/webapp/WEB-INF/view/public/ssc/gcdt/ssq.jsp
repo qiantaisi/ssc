@@ -64,10 +64,10 @@
                     <li class="gf-li">
                         <b>快钱玩法</b>
                         <p class="kuaiqian" data-name="kqwf">
-                            <span><a href="javascript:void(0)" data-url="ssq-lm">蓝码</a></span>
+                            <span><a href="javascript:void(0)" data-url="ssq-sm">双面</a></span>
                             <span><a href="javascript:void(0)" data-url="ssq-hm">红码</a></span>
                             <span><a href="javascript:void(0)" data-url="ssq-hmdw_d1q">红码定位</a></span>
-                            <span><a href="javascript:void(0)" data-url="ssq-sm">双面</a></span>
+                            <span><a href="javascript:void(0)" data-url="ssq-lm">蓝码</a></span>
                             <span><a href="javascript:void(0)" data-url="ssq-hlp">红蓝配</a></span>
 
                         </p>
