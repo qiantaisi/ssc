@@ -432,7 +432,7 @@ function getOpenCodeHistory() {
                 var lastNumberOpening = openCodeArr.length == 0 ? true : false;  // 是否开奖中
                 if (lastNumberOpening) {
                     if (lastNumberOpening_intervalFlag == null) {
-                        $("#lastNumber").html('<a href="javascript:void(0)" onclick="gdkj('+playGroupId+')">更多</a>&nbsp;&nbsp;第 ' + value.number + '期<var>开奖中</var>');
+                        $("#lastNumber").html('<a href="javascript:void(0)" class="gcdtgd" onclick="gdkj('+playGroupId+')">更多</a>&nbsp;&nbsp;第 ' + value.number + '期<var>开奖中</var>');
 
                         // 随机号码
                         if (typeof randomNumber == 'function') {
