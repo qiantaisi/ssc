@@ -581,9 +581,9 @@ function gdkj(playGroupId) {
                         }
                     }
                     if (lastNumberOpening) {
-                        str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                        str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di">' + getBgColor(num) + ' ' + getBgColor(num1) + '' + getBgColor(num2) + ' ' + getBgColor(num3) + '' + getBgColor(num4) + ' ' + getBgColor(num5) + ' ' + getBgColor(num6) + ' ' + getBgColor(num7) + ' ' + getBgColor(num8) + ' ' + getBgColor(num9) + '</div></p>';
+                        str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di">' + getBgColor(num) + ' ' + getBgColor(num1) + '' + getBgColor(num2) + ' ' + getBgColor(num3) + '' + getBgColor(num4) + ' ' + getBgColor(num5) + ' ' + getBgColor(num6) + ' ' + getBgColor(num7) + ' ' + getBgColor(num8) + ' ' + getBgColor(num9) + '</div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -604,7 +604,7 @@ function gdkj(playGroupId) {
                                     var num9 = openCode[9];
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px; color: white"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di">' + getBgColor(num) + ' ' + getBgColor(num1) + '' + getBgColor(num2) + ' ' + getBgColor(num3) + '' + getBgColor(num4) + ' ' + getBgColor(num5) + ' ' + getBgColor(num6) + ' ' + getBgColor(num7) + ' ' + getBgColor(num8) + ' ' + getBgColor(num9) + '</div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px; color: white"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di">' + getBgColor(num) + ' ' + getBgColor(num1) + '' + getBgColor(num2) + ' ' + getBgColor(num3) + '' + getBgColor(num4) + ' ' + getBgColor(num5) + ' ' + getBgColor(num6) + ' ' + getBgColor(num7) + ' ' + getBgColor(num8) + ' ' + getBgColor(num9) + '</div></p>';
 
                     }
                     //询问框
@@ -615,8 +615,8 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
 
+                    $(".layui-layer-title").addClass('xzqdlskj');
                 }
-
             } else if (playGroupId == 1 || playGroupId == 15 || playGroupId == 3 || playGroupId == 2 || playGroupId == 16 || playGroupId == 13 || playGroupId == 17) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -628,20 +628,17 @@ function gdkj(playGroupId) {
                         openCode = openCode.split(",");
 
                         for (var i in openCode) {
-
                             var num = openCode[0];
                             var num1 = openCode[1];
                             var num2 = openCode[2];
                             var num3 = openCode[3];
                             var num4 = openCode[4];
-
-
                         }
                     }
                     if (lastNumberOpening) {
-                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                        var str = '<p style="font-weight: bold;padding: 0;border-bottom: 1px dashed #bebebe;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold; padding: 0;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -658,7 +655,7 @@ function gdkj(playGroupId) {
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
 
                     }
                     //询问框
@@ -668,7 +665,8 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                }
+
+                    $(".layui-layer-title").addClass('xzqdlskj');                }
             } else if (playGroupId == 19 || playGroupId == 20 || playGroupId == 21 || playGroupId == 5 || playGroupId == 4) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -689,9 +687,9 @@ function gdkj(playGroupId) {
                         }
                     }
                     if (lastNumberOpening) {
-                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span></div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -708,7 +706,7 @@ function gdkj(playGroupId) {
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span></div></p>';
 
                     }
                     //询问框
@@ -719,7 +717,7 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
 
-                }
+                    $(".layui-layer-title").addClass('xzqdlskj');                }
             } else if (playGroupId == 10 || playGroupId == 11) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -745,9 +743,9 @@ function gdkj(playGroupId) {
                         }
                     }
                     if (lastNumberOpening) {
-                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span></div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -767,7 +765,7 @@ function gdkj(playGroupId) {
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span></div></p>';
 
                     }
                     //询问框
@@ -777,7 +775,8 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                }
+
+                    $(".layui-layer-title").addClass('xzqdlskj');                }
             } else if (playGroupId == 6) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -799,9 +798,9 @@ function gdkj(playGroupId) {
                         }
                     }
                     if (lastNumberOpening) {
-                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number +
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + value.number +
                             '</var>期</span></div><div class="di">' +
                             getBgColorlhc(num) + ' ' + getBgColorlhc(num1) + ' ' +
                             getBgColorlhc(num2) + ' ' + getBgColorlhc(num3) + ' ' +
@@ -825,7 +824,7 @@ function gdkj(playGroupId) {
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di">' + getBgColorlhc(num) + ' ' + getBgColorlhc(num1) + ' ' + getBgColorlhc(num2) + ' ' + getBgColorlhc(num3) + ' ' + getBgColorlhc(num4) + ' ' + getBgColorlhc(num5) + ' ' + getBgColorlhc(num6) + '</div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di">' + getBgColorlhc(num) + ' ' + getBgColorlhc(num1) + ' ' + getBgColorlhc(num2) + ' ' + getBgColorlhc(num3) + ' ' + getBgColorlhc(num4) + ' ' + getBgColorlhc(num5) + ' ' + getBgColorlhc(num6) + '</div></p>';
 
                     }
                     //询问框
@@ -835,7 +834,7 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                }
+                    $(".layui-layer-title").addClass('xzqdlskj');                }
             } else if (playGroupId == 8) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -871,9 +870,9 @@ function gdkj(playGroupId) {
                         }
                     }
                     if (lastNumberOpening) {
-                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span><span class="apend">' + num8 + '</span><span class="apend">' + num9 + '</span><span class="apend">' + num10 + '</span><span class="apend">' + num11 + '</span><span class="apend">' + num12 + '</span><span class="apend">' + num13 + '</span><span class="apend">' + num14 + '</span><span class="apend">' + num15 + '</span><span class="apend">' + num16 + '</span><span class="apend">' + num17 + '</span><span class="apend">' + num18 + '</span><span class="apend">' + num19 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span><span class="apend">' + num8 + '</span><span class="apend">' + num9 + '</span><span class="apend">' + num10 + '</span><span class="apend">' + num11 + '</span><span class="apend">' + num12 + '</span><span class="apend">' + num13 + '</span><span class="apend">' + num14 + '</span><span class="apend">' + num15 + '</span><span class="apend">' + num16 + '</span><span class="apend">' + num17 + '</span><span class="apend">' + num18 + '</span><span class="apend">' + num19 + '</span></div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -905,7 +904,7 @@ function gdkj(playGroupId) {
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span><span class="apend">' + num8 + '</span><span class="apend">' + num9 + '</span><span class="apend">' + num10 + '</span><span class="apend">' + num11 + '</span><span class="apend">' + num12 + '</span><span class="apend">' + num13 + '</span><span class="apend">' + num14 + '</span><span class="apend">' + num15 + '</span><span class="apend">' + num16 + '</span><span class="apend">' + num17 + '</span><span class="apend">' + num18 + '</span><span class="apend">' + num19 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend">' + num6 + '</span><span class="apend">' + num7 + '</span><span class="apend">' + num8 + '</span><span class="apend">' + num9 + '</span><span class="apend">' + num10 + '</span><span class="apend">' + num11 + '</span><span class="apend">' + num12 + '</span><span class="apend">' + num13 + '</span><span class="apend">' + num14 + '</span><span class="apend">' + num15 + '</span><span class="apend">' + num16 + '</span><span class="apend">' + num17 + '</span><span class="apend">' + num18 + '</span><span class="apend">' + num19 + '</span></div></p>';
 
                     }
                     //询问框
@@ -915,7 +914,7 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                }
+                    $(".layui-layer-title").addClass('xzqdlskj');                }
             } else if (playGroupId == 12) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -937,9 +936,9 @@ function gdkj(playGroupId) {
                         }
                     }
                     if (lastNumberOpening) {
-                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend round ball-blue">' + num6 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend round ball-blue">' + num6 + '</span></div></p>';
 
                     }
 
@@ -959,7 +958,7 @@ function gdkj(playGroupId) {
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend round ball-blue">' + num6 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend round ball-blue">' + num6 + '</span></div></p>';
 
                     }
                     //询问框
@@ -969,7 +968,7 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                }
+                    $(".layui-layer-title").addClass('xzqdlskj');                }
             }else if (playGroupId == 7) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -989,9 +988,9 @@ function gdkj(playGroupId) {
                         }
                     }
                     if (lastNumberOpening) {
-                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend ' + getBgCo(num3) + '">' + num3 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend ' + getBgCo(num3) + '">' + num3 + '</span></div></p>';
                     }
 
                     var slist = json.sscHistoryList;
@@ -1009,7 +1008,7 @@ function gdkj(playGroupId) {
                             }
                         }
 
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend ' + getBgCo(num3) + '">' + num3 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="pluss">+</span><span class="apend">' + num1 + '</span><span class="pluss">+</span><span class="apend">' + num2 + '</span><span class="pluss">=</span><span class="apend ' + getBgCo(num3) + '">' + num3 + '</span></div></p>';
 
                     }
                     //询问框
@@ -1019,7 +1018,7 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                }
+                    $(".layui-layer-title").addClass('xzqdlskj');                }
             }else if (playGroupId == 24) {
                 if (json.sscHistoryList.length > 0) {
                     var value = json.sscHistoryList[0];
@@ -1039,9 +1038,9 @@ function gdkj(playGroupId) {
                         }
                     }
                     if (lastNumberOpening) {
-                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;margin-bottom: 5px;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
+                        var str = '<p style="font-weight: bold;padding-bottom: 5px;border-bottom: 1px dashed #bebebe;"><span>第<var>' + value.number + '</var>期</span><span>开奖中</span></p>';
                     } else {
-                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
+                        var str = '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + value.number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
 
                     }
 
@@ -1060,7 +1059,7 @@ function gdkj(playGroupId) {
 
                             }
                         }
-                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;margin-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
+                        str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span></div></p>';
 
                     }
                     //询问框
@@ -1070,7 +1069,7 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-
+                    $(".layui-layer-title").addClass('xzqdlskj');
                 }
             }
 
@@ -1081,8 +1080,8 @@ function gdkj(playGroupId) {
 
 
 
-    $(".layui-layer-title").addClass('xzqd');
-    $(".layui-layer-close").css({'background': 'url(' + CONFIG.RESURL + 'img/icon.png) no-repeat!important'});
+    // $(".layui-layer-title").addClass('xzqd');
+    // $(".layui-layer-close").css({'background': 'url(' + CONFIG.RESURL + 'img/icon.png) no-repeat!important'});
 }
 
 function getBgColorlhc(num){
