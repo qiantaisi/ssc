@@ -381,7 +381,12 @@
                 $(".bitianIphone").html("选填").css("color", "#AAAAAA");
                 $("#inputsj").blur(function () {
                     var phone = $("input[name='phoneName']").val();
-                    if (!phone.match(/^0?(13[0-9]|15[012356789]|17[012345678]|18[02356789]|147|[5689])([0-9]{8}|[0-9]{7})$/) && phone) {
+                    if (!(phone.match(/^0?(13[0-9]|15[012356789]|17[012345678]|18[02356789]|147)[0-9]{8}$/) != null || phone.match(/^0?[5689][0-9]{7}$/) != null) && phone) {
+                        $(".sj").find(".info").hide();
+                        $('#yessj').hide();
+                        $('#nosj').show();
+                        $(".sj").find(".error").html("请输入正确手机号").show();
+                    } else if (!phone.match(/^0?([5689])[0-9]{7}$/) && phone) {
                         $(".sj").find(".info").hide();
                         $('#yessj').hide();
                         $('#nosj').show();
@@ -405,7 +410,7 @@
                         $('#nosj').show();
                         $(".sj").find(".error").html("请输入手机").show();
                         return;
-                    } else if (!phone.match(/^0?(13[0-9]|15[012356789]|17[012345678]|18[02356789]|147|[5689])([0-9]{8}|[0-9]{7})$/)) {
+                    } else if (!(phone.match(/^0?(13[0-9]|15[012356789]|17[012345678]|18[02356789]|147)[0-9]{8}$/) != null || phone.match(/^0?[5689][0-9]{7}$/) != null)) {
                         $(".sj").find(".info").hide();
                         $('#yessj').hide();
                         $('#nosj').show();
