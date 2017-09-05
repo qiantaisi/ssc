@@ -452,7 +452,7 @@ function getOpenCodeHistory() {
                         lastNumberOpening_intervalFlag = null;
                     }
 
-                    $("#lastNumber").html('<a href="javascript:void(0)" onclick="gdkj('+playGroupId+')">更多</a>&nbsp;&nbsp;第<var>' + value.number + '</var>期');
+                    $("#lastNumber").html('<a href="javascript:void(0)" class="gcdtgd" onclick="gdkj('+playGroupId+')">更多</a>&nbsp;&nbsp;第<var>' + value.number + '</var>期');
 /*
                     '<a href="javascript:void(0)" onclick="gdkj('+playGroupId+'">更多</a>'+ '第<var>' + value.number + '</var>期')
 */
@@ -522,6 +522,8 @@ function getOpenCodeHistory() {
                 tmpHtml += template('template_openDataHistory', obj);
             });
             $("#lastOpenCodeList ul").html(tmpHtml);
+            //购彩页面更多调用风格颜色
+            $('.gcdtgd').css("color", "#"+ fengge1 +"");
         },
         error: function() {
             // 失败重试
@@ -845,7 +847,6 @@ function gdkj(playGroupId) {
                         openCode = openCode.split(",");
 
                         for (var i in openCode) {
-
                             var num = openCode[0];
                             var num1 = openCode[1];
                             var num2 = openCode[2];
@@ -866,7 +867,6 @@ function gdkj(playGroupId) {
                             var num17 = openCode[17];
                             var num18 = openCode[18];
                             var num19 = openCode[19];
-
 
                         }
                     }
@@ -934,9 +934,6 @@ function gdkj(playGroupId) {
                             num4 = openCode[4];
                             num5 = openCode[5];
                             num6 = openCode[6];
-
-
-
                         }
                     }
                     if (lastNumberOpening) {
@@ -989,8 +986,6 @@ function gdkj(playGroupId) {
                             var num1 = openCode[1];
                             var num2 = openCode[2];
                             var num3 = parseInt(num) + parseInt(num1) + parseInt(num2);
-
-
                         }
                     }
                     if (lastNumberOpening) {
@@ -1087,7 +1082,7 @@ function gdkj(playGroupId) {
 
 
     $(".layui-layer-title").addClass('xzqd');
-    $(".layui-layer-close").css({'background': 'url(' + CONFIG.RESURL + 'img/ico_close.png) no-repeat'});
+    $(".layui-layer-close").css({'background': 'url(' + CONFIG.RESURL + 'img/icon.png) no-repeat!important'});
 }
 
 function getBgColorlhc(num){

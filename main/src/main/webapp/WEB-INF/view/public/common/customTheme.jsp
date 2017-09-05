@@ -6,6 +6,9 @@
 <%
     String basePath = RequestUtils.getBasePath(request);
 %>
+<script>
+    var fengge1 = '${fengge_1}';
+</script>
 <%--自定义风格--%>
 <c:if test="${not empty fengge_1}">
     <style>

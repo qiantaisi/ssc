@@ -390,17 +390,19 @@
                         $('#yessj').hide();
                         $('#nosj').show();
                         $(".sj").find(".error").html("请输入正确手机号").show();
-                    } else if (!phone.match(/^0?([5689])[0-9]{7}$/) && phone) {
-                        $(".sj").find(".info").hide();
-                        $('#yessj').hide();
-                        $('#nosj').show();
-                        $(".sj").find(".error").html("请输入正确手机号").show();
-                    } else {
-                        $('#yessj').show();
-                        $('#nosj').hide();
-                        $(".sj").find(".info").hide();
-                        $(".sj").find(".error").html("请输入正确手机号").hide();
-                        $(".bitianIphone").hide();
+                    }else {
+                        if(!phone){
+                            $(".bitianIphone").html("选填").css("color", "#AAAAAA");
+                            $('#nosj').hide();
+                            $(".sj").find(".error").html("请输入正确手机号").hide();
+                        }else {
+                            $('#yessj').show();
+                            $('#nosj').hide();
+                            $(".sj").find(".info").hide();
+                            $(".sj").find(".error").html("请输入正确手机号").hide();
+                            $(".bitianIphone").hide();
+                        }
+
                     }
 
                 });
@@ -442,12 +444,18 @@
                         $('#noqq').show();
                         $(".qq").find(".error").html("请输入正确的QQ").show();
                     }else{
-                        $('#yesqq').show();
-                        $('#noqq').hide();
-                        $(".qq").find(".info").hide();
-                        $(".qq").find(".error").html("请输入正确的QQ").hide();
-                        $(".qq").find(".error").html("请输入QQ").hide();
-                        $(".bitianqq").hide();
+                         if(!qq){
+                             $(".bitianqq").html("选填").css("color","#AAAAAA");
+                             $('#noqq').hide();
+                             $(".qq").find(".error").html("请输入正确的QQ").hide();
+                         }else {
+                             $('#yesqq').show();
+                             $('#noqq').hide();
+                             $(".qq").find(".info").hide();
+                             $(".qq").find(".error").html("请输入正确的QQ").hide();
+                             $(".qq").find(".error").html("请输入QQ").hide();
+                             $(".bitianqq").hide();
+                         }
                     }
                 });
             }else {
@@ -514,12 +522,19 @@
                         $('#noyx').show();
                         $(".yx").find(".error").html("请输入正确的邮箱").show();
                     }else{
-                        $('#yesyx').show();
-                        $('#noyx').hide();
-                        $(".yx").find(".info").hide();
-                        $(".yx").find(".error").html("请输入正确的邮箱").hide();
-                        $(".yx").find(".error").html("请输入邮箱").hide();
-                        $(".bitianemail").hide();
+                        if(!email){
+                            $(".bitianemail").html("选填").css("color","#AAAAAA");
+                            $('#noyx').hide();
+                            $(".yx").find(".error").html("请输入正确的邮箱").hide();
+                        }else {
+                            $('#yesyx').show();
+                            $('#noyx').hide();
+                            $(".yx").find(".info").hide();
+                            $(".yx").find(".error").html("请输入正确的邮箱").hide();
+                            $(".yx").find(".error").html("请输入邮箱").hide();
+                            $(".bitianemail").hide();
+                        }
+
                     }
                 });
             }
