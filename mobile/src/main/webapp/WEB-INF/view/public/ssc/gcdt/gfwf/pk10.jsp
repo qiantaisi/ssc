@@ -21,35 +21,35 @@
                 菜单
             </a>
             <h1 class="title">
-                <i class="title_cq">北京PK10
+                <a class="title_cq" href="<%=basePath%>ssc/gcdt/pk10.html">北京pk10-官方模式
                     <div class="gfwf_triangle_down">
                         <%--画出一个向下的三角形图标--%>
                     </div>
-                </i>
+                </a>
             </h1>
         </header>
         <c:import url="./common/commonBet.jsp"/>
-        <div class="BeginFind Hide_Show">
-            <div class="gfwf_consele">
-                <div class="gfwf_one">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/pk10.html">
-                        <div class="border_one color_two">
-                            官方模式
-                        </div>
-                    </a>
-                </div>
-                <div class="gfwf_two">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/pk10.html">
-                        <div class="border_two color_one">
-                            传统模式
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="gfwf_mask">
-                <%--实现蒙版--%>
-            </div>
-        </div>
+        <%--<div class="BeginFind Hide_Show">--%>
+            <%--<div class="gfwf_consele">--%>
+                <%--<div class="gfwf_one">--%>
+                    <%--<a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/pk10.html">--%>
+                        <%--<div class="border_one color_two">--%>
+                            <%--官方模式--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+                <%--<div class="gfwf_two">--%>
+                    <%--<a class="F1_color" href="<%=basePath%>ssc/gcdt/pk10.html">--%>
+                        <%--<div class="border_two color_one">--%>
+                            <%--传统模式--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<div class="gfwf_mask">--%>
+                <%--&lt;%&ndash;实现蒙版&ndash;%&gt;--%>
+            <%--</div>--%>
+        <%--</div>--%>
         <div class="content cl-601">
             <c:import url="./pk10/common/common.jsp"/> <%--玩法选择菜单标题--%>
             <div class="cl-900" id="lastOpenInfo">

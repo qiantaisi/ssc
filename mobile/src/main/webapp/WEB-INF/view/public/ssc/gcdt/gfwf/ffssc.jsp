@@ -21,11 +21,11 @@
                 菜单
             </a>
             <h1 class="title">
-                <i class="title_cq">分分时时彩
+                <a class="title_cq" href="<%=basePath%>ssc/gcdt/ffssc.html">分分时时彩-官方模式
                     <div class="gfwf_triangle_down">
                         <%--画出一个向下的三角形图标--%>
                     </div>
-                </i>
+                </a>
             </h1>
         </header>
         <c:import url="./common/commonBet.jsp"/>
