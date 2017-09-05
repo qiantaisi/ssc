@@ -1378,7 +1378,11 @@ function getJjsm() {
                 return;
             }
 
-            $(container).html(json.jjDescription);
+            if (json.jjDescription == null || json.jjDescription == '' || json.jjDescription == undefined) {
+                $(container).html('');
+            } else {
+                $(container).html(json.jjDescription);
+            }
         }
     });
 }
