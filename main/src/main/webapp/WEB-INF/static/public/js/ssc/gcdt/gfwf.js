@@ -805,7 +805,7 @@ function showloadTxtTemplate() {
         type: 1,
         title: false,
         closeBtn: 0,
-        area: ['615px', '428px'], //宽高
+        area: ['615px', '428px'], //宽高1
         content: loadTxt_template
     });
 }
