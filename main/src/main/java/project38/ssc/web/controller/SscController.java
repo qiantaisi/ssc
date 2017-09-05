@@ -1,9 +1,7 @@
 package project38.ssc.web.controller;
+
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
-import project38.api.common.enums.PlayGroupIdEnum;
-import project38.api.common.exception.UserException;
-import project38.api.common.result.CommonResult;
-import project38.api.common.utils.JSONUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import project38.api.common.enums.PlayGroupIdEnum;
+import project38.api.common.exception.UserException;
+import project38.api.common.result.CommonResult;
+import project38.api.common.utils.JSONUtils;
 import project38.api.result.*;
-import project38.api.utils.SessionUtils;
+import project38.api.utils.ApiUtils;
 import project38.ssc.web.auth.Authentication;
 import project38.ssc.web.form.SscBetForm;
-import project38.api.utils.ApiUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
@@ -142,7 +143,15 @@ public class SscController extends CacheController {
     @ResponseBody
     public String getAllDataHistory(Integer type) {
         String companyShortName = this.getCompanyShortName();
-        return this.renderJson(ApiUtils.getAllDataHistory(type,null, companyShortName));
+        SscHistoryResult3 result = ApiUtils.getAllDataHistory(type, null, companyShortName);
+        Collections.sort(result.getSscHistoryList(), new Comparator<SscHistoryResult3.SscHistory>() {
+            Integer[] index = {6, 12, 5, 4, 1, 2, 3, 9, 14, 7, 8, 18, 19, 20, 21, 10, 11, 23, 24};
+            @Override
+            public int compare(SscHistoryResult3.SscHistory o1, SscHistoryResult3.SscHistory o2) {
+                return ArrayUtils.indexOf(index, o1.getPlayGroupId()) - ArrayUtils.indexOf(index, o2.getPlayGroupId());
+            }
+        });
+        return this.renderJson(result);
     }
 
     @RequestMapping(value = "/getAllSscOpenTime2.json", method = {RequestMethod.GET, RequestMethod.POST})
