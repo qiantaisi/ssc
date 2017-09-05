@@ -5757,6 +5757,7 @@ function getSuiji(total) {
     selectedCheckboxtbzh(optionVal);
 
     //点击随机数时计算追号总额
+    $("#zhInfo .tabs ul li:first-child").trigger('click');
     $('.zhfbzjetxt').html(getFbTotelMoney());
     $('.zhzjetxt').html(getTbTotelMoney());
 }
@@ -17221,8 +17222,7 @@ function renderZhuihao(strZh, obj) {
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        var beishu = $(this).data('bet_beishu');  //倍数
-        tempMoney = perMoney * zhushu * beishu;
+        tempMoney = perMoney * zhushu;
         totelMoney += tempMoney;
     });
 
@@ -17301,6 +17301,29 @@ function renderZhuihao(strZh, obj) {
             $('.zhzjetxt').html(getFbTotelMoney());
         });
 
+        //列表中的倍数输入框动态改变单行值
+        $(".ulzh li").each(function () {
+            $(this).find('input[type="text"]').keyup(function () {
+                var totelMoney = getZhuJinE();
+                var beishu = $(this).val();
+
+                $(this).parent().parent().find('.content_money').html('￥'+ (beishu * totelMoney));
+                $('.zhzjetxt').html(getFbTotelMoney());
+            });
+
+            $(this).find('input[type="text"]').blur(function () {
+                var valStr = $(this).val();
+                if (typeof valStr == "undefined" || valStr == "" || valStr == null) {
+                    $(this).val(1);
+                }
+                var totelMoney = getZhuJinE();
+                var beishu = $(this).val();
+                $(this).parent().parent().find('.content_money').html('￥'+ (beishu * totelMoney));
+                $('.zhzjetxt').html(getFbTotelMoney());
+            });
+        });
+
+
         $("#rt_trace_diff").keyup(function () {
             changeContentFbzh();
             $('.zhfbzjetxt').html(getFbTotelMoney());
@@ -17375,6 +17398,20 @@ function getTbFbFlag(){
     return strTFb;
 }
 
+//获取注追号的基本金额
+function getZhuJinE(){
+    var tempMoney= 0;
+    var totelMoney= 0;
+    $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
+        var perMoney = $(this).data('bet_per_money');   //每注金额
+        var zhushu = $(this).data('bet_zhushu');  //注数
+        tempMoney = perMoney * zhushu;
+        totelMoney += tempMoney;
+    });
+
+    return totelMoney;
+}
+
 //计算购买追号翻倍总金额
 function getFbTotelMoney(){
     var zhTotelMoney = 0;
@@ -17396,8 +17433,7 @@ function getTbTotelMoney(){
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        var beishu = $(this).data('bet_beishu');  //倍数
-        tempMoney = perMoney * zhushu * beishu;
+        tempMoney = perMoney * zhushu;
         totelMoney += tempMoney;
     });
 
@@ -17426,6 +17462,7 @@ function zhTempletHideOrShow() {
             $(obj).children().addClass('imgZhCancle');
         }
         $(obj).parent().attr("sp", "1");
+        $("#zhInfo .tabs ul li:first-child").trigger('click');
         $("#zhInfo .list_wrap_zh").eq(0).show();
     }
 
@@ -17535,8 +17572,7 @@ function changeContent() {
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        var beishu = $(this).data('bet_beishu');  //倍数
-        tempMoney = perMoney * zhushu * beishu;
+        tempMoney = perMoney * zhushu;
         totelMoney += tempMoney;
     });
 
@@ -17563,8 +17599,7 @@ function changeContentFbzh() {
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        var beishu = $(this).data('bet_beishu');  //倍数
-        tempMoney = perMoney * zhushu * beishu;
+        tempMoney = perMoney * zhushu;
         totelMoney += tempMoney;
     });
 

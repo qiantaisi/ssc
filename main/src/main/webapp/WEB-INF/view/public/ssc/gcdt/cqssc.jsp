@@ -156,8 +156,9 @@
                 zhTempletHideOrShow();
             }
         } else{
-            var optionVal = parseInt($('#lt_zh_qishu').val());
-            selectedCheckboxtbzh(optionVal);
+//            var optionVal = parseInt($('#lt_zh_qishu').val());
+//            selectedCheckboxtbzh(optionVal);
+            $("#zhInfo .tabs ul li:first-child").trigger('click');
         }
 
 

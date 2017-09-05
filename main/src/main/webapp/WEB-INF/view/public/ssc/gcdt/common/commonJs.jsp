@@ -9,9 +9,9 @@
 %>
 
 
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170902"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=2017090562"></script>
 
-<script src="${resPath}js/ssc/gcdt/ssc.js?v=2017090512"></script>
+<script src="${resPath}js/ssc/gcdt/ssc.js?v=201709052"></script>
 
 
 <div class="alert_log two2">
