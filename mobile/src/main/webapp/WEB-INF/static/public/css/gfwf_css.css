@@ -309,7 +309,7 @@ ding {
 }
 
 .wrap .cus_common .wan_top {
-    line-height: 2.6rem;
+    line-height: 1.5rem;
     border-top: 2px solid #dddddd;
 }
 
@@ -317,8 +317,8 @@ ding {
     padding-right: 1rem;
     padding-left: 1rem;
     background: #fa6200;
-    padding-bottom: 0.6rem;
-    padding-top: 0.6rem;
+    padding-bottom: 0.4rem;
+    padding-top: 0.4rem;
     color: #fff;
     font-size: initial;
 }
