@@ -199,7 +199,7 @@
                 <div class="login_b">
                     <p>
                         <input type="button" class="mfkh" value="免费开户" id="btn-register"/>
-                        <input type="reset" class="mfkh" value="重置" onclick="rest()"/>
+                        <input type="reset" class="mfkh" value="重置" onclick="restbtn()"/>
                     </p>
                 </div>
         </form>
@@ -242,6 +242,10 @@
             src += '&' + value.key + '=' + value.value;
         });
         $(obj).attr("src", src);
+    }
+
+    function restbtn(){
+        window.location.href ="<%=basePath%>register.html";
     }
 
     var qqCheck = false;
