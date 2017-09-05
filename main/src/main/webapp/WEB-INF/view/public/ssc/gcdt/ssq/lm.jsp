@@ -38,92 +38,92 @@
                 <tbody>
                 <tr>
                     <td>01</td>
-                    <td><strong class="color-red pl" data-plid="14393"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="1" data-plid="14393"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="1" data-plid="14859"/></td>
 
                     <td>02</td>
-                    <td><strong class="color-red pl" data-plid="14394"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="2" data-plid="14394"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="2" data-plid="14859"/></td>
 
                     <td>03</td>
-                    <td><strong class="color-red pl" data-plid="14403"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="3" data-plid="14403"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="3" data-plid="14859"/></td>
 
                     <td>04</td>
-                    <td><strong class="color-red pl" data-plid="14406"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="4" data-plid="14406"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="4" data-plid="14859"/></td>
                 </tr>
 
                 <tr>
                     <td>05</td>
-                    <td><strong class="color-red pl" data-plid="14395"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="5" data-plid="14395"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="5" data-plid="14859"/></td>
 
                     <td>06</td>
-                    <td><strong class="color-red pl" data-plid="14396"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="6" data-plid="14396"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="6" data-plid="14859"/></td>
 
                     <td>07</td>
-                    <td><strong class="color-red pl" data-plid="14404"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="7" data-plid="14404"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="7" data-plid="14859"/></td>
 
                     <td>08</td>
-                    <td><strong class="color-red pl" data-plid="14397"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="8" data-plid="14397"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="8" data-plid="14859"/></td>
                 </tr>
 
                 <tr>
                     <td>09</td>
-                    <td><strong class="color-red pl" data-plid="14398"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="9" data-plid="14398"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="9" data-plid="14859"/></td>
 
                     <td>10</td>
-                    <td><strong class="color-red pl" data-plid="14405"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="10" data-plid="14405"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="10" data-plid="14859"/></td>
 
                     <td>11</td>
-                    <td><strong class="color-red pl" data-plid="14399"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="11" data-plid="14399"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="11" data-plid="14859"/></td>
 
                     <td>12</td>
-                    <td><strong class="color-red pl" data-plid="14400"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="12" data-plid="14400"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="12" data-plid="14859"/></td>
                 </tr>
 
                 <tr>
                     <td>13</td>
-                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="13" data-plid="14401"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="13" data-plid="14859"/></td>
 
                     <td>14</td>
-                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="14" data-plid="14402"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="14" data-plid="14859"/></td>
 
                     <td>15</td>
-                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="15" data-plid="14401"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="15" data-plid="14859"/></td>
 
                     <td>16</td>
-                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="16" data-plid="14402"/></td>
+                    <td><strong class="color-red pl" data-plid="14859"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="16" data-plid="14859"/></td>
                 </tr>
 
                 <tr>
                     <td>大</td>
-                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="大" data-plid="14401"/></td>
+                    <td><strong class="color-red pl" data-plid="14860"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="大" data-plid="14860"/></td>
 
                     <td>小</td>
-                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="小" data-plid="14402"/></td>
+                    <td><strong class="color-red pl" data-plid="14861"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="小" data-plid="14861"/></td>
 
                     <td>单</td>
-                    <td><strong class="color-red pl" data-plid="14401"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="单" data-plid="14401"/></td>
+                    <td><strong class="color-red pl" data-plid="14862"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="单" data-plid="14862"/></td>
 
                     <td>双</td>
-                    <td><strong class="color-red pl" data-plid="14402"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="双" data-plid="14402"/></td>
+                    <td><strong class="color-red pl" data-plid="14863"></strong></td>
+                    <td><input type="text" class="table-txt" data-name="双" data-plid="14863"/></td>
                 </tr>
 
                 </tbody>
@@ -230,7 +230,7 @@
 </script>
 <script>
     var playGroupId = 12;
-    var playId = 657;
+    var playId = 1036;
     var playGroupName = '混合';
 
     function getZhudan() {
