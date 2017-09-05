@@ -233,24 +233,21 @@
         });
     }
 
+    function refreshYzm(obj) {
+        var src = $(obj).attr("src");
+        var params = getRequest(src);
+
+        src = "<%=basePath%>code/yzm?timestamp=" + (new Date()).getTime();
+        $.each(params, function (index, value) {
+            src += '&' + value.key + '=' + value.value;
+        });
+        $(obj).attr("src", src);
+    }
+
     var qqCheck = false;
     var iphoneCheck = false;
     var emailCheck = false;
     $(function () {
-        /*$('#yes').hide();
-        $('#no').hide();
-        $('#yesqmm').hide();
-        $('#noqmm').hide();
-        $('#yesxm').hide();
-        $('#noxm').hide();
-        $('#yessj').hide();
-        $('#nosj').hide();
-        $('#yesyx').hide();
-        $('#noyx').hide();
-        $('#yesqq').hide();
-        $('#noqq').hide();
-        $('#yesyhm').hide();
-        $('#noyhm').hide();*/
        var flagiphone= ${registerResult.needRequredPhone}
        var flageamil= ${registerResult.needRequiredEmail}
        var flagqq= ${registerResult.needRequiredQq}
@@ -380,50 +377,55 @@
 
 
         if(isiphone){
-           if(!flagiphone){
-               $(".bitianIphone").html("选填").css("color","#AAAAAA");
-               $("#inputsj").blur(function(){
-                   var phone = $("input[name='phoneName']").val();
-                   if (!phone.match(/^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/) && phone) {
-                       $(".sj").find(".info").hide();
-                       $('#yessj').hide();
-                       $('#nosj').show();
-                       $(".sj").find(".error").html("请输入正确手机号").show();
-                   }else{
-                       $('#yessj').show();
-                       $('#nosj').hide();
-                       $(".sj").find(".info").hide();
-                       $(".sj").find(".error").html("请输入正确手机号").hide();
-                       $(".bitianIphone").hide();
-                   }
+            if (!flagiphone) {
+                $(".bitianIphone").html("选填").css("color", "#AAAAAA");
+                $("#inputsj").blur(function () {
+                    var phone = $("input[name='phoneName']").val();
+                    if (!(phone.match(/^0?(13[0-9]|15[012356789]|17[012345678]|18[02356789]|147)[0-9]{8}$/) != null || phone.match(/^0?[5689][0-9]{7}$/) != null) && phone) {
+                        $(".sj").find(".info").hide();
+                        $('#yessj').hide();
+                        $('#nosj').show();
+                        $(".sj").find(".error").html("请输入正确手机号").show();
+                    } else if (!phone.match(/^0?([5689])[0-9]{7}$/) && phone) {
+                        $(".sj").find(".info").hide();
+                        $('#yessj').hide();
+                        $('#nosj').show();
+                        $(".sj").find(".error").html("请输入正确手机号").show();
+                    } else {
+                        $('#yessj').show();
+                        $('#nosj').hide();
+                        $(".sj").find(".info").hide();
+                        $(".sj").find(".error").html("请输入正确手机号").hide();
+                        $(".bitianIphone").hide();
+                    }
 
-               });
-           }else{
-               $(".bitianIphone").html("&nbsp;&nbsp;&nbsp;必填");
-               $("#inputsj").blur(function(){
-                   var phone = $("input[name='phoneName']").val();   // 姓名
-                   if (!phone) {
-                       $(".sj").find(".info").hide();
-                       $('#yessj').hide();
-                       $('#nosj').show();
-                       $(".sj").find(".error").html("请输入手机").show();
-                       return;
-                   } else  if (!phone.match(/^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/)) {
-                       $(".sj").find(".info").hide();
-                       $('#yessj').hide();
-                       $('#nosj').show();
-                       $(".sj").find(".error").html("请输入正确手机号").show();
-                   }else{
-                       $('#yessj').show();
-                       $('#nosj').hide();
-                       $(".sj").find(".info").hide();
-                       $(".sj").find(".error").html("请输入正确手机号").hide();
-                       $(".sj").find(".error").html("请输入手机").hide();
-                       $(".bitianIphone").hide();
-                   }
+                });
+            } else {
+                $(".bitianIphone").html("&nbsp;&nbsp;&nbsp;必填");
+                $("#inputsj").blur(function () {
+                    var phone = $("input[name='phoneName']").val();   // 姓名
+                    if (!phone) {
+                        $(".sj").find(".info").hide();
+                        $('#yessj').hide();
+                        $('#nosj').show();
+                        $(".sj").find(".error").html("请输入手机").show();
+                        return;
+                    } else if (!(phone.match(/^0?(13[0-9]|15[012356789]|17[012345678]|18[02356789]|147)[0-9]{8}$/) != null || phone.match(/^0?[5689][0-9]{7}$/) != null)) {
+                        $(".sj").find(".info").hide();
+                        $('#yessj').hide();
+                        $('#nosj').show();
+                        $(".sj").find(".error").html("请输入正确手机号").show();
+                    } else {
+                        $('#yessj').show();
+                        $('#nosj').hide();
+                        $(".sj").find(".info").hide();
+                        $(".sj").find(".error").html("请输入正确手机号").hide();
+                        $(".sj").find(".error").html("请输入手机").hide();
+                        $(".bitianIphone").hide();
+                    }
 
-               });
-           }
+                });
+            }
         }
         if(isqq){
             if(!flagqq){
@@ -657,6 +659,7 @@
                         $.cookie("token", json.token, {path: "/"});
                         window.location.href = "<%=basePath%>main.html";
                     } else {
+                        refreshYzm(document.getElementById('registerYzmImg2'));
                         Tools.toast("注册失败：" + json.description);
                     }
                 },

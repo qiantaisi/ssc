@@ -348,9 +348,12 @@ $(function () {
         var u = navigator.userAgent;
         var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
         var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-        console.log(isiOS);
-        if(isiOS){
-            $('.closeAddHome').parent().parent().removeClass('hideAddhome');
+        if (isiOS) {
+            var flagTF = Tools.getCookie('flagTF');
+            if (flagTF == null) {
+                $('.closeAddHome').parent().parent().removeClass('hideAddhome');
+                Tools.setCookie('flagTF', true);
+            }
         }
         $('.closeAddHome').click(function () {
             $(this).parent().parent().addClass('hideAddhome');

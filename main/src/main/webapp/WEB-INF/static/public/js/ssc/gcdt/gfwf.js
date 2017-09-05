@@ -17570,7 +17570,6 @@ function changeContentFbzh() {
 
     $(".reConHei .ulzh li").each(function (index, value) {
         var flagStatus = $(this).find('input').prop('checked');
-        console.log(flagStatus);
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
             $(this).find('.content_money').html('￥0.0');

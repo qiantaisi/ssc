@@ -12,7 +12,7 @@
 
         .reResulttBg{background: #${fengge_1};} <%--开奖结果版块--%>
         .process .layout .monty ul li,.process .layout .list_tems .date:after,.list ul li .slide p.acti,.headmemberbg{background: #${fengge_1};}
-        .process .layout .list_tems .date span, .process .layout .list_tems .date h3,.eveb_amount span,.color-e77c3c,.eveb_setting_table a,.xieyiCss{color: #${fengge_1}!important;}
+        .process .layout .list_tems .date span, .process .layout .list_tems .date h3,.eveb_amount span,.color-e77c3c,.eveb_setting_table a,.xieyiCss，.gcdtgd{color: #${fengge_1}!important;}
         .eveb_sub_nav_type a:hover, .eveb_sub_nav_type li.on a:link, .eveb_sub_nav_type li.on a:visited{color: #${fengge_1}!important;font-weight: 700;border-bottom-color: #e1e1e1;background: #f8f8f8;}
         .list ul li .slide p:hover,.letterbtn-bg{background: #${fengge_1}!important;color: white;}
         .list h3 a{background: #${fengge_1};border-bottom: 3px solid #a92309; height: 47px; line-height: 47px;}
