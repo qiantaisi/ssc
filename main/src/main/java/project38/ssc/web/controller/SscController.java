@@ -145,7 +145,7 @@ public class SscController extends CacheController {
         String companyShortName = this.getCompanyShortName();
         SscHistoryResult3 result = ApiUtils.getAllDataHistory(type, null, companyShortName);
         Collections.sort(result.getSscHistoryList(), new Comparator<SscHistoryResult3.SscHistory>() {
-            Long[] index = {6l, 12l, 5l, 4l, 1l, 2l, 3l, 9l, 14l, 7l, 8l, 18l, 19l, 20l, 21l, 10l, 11l, 23l, 24l};
+            Long[] index = {6L, 12L, 5L, 4L, 1L, 2L, 3L, 9L, 14L, 7L, 8L, 18L, 19L, 20L, 21L, 10L, 11L, 23L, 24L, 15L, 16L, 13L, 17L, 24L};
             @Override
             public int compare(SscHistoryResult3.SscHistory o1, SscHistoryResult3.SscHistory o2) {
                 return ArrayUtils.indexOf(index, o1.getPlayGroupId()) - ArrayUtils.indexOf(index, o2.getPlayGroupId());
