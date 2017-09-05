@@ -1,17 +1,20 @@
 package project38.ssc.mobile.controller;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.bind.annotation.*;
-import project38.api.common.enums.PlayGroupIdEnum;
-import project38.api.common.exception.UserException;
-import project38.api.common.result.CommonResult;
-import project38.api.common.utils.JSONUtils;
-import org.apache.commons.lang3.time.DateUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import project38.api.common.enums.PlayGroupIdEnum;
+import project38.api.common.exception.UserException;
+import project38.api.common.result.CommonResult;
+import project38.api.common.utils.JSONUtils;
 import project38.api.result.*;
 import project38.api.utils.ApiUtils;
 import project38.ssc.mobile.auth.Authentication;
@@ -19,9 +22,7 @@ import project38.ssc.mobile.form.SscBetForm;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.text.html.HTML;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -420,6 +421,13 @@ public class SscController extends CacheController {
         SscHistoryResult3 result = new SscHistoryResult3();
         try {
             result = ApiUtils.getAllDataHistory(type, null, companyShortName);
+            Collections.sort(result.getSscHistoryList(), new Comparator<SscHistoryResult3.SscHistory>() {
+                Integer[] index = {6, 12, 5, 4, 1, 2, 3, 9, 14, 7, 8, 18, 19, 20, 21, 10, 11, 23, 24};
+                @Override
+                public int compare(SscHistoryResult3.SscHistory o1, SscHistoryResult3.SscHistory o2) {
+                    return ArrayUtils.indexOf(index, o1.getPlayGroupId()) - ArrayUtils.indexOf(index, o2.getPlayGroupId());
+                }
+            });
         } catch (Exception e) {
             result.setResult(-1000);
             result.setDescription("服务器错误");
