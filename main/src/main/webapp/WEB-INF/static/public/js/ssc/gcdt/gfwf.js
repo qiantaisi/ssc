@@ -690,6 +690,11 @@ function buyBtn() {
         // 确定按钮
         $("#gfwfBetForm_submit").click(function () {
             sureGfwtXz(tmpBetContent);
+            //清除追号模板
+            var flag = $(".clearLiZhudanbtn").attr('sp');
+            if(flag == 1){
+                zhTempletHideOrShow();
+            }
             //清除弹框layerInfo
             cancel();
         });
@@ -800,7 +805,7 @@ function showloadTxtTemplate() {
         type: 1,
         title: false,
         closeBtn: 0,
-        area: ['615px', '428px'], //宽高
+        area: ['615px', '428px'], //宽高1
         content: loadTxt_template
     });
 }
@@ -17565,7 +17570,6 @@ function changeContentFbzh() {
 
     $(".reConHei .ulzh li").each(function (index, value) {
         var flagStatus = $(this).find('input').prop('checked');
-        console.log(flagStatus);
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
             $(this).find('.content_money').html('￥0.0');
