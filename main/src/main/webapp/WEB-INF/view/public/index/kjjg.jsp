@@ -425,7 +425,7 @@
                 } else {
                     str += html;
                 }
-            } else if ($.inArray(playGroupId, [6, 22]) >= 0) {
+            } else if ($.inArray(playGroupId, [6]) >= 0) {
                 var obj = {};
 
                 obj.playGroupId = playGroupId;
