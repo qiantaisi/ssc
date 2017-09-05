@@ -23,8 +23,8 @@
     <table width="100%" border="0" class="game_tab" id="bottom_zs_table_select">
         <tbody>
         <tr>
-            <th class="game_result choose" data-type="dx">大小</th>
-            <th class="game_result" data-type="ds">单双</th>
+            <th class="game_result" data-type="dx">大小</th>
+            <th class="game_result choose" data-type="ds">单双</th>
             <th></th>
             <th></th>
             <th></th>
@@ -79,37 +79,37 @@
 
     function renderViewRight(json) {
         var result = {
-            wan: {
+            shiwan: {
                 da: {name: '第一球-大', num: 0},
                 xiao: {name: '第一球-小', num: 0},
                 dan: {name: '第一球-单', num: 0},
                 shuang: {name: '第一球-双', num: 0}
             },
-            qian: {
+            wan: {
                 da: {name: '第二球-大', num: 0},
                 xiao: {name: '第二球-小', num: 0},
                 dan: {name: '第二球-单', num: 0},
                 shuang: {name: '第二球-双', num: 0}
             },
-            bai: {
+            qian: {
                 da: {name: '第三球-大', num: 0},
                 xiao: {name: '第三球-小', num: 0},
                 dan: {name: '第三球-单', num: 0},
                 shuang: {name: '第三球-双', num: 0}
             },
-            shi: {
+            bai: {
                 da: {name: '第四球-大', num: 0},
                 xiao: {name: '第四球-小', num: 0},
                 dan: {name: '第四球-单', num: 0},
                 shuang: {name: '第四球-双', num: 0}
             },
-            ge: {
+            shi: {
                 da: {name: '第五球-大', num: 0},
                 xiao: {name: '第五球-小', num: 0},
                 dan: {name: '第五球-单', num: 0},
                 shuang: {name: '第五球-双', num: 0}
             },
-            shiwan:{
+            ge:{
                 da: {name: '第六球-大', num: 0},
                 xiao: {name: '第六球-小', num: 0},
                 dan: {name: '第六球-单', num: 0},
@@ -128,88 +128,13 @@
             var num6 = Tools.parseInt(openCode[5]);
 
             if (num1 >= 18) {
-                result.wan.da.num++;
-                result.wan.xiao.num = 0;
-            } else {
-                result.wan.da.num = 0;
-                result.wan.xiao.num++;
-            }
-            if (num1 % 2 == 0) {
-                result.wan.shuang.num++;
-                result.wan.dan.num = 0;
-            } else {
-                result.wan.shuang.num = 0;
-                result.wan.dan.num++;
-            }
-
-            if (num2 >= 18) {
-                result.qian.da.num++;
-                result.qian.xiao.num = 0;
-            } else {
-                result.qian.da.num = 0;
-                result.qian.xiao.num++;
-            }
-            if (num2 % 2 == 0) {
-                result.qian.shuang.num++;
-                result.qian.dan.num = 0;
-            } else {
-                result.qian.shuang.num = 0;
-                result.qian.dan.num++;
-            }
-
-            if (num3 >= 18) {
-                result.bai.da.num++;
-                result.bai.xiao.num = 0;
-            } else {
-                result.bai.da.num = 0;
-                result.bai.xiao.num++;
-            }
-            if (num3 % 2 == 0) {
-                result.bai.shuang.num++;
-                result.bai.dan.num = 0;
-            } else {
-                result.bai.shuang.num = 0;
-                result.bai.dan.num++;
-            }
-
-            if (num4 >= 18) {
-                result.shi.da.num++;
-                result.shi.xiao.num = 0;
-            } else {
-                result.shi.da.num = 0;
-                result.shi.xiao.num++;
-            }
-            if (num4 % 2 == 0) {
-                result.shi.shuang.num++;
-                result.shi.dan.num = 0;
-            } else {
-                result.shi.shuang.num = 0;
-                result.shi.dan.num++;
-            }
-
-            if (num5 >= 18) {
-                result.ge.da.num++;
-                result.ge.xiao.num = 0;
-            } else {
-                result.ge.da.num = 0;
-                result.ge.xiao.num++;
-            }
-            if (num5 % 2 == 0) {
-                result.ge.shuang.num++;
-                result.ge.dan.num = 0;
-            } else {
-                result.ge.shuang.num = 0;
-                result.ge.dan.num++;
-            }
-
-            if (num6 >= 18) {
                 result.shiwan.da.num++;
                 result.shiwan.xiao.num = 0;
             } else {
                 result.shiwan.da.num = 0;
                 result.shiwan.xiao.num++;
             }
-            if (num6 % 2 == 0) {
+            if (num1 % 2 == 0) {
                 result.shiwan.shuang.num++;
                 result.shiwan.dan.num = 0;
             } else {
@@ -217,9 +142,88 @@
                 result.shiwan.dan.num++;
             }
 
+            if (num2 >= 18) {
+                result.wan.da.num++;
+                result.wan.xiao.num = 0;
+            } else {
+                result.wan.da.num = 0;
+                result.wan.xiao.num++;
+            }
+            if (num2 % 2 == 0) {
+                result.wan.shuang.num++;
+                result.wan.dan.num = 0;
+            } else {
+                result.wan.shuang.num = 0;
+                result.wan.dan.num++;
+            }
+
+            if (num3 >= 18) {
+                result.qian.da.num++;
+                result.qian.xiao.num = 0;
+            } else {
+                result.qian.da.num = 0;
+                result.qian.xiao.num++;
+            }
+            if (num3 % 2 == 0) {
+                result.qian.shuang.num++;
+                result.qian.dan.num = 0;
+            } else {
+                result.qian.shuang.num = 0;
+                result.qian.dan.num++;
+            }
+
+            if (num4 >= 18) {
+                result.bai.da.num++;
+                result.bai.xiao.num = 0;
+            } else {
+                result.bai.da.num = 0;
+                result.bai.xiao.num++;
+            }
+            if (num4 % 2 == 0) {
+                result.bai.shuang.num++;
+                result.bai.dan.num = 0;
+            } else {
+                result.bai.shuang.num = 0;
+                result.bai.dan.num++;
+            }
+
+            if (num5 >= 18) {
+                result.shi.da.num++;
+                result.shi.xiao.num = 0;
+            } else {
+                result.shi.da.num = 0;
+                result.shi.xiao.num++;
+            }
+            if (num5 % 2 == 0) {
+                result.shi.shuang.num++;
+                result.shi.dan.num = 0;
+            } else {
+                result.shi.shuang.num = 0;
+                result.shi.dan.num++;
+            }
+
+            if (num6 >= 18) {
+                result.ge.da.num++;
+                result.ge.xiao.num = 0;
+            } else {
+                result.ge.da.num = 0;
+                result.ge.xiao.num++;
+            }
+            if (num6 % 2 == 0) {
+                result.ge.shuang.num++;
+                result.ge.dan.num = 0;
+            } else {
+                result.ge.shuang.num = 0;
+                result.ge.dan.num++;
+            }
+
         }
 
         var arr = [];
+        arr.push(result.shiwan.da);
+        arr.push(result.shiwan.xiao);
+        arr.push(result.shiwan.dan);
+        arr.push(result.shiwan.shuang);
         arr.push(result.wan.da);
         arr.push(result.wan.xiao);
         arr.push(result.wan.dan);
@@ -240,10 +244,6 @@
         arr.push(result.ge.xiao);
         arr.push(result.ge.dan);
         arr.push(result.ge.shuang);
-        arr.push(result.shiwan.da);
-        arr.push(result.shiwan.xiao);
-        arr.push(result.shiwan.dan);
-        arr.push(result.shiwan.shuang);
 
         arr.sort(function (a, b) {
             var val1 = a.num;
@@ -486,10 +486,10 @@
         });
 
         $("#bottom_zs_table_content").html(str);
-        for (var i = 0; i < 6; ++i) {
+        for (var i = 0; i < 7; ++i) {
             var value = result[i];
 
-            var pre = i == 5 ? 'zh' : i;
+            var pre = i == 6 ? 'zh' : i;
             $.each(value.ds, function (index, value) {
                 $('#bottom_zs_table_' + pre + '_ds').find("tr").eq(value.y).find("td").eq(value.x).html(value.name);
             });
@@ -497,6 +497,5 @@
                 $('#bottom_zs_table_' + pre + '_dx').find("tr").eq(value.y).find("td").eq(value.x).html(value.name);
             });
         }
-    }
-    ;
+    };
 </script>

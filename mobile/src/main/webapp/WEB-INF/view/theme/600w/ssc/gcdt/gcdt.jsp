@@ -298,6 +298,19 @@
                         <span class="img bg-img-gd11x5"></span>
                         <span>广东11选5</span>
                     </a>
+                    <a class="col-25 col-33 a_bottom del_boder_top boder_right" data-play_group_id="12"
+                       href="<%=basePath%>ssc/gcdt/ssq.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-ssq"></span>
+                        <span>双色球</span>
+                    </a>
                 </div>
             </div>
             <div class="row cl-6 cl-317">

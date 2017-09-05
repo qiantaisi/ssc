@@ -8,9 +8,9 @@
     String basePath = RequestUtils.getBasePath(request);
 %>
 <jsp:include page="../../common/commonJs.jsp" />
-<script src="${resPath}js/script.js?v=20170901"></script>
+<script src="${resPath}js/script.js?v=20170904"></script>
 <%--购彩按钮颜色变换-购彩走势图--%>
-<script src="${resPath}js/gfwf.js?v=20170901_1"></script>
+<script src="${resPath}js/gfwf.js?v=20170904"></script>
 
 <script language="javascript">
     var colorStr = "#${fengge_1}";

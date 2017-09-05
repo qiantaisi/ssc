@@ -5082,6 +5082,21 @@ $(function () {
         $(".cl-602 a").eq(0).trigger("click");
     });
 
+    $(document).on("pageInit", "#page-gcdt-ssq", function (e, id, page) {
+        initSscPage(12);
+
+        $('.bg').click(function(){
+            $(".bg").hide();
+            $(".menu_alert").hide();
+        });
+
+        $('.cha').click(function(){
+            $(".bg").hide();
+            $(".menu_alert").hide();
+        });
+        $(".cl-602 a").eq(0).trigger("click");
+    });
+
 
     // 官方玩法说明
     $(document).on("pageInit","#page-wfsm-wfsm-gfwf",function(){
