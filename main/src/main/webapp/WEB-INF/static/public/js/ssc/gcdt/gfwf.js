@@ -690,6 +690,11 @@ function buyBtn() {
         // 确定按钮
         $("#gfwfBetForm_submit").click(function () {
             sureGfwtXz(tmpBetContent);
+            //清除追号模板
+            var flag = $(".clearLiZhudanbtn").attr('sp');
+            if(flag == 1){
+                zhTempletHideOrShow();
+            }
             //清除弹框layerInfo
             cancel();
         });
