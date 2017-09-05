@@ -616,6 +616,8 @@ function gdkj(playGroupId) {
                     });
 
                     $(".layui-layer-title").addClass('xzqdlskj');
+                    $("#layui-layer"+ lid +"").css("top","0");
+                    $(".layui-layer-content").css({"padding":"0 0 0 20px"});
                 }
             } else if (playGroupId == 1 || playGroupId == 15 || playGroupId == 3 || playGroupId == 2 || playGroupId == 16 || playGroupId == 13 || playGroupId == 17) {
 
@@ -666,7 +668,10 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
 
-                    $(".layui-layer-title").addClass('xzqdlskj');                }
+                    $(".layui-layer-title").addClass('xzqdlskj');
+                    $("#layui-layer"+ lid +"").css("top","0");
+                    $(".layui-layer-content").css({"padding":"0 0 0 20px"});
+                }
             } else if (playGroupId == 19 || playGroupId == 20 || playGroupId == 21 || playGroupId == 5 || playGroupId == 4) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -717,7 +722,10 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
 
-                    $(".layui-layer-title").addClass('xzqdlskj');                }
+                    $(".layui-layer-title").addClass('xzqdlskj');
+                    $("#layui-layer"+ lid +"").css("top","0");
+                    $(".layui-layer-content").css({"padding":"0 0 0 20px"});
+                }
             } else if (playGroupId == 10 || playGroupId == 11) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -776,7 +784,10 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
 
-                    $(".layui-layer-title").addClass('xzqdlskj');                }
+                    $(".layui-layer-title").addClass('xzqdlskj');
+                    $("#layui-layer"+ lid +"").css("top","0");
+                    $(".layui-layer-content").css({"padding":"0 0 0 20px"});
+                }
             } else if (playGroupId == 6) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -834,7 +845,11 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                    $(".layui-layer-title").addClass('xzqdlskj');                }
+
+                    $(".layui-layer-title").addClass('xzqdlskj');
+                    $("#layui-layer"+ lid +"").css("top","0");
+                    $(".layui-layer-content").css({"padding":"0 0 0 20px"});
+               }
             } else if (playGroupId == 8) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -914,7 +929,10 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                    $(".layui-layer-title").addClass('xzqdlskj');                }
+                    $(".layui-layer-title").addClass('xzqdlskj');
+                    $("#layui-layer"+ lid +"").css("top","0");
+                    $(".layui-layer-content").css({"padding":"0 0 0 20px"});
+                }
             } else if (playGroupId == 12) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -955,7 +973,6 @@ function gdkj(playGroupId) {
                                 num4 = openCode[4];
                                 num5 = openCode[5];
                                 num6 = openCode[6];
-
                             }
                         }
                         str += '<p class="p" style="font-weight: bold;padding-bottom: 5px;"><div class="di1"><span>第<var>' + slist[i].number + '</var>期</span></div><div class="di pk10_content"><span class="apend">' + num + '</span><span class="apend">' + num1 + '</span><span class="apend">' + num2 + '</span><span class="apend">' + num3 + '</span><span class="apend">' + num4 + '</span><span class="apend">' + num5 + '</span><span class="apend round ball-blue">' + num6 + '</span></div></p>';
@@ -968,7 +985,10 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                    $(".layui-layer-title").addClass('xzqdlskj');                }
+                    $(".layui-layer-title").addClass('xzqdlskj');
+                    $("#layui-layer"+ lid +"").css("top","0");
+                    $(".layui-layer-content").css({"padding":"0 0 0 20px"});
+                }
             }else if (playGroupId == 7) {
 
                 if (json.sscHistoryList.length > 0) {
@@ -1018,7 +1038,10 @@ function gdkj(playGroupId) {
                     }, function () {
                         layer.close(lid);
                     });
-                    $(".layui-layer-title").addClass('xzqdlskj');                }
+                    $(".layui-layer-title").addClass('xzqdlskj');
+                    $("#layui-layer"+ lid +"").css("top","0");
+                    $(".layui-layer-content").css({"padding":"0 0 0 20px"});
+                }
             }else if (playGroupId == 24) {
                 if (json.sscHistoryList.length > 0) {
                     var value = json.sscHistoryList[0];
@@ -1070,6 +1093,8 @@ function gdkj(playGroupId) {
                         layer.close(lid);
                     });
                     $(".layui-layer-title").addClass('xzqdlskj');
+                    $("#layui-layer"+ lid +"").css("top","0");
+                    $(".layui-layer-content").css({"padding":"0 0 0 20px"});
                 }
             }
 
