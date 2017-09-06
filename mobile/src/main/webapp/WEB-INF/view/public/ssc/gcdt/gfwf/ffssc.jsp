@@ -29,27 +29,27 @@
             </h1>
         </header>
         <c:import url="./common/commonBet.jsp"/>
-        <div class="BeginFind Hide_Show">
-            <div class="gfwf_consele">
-                <div class="gfwf_one">
-                    <a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/ffssc.html">
-                        <div class="border_one color_two">
-                            官方模式
-                        </div>
-                    </a>
-                </div>
-                <div class="gfwf_two">
-                    <a class="F1_color" href="<%=basePath%>ssc/gcdt/ffssc.html">
-                        <div class="border_two color_one">
-                            传统模式
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="gfwf_mask">
-                <%--实现蒙版--%>
-            </div>
-        </div>
+        <%--<div class="BeginFind Hide_Show">--%>
+            <%--<div class="gfwf_consele">--%>
+                <%--<div class="gfwf_one">--%>
+                    <%--<a class="F2_color" href="<%=basePath%>ssc/gcdt/gfwf/ffssc.html">--%>
+                        <%--<div class="border_one color_two">--%>
+                            <%--官方模式--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+                <%--<div class="gfwf_two">--%>
+                    <%--<a class="F1_color" href="<%=basePath%>ssc/gcdt/ffssc.html">--%>
+                        <%--<div class="border_two color_one">--%>
+                            <%--传统模式--%>
+                        <%--</div>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<div class="gfwf_mask">--%>
+                <%--&lt;%&ndash;实现蒙版&ndash;%&gt;--%>
+            <%--</div>--%>
+        <%--</div>--%>
         <div class="content cl-601">
             <c:import url="./ffssc/common/common.jsp"/> <%--玩法选择菜单标题--%>
             <div class="cl-900" id="lastOpenInfo">
