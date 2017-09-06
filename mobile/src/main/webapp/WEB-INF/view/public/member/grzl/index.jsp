@@ -79,7 +79,7 @@
                                 <div class="item-content item-link">
                                     </c:otherwise>
                                     </c:choose>
-                                    <div class="item-media"><i class="icon"></i></div>
+                                    <div class="item-media"><i class="icon icon-form-zhsjhm"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title label">手机号码：</div>
                                         <div class="item-input re-item-input">
@@ -106,7 +106,7 @@
                                 <div class="item-content item-link">
                                     </c:otherwise>
                                     </c:choose>
-                                    <div class="item-media"><i class="icon"></i></div>
+                                    <div class="item-media"><i class="icon icon-form-zhdzyx"></i></div>
                                     <div class="item-inner">
                                         <div class="item-title label">电子邮箱：</div>
                                         <div class="item-input re-item-input">
@@ -125,7 +125,7 @@
                         </li>
                         <li>
                             <div class="item-content item-link">
-                                <div class="item-media"><i class="icon"></i></div>
+                                <div class="item-media"><i class="icon icon-form-zhtxqq"></i></div>
                                 <div class="item-inner">
                                     <div class="item-title label">腾讯QQ：</div>
                                     <div class="item-input info_gr">
@@ -137,7 +137,7 @@
                         </li>
                         <li>
                             <div class="item-content item-link">
-                                <div class="item-media"><i class="icon"></i></div>
+                                <div class="item-media"><i class="icon icon-form-zhnc"></i></div>
                                 <div class="item-inner">
                                     <div class="item-title label">昵称：</div>
                                     <div class="item-input info_gr">
@@ -150,7 +150,7 @@
 
                         <li>
                             <div class="item-content item-link">
-                                <div class="item-media"><i class="icon"></i></div>
+                                <div class="item-media"><i class="icon icon-form-zhxb"></i></div>
                                 <div class="item-inner">
                                     <div class="item-title label">性别：</div>
                                     <div class="item-input info_gr">
@@ -165,7 +165,7 @@
                         </li>
                         <li>
                             <div class="item-content item-link">
-                                <div class="item-media"><i class="icon"></i></div>
+                                <div class="item-media"><i class="icon icon-form-zhsr"></i></div>
                                 <div class="item-inner">
                                     <div class="item-title label">生日：</div>
                                     <div class="item-input info_gr">
