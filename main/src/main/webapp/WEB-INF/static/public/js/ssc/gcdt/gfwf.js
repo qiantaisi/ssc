@@ -585,6 +585,7 @@ function getThreeNewArrs(baiA, shiA, geA) {
 var tmpBetContent = null;
 function buyBtn() {
     var len = $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").length;
+    var totalM = 0;
     if (len > 0) {
         showloadTxtTemplate();
 
@@ -605,11 +606,13 @@ function buyBtn() {
             $('.tzTishiTemplate').find('.qiTishi').html("确定要追号" + num + "期？");
             if (nameF == 'tbzh') {
                 $('.tzTishiTemplate').find('.total-money').html(moneyValTb);
+                totalM = moneyValTb;
             } else if(nameF == 'fbzh') {
                 $('.tzTishiTemplate').find('.total-money').html(moneyValFb);
+                totalM = moneyValFb;
             }
         } else {
-            var totalM = $("#zongtouInfo .totalM").html();
+            totalM = $("#zongtouInfo .totalM").html();
             $(".total-money").html(totalM);
         }
 
@@ -675,10 +678,10 @@ function buyBtn() {
                     number: $(this).children(".content_qs").text(),
                     beishu: $(this).children(".nosel").children('input[type="text"]').val()
                 });
-                money += betForm.totalMoney;
+                var bei = $(this).children(".nosel").children('input[type="text"]').val();
                 zs += betForm.totalZhushu;
             });
-            betForm.totalMoney = parseFloat(money);
+            betForm.totalMoney = parseFloat(totalM);
             betForm.totalZhushu = zs;
         }
 
