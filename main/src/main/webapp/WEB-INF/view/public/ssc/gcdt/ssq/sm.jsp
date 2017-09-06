@@ -42,19 +42,19 @@
                 <tr>
                     <td><strong>大</strong></td>
                     <td><strong class="color-red pl" data-plid="14953"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="14953"/></td>
+                    <td><input type="text" class="table-txt" data-name="1/大" data-plid="14953"/></td>
 
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="14954"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="14954"/></td>
+                    <td><input type="text" class="table-txt" data-name="1/小" data-plid="14954"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14955"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="14955"/></td>
+                    <td><input type="text" class="table-txt" data-name="1/单" data-plid="14955"/></td>
 
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14956"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="14956"/></td>
+                    <td><input type="text" class="table-txt" data-name="1/双" data-plid="14956"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -84,19 +84,19 @@
                 <tr>
                     <td><strong>大</strong></td>
                     <td><strong class="color-red pl" data-plid="14957"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="14957"/></td>
+                    <td><input type="text" class="table-txt" data-name="2/大" data-plid="14957"/></td>
 
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="14958"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="14958"/></td>
+                    <td><input type="text" class="table-txt" data-name="2/小" data-plid="14958"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14959"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="14959"/></td>
+                    <td><input type="text" class="table-txt" data-name="2/单" data-plid="14959"/></td>
 
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14960"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="14960"/></td>
+                    <td><input type="text" class="table-txt" data-name="2/双" data-plid="14960"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -126,19 +126,19 @@
                 <tr>
                     <td><strong>大</strong></td>
                     <td><strong class="color-red pl" data-plid="14961"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="14961"/></td>
+                    <td><input type="text" class="table-txt" data-name="3/大" data-plid="14961"/></td>
 
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="14962"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="14962"/></td>
+                    <td><input type="text" class="table-txt" data-name="3/小" data-plid="14962"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14963"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="14963"/></td>
+                    <td><input type="text" class="table-txt" data-name="3/单" data-plid="14963"/></td>
 
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14964"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="14964"/></td>
+                    <td><input type="text" class="table-txt" data-name="3/双" data-plid="14964"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -168,19 +168,19 @@
                 <tr>
                     <td><strong>大</strong></td>
                     <td><strong class="color-red pl" data-plid="14965"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="14965"/></td>
+                    <td><input type="text" class="table-txt" data-name="4/大" data-plid="14965"/></td>
 
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="14966"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="14966"/></td>
+                    <td><input type="text" class="table-txt" data-name="4/小" data-plid="14966"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14967"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="14967"/></td>
+                    <td><input type="text" class="table-txt" data-name="4/单" data-plid="14967"/></td>
 
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14968"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="14968"/></td>
+                    <td><input type="text" class="table-txt" data-name="4/双" data-plid="14968"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -210,19 +210,19 @@
                 <tr>
                     <td><strong>大</strong></td>
                     <td><strong class="color-red pl" data-plid="14969"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="14969"/></td>
+                    <td><input type="text" class="table-txt" data-name="5/大" data-plid="14969"/></td>
 
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="14970"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="14970"/></td>
+                    <td><input type="text" class="table-txt" data-name="5/小" data-plid="14970"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14971"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="14971"/></td>
+                    <td><input type="text" class="table-txt" data-name="5/单" data-plid="14971"/></td>
 
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14972"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="14972"/></td>
+                    <td><input type="text" class="table-txt" data-name="5/双" data-plid="14972"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -252,19 +252,19 @@
                 <tr>
                     <td><strong>大</strong></td>
                     <td><strong class="color-red pl" data-plid="14973"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-大" data-plid="14973"/></td>
+                    <td><input type="text" class="table-txt" data-name="6/大" data-plid="14973"/></td>
 
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="14974"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-小" data-plid="14974"/></td>
+                    <td><input type="text" class="table-txt" data-name="6/小" data-plid="14974"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14975"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-单" data-plid="14975"/></td>
+                    <td><input type="text" class="table-txt" data-name="6/单" data-plid="14975"/></td>
 
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14976"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="万位-双" data-plid="14976"/></td>
+                    <td><input type="text" class="table-txt" data-name="6/双" data-plid="14976"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -294,19 +294,19 @@
                 <tr>
                     <td><strong>大</strong></td>
                     <td><strong class="color-red pl" data-plid="14977"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和-大" data-plid="14977"/></td>
+                    <td><input type="text" class="table-txt" data-name="总和/大" data-plid="14977"/></td>
 
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="14978"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和-小" data-plid="14978"/></td>
+                    <td><input type="text" class="table-txt" data-name="总和/小" data-plid="14978"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14979"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和-单" data-plid="14978"/></td>
+                    <td><input type="text" class="table-txt" data-name="总和/单" data-plid="14978"/></td>
 
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14980"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="总和-双" data-plid="14980"/></td>
+                    <td><input type="text" class="table-txt" data-name="总和/双" data-plid="14980"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -336,19 +336,19 @@
                 <tr>
                     <td><strong>大</strong></td>
                     <td><strong class="color-red pl" data-plid="14981"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="蓝码-大" data-plid="14981"/></td>
+                    <td><input type="text" class="table-txt" data-name="蓝/大" data-plid="14981"/></td>
 
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="14982"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="蓝码-小" data-plid="14982"/></td>
+                    <td><input type="text" class="table-txt" data-name="蓝/小" data-plid="14982"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14983"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="蓝码-单" data-plid="14983"/></td>
+                    <td><input type="text" class="table-txt" data-name="蓝/单" data-plid="14983"/></td>
 
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14984"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="蓝码-双" data-plid="14984"/></td>
+                    <td><input type="text" class="table-txt" data-name="蓝/双" data-plid="14984"/></td>
                 </tr>
                 </tbody>
             </table>
@@ -378,19 +378,19 @@
                 <tr>
                     <td><strong>大</strong></td>
                     <td><strong class="color-red pl" data-plid="14985"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="红码-大" data-plid="14985"/></td>
+                    <td><input type="text" class="table-txt" data-name="红/大" data-plid="14985"/></td>
 
                     <td><strong>小</strong></td>
                     <td><strong class="color-red pl" data-plid="14986"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="红码-小" data-plid="14986"/></td>
+                    <td><input type="text" class="table-txt" data-name="红/小" data-plid="14986"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14987"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="红码-单" data-plid="14987"/></td>
+                    <td><input type="text" class="table-txt" data-name="红/单" data-plid="14987"/></td>
 
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14988"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="红码-双" data-plid="14988"/></td>
+                    <td><input type="text" class="table-txt" data-name="红/双" data-plid="14988"/></td>
                 </tr>
                 </tbody>
             </table>

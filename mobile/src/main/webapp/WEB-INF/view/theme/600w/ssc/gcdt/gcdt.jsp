@@ -298,19 +298,6 @@
                         <span class="img bg-img-gd11x5"></span>
                         <span>广东11选5</span>
                     </a>
-                    <a class="col-25 col-33 a_bottom del_boder_top boder_right" data-play_group_id="12"
-                       href="<%=basePath%>ssc/gcdt/ssq.html">
-                        <span class="info">距离开盘</span>
-                        <span class="time">
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                          <font>:</font>
-                          <i>00</i>
-                        </span>
-                        <span class="img bg-img-ssq"></span>
-                        <span>双色球</span>
-                    </a>
                 </div>
             </div>
             <div class="row cl-6 cl-317">
@@ -320,7 +307,7 @@
             </div>
             <div class="cl-7">
                 <div class="row cl-318 gcdtList">
-                    <a class="col-25 col-33 b_bottom" data-play_group_id="6" href="<%=basePath%>ssc/gcdt/lhc.html">
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="6" href="<%=basePath%>ssc/gcdt/lhc.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
                           <i>00</i>
@@ -332,7 +319,7 @@
                         <span class="img bg-img-lhc"></span>
                         <span>香港六合彩</span>
                     </a>
-                    <a class="col-25 col-33 b_bottom" data-play_group_id="5" href="<%=basePath%>ssc/gcdt/fc3d.html">
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="5" href="<%=basePath%>ssc/gcdt/fc3d.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
                           <i>00</i>
@@ -344,7 +331,7 @@
                         <span class="img bg-img-3d"></span>
                         <span>福彩3D</span>
                     </a>
-                    <a class="col-25 col-33 b_bottom" data-play_group_id="4" href="<%=basePath%>ssc/gcdt/pl3.html">
+                    <a class="col-25 col-33 a_bottom" data-play_group_id="4" href="<%=basePath%>ssc/gcdt/pl3.html">
                         <span class="info">距离开盘</span>
                         <span class="time">
                           <i>00</i>
@@ -355,6 +342,19 @@
                         </span>
                         <span class="img bg-img-pl3"></span>
                         <span>体彩排列3</span>
+                    </a>
+                    <a class="col-25 col-33 a_bottom boder_right" data-play_group_id="12"
+                       href="<%=basePath%>ssc/gcdt/ssq.html">
+                        <span class="info">距离开盘</span>
+                        <span class="time">
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                          <font>:</font>
+                          <i>00</i>
+                        </span>
+                        <span class="img bg-img-ssq"></span>
+                        <span>双色球</span>
                     </a>
                 </div>
             </div>
