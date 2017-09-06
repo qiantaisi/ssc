@@ -95,7 +95,7 @@
         </span>
     </div>
     <div class="content_heigth">
-        <ul class="ulzh" id="tbLiList">
+        <ul class="ulzh tbulzh" id="tbLiList">
             {{each listContent}}
             <li class="list-li" style="display:none;">
                 <input type="checkbox" class="oneCheckbox"/>
