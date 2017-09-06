@@ -673,14 +673,34 @@ function buyBtn() {
         var money = 0;
         var zs = 0;
         if (betForm.isZhuihao == 1) {
-            $(".list_wrap_zh .ulzh .checkbox_selected").each(function () {
-                betForm.sscBetZhList.push({
-                    number: $(this).children(".content_qs").text(),
-                    beishu: $(this).children(".nosel").children('input[type="text"]').val()
+
+            $('.reBetting .tabs ul li').each(function () {
+                var ft = $(this).hasClass('acti');
+                if (ft) {
+                    nameF = $(this).attr('data-opertype');
+                }
+            })
+
+            if (nameF == 'tbzh') {
+                $(".list_wrap_zh .tbulzh .checkbox_selected").each(function () {
+                    betForm.sscBetZhList.push({
+                        number: $(this).children(".content_qs").text(),
+                        beishu: $(this).children(".nosel").children('input[type="text"]').val()
+                    });
+                    var bei = $(this).children(".nosel").children('input[type="text"]').val();
+                    zs += betForm.totalZhushu;
                 });
-                var bei = $(this).children(".nosel").children('input[type="text"]').val();
-                zs += betForm.totalZhushu;
-            });
+            } else if (nameF == 'fbzh') {
+                $(".list_wrap_zh .fbulzh .checkbox_selected").each(function () {
+                    betForm.sscBetZhList.push({
+                        number: $(this).children(".content_qs").text(),
+                        beishu: $(this).children(".nosel").children('input[type="text"]').val()
+                    });
+                    var bei = $(this).children(".nosel").children('input[type="text"]').val();
+                    zs += betForm.totalZhushu;
+                });
+            }
+
             betForm.totalMoney = parseFloat(totalM);
             betForm.totalZhushu = zs;
         }
@@ -17361,7 +17381,7 @@ function renderZhuihao(strZh, obj) {
 
             $(".zhqishutxt").html(optionVal);
             selectedCheckboxtbzh(optionVal);
-            $('.zhzjetxt').html(getFbTotelMoney());
+            $('.zhzjetxt').html(getTbTotelMoney());
 
         });
 
@@ -17418,7 +17438,7 @@ function getZhuJinE(){
 //计算购买追号翻倍总金额
 function getFbTotelMoney(){
     var zhTotelMoney = 0;
-    $(".ulzh li span.content_money").each(function () {
+    $(".fbulzh li span.content_money").each(function () {
         var flagStatus = $(this).parent().find('input').prop('checked');
         if(flagStatus){
             var strMoney = $(this).html();
