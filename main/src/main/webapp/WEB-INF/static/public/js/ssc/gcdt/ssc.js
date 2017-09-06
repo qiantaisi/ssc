@@ -617,7 +617,7 @@ function gdkj(playGroupId) {
 
                     var h = $("#layui-layer-shade" + lid + "").height();
                     $(".layui-layer-title").addClass('xzqdlskj');
-                    $("#layui-layer" + lid + "").css({"top": "0", "height": "" + h + ""});
+                    $("#layui-layer" + lid + "").css("top","0");
                     $(".layui-layer-content").css({"padding": "0 0 0 20px"});
                 }
             } else if (playGroupId == 1 || playGroupId == 15 || playGroupId == 3 || playGroupId == 2 || playGroupId == 16 || playGroupId == 13 || playGroupId == 17) {
@@ -671,7 +671,7 @@ function gdkj(playGroupId) {
 
                     var h = $("#layui-layer-shade" + lid + "").height();
                     $(".layui-layer-title").addClass('xzqdlskj');
-                    $("#layui-layer" + lid + "").css({"top": "0", "height": "" + h + ""});
+                    $("#layui-layer" + lid + "").css("top","0");
                     $(".layui-layer-content").css({"padding": "0 0 0 20px"});
                 }
             } else if (playGroupId == 19 || playGroupId == 20 || playGroupId == 21 || playGroupId == 5 || playGroupId == 4) {
@@ -726,7 +726,7 @@ function gdkj(playGroupId) {
 
                     var h = $("#layui-layer-shade" + lid + "").height();
                     $(".layui-layer-title").addClass('xzqdlskj');
-                    $("#layui-layer" + lid + "").css({"top": "0", "height": "" + h + ""});
+                    $("#layui-layer" + lid + "").css("top","0");
                     $(".layui-layer-content").css({"padding": "0 0 0 20px"});
                 }
             } else if (playGroupId == 10 || playGroupId == 11) {
@@ -789,7 +789,7 @@ function gdkj(playGroupId) {
 
                     var h = $("#layui-layer-shade" + lid + "").height();
                     $(".layui-layer-title").addClass('xzqdlskj');
-                    $("#layui-layer" + lid + "").css({"top": "0", "height": "" + h + ""});
+                    $("#layui-layer" + lid + "").css("top","0");
                     $(".layui-layer-content").css({"padding": "0 0 0 20px"});
                 }
             } else if (playGroupId == 6) {
@@ -852,7 +852,7 @@ function gdkj(playGroupId) {
 
                     var h = $("#layui-layer-shade" + lid + "").height();
                     $(".layui-layer-title").addClass('xzqdlskj');
-                    $("#layui-layer" + lid + "").css({"top": "0", "height": "" + h + ""});
+                    $("#layui-layer" + lid + "").css("top","0");
                     $(".layui-layer-content").css({"padding": "0 0 0 20px"});
                }
             } else if (playGroupId == 8) {
@@ -937,7 +937,7 @@ function gdkj(playGroupId) {
 
                     var h = $("#layui-layer-shade" + lid + "").height();
                     $(".layui-layer-title").addClass('xzqdlskj');
-                    $("#layui-layer" + lid + "").css({"top": "0", "height": "" + h + ""});
+                    $("#layui-layer" + lid + "").css("top","0");
                     $(".layui-layer-content").css({"padding": "0 0 0 20px"});
                 }
             } else if (playGroupId == 12) {
@@ -995,7 +995,7 @@ function gdkj(playGroupId) {
 
                     var h = $("#layui-layer-shade" + lid + "").height();
                     $(".layui-layer-title").addClass('xzqdlskj');
-                    $("#layui-layer" + lid + "").css({"top": "0", "height": "" + h + ""});
+                    $("#layui-layer" + lid + "").css("top","0");
                     $(".layui-layer-content").css({"padding": "0 0 0 20px"});
                 }
             }else if (playGroupId == 7) {
@@ -1049,7 +1049,7 @@ function gdkj(playGroupId) {
                     });
                     var h = $("#layui-layer-shade" + lid + "").height();
                     $(".layui-layer-title").addClass('xzqdlskj');
-                    $("#layui-layer" + lid + "").css({"top": "0", "height": "" + h + ""});
+                    $("#layui-layer" + lid + "").css("top","0");
                     $(".layui-layer-content").css({"padding": "0 0 0 20px"});
                 }
             }else if (playGroupId == 24) {
@@ -1104,7 +1104,7 @@ function gdkj(playGroupId) {
                     });
                     var h = $("#layui-layer-shade" + lid + "").height();
                     $(".layui-layer-title").addClass('xzqdlskj');
-                    $("#layui-layer" + lid + "").css({"top": "0", "height": "" + h + ""});
+                    $("#layui-layer" + lid + "").css("top","0");
                     $(".layui-layer-content").css({"padding": "0 0 0 20px"});
                 }
             }
