@@ -175,11 +175,11 @@
         <tbody>
         <tr>
             <td data-name="大">
-                <span class="txt_1"><font class="ball-4 ball-orange">大</font></span>
+                <span class="txt_1"><font>大</font></span>
                 <span class="pl" data-plid="9067"></span>
             </td>
             <td data-name="小">
-                <span class="txt_1"><font class="ball-4 ball-orange">小</font></span>
+                <span class="txt_1"><font>小</font></span>
                 <span class="pl" data-plid="9067"></span>
             </td>
         </tr>
@@ -190,11 +190,11 @@
         <tbody>
         <tr>
             <td data-name="单">
-                <span class="txt_1"><font class="ball-4 ball-orange">单</font></span>
+                <span class="txt_1"><font>单</font></span>
                 <span class="pl" data-plid="9068"></span>
             </td>
             <td data-name="双">
-                <span class="txt_1"><font class="ball-4 ball-orange">双</font></span>
+                <span class="txt_1"><font>双</font></span>
                 <span class="pl" data-plid="9068"></span>
             </td>
         </tr>
@@ -214,7 +214,7 @@
             totalZhushu: 0
         };
 
-        $(".cl-604 table tbody tr td.active").each(function() {
+        $(".cl-604 table tbody tr td.active").each(function () {
             betForm.sscBetList.push({
                 playGroupName: playGroupName,
                 playGroupId: playGroupId,
