@@ -22,6 +22,8 @@
         margin-left:7rem;
         margin-right:0.6rem;
     }
+    .item-innerss,.item-inners{text-align:center;display:block;}
+    .item-innerss{width:1005;}
 </style>
 <div class="bg"></div>
 <div class="menu_alert">
