@@ -16,21 +16,21 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="第一位-大">
+            <td data-name="1/大">
                 <span>大</span>
                 <span class="pl" data-plid="14953"></span>
             </td>
-            <td data-name="第一位-小">
+            <td data-name="1/小">
                 <span>小</span>
                 <span class="pl" data-plid="14954"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="第一位-单">
+            <td data-name="1/单">
                 <span>单</span>
                 <span class="pl" data-plid="14955"></span>
             </td>
-            <td data-name="第一位-双">
+            <td data-name="1/双">
                 <span>双</span>
                 <span class="pl" data-plid="14956"></span>
             </td>
@@ -46,21 +46,21 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="第二位-大">
+            <td data-name="2/大">
                 <span>大</span>
                 <span class="pl" data-plid="14957"></span>
             </td>
-            <td data-name="第二位-小">
+            <td data-name="2/小">
                 <span>小</span>
                 <span class="pl" data-plid="14958"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="第二位-单">
+            <td data-name="2/单">
                 <span>单</span>
                 <span class="pl" data-plid="14959"></span>
             </td>
-            <td data-name="第二位-双">
+            <td data-name="2/双">
                 <span>双</span>
                 <span class="pl" data-plid="14960"></span>
             </td>
@@ -76,21 +76,21 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="第三位-大">
+            <td data-name="3/大">
                 <span>大</span>
                 <span class="pl" data-plid="14961"></span>
             </td>
-            <td data-name="第三位-小">
+            <td data-name="3/小">
                 <span>小</span>
                 <span class="pl" data-plid="14962"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="第三位-单">
+            <td data-name="3/单">
                 <span>单</span>
                 <span class="pl" data-plid="14963"></span>
             </td>
-            <td data-name="第三位-双">
+            <td data-name="3/双">
                 <span>双</span>
                 <span class="pl" data-plid="14964"></span>
             </td>
@@ -106,21 +106,21 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="第四位-大">
+            <td data-name="4/大">
                 <span>大</span>
                 <span class="pl" data-plid="14965"></span>
             </td>
-            <td data-name="第四位-小">
+            <td data-name="4/小">
                 <span>小</span>
                 <span class="pl" data-plid="14966"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="第四位-单">
+            <td data-name="4/单">
                 <span>单</span>
                 <span class="pl" data-plid="14967"></span>
             </td>
-            <td data-name="第四位-双">
+            <td data-name="4/双">
                 <span>双</span>
                 <span class="pl" data-plid="14968"></span>
             </td>
@@ -136,21 +136,21 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="第五位-大">
+            <td data-name="5/大">
                 <span>大</span>
                 <span class="pl" data-plid="14969"></span>
             </td>
-            <td data-name="第五位-小">
+            <td data-name="5/小">
                 <span>小</span>
                 <span class="pl" data-plid="14970"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="第五位-单">
+            <td data-name="5/单">
                 <span>单</span>
                 <span class="pl" data-plid="14971"></span>
             </td>
-            <td data-name="第五位-双">
+            <td data-name="5/双">
                 <span>双</span>
                 <span class="pl" data-plid="14972"></span>
             </td>
@@ -166,21 +166,21 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="第六位-大">
+            <td data-name="6/大">
                 <span>大</span>
                 <span class="pl" data-plid="14973"></span>
             </td>
-            <td data-name="第六位-小">
+            <td data-name="6/小">
                 <span>小</span>
                 <span class="pl" data-plid="14974"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="第六位-单">
+            <td data-name="6/单">
                 <span>单</span>
                 <span class="pl" data-plid="14975"></span>
             </td>
-            <td data-name="第六位-双">
+            <td data-name="6/双">
                 <span>双</span>
                 <span class="pl" data-plid="14976"></span>
             </td>
@@ -196,21 +196,21 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="蓝码-大">
+            <td data-name="蓝/大">
                 <span>大</span>
                 <span class="pl" data-plid="14985"></span>
             </td>
-            <td data-name="蓝码-小">
+            <td data-name="蓝/小">
                 <span>小</span>
                 <span class="pl" data-plid="14986"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="蓝码-单">
+            <td data-name="蓝/单">
                 <span>单</span>
                 <span class="pl" data-plid="14987"></span>
             </td>
-            <td data-name="蓝码-双">
+            <td data-name="蓝/双">
                 <span>双</span>
                 <span class="pl" data-plid="14988"></span>
             </td>
@@ -225,21 +225,21 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="红码-大">
+            <td data-name="红/大">
                 <span>大</span>
                 <span class="pl" data-plid="14981"></span>
             </td>
-            <td data-name="红码-小">
+            <td data-name="红/小">
                 <span>小</span>
                 <span class="pl" data-plid="14982"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="红码-单">
+            <td data-name="红/单">
                 <span>单</span>
                 <span class="pl" data-plid="14983"></span>
             </td>
-            <td data-name="红码-双">
+            <td data-name="红/双">
                 <span>双</span>
                 <span class="pl" data-plid="14984"></span>
             </td>
@@ -256,21 +256,21 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="总和-大">
+            <td data-name="总和/大">
                 <span>大</span>
                 <span class="pl" data-plid="14977"></span>
             </td>
-            <td data-name="总和-小">
+            <td data-name="总和/小">
                 <span>小</span>
                 <span class="pl" data-plid="14978"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="总和-单">
+            <td data-name="总和/单">
                 <span>单</span>
                 <span class="pl" data-plid="149879"></span>
             </td>
-            <td data-name="总和-双">
+            <td data-name="总和/双">
                 <span>双</span>
                 <span class="pl" data-plid="14980"></span>
             </td>

@@ -327,7 +327,7 @@
                     </div>
                     <div id="shuju2" class="shuju hide">
                         <div class="biao">
-                            <div id="main1" style="width: 1005px;;height:600px;background: #fff"></div>
+                            <div id="main1" style="width: 1155px;;height:600px;background: #fff"></div>
                         </div>
                     </div>
                     <div id="shuju3" class="shuju hide">
@@ -709,7 +709,7 @@
         $.each(data, function(index, value) {
             option.xAxis[0].data.push(value.number);
             option.series[0].data.push({
-                value: parseInt(value.openCode.split(",")[0]),
+                value: parseInt(value.openCode.split(",")[6]),
                 openCode: value.openCode
             });
         });
