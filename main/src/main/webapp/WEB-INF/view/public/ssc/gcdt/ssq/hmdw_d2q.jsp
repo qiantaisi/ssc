@@ -347,7 +347,7 @@
                     playId: playId,
                     zhushu: 1,
                     perMoney: inputMoney,
-                    content: $(this).data("name"),
+                    content: "2/" + $(this).data("name"),
                     playPlId: $(this).data("plid"),
                     playPl: $(this).data("pl")
                 });
