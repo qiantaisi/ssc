@@ -55,6 +55,10 @@
             <div class="cl-600" id="ssc-parent-menu">
                 <div class="cl-602">
                     <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/ssq/sm.html">双面</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/ssq/hm.html">红码</a>
+                    <a href="javascript:void(0)" data-type="sub-menu" data-sub_menu_id="sub-menu-hmdw">红码定位</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/ssq/lm.html">蓝码</a>
+                    <a href="javascript:void(0)" data-type="page" data-url="<%=basePath%>ssc/gcdt/ssq/hlp.html">红蓝配</a>
                 </div>
             </div>
             <div class="cl-900" id="lastOpenInfo">
@@ -69,7 +73,19 @@
 
                 </div>
             </div>
+            <div id="sub-menu-list">
+                <div class="cl-600 cl-610 hide" id="sub-menu-hmdw">
+                    <div class="cl-602">
+                        <a data-url="<%=basePath%>ssc/gcdt/ssq/hmdwd1q.html" href="javascript:void(0)">第一球</a>
+                        <a data-url="<%=basePath%>ssc/gcdt/ssq/hmdwd2q.html" href="javascript:void(0)">第二球</a>
+                        <a data-url="<%=basePath%>ssc/gcdt/ssq/hmdwd3q.html" href="javascript:void(0)">第三球</a>
+                        <a data-url="<%=basePath%>ssc/gcdt/ssq/hmdwd4q.html" href="javascript:void(0)">第四球</a>
+                        <a data-url="<%=basePath%>ssc/gcdt/ssq/hmdwd5q.html" href="javascript:void(0)">第五球</a>
+                        <a data-url="<%=basePath%>ssc/gcdt/ssq/hmdwd6q.html" href="javascript:void(0)">第六球</a>
+                    </div>
+                </div>
 
+            </div>
             <div class="bg-white cl-951" id="betContainer">
 
             </div>

@@ -17255,7 +17255,9 @@ function renderZhuihao(strZh, obj) {
             listContent: []
         };
 
+        console.log(zhuihaoSscOpenTimeList);
         $.each(zhuihaoSscOpenTimeList, function(index, value) {
+            console.log('00');
             dataContent.listContent.push({
                 zhqishu: value.number,
                 zhbeishu: $("#startBeiShu.Zh").val(),
