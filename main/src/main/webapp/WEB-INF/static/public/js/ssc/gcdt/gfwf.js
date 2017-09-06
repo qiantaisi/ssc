@@ -17257,7 +17257,7 @@ function renderZhuihao(strZh, obj) {
 
         console.log(zhuihaoSscOpenTimeList);
         $.each(zhuihaoSscOpenTimeList, function(index, value) {
-            console.log('00');
+            console.log('000');
             dataContent.listContent.push({
                 zhqishu: value.number,
                 zhbeishu: $("#startBeiShu.Zh").val(),
@@ -17382,6 +17382,7 @@ function renderZhuihao(strZh, obj) {
             var optionVal = parseInt($(this).val());
 
             $(".zhqishutxt").html(optionVal);
+            $(".qs").val(optionVal);
             selectedCheckboxtbzh(optionVal);
             $('.zhzjetxt').html(getTbTotelMoney());
 
@@ -17392,6 +17393,7 @@ function renderZhuihao(strZh, obj) {
             var optionVal = parseInt($(this).val());
 
             $(".zhfbqishutxt").html(optionVal);
+            $(".qs").val(optionVal);
             selectedCheckboxfbzh(optionVal); //改变前选中选行数
             $('.zhfbzjetxt').html(getFbTotelMoney());
 
@@ -17555,6 +17557,7 @@ function selectedZhqishu() {
         });
 
         $(".zhqishutxt").html(zongQiShu);
+        $(".qs").val(zongQiShu);
     } else if(f == 'fbzh'){
         $(".fbulzh li").each(function () {
             var flagStatus = $(this).find('input').prop('checked');
@@ -17563,6 +17566,7 @@ function selectedZhqishu() {
             }
         });
         $(".zhfbqishutxt").html(zongQiShu);
+        $(".qs").val(zongQiShu);
     }
     return zongQiShu;
 }

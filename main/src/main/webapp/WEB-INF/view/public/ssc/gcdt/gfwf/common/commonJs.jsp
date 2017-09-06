@@ -72,11 +72,11 @@
         <span class="headZh-zhqs">追号期数：</span>
         <select id="lt_zh_qishu">
             <option value="">请选择</option>
-            <option value="5">第5期</option>
-            <option value="10">第10期</option>
-            <option value="15">第15期</option>
-            <option value="20">第20期</option>
-            <option value="25">第25期</option>
+            <option value="5">5期</option>
+            <option value="10">10期</option>
+            <option value="15">15期</option>
+            <option value="20">20期</option>
+            <option value="25">25期</option>
             <option value="50">全部</option>
         </select>
         &nbsp;&nbsp;总期数：
@@ -91,7 +91,7 @@
         </span>
         追号期数
         <span class="endzhqiShu zhredtxt">
-            <input name="lt_trace_count_input" id="lt_trace_count_input" value="10" size="3" disabled="disabled"/>
+            <input name="lt_trace_count_input" id="lt_trace_count_input" class="qs" value="10" size="3" disabled="disabled"/>
         </span>
     </div>
     <div class="content_heigth">
@@ -117,11 +117,11 @@
         <span class="headZh-zhqs">追号期数：</span>
         <select id="rt_zh_qishu">
             <option value="">请选择</option>
-            <option value="5">第5期</option>
-            <option value="10">第10期</option>
-            <option value="15">第15期</option>
-            <option value="20">第20期</option>
-            <option value="25">第25期</option>
+            <option value="5">5期</option>
+            <option value="10">10期</option>
+            <option value="15">15期</option>
+            <option value="20">20期</option>
+            <option value="25">25期</option>
             <option value="50">全部</option>
         </select>
         &nbsp;&nbsp;总期数：
@@ -143,7 +143,7 @@
         </span>
         追号期数
         <span class="zhqiShu zhredtxt">
-                    <input name="lt_trace_count_input" id="rt_trace_count_input" value="10" size="3" disabled="disabled"/>
+                    <input name="lt_trace_count_input" id="rt_trace_count_input" class="qs" value="10" size="3" disabled="disabled"/>
         </span>
     </div>
     <div class="content_heigth reConHei">
