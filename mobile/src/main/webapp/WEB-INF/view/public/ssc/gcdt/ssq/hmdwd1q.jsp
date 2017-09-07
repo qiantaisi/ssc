@@ -124,7 +124,7 @@
             </td>
             <td data-name="1/24">
                 <span class="txt_1"><font class="ball-4 ball-orange">24</font></span>
-                <span class="pl" data-plid="9068"></span>
+                <span class="pl" data-plid="14923"></span>
             </td>
         </tr>
         <tr>

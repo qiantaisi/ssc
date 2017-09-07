@@ -173,19 +173,19 @@
                 <tr>
                     <td>29</td>
                     <td><strong class="color-red pl" data-plid="14948"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="21" data-plid="14948"/></td>
+                    <td><input type="text" class="table-txt" data-name="29" data-plid="14948"/></td>
 
                     <td>30</td>
                     <td><strong class="color-red pl" data-plid="14948"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="22" data-plid="14948"/></td>
+                    <td><input type="text" class="table-txt" data-name="30" data-plid="14948"/></td>
 
                     <td>31</td>
                     <td><strong class="color-red pl" data-plid="14948"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="23" data-plid="14948"/></td>
+                    <td><input type="text" class="table-txt" data-name="31" data-plid="14948"/></td>
 
                     <td>32</td>
                     <td><strong class="color-red pl" data-plid="14948"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="24" data-plid="14948"/></td>
+                    <td><input type="text" class="table-txt" data-name="32" data-plid="14948"/></td>
                 </tr>
 
                 <tr>
