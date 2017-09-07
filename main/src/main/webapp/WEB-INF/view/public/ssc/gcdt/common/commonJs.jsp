@@ -9,7 +9,7 @@
 %>
 
 
-<script src="${resPath}js/ssc/gcdt/gfwf.js?v=20170906"></script>
+<script src="${resPath}js/ssc/gcdt/gfwf.js?v=201709073"></script>
 <script src="${resPath}js/ssc/gcdt/ssc.js?v=20170906"></script>
 
 <div class="alert_log two2">

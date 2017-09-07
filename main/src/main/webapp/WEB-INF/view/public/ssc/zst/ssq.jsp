@@ -22,7 +22,7 @@
                         <%--<li data-id="shuju4">遗漏统计</li>--%>
                         <li data-id="shuju5">历史开奖数据</li>
                         <li>
-                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/bj28')">立即投注</a>
+                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/ssq')">立即投注</a>
                         </li>
                     </ul>
                 </div>
@@ -149,7 +149,7 @@
                         </div>
                         <div class="main-li-right" style="visibility: hidden;">
                             <div>
-                                <a href="javascript:void(0)" onclick="getSscPage('gcdt/bj28')">立即投注</a>
+                                <a href="javascript:void(0)" onclick="getSscPage('gcdt/ssq')">立即投注</a>
                             </div>
                         </div>
                     </div>
@@ -270,7 +270,7 @@
                                             <script>
                                                 for (var i = 1; i < 34; ++i) {
                                                     var s = '';
-                                                    s = 'bg-1';
+                                                    s = 'bg-2';
                                                     document.write('<var class="' + s + '"><i>' + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
                                                 }
                                             </script>
@@ -287,7 +287,7 @@
                                             <script>
                                                 for (var i = 1; i <= 16; ++i) {
                                                     var s = '';
-                                                    s = 'bg-2';
+                                                    s = 'bg-1';
                                                     document.write('<var class="' + s + '"><i>' + (i = i >= 10 ? i : ('0' + i)) + '</i></var>');
                                                 }
                                             </script>
@@ -384,7 +384,7 @@
                             <div class="tou">
                                 <h4>第 <span id="number"></span> 期 &nbsp <font id="openDate"></font>开奖</h4>
                             </div>
-                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/bj28')"><img class="btnjiang" src="${resPath}zst/img/jiang.png" alt=""></a>
+                            <a href="javascript:void(0)" onclick="getSscPage('gcdt/ssq')"><img class="btnjiang" src="${resPath}zst/img/jiang.png" alt=""></a>
                             <div class="jiezhi">
                                 <h3>
                                     <p><font id="tip"></font>
@@ -536,17 +536,21 @@
         // 基于准备好的dom，初始化echarts实例
         var myChart2 = echarts.init(document.getElementById('main2'));
         // 指定图表的配置项和数据
+        var subtext = "双色球";
+        if(data.length > 0) {
+            subtext += " 第" + data[0].number + '期 ~ 第' + data[data.length - 1].number + '期';
+        }
+
+        // 指定图表的配置项和数据
         var option = {
-            //            grid: {
-            //                left: 20,
-            //                right: 20,
-            //                top: 35,
-            //                bottom: 0,
-            //                containLabel: true
-            //            },
+            title: {
+                text: '双色球直方图',    //主标题文本
+                subtext: subtext,     //副标题文本
+                x: 'center'
+            },
             grid: {
                 left: '1%',
-                right: '15%',
+                right: '10%',
                 containLabel: true
             },
             tooltip: {
@@ -577,12 +581,16 @@
                 axisTick: {
                     alignWithLabel: true
                 },
-                data: []
+                data: [],
+                axisLabel:{
+                    //X轴刻度配置
+                    interval: 'auto'//0：表示全部显示不间隔；auto:表示自动根据刻度个数和宽度自动设置间隔个数
+                }
             },
             yAxis: [{
                 type: 'value',
                 splitNumber: 10,
-                triggerEvent: true,
+                triggerEvent: true
             }],
             series: [{
                 name: '出现次数',
@@ -602,10 +610,10 @@
                     symbol: 'pin',
                     symbolSize: 50,
                     silent: true,
-                    animation: true,
+                    animation: true
                 },
                 barWidth: '27px',
-                barGap: '30%',
+                barGap: '10px',
                 //            barCategoryGap:'30%',
                 markArea: {
                     //              silent:true
@@ -618,17 +626,16 @@
             }]
         };
         var yData = [];
-        for(var i = 1; i <= 10; ++i) {
+        for(var i = 1; i <= 33; ++i) {
             yData[i - 1] = 0;
             option.xAxis.data.push(i);
         }
-
         $.each(data, function(index, value) {
             var openCode = value.openCode;
-            var arr = openCode.split(",");
-
+            var strCode =openCode.substr(0,17);
+            var arr = strCode.split(",");
+//            console.log(strCode);
             for(var i = 0; i < arr.length; ++i) {
-                //                console.log(parseInt(arr[i]));
                 yData[parseInt(arr[i] - 1)]++;
             }
         });

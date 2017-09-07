@@ -17447,12 +17447,12 @@ function getFbTotelMoney(){
     $(".fbulzh li span.content_money").each(function () {
         var flagStatus = $(this).parent().find('input').prop('checked');
         if(flagStatus){
-            var strMoney = $(this).html();
-            zhTotelMoney += parseInt(strMoney.replace('￥',''));
+            var strMoney = ($(this).html()).toString();
+            zhTotelMoney += parseFloat(strMoney.substr(1,strMoney.length));
         }
     });
 
-    return zhTotelMoney;
+    return zhTotelMoney.toFixed(2);
 }
 
 //计算购买追号同倍总金额
