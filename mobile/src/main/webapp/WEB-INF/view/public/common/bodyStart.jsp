@@ -13,9 +13,9 @@
     <jsp:include page="../../common/commonMeta.jsp" />
     <jsp:include page="../../common/commonCss.jsp" />
 
-    <link rel="stylesheet" href="${resPath}css/style.css?v=20170825">
+    <link rel="stylesheet" href="${resPath}css/style.css?v=2017097">
     <link rel="stylesheet" href="${resPath}css/other.css?v=2017096_2">
-    <link rel="stylesheet" href="${resPath}css/gfwf_css.css?v=2017095_11">
+    <link rel="stylesheet" href="${resPath}css/gfwf_css.css?v=2017095_2">
     <link rel="stylesheet" href="${resPath}theme/${themeBottomNav}/css/base-template.css?v=20170628">
     <jsp:include page="customTheme.jsp" />
 </head>

@@ -305,13 +305,14 @@ ding {
 .wrap .cus_common {
     background: #f7f7f7;
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
 }
 
 .wrap .cus_common .wan_top {
     line-height: 1.5rem;
-    border-top: 2px solid #dddddd;
+    /*border-top: 1px solid #dddddd;*/
 }
+.czqh{left: 260px;}
 
 .wrap .cus_common .wan_top .wanwei {
     padding-right: 1rem;

@@ -14,15 +14,16 @@
 <div class="page-group">
     <div class="page page-current" id="page-zst-jbzst">
         <header class="bar bar-nav">
-            <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
-                <font>彩种切换</font>
-                <span class="icon icon-top-gcdt"></span>
+            <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
+                <span class="icon icon-left"></span>
+                返回
             </a>
             <%--<a class="yxsm" href="<%=basePath%>ssc/kjjl/bqxq.html?playGroupId=1">--%>
             <%--游戏说明--%>
             <%--</a>--%>
-            <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
-                菜单
+            <a class="button button-link button-nav pull-left open-panel czqh" data-panel='#panel-left'>
+                <font>彩种切换</font>
+                <span class="icon icon-top-gcdt"></span>
             </a>
             <h1 class="title">重庆幸运农场-走势图</h1>
         </header>
