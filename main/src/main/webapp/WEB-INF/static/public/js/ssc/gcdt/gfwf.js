@@ -10681,6 +10681,15 @@ function tjzd() {
     clearStateTouZhu();
     addYuxuan(obj);
     calcAll();
+
+    //改变追号模板内每期总额值
+    var optionVal = parseInt($('#lt_zh_qishu').val());
+    selectedCheckboxtbzh(optionVal);
+
+    //点击随机数时计算追号总额
+    $("#zhInfo .tabs ul li:first-child").trigger('click');
+    $('.zhfbzjetxt').html(getFbTotelMoney());
+    $('.zhzjetxt').html(getTbTotelMoney());
 }
 //**************任选4***************
 /**
@@ -17225,6 +17234,24 @@ function getZhuihaoList(callback) {
     });
 }
 
+//注单列表
+function removeThisItem(obj) {
+    $(obj).parent().parent().trigger("mouseout");
+    $(obj).parent().parent().remove();
+    calcAll();
+    bindYuxuan();
+    if ($("#zhudanList .re_touzhu_tem").length <= 0) {
+        $("#zhudanList").html('<tr class="noRecord"><td>暂无投注项</td></tr>');
+        //清除追号模板
+        var flag = $(".clearLiZhudanbtn").attr('sp');
+        if(flag == 1){
+            zhTempletHideOrShow();
+        }
+    } else{
+        $("#zhInfo .tabs ul li:first-child").trigger('click');
+    }
+}
+
 // 最近最新开奖时间（默认10期），用于追号模板渲染
 function renderZhuihao(strZh, obj) {
     var totelMoney = 0;
@@ -17261,7 +17288,7 @@ function renderZhuihao(strZh, obj) {
             dataContent.listContent.push({
                 zhqishu: value.number,
                 zhbeishu: $("#startBeiShu.Zh").val(),
-                totelMoney: '￥' + totelMoney,
+                totelMoney: '￥' + totelMoney.toFixed(2),
                 zhkjshijian: Tools.formatDate(value.openTime)
             });
         });
@@ -17283,7 +17310,7 @@ function renderZhuihao(strZh, obj) {
 
         //总金额
         var num = selectedZhqishu();
-        $('.zhzjetxt').html(totelMoney * num);
+        $('.zhzjetxt').html((totelMoney * num).toFixed(2));
         $('.zhfbzjetxt').html(getFbTotelMoney());
 
         //单行点击选中事件
@@ -17332,7 +17359,7 @@ function renderZhuihao(strZh, obj) {
                 var totelMoney = getZhuJinE();
                 var beishu = $(this).val();
 
-                $(this).parent().parent().find('.content_money').html('￥'+ (beishu * totelMoney));
+                $(this).parent().parent().find('.content_money').html('￥'+ (beishu * totelMoney).toFixed(2));
                 $('.zhzjetxt').html(getFbTotelMoney());
             });
 
@@ -17343,7 +17370,7 @@ function renderZhuihao(strZh, obj) {
                 }
                 var totelMoney = getZhuJinE();
                 var beishu = $(this).val();
-                $(this).parent().parent().find('.content_money').html('￥'+ (beishu * totelMoney));
+                $(this).parent().parent().find('.content_money').html('￥'+ (beishu * totelMoney).toFixed(2));
                 $('.zhzjetxt').html(getFbTotelMoney());
             });
         });
@@ -17469,7 +17496,7 @@ function getTbTotelMoney(){
     });
 
     var num = selectedZhqishu();
-    return totelMoney * num;
+    return (totelMoney * num).toFixed(2);
 }
 
 // 清除和显示追号模板
@@ -17620,7 +17647,7 @@ function changeContent() {
             var beishu = $("#startBeiShuZh").val();
             beishu = beishu == '' ? 1 : beishu;
             $(this).find('input[type="text"]').val(beishu);
-            $(this).find('.content_money').html('￥' + (beishu * totelMoney));
+            $(this).find('.content_money').html('￥' + (beishu * totelMoney).toFixed(2));
         }
     });
 }

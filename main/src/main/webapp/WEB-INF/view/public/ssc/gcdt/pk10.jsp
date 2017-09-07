@@ -202,25 +202,7 @@
     </tr>
 </script>
 <script>
-    function removeThisItem(obj) {
-        $(obj).parent().parent().trigger("mouseout");
-        $(obj).parent().parent().remove();
-        calcAll();
-        bindYuxuan();
-        if ($("#zhudanList .re_touzhu_tem").length <= 0) {
-            $("#zhudanList").html('<tr class="noRecord"><td>暂无投注项</td></tr>');
-            //清除追号模板
-            var flag = $(".clearLiZhudanbtn").attr('sp');
-            if(flag == 1){
-                zhTempletHideOrShow();
-            }
-        } else{
-            var optionVal = parseInt($('#lt_zh_qishu').val());
-            selectedCheckboxtbzh(optionVal);
-        }
 
-
-    }
    /* // 随机号码
     function randomNumber() {
         var arr = [];
