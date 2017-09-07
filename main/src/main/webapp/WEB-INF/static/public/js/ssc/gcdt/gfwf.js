@@ -650,14 +650,12 @@ function buyBtn() {
         };
 
         $("#zhudanList .re_touzhu_tem").each(function () {
-            var modeVal = getMode($(this).data("bet_mode"));
-            var tempMoney = $(this).data("bet_per_money");
             betForm.sscBetList.push({
                 playGroupId: $(this).data("bet_play_group_id"),
                 number: getNumber(),
                 playId: $(this).data("bet_play_id"),
                 zhushu: $(this).data("bet_zhushu"),
-                perMoney: (flagsp == 1 ? (tempMoney * modeVal) : tempMoney),
+                perMoney: $(this).data("bet_per_money"),
                 content: $(this).data("bet_content"),
                 playPlId: $(this).data("bet_play_pl_id"),
                 playPl: $(this).data("bet_play_pl"),
