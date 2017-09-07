@@ -24,7 +24,13 @@
             <a href="javascript:void(0);" class="button button-link pull-right menubtn">
                 菜单
             </a>
-            <h1 class="title">双色球</h1>
+            <h1 class="title">
+                <a class="title_cq" href="<%=basePath%>ssc/gcdt/ssq.html">双色球-官方模式
+                    <div class="gfwf_triangle_down">
+                        <%--画出一个向下的三角形图标--%>
+                    </div>
+                </a>
+            </h1>
         </header>
         <c:import url="./common/commonBet.jsp"/>
 
