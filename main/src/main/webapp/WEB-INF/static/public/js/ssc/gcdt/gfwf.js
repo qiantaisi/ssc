@@ -17659,7 +17659,7 @@ function changeContentFbzh() {
 
             num++; //间隔计算临时数量
             $(this).find('input[type="text"]').val(bsTemp);
-            $(this).find('.content_money').html('￥' + (bsTemp * totelMoney));
+            $(this).find('.content_money').html('￥' + (bsTemp * totelMoney).toFixed(2));
 
         }
     });
