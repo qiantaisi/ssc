@@ -256,21 +256,22 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="总/大">
+
+            <td data-name="总和/大">
                 <span>大</span>
                 <span class="pl" data-plid="14977"></span>
             </td>
-            <td data-name="总/小">
+            <td data-name="总和/小">
                 <span>小</span>
                 <span class="pl" data-plid="14978"></span>
             </td>
         </tr>
         <tr>
-            <td data-name="总/单">
+            <td data-name="总和/单">
                 <span>单</span>
-                <span class="pl" data-plid="149879"></span>
+                <span class="pl" data-plid="14979"></span>
             </td>
-            <td data-name="总/双">
+            <td data-name="总和/双">
                 <span>双</span>
                 <span class="pl" data-plid="14980"></span>
             </td>

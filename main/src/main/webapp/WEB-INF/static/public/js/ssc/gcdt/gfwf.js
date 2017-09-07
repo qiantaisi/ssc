@@ -17245,7 +17245,9 @@ function renderZhuihao(strZh, obj) {
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        tempMoney = perMoney * zhushu;
+        var mode = $(this).data('bet_mode');  //模式
+        var modeVal = getMode(mode);
+        tempMoney = perMoney * zhushu * modeVal;
         totelMoney += tempMoney;
     });
 
@@ -17255,9 +17257,7 @@ function renderZhuihao(strZh, obj) {
             listContent: []
         };
 
-        console.log(zhuihaoSscOpenTimeList);
         $.each(zhuihaoSscOpenTimeList, function(index, value) {
-            console.log('000');
             dataContent.listContent.push({
                 zhqishu: value.number,
                 zhbeishu: $("#startBeiShu.Zh").val(),
@@ -17432,7 +17432,9 @@ function getZhuJinE(){
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        tempMoney = perMoney * zhushu;
+        var mode = $(this).data('bet_mode');  //模式
+        var modeVal = getMode(mode);
+        tempMoney = perMoney * zhushu * modeVal;
         totelMoney += tempMoney;
     });
 
@@ -17460,7 +17462,9 @@ function getTbTotelMoney(){
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        tempMoney = perMoney * zhushu;
+        var mode = $(this).data('bet_mode');  //模式
+        var modeVal = getMode(mode);
+        tempMoney = perMoney * zhushu * modeVal;
         totelMoney += tempMoney;
     });
 
@@ -17601,7 +17605,9 @@ function changeContent() {
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        tempMoney = perMoney * zhushu;
+        var mode = $(this).data('bet_mode');  //模式
+        var modeVal = getMode(mode);
+        tempMoney = perMoney * zhushu * modeVal;
         totelMoney += tempMoney;
     });
 
@@ -17628,7 +17634,9 @@ function changeContentFbzh() {
     $(".Detailedlist .layout .boxt .left table tbody tr.re_touzhu_tem").each(function () {
         var perMoney = $(this).data('bet_per_money');   //每注金额
         var zhushu = $(this).data('bet_zhushu');  //注数
-        tempMoney = perMoney * zhushu;
+        var mode = $(this).data('bet_mode');  //模式
+        var modeVal = getMode(mode);
+        tempMoney = perMoney * zhushu * modeVal;
         totelMoney += tempMoney;
     });
 

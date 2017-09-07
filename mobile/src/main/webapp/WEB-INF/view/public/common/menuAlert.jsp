@@ -22,6 +22,10 @@
         margin-left:7rem;
         margin-right:0.6rem;
     }
+    .item-innerss,.item-inners{text-align:center;display:block;}
+    .item-innerss{width:100%;}
+    .list-block .ul{width:100px;margin-left:70px;}
+    .bg{background-color:#000; opacity:0.6;filter:alpha(opacity=60);}
 </style>
 <div class="bg"></div>
 <div class="menu_alert">
@@ -33,10 +37,10 @@
                     <c:when test="${not empty userSession}">
                         <div class="item-inner-r" style="background: rgba(253, 255, 239, 0.8)">
                             <div style="height: 1rem;">
-                                <span style="font-size: 0.61rem;font-weight: bold;color:gray;">余额:</span>
+                                <span style="font-size: 0.61rem;font-weight: bold;color:gray;">即时注单:</span>
                             </div>
                             <div  style="height: 1rem;">
-                                <span style="color: red;font-size: 0.7rem;display: block; font-weight: bold;">${userSession.balance}元</span>
+                                <span style="color: red;font-size: 0.7rem;display: block; font-weight: bold;" data-img="${resPath}img/small-loading.gif" id="menu-jszd"></span>
                             </div>
                         </div>
                     </c:when>
@@ -865,7 +869,11 @@
 
                 <c:choose>
                     <c:when test="${not empty userSession}">
-                        <div class="item-inner-re" style="line-height:0.7rem;"><span style="color:red " id="jieSuan">刷新中...</span></div>
+                        <%--<div class="item-inner-re" style="line-height:0.7rem;"><span style="color:red " id="jieSuan">刷新中...</span></div>--%>
+                        <div class="item-inner-re" style="line-height:0.7rem;">
+                            <span style="color:red " id="jieSuan" data-img="${resPath}img/small-loading.gif">
+                            </span>
+                        </div>
                     </c:when>
                     <c:otherwise>
                         <a href="<%=basePath%>login.html">

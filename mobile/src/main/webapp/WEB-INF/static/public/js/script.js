@@ -1941,22 +1941,26 @@ $(function () {
                 ajaxRequest({
                     url: config.basePath + "ssc/ajaxGetShuYing.json",
                     beforeSend: function () {
-                        $("#jieSuan").html("刷新中...");
+                        $("#jieSuan").html('<img src="' + $("#jieSuan").attr("data-img") + '">');
+                        $("#menu-jszd").html('<img src="' + $("#menu-jszd").attr("data-img") + '">');
                     },
                     success: function (obj) {
                         if (obj.result == 1) {
-                            var money = obj.todayWinOrLose.toFixed(3);
-                            if (money > 0) {
-                                $("#jieSuan").html("+" + money);
-                                if (!($("#jieSuan").hasClass('greenColor'))) {
-                                    $("#jieSuan").addClass('greenColor');
+                            setTimeout(function() {
+                                var money = obj.todayWinOrLose.toFixed(3);
+                                if (money > 0) {
+                                    $("#jieSuan").html("+" + money);
+                                    if (!($("#jieSuan").hasClass('greenColor'))) {
+                                        $("#jieSuan").addClass('greenColor');
+                                    }
+                                } else {
+                                    if ($("#jieSuan").hasClass('greenColor')) {
+                                        $("#jieSuan").removeClass('greenColor');
+                                    }
+                                    $("#jieSuan").html(money);
                                 }
-                            } else {
-                                if ($("#jieSuan").hasClass('greenColor')) {
-                                    $("#jieSuan").removeClass('greenColor');
-                                }
-                                $("#jieSuan").html(money);
-                            }
+                                $("#menu-jszd").html(obj.jszdMoney.toFixed(3));
+                            }, 1500);
                         }
                     }
                 });
