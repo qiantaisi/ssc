@@ -24,7 +24,7 @@
             <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
                 菜单
             </a>
-            <h1 class="title">重庆幸运农场</h1>
+            <h1 class="title">重庆幸运农场-走势图</h1>
         </header>
         <div class="content cl-601 zst-cl-10">
             <div id="sub-menu-list">
