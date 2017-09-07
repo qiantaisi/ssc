@@ -21,7 +21,7 @@
             <%--<a class="yxsm" href="<%=basePath%>ssc/kjjl/bqxq.html?playGroupId=1">--%>
             <%--游戏说明--%>
             <%--</a>--%>
-            <a class="button button-link button-nav pull-left open-panel czqh" data-panel='#panel-left'>
+            <a class="button button-link button-nav open-panel re_czqh" data-panel='#panel-left'>
                 <font>彩种切换</font>
                 <span class="icon icon-top-gcdt"></span>
             </a>
