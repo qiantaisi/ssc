@@ -15,68 +15,68 @@
         <tr>
             <td data-name="1">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">1</font></span>
-                <span class="pl" data-plid="9049"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="2">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">2</font></span>
-                <span class="pl" data-plid="9050"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="3">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">3</font></span>
-                <span class="pl" data-plid="9051"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
         </tr>
         <tr>
             <td data-name="4">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">4</font></span>
-                <span class="pl" data-plid="9052"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="5">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">5</font></span>
-                <span class="pl" data-plid="9053"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="6">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">6</font></span>
-                <span class="pl" data-plid="9054"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
         </tr>
         <tr>
             <td data-name="7">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">7</font></span>
-                <span class="pl" data-plid="9055"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="8">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">8</font></span>
-                <span class="pl" data-plid="9056"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="9">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">9</font></span>
-                <span class="pl" data-plid="9057"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
         </tr>
         <tr>
             <td data-name="10">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">10</font></span>
-                <span class="pl" data-plid="9058"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="11">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">11</font></span>
-                <span class="pl" data-plid="9059"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="12">
                 <span class="ball-4 ball-orange"><font class="ball-4 ball-orange">12</font></span>
-                <span class="pl" data-plid="9060"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
         </tr>
         <table>
             <tbody>
             <td data-name="13">
                 <span class="txt_1"><font class="ball-4 ball-orange">13</font></span>
-                <span class="pl" data-plid="9059"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="14">
                 <span class="txt_1"><font class="ball-4 ball-orange">14</font></span>
-                <span class="pl" data-plid="9058"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             </tbody>
         </table>
@@ -84,11 +84,11 @@
             <tbody>
             <td data-name="15">
                 <span class="txt_1"><font class="ball-4 ball-orange">15</font></span>
-                <span class="pl" data-plid="9059"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             <td data-name="16">
                 <span class="txt_1"><font class="ball-4 ball-orange">16</font></span>
-                <span class="pl" data-plid="9058"></span>
+                <span class="pl" data-plid="14989"></span>
             </td>
             </tbody>
         </table>
@@ -98,7 +98,7 @@
 
 <script>
     var playGroupId = 12;
-    var playId = 295;
+    var playId = 1039;
     var playGroupName = '红球';
 
     function getZhudan(inputMoney, number) {

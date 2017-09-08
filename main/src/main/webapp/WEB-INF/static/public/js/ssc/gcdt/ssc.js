@@ -232,6 +232,9 @@ $(function() {
                         // 显示清除投注内容提示框
                         if (typeof showClearBetTemplate == 'function') {
                             showClearBetTemplate();
+                            if($('.imgZh').hasClass('imgZhCancle')){
+                                $('.imgZh').removeClass('imgZhCancle')
+                            }
                         }
                     }
                 }
@@ -245,6 +248,9 @@ $(function() {
                     // 显示清除投注内容提示框
                     if (typeof showClearBetTemplate == 'function') {
                         showClearBetTemplate();
+                        if($('.imgZh').hasClass('imgZhCancle')){
+                            $('.imgZh').removeClass('imgZhCancle')
+                        }
                     }
                 }
             }

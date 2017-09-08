@@ -24,14 +24,19 @@ $(function () {
         return dateFormat(date, format);
     });
 
-
     // 返回按钮
     $(".bar-nav .fanhui").click(function () {
+
         if ($.config.router == true) {
             $.router.back();
         } else {
             back();
         }
+    });
+
+    // 购彩返回按钮
+    $(".bar-nav .gcfanhui").click(function () {
+        window.location.href = config.basePath + "main.html";
     });
 
     // 首页

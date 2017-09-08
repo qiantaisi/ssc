@@ -173,19 +173,19 @@
                 <tr>
                     <td>29</td>
                     <td><strong class="color-red pl" data-plid="14933"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="21" data-plid="14933"/></td>
+                    <td><input type="text" class="table-txt" data-name="29" data-plid="14933"/></td>
 
                     <td>30</td>
                     <td><strong class="color-red pl" data-plid="14933"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="22" data-plid="14933"/></td>
+                    <td><input type="text" class="table-txt" data-name="30" data-plid="14933"/></td>
 
                     <td>31</td>
                     <td><strong class="color-red pl" data-plid="14933"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="23" data-plid="14933"/></td>
+                    <td><input type="text" class="table-txt" data-name="31" data-plid="14933"/></td>
 
                     <td>32</td>
                     <td><strong class="color-red pl" data-plid="14933"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="24" data-plid="14933"/></td>
+                    <td><input type="text" class="table-txt" data-name="32" data-plid="14933"/></td>
                 </tr>
 
                 <tr>
@@ -193,31 +193,13 @@
                     <td><strong class="color-red pl" data-plid="14933"></strong></td>
                     <td><input type="text" class="table-txt" data-name="33" data-plid="14933"/></td>
 
-                    <td>大</td>
-                    <td><strong class="color-red pl" data-plid="14934"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="大" data-plid="14934"/></td>
-
-                    <td>小</td>
-                    <td><strong class="color-red pl" data-plid="14935"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="小" data-plid="14935"/></td>
-
                     <td>单</td>
                     <td><strong class="color-red pl" data-plid="14936"></strong></td>
                     <td><input type="text" class="table-txt" data-name="单" data-plid="14936"/></td>
-                </tr>
 
-                <tr>
                     <td>双</td>
                     <td><strong class="color-red pl" data-plid="14937"></strong></td>
                     <td><input type="text" class="table-txt" data-name="双" data-plid="14937"/></td>
-
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                    <td></td>
-                    <td></td>
-                    <td></td>
 
                     <td></td>
                     <td></td>

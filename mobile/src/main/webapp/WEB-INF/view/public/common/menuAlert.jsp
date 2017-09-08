@@ -24,14 +24,14 @@
     }
     .item-innerss,.item-inners{text-align:center;display:block;}
     .item-innerss{width:100%;}
-    .list-block .ul{width:100px;margin-left:70px;}
+    .list-block .ul{width:100px;}
     .bg{background-color:#000; opacity:0.6;filter:alpha(opacity=60);}
 </style>
 <div class="bg"></div>
 <div class="menu_alert">
     <div class="arrow-up"></div>
     <span class="list-block">
-        <ul class="ul">
+        <ul class="ul" style="position: absolute; right: 0.4rem;">
                 <li style="height: 3rem; height: 2rem;">
                 <c:choose>
                     <c:when test="${not empty userSession}">

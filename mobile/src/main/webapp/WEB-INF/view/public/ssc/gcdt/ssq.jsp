@@ -10,10 +10,18 @@
     String basePath = RequestUtils.getBasePath(request);
 %>
 <c:import url="../../common/bodyStart.jsp"/>
+<style>
+    .cl-1201 i.ball_bluessq,.cl-904 .openNumber i.ball_bluessq{
+        background:#1379D7!important;
+    }
+    .ball_bluessq{
+        background: #1379D7!important;
+    }
+</style>
 <div class="page-group">
     <div class="page page-current" id="page-gcdt-ssq">
         <header class="bar bar-nav">
-            <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
+            <a class="button button-link button-nav pull-left gcfanhui" href="javascript:void(0)">
                 <span class="icon icon-left"></span>
                 返回
             </a>
@@ -104,7 +112,11 @@
             <span class="openNumber">
                 {{if openCodeArr != null}}
                     {{each openCodeArr as value index}}
-                        <i>{{value}}</i>
+                        {{if index == 6}}
+                           <i class="ball_bluessq">{{value}}</i>
+                            {{else}}
+                           <i>{{value}}</i>
+                        {{/if}}
                     {{/each}}
                 {{else}}
                     开奖中
@@ -119,12 +131,20 @@
     <div class="left">
         <span class="cl-1201 ssc_1201_num">
             {{each openCodeArr as value index}}
-                <i>{{value}}</i>
+                {{if index == 6}}
+                   <i class="ball_bluessq">{{value}}</i>
+                      {{else}}
+                   <i>{{value}}</i>
+                {{/if}}
             {{/each}}
         </span>
         <span class="cl-1202 ssc_1202_sx">&nbsp;
             {{each infoArr as value index}}
-                <i>{{value}}</i>
+                {{if index == 6}}
+                    <i class="ball_bluessq">{{value}}</i>
+                        {{else}}
+                    <i>{{value}}</i>
+                {{/if}}
             {{/each}}
         </span>
     </div>

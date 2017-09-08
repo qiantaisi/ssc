@@ -16,16 +16,6 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="1/大">
-                <span>大</span>
-                <span class="pl" data-plid="14953"></span>
-            </td>
-            <td data-name="1/小">
-                <span>小</span>
-                <span class="pl" data-plid="14954"></span>
-            </td>
-        </tr>
-        <tr>
             <td data-name="1/单">
                 <span>单</span>
                 <span class="pl" data-plid="14955"></span>
@@ -45,16 +35,7 @@
 <div class="cl-604">
     <table>
         <tbody>
-        <tr>
-            <td data-name="2/大">
-                <span>大</span>
-                <span class="pl" data-plid="14957"></span>
-            </td>
-            <td data-name="2/小">
-                <span>小</span>
-                <span class="pl" data-plid="14958"></span>
-            </td>
-        </tr>
+
         <tr>
             <td data-name="2/单">
                 <span>单</span>
@@ -76,16 +57,6 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="3/大">
-                <span>大</span>
-                <span class="pl" data-plid="14961"></span>
-            </td>
-            <td data-name="3/小">
-                <span>小</span>
-                <span class="pl" data-plid="14962"></span>
-            </td>
-        </tr>
-        <tr>
             <td data-name="3/单">
                 <span>单</span>
                 <span class="pl" data-plid="14963"></span>
@@ -105,16 +76,6 @@
 <div class="cl-604">
     <table>
         <tbody>
-        <tr>
-            <td data-name="4/大">
-                <span>大</span>
-                <span class="pl" data-plid="14965"></span>
-            </td>
-            <td data-name="4/小">
-                <span>小</span>
-                <span class="pl" data-plid="14966"></span>
-            </td>
-        </tr>
         <tr>
             <td data-name="4/单">
                 <span>单</span>
@@ -136,16 +97,6 @@
     <table>
         <tbody>
         <tr>
-            <td data-name="5/大">
-                <span>大</span>
-                <span class="pl" data-plid="14969"></span>
-            </td>
-            <td data-name="5/小">
-                <span>小</span>
-                <span class="pl" data-plid="14970"></span>
-            </td>
-        </tr>
-        <tr>
             <td data-name="5/单">
                 <span>单</span>
                 <span class="pl" data-plid="14971"></span>
@@ -165,16 +116,6 @@
 <div class="cl-604">
     <table>
         <tbody>
-        <tr>
-            <td data-name="6/大">
-                <span>大</span>
-                <span class="pl" data-plid="14973"></span>
-            </td>
-            <td data-name="6/小">
-                <span>小</span>
-                <span class="pl" data-plid="14974"></span>
-            </td>
-        </tr>
         <tr>
             <td data-name="6/单">
                 <span>单</span>
@@ -256,6 +197,7 @@
     <table>
         <tbody>
         <tr>
+
             <td data-name="总和/大">
                 <span>大</span>
                 <span class="pl" data-plid="14977"></span>
@@ -268,7 +210,7 @@
         <tr>
             <td data-name="总和/单">
                 <span>单</span>
-                <span class="pl" data-plid="149879"></span>
+                <span class="pl" data-plid="14979"></span>
             </td>
             <td data-name="总和/双">
                 <span>双</span>

@@ -29,17 +29,18 @@
 <div class="page-group">
     <div class="page page-current" id="page-zst-jbzst">
         <header class="bar bar-nav">
-            <a class="button button-link button-nav pull-left open-panel" data-panel='#panel-left'>
-                <font>彩种切换</font>
-                <span class="icon icon-top-gcdt"></span>
+            <a class="button button-link button-nav pull-left fanhui" href="javascript:void(0)">
+                <span class="icon icon-left"></span>
+                返回
             </a>
             <%--<a class="yxsm" href="<%=basePath%>ssc/kjjl/bqxq.html?playGroupId=1">--%>
             <%--游戏说明--%>
             <%--</a>--%>
-            <a class="button button-link pull-right open-panel" data-panel='#panel-right'>
-                菜单
+            <a class="button button-link button-nav open-panel re_czqh" data-panel='#panel-left'>
+                <font>彩种切换</font>
+                <span class="icon icon-top-gcdt"></span>
             </a>
-            <h1 class="title">广东11选5</h1>
+            <h1 class="title">广东11选5-走势图</h1>
         </header>
         <div class="content cl-601 zst-cl-10">
             <div class="cl-600" id="ssc-parent-menu">
