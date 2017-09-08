@@ -17411,6 +17411,8 @@ $(function () {
     //选择选项-同倍追号
     $(document).on("change", 'select#lt_zh_qishu', function () {
         var optionVal = parseInt($(this).val());
+
+        console.log(optionVal);
         $(".zhqishutxt").html(optionVal);
         $(".qs").val(optionVal);
         selectedCheckboxtbzh(optionVal);
@@ -17421,6 +17423,7 @@ $(function () {
     //选择选项-翻倍追号
     $(document).on("change", 'select#rt_zh_qishu', function () {
         var optionVal = parseInt($(this).val());
+        console.log(optionVal);
 
         $(".zhfbqishutxt").html(optionVal);
         $(".qs").val(optionVal);
@@ -17428,7 +17431,7 @@ $(function () {
         $('.zhfbzjetxt').html(getFbTotelMoney());
 
     });
-})
+});
 
 //获取当前选中的期数
 function getFbTotelQishu() {
@@ -17538,14 +17541,14 @@ function selectedCheckboxtbzh(countLi) {
         }
     });
 
-    $(".ulzh li").each(function () {
+    $(".tbulzh li").each(function () {
         var flagStatus = $(this).find('input').prop('checked');
         if (flagStatus) {
             $(this).find("input[type='checkbox']").removeAttr("checked");
         }
     });
     for (var i = 0; i < countLi; i++) {
-        $(".content_heigth .ulzh li:eq(" + i + ") input").prop("checked", true);
+        $(".content_heigth .tbulzh li:eq(" + i + ") input").prop("checked", true);
     }
 
     changeBgColor();
@@ -17561,7 +17564,7 @@ function selectedCheckboxfbzh(countLi) {
         }
     });
 
-    $(".reConHei .ulzh li").each(function () {
+    $(".reConHei .fbulzh li").each(function () {
         var flagStatus = $(this).find('input').prop('checked');
         if (flagStatus) {
             $(this).find("input[type='checkbox']").removeAttr("checked");
@@ -17569,7 +17572,7 @@ function selectedCheckboxfbzh(countLi) {
     });
 
     for (var i = 0; i < countLi; i++) {
-        $(".reConHei .ulzh li:eq(" + i + ") input").prop("checked", true);
+        $(".reConHei .fbulzh li:eq(" + i + ") input").prop("checked", true);
     }
 
     changeBgColor();
@@ -17640,7 +17643,7 @@ function changeContent() {
         totelMoney += tempMoney;
     });
 
-    $(".ulzh li").each(function () {
+    $(".tbulzh li").each(function () {
         var flagStatus = $(this).find('input').prop('checked');
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
@@ -17669,7 +17672,7 @@ function changeContentFbzh() {
         totelMoney += tempMoney;
     });
 
-    $(".reConHei .ulzh li").each(function (index, value) {
+    $(".reConHei .fbulzh li").each(function (index, value) {
         var flagStatus = $(this).find('input').prop('checked');
         if (!flagStatus) {
             $(this).find('input[type="text"]').val('0');
