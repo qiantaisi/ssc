@@ -171,20 +171,6 @@
         </tr>
         </tbody>
     </table>
-    <table>
-        <tbody>
-        <tr>
-            <td data-name="5/大">
-                <span class="txt_1"><font>大</font></span>
-                <span class="pl" data-plid="14944"></span>
-            </td>
-            <td data-name="5/小">
-                <span class="txt_1"><font>小</font></span>
-                <span class="pl" data-plid="14945"></span>
-            </td>
-        </tr>
-        </tbody>
-    </table>
 
     <table>
         <tbody>
