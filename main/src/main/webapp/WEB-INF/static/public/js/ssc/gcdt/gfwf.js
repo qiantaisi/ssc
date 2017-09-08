@@ -17404,29 +17404,31 @@ function renderZhuihao(strZh, obj) {
             $('.zhfbzjetxt').html(getFbTotelMoney());
         });
 
-        //选择选项-同倍追号
-        $(document).on("change", 'select#lt_zh_qishu', function () {
-            var optionVal = parseInt($(this).val());
-
-            $(".zhqishutxt").html(optionVal);
-            $(".qs").val(optionVal);
-            selectedCheckboxtbzh(optionVal);
-            $('.zhzjetxt').html(getTbTotelMoney());
-
-        });
-
-        //选择选项-翻倍追号
-        $(document).on("change", 'select#rt_zh_qishu', function () {
-            var optionVal = parseInt($(this).val());
-
-            $(".zhfbqishutxt").html(optionVal);
-            $(".qs").val(optionVal);
-            selectedCheckboxfbzh(optionVal); //改变前选中选行数
-            $('.zhfbzjetxt').html(getFbTotelMoney());
-
-        });
     });
 }
+
+$(function () {
+    //选择选项-同倍追号
+    $(document).on("change", 'select#lt_zh_qishu', function () {
+        var optionVal = parseInt($(this).val());
+        $(".zhqishutxt").html(optionVal);
+        $(".qs").val(optionVal);
+        selectedCheckboxtbzh(optionVal);
+        $('.zhzjetxt').html(getTbTotelMoney());
+
+    });
+
+    //选择选项-翻倍追号
+    $(document).on("change", 'select#rt_zh_qishu', function () {
+        var optionVal = parseInt($(this).val());
+
+        $(".zhfbqishutxt").html(optionVal);
+        $(".qs").val(optionVal);
+        selectedCheckboxfbzh(optionVal); //改变前选中选行数
+        $('.zhfbzjetxt').html(getFbTotelMoney());
+
+    });
+})
 
 //获取当前选中的期数
 function getFbTotelQishu() {

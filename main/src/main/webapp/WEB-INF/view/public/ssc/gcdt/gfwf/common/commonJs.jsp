@@ -77,7 +77,7 @@
             <option value="15">15期</option>
             <option value="20">20期</option>
             <option value="25">25期</option>
-            <option value="50">全部</option>
+            <option value="50">50期</option>
         </select>
         &nbsp;&nbsp;总期数：
         &nbsp;<span class="qishu zhredtxt zhqishutxt">10</span>&nbsp;&nbsp;期
@@ -122,7 +122,7 @@
             <option value="15">15期</option>
             <option value="20">20期</option>
             <option value="25">25期</option>
-            <option value="50">全部</option>
+            <option value="50">50期</option>
         </select>
         &nbsp;&nbsp;总期数：
         &nbsp;<span class="qishu zhredtxt zhfbqishutxt">10</span>&nbsp;&nbsp;期
