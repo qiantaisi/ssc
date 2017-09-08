@@ -193,31 +193,13 @@
                     <td><strong class="color-red pl" data-plid="14928"></strong></td>
                     <td><input type="text" class="table-txt" data-name="33" data-plid="14928"/></td>
 
-                    <td>大</td>
-                    <td><strong class="color-red pl" data-plid="14929"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="大" data-plid="14929"/></td>
-
-                    <td>小</td>
-                    <td><strong class="color-red pl" data-plid="14930"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="小" data-plid="14930"/></td>
-
                     <td>单</td>
                     <td><strong class="color-red pl" data-plid="14931"></strong></td>
                     <td><input type="text" class="table-txt" data-name="单" data-plid="14931"/></td>
-                </tr>
 
-                <tr>
                     <td>双</td>
                     <td><strong class="color-red pl" data-plid="14932"></strong></td>
                     <td><input type="text" class="table-txt" data-name="双" data-plid="14932"/></td>
-
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                    <td></td>
-                    <td></td>
-                    <td></td>
 
                     <td></td>
                     <td></td>

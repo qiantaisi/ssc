@@ -20,7 +20,8 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="12">第一位</th>
+                    <th colspan="6">第一位</th>
+                    <th colspan="6">第二位</th>
                 </tr>
                 <tr>
                     <th width="47">号码</th>
@@ -40,14 +41,6 @@
 
                 <tbody>
                 <tr>
-                    <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="14953"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="1/大" data-plid="14953"/></td>
-
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="14954"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="1/小" data-plid="14954"/></td>
-
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14955"></strong></td>
                     <td><input type="text" class="table-txt" data-name="1/单" data-plid="14955"/></td>
@@ -55,40 +48,6 @@
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14956"></strong></td>
                     <td><input type="text" class="table-txt" data-name="1/双" data-plid="14956"/></td>
-                </tr>
-                </tbody>
-            </table>
-
-            <table width="100%" border="1">
-                <thead>
-                <tr>
-                    <th colspan="12">第二位</th>
-                </tr>
-                <tr>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                    <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="14957"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="2/大" data-plid="14957"/></td>
-
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="14958"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="2/小" data-plid="14958"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14959"></strong></td>
@@ -101,10 +60,12 @@
                 </tbody>
             </table>
 
+
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="12">第三位</th>
+                    <th colspan="6">第三位</th>
+                    <th colspan="6">第四位</th>
                 </tr>
                 <tr>
                     <th width="47">号码</th>
@@ -124,14 +85,6 @@
 
                 <tbody>
                 <tr>
-                    <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="14961"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="3/大" data-plid="14961"/></td>
-
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="14962"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="3/小" data-plid="14962"/></td>
-
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14963"></strong></td>
                     <td><input type="text" class="table-txt" data-name="3/单" data-plid="14963"/></td>
@@ -139,40 +92,6 @@
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14964"></strong></td>
                     <td><input type="text" class="table-txt" data-name="3/双" data-plid="14964"/></td>
-                </tr>
-                </tbody>
-            </table>
-
-            <table width="100%" border="1">
-                <thead>
-                <tr>
-                    <th colspan="12">第四位</th>
-                </tr>
-                <tr>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                    <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="14965"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="4/大" data-plid="14965"/></td>
-
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="14966"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="4/小" data-plid="14966"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14967"></strong></td>
@@ -185,10 +104,12 @@
                 </tbody>
             </table>
 
+
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="12">第五位</th>
+                    <th colspan="6">第五位</th>
+                    <th colspan="6">第六位</th>
                 </tr>
                 <tr>
                     <th width="47">号码</th>
@@ -208,14 +129,6 @@
 
                 <tbody>
                 <tr>
-                    <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="14969"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="5/大" data-plid="14969"/></td>
-
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="14970"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="5/小" data-plid="14970"/></td>
-
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14971"></strong></td>
                     <td><input type="text" class="table-txt" data-name="5/单" data-plid="14971"/></td>
@@ -223,40 +136,6 @@
                     <td><strong>双</strong></td>
                     <td><strong class="color-red pl" data-plid="14972"></strong></td>
                     <td><input type="text" class="table-txt" data-name="5/双" data-plid="14972"/></td>
-                </tr>
-                </tbody>
-            </table>
-
-            <table width="100%" border="1">
-                <thead>
-                <tr>
-                    <th colspan="12">第六位</th>
-                </tr>
-                <tr>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                    <td><strong>大</strong></td>
-                    <td><strong class="color-red pl" data-plid="14973"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="6/大" data-plid="14973"/></td>
-
-                    <td><strong>小</strong></td>
-                    <td><strong class="color-red pl" data-plid="14974"></strong></td>
-                    <td><input type="text" class="table-txt" data-name="6/小" data-plid="14974"/></td>
 
                     <td><strong>单</strong></td>
                     <td><strong class="color-red pl" data-plid="14975"></strong></td>
