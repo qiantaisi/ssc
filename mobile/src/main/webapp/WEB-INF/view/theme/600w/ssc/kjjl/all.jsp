@@ -618,7 +618,7 @@
                     <span class="ball">{{num4}}</span>
                     <span class="ball">{{num5}}</span>
                     <span class="ball">{{num6}}</span>
-                    <span class="ball">{{num7}}</span>
+                    <span class="ball col0">{{num7}}</span>
                 </div>
             </div>
         </a>
